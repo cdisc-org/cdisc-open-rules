@@ -1,0 +1,133 @@
+# Either a record with TSPARMCD of AGE or TSPARMCD of AGETXT should be present, but not both.
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Either the AGE or the AGETXT variable should be populated.
+                Document: IG v3.0
+                Section: 3.7.6
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND250
+              Version: '1'
+            Version: '5.0'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Either the AGE or the AGETXT variable should be populated.
+                Document: IG v3.1
+                Section: 3.7.6
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND250
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Either the AGE or the AGETXT variable should be populated.
+                Document: IG v3.1.1
+                Section: 3.7.6
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND250
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: Either the AGE or the AGETXT variable should be populated.
+                Document: IG v3.1
+                Section: 3.7.6
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND250
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: Either the AGE or the AGETXT variable should be populated.
+                Document: IG v3.1.1
+                Section: 3.7.6
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND250
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: Either the AGE or the AGETXT variable should be populated.
+                Document: IG v3.1.1
+                Section: 3.7.6
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND250
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+Check:
+  any:
+    - all:
+        # count # record for which TSPARMCD=AGETXT and for which TXPARMCD=AGE
+        # throw error when both counts >= 1
+        - name: $record_count_AGETXT
+          operator: greater_than_or_equal_to
+          value: 1
+        - name: $record_count_AGE
+          operator: greater_than_or_equal_to
+          value: 1
+    # NO TSPARMCD=AGE and no TSPARMCD=AGETXT is present
+    # Both counts are 0
+    - all:
+        - name: $record_count_AGETXT
+          operator: equal_to
+          value: 0
+        - name: $record_count_AGE
+          operator: equal_to
+          value: 0
+
+Core:
+  Id: CORE-000509
+  Status: Published
+  Version: '1'
+Description: Either a record with TSPARMCD of AGE or TSPARMCD of AGETXT should
+  be present, but not both.
+Executability: Fully Executable
+Operations:
+  # Record count for TSPARMCD=AGE (for reporting reasons)
+  - filter:
+      TSPARMCD: AGE
+    id: $record_count_AGE
+    operator: record_count
+  # Record count for TSPARMCD=AGETXT
+  - filter:
+      TSPARMCD: AGETXT
+    id: $record_count_AGETXT
+    operator: record_count
+Outcome:
+  Message: Either a record with TSPARMCD of AGE or TSPARMCD of AGETXT should be
+    present, but not both.
+  Output Variables:
+    #- TSPARMCD
+    #- TSVAL
+    - $record_count_AGE
+    - $record_count_AGETXT
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - TRIAL DESIGN
+  Domains:
+    Include:
+      - TS
+# IMPORTANT: Sensitivity=Dataset
+Sensitivity: Dataset

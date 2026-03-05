@@ -1,0 +1,115 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: TSVAL values associated with TSPARMCD=SRANDOM would be "Y" or
+                  "N".
+                Document: IG v3.0
+                Item: Specification
+                Section: 7.6.3
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: "SEND251"
+              Version: "1"
+            Version: "5.0"
+        Version: "3.0"
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: TSVAL values associated with TSPARMCD=SRANDOM would be "Y" or
+                  "N".
+                Document: IG v3.1
+                Item: Specification
+                Section: 7.6.3
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: "SEND251"
+              Version: "1"
+            Version: "5.0"
+        Version: "3.1"
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: TSVAL values associated with TSPARMCD=SRANDOM would be "Y" or
+                  "N".
+                Document: IG v3.1.1
+                Item: Specification
+                Section: 7.6.2
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: "SEND251"
+              Version: "1"
+            Version: "5.0"
+        Version: "3.1.1"
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: TSVAL values associated with TSPARMCD=SRANDOM would be "Y" or
+                  "N".
+                Document: IG v3.1
+                Item: Specification
+                Section: 7.6.3
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: "SEND251"
+              Version: "1"
+            Version: "5.0"
+        Version: "1.1"
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: TSVAL values associated with TSPARMCD=SRANDOM would be "Y" or
+                  "N".
+                Document: IG v3.1.1
+                Item: Specification
+                Section: 7.6.2
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: "SEND251"
+              Version: "1"
+            Version: "5.0"
+        Version: "1.2"
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: TSVAL values associated with TSPARMCD=SRANDOM would be "Y" or
+                  "N".
+                Document: IG v3.1.1
+                Item: Specification
+                Section: 7.6.2
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: "SEND251"
+              Version: "1"
+            Version: "5.0"
+        Version: "1.0"
+Check:
+  all:
+    - name: TSPARMCD
+      operator: equal_to
+      value: SRANDOM
+    - name: TSVAL
+      operator: not_equal_to
+      value: Y
+    - name: TSVAL
+      operator: not_equal_to
+      value: N
+Core:
+  Id: CORE-000479
+  Status: Published
+  Version: "1"
+Description: When TSPARMCD=SRANDOM, the value of TSVAL must be either "Y" or "N".
+Executability: Fully Executable
+Outcome:
+  Message: The value of TSVAL is neither "Y" nor "N" for TSPARMCD=SRANDOM
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - TRIAL DESIGN
+  Domains:
+    Include:
+      - TS
+Sensitivity: Record

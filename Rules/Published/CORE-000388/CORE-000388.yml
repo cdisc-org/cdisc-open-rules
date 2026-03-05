@@ -1,0 +1,132 @@
+Authorities:
+  - Organization: CDISC
+    # REMARK: NOT applicable to SENDIG-3.0 (which has similar rule 121)
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Record-to-record relationships (USUBJID or POOLID, and IDVARVAL
+                  are populated; RELTYPE is null)
+                Document: SENDIG v3.1
+                Item: Assumption 3
+                Section: '8.2.1'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: 'SEND286'
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Record-to-record relationships (USUBJID or POOLID, and IDVARVAL
+                  are populated; RELTYPE is null)
+                Document: SENDIG v3.1.1
+                Item: Assumption 3
+                Section: '8.2.1'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: 'SEND286'
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1.1'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: Record-to-record relationships (USUBJID or POOLID, and IDVARVAL
+                  are populated; RELTYPE is null)
+                Document: SENDIG v3.1.1
+                Item: Assumption 3
+                Section: '8.2.1'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: 'SEND286'
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: Record-to-record relationships (USUBJID or POOLID, and IDVARVAL
+                  are populated; RELTYPE is null)
+                Document: SENDIG v3.1
+                Item: Assumption 3
+                Section: '8.2.1'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: 'SEND286'
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: Record-to-record relationships (USUBJID or POOLID, and IDVARVAL
+                  are populated; RELTYPE is null)
+                Document: SENDIG v3.1.1
+                Item: Assumption 3
+                Section: '8.2.1'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: 'SEND286'
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: Record-to-record relationships (USUBJID or POOLID, and IDVARVAL
+                  are populated; RELTYPE is null)
+                Document: TIG v1.0
+                Item: Assumption 3
+                Section: 2.8.5.2
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0202
+              Version: '1'
+            Version: '1.0'
+        Substandard: SEND
+        Version: '1.0'
+Check:
+  any:
+    - all:
+        - name: USUBJID
+          operator: non_empty
+        - name: IDVARVAL
+          operator: non_empty
+        - name: RELTYPE
+          operator: non_empty
+    - all:
+        - name: POOLID
+          operator: non_empty
+        - name: IDVARVAL
+          operator: non_empty
+        - name: RELTYPE
+          operator: non_empty
+Core:
+  Id: CORE-000388
+  Status: Published
+  Version: '1'
+Description: When USUBJID or POOLID are populated, and IDVARVAL is populated,
+  then RELTYPE must be null.
+Executability: Fully Executable
+Outcome:
+  Message: RELTYPE may not be populated when USUBJID or POOLID is populated, and
+    IDVARVAL is populated
+  Output Variables:
+    - RDOMAIN
+    - USUBJID
+    - POOLID
+    - IDVAR
+    - IDVARVAL
+    - RELTYPE
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - RELATIONSHIP
+  Domains:
+    Include:
+      - RELREC
+  Use Case: NONCLIN
+Sensitivity: Record

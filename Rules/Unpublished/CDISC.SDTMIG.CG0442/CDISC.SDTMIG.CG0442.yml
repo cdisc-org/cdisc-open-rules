@@ -1,0 +1,59 @@
+# Variable: --SOCCD
+# Condition: 
+# Rule: --SOCCD = MedDRA primary system organ class
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Further information about the parameters is included below in
+                  Table 1. TSVAL may have controlled terminology depending on
+                  the value of TSPARMCD
+                Document: IG v3.2
+                Section: 7.4|Appendix C1
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0442
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Further information about the parameters is included below in
+                  Table 1. TSVAL may have controlled terminology depending on
+                  the value of TSPARMCD
+                Document: IG v3.3
+                Section: 7.4
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0442
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+Check:
+  all:
+    - name:
+      operator:
+      value:
+Core:
+  Id: CDISC.SDTMIG.CG0442
+  Status: Draft
+  Version: '1'
+Description: TSVAL is a valid preferred term from FDA Substance Registration System (SRS)
+Executability: Fully Executable
+Outcome:
+  Message: TSVAL is not a valid preferred term from FDA Substance Registration
+    System (SRS)
+  Output Variables:
+    - --SOCCD
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - TRIAL DESIGN
+  Domains:
+    Include:
+      - TS
+Sensitivity: Record

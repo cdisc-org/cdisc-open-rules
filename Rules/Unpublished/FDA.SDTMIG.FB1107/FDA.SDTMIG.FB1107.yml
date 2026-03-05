@@ -1,0 +1,91 @@
+# Variable: TSPARMCD, TSVAL
+# Condition: TSPARAMCD=’ADDON’ and TSVAL=’Y’
+# Success Criteria: At least one occurrence of TSPARAMCD=’CURTRT’ is included in TS with TSVAL populated.
+Authorities:
+  - Organization: 'FDA'
+    Standards:
+      - Name: 'SDTMIG'
+        References:
+          - Citations:
+              - Cited Guidance: 'TCG, Appendix B'
+                Document: 'FDA'
+                Section: 'FDAB011'
+            Origin: 'FDA Business Rules'
+            Rule Identifier:
+              Id: 'FB1107'
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+      - Name: 'SDTMIG'
+        References:
+          - Citations:
+              - Cited Guidance: 'TCG, Appendix B'
+                Document: 'FDA'
+                Section: 'FDAB011'
+            Origin: 'FDA Business Rules'
+            Rule Identifier:
+              Id: 'FB1107'
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: 'SDTMIG'
+        References:
+          - Citations:
+              - Cited Guidance: 'TCG, Appendix B'
+                Document: 'FDA'
+                Section: 'FDAB011'
+            Origin: 'FDA Business Rules'
+            Rule Identifier:
+              Id: 'FB1107'
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+Check:
+  all:
+    - all:
+        - name: TSPARMCD
+          operator: 'equal_to'
+          value: 'ADDON'
+          value_is_literal: true
+        - name: TSVAL
+          operator: 'equal_to'
+          value: 'Y'
+          value_is_literal: true
+    - any:
+        - name: $tsparmcd
+          operator: does_not_contain
+          value: 'CURTRT'
+          value_is_literal: true
+        - name: TSPARMCD
+          operator: 'equal_to'
+          value: 'CURTRT'
+          value_is_literal: true
+        - name: TSVAL
+          operator: empty
+Core:
+  Id: FDA.SDTMIG.FB1107
+  Status: Draft
+  Version: '1'
+Description: At least one occurrence of TSPARAMCD='CURTRT' is included in TS
+  with TSVAL populated.
+Executability: Fully Executable
+Operations:
+  - domain: TS
+    id: $tsparmcd
+    name: TSPARMCD
+    operator: distinct
+Outcome:
+  Message: No occurrence of TSPARAMCD='CURTRT' is included in TS or TSVAL is null.
+  Output Variables:
+    - TSPARMCD
+    - TSVAL
+    - $tsparmcd
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - TRIAL DESIGN
+  Domains:
+    Include:
+      - TS
+Sensitivity: Record

@@ -1,0 +1,117 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: If the PCORRES result is less than the Lower Limit of
+                  Quantification (LLQ), then PCSTRESN should be null and not
+                  populated with the value of zero (0).
+                Document: IG v3.0
+                Section: 6.3.11.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND194
+              Version: '1'
+            Version: '5.0'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: If the PCORRES result is less than the Lower Limit of
+                  Quantification (LLQ), then PCSTRESN should be null and not
+                  populated with the value of zero (0).
+                Document: IG v3.1
+                Section: 6.3.11.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND194
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: If the PCORRES result is less than the Lower Limit of
+                  Quantification (LLQ), then PCSTRESN should be null and not
+                  populated with the value of zero (0).
+                Document: IG v3.1.1
+                Section: 6.3.11.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND194
+              Version: '1'
+            Version: '5.0'
+        Version: 3.1.1
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: If the PCORRES result is less than the Lower Limit of
+                  Quantification (LLQ), then PCSTRESN should be null and not
+                  populated with the value of zero (0).
+                Document: IG v3.1
+                Section: 6.3.11.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND194
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: If the PCORRES result is less than the Lower Limit of
+                  Quantification (LLQ), then PCSTRESN should be null and not
+                  populated with the value of zero (0).
+                Document: IG v3.1.1
+                Section: 6.3.11.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND194
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: If the PCORRES result is less than the Lower Limit of
+                  Quantification (LLQ), then PCSTRESN should be null and not
+                  populated with the value of zero (0).
+                Document: IG v3.1.1
+                Section: 6.3.11.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND194
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+Check:
+  all:
+    # Attention: -ORRES is "char", -STRESN is "num"
+    - name: PCORRES
+      operator: less_than
+      value: PCLLOQ
+    - name: PCSTRESN
+      operator: non_empty
+Core:
+  Id: CORE-000722
+  Status: Published
+  Version: '1'
+Description: If the PCORRES result is less than the Lower Limit of
+  Quantification, then PCSTRESN should be null and not populated with the value
+  of zero (0).
+Executability: Fully Executable
+Outcome:
+  Message: PCSTRESN may not be populated as PCORRES is less than PCLLOQ
+  Output Variables:
+    - PCORRES
+    - PCSTRESN
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - PC
+Sensitivity: Record

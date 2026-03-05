@@ -1,0 +1,68 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'Every study version must have exactly one study identifier with
+                  an identifier scope that references a clinical study sponsor
+                  organization.'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00005'
+              Version: '1'
+            Version: '1.0'
+        Version: '3.0'
+Check:
+  all:
+    - name: instanceType
+      operator: equal_to
+      value: 'StudyVersion'
+    - name: rel_type
+      operator: equal_to
+      value: 'definition'
+    - any:
+        - name: $num_sponsor_ids
+          operator: empty
+        - name: $num_sponsor_ids
+          operator: not_equal_to
+          value: 1
+Core:
+  Id: 'CORE-000401'
+  Status: Published
+  Version: '1'
+Description: 'Every study version must have exactly one study identifier with an
+  identifier scope that references a clinical study sponsor organization.'
+Executability: Fully Executable
+Operations:
+  - domain: StudyIdentifier
+    filter:
+      parent_entity: 'StudyVersion'
+      parent_rel: 'studyIdentifiers'
+      rel_type: 'definition'
+      studyIdentifierScope.organizationType.code: 'C70793'
+      studyIdentifierScope.organizationType.codeSystem: 'http://www.cdisc.org'
+    group:
+      - parent_id
+    group_aliases:
+      - id
+    id: $num_sponsor_ids
+    operator: record_count
+Outcome:
+  Message: 'The study version does not have exactly one sponsor identifier (i.e.,
+    a study identifier whose scope is an organization with an type code system
+    of "http://www.cdisc.org" and a type code of "C70793")'
+  Output Variables:
+    - parent_entity
+    - parent_id
+    - parent_rel
+    - id
+    - versionIdentifier
+    - $num_sponsor_ids
+Rule Type: Record Data
+Scope:
+  Entities:
+    Include:
+      - StudyVersion
+Sensitivity: Record

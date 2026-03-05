@@ -1,0 +1,51 @@
+# Variable: LEVEL
+# Condition: Record does not have associated PARENT records
+# Rule: Value for LEVEL = 1
+Authorities:
+  - Organization: 'CDISC'
+    Standards:
+      - Name: 'TIG'
+        References:
+          - Citations:
+              - Cited Guidance: The value for LEVEL must be 1 for a record without a PARENT
+                  record.  This record may or may not have a child record.
+                Document: 'TIG 1.0'
+                Item: 'assumption 5'
+                Section: '2.8.9.23'
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: 'TIG0032'
+              Version: '1'
+            Version: '1.0'
+        Substandard: SEND
+        Version: '1.0'
+Check:
+  all:
+    - name: PARENT
+      operator: empty
+    - name: LEVEL
+      operator: not_equal_to
+      value: 1
+Core:
+  Status: Published
+  Version: '1'
+  Id: CORE-000602
+Description: Raise an error when a record does not have associated PARENT
+  records but the value for LEVEL does not equal '1'.
+Executability: Fully Executable
+Outcome:
+  Message: Record has no PARENT record in RELREF but LEVEL value does not equal '1'.
+  Output Variables:
+    - LEVEL
+    - PARENT
+    - SETCD
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - RELATIONSHIP
+  Domains:
+    Include:
+      - RELREF
+  Use Case: NONCLIN
+Sensitivity: Record

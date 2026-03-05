@@ -1,0 +1,79 @@
+# Variable: CMTRT
+# Condition: 
+# Rule: CMTRT = collected on CRF
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Verbatim medication name that is either pre-printed or collected
+                  on a CRF.
+                Document: IG v3.4
+                Item: Specification
+                Section: 6.1.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0097
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Verbatim medication name that is either pre-printed or collected
+                  on a CRF.
+                Document: IG v3.2
+                Item: Specification
+                Section: '6.1'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0097
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Verbatim medication name that is either pre-printed or collected
+                  on a CRF.
+                Document: IG v3.3
+                Item: Specification
+                Section: 6.1.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0097
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+Check:
+  all:
+    - name: variable_name
+      operator: equal_to
+      value: CMTRT
+    # skipping cases when CMTRT is not provided (though this should never be the case)
+    #- name: CMTRT
+    #  operator: non_empty
+    # Generate an issue when CMTRT is not declared as "collected" in the define.xml
+    - name: define_variable_is_collected
+      operator: equal_to
+      value: false
+
+Core:
+  Id: CDISC.SDTMIG.CG0097
+  Status: Draft
+  Version: '1'
+Description: Trigger error if CMTRT was not collected on CRF
+Executability: Fully Executable
+Outcome:
+  Message: CMTRT was not collected on CRF
+Rule Type: Value Check against Define XML Variable
+Scope:
+  Classes:
+    Include:
+      - INTERVENTIONS
+  Domains:
+    Include:
+      - CM
+# Sensitivity: Record # will generate an issue for each record.
+Sensitivity: Dataset

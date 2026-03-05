@@ -1,0 +1,68 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: --NOMDY is an integer
+                Document: IG v3.1
+                Section: 6.2.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND318
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: --NOMDY is an integer
+                Document: IG v3.1.1
+                Section: 6.2.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND318
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: --NOMDY is an integer
+                Document: IG v3.1.1
+                Section: 6.2.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND318
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+
+Check:
+  all:
+    - name: --NOMDY
+      operator: non_empty
+    - name: --NOMDY
+      operator: not_matches_regex
+      # value can be a negative or positive integer, but may not be 0.
+      # This is more restrictive, but approved by the SEND team
+      # than the original statement "--NOMDY must be an integer"
+      value: '^-?[1-9]{1}\d*$'
+Core:
+  Id: CDISC.SENDIG.318
+  Status: Draft
+  Version: '1'
+Description: 'The value of -NOMDY must be a positive or negative integer other than 0'
+Executability: Fully Executable
+Outcome:
+  Message: 'The value of -NOMDY must be a positive or negative integer other than 0'
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - EVENTS
+      - FINDINGS
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record

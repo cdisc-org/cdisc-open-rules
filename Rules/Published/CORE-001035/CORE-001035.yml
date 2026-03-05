@@ -1,0 +1,49 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'A scheduled decision instance must refer to a default
+                  condition.'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00038'
+              Version: '1'
+            Version: '1.0'
+        Version: '4.0'
+Check:
+  all:
+    - name: instanceType
+      operator: equal_to
+      value: 'ScheduledDecisionInstance'
+    - name: rel_type
+      operator: equal_to
+      value: 'definition'
+    - any:
+        - name: defaultConditionId
+          operator: not_exists
+        - name: defaultConditionId
+          operator: empty
+Core:
+  Id: 'CORE-001035'
+  Status: Published
+  Version: '1'
+Description: 'A scheduled decision instance must refer to a default condition.'
+Executability: Fully Executable
+Outcome:
+  Message: 'The scheduled decision instance does not refer to a default condition.'
+  Output Variables:
+    - parent_entity
+    - parent_id
+    - parent_rel
+    - id
+    - name
+    - defaultConditionId
+Rule Type: Record Data
+Scope:
+  Entities:
+    Include:
+      - 'ScheduledDecisionInstance'
+Sensitivity: Record

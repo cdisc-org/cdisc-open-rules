@@ -1,0 +1,68 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: If the amount of treatment administered cannot be represented as
+                  a number and populated in EXDOSE, this field is used to
+                  describe the amount of treatment administered.
+                Document: IG v3.1
+                Section: 6.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: 'SEND314'
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: If the amount of treatment administered cannot be represented as
+                  a number and populated in EXDOSE, this field is used to
+                  describe the amount of treatment administered.
+                Document: IG v3.1
+                Section: 6.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: 'SEND314'
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: If the amount of treatment administered cannot be represented as
+                  a number and populated in EXDOSE, this field is used to
+                  describe the amount of treatment administered.
+                Document: IG v3.1
+                Section: 6.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: 'SEND314'
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+Check:
+  all:
+    - name: EXDOSTXT
+      operator: non_empty
+    - name: EXDOSE
+      operator: non_empty
+Core:
+  Id: CORE-000445
+  Status: Published
+  Version: '1'
+Description: Raise an error when EXDOSE is populated when EXDOSTXT is populated
+Executability: Fully Executable
+Outcome:
+  Message: If EXDOSTXT is populated EXDOSE may not be populated.
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - INTERVENTIONS
+  Domains:
+    Include:
+      - EX
+Sensitivity: Record

@@ -1,0 +1,93 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      # REMARK: Not applicable to SENDIG-3.0
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: The Unscheduled Flag (--USCHFL) variable is populated when the
+                  timing of a performed test or observation was not driven by
+                  the study schedule. | Expected values are Y or null.
+                Document: IG v3.1
+                Section: '4.2.9|6.2.1 '
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: 'SEND303'
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: The Unscheduled Flag (--USCHFL) variable is populated when the
+                  timing of a performed test or observation was not driven by
+                  the study schedule. | Expected values are Y or null.
+                Document: IG v3.1.1
+                Section: '4.2.9|6.2.1 '
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: 'SEND303'
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: The Unscheduled Flag (--USCHFL) variable is populated when the
+                  timing of a performed test or observation was not driven by
+                  the study schedule. | Expected values are Y or null.
+                Document: IG v3.1
+                Section: '4.2.9|6.2.1 '
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: 'SEND303'
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: The Unscheduled Flag (--USCHFL) variable is populated when the
+                  timing of a performed test or observation was not driven by
+                  the study schedule.
+                Document: TIG v1.0
+                Item: Text
+                Section: 2.8.7.5
+              - Cited Guidance: Expected values are Y or null.
+                Document: TIG v1.0
+                Item: DSUSCHFL CDISC Notes
+                Section: 2.8.7.5
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0215
+              Version: '1'
+            Version: '1.0'
+        Substandard: SEND
+        Version: '1.0'
+Check:
+  all:
+    - name: --USCHFL
+      operator: non_empty
+    - name: --USCHFL
+      operator: not_equal_to
+      value: Y
+Core:
+  Id: CORE-000466
+  Status: Published
+  Version: '1'
+Description: --USCHFL must be either Y or null
+Executability: Fully Executable
+Outcome:
+  Message: --USCHFL must be either Y or null
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+      - EVENTS
+      - INTERVENTIONS
+  Domains:
+    Include:
+      - ALL
+  Use Case: NONCLIN
+Sensitivity: Record

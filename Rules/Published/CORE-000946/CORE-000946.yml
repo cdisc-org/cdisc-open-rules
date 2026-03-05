@@ -1,0 +1,88 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: RPHASE variable is required when any Repro Phase day variable is
+                  used
+                Document: IG-DART v1.1
+                Section: '4.1.1'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND351
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: RPHASE variable is required when any Repro Phase day variable is
+                  used
+                Document: IG-DART v1.2
+                Section: '4.1.1'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND351
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+
+Check:
+  all:
+    # RPPLDY ^= null  OR RPPLSTDY ^= null OR RPPLENDY ^= null OR --RPDY ^= null OR --RPSTDY ^= null OR --RPENDY ^= null
+    - any:
+        - all:
+            - name: RPPLDY
+              operator: exists
+            - name: RPPLDY
+              operator: non_empty
+        - all:
+            - name: RPPLSTDY
+              operator: exists
+            - name: RPPLSTDY
+              operator: non_empty
+        - all:
+            - name: RPPLENDY
+              operator: exists
+            - name: RPPLENDY
+              operator: non_empty
+        - all:
+            - name: --RPDY
+              operator: exists
+            - name: --RPDY
+              operator: non_empty
+        - all:
+            - name: --RPSTDY
+              operator: exists
+            - name: --RPSTDY
+              operator: non_empty
+        - all:
+            - name: --RPENDY
+              operator: exists
+            - name: --RPENDY
+              operator: non_empty
+    # when one of the above is populated, RPHASE may not be empty
+    - name: RPHASE
+      operator: empty
+
+Core:
+  Id: CORE-000946
+  Status: Published
+  Version: '1'
+Description: Raise an error when one of the timing variables is populated and
+  RPHASE is not populated
+Executability: Fully Executable
+Outcome:
+  Message: RPHASE must be populated when one of the timing variables is populated
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - INTERVENTIONS
+      - EVENTS
+      - FINDINGS
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record

@@ -1,0 +1,83 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: ADaMIG
+        References:
+          - Citations:
+              - Cited Guidance: 'Codelist/Controlled Terms: Y {Y, NULL}'
+                Document: ADaMIG
+                Item: Table 3.2.6.1
+                Section: 3.2.6
+            Criteria:
+              Logical Expression:
+                Condition: ''
+                Rule: ANLzzzL is equal to Y or null
+              Plain Language Expression: ANLzzFL is equal to Y or missing
+              Type: Failure
+            Origin: ADaM Conformance Rules
+            Release Notes: ''
+            Rule Identifier:
+              Id: '178'
+              Version: ''
+            Validator Rule Message: ANLzzFL must equal to Y or missing
+            Version: '5.0'
+        Version: '1.0'
+      - Name: ADaMIG
+        References:
+          - Citations:
+              - Cited Guidance: 'Codelist/Controlled Terms: Y {Y, NULL}'
+                Document: ADaMIG
+                Item: Table 3.3.8.1
+                Section: 3.3.8
+            Criteria:
+              Logical Expression:
+                Condition: if ANLzzFL is populated. must equal Y
+                Rule: ANLzzFL is equal to Y or null
+              Plain Language Expression: ANLzzFL is equal to Y or missing
+              Type: Failure
+            Origin: ADaM Conformance Rules
+            Release Notes: ''
+            Rule Identifier:
+              Id: '178'
+              Version: ''
+            Validator Rule Message: ANLzzFL must equal to Y or missing
+            Version: '5.0'
+        Version: '1.1'
+Check:
+  all:
+    - name: variable_name
+      operator: matches_regex
+      value: 'AN/[0-9]/[0-9]/FL'
+    - name: &variable_name #how to refer to return variable from first check?
+      operator: is_not_contained_by
+      value:
+        - 'Y'
+
+#or
+#  all:
+#    - name: regex(variable_name,'AN/[0-9]/[0-9]/FL')
+#      operator: matches
+#      value: True
+#    - name: &variable_name
+#      operator: is_not_contained_by
+#      value:
+#        - 'Y'
+
+
+Core:
+  Id: CDISC.ADaMIG.AD0178
+  Status: Draft
+  Version: '1'
+Description: ''
+Executability: Fully Executable
+Outcome:
+  Message: ANLzzFL is not equal to Y or missing
+  Output Variables:
+    - SUBJID
+    - ANLzzFL
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+      - BASIC DATA STRUCTURE
+Sensitivity: Record

@@ -1,0 +1,88 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'Every study version must have a title of type "Official Study
+                  Title".'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00115'
+              Version: '1'
+            Version: '1.0'
+        Version: '3.0'
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'Every study version must have a title of type "Official Study
+                  Title".'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00115'
+              Version: '1'
+            Version: '1.0'
+        Version: '4.0'
+Check:
+  all:
+    - name: instanceType
+      operator: equal_to
+      value: 'StudyVersion'
+    - name: rel_type
+      operator: equal_to
+      value: 'definition'
+    - name: $study_title_type_codes
+      operator: does_not_contain_case_insensitive
+      value: 'C207616'
+    - name: $study_title_type_decodes
+      operator: does_not_contain_case_insensitive
+      value: 'Official Study Title'
+Core:
+  Id: 'CORE-000823'
+  Status: Published
+  Version: '1'
+Description: 'Every study version must have a title of type "Official Study Title".'
+Executability: Fully Executable
+Operations:
+  - domain: StudyTitle
+    group:
+      - parent_entity
+      - parent_id
+      - rel_type
+    group_aliases:
+      - instanceType
+      - id
+    id: $study_title_type_codes
+    name: type.code
+    operator: distinct
+  - domain: StudyTitle
+    group:
+      - parent_entity
+      - parent_id
+      - rel_type
+    group_aliases:
+      - instanceType
+      - id
+    id: $study_title_type_decodes
+    name: type.decode
+    operator: distinct
+Outcome:
+  Message: 'The study version does not have a title of type "Official Study Title"
+    (type.code = C207616 or type.decode = "Official Study Title", both case
+    insensitive).'
+  Output Variables:
+    - parent_entity
+    - parent_id
+    - parent_rel
+    - id
+    - versionIdentifier
+    - $study_title_type_codes
+    - $study_title_type_decodes
+Rule Type: Record Data
+Scope:
+  Entities:
+    Include:
+      - 'StudyVersion'
+Sensitivity: Record

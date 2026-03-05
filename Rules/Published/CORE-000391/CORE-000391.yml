@@ -1,0 +1,40 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: The value in DDTESTCD...In this domain the value should always
+                  be DEATHD.
+                Document: IG v3.0
+                Section: 6.3.4
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND164
+              Version: "1"
+            Version: "5.0"
+        Version: "3.0"
+Check:
+  all:
+    - name: DDTESTCD
+      operator: not_equal_to
+      value: DEATHD
+Core:
+  Id: CORE-000391
+  Status: Published
+  Version: "1"
+Description: DDTESTCD should always be DEATHD.
+Executability: Fully Executable
+Outcome:
+  Message: The value of DDTESTCD is not 'DEATHD'
+  Output Variables:
+    - DDTESTCD
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - DD
+Sensitivity: Record

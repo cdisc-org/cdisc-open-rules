@@ -1,0 +1,117 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: It is important to note that POOLID values are unique for a
+                  given set of subjects. While the same value of POOLID may not
+                  be re-used to refer to different sets of subjects, different
+                  POOLIDs may be used to refer to the same set of subjects.
+                Document: IG v3.0
+                Section: '8.7'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND261
+              Version: '1'
+            Version: '5.0'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: It is important to note that POOLID values are unique for a
+                  given set of subjects. While the same value of POOLID may not
+                  be re-used to refer to different sets of subjects, different
+                  POOLIDs may be used to refer to the same set of subjects.
+                Document: IG v3.1
+                Section: '8.5'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND261
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: It is important to note that POOLID values are unique for a
+                  given set of subjects. While the same value of POOLID may not
+                  be re-used to refer to different sets of subjects, different
+                  POOLIDs may be used to refer to the same set of subjects.
+                Document: IG v3.1.1
+                Section: '8.5'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND261
+              Version: '1'
+            Version: '5.0'
+        Version: 3.1.1
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: It is important to note that POOLID values are unique for a
+                  given set of subjects. While the same value of POOLID may not
+                  be re-used to refer to different sets of subjects, different
+                  POOLIDs may be used to refer to the same set of subjects.
+                Document: IG v3.1
+                Section: '8.5'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND261
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: It is important to note that POOLID values are unique for a
+                  given set of subjects. While the same value of POOLID may not
+                  be re-used to refer to different sets of subjects, different
+                  POOLIDs may be used to refer to the same set of subjects.
+                Document: IG v3.1.1
+                Section: '8.5'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND261
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: It is important to note that POOLID values are unique for a
+                  given set of subjects. While the same value of POOLID may not
+                  be re-used to refer to different sets of subjects, different
+                  POOLIDs may be used to refer to the same set of subjects.
+                Document: IG v3.1.1
+                Section: '8.5'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND261
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+# IMPORTANT REMARK 2025-09-10: The code of this rule is identical to that of SEND262.1
+# as we believe that both rules have essentially the same meaning.
+# TODO: discuss with the team whether 261 and 262.1 must be merged (216 is published ...)
+Check:
+  all:
+    - name: POOLID
+      operator: is_not_unique_set
+      value: USUBJID
+Core:
+  Status: Draft
+  Version: '1'
+Description: 'A POOLID can only refer to one set of subjects'
+Executability: Fully Executable
+Outcome:
+  Message: 'POOLID does not refer to one single set of subjects'
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - RELATIONSHIP
+  Domains:
+    Include:
+      - POOLDEF
+Sensitivity: Record

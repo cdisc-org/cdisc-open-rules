@@ -1,0 +1,100 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: One record per finding per specimen per subject
+                Document: SENDIG v3.0
+                Section: 6.3.7.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND180
+              Version: '1'
+            Version: '5.0'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: One record per finding per specimen per subject
+                Document: SENDIG v3.1
+                Section: 6.3.7.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND180
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: One record per finding per specimen per subject
+                Document: SENDIG v3.1.1
+                Section: 6.3.7.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND180
+              Version: '1'
+            Version: '5.0'
+        Version: 3.1.1
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: One record per finding per specimen per subject
+                Document: SENDIG v3.1
+                Section: 6.3.7.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND180
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+Check:
+  all:
+    #- name: MIDTC
+    #  operator: non_empty
+    #- name: MISPEC
+    #  operator: non_empty
+    - name: USUBJID
+      operator: is_not_unique_set
+      value:
+        - MISTESTCD
+        - MISPEC
+        - MISTRESC
+        - MILAT # Laterality: when present and populated
+        - MIDIR # Directionality: when present and populated
+        - MIANTREG # Anatomical region: when present and populated
+Core:
+  Id: CDISC.SENDIG.180
+  Status: Draft
+  Version: '1'
+Description: Raise an error when there is more than one record present for any
+  particular Microscopic Finding in the MI Domain, for a specific subject, test
+  code, specimen, laterality, directionality, anatomical region and standardized
+  resulz
+Executability: Fully Executable
+Outcome:
+  Message: The Microscopic Finding record is not unique for this subject, test
+    code, specimen, standardized result  and laterality (when present and
+    populated), directionality (when present and populated) and anatomical
+    region (when present and populated)
+  Output Variables:
+    - USUBJID
+    - MITESTCD
+    - MISTRESC
+    - MISPEC
+    # The following variables and values should also appear in the output
+    # when the column is present.
+    # In case it is not, we get a "skip"
+    # - MILAT
+    # - MIDIR
+    # - MIANTREG
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - MI
+Sensitivity: Record

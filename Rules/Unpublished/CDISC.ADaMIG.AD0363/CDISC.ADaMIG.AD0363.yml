@@ -1,0 +1,73 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: ADaMIG
+        References:
+          - Citations:
+              - Cited Guidance: Code List / Controlled Terms for ONTRTFL have allowable values
+                  of':' "Y"
+                Document: ADaMIG
+                Item: Table 3.2.6.1
+                Section: 3.2.6
+            Criteria:
+              Logical Expression:
+                Condition: ''
+                Rule: ONTRTFL have allowable values of "Y"
+              Plain Language Expression: ONTRTFL is equal to Y
+              Type: Failure
+            Origin: ADaM Conformance Rules
+            Release Notes: ''
+            Rule Identifier:
+              Id: '363'
+              Version: ''
+            Validator Rule Message: ONTRTFL can only have values of "Y"
+            Version: '5.0'
+        Version: '1.0'
+      - Name: ADaMIG
+        References:
+          - Citations:
+              - Cited Guidance: Code List / Controlled Terms for ONTRTFL have allowable values
+                  of':' "Y"
+                Document: ADaMIG
+                Item: Table 3.3.8.1
+                Section: 3.3.8
+            Criteria:
+              Logical Expression:
+                Condition: ONTRTFL have allowable values of "Y"
+                Rule: ONTRTFL have allowable values of "Y"
+              Plain Language Expression: ONTRTFL is equal to Y or missing
+              Type: Failure
+            Origin: ADaM Conformance Rules
+            Release Notes: ''
+            Rule Identifier:
+              Id: '363'
+              Version: ''
+            Validator Rule Message: ONTRTFL must equal to Y or missing
+            Version: '5.0'
+        Version: '1.1'
+Check:
+  all:
+    - name: ONTRTFL
+      operator: non_empty
+    - name: ONTRTFL
+      operator: is_not_contained_by
+      value:
+        - 'Y'
+
+Core:
+  Id: CDISC.ADaMIG.AD0363
+  Status: Draft
+  Version: '1'
+Description: ''
+Executability: Fully Executable
+Outcome:
+  Message: ONTRTFL is not equal to Y or missing
+  Output Variables:
+    - SUBJID
+    - ONTRTFL
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+      - BASIC DATA STRUCTURE
+Sensitivity: Record

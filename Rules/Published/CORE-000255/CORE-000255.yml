@@ -1,0 +1,109 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: --ORRES is an Expected variable and should always be populated
+                  except when --STAT = 'NOT DONE'
+                Document: IG v3.0
+                Section: 4.5.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND85.1
+              Version: '1'
+            Version: '5.0'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: --ORRES is an Expected variable and should always be populated
+                  except when --STAT = 'NOT DONE'
+                Document: IG v3.1
+                Section: 4.5.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND85.1
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: --ORRES is an Expected variable and should always be populated
+                  except when --STAT = 'NOT DONE'
+                Document: IG v3.1.1
+                Section: 4.5.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND85.1
+              Version: '1'
+            Version: '5.0'
+        Version: 3.1.1
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: --ORRES is an Expected variable and should always be populated
+                  except when --STAT = 'NOT DONE'
+                Document: IG v3.1
+                Section: 4.5.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND85.1
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: --ORRES is an Expected variable and should always be populated
+                  except when --STAT = 'NOT DONE'
+                Document: IG v3.1.1
+                Section: 4.5.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND85.1
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: --ORRES is an Expected variable and should always be populated
+                  except when --STAT = 'NOT DONE'
+                Document: IG v3.1.1
+                Section: 4.5.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND85.1
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+Check:
+  all:
+    - name: --STAT
+      operator: not_equal_to
+      value: NOT DONE
+    - name: --ORRES
+      operator: empty
+Core:
+  Id: CORE-000255
+  Status: Published
+  Version: '1'
+Description: There should always be data presented in the --ORRES variable
+  unless  --STAT = "NOT DONE".
+Executability: Fully Executable
+Outcome:
+  Message: --ORRES must be populated as --STAT is not equal to 'NOT DONE'
+  Output Variables:
+    - --STAT
+    - --ORRES
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record

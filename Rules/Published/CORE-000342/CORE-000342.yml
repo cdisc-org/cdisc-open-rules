@@ -1,0 +1,226 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Each Trial Set must be identified by a SETCD which is unique
+                  within the trial.
+                Document: IG v3.0
+                Item: Specification
+                Section: 7.4.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND233
+              Version: '1'
+            Version: '5.0'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Each Trial Set must be identified by a SETCD which is unique
+                  within the trial.
+                Document: IG v3.1
+                Item: Specification
+                Section: 7.4.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND233
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Each Trial Set must be identified by a SETCD which is unique
+                  within the trial.
+                Document: IG v3.1.1
+                Item: Specification
+                Section: 7.4.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND233
+              Version: '1'
+            Version: '5.0'
+        Version: 3.1.1
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: Each Trial Set must be identified by a SETCD which is unique
+                  within the trial.
+                Document: IG v3.1
+                Item: Specification
+                Section: 7.4.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND233
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: Each Trial Set must be identified by a SETCD which is unique
+                  within the trial.
+                Document: IG v3.1.1
+                Item: Specification
+                Section: 7.4.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND233
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: Each Trial Set must be identified by a SETCD which is unique
+                  within the trial.
+                Document: IG v3.1.1
+                Item: Specification
+                Section: 7.4.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND233
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: Each Trial Set must be identified by a SETCD that is unique
+                  within the trial.
+                Document: TIG v1.0
+                Item: Assumption 2
+                Section: 2.8.9.28 Assumption 2
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0161
+              Version: '1'
+            Version: '1.0'
+        Substandard: SEND
+        Version: '1.0'
+  # FDA BUsiness Rule metadata added as both have the same logic
+  - Organization: FDA
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Trial set parameter code should be unique for each study set for
+                  nonclinical data.
+                Document: FDA
+                Section: FDAB050
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB5001
+              Version: '1'
+            Version: '1.5'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Trial set parameter code should be unique for each study set for
+                  nonclinical data.
+                Document: FDA
+                Section: FDAB050
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB5001
+              Version: '1'
+            Version: '1.5'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Trial set parameter code should be unique for each study set for
+                  nonclinical data.
+                Document: FDA
+                Section: FDAB050
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB5001
+              Version: '1'
+            Version: '1.5'
+        Version: '3.1.1'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: Trial set parameter code should be unique for each study set for
+                  nonclinical data.
+                Document: FDA
+                Section: FDAB050
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB5001
+              Version: '1'
+            Version: '1.5'
+        Version: '1.0'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: Trial set parameter code should be unique for each study set for
+                  nonclinical data.
+                Document: FDA
+                Section: FDAB050
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB5001
+              Version: '1'
+            Version: '1.5'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: Trial set parameter code should be unique for each study set for
+                  nonclinical data.
+                Document: FDA
+                Section: FDAB050
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB5001
+              Version: '1'
+            Version: '1.5'
+        Version: '1.2'
+      - Name: SENDIG-AR
+        References:
+          - Citations:
+              - Cited Guidance: Trial set parameter code should be unique for each study set for
+                  nonclinical data.
+                Document: FDA
+                Section: FDAB050
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB5001
+              Version: '1'
+            Version: '1.5'
+        Version: '1.0'
+Check:
+  # SETCD must be unique for the combination of value in TXPARMCD, TXPARM, TXVAL, and SET
+  all:
+    - name: SETCD
+      operator: is_not_unique_set
+      value:
+        - TXPARMCD
+        - TXPARM
+        - TXVAL
+        - SET
+Core:
+  Id: CORE-000342
+  Status: Published
+  Version: '1'
+Description: SETCD must be unique for the combination of value in TXPARMCD,
+  TXPARM, TXVAL, and SET
+Executability: Fully Executable
+Outcome:
+  Message: SETCD is not unique for the combination of value in TXPARMCD, TXPARM,
+    TXVAL, and SET
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - TRIAL DESIGN
+  Domains:
+    Include:
+      - TX
+  Use Case: NONCLIN
+Sensitivity: Record

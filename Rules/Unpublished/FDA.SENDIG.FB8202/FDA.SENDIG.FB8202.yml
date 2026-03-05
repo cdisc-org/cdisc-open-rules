@@ -1,0 +1,69 @@
+Authorities:
+  - Organization: FDA
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: 'For carcinogenicity studies, MIRESCAT should be populated
+                  unless MISTRESC has a value of UNREMARKABLE (for SENDIGv3.1)
+                  or NORMAL (for SENDIGv3.0) or MISTAT has a value of NOT DONE.'
+                Document: FDA
+                Section: FDAB082
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB8202
+              Version: '1'
+            Version: '1.5'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: 'For carcinogenicity studies, MIRESCAT should be populated
+                  unless MISTRESC has a value of UNREMARKABLE (for SENDIGv3.1)
+                  or NORMAL (for SENDIGv3.0) or MISTAT has a value of NOT DONE.'
+                Document: FDA
+                Section: FDAB082
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB8202
+              Version: '1'
+            Version: '1.5'
+        Version: '3.1.1'
+Check:
+  all:
+    # TODO: still causes an error as this is a check on the dataset level
+    #- all:
+    #    - name: TSPARMCD
+    #      operator: equal_to
+    #      value: SSTYP
+    #    - name: TSVAL
+    #      operator: equal_to
+    #      value: CARCINOGENICITY
+    - all:
+        - name: MISTRESC
+          operator: not_equal_to
+          value: 'UNREMARKABLE'
+        - name: MISTAT
+          operator: not_equal_to
+          value: 'NOT DONE'
+    - name: MIRESCAT
+      operator: empty
+Core:
+  Id: FDA.SENDIG.FB8202
+  Status: Draft
+  Version: '1'
+Description: For carcinogenicity studies, MIRESCAT value should be populated
+  when MISTRESC does not have a value of  UNREMARKABLE or MISTAT has a value of
+  NOT DONE.
+Executability: Fully Executable
+Outcome:
+  Message: MIRESCAT value is missing.
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - MI
+Sensitivity: Record

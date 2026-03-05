@@ -1,0 +1,148 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: ADaMIG
+        References:
+          - Citations:
+              - Cited Guidance: >-
+                  For subject-level numeric population flag variables':'' 0 = no
+                  (not included), 1 = yes (included). Null values are not
+                  allowed.  
+                Document: ADaM IG v1.3
+                Item: '5'
+                Section: 3.1.4
+              - Cited Guidance: >-
+                  For character flags with variable names that end in FL and
+                  that are not population flags, a scheme of Y/N/null, or Y/null
+                  may be specified. As indicated in Tables 3.3.4.3.1 and
+                  3.3.8.1, some common character flags use the scheme Y/null.
+                  The choice of Y/N/null vs Y/null is dependent on analysis
+                  needs. Y/N/null should be used when N and null values need to
+                  be analyzed differently. Y/null can be used when the need is
+                  to analyze just the Y values. Corresponding 1/0/null and
+                  1/null schemes apply to numeric flags with variable names that
+                  end in FN and which are not population indicators.
+                Document: ADaM IG v1.3
+                Item: '9'
+                Section: 3.1.4
+            Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '6'
+            Version: '5.0'
+        Version: '1.3'
+
+      - Name: ADaMIG
+        References:
+          - Citations:
+              - Cited Guidance: >-
+                  For subject-level numeric population flag variables':'0 = no
+                  (not included), 1 = yes (included). Null values are not
+                  allowed.
+                Document: ADaM IG v1.2
+                Item: '5'
+                Section: 3.1.4
+              - Cited Guidance: >-
+                  For character flags with variable names that end in FL and
+                  that are not population flags, a scheme of Y/N/null, or Y/null
+                  may be specified. As indicated in Tables 3.3.4.3.1 and
+                  3.3.8.1, some common character flags use the scheme Y/null.
+                  The choice of Y/N/null vs Y/null is dependent on analysis
+                  needs. Y/N/null should be used when N and null values need to
+                  be analyzed differently. Y/null can be used when the need is
+                  to analyze just the Y values. Corresponding 1/0/null and
+                  1/null schemes apply to numeric flags with variable names that
+                  end in FN and which are not population indicators.
+                Document: ADaM IG v1.2
+                Item: '9'
+                Section: 3.1.4
+            Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '6'
+            Version: '5.0'
+        Version: '1.2'
+      - Name: ADaMIG
+        References:
+          - Citations:
+              - Cited Guidance: >-
+                  For subject-level numeric population flag variables':'' 0 = no
+                  (not included), 1 = yes (included). Null values are not
+                  allowed.
+                Document: ADaM IG v1.1
+                Item: '5'
+                Section: 3.1.4
+              - Cited Guidance: >-
+                  For character flags with variable names that end in FL and
+                  that are not population flags, a scheme of Y/N/null, or Y/null
+                  may be specified. As indicated in Table 3.3.4.2, and Table
+                  3.3.8.1, some common character flags use the scheme Y/null.
+                  Corresponding 1/0/null and 1/null schemes apply to numeric
+                  flags with variable names that end in FN and that are not
+                  population indicators.
+                Document: ADaM IG v1.1
+                Item: '9'
+                Section: 3.1.4
+            Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '6'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: ADaMIG
+        References:
+          - Citations:
+              - Cited Guidance: >-
+                  For subject-level numeric population flag variables: 0 = no
+                  (not included), 1 = yes (included). Null values are not
+                  allowed.
+                Document: ADaM IG v1.0
+                Item: 5 (General Flag Variable Conventions)
+                Section: '3'
+              - Cited Guidance: >-
+                  For character flags with variable names that end in FL and
+                  that are not population flags, a scheme of Y/N/null, or Y/null
+                  may be specified. As indicated in Table 3.3.4.2, and Table
+                  3.3.8.1, some common character flags use the scheme Y/null.
+                  Corresponding 1/0/null and 1/null schemes apply to numeric
+                  flags with variable names that end in FN and that are not
+                  population indicators.
+                Document: ADaM IG v1.0
+                Item: 9 (General Flag Variable Conventions)
+                Section: '3'
+            Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '6'
+            Version: '5.0'
+        Version: '1.0'
+Check:
+  all:
+    - name: -- 'FN'
+      operator: exists
+    - name: ROOT(N)||'FL' # where ROOT(--FN) is  N characters up to LENGTH(--FN)-2
+      operator: exists
+    - name: --'FN'
+      operator: non_empty
+    - name: --'FN'
+      operator: does_not_contain
+      value: (0,1)
+Core:
+  Id: CDISC.ADaMIG.AD0006
+  Status: Draft
+  Version: '1'
+Description: >-
+  'A variable with a suffix of FN must have a value that is not 0, 1 or null'
+Executability: Fully Executable
+Outcome:
+  Message: Variable with a suffix of FN does must have the value  Y, N or null
+  Output Variables:
+    - --FL
+    - --FN
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+      - ALL
+
+  Subclasses:
+    Include:
+      - ALL
+
+Sensitivity: Record

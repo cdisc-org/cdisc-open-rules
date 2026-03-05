@@ -1,0 +1,66 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'When specified, the lower limit of a timing window must be a
+                  non-negative duration in ISO 8601 format.'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00061'
+              Version: '1'
+            Version: '1.0'
+        Version: '3.0'
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'When specified, the lower limit of a timing window must be a
+                  non-negative duration in ISO 8601 format.'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00061'
+              Version: '1'
+            Version: '1.0'
+        Version: '4.0'
+Check:
+  all:
+    - name: instanceType
+      operator: equal_to
+      value: 'Timing'
+    - name: rel_type
+      operator: equal_to
+      value: 'definition'
+    - name: windowLower
+      operator: exists
+    - name: windowLower
+      operator: non_empty
+    - name: windowLower
+      negative: false
+      operator: invalid_duration
+Core:
+  Id: 'CORE-000825'
+  Status: Published
+  Version: '1'
+Description: 'When specified, the lower limit of a timing window must be a
+  non-negative duration in ISO 8601 format.'
+Executability: Fully Executable
+Outcome:
+  Message: 'The lower limit of the timing window (windowLower) is not a
+    non-negative duration in ISO 8601 format.'
+  Output Variables:
+    - parent_entity
+    - parent_id
+    - parent_rel
+    - id
+    - name
+    - windowLower
+    - windowLabel
+Rule Type: Record Data
+Scope:
+  Entities:
+    Include:
+      - 'Timing'
+Sensitivity: Record

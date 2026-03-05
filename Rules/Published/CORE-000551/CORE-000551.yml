@@ -1,0 +1,161 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      # SENDIG-3.0: rule 254
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: supp--.xpt, Supplemental Qualifiers for (domain name) -
+                  Relationship Datasets. One record per IDVAR, IDVARVAL, and
+                  QNAM value per subject per related domain, Tabulation.
+                Document: IG v3.0
+                Item: Domain Table Header
+                Section: '8.5'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: 'SEND254'
+              Version: '1'
+            Version: '5.0'
+        Version: '3.0'
+      # SENDIG-3.1: rule 254.1
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: supp--.xpt, Supplemental Qualifiers for (domain name) -
+                  Relationship Datasets. One record per supplemental qualifier
+                  per related parent domain record(s), Tabulation.
+                Document: IG v3.1
+                Item: Domain Table Header
+                Section: '8.3'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: 'SEND254.1'
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      # SENDIG-3.1: rule 254.1
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: supp--.xpt, Supplemental Qualifiers for (domain name) -
+                  Relationship Datasets. One record per supplemental qualifier
+                  per related parent domain record(s), Tabulation.
+                Document: IG v3.1.1
+                Item: Domain Table Header
+                Section: '8.3'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: 'SEND254.1'
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1.1'
+      # SENDIG-DART-1.1: rule 254.1
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: supp--.xpt, Supplemental Qualifiers for (domain name) -
+                  Relationship Datasets. One record per supplemental qualifier
+                  per related parent domain record(s), Tabulation.
+                Document: IG v3.1
+                Item: Domain Table Header
+                Section: '8.3'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: 'SEND254.1'
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      # SENDIG-DART-1.2: rule 254.1
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: supp--.xpt, Supplemental Qualifiers for (domain name) -
+                  Relationship Datasets. One record per supplemental qualifier
+                  per related parent domain record(s), Tabulation.
+                Document: IG v3.1.1
+                Item: Domain Table Header
+                Section: '8.3'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: 'SEND254.1'
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+      # SENDIG-GENETOX-1.0: rule 254.1
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: supp--.xpt, Supplemental Qualifiers for (domain name) -
+                  Relationship Datasets. One record per supplemental qualifier
+                  per related parent domain record(s), Tabulation.
+                Document: IG v3.1.1
+                Item: Domain Table Header
+                Section: '8.3'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: 'SEND254.1'
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: supp--.xpt, Supplemental Qualifiers for [domain name] —
+                  Relationship. One record per IDVAR, IDVARVAL, and QNAM value
+                  per subject per related domain, Tabulation.
+                Document: TIG v1.0
+                Item: Domain Table Header
+                Section: 2.8.9.27
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0172
+              Version: '1'
+            Version: '1.0'
+        Substandard: SEND
+        Version: '1.0'
+Check:
+  any:
+    - all:
+        - name: USUBJID
+          operator: non_empty
+        - name: QNAM
+          operator: is_not_unique_set
+          value:
+            - USUBJID
+            - RDOMAIN
+            - IDVAR
+            - IDVARVAL
+    - all:
+        - name: POOLID
+          operator: non_empty
+        - name: QNAM
+          operator: is_not_unique_set
+          value:
+            - POOLID
+            - RDOMAIN
+            - IDVAR
+            - IDVARVAL
+Core:
+  Id: CORE-000551
+  Status: Published
+  Version: '1'
+Description: There may be only be one record in a SUPP-- dataset with the same
+  QNAM value within USUBJID or POOLID, RDOMAIN, IDVAR, IDVARVAL.
+Executability: Fully Executable
+Outcome:
+  Message: Duplicate value of the combination of USUBJID or POOLID, RDOMAIN,
+    IDVAR, IDVARVAL with QNAM
+  Output Variables:
+    - RDOMAIN
+    - IDVAR
+    - IDVARVAL
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - RELATIONSHIP
+  Domains:
+    Include:
+      - SUPP--
+  Use Case: NONCLIN
+Sensitivity: Record

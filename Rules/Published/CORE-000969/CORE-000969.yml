@@ -1,0 +1,83 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'If a dose is specified, then a corresponding administrable
+                  product must also be specified either directly or embedded in
+                  the medical device and vice versa.'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00185'
+              Version: '1'
+            Version: '1.0'
+        Version: '4.0'
+Check: |-
+  (study.versions)@$sv.
+    $sv.studyInterventions@$si.
+    $si.administrations@$sa.
+        [(
+            $ValU:=function($v){$v.value&($v.unit? " " & $v.unit.standardCode.decode & " ("&$v.unit.standardCode.code&")")};
+            $FValU:=function($n)
+                {
+                    (
+                        $exists($n)
+                            ?   $type($n)="object"
+                                ?   $exists($n.value)
+                                    ? $ValU($n)
+                                    : $exists($n.minValue) or $exists($n.maxValue)
+                                        ? $ValU($n.minValue)&" to "&$ValU($n.maxValue)
+                                        : "Missing"
+                                : $string($n)
+                            : "Missing"
+                    )              
+                };
+            $MedProduct:=(($exists($sa.administrableProductId) and $sa.administrableProductId!=null) or ($exists($sv.medicalDevices[id=$sa.medicalDeviceId].embeddedProductId ) and $sv.medicalDevices[id=$sa.medicalDeviceId].embeddedProductId !=null));
+                {
+                    "instanceType": $sa.instanceType,
+                    "id": $sa.id,
+                    "path": $sa._path,
+                    "StudyIntervention.id": $si.id,
+                    "StudyIntervention.name": $si.name,
+                    "name": $sa.name,
+                    "dose.id": $sa.dose.id,
+                    "dose(value/range)": $FValU($sa.dose),
+                    "administrableProductId": $sa.administrableProductId,
+                    "medicalDeviceId": $sa.medicalDeviceId,
+                    "MedicalDevice.name": $sv.medicalDevices[id=$sa.medicalDeviceId].name,
+                    "MedicalDevice.embeddedProductId": $sv.medicalDevices[id=$sa.medicalDeviceId].embeddedProductId ,
+                    "AdministrableProduct.name": $sv.administrableProducts[id in $append($sa.administrableProductId, $sv.medicalDevices[id=$sa.medicalDeviceId].embeddedProductId)].name,
+                    "check": ($exists($sa.dose.id) != $MedProduct)
+                }
+        )][check=true]
+Core:
+  Id: 'CORE-000969'
+  Status: Published
+  Version: '1'
+Description: 'If a dose is specified, then a corresponding administrable product
+  must also be specified either directly or embedded in the medical device and
+  vice versa.'
+Executability: Fully Executable
+Outcome:
+  Message: 'The administration dose has been specified without an administrable
+    product (either as a direct administrable product or as an embedded product
+    via the related medical device) or vice versa.'
+  Output Variables:
+    - StudyIntervention.id
+    - StudyIntervention.name
+    - name
+    - dose.id
+    - dose(value/range)
+    - administrableProductId
+    - medicalDeviceId
+    - MedicalDevice.name
+    - MedicalDevice.embeddedProductId
+    - AdministrableProduct.name
+Rule Type: JSONata
+Scope:
+  Entities:
+    Include:
+      - 'Administration'
+Sensitivity: Record

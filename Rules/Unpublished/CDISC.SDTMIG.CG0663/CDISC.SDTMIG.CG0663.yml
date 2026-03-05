@@ -1,0 +1,77 @@
+# Variable: DOMAIN
+# Condition: AP Core Domain
+# Rule: Value length = 4 characters beginning with 'AP' and ending with 2 character SDTM domain 
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Associated Persons datasets are given a prefix of AP-- to
+                  identify the data as AP data to and distinguish them from
+                  study subject data. Associated Persons domain codes in the
+                  DOMAIN column of every record are also given a prefix of AP--
+                  to identify the domains as AP domains and to distinguish them
+                  from study subject domains. AP domain codes are therefore four
+                  characters long.
+                Document: AP Guide v1.0
+                Section: Section 2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0663
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+Check:
+  any:
+    # Fire query if domain name does not start with APFA and does not have the format "AP" followed by an alpha character, then an alphanum character
+    - all:
+        - name: DOMAIN
+          operator: not_prefix_matches_regex
+          prefix: 4
+          value: ^APFA$
+        - name: DOMAIN
+          operator: not_matches_regex
+          value: ^AP[A-Z][A-Z0-9]$
+    # Fire query if domain name starts with APFA and is not followed by an alpha character, then an alphanum character
+    - all:
+        - name: DOMAIN
+          operator: prefix_matches_regex
+          prefix: 4
+          value: ^APFA$
+        - name: DOMAIN
+          operator: not_suffix_matches_regex
+          suffix: 2
+          value: '[A-Z0-9][A-Z0-9]$'
+        # Fire query if characters 3/4 refers to invalid SDTM domain
+        - name: DOMAIN
+          operator: suffix_is_not_contained_by
+          suffix: 2
+          value: $valid_domain_name
+      # Fire query if characters 5/6 refers to invalid SDTM domain (for APFA domains)
+    - name: DOMAIN
+      operator: matches_regex
+      value: ^APFA(AD|AX|AP|SQ|SA)$
+Core:
+  Id: CDISC.SDTMIG.CG0663
+  Status: Draft
+  Version: '1'
+Description: Raise an error when an AP Core Domain does not have a value length
+  of 4 characters beginning with 'AP' and ending with 2 character SDTM domain
+Executability: Fully Executable
+Operations:
+  - id: $valid_domain_name
+    name: domain_suffix
+    operator: extract_metadata
+Outcome:
+  Message: AP Core Domain does not have a value length of 4 characters beginning
+    with 'AP' and ending with 2 character SDTM domain
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - AP--
+Sensitivity: Record

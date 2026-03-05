@@ -1,0 +1,116 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Trial Set Parameters that include dates are required to be
+                  presented according to the international standard ISO 8601
+                Document: IG v3.0
+                Item: Specification
+                Section: 7.4.2
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND243.1
+              Version: '1'
+            Version: '5.0'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Trial Set Parameters that include dates are required to be
+                  presented according to the international standard ISO 8601
+                Document: IG v3.1
+                Item: Specification
+                Section: 7.4.2
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND243.1
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Trial Set Parameters that include dates are required to be
+                  presented according to the international standard ISO 8601
+                Document: IG v3.1.1
+                Item: Specification
+                Section: 7.4.2
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND243.1
+              Version: '1'
+            Version: '5.0'
+        Version: 3.1.1
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: Trial Set Parameters that include dates are required to be
+                  presented according to the international standard ISO 8601
+                Document: IG v3.1
+                Item: Specification
+                Section: 7.4.2
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND243.1
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: Trial Set Parameters that include dates are required to be
+                  presented according to the international standard ISO 8601
+                Document: IG v3.1.1
+                Item: Specification
+                Section: 7.4.2
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND243.1
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: Trial Set Parameters that include dates are required to be
+                  presented according to the international standard ISO 8601
+                Document: IG v3.1.1
+                Item: Specification
+                Section: 7.4.2
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND243.1
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+Check:
+  all:
+    - any:
+        - name: TXPARMCD
+          operator: equal_to
+          value: DOSENDTC
+        - name: TXPARMCD
+          operator: equal_to
+          value: DOSSTDTC
+    - name: TXVAL
+      operator: invalid_date
+Core:
+  Id: CORE-000460
+  Status: Published
+  Version: '1'
+Description: Trial Set Parameters that include dates are required to be
+  presented according to the international standard ISO 8601
+Executability: Fully Executable
+Outcome:
+  Message: The value of TXVAL is not in ISO 8601 date/datetime format
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - TRIAL DESIGN
+  Domains:
+    Include:
+      - TX
+Sensitivity: Record

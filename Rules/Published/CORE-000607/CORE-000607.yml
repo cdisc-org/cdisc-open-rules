@@ -1,0 +1,54 @@
+# Variable: STOCONID
+# Rule: STOCONID in ES.STOCONID
+Authorities:
+  - Organization: 'CDISC'
+    Standards:
+      - Name: 'TIG'
+        References:
+          - Citations:
+              - Cited Guidance: Applicant-defined identifier for a set of storage conditions
+                  that are represented in the ES domain, where this identifier
+                  originates.
+                Document: 'TIG 1.0'
+                Item: 'STOCONID, CDISC Notes column'
+                Section: '2.8.8.3'
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: 'TIG0017'
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: STOCONID
+      operator: is_not_contained_by
+      value: $es_stoconid
+Core:
+  Status: Published
+  Version: '1'
+  Id: CORE-000607
+Description: Raise an error when value for STOCONID in the PT dataset does not
+  match a STOCONID specified in the ES dataset.
+Executability: Fully Executable
+Operations:
+  - domain: ES
+    id: $es_stoconid
+    name: STOCONID
+    operator: distinct
+Outcome:
+  Message: STOCONID does not have a matching STOCONID in ES.
+  Output Variables:
+    - SPTOBID
+    - STOCONID
+    - $es_stoconid
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - PT
+  Use Case: PROD
+Sensitivity: Record

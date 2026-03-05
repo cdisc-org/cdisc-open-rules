@@ -1,0 +1,124 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: One record per finding per observation time per subject or pool
+                Document: SENDIG v3.0
+                Section: 6.3.3
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND156
+              Version: '1'
+            Version: '5.0'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: One record per finding per observation time per subject or pool
+                Document: SENDIG v3.1
+                Section: 6.3.3
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND156
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: One record per finding per observation time per subject or pool
+                Document: SENDIG v3.1.1
+                Section: 6.3.3
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND156
+              Version: '1'
+            Version: '5.0'
+        Version: 3.1.1
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: One record per finding per observation time per subject or pool
+                Document: SENDIG v3.1
+                Section: 6.3.3
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND156
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: One record per finding per observation time per subject or pool
+                Document: SENDIG v3.1.1
+                Section: 6.3.3
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND156
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: One record per finding per observation time per subject or pool
+                Document: SENDIG v3.1
+                Section: 6.3.3
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND156
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+Check:
+  any:
+    - all:
+        - name: CLDTC
+          operator: non_empty
+        - name: USUBJID
+          operator: non_empty
+        - name: CLORRES
+          operator: is_not_unique_set
+          value:
+            - USUBJID
+            - CLDTC
+    - all:
+        - name: CLDTC
+          operator: non_empty
+        - name: POOLID
+          operator: non_empty
+        - name: CLORRES
+          operator: is_not_unique_set
+          value:
+            - POOLID
+            - CLDTC
+Core:
+  Id: CORE-000771
+  Status: Published
+  Version: '1'
+Description: Raise an error when there is more than one record present for any
+  particular Result or Findings as Collected, in the CL Domain, for a subject or
+  pool on a particular date.
+Executability: Fully Executable
+# The check for this rule was revised to NOT check the records where CLDTC is null
+Outcome:
+  Message: The Clinical Observation test result is not unique for this subject and
+    date/time.
+  Output Variables:
+    - USUBJID
+    - POOLID
+    - CLTESTCD
+    - CLORRES
+    - CLDTC
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - CL
+Sensitivity: Record

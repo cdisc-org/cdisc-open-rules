@@ -1,0 +1,159 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'An objective level must be specified using the objective level
+                  (C188725) DDF codelist.'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00147'
+              Version: '1'
+            Version: '1.0'
+        Version: '3.0'
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'An objective level must be specified using the objective level
+                  (C188725) DDF codelist.'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00147'
+              Version: '1'
+            Version: '1.0'
+        Version: '4.0'
+Check:
+  all:
+    - name: rel_type
+      operator: equal_to
+      value: 'definition'
+    - name: level
+      operator: equal_to
+      value: true
+    - not:
+        all:
+          - name: level.codeSystem
+            operator: equal_to
+            value: 'http://www.cdisc.org'
+          - name: level.codeSystemVersion
+            operator: is_contained_by
+            value: $valid_versions
+          - any:
+              - all:
+                  - name: $pref_term_for_code
+                    operator: non_empty
+                  - name: $value_for_code
+                    operator: non_empty
+                  - any:
+                      - name: $code_for_decode_pref_term
+                        operator: non_empty
+                      - name: $code_for_decode_value
+                        operator: non_empty
+                  - any:
+                      - name: level.code
+                        operator: equal_to
+                        value: $code_for_decode_pref_term
+                      - name: level.code
+                        operator: equal_to
+                        value: $code_for_decode_value
+                  - any:
+                      - name: level.decode
+                        operator: equal_to
+                        value: $pref_term_for_code
+                      - name: level.decode
+                        operator: equal_to
+                        value: $value_for_code
+              - all:
+                  - name: $codelist_extensible
+                    operator: equal_to
+                    value: true
+                  - name: $code_for_decode_pref_term
+                    operator: empty
+                  - name: $code_for_decode_value
+                    operator: empty
+                  - name: $pref_term_for_code
+                    operator: empty
+                  - name: $value_for_code
+                    operator: empty
+Core:
+  Id: 'CORE-000939'
+  Status: Published
+  Version: '1'
+Description: 'An objective level must be specified using the objective level
+  (C188725) DDF codelist.'
+Executability: Fully Executable
+Operations:
+  - id: $codelist_code
+    map:
+      - output: C188725
+    operator: map
+  - ct_package_types:
+      - DDF
+    id: $valid_versions
+    operator: valid_codelist_dates
+  - codelist_code: $codelist_code
+    ct_package_type: DDF
+    id: $codelist_extensible
+    operator: codelist_extensible
+    version: level.codeSystemVersion
+  - codelist_code: $codelist_code
+    ct_package_type: DDF
+    id: $value_for_code
+    operator: codelist_terms
+    returntype: value
+    term_code: level.code
+    version: level.codeSystemVersion
+  - codelist_code: $codelist_code
+    ct_package_type: DDF
+    id: $pref_term_for_code
+    operator: codelist_terms
+    returntype: pref_term
+    term_code: level.code
+    version: level.codeSystemVersion
+  - codelist_code: $codelist_code
+    ct_package_type: DDF
+    id: $code_for_decode_pref_term
+    operator: codelist_terms
+    returntype: code
+    term_pref_term: level.decode
+    version: level.codeSystemVersion
+  - codelist_code: $codelist_code
+    ct_package_type: DDF
+    id: $code_for_decode_value
+    operator: codelist_terms
+    returntype: code
+    term_value: level.decode
+    version: level.codeSystemVersion
+Outcome:
+  Message: 'The objective level is not specified using the objective level
+    (C188725) DDF codelist - codeSystem is not "http://www.cdisc.org",
+    codeSystemVersion is not a valid terminology package date, the code or
+    decode (either as preferred term or as submission value) is found in the
+    codelist (case insensitive) but the corresponding decode or code does not
+    match the codelist value (case sensitive), and/or neither code nor decode is
+    found in the codelist.'
+  Output Variables:
+    - parent_entity
+    - parent_id
+    - parent_rel
+    - id
+    - name
+    - $codelist_code
+    - $codelist_extensible
+    - level.code
+    - $code_for_decode_value
+    - $code_for_decode_pref_term
+    - level.codeSystem
+    - level.codeSystemVersion
+    - level.decode
+    - $value_for_code
+    - $pref_term_for_code
+Rule Type: Record Data
+Scope:
+  Entities:
+    Include:
+      - 'Objective'
+Sensitivity: Record

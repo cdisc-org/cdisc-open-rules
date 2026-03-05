@@ -1,0 +1,53 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'A study element must only reference study interventions that
+                  are referenced by the same study design as the study element.'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00252'
+              Version: '1'
+            Version: '1.0'
+        Version: '4.0'
+Check: |-
+  ($.**.versions)@$sv.
+    $sv.studyDesigns@$sd.
+            $sd.elements[$count(studyInterventionIds[$not ($ in $sd.studyInterventionIds)])>0].
+                            {
+                            "instanceType": instanceType,
+                            "id": id,
+                            "path": _path,
+                            "StudyDesign.id": $sd.id,
+                            "StudyDesign.name": $sd.name,
+                            "StudyDesign.studyInterventionIds": $sd.studyInterventionIds,
+                            "name": name,
+                            "Invalid studyInterventionIds": studyInterventionIds[$not ($ in $sd.studyInterventionIds)],
+                            "Invalid StudyIntervention.name": "["&$join(studyInterventionIds[$not ($ in $sd.studyInterventionIds)].($oid:=$;$oid&": "&($o:=$sv.studyInterventions[id=$oid];$o?$o.name:"Not defined")),"; ")&"]"
+                            }
+Core:
+  Id: 'CORE-001030'
+  Status: Published
+  Version: '1'
+Description: 'A study element must only reference study interventions that are
+  referenced by the same study design as the study element.'
+Executability: Fully Executable
+Outcome:
+  Message: 'The reference to the intervention is not targetting an intervention
+    that has been referenced by the study design as a study intervention.'
+  Output Variables:
+    - StudyDesign.id
+    - StudyDesign.name
+    - StudyDesign.studyInterventionIds
+    - name
+    - Invalid studyInterventionIds
+    - Invalid StudyIntervention.name
+Rule Type: JSONata
+Scope:
+  Entities:
+    Include:
+      - 'StudyElement'
+Sensitivity: Record

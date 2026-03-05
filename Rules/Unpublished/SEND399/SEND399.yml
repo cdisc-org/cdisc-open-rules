@@ -1,0 +1,83 @@
+Authorities:
+  - Organization: 'CDISC'
+    Standards:
+      - Name: 'SENDIG-DART'
+        References:
+          - Citations:
+              - Cited Guidance: 'This Implementation Guide (IG) defines recommended standards
+                  for the submission of data from nonclinical Developmental and
+                  Reproductive Toxicology (DART) studies, and is referred to as
+                  the SENDIG-DART. This IG is based on and should be used in
+                  close concert with Version 3.1 of the Standard for Exchange of
+                  Nonclinical Data Implementation Guide (SENDIG) and Version 1.6
+                  of the CDISC Study Data Tabulation Model (SDTM), available at
+                  https://www.cdisc.org/standards/.'
+                Document: 'SENDIG DART'
+                Section: '1.1'
+            Origin: 'SEND Conformance Rules'
+            Rule Identifier:
+              Id: 'SEND399'
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: 'SENDIG-DART'
+        References:
+          - Citations:
+              - Cited Guidance: 'This Implementation Guide (IG) defines recommended standards
+                  for the submission of data from nonclinical Developmental and
+                  Reproductive Toxicology (DART) studies, and is referred to as
+                  the SENDIG-DART. This IG is based on and should be used in
+                  close concert with Version 3.1 of the Standard for Exchange of
+                  Nonclinical Data Implementation Guide (SENDIG) and Version 1.6
+                  of the CDISC Study Data Tabulation Model (SDTM), available at
+                  https://www.cdisc.org/standards/.'
+                Document: 'SENDIG DART'
+                Section: '1.1'
+            Origin: 'SEND Conformance Rules'
+            Rule Identifier:
+              Id: 'SEND399'
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+Check:
+  any:
+    # check on whether there is a record with TSPARMCD=SNDIGVER
+    - name: $distinct_tsparmcd
+      operator: does_not_contain
+      value: SNDIGVER
+    # when there is a record with TSPARMCD=SNDIGVER, 
+    # then TSVAL must be one from the SNDIGVER for DART-1.1 or DART-1.2
+    - all:
+        - name: TSPARMCD
+          operator: equal_to
+          value: SNDIGVER
+        - name: TSVAL
+          operator: is_not_contained_by
+          value:
+            - SEND DEVELOPMENTAL AND REPRODUCTIVE TOXICOLOGY IMPLEMENTATION
+              GUIDE VERSION 1.1
+            - SEND DEVELOPMENTAL AND REPRODUCTIVE TOXICOLOGY IMPLEMENTATION
+              GUIDE VERSION 1.2
+Core:
+  Status: Draft
+  Version: '1'
+Description: 'A record exists in TS where TSPARMCD = "SNDIGVER" and TSVAL  =
+  Controlled Terminology term for SENDIG-DART from the SNDIGVER codelist'
+Executability: Fully Executable
+Operations:
+  - id: $distinct_tsparmcd
+    name: TSPARMCD
+    operator: distinct
+Outcome:
+  Message: 'A record with TSPARMCD=SNDIGVER must be present in TS and the TSVAL
+    for SNDIGVER must be the Controlled Terminology term for SENDIG-DART from
+    the SNDIGVER codelist.'
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - TRIAL DESIGN
+  Domains:
+    Include:
+      - TS
+Sensitivity: Dataset

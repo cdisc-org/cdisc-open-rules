@@ -1,0 +1,57 @@
+# Variable: TOPARMCD
+# Rule: TOPARMCD=TBPRDCAT present in dataset
+Authorities:
+  - Organization: 'CDISC'
+    Standards:
+      - Name: 'TIG'
+        References:
+          - Citations:
+              - Cited Guidance: A minimally meaningful TO dataset must include at least the
+                  parameter for tobacco product category (TOPARMCD = TPRDCAT)
+                Document: 'TIG 1.0'
+                Item: 'assumption 2'
+                Section: '2.8.8.1'
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: 'TIG0003'
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: $tbprdcat_count
+      operator: equal_to
+      value: 0
+Core:
+  Status: Published
+  Version: '1'
+  Id: CORE-000591
+Description: Raise an error when there is no record present in TO per SPTOBID
+  where TOPARMCD equals TBPRDCAT.
+Executability: Fully Executable
+Operations:
+  - domain: TO
+    filter:
+      TOPARMCD: TBPRDCAT
+    group:
+      - SPTOBID
+    id: $tbprdcat_count
+    name: TOPARMCD
+    operator: record_count
+Outcome:
+  Message: TO dataset does not include a record for each SPTOBID where TOPARMCD =
+    TBPRDCAT.
+  Output Variables:
+    - SPTOBID
+    - $tbprdcat_count
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - STUDY REFERENCE
+  Domains:
+    Include:
+      - TO
+  Use Case: PROD
+Sensitivity: Record

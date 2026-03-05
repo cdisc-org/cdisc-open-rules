@@ -1,0 +1,130 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: A descriptive Variable Label, using up to 40 characters, which
+                  should be unique for each variable in the dataset.
+                Document: SENDIG v3.0
+                Item: Text
+                Section: 3.2.2
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND273
+              Version: "1"
+            Version: "5.0"
+        Version: "3.0"
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: A descriptive Variable Label, using up to 40 characters, which
+                  should be unique for each variable in the dataset.
+                Document: SENDIG v3.1
+                Item: Text
+                Section: 3.2.2
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND273
+              Version: "1"
+            Version: "5.0"
+        Version: "3.1"
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: A descriptive Variable Label, using up to 40 characters, which
+                  should be unique for each variable in the dataset.
+                Document: SENDIG v3.1.1
+                Item: Text
+                Section: 3.2.2
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND273
+              Version: "1"
+            Version: "5.0"
+        Version: 3.1.1
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: A descriptive Variable Label, using up to 40 characters, which
+                  should be unique for each variable in the dataset.
+                Document: SENDIG v3.1
+                Item: Text
+                Section: 3.2.2
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND273
+              Version: "1"
+            Version: "5.0"
+        Version: "1.1"
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: A descriptive Variable Label, using up to 40 characters, which
+                  should be unique for each variable in the dataset.
+                Document: SENDIG v3.1.1
+                Item: Text
+                Section: 3.2.2
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND273
+              Version: "1"
+            Version: "5.0"
+        Version: "1.2"
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: A descriptive Variable Label, using up to 40 characters, which
+                  should be unique for each variable in the dataset.
+                Document: SENDIG v3.1.1
+                Item: Text
+                Section: 3.2.2
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND273
+              Version: "1"
+            Version: "5.0"
+        Version: "1.0"
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: Descriptive labels per this guide, up to 40 characters, will be
+                  provided as data variable labels for all variables, including
+                  Supplemental Qualifier variables
+                Document: TIG v1.0
+                Item: Text
+                Section: 2.6 Guidance for Datasets, Tabulation Dataset, Num 5
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0192
+              Version: "1"
+            Version: "1.0"
+        Substandard: SEND
+        Version: "1.0"
+Check:
+  all:
+    - name: variable_name
+      operator: is_not_unique_relationship
+      value: variable_label
+Core:
+  Status: Published
+  Version: '1'
+  Id: CORE-000690
+Description: Raise an error when the variable label is not unique for each
+  variable in the dataset
+Executability: Fully Executable
+Outcome:
+  Message: Variable label is not unique for each variable in the dataset.
+  Output Variables:
+    - variable_label
+    - variable_name
+Rule Type: Variable Metadata Check
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+  Use Case: NONCLIN
+Sensitivity: Record

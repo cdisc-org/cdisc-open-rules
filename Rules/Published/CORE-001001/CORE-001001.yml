@@ -1,0 +1,55 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'Sourcing must not be defined for an administrable product which
+                  is only referenced as an embedded product for a medical
+                  device.'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00206'
+              Version: '1'
+            Version: '1.0'
+        Version: '4.0'
+Check: |-
+  (study.versions)@$sv.
+    $sv.administrableProducts@$ap.
+        [($a:=$sv.administrableProducts[id in $distinct($sv.studyInterventions.administrations.administrableProductId)].id;
+          $p:=$sv.administrableProducts[id in $distinct($sv.medicalDevices.embeddedProductId)].id;
+                 $ap.{
+                    "instanceType": instanceType,
+                    "id": id,
+                    "path": _path,
+                    "name": name,
+                    "sourcing": sourcing.(decode & " (" &code&")"),
+                    "MedicalDevice.id": $sv.medicalDevices[embeddedProductId=$ap.id]? "["&$join($sv.medicalDevices[embeddedProductId=$ap.id].id,", ")&"]",
+                    "MedicalDevice.name": $sv.medicalDevices[embeddedProductId=$ap.id]? "["&$join($sv.medicalDevices[embeddedProductId=$ap.id].name,", ")&"]",
+                    "MedicalDevice.embeddedProductId": $sv.medicalDevices[embeddedProductId=$ap.id]? "["&$join($sv.medicalDevices[embeddedProductId=$ap.id].embeddedProductId,", ")&"]",
+                    "check": (id in $p)=true and (id in $a) =false and sourcing
+                }
+        )][check=true]
+Core:
+  Id: 'CORE-001001'
+  Status: Published
+  Version: '1'
+Description: 'Sourcing must not be defined for an administrable product which is
+  only referenced as an embedded product for a medical device.'
+Executability: Fully Executable
+Outcome:
+  Message: 'The sourcing is defined while the administrable product is only
+    referenced to as an embedded product for a medical device.'
+  Output Variables:
+    - name
+    - sourcing
+    - MedicalDevice.id
+    - MedicalDevice.name
+    - MedicalDevice.embeddedProductId
+Rule Type: JSONata
+Scope:
+  Entities:
+    Include:
+      - 'AdministrableProduct'
+Sensitivity: Record

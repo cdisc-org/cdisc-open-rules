@@ -1,0 +1,61 @@
+# Variable: --
+# Condition: 
+# Rule: 
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: xxx.
+                Document: IG v3.4
+                Item: Item 3.b.
+                Section: '2.6'
+              - Cited Guidance: yyyyyyy.
+                Document: IG v3.4
+                Section: 4.3.6
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0998
+              Version: '2'
+            Version: '2.0'
+        Version: '3.4'
+
+Check:
+  any:
+    - name: TS
+      operator: not_exists
+    - name: TA
+      operator: not_exists
+    - name: TE
+      operator: not_exists
+
+Core:
+  Id: CDISC.SDTMIG.CG0998
+  Status: Draft
+  Version: '1'
+Description: All TDM dataset(s) for the corresponding IG should be included in
+  every submission.
+Executability: Fully Executable
+Grouping_Variables:
+  - $study_domains
+Operations:
+  - id: $study_domains
+    operator: study_domains
+  - id: $dataset_names
+    operator: dataset_names
+Outcome:
+  Message: Missing one or more TDM dataset(s)
+  Output Variables:
+    - $study_domains
+#    - dataset_name
+#Rule Type: Dataset Metadata Check
+Rule Type: Domain Presence Check
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Dataset

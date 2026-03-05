@@ -1,0 +1,83 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: DM.ARMCD; Should be populated when Arms have been defined in the
+                  TA domain.
+                Document: IG v3.1
+                Item: Specification
+                Section: 5.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND107
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+Check:
+  all:
+    # TODO: operator "exists" must act on the set of datasets (i.e. the whole submission)
+    # - name: TA
+    #  operator: exists
+    # check on value for DM.ARMCD
+    #- name: ARMCD
+    #  operator: empty
+    # 2024-03-15: starting from Wiki under 'operations', 
+    # Flag an error if MIDS is in the dataset currently being evaluated and the TM domain is not present in the study
+    # check whether TA dataset is present (in combination with Rule Type: Domain Presence Check)
+    #- name: TA
+    #  operator: exists
+    #- name: $DM_ARMCD_null
+    #  operator: equal_to
+    #  value: true
+    # Just trying an alternative 2024-06-04
+    - name: ARMCD
+      operator: empty
+    #- name: $TA_exists
+    #  operator: equal_to
+    #  value: true
+    - name: $TA_present
+      operator: equal_to
+      value: true
+
+Core:
+  Id: CDISC.SENDIG.107
+  Status: Draft
+  Version: '1'
+Description: When study does not use multi-stage arm assignments and ARMCD is
+  populated, ARMCD must be present in TA.ARMCD. This rule has been executed to
+  identify all cases when ARMCD is not present in TA.ARMCD and therefore
+  acknowledges that false positives may be recorded when multi-stage arm
+  assignments are in use.
+Executability: Fully Executable
+Operations:
+  - domain: DM # necessary?
+    id: $DM_ARMCD_null
+    name: ARMCD
+    operator: variable_is_null
+  # Alternative approach 2024-06-04
+  # BUT this fails when there is no TA dataset at all
+  - domain: TA
+    id: $TA_exists
+    name: ARMCD
+    operator: variable_exists
+  # 2024-06-04: does this check whether TA is present in the study?
+  # NO: it doesn't like that it works as I was thinking
+  - id: $TA_present
+    name: TA
+    operator: study_domains
+Outcome:
+  Message: Arms are defined in TA.ARMCD, but DM.ARMCD is empty
+# Rule Type: Record Data
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+      # - ALL
+  Domains:
+    Include:
+      - DM
+      # - TA # ?
+Sensitivity: Record

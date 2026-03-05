@@ -1,0 +1,66 @@
+Authorities:
+  - Organization: FDA
+    Standards:
+      # Applicable to SENDIG version 3.1 and 3.1.1
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: 'Required timing variables for identification of the day on
+                  which group summaries (group means and incidences) are
+                  calculated should be populated for nonclinical data.'
+                Document: FDA
+                Section: FDAB047
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB4701
+              Version: '1'
+            Version: '1.5'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: 'Required timing variables for identification of the day on
+                  which group summaries (group means and incidences) are
+                  calculated should be populated for nonclinical data.'
+                Document: FDA
+                Section: FDAB047
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB4701
+              Version: '1'
+            Version: '1.5'
+        Version: '3.1.1'
+Check:
+  all:
+    # - name: DSTERM
+    - name: DSDECOD
+      operator: is_contained_by
+      value:
+        - "INTERIM SACRIFICE"
+        - "RECOVERY SACRIFICE"
+        - "REMOVED FROM STUDY ALIVE"
+        - "TERMINAL SACRIFICE"
+    - name: VISITDY
+      operator: 'empty'
+    - name: DSNOMDY
+      operator: 'empty'
+Core:
+  Id: CORE-000881
+  Status: Published
+  Version: '1'
+Description: VISITDY or DSNOMDY is populated in the DS dataset for scheduled
+  disposition records as these are required timing variables for identification
+  of the day on which group summaries (Group Means and Incidences) are
+  calculated for post mortem data.
+Executability: Fully Executable
+Outcome:
+  Message: Missing VISITDY or DSNOMDY values for scheduled disposition record.
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - EVENTS
+  Domains:
+    Include:
+      - DS
+Sensitivity: Record

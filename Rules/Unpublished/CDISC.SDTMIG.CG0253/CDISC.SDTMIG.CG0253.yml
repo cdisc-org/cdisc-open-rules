@@ -1,0 +1,74 @@
+# Variable: TIVERS
+# Condition: Greater than one version of the IE criteria in study documentation
+# Rule: TIVERS ^= null
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: If inclusion/exclusion criteria were amended during the trial,
+                  then each complete set of criteria must be included in the TI
+                  domain. TIVERS is used to distinguish between the versions.
+                Document: IG v3.4
+                Item: Assumption 1
+                Section: 7.4.1
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0253
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: If inclusion/exclusion criteria were amended during the trial,
+                  then each complete set of criteria must be included in the TI
+                  domain. TIVERS is used to distinguish between the versions.
+                Document: IG v3.2
+                Item: Assumption 1
+                Section: '7.4'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0253
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: If inclusion/exclusion criteria were amended during the trial,
+                  then each complete set of criteria must be included in the TI
+                  domain. TIVERS is used to distinguish between the versions.
+                Document: IG v3.3
+                Item: Assumption 1
+                Section: 7.4.1
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0253
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+Check:
+  all:
+
+
+Core:
+  Id: CDISC.SDTMIG.CG0253
+  Status: Draft
+  Version: '1'
+Description: Trigger error when TIVERS is null and there is more than one
+  version of the IE criteria in study documentation
+Executability: Not Executable
+Outcome:
+  Message: TIVERS is null when there is more than one version of the IE criteria
+    in study documentation
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - TRIAL DESIGN
+  Domains:
+    Include:
+      - TI
+Sensitivity: Dataset

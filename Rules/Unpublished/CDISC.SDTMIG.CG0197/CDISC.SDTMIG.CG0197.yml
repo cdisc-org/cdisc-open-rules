@@ -1,0 +1,80 @@
+# Variable: PESTRESC
+# Condition: PESTRESC ^= null
+# Rule: PESTRESC = PEORRES OR a dictionary coded preferred term
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        Version: '3.4'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0197
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: If there are findings for a body system, then either
+                  the dictionary preferred term (if findings are coded using a dictionary)
+                  or PEORRES (if findings are not encoded) should appear here.
+                Document: IG v3.4
+                Item: Specification
+                Section: 6.3.8
+      - Name: SDTMIG
+        Version: '3.2'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0197
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: If there are findings for a body system, then either
+                  the dictionary preferred term (if findings are coded using a dictionary)
+                  or PEORRES (if findings are not coded) should appear here.
+                Document: IG v3.2
+                Section: '6.3'
+      - Name: SDTMIG
+        Version: '3.3'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0197
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: If there are findings for a body system, then either
+                  the dictionary preferred term (if findings are coded using a dictionary)
+                  or PEORRES (if findings are not coded) should appear here.
+                Document: IG v3.3
+                Section: 6.3.12
+Check:
+  all:
+    - name: PESTRESC
+      operator: non_empty
+    - any:
+        - name: PESTRESC
+          operator: equal_to
+          value: PEORRES
+        - name: PESTRES
+          operator: is_contained_by
+          value:
+Core:
+  Id: CDISC.SDTMIG.CG0197
+  Status: Draft
+  Version: '1'
+Description: Trigger error when PESTRESC ^= null but PESTRESC does not equal PEORRES
+  OR a dictionary coded preferred term
+Executability: Fully Executable
+Outcome:
+  Message: PESTRESC does not equal PEORRES OR a dictionary coded preferred term
+  Output Variables:
+    - PESTRESC
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - PE
+Sensitivity: Record

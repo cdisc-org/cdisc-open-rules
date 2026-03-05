@@ -1,0 +1,82 @@
+Authorities:
+  - Organization: CDISC
+    # Remark: This is the version for SENDIG-3.1.1, which excludes PC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: In the Findings observation class, where data are usually
+                  collected at multiple study days, either --DTC or --DY must be
+                  used.
+                Document: IG v3.1.1
+                Section: '4.4'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: 'SEND289.1'
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: In the Findings observation class, where data are usually
+                  collected at multiple study days, either --DTC or --DY must be
+                  used.
+                Document: IG v3.1.1
+                Section: '4.4'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: 'SEND289.1'
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: In the Findings observation class, where data are usually
+                  collected at multiple study days, either --DTC or --DY must be
+                  used.
+                Document: IG v3.1.1
+                Section: '4.4'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: 'SEND289.1'
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+Check:
+  all:
+    - name: --DTC
+      operator: empty
+    - name: --DY
+      operator: empty
+Core:
+  Id: CORE-000477
+  Status: Published
+  Version: '1'
+Description: When a domain belongs to the Findings General Observation Class,
+  and the domain is one in which data are usually collected at multiple study
+  days, at least --DTC or --DY must be populated.
+Executability: Fully Executable
+Outcome:
+  Message: Neither --DTC nor --DY is populated
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - BW
+      - BG
+      - CL
+      - FW
+      - LB
+      - OM
+      - PM
+      # REMARK that for SENDIG-3.1.1, PC is not in the list anymore
+      - VS
+      - EG
+      - CV
+      - RE
+Sensitivity: Record

@@ -1,0 +1,52 @@
+# Variable: ARM
+# Condition: 
+# Rule: ARM not in ('Screen Failure', 'Not Assigned', 'Unplanned Product Exposure', 'Not Exposed to Product')
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: The trial arms table describes each planned arm in the trial.
+                Document: TIG 1.0
+                Item: Specification:ARM
+                Section: 2.8.6.1|2.8.10.27|2.8.9.29
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0654
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: ARM
+      operator: is_contained_by_case_insensitive
+      value:
+        - Screen Failure
+        - Not Assigned
+        - Not Exposed to Product
+        - Unplanned Product Exposure
+Core:
+  Id: "CORE-000721"
+  Status: Published
+  Version: '1'
+Description: Raise an error when ARM is 'Screen Failure', 'Not Assigned',
+  'Unplanned Product Exposure', or 'Not Exposed to Product'
+Executability: Fully Executable
+Outcome:
+  Message: ARM cannot be equal to 'Screen Failure', 'Not Assigned', 'Unplanned
+    Product Exposure' or 'Not Exposed to Product'.
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - TRIAL DESIGN
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - DM
+      - TA
+      - TV
+  Use Case: INDH
+Sensitivity: Record

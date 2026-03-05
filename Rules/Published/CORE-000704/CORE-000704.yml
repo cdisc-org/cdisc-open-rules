@@ -1,0 +1,55 @@
+# Variable: --VALTRG
+# Condition: --VALTRG is a number
+# Rule: --VALMIN <= --VALTRG <= --VALMAX
+Authorities:
+  - Organization: 'CDISC'
+    Standards:
+      - Name: 'TIG'
+        References:
+          - Citations:
+              - Cited Guidance: No specific guidance; this is a simple mathematical definition
+                Document: 'TIG 1.0'
+                Item: 'Specification Table: PDVALTRG | PDVALMIN | PDVALMAX'
+                Section: '2.8.8.2'
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: 'TIG0016'
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: --VALTRG
+      operator: matches_regex
+      value: ^-?([1-9]\d*|0)(\.\d+)?$
+    - name: --VALMAX
+      operator: matches_regex
+      value: ^.+$
+    - name: --VALTRG
+      operator: greater_than
+      value: --VALMAX
+Core:
+  Status: Published
+  Version: '1'
+  Id: CORE-000704
+Description: Part B - Raise an error when --VALTRG is a number and is greater
+  than the specified --VALMAX value.
+Executability: Fully Executable
+Outcome:
+  Message: --VALTRG is not equal to or less than the --VALMAX value.
+  Output Variables:
+    - SPTOBID
+    - --VALTRG
+    - --VALMAX
+    - PDPARMCD
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - PD
+  Use Case: PROD
+Sensitivity: Record

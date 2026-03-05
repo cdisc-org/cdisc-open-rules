@@ -1,0 +1,52 @@
+# Variable: SETCD
+# Rule: RELREF.SETCD = TX.SETCD for a given TX record
+Authorities:
+  - Organization: 'CDISC'
+    Standards:
+      - Name: 'TIG'
+        References:
+          - Citations:
+              - Cited Guidance: The SETCD column value must match a SETCD value in the TX
+                  dataset
+                Document: 'TIG 1.0'
+                Item: 'assumption 7'
+                Section: '2.8.9.23'
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: 'TIG0033'
+              Version: '1'
+            Version: '1.0'
+        Substandard: SEND
+        Version: '1.0'
+Check:
+  all:
+    - name: SETCD
+      operator: is_not_contained_by
+      value: $tx_setcd
+Core:
+  Status: Published
+  Version: '1'
+  Id: CORE-000609
+Description: Raise an error when the SETCD value doesn't match a SETCD value in
+  the TX dataset.
+Executability: Fully Executable
+Operations:
+  - domain: TX
+    id: $tx_setcd
+    name: SETCD
+    operator: distinct
+Outcome:
+  Message: SETCD value doesn't match a SETCD value in the TX dataset.
+  Output Variables:
+    - SETCD
+    - $tx_setcd
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+  Use Case: NONCLIN
+Sensitivity: Record

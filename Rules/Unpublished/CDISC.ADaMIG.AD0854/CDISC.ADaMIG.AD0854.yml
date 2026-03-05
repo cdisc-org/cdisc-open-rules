@@ -1,0 +1,54 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: 'ADaMIG'
+        References:
+          - Citations:
+              - Cited Guidance: <-When a secondary variable is included in the dataset, then the
+                  primary variable must also be included.
+                Document: ADaM v1.3
+                Item: '6'
+                Section: '3.1.1'
+            Criteria:
+              Logical Expression:
+                Condition: ''
+                Rule: ''
+              Plain Language Expression: ''
+              Type: Failure
+            Origin: ADaM Conformance Rules
+            Release Notes: ''
+            Rule Identifier:
+              Id: '854'
+              Version: '1'
+            Validator Rule Message: ''
+            Version: '5.0'
+        Version: '1.3'
+
+Check:
+  all:
+    - name: ROUTEC
+      operator: exists
+    - name: ROUTE
+      operator: not_exists
+Core:
+  Id: CDISC.ADaMIG.AD0854
+  Status: Draft
+  Version: '1'
+Description: ''
+Executability: Fully Executable
+Outcome:
+  Message: ROUTEC is present, but ROUTE is not present
+  Output Variables:
+    - ROUTEC
+    - USUBJID
+    - SUBJID
+
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+      - BASIC DATA STRUCTURE
+  Subclasses:
+    Include:
+      - POPULATION PHARMACOKINETIC ANALYSIS
+Sensitivity: Dataset

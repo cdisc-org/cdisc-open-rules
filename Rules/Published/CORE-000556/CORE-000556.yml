@@ -1,0 +1,104 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: pooldef.xpt, Pooled Definition - Relationship Datasets. One
+                  record per subject per pool,
+                Document: IG v3.0
+                Section: 8.7.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND262
+              Version: '1'
+            Version: '5.0'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: pooldef.xpt, Pooled Definition - Relationship Datasets. One
+                  record per subject per pool,
+                Document: IG v3.1
+                Section: 8.5.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND262.1
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: pooldef.xpt, Pooled Definition - Relationship Datasets. One
+                  record per subject per pool,
+                Document: IG v3.1.1
+                Section: 8.5.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND262.1
+              Version: '1'
+            Version: '5.0'
+        Version: 3.1.1
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: pooldef.xpt, Pooled Definition - Relationship Datasets. One
+                  record per subject per pool,
+                Document: IG v3.1
+                Section: 8.5.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND262.1
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: pooldef.xpt, Pooled Definition - Relationship Datasets. One
+                  record per subject per pool,
+                Document: IG v3.1.1
+                Section: 8.5.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND262.1
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: pooldef.xpt, Pooled Definition - Relationship Datasets. One
+                  record per subject per pool,
+                Document: IG v3.1.1
+                Section: 8.5.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND262.1
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+Check:
+  all:
+    - name: POOLID
+      operator: is_not_unique_set
+      value: USUBJID
+Core:
+  Id: CORE-000556
+  Status: Published
+  Version: '1'
+Description: 'Generate a message when the there are duplicate combinations of
+  USUBJID and POOLID'
+Executability: Fully Executable
+Outcome:
+  Message: 'A duplicate combination of USUBJID and POOLID was found'
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - RELATIONSHIP
+  Domains:
+    Include:
+      - POOLDEF
+Sensitivity: Record

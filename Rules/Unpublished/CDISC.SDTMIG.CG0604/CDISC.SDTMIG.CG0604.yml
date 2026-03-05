@@ -1,0 +1,42 @@
+# Variable: --OBJ
+# Condition: Parent record does not exist, and NO name of event or intervention is coded
+# Rule: --OBJ = verbatim value
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        Version: '3.4'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0604
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: When findings are collected about an event or intervention,
+                  and the name of the event or intervention is collected in an "Other,
+                  specify" CRF field, the value in --OBJ variable depends on whether
+                  the FA record has a parent record and whether the "Other, specify"
+                  value was coded.
+                Document: IG v3.4
+                Section: 4.2.7.4
+Check:
+  all: []
+Core:
+  Id: CDISC.SDTMIG.CG0604
+  Status: Draft
+  Version: '1'
+Description: ''
+Executability: Fully Executable
+Outcome:
+  Message: ''
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS ABOUT
+  Domains:
+    Include:
+      - F
+      - A
+Sensitivity: Record

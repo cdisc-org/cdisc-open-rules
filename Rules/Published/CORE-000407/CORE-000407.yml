@@ -1,0 +1,59 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'Within a study design, there must be exactly one scheduled
+                  timeline which identifies as the main Timeline.'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00012'
+              Version: '1'
+            Version: '1.0'
+        Version: '3.0'
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'Within a study design, there must be exactly one scheduled
+                  timeline which identifies as the main Timeline.'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00012'
+              Version: '1'
+            Version: '1.0'
+        Version: '4.0'
+Check: |-
+  $.study.versions.studyDesigns.
+    {
+        "instanceType": instanceType,
+        "id": id,
+        "path": _path,
+        "name": name,
+        "# Main timelines": $count(scheduleTimelines[mainTimeline=true]),
+        "Main timelines": scheduleTimelines[mainTimeline=true]
+                          ~> $map(function($v){$v.id & ($v.name ? " [" & $v.name & "]")})
+    }[`# Main timelines` != 1][]
+Core:
+  Id: 'CORE-000407'
+  Status: Published
+  Version: '1'
+Description: 'Within a study design, there must be exactly one scheduled
+  timeline which identifies as the main Timeline.'
+Executability: Fully Executable
+Outcome:
+  Message: 'The study design does not have exactly one main timeline.'
+  Output Variables:
+    - name
+    - '# Main timelines'
+    - 'Main timelines'
+Rule Type: JSONata
+Scope:
+  Entities:
+    Include:
+      - 'StudyDesign'
+      - 'InterventionalStudyDesign'
+      - 'ObservationalStudyDesign'
+Sensitivity: Record

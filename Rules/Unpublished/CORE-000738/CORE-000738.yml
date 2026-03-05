@@ -1,0 +1,82 @@
+Authorities:
+  - Organization: 'FDA'
+    Standards:
+      - Name: 'SDTMIG'
+        References:
+          - Citations:
+              - Cited Guidance: 'TCG, Appendix B'
+                Document: 'FDA'
+                Section: 'FDAB011'
+            Origin: 'FDA Business Rules'
+            Rule Identifier:
+              Id: 'FB1106'
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+      - Name: 'SDTMIG'
+        References:
+          - Citations:
+              - Cited Guidance: 'TCG, Appendix B'
+                Document: 'FDA'
+                Section: 'FDAB011'
+            Origin: 'FDA Business Rules'
+            Rule Identifier:
+              Id: 'FB1106'
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: 'SDTMIG'
+        References:
+          - Citations:
+              - Cited Guidance: 'TCG, Appendix B'
+                Document: 'FDA'
+                Section: 'FDAB011'
+            Origin: 'FDA Business Rules'
+            Rule Identifier:
+              Id: 'FB1106'
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+Check:
+  any:
+    - name: $crmdur_count
+      operator: less_than
+      value: 1
+    - all:
+        - name: $crmdur_count
+          operator: 'greater_than_or_equal_to'
+          value: 1
+        - name: TSPARMCD
+          operator: equal_to
+          value: 'CRMDUR'
+        - name: TSVAL
+          operator: empty
+
+Core:
+  Id: CORE-000738
+  Status: Draft
+  Version: '1'
+Description: 'No occurrence of TSPARMCD=’CRMDUR’ is included in TS or TSVAL is null.'
+Executability: Partially Executable
+Operations:
+  - domain: TS
+    filter:
+      TSPARMCD: CRMDUR
+    id: $crmdur_count
+    name: TSPARMCD
+    operator: record_count
+Outcome:
+  Message: 'No occurrence of TSPARMCD=’CRMDUR’ is included in TS or TSVAL is null.'
+  Output Variables:
+    - TSPARMCD
+    - TSVAL
+    - $crmdur_count
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - TRIAL DESIGN
+  Domains:
+    Include:
+      - TS
+Sensitivity: Record

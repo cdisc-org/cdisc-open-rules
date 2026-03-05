@@ -1,0 +1,52 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'An identified organization is not expected to have more than
+                  one identifier for the study.'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00139'
+              Version: '1'
+            Version: '1.0'
+        Version: '3.0'
+Check:
+  all:
+    - name: instanceType
+      operator: equal_to
+      value: 'StudyIdentifier'
+    - name: rel_type
+      operator: equal_to
+      value: 'definition'
+    - name: studyIdentifierScope.identifier
+      operator: is_not_unique_set
+      value:
+        - parent_id
+        - studyIdentifierScope.identifierScheme
+Core:
+  Id: 'CORE-000697'
+  Status: Published
+  Version: '1'
+Description: 'An identified organization is not expected to have more than one
+  identifier for the study.'
+Executability: Partially Executable - Possible Overreporting
+Outcome:
+  Message: 'The identified organization has more than one identifier for the study.'
+  Output Variables:
+    - parent_entity
+    - parent_id
+    - parent_rel
+    - id
+    - studyIdentifier
+    - studyIdentifierScope.name
+    - studyIdentifierScope.identifierScheme
+    - studyIdentifierScope.identifier
+Rule Type: Record Data
+Scope:
+  Entities:
+    Include:
+      - 'StudyIdentifier'
+Sensitivity: Record

@@ -1,0 +1,66 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'Within a study design, if more therapeutic areas are defined,
+                  they must be distinct.'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00221'
+              Version: '1'
+            Version: '1.0'
+        Version: '4.0'
+Check: |-
+  study.versions.studyDesigns@$sd.(
+    $sd.therapeuticAreas.
+      {
+        "group": $join([codeSystem,codeSystemVersion,code],"\n"),
+        "details": $
+      } {
+          group:  $count(details)>1
+                  ? {
+                      "codeSystem":$distinct(details.codeSystem),
+                      "codeSystemVersion":$distinct(details.codeSystemVersion),
+                      "therapeuticAreas":"["&$join($.(details.id&": "&details.decode&" ("&details.code&")"),"; ")&"]"
+                    }
+        }
+    ~>$each(function($v)
+        {
+          {
+            "instanceType": $sd.instanceType,
+            "id": $sd.id,
+            "path": $sd._path,
+            "name": $sd.name,
+            "therapeuticAreas.codeSystem": $v.codeSystem,
+            "therapeuticAreas.codeSystemVersion": $v.codeSystemVersion,
+            "therapeuticAreas": $v.therapeuticAreas
+          }
+        }
+      )
+    )
+Core:
+  Id: 'CORE-001003'
+  Status: Published
+  Version: '1'
+Description: 'Within a study design, if more therapeutic areas are defined, they
+  must be distinct.'
+Executability: Fully Executable
+Outcome:
+  Message: 'The therapeutic areas of the study design are not unique - the same
+    code is used more than once within the same codeSystem and
+    codeSystemVersion.'
+  Output Variables:
+    - name
+    - therapeuticAreas.codeSystem
+    - therapeuticAreas.codeSystemVersion
+    - therapeuticAreas
+Rule Type: JSONata
+Scope:
+  Entities:
+    Include:
+      - 'InterventionalStudyDesign'
+      - 'ObservationalStudyDesign'
+Sensitivity: Record

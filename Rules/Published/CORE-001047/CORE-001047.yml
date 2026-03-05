@@ -1,0 +1,99 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'If a biomedical concept is referenced from an activity then it
+                  is not expected to be referenced as well by a biomedical
+                  concept category that is referenced from the same activity.'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00076'
+              Version: '1'
+            Version: '1.0'
+        Version: '3.0'
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'If a biomedical concept is referenced from an activity then it
+                  is not expected to be referenced as well by a biomedical
+                  concept category that is referenced from the same activity.'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00076'
+              Version: '1'
+            Version: '1.0'
+        Version: '4.0'
+Check: |-
+  ($.study.versions)@$sv.
+    [
+      (
+        $flatten:=function($tree) 
+          {
+            (
+              $iter:=function($t, $p)
+                {
+                  $type($t) = "array"
+                  ? [$map($t,function($v){$iter($v,$p)})]
+                  : $type($t) = "object"
+                    ? (
+                        $pfx := ($p?($p & ">")) & $t.id & ($t.name?("["&$t.name&"]"));
+                        $t ~> 
+                        $sift(function($v, $k){$not($k in ["id","name"])}) ~>
+                        $each(function($v){$iter($v,$pfx)})
+                      )
+                    : $join([$p,$t],">")
+                };
+              $iter($tree,"")
+            )                        
+          };
+        $pcats := $utils.parse_refs("childIds","children",$sv.bcCategories);                
+        ($sv.studyDesigns)@$sd.($sd.activities)@$a.
+          ($a.biomedicalConceptIds)
+            [
+              $count($a.bcCategoryIds) > 0 and
+              $ in [$a.bcCategoryIds.$lookup($pcats{id: **.memberIds},$)]
+            ].
+            (
+              $this := $;
+              {
+                "instanceType": $a.instanceType,
+                "id": $a.id,
+                "path": $a._path,
+                "StudyDesign.id": $sd.id,
+                "StudyDesign.name": $sd.name,
+                "name": $a.name,
+                "biomedicalConceptId": $this,
+                "bcCategoryId(s) containing BC": 
+                  $utils.sift_tree($pcats[id in $a.bcCategoryIds],$this,["id","name"])~>$flatten
+              }
+            )     
+      )
+    ]
+Core:
+  Id: 'CORE-001047'
+  Status: Published
+  Version: '1'
+Description: 'If a biomedical concept is referenced from an activity then it is
+  not expected to be referenced as well by a biomedical concept category that is
+  referenced from the same activity.'
+Executability: Partially Executable - Possible Overreporting
+Outcome:
+  Message: 'The activity references both a biomedical concept category and a
+    biomedical concept, but the biomedical concept is a member of the referenced
+    category or one of its subcategories.'
+  Output Variables:
+    - StudyDesign.id
+    - StudyDesign.name
+    - name
+    - biomedicalConceptId
+    - bcCategoryId(s) containing BC
+Rule Type: JSONata
+Scope:
+  Entities:
+    Include:
+      - 'Activity'
+Sensitivity: Record

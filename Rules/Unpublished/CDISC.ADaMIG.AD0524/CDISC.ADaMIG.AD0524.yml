@@ -1,0 +1,122 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: ADaMIG-MD
+        References:
+          - Citations:
+              - Cited Guidance: The MDBDS supports analysis needs by adding SPDEVID as a
+                  required key variable and USUBJID as a conditionally required
+                  variable. See the BDS class for further details.
+                Document: ADaMIG-MD v1.0
+                Item: ''
+                Section: '3.1'
+            Criteria:
+              Logical Expression:
+                Condition: ''
+                Rule: ''
+              Plain Language Expression: ''
+              Type: Failure
+            Origin: ADaM Conformance Rules
+            Release Notes: ''
+            Rule Identifier:
+              Id: '524'
+              Version: '2'
+            Validator Rule Message: ''
+            Version: '5.0'
+
+      - Name: ADaMIG
+        References:
+          - Citations:
+              - Cited Guidance: <- When a secondary variable is included in the dataset, then
+                  the primary variable must also be included.
+                Document: ADaMIG v1.3
+                Item: '6'
+                Section: '3.1.1'
+            Criteria:
+              Logical Expression:
+                Condition: ''
+                Rule: ''
+              Plain Language Expression: ''
+              Type: Failure
+            Origin: ADaM Conformance Rules
+            Release Notes: ''
+            Rule Identifier:
+              Id: '524'
+              Version: '2'
+            Validator Rule Message: ''
+            Version: '5.0'
+        Version: '1.3'
+
+      - Name: ADaMIG
+        References:
+          - Citations:
+              - Cited Guidance: <- When a secondary variable is included in the dataset, then
+                  the primary variable must also be included.
+                Document: ADaMIG v1.2
+                Item: '6'
+                Section: '3.1.1'
+            Criteria:
+              Logical Expression:
+                Condition: ''
+                Rule: ''
+              Plain Language Expression: ''
+              Type: Failure
+            Origin: ADaM Conformance Rules
+            Release Notes: ''
+            Rule Identifier:
+              Id: '524'
+              Version: '1'
+            Validator Rule Message: ''
+            Version: '5.0'
+        Version: '1.2'
+
+      - Name: ADaMIG
+        References:
+          - Citations:
+              - Cited Guidance: <- When a secondary variable is included in the dataset, then
+                  the primary variable must also be included.
+                Document: ADaMIG v1.1
+                Item: '6'
+                Section: '3.1.1'
+            Criteria:
+              Logical Expression:
+                Condition: ''
+                Rule: ''
+              Plain Language Expression: ''
+              Type: Failure
+            Origin: ADaM Conformance Rules
+            Release Notes: ''
+            Rule Identifier:
+              Id: '524'
+              Version: '1'
+            Validator Rule Message: ''
+            Version: '5.0'
+        Version: '1.1'
+
+Check:
+  all:
+    - name: ATOXGRHN
+      operator: exists
+    - name: ATOXGRH
+      operator: not_exists
+Core:
+  Id: CDISC.ADaMIG.AD0524
+  Status: Draft
+  Version: '1'
+Description: ''
+Executability: Fully Executable
+Outcome:
+  Message: ATOXGRHN present but ATOXGRH not be present in dataset
+  Output Variables:
+    - USUBJID
+    - ATOXGRHN
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+      - BASIC DATA STRUCTURE
+      - MEDICAL DEVICE BASIC DATA STRUCTURE
+  Subclasses:
+    Include:
+      - ALL
+Sensitivity: Dataset

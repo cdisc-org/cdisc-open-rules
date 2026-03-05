@@ -1,0 +1,62 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: ADAMIG
+        Version: '1.3'
+        References:
+  # Origin for ADaM/ADaMIG should be defined in yaml validation schema
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: AD0061
+              Version: '1'
+    # Version 4.0 for ADaM/ADaMIG should be allowed according to yaml validation schema
+            Version: '4.0'
+            Citations:
+              - Document: IG v1.3
+                Section: 3.2
+                Cited Guidance: >-
+                  ADaM IG v1.3, Section 3.2, Table 3.2.6:  TRTSDT and/or TRTSDTM are
+                  required if there is an investigational product.
+Check:
+  all:
+    - name: $TRTSDT_EXISTS
+      operator: equal_to
+      value: false
+    - name: $TRTSDTM_EXISTS
+      operator: equal_to
+      value: false
+    - name: EX
+      operator: exists
+Core:
+  # Need to make yaml validation accept ADAMIG
+  # Will we need to prepend ADaM rules with "AD0..."? 
+  # (column "Check Number" in ADaM_Conformance_Rules_v4.0 is 1-3 digits only, some with a ",1" (e.g. "37,01") )
+  Id: CDISC.ADAMIG.AD0061
+  Status: Draft
+  Version: '1'
+Description: Raise an error when TRTSDT and/or TRTSDTM are not present, though data
+  exist in SDTM.EX
+Operations:
+  - id: $TRTSDT_EXISTS
+    domain: ADSL
+    name: TRTSDT
+    operator: variable_exists
+  - id: $TRTSDTM_EXISTS
+    domain: ADSL
+    name: TRTSDTM
+    operator: variable_exists
+
+Outcome:
+  Message: SDTM.EX is present and neither TRTSDT or TRTSDTM are present
+  Output Variables:
+Rule Type: Domain Presence Check
+Scope:
+  Classes:
+    Include:
+      # What ADaM classes will be defined? ADSL, BDS, OCCDS, OTHER?
+      - ADSL
+  Domains:
+    Include:
+      - ADSL
+      - EX
+Sensitivity: Dataset

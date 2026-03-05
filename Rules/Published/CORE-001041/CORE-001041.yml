@@ -1,0 +1,61 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: Within a document version, the specified displayed section
+                  numbers for narrative content must be unique.'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00245'
+              Version: '1'
+            Version: '1.0'
+        Version: '4.0'
+Check: |-
+  $.study.documentedBy@$sdd.
+    $sdd.versions@$sddv.
+      (
+        $sddv.contents[displaySectionNumber=true and sectionNumber].
+          {
+            "group": $join([$sdd.id,$sddv.id,sectionNumber],"\n"),
+            "details":
+              {
+                "instanceType": instanceType,
+                "id": id,
+                "path": _path,
+                "StudyDefinitionDocument.id": $sdd.id,
+                "StudyDefinitionDocument.name": $sdd.name,
+                "StudyDefinitionDocumentVersion.id": $sddv.id,
+                "StudyDefinitionDocumentVersion.version": $sddv.version,
+                "name": name,
+                "sectionNumber": sectionNumber,
+                "displaySectionNumber": displaySectionNumber
+              }
+          } {group: $count(details)>1?details}
+        ).*
+Core:
+  Id: 'CORE-001041'
+  Status: Published
+  Version: '1'
+Description: 'Within a document version, the specified displayed section numbers
+  for narrative content must be unique.'
+Executability: Fully Executable
+Outcome:
+  Message: 'The displayed section number is not unique within the study definition
+    document version.'
+  Output Variables:
+    - StudyDefinitionDocument.id
+    - StudyDefinitionDocument.name
+    - StudyDefinitionDocumentVersion.id
+    - StudyDefinitionDocumentVersion.version
+    - name
+    - sectionNumber
+    - displaySectionNumber
+Rule Type: JSONata
+Scope:
+  Entities:
+    Include:
+      - 'NarrativeContent'
+Sensitivity: Record

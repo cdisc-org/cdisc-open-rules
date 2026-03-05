@@ -1,0 +1,84 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'Each study enrollment must apply to either a geographic scope,
+                  a study site, or a study cohort.'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00195'
+              Version: '1'
+            Version: '1.0'
+        Version: '4.0'
+Check: |-
+  study.versions@$sv.
+    $sv.amendments@$a.
+      $a.enrollments.
+      (
+        $gs:=$exists(forGeographicScope) and forGeographicScope;
+        $ss:=$exists(forStudySiteId) and forStudySiteId;
+        $sc:=$exists(forStudyCohortId) and forStudyCohortId;
+        {
+          "instanceType": instanceType,
+          "id": id,
+          "path": _path,
+          "StudyAmendment.id": $a.id,
+          "StudyAmendment.name": $a.name,
+          "name": name,
+          "forGeographicScope": 
+            forGeographicScope
+            ? forGeographicScope.(id&": "&type.decode),
+          "forStudySiteId": 
+            forStudySiteId
+            ? (
+                $sid:=forStudySiteId;
+                $sid&": "&
+                  (
+                    $sid in $sv.organizations.managedSites.id
+                    ? $sv.organizations.managedSites[id=$sid].name
+                    : "Invalid forStudySiteId"
+                  )
+              ),
+          "forStudyCohortId":
+            forStudyCohortId
+            ? (
+                $cid:=forStudyCohortId;
+                $cid&": "&
+                  (
+                    $cid in $sv.**.cohorts.id
+                    ? $sv.**.cohorts[id=$cid].name
+                    : "Invalid forStudyCohortId"
+                  )
+              ),
+          "check": $sum([$gs?1:0,$ss?1:0,$sc?1:0])!=1 or
+                   ($ss and $not(forStudySiteId in $sv.organizations.managedSites.id)) or
+                   ($sc and $not(forStudyCohortId in $sv.**.cohorts.id))
+        }
+      )[check=true]
+Core:
+  Id: 'CORE-000984'
+  Status: Published
+  Version: '1'
+Description: 'Each study enrollment must apply to either a geographic scope, a
+  study site, or a study cohort.'
+Executability: Fully Executable
+Outcome:
+  Message: 'The study enrollment does not apply to either a geographic scope, a
+    study site, or a study cohort - it does not apply to one and only one of
+    these, or the value for forStudySiteId or forStudyCohortId is invalid.'
+  Output Variables:
+    - StudyAmendment.id
+    - StudyAmendment.name
+    - name
+    - forGeographicScope
+    - forStudySiteId
+    - forStudyCohortId
+Rule Type: JSONata
+Scope:
+  Entities:
+    Include:
+      - SubjectEnrollment
+Sensitivity: Record

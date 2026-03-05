@@ -1,0 +1,101 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'Within a study design, the planned age range must be specified
+                  either in the study population or in all cohorts.'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00097'
+              Version: '1'
+            Version: '1.0'
+        Version: '3.0'
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'Within a study design, the planned age range must be specified
+                  either in the study population or in all cohorts.'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00097'
+              Version: '1'
+            Version: '1.0'
+        Version: '4.0'
+Check:
+  all:
+    - name: instanceType
+      operator: equal_to
+      value: 'StudyDesignPopulation'
+    - name: rel_type
+      operator: equal_to
+      value: 'definition'
+    - any:
+        - all:
+            - any:
+                - name: plannedAge
+                  operator: not_exists
+                - name: plannedAge
+                  operator: empty
+                - name: plannedAge
+                  operator: equal_to
+                  value: false
+            - any:
+                - name: plannedAge.StudyCohort
+                  operator: not_exists
+                - name: plannedAge.StudyCohort
+                  operator: empty
+                - name: plannedAge.StudyCohort
+                  operator: equal_to
+                  value: false
+        - all:
+            - name: plannedAge
+              operator: equal_to
+              value: true
+            - name: plannedAge.StudyCohort
+              operator: equal_to
+              value: true
+Core:
+  Id: 'CORE-000815'
+  Status: Published
+  Version: '1'
+Description: 'Within a study design, the planned age range must be specified
+  either in the study population or in all cohorts.'
+Executability: Fully Executable
+Match Datasets:
+  - Join Type: left
+    Keys:
+      - Left: id
+        Right: parent_id
+      - Left: instanceType
+        Right: parent_entity
+      - rel_type
+    Name: StudyCohort
+Outcome:
+  Message: 'Planned age has not been specified for either the study population or
+    the cohort, or it has been specified for both.'
+  Output Variables:
+    - parent_entity
+    - parent_id
+    - parent_rel
+    - id
+    - name
+    - plannedAge
+    - plannedAge.minValue
+    - plannedAge.maxValue
+    - plannedAge.unit.decode
+    - id.StudyCohort
+    - name.StudyCohort
+    - plannedAge.StudyCohort
+    - plannedAge.minValue.StudyCohort
+    - plannedAge.maxValue.StudyCohort
+    - plannedAge.unit.decode.StudyCohort
+Rule Type: Record Data
+Scope:
+  Entities:
+    Include:
+      - 'StudyDesignPopulation'
+Sensitivity: Record

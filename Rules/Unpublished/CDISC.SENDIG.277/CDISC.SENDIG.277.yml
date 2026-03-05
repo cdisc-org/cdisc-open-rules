@@ -1,0 +1,77 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: SEND dataset file names are in lowercase
+                Document: SENDIG v3.0
+                Section: '3.2.1'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND277
+              Version: '1'
+            Version: '5.0'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: SEND dataset file names are in lowercase
+                Document: SENDIG v3.1
+                Section: '3.2.1'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND277
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: SEND dataset file names are in lowercase
+                Document: SENDIG v3.1.1
+                Section: '3.2.1'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND277
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: SEND dataset file names are in lowercase
+                Document: SENDIG v3.1
+                Section: '3.2.1'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND277
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+Check:
+  all:
+    - name: dataset_location
+      operator: not_matches_regex
+      value: '^[a-z0-9\-\.]+$'
+Core:
+  Id: CDISC.SENDIG.277
+  Status: Draft
+  Version: '1'
+Description: Trigger error when a file name has uppercase characters
+Executability: Fully Executable
+Outcome:
+  Message: File name must be all lowercase characters
+  Output Variables:
+    - dataset_name
+    - dataset_label
+    - dataset_location
+Rule Type: Dataset Metadata Check
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Dataset

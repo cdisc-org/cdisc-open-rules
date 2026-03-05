@@ -1,0 +1,117 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: MASPEC defines the base organ or tissue examined and is required
+                  when MATEST is 'Gross Pathological Examination'. It should not
+                  be used when MATEST is 'Clinical Signs Follow-up'.
+                Document: SENDIG v3.0
+                Item: Assumption 4.b
+                Section: Section 6.3.7.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND177
+              Version: '1'
+            Version: '5.0'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: MASPEC defines the base organ or tissue examined and is required
+                  when MATEST is 'Gross Pathological Examination'. It should not
+                  be used when MATEST is 'Clinical Signs Follow-up'.
+                Document: SENDIG v3.1
+                Item: Assumption 4.b
+                Section: Section 6.3.7.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND177
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: MASPEC defines the base organ or tissue examined and is required
+                  when MATEST is 'Gross Pathological Examination'. It should not
+                  be used when MATEST is 'Clinical Signs Follow-up'.
+                Document: SENDIG v3.1.1
+                Item: Assumption 4.b
+                Section: Section 6.3.7.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND177
+              Version: '1'
+            Version: '5.0'
+        Version: 3.1.1
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: MASPEC defines the base organ or tissue examined and is required
+                  when MATEST is 'Gross Pathological Examination'. It should not
+                  be used when MATEST is 'Clinical Signs Follow-up'.
+                Document: SENDIG v3.1
+                Item: Assumption 4.b
+                Section: Section 6.3.7.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND177
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: MASPEC defines the base organ or tissue examined and is required
+                  when MATEST is 'Gross Pathological Examination'. It should not
+                  be used when MATEST is 'Clinical Signs Follow-up'.
+                Document: SENDIG v3.1.1
+                Item: Assumption 4.b
+                Section: Section 6.3.7.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND177
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: MASPEC defines the base organ or tissue examined and is required
+                  when MATEST is 'Gross Pathological Examination'. It should not
+                  be used when MATEST is 'Clinical Signs Follow-up'.
+                Document: SENDIG v3.1.1
+                Item: Assumption 4.b
+                Section: Section 6.3.7.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND177
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+Check:
+  all:
+    - name: MATEST
+      operator: equal_to
+      value: Gross Pathological Examination
+    - name: MASPEC
+      operator: empty
+Core:
+  Id: CORE-000456
+  Status: Published
+  Version: '1'
+Description: When MATEST is "Gross Pathological Examination" MASPEC is required.
+Executability: Fully Executable
+Outcome:
+  Message: When MATEST is 'Gross Pathological Examination' then MASPEC is required.
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - MA
+Sensitivity: Record

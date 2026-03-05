@@ -1,0 +1,92 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: The use of an interval of uncertainty, as described in Section
+                  4.4.2, cannot be used for DSSTDTC.
+                Document: IG v3.1
+                Section: 6.2.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: 'SEND317'
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: The use of an interval of uncertainty, as described in Section
+                  4.4.2, cannot be used for DSSTDTC.
+                Document: IG v3.1.1
+                Section: 6.2.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: 'SEND317'
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: The use of an interval of uncertainty, as described in Section
+                  4.4.2, cannot be used for DSSTDTC.
+                Document: IG v3.1
+                Section: 6.2.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: 'SEND317'
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: The use of an interval of uncertainty, as described in Section
+                  4.4.2, cannot be used for DSSTDTC.
+                Document: IG v3.1.1
+                Section: 6.2.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: 'SEND317'
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: The use of an interval of uncertainty, as described in Section
+                  4.4.2, cannot be used for DSSTDTC.
+                Document: IG v3.1.1
+                Section: 6.2.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: 'SEND317'
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+Check:
+  all:
+    - name: DSSTDTC
+      operator: non_empty
+    - name: DSSTDTC
+      operator: contains
+      value: /
+Core:
+  Id: CORE-000359
+  Status: Published
+  Version: '1'
+Description: Raise an error when the value of DSSTDTC contains a slash
+Executability: Fully Executable
+Outcome:
+  Message: The value of DSSTDTC may not be an interval
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - EVENTS
+  Domains:
+    Include:
+      - DS
+Sensitivity: Record

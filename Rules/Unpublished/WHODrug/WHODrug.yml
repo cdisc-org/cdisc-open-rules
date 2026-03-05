@@ -1,0 +1,56 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: WHODrug
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: WHODrug
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: WHODrug
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+Check:
+  all:
+    - name: $valid_whodrug_codes
+      operator: not_equal_to
+      value: true
+Core:
+  Id: WHODrug
+  Status: Draft
+  Version: '1'
+Description: WHODRUG hierarchy is valid in provided whodrug dictionary version
+Executability: Fully Executable
+Operations:
+  - id: $valid_whodrug_codes
+    operator: whodrug_code_hierarchy
+Outcome:
+  Message: Invalid whodrug code hierarcy
+  Output Variables:
+    - --DECOD
+    - --CLAS
+    - --CLASCD
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record

@@ -1,0 +1,82 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'Epoch ordering using previous and next attributes is expected
+                  to be consistent with the order of corresponding scheduled
+                  activity instances according to their specified default
+                  conditions.'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00088'
+              Version: '1'
+            Version: '1.0'
+        Version: '3.0'
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'Epoch ordering using previous and next attributes is expected
+                  to be consistent with the order of corresponding scheduled
+                  activity instances according to their specified default
+                  conditions.'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00088'
+              Version: '1'
+            Version: '1.0'
+        Version: '4.0'
+Check: |-
+  ($.study.versions)@$sv.
+      ($sv.studyDesigns)@$sd.
+          ($sd.scheduleTimelines[mainTimeline = true])@$st.
+              (
+                  $actord := $utils.parse_refs("nextId","next",$sd.epochs)
+                              [previousId = null].$append(id,**.next.id);
+                  $reford := $utils.parse_refs("defaultConditionId","defaultCondition",$st.instances)
+                              [id = $st.entryId].**[instanceType="ScheduledActivityInstance" and epochId in $sd.epochs.id].epochId
+                              ~> $filter(function($v,$i,$a){$i = 0 or ($i > 0 and $v != $a[$i-1])});
+                  $epoch := function($id){($e:=$sd.epochs[id=$id];$id & ": " & $e.name)};
+                  {
+                      "instanceType": $sd.instanceType,
+                      "id": $sd.id,
+                      "path": $sd._path,
+                      "name": $sd.name,
+                      "ScheduleTimeline.id": $st.id,
+                      "ScheduleTimeline.name": $st.name,
+                      "ScheduleTimeline.mainTimeline": $st.mainTimeline,
+                      "Epoch order by previous/next": "[ "&($actord ~> $map($epoch) ~> $join(" > "))&" ]",
+                      "Epoch order by timeline refs": "[ "&($reford ~> $map($epoch) ~> $join(" > "))&" ]"
+                  }[`Epoch order by previous/next` != `Epoch order by timeline refs`]
+              )
+Core:
+  Id: 'CORE-001048'
+  Status: Published
+  Version: '1'
+Description: 'Epoch ordering using previous and next attributes is expected to
+  be consistent with the order of corresponding scheduled activity instances
+  according to their specified default conditions.'
+Executability: Partially Executable - Possible Overreporting
+Outcome:
+  Message: 'The order of the epochs in the study design (as defined by the next
+    attribute) does not match the order of epochs as referenced from scheduled
+    activity instances in the main timeline that are ordered by default
+    condition.'
+  Output Variables:
+    - name
+    - ScheduleTimeline.id
+    - ScheduleTimeline.name
+    - ScheduleTimeline.mainTimeline
+    - Epoch order by previous/next
+    - Epoch order by timeline refs
+Rule Type: JSONata
+Scope:
+  Entities:
+    Include:
+      - 'StudyDesign'
+      - 'InterventionalStudyDesign'
+      - 'ObservationalStudyDesign'
+Sensitivity: Record

@@ -1,0 +1,105 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: The reason the result should be excluded from all calculations.
+                  Used only when BWEXCLFL is Y.
+                Document: IG v3.0
+                Section: 6.3.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND149
+              Version: '1'
+            Version: '5.0'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: The reason the result should be excluded from all calculations.
+                  Used only when BWEXCLFL is Y.
+                Document: IG v3.1
+                Section: 6.3.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND149
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: The reason the result should be excluded from all calculations.
+                  Used only when BWEXCLFL is Y.
+                Document: IG v3.1.1
+                Section: 6.3.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND149
+              Version: '1'
+            Version: '5.0'
+        Version: 3.1.1
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: The reason the result should be excluded from all calculations.
+                  Used only when BWEXCLFL is Y.
+                Document: IG v3.1
+                Section: 6.3.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND149
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: The reason the result should be excluded from all calculations.
+                  Used only when BWEXCLFL is Y.
+                Document: IG v3.1.1
+                Section: 6.3.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND149
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: The reason the result should be excluded from all calculations.
+                  Used only when BWEXCLFL is Y.
+                Document: IG v3.1.1
+                Section: 6.3.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND149
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+Check:
+  all:
+    - name: --EXCLFL
+      operator: not_equal_to
+      value: Y
+    - name: --REASEX
+      operator: non_empty
+Core:
+  Id: CORE-000481
+  Status: Published
+  Version: '1'
+Description: Trigger error when --REASEX is populated and --EXCLFL is not 'Y'
+Executability: Fully Executable
+Outcome:
+  Message: --REASEX may only be present when --EXCLFL is 'Y'
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record

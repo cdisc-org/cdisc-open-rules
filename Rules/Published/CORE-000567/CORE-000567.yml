@@ -1,0 +1,115 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: (ND) codelist is referenced in the domain table
+                Document: IG v3.0
+                Section: 6.3.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND143
+              Version: '1'
+            Version: '5.0'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: (ND) codelist is referenced in the domain table
+                Document: IG v3.1
+                Section: 6.3.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND143
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: (ND) codelist is referenced in the domain table
+                Document: IG v3.1.1
+                Section: 6.3.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND143
+              Version: '1'
+            Version: '5.0'
+        Version: 3.1.1
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: (ND) codelist is referenced in the domain table
+                Document: IG v3.1.1
+                Section: 6.3.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND143
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: (ND) codelist is referenced in the domain table
+                Document: IG v3.1
+                Section: 6.3.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND143
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: (ND) codelist is referenced in the domain table
+                Document: IG v3.1.1
+                Section: 6.3.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND143
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: (ND) codelist is referenced in the domain table
+                Document: TIG v1.0
+                Item: BWSTAT Controlled Terms, Codelist, or Format
+                Section: 2.8.9.9
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0079
+              Version: '1'
+            Version: '1.0'
+        Substandard: SEND
+        Version: '1.0'
+Check:
+  all:
+    - name: --STAT
+      operator: non_empty
+    - name: --STAT
+      operator: not_equal_to
+      value: NOT DONE
+Core:
+  Id: CORE-000567
+  Status: Published
+  Version: '1'
+Description: Trigger error when --STAT is non-empty and does not contain a value
+  from the ND codelist
+Executability: Fully Executable
+Outcome:
+  Message: --STAT does not contain a value from the (ND) codelist
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Exclude:
+      - SC
+  Use Case: NONCLIN
+Sensitivity: Record

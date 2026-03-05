@@ -1,0 +1,138 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: The mass identification should be unique within the subject,
+                  regardless of mass location.
+                Document: SENDIG v3.0
+                Section: 6.3.3
+              - Cited Guidance: The mass identification should be unique within the subject,
+                  regardless of mass location.
+                Document: SENDIG v3.1
+                Section: 6.3.3
+              - Cited Guidance: The mass identification should be unique within the subject,
+                  regardless of mass location.
+                Document: SENDIG v3.1.1
+                Section: 6.3.3
+            Origin: SENDIG Conformance Rules
+            Rule Identifier:
+              Id: 'SEND157'
+              Version: '1'
+            Version: '5'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: The mass identification should be unique within the subject,
+                  regardless of mass location.
+                Document: SENDIG v3.0
+                Section: 6.3.3
+              - Cited Guidance: The mass identification should be unique within the subject,
+                  regardless of mass location.
+                Document: SENDIG v3.1
+                Section: 6.3.3
+              - Cited Guidance: The mass identification should be unique within the subject,
+                  regardless of mass location.
+                Document: SENDIG v3.1.1
+                Section: 6.3.3
+            Origin: SENDIG Conformance Rules
+            Rule Identifier:
+              Id: 'SEND157'
+              Version: '1'
+            Version: '5'
+        Version: '3.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: The mass identification should be unique within the subject,
+                  regardless of mass location.
+                Document: SENDIG v3.0
+                Section: 6.3.3
+              - Cited Guidance: The mass identification should be unique within the subject,
+                  regardless of mass location.
+                Document: SENDIG v3.1
+                Section: 6.3.3
+              - Cited Guidance: The mass identification should be unique within the subject,
+                  regardless of mass location.
+                Document: SENDIG v3.1.1
+                Section: 6.3.3
+            Origin: SENDIG Conformance Rules
+            Rule Identifier:
+              Id: 'SEND157'
+              Version: '1'
+            Version: '5'
+        Version: v1.1
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: The mass identification should be unique within the subject,
+                  regardless of mass location.
+                Document: SENDIG v3.0
+                Section: 6.3.3
+              - Cited Guidance: The mass identification should be unique within the subject,
+                  regardless of mass location.
+                Document: SENDIG v3.1
+                Section: 6.3.3
+              - Cited Guidance: The mass identification should be unique within the subject,
+                  regardless of mass location.
+                Document: SENDIG v3.1.1
+                Section: 6.3.3
+            Origin: SENDIG Conformance Rules
+            Rule Identifier:
+              Id: 'SEND157'
+              Version: '1'
+            Version: '5'
+        Version: v1.2
+      - Name: SENDID-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: The mass identification should be unique within the subject,
+                  regardless of mass location.
+                Document: SENDIG v3.0
+                Section: 6.3.3
+              - Cited Guidance: The mass identification should be unique within the subject,
+                  regardless of mass location.
+                Document: SENDIG v3.1
+                Section: 6.3.3
+              - Cited Guidance: The mass identification should be unique within the subject,
+                  regardless of mass location.
+                Document: SENDIG v3.1.1
+                Section: 6.3.3
+            Origin: SENDIG Conformance Rules
+            Rule Identifier:
+              Id: 'SEND157'
+              Version: '1'
+            Version: '5'
+        Version: v1.0
+Check:
+  any:
+    - name: --SPID
+      operator: is_not_unique_set
+      value: -"USUBJID"
+Core:
+  Id: CDISC.SENDIG.SEND157
+  Status: Draft
+  Version: '1'
+Description: Raise an error when the mass identification is not unique within
+  the subject, regardless of the mass location.
+Outcome:
+  Message: The mass identification is not unique within the subject regardless of
+    the mass location.
+  Output Variables:
+    - --SPID
+    - USUBJID
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - CL
+      - PM
+      - MA
+      - MI
+      - TF
+Sensitivity: Variable

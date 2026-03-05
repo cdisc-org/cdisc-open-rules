@@ -1,0 +1,129 @@
+Authorities:
+  - Organization: 'FDA'
+    Standards:
+      - Name: 'SENDIG'
+        References:
+          - Citations:
+              - Cited Guidance: 'All nonclinical studies should include Trial Sets (tx.xpt)
+                  dataset.'
+                Document: 'FDA'
+                Section: 'FDAB046'
+            Origin: 'FDA Business Rules'
+            Rule Identifier:
+              Id: 'FB4603'
+              Version: '1'
+            Version: '1.5'
+        Version: '3.0'
+      - Name: 'SENDIG'
+        References:
+          - Citations:
+              - Cited Guidance: 'All nonclinical studies should include Trial Sets (tx.xpt)
+                  dataset.'
+                Document: 'FDA'
+                Section: 'FDAB046'
+            Origin: 'FDA Business Rules'
+            Rule Identifier:
+              Id: 'FB4603'
+              Version: '1'
+            Version: '1.5'
+        Version: '3.1'
+      - Name: 'SENDIG'
+        References:
+          - Citations:
+              - Cited Guidance: 'All nonclinical studies should include Trial Sets (tx.xpt)
+                  dataset.'
+                Document: 'FDA'
+                Section: 'FDAB046'
+            Origin: 'FDA Business Rules'
+            Rule Identifier:
+              Id: 'FB4603'
+              Version: '1'
+            Version: '1.5'
+        Version: '3.1.1'
+      - Name: 'SENDIG-GENETOX'
+        References:
+          - Citations:
+              - Cited Guidance: 'All nonclinical studies should include Trial Sets (tx.xpt)
+                  dataset.'
+                Document: 'FDA'
+                Section: 'FDAB046'
+            Origin: 'FDA Business Rules'
+            Rule Identifier:
+              Id: 'FB4603'
+              Version: '1'
+            Version: '1.5'
+        Version: '1.0'
+      - Name: 'SENDIG-DART'
+        References:
+          - Citations:
+              - Cited Guidance: 'All nonclinical studies should include Trial Sets (tx.xpt)
+                  dataset.'
+                Document: 'FDA'
+                Section: 'FDAB046'
+            Origin: 'FDA Business Rules'
+            Rule Identifier:
+              Id: 'FB4603'
+              Version: '1'
+            Version: '1.5'
+        Version: '1.1'
+      - Name: 'SENDIG-DART'
+        References:
+          - Citations:
+              - Cited Guidance: 'All nonclinical studies should include Trial Sets (tx.xpt)
+                  dataset.'
+                Document: 'FDA'
+                Section: 'FDAB046'
+            Origin: 'FDA Business Rules'
+            Rule Identifier:
+              Id: 'FB4603'
+              Version: '1'
+            Version: '1.5'
+        Version: '1.2'
+      - Name: 'SENDIG-AR'
+        References:
+          - Citations:
+              - Cited Guidance: 'All nonclinical studies should include Trial Sets (tx.xpt)
+                  dataset.'
+                Document: 'FDA'
+                Section: 'FDAB046'
+            Origin: 'FDA Business Rules'
+            Rule Identifier:
+              Id: 'FB4603'
+              Version: '1'
+            Version: '1.5'
+        Version: '1.0'
+Check:
+  all:
+    - name: '$txparmcd'
+      operator: 'does_not_contain'
+      value: 'ARMCD'
+Core:
+  Id: CORE-000891
+  Status: Published
+  Version: '1'
+Description: For each Trial Set (SETCD) in the TX dataset an Arm Code (ARMCD)
+  record should be included.
+Executability: Fully Executable # We make a list of the distinct values of TXPARMCD within each group with same value for SETCD
+Operations:
+  - domain: TX
+    group:
+      - SETCD
+    id: $txparmcd
+    name: TXPARMCD
+    operator: distinct
+Outcome:
+  Message: TX dataset should include a TXPARMCD = 'ARMCD' record per SETCD.
+  Output Variables:
+    - SETCD
+    - $txparmcd
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - TRIAL DESIGN
+  Domains:
+    Include:
+      - TX
+# When "Dataset" is taken for "Sensitivity", only the first violation is reported
+# When "Record" is taken for "Sensitivity", a violation is reported for each row in the group that violates the rule
+Sensitivity: Record

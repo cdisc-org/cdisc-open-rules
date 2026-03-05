@@ -1,0 +1,127 @@
+Authorities:
+  # REMARK: not applicable to SENDIG-3.0
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: In general, all domains based on the three general observation
+                  classes should have at least one Timing variable. In the
+                  Events or Interventions general observation class, this could
+                  be the start date of the event or intervention…This domain
+                  should contain one record per constant dosing interval per
+                  subject per administration site (as identified in FOCID). A
+                  constant dosing interval is sponsor defined and represents a
+                  specific period of time during which a subject was treated
+                  with a specific lot at a constant dose level.
+                Document: IG v3.1
+                Section: 4.4|6.1.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: 'SEND291'
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: In general, all domains based on the three general observation
+                  classes should have at least one Timing variable. In the
+                  Events or Interventions general observation class, this could
+                  be the start date of the event or intervention…This domain
+                  should contain one record per constant dosing interval per
+                  subject per administration site (as identified in FOCID). A
+                  constant dosing interval is sponsor defined and represents a
+                  specific period of time during which a subject was treated
+                  with a specific lot at a constant dose level.
+                Document: IG v3.1.1
+                Section: 4.4|6.1.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: 'SEND291'
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1.1'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: In general, all domains based on the three general observation
+                  classes should have at least one Timing variable. In the
+                  Events or Interventions general observation class, this could
+                  be the start date of the event or intervention…This domain
+                  should contain one record per constant dosing interval per
+                  subject per administration site (as identified in FOCID). A
+                  constant dosing interval is sponsor defined and represents a
+                  specific period of time during which a subject was treated
+                  with a specific lot at a constant dose level.
+                Document: IG v3.1.1
+                Section: 4.4|6.1.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: 'SEND291'
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: In general, all domains based on the three general observation
+                  classes should have at least one Timing variable. In the
+                  Events or Interventions general observation class, this could
+                  be the start date of the event or intervention…This domain
+                  should contain one record per constant dosing interval per
+                  subject per administration site (as identified in FOCID). A
+                  constant dosing interval is sponsor defined and represents a
+                  specific period of time during which a subject was treated
+                  with a specific lot at a constant dose level.
+                Document: IG v3.1
+                Section: 4.4|6.1.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: 'SEND291'
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: In general, all domains based on the three general observation
+                  classes should have at least one Timing variable. In the
+                  Events or Interventions general observation class, this could
+                  be the start date of the event or intervention…This domain
+                  should contain one record per constant dosing interval per
+                  subject per administration site (as identified in FOCID). A
+                  constant dosing interval is sponsor defined and represents a
+                  specific period of time during which a subject was treated
+                  with a specific lot at a constant dose level.
+                Document: IG v3.1.1
+                Section: 4.4|6.1.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: 'SEND291'
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+Check:
+  all:
+    - name: --STDTC
+      operator: empty
+    - name: --STDY
+      operator: empty
+Core:
+  Id: CORE-000385
+  Status: Published
+  Version: '1'
+Description: Either --STDTC or --STDY must be populated.
+Executability: Fully Executable
+Outcome:
+  Message: Neither --STDTC nor --STDY is populated
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - INTERVENTIONS
+  Domains:
+    Include:
+      - EX
+Sensitivity: Record

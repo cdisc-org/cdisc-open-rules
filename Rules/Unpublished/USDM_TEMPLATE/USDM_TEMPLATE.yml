@@ -1,0 +1,74 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: '<Textual statement of rule>'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'USDM_TEMPLATE'
+              Version: '1'
+            Version: '1.0'
+        Version: '3.0'
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: '<Textual statement of rule>'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'USDM_TEMPLATE'
+              Version: '1'
+            Version: '1.0'
+        Version: '4.0'
+Check:
+  all:
+    - operator: variable_metadata_not_equal_to
+    - ...: ''
+  any:
+    - operator: variable_metadata_not_equal_to
+    - ...: ''
+  not:
+    operator: variable_metadata_not_equal_to
+Core:
+  Id: ''
+  Status: Draft
+  Version: '1'
+Description: '<Description>'
+Executability: >-
+  Fully Executable | Not Executable | Partially Executable | Partially
+  Executable - Possible Overreporting | Partially Executable - Possible
+  Underreporting
+# Match Datasets is optional
+# - if needed, remove this comment
+# - if not needed, remove the Match Datasets section
+Match Datasets:
+  - Keys:
+      - ''
+      - Left: ''
+        Right: ''
+    Name: >-
+      ...
+# Operations is optional
+# - if needed, remove this comment
+# - if not needed, remove the Operations section
+Operations:
+  - ...: ''
+Outcome:
+  Message: '<Error Message>'
+  Output Variables:
+    - parent_entity
+    - parent_id
+    - parent_rel
+    - id
+    - name
+Rule Type: Record Data
+Scope:
+  Entities:
+    Exclude:
+      - ''
+    Include:
+      - ''
+Sensitivity: Record

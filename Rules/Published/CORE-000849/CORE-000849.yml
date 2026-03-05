@@ -1,0 +1,58 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'An instance of a class must not refer to itself as its next
+                  instance.'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00022'
+              Version: '1'
+            Version: '1.0'
+        Version: '3.0'
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'An instance of a class must not refer to itself as its next
+                  instance.'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00022'
+              Version: '1'
+            Version: '1.0'
+        Version: '4.0'
+Check:
+  all:
+    - name: rel_type
+      operator: equal_to
+      value: 'definition'
+    - name: nextId
+      operator: exists
+    - name: nextId
+      operator: equal_to
+      value: id
+Core:
+  Id: CORE-000849
+  Status: Published
+  Version: '1'
+Description: 'An instance of a class must not refer to itself as its next instance.'
+Executability: Fully Executable
+Outcome:
+  Message: 'An instance of a class is referencing itself as its next instance.'
+  Output Variables:
+    - parent_entity
+    - parent_id
+    - parent_rel
+    - id
+    - name
+    - nextId
+Rule Type: Record Data
+Scope:
+  Entities:
+    Include:
+      - ALL
+Sensitivity: Record

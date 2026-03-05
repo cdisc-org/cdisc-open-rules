@@ -1,0 +1,101 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Data in BRTHDTC should never be derived from another variable.
+                Document: IG v3.0
+                Section: 5.1.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND111
+              Version: '1'
+            Version: '5.0'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Data in BRTHDTC should never be derived from another variable.
+                Document: IG v3.1
+                Section: 5.1.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND111
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Data in BRTHDTC should never be derived from another variable.
+                Document: IG v3.1.1
+                Section: 5.1.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND111
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1.1'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: Data in BRTHDTC should never be derived from another variable.
+                Document: IG v3.1
+                Section: 5.1.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND111
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: Data in BRTHDTC should never be derived from another variable.
+                Document: IG v3.1
+                Section: 5.1.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND111
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: Data in BRTHDTC should never be derived from another variable.
+                Document: IG v3.1.1
+                Section: 5.1.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND111
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+Check:
+  all:
+    - name: variable_name
+      operator: equal_to
+      value: BRTHDTC
+    - name: define_variable_is_collected
+      operator: equal_to
+      value: false
+Core:
+  Id: CDISC.SENDIG.111
+  Status: Draft
+  Version: '1'
+Description: Check 'BRTHDTC ORIGIN = collected in the Define-XML document'
+Executability: Fully Executable
+Outcome:
+  Message: "BRTHDTC is not described as being 'Collected' in the define.xml"
+# Rule Type: Variable Metadata Check against Define XML - NO!
+Rule Type: Value Check against Define XML Variable
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - DM
+Sensitivity: Dataset
