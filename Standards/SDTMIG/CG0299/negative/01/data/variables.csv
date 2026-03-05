@@ -1,0 +1,34 @@
+dataset,variable,label,type,length
+tr.xpt,STUDYID,Study Identifier,Char,50
+tr.xpt,DOMAIN,Domain Abbreviation,Char,50
+tr.xpt,USUBJID,Unique Subject Identifier,Char,50
+tr.xpt,TRSEQ,Sequence Number,Num,8
+tr.xpt,TRGRPID,Group ID,Char,50
+tr.xpt,TRREFID,Reference ID,Char,50
+tr.xpt,TRSPID,Sponsor-Defined Identifier,Char,50
+tr.xpt,TRLNKID,Link ID,Char,50
+tr.xpt,TRLNKGRP,Link Group,Char,50
+tr.xpt,TRTESTCD,Tumor/Lesion Assessment Short Name,Char,50
+tr.xpt,TRTEST,Tumor/Lesion Assessment Test Name,Char,50
+tr.xpt,TRORRES,Result or Finding in Original Units,Char,50
+tr.xpt,TRORRESU,Original Units,Char,50
+tr.xpt,TRSTRESC,Character Result/Finding in Std Format,Char,50
+tr.xpt,TRSTRESN,Numeric Result/Finding in Standard Units,Num,8
+tr.xpt,TRSTRESU,Standard Units,Char,50
+tr.xpt,TRSTAT,Completion Status,Char,50
+tr.xpt,TRREASND,Reason Not Done,Char,50
+tr.xpt,TRNAM,Laboratory/Vendor Name,Char,50
+tr.xpt,TRLOC,Location of the Tumor/Lesion,Char,50
+tr.xpt,TRMETHOD,Method Used to Identify the Tumor/Lesion,Char,50
+tr.xpt,TRLOBXFL,Last Observation Before Exposure Flag,Char,50
+tr.xpt,TRBLFL,Baseline Flag,Char,50
+tr.xpt,TREVAL,Evaluator,Char,50
+tr.xpt,TREVALID,Evaluator Identifier,Char,50
+tr.xpt,TRACPTFL,Accepted Record Flag,Char,50
+tr.xpt,VISITNUM,Visit Number,Num,8
+tr.xpt,VISIT,Visit Name,Char,50
+tr.xpt,VISITDY,Planned Study Day of Visit,Num,8
+tr.xpt,TAETORD,Planned Order of Element within Arm,Num,8
+tr.xpt,EPOCH,Epoch,Char,50
+tr.xpt,TRDTC,Date/Time of Tumor/Lesion Measurement,Char,50
+tr.xpt,TRDY,Study Day of Tumor/Lesion Measurement,Num,8

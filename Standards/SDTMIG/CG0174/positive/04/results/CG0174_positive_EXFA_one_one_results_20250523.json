@@ -1,0 +1,32 @@
+{
+    "EX": [
+        {
+            "executionStatus": "skipped",
+            "dataset": "ex.xpt",
+            "domain": "EX",
+            "variables": [],
+            "message": "Rule skipped - doesn't apply to domain for rule id=CDISC.SDTMIG.CG0174, dataset=EX",
+            "errors": []
+        }
+    ],
+    "FA": [
+        {
+            "executionStatus": "success",
+            "dataset": "fa.xpt",
+            "domain": "FA",
+            "variables": [],
+            "message": null,
+            "errors": []
+        }
+    ],
+    "RELREC": [
+        {
+            "executionStatus": "skipped",
+            "dataset": "relrec.xpt",
+            "domain": "",
+            "variables": [],
+            "message": "Rule skipped - doesn't apply to domain for rule id=CDISC.SDTMIG.CG0174, dataset=RELREC",
+            "errors": []
+        }
+    ]
+}

@@ -1,0 +1,23 @@
+{
+  "VS": [
+    {
+      "executionStatus": "success",
+      "domain": "VS",
+      "variables": [
+        "POOLID",
+        "USUBJID"
+      ],
+      "message": "Both USUBJID and POOID are empty",
+      "errors": [
+        {
+          "value": {
+            "USUBJID": "",
+            "POOLID": null
+          },
+          "row": 5,
+          "seq": 6
+        }
+      ]
+    }
+  ]
+}

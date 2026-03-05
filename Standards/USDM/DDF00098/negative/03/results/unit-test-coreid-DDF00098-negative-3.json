@@ -1,0 +1,137 @@
+{
+    "StudyCohort": [
+        {
+            "executionStatus": "success",
+            "dataset": "StudyCohort.xpt",
+            "domain": null,
+            "variables": [],
+            "message": null,
+            "errors": []
+        }
+    ],
+    "StudyDesignPopulation": [
+        {
+            "executionStatus": "success",
+            "dataset": "StudyDesignPopulation.xpt",
+            "domain": "StudyDesignPopulation",
+            "variables": [
+                "id",
+                "id.StudyCohort",
+                "name",
+                "name.StudyCohort",
+                "parent_entity",
+                "parent_id",
+                "parent_rel",
+                "plannedSex",
+                "plannedSex.StudyCohort",
+                "plannedSex.decode",
+                "plannedSex.decode.StudyCohort"
+            ],
+            "message": "Planned sex has not been specified for either the study population or the cohort, or it has been specified for both.",
+            "errors": [
+                {
+                    "value": {
+                        "name": "POP1",
+                        "name.StudyCohort": "COHORT1",
+                        "plannedSex": false,
+                        "parent_entity": "StudyDesign",
+                        "id.StudyCohort": "StudyCohort_1",
+                        "plannedSex.decode": null,
+                        "parent_id": "StudyDesign_1",
+                        "parent_rel": "population",
+                        "id": "StudyDesignPopulation_1",
+                        "plannedSex.decode.StudyCohort": "Not in dataset",
+                        "plannedSex.StudyCohort": "Not in dataset"
+                    },
+                    "dataset": "StudyDesignPopulation.xpt",
+                    "row": 1
+                },
+                {
+                    "value": {
+                        "name": "POP1",
+                        "name.StudyCohort": "COHORT2",
+                        "plannedSex": false,
+                        "parent_entity": "StudyDesign",
+                        "id.StudyCohort": "StudyCohort_2",
+                        "plannedSex.decode": null,
+                        "parent_id": "StudyDesign_1",
+                        "parent_rel": "population",
+                        "id": "StudyDesignPopulation_1",
+                        "plannedSex.decode.StudyCohort": "Not in dataset",
+                        "plannedSex.StudyCohort": "Not in dataset"
+                    },
+                    "dataset": "StudyDesignPopulation.xpt",
+                    "row": 1
+                },
+                {
+                    "value": {
+                        "name": "POP2",
+                        "name.StudyCohort": "COHORT3",
+                        "plannedSex": null,
+                        "parent_entity": "StudyDesign",
+                        "id.StudyCohort": "StudyCohort_3",
+                        "plannedSex.decode": null,
+                        "parent_id": "StudyDesign_2",
+                        "parent_rel": "population",
+                        "id": "StudyDesignPopulation_2",
+                        "plannedSex.decode.StudyCohort": "Not in dataset",
+                        "plannedSex.StudyCohort": "Not in dataset"
+                    },
+                    "dataset": "StudyDesignPopulation.xpt",
+                    "row": 2
+                },
+                {
+                    "value": {
+                        "name": "POP2",
+                        "name.StudyCohort": "COHORT4",
+                        "plannedSex": null,
+                        "parent_entity": "StudyDesign",
+                        "id.StudyCohort": "StudyCohort_4",
+                        "plannedSex.decode": null,
+                        "parent_id": "StudyDesign_2",
+                        "parent_rel": "population",
+                        "id": "StudyDesignPopulation_2",
+                        "plannedSex.decode.StudyCohort": "Not in dataset",
+                        "plannedSex.StudyCohort": "Not in dataset"
+                    },
+                    "dataset": "StudyDesignPopulation.xpt",
+                    "row": 2
+                },
+                {
+                    "value": {
+                        "name": "POP3",
+                        "name.StudyCohort": null,
+                        "plannedSex": null,
+                        "parent_entity": "StudyDesign",
+                        "id.StudyCohort": null,
+                        "plannedSex.decode": null,
+                        "parent_id": "StudyDesign_3",
+                        "parent_rel": "population",
+                        "id": "StudyDesignPopulation_3",
+                        "plannedSex.decode.StudyCohort": "Not in dataset",
+                        "plannedSex.StudyCohort": "Not in dataset"
+                    },
+                    "dataset": "StudyDesignPopulation.xpt",
+                    "row": 3
+                },
+                {
+                    "value": {
+                        "name": "POP4",
+                        "name.StudyCohort": null,
+                        "plannedSex": null,
+                        "parent_entity": "StudyDesign",
+                        "id.StudyCohort": null,
+                        "plannedSex.decode": null,
+                        "parent_id": "StudyDesign_4",
+                        "parent_rel": "population",
+                        "id": "StudyDesignPopulation_4",
+                        "plannedSex.decode.StudyCohort": "Not in dataset",
+                        "plannedSex.StudyCohort": "Not in dataset"
+                    },
+                    "dataset": "StudyDesignPopulation.xpt",
+                    "row": 4
+                }
+            ]
+        }
+    ]
+}

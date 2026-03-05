@@ -1,0 +1,30 @@
+{
+    "CONDITION": [
+        {
+            "executionStatus": "success",
+            "domain": "CONDITION",
+            "variables": [
+                "appliesToIds",
+                "id",
+                "name",
+                "parent_entity",
+                "parent_id",
+                "parent_rel"
+            ],
+            "message": "The condition does not apply to a procedure, biomedical concept, biomedical concept surrogate, biomedical concept category or a whole activity.",
+            "errors": [
+                {
+                    "value": {
+                        "parent_rel": "conditions",
+                        "name": "COND1",
+                        "id": "Condition_1",
+                        "parent_entity": "StudyDesign",
+                        "parent_id": "StudyDesign_1",
+                        "appliesToIds": false
+                    },
+                    "row": 1
+                }
+            ]
+        }
+    ]
+}

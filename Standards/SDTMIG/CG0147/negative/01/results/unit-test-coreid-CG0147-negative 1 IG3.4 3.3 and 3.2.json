@@ -1,0 +1,34 @@
+{2 items
+"DM":[1 item
+0:{5 items
+"executionStatus":"success"
+"domain":"DM"
+"variables":[3 items
+0:"$max_ex_exendtc"
+1:"$max_ex_exstdtc"
+2:"RFXENDTC"
+]
+"message":"RFXENDTC does not equal the latest value of EX.EXSTDTC or EX.EXENDTC"
+"errors":[1 item
+0:{3 items
+"value":{3 items
+"$max_ex_exendtc":"2013-01-23"
+"RFXENDTC":"2013-01-22"
+"$max_ex_exstdtc":"2013-01-23"
+}
+"row":1
+"uSubjId":"CDISC001"
+}
+]
+}
+]
+"EX":[1 item
+0:{5 items
+"executionStatus":"skipped"
+"domain":"EX"
+"variables":[]0 items
+"message":NULL
+"errors":[]0 items
+}
+]
+}

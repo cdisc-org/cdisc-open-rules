@@ -1,0 +1,37 @@
+{
+  "VS": [
+    {
+      "executionStatus": "success",
+      "domain": "VS",
+      "variables": [
+        "VSEXCLFL",
+        "VSREASEX"
+      ],
+      "message": "VSREASEX may only be present when VSEXCLFL is 'Y'",
+      "errors": [
+        {
+          "value": {
+            "VSEXCLFL": "",
+            "VSREASEX": "Reason exlcusion"
+          },
+          "row": 3,
+          "SEQ": 3
+        }
+      ]
+    }
+  ],
+  "SC": [
+    {
+      "executionStatus": "execution_error",
+      "domain": "SC",
+      "variables": [],
+      "message": "rule execution error",
+      "errors": [
+        {
+          "error": "Column not found in data",
+          "message": "SCEXCLFL"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,184 @@
+{
+  "rule": {
+    "Authorities": [
+      {
+        "Organization": "CDISC",
+        "Standards": [
+          {
+            "Name": "SDTMIG",
+            "Version": "3.2",
+            "References": [
+              {
+                "Origin": "SDTM and SDTMIG Conformance Rules",
+                "Version": "2.0",
+                "Citations": [
+                  {
+                    "Document": "IG v3.2",
+                    "Item": "Assumption 3d",
+                    "Section": "6.2",
+                    "Cited_Guidance": "d. When DSCAT='PROTOCOL MILESTONE', DSTERM and DSDECOD will contain the same value drawn from the sponsor's controlled terminology."
+                  }
+                ],
+                "Rule_Identifier": {
+                  "Id": "CG0066",
+                  "Version": "1"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "Core": {
+      "Id": "CDISC.SDTMIG.CG0066",
+      "Version": "1",
+      "Status": "Draft"
+    },
+    "Description": "When DSCAT equals PROTOCOL MILESTONE, then DSTERM should be equal to DSDECOD",
+    "Outcome": {
+      "Message": "DSCAT equals PROTOCOL MILESTONE but DSTERM is not equal to DSDECOD",
+      "Output_Variables": [
+        "DSTERM",
+        "DSDECOD"
+      ]
+    },
+    "Sensitivity": "Record",
+    "Scope": {
+      "Classes": {
+        "Include": [
+          "EVENTS"
+        ]
+      },
+      "Domains": {
+        "Include": [
+          "DS"
+        ]
+      }
+    },
+    "Executability": "Fully Executable",
+    "Check": {
+      "all": [
+        {
+          "name": "DSCAT",
+          "operator": "equal_to",
+          "value": "PROTOCOL MILESTONE",
+          "value_is_literal": true
+        },
+        {
+          "name": "DSTERM",
+          "operator": "not_equal_to",
+          "value": "DSDECOD"
+        }
+      ]
+    },
+    "Rule_Type": "Record Data"
+  },
+  "datasets": [
+    {
+      "filename": "ds.xpt",
+      "label": "Disposition",
+      "domain": "DS",
+      "variables": [
+        {
+          "name": "STUDYID",
+          "label": "Study Identifier",
+          "type": "Char",
+          "length": 12
+        },
+        {
+          "name": "DOMAIN",
+          "label": "Domain Abbreviation",
+          "type": "Char",
+          "length": 2
+        },
+        {
+          "name": "USUBJID",
+          "label": "Unique Subject Identifier",
+          "type": "Char",
+          "length": 20
+        },
+        {
+          "name": "DSTERM",
+          "label": "Reported Term for the Disposition Event",
+          "type": "Char",
+          "length": 200
+        },
+        {
+          "name": "DSDECOD",
+          "label": "Reported Term for the Disposition Event",
+          "type": "Char",
+          "length": 200
+        },
+        {
+          "name": "DSCAT",
+          "label": "Reported Term for the Disposition Event",
+          "type": "Char",
+          "length": 200
+        },
+        {
+          "name": "EPOCH",
+          "label": "Epoch",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "DSSTDTC",
+          "label": "Date/Time of Informed Consent",
+          "type": "Char",
+          "length": 19
+        }
+      ],
+      "records": {
+        "STUDYID": [
+          "CDISCCORE01",
+          "CDISCCORE01",
+          "CDISCCORE01",
+          "CDISCCORE01"
+        ],
+        "DOMAIN": [
+          "DS",
+          "DS",
+          "DS",
+          "DS"
+        ],
+        "USUBJID": [
+          "015246-076-0003-00003",
+          "015246-203-0003-00001",
+          "015246-300-0004-00002",
+          "015246-036-0002-00004"
+        ],
+        "DSTERM": [
+          "FUTURE USE OF SAMPLES INFORMED CONSENT OBTAINED",
+          "STUDY INFORMED CONSENT OBTAINED",
+          "COMPLETED",
+          "RANDOMIZED"
+        ],
+        "DSDECOD": [
+          "Future USE OF SAMPLES INFORMED CONSENT OBTAINED",
+          "STUDY INFORMED CONSENT OBTAINE",
+          "ADVERSE EVENT",
+          "RANDOMIZED"
+        ],
+        "DSCAT": [
+          "PROTOCOL MILESTONE",
+          "PROTOCOL MILESTONE",
+          "PROTOCOL MILESTONE",
+          "PROTOCOL MILESTONE"
+        ],
+        "EPOCH": [
+          "",
+          "",
+          "SCREENING",
+          ""
+        ],
+        "DSSTDTC": [
+          "2018-03-06",
+          "2018-03-06",
+          "2018-03-30",
+          "2018-03-30T13:05"
+        ]
+      }
+    }
+  ],
+  "codelists": []
+}

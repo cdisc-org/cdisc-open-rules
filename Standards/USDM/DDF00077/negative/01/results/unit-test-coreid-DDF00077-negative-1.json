@@ -1,0 +1,83 @@
+{
+    "GeographicScope": [
+        {
+            "executionStatus": "success",
+            "dataset": "GeographicScope.xpt",
+            "domain": "GeographicScope",
+            "variables": [
+                "code",
+                "code.standardCode.code",
+                "code.standardCode.decode",
+                "id",
+                "parent_entity",
+                "parent_id",
+                "parent_rel",
+                "type.code",
+                "type.decode"
+            ],
+            "message": "The geographic scope is global (type.code = C68846) and a code has been specified or the geographic scope is not global (type.code is not C68846) and no code has been specified.",
+            "errors": [
+                {
+                    "value": {
+                        "type.decode": "Global",
+                        "parent_rel": "geographicScopes",
+                        "parent_id": "GovernanceDate_1",
+                        "id": "GeographicScope_1",
+                        "parent_entity": "GovernanceDate",
+                        "code.standardCode.code": "EUR",
+                        "code": true,
+                        "code.standardCode.decode": "Europe",
+                        "type.code": "C68846"
+                    },
+                    "dataset": "GeographicScope.xpt",
+                    "row": 1
+                },
+                {
+                    "value": {
+                        "type.decode": "Region",
+                        "parent_rel": "geographicScopes",
+                        "parent_id": "GovernanceDate_2",
+                        "id": "GeographicScope_2",
+                        "parent_entity": "GovernanceDate",
+                        "code.standardCode.code": null,
+                        "code": false,
+                        "code.standardCode.decode": null,
+                        "type.code": "C41129"
+                    },
+                    "dataset": "GeographicScope.xpt",
+                    "row": 2
+                },
+                {
+                    "value": {
+                        "type.decode": "Country",
+                        "parent_rel": "geographicScopes",
+                        "parent_id": "GovernanceDate_4",
+                        "id": "GeographicScope_4",
+                        "parent_entity": "GovernanceDate",
+                        "code.standardCode.code": null,
+                        "code": null,
+                        "code.standardCode.decode": null,
+                        "type.code": "C25464"
+                    },
+                    "dataset": "GeographicScope.xpt",
+                    "row": 4
+                },
+                {
+                    "value": {
+                        "type.decode": "Country",
+                        "parent_rel": "geographicScopes",
+                        "parent_id": "GovernanceDate_5",
+                        "id": "GeographicScope_5",
+                        "parent_entity": "GovernanceDate",
+                        "code.standardCode.code": "USA",
+                        "code": true,
+                        "code.standardCode.decode": "United States of America",
+                        "type.code": "C68846"
+                    },
+                    "dataset": "GeographicScope.xpt",
+                    "row": 5
+                }
+            ]
+        }
+    ]
+}

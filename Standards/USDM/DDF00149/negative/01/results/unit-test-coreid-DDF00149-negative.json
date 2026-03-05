@@ -1,0 +1,145 @@
+{
+    "StudyArm": [
+        {
+            "executionStatus": "success",
+            "dataset": "StudyArm.xpt",
+            "domain": "StudyArm",
+            "variables": [
+                "$code_for_decode_pref_term",
+                "$code_for_decode_value",
+                "$codelist_code",
+                "$codelist_extensible",
+                "$codelist_extensible_override",
+                "$pref_term_for_code",
+                "$value_for_code",
+                "dataOriginType.code",
+                "dataOriginType.codeSystem",
+                "dataOriginType.codeSystemVersion",
+                "dataOriginType.decode",
+                "id",
+                "name",
+                "parent_entity",
+                "parent_id",
+                "parent_rel"
+            ],
+            "message": "The study arm data origin type is not specified according to the extensible data origin type (C188727) DDF codelist - codeSystem is not \"http://www.cdisc.org\", codeSystemVersion is not a valid terminology package date, and/or the code or decode (either as preferred term or as submission value) is found in the codelist (case insensitive) but the corresponding decode or code does not match the codelist value (case sensitive).",
+            "errors": [
+                {
+                    "value": {
+                        "$value_for_code": "Virtual Data",
+                        "dataOriginType.decode": "Data Generated Within Study",
+                        "dataOriginType.codeSystem": "http://www.cdisc.org",
+                        "$codelist_code": "C188727",
+                        "$code_for_decode_pref_term": "C188866",
+                        "$pref_term_for_code": "Virtual Data",
+                        "id": "StudyArm_1",
+                        "dataOriginType.codeSystemVersion": "2023-12-15",
+                        "parent_id": "StudyDesign_1",
+                        "parent_rel": "arms",
+                        "$codelist_extensible_override": "Y",
+                        "$code_for_decode_value": "C188866",
+                        "parent_entity": "StudyDesign",
+                        "dataOriginType.code": "C188865",
+                        "$codelist_extensible": false,
+                        "name": "ARM1"
+                    },
+                    "dataset": "StudyArm.xpt",
+                    "row": 1,
+                    "instance_id": "StudyArm_1"
+                },
+                {
+                    "value": {
+                        "$value_for_code": "Historical Data",
+                        "dataOriginType.decode": "Historic Data",
+                        "dataOriginType.codeSystem": "http://www.cdisc.org",
+                        "$codelist_code": "C188727",
+                        "$code_for_decode_pref_term": null,
+                        "$pref_term_for_code": "Historical Data",
+                        "id": "StudyArm_2",
+                        "dataOriginType.codeSystemVersion": "2023-12-15",
+                        "parent_id": "StudyDesign_1",
+                        "parent_rel": "arms",
+                        "$codelist_extensible_override": "Y",
+                        "$code_for_decode_value": null,
+                        "parent_entity": "StudyDesign",
+                        "dataOriginType.code": "C188864",
+                        "$codelist_extensible": false,
+                        "name": "ARM2"
+                    },
+                    "dataset": "StudyArm.xpt",
+                    "row": 2,
+                    "instance_id": "StudyArm_2"
+                },
+                {
+                    "value": {
+                        "$value_for_code": null,
+                        "dataOriginType.decode": "Real World Data",
+                        "dataOriginType.codeSystem": "http://www.cdisc.org",
+                        "$codelist_code": "C188727",
+                        "$code_for_decode_pref_term": null,
+                        "$pref_term_for_code": null,
+                        "id": "StudyArm_3",
+                        "dataOriginType.codeSystemVersion": "2024-09-27",
+                        "parent_id": "StudyDesign_1",
+                        "parent_rel": "arms",
+                        "$codelist_extensible_override": null,
+                        "$code_for_decode_value": "C165830",
+                        "parent_entity": "StudyDesign",
+                        "dataOriginType.code": "C165830xx",
+                        "$codelist_extensible": true,
+                        "name": "ARM3"
+                    },
+                    "dataset": "StudyArm.xpt",
+                    "row": 3,
+                    "instance_id": "StudyArm_3"
+                },
+                {
+                    "value": {
+                        "$value_for_code": "Synthetic Data",
+                        "dataOriginType.decode": "Synthetic Data",
+                        "dataOriginType.codeSystem": "CDISC Terminology",
+                        "$codelist_code": "C188727",
+                        "$code_for_decode_pref_term": "C176263",
+                        "$pref_term_for_code": "Synthetic Data",
+                        "id": "StudyArm_4",
+                        "dataOriginType.codeSystemVersion": "2023-12-15",
+                        "parent_id": "StudyDesign_1",
+                        "parent_rel": "arms",
+                        "$codelist_extensible_override": "Y",
+                        "$code_for_decode_value": "C176263",
+                        "parent_entity": "StudyDesign",
+                        "dataOriginType.code": "C176263",
+                        "$codelist_extensible": false,
+                        "name": "ARM4"
+                    },
+                    "dataset": "StudyArm.xpt",
+                    "row": 4,
+                    "instance_id": "StudyArm_4"
+                },
+                {
+                    "value": {
+                        "$value_for_code": null,
+                        "dataOriginType.decode": "Virtual Data",
+                        "dataOriginType.codeSystem": "http://www.cdisc.org",
+                        "$codelist_code": "C188727",
+                        "$code_for_decode_pref_term": null,
+                        "$pref_term_for_code": null,
+                        "id": "StudyArm_5",
+                        "dataOriginType.codeSystemVersion": "2024 09 27",
+                        "parent_id": "StudyDesign_1",
+                        "parent_rel": "arms",
+                        "$codelist_extensible_override": null,
+                        "$code_for_decode_value": null,
+                        "parent_entity": "StudyDesign",
+                        "dataOriginType.code": "C188865",
+                        "$codelist_extensible": null,
+                        "name": "ARM5"
+                    },
+                    "dataset": "StudyArm.xpt",
+                    "row": 5,
+                    "instance_id": "StudyArm_5"
+                }
+            ]
+        }
+    ]
+}

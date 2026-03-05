@@ -1,0 +1,99 @@
+{
+  "EG": [
+    {
+      "executionStatus": "success",
+      "domain": "EG",
+      "variables": [
+        "EGORRES",
+        "EGSTRESN"
+      ],
+      "message": "EGSTRESN may not be populated as EGORRES does not represent a pure numeric value",
+      "errors": [
+        {
+          "value": {
+            "EGORRES": "<62",
+            "EGSTRESN": 62
+          },
+          "row": 4,
+          "uSubjId": "123101",
+          "seq": 1
+        }
+      ]
+    }
+  ],
+  "FA": [
+    {
+      "executionStatus": "success",
+      "domain": "FA",
+      "variables": [
+        "FAORRES",
+        "FASTRESN"
+      ],
+      "message": "FASTRESN may not be populated as FAORRES does not represent a pure numeric value",
+      "errors": [
+        {
+          "value": {
+            "FAORRES": "SEVERE",
+            "FASTRESN": 1
+          },
+          "row": 3,
+          "uSubjId": "123102",
+          "seq": 1
+        }
+      ]
+    }
+  ],
+  "MI": [
+    {
+      "executionStatus": "success",
+      "domain": "MI",
+      "variables": [],
+      "message": null,
+      "errors": []
+    }
+  ],
+  "LB": [
+    {
+      "executionStatus": "success",
+      "domain": "LB",
+      "variables": [
+        "LBORRES",
+        "LBSTRESN"
+      ],
+      "message": "LBSTRESN may not be populated as LBORRES does not represent a pure numeric value",
+      "errors": [
+        {
+          "value": {
+            "LBSTRESN": 50,
+            "LBORRES": "<50"
+          },
+          "row": 3,
+          "uSubjId": "123101",
+          "seq": 1
+        }
+      ]
+    }
+  ],
+  "VS": [
+    {
+      "executionStatus": "success",
+      "domain": "VS",
+      "variables": [
+        "VSORRES",
+        "VSSTRESN"
+      ],
+      "message": "VSSTRESN may not be populated as VSORRES does not represent a pure numeric value",
+      "errors": [
+        {
+          "value": {
+            "VSORRES": ">200",
+            "VSSTRESN": 200
+          },
+          "row": 3,
+          "uSubjId": "123101",
+          "seq": 2
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{5 items
+"AE":[1 item
+0:{5 items
+"domain":"AE"
+"errors":[3 items
+0:{4 items
+"row":0
+"seq":1
+"uSubjId":"123101"
+"value":{1 item
+"AEPORTOT":"PARTIAL"
+}
+}
+1:{4 items
+"row":1
+"seq":2
+"uSubjId":"123102"
+"value":{1 item
+"AEPORTOT":"HEMI"
+}
+}
+2:{2 items
+"row":0
+"value":{1 item
+"AELOC":"Not in dataset"
+}
+}
+]
+"executionStatus":"success"
+"message":"AEPORTOT variable is present, when AELOC variable does not exist in a dataset."
+"variables":[1 item
+0:"AEPORTOT"
+]
+}
+]
+"EC":[1 item
+0:{5 items
+"domain":"EC"
+"errors":[3 items
+0:{4 items
+"row":0
+"seq":1
+"uSubjId":"123101"
+"value":{1 item
+"ECPORTOT":"SINGLE"
+}
+}
+1:{4 items
+"row":1
+"seq":2
+"uSubjId":"123102"
+"value":{1 item
+"ECPORTOT":"SEGMENT"
+}
+}
+2:{2 items
+"row":0
+"value":{1 item
+"ECLOC":"Not in dataset"
+}
+}
+]
+"executionStatus":"success"
+"message":"ECPORTOT variable is present, when ECLOC variable does not exist in a dataset."
+"variables":[1 item
+0:"ECPORTOT"
+]
+}
+]
+"OE":[]0 items
+"PR":[]0 items
+"TU":[1 item
+0:{5 items
+"domain":"TU"
+"errors":[3 items
+0:{4 items
+"row":0
+"seq":1
+"uSubjId":"123101"
+"value":{1 item
+"TUPORTOT":"SINGLE"
+}
+}
+1:{4 items
+"row":1
+"seq":2
+"uSubjId":"123102"
+"value":{1 item
+"TUPORTOT":""
+}
+}
+2:{2 items
+"row":0
+"value":{1 item
+"TULOC":"Not in dataset"
+}
+}
+]
+"executionStatus":"success"
+"message":"TUPORTOT variable is present, when TULOC variable does not exist in a dataset."
+"variables":[1 item
+0:"TUPORTOT"
+]
+}
+]
+}

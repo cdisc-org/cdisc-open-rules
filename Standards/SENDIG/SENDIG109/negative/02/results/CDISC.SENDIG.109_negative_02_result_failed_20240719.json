@@ -1,0 +1,80 @@
+{
+  "AE": [
+    {
+      "executionStatus": "success",
+      "domain": "AE",
+      "variables": [
+        "USUBJID"
+      ],
+      "message": "USUBJID is not found in DM.USUBJID",
+      "errors": [
+        {
+          "value": {
+            "USUBJID": "002"
+          },
+          "row": 2,
+          "USUBJID": "002",
+          "SEQ": 2
+        },
+        {
+          "value": {
+            "USUBJID": "003"
+          },
+          "row": 3,
+          "USUBJID": "003",
+          "SEQ": 3
+        },
+        {
+          "value": {
+            "USUBJID": "CDISC-TEST-005"
+          },
+          "row": 5,
+          "USUBJID": "CDISC-TEST-005",
+          "SEQ": 1
+        }
+      ]
+    }
+  ],
+  "DM": [
+    {
+      "executionStatus": "success",
+      "domain": "DM",
+      "variables": [],
+      "message": null,
+      "errors": []
+    }
+  ],
+  "TA": [
+    {
+      "executionStatus": "execution_error",
+      "domain": "TA",
+      "variables": [],
+      "message": "rule execution error",
+      "errors": [
+        {
+          "error": "Column not found in data",
+          "message": "USUBJID"
+        }
+      ]
+    }
+  ],
+  "LB": [
+    {
+      "executionStatus": "success",
+      "domain": "LB",
+      "variables": [
+        "USUBJID"
+      ],
+      "message": "USUBJID is not found in DM.USUBJID",
+      "errors": [
+        {
+          "value": {
+            "USUBJID": "CDISC-TEST-010"
+          },
+          "row": 5,
+          "USUBJID": "CDISC-TEST-010"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "QS": [
+    {
+      "executionStatus": "success",
+      "domain": "QS",
+      "variables": [
+        "dataset_name"
+      ],
+      "message": "Split dataset name is not 3 or 4 characters in length",
+      "errors": [
+        {
+          "value": {
+            "dataset_name": "QSCGI"
+          }
+        }
+      ]
+    }
+  ]
+}

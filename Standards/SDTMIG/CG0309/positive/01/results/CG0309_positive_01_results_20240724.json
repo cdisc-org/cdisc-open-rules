@@ -1,0 +1,43 @@
+{
+    "AE1111": [
+        {
+            "executionStatus": "skipped",
+            "domain": "AE1111",
+            "variables": [],
+            "message": null,
+            "errors": []
+        }
+    ],
+    "DM": [
+        {
+            "executionStatus": "skipped",
+            "domain": "DM",
+            "variables": [],
+            "message": null,
+            "errors": []
+        }
+    ],
+    "APRELSUB": [
+        {
+            "executionStatus": "execution_error",
+            "domain": "APRELSUB",
+            "variables": [],
+            "message": "rule execution error",
+            "errors": [
+                {
+                    "error": "Column not found in data",
+                    "message": "DOMAIN"
+                }
+            ]
+        }
+    ],
+    "APMH": [
+        {
+            "executionStatus": "success",
+            "domain": "APMH",
+            "variables": [],
+            "message": null,
+            "errors": []
+        }
+    ]
+}

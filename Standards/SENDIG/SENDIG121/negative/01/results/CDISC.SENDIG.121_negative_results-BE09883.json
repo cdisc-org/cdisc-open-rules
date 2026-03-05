@@ -1,0 +1,92 @@
+{
+  "CO": [
+    {
+      "executionStatus": "success",
+      "domain": "CO",
+      "variables": [
+        "IDVAR",
+        "IDVARVAL",
+        "RDOMAIN",
+        "USUBJID"
+      ],
+      "message": "IDVAR does not represent a variable present in the dataset identified in RDOMAIN",
+      "errors": [
+        {
+          "value": {
+            "USUBJID": "S001",
+            "RDOMAIN": "LB",
+            "IDVARVAL": "320",
+            "IDVAR": "LBSEQ"
+          },
+          "row": 1,
+          "uSubjId": "S001",
+          "seq": 1
+        },
+        {
+          "value": {
+            "USUBJID": "S001",
+            "RDOMAIN": "LB",
+            "IDVARVAL": "299",
+            "IDVAR": "NONSENSE"
+          },
+          "row": 2,
+          "uSubjId": "S001",
+          "seq": 1
+        }
+      ]
+    }
+  ],
+  "RELREC": [
+    {
+      "executionStatus": "success",
+      "domain": "RELREC",
+      "variables": [
+        "IDVAR",
+        "IDVARVAL",
+        "RDOMAIN",
+        "USUBJID"
+      ],
+      "message": "IDVAR does not represent a variable present in the dataset identified in RDOMAIN",
+      "errors": [
+        {
+          "value": {
+            "USUBJID": "S001",
+            "RDOMAIN": "LB",
+            "IDVARVAL": "320",
+            "IDVAR": "LBSEQ"
+          },
+          "row": 1,
+          "uSubjId": "S001"
+        },
+        {
+          "value": {
+            "USUBJID": "S001",
+            "RDOMAIN": "LB",
+            "IDVARVAL": "299",
+            "IDVAR": "NONSENSE"
+          },
+          "row": 2,
+          "uSubjId": "S001"
+        }
+      ]
+    }
+  ],
+  "SUPPLB": [
+    {
+      "executionStatus": "skipped",
+      "domain": "SUPPLB",
+      "variables": [],
+      "message": null,
+      "errors": []
+    }
+  ],
+  "LB": [
+    {
+      "executionStatus": "skipped",
+      "domain": "LB",
+      "variables": [],
+      "message": null,
+      "errors": []
+    }
+  ]
+}

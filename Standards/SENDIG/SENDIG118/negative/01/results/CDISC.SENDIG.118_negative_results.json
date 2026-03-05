@@ -1,0 +1,24 @@
+{
+  "CO": [
+    {
+      "executionStatus": "success",
+      "domain": "CO",
+      "variables": [
+        "IDVAR",
+        "IDVARVAL"
+      ],
+      "message": "IDVARVAL may not be populated as IDVAR is null",
+      "errors": [
+        {
+          "value": {
+            "IDVARVAL": "comment without variable",
+            "IDVAR": ""
+          },
+          "row": 3,
+          "uSubjId": "XX-11",
+          "seq": 6
+        }
+      ]
+    }
+  ]
+}

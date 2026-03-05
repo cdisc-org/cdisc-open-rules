@@ -1,0 +1,36 @@
+{
+  "LB": [
+    {
+      "domain": "LB",
+      "errors": [
+        {
+          "row": 0,
+          "seq": 1,
+          "uSubjId": "CDISC001",
+          "value": {
+            "LBDRVFL": "",
+            "LBORRES": "",
+            "LBSTAT": ""
+          }
+        },
+        {
+          "row": 1,
+          "seq": 2,
+          "uSubjId": "CDISC001",
+          "value": {
+            "LBDRVFL": "",
+            "LBORRES": "",
+            "LBSTAT": ""
+          }
+        }
+      ],
+      "executionStatus": "success",
+      "message": "--ORRES cannot be null when --STAT is null or --DRVFL not equal to 'Y'",
+      "variables": [
+        "LBDRVFL",
+        "LBORRES",
+        "LBSTAT"
+      ]
+    }
+  ]
+}

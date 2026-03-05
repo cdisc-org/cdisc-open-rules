@@ -1,0 +1,7 @@
+parent_entity,parent_id,parent_rel,rel_type,id,name,description,label,instanceType,defaultConditionId,epochId,timelineId,timelineExitId,activityIds,encounterId
+ScheduleTimeline,ScheduleTimeline_1,instances,definition,ScheduledActivityInstance_1,SCREEN1,,Screen One,ScheduledActivityInstance,ScheduledActivityInstance_2,,,,True,
+ScheduleTimeline,ScheduleTimeline_1,instances,definition,ScheduledActivityInstance_2,SCREEN2,,Screen Two,ScheduledActivityInstance,,,,ScheduleTimelineExit_1,True,
+ScheduleTimeline,ScheduleTimeline_1,entryId,reference,ScheduledActivityInstance_1,SCREEN1,,Screen One,ScheduledActivityInstance,ScheduledActivityInstance_2,,,,True,
+ScheduledActivityInstance,ScheduledActivityInstance_1,defaultConditionId,reference,ScheduledActivityInstance_2,SCREEN2,,Screen Two,ScheduledActivityInstance,,,,ScheduleTimelineExit_1,True,
+Timing,Timing_1,relativeFromScheduledInstanceId,reference,ScheduledActivityInstance_1,SCREEN1,,Screen One,ScheduledActivityInstance,ScheduledActivityInstance_2,,,,True,
+Timing,Timing_1,relativeToScheduledInstanceId,reference,ScheduledActivityInstance_2,SCREEN2,,Screen Two,ScheduledActivityInstance,,,,ScheduleTimelineExit_1,True,

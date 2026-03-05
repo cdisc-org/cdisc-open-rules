@@ -1,0 +1,49 @@
+{
+  "DM": [
+    {
+      "executionStatus": "skipped",
+      "domain": "DM",
+      "variables": [],
+      "message": null,
+      "errors": []
+    }
+  ],
+  "TA": [
+    {
+      "executionStatus": "skipped",
+      "domain": "TA",
+      "variables": [],
+      "message": null,
+      "errors": []
+    }
+  ],
+  "TX": [
+    {
+      "executionStatus": "success",
+      "domain": "TX",
+      "variables": [
+        "TXPARMCD",
+        "TXVAL"
+      ],
+      "message": "The value of TXVAL for TXPARMCD=TRTDOS is neither a number, a semicolon-delimited string containing numbers without spaces, or \"SEE PROTOCOL\"",
+      "errors": [
+        {
+          "value": {
+            "TXPARMCD": "TRTDOS",
+            "TXVAL": "invalid"
+          },
+          "row": 10,
+          "SEQ": 10
+        },
+        {
+          "value": {
+            "TXPARMCD": "TRTDOS",
+            "TXVAL": "-5.18,3.1416,2,2.88"
+          },
+          "row": 11,
+          "SEQ": 11
+        }
+      ]
+    }
+  ]
+}

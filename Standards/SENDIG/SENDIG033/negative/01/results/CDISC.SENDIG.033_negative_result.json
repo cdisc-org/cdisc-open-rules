@@ -1,0 +1,68 @@
+{
+  "Ae": [
+    {
+      "executionStatus": "success",
+      "domain": "Ae",
+      "variables": [
+        "DOMAIN"
+      ],
+      "message": "DOMAIN value must be uppercase",
+      "errors": [
+        {
+          "value": {
+            "DOMAIN": "Ae"
+          },
+          "row": 1,
+          "uSubjId": "123101"
+        },
+        {
+          "value": {
+            "DOMAIN": "ae"
+          },
+          "row": 2,
+          "uSubjId": "123101"
+        },
+        {
+          "value": {
+            "DOMAIN": "aE"
+          },
+          "row": 3,
+          "uSubjId": "123101"
+        }
+      ]
+    }
+  ],
+  "DM": [
+    {
+      "executionStatus": "success",
+      "domain": "DM",
+      "variables": [
+        "DOMAIN"
+      ],
+      "message": "DOMAIN value must be uppercase",
+      "errors": [
+        {
+          "value": {
+            "DOMAIN": "Dm"
+          },
+          "row": 2,
+          "uSubjId": "123102"
+        },
+        {
+          "value": {
+            "DOMAIN": "dM"
+          },
+          "row": 3,
+          "uSubjId": "123103"
+        },
+        {
+          "value": {
+            "DOMAIN": "dm"
+          },
+          "row": 5,
+          "uSubjId": "123105"
+        }
+      ]
+    }
+  ]
+}

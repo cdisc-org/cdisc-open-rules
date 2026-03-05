@@ -1,0 +1,637 @@
+{
+    "rule": {
+        "Authorities": [
+            {
+                "Organization": "CDISC",
+                "Standards": [
+                    {
+                        "Name": "SENDIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "SENDIG v3.0",
+                                        "Item": "Text",
+                                        "Section": "3.2.2",
+                                        "Cited_Guidance": "A descriptive Variable Label, using up to 40 characters, which should be unique for each variable in the dataset."
+                                    }
+                                ],
+                                "Origin": "SEND Conformance Rules",
+                                "Version": "5.0",
+                                "Rule_Identifier": {
+                                    "Id": "SEND273",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.0"
+                    },
+                    {
+                        "Name": "SENDIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "SENDIG v3.1",
+                                        "Item": "Text",
+                                        "Section": "3.2.2",
+                                        "Cited_Guidance": "A descriptive Variable Label, using up to 40 characters, which should be unique for each variable in the dataset."
+                                    }
+                                ],
+                                "Origin": "SEND Conformance Rules",
+                                "Version": "5.0",
+                                "Rule_Identifier": {
+                                    "Id": "SEND273",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.1"
+                    },
+                    {
+                        "Name": "SENDIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "SENDIG v3.1.1",
+                                        "Item": "Text",
+                                        "Section": "3.2.2",
+                                        "Cited_Guidance": "A descriptive Variable Label, using up to 40 characters, which should be unique for each variable in the dataset."
+                                    }
+                                ],
+                                "Origin": "SEND Conformance Rules",
+                                "Version": "5.0",
+                                "Rule_Identifier": {
+                                    "Id": "SEND273",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.1.1"
+                    },
+                    {
+                        "Name": "SENDIG-DART",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "SENDIG v3.1",
+                                        "Item": "Text",
+                                        "Section": "3.2.2",
+                                        "Cited_Guidance": "A descriptive Variable Label, using up to 40 characters, which should be unique for each variable in the dataset."
+                                    }
+                                ],
+                                "Origin": "SEND Conformance Rules",
+                                "Version": "5.0",
+                                "Rule_Identifier": {
+                                    "Id": "SEND273",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "1.1"
+                    },
+                    {
+                        "Name": "SENDIG-DART",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "SENDIG v3.1.1",
+                                        "Item": "Text",
+                                        "Section": "3.2.2",
+                                        "Cited_Guidance": "A descriptive Variable Label, using up to 40 characters, which should be unique for each variable in the dataset."
+                                    }
+                                ],
+                                "Origin": "SEND Conformance Rules",
+                                "Version": "5.0",
+                                "Rule_Identifier": {
+                                    "Id": "SEND273",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "1.2"
+                    },
+                    {
+                        "Name": "SENDIG-GENETOX",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "SENDIG v3.1.1",
+                                        "Item": "Text",
+                                        "Section": "3.2.2",
+                                        "Cited_Guidance": "A descriptive Variable Label, using up to 40 characters, which should be unique for each variable in the dataset."
+                                    }
+                                ],
+                                "Origin": "SEND Conformance Rules",
+                                "Version": "5.0",
+                                "Rule_Identifier": {
+                                    "Id": "SEND273",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "1.0"
+                    },
+                    {
+                        "Name": "TIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "TIG v1.0",
+                                        "Item": "Text",
+                                        "Section": "2.6 Guidance for Datasets, Tabulation Dataset, Num 5",
+                                        "Cited_Guidance": "Descriptive labels per this guide, up to 40 characters, will be provided as data variable labels for all variables, including Supplemental Qualifier variables"
+                                    }
+                                ],
+                                "Origin": "TIG Conformance Rules",
+                                "Version": "1.0",
+                                "Rule_Identifier": {
+                                    "Id": "TIG0192",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Substandard": "SEND",
+                        "Version": "1.0"
+                    }
+                ]
+            }
+        ],
+        "Check": {
+            "all": [
+                {
+                    "name": "variable_name",
+                    "operator": "is_not_unique_relationship",
+                    "value": "variable_label"
+                }
+            ]
+        },
+        "Core": {
+            "Status": "Draft",
+            "Version": "1"
+        },
+        "Description": "Raise an error when the variable label is not unique for each variable in the dataset",
+        "Executability": "Fully Executable",
+        "Outcome": {
+            "Message": "Variable label is not unique for each variable in the dataset.",
+            "Output_Variables": [
+                "variable_label",
+                "variable_name"
+            ]
+        },
+        "Scope": {
+            "Classes": {
+                "Include": [
+                    "ALL"
+                ]
+            },
+            "Domains": {
+                "Include": [
+                    "ALL"
+                ]
+            },
+            "Use_Case": "NONCLIN"
+        },
+        "Sensitivity": "Record",
+        "Rule_Type": "Variable Metadata Check"
+    },
+    "datasets": [
+        {
+            "filename": "gt.xpt",
+            "label": "Genetic Toxicology In Vitro Test Results",
+            "domain": "GT",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "DOMAIN",
+                    "label": "Domain Abbreviation",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "GTSEQ",
+                    "label": "Domain Abbreviation",
+                    "type": "Num",
+                    "length": 50
+                },
+                {
+                    "name": "GTREFID",
+                    "label": "Reference ID",
+                    "type": "Char",
+                    "length": 8
+                },
+                {
+                    "name": "GTTESTCD",
+                    "label": "Reference ID",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "GTTEST",
+                    "label": "Reference ID",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "GTORRES",
+                    "label": "Reference ID",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "GTORRESU",
+                    "label": "Unit of the Original Result",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "GTCOLSRT",
+                    "label": "Collected Summary Result Type",
+                    "type": "Char",
+                    "length": 8
+                },
+                {
+                    "name": "GTSTRESC",
+                    "label": "Standardized Result in Character Format",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "GTSTRESN",
+                    "label": "Standardized Result in Numeric Format",
+                    "type": "Num",
+                    "length": 50
+                },
+                {
+                    "name": "GTSTRESU",
+                    "label": "Unit of the Standardized Result",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "GTSTAT",
+                    "label": "Completion Status",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "GTREASND",
+                    "label": "Reason Not Done",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "GTMETHOD",
+                    "label": "Method of Test or Examination",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "GTDTC",
+                    "label": "Date/Time of Collection",
+                    "type": "Char",
+                    "length": 8
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "8325064",
+                    "8325064",
+                    "8325064",
+                    "8325064",
+                    "8325064",
+                    "8325064",
+                    "8325064"
+                ],
+                "DOMAIN": [
+                    "GT",
+                    "GT",
+                    "GT",
+                    "GT",
+                    "GT",
+                    "GT",
+                    "GT"
+                ],
+                "GTSEQ": [
+                    1,
+                    2,
+                    3,
+                    7,
+                    8,
+                    11,
+                    12
+                ],
+                "GTREFID": [
+                    "2_1",
+                    "2_2",
+                    "2_3",
+                    "2_4",
+                    "2_5",
+                    "2_6",
+                    "2_7"
+                ],
+                "GTTESTCD": [
+                    "RPP",
+                    "RPP",
+                    "RPP",
+                    "RPP",
+                    "RPP",
+                    "CYTOTOX",
+                    "RPP"
+                ],
+                "GTTEST": [
+                    "Revertant Colony Numbers Per Plate",
+                    "Revertant Colony Numbers Per Plate",
+                    "Revertant Colony Numbers Per Plate",
+                    "Revertant Colony Numbers Per Plate",
+                    "Revertant Colony Numbers Per Plate",
+                    "Cytotoxicity",
+                    "Revertant Colony Numbers Per Plate"
+                ],
+                "GTORRES": [
+                    "26",
+                    "35",
+                    "39",
+                    "5",
+                    "8",
+                    "Very thin background bacterial lawn",
+                    "12"
+                ],
+                "GTORRESU": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "GTCOLSRT": [
+                    "",
+                    "",
+                    "",
+                    "STANDARD DEVIATION",
+                    "",
+                    "",
+                    ""
+                ],
+                "GTSTRESC": [
+                    "26",
+                    "35",
+                    "39",
+                    "5",
+                    "8",
+                    "V",
+                    "12"
+                ],
+                "GTSTRESN": [
+                    26,
+                    35,
+                    39,
+                    5,
+                    8,
+                    null,
+                    12
+                ],
+                "GTSTRESU": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "GTSTAT": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "GTREASND": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "GTMETHOD": [
+                    "INSTRUMENT COUNTED",
+                    "INSTRUMENT COUNTED",
+                    "INSTRUMENT COUNTED",
+                    "",
+                    "MANUALLY COUNTED",
+                    "",
+                    "MANUALLY COUNTED"
+                ],
+                "GTDTC": [
+                    "42219",
+                    "42219",
+                    "42219",
+                    "42219",
+                    "42219",
+                    "42219",
+                    "42219"
+                ]
+            }
+        },
+        {
+            "filename": "relref.xpt",
+            "label": "Related References",
+            "domain": "RELREF",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "SETCD",
+                    "label": "Trial Set Code",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "REFID",
+                    "label": "Reference ID",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "PARENT",
+                    "label": "Parent Reference ID",
+                    "type": "Char",
+                    "length": 8
+                },
+                {
+                    "name": "LEVEL",
+                    "label": "Reference ID Generation Level",
+                    "type": "Num",
+                    "length": 50
+                },
+                {
+                    "name": "LVLDESC",
+                    "label": "Reference ID Generation Level",
+                    "type": "Char",
+                    "length": 50
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "123",
+                    "123",
+                    "123",
+                    "123",
+                    "123",
+                    "123",
+                    "123",
+                    "123",
+                    "123",
+                    "123",
+                    "123",
+                    "123",
+                    "123",
+                    "123",
+                    "123",
+                    "123",
+                    "123",
+                    "123",
+                    "123",
+                    "123"
+                ],
+                "SETCD": [
+                    "A1",
+                    "A1",
+                    "A1",
+                    "A1",
+                    "A1",
+                    "A2",
+                    "A2",
+                    "A2",
+                    "A2",
+                    "A2",
+                    "A3",
+                    "A3",
+                    "A3",
+                    "A3",
+                    "A3",
+                    "A4",
+                    "A4",
+                    "A4",
+                    "A4",
+                    "A4"
+                ],
+                "REFID": [
+                    "C0",
+                    "C0-Count1",
+                    "C0-Count2",
+                    "C0-Count3",
+                    "C0-Count4",
+                    "C1250",
+                    "C1250-Count1",
+                    "C1250-Count2",
+                    "C1250-Count3",
+                    "C1250-Count4",
+                    "C50",
+                    "C50-Count1",
+                    "C50-Count2",
+                    "C50-Count3",
+                    "C50-Count4",
+                    "C100",
+                    "C100-Count1",
+                    "C50-Count2",
+                    "C50-Count3",
+                    "C50-Count4"
+                ],
+                "PARENT": [
+                    "",
+                    "C0",
+                    "C0",
+                    "C0",
+                    "C0",
+                    "",
+                    "C1250",
+                    "C1250",
+                    "C1250",
+                    "C1250",
+                    "",
+                    "C50",
+                    "C50",
+                    "C50",
+                    "C50",
+                    "",
+                    "C100",
+                    "C100",
+                    "C100",
+                    "C100"
+                ],
+                "LEVEL": [
+                    2,
+                    2,
+                    2,
+                    2,
+                    2,
+                    0,
+                    2,
+                    2,
+                    2,
+                    2,
+                    null,
+                    2,
+                    2,
+                    2,
+                    2,
+                    -1,
+                    2,
+                    2,
+                    2,
+                    2
+                ],
+                "LVLDESC": [
+                    "EXPERIMENTAL UNIT/TRIAL SET",
+                    "OBSERVATIONAL UNIT",
+                    "OBSERVATIONAL UNIT",
+                    "OBSERVATIONAL UNIT",
+                    "OBSERVATIONAL UNIT",
+                    "EXPERIMENTAL UNIT/TRIAL SET",
+                    "OBSERVATIONAL UNIT",
+                    "OBSERVATIONAL UNIT",
+                    "OBSERVATIONAL UNIT",
+                    "OBSERVATIONAL UNIT",
+                    "EXPERIMENTAL UNIT/TRIAL SET",
+                    "OBSERVATIONAL UNIT",
+                    "OBSERVATIONAL UNIT",
+                    "OBSERVATIONAL UNIT",
+                    "OBSERVATIONAL UNIT",
+                    "EXPERIMENTAL UNIT/TRIAL SET",
+                    "OBSERVATIONAL UNIT",
+                    "OBSERVATIONAL UNIT",
+                    "OBSERVATIONAL UNIT",
+                    "OBSERVATIONAL UNIT"
+                ]
+            }
+        }
+    ],
+    "standard": {
+        "product": "tig",
+        "version": "1-0",
+        "substandard": "send"
+    },
+    "codelists": []
+}

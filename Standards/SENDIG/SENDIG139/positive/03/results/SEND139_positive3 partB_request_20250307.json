@@ -1,0 +1,619 @@
+{
+    "rule": {
+        "Authorities": [
+            {
+                "Organization": "CDISC",
+                "Standards": [
+                    {
+                        "Name": "SENDIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "SENDIG v3.0",
+                                        "Item": "POOLID CDISC Notes",
+                                        "Section": "6.1.1",
+                                        "Cited_Guidance": "If POOLID is entered, POOLDEF records must exist for each subject and the USUBJID must be null."
+                                    }
+                                ],
+                                "Origin": "SEND Conformance Rules",
+                                "Version": "5.0",
+                                "Rule_Identifier": {
+                                    "Id": "SEND139",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.0"
+                    },
+                    {
+                        "Name": "SENDIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "SENDIG v3.1",
+                                        "Item": "POOLID CDISC Notes",
+                                        "Section": "6.1.1",
+                                        "Cited_Guidance": "If POOLID is entered, POOLDEF records must exist for each subject and the USUBJID must be null."
+                                    }
+                                ],
+                                "Origin": "SEND Conformance Rules",
+                                "Version": "5.0",
+                                "Rule_Identifier": {
+                                    "Id": "SEND139",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.1"
+                    },
+                    {
+                        "Name": "SENDIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "SENDIG v3.1.1",
+                                        "Item": "POOLID CDISC Notes",
+                                        "Section": "6.1.1",
+                                        "Cited_Guidance": "If POOLID is entered, POOLDEF records must exist for each subject and the USUBJID must be null."
+                                    }
+                                ],
+                                "Origin": "SEND Conformance Rules",
+                                "Version": "5.0",
+                                "Rule_Identifier": {
+                                    "Id": "SEND139",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.1.1"
+                    },
+                    {
+                        "Name": "SENDIG-DART",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "SENDIG v3.1",
+                                        "Item": "POOLID CDISC Notes",
+                                        "Section": "6.1.1",
+                                        "Cited_Guidance": "If POOLID is entered, POOLDEF records must exist for each subject and the USUBJID must be null."
+                                    }
+                                ],
+                                "Origin": "SEND Conformance Rules",
+                                "Version": "5.0",
+                                "Rule_Identifier": {
+                                    "Id": "SEND139",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "1.1"
+                    },
+                    {
+                        "Name": "SENDIG-DART",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "SENDIG v3.1.1",
+                                        "Item": "POOLID CDISC Notes",
+                                        "Section": "6.1.1",
+                                        "Cited_Guidance": "If POOLID is entered, POOLDEF records must exist for each subject and the USUBJID must be null."
+                                    }
+                                ],
+                                "Origin": "SEND Conformance Rules",
+                                "Version": "5.0",
+                                "Rule_Identifier": {
+                                    "Id": "SEND139",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "1.2"
+                    },
+                    {
+                        "Name": "SENDIG-GENETOX",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "SENDIG v3.1.1",
+                                        "Item": "POOLID CDISC Notes",
+                                        "Section": "6.1.1",
+                                        "Cited_Guidance": "If POOLID is entered, POOLDEF records must exist for each subject and the USUBJID must be null."
+                                    }
+                                ],
+                                "Origin": "SEND Conformance Rules",
+                                "Version": "5.0",
+                                "Rule_Identifier": {
+                                    "Id": "SEND139",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "1.0"
+                    },
+                    {
+                        "Name": "TIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "TIG v1.0",
+                                        "Item": "POOLID CDISC Notes",
+                                        "Section": "2.8.9.22",
+                                        "Cited_Guidance": "If POOLID is entered, POOLDEF records must exist for each subject and the USUBJID must be null."
+                                    }
+                                ],
+                                "Origin": "TIG Conformance Rules",
+                                "Version": "1.0",
+                                "Rule_Identifier": {
+                                    "Id": "TIG0075",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Substandard": "SEND",
+                        "Version": "1.0"
+                    }
+                ]
+            }
+        ],
+        "Check": {
+            "all": [
+                {
+                    "name": "POOLID",
+                    "operator": "non_empty"
+                },
+                {
+                    "name": "POOLID",
+                    "operator": "is_not_contained_by",
+                    "value": "$pooldef_poolid"
+                }
+            ]
+        },
+        "Core": {
+            "Id": "CDISC.SENDIG.139",
+            "Status": "Draft",
+            "Version": "1"
+        },
+        "Description": "Part B - Raise error when value for POOLID in the dataset is not a POOLID value in POOLDEF.",
+        "Executability": "Fully Executable",
+        "Operations": [
+            {
+                "domain": "POOLDEF",
+                "id": "$pooldef_poolid",
+                "name": "POOLID",
+                "operator": "distinct"
+            }
+        ],
+        "Outcome": {
+            "Message": "POOLID value in the dataset does not correspond to a POOLID value in POOLDEF.",
+            "Output_Variables": [
+                "POOLID",
+                "$pooldef_poolid"
+            ]
+        },
+        "Scope": {
+            "Classes": {
+                "Include": [
+                    "ALL"
+                ]
+            },
+            "Domains": {
+                "Include": [
+                    "ALL"
+                ]
+            },
+            "Use_Case": "NONCLIN"
+        },
+        "Sensitivity": "Record",
+        "Rule_Type": "Record Data"
+    },
+    "datasets": [
+        {
+            "filename": "vs.xpt",
+            "label": "Vital Signs",
+            "domain": "VS",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 12
+                },
+                {
+                    "name": "DOMAIN",
+                    "label": "Domain Abbreviation",
+                    "type": "Char",
+                    "length": 2
+                },
+                {
+                    "name": "USUBJID",
+                    "label": "Unique Subject Identifier",
+                    "type": "Char",
+                    "length": 8
+                },
+                {
+                    "name": "POOLID",
+                    "label": "Pool Identfier",
+                    "type": "Char",
+                    "length": 8
+                },
+                {
+                    "name": "VSSEQ",
+                    "label": "Sequence Number",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "VSTESTCD",
+                    "label": "Vital Signs Test Short Name",
+                    "type": "Char",
+                    "length": 6
+                },
+                {
+                    "name": "VSTEST",
+                    "label": "Vital Signs Test Name",
+                    "type": "Char",
+                    "length": 24
+                },
+                {
+                    "name": "VSPOS",
+                    "label": "Vital Signs Position of Subject",
+                    "type": "Char",
+                    "length": 8
+                },
+                {
+                    "name": "VSORRES",
+                    "label": "Result or Finding in Original Units",
+                    "type": "Char",
+                    "length": 8
+                },
+                {
+                    "name": "VSORRESU",
+                    "label": "Original Units",
+                    "type": "Char",
+                    "length": 9
+                },
+                {
+                    "name": "VSSTRESC",
+                    "label": "Character Result/Finding in Std Format",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "VSSTRESN",
+                    "label": "Numeric Result/Finding in Standard Units",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "VSSTRESU",
+                    "label": "Standard Units",
+                    "type": "Char",
+                    "length": 9
+                },
+                {
+                    "name": "VSSTAT",
+                    "label": "Completion Status",
+                    "type": "Char",
+                    "length": 8
+                },
+                {
+                    "name": "VSLOC",
+                    "label": "Location of Vital Signs Measurement",
+                    "type": "Char",
+                    "length": 11
+                },
+                {
+                    "name": "VSLOBXFL",
+                    "label": "Last Observation Before Exposure Flag",
+                    "type": "Char",
+                    "length": 1
+                },
+                {
+                    "name": "VSREPNUM",
+                    "label": "Repetition Number",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "VISITNUM",
+                    "label": "Visit Number",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "VISIT",
+                    "label": "Visit Name",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "EPOCH",
+                    "label": "Epoch",
+                    "type": "Char",
+                    "length": 9
+                },
+                {
+                    "name": "VSDTC",
+                    "label": "Date/Time of Measurements",
+                    "type": "Char",
+                    "length": 10
+                },
+                {
+                    "name": "VSDY",
+                    "label": "Study Day of Vital Signs",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "VSTPT",
+                    "label": "Planned Time Point Name",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "VSTPTNUM",
+                    "label": "Planned Time Point Number",
+                    "type": "Num",
+                    "length": 8
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01"
+                ],
+                "DOMAIN": [
+                    "VS",
+                    "VS",
+                    "VS",
+                    "VS",
+                    "VS",
+                    "VS"
+                ],
+                "USUBJID": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "POOLID": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "VSSEQ": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    6,
+                    7
+                ],
+                "VSTESTCD": [
+                    "DIABP",
+                    "DIABP",
+                    "DIABP",
+                    "DIABP",
+                    "DIABP",
+                    "DIABP"
+                ],
+                "VSTEST": [
+                    "Diastolic Blood Pressure",
+                    "Diastolic Blood Pressure",
+                    "Diastolic Blood Pressure",
+                    "Diastolic Blood Pressure",
+                    "Diastolic Blood Pressure",
+                    "Diastolic Blood Pressure"
+                ],
+                "VSPOS": [
+                    "STANDING",
+                    "STANDING",
+                    "STANDING",
+                    "STANDING",
+                    "SUPINE",
+                    "STANDING"
+                ],
+                "VSORRES": [
+                    "71",
+                    "71",
+                    "83",
+                    "79",
+                    "77",
+                    "71"
+                ],
+                "VSORRESU": [
+                    "mmHg",
+                    "mmHg",
+                    "mmHg",
+                    "mmHg",
+                    "mmHg",
+                    "mmHg"
+                ],
+                "VSSTRESC": [
+                    "71",
+                    "71",
+                    "83",
+                    "79",
+                    "77",
+                    "71"
+                ],
+                "VSSTRESN": [
+                    71,
+                    71,
+                    83,
+                    79,
+                    77,
+                    71
+                ],
+                "VSSTRESU": [
+                    "mmHg",
+                    "mmHg",
+                    "mmHg",
+                    "mmHg",
+                    "mmHg",
+                    "mmHg"
+                ],
+                "VSSTAT": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "VSLOC": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "VSLOBXFL": [
+                    "",
+                    "",
+                    "Y",
+                    "",
+                    "",
+                    ""
+                ],
+                "VSREPNUM": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    1,
+                    2
+                ],
+                "VISITNUM": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    null,
+                    null
+                ],
+                "VISIT": [
+                    "SCREENING 1",
+                    "SCREENING 2",
+                    "BASELINE",
+                    "WEEK 2",
+                    "WEEK 6",
+                    "WEEK 6"
+                ],
+                "EPOCH": [
+                    "SCREENING",
+                    "SCREENING",
+                    "SCREENING",
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT"
+                ],
+                "VSDTC": [
+                    "2012-11-23",
+                    "2012-11-28",
+                    "2012-11-30",
+                    "2012-12-13",
+                    "2013-01-10",
+                    "2013-01-10"
+                ],
+                "VSDY": [
+                    -7,
+                    -2,
+                    1,
+                    14,
+                    42,
+                    42
+                ],
+                "VSTPT": [
+                    "",
+                    "",
+                    "PREDOSE",
+                    "PREDOSE",
+                    "5MIN POSTDOSE",
+                    "5MIN POSTDOSE"
+                ],
+                "VSTPTNUM": [
+                    null,
+                    null,
+                    -1,
+                    -1,
+                    -1,
+                    5
+                ]
+            }
+        },
+        {
+            "filename": "pooldef.xpt",
+            "label": "Pool Definition",
+            "domain": "POOLDEF",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 12
+                },
+                {
+                    "name": "POOLID",
+                    "label": "Pool Identfier",
+                    "type": "Char",
+                    "length": 8
+                },
+                {
+                    "name": "USUBJID",
+                    "label": "Unique Subject Identifier",
+                    "type": "Char",
+                    "length": 8
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01"
+                ],
+                "POOLID": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "USUBJID": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ]
+            }
+        }
+    ],
+    "standard": {
+        "product": "sendig",
+        "version": "3-1"
+    },
+    "codelists": []
+}

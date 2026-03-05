@@ -1,0 +1,140 @@
+{
+  "DM": [
+    {
+      "executionStatus": "execution_error",
+      "domain": "DM",
+      "variables": [],
+      "message": "rule execution error",
+      "errors": [
+        {
+          "error": "Column not found in data",
+          "message": "DMDTC"
+        }
+      ]
+    }
+  ],
+  "EX": [
+    {
+      "executionStatus": "success",
+      "domain": "EX",
+      "variables": [
+        "EXDTC",
+        "EXDY",
+        "RFSTDTC"
+      ],
+      "message": "EXDY is not calculated correctly even though the date portion of EXDTC is complete, the date portion of DM.RFSTDTC is a complete date, and EXDY is not empty.",
+      "errors": [
+        {
+          "value": {
+            "EXDTC": "2012-11-30",
+            "EXDY": 0,
+            "RFSTDTC": "2012-11-30"
+          },
+          "row": 1,
+          "USUBJID": "CDISC-TEST-001",
+          "SEQ": 1
+        },
+        {
+          "value": {
+            "EXDTC": "2012-12-01",
+            "EXDY": 1,
+            "RFSTDTC": "2012-11-30"
+          },
+          "row": 8,
+          "USUBJID": "CDISC-TEST-001",
+          "SEQ": 2
+        },
+        {
+          "value": {
+            "EXDTC": "2012-12-02",
+            "EXDY": 4,
+            "RFSTDTC": "2012-11-30"
+          },
+          "row": 9,
+          "USUBJID": "CDISC-TEST-001",
+          "SEQ": 3
+        },
+        {
+          "value": {
+            "EXDTC": "2012-12-03",
+            "EXDY": 6,
+            "RFSTDTC": "2012-11-30"
+          },
+          "row": 10,
+          "USUBJID": "CDISC-TEST-001",
+          "SEQ": 4
+        },
+        {
+          "value": {
+            "EXDTC": "2012-12-04",
+            "EXDY": 8,
+            "RFSTDTC": "2012-11-30"
+          },
+          "row": 11,
+          "USUBJID": "CDISC-TEST-001",
+          "SEQ": 5
+        },
+        {
+          "value": {
+            "EXDTC": "2012-12-05",
+            "EXDY": 10,
+            "RFSTDTC": "2012-11-30"
+          },
+          "row": 12,
+          "USUBJID": "CDISC-TEST-001",
+          "SEQ": 6
+        },
+        {
+          "value": {
+            "EXDTC": "2012-12-06",
+            "EXDY": 12,
+            "RFSTDTC": "2012-11-30"
+          },
+          "row": 13,
+          "USUBJID": "CDISC-TEST-001",
+          "SEQ": 7
+        },
+        {
+          "value": {
+            "EXDTC": "2012-11-29",
+            "EXDY": -2,
+            "RFSTDTC": "2012-11-30"
+          },
+          "row": 18,
+          "USUBJID": "CDISC-TEST-001",
+          "SEQ": 7
+        },
+        {
+          "value": {
+            "EXDTC": "2012-11-28",
+            "EXDY": -3,
+            "RFSTDTC": "2012-11-30"
+          },
+          "row": 19,
+          "USUBJID": "CDISC-TEST-001",
+          "SEQ": 7
+        },
+        {
+          "value": {
+            "EXDTC": "2012-11-27",
+            "EXDY": -6,
+            "RFSTDTC": "2012-11-30"
+          },
+          "row": 20,
+          "USUBJID": "CDISC-TEST-001",
+          "SEQ": 7
+        },
+        {
+          "value": {
+            "EXDTC": "2012-11-26",
+            "EXDY": -10,
+            "RFSTDTC": "2012-11-30"
+          },
+          "row": 21,
+          "USUBJID": "CDISC-TEST-001",
+          "SEQ": 7
+        }
+      ]
+    }
+  ]
+}

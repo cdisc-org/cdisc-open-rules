@@ -1,0 +1,796 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.22000}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 "Organization":"CDISC"\par
+\}\par
+"standards":[1 item\par
+0:\{2 items\par
+"Name":"SDTMIG"\par
+"Version":"3.4"\par
+\}\par
+]\par
+"classes":\{1 item\par
+"Include":[2 items\par
+0:"Events"\par
+1:"Interventions"\par
+]\par
+\}\par
+"domains":\{1 item\par
+"Exclude":[3 items\par
+0:"DS"\par
+1:"DV"\par
+2:"EX"\par
+]\par
+\}\par
+"rule_type":"Variable Presence"\par
+"conditions":\{1 item\par
+"all":[2 items\par
+0:\{3 items\par
+"name":"get_dataset"\par
+"operator":"not_exists"\par
+"value":\{1 item\par
+"target":"--PRESP"\par
+\}\par
+\}\par
+1:\{3 items\par
+"name":"get_dataset"\par
+"operator":"exists"\par
+"value":\{1 item\par
+"target":"--STAT"\par
+\}\par
+\}\par
+]\par
+\}\par
+"output_variables":[3 items\par
+0:"--PRESP"\par
+1:"--OCCUR"\par
+2:"--STAT"\par
+]\par
+"actions":[1 item\par
+0:\{2 items\par
+"name":"generate_dataset_error_objects"\par
+"params":\{1 item\par
+"message":"--STAT is present when --PRESP is not present."\par
+\}\par
+\}\par
+]\par
+\}\par
+"datasets":[1 item\par
+0:\{5 items\par
+"filename":"ae.xpt"\par
+"label":"Adverse Events"\par
+"domain":"AE"\par
+"variables":[29 items\par
+0:\{4 items\par
+"name":"STUDYID"\par
+"label":"Study Identifier"\par
+"type":"Char"\par
+"length":10\par
+\}\par
+1:\{4 items\par
+"name":"DOMAIN"\par
+"label":"Domain Abbreviation"\par
+"type":"Char"\par
+"length":2\par
+\}\par
+2:\{4 items\par
+"name":"USUBJID"\par
+"label":"Unique Subject Identifier"\par
+"type":"Char"\par
+"length":14\par
+\}\par
+3:\{4 items\par
+"name":"AESEQ"\par
+"label":"Sequence Number"\par
+"type":"Num"\par
+"length":8\par
+\}\par
+4:\{4 items\par
+"name":"AESPID"\par
+"label":"Sponsor-Defined Identifier"\par
+"type":"Char"\par
+"length":4\par
+\}\par
+5:\{4 items\par
+"name":"AETERM"\par
+"label":"Reported Term for the Adverse Event"\par
+"type":"Char"\par
+"length":38\par
+\}\par
+6:\{4 items\par
+"name":"AELLT"\par
+"label":"Lowest Level Term"\par
+"type":"Char"\par
+"length":38\par
+\}\par
+7:\{4 items\par
+"name":"AELLTCD"\par
+"label":"Lowest Level Term Code"\par
+"type":"Num"\par
+"length":8\par
+\}\par
+8:\{4 items\par
+"name":"AEDECOD"\par
+"label":"Dictionary-Derived Term"\par
+"type":"Char"\par
+"length":38\par
+\}\par
+9:\{4 items\par
+"name":"AEPTCD"\par
+"label":"Preferred Term Code"\par
+"type":"Num"\par
+"length":8\par
+\}\par
+10:\{4 items\par
+"name":"AEHLT"\par
+"label":"High Level Term"\par
+"type":"Char"\par
+"length":65\par
+\}\par
+11:\{4 items\par
+"name":"AEHLTCD"\par
+"label":"High Level Term Code"\par
+"type":"Num"\par
+"length":8\par
+\}\par
+12:\{4 items\par
+"name":"AEHLGT"\par
+"label":"High Level Group Term"\par
+"type":"Char"\par
+"length":55\par
+\}\par
+13:\{4 items\par
+"name":"AEHLGTCD"\par
+"label":"High Level Group Term Code"\par
+"type":"Num"\par
+"length":8\par
+\}\par
+14:\{4 items\par
+"name":"AEBODSYS"\par
+"label":"Body System or Organ Class"\par
+"type":"Char"\par
+"length":52\par
+\}\par
+15:\{4 items\par
+"name":"AEBDSYCD"\par
+"label":"Body System or Organ Class Code"\par
+"type":"Num"\par
+"length":8\par
+\}\par
+16:\{4 items\par
+"name":"AESOC"\par
+"label":"Primary System Organ Class"\par
+"type":"Char"\par
+"length":52\par
+\}\par
+17:\{4 items\par
+"name":"AESOCCD"\par
+"label":"Primary System Organ Class Code"\par
+"type":"Num"\par
+"length":8\par
+\}\par
+18:\{4 items\par
+"name":"AESEV"\par
+"label":"Severity/Intensity"\par
+"type":"Char"\par
+"length":8\par
+\}\par
+19:\{4 items\par
+"name":"AESER"\par
+"label":"Serious Event"\par
+"type":"Char"\par
+"length":1\par
+\}\par
+20:\{4 items\par
+"name":"AEACN"\par
+"label":"Action Taken with Study Treatment"\par
+"type":"Char"\par
+"length":1\par
+\}\par
+21:\{4 items\par
+"name":"AEREL"\par
+"label":"Causality"\par
+"type":"Char"\par
+"length":1\par
+\}\par
+22:\{4 items\par
+"name":"AEOUT"\par
+"label":"Outcome of Adverse Event"\par
+"type":"Char"\par
+"length":26\par
+\}\par
+23:\{4 items\par
+"name":"AESHOSP"\par
+"label":"Requires or Prolongs Hospitalization"\par
+"type":"Char"\par
+"length":1\par
+\}\par
+24:\{4 items\par
+"name":"AESTAT"\par
+"label":"Completion Status"\par
+"type":"Char"\par
+"length":8\par
+\}\par
+25:\{4 items\par
+"name":"AEREASND"\par
+"label":"Reason Adverse Event Not Collected"\par
+"type":"Char"\par
+"length":200\par
+\}\par
+26:\{4 items\par
+"name":"AESTDTC"\par
+"label":"Start Date/Time of Adverse Event"\par
+"type":"Char"\par
+"length":10\par
+\}\par
+27:\{4 items\par
+"name":"AEENDTC"\par
+"label":"End Date/Time of Adverse Event"\par
+"type":"Char"\par
+"length":1\par
+\}\par
+28:\{4 items\par
+"name":"AESTDY"\par
+"label":"Study Day of Start of Adverse Event"\par
+"type":"Num"\par
+"length":8\par
+\}\par
+]\par
+"records":\{29 items\par
+"STUDYID":1616 items\par
+[0 - 100]\par
+[100 - 200]\par
+[200 - 300]\par
+[300 - 400]\par
+[400 - 500]\par
+[500 - 600]\par
+[600 - 700]\par
+[700 - 800]\par
+[800 - 900]\par
+[900 - 1000]\par
+[1000 - 1100]\par
+[1100 - 1200]\par
+[1200 - 1300]\par
+[1300 - 1400]\par
+[1400 - 1500]\par
+[1500 - 1600]\par
+[1600 - 1616]\par
+"DOMAIN":1616 items\par
+[0 - 100]\par
+[100 - 200]\par
+[200 - 300]\par
+[300 - 400]\par
+[400 - 500]\par
+[500 - 600]\par
+[600 - 700]\par
+[700 - 800]\par
+[800 - 900]\par
+[900 - 1000]\par
+[1000 - 1100]\par
+[1100 - 1200]\par
+[1200 - 1300]\par
+[1300 - 1400]\par
+[1400 - 1500]\par
+[1500 - 1600]\par
+[1600 - 1616]\par
+"USUBJID":1616 items\par
+[0 - 100]\par
+[100 - 200]\par
+[200 - 300]\par
+[300 - 400]\par
+[400 - 500]\par
+[500 - 600]\par
+[600 - 700]\par
+[700 - 800]\par
+[800 - 900]\par
+[900 - 1000]\par
+[1000 - 1100]\par
+[1100 - 1200]\par
+[1200 - 1300]\par
+[1300 - 1400]\par
+[1400 - 1500]\par
+[1500 - 1600]\par
+[1600 - 1616]\par
+"AESEQ":1616 items\par
+[0 - 100]\par
+[100 - 200]\par
+[200 - 300]\par
+[300 - 400]\par
+[400 - 500]\par
+[500 - 600]\par
+[600 - 700]\par
+[700 - 800]\par
+[800 - 900]\par
+[900 - 1000]\par
+[1000 - 1100]\par
+[1100 - 1200]\par
+[1200 - 1300]\par
+[1300 - 1400]\par
+[1400 - 1500]\par
+[1500 - 1600]\par
+[1600 - 1616]\par
+"AESPID":1616 items\par
+[0 - 100]\par
+[100 - 200]\par
+[200 - 300]\par
+[300 - 400]\par
+[400 - 500]\par
+[500 - 600]\par
+[600 - 700]\par
+[700 - 800]\par
+[800 - 900]\par
+[900 - 1000]\par
+[1000 - 1100]\par
+[1100 - 1200]\par
+[1200 - 1300]\par
+[1300 - 1400]\par
+[1400 - 1500]\par
+[1500 - 1600]\par
+[1600 - 1616]\par
+"AETERM":1616 items\par
+[0 - 100]\par
+[100 - 200]\par
+[200 - 300]\par
+[300 - 400]\par
+[400 - 500]\par
+[500 - 600]\par
+[600 - 700]\par
+[700 - 800]\par
+[800 - 900]\par
+[900 - 1000]\par
+[1000 - 1100]\par
+[1100 - 1200]\par
+[1200 - 1300]\par
+[1300 - 1400]\par
+[1400 - 1500]\par
+[1500 - 1600]\par
+[1600 - 1616]\par
+"AELLT":1616 items\par
+[0 - 100]\par
+[100 - 200]\par
+[200 - 300]\par
+[300 - 400]\par
+[400 - 500]\par
+[500 - 600]\par
+[600 - 700]\par
+[700 - 800]\par
+[800 - 900]\par
+[900 - 1000]\par
+[1000 - 1100]\par
+[1100 - 1200]\par
+[1200 - 1300]\par
+[1300 - 1400]\par
+[1400 - 1500]\par
+[1500 - 1600]\par
+[1600 - 1616]\par
+"AELLTCD":1616 items\par
+[0 - 100]\par
+[100 - 200]\par
+[200 - 300]\par
+[300 - 400]\par
+[400 - 500]\par
+[500 - 600]\par
+[600 - 700]\par
+[700 - 800]\par
+[800 - 900]\par
+[900 - 1000]\par
+[1000 - 1100]\par
+[1100 - 1200]\par
+[1200 - 1300]\par
+[1300 - 1400]\par
+[1400 - 1500]\par
+[1500 - 1600]\par
+[1600 - 1616]\par
+"AEDECOD":1616 items\par
+[0 - 100]\par
+[100 - 200]\par
+[200 - 300]\par
+[300 - 400]\par
+[400 - 500]\par
+[500 - 600]\par
+[600 - 700]\par
+[700 - 800]\par
+[800 - 900]\par
+[900 - 1000]\par
+[1000 - 1100]\par
+[1100 - 1200]\par
+[1200 - 1300]\par
+[1300 - 1400]\par
+[1400 - 1500]\par
+[1500 - 1600]\par
+[1600 - 1616]\par
+"AEPTCD":1616 items\par
+[0 - 100]\par
+[100 - 200]\par
+[200 - 300]\par
+[300 - 400]\par
+[400 - 500]\par
+[500 - 600]\par
+[600 - 700]\par
+[700 - 800]\par
+[800 - 900]\par
+[900 - 1000]\par
+[1000 - 1100]\par
+[1100 - 1200]\par
+[1200 - 1300]\par
+[1300 - 1400]\par
+[1400 - 1500]\par
+[1500 - 1600]\par
+[1600 - 1616]\par
+"AEHLT":1616 items\par
+[0 - 100]\par
+[100 - 200]\par
+[200 - 300]\par
+[300 - 400]\par
+[400 - 500]\par
+[500 - 600]\par
+[600 - 700]\par
+[700 - 800]\par
+[800 - 900]\par
+[900 - 1000]\par
+[1000 - 1100]\par
+[1100 - 1200]\par
+[1200 - 1300]\par
+[1300 - 1400]\par
+[1400 - 1500]\par
+[1500 - 1600]\par
+[1600 - 1616]\par
+"AEHLTCD":1616 items\par
+[0 - 100]\par
+[100 - 200]\par
+[200 - 300]\par
+[300 - 400]\par
+[400 - 500]\par
+[500 - 600]\par
+[600 - 700]\par
+[700 - 800]\par
+[800 - 900]\par
+[900 - 1000]\par
+[1000 - 1100]\par
+[1100 - 1200]\par
+[1200 - 1300]\par
+[1300 - 1400]\par
+[1400 - 1500]\par
+[1500 - 1600]\par
+[1600 - 1616]\par
+"AEHLGT":1616 items\par
+[0 - 100]\par
+[100 - 200]\par
+[200 - 300]\par
+[300 - 400]\par
+[400 - 500]\par
+[500 - 600]\par
+[600 - 700]\par
+[700 - 800]\par
+[800 - 900]\par
+[900 - 1000]\par
+[1000 - 1100]\par
+[1100 - 1200]\par
+[1200 - 1300]\par
+[1300 - 1400]\par
+[1400 - 1500]\par
+[1500 - 1600]\par
+[1600 - 1616]\par
+"AEHLGTCD":1616 items\par
+[0 - 100]\par
+[100 - 200]\par
+[200 - 300]\par
+[300 - 400]\par
+[400 - 500]\par
+[500 - 600]\par
+[600 - 700]\par
+[700 - 800]\par
+[800 - 900]\par
+[900 - 1000]\par
+[1000 - 1100]\par
+[1100 - 1200]\par
+[1200 - 1300]\par
+[1300 - 1400]\par
+[1400 - 1500]\par
+[1500 - 1600]\par
+[1600 - 1616]\par
+"AEBODSYS":1616 items\par
+[0 - 100]\par
+[100 - 200]\par
+[200 - 300]\par
+[300 - 400]\par
+[400 - 500]\par
+[500 - 600]\par
+[600 - 700]\par
+[700 - 800]\par
+[800 - 900]\par
+[900 - 1000]\par
+[1000 - 1100]\par
+[1100 - 1200]\par
+[1200 - 1300]\par
+[1300 - 1400]\par
+[1400 - 1500]\par
+[1500 - 1600]\par
+[1600 - 1616]\par
+"AEBDSYCD":1616 items\par
+[0 - 100]\par
+[100 - 200]\par
+[200 - 300]\par
+[300 - 400]\par
+[400 - 500]\par
+[500 - 600]\par
+[600 - 700]\par
+[700 - 800]\par
+[800 - 900]\par
+[900 - 1000]\par
+[1000 - 1100]\par
+[1100 - 1200]\par
+[1200 - 1300]\par
+[1300 - 1400]\par
+[1400 - 1500]\par
+[1500 - 1600]\par
+[1600 - 1616]\par
+"AESOC":1616 items\par
+[0 - 100]\par
+[100 - 200]\par
+[200 - 300]\par
+[300 - 400]\par
+[400 - 500]\par
+[500 - 600]\par
+[600 - 700]\par
+[700 - 800]\par
+[800 - 900]\par
+[900 - 1000]\par
+[1000 - 1100]\par
+[1100 - 1200]\par
+[1200 - 1300]\par
+[1300 - 1400]\par
+[1400 - 1500]\par
+[1500 - 1600]\par
+[1600 - 1616]\par
+"AESOCCD":1616 items\par
+[0 - 100]\par
+[100 - 200]\par
+[200 - 300]\par
+[300 - 400]\par
+[400 - 500]\par
+[500 - 600]\par
+[600 - 700]\par
+[700 - 800]\par
+[800 - 900]\par
+[900 - 1000]\par
+[1000 - 1100]\par
+[1100 - 1200]\par
+[1200 - 1300]\par
+[1300 - 1400]\par
+[1400 - 1500]\par
+[1500 - 1600]\par
+[1600 - 1616]\par
+"AESEV":1616 items\par
+[0 - 100]\par
+[100 - 200]\par
+[200 - 300]\par
+[300 - 400]\par
+[400 - 500]\par
+[500 - 600]\par
+[600 - 700]\par
+[700 - 800]\par
+[800 - 900]\par
+[900 - 1000]\par
+[1000 - 1100]\par
+[1100 - 1200]\par
+[1200 - 1300]\par
+[1300 - 1400]\par
+[1400 - 1500]\par
+[1500 - 1600]\par
+[1600 - 1616]\par
+"AESER":1616 items\par
+[0 - 100]\par
+[100 - 200]\par
+[200 - 300]\par
+[300 - 400]\par
+[400 - 500]\par
+[500 - 600]\par
+[600 - 700]\par
+[700 - 800]\par
+[800 - 900]\par
+[900 - 1000]\par
+[1000 - 1100]\par
+[1100 - 1200]\par
+[1200 - 1300]\par
+[1300 - 1400]\par
+[1400 - 1500]\par
+[1500 - 1600]\par
+[1600 - 1616]\par
+"AEACN":1616 items\par
+[0 - 100]\par
+[100 - 200]\par
+[200 - 300]\par
+[300 - 400]\par
+[400 - 500]\par
+[500 - 600]\par
+[600 - 700]\par
+[700 - 800]\par
+[800 - 900]\par
+[900 - 1000]\par
+[1000 - 1100]\par
+[1100 - 1200]\par
+[1200 - 1300]\par
+[1300 - 1400]\par
+[1400 - 1500]\par
+[1500 - 1600]\par
+[1600 - 1616]\par
+"AEREL":1616 items\par
+[0 - 100]\par
+[100 - 200]\par
+[200 - 300]\par
+[300 - 400]\par
+[400 - 500]\par
+[500 - 600]\par
+[600 - 700]\par
+[700 - 800]\par
+[800 - 900]\par
+[900 - 1000]\par
+[1000 - 1100]\par
+[1100 - 1200]\par
+[1200 - 1300]\par
+[1300 - 1400]\par
+[1400 - 1500]\par
+[1500 - 1600]\par
+[1600 - 1616]\par
+"AEOUT":1616 items\par
+[0 - 100]\par
+[100 - 200]\par
+[200 - 300]\par
+[300 - 400]\par
+[400 - 500]\par
+[500 - 600]\par
+[600 - 700]\par
+[700 - 800]\par
+[800 - 900]\par
+[900 - 1000]\par
+[1000 - 1100]\par
+[1100 - 1200]\par
+[1200 - 1300]\par
+[1300 - 1400]\par
+[1400 - 1500]\par
+[1500 - 1600]\par
+[1600 - 1616]\par
+"AESHOSP":1616 items\par
+[0 - 100]\par
+[100 - 200]\par
+[200 - 300]\par
+[300 - 400]\par
+[400 - 500]\par
+[500 - 600]\par
+[600 - 700]\par
+[700 - 800]\par
+[800 - 900]\par
+[900 - 1000]\par
+[1000 - 1100]\par
+[1100 - 1200]\par
+[1200 - 1300]\par
+[1300 - 1400]\par
+[1400 - 1500]\par
+[1500 - 1600]\par
+[1600 - 1616]\par
+"AESTAT":1616 items\par
+[0 - 100]\par
+[100 - 200]\par
+[200 - 300]\par
+[300 - 400]\par
+[400 - 500]\par
+[500 - 600]\par
+[600 - 700]\par
+[700 - 800]\par
+[800 - 900]\par
+[900 - 1000]\par
+[1000 - 1100]\par
+[1100 - 1200]\par
+[1200 - 1300]\par
+[1300 - 1400]\par
+[1400 - 1500]\par
+[1500 - 1600]\par
+[1600 - 1616]\par
+"AEREASND":1616 items\par
+[0 - 100]\par
+[100 - 200]\par
+[200 - 300]\par
+[300 - 400]\par
+[400 - 500]\par
+[500 - 600]\par
+[600 - 700]\par
+[700 - 800]\par
+[800 - 900]\par
+[900 - 1000]\par
+[1000 - 1100]\par
+[1100 - 1200]\par
+[1200 - 1300]\par
+[1300 - 1400]\par
+[1400 - 1500]\par
+[1500 - 1600]\par
+[1600 - 1616]\par
+"AESTDTC":1616 items\par
+[0 - 100]\par
+[100 - 200]\par
+[200 - 300]\par
+[300 - 400]\par
+[400 - 500]\par
+[500 - 600]\par
+[600 - 700]\par
+[700 - 800]\par
+[800 - 900]\par
+[900 - 1000]\par
+[1000 - 1100]\par
+[1100 - 1200]\par
+[1200 - 1300]\par
+[1300 - 1400]\par
+[1400 - 1500]\par
+[1500 - 1600]\par
+[1600 - 1616]\par
+"AEENDTC":1616 items\par
+[0 - 100]\par
+[100 - 200]\par
+[200 - 300]\par
+[300 - 400]\par
+[400 - 500]\par
+[500 - 600]\par
+[600 - 700]\par
+[700 - 800]\par
+[800 - 900]\par
+[900 - 1000]\par
+[1000 - 1100]\par
+[1100 - 1200]\par
+[1200 - 1300]\par
+[1300 - 1400]\par
+[1400 - 1500]\par
+[1500 - 1600]\par
+[1600 - 1616]\par
+"AESTDY":1616 items\par
+[0 - 100]\par
+[100 - 200]\par
+[200 - 300]\par
+[300 - 400]\par
+[400 - 500]\par
+[500 - 600]\par
+[600 - 700]\par
+[700 - 800]\par
+[800 - 900]\par
+[900 - 1000]\par
+[1000 - 1100]\par
+[1100 - 1200]\par
+[1200 - 1300]\par
+[1300 - 1400]\par
+[1400 - 1500]\par
+[1500 - 1600]\par
+[1600 - 1616]\par
+\}\par
+\}\par
+]\par
+\}\par
+Results\par
+\par
+\{1 item\par
+"AE":[1 item\par
+0:\{5 items\par
+"domain":"AE"\par
+"errors":1618 items\par
+[0 - 100]\par
+[100 - 200]\par
+[200 - 300]\par
+[300 - 400]\par
+[400 - 500]\par
+[500 - 600]\par
+[600 - 700]\par
+[700 - 800]\par
+[800 - 900]\par
+[900 - 1000]\par
+[1000 - 1100]\par
+[1100 - 1200]\par
+[1200 - 1300]\par
+[1300 - 1400]\par
+[1400 - 1500]\par
+[1500 - 1600]\par
+[1600 - 1618]\par
+"executionStatus":"success"\par
+"message":"--STAT is present when --PRESP is not present."\par
+"variables":[1 item\par
+0:"AESTAT"\par
+]\par
+\}\par
+}
+ 

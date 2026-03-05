@@ -1,0 +1,88 @@
+{
+    "StudyProtocolDocumentVersion": [
+        {
+            "executionStatus": "success",
+            "dataset": "StudyProtocolDocumentVersio.xpt",
+            "domain": "StudyProtocolDocumentVersion",
+            "variables": [
+                "code.standardCode.code",
+                "code.standardCode.decode",
+                "dateValue",
+                "id",
+                "id.GovernanceDate",
+                "name",
+                "parent_entity",
+                "parent_id",
+                "parent_rel",
+                "protocolVersion",
+                "type.code",
+                "type.code.GeographicScope",
+                "type.decode",
+                "type.decode.GeographicScope"
+            ],
+            "message": "The study protocol document version has more than one governance date with the same type and geographic scope.",
+            "errors": [
+                {
+                    "value": {
+                        "id.GovernanceDate": "GovernanceDate_2",
+                        "parent_rel": "versions",
+                        "type.code.GeographicScope": "C68846",
+                        "type.code": "C99903x1",
+                        "parent_entity": "StudyProtocolDocument",
+                        "name": "P_APPROVE",
+                        "type.decode": "Protocol Effective Date",
+                        "parent_id": "StudyProtocolDocument_1",
+                        "protocolVersion": "2",
+                        "id": "StudyProtocolDocumentVersion_1",
+                        "dateValue": "2006-07-01",
+                        "type.decode.GeographicScope": "Global",
+                        "code.standardCode.decode": "Not in dataset",
+                        "code.standardCode.code": "Not in dataset"
+                    },
+                    "dataset": "StudyProtocolDocumentVersio.xpt",
+                    "row": 1
+                },
+                {
+                    "value": {
+                        "id.GovernanceDate": "GovernanceDate_3",
+                        "parent_rel": "versions",
+                        "type.code.GeographicScope": "C68846",
+                        "type.code": "C99903x1",
+                        "parent_entity": "StudyProtocolDocument",
+                        "name": "P_APPROVE2",
+                        "type.decode": "Protocol Effective Date",
+                        "parent_id": "StudyProtocolDocument_1",
+                        "protocolVersion": "2",
+                        "id": "StudyProtocolDocumentVersion_1",
+                        "dateValue": "2006-07-02",
+                        "type.decode.GeographicScope": "Global",
+                        "code.standardCode.decode": "Not in dataset",
+                        "code.standardCode.code": "Not in dataset"
+                    },
+                    "dataset": "StudyProtocolDocumentVersio.xpt",
+                    "row": 1
+                }
+            ]
+        }
+    ],
+    "GovernanceDate": [
+        {
+            "executionStatus": "skipped",
+            "dataset": "GovernanceDate.xpt",
+            "domain": "",
+            "variables": [],
+            "message": "Rule skipped - doesn't apply to entity for rule id=, dataset=GovernanceDate",
+            "errors": []
+        }
+    ],
+    "GeographicScope": [
+        {
+            "executionStatus": "skipped",
+            "dataset": "GeographicScope.xpt",
+            "domain": "",
+            "variables": [],
+            "message": "Rule skipped - doesn't apply to entity for rule id=, dataset=GeographicScope",
+            "errors": []
+        }
+    ]
+}

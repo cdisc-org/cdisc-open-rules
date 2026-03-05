@@ -1,0 +1,90 @@
+{
+    "StudyIdentifier": [
+        {
+            "executionStatus": "success",
+            "dataset": "StudyIdentifier.xpt",
+            "domain": null,
+            "variables": [],
+            "message": null,
+            "errors": []
+        }
+    ],
+    "StudyVersion": [
+        {
+            "executionStatus": "success",
+            "dataset": "StudyVersion.xpt",
+            "domain": "StudyVersion",
+            "variables": [
+                "$num_sponsor_ids",
+                "id",
+                "parent_entity",
+                "parent_id",
+                "parent_rel",
+                "versionIdentifier"
+            ],
+            "message": "The study version does not have exactly one sponsor identifier (i.e., a study identifier whose scope is an organization with an type code system of \"http://www.cdisc.org\" and a type code of \"C70793\")",
+            "errors": [
+                {
+                    "value": {
+                        "parent_rel": "versions",
+                        "id": "StudyVersion_1",
+                        "$num_sponsor_ids": 2,
+                        "versionIdentifier": "2",
+                        "parent_id": "Study_1",
+                        "parent_entity": "Study"
+                    },
+                    "dataset": "StudyVersion.xpt",
+                    "row": 1
+                },
+                {
+                    "value": {
+                        "parent_rel": "versions",
+                        "id": "StudyVersion_2",
+                        "$num_sponsor_ids": 0,
+                        "versionIdentifier": "3",
+                        "parent_id": "Study_1",
+                        "parent_entity": "Study"
+                    },
+                    "dataset": "StudyVersion.xpt",
+                    "row": 2
+                },
+                {
+                    "value": {
+                        "parent_rel": "versions",
+                        "id": "StudyVersion_3",
+                        "$num_sponsor_ids": 0,
+                        "versionIdentifier": "4",
+                        "parent_id": "Study_1",
+                        "parent_entity": "Study"
+                    },
+                    "dataset": "StudyVersion.xpt",
+                    "row": 3
+                },
+                {
+                    "value": {
+                        "parent_rel": "versions",
+                        "id": "StudyVersion_4",
+                        "$num_sponsor_ids": 0,
+                        "versionIdentifier": "5",
+                        "parent_id": "Study_1",
+                        "parent_entity": "Study"
+                    },
+                    "dataset": "StudyVersion.xpt",
+                    "row": 4
+                },
+                {
+                    "value": {
+                        "parent_rel": "versions",
+                        "id": "StudyVersion_5",
+                        "$num_sponsor_ids": null,
+                        "versionIdentifier": "6",
+                        "parent_id": "Study_1",
+                        "parent_entity": "Study"
+                    },
+                    "dataset": "StudyVersion.xpt",
+                    "row": 5
+                }
+            ]
+        }
+    ]
+}

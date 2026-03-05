@@ -1,0 +1,4 @@
+parent_entity,parent_id,parent_rel,rel_type,id,name,description,label,dateValue,instanceType,type,type.id,type.code,type.codeSystem,type.codeSystemVersion,type.decode,geographicScopes
+StudyVersion,StudyVersion_1,dateValues,definition,GovernanceDate_1,D_APPROVE,Design approval date,Design Approval,2006-06-01,GovernanceDate,True,Code_9,C132352,http://www.cdisc.org,2023-12-15,Sponsor Approval Date,True
+StudyVersion,StudyVersion_1,dateValues,definition,GovernanceDate_3,D_IDMCAPPR,Design IDMC approval date,Design IDMC Approval,2006-06-15,GovernanceDate,True,Code_10,C99903x0,http://www.cdisc.org,2023-12-15,IDMC Approval Date,True
+StudyProtocolDocumentVersion,StudyProtocolDocumentVersion_1,dateValues,definition,GovernanceDate_2,P_APPROVE,Protocol document approval date,Protocol Approval,2006-07-01,GovernanceDate,True,Code_11,C99903x1,http://www.cdisc.org,2023-12-15,Protocol Effective Date,True

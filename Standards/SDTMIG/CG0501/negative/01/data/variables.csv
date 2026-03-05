@@ -1,0 +1,11 @@
+dataset,variable,label,type,length
+mh.xpt,STUDYID,Study Identifier,Char,12
+mh.xpt,DOMAIN,Domain Abbreviation,Char,2
+mh.xpt,USUBJID,Unique Subject Identifier,Char,8
+mh.xpt,MHSEQ,Sequence Number,Num,8
+mh.xpt,MHTERM,Reported Term for the Medical History,Char,19
+mh.xpt,MHEVDTYP,Medical History Event Date Type,Char,13
+mh.xpt,MHSTDTC,Start Date/Time of Medical History Event,Char,10
+mh.xpt,MHSTDY,Study Day of Start of Observation,Num,8
+mh.xpt,MIDS,"Disease Milestone
+Instance Name",Char,8

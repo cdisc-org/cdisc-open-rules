@@ -1,0 +1,314 @@
+{
+  "rule": {
+    "_links": {},
+    "core_id": "CDISC.SDTMIG.CG0337",
+    "reference": [
+      {
+        "Origin": "SDTM and SDTMIG Conformance Rules",
+        "Rule Identifier": {
+          "Id": "CG0337",
+          "Version": "1"
+        },
+        "Version": "2.0"
+      }
+    ],
+    "sensitivity": "Record",
+    "severity": "error",
+    "description": "Raise an error when --CAT = --DECOD.",
+    "authority": {
+      "Organization": "CDISC"
+    },
+    "standards": [
+      {
+        "Name": "SDTMIG",
+        "Version": "3.4"
+      }
+    ],
+    "classes": {
+      "Include": [
+        "Events"
+      ]
+    },
+    "domains": {
+      "Include": [
+        "All"
+      ]
+    },
+    "rule_type": "Uniqueness",
+    "conditions": {
+      "all": [
+        {
+          "name": "get_dataset",
+          "operator": "equal_to_case_insensitive",
+          "value": {
+            "target": "--CAT",
+            "comparator": "--DECOD"
+          }
+        }
+      ]
+    },
+    "output_variables": [
+      "--DECOD",
+      "--CAT"
+    ],
+    "actions": [
+      {
+        "name": "generate_dataset_error_objects",
+        "params": {
+          "message": "--CAT is equal to --DECOD."
+        }
+      }
+    ]
+  },
+  "datasets": [
+    {
+      "filename": "ds.xpt",
+      "label": "Disposition Events",
+      "domain": "DS",
+      "variables": [
+        {
+          "name": "STUDYID",
+          "label": "Study Identifier",
+          "type": "Char",
+          "length": 12
+        },
+        {
+          "name": "DOMAIN",
+          "label": "Domain Abbreviation",
+          "type": "Char",
+          "length": 2
+        },
+        {
+          "name": "USUBJID",
+          "label": "Unique Subject Identifier",
+          "type": "Char",
+          "length": 8
+        },
+        {
+          "name": "DSSEQ",
+          "label": "Sequence Number",
+          "type": "Num",
+          "length": 8
+        },
+        {
+          "name": "DSLNKID",
+          "label": "Link ID",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "DSTERM",
+          "label": "Reported Term for the Disposition Event",
+          "type": "Char",
+          "length": 200
+        },
+        {
+          "name": "DSDECOD",
+          "label": "Standardized Disposition Term",
+          "type": "Char",
+          "length": 29
+        },
+        {
+          "name": "DSCAT",
+          "label": "Category for Disposition Event",
+          "type": "Char",
+          "length": 18
+        },
+        {
+          "name": "DSSCAT",
+          "label": "Subcategory for Disposition Event",
+          "type": "Char",
+          "length": 19
+        },
+        {
+          "name": "EPOCH",
+          "label": "Epoch",
+          "type": "Char",
+          "length": 9
+        },
+        {
+          "name": "DSSTDTC",
+          "label": "Start Date/Time of Disposition Event",
+          "type": "Char",
+          "length": 10
+        },
+        {
+          "name": "DSSTDY",
+          "label": "Study Day of Start of Disposition Event",
+          "type": "Num",
+          "length": 8
+        }
+      ],
+      "records": {
+        "STUDYID": [
+          "CDISCPILOT01",
+          "CDISCPILOT01",
+          "CDISCPILOT01",
+          "CDISCPILOT01",
+          "CDISCPILOT01",
+          "CDISCPILOT01",
+          "CDISCPILOT01",
+          "CDISCPILOT01",
+          "CDISCPILOT01",
+          "CDISCPILOT01",
+          "CDISCPILOT01",
+          "CDISCPILOT01"
+        ],
+        "DOMAIN": [
+          "DS",
+          "DS",
+          "DS",
+          "DS",
+          "DS",
+          "DS",
+          "DS",
+          "DS",
+          "DS",
+          "DS",
+          "DS",
+          "DS"
+        ],
+        "USUBJID": [
+          "CDISC002",
+          "CDISC002",
+          "CDISC002",
+          "CDISC006",
+          "CDISC006",
+          "CDISC006",
+          "CDISC010",
+          "CDISC010",
+          "CDISC010",
+          "CDISC013",
+          "CDISC013",
+          "CDISC013"
+        ],
+        "DSSEQ": [
+          1,
+          2,
+          3,
+          1,
+          2,
+          3,
+          1,
+          2,
+          3,
+          1,
+          2,
+          3
+        ],
+        "DSLNKID": [
+          "",
+          "8",
+          "9",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "1",
+          "1"
+        ],
+        "DSTERM": [
+          "INFORMED CONSENT OBTAINED",
+          "DYSPNOEA",
+          "SUDDEN DEATH",
+          "INFORMED CONSENT OBTAINED",
+          "WITHDRAWAL BY SUBJECT",
+          "WITHDRAWAL BY SUBJECT",
+          "INFORMED CONSENT OBTAINED",
+          "WITHDRAWAL BY SUBJECT",
+          "WITHDRAWAL BY SUBJECT",
+          "INFORMED CONSENT OBTAINED",
+          "MYOCARDIAL INFARCTION",
+          "MYOCARDIAL INFARCTION"
+        ],
+        "DSDECOD": [
+          "INFORMED CONSENT OBTAINED",
+          "ADVERSE EVENT",
+          "DEATH",
+          "INFORMED CONSENT OBTAINED",
+          "WITHDRAWAL BY SUBJECT",
+          "WITHDRAWAL BY SUBJECT",
+          "INFORMED CONSENT OBTAINED",
+          "WITHDRAWAL BY SUBJECT",
+          "WITHDRAWAL BY SUBJECT",
+          "INFORMED CONSENT OBTAINED",
+          "DEATH",
+          "DEATH"
+        ],
+        "DSCAT": [
+          "PROTOCOL MILESTONE",
+          "DISPOSITION EVENT",
+          "DISPOSITION EVENT",
+          "PROTOCOL MILESTONE",
+          "DISPOSITION EVENT",
+          "DISPOSITION EVENT",
+          "PROTOCOL MILESTONE",
+          "DISPOSITION EVENT",
+          "DISPOSITION EVENT",
+          "WITHDRAWAL BY SUBJECT",
+          "DISPOSITION EVENT",
+          ""
+        ],
+        "DSSCAT": [
+          "",
+          "STUDY TREATMENT",
+          "STUDY PARTICIPATION",
+          "",
+          "STUDY PARTICIPATION",
+          "STUDY TREATMENT",
+          "",
+          "STUDY TREATMENT",
+          "STUDY PARTICIPATION",
+          "",
+          "STUDY TREATMENT",
+          "STUDY PARTICIPATION"
+        ],
+        "EPOCH": [
+          "SCREENING",
+          "TREATMENT",
+          "TREATMENT",
+          "SCREENING",
+          "TREATMENT",
+          "TREATMENT",
+          "SCREENING",
+          "TREATMENT",
+          "TREATMENT",
+          "SCREENING",
+          "TREATMENT",
+          "TREATMENT"
+        ],
+        "DSSTDTC": [
+          "2012-10-30",
+          "2013-01-12",
+          "2013-01-14",
+          "2013-02-25",
+          "2013-04-30",
+          "2013-04-30",
+          "2013-09-08",
+          "2013-09-21",
+          "2013-09-26",
+          "2013-07-09",
+          "2013-08-03",
+          "2013-08-03"
+        ],
+        "DSSTDY": [
+          -16,
+          59,
+          61,
+          -22,
+          43,
+          43,
+          -13,
+          1,
+          6,
+          -13,
+          13,
+          13
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+    "CM": [
+        {
+            "executionStatus": "execution_error",
+            "dataset": "cm.xpt",
+            "domain": "CM",
+            "variables": [],
+            "message": "rule execution error",
+            "errors": [
+                {
+                    "dataset": "cm.xpt",
+                    "error": "Column not found in data",
+                    "message": "Unknown string format: %s"
+                }
+            ]
+        }
+    ],
+    "MH": [
+        {
+            "executionStatus": "success",
+            "dataset": "mh.xpt",
+            "domain": "MH",
+            "variables": [],
+            "message": null,
+            "errors": []
+        }
+    ]
+}

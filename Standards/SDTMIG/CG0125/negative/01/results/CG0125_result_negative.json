@@ -1,0 +1,44 @@
+{2 items
+"TA":[1 item
+0:{5 items
+"executionStatus":"skipped"
+"domain":"TA"
+"variables":[]0 items
+"message":NULL
+"errors":[]0 items
+}
+]
+"DM":[1 item
+0:{5 items
+"executionStatus":"success"
+"domain":"DM"
+"variables":[1 item
+0:"ACTARMCD"
+]
+"message":"DM.ACTARMCD must equal SCRNFAIL, NOTASSGN, NOTTRT, or UNPLAN if the value is not present in TA.ARMCD"
+"errors":[3 items
+0:{3 items
+"value":{1 item
+"ACTARMCD":"ZAN_MED"
+}
+"row":10
+"USUBJID":"015246-300-0004-00010"
+}
+1:{3 items
+"value":{1 item
+"ACTARMCD":"ZAN_UNK"
+}
+"row":11
+"USUBJID":"015246-300-0004-00011"
+}
+2:{3 items
+"value":{1 item
+"ACTARMCD":""
+}
+"row":12
+"USUBJID":"015246-300-0004-00012"
+}
+]
+}
+]
+}

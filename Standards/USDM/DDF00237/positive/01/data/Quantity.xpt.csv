@@ -1,0 +1,17 @@
+parent_entity,parent_id,parent_rel,rel_type,id,value,unit,unit.id,unit.standardCode,unit.standardCode.id,unit.standardCode.code,unit.standardCode.codeSystem,unit.standardCode.codeSystemVersion,unit.standardCode.decode,unit.standardCode.instanceType,unit.standardCodeAliases,unit.instanceType,instanceType
+Range,Range_5,minValue,definition,Quantity_12,50,True,AliasCode_550,True,Code_550,C25529,http://www.cdisc.org,2024-09-27,HOURS,Code,False,AliasCode,Quantity
+Range,Range_5,maxValue,definition,Quantity_14,100,True,AliasCode_552,True,Code_552,C25301,http://www.cdisc.org,2024-09-27,DAYS,Code,False,AliasCode,Quantity
+Range,Range_6,minValue,definition,Quantity_13,50,True,AliasCode_551,True,Code_551,C29844,http://www.cdisc.org,2023-12-15,WEEKS,Code,False,AliasCode,Quantity
+Range,Range_6,maxValue,definition,Quantity_15,100,True,AliasCode_553,True,Code_553,C29846,http://www.cdisc.org,2023-12-15,MONTHS,Code,False,AliasCode,Quantity
+Range,Range_3,minValue,definition,Quantity_10,50,True,AliasCode_548,True,Code_548,C29848,http://www.cdisc.org,2023-12-15,YEARS,Code,False,AliasCode,Quantity
+Range,Range_3,maxValue,definition,Quantity_11,100,True,AliasCode_648,True,Code_648,C29848,http://www.cdisc.org,2023-12-15,YEARS,Code,False,AliasCode,Quantity
+StudyIntervention,StudyIntervention_1,minimumResponseDuration,definition,Quantity_4,1,True,AliasCode_246,True,Code_613,C25301,http://www.cdisc.org,2024-03-29,DAYS,Code,False,AliasCode,Quantity
+Duration,Duration_1,quantity,definition,Quantity_2,24,True,AliasCode_242,True,Code_606,C44278,http://www.cdisc.org,2024-03-29,U,Code,False,AliasCode,Quantity
+Duration,Duration_2,quantity,definition,Quantity_5,24,True,AliasCode_247,True,Code_614,C105499,http://www.cdisc.org,2024-09-27,uV*s,Code,False,AliasCode,Quantity
+StudyIntervention,StudyIntervention_2,minimumResponseDuration,definition,Quantity_16,1,True,AliasCode_260,True,Code_848,C0051X,http://www.cdisc.org,2024-09-27,Extension,Code,False,AliasCode,Quantity
+Range,Range_8,minValue,definition,Quantity_19,50,True,AliasCode_702,True,Code_902,C25529,http://www.cdisc.org,2025-09-26,Hour,Code,False,AliasCode,Quantity
+Range,Range_8,maxValue,definition,Quantity_20,100,True,AliasCode_703,True,Code_903,C25301,http://www.cdisc.org,2025-09-26,Day,Code,False,AliasCode,Quantity
+Range,Range_9,minValue,definition,Quantity_21,50,True,AliasCode_704,True,Code_904,C29844,http://www.cdisc.org,2025-09-26,Week,Code,False,AliasCode,Quantity
+Range,Range_9,maxValue,definition,Quantity_22,100,True,AliasCode_705,True,Code_905,C29846,http://www.cdisc.org,2025-09-26,Month,Code,False,AliasCode,Quantity
+Range,Range_7,minValue,definition,Quantity_17,50,True,AliasCode_700,True,Code_900,C29848,http://www.cdisc.org,2025-09-26,Year,Code,False,AliasCode,Quantity
+Range,Range_7,maxValue,definition,Quantity_18,100,True,AliasCode_701,True,Code_901,C29848,http://www.cdisc.org,2025-09-26,Year,Code,False,AliasCode,Quantity

@@ -1,0 +1,52 @@
+{
+    "StudyVersion": [
+        {
+            "executionStatus": "success",
+            "dataset": "StudyVersion.xpt",
+            "domain": "StudyVersion",
+            "variables": [
+                "$study_title_type_codes",
+                "$study_title_type_decodes",
+                "id",
+                "parent_entity",
+                "parent_id",
+                "parent_rel",
+                "versionIdentifier"
+            ],
+            "message": "The study version does not have a title of type \"Official Study Title\" (type.code = C207616 or type.decode = \"Official Study Title\", both case insensitive).",
+            "errors": [
+                {
+                    "value": {
+                        "$study_title_type_codes": [
+                            "C94108",
+                            "C99905x1",
+                            "C99905x2"
+                        ],
+                        "versionIdentifier": "2",
+                        "parent_rel": "versions",
+                        "parent_id": "Study_1",
+                        "$study_title_type_decodes": [
+                            "Official Title",
+                            "Public Study Title",
+                            "Study Acronym"
+                        ],
+                        "id": "StudyVersion_2",
+                        "parent_entity": "Study"
+                    },
+                    "dataset": "StudyVersion.xpt",
+                    "row": 1
+                }
+            ]
+        }
+    ],
+    "StudyTitle": [
+        {
+            "executionStatus": "success",
+            "dataset": "StudyTitle.xpt",
+            "domain": null,
+            "variables": [],
+            "message": null,
+            "errors": []
+        }
+    ]
+}

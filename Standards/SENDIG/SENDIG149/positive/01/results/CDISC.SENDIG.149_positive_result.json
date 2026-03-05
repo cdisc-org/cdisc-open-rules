@@ -1,0 +1,25 @@
+{
+  "VS": [
+    {
+      "executionStatus": "success",
+      "domain": "VS",
+      "variables": [],
+      "message": null,
+      "errors": []
+    }
+  ],
+  "SC": [
+    {
+      "executionStatus": "execution_error",
+      "domain": "SC",
+      "variables": [],
+      "message": "rule execution error",
+      "errors": [
+        {
+          "error": "Column not found in data",
+          "message": "SCEXCLFL"
+        }
+      ]
+    }
+  ]
+}

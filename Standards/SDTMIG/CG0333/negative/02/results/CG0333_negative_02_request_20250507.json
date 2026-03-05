@@ -1,0 +1,628 @@
+{3 items
+"datasets":[3 items
+0:{5 items
+"filename":"fa.xpt"
+"label":"Findings About"
+"domain":"FA"
+"variables":[16 items
+0:{4 items
+"name":"STUDYID"
+"label":"Study Identifier"
+"type":"Char"
+"length":12
+}
+1:{4 items
+"name":"DOMAIN"
+"label":"Domain Abbreviation"
+"type":"Char"
+"length":2
+}
+2:{4 items
+"name":"USUBJID"
+"label":"Unique Subject Identifier"
+"type":"Char"
+"length":8
+}
+3:{4 items
+"name":"FASEQ"
+"label":"Sequence Number"
+"type":"Num"
+"length":8
+}
+4:{4 items
+"name":"FALNKGRP"
+"label":"Link Group ID"
+"type":"Char"
+"length":200
+}
+5:{4 items
+"name":"FATESTCD"
+"label":"Findings About Test Short Name"
+"type":"Char"
+"length":5
+}
+6:{4 items
+"name":"FATEST"
+"label":"Findings About Test Name"
+"type":"Char"
+"length":20
+}
+7:{4 items
+"name":"FAOBJ"
+"label":"Object of the Observation"
+"type":"Char"
+"length":10
+}
+8:{4 items
+"name":"FACAT"
+"label":"Category for Findings About"
+"type":"Char"
+"length":23
+}
+9:{4 items
+"name":"FAORRES"
+"label":"Result or Finding in Original Units"
+"type":"Char"
+"length":8
+}
+10:{4 items
+"name":"FASTRESC"
+"label":"Character Result/Finding in Std Format"
+"type":"Char"
+"length":8
+}
+11:{4 items
+"name":"FALOC"
+"label":"Location of the Finding About"
+"type":"Char"
+"length":3
+}
+12:{4 items
+"name":"VISITNUM"
+"label":"Visit Number"
+"type":"Num"
+"length":8
+}
+13:{4 items
+"name":"EPOCH"
+"label":"Epoch"
+"type":"Char"
+"length":9
+}
+14:{4 items
+"name":"FADTC"
+"label":"Date/Time of Collection"
+"type":"Char"
+"length":10
+}
+15:{4 items
+"name":"FADY"
+"label":"Study Day of Collection"
+"type":"Num"
+"length":8
+}
+]
+"records":{16 items
+"STUDYID":[5 items
+0:"CDISCPILOT01"
+1:"CDISCPILOT01"
+2:"CDISCPILOT01"
+3:"CDISCPILOT01"
+4:"CDISCPILOT01"
+]
+"DOMAIN":[5 items
+0:"FA"
+1:"FA"
+2:"FA"
+3:"FA"
+4:"FA"
+]
+"USUBJID":[5 items
+0:"CDISC001"
+1:"CDISC001"
+2:"CDISC001"
+3:"CDISC001"
+4:"CDISC001"
+]
+"FASEQ":[5 items
+0:1
+1:2
+2:3
+3:4
+4:5
+]
+"FALNKGRP":[5 items
+0:"1"
+1:"1"
+2:"1"
+3:"1"
+4:"1"
+]
+"FATESTCD":[5 items
+0:"OCCUR"
+1:"SEV"
+2:"OCCUR"
+3:"OCCUR"
+4:"OCCUR"
+]
+"FATEST":[5 items
+0:"Occurrence Indicator"
+1:"Severity/Intensity"
+2:"Occurrence Indicator"
+3:"Occurrence Indicator"
+4:"Occurrence Indicator"
+]
+"FAOBJ":[5 items
+0:"ERYTHEMA"
+1:"ERYTHEMA"
+2:"PAIN"
+3:"INDURATION"
+4:"PRURITIS"
+]
+"FACAT":[5 items
+0:"INJECTION SITE REACTION"
+1:"INJECTION SITE REACTION"
+2:"INJECTION SITE REACTION"
+3:"INJECTION SITE REACTION"
+4:"INJECTION SITE REACTION"
+]
+"FAORRES":[5 items
+0:"Y"
+1:"MODERATE"
+2:"N"
+3:"N"
+4:"N"
+]
+"FASTRESC":[5 items
+0:"Y"
+1:"MODERATE"
+2:"N"
+3:"N"
+4:"N"
+]
+"FALOC":[5 items
+0:"ARM"
+1:"ARM"
+2:"ARM"
+3:"ARM"
+4:"ARM"
+]
+"VISITNUM":[5 items
+0:NULL
+1:NULL
+2:NULL
+3:NULL
+4:NULL
+]
+"EPOCH":[5 items
+0:"TREATMENT"
+1:"TREATMENT"
+2:"TREATMENT"
+3:"TREATMENT"
+4:"TREATMENT"
+]
+"FADTC":[5 items
+0:"2012-12-02"
+1:"2012-12-02"
+2:"2012-12-02"
+3:"2012-12-02"
+4:"2012-12-02"
+]
+"FADY":[5 items
+0:3
+1:3
+2:3
+3:3
+4:3
+]
+}
+}
+1:{5 items
+"filename":"facm.xpt"
+"label":"Findings About CM Records"
+"domain":"FA"
+"variables":[16 items
+0:{4 items
+"name":"STUDYID"
+"label":"Study Identifier"
+"type":"Char"
+"length":12
+}
+1:{4 items
+"name":"DOMAIN"
+"label":"Domain Abbreviation"
+"type":"Char"
+"length":2
+}
+2:{4 items
+"name":"USUBJID"
+"label":"Unique Subject Identifier"
+"type":"Char"
+"length":8
+}
+3:{4 items
+"name":"FASEQ"
+"label":"Sequence Number"
+"type":"Num"
+"length":8
+}
+4:{4 items
+"name":"FALNKGRP"
+"label":"Link Group ID"
+"type":"Char"
+"length":200
+}
+5:{4 items
+"name":"FATESTCD"
+"label":"Findings About Test Short Name"
+"type":"Char"
+"length":5
+}
+6:{4 items
+"name":"FATEST"
+"label":"Findings About Test Name"
+"type":"Char"
+"length":20
+}
+7:{4 items
+"name":"FAOBJ"
+"label":"Object of the Observation"
+"type":"Char"
+"length":10
+}
+8:{4 items
+"name":"FACAT"
+"label":"Category for Findings About"
+"type":"Char"
+"length":23
+}
+9:{4 items
+"name":"FAORRES"
+"label":"Result or Finding in Original Units"
+"type":"Char"
+"length":8
+}
+10:{4 items
+"name":"FASTRESC"
+"label":"Character Result/Finding in Std Format"
+"type":"Char"
+"length":8
+}
+11:{4 items
+"name":"FALOC"
+"label":"Location of the Finding About"
+"type":"Char"
+"length":3
+}
+12:{4 items
+"name":"VISITNUM"
+"label":"Visit Number"
+"type":"Num"
+"length":8
+}
+13:{4 items
+"name":"EPOCH"
+"label":"Epoch"
+"type":"Char"
+"length":9
+}
+14:{4 items
+"name":"FADTC"
+"label":"Date/Time of Collection"
+"type":"Char"
+"length":10
+}
+15:{4 items
+"name":"FADY"
+"label":"Study Day of Collection"
+"type":"Num"
+"length":8
+}
+]
+"records":{16 items
+"STUDYID":[2 items
+0:"CDISCPILOT01"
+1:"CDISCPILOT01"
+]
+"DOMAIN":[2 items
+0:"FA"
+1:"FA"
+]
+"USUBJID":[2 items
+0:"CDISC001"
+1:"CDISC001"
+]
+"FASEQ":[2 items
+0:1
+1:4
+]
+"FALNKGRP":[2 items
+0:"1"
+1:"1"
+]
+"FATESTCD":[2 items
+0:"OCCUR"
+1:"OCCUR"
+]
+"FATEST":[2 items
+0:"Occurrence Indicator"
+1:"Occurrence Indicator"
+]
+"FAOBJ":[2 items
+0:"OMEPRAZOLE"
+1:"OMEPRAZOLE"
+]
+"FACAT":[2 items
+0:"INJECTION SITE REACTION"
+1:"INJECTION SITE REACTION"
+]
+"FAORRES":[2 items
+0:"Y"
+1:"N"
+]
+"FASTRESC":[2 items
+0:"Y"
+1:"N"
+]
+"FALOC":[2 items
+0:"ARM"
+1:"ARM"
+]
+"VISITNUM":[2 items
+0:NULL
+1:NULL
+]
+"EPOCH":[2 items
+0:"TREATMENT"
+1:"TREATMENT"
+]
+"FADTC":[2 items
+0:"2012-12-02"
+1:"2012-12-02"
+]
+"FADY":[2 items
+0:3
+1:3
+]
+}
+}
+2:{5 items
+"filename":"fa1.xpt"
+"label":"Findings About Medical History"
+"domain":"FA"
+"variables":[16 items
+0:{4 items
+"name":"STUDYID"
+"label":"Study Identifier"
+"type":"Char"
+"length":12
+}
+1:{4 items
+"name":"DOMAIN"
+"label":"Domain Abbreviation"
+"type":"Char"
+"length":2
+}
+2:{4 items
+"name":"USUBJID"
+"label":"Unique Subject Identifier"
+"type":"Char"
+"length":8
+}
+3:{4 items
+"name":"FASEQ"
+"label":"Sequence Number"
+"type":"Num"
+"length":8
+}
+4:{4 items
+"name":"FALNKGRP"
+"label":"Link Group ID"
+"type":"Char"
+"length":200
+}
+5:{4 items
+"name":"FATESTCD"
+"label":"Findings About Test Short Name"
+"type":"Char"
+"length":5
+}
+6:{4 items
+"name":"FATEST"
+"label":"Findings About Test Name"
+"type":"Char"
+"length":20
+}
+7:{4 items
+"name":"FAOBJ"
+"label":"Object of the Observation"
+"type":"Char"
+"length":10
+}
+8:{4 items
+"name":"FACAT"
+"label":"Category for Findings About"
+"type":"Char"
+"length":23
+}
+9:{4 items
+"name":"FAORRES"
+"label":"Result or Finding in Original Units"
+"type":"Char"
+"length":8
+}
+10:{4 items
+"name":"FASTRESC"
+"label":"Character Result/Finding in Std Format"
+"type":"Char"
+"length":8
+}
+11:{4 items
+"name":"FALOC"
+"label":"Location of the Finding About"
+"type":"Char"
+"length":3
+}
+12:{4 items
+"name":"VISITNUM"
+"label":"Visit Number"
+"type":"Num"
+"length":8
+}
+13:{4 items
+"name":"EPOCH"
+"label":"Epoch"
+"type":"Char"
+"length":9
+}
+14:{4 items
+"name":"FADTC"
+"label":"Date/Time of Collection"
+"type":"Char"
+"length":10
+}
+15:{4 items
+"name":"FADY"
+"label":"Study Day of Collection"
+"type":"Num"
+"length":8
+}
+]
+"records":{16 items
+"STUDYID":[6 items
+0:"CDISCPILOT01"
+1:"CDISCPILOT01"
+2:"CDISCPILOT01"
+3:"CDISCPILOT01"
+4:"CDISCPILOT01"
+5:"CDISCPILOT01"
+]
+"DOMAIN":[6 items
+0:"FA"
+1:"FA"
+2:"FA"
+3:"FA"
+4:"FA"
+5:"FA"
+]
+"USUBJID":[6 items
+0:"CDISC002"
+1:"CDISC002"
+2:"CDISC002"
+3:"CDISC002"
+4:"CDISC002"
+5:"CDISC002"
+]
+"FASEQ":[6 items
+0:1
+1:2
+2:3
+3:4
+4:5
+5:6
+]
+"FALNKGRP":[6 items
+0:"1"
+1:"1"
+2:"1"
+3:"1"
+4:"1"
+5:"1"
+]
+"FATESTCD":[6 items
+0:"OCCUR"
+1:"OCCUR"
+2:"OCCUR"
+3:"OCCUR"
+4:"SEV"
+5:"OCCUR"
+]
+"FATEST":[6 items
+0:"Occurrence Indicator"
+1:"Occurrence Indicator"
+2:"Occurrence Indicator"
+3:"Occurrence Indicator"
+4:"Severity/Intensity"
+5:"Occurrence Indicator"
+]
+"FAOBJ":[6 items
+0:"ERYTHEMA"
+1:"PAIN"
+2:"INDURATION"
+3:"PRURITIS"
+4:"PRURITIS"
+5:"EDEMA"
+]
+"FACAT":[6 items
+0:"INJECTION SITE REACTION"
+1:"INJECTION SITE REACTION"
+2:"INJECTION SITE REACTION"
+3:"INJECTION SITE REACTION"
+4:"INJECTION SITE REACTION"
+5:"INJECTION SITE REACTION"
+]
+"FAORRES":[6 items
+0:"N"
+1:"N"
+2:"N"
+3:"Y"
+4:"MILD"
+5:"N"
+]
+"FASTRESC":[6 items
+0:"N"
+1:"N"
+2:"N"
+3:"Y"
+4:"MILD"
+5:"N"
+]
+"FALOC":[6 items
+0:"ARM"
+1:"ARM"
+2:"ARM"
+3:"ARM"
+4:"ARM"
+5:"ARM"
+]
+"VISITNUM":[6 items
+0:NULL
+1:NULL
+2:NULL
+3:NULL
+4:NULL
+5:NULL
+]
+"EPOCH":[6 items
+0:"TREATMENT"
+1:"TREATMENT"
+2:"TREATMENT"
+3:"TREATMENT"
+4:"TREATMENT"
+5:"TREATMENT"
+]
+"FADTC":[6 items
+0:"2012-11-16"
+1:"2012-11-16"
+2:"2012-11-16"
+3:"2012-11-16"
+4:"2012-11-16"
+5:"2012-11-16"
+]
+"FADY":[6 items
+0:2
+1:2
+2:2
+3:2
+4:2
+5:2
+]
+}
+}
+]
+"standard":{2 items
+"product":"sdtmig"
+"version":"3-4"
+}
+"codelists":[]0 items
+}

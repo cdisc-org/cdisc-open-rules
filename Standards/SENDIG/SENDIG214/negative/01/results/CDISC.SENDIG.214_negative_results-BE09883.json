@@ -1,0 +1,22 @@
+{
+  "TE": [
+    {
+      "executionStatus": "success",
+      "domain": "TE",
+      "variables": [
+        "TEDUR",
+        "TEENRL"
+      ],
+      "message": "TEDUR cannot be null when TEENRL is null",
+      "errors": [
+        {
+          "value": {
+            "TEDUR": "",
+            "TEENRL": ""
+          },
+          "row": 1
+        }
+      ]
+    }
+  ]
+}

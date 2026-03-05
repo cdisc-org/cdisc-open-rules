@@ -1,0 +1,27 @@
+{
+  "TS": [
+    {
+      "executionStatus": "success",
+      "domain": "TS",
+      "variables": [
+        "$HLTSUBJI_Y",
+        "TSGRPID",
+        "TSPARMCD",
+        "TSVAL"
+      ],
+      "message": "A record exists in TS where TSPARMCD = HLTSUBJI and TSVAL = Y but TSVAL for TSPARMCD = TDIGRP is not empty or does not equal HEALTHY SUBJECTS.",
+      "errors": [
+        {
+          "value": {
+            "TSGRPID": "",
+            "TSVAL": "Patients with Probable Mild to Moderate Alzheimers Disease",
+            "TSPARMCD": "TDIGRP",
+            "$HLTSUBJI_Y": 1
+          },
+          "row": 45,
+          "SEQ": 1
+        }
+      ]
+    }
+  ]
+}

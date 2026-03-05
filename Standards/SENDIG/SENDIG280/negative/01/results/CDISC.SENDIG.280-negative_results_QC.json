@@ -1,0 +1,24 @@
+{
+  "LB": [
+    {
+      "executionStatus": "success",
+      "domain": "LB",
+      "variables": [
+        "LBREASND",
+        "LBSTAT"
+      ],
+      "message": "When LBSTAT is \"NOT DONE\", LBREASND must be populated.",
+      "errors": [
+        {
+          "value": {
+            "LBSTAT": "NOT DONE",
+            "LBREASND": ""
+          },
+          "row": 4,
+          "USUBJID": "CDISC002",
+          "SEQ": 2
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+{
+    "STUDYPROTOCOLDOCUMENTVERSIO": [
+        {
+            "executionStatus": "success",
+            "domain": "STUDYPROTOCOLDOCUMENTVERSIO",
+            "variables": [
+                "id",
+                "name",
+                "parent_entity",
+                "parent_id",
+                "parent_rel"
+            ],
+            "message": "An instance of a class is being referenced as one of its own children.",
+            "errors": [
+                {
+                    "value": {
+                        "parent_entity": "StudyProtocolDocumentVersion",
+                        "parent_rel": "childIds",
+                        "id": "StudyProtocolDocumentVersion_1",
+                        "parent_id": "StudyProtocolDocumentVersion_1",
+                        "name": "Not in dataset"
+                    },
+                    "row": 3
+                }
+            ]
+        }
+    ],
+    "BIOMEDICALCONCEPTCATEGORY": [
+        {
+            "executionStatus": "success",
+            "domain": "BIOMEDICALCONCEPTCATEGORY",
+            "variables": [
+                "id",
+                "name",
+                "parent_entity",
+                "parent_id",
+                "parent_rel"
+            ],
+            "message": "An instance of a class is being referenced as one of its own children.",
+            "errors": [
+                {
+                    "value": {
+                        "id": "BiomedicalConceptCategory_1",
+                        "parent_id": "BiomedicalConceptCategory_1",
+                        "parent_entity": "BiomedicalConceptCategory",
+                        "name": "BCCAT1",
+                        "parent_rel": "childIds"
+                    },
+                    "row": 2
+                }
+            ]
+        }
+    ],
+    "NARRATIVECONTENT": [
+        {
+            "executionStatus": "success",
+            "domain": "NARRATIVECONTENT",
+            "variables": [
+                "id",
+                "name",
+                "parent_entity",
+                "parent_id",
+                "parent_rel"
+            ],
+            "message": "An instance of a class is being referenced as one of its own children.",
+            "errors": [
+                {
+                    "value": {
+                        "id": "NarrativeContent_1",
+                        "parent_id": "NarrativeContent_1",
+                        "parent_entity": "NarrativeContent",
+                        "name": "ROOT",
+                        "parent_rel": "childIds"
+                    },
+                    "row": 5
+                },
+                {
+                    "value": {
+                        "id": "NarrativeContent_2",
+                        "parent_id": "NarrativeContent_2",
+                        "parent_entity": "NarrativeContent",
+                        "name": "SECTION 0",
+                        "parent_rel": "childIds"
+                    },
+                    "row": 6
+                },
+                {
+                    "value": {
+                        "id": "NarrativeContent_3",
+                        "parent_id": "NarrativeContent_3",
+                        "parent_entity": "NarrativeContent",
+                        "name": "SECTION 1",
+                        "parent_rel": "childIds"
+                    },
+                    "row": 7
+                },
+                {
+                    "value": {
+                        "id": "NarrativeContent_4",
+                        "parent_id": "NarrativeContent_4",
+                        "parent_entity": "NarrativeContent",
+                        "name": "SECTION 1.1",
+                        "parent_rel": "childIds"
+                    },
+                    "row": 8
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,9 @@
+parent_entity,parent_id,parent_rel,rel_type,id,name,label,description,notes,bcSurrogateIds,bcCategoryIds,childIds,previousId,nextId,timelineId,instanceType
+InterventionalStudyDesign,InterventionalStudyDesign_1,activities,definition,Activity_982,A982,,,FALSE,False,False,False,,Activity_983,,Activity
+InterventionalStudyDesign,InterventionalStudyDesign_1,activities,definition,Activity_983,A983,,,FALSE,False,False,,Activity_982,Activity_986,,Activity
+InterventionalStudyDesign,InterventionalStudyDesign_1,activities,definition,Activity_986,A986,,,FALSE,False,,False,Activity_983,Activity_987,,Activity
+InterventionalStudyDesign,InterventionalStudyDesign_1,activities,definition,Activity_987,A987,,,FALSE,False,,,Activity_986,Activity_998,,Activity
+InterventionalStudyDesign,InterventionalStudyDesign_1,activities,definition,Activity_998,A998,,,FALSE,,False,False,Activity_987,Activity_999,,Activity
+InterventionalStudyDesign,InterventionalStudyDesign_1,activities,definition,Activity_999,A999,,,FALSE,,False,,Activity_998,Activity_1002,,Activity
+InterventionalStudyDesign,InterventionalStudyDesign_1,activities,definition,Activity_1002,A1002,,,FALSE,,,False,Activity_999,Activity_1003,,Activity
+InterventionalStudyDesign,InterventionalStudyDesign_1,activities,definition,Activity_1003,A1003,,,FALSE,,,,Activity_1002,,,Activity

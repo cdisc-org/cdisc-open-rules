@@ -1,0 +1,78 @@
+{
+    "StudyDesign": [
+        {
+            "executionStatus": "skipped",
+            "dataset": "StudyDesign.xpt",
+            "domain": "",
+            "variables": [],
+            "message": "Rule skipped - doesn't apply to entity for rule id=, dataset=StudyDesign",
+            "errors": []
+        }
+    ],
+    "ScheduledActivityInstance": [
+        {
+            "executionStatus": "success",
+            "dataset": "ScheduledActivityInstance.xpt",
+            "domain": "ScheduledActivityInstance",
+            "variables": [
+                "$study_design_id_for_scheduled_instance",
+                "$study_design_id_for_subtimeline",
+                "id",
+                "name",
+                "parent_entity",
+                "parent_id",
+                "parent_rel",
+                "timelineId"
+            ],
+            "message": "The scheduled activity instance has a sub-timeline that is not defined within the same study design.",
+            "errors": [
+                {
+                    "value": {
+                        "timelineId": "ScheduleTimeline_14",
+                        "parent_rel": "instances",
+                        "parent_entity": "ScheduleTimeline",
+                        "name": "DOSE-1",
+                        "$study_design_id_for_subtimeline": [
+                            "StudyDesign_2"
+                        ],
+                        "$study_design_id_for_scheduled_instance": [
+                            "StudyDesign_1"
+                        ],
+                        "parent_id": "ScheduleTimeline_4",
+                        "id": "ScheduledActivityInstance_11"
+                    },
+                    "dataset": "ScheduledActivityInstance.xpt",
+                    "row": 2
+                },
+                {
+                    "value": {
+                        "timelineId": "ScheduleTimeline_15",
+                        "parent_rel": "instances",
+                        "parent_entity": "ScheduleTimeline",
+                        "name": "DOSE-2",
+                        "$study_design_id_for_subtimeline": [
+                            "StudyDesign_1"
+                        ],
+                        "$study_design_id_for_scheduled_instance": [
+                            "StudyDesign_2"
+                        ],
+                        "parent_id": "ScheduleTimeline_5",
+                        "id": "ScheduledActivityInstance_31"
+                    },
+                    "dataset": "ScheduledActivityInstance.xpt",
+                    "row": 12
+                }
+            ]
+        }
+    ],
+    "ScheduleTimeline": [
+        {
+            "executionStatus": "skipped",
+            "dataset": "ScheduleTimeline.xpt",
+            "domain": "",
+            "variables": [],
+            "message": "Rule skipped - doesn't apply to entity for rule id=, dataset=ScheduleTimeline",
+            "errors": []
+        }
+    ]
+}

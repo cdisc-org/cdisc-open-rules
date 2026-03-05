@@ -1,0 +1,1441 @@
+{
+  "rule": {
+    "Authorities": [
+      {
+        "Organization": "CDISC",
+        "Standards": [
+          {
+            "Name": "SENDIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Document": "IG v3.0",
+                    "Section": "6.1.1",
+                    "Cited_Guidance": "POOLID and USUBJID are mutually exclusive. When POOLID is used, USUBJID will be null and if a USUBJID is recorded, the POOLID will be null."
+                  }
+                ],
+                "Origin": "SEND Conformance Rules",
+                "Version": "5.0",
+                "Rule_Identifier": {
+                  "Id": "SEND132",
+                  "Version": "1"
+                }
+              }
+            ],
+            "Version": "3.0"
+          },
+          {
+            "Name": "SENDIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Document": "IG v3.1",
+                    "Section": "8.5",
+                    "Cited_Guidance": "POOLID and USUBJID are mutually exclusive. When POOLID is used, USUBJID will be null and if a USUBJID is recorded, the POOLID will be null."
+                  }
+                ],
+                "Origin": "SEND Conformance Rules",
+                "Version": "5.0",
+                "Rule_Identifier": {
+                  "Id": "SEND132",
+                  "Version": "1"
+                }
+              }
+            ],
+            "Version": "3.1"
+          },
+          {
+            "Name": "SENDIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Document": "IG v3.1.1",
+                    "Section": "8.5",
+                    "Cited_Guidance": "POOLID and USUBJID are mutually exclusive. When POOLID is used, USUBJID will be null and if a USUBJID is recorded, the POOLID will be null."
+                  }
+                ],
+                "Origin": "SEND Conformance Rules",
+                "Version": "5.0",
+                "Rule_Identifier": {
+                  "Id": "SEND132",
+                  "Version": "1"
+                }
+              }
+            ],
+            "Version": "3.1.1"
+          },
+          {
+            "Name": "SENDIG-DART",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Document": "IG v3.1",
+                    "Section": "8.5",
+                    "Cited_Guidance": "POOLID and USUBJID are mutually exclusive. When POOLID is used, USUBJID will be null and if a USUBJID is recorded, the POOLID will be null."
+                  }
+                ],
+                "Origin": "SEND Conformance Rules",
+                "Version": "5.0",
+                "Rule_Identifier": {
+                  "Id": "SEND132",
+                  "Version": "1"
+                }
+              }
+            ],
+            "Version": "1.1"
+          },
+          {
+            "Name": "SENDIG-DART",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Document": "IG v3.1",
+                    "Section": "8.5",
+                    "Cited_Guidance": "POOLID and USUBJID are mutually exclusive. When POOLID is used, USUBJID will be null and if a USUBJID is recorded, the POOLID will be null."
+                  }
+                ],
+                "Origin": "SEND Conformance Rules",
+                "Version": "5.0",
+                "Rule_Identifier": {
+                  "Id": "SEND132",
+                  "Version": "1"
+                }
+              }
+            ],
+            "Version": "1.2"
+          },
+          {
+            "Name": "SENDIG-GENETOX",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Document": "IG v3.1",
+                    "Section": "8.5",
+                    "Cited_Guidance": "POOLID and USUBJID are mutually exclusive. When POOLID is used, USUBJID will be null and if a USUBJID is recorded, the POOLID will be null."
+                  }
+                ],
+                "Origin": "SEND Conformance Rules",
+                "Version": "5.0",
+                "Rule_Identifier": {
+                  "Id": "SEND132",
+                  "Version": "1"
+                }
+              }
+            ],
+            "Version": "1.0"
+          }
+        ]
+      }
+    ],
+    "Check": {
+      "all": [
+        {
+          "name": "POOLID",
+          "operator": "non_empty"
+        },
+        {
+          "name": "USUBJID",
+          "operator": "non_empty"
+        }
+      ]
+    },
+    "Core": {
+      "Id": "CDISC.SENDIG.132",
+      "Status": "Draft",
+      "Version": "1"
+    },
+    "Description": "Raise an error when both USUBJID and POOLID are populated",
+    "Executability": "Fully Executable",
+    "Outcome": {
+      "Message": "When POOLID is populated, USUBJID may not be populated",
+      "Output_Variables": [
+        "USUBJID",
+        "POOLID"
+      ]
+    },
+    "Scope": {
+      "Classes": {
+        "Include": [
+          "INTERVENTIONS",
+          "FINDINGS"
+        ]
+      },
+      "Domains": {
+        "Include": [
+          "ALL"
+        ]
+      }
+    },
+    "Sensitivity": "Record",
+    "Rule_Type": "Record Data"
+  },
+  "datasets": [
+    {
+      "filename": "ae.xpt",
+      "label": "Adverse Events",
+      "domain": "AE",
+      "variables": [
+        {
+          "name": "STUDYID",
+          "label": "Study Identifier",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "DOMAIN",
+          "label": "Domain Abbreviation",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "USUBJID",
+          "label": "Unique Subject Identifier",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "AESEQ",
+          "label": "Sequence Number",
+          "type": "Num",
+          "length": 8
+        },
+        {
+          "name": "AETERM",
+          "label": "Reported Term for the Adverse Event",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "AEMODIFY",
+          "label": "Modified Reported Term",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "AEDECOD",
+          "label": "Dictionary-Derived Term",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "AEBODSYS",
+          "label": "Body System or Organ Class",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "AESEV",
+          "label": "Severity/Intensity",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "AESER",
+          "label": "Serious Event",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "AEACN",
+          "label": "Action Taken with Study Treatment",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "AEREL",
+          "label": "Causality",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "AEOUT",
+          "label": "Outcome of Adverse Event",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "AESCONG",
+          "label": "Congenital Anomaly or Birth Defect",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "AESDISAB",
+          "label": "Persist or Signif Disability/Incapacity",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "AESDTH",
+          "label": "Results in Death",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "AESHOSP",
+          "label": "Requires or Prolongs Hospitalization",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "AESLIFE",
+          "label": "Is Life Threatening",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "EPOCH",
+          "label": "Epoch",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "AESTDTC",
+          "label": "Start Date/Time of Adverse Event",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "AEENDTC",
+          "label": "End Date/Time of Adverse Event",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "AESTDY",
+          "label": "Study Day of Start of Adverse Event",
+          "type": "Num",
+          "length": 8
+        },
+        {
+          "name": "AEENDY",
+          "label": "Study Day of End of Adverse Event",
+          "type": "Num",
+          "length": 8
+        },
+        {
+          "name": "AETPTREF",
+          "label": "Time Point Reference",
+          "type": "Char",
+          "length": 200
+        },
+        {
+          "name": "AEENRF",
+          "label": "End Relative to Reference Period",
+          "type": "Char",
+          "length": 50
+        }
+      ],
+      "records": {
+        "STUDYID": [
+          "ABC123",
+          "ABC123",
+          "ABC123"
+        ],
+        "DOMAIN": [
+          "AE",
+          "AE",
+          "AE"
+        ],
+        "USUBJID": [
+          "123101",
+          "123101",
+          "123102"
+        ],
+        "AESEQ": [
+          1,
+          2,
+          1
+        ],
+        "AETERM": [
+          "POUNDING HEADACHE",
+          "BACK PAIN FOR 6 HOURS",
+          "POUNDING HEADACHE"
+        ],
+        "AEMODIFY": [
+          "HEADACHE",
+          "BACK PAIN",
+          "HEADACHE"
+        ],
+        "AEDECOD": [
+          "Headache",
+          "Back pain",
+          "Headache"
+        ],
+        "AEBODSYS": [
+          "Nervous system disorders",
+          "Musculoskeletal and connective tissue disorders",
+          "Nervous system disorders"
+        ],
+        "AESEV": [
+          "SEVERE",
+          "MODERATE",
+          "SEVERE"
+        ],
+        "AESER": [
+          "N",
+          "N",
+          "N"
+        ],
+        "AEACN": [
+          "NOT APPLICABLE",
+          "DOSE REDUCED",
+          "NOT APPLICABLE"
+        ],
+        "AEREL": [
+          "DEFINITELY NOT RELATED",
+          "PROBABLY RELATED",
+          "DEFINITELY NOT RELATED"
+        ],
+        "AEOUT": [
+          "RECOVERED/RESOLVED",
+          "RECOVERED/RESOLVED",
+          "RECOVERED/RESOLVED"
+        ],
+        "AESCONG": [
+          "",
+          "",
+          ""
+        ],
+        "AESDISAB": [
+          "",
+          "",
+          ""
+        ],
+        "AESDTH": [
+          "",
+          "",
+          ""
+        ],
+        "AESHOSP": [
+          "",
+          "",
+          ""
+        ],
+        "AESLIFE": [
+          "",
+          "",
+          ""
+        ],
+        "EPOCH": [
+          "SCREENING",
+          "TREATMENT",
+          "SCREENING"
+        ],
+        "AESTDTC": [
+          "2005-10-12",
+          "2005-10-13T13:05",
+          "2005-10-12"
+        ],
+        "AEENDTC": [
+          "2005-10-12",
+          "2005-10-13T19:00",
+          "2005-10-12"
+        ],
+        "AESTDY": [
+          -1,
+          1,
+          -1
+        ],
+        "AEENDY": [
+          -1,
+          1,
+          -1
+        ],
+        "AETPTREF": [
+          "Reference point 1",
+          "Reference point 2",
+          "Reference point 1"
+        ],
+        "AEENRF": [
+          "",
+          "",
+          ""
+        ]
+      }
+    },
+    {
+      "filename": "co.xpt",
+      "label": "Comments",
+      "domain": "CO",
+      "variables": [
+        {
+          "name": "STUDYID",
+          "label": "Study Identifier",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "DOMAIN",
+          "label": "Domain Abbreviation",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "RDOMAIN",
+          "label": "Related Domain Abbreviation",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "USUBJID",
+          "label": "Unique Subject Identifier",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "POOLID",
+          "label": "Pool Identifier",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "COSEQ",
+          "label": "Sequence Number",
+          "type": "Num",
+          "length": 8
+        },
+        {
+          "name": "IDVAR",
+          "label": "Identifying Variable",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "IDVARVAL",
+          "label": "Identifying Variable Value",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "COREF",
+          "label": "Comment Reference",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "COVAL",
+          "label": "Comment",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "COEVAL",
+          "label": "Evaluator",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "CODTC",
+          "label": "Date/Time of Comment",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "CODY",
+          "label": "Study Day of Comment",
+          "type": "Num",
+          "length": 8
+        }
+      ],
+      "records": {
+        "STUDYID": [
+          "1234",
+          "1234",
+          "1234"
+        ],
+        "DOMAIN": [
+          "CO",
+          "CO",
+          "CO"
+        ],
+        "RDOMAIN": [
+          "EX",
+          "PE",
+          "LB"
+        ],
+        "USUBJID": [
+          "ZZ-23",
+          "",
+          "XX-11"
+        ],
+        "POOLID": [
+          "",
+          "B",
+          ""
+        ],
+        "COSEQ": [
+          4,
+          6,
+          6
+        ],
+        "IDVAR": [
+          "EXGRPID",
+          "VISITNUM",
+          "LBLOINC"
+        ],
+        "IDVARVAL": [
+          "COMBO1",
+          "4",
+          "comment with variable"
+        ],
+        "COREF": [
+          "PAGE 320-355",
+          "",
+          ""
+        ],
+        "COVAL": [
+          "Medicine was administered under supervision of Sub investigator as PI was on leave",
+          "Visit was delayed by a day due to hospital holiday",
+          "Visit was delayed by a day due to hospital holiday"
+        ],
+        "COEVAL": [
+          "PRINCIPAL INVESTIGATOR",
+          "PRINCIPAL INVESTIGATOR",
+          ""
+        ],
+        "CODTC": [
+          "",
+          "",
+          "PRINCIPAL INVESTIGATOR"
+        ],
+        "CODY": [
+          null,
+          null,
+          null
+        ]
+      }
+    },
+    {
+      "filename": "ds.xpt",
+      "label": "Disposition",
+      "domain": "DS",
+      "variables": [
+        {
+          "name": "STUDYID",
+          "label": "Study Identifier",
+          "type": "Char",
+          "length": 12
+        },
+        {
+          "name": "DOMAIN",
+          "label": "Domain Abbreviation",
+          "type": "Char",
+          "length": 2
+        },
+        {
+          "name": "USUBJID",
+          "label": "Unique Subject Identifier",
+          "type": "Char",
+          "length": 20
+        },
+        {
+          "name": "DSSEQ",
+          "label": "Sequence Number",
+          "type": "Num",
+          "length": 8
+        },
+        {
+          "name": "DSTERM",
+          "label": "Reported Term for the Disposition Event",
+          "type": "Char",
+          "length": 200
+        },
+        {
+          "name": "DSDECOD",
+          "label": "Standardized Disposition Term",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "DSCAT",
+          "label": "Category for Disposition Event",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "DSSTDTC",
+          "label": "Start Date/Time of Disposition Event",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "DSUSCHFL",
+          "label": "Unscheduled Flag",
+          "type": "Char",
+          "length": 1
+        }
+      ],
+      "records": {
+        "STUDYID": [
+          "CDISCPILOT01",
+          "CDISCPILOT01",
+          "CDISCPILOT01",
+          "CDISCPILOT01",
+          "CDISCPILOT01"
+        ],
+        "DOMAIN": [
+          "DS",
+          "DS",
+          "DS",
+          "DS",
+          "DS"
+        ],
+        "USUBJID": [
+          "CDISC001",
+          "CDISC002",
+          "CDISC003",
+          "CDISC004",
+          "CDISC005"
+        ],
+        "DSSEQ": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "DSTERM": [
+          "accidental death",
+          "accidental death",
+          "accidental death",
+          "accidental death",
+          "accidental death"
+        ],
+        "DSDECOD": [
+          "ACCIDENTAL DEATH ",
+          "ACCIDENTAL DEATH ",
+          "ACCIDENTAL DEATH ",
+          "ACCIDENTAL DEATH ",
+          "ACCIDENTAL DEATH "
+        ],
+        "DSCAT": [
+          "PROTOCOL MILESTONE",
+          "PROTOCOL MILESTONE",
+          "PROTOCOL MILESTONE",
+          "PROTOCOL MILESTONE",
+          "PROTOCOL MILESTONE"
+        ],
+        "DSSTDTC": [
+          "2018-03-06",
+          "2018-04-17",
+          "2018-04-17",
+          "2018-04-17",
+          "2018-04-22"
+        ],
+        "DSUSCHFL": [
+          "Y",
+          "Y",
+          "Y",
+          "Y",
+          "Y"
+        ]
+      }
+    },
+    {
+      "filename": "ex.xpt",
+      "label": "Exposure",
+      "domain": "EX",
+      "variables": [
+        {
+          "name": "STUDYID",
+          "label": "Study Identifier",
+          "type": "Char",
+          "length": 12
+        },
+        {
+          "name": "DOMAIN",
+          "label": "Domain Abbreviation",
+          "type": "Char",
+          "length": 2
+        },
+        {
+          "name": "USUBJID",
+          "label": "Unique Subject Identifier",
+          "type": "Char",
+          "length": 8
+        },
+        {
+          "name": "POOLID",
+          "label": "Pool Identifier",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "EXSEQ",
+          "label": "Sequence Number",
+          "type": "Num",
+          "length": 8
+        },
+        {
+          "name": "EXTRT",
+          "label": "Name of Treatment",
+          "type": "Char",
+          "length": 10
+        },
+        {
+          "name": "EXDOSE",
+          "label": "Dose",
+          "type": "Num",
+          "length": 8
+        },
+        {
+          "name": "EXDOSU",
+          "label": "Dose Units",
+          "type": "Char",
+          "length": 2
+        },
+        {
+          "name": "EXDOSFRM",
+          "label": "Dose Form",
+          "type": "Char",
+          "length": 9
+        },
+        {
+          "name": "EXDOSFRQ",
+          "label": "Dosing Frequency per Interval",
+          "type": "Char",
+          "length": 2
+        },
+        {
+          "name": "EXROUTE",
+          "label": "Route of Administration",
+          "type": "Char",
+          "length": 12
+        },
+        {
+          "name": "EXLOT",
+          "label": "Lot Number",
+          "type": "Char",
+          "length": 200
+        },
+        {
+          "name": "EPOCH",
+          "label": "Epoch",
+          "type": "Char",
+          "length": 9
+        },
+        {
+          "name": "EXSTDTC",
+          "label": "Start Date/Time of Treatment",
+          "type": "Char",
+          "length": 10
+        },
+        {
+          "name": "EXENDTC",
+          "label": "End Date/Time of Treatment",
+          "type": "Char",
+          "length": 10
+        },
+        {
+          "name": "EXSTDY",
+          "label": "Study Day of Start of Treatment",
+          "type": "Num",
+          "length": 8
+        },
+        {
+          "name": "EXENDY",
+          "label": "Study Day of End of Treatment",
+          "type": "Num",
+          "length": 8
+        }
+      ],
+      "records": {
+        "STUDYID": [
+          "CDISCPILOT01",
+          "CDISCPILOT01",
+          "CDISCPILOT01",
+          "CDISCPILOT01",
+          "CDISCPILOT01",
+          "CDISCPILOT01",
+          "CDISCPILOT01",
+          "CDISCPILOT01",
+          "CDISCPILOT01",
+          "CDISCPILOT01",
+          "CDISCPILOT01",
+          "CDISCPILOT01"
+        ],
+        "DOMAIN": [
+          "EX",
+          "EX",
+          "EX",
+          "EX",
+          "EX",
+          "EX",
+          "EX",
+          "EX",
+          "EX",
+          "EX",
+          "EX",
+          "EX"
+        ],
+        "USUBJID": [
+          "CDISC001",
+          "",
+          "",
+          "CDISC001",
+          "CDISC004",
+          "CDISC004",
+          "CDISC004",
+          "CDISC004",
+          "CDISC004",
+          "CDISC004",
+          "",
+          "CDISC004"
+        ],
+        "POOLID": [
+          "",
+          "B",
+          "B",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "B",
+          ""
+        ],
+        "EXSEQ": [
+          1,
+          2,
+          3,
+          4,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "EXTRT": [
+          "ZANOMALINE",
+          "ZANOMALINE",
+          "ZANOMALINE",
+          "ZANOMALINE",
+          "PLACEBO",
+          "PLACEBO",
+          "PLACEBO",
+          "PLACEBO",
+          "PLACEBO",
+          "PLACEBO",
+          "PLACEBO",
+          "PLACEBO"
+        ],
+        "EXDOSE": [
+          54,
+          54,
+          54,
+          54,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "EXDOSU": [
+          "mg",
+          "mg",
+          "mg",
+          "mg",
+          "mg",
+          "mg",
+          "mg",
+          "mg",
+          "mg",
+          "mg",
+          "mg",
+          "mg"
+        ],
+        "EXDOSFRM": [
+          "INJECTION",
+          "INJECTION",
+          "INJECTION",
+          "INJECTION",
+          "INJECTION",
+          "INJECTION",
+          "INJECTION",
+          "INJECTION",
+          "INJECTION",
+          "INJECTION",
+          "INJECTION",
+          "INJECTION"
+        ],
+        "EXDOSFRQ": [
+          "QD",
+          "QD",
+          "QD",
+          "QD",
+          "QD",
+          "QD",
+          "QD",
+          "QD",
+          "QD",
+          "QD",
+          "QD",
+          "QD"
+        ],
+        "EXROUTE": [
+          "SUBCUTANEOUS",
+          "SUBCUTANEOUS",
+          "SUBCUTANEOUS",
+          "SUBCUTANEOUS",
+          "SUBCUTANEOUS",
+          "SUBCUTANEOUS",
+          "SUBCUTANEOUS",
+          "SUBCUTANEOUS",
+          "SUBCUTANEOUS",
+          "SUBCUTANEOUS",
+          "SUBCUTANEOUS",
+          "SUBCUTANEOUS"
+        ],
+        "EXLOT": [
+          "SDS580-359",
+          "SDS580-359",
+          "SDS580-359",
+          "SDS580-359",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "EPOCH": [
+          "TREATMENT",
+          "TREATMENT",
+          "TREATMENT",
+          "TREATMENT",
+          "TREATMENT",
+          "TREATMENT",
+          "TREATMENT",
+          "TREATMENT",
+          "TREATMENT",
+          "TREATMENT",
+          "TREATMENT",
+          "TREATMENT"
+        ],
+        "EXSTDTC": [
+          "2012-11-30",
+          "2012-12-01",
+          "2012-12-02",
+          "2012-12-03",
+          "2013-10-08",
+          "2013-10-09",
+          "2013-10-10",
+          "2013-10-11",
+          "2013-10-12",
+          "2013-10-13",
+          "2013-10-14",
+          "2013-10-15"
+        ],
+        "EXENDTC": [
+          "2012-11-30",
+          "2012-12-01",
+          "2012-12-02",
+          "2012-12-03",
+          "2013-10-08",
+          "2013-10-09",
+          "2013-10-10",
+          "2013-10-11",
+          "2013-10-12",
+          "2013-10-13",
+          "2013-10-14",
+          "2013-10-15"
+        ],
+        "EXSTDY": [
+          1,
+          2,
+          3,
+          4,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "EXENDY": [
+          1,
+          2,
+          3,
+          4,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      }
+    },
+    {
+      "filename": "vs.xpt",
+      "label": "Vital Signs",
+      "domain": "VS",
+      "variables": [
+        {
+          "name": "STUDYID",
+          "label": "Study Identifier",
+          "type": "Char",
+          "length": 12
+        },
+        {
+          "name": "DOMAIN",
+          "label": "Domain Abbreviation",
+          "type": "Char",
+          "length": 2
+        },
+        {
+          "name": "USUBJID",
+          "label": "Unique Subject Identifier",
+          "type": "Char",
+          "length": 8
+        },
+        {
+          "name": "POOLID",
+          "label": "Pool Identifier",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "VSSEQ",
+          "label": "Sequence Number",
+          "type": "Num",
+          "length": 8
+        },
+        {
+          "name": "VSTESTCD",
+          "label": "Vital Signs Test Short Name",
+          "type": "Char",
+          "length": 6
+        },
+        {
+          "name": "VSTEST",
+          "label": "Vital Signs Test Name",
+          "type": "Char",
+          "length": 24
+        },
+        {
+          "name": "VSPOS",
+          "label": "Vital Signs Position of Subject",
+          "type": "Char",
+          "length": 8
+        },
+        {
+          "name": "VSORRES",
+          "label": "Result or Finding in Original Units",
+          "type": "Char",
+          "length": 8
+        },
+        {
+          "name": "VSORRESU",
+          "label": "Original Units",
+          "type": "Char",
+          "length": 9
+        },
+        {
+          "name": "VSSTRESC",
+          "label": "Character Result/Finding in Std Format",
+          "type": "Char",
+          "length": 200
+        },
+        {
+          "name": "VSSTRESN",
+          "label": "Numeric Result/Finding in Standard Units",
+          "type": "Num",
+          "length": 8
+        },
+        {
+          "name": "VSSTRESU",
+          "label": "Standard Units",
+          "type": "Char",
+          "length": 9
+        },
+        {
+          "name": "VSSTAT",
+          "label": "Completion Status",
+          "type": "Char",
+          "length": 8
+        },
+        {
+          "name": "VSLOC",
+          "label": "Location of Vital Signs Measurement",
+          "type": "Char",
+          "length": 11
+        },
+        {
+          "name": "VSLOBXFL",
+          "label": "Last Observation Before Exposure Flag",
+          "type": "Char",
+          "length": 1
+        },
+        {
+          "name": "VSREPNUM",
+          "label": "Repetition Number",
+          "type": "Num",
+          "length": 8
+        },
+        {
+          "name": "VISITNUM",
+          "label": "Visit Number",
+          "type": "Num",
+          "length": 8
+        },
+        {
+          "name": "VISIT",
+          "label": "Visit Name",
+          "type": "Char",
+          "length": 200
+        },
+        {
+          "name": "EPOCH",
+          "label": "Epoch",
+          "type": "Char",
+          "length": 9
+        },
+        {
+          "name": "VSDTC",
+          "label": "Date/Time of Measurements",
+          "type": "Char",
+          "length": 10
+        },
+        {
+          "name": "VSDY",
+          "label": "Study Day of Vital Signs",
+          "type": "Num",
+          "length": 8
+        },
+        {
+          "name": "VSTPT",
+          "label": "Planned Time Point Name",
+          "type": "Char",
+          "length": 200
+        },
+        {
+          "name": "VSTPTNUM",
+          "label": "Planned Time Point Number",
+          "type": "Num",
+          "length": 8
+        }
+      ],
+      "records": {
+        "STUDYID": [
+          "CDISCPILOT01",
+          "CDISCPILOT01",
+          "CDISCPILOT01",
+          "CDISCPILOT01",
+          "CDISCPILOT01",
+          "CDISCPILOT01"
+        ],
+        "DOMAIN": [
+          "VS",
+          "VS",
+          "VS",
+          "VS",
+          "VS",
+          "VS"
+        ],
+        "USUBJID": [
+          "CDISC001",
+          "CDISC001",
+          "CDISC001",
+          "",
+          "CDISC001",
+          "CDISC001"
+        ],
+        "POOLID": [
+          "",
+          "",
+          "",
+          "POOL1",
+          "",
+          ""
+        ],
+        "VSSEQ": [
+          1,
+          2,
+          3,
+          4,
+          6,
+          7
+        ],
+        "VSTESTCD": [
+          "DIABP",
+          "DIABP",
+          "DIABP",
+          "DIABP",
+          "DIABP",
+          "DIABP"
+        ],
+        "VSTEST": [
+          "Diastolic Blood Pressure",
+          "Diastolic Blood Pressure",
+          "Diastolic Blood Pressure",
+          "Diastolic Blood Pressure",
+          "Diastolic Blood Pressure",
+          "Diastolic Blood Pressure"
+        ],
+        "VSPOS": [
+          "STANDING",
+          "STANDING",
+          "STANDING",
+          "STANDING",
+          "SUPINE",
+          "STANDING"
+        ],
+        "VSORRES": [
+          "71",
+          "71",
+          "83",
+          "79",
+          "77",
+          "71"
+        ],
+        "VSORRESU": [
+          "mmHg",
+          "mmHg",
+          "mmHg",
+          "mmHg",
+          "mmHg",
+          "mmHg"
+        ],
+        "VSSTRESC": [
+          "71",
+          "71",
+          "83",
+          "79",
+          "77",
+          "71"
+        ],
+        "VSSTRESN": [
+          71,
+          71,
+          83,
+          79,
+          77,
+          71
+        ],
+        "VSSTRESU": [
+          "mmHg",
+          "mmHg",
+          "mmHg",
+          "mmHg",
+          "mmHg",
+          "mmHg"
+        ],
+        "VSSTAT": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "VSLOC": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "VSLOBXFL": [
+          "",
+          "",
+          "Y",
+          "",
+          "",
+          ""
+        ],
+        "VSREPNUM": [
+          null,
+          null,
+          null,
+          null,
+          1,
+          2
+        ],
+        "VISITNUM": [
+          1,
+          2,
+          3,
+          4,
+          null,
+          null
+        ],
+        "VISIT": [
+          "SCREENING 1",
+          "SCREENING 2",
+          "BASELINE",
+          "WEEK 2",
+          "WEEK 6",
+          "WEEK 6"
+        ],
+        "EPOCH": [
+          "SCREENING",
+          "SCREENING",
+          "SCREENING",
+          "TREATMENT",
+          "TREATMENT",
+          "TREATMENT"
+        ],
+        "VSDTC": [
+          "2012-11-23",
+          "2012-11-28",
+          "2012-11-30",
+          "2012-12-13",
+          "2013-01-10",
+          "2013-01-10"
+        ],
+        "VSDY": [
+          -7,
+          -2,
+          1,
+          14,
+          42,
+          42
+        ],
+        "VSTPT": [
+          "",
+          "",
+          "PREDOSE",
+          "PREDOSE",
+          "5MIN POSTDOSE",
+          "5MIN POSTDOSE"
+        ],
+        "VSTPTNUM": [
+          null,
+          null,
+          -1,
+          -1,
+          -1,
+          5
+        ]
+      }
+    }
+  ],
+  "standard": {
+    "product": "sendig",
+    "version": "3-1"
+  },
+  "codelists": []
+}

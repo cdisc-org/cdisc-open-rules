@@ -1,0 +1,64 @@
+{
+    "LB": [
+        {
+            "executionStatus": "success",
+            "dataset": "lb.xpt",
+            "domain": "LB",
+            "variables": [
+                "LBDTC",
+                "LBSPEC",
+                "LBTESTCD",
+                "POOLID"
+            ],
+            "message": "The LB test result is not unique per specimen per subject or pool and date/time.",
+            "errors": [
+                {
+                    "value": {
+                        "LBSPEC": "BLOOD",
+                        "POOLID": "",
+                        "LBTESTCD": "PLAT",
+                        "LBDTC": "2019-10-10"
+                    },
+                    "dataset": "lb.xpt",
+                    "row": 46,
+                    "USUBJID": "CDISC-TEST-001",
+                    "SEQ": 46
+                },
+                {
+                    "value": {
+                        "LBSPEC": "BLOOD",
+                        "POOLID": "",
+                        "LBTESTCD": "PLAT",
+                        "LBDTC": "2019-10-10"
+                    },
+                    "dataset": "lb.xpt",
+                    "row": 47,
+                    "USUBJID": "CDISC-TEST-001",
+                    "SEQ": 46
+                },
+                {
+                    "value": {
+                        "LBSPEC": "BLOOD",
+                        "POOLID": "POOL1",
+                        "LBTESTCD": "PLAT",
+                        "LBDTC": "2019-10-10T02:02:03"
+                    },
+                    "dataset": "lb.xpt",
+                    "row": 48,
+                    "SEQ": 1
+                },
+                {
+                    "value": {
+                        "LBSPEC": "BLOOD",
+                        "POOLID": "POOL1",
+                        "LBTESTCD": "PLAT",
+                        "LBDTC": "2019-10-10T02:02:03"
+                    },
+                    "dataset": "lb.xpt",
+                    "row": 49,
+                    "SEQ": 2
+                }
+            ]
+        }
+    ]
+}

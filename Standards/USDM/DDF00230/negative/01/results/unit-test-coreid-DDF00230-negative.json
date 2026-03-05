@@ -1,0 +1,188 @@
+{
+    "InterventionalStudyDesign": [
+        {
+            "executionStatus": "success",
+            "dataset": "InterventionalStudyDesign.xpt",
+            "domain": "InterventionalStudyDesign",
+            "variables": [
+                "$code_for_decode_pref_term",
+                "$code_for_decode_value",
+                "$codelist_code",
+                "$codelist_extensible",
+                "$pref_term_for_code",
+                "$value_for_code",
+                "id",
+                "name",
+                "parent_entity",
+                "parent_id",
+                "parent_rel",
+                "studyType.code",
+                "studyType.codeSystem",
+                "studyType.codeSystemVersion",
+                "studyType.decode"
+            ],
+            "message": "The study design's study type is not specified using the Study Type Response (C99077) SDTM codelist - codeSystem is not \"http://www.cdisc.org\", codeSystemVersion is not a valid terminology package date, the code or decode (either as preferred term or as submission value) is found in the codelist (case insensitive) but the corresponding decode or code does not match the codelist value (case sensitive), and/or neither code nor decode is found in the codelist.",
+            "errors": [
+                {
+                    "value": {
+                        "studyType.codeSystem": "http://www.cdisc.org",
+                        "id": "InterventionalStudyDesign_1",
+                        "$code_for_decode_value": "C98722",
+                        "$value_for_code": "INTERVENTIONAL",
+                        "studyType.decode": "EXPANDED ACCESS",
+                        "name": "Study Design 1",
+                        "$codelist_extensible": false,
+                        "parent_entity": "StudyVersion",
+                        "$code_for_decode_pref_term": null,
+                        "$codelist_code": "C99077",
+                        "$pref_term_for_code": "Interventional Study",
+                        "parent_rel": "studyDesigns",
+                        "studyType.code": "C98388",
+                        "studyType.codeSystemVersion": "2025-09-26",
+                        "parent_id": "StudyVersion_1"
+                    },
+                    "dataset": "InterventionalStudyDesign.xpt",
+                    "row": 1,
+                    "instance_id": "InterventionalStudyDesign_1"
+                },
+                {
+                    "value": {
+                        "studyType.codeSystem": "http://www.cdisc.org",
+                        "id": "InterventionalStudyDesign_2",
+                        "$code_for_decode_value": "C98388",
+                        "$value_for_code": "INTERVENTIONAL",
+                        "studyType.decode": "Interventional",
+                        "name": "Study Design 2",
+                        "$codelist_extensible": false,
+                        "parent_entity": "StudyVersion",
+                        "$code_for_decode_pref_term": null,
+                        "$codelist_code": "C99077",
+                        "$pref_term_for_code": "Interventional Study",
+                        "parent_rel": "studyDesigns",
+                        "studyType.code": "C98388",
+                        "studyType.codeSystemVersion": "2025-09-26",
+                        "parent_id": "StudyVersion_1"
+                    },
+                    "dataset": "InterventionalStudyDesign.xpt",
+                    "row": 2,
+                    "instance_id": "InterventionalStudyDesign_2"
+                },
+                {
+                    "value": {
+                        "studyType.codeSystem": "http://www.cdisc.org",
+                        "id": "InterventionalStudyDesign_3",
+                        "$code_for_decode_value": "C98388",
+                        "$value_for_code": null,
+                        "studyType.decode": "INTERVENTIONAL",
+                        "name": "Study Design 3",
+                        "$codelist_extensible": false,
+                        "parent_entity": "StudyVersion",
+                        "$code_for_decode_pref_term": null,
+                        "$codelist_code": "C99077",
+                        "$pref_term_for_code": null,
+                        "parent_rel": "studyDesigns",
+                        "studyType.code": "C98388xx",
+                        "studyType.codeSystemVersion": "2025-09-26",
+                        "parent_id": "StudyVersion_1"
+                    },
+                    "dataset": "InterventionalStudyDesign.xpt",
+                    "row": 3,
+                    "instance_id": "InterventionalStudyDesign_3"
+                }
+            ]
+        }
+    ],
+    "ObservationalStudyDesign": [
+        {
+            "executionStatus": "success",
+            "dataset": "ObservationalStudyDesign.xpt",
+            "domain": "ObservationalStudyDesign",
+            "variables": [
+                "$code_for_decode_pref_term",
+                "$code_for_decode_value",
+                "$codelist_code",
+                "$codelist_extensible",
+                "$pref_term_for_code",
+                "$value_for_code",
+                "id",
+                "name",
+                "parent_entity",
+                "parent_id",
+                "parent_rel",
+                "studyType.code",
+                "studyType.codeSystem",
+                "studyType.codeSystemVersion",
+                "studyType.decode"
+            ],
+            "message": "The study design's study type is not specified using the Study Type Response (C99077) SDTM codelist - codeSystem is not \"http://www.cdisc.org\", codeSystemVersion is not a valid terminology package date, the code or decode (either as preferred term or as submission value) is found in the codelist (case insensitive) but the corresponding decode or code does not match the codelist value (case sensitive), and/or neither code nor decode is found in the codelist.",
+            "errors": [
+                {
+                    "value": {
+                        "studyType.codeSystem": "http://www.cdisc.org/STYPE",
+                        "id": "ObservationalStudyDesign_1",
+                        "$code_for_decode_value": "C16084",
+                        "$value_for_code": "OBSERVATIONAL",
+                        "studyType.decode": "OBSERVATIONAL",
+                        "name": "Study Design 4",
+                        "$codelist_extensible": false,
+                        "parent_entity": "StudyVersion",
+                        "$code_for_decode_pref_term": null,
+                        "$codelist_code": "C99077",
+                        "$pref_term_for_code": "Observational Study",
+                        "parent_rel": "studyDesigns",
+                        "studyType.code": "C16084",
+                        "studyType.codeSystemVersion": "2025-09-26",
+                        "parent_id": "StudyVersion_1"
+                    },
+                    "dataset": "ObservationalStudyDesign.xpt",
+                    "row": 1,
+                    "instance_id": "ObservationalStudyDesign_1"
+                },
+                {
+                    "value": {
+                        "studyType.codeSystem": "http://www.cdisc.org",
+                        "id": "ObservationalStudyDesign_2",
+                        "$code_for_decode_value": null,
+                        "$value_for_code": null,
+                        "studyType.decode": "PATIENT REGISTRY",
+                        "name": "Study Design 5",
+                        "$codelist_extensible": null,
+                        "parent_entity": "StudyVersion",
+                        "$code_for_decode_pref_term": null,
+                        "$codelist_code": "C99077",
+                        "$pref_term_for_code": null,
+                        "parent_rel": "studyDesigns",
+                        "studyType.code": "C129000",
+                        "studyType.codeSystemVersion": "XXXX-XX-XX",
+                        "parent_id": "StudyVersion_1"
+                    },
+                    "dataset": "ObservationalStudyDesign.xpt",
+                    "row": 2,
+                    "instance_id": "ObservationalStudyDesign_2"
+                },
+                {
+                    "value": {
+                        "studyType.codeSystem": "http://www.cdisc.org",
+                        "id": "ObservationalStudyDesign_3",
+                        "$code_for_decode_value": null,
+                        "$value_for_code": null,
+                        "studyType.decode": "EXTENSION",
+                        "name": "Study Design 6",
+                        "$codelist_extensible": false,
+                        "parent_entity": "StudyVersion",
+                        "$code_for_decode_pref_term": null,
+                        "$codelist_code": "C99077",
+                        "$pref_term_for_code": null,
+                        "parent_rel": "studyDesigns",
+                        "studyType.code": "C0051X",
+                        "studyType.codeSystemVersion": "2025-09-26",
+                        "parent_id": "StudyVersion_1"
+                    },
+                    "dataset": "ObservationalStudyDesign.xpt",
+                    "row": 3,
+                    "instance_id": "ObservationalStudyDesign_3"
+                }
+            ]
+        }
+    ]
+}

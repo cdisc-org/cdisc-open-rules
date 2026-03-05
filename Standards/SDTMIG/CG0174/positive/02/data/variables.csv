@@ -1,0 +1,48 @@
+dataset,variable,label,type,length
+ae.xpt,STUDYID,Study Identifier,Char,50
+ae.xpt,DOMAIN,Domain Abbreviation,Char,50
+ae.xpt,USUBJID,Unique Subject Identifier,Char,50
+ae.xpt,AESEQ,Sequence Number,Num,8
+ae.xpt,AESPID,Sponsor-Defined Identifier,Char,50
+ae.xpt,AETERM,Reported Term for the Adverse Event,Char,50
+ae.xpt,AEDECOD,Dictionary-Derived Term,Char,50
+ae.xpt,AEBODSYS,Body System or Organ Class,Char,50
+ae.xpt,AESEV,Severity/Intensity,Char,50
+ae.xpt,AESER,Serious Event,Char,50
+ae.xpt,AEACN,Action Taken with Study Treatment,Char,50
+ae.xpt,AEREL,Causality,Char,50
+ae.xpt,AEOUT,Outcome of Adverse Event,Char,50
+ae.xpt,AESCONG,Congenital Anomaly or Birth Defect,Char,50
+ae.xpt,AESDISAB,Persist or Signif Disability/Incapacity,Char,50
+ae.xpt,AESDTH,Results in Death,Char,50
+ae.xpt,AESHOSP,Requires or Prolongs Hospitalization,Char,50
+ae.xpt,AESLIFE,Is Life Threatening,Char,50
+ae.xpt,EPOCH,Epoch,Char,50
+ae.xpt,AESTDTC,Start Date/Time of Adverse Event,Char,50
+ae.xpt,AEENDTC,End Date/Time of Adverse Event,Char,50
+ae.xpt,AESTDY,Study Day of Start of Adverse Event,Num,8
+ae.xpt,AEENDY,Study Day of End of Adverse Event,Num,8
+ae.xpt,AEENRF,End Relative to Reference Period,Char,50
+fa.xpt,STUDYID,Study Identifier,Char,50
+fa.xpt,DOMAIN,Domain Abbreviation,Char,50
+fa.xpt,USUBJID,Unique Subject Identifier,Char,50
+fa.xpt,FASEQ,Sequence Number,Num,8
+fa.xpt,FASPID,Sponsor-Defined Identifier,Char,50
+fa.xpt,FATESTCD,Var Label,Char,200
+fa.xpt,FATEST,Findings About Test Short Name,Char,50
+fa.xpt,FAOBJ,Object of the Observation,Char,50
+fa.xpt,FACAT,Category for Findings About,Char,50
+fa.xpt,FAORRES,Result or Finding in Original Units,Char,50
+fa.xpt,FASTRESC,Character Result/Finding in Std Format,Char,50
+fa.xpt,FALOC,Location of the Finding About,Char,50
+fa.xpt,VISITNUM,Visit Number,Num,8
+fa.xpt,EPOCH,Epoch,Char,50
+fa.xpt,FADTC,Date/Time of Collection,Char,50
+fa.xpt,FADY,Study Day of Collection,Num,8
+relrec.xpt,STUDYID,Study Identifier,Char,50
+relrec.xpt,RDOMAIN,Related Domain Abbreviation,Char,50
+relrec.xpt,USUBJID,Unique Subject Identifier,Char,50
+relrec.xpt,IDVAR,Identifying Variable,Char,50
+relrec.xpt,IDVARVAL,Identifying Variable Value,Char,50
+relrec.xpt,RELTYPE,Relationship Type,Char,50
+relrec.xpt,RELID,Relationship Identifier,Char,50

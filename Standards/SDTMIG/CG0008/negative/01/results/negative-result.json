@@ -1,0 +1,84 @@
+{
+  "ML": [
+    {
+      "domain": "ML",
+      "errors": [
+        {
+          "row": 0,
+          "value": {
+            "MLELTM": "-PT10M",
+            "MLTPTREF": ""
+          }
+        },
+        {
+          "row": 1,
+          "value": {
+            "MLELTM": "PT1H",
+            "MLTPTREF": ""
+          }
+        },
+        {
+          "row": 2,
+          "value": {
+            "MLELTM": "PT2H",
+            "MLTPTREF": ""
+          }
+        },
+        {
+          "row": 3,
+          "value": {
+            "MLELTM": "PT24H",
+            "MLTPTREF": ""
+          }
+        },
+        {
+          "row": 4,
+          "value": {
+            "MLELTM": "PT48H",
+            "MLTPTREF": ""
+          }
+        }
+      ],
+      "message": "--TPTREF is empty and --ELTM is not empty",
+      "usubjid": "123101",
+      "variables": [
+        "MLELTM",
+        "MLTPTREF"
+      ]
+    }
+  ],
+  "PC": [
+    {
+      "domain": "PC",
+      "errors": [
+        {
+          "row": 2,
+          "value": {
+            "PCELTM": "PT2H",
+            "PCTPTREF": ""
+          }
+        },
+        {
+          "row": 3,
+          "value": {
+            "PCELTM": "PT24H",
+            "PCTPTREF": ""
+          }
+        },
+        {
+          "row": 4,
+          "value": {
+            "PCELTM": "PT48H",
+            "PCTPTREF": ""
+          }
+        }
+      ],
+      "message": "--TPTREF is empty and --ELTM is not empty",
+      "usubjid": "123101",
+      "variables": [
+        "PCELTM",
+        "PCTPTREF"
+      ]
+    }
+  ]
+}

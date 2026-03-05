@@ -1,0 +1,55 @@
+{
+    "ZB": [
+        {
+            "executionStatus": "success",
+            "domain": "ZB",
+            "variables": [
+                "$domain_list",
+                "variable_name"
+            ],
+            "message": "First 2 characters of prefixed variable within custom domain do not match the DOMAIN value.",
+            "errors": [
+                {
+                    "value": {
+                        "$domain_list": [
+                            "ZB"
+                        ],
+                        "variable_name": "LBTESTCD"
+                    },
+                    "row": 5
+                }
+            ]
+        }
+    ],
+    "ZM": [
+        {
+            "executionStatus": "success",
+            "domain": "ZM",
+            "variables": [
+                "$domain_list",
+                "variable_name"
+            ],
+            "message": "First 2 characters of prefixed variable within custom domain do not match the DOMAIN value.",
+            "errors": [
+                {
+                    "value": {
+                        "$domain_list": [
+                            "ZM"
+                        ],
+                        "variable_name": "AEINDC"
+                    },
+                    "row": 6
+                },
+                {
+                    "value": {
+                        "$domain_list": [
+                            "ZM"
+                        ],
+                        "variable_name": "CMDOSE"
+                    },
+                    "row": 7
+                }
+            ]
+        }
+    ]
+}

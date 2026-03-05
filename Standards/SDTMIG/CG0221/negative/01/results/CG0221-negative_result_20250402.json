@@ -1,0 +1,55 @@
+{2 items
+"AE":[1 item
+0:{6 items
+"executionStatus":"success"
+"dataset":"ae.xpt"
+"domain":"AE"
+"variables":[3 items
+0:"AESTDTC"
+1:"AESTDY"
+2:"RFSTDTC"
+]
+"message":"AESTDY is not null when either AESTDTC or DM.RFSTDTC do not contain complete values in their date portion"
+"errors":[2 items
+0:{5 items
+"value":{3 items
+"RFSTDTC":"2022-03-20"
+"AESTDY":1
+"AESTDTC":"2005-10"
+}
+"dataset":"ae.xpt"
+"row":1
+"USUBJID":"001"
+"SEQ":1
+}
+1:{5 items
+"value":{3 items
+"RFSTDTC":"2022-03"
+"AESTDY":1
+"AESTDTC":"2005-10-13T13:05"
+}
+"dataset":"ae.xpt"
+"row":2
+"USUBJID":"002"
+"SEQ":1
+}
+]
+}
+]
+"DM":[1 item
+0:{6 items
+"executionStatus":"execution_error"
+"dataset":"dm.xpt"
+"domain":"DM"
+"variables":[]0 items
+"message":"rule execution error"
+"errors":[1 item
+0:{3 items
+"dataset":"dm.xpt"
+"error":"Column not found in data"
+"message":"DMSTDY, DMSTDTC"
+}
+]
+}
+]
+}

@@ -1,0 +1,49 @@
+{
+    "TA": [
+        {
+            "executionStatus": "skipped",
+            "dataset": "ta.xpt",
+            "domain": "TA",
+            "variables": [],
+            "message": "Rule skipped - doesn't apply to domain for rule id=CORE-000368, dataset=TA",
+            "errors": []
+        }
+    ],
+    "DM": [
+        {
+            "executionStatus": "success",
+            "dataset": "dm.xpt",
+            "domain": "DM",
+            "variables": [
+                "ARM"
+            ],
+            "message": "ARM is not in TA.ARM, but ARM in DM does not equal Screen Failure or Not Assigned.",
+            "errors": [
+                {
+                    "value": {
+                        "ARM": "NOT Assigned"
+                    },
+                    "dataset": "dm.xpt",
+                    "row": 2,
+                    "USUBJID": "015246-300-0004-00002"
+                },
+                {
+                    "value": {
+                        "ARM": "Placebo2"
+                    },
+                    "dataset": "dm.xpt",
+                    "row": 4,
+                    "USUBJID": "015246-076-0003-00004"
+                },
+                {
+                    "value": {
+                        "ARM": "Zanomaline Low Dose"
+                    },
+                    "dataset": "dm.xpt",
+                    "row": 5,
+                    "USUBJID": "015246-300-0004-00012"
+                }
+            ]
+        }
+    ]
+}

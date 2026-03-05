@@ -1,0 +1,38 @@
+{
+    "FA": [
+        {
+            "executionStatus": "success",
+            "dataset": "fa.xpt",
+            "domain": "FA",
+            "variables": [
+                "$list_dataset_names",
+                "dataset_name"
+            ],
+            "message": "Parent domain referenced in Findings About dataset name is not present in the study",
+            "errors": [
+                {
+                    "value": {
+                        "dataset_name": "FACM",
+                        "$list_dataset_names": [
+                            "FACM",
+                            "FA1",
+                            "FA"
+                        ]
+                    },
+                    "row": 2
+                },
+                {
+                    "value": {
+                        "dataset_name": "FA1",
+                        "$list_dataset_names": [
+                            "FACM",
+                            "FA1",
+                            "FA"
+                        ]
+                    },
+                    "row": 3
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,709 @@
+{
+    "rule": {
+        "Authorities": [
+            {
+                "Organization": "CDISC",
+                "Standards": [
+                    {
+                        "Name": "SDTMIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "IG v3.4",
+                                        "Section": "3.2.2",
+                                        "Cited_Guidance": "Using SDTM-specified data types for all variables"
+                                    },
+                                    {
+                                        "Document": "Model v2.0",
+                                        "Section": "2.1",
+                                        "Cited_Guidance": "Note that the SDTM type specified in this document is either character or numeric, as these are the only types supported by SAS v.5 transport files.]"
+                                    }
+                                ],
+                                "Origin": "SDTM and SDTMIG Conformance Rules",
+                                "Version": "2.0",
+                                "Rule_Identifier": {
+                                    "Id": "CG0012",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.4"
+                    },
+                    {
+                        "Name": "SDTMIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "IG v3.2|Model v1.4",
+                                        "Section": "IG v3.2[3.2.2]|Model v1.4[2]",
+                                        "Cited_Guidance": "IG v3.2[3.2.2][Using SDTM-specified data types for all variables]|Model v1.4[2][The data Type (e.g., whether the variable value is a character or numeric)]"
+                                    }
+                                ],
+                                "Origin": "SDTM and SDTMIG Conformance Rules",
+                                "Version": "2.0",
+                                "Rule_Identifier": {
+                                    "Id": "CG0012",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.2"
+                    },
+                    {
+                        "Name": "SDTMIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "IG v3.3|Model v1.7",
+                                        "Section": "IG v3.3[3.2.2]|Model v1.7[2.1]",
+                                        "Cited_Guidance": "IG v3.3[3.2.2][Using SDTM-specified data types for all variables]|Model v1.7[2.1][The SDTM describes the name, label, role, and type for the standard variables. Note that the SDTM type specified in this document is either character or numeric, as these are the only types supported by SAS v.5 transport files.]"
+                                    }
+                                ],
+                                "Origin": "SDTM and SDTMIG Conformance Rules",
+                                "Version": "2.0",
+                                "Rule_Identifier": {
+                                    "Id": "CG0012",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.3"
+                    },
+                    {
+                        "Name": "SENDIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "SENDIG v3.0",
+                                        "Section": "3.2.2",
+                                        "Cited_Guidance": "The define.xml specification includes seven distinct attributes to describe variable-level metadata; ...The data Type."
+                                    }
+                                ],
+                                "Origin": "SEND Conformance Rules",
+                                "Version": "5.0",
+                                "Rule_Identifier": {
+                                    "Id": "SEND4",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.0"
+                    },
+                    {
+                        "Name": "SENDIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "SENDIG v3.1",
+                                        "Section": "3.2.2",
+                                        "Cited_Guidance": "The define.xml specification includes seven distinct attributes to describe variable-level metadata; ... The data Type."
+                                    }
+                                ],
+                                "Origin": "SEND Conformance Rules",
+                                "Version": "5.0",
+                                "Rule_Identifier": {
+                                    "Id": "SEND4",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.1"
+                    },
+                    {
+                        "Name": "SENDIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "SENDIG v3.1.1",
+                                        "Section": "3.2.2",
+                                        "Cited_Guidance": "The define.xml specification includes seven distinct attributes to describe variable-level metadata; ...The data Type."
+                                    }
+                                ],
+                                "Origin": "SEND Conformance Rules",
+                                "Version": "5.0",
+                                "Rule_Identifier": {
+                                    "Id": "SEND4",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.1.1"
+                    },
+                    {
+                        "Name": "SENDIG-GENETOX",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "SENDIG v3.1.1",
+                                        "Section": "3.2.2",
+                                        "Cited_Guidance": "The define.xml specification includes seven distinct attributes to describe variable-level metadata; ...The data Type."
+                                    }
+                                ],
+                                "Origin": "SEND Conformance Rules",
+                                "Version": "5.0",
+                                "Rule_Identifier": {
+                                    "Id": "SEND4",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "1.0"
+                    },
+                    {
+                        "Name": "SENDIG-DART",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "SENDIG v3.1",
+                                        "Section": "3.2.2",
+                                        "Cited_Guidance": "The define.xml specification includes seven distinct attributes to describe variable-level metadata; ...The data Type."
+                                    }
+                                ],
+                                "Origin": "SEND Conformance Rules",
+                                "Version": "5.0",
+                                "Rule_Identifier": {
+                                    "Id": "SEND4",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "1.1"
+                    },
+                    {
+                        "Name": "SENDIG-DART",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "SENDIG v3.1.1",
+                                        "Section": "3.2.2",
+                                        "Cited_Guidance": "The define.xml specification includes seven distinct attributes to describe variable-level metadata; ...The data Type."
+                                    }
+                                ],
+                                "Origin": "SEND Conformance Rules",
+                                "Version": "5.0",
+                                "Rule_Identifier": {
+                                    "Id": "SEND4",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "1.2"
+                    }
+                ]
+            }
+        ],
+        "Check": {
+            "all": [
+                {
+                    "name": "variable_data_type",
+                    "operator": "not_equal_to",
+                    "value": "library_variable_data_type"
+                }
+            ]
+        },
+        "Core": {
+            "Id": "CDISC.SDTMIG.CG0012",
+            "Status": "Draft",
+            "Version": "1"
+        },
+        "Description": "Raise an error when the variable type does not match IG Type (for domains in IG) or Model Type (custom domains)",
+        "Executability": "Fully Executable",
+        "Outcome": {
+            "Message": "Variable data type specified in the dataset does not match the variable data type in the IG or the Model.",
+            "Output_Variables": [
+                "variable_name",
+                "variable_data_type",
+                "library_variable_data_type"
+            ]
+        },
+        "Scope": {
+            "Classes": {
+                "Include": [
+                    "ALL"
+                ]
+            },
+            "Domains": {
+                "Include": [
+                    "ALL"
+                ]
+            }
+        },
+        "Sensitivity": "Record",
+        "Rule_Type": "Variable Metadata Check against Library Metadata"
+    },
+    "datasets": [
+        {
+            "filename": "lb.xpt",
+            "label": "Laboratory Test Results",
+            "domain": "LB",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 10
+                },
+                {
+                    "name": "DOMAIN",
+                    "label": "Domain Abbreviation",
+                    "type": "Char",
+                    "length": 2
+                },
+                {
+                    "name": "USUBJID",
+                    "label": "Unique Subject Identifier",
+                    "type": "Char",
+                    "length": 14
+                },
+                {
+                    "name": "LBSEQ",
+                    "label": "Sequence Number",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "LBTESTCD",
+                    "label": "Lab Test or Examination Short Name",
+                    "type": "Char",
+                    "length": 8
+                },
+                {
+                    "name": "LBTEST",
+                    "label": "Lab Test or Examination Name",
+                    "type": "Char",
+                    "length": 40
+                },
+                {
+                    "name": "LBORRES",
+                    "label": "Result or Finding in Original Units",
+                    "type": "Char",
+                    "length": 8
+                },
+                {
+                    "name": "LBORRESU",
+                    "label": "Original Units",
+                    "type": "Char",
+                    "length": 20
+                },
+                {
+                    "name": "VISITNUM",
+                    "label": "Visit Number",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "VISIT",
+                    "label": "Visit Name",
+                    "type": "Char",
+                    "length": 18
+                },
+                {
+                    "name": "LBDTC",
+                    "label": "Date/Time of Specimen Collection",
+                    "type": "Char",
+                    "length": 10
+                },
+                {
+                    "name": "LBDY",
+                    "label": "Study Day of Specimen Collection",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "LBCHENDY",
+                    "label": "Study Day of Specimen Collection",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "LBDUR",
+                    "label": "Collected Duration",
+                    "type": "Char",
+                    "length": 10
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "CDISCPILOT01"
+                ],
+                "DOMAIN": [
+                    "LB"
+                ],
+                "USUBJID": [
+                    "CDISC-TEST-001"
+                ],
+                "LBSEQ": [
+                    1
+                ],
+                "LBTESTCD": [
+                    "ALB"
+                ],
+                "LBTEST": [
+                    "Albumin"
+                ],
+                "LBORRES": [
+                    "2.12"
+                ],
+                "LBORRESU": [
+                    "mg/dL"
+                ],
+                "VISITNUM": [
+                    2
+                ],
+                "VISIT": [
+                    "DAY 1"
+                ],
+                "LBDTC": [
+                    "2012-11-30"
+                ],
+                "LBDY": [
+                    1
+                ],
+                "LBCHENDY": [
+                    1
+                ],
+                "LBDUR": [
+                    "PT12H"
+                ]
+            }
+        },
+        {
+            "filename": "dm.xpt",
+            "label": "Demographics",
+            "domain": "DM",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 10
+                },
+                {
+                    "name": "DOMAIN",
+                    "label": "Domain Abbreviation",
+                    "type": "Char",
+                    "length": 2
+                },
+                {
+                    "name": "USUBJID",
+                    "label": "Unique Subject Identifier",
+                    "type": "Char",
+                    "length": 14
+                },
+                {
+                    "name": "SUBJID",
+                    "label": "Subject Identifier for the Study",
+                    "type": "Char",
+                    "length": 3
+                },
+                {
+                    "name": "RFSTDTC",
+                    "label": "Subject Reference Start Date/Time",
+                    "type": "Char",
+                    "length": 10
+                },
+                {
+                    "name": "RFENDTC",
+                    "label": "Subject Reference End Date/Time",
+                    "type": "Char",
+                    "length": 10
+                },
+                {
+                    "name": "RFXSTDTC",
+                    "label": "Date/Time of First Study Treatment",
+                    "type": "Char",
+                    "length": 10
+                },
+                {
+                    "name": "RFXENDTC",
+                    "label": "Date/Time of Last Study Treatment",
+                    "type": "Char",
+                    "length": 10
+                },
+                {
+                    "name": "RFICDTC",
+                    "label": "Date/Time of Informed Consent",
+                    "type": "Char",
+                    "length": 10
+                },
+                {
+                    "name": "RFPENDTC",
+                    "label": "Date/Time of End of Participation",
+                    "type": "Char",
+                    "length": 10
+                },
+                {
+                    "name": "DTHDTC",
+                    "label": "Date/Time of Death",
+                    "type": "Char",
+                    "length": 1
+                },
+                {
+                    "name": "DTHFL",
+                    "label": "Subject Death Flag",
+                    "type": "Char",
+                    "length": 1
+                },
+                {
+                    "name": "SITEID",
+                    "label": "Study Site Identifier",
+                    "type": "Char",
+                    "length": 3
+                },
+                {
+                    "name": "AGE",
+                    "label": "Age",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "AGEU",
+                    "label": "Age Units",
+                    "type": "Char",
+                    "length": 5
+                },
+                {
+                    "name": "SEX",
+                    "label": "Sex",
+                    "type": "Char",
+                    "length": 1
+                },
+                {
+                    "name": "RACE",
+                    "label": "Race",
+                    "type": "Char",
+                    "length": 1
+                },
+                {
+                    "name": "ARMCD",
+                    "label": "Planned Arm Code",
+                    "type": "Char",
+                    "length": 1
+                },
+                {
+                    "name": "ARM",
+                    "label": "Description of Planned Arm",
+                    "type": "Char",
+                    "length": 13
+                },
+                {
+                    "name": "ACTARMCD",
+                    "label": "Actual Arm Code",
+                    "type": "Char",
+                    "length": 1
+                },
+                {
+                    "name": "ACTARM",
+                    "label": "Description of Actual Arm",
+                    "type": "Char",
+                    "length": 13
+                },
+                {
+                    "name": "COUNTRY",
+                    "label": "Country",
+                    "type": "Char",
+                    "length": 3
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "CDISCPILOT01"
+                ],
+                "DOMAIN": [
+                    "DM"
+                ],
+                "USUBJID": [
+                    "CDISC-TEST-001"
+                ],
+                "SUBJID": [
+                    "001"
+                ],
+                "RFSTDTC": [
+                    "2012-11-30"
+                ],
+                "RFENDTC": [
+                    "2013-09-10"
+                ],
+                "RFXSTDTC": [
+                    "2012-11-30"
+                ],
+                "RFXENDTC": [
+                    "2013-09-10"
+                ],
+                "RFICDTC": [
+                    "2012-10-25"
+                ],
+                "RFPENDTC": [
+                    "2013-09-10"
+                ],
+                "DTHDTC": [
+                    ""
+                ],
+                "DTHFL": [
+                    ""
+                ],
+                "SITEID": [
+                    "102"
+                ],
+                "AGE": [
+                    26
+                ],
+                "AGEU": [
+                    "YEARS"
+                ],
+                "SEX": [
+                    "F"
+                ],
+                "RACE": [
+                    ""
+                ],
+                "ARMCD": [
+                    "A"
+                ],
+                "ARM": [
+                    "HUMAN INSULIN"
+                ],
+                "ACTARMCD": [
+                    "A"
+                ],
+                "ACTARM": [
+                    "HUMAN INSULIN"
+                ],
+                "COUNTRY": [
+                    "FRA"
+                ]
+            }
+        },
+        {
+            "filename": "xy.xpt",
+            "label": "Custom Domain",
+            "domain": "XY",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 10
+                },
+                {
+                    "name": "DOMAIN",
+                    "label": "Domain Abbreviation",
+                    "type": "Char",
+                    "length": 2
+                },
+                {
+                    "name": "USUBJID",
+                    "label": "Unique Subject Identifier",
+                    "type": "Char",
+                    "length": 14
+                },
+                {
+                    "name": "XYSEQ",
+                    "label": "Sequence Number",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "XYTESTCD",
+                    "label": "Custom Test Examination Short Name",
+                    "type": "Char",
+                    "length": 8
+                },
+                {
+                    "name": "XYTEST",
+                    "label": "Custom Test or Examination Name",
+                    "type": "Char",
+                    "length": 40
+                },
+                {
+                    "name": "XYORRES",
+                    "label": "Result or Finding in Original Units",
+                    "type": "Char",
+                    "length": 8
+                },
+                {
+                    "name": "XYORRESU",
+                    "label": "Original Units",
+                    "type": "Char",
+                    "length": 20
+                },
+                {
+                    "name": "VISITNUM",
+                    "label": "Visit Number",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "VISIT",
+                    "label": "Visit Name",
+                    "type": "Char",
+                    "length": 18
+                },
+                {
+                    "name": "XYDTC",
+                    "label": "Date/Time of Specimen Collection",
+                    "type": "Char",
+                    "length": 10
+                },
+                {
+                    "name": "XYDY",
+                    "label": "Study Day of Specimen Collection",
+                    "type": "Num",
+                    "length": 8
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "CDISCPILOT01"
+                ],
+                "DOMAIN": [
+                    "XY"
+                ],
+                "USUBJID": [
+                    "CDISC-TEST-001"
+                ],
+                "XYSEQ": [
+                    1
+                ],
+                "XYTESTCD": [
+                    "ALB"
+                ],
+                "XYTEST": [
+                    "Albumin"
+                ],
+                "XYORRES": [
+                    ""
+                ],
+                "XYORRESU": [
+                    ""
+                ],
+                "VISITNUM": [
+                    2
+                ],
+                "VISIT": [
+                    "DAY 1"
+                ],
+                "XYDTC": [
+                    "2012-11-30"
+                ],
+                "XYDY": [
+                    1
+                ]
+            }
+        }
+    ],
+    "standard": {
+        "product": "sdtmig",
+        "version": "3-4"
+    },
+    "codelists": []
+}

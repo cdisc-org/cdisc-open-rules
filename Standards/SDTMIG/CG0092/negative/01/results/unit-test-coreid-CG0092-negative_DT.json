@@ -1,0 +1,44 @@
+{
+  "VS": [
+    {
+      "domain": "VS",
+      "errors": [
+        {
+          "row": 0,
+          "seq": 1,
+          "uSubjId": "CDISC001",
+          "value": {
+            "VSELTM": "PT30M"
+          }
+        },
+        {
+          "row": 1,
+          "seq": 2,
+          "uSubjId": "CDISC001",
+          "value": {
+            "VSELTM": "PT1H"
+          }
+        },
+        {
+          "row": 2,
+          "seq": 3,
+          "uSubjId": "CDISC001",
+          "value": {
+            "VSELTM": "PT1H30M"
+          }
+        },
+        {
+          "row": 0,
+          "value": {
+            "VSTPTREF": "Not in dataset"
+          }
+        }
+      ],
+      "executionStatus": "success",
+      "message": "VSTPTREF must be present when VSELTM is present in a dataset",
+      "variables": [
+        "VSELTM"
+      ]
+    }
+  ]
+}

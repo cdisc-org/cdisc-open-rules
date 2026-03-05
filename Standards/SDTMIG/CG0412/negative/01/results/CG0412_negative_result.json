@@ -1,0 +1,40 @@
+{2 items
+"DM":[1 item
+0:{5 items
+"executionStatus":"success"
+"domain":"DM"
+"variables":[2 items
+0:"ACTARMCD"
+1:"USUBJID"
+]
+"message":"DM.ACTARMCD does not equal "SCRNFAIL", "NOTASSGN" or "NOTTRT" but there are no DS records for the same subject"
+"errors":[2 items
+0:{3 items
+"value":{2 items
+"ACTARMCD":"A"
+"USUBJID":"CDISC-TEST-002"
+}
+"row":2
+"USUBJID":"CDISC-TEST-002"
+}
+1:{3 items
+"value":{2 items
+"ACTARMCD":"B"
+"USUBJID":"CDISC-TEST-003"
+}
+"row":3
+"USUBJID":"CDISC-TEST-003"
+}
+]
+}
+]
+"DS":[1 item
+0:{5 items
+"executionStatus":"skipped"
+"domain":"DS"
+"variables":[]0 items
+"message":NULL
+"errors":[]0 items
+}
+]
+}

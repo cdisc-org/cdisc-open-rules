@@ -1,0 +1,531 @@
+{
+    "rule": {
+        "Authorities": [
+            {
+                "Organization": "CDISC",
+                "Standards": [
+                    {
+                        "Name": "SDTMIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "IG v3.4",
+                                        "Item": "6",
+                                        "Section": "4.1.7",
+                                        "Cited_Guidance": "For domains with two-letter domain codes (i.e., other than SUPPxx and RELREC), split dataset names can be up to four characters in length. For example, if splitting by --CAT, then dataset names would be the domain name plus up to two additional characters (e.g., QS36 for SF-36). If splitting Findings About by parent domain, then the dataset name would be the domain code, \"FA\", plus the two-character domain code for parent domain code (e.g., \"FACM\"). The four-character dataset-name limitation allows the use of a Supplemental Qualifier dataset associated with the split dataset. "
+                                    }
+                                ],
+                                "Origin": "SDTM and SDTMIG Conformance Rules",
+                                "Version": "2.0",
+                                "Rule_Identifier": {
+                                    "Id": "CG0332",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.4"
+                    },
+                    {
+                        "Name": "SDTMIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "IG v3.2",
+                                        "Item": "6",
+                                        "Section": "4.1.1.7",
+                                        "Cited_Guidance": "Split dataset names can be up to four characters in length. For example; if splitting by --CAT; then dataset names would be the domain name plus up to two additional characters (e.g., QS36 for SF-36). If splitting Findings About by parent domain; then the dataset name would be the domain name plus the two-character domain code describing the parent domain code (e.g., FACM). The four-character dataset-name limitation allows the use of a Supplemental Qualifier dataset associated with the split dataset."
+                                    }
+                                ],
+                                "Origin": "SDTM and SDTMIG Conformance Rules",
+                                "Version": "2.0",
+                                "Rule_Identifier": {
+                                    "Id": "CG0332",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.2"
+                    },
+                    {
+                        "Name": "SDTMIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "IG v3.3",
+                                        "Item": "6",
+                                        "Section": "4.1.7",
+                                        "Cited_Guidance": "Split dataset names can be up to four characters in length. For example; if splitting by --CAT; then dataset names would be the domain name plus up to two additional characters (e.g., QS36 for SF-36). If splitting Findings About by parent domain; then the dataset name would be the domain name plus the two-character domain code describing the parent domain code (e.g., FACM). The four-character dataset-name limitation allows the use of a Supplemental Qualifier dataset associated with the split dataset."
+                                    }
+                                ],
+                                "Origin": "SDTM and SDTMIG Conformance Rules",
+                                "Version": "2.0",
+                                "Rule_Identifier": {
+                                    "Id": "CG0332",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.3"
+                    }
+                ]
+            }
+        ],
+        "Check": {
+            "all": [
+                {
+                    "name": "dataset_name",
+                    "operator": "matches_regex",
+                    "value": "^[a-z(?-i)]{2}[a-z0-9(?-i)]{1,2}"
+                },
+                {
+                    "name": "dataset_name",
+                    "operator": "not_prefix_matches_regex",
+                    "prefix": 2,
+                    "value": "(AP|FA)"
+                },
+                {
+                    "name": "dataset_name",
+                    "operator": "prefix_is_not_contained_by",
+                    "prefix": 2,
+                    "value": "$list_dataset_names"
+                }
+            ]
+        },
+        "Core": {
+            "Id": "CDISC.SDTMIG.CG0332",
+            "Status": "Draft",
+            "Version": "1"
+        },
+        "Description": "Raise an error when split domains (i.e three/four-letter domain name) do not have a two-letter parent domain present in the study.",
+        "Executability": "Fully Executable",
+        "Operations": [
+            {
+                "id": "$list_dataset_names",
+                "operator": "dataset_names"
+            }
+        ],
+        "Outcome": {
+            "Message": "Split dataset is present but the two-Letter parent domain is missing.",
+            "Output_Variables": [
+                "dataset_name",
+                "$list_dataset_names"
+            ]
+        },
+        "Scope": {
+            "Classes": {
+                "Include": [
+                    "ALL"
+                ]
+            },
+            "Domains": {
+                "Exclude": [
+                    "RELREC",
+                    "RELSUB",
+                    "SUPP"
+                ]
+            }
+        },
+        "Sensitivity": "Record",
+        "Rule_Type": "Dataset Metadata Check"
+    },
+    "datasets": [
+        {
+            "filename": "ae.xpt",
+            "label": "Adverse Events",
+            "domain": "AE",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "DOMAIN",
+                    "label": "Domain Abbreviation",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "USUBJID",
+                    "label": "Unique Subject Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AESEQ",
+                    "label": "Sequence Number",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "AETERM",
+                    "label": "Reported Term for the Adverse Event",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AEMODIFY",
+                    "label": "Modified Reported Term",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AEDECOD",
+                    "label": "Dictionary-Derived Term",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AEBODSYS",
+                    "label": "Body System or Organ Class",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AESEV",
+                    "label": "Severity/Intensity",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AESER",
+                    "label": "Serious Event",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AEACN",
+                    "label": "Action Taken with Study Treatment",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AEREL",
+                    "label": "Causality",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AEOUT",
+                    "label": "Outcome of Adverse Event",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AESCONG",
+                    "label": "Congenital Anomaly or Birth Defect",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AESDISAB",
+                    "label": "Persist or Signif Disability/Incapacity",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AESDTH",
+                    "label": "Results in Death",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AESHOSP",
+                    "label": "Requires or Prolongs Hospitalization",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AESLIFE",
+                    "label": "Is Life Threatening",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "EPOCH",
+                    "label": "Epoch",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AESTDTC",
+                    "label": "Start Date/Time of Adverse Event",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AEENDTC",
+                    "label": "End Date/Time of Adverse Event",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AESTDY",
+                    "label": "Study Day of Start of Adverse Event",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "AEENDY",
+                    "label": "Study Day of End of Adverse Event",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "AEENRF",
+                    "label": "End Relative to Reference Period",
+                    "type": "Char",
+                    "length": 50
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "ABC123",
+                    "ABC123",
+                    "ABC123"
+                ],
+                "DOMAIN": [
+                    "AE",
+                    "AE",
+                    "AE"
+                ],
+                "USUBJID": [
+                    "123101",
+                    "123101",
+                    "123101"
+                ],
+                "AESEQ": [
+                    1,
+                    2,
+                    3
+                ],
+                "AETERM": [
+                    "POUNDING HEADACHE",
+                    "BACK PAIN FOR 6 HOURS",
+                    "PULMONARY EMBOLISM"
+                ],
+                "AEMODIFY": [
+                    "HEADACHE",
+                    "BACK PAIN",
+                    ""
+                ],
+                "AEDECOD": [
+                    "Headache",
+                    "Back pain",
+                    "Pulmonary embolism"
+                ],
+                "AEBODSYS": [
+                    "Nervous system disorders",
+                    "Musculoskeletal and connective tissue disorders",
+                    "Vascular disorders"
+                ],
+                "AESEV": [
+                    "SEVERE",
+                    "MODERATE",
+                    "MODERATE"
+                ],
+                "AESER": [
+                    "N",
+                    "N",
+                    "Y"
+                ],
+                "AEACN": [
+                    "NOT APPLICABLE",
+                    "DOSE REDUCED",
+                    "DOSE REDUCED"
+                ],
+                "AEREL": [
+                    "DEFINITELY NOT RELATED",
+                    "PROBABLY RELATED",
+                    "PROBABLY NOT RELATED"
+                ],
+                "AEOUT": [
+                    "RECOVERED/RESOLVED",
+                    "RECOVERED/RESOLVED",
+                    "RECOVERING/RESOLVING"
+                ],
+                "AESCONG": [
+                    "",
+                    "",
+                    ""
+                ],
+                "AESDISAB": [
+                    "",
+                    "",
+                    ""
+                ],
+                "AESDTH": [
+                    "",
+                    "",
+                    ""
+                ],
+                "AESHOSP": [
+                    "",
+                    "",
+                    "Y"
+                ],
+                "AESLIFE": [
+                    "",
+                    "",
+                    "Y"
+                ],
+                "EPOCH": [
+                    "SCREENING",
+                    "TREATMENT",
+                    "TREATMENT"
+                ],
+                "AESTDTC": [
+                    "2005-10-12",
+                    "2005-10-13T13:05",
+                    "2005-10-21"
+                ],
+                "AEENDTC": [
+                    "2005-10-12",
+                    "2005-10-13T19:00",
+                    ""
+                ],
+                "AESTDY": [
+                    -1,
+                    1,
+                    9
+                ],
+                "AEENDY": [
+                    -1,
+                    1,
+                    null
+                ],
+                "AEENRF": [
+                    "",
+                    "",
+                    "AFTER"
+                ]
+            }
+        },
+        {
+            "filename": "apmh.xpt",
+            "label": "Associated Persons Medical History",
+            "domain": "APMHE",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "DOMAIN",
+                    "label": "Domain Abbreviation",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "APID",
+                    "label": "Associated Persons Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "MHSEQ",
+                    "label": "Sequence Number",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "RSUBJID",
+                    "label": "Related Subject or Pool Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "SREL",
+                    "label": "Subject, Device, or Study Relationship",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "MHTERM",
+                    "label": "Reported Term for the Medical History",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "MHPRESP",
+                    "label": "Medical History Event Pre-Specified",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "MHOCCUR",
+                    "label": "Medical History Occurrence",
+                    "type": "Char",
+                    "length": 50
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "ABC123",
+                    "ABC123",
+                    "ABC123",
+                    "ABC123"
+                ],
+                "DOMAIN": [
+                    "APMHE",
+                    "APMHE",
+                    "APMHE",
+                    "APMHE"
+                ],
+                "APID": [
+                    "2011-02-02-N120",
+                    "2011-02-02-N121",
+                    "2011-02-02-N122",
+                    "2011-02-02-N123"
+                ],
+                "MHSEQ": [
+                    1,
+                    1,
+                    1,
+                    1
+                ],
+                "RSUBJID": [
+                    "ABC123-01",
+                    "ABC123-01",
+                    "ABC123-01",
+                    "ABC123-01"
+                ],
+                "SREL": [
+                    "MOTHER, BIOLOGICAL",
+                    "FATHER, BIOLOGICAL",
+                    "SIBLING, FULL",
+                    "COUSIN, BIOLOGICAL"
+                ],
+                "MHTERM": [
+                    "POMPE DISEASE",
+                    "POMPE DISEASE",
+                    "POMPE DISEASE",
+                    "POMPE DISEASE"
+                ],
+                "MHPRESP": [
+                    "Y",
+                    "Y",
+                    "Y",
+                    "Y"
+                ],
+                "MHOCCUR": [
+                    "N",
+                    "Y",
+                    "N",
+                    "Y"
+                ]
+            }
+        }
+    ],
+    "standard": {
+        "product": "sdtmig",
+        "version": "3-3"
+    },
+    "codelists": []
+}

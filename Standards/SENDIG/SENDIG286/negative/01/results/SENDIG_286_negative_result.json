@@ -1,0 +1,31 @@
+{
+  "RELREC": [
+    {
+      "executionStatus": "success",
+      "domain": "RELREC",
+      "variables": [
+        "IDVAR",
+        "IDVARVAL",
+        "POOLID",
+        "RDOMAIN",
+        "RELTYPE",
+        "USUBJID"
+      ],
+      "message": "RELTYPE may not be populated when USUBJID or POOID is populated, and IDVARVAL is populated",
+      "errors": [
+        {
+          "value": {
+            "IDVARVAL": "11",
+            "IDVAR": "LBSEQ",
+            "RDOMAIN": "LB",
+            "USUBJID": "CDISC-TEST-001",
+            "RELTYPE": "ONE",
+            "POOLID": "Not in dataset"
+          },
+          "row": 3,
+          "USUBJID": "CDISC-TEST-001"
+        }
+      ]
+    }
+  ]
+}

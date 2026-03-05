@@ -1,0 +1,68 @@
+{
+    "STUDYEPOCH": [
+        {
+            "executionStatus": "success",
+            "dataset": "StudyEpoch.xpt",
+            "domain": "STUDYEPOCH",
+            "variables": [],
+            "message": null,
+            "errors": []
+        }
+    ],
+    "ENCOUNTER": [
+        {
+            "executionStatus": "success",
+            "dataset": "Encounter.xpt",
+            "domain": "ENCOUNTER",
+            "variables": [],
+            "message": null,
+            "errors": []
+        }
+    ],
+    "ACTIVITY": [
+        {
+            "executionStatus": "success",
+            "dataset": "Activity.xpt",
+            "domain": "ACTIVITY",
+            "variables": [],
+            "message": null,
+            "errors": []
+        }
+    ],
+    "NARRATIVECONTENT": [
+        {
+            "executionStatus": "success",
+            "dataset": "NarrativeContent.xpt",
+            "domain": "NARRATIVECONTENT",
+            "variables": [],
+            "message": null,
+            "errors": []
+        }
+    ],
+    "ELIGIBILITYCRITERION": [
+        {
+            "executionStatus": "success",
+            "dataset": "EligibilityCriterion.xpt",
+            "domain": "ELIGIBILITYCRITERION",
+            "variables": [],
+            "message": null,
+            "errors": []
+        }
+    ],
+    "RANGE": [
+        {
+            "executionStatus": "execution_error",
+            "dataset": "Range.xpt",
+            "domain": "RANGE",
+            "variables": [],
+            "message": "rule execution error",
+            "errors": [
+                {
+                    "dataset": "Range.xpt",
+                    "error": "Column not found in data",
+                    "message": "nextId, previousId"
+                }
+            ]
+        }
+    ]
+}

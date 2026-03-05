@@ -1,0 +1,1131 @@
+{
+    "rule": {
+        "Authorities": [
+            {
+                "Organization": "CDISC",
+                "Standards": [
+                    {
+                        "Name": "SDTMIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "Model v1.4",
+                                        "Section": "2.2.4",
+                                        "Cited_Guidance": "STUDYID, DOMAIN, USUBJID (or POOLID), and --SEQ are required in all domains based on one of the three general observation classes."
+                                    }
+                                ],
+                                "Origin": "SDTM and SDTMIG Conformance Rules",
+                                "Version": "2.0",
+                                "Rule_Identifier": {
+                                    "Id": "CG0313",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.2"
+                    }
+                ]
+            }
+        ],
+        "Check": {
+            "any": [
+                {
+                    "any": [
+                        {
+                            "name": "STUDYID",
+                            "operator": "not_exists"
+                        },
+                        {
+                            "name": "--SEQ",
+                            "operator": "not_exists"
+                        },
+                        {
+                            "name": "DOMAIN",
+                            "operator": "not_exists"
+                        }
+                    ]
+                },
+                {
+                    "all": [
+                        {
+                            "name": "USUBJID",
+                            "operator": "not_exists"
+                        },
+                        {
+                            "name": "POOLID",
+                            "operator": "not_exists"
+                        }
+                    ]
+                }
+            ]
+        },
+        "Core": {
+            "Id": "CDISC.SDTMIG.CG0313",
+            "Status": "Draft",
+            "Version": "1"
+        },
+        "Description": "Raise an error when one of the following variables; STUDYID, DOMAIN, USUBJID (or POOLID) or --SEQ is not present in the dataset.",
+        "Executability": "Fully Executable",
+        "Outcome": {
+            "Message": "One of following variables is not present in the dataset; STUDYID, DOMAIN, USUBJID (or POOLID) or --SEQ.",
+            "Output_Variables": [
+                "STUDYID",
+                "DOMAIN",
+                "USUBJID",
+                "POOLID",
+                "--SEQ"
+            ]
+        },
+        "Scope": {
+            "Classes": {
+                "Include": [
+                    "ALL"
+                ]
+            },
+            "Domains": {
+                "Include": [
+                    "ALL"
+                ]
+            }
+        },
+        "Sensitivity": "Dataset",
+        "Rule_Type": "Record Data"
+    },
+    "datasets": [
+        {
+            "filename": "ae.xpt",
+            "label": "Adverse Events",
+            "domain": "AE",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "USUBJID",
+                    "label": "Unique Subject Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AESEQ",
+                    "label": "Sequence Number",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "AETERM",
+                    "label": "Reported Term for the Adverse Event",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AEMODIFY",
+                    "label": "Modified Reported Term",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AEDECOD",
+                    "label": "Dictionary-Derived Term",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AEBODSYS",
+                    "label": "Body System or Organ Class",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AESEV",
+                    "label": "Severity/Intensity",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AESER",
+                    "label": "Serious Event",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AEACN",
+                    "label": "Action Taken with Study Treatment",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AEREL",
+                    "label": "Causality",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AEOUT",
+                    "label": "Outcome of Adverse Event",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AESCONG",
+                    "label": "Congenital Anomaly or Birth Defect",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AESDISAB",
+                    "label": "Persist or Signif Disability/Incapacity",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AESDTH",
+                    "label": "Results in Death",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AESHOSP",
+                    "label": "Requires or Prolongs Hospitalization",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AESLIFE",
+                    "label": "Is Life Threatening",
+                    "type": "Char",
+                    "length": 50
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "TEST",
+                    "TEST"
+                ],
+                "USUBJID": [
+                    "001",
+                    "001"
+                ],
+                "AESEQ": [
+                    2,
+                    1
+                ],
+                "AETERM": [
+                    "POUNDING HEADACHE",
+                    "POUNDING HEADACHE"
+                ],
+                "AEMODIFY": [
+                    "HEADACHE",
+                    "HEADACHE"
+                ],
+                "AEDECOD": [
+                    "Headache",
+                    "Headache"
+                ],
+                "AEBODSYS": [
+                    "Nervous system disorders",
+                    "Nervous system disorders"
+                ],
+                "AESEV": [
+                    "SEVERE",
+                    "SEVERE"
+                ],
+                "AESER": [
+                    "N",
+                    "N"
+                ],
+                "AEACN": [
+                    "NOT APPLICABLE",
+                    "NOT APPLICABLE"
+                ],
+                "AEREL": [
+                    "DEFINITELY NOT RELATED",
+                    "DEFINITELY NOT RELATED"
+                ],
+                "AEOUT": [
+                    "RECOVERED/RESOLVED",
+                    "RECOVERED/RESOLVED"
+                ],
+                "AESCONG": [
+                    "",
+                    ""
+                ],
+                "AESDISAB": [
+                    "",
+                    ""
+                ],
+                "AESDTH": [
+                    "",
+                    ""
+                ],
+                "AESHOSP": [
+                    "",
+                    ""
+                ],
+                "AESLIFE": [
+                    "",
+                    ""
+                ]
+            }
+        },
+        {
+            "filename": "lb.xpt",
+            "label": "Laboratory Test Results",
+            "domain": "LB",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "DOMAIN",
+                    "label": "Domain Abbreviation",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "LBSEQ",
+                    "label": "Sequence Number",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "LBGRPID",
+                    "label": "Group ID",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "LBTESTCD",
+                    "label": "Lab Test or Examination Short Name",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "LBTEST",
+                    "label": "Lab Test or Examination Name",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "LBTSTCND",
+                    "label": "Test Condition",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "LBCAT",
+                    "label": "Category for Lab Test",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "LBSCAT",
+                    "label": "Subcategory for Lab Test",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "LBORRES",
+                    "label": "Result or Finding in Original Units",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "LBORRESU",
+                    "label": "Original Units",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "LBRESSCL",
+                    "label": "Result Scale",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "LBRESTYP",
+                    "label": "Result Type",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "LBCOLSRT",
+                    "label": "Collected Summary Result Type",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "LBORNRLO",
+                    "label": "Reference Range Lower Limit in Orig Unit",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "LBORNRHI",
+                    "label": "Reference Range Upper Limit in Orig Unit",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "LBLLOD",
+                    "label": "Lower Limit of Detection",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "LBSTRESC",
+                    "label": "Character Result/Finding in Std Format",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "LBSTRESN",
+                    "label": "Numeric Result/Finding in Standard Units",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "LBSTRESU",
+                    "label": "Standard Units",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "LBSTNRLO",
+                    "label": "Reference Range Lower Limit-Std Units",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "LBSTNRHI",
+                    "label": "Reference Range Upper Limit-Std Units",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "LBSTNRC",
+                    "label": "Reference Range for Char Rslt-Std Units",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "LBNRIND",
+                    "label": "Reference Range Indicator",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "LBSTAT",
+                    "label": "Completion Status",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "LBREASND",
+                    "label": "Reason Test Not Done",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "LBLOINC",
+                    "label": "LOINC Code",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "LBSPEC",
+                    "label": "Specimen Type",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "LBMETHOD",
+                    "label": "Method of Test or Examination",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "LBTMTHSN",
+                    "label": "Test Method Sensitivity",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "LBLOBXFL",
+                    "label": "Last Observation Before Exposure Flag",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "LBFAST",
+                    "label": "Fasting Status",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "LBDRVFL",
+                    "label": "Derived Flag",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "LBCLSIG",
+                    "label": "Clinically Significant, Collected",
+                    "type": "Char",
+                    "length": 50
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "ABC123",
+                    "ABC123",
+                    "ABC123",
+                    "ABC123",
+                    "ABC123",
+                    "ABC123"
+                ],
+                "DOMAIN": [
+                    "LB",
+                    "LB",
+                    "LB",
+                    "LB",
+                    "LB",
+                    "LB"
+                ],
+                "LBSEQ": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6
+                ],
+                "LBGRPID": [
+                    "",
+                    "A",
+                    "A",
+                    "A",
+                    "A",
+                    ""
+                ],
+                "LBTESTCD": [
+                    "ALB",
+                    "ALP",
+                    "ALP",
+                    "ALP",
+                    "ALP",
+                    "CRP"
+                ],
+                "LBTEST": [
+                    "Albumin",
+                    "Alkaline Phosphatase",
+                    "Alkaline Phosphatase",
+                    "Alkaline Phosphatase",
+                    "Alkaline Phosphatase",
+                    "C Reactive Protein"
+                ],
+                "LBTSTCND": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "LBCAT": [
+                    "CHEMISTRY",
+                    "CHEMISTRY",
+                    "CHEMISTRY",
+                    "CHEMISTRY",
+                    "CHEMISTRY",
+                    "CHEMISTRY"
+                ],
+                "LBSCAT": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "LBORRES": [
+                    "30",
+                    "398",
+                    "350",
+                    "",
+                    "",
+                    "2.5"
+                ],
+                "LBORRESU": [
+                    "g/L",
+                    "IU/L",
+                    "IU/L",
+                    "",
+                    "",
+                    "mg/L"
+                ],
+                "LBRESSCL": [
+                    "QUANTITATIVE",
+                    "QUANTITATIVE",
+                    "QUANTITATIVE",
+                    "QUANTITATIVE",
+                    "QUANTITATIVE",
+                    "QUANTITATIVE"
+                ],
+                "LBRESTYP": [
+                    "MASS CONCENTRATION",
+                    "CATALYTIC CONCENTRATION",
+                    "CATALYTIC CONCENTRATION",
+                    "CATALYTIC CONCENTRATION",
+                    "CATALYTIC CONCENTRATION",
+                    "MASS CONCENTRATION"
+                ],
+                "LBCOLSRT": [
+                    "",
+                    "",
+                    "",
+                    "MEAN, ARITHMETIC",
+                    "",
+                    ""
+                ],
+                "LBORNRLO": [
+                    "35",
+                    "40",
+                    "40",
+                    "",
+                    "",
+                    "0.5"
+                ],
+                "LBORNRHI": [
+                    "50",
+                    "160",
+                    "160",
+                    "",
+                    "",
+                    "10"
+                ],
+                "LBLLOD": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "LBSTRESC": [
+                    "3",
+                    "398",
+                    "350",
+                    "374",
+                    "398",
+                    "2.5"
+                ],
+                "LBSTRESN": [
+                    3,
+                    398,
+                    350,
+                    374,
+                    398,
+                    2.5
+                ],
+                "LBSTRESU": [
+                    "g/dL",
+                    "IU/L",
+                    "IU/L",
+                    "IU/L",
+                    "IU/L",
+                    "mg/L"
+                ],
+                "LBSTNRLO": [
+                    3.5,
+                    40,
+                    40,
+                    40,
+                    40,
+                    0.5
+                ],
+                "LBSTNRHI": [
+                    5,
+                    160,
+                    160,
+                    160,
+                    160,
+                    10
+                ],
+                "LBSTNRC": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "LBNRIND": [
+                    "LOW",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "LBSTAT": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "LBREASND": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "LBLOINC": [
+                    "2862-1",
+                    "6768-6",
+                    "6768-6",
+                    "",
+                    "",
+                    "30522-7"
+                ],
+                "LBSPEC": [
+                    "SERUM",
+                    "SERUM",
+                    "SERUM",
+                    "SERUM",
+                    "SERUM",
+                    "SERUM"
+                ],
+                "LBMETHOD": [
+                    "ELECTROPHORESIS",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "LBTMTHSN": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "HIGH SENSITIVITY"
+                ],
+                "LBLOBXFL": [
+                    "Y",
+                    "",
+                    "Y",
+                    "",
+                    "",
+                    "Y"
+                ],
+                "LBFAST": [
+                    "Y",
+                    "Y",
+                    "Y",
+                    "Y",
+                    "Y",
+                    "Y"
+                ],
+                "LBDRVFL": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "Y",
+                    ""
+                ],
+                "LBCLSIG": [
+                    "N",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ]
+            }
+        },
+        {
+            "filename": "ec.xpt",
+            "label": "Exposure as Collected",
+            "domain": "EC",
+            "variables": [
+                {
+                    "name": "DOMAIN",
+                    "label": "Domain Abbreviation",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "USUBJID",
+                    "label": "Unique Subject Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "SPDEVID",
+                    "label": "Sponsor Device Identifier",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "ECSEQ",
+                    "label": "Sequence Number",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "ECTRT",
+                    "label": "Name of Treatment",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "ECPRESP",
+                    "label": "Pre-Specified",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "ECOCCUR",
+                    "label": "Occurrence",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "ECDOSE",
+                    "label": "Dose",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "ECDOSU",
+                    "label": "Dose Units",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "ECDOSFRM",
+                    "label": "Dose Form",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "ECDOSFRQ",
+                    "label": "Dosing Frequency per Interval",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "ECROUTE",
+                    "label": "Route of Administration",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "ECLOT",
+                    "label": "Lot Number",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "ECPSTRG",
+                    "label": "Pharmaceutical Strength",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "ECPSTRGU",
+                    "label": "Pharmaceutical Strength Units",
+                    "type": "Char",
+                    "length": 50
+                }
+            ],
+            "records": {
+                "DOMAIN": [
+                    "EC",
+                    "EC",
+                    "EC"
+                ],
+                "USUBJID": [
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC001"
+                ],
+                "SPDEVID": [
+                    "DEV0001",
+                    "DEV0001",
+                    "DEV0001"
+                ],
+                "ECSEQ": [
+                    1,
+                    2,
+                    3
+                ],
+                "ECTRT": [
+                    "ZANOMALINE",
+                    "MULTIPLE",
+                    "OTHERZ"
+                ],
+                "ECPRESP": [
+                    "Y",
+                    "Y",
+                    "Y"
+                ],
+                "ECOCCUR": [
+                    "Y",
+                    "Y",
+                    "Y"
+                ],
+                "ECDOSE": [
+                    5,
+                    5,
+                    5
+                ],
+                "ECDOSU": [
+                    "mL",
+                    "mL",
+                    "mL"
+                ],
+                "ECDOSFRM": [
+                    "INJECTION",
+                    "INJECTION",
+                    "INJECTION"
+                ],
+                "ECDOSFRQ": [
+                    "QD",
+                    "QD",
+                    "QD"
+                ],
+                "ECROUTE": [
+                    "SUBCUTANEOUS",
+                    "SUBCUTANEOUS",
+                    "SUBCUTANEOUS"
+                ],
+                "ECLOT": [
+                    "SDS580-359",
+                    "SDS580-359",
+                    "SDS580-359"
+                ],
+                "ECPSTRG": [
+                    10.8,
+                    10.8,
+                    10.8
+                ],
+                "ECPSTRGU": [
+                    "g/L",
+                    "g/L",
+                    "g/L"
+                ]
+            }
+        },
+        {
+            "filename": "fa.xpt",
+            "label": "Findings About",
+            "domain": "FA",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "DOMAIN",
+                    "label": "Domain Abbreviation",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "POOLID",
+                    "label": "Pool Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "FALNKID",
+                    "label": "Var Label",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "FATESTCD",
+                    "label": "Findings About Test Short Name",
+                    "type": "Char",
+                    "length": 8
+                },
+                {
+                    "name": "FATEST",
+                    "label": "Findings About Test Name",
+                    "type": "Char",
+                    "length": 40
+                },
+                {
+                    "name": "FAOBJ",
+                    "label": "Object of the Observation",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "FAORRES",
+                    "label": "Result or Finding in Original Units",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "FAORRESU",
+                    "label": "Original Units",
+                    "type": "Char",
+                    "length": 10
+                },
+                {
+                    "name": "FASTRESC",
+                    "label": "Character Result/Finding in Std Format",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "FASTRESU",
+                    "label": "Standard Units",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "VISITNUM",
+                    "label": "Visit Number",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "VISIT",
+                    "label": "Visit Name",
+                    "type": "Char",
+                    "length": 20
+                },
+                {
+                    "name": "EPOCH",
+                    "label": "Var Label",
+                    "type": "Char",
+                    "length": 200
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "ABC123",
+                    "ABC123",
+                    "ABC123",
+                    "ABC123",
+                    "ABC123"
+                ],
+                "DOMAIN": [
+                    "FA",
+                    "FA",
+                    "FA",
+                    "FA",
+                    "FA"
+                ],
+                "POOLID": [
+                    "ABC123-0201",
+                    "ABC123-0202",
+                    "ABC123-0203",
+                    "ABC123-0204",
+                    "ABC123-0205"
+                ],
+                "FALNKID": [
+                    "20090213T1000",
+                    "20090213T1001",
+                    "20090213T1002",
+                    "20090213T1003",
+                    "20090213T1004"
+                ],
+                "FATESTCD": [
+                    "DOSEALT",
+                    "DOSEALT",
+                    "DOSEALT",
+                    "DOSEALT",
+                    "DOSEALT"
+                ],
+                "FATEST": [
+                    "Dose in Alternative Unit",
+                    "Dose in Alternative Unit",
+                    "Dose in Alternative Unit",
+                    "Dose in Alternative Unit",
+                    "Dose in Alternative Unit"
+                ],
+                "FAOBJ": [
+                    "DRUG E",
+                    "DRUG D",
+                    "DRUG Y",
+                    "DRUG B",
+                    "DRUG A"
+                ],
+                "FAORRES": [
+                    "522.5",
+                    "522.6",
+                    "522.7",
+                    "522.8",
+                    "522.9"
+                ],
+                "FAORRESU": [
+                    "mg",
+                    "mg",
+                    "mg",
+                    "mg",
+                    "mg"
+                ],
+                "FASTRESC": [
+                    "522.5",
+                    "522.6",
+                    "522.7",
+                    "522.8",
+                    "522.9"
+                ],
+                "FASTRESU": [
+                    "mg",
+                    "mg",
+                    "mg",
+                    "mg",
+                    "mg"
+                ],
+                "VISITNUM": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ],
+                "VISIT": [
+                    "VISIT 1",
+                    "VISIT 2",
+                    "VISIT 3",
+                    "VISIT 4",
+                    "VISIT 5"
+                ],
+                "EPOCH": [
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT"
+                ]
+            }
+        }
+    ],
+    "standard": {
+        "product": "sdtmig",
+        "version": "3-2"
+    },
+    "codelists": []
+}

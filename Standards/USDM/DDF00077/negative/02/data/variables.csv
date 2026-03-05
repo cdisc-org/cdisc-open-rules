@@ -1,0 +1,13 @@
+dataset,variable,label,type,length
+GeographicScope.xpt,parent_entity,Parent Entity Name,String,[1]
+GeographicScope.xpt,parent_id,Parent Entity Id,String,[1]
+GeographicScope.xpt,parent_rel,Name of Relationship from Parent Entity,String,[1]
+GeographicScope.xpt,rel_type,Type of Relationship,String,[1]
+GeographicScope.xpt,id,(Geographic Scope Id),String,[1]
+GeographicScope.xpt,instanceType,Instance Type,String,[1]
+GeographicScope.xpt,type,Geographic Scope Type [Exists],Boolean,Code[1]
+GeographicScope.xpt,type.id,Geographic Scope Type / (Code Id),String,Code[1].id[1]
+GeographicScope.xpt,type.code,Geographic Scope Type / Code Value,String,Code[1].code[1]
+GeographicScope.xpt,type.codeSystem,Geographic Scope Type / Code System Name,String,Code[1].codeSystem[1]
+GeographicScope.xpt,type.codeSystemVersion,Geographic Scope Type / Code System Version,String,Code[1].codeSystemVersion[1]
+GeographicScope.xpt,type.decode,Geographic Scope Type / Decode,String,Code[1].decode[1]

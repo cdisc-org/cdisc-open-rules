@@ -1,0 +1,55 @@
+{
+  "DM": [
+    {
+      "executionStatus": "success",
+      "domain": "DM",
+      "variables": [
+        "AGETXT",
+        "USUBJID"
+      ],
+      "message": "AGETXT must be in number dash number format",
+      "errors": [
+        {
+          "value": {
+            "AGETXT": "11",
+            "USUBJID": "002"
+          },
+          "row": 2,
+          "USUBJID": "002"
+        },
+        {
+          "value": {
+            "AGETXT": "a11-20",
+            "USUBJID": "003"
+          },
+          "row": 3,
+          "USUBJID": "003"
+        },
+        {
+          "value": {
+            "AGETXT": "young",
+            "USUBJID": "004"
+          },
+          "row": 4,
+          "USUBJID": "004"
+        },
+        {
+          "value": {
+            "AGETXT": "11--a2",
+            "USUBJID": "005"
+          },
+          "row": 5,
+          "USUBJID": "005"
+        },
+        {
+          "value": {
+            "AGETXT": "11--22",
+            "USUBJID": "006"
+          },
+          "row": 6,
+          "USUBJID": "006"
+        }
+      ]
+    }
+  ]
+}

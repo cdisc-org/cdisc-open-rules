@@ -1,0 +1,661 @@
+{2 items
+"AE":[1 item
+0:{6 items
+"executionStatus":"success"
+"dataset":"ae.xpt"
+"domain":"AE"
+"variables":[3 items
+0:"AESTDTC"
+1:"AESTDY"
+2:"RFSTDTC"
+]
+"message":"AESTDY is not null when either AESTDTC or DM.RFSTDTC do not contain complete values in their date portion"
+"errors":[2 items
+0:{5 items
+"value":{3 items
+"RFSTDTC":"2022-03-20"
+"AESTDY":1
+"AESTDTC":"2005-10"
+}
+"dataset":"ae.xpt"
+"row":1
+"USUBJID":"001"
+"SEQ":1
+}
+1:{5 items
+"value":{3 items
+"RFSTDTC":"2022-03"
+"AESTDY":1
+"AESTDTC":"2005-10-13T13:05"
+}
+"dataset":"ae.xpt"
+"row":2
+"USUBJID":"002"
+"SEQ":1
+}
+]
+}
+]
+"DM":[1 item
+0:{6 items
+"executionStatus":"execution_error"
+"dataset":"dm.xpt"
+"domain":"DM"
+"variables":[]0 items
+"message":"rule execution {2 items
+"datasets":[2 items
+0:{5 items
+"filename":"ae.xpt"
+"label":"Adverse Events"
+"domain":"AE"
+"variables":[24 items
+0:{4 items
+"name":"STUDYID"
+"label":"Study Identifier"
+"type":"Char"
+"length":50
+}
+1:{4 items
+"name":"DOMAIN"
+"label":"Domain Abbreviation"
+"type":"Char"
+"length":50
+}
+2:{4 items
+"name":"USUBJID"
+"label":"Unique Subject Identifier"
+"type":"Char"
+"length":50
+}
+3:{4 items
+"name":"AESEQ"
+"label":"Sequence Number"
+"type":"Num"
+"length":8
+}
+4:{4 items
+"name":"AETERM"
+"label":"Reported Term for the Adverse Event"
+"type":"Char"
+"length":50
+}
+5:{4 items
+"name":"AEMODIFY"
+"label":"Modified Reported Term"
+"type":"Char"
+"length":50
+}
+6:{4 items
+"name":"AEDECOD"
+"label":"Dictionary-Derived Term"
+"type":"Char"
+"length":50
+}
+7:{4 items
+"name":"AEBODSYS"
+"label":"Body System or Organ Class"
+"type":"Char"
+"length":50
+}
+8:{4 items
+"name":"AESEV"
+"label":"Severity/Intensity"
+"type":"Char"
+"length":50
+}
+9:{4 items
+"name":"AESER"
+"label":"Serious Event"
+"type":"Char"
+"length":50
+}
+10:{4 items
+"name":"AEACN"
+"label":"Action Taken with Study Treatment"
+"type":"Char"
+"length":50
+}
+11:{4 items
+"name":"AEREL"
+"label":"Causality"
+"type":"Char"
+"length":50
+}
+12:{4 items
+"name":"AEOUT"
+"label":"Outcome of Adverse Event"
+"type":"Char"
+"length":50
+}
+13:{4 items
+"name":"AESCONG"
+"label":"Congenital Anomaly or Birth Defect"
+"type":"Char"
+"length":50
+}
+14:{4 items
+"name":"AESDISAB"
+"label":"Persist or Signif Disability/Incapacity"
+"type":"Char"
+"length":50
+}
+15:{4 items
+"name":"AESDTH"
+"label":"Results in Death"
+"type":"Char"
+"length":50
+}
+16:{4 items
+"name":"AESHOSP"
+"label":"Requires or Prolongs Hospitalization"
+"type":"Char"
+"length":50
+}
+17:{4 items
+"name":"AESLIFE"
+"label":"Is Life Threatening"
+"type":"Char"
+"length":50
+}
+18:{4 items
+"name":"EPOCH"
+"label":"Epoch"
+"type":"Char"
+"length":50
+}
+19:{4 items
+"name":"AESTDTC"
+"label":"Start Date/Time of Adverse Event"
+"type":"Char"
+"length":50
+}
+20:{4 items
+"name":"AEENDTC"
+"label":"End Date/Time of Adverse Event"
+"type":"Char"
+"length":50
+}
+21:{4 items
+"name":"AESTDY"
+"label":"Study Day of Start of Adverse Event"
+"type":"Num"
+"length":8
+}
+22:{4 items
+"name":"AEENDY"
+"label":"Study Day of End of Adverse Event"
+"type":"Num"
+"length":8
+}
+23:{4 items
+"name":"AEENRF"
+"label":"End Relative to Reference Period"
+"type":"Char"
+"length":50
+}
+]
+"records":{24 items
+"STUDYID":[3 items
+0:"TEST"
+1:"TEST"
+2:"TEST"
+]
+"DOMAIN":[3 items
+0:"AE"
+1:"AE"
+2:"AE"
+]
+"USUBJID":[3 items
+0:"001"
+1:"001"
+2:"002"
+]
+"AESEQ":[3 items
+0:1
+1:2
+2:1
+]
+"AETERM":[3 items
+0:"POUNDING HEADACHE"
+1:"POUNDING HEADACHE"
+2:"BACK PAIN FOR 6 HOURS"
+]
+"AEMODIFY":[3 items
+0:"HEADACHE"
+1:"HEADACHE"
+2:"BACK PAIN"
+]
+"AEDECOD":[3 items
+0:"Headache"
+1:"Headache"
+2:"Back pain"
+]
+"AEBODSYS":[3 items
+0:"Nervous system disorders"
+1:"Nervous system disorders"
+2:"Musculoskeletal and connective tissue disorders"
+]
+"AESEV":[3 items
+0:"SEVERE"
+1:"SEVERE"
+2:"MODERATE"
+]
+"AESER":[3 items
+0:"N"
+1:"N"
+2:"N"
+]
+"AEACN":[3 items
+0:"NOT APPLICABLE"
+1:"NOT APPLICABLE"
+2:"DOSE REDUCED"
+]
+"AEREL":[3 items
+0:"DEFINITELY NOT RELATED"
+1:"DEFINITELY NOT RELATED"
+2:"PROBABLY RELATED"
+]
+"AEOUT":[3 items
+0:"RECOVERED/RESOLVED"
+1:"RECOVERED/RESOLVED"
+2:"RECOVERED/RESOLVED"
+]
+"AESCONG":[3 items
+0:""
+1:""
+2:""
+]
+"AESDISAB":[3 items
+0:""
+1:""
+2:""
+]
+"AESDTH":[3 items
+0:""
+1:""
+2:""
+]
+"AESHOSP":[3 items
+0:""
+1:""
+2:""
+]
+"AESLIFE":[3 items
+0:""
+1:""
+2:""
+]
+"EPOCH":[3 items
+0:"SCREENING"
+1:"SCREENING"
+2:"TREATMENT"
+]
+"AESTDTC":[3 items
+0:"2005-10"
+1:"2005-10-12"
+2:"2005-10-13T13:05"
+]
+"AEENDTC":[3 items
+0:"2005-10"
+1:"2005-10"
+2:"2005-10-13T19:00"
+]
+"AESTDY":[3 items
+0:NULL
+1:-1
+2:NULL
+]
+"AEENDY":[3 items
+0:NULL
+1:NULL
+2:NULL
+]
+"AEENRF":[3 items
+0:""
+1:""
+2:""
+]
+}
+}
+1:{5 items
+"filename":"dm.xpt"
+"label":"Demographics"
+"domain":"DM"
+"variables":[32 items
+0:{4 items
+"name":"STUDYID"
+"label":"Study Identifier"
+"type":"Char"
+"length":50
+}
+1:{4 items
+"name":"DOMAIN"
+"label":"Domain Abbreviation"
+"type":"Char"
+"length":50
+}
+2:{4 items
+"name":"USUBJID"
+"label":"Unique Subject Identifier"
+"type":"Char"
+"length":50
+}
+3:{4 items
+"name":"SUBJID"
+"label":"Subject Identifier for the Study"
+"type":"Char"
+"length":50
+}
+4:{4 items
+"name":"RFSTDTC"
+"label":"Subject Reference Start Date/Time"
+"type":"Char"
+"length":50
+}
+5:{4 items
+"name":"RFENDTC"
+"label":"Subject Reference End Date/Time"
+"type":"Char"
+"length":50
+}
+6:{4 items
+"name":"RFXSTDTC"
+"label":"Date/Time of First Study Treatment"
+"type":"Char"
+"length":50
+}
+7:{4 items
+"name":"RFXENDTC"
+"label":"Date/Time of Last Study Treatment"
+"type":"Char"
+"length":50
+}
+8:{4 items
+"name":"RFCSTDTC"
+"label":"Date/Time of First Challenge Agent Admin"
+"type":"Char"
+"length":50
+}
+9:{4 items
+"name":"RFCENDTC"
+"label":"Date/Time of Last Challenge Agent Admin"
+"type":"Char"
+"length":50
+}
+10:{4 items
+"name":"RFICDTC"
+"label":"Date/Time of Informed Consent"
+"type":"Char"
+"length":50
+}
+11:{4 items
+"name":"RFPENDTC"
+"label":"Date/Time of End of Participation"
+"type":"Char"
+"length":50
+}
+12:{4 items
+"name":"DTHDTC"
+"label":"Date/Time of Death"
+"type":"Char"
+"length":50
+}
+13:{4 items
+"name":"DTHFL"
+"label":"Subject Death Flag"
+"type":"Char"
+"length":50
+}
+14:{4 items
+"name":"SITEID"
+"label":"Study Site Identifier"
+"type":"Char"
+"length":50
+}
+15:{4 items
+"name":"INVID"
+"label":"Investigator Identifier"
+"type":"Char"
+"length":50
+}
+16:{4 items
+"name":"INVNAM"
+"label":"Investigator Name"
+"type":"Char"
+"length":50
+}
+17:{4 items
+"name":"BRTHDTC"
+"label":"Date/Time of Birth"
+"type":"Char"
+"length":50
+}
+18:{4 items
+"name":"AGE"
+"label":"Age"
+"type":"Num"
+"length":8
+}
+19:{4 items
+"name":"AGEU"
+"label":"Age Units"
+"type":"Char"
+"length":50
+}
+20:{4 items
+"name":"SEX"
+"label":"Sex"
+"type":"Char"
+"length":50
+}
+21:{4 items
+"name":"RACE"
+"label":"Race"
+"type":"Char"
+"length":50
+}
+22:{4 items
+"name":"ETHNIC"
+"label":"Ethnicity"
+"type":"Char"
+"length":50
+}
+23:{4 items
+"name":"ARMCD"
+"label":"Planned Arm Code"
+"type":"Char"
+"length":50
+}
+24:{4 items
+"name":"ARM"
+"label":"Description of Planned Arm"
+"type":"Char"
+"length":50
+}
+25:{4 items
+"name":"ACTARMCD"
+"label":"Actual Arm Code"
+"type":"Char"
+"length":50
+}
+26:{4 items
+"name":"ACTARM"
+"label":"Description of Actual Arm"
+"type":"Char"
+"length":50
+}
+27:{4 items
+"name":"ARMNRS"
+"label":"Reason Arm and/or Actual Arm is Null"
+"type":"Char"
+"length":50
+}
+28:{4 items
+"name":"ACTARMUD"
+"label":"Description of Unplanned Actual Arm"
+"type":"Char"
+"length":50
+}
+29:{4 items
+"name":"COUNTRY"
+"label":"Country"
+"type":"Char"
+"length":50
+}
+30:{4 items
+"name":"DMDTC"
+"label":"Date/Time of Collection"
+"type":"Char"
+"length":50
+}
+31:{4 items
+"name":"DMDY"
+"label":"Study Day of Collection"
+"type":"Num"
+"length":8
+}
+]
+"records":{32 items
+"STUDYID":[2 items
+0:"TEST"
+1:"TEST"
+]
+"DOMAIN":[2 items
+0:"DM"
+1:"DM"
+]
+"USUBJID":[2 items
+0:"001"
+1:"002"
+]
+"SUBJID":[2 items
+0:"001"
+1:"002"
+]
+"RFSTDTC":[2 items
+0:"2022-03-20"
+1:"2022-03"
+]
+"RFENDTC":[2 items
+0:""
+1:""
+]
+"RFXSTDTC":[2 items
+0:""
+1:""
+]
+"RFXENDTC":[2 items
+0:""
+1:""
+]
+"RFCSTDTC":[2 items
+0:""
+1:""
+]
+"RFCENDTC":[2 items
+0:""
+1:""
+]
+"RFICDTC":[2 items
+0:""
+1:""
+]
+"RFPENDTC":[2 items
+0:""
+1:""
+]
+"DTHDTC":[2 items
+0:""
+1:""
+]
+"DTHFL":[2 items
+0:""
+1:""
+]
+"SITEID":[2 items
+0:""
+1:""
+]
+"INVID":[2 items
+0:""
+1:""
+]
+"INVNAM":[2 items
+0:""
+1:""
+]
+"BRTHDTC":[2 items
+0:""
+1:""
+]
+"AGE":[2 items
+0:NULL
+1:NULL
+]
+"AGEU":[2 items
+0:""
+1:""
+]
+"SEX":[2 items
+0:""
+1:""
+]
+"RACE":[2 items
+0:""
+1:""
+]
+"ETHNIC":[2 items
+0:""
+1:""
+]
+"ARMCD":[2 items
+0:""
+1:""
+]
+"ARM":[2 items
+0:""
+1:""
+]
+"ACTARMCD":[2 items
+0:""
+1:""
+]
+"ACTARM":[2 items
+0:""
+1:""
+]
+"ARMNRS":[2 items
+0:""
+1:""
+]
+"ACTARMUD":[2 items
+0:""
+1:""
+]
+"COUNTRY":[2 items
+0:""
+1:""
+]
+"DMDTC":[2 items
+0:""
+1:""
+]
+"DMDY":[2 items
+0:NULL
+1:NULL
+]
+}
+}
+]
+"codelists":[]0 items
+}error"
+"errors":[1 item
+0:{3 items
+"dataset":"dm.xpt"
+"error":"Column not found in data"
+"message":"DMSTDY, DMSTDTC"
+}
+]
+}
+]
+}

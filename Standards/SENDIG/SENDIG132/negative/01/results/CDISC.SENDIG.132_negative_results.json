@@ -1,0 +1,24 @@
+{
+  "VS": [
+    {
+      "executionStatus": "success",
+      "domain": "VS",
+      "variables": [
+        "POOLID",
+        "USUBJID"
+      ],
+      "message": "When POOLID is populated, USUBJID may not be populated",
+      "errors": [
+        {
+          "value": {
+            "USUBJID": "CDISC001",
+            "POOLID": "POOL1"
+          },
+          "row": 6,
+          "uSubjId": "CDISC001",
+          "seq": 7
+        }
+      ]
+    }
+  ]
+}

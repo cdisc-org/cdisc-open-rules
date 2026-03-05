@@ -1,0 +1,130 @@
+[
+  {
+    "filename": "sm.xpt",
+    "domain": "SM",
+    "variables": [
+      {
+        "name": "STUDYID",
+        "label": "Study Identifier",
+        "type": "Char",
+        "length": 50
+      },
+      {
+        "name": "DOMAIN",
+        "label": "Domain Abbreviation",
+        "type": "Char",
+        "length": 50
+      },
+      {
+        "name": "USUBJID",
+        "label": "Unique Subject Identifier",
+        "type": "Char",
+        "length": 50
+      },
+      {
+        "name": "SMSEQ",
+        "label": "Sequence Number",
+        "type": "Num",
+        "length": 8
+      },
+      {
+        "name": "MIDS",
+        "label": "Disease Milestone Instance Name",
+        "type": "Char",
+        "length": 50
+      },
+      {
+        "name": "MIDSTYPE",
+        "label": "Disease Milestone Type",
+        "type": "Char",
+        "length": 50
+      },
+      {
+        "name": "SMSTDTC",
+        "label": "Start Date/Time of Milestone",
+        "type": "Char",
+        "length": 50
+      },
+      {
+        "name": "SMENDTC",
+        "label": "End Date/Time of Milestone",
+        "type": "Char",
+        "length": 50
+      },
+      {
+        "name": "SMSTDY",
+        "label": "Study Day of Start of Milestone",
+        "type": "Num",
+        "length": 8
+      },
+      {
+        "name": "SMENDY",
+        "label": "Study Day of End of Milestone",
+        "type": "Num",
+        "length": 8
+      }
+    ],
+    "records": {
+      "STUDYID": [
+        "XYZ",
+        "XYZ",
+        "XYZ",
+        "XYZ"
+      ],
+      "DOMAIN": [
+        "SM",
+        "SM",
+        "SM",
+        "SM"
+      ],
+      "USUBJID": [
+        "001",
+        "001",
+        "001",
+        "002"
+      ],
+      "SMSEQ": [
+        1,
+        2,
+        3,
+        1
+      ],
+      "MIDS": [
+        "DIAG",
+        "HYPO1",
+        "HYPO2",
+        "DIAG"
+      ],
+      "MIDSTYPE": [
+        "DIAGNOSIS",
+        "HYPOGLYCEMIC EVENT",
+        "HYPOGLYCEMIC EVENT",
+        "DIAGNOSIS"
+      ],
+      "SMSTDTC": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "SMENDTC": [
+        "2005-10",
+        "2013-09-01T11:00",
+        "2013-09-24T08:48",
+        "2010-05-15"
+      ],
+      "SMSTDY": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "SMENDY": [
+        null,
+        25,
+        50,
+        -1046
+      ]
+    }
+  }
+]

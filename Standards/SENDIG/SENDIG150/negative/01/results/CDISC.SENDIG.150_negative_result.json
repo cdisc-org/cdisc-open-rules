@@ -1,0 +1,56 @@
+{
+  "BG": [
+    {
+      "executionStatus": "success",
+      "domain": "BG",
+      "variables": [
+        "BGDTC",
+        "BGTESTCD",
+        "USUBJID"
+      ],
+      "message": "The Body Weight Gain test is not unique for this subject and date/time.",
+      "errors": [
+        {
+          "value": {
+            "BGTESTCD": "T1",
+            "USUBJID": "SUBJ2",
+            "BGDTC": "2013-01-10"
+          },
+          "row": 5,
+          "uSubjId": "SUBJ2",
+          "seq": 2
+        },
+        {
+          "value": {
+            "BGTESTCD": "T1",
+            "USUBJID": "SUBJ2",
+            "BGDTC": "2013-01-10"
+          },
+          "row": 6,
+          "uSubjId": "SUBJ2",
+          "seq": 3
+        },
+        {
+          "value": {
+            "BGTESTCD": "T1",
+            "USUBJID": "SUBJ3",
+            "BGDTC": "2013-01-10"
+          },
+          "row": 8,
+          "uSubjId": "SUBJ3",
+          "seq": 2
+        },
+        {
+          "value": {
+            "BGTESTCD": "T1",
+            "USUBJID": "SUBJ3",
+            "BGDTC": "2013-01-10"
+          },
+          "row": 9,
+          "uSubjId": "SUBJ3",
+          "seq": 3
+        }
+      ]
+    }
+  ]
+}

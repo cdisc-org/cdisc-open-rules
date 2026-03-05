@@ -1,0 +1,28 @@
+{1 item
+"MB":[1 item
+0:{5 items
+"executionStatus":"success"
+"domain":"MB"
+"variables":[4 items
+0:"MBMETHOD"
+1:"MBRESCAT"
+2:"MBSTRESC"
+3:"MBTESTCD"
+]
+"message":"MBRESCAT is expected when MBTESTCD='ORGANISM', MSSTRESC!='NO GROWTH', MBMETHOD!='GRAM STAIN'"
+"errors":[1 item
+0:{4 items
+"value":{4 items
+"MBSTRESC":"NOT NO GROWTH"
+"MBTESTCD":"ORGANISM"
+"MBMETHOD":"NOT GRAM STAIN"
+"MBRESCAT":""
+}
+"row":1
+"USUBJID":"ABC-001-002"
+"SEQ":1
+}
+]
+}
+]
+}

@@ -1,0 +1,38 @@
+{
+  "VS": [
+    {
+      "executionStatus": "success",
+      "domain": "VS",
+      "variables": [
+        "VSTESTCD"
+      ],
+      "message": "VSTESTCD value cannot contain characters other than letters, numbers or underscores",
+      "errors": [
+        {
+          "value": {
+            "VSTESTCD": "(PULSE"
+          },
+          "row": 12,
+          "uSubjId": "CDISC001",
+          "seq": 22
+        },
+        {
+          "value": {
+            "VSTESTCD": "PUL?SE"
+          },
+          "row": 13,
+          "uSubjId": "CDISC001",
+          "seq": 23
+        },
+        {
+          "value": {
+            "VSTESTCD": "TOOLONG$Y"
+          },
+          "row": 16,
+          "uSubjId": "CDISC001",
+          "seq": 26
+        }
+      ]
+    }
+  ]
+}

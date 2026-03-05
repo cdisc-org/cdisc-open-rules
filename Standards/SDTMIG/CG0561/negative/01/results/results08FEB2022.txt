@@ -1,0 +1,412 @@
+REQUEST:
+
+{
+  "rule": {
+    "_links": {},
+    "core_id": "CDISC.SDTMIG.CG0561",
+    "reference": [
+      {
+        "Origin": "SDTM and SDTMIG Conformance Rules",
+        "Version": "2.0",
+        "Rule Identifier": {
+          "Id": "CG0561",
+          "Version": "1"
+        }
+      }
+    ],
+    "sensitivity": "Record",
+    "severity": "error",
+    "description": "Verify that PESTRESC is null when PEORRES is null",
+    "authority": {
+      "Organization": "CDISC"
+    },
+    "standards": [
+      {
+        "Name": "SDTMIG",
+        "Version": "3.4"
+      }
+    ],
+    "classes": {
+      "Include": [
+        "Findings"
+      ]
+    },
+    "domains": {
+      "Include": [
+        "PE"
+      ]
+    },
+    "rule_type": "Value Presence",
+    "conditions": {
+      "all": [
+        {
+          "name": "get_dataset",
+          "operator": "empty",
+          "value": {
+            "target": "PEORRES"
+          }
+        },
+        {
+          "name": "get_dataset",
+          "operator": "non_empty",
+          "value": {
+            "target": "PESTRESC"
+          }
+        }
+      ]
+    },
+    "output_variables": [
+      "PEORRES",
+      "PESTRESC"
+    ],
+    "actions": [
+      {
+        "name": "generate_dataset_error_objects",
+        "params": {
+          "message": "PESTRESC value is not missing when PEORRES value is missing"
+        }
+      }
+    ]
+  },
+  "datasets": [
+    {
+      "filename": "pe.xpt",
+      "label": "Physical Examination",
+      "domain": "PE",
+      "variables": [
+        {
+          "name": "STUDYID",
+          "label": "Study Identifier",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "DOMAIN",
+          "label": "Domain Abbreviation",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "USUBJID",
+          "label": "Unique Subject Identifier",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "PESEQ",
+          "label": "Sequence Number",
+          "type": "Num",
+          "length": 8
+        },
+        {
+          "name": "PESPID",
+          "label": "Sponsor-Defined Identifier",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "PETESTCD",
+          "label": "Body System Examined Short Name",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "PETEST",
+          "label": "Body System Examined",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "PEBODSYS",
+          "label": "Body System or Organ Class",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "PEORRES",
+          "label": "Verbatim Examination Finding",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "PESTRESC",
+          "label": "Character Result/Finding in Std Format",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "PESTAT",
+          "label": "Completion Status",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "PEREASND",
+          "label": "Reason Not Examined",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "PELOC",
+          "label": "Location of Physical Exam Finding",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "PELAT",
+          "label": "Laterality",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "VISITNUM",
+          "label": "Visit Number",
+          "type": "Num",
+          "length": 8
+        },
+        {
+          "name": "VISIT",
+          "label": "Visit Name",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "VISITDY",
+          "label": "Planned Study Day of Visit",
+          "type": "Num",
+          "length": 8
+        },
+        {
+          "name": "PEDTC",
+          "label": "Date/Time of Examination",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "PEDY",
+          "label": "Study Day of Examination",
+          "type": "Num",
+          "length": 8
+        }
+      ],
+      "records": {
+        "STUDYID": [
+          "ABC",
+          "ABC",
+          "ABC",
+          "ABC",
+          "ABC",
+          "ABC",
+          "ABC"
+        ],
+        "DOMAIN": [
+          "PE",
+          "PE",
+          "PE",
+          "PE",
+          "PE",
+          "PE",
+          "PE"
+        ],
+        "USUBJID": [
+          "ABC-001-001",
+          "ABC-001-001",
+          "ABC-001-001",
+          "ABC-001-001",
+          "ABC-001-001",
+          "ABC-001-001",
+          "ABC-001-001"
+        ],
+        "PESEQ": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "PESPID": [
+          "",
+          "",
+          "1",
+          "2",
+          "3",
+          "",
+          ""
+        ],
+        "PETESTCD": [
+          "HEAD",
+          "ENT",
+          "SKIN",
+          "SKIN",
+          "SKIN",
+          "HEART",
+          "GNTU"
+        ],
+        "PETEST": [
+          "Head",
+          "Ear/Nose/Throat",
+          "Skin",
+          "Skin",
+          "Skin",
+          "Heart",
+          "Genitourinary system"
+        ],
+        "PEBODSYS": [
+          "",
+          "",
+          "Skin and subcutaneous tissue disorder",
+          "Skin and subcutaneous tissue disorder",
+          "Skin and subcutaneous tissue disorder",
+          "",
+          ""
+        ],
+        "PEORRES": [
+          "",
+          "",
+          "ACNE",
+          "DERMATITIS",
+          "SKIN RASH",
+          "",
+          ""
+        ],
+        "PESTRESC": [
+          "NORMAL",
+          "NORMAL",
+          "Acne",
+          "Dermatitis",
+          "Rash",
+          "NORMAL",
+          ""
+        ],
+        "PESTAT": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "NOT DONE"
+        ],
+        "PEREASND": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "Not Indicated"
+        ],
+        "PELOC": [
+          "",
+          "",
+          "FACE",
+          "HAND",
+          "ARM",
+          "",
+          ""
+        ],
+        "PELAT": [
+          "",
+          "",
+          "",
+          "BILATERAL",
+          "LEFT",
+          "",
+          ""
+        ],
+        "VISITNUM": [
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "VISIT": [
+          "BASELINE",
+          "BASELINE",
+          "BASELINE",
+          "BASELINE",
+          "BASELINE",
+          "BASELINE",
+          "BASELINE"
+        ],
+        "VISITDY": [
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "PEDTC": [
+          "1999-06-06",
+          "1999-06-06",
+          "1999-06-06",
+          "1999-06-06",
+          "1999-06-06",
+          "1999-06-06",
+          "1999-06-06"
+        ],
+        "PEDY": [
+          -3,
+          -3,
+          -3,
+          -3,
+          -3,
+          -3,
+          -3
+        ]
+      }
+    }
+  ]
+}
+
+RESULTS:
+
+{
+  "PE": [
+    {
+      "domain": "PE",
+      "errors": [
+        {
+          "row": 0,
+          "seq": 1,
+          "uSubjId": "ABC-001-001",
+          "value": {
+            "PEORRES": "",
+            "PESTRESC": "NORMAL"
+          }
+        },
+        {
+          "row": 1,
+          "seq": 2,
+          "uSubjId": "ABC-001-001",
+          "value": {
+            "PEORRES": "",
+            "PESTRESC": "NORMAL"
+          }
+        },
+        {
+          "row": 5,
+          "seq": 6,
+          "uSubjId": "ABC-001-001",
+          "value": {
+            "PEORRES": "",
+            "PESTRESC": "NORMAL"
+          }
+        }
+      ],
+      "executionStatus": "success",
+      "message": "PESTRESC value is not missing when PEORRES value is missing",
+      "variables": [
+        "PEORRES",
+        "PESTRESC"
+      ]
+    }
+  ]
+}

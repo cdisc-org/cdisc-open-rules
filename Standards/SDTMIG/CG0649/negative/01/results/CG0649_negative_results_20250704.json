@@ -1,0 +1,61 @@
+{
+    "TS": [
+        {
+            "executionStatus": "success",
+            "dataset": "ts.xpt",
+            "domain": "TS",
+            "variables": [
+                "TSVAL",
+                "TSVALNF"
+            ],
+            "message": "TSVAL is not populated with an ISO 21090 null flavor or null flavor description but TSVALNF is populated.",
+            "errors": [
+                {
+                    "value": {
+                        "TSVALNF": "Completed",
+                        "TSVAL": "This is it"
+                    },
+                    "dataset": "ts.xpt",
+                    "row": 2,
+                    "SEQ": 2
+                },
+                {
+                    "value": {
+                        "TSVALNF": "Yes",
+                        "TSVAL": "UNK it will be"
+                    },
+                    "dataset": "ts.xpt",
+                    "row": 3,
+                    "SEQ": 3
+                },
+                {
+                    "value": {
+                        "TSVALNF": "No",
+                        "TSVAL": "abcQS"
+                    },
+                    "dataset": "ts.xpt",
+                    "row": 4,
+                    "SEQ": 4
+                },
+                {
+                    "value": {
+                        "TSVALNF": "NAV",
+                        "TSVAL": "NAVitis"
+                    },
+                    "dataset": "ts.xpt",
+                    "row": 5,
+                    "SEQ": 5
+                },
+                {
+                    "value": {
+                        "TSVALNF": "QS",
+                        "TSVAL": "Something else"
+                    },
+                    "dataset": "ts.xpt",
+                    "row": 6,
+                    "SEQ": 6
+                }
+            ]
+        }
+    ]
+}

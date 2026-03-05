@@ -1,0 +1,356 @@
+{
+    "rule": {
+        "Authorities": [
+            {
+                "Organization": "CDISC",
+                "Standards": [
+                    {
+                        "Name": "SDTMIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "IG v3.4",
+                                        "Item": "7",
+                                        "Section": "4.1.7",
+                                        "Cited_Guidance": "Supplemental Qualifier datasets for split domains would also be split. The nomenclature would include the additional one-to-two characters used to identify the split dataset."
+                                    }
+                                ],
+                                "Origin": "SDTM and SDTMIG Conformance Rules",
+                                "Version": "2.0",
+                                "Rule_Identifier": {
+                                    "Id": "CG0018",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.4"
+                    },
+                    {
+                        "Name": "SDTMIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "IG v3.2",
+                                        "Item": "Rule 7",
+                                        "Section": "4.1.1.7",
+                                        "Cited_Guidance": "Supplemental Qualifier datasets for split domains would also be split. The nomenclature would include the additional one-to-two characters used to identify the split dataset."
+                                    }
+                                ],
+                                "Origin": "SDTM and SDTMIG Conformance Rules",
+                                "Version": "2.0",
+                                "Rule_Identifier": {
+                                    "Id": "CG0018",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.2"
+                    },
+                    {
+                        "Name": "SDTMIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "IG v3.3",
+                                        "Item": "Rule 7",
+                                        "Section": "4.1.7",
+                                        "Cited_Guidance": "Supplemental Qualifier datasets for split domains would also be split. The nomenclature would include the additional one-to-two characters used to identify the split dataset."
+                                    }
+                                ],
+                                "Origin": "SDTM and SDTMIG Conformance Rules",
+                                "Version": "2.0",
+                                "Rule_Identifier": {
+                                    "Id": "CG0018",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.3"
+                    },
+                    {
+                        "Name": "TIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "TIG 1.0",
+                                        "Item": "Num 9.3.ii",
+                                        "Section": "2.6",
+                                        "Cited_Guidance": "Supplemental Qualifier datasets for split domains would also be split. The nomenclature will include the additional one to two characters used to identify the split dataset (e.g., SUPPLBHM, SUPPFACM)."
+                                    }
+                                ],
+                                "Origin": "TIG Conformance Rules",
+                                "Version": "1.0",
+                                "Rule_Identifier": {
+                                    "Id": "TIG0303",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Substandard": "SDTM",
+                        "Version": "1.0"
+                    }
+                ]
+            }
+        ],
+        "Check": {
+            "all": [
+                {
+                    "name": "dataset_name",
+                    "operator": "longer_than",
+                    "value": 8
+                }
+            ]
+        },
+        "Core": {
+            "Id": "CORE-000357",
+            "Status": "Published",
+            "Version": "1"
+        },
+        "Description": "When a supplemental qualifier dataset is associated with a split dataset, the dataset name length must not be greater than 8 characters.",
+        "Executability": "Fully Executable",
+        "Outcome": {
+            "Message": "Supplemental qualifier dataset associated with a split dataset is greater than 8 characters in length"
+        },
+        "Scope": {
+            "Classes": {
+                "Include": [
+                    "ALL"
+                ]
+            },
+            "Domains": {
+                "Include": [
+                    "SUPP--"
+                ],
+                "include_split_datasets": true
+            },
+            "Use_Case": "INDH, PROD"
+        },
+        "Sensitivity": "Record",
+        "Rule_Type": "Dataset Metadata Check"
+    },
+    "datasets": [
+        {
+            "filename": "suppqscqi.xpt",
+            "label": "Supplemental Qualifiers for QSCG",
+            "domain": "SUPPQSCQI",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "RDOMAIN",
+                    "label": "Related Domain Abbreviation",
+                    "type": "Char",
+                    "length": 2
+                },
+                {
+                    "name": "USUBJID",
+                    "label": "Subject Identifier",
+                    "type": "Char",
+                    "length": 14
+                },
+                {
+                    "name": "IDVAR",
+                    "label": "Identifying Variable",
+                    "type": "Char",
+                    "length": 6
+                },
+                {
+                    "name": "IDVARVAL",
+                    "label": "Identifying Variable Value",
+                    "type": "Char",
+                    "length": 4
+                },
+                {
+                    "name": "QNAM",
+                    "label": "Qualifier Variable Name",
+                    "type": "Char",
+                    "length": 11
+                },
+                {
+                    "name": "QLABEL",
+                    "label": "Qualifier Variable Label",
+                    "type": "Char",
+                    "length": 49
+                },
+                {
+                    "name": "QVAL",
+                    "label": "Data Value",
+                    "type": "Char",
+                    "length": 19
+                },
+                {
+                    "name": "QORIG",
+                    "label": "Origin",
+                    "type": "Char",
+                    "length": 8
+                },
+                {
+                    "name": "QEVAL",
+                    "label": "Evaluator",
+                    "type": "Char",
+                    "length": 22
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "CDISC01",
+                    "CDISC01"
+                ],
+                "RDOMAIN": [
+                    "QS",
+                    "QS"
+                ],
+                "USUBJID": [
+                    "CDISC01.100008",
+                    "CDISC01.100014"
+                ],
+                "IDVAR": [
+                    "QSCAT",
+                    "QSCAT"
+                ],
+                "IDVARVAL": [
+                    "CGI",
+                    "CGI"
+                ],
+                "QNAM": [
+                    "QSLANG",
+                    "QSLANG"
+                ],
+                "QLABEL": [
+                    "Questionnaire Language",
+                    "Questionnaire Language"
+                ],
+                "QVAL": [
+                    "GERMAN",
+                    "FRENCH"
+                ],
+                "QORIG": [
+                    "CRF",
+                    "CRF"
+                ],
+                "QEVAL": [
+                    "",
+                    ""
+                ]
+            }
+        },
+        {
+            "filename": "suppqsswls.xpt",
+            "label": "Supplemental Qualifiers for QSSW",
+            "domain": "SUPPQSSWLS",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "RDOMAIN",
+                    "label": "Related Domain Abbreviation",
+                    "type": "Char",
+                    "length": 2
+                },
+                {
+                    "name": "USUBJID",
+                    "label": "Subject Identifier",
+                    "type": "Char",
+                    "length": 14
+                },
+                {
+                    "name": "IDVAR",
+                    "label": "Identifying Variable",
+                    "type": "Char",
+                    "length": 6
+                },
+                {
+                    "name": "IDVARVAL",
+                    "label": "Identifying Variable Value",
+                    "type": "Char",
+                    "length": 4
+                },
+                {
+                    "name": "QNAM",
+                    "label": "Qualifier Variable Name",
+                    "type": "Char",
+                    "length": 11
+                },
+                {
+                    "name": "QLABEL",
+                    "label": "Qualifier Variable Label",
+                    "type": "Char",
+                    "length": 49
+                },
+                {
+                    "name": "QVAL",
+                    "label": "Data Value",
+                    "type": "Char",
+                    "length": 19
+                },
+                {
+                    "name": "QORIG",
+                    "label": "Origin",
+                    "type": "Char",
+                    "length": 8
+                },
+                {
+                    "name": "QEVAL",
+                    "label": "Evaluator",
+                    "type": "Char",
+                    "length": 22
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "CDISC01",
+                    "CDISC01"
+                ],
+                "RDOMAIN": [
+                    "QS",
+                    "QS"
+                ],
+                "USUBJID": [
+                    "CDISC01.100008",
+                    "CDISC01.100014"
+                ],
+                "IDVAR": [
+                    "QSCAT",
+                    "QSCAT"
+                ],
+                "IDVARVAL": [
+                    "SWLS",
+                    "SWLS"
+                ],
+                "QNAM": [
+                    "QSLANG",
+                    "QSLANG"
+                ],
+                "QLABEL": [
+                    "Questionnaire Language",
+                    "Questionnaire Language"
+                ],
+                "QVAL": [
+                    "GERMAN",
+                    "FRENCH"
+                ],
+                "QORIG": [
+                    "CRF",
+                    "CRF"
+                ],
+                "QEVAL": [
+                    "",
+                    ""
+                ]
+            }
+        }
+    ],
+    "codelists": []
+}

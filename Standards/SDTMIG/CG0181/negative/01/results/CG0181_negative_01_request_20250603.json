@@ -1,0 +1,144 @@
+{2 items
+"datasets":[1 item
+0:{5 items
+"filename":"lb.xpt"
+"label":"Laboratory Test Results"
+"domain":"LB"
+"variables":[13 items
+0:{4 items
+"name":"STUDYID"
+"label":"Study Identifier"
+"type":"Char"
+"length":50
+}
+1:{4 items
+"name":"DOMAIN"
+"label":"Domain Abbreviation"
+"type":"Char"
+"length":50
+}
+2:{4 items
+"name":"USUBJID"
+"label":"Unique Subject Identifier"
+"type":"Char"
+"length":50
+}
+3:{4 items
+"name":"LBSEQ"
+"label":"Sequence Number"
+"type":"Num"
+"length":8
+}
+4:{4 items
+"name":"LBTESTCD"
+"label":"Lab Test or Examination Short Name"
+"type":"Char"
+"length":50
+}
+5:{4 items
+"name":"LBTEST"
+"label":"Lab Test or Examination Name"
+"type":"Char"
+"length":50
+}
+6:{4 items
+"name":"LBORRES"
+"label":"Result or Finding in Original Units"
+"type":"Char"
+"length":50
+}
+7:{4 items
+"name":"LBORRESU"
+"label":"Original Units"
+"type":"Char"
+"length":50
+}
+8:{4 items
+"name":"LBSTRESC"
+"label":"Character Result/Finding in Std Format"
+"type":"Char"
+"length":50
+}
+9:{4 items
+"name":"LBSTRESN"
+"label":"Numeric Result/Finding in Standard Units"
+"type":"Num"
+"length":8
+}
+10:{4 items
+"name":"LBSTRESU"
+"label":"Standard Units"
+"type":"Char"
+"length":50
+}
+11:{4 items
+"name":"LBORNRLO"
+"label":"Reference Range Lower Limit in Orig Unit"
+"type":"Char"
+"length":50
+}
+12:{4 items
+"name":"LBORNRHI"
+"label":"Reference Range Upper Limit in Orig Unit"
+"type":"Char"
+"length":50
+}
+]
+"records":{13 items
+"STUDYID":[2 items
+0:"123101"
+1:"123101"
+]
+"DOMAIN":[2 items
+0:"LB"
+1:"LB"
+]
+"USUBJID":[2 items
+0:"ALB"
+1:"Prot"
+]
+"LBSEQ":[2 items
+0:1
+1:2
+]
+"LBTESTCD":[2 items
+0:"ALB"
+1:"ALP"
+]
+"LBTEST":[2 items
+0:"Albumin"
+1:"Alkaline Phosphatase"
+]
+"LBORRES":[2 items
+0:"NEGATIVE"
+1:"POSITIVE"
+]
+"LBORRESU":[2 items
+0:"g/L"
+1:"IU/L"
+]
+"LBSTRESC":[2 items
+0:"3.0"
+1:"398"
+]
+"LBSTRESN":[2 items
+0:3
+1:398
+]
+"LBSTRESU":[2 items
+0:"g/L"
+1:"IU/L"
+]
+"LBORNRLO":[2 items
+0:"3.5"
+1:"40"
+]
+"LBORNRHI":[2 items
+0:"30"
+1:"POSITIVE"
+]
+}
+}
+]
+"codelists":[]0 items
+}

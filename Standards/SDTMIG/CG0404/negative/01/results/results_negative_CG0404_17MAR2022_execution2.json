@@ -1,0 +1,40 @@
+{
+  "CM": [
+    {
+      "domain": "CM",
+      "errors": [
+        {
+          "value": {
+            "CMOCCUR": "",
+            "CMPRESP": "Y"
+          }
+        }
+      ],
+      "executionStatus": "success",
+      "message": "CMSTAT is not present in dataset when CMPRESP is equal to \"Y\" and CMOCCUR is blank",
+      "variables": [
+        "CMOCCUR",
+        "CMPRESP"
+      ]
+    }
+  ],
+  "MH": [
+    {
+      "domain": "MH",
+      "errors": [
+        {
+          "value": {
+            "MHOCCUR": "",
+            "MHPRESP": "Y"
+          }
+        }
+      ],
+      "executionStatus": "success",
+      "message": "MHSTAT is not present in dataset when MHPRESP is equal to \"Y\" and MHOCCUR is blank",
+      "variables": [
+        "MHOCCUR",
+        "MHPRESP"
+      ]
+    }
+  ]
+}

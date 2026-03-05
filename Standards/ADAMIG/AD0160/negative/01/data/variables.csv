@@ -1,0 +1,196 @@
+dataset,variable,label,type,length
+advs.xpt,STUDYID,Study Identifier,Char,50
+advs.xpt,USUBJID,Unique Subject Identifier,Char,50
+advs.xpt,SUBJID,Subject Identifier for the Study,Char,50
+advs.xpt,SITEID,Study Site Identifier,Char,50
+advs.xpt,ASEQ,Analysis Sequence Number,Num,8
+advs.xpt,TRTP,Planned Treatment,Char,50
+advs.xpt,TRTPN,Planned Treatment (N),Num,8
+advs.xpt,TRTA,Actual Treatment,Char,50
+advs.xpt,TRTAN,Actual Treatment (N),Num,8
+advs.xpt,TRTPGy,Planned Pooled Treatment y,Char,50
+advs.xpt,TRTPGyN,Planned Pooled Treatment y (N),Num,8
+advs.xpt,TRTAGy,Actual Pooled Treatment y,Char,50
+advs.xpt,TRTAGyN,Actual Pooled Treatment y (N),Num,8
+advs.xpt,DOSEP,Planned Treatment Dose,Num,8
+advs.xpt,DOSCUMP,Cumulative Planned Treatment Dose,Num,8
+advs.xpt,DOSEA,Actual Treatment Dose,Num,8
+advs.xpt,DOSCUMA,Cumulative Actual Treatment Dose,Num,8
+advs.xpt,DOSEU,Treatment Dose Units,Char,50
+advs.xpt,ADT,Analysis Date,Num,8
+advs.xpt,ATM,Analysis Time,Num,8
+advs.xpt,ADTM,Analysis Datetime,Num,8
+advs.xpt,ADY,Analysis Relative Day,Num,8
+advs.xpt,ADTF,Analysis Date Imputation Flag,Char,50
+advs.xpt,ATMF,Analysis Time Imputation Flag,Char,50
+advs.xpt,ASTDT,Analysis Start Date,Num,8
+advs.xpt,ASTTM,Analysis Start Time,Num,8
+advs.xpt,ASTDTM,Analysis Start Datetime,Num,8
+advs.xpt,ASTDY,Analysis Start Relative Day,Num,8
+advs.xpt,ASTDTF,Analysis Start Date Imputation Flag,Char,50
+advs.xpt,ASTTMF,Analysis Start Time Imputation Flag,Char,50
+advs.xpt,AENDT,Analysis End Date,Num,8
+advs.xpt,AENTM,Analysis End Time,Num,8
+advs.xpt,AENDTM,Analysis End Datetime,Num,8
+advs.xpt,AENDY,Analysis End Relative Day,Num,8
+advs.xpt,AENDTF,Analysis End Date Imputation Flag,Char,50
+advs.xpt,AENTMF,Analysis End Time Imputation Flag,Char,50
+advs.xpt,AVISIT,Analysis Visit,Char,50
+advs.xpt,AVISITN,Analysis Visit (N),Num,8
+advs.xpt,ATPT,Analysis Timepoint,Char,50
+advs.xpt,ATPTN,Analysis Timepoint (N),Num,8
+advs.xpt,ATPTREF,Analysis Timepoint Reference,Char,8
+advs.xpt,APHASE,Phase,Char,50
+advs.xpt,APHASEN,Phase (N),Num,8
+advs.xpt,APERIOD,Period,Num,8
+advs.xpt,APERIODC,Period (C),Char,50
+advs.xpt,ASPER,Subperiod within Period,Num,8
+advs.xpt,ASPERC,Subperiod within Period (C),Char,50
+advs.xpt,ARELTM,Analysis Relative Time,Num,8
+advs.xpt,ARELTMU,Analysis Relative Time Unit,Char,50
+advs.xpt,APERSDT,Period Start Date,Num,8
+advs.xpt,APERSTM,Period Start Time,Num,8
+advs.xpt,APERSDTM,Period Start Datetime,Num,8
+advs.xpt,APERSDTF,Period Start Date Imput. Flag,Char,50
+advs.xpt,APERSTMF,Period Start Time Imput. Flag,Char,50
+advs.xpt,APEREDT,Period End Date,Num,8
+advs.xpt,APERETM,Period End Time,Num,8
+advs.xpt,APEREDTM,Period End Datetime,Num,8
+advs.xpt,APEREDTF,Period End Date Imput. Flag,Char,50
+advs.xpt,APERETMF,Period End Time Imput. Flag,Char,50
+advs.xpt,ASPRSDT,Subperiod Start Date,Num,8
+advs.xpt,ASPRSTM,Subperiod Start Time,Num,8
+advs.xpt,ASPRSDTM,Subperiod Start Datetime,Num,8
+advs.xpt,ASPRSDTF,Subperiod Start Date Imput. Flag,Char,50
+advs.xpt,ASPRSTMF,Subperiod Start Time Imput. Flag,Char,50
+advs.xpt,ASPREDT,Subperiod End Date,Num,8
+advs.xpt,ASPRETM,Subperiod End Time,Num,8
+advs.xpt,ASPREDTM,Subperiod End Datetime,Num,8
+advs.xpt,ASPREDTF,Subperiod End Date Imput. Flag,Char,50
+advs.xpt,ASPRETMF,Subperiod End Time Imput. Flag,Char,50
+advs.xpt,PHSDT,Phase Start Date,Num,8
+advs.xpt,PHSTM,Phase Start Time,Num,8
+advs.xpt,PHSDTM,Phase Start Datetime,Num,8
+advs.xpt,PHSDTF,Phase Start Date Imput. Flag,Char,50
+advs.xpt,PHSTMF,Phase Start Time Imput. Flag,Char,50
+advs.xpt,PHEDT,Phase End Date,Num,8
+advs.xpt,PHETM,Phase End Time,Num,8
+advs.xpt,PHEDTM,Phase End Datetime,Num,8
+advs.xpt,PHEDTF,Phase End Date Imput. Flag,Char,50
+advs.xpt,PHETMF,Phase End Time Imput. Flag,Char,50
+advs.xpt,*DT,{Date},Num,8
+advs.xpt,*TM,{Time},Num,8
+advs.xpt,*DTM,{Datetime},Num,8
+advs.xpt,*ADY,{Relative Day},Num,8
+advs.xpt,*DTF,{Date Imputation Flag},Char,50
+advs.xpt,*TMF,{Time Imputation Flag},Char,50
+advs.xpt,*SDT,{Start Date},Num,8
+advs.xpt,*STM,{Start Time},Num,8
+advs.xpt,*SDTM,{Start Datetime},Num,8
+advs.xpt,*SDY,{Relative Start Day},Num,8
+advs.xpt,*SDTF,{Start Date Imputation Flag},Char,50
+advs.xpt,*STMF,{Start Time Imputation Flag},Char,50
+advs.xpt,*EDT,{End Date},Num,8
+advs.xpt,*ETM,{End Time},Num,8
+advs.xpt,*EDTM,{End Datetime},Num,8
+advs.xpt,*EDY,{Relative End Day},Num,8
+advs.xpt,*EDTF,{End Date Imputation Flag},Char,50
+advs.xpt,*ETMF,{End Time Imputation Flag},Char,50
+advs.xpt,PARAM,Parameter,Char,50
+advs.xpt,PARAMCD,Parameter Code,Char,50
+advs.xpt,PARAMN,Parameter (N),Num,8
+advs.xpt,PARCATy,Parameter Category y,Char,50
+advs.xpt,PARCATyN,Parameter Category y (N),Num,8
+advs.xpt,AVAL,Analysis Value,Num,8
+advs.xpt,AVALC,Analysis Value (C),Char,50
+advs.xpt,AVALCATy,Analysis Value Category y,Char,50
+advs.xpt,AVALCAyN,Analysis Value Category y (N),Num,8
+advs.xpt,BASE,Baseline Value,Num,8
+advs.xpt,BASEC,Baseline Value (C),Char,50
+advs.xpt,BASECATy,Baseline Category y,Char,50
+advs.xpt,BASECAyN,Baseline Category y (N),Num,8
+advs.xpt,BASETYPE,Baseline Type,Char,50
+advs.xpt,CHG,Change from Baseline,Num,8
+advs.xpt,CHGCATy,Change from Baseline Category y,Char,50
+advs.xpt,CHGCATyN,Change from Baseline Category y (N),Num,8
+advs.xpt,PCHG,Percent Change from Baseline,Num,8
+advs.xpt,PCHGCATy,Percent Chg from Baseline Category y,Char,50
+advs.xpt,PCHGCAyN,Percent Chg from Baseline Category y (N),Num,8
+advs.xpt,R2BASE,Ratio to Baseline,Num,8
+advs.xpt,R2AyLO,Ratio to Analysis Range y Lower Limit,Num,8
+advs.xpt,R2AyHI,Ratio to Analysis Range y Upper Limit,Num,8
+advs.xpt,SHIFTy,Shift y,Char,50
+advs.xpt,SHIFTyN,Shift y (N),Num,8
+advs.xpt,BCHG,Change to Baseline,Num,8
+advs.xpt,BCHGCATy,Change to Baseline Category y,Char,50
+advs.xpt,BCHGCAyN,Change to Baseline Category y (N),Num,8
+advs.xpt,PBCHG,Percent Change to Baseline,Num,8
+advs.xpt,PBCHGCAy,Percent Change to Baseline Category y,Char,50
+advs.xpt,PBCHGCyN,Percent Change to Baseline Category y (N),Num,8
+advs.xpt,CRITy,Analysis Criterion y,Char,50
+advs.xpt,CRITyFL,Criterion y Evaluation Result Flag,Char,50
+advs.xpt,CRITyFN,Criterion y Evaluation Result Flag (N),Num,8
+advs.xpt,MCRITy,Analysis Multi-Response Criterion y,Char,50
+advs.xpt,MCRITyML,Multi-Response Criterion y Evaluation,Char,50
+advs.xpt,MCRITyMN,Multi-Response Criterion y Eval (N),Num,8
+advs.xpt,DTYPE,Derivation Type,Char,50
+advs.xpt,AWRANGE,Analysis Window Valid Relative Range,Char,50
+advs.xpt,AWTARGET,Analysis Window Target,Num,8
+advs.xpt,AWTDIFF,Analysis Window Diff from Target,Num,8
+advs.xpt,AWU,Analysis Window Unit,Char,50
+advs.xpt,STARTDT,Time-to-Event Origin Date for Subject,Num,8
+advs.xpt,STARTDTM,Time-to-Event Origin Datetime,Num,8
+advs.xpt,STARTDTF,Origin Date Imputation Flag,Char,50
+advs.xpt,STARTTMF,Origin Time Imputation Flag,Char,50
+advs.xpt,CNSR,Censor,Num,8
+advs.xpt,EVNTDESC,Event or Censoring Description,Char,50
+advs.xpt,CNSDTDSC,Censor Date Description,Char,50
+advs.xpt,ATOXGR,Analysis Toxicity Grade,Char,50
+advs.xpt,ATOXGRN,Analysis Toxicity Grade (N),Num,8
+advs.xpt,BTOXGR,Baseline Toxicity Grade,Char,50
+advs.xpt,BTOXGRN,Baseline Toxicity Grade (N),Num,8
+advs.xpt,ANRIND,Analysis Reference Range Indicator,Char,50
+advs.xpt,BNRIND,Baseline Reference Range Indicator,Char,50
+advs.xpt,ANRLO,Analysis Normal Range Lower Limit,Num,8
+advs.xpt,ANRLOC,Analysis Normal Range Lower Limit (C),Char,50
+advs.xpt,ANRHI,Analysis Normal Range Upper Limit,Num,8
+advs.xpt,ANRHIC,Analysis Normal Range Upper Limit (C),Char,50
+advs.xpt,AyLO,Analysis Range y Lower Limit,Num,8
+advs.xpt,AyLOC,Analysis Range y Lower Limit (C),Char,50
+advs.xpt,AyHI,Analysis Range y Upper Limit,Num,8
+advs.xpt,AyHIC,Analysis Range y Upper Limit (C),Char,50
+advs.xpt,AyIND,Analysis Range y Indicator,Char,50
+advs.xpt,ByIND,Baseline Analysis Range y Indicator,Char,50
+advs.xpt,ATOXGRL,Analysis Toxicity Grade Low,Char,50
+advs.xpt,ATOXGRLN,Analysis Toxicity Grade Low (N),Num,8
+advs.xpt,ATOXGRH,Analysis Toxicity Grade High,Char,50
+advs.xpt,ATOXGRHN,Analysis Toxicity Grade High (N),Num,8
+advs.xpt,BTOXGRL,Baseline Toxicity Grade Low,Char,50
+advs.xpt,BTOXGRLN,Baseline Toxicity Grade Low (N),Num,8
+advs.xpt,BTOXGRH,Baseline Toxicity Grade High,Char,50
+advs.xpt,BTOXGRHN,Baseline Toxicity Grade High (N),Num,8
+advs.xpt,ATOXDSCL,Analysis Toxicity Description Low,Char,50
+advs.xpt,ATOXDSCH,Analysis Toxicity Description High,Char,50
+advs.xpt,ABLFL,Baseline Record Flag,Char,50
+advs.xpt,ABLFN,Baseline Record Flag (N),Num,8
+advs.xpt,ANL01FL,Analysis Flag zz,Char,50
+advs.xpt,ANL01FN,Analysis Flag zz (N),Num,8
+advs.xpt,ONTRTFL,On Treatment Record Flag,Char,50
+advs.xpt,ONTRTFN,On Treatment Record Flag (N),Num,8
+advs.xpt,LVOTFL,Last Value On Treatment Record Flag,Char,50
+advs.xpt,LVOTFN,Last Value On Treatment Record Flag (N),Num,8
+advs.xpt,ITTRFL,Intent-To-Treat Record-Level Flag,Char,50
+advs.xpt,SAFRFL,Safety Analysis Record-Level Flag,Char,50
+advs.xpt,FASRFL,Full Analysis Set Record-Level Flag,Char,50
+advs.xpt,PPROTRFL,Per-Protocol Record-Level Flag,Char,50
+advs.xpt,COMPLRFL,Completers Record-Level Flag,Char,50
+advs.xpt,ITTPFL,Intent-To-Treat Parameter-Level Flag,Char,50
+advs.xpt,SAFPFL,Safety Analysis Parameter-Level Flag,Char,50
+advs.xpt,FASPFL,Full Analysis Set Parameter-Level Flag,Char,50
+advs.xpt,PPROTPFL,Per-Protocol Parameter-Level Flag,Char,50
+advs.xpt,COMPLPFL,Completers Parameter-Level Flag,Char,50
+advs.xpt,SRCDOM,Source Data,Char,50
+advs.xpt,SRCVAR,Source Variable,Char,50
+advs.xpt,SRCSEQ,Source Sequence Number,Num,8
+advs.xpt,VISITNUM,Visit Number,Num,8
+advs.xpt,VSSEQ,Sequence Number,Num,8

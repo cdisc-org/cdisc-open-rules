@@ -1,0 +1,70 @@
+{
+    "PR": [
+        {
+            "executionStatus": "success",
+            "dataset": "pr.xpt",
+            "domain": "PR",
+            "variables": [
+                "PRSTRTPT",
+                "PRSTTPT"
+            ],
+            "message": "PRSTRTPT is completed, but PRSTTPT is not completed.",
+            "errors": [
+                {
+                    "value": {
+                        "PRSTTPT": "",
+                        "PRSTRTPT": "AFTER"
+                    },
+                    "row": 1,
+                    "USUBJID": "CDISC009",
+                    "SEQ": 1
+                },
+                {
+                    "value": {
+                        "PRSTTPT": "",
+                        "PRSTRTPT": "AFTER"
+                    },
+                    "row": 2,
+                    "USUBJID": "CDISC010",
+                    "SEQ": 2
+                },
+                {
+                    "value": {
+                        "PRSTTPT": "",
+                        "PRSTRTPT": "AFTER"
+                    },
+                    "row": 3,
+                    "USUBJID": "CDISC011",
+                    "SEQ": 3
+                },
+                {
+                    "value": {
+                        "PRSTTPT": "",
+                        "PRSTRTPT": "BEFORE"
+                    },
+                    "row": 4,
+                    "USUBJID": "CDISC012",
+                    "SEQ": 1
+                },
+                {
+                    "value": {
+                        "PRSTTPT": "",
+                        "PRSTRTPT": "BEFORE"
+                    },
+                    "row": 5,
+                    "USUBJID": "CDISC013",
+                    "SEQ": 10
+                },
+                {
+                    "value": {
+                        "PRSTTPT": "",
+                        "PRSTRTPT": "BEFORE"
+                    },
+                    "row": 6,
+                    "USUBJID": "CDISC014",
+                    "SEQ": 11
+                }
+            ]
+        }
+    ]
+}

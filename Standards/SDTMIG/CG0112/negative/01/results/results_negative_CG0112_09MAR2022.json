@@ -1,0 +1,74 @@
+{
+  "AG": [],
+  "CM": [
+    {
+      "domain": "CM",
+      "errors": [
+        {
+          "row": 1,
+          "seq": 2,
+          "uSubjId": "ABC-0002",
+          "value": {
+            "CMDOSTXT": "100"
+          }
+        },
+        {
+          "row": 3,
+          "seq": 1,
+          "uSubjId": "ABC-0003",
+          "value": {
+            "CMDOSTXT": "2.5"
+          }
+        }
+      ],
+      "executionStatus": "success",
+      "message": "CMDOSTXT value is numeric",
+      "variables": [
+        "CMDOSTXT"
+      ]
+    }
+  ],
+  "EC": [],
+  "EX": [
+    {
+      "domain": "EX",
+      "errors": [
+        {
+          "row": 1,
+          "seq": 1,
+          "uSubjId": "ABC2001",
+          "value": {
+            "EXDOSTXT": "500"
+          }
+        }
+      ],
+      "executionStatus": "success",
+      "message": "EXDOSTXT value is numeric",
+      "variables": [
+        "EXDOSTXT"
+      ]
+    }
+  ],
+  "ML": [],
+  "PR": [],
+  "SU": [
+    {
+      "domain": "SU",
+      "errors": [
+        {
+          "row": 1,
+          "seq": 2,
+          "uSubjId": "1234005",
+          "value": {
+            "SUDOSTXT": "3"
+          }
+        }
+      ],
+      "executionStatus": "success",
+      "message": "SUDOSTXT value is numeric",
+      "variables": [
+        "SUDOSTXT"
+      ]
+    }
+  ]
+}

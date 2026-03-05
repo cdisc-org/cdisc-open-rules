@@ -1,0 +1,46 @@
+{
+  "AE": [
+    {
+      "executionStatus": "skipped",
+      "domain": "AE",
+      "variables": [],
+      "message": null,
+      "errors": []
+    }
+  ],
+  "FA": [
+    {
+      "executionStatus": "success",
+      "domain": "FA",
+      "variables": [
+        "FAOBJ",
+        "RELREC.__DECOD",
+        "RELREC.__TERM",
+        "RELREC.__TRT"
+      ],
+      "message": "Related record is present in the parent domain dataset and FAOBJ is not in (FATERM, FATRT, FADECOD)",
+      "errors": [
+        {
+          "value": {
+            "RELREC.__TERM": "INJECTION SITE REACTION",
+            "FAOBJ": "INVALID FAOBJ",
+            "RELREC.__TRT": "Not in dataset",
+            "RELREC.__DECOD": "Not in dataset"
+          },
+          "row": 16,
+          "USUBJID": "CDISC002",
+          "SEQ": 10
+        }
+      ]
+    }
+  ],
+  "RELREC": [
+    {
+      "executionStatus": "skipped",
+      "domain": "RELREC",
+      "variables": [],
+      "message": null,
+      "errors": []
+    }
+  ]
+}

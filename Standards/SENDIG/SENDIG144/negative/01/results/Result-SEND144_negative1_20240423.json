@@ -1,0 +1,35 @@
+{2 items
+"VS":[1 item
+0:{6 items
+"executionStatus":"success"
+"dataset":"vs.xpt"
+"domain":"VS"
+"variables":[2 items
+0:"VSORRES"
+1:"VSSTAT"
+]
+"message":"If VSORRES is not populated, VSSTAT must be populated"
+"errors":[1 item
+0:{4 items
+"value":{2 items
+"VSSTAT":"null"
+"VSORRES":"null"
+}
+"dataset":"vs.xpt"
+"row":3
+"SEQ":3
+}
+]
+}
+]
+"SC":[1 item
+0:{6 items
+"executionStatus":"skipped"
+"dataset":"sc.xpt"
+"domain":"SC"
+"variables":[]0 items
+"message":"Rule skipped - doesn't apply to domain for rule id=CDISC.SENDIG.144, dataset=SC"
+"errors":[]0 items
+}
+]
+}

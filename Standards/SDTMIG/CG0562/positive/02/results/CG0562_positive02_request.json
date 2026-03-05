@@ -1,0 +1,1344 @@
+{3 items
+"datasets":[3 items
+0:{5 items
+"filename":"eg.xpt"
+"label":"ECG"
+"domain":"EG"
+"variables":[22 items
+0:{4 items
+"name":"STUDYID"
+"label":"Study Identifier"
+"type":"Char"
+"length":50
+}
+1:{4 items
+"name":"DOMAIN"
+"label":"Domain Abbreviation"
+"type":"Char"
+"length":50
+}
+2:{4 items
+"name":"USUBJID"
+"label":"Unique Subject Identifier"
+"type":"Char"
+"length":50
+}
+3:{4 items
+"name":"EGSEQ"
+"label":"Sequence Number"
+"type":"Num"
+"length":8
+}
+4:{4 items
+"name":"EGTESTCD"
+"label":"ECG Test or Examination Short Name"
+"type":"Char"
+"length":50
+}
+5:{4 items
+"name":"EGTEST"
+"label":"ECG Test or Examination Name"
+"type":"Char"
+"length":50
+}
+6:{4 items
+"name":"EGORRES"
+"label":"Result or Finding in Original Units"
+"type":"Char"
+"length":50
+}
+7:{4 items
+"name":"EGORRESU"
+"label":"Original Units"
+"type":"Char"
+"length":50
+}
+8:{4 items
+"name":"EGSTRESC"
+"label":"Character Result/Finding in Std Format"
+"type":"Char"
+"length":50
+}
+9:{4 items
+"name":"EGSTRESN"
+"label":"Numeric Result/Finding in Standard Units"
+"type":"Num"
+"length":8
+}
+10:{4 items
+"name":"EGSTRESU"
+"label":"Standard Units"
+"type":"Char"
+"length":50
+}
+11:{4 items
+"name":"EGSTAT"
+"label":"Completion Status"
+"type":"Char"
+"length":50
+}
+12:{4 items
+"name":"EGREASND"
+"label":"Reason ECG Not Done"
+"type":"Char"
+"length":50
+}
+13:{4 items
+"name":"VISITNUM"
+"label":"Visit Number"
+"type":"Num"
+"length":8
+}
+14:{4 items
+"name":"VISIT"
+"label":"Visit Name"
+"type":"Char"
+"length":50
+}
+15:{4 items
+"name":"EGDTC"
+"label":"Date/Time of ECG"
+"type":"Char"
+"length":50
+}
+16:{4 items
+"name":"EGDY"
+"label":"Study Day of ECG"
+"type":"Num"
+"length":8
+}
+17:{4 items
+"name":"EGTPT"
+"label":"Planned Time Point Name"
+"type":"Char"
+"length":50
+}
+18:{4 items
+"name":"EGTPTNUM"
+"label":"Planned Time Point Number"
+"type":"Num"
+"length":8
+}
+19:{4 items
+"name":"EGELTM"
+"label":"Planned Elapsed Time from Time Point Ref"
+"type":"Char"
+"length":50
+}
+20:{4 items
+"name":"EGTPTREF"
+"label":"Time Point Reference"
+"type":"Char"
+"length":50
+}
+21:{4 items
+"name":"EGRFTDTC"
+"label":"Date/Time of Reference Time Point"
+"type":"Char"
+"length":50
+}
+]
+"records":{22 items
+"STUDYID":[6 items
+0:"CDISCPILOT01"
+1:"CDISCPILOT01"
+2:"CDISCPILOT01"
+3:"CDISCPILOT01"
+4:"CDISCPILOT01"
+5:"CDISCPILOT01"
+]
+"DOMAIN":[6 items
+0:"EG"
+1:"EG"
+2:"EG"
+3:"EG"
+4:"EG"
+5:"EG"
+]
+"USUBJID":[6 items
+0:"TEST123"
+1:"TEST123"
+2:"TEST123"
+3:"TEST123"
+4:"TEST123"
+5:"TEST123"
+]
+"EGSEQ":[6 items
+0:1
+1:2
+2:3
+3:4
+4:5
+5:6
+]
+"EGTESTCD":[6 items
+0:"QTCFAG"
+1:"QTCFAG"
+2:"QTCFAG"
+3:"QTCFAG"
+4:"QTCFAG"
+5:"QTCFAG"
+]
+"EGTEST":[6 items
+0:"QTcF Interval, Aggregate"
+1:"QTcF Interval, Aggregate"
+2:"QTcF Interval, Aggregate"
+3:"QTcF Interval, Aggregate"
+4:"QTcF Interval, Aggregate"
+5:"QTcF Interval, Aggregate"
+]
+"EGORRES":[6 items
+0:"350"
+1:"351"
+2:"352"
+3:"353"
+4:"354"
+5:"355"
+]
+"EGORRESU":[6 items
+0:"msec"
+1:"msec"
+2:"msec"
+3:"msec"
+4:"msec"
+5:"msec"
+]
+"EGSTRESC":[6 items
+0:"350"
+1:"350"
+2:"350"
+3:"350"
+4:"350"
+5:"350"
+]
+"EGSTRESN":[6 items
+0:350
+1:350
+2:350
+3:350
+4:350
+5:350
+]
+"EGSTRESU":[6 items
+0:"msec"
+1:"msec"
+2:"msec"
+3:"msec"
+4:"msec"
+5:"msec"
+]
+"EGSTAT":[6 items
+0:""
+1:""
+2:""
+3:""
+4:""
+5:""
+]
+"EGREASND":[6 items
+0:""
+1:""
+2:""
+3:""
+4:""
+5:""
+]
+"VISITNUM":[6 items
+0:1
+1:1
+2:1
+3:2
+4:2
+5:2
+]
+"VISIT":[6 items
+0:"DAY1"
+1:"DAY1"
+2:"DAY1"
+3:"DAY1"
+4:"DAY1"
+5:"DAY1"
+]
+"EGDTC":[6 items
+0:"2022-01-14"
+1:"2022-01-14T07:00"
+2:"2022-01-14"
+3:"2022-01-20T13:01"
+4:"2022-01-20T13:01"
+5:"2022-01-20T13:02"
+]
+"EGDY":[6 items
+0:NULL
+1:NULL
+2:NULL
+3:NULL
+4:NULL
+5:NULL
+]
+"EGTPT":[6 items
+0:"PREDOSE"
+1:"PREDOSE"
+2:"PREDOSE"
+3:"6H"
+4:"6H"
+5:"6H"
+]
+"EGTPTNUM":[6 items
+0:-1
+1:-1
+2:-1
+3:360
+4:360
+5:360
+]
+"EGELTM":[6 items
+0:""
+1:""
+2:""
+3:""
+4:""
+5:""
+]
+"EGTPTREF":[6 items
+0:"DOSE"
+1:"DOSE"
+2:"DOSE"
+3:"DOSE"
+4:"DOSE"
+5:"DOSE"
+]
+"EGRFTDTC":[6 items
+0:""
+1:""
+2:""
+3:""
+4:""
+5:""
+]
+}
+}
+1:{5 items
+"filename":"vs.xpt"
+"label":"Vital Signs"
+"domain":"VS"
+"variables":[20 items
+0:{4 items
+"name":"STUDYID"
+"label":"Study Identifier"
+"type":"Char"
+"length":12
+}
+1:{4 items
+"name":"DOMAIN"
+"label":"Domain Abbreviation"
+"type":"Char"
+"length":2
+}
+2:{4 items
+"name":"USUBJID"
+"label":"Unique Subject Identifier"
+"type":"Char"
+"length":8
+}
+3:{4 items
+"name":"VSSEQ"
+"label":"Sequence Number"
+"type":"Num"
+"length":8
+}
+4:{4 items
+"name":"VSTESTCD"
+"label":"Vital Signs Test Short Name"
+"type":"Char"
+"length":6
+}
+5:{4 items
+"name":"VSTEST"
+"label":"Vital Signs Test Name"
+"type":"Char"
+"length":24
+}
+6:{4 items
+"name":"VSPOS"
+"label":"Vital Signs Position of Subject"
+"type":"Char"
+"length":8
+}
+7:{4 items
+"name":"VSORRES"
+"label":"Result or Finding in Original Units"
+"type":"Char"
+"length":8
+}
+8:{4 items
+"name":"VSORRESU"
+"label":"Original Units"
+"type":"Char"
+"length":9
+}
+9:{4 items
+"name":"VSSTRESC"
+"label":"Character Result/Finding in Std Format"
+"type":"Char"
+"length":200
+}
+10:{4 items
+"name":"VSSTRESN"
+"label":"Numeric Result/Finding in Standard Units"
+"type":"Num"
+"length":8
+}
+11:{4 items
+"name":"VSSTRESU"
+"label":"Standard Units"
+"type":"Char"
+"length":9
+}
+12:{4 items
+"name":"VSSTAT"
+"label":"Completion Status"
+"type":"Char"
+"length":8
+}
+13:{4 items
+"name":"VSLOC"
+"label":"Location of Vital Signs Measurement"
+"type":"Char"
+"length":11
+}
+14:{4 items
+"name":"VSLOBXFL"
+"label":"Last Observation Before Exposure Flag"
+"type":"Char"
+"length":1
+}
+15:{4 items
+"name":"VISITNUM"
+"label":"Visit Number"
+"type":"Num"
+"length":8
+}
+16:{4 items
+"name":"VISIT"
+"label":"Visit Name"
+"type":"Char"
+"length":200
+}
+17:{4 items
+"name":"EPOCH"
+"label":"Epoch"
+"type":"Char"
+"length":9
+}
+18:{4 items
+"name":"VSDTC"
+"label":"Date/Time of Measurements"
+"type":"Char"
+"length":10
+}
+19:{4 items
+"name":"VSDY"
+"label":"Study Day of Vital Signs"
+"type":"Num"
+"length":8
+}
+]
+"records":{20 items
+"STUDYID":[29 items
+0:"CDISCPILOT01"
+1:"CDISCPILOT01"
+2:"CDISCPILOT01"
+3:"CDISCPILOT01"
+4:"CDISCPILOT01"
+5:"CDISCPILOT01"
+6:"CDISCPILOT01"
+7:"CDISCPILOT01"
+8:"CDISCPILOT01"
+9:"CDISCPILOT01"
+10:"CDISCPILOT01"
+11:"CDISCPILOT01"
+12:"CDISCPILOT01"
+13:"CDISCPILOT01"
+14:"CDISCPILOT01"
+15:"CDISCPILOT01"
+16:"CDISCPILOT01"
+17:"CDISCPILOT01"
+18:"CDISCPILOT01"
+19:"CDISCPILOT01"
+20:"CDISCPILOT01"
+21:"CDISCPILOT01"
+22:"CDISCPILOT01"
+23:"CDISCPILOT01"
+24:"CDISCPILOT01"
+25:"CDISCPILOT01"
+26:"CDISCPILOT01"
+27:"CDISCPILOT01"
+28:"CDISCPILOT01"
+]
+"DOMAIN":[29 items
+0:"VS"
+1:"VS"
+2:"VS"
+3:"VS"
+4:"VS"
+5:"VS"
+6:"VS"
+7:"VS"
+8:"VS"
+9:"VS"
+10:"VS"
+11:"VS"
+12:"VS"
+13:"VS"
+14:"VS"
+15:"VS"
+16:"VS"
+17:"VS"
+18:"VS"
+19:"VS"
+20:"VS"
+21:"VS"
+22:"VS"
+23:"VS"
+24:"VS"
+25:"VS"
+26:"VS"
+27:"VS"
+28:"VS"
+]
+"USUBJID":[29 items
+0:"CDISC001"
+1:"CDISC001"
+2:"CDISC001"
+3:"CDISC001"
+4:"CDISC001"
+5:"CDISC001"
+6:"CDISC001"
+7:"CDISC001"
+8:"CDISC001"
+9:"CDISC001"
+10:"CDISC001"
+11:"CDISC001"
+12:"CDISC001"
+13:"CDISC001"
+14:"CDISC001"
+15:"CDISC001"
+16:"CDISC001"
+17:"CDISC001"
+18:"CDISC001"
+19:"CDISC001"
+20:"CDISC001"
+21:"CDISC001"
+22:"CDISC001"
+23:"CDISC002"
+24:"CDISC002"
+25:"CDISC002"
+26:"CDISC002"
+27:"CDISC002"
+28:"CDISC002"
+]
+"VSSEQ":[29 items
+0:1
+1:2
+2:3
+3:4
+4:5
+5:6
+6:7
+7:8
+8:9
+9:10
+10:11
+11:12
+12:13
+13:14
+14:21
+15:22
+16:23
+17:24
+18:25
+19:26
+20:27
+21:28
+22:29
+23:7
+24:8
+25:9
+26:17
+27:18
+28:19
+]
+"VSTESTCD":[29 items
+0:"DIABP"
+1:"DIABP"
+2:"DIABP"
+3:"DIABP"
+4:"DIABP"
+5:"DIABP"
+6:"DIABP"
+7:"DIABP"
+8:"DIABP"
+9:"DIABP"
+10:"DIABP"
+11:"DIABP"
+12:"DIABP"
+13:"DIABP"
+14:"PULSE"
+15:"PULSE"
+16:"PULSE"
+17:"PULSE"
+18:"PULSE"
+19:"PULSE"
+20:"PULSE"
+21:"PULSE"
+22:"PULSE"
+23:"DIABP"
+24:"DIABP"
+25:"DIABP"
+26:"PULSE"
+27:"PULSE"
+28:"PULSE"
+]
+"VSTEST":[29 items
+0:"Diastolic Blood Pressure"
+1:"Diastolic Blood Pressure"
+2:"Diastolic Blood Pressure"
+3:"Diastolic Blood Pressure"
+4:"Diastolic Blood Pressure"
+5:"Diastolic Blood Pressure"
+6:"Diastolic Blood Pressure"
+7:"Diastolic Blood Pressure"
+8:"Diastolic Blood Pressure"
+9:"Diastolic Blood Pressure"
+10:"Diastolic Blood Pressure"
+11:"Diastolic Blood Pressure"
+12:"Diastolic Blood Pressure"
+13:"Diastolic Blood Pressure"
+14:"Pulse Rate"
+15:"Pulse Rate"
+16:"Pulse Rate"
+17:"Pulse Rate"
+18:"Pulse Rate"
+19:"Pulse Rate"
+20:"Pulse Rate"
+21:"Pulse Rate"
+22:"Pulse Rate"
+23:"Diastolic Blood Pressure"
+24:"Diastolic Blood Pressure"
+25:"Diastolic Blood Pressure"
+26:"Pulse Rate"
+27:"Pulse Rate"
+28:"Pulse Rate"
+]
+"VSPOS":[29 items
+0:"STANDING"
+1:"STANDING"
+2:"STANDING"
+3:"STANDING"
+4:"STANDING"
+5:"SUPINE"
+6:"STANDING"
+7:"STANDING"
+8:"SUPINE"
+9:"STANDING"
+10:"STANDING"
+11:"SUPINE"
+12:"STANDING"
+13:"STANDING"
+14:"SUPINE"
+15:"STANDING"
+16:"STANDING"
+17:"SUPINE"
+18:"STANDING"
+19:"STANDING"
+20:"SUPINE"
+21:"STANDING"
+22:"STANDING"
+23:"SUPINE"
+24:"STANDING"
+25:"STANDING"
+26:"SUPINE"
+27:"STANDING"
+28:"STANDING"
+]
+"VSORRES":[29 items
+0:"71"
+1:"71"
+2:"83"
+3:"79"
+4:"68"
+5:"77"
+6:"71"
+7:"69"
+8:"76"
+9:"52"
+10:"60"
+11:"68"
+12:"72"
+13:"68"
+14:"52"
+15:"62"
+16:"62"
+17:"50"
+18:"52"
+19:"54"
+20:"79"
+21:"98"
+22:"94"
+23:"59"
+24:"65"
+25:"68"
+26:"65"
+27:"75"
+28:"74"
+]
+"VSORRESU":[29 items
+0:"mmHg"
+1:"mmHg"
+2:"mmHg"
+3:"mmHg"
+4:"mmHg"
+5:"mmHg"
+6:"mmHg"
+7:"mmHg"
+8:"mmHg"
+9:"mmHg"
+10:"mmHg"
+11:"mmHg"
+12:"mmHg"
+13:"mmHg"
+14:"beats/min"
+15:"beats/min"
+16:"beats/min"
+17:"beats/min"
+18:"beats/min"
+19:"beats/min"
+20:"beats/min"
+21:"beats/min"
+22:"beats/min"
+23:"mmHg"
+24:"mmHg"
+25:"mmHg"
+26:"beats/min"
+27:"beats/min"
+28:"beats/min"
+]
+"VSSTRESC":[29 items
+0:"71"
+1:"71"
+2:"83"
+3:"79"
+4:"68"
+5:"77"
+6:"71"
+7:"69"
+8:"76"
+9:"52"
+10:"60"
+11:"68"
+12:"72"
+13:"68"
+14:"52"
+15:"62"
+16:"62"
+17:"50"
+18:"52"
+19:"54"
+20:"79"
+21:"98"
+22:"94"
+23:"59"
+24:"65"
+25:"68"
+26:"65"
+27:"75"
+28:"74"
+]
+"VSSTRESN":[29 items
+0:71
+1:71
+2:83
+3:79
+4:68
+5:77
+6:71
+7:69
+8:76
+9:52
+10:60
+11:68
+12:72
+13:68
+14:52
+15:62
+16:62
+17:50
+18:52
+19:54
+20:79
+21:98
+22:94
+23:59
+24:65
+25:68
+26:65
+27:75
+28:74
+]
+"VSSTRESU":[29 items
+0:"mmHg"
+1:"mmHg"
+2:"mmHg"
+3:"mmHg"
+4:"mmHg"
+5:"mmHg"
+6:"mmHg"
+7:"mmHg"
+8:"mmHg"
+9:"mmHg"
+10:"mmHg"
+11:"mmHg"
+12:"mmHg"
+13:"mmHg"
+14:"beats/min"
+15:"beats/min"
+16:"beats/min"
+17:"beats/min"
+18:"beats/min"
+19:"beats/min"
+20:"beats/min"
+21:"beats/min"
+22:"beats/min"
+23:"mmHg"
+24:"mmHg"
+25:"mmHg"
+26:"beats/min"
+27:"beats/min"
+28:"beats/min"
+]
+"VSSTAT":[29 items
+0:""
+1:""
+2:""
+3:""
+4:""
+5:""
+6:""
+7:""
+8:""
+9:""
+10:""
+11:""
+12:""
+13:""
+14:""
+15:""
+16:""
+17:""
+18:""
+19:""
+20:""
+21:""
+22:""
+23:""
+24:""
+25:""
+26:""
+27:""
+28:""
+]
+"VSLOC":[29 items
+0:""
+1:""
+2:""
+3:""
+4:""
+5:""
+6:""
+7:""
+8:""
+9:""
+10:""
+11:""
+12:""
+13:""
+14:""
+15:""
+16:""
+17:""
+18:""
+19:""
+20:""
+21:""
+22:""
+23:""
+24:""
+25:""
+26:""
+27:""
+28:""
+]
+"VSLOBXFL":[29 items
+0:""
+1:""
+2:"Y"
+3:""
+4:""
+5:""
+6:""
+7:""
+8:""
+9:""
+10:""
+11:""
+12:""
+13:""
+14:""
+15:""
+16:""
+17:""
+18:""
+19:""
+20:""
+21:""
+22:""
+23:""
+24:""
+25:""
+26:""
+27:""
+28:""
+]
+"VISITNUM":[29 items
+0:1
+1:2
+2:3
+3:4
+4:5
+5:7
+6:7
+7:7
+8:8
+9:8
+10:8
+11:201
+12:201
+13:201
+14:7
+15:7
+16:7
+17:8
+18:8
+19:8
+20:201
+21:201
+22:201
+23:8
+24:8
+25:8
+26:8
+27:8
+28:8
+]
+"VISIT":[29 items
+0:"SCREENING 1"
+1:"SCREENING 2"
+2:"BASELINE"
+3:"WEEK 2"
+4:"WEEK 4"
+5:"WEEK 6"
+6:"WEEK 6"
+7:"WEEK 6"
+8:"WEEK 8"
+9:"WEEK 8"
+10:"WEEK 8"
+11:"EARLY DISCONTINUATION RETRIEVAL"
+12:"EARLY DISCONTINUATION RETRIEVAL"
+13:"EARLY DISCONTINUATION RETRIEVAL"
+14:"WEEK 6"
+15:"WEEK 6"
+16:"WEEK 6"
+17:"WEEK 8"
+18:"WEEK 8"
+19:"WEEK 8"
+20:"EARLY DISCONTINUATION RETRIEVAL"
+21:"EARLY DISCONTINUATION RETRIEVAL"
+22:"EARLY DISCONTINUATION RETRIEVAL"
+23:"WEEK 8"
+24:"WEEK 8"
+25:"WEEK 8"
+26:"WEEK 8"
+27:"WEEK 8"
+28:"WEEK 8"
+]
+"EPOCH":[29 items
+0:"SCREENING"
+1:"SCREENING"
+2:"SCREENING"
+3:"TREATMENT"
+4:"TREATMENT"
+5:"TREATMENT"
+6:"TREATMENT"
+7:"TREATMENT"
+8:"TREATMENT"
+9:"TREATMENT"
+10:"TREATMENT"
+11:"TREATMENT"
+12:"TREATMENT"
+13:"TREATMENT"
+14:"TREATMENT"
+15:"TREATMENT"
+16:"TREATMENT"
+17:"TREATMENT"
+18:"TREATMENT"
+19:"TREATMENT"
+20:"TREATMENT"
+21:"TREATMENT"
+22:"TREATMENT"
+23:"TREATMENT"
+24:"TREATMENT"
+25:"TREATMENT"
+26:"TREATMENT"
+27:"TREATMENT"
+28:"TREATMENT"
+]
+"VSDTC":[29 items
+0:"2012-11-23"
+1:"2012-11-28"
+2:"2012-11-30"
+3:"2012-12-13"
+4:"2012-12-26"
+5:"2013-01-10"
+6:"2013-01-10"
+7:"2013-01-10"
+8:"2013-01-23T08:00"
+9:"2013-01-23T08:00"
+10:"2013-01-23T08:00"
+11:"2013-05-20T10:01"
+12:"2013-05-20T10:02"
+13:"2013-05-20T10:03"
+14:"2013-01-10"
+15:"2013-01-10"
+16:"2013-01-10"
+17:"2013-01-23"
+18:"2013-01-24"
+19:"2013-01-25"
+20:"2013-05-20"
+21:"2013-05-20"
+22:"2013-05-20"
+23:"2013-01-23"
+24:"2013-01-23"
+25:"2013-01-23"
+26:"2013-01-23"
+27:"2013-01-23"
+28:"2013-01-23"
+]
+"VSDY":[29 items
+0:-7
+1:-2
+2:1
+3:14
+4:27
+5:42
+6:42
+7:42
+8:55
+9:55
+10:55
+11:172
+12:172
+13:172
+14:42
+15:42
+16:42
+17:55
+18:55
+19:55
+20:172
+21:172
+22:172
+23:55
+24:55
+25:55
+26:55
+27:55
+28:55
+]
+}
+}
+2:{5 items
+"filename":"sv.xpt"
+"label":"Subject Visits"
+"domain":"SV"
+"variables":[10 items
+0:{4 items
+"name":"STUDYID"
+"label":"Study Identifier"
+"type":"Char"
+"length":12
+}
+1:{4 items
+"name":"DOMAIN"
+"label":"Domain Abbreviation"
+"type":"Char"
+"length":2
+}
+2:{4 items
+"name":"USUBJID"
+"label":"Unique Subject Identifier"
+"type":"Char"
+"length":8
+}
+3:{4 items
+"name":"VISITNUM"
+"label":"Visit Number"
+"type":"Num"
+"length":8
+}
+4:{4 items
+"name":"VISIT"
+"label":"Visit Name"
+"type":"Char"
+"length":200
+}
+5:{4 items
+"name":"SVSTDTC"
+"label":"Start Date/Time of Visit"
+"type":"Char"
+"length":10
+}
+6:{4 items
+"name":"SVENDTC"
+"label":"End Date/Time of Visit"
+"type":"Char"
+"length":10
+}
+7:{4 items
+"name":"SVSTDY"
+"label":"Study Day of Start of Visit"
+"type":"Num"
+"length":8
+}
+8:{4 items
+"name":"SVENDY"
+"label":"Study Day of End of Visit"
+"type":"Num"
+"length":8
+}
+9:{4 items
+"name":"SVUPDES"
+"label":"Description of Unplanned Visit"
+"type":"Char"
+"length":200
+}
+]
+"records":{10 items
+"STUDYID":[18 items
+0:"CDISCPILOT01"
+1:"CDISCPILOT01"
+2:"CDISCPILOT01"
+3:"CDISCPILOT01"
+4:"CDISCPILOT01"
+5:"CDISCPILOT01"
+6:"CDISCPILOT01"
+7:"CDISCPILOT01"
+8:"CDISCPILOT01"
+9:"CDISCPILOT01"
+10:"CDISCPILOT01"
+11:"CDISCPILOT01"
+12:"CDISCPILOT01"
+13:"CDISCPILOT01"
+14:"CDISCPILOT01"
+15:"CDISCPILOT01"
+16:"CDISCPILOT01"
+17:"CDISCPILOT01"
+]
+"DOMAIN":[18 items
+0:"SV"
+1:"SV"
+2:"SV"
+3:"SV"
+4:"SV"
+5:"SV"
+6:"SV"
+7:"SV"
+8:"SV"
+9:"SV"
+10:"SV"
+11:"SV"
+12:"SV"
+13:"SV"
+14:"SV"
+15:"SV"
+16:"SV"
+17:"SV"
+]
+"USUBJID":[18 items
+0:"CDISC001"
+1:"CDISC001"
+2:"CDISC001"
+3:"CDISC001"
+4:"CDISC001"
+5:"CDISC001"
+6:"CDISC001"
+7:"CDISC001"
+8:"CDISC001"
+9:"CDISC001"
+10:"CDISC002"
+11:"CDISC002"
+12:"CDISC002"
+13:"CDISC002"
+14:"CDISC002"
+15:"CDISC002"
+16:"CDISC002"
+17:"CDISC002"
+]
+"VISITNUM":[18 items
+0:1
+1:2
+2:3
+3:4
+4:5
+5:5.01
+6:7
+7:8
+8:101
+9:201
+10:1
+11:2
+12:3
+13:4
+14:5
+15:7
+16:8
+17:9
+]
+"VISIT":[18 items
+0:"SCREENING 1"
+1:"SCREENING 2"
+2:"BASELINE"
+3:"WEEK 2"
+4:"WEEK 4"
+5:"WEEK 4: UNSCHEDULED 01"
+6:"WEEK 6"
+7:"WEEK 8"
+8:"EARLY DISCONTINUATION"
+9:"EARLY DISCONTINUATION RETRIEVAL"
+10:"SCREENING 1"
+11:"SCREENING 2"
+12:"BASELINE"
+13:"WEEK 2"
+14:"WEEK 4"
+15:"WEEK 6"
+16:"WEEK 8"
+17:"WEEK 12"
+]
+"SVSTDTC":[18 items
+0:"2012-11-23"
+1:"2012-11-28"
+2:"2012-11-30"
+3:"2012-12-13"
+4:"2012-12-26"
+5:"2012-12-28"
+6:"2013-01-10"
+7:"2013-01-23"
+8:"2013-02-14"
+9:"2013-05-20"
+10:"2012-10-30"
+11:"2012-11-14"
+12:"2012-11-15"
+13:"2012-11-28"
+14:"2012-12-11"
+15:"2012-12-25"
+16:"2013-01-08"
+17:"2013-01-14"
+]
+"SVENDTC":[18 items
+0:"2012-11-23"
+1:"2012-11-28"
+2:"2012-11-30"
+3:"2012-12-13"
+4:"2012-12-26"
+5:"2012-12-28"
+6:"2013-01-10"
+7:"2013-01-23"
+8:"2013-02-14"
+9:"2013-05-20"
+10:"2012-10-30"
+11:"2012-11-14"
+12:"2012-11-15"
+13:"2012-11-28"
+14:"2012-12-11"
+15:"2012-12-25"
+16:"2013-01-08"
+17:"2013-01-14"
+]
+"SVSTDY":[18 items
+0:-7
+1:-2
+2:1
+3:14
+4:27
+5:29
+6:42
+7:55
+8:77
+9:172
+10:-16
+11:-1
+12:1
+13:14
+14:27
+15:41
+16:55
+17:61
+]
+"SVENDY":[18 items
+0:-7
+1:-2
+2:1
+3:14
+4:27
+5:29
+6:42
+7:55
+8:77
+9:172
+10:-16
+11:-1
+12:1
+13:14
+14:27
+15:41
+16:55
+17:61
+]
+"SVUPDES":[18 items
+0:""
+1:""
+2:""
+3:""
+4:""
+5:"UNSCHEDULED LABS"
+6:""
+7:""
+8:""
+9:""
+10:""
+11:""
+12:""
+13:""
+14:""
+15:""
+16:""
+17:""
+]
+}
+}
+]
+"standard":{2 items
+"product":"sdtmig"
+"version":"3-3"
+}
+"codelists":[]0 items
+}

@@ -1,0 +1,80 @@
+{
+  "AE": [
+    {
+      "domain": "AE",
+      "errors": [
+        {
+          "value": {
+            "variable_label": "Reported Term for the Adverse Event in std"
+          }
+        }
+      ],
+      "executionStatus": "success",
+      "message": "Variable label length should be less than or equal to 40",
+      "variables": [
+        "variable_label"
+      ]
+    }
+  ],
+  "AG": [
+    {
+      "domain": "AG",
+      "errors": [
+        {
+          "value": {
+            "variable_label": "Unique Subject Identifier Subject Identif"
+          }
+        }
+      ],
+      "executionStatus": "success",
+      "message": "Variable label length should be less than or equal to 40",
+      "variables": [
+        "variable_label"
+      ]
+    }
+  ],
+  "BE": [],
+  "CE": [],
+  "CM": [],
+  "DS": [],
+  "DV": [],
+  "EC": [],
+  "EX": [],
+  "HO": [],
+  "MH": [
+    {
+      "domain": "MH",
+      "errors": [
+        {
+          "value": {
+            "variable_label": "Reported Term for the Medical History in this study"
+          }
+        }
+      ],
+      "executionStatus": "success",
+      "message": "Variable label length should be less than or equal to 40",
+      "variables": [
+        "variable_label"
+      ]
+    }
+  ],
+  "ML": [
+    {
+      "domain": "ML",
+      "errors": [
+        {
+          "value": {
+            "variable_label": "Unique Subject Identifier Unique Subject "
+          }
+        }
+      ],
+      "executionStatus": "success",
+      "message": "Variable label length should be less than or equal to 40",
+      "variables": [
+        "variable_label"
+      ]
+    }
+  ],
+  "PR": [],
+  "SU": []
+}

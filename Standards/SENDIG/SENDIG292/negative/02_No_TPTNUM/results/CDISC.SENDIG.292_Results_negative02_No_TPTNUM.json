@@ -1,0 +1,34 @@
+{
+    "LB": [
+        {
+            "executionStatus": "execution_error",
+            "dataset": "lb.xpt",
+            "domain": "LB",
+            "variables": [],
+            "message": "rule execution error",
+            "errors": [
+                {
+                    "dataset": "lb.xpt",
+                    "error": "Column not found in data",
+                    "message": "LBTPTNUM"
+                }
+            ]
+        }
+    ],
+    "PC": [
+        {
+            "executionStatus": "execution_error",
+            "dataset": "pc.xpt",
+            "domain": "PC",
+            "variables": [],
+            "message": "rule execution error",
+            "errors": [
+                {
+                    "dataset": "pc.xpt",
+                    "error": "Column not found in data",
+                    "message": "PCTPTNUM"
+                }
+            ]
+        }
+    ]
+}

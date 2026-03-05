@@ -1,0 +1,28 @@
+{
+    "StudyDesignPopulation": [
+        {
+            "executionStatus": "success",
+            "dataset": "StudyDesignPopulation.xpt",
+            "domain": null,
+            "variables": [],
+            "message": null,
+            "errors": []
+        }
+    ],
+    "StudyArm": [
+        {
+            "executionStatus": "execution_error",
+            "dataset": "StudyArm.xpt",
+            "domain": "",
+            "variables": [],
+            "message": "rule execution error",
+            "errors": [
+                {
+                    "dataset": "StudyArm.xpt",
+                    "error": "Column not found in data",
+                    "message": "rel_type.StudyArm"
+                }
+            ]
+        }
+    ]
+}

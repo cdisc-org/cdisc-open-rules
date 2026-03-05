@@ -1,0 +1,188 @@
+{
+    "InterventionalStudyDesign": [
+        {
+            "executionStatus": "success",
+            "dataset": "InterventionalStudyDesign.xpt",
+            "domain": "InterventionalStudyDesign",
+            "variables": [
+                "$code_for_decode_pref_term",
+                "$code_for_decode_value",
+                "$codelist_code",
+                "$codelist_extensible",
+                "$pref_term_for_code",
+                "$value_for_code",
+                "id",
+                "name",
+                "parent_entity",
+                "parent_id",
+                "parent_rel",
+                "studyPhase.standardCode.code",
+                "studyPhase.standardCode.codeSystem",
+                "studyPhase.standardCode.codeSystemVersion",
+                "studyPhase.standardCode.decode"
+            ],
+            "message": "The study design's study phase is not specified according to the extensible Trial Phase Response (C66737) SDTM codelist - codeSystem is not \"http://www.cdisc.org\", codeSystemVersion is not a valid terminology package date, and/or the code or decode (either as preferred term or as submission value) is found in the codelist (case insensitive) but the corresponding decode or code does not match the codelist value (case sensitive).",
+            "errors": [
+                {
+                    "value": {
+                        "id": "InterventionalStudyDesign_1",
+                        "$code_for_decode_value": null,
+                        "studyPhase.standardCode.codeSystemVersion": "2025-09-26",
+                        "$value_for_code": "PHASE I/II/III TRIAL",
+                        "name": "Study Design 1",
+                        "studyPhase.standardCode.codeSystem": "http://www.cdisc.org",
+                        "$codelist_extensible": true,
+                        "parent_entity": "StudyVersion",
+                        "studyPhase.standardCode.code": "C198366",
+                        "$code_for_decode_pref_term": null,
+                        "$codelist_code": "C66737",
+                        "$pref_term_for_code": "Phase I/II/III Trial",
+                        "parent_rel": "studyDesigns",
+                        "studyPhase.standardCode.decode": "Phase I/II/III Study",
+                        "parent_id": "StudyVersion_1"
+                    },
+                    "dataset": "InterventionalStudyDesign.xpt",
+                    "row": 1,
+                    "instance_id": "InterventionalStudyDesign_1"
+                },
+                {
+                    "value": {
+                        "id": "InterventionalStudyDesign_2",
+                        "$code_for_decode_value": "C198366",
+                        "studyPhase.standardCode.codeSystemVersion": "2025-09-26",
+                        "$value_for_code": "PHASE I/II/III TRIAL",
+                        "name": "Study Design 2",
+                        "studyPhase.standardCode.codeSystem": "CDISC",
+                        "$codelist_extensible": true,
+                        "parent_entity": "StudyVersion",
+                        "studyPhase.standardCode.code": "C198366",
+                        "$code_for_decode_pref_term": "C198366",
+                        "$codelist_code": "C66737",
+                        "$pref_term_for_code": "Phase I/II/III Trial",
+                        "parent_rel": "studyDesigns",
+                        "studyPhase.standardCode.decode": "PHASE I/II/III TRIAL",
+                        "parent_id": "StudyVersion_1"
+                    },
+                    "dataset": "InterventionalStudyDesign.xpt",
+                    "row": 2,
+                    "instance_id": "InterventionalStudyDesign_2"
+                },
+                {
+                    "value": {
+                        "id": "InterventionalStudyDesign_3",
+                        "$code_for_decode_value": "C15602",
+                        "studyPhase.standardCode.codeSystemVersion": "2025-09-26",
+                        "$value_for_code": "PHASE I/II/III TRIAL",
+                        "name": "Study Design 3",
+                        "studyPhase.standardCode.codeSystem": "http://www.cdisc.org",
+                        "$codelist_extensible": true,
+                        "parent_entity": "StudyVersion",
+                        "studyPhase.standardCode.code": "C198366",
+                        "$code_for_decode_pref_term": "C15602",
+                        "$codelist_code": "C66737",
+                        "$pref_term_for_code": "Phase I/II/III Trial",
+                        "parent_rel": "studyDesigns",
+                        "studyPhase.standardCode.decode": "PHASE III TRIAL",
+                        "parent_id": "StudyVersion_1"
+                    },
+                    "dataset": "InterventionalStudyDesign.xpt",
+                    "row": 3,
+                    "instance_id": "InterventionalStudyDesign_3"
+                }
+            ]
+        }
+    ],
+    "ObservationalStudyDesign": [
+        {
+            "executionStatus": "success",
+            "dataset": "ObservationalStudyDesign.xpt",
+            "domain": "ObservationalStudyDesign",
+            "variables": [
+                "$code_for_decode_pref_term",
+                "$code_for_decode_value",
+                "$codelist_code",
+                "$codelist_extensible",
+                "$pref_term_for_code",
+                "$value_for_code",
+                "id",
+                "name",
+                "parent_entity",
+                "parent_id",
+                "parent_rel",
+                "studyPhase.standardCode.code",
+                "studyPhase.standardCode.codeSystem",
+                "studyPhase.standardCode.codeSystemVersion",
+                "studyPhase.standardCode.decode"
+            ],
+            "message": "The study design's study phase is not specified according to the extensible Trial Phase Response (C66737) SDTM codelist - codeSystem is not \"http://www.cdisc.org\", codeSystemVersion is not a valid terminology package date, and/or the code or decode (either as preferred term or as submission value) is found in the codelist (case insensitive) but the corresponding decode or code does not match the codelist value (case sensitive).",
+            "errors": [
+                {
+                    "value": {
+                        "id": "ObservationalStudyDesign_1",
+                        "$code_for_decode_value": null,
+                        "studyPhase.standardCode.codeSystemVersion": "2025-09-26",
+                        "$value_for_code": "EARLY PHASE I",
+                        "name": "Study Design 4",
+                        "studyPhase.standardCode.codeSystem": "http://www.cdisc.org",
+                        "$codelist_extensible": true,
+                        "parent_entity": "StudyVersion",
+                        "studyPhase.standardCode.code": "C54721",
+                        "$code_for_decode_pref_term": null,
+                        "$codelist_code": "C66737",
+                        "$pref_term_for_code": "Early Phase 1 Trial",
+                        "parent_rel": "studyDesigns",
+                        "studyPhase.standardCode.decode": "PHASE 0 TRIAL",
+                        "parent_id": "StudyVersion_1"
+                    },
+                    "dataset": "ObservationalStudyDesign.xpt",
+                    "row": 1,
+                    "instance_id": "ObservationalStudyDesign_1"
+                },
+                {
+                    "value": {
+                        "id": "ObservationalStudyDesign_2",
+                        "$code_for_decode_value": "C54721",
+                        "studyPhase.standardCode.codeSystemVersion": "2025-09-26",
+                        "$value_for_code": null,
+                        "name": "Study Design 5",
+                        "studyPhase.standardCode.codeSystem": "http://www.cdisc.org",
+                        "$codelist_extensible": true,
+                        "parent_entity": "StudyVersion",
+                        "studyPhase.standardCode.code": "C54721xx",
+                        "$code_for_decode_pref_term": null,
+                        "$codelist_code": "C66737",
+                        "$pref_term_for_code": null,
+                        "parent_rel": "studyDesigns",
+                        "studyPhase.standardCode.decode": "EARLY PHASE I",
+                        "parent_id": "StudyVersion_1"
+                    },
+                    "dataset": "ObservationalStudyDesign.xpt",
+                    "row": 2,
+                    "instance_id": "ObservationalStudyDesign_2"
+                },
+                {
+                    "value": {
+                        "id": "ObservationalStudyDesign_3",
+                        "$code_for_decode_value": null,
+                        "studyPhase.standardCode.codeSystemVersion": "N/A",
+                        "$value_for_code": null,
+                        "name": "Study Design 6",
+                        "studyPhase.standardCode.codeSystem": "http://www.cdisc.org",
+                        "$codelist_extensible": null,
+                        "parent_entity": "StudyVersion",
+                        "studyPhase.standardCode.code": "C48660",
+                        "$code_for_decode_pref_term": null,
+                        "$codelist_code": "C66737",
+                        "$pref_term_for_code": null,
+                        "parent_rel": "studyDesigns",
+                        "studyPhase.standardCode.decode": "NOT APPLICABLE",
+                        "parent_id": "StudyVersion_1"
+                    },
+                    "dataset": "ObservationalStudyDesign.xpt",
+                    "row": 3,
+                    "instance_id": "ObservationalStudyDesign_3"
+                }
+            ]
+        }
+    ]
+}

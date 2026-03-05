@@ -1,0 +1,14 @@
+STUDYID,DOMAIN,SETCD,SET,TXSEQ,TXPARMCD,TXPARM,TXVAL
+TDM1,TX,1NR,"Control Group, Vehicle Control once daily, Nonrecovery ",1,ARMCD ,Arm Code ,1
+TDM1,TX,1NR,"Control Group, Vehicle Control once daily, Nonrecovery ",2,SPGRPCD ,Sponsor-Defined Group Code ,1
+TDM1,TX,1NR,"Control Group, Vehicle Control once daily, Nonrecovery ",3,GRPLBL ,Group Label ,"Group 1, Control "
+TDM1,TX,1NR,"Control Group, Vehicle Control once daily, Nonrecovery ",4,SETLBL ,Set Label ,"Group 1, Control - Nonrec "
+TDM1,TX,1NR,"Control Group, Vehicle Control once daily, Nonrecovery ",5,TRTDOS ,Dose Level ,0
+TDM1,TX,1NR,"Control Group, Vehicle Control once daily, Nonrecovery ",6,TRTDOSU ,Dose Units ,mg/kg/day 
+TDM1,TX,1NR,"Control Group, Vehicle Control once daily, Nonrecovery ",7,TCNTRL ,Control Type ,Vehicle Control 
+TDM1,TX,1NR,"Control Group, Vehicle Control once daily, Nonrecovery ",8,PLANMSUB ,Planned Number of Male Subjects ,5
+TDM1,TX,1NR,"Control Group, Vehicle Control once daily, Nonrecovery ",9,PLANFSUB ,Planned Number of Female Subjects ,5
+TDM1,TX,1NR,"Control Group, Vehicle Control once daily, Nonrecovery ",10,STRAIN,Strain,My strain
+TDM1,TX,2NR,"Low dose Group, 100 mg/kg Drug a once daily, Nonrecovery",21,ARMCD ,Arm Code ,2
+TDM1,TX,2R,"Low-Dose Group, 100 mg/kg Drug a once daily, Recovery ",31,ARMCD ,Arm Code ,02R
+TDM1,TX,2R,"Low-Dose Group, 100 mg/kg Drug a once daily, Recovery ",32,STRAIN,Strain,Another strain

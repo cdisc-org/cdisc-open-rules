@@ -1,0 +1,28 @@
+{
+  "TS": [
+    {
+      "executionStatus": "success",
+      "domain": "TS",
+      "variables": [
+        "TSPARMCD"
+      ],
+      "message": "Only one record with TSPARMCD=STCAT is allowed",
+      "errors": [
+        {
+          "value": {
+            "TSPARMCD": "STCAT"
+          },
+          "row": 59,
+          "seq": 59
+        },
+        {
+          "value": {
+            "TSPARMCD": "STCAT"
+          },
+          "row": 60,
+          "seq": 60
+        }
+      ]
+    }
+  ]
+}

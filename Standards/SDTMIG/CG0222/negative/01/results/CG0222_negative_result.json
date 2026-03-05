@@ -1,0 +1,99 @@
+{3 items
+"AE":[1 item
+0:{6 items
+"executionStatus":"success"
+"dataset":"ae.xpt"
+"domain":"AE"
+"variables":[4 items
+0:"$val_endy"
+1:"AEENDTC"
+2:"AEENDY"
+3:"RFSTDTC"
+]
+"message":"AEENDY is not properly calculated per study day algorithm"
+"errors":[2 items
+0:{4 items
+"value":{4 items
+"RFSTDTC":"2022-03-20"
+"AEENDY":-2
+"$val_endy":-1
+"AEENDTC":"2022-03-19"
+}
+"row":1
+"USUBJID":"001"
+"SEQ":2
+}
+1:{4 items
+"value":{4 items
+"RFSTDTC":"2022-03-20"
+"AEENDY":0
+"$val_endy":1
+"AEENDTC":"2022-03-20"
+}
+"row":2
+"USUBJID":"001"
+"SEQ":1
+}
+]
+}
+]
+"CM":[1 item
+0:{6 items
+"executionStatus":"success"
+"dataset":"cm.xpt"
+"domain":"CM"
+"variables":[4 items
+0:"$val_endy"
+1:"CMENDTC"
+2:"CMENDY"
+3:"RFSTDTC"
+]
+"message":"CMENDY is not properly calculated per study day algorithm"
+"errors":[3 items
+0:{4 items
+"value":{4 items
+"CMENDTC":"2013-05-10"
+"RFSTDTC":"2013-01-05"
+"$val_endy":126
+"CMENDY":NULL
+}
+"row":7
+"USUBJID":"CDISC007"
+"SEQ":5
+}
+1:{4 items
+"value":{4 items
+"CMENDTC":"2014-05-20"
+"RFSTDTC":"2014-05-11"
+"$val_endy":10
+"CMENDY":11
+}
+"row":8
+"USUBJID":"CDISC008"
+"SEQ":6
+}
+2:{4 items
+"value":{4 items
+"CMENDTC":"2013-06-05"
+"RFSTDTC":"2013-09-21"
+"$val_endy":-108
+"CMENDY":-107
+}
+"row":10
+"USUBJID":"CDISC010"
+"SEQ":2
+}
+]
+}
+]
+"DM":[1 item
+0:{6 items
+"executionStatus":"skipped"
+"dataset":NULL
+"domain":"DM"
+"variables":[]0 items
+"message":NULL
+"errors":[]0 items
+}
+]
+}

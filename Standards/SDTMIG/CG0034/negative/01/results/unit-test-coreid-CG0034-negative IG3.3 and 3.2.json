@@ -1,0 +1,116 @@
+{5 items
+"LB":[1 item
+0:{5 items
+"executionStatus":"success"
+"domain":"LB"
+"variables":[1 item
+0:"VISITNUM"
+]
+"message":"VISITNUM is not among VISITNUM in SV domain."
+"errors":[2 items
+0:{4 items
+"value":{1 item
+"VISITNUM":45
+}
+"row":4
+"uSubjId":"CDISC004"
+"seq":4
+}
+1:{4 items
+"value":{1 item
+"VISITNUM":64
+}
+"row":10
+"uSubjId":"CDISC004"
+"seq":10
+}
+]
+}
+]
+"OE":[1 item
+0:{5 items
+"executionStatus":"success"
+"domain":"OE"
+"variables":[1 item
+0:"VISITNUM"
+]
+"message":"VISITNUM is not among VISITNUM in SV domain."
+"errors":[4 items
+0:{4 items
+"value":{1 item
+"VISITNUM":500
+}
+"row":10
+"uSubjId":"CDISC004"
+"seq":10
+}
+1:{4 items
+"value":{1 item
+"VISITNUM":500
+}
+"row":11
+"uSubjId":"CDISC004"
+"seq":11
+}
+2:{4 items
+"value":{1 item
+"VISITNUM":500
+}
+"row":12
+"uSubjId":"CDISC004"
+"seq":12
+}
+3:{4 items
+"value":{1 item
+"VISITNUM":123
+}
+"row":66
+"uSubjId":"CDISC008"
+"seq":14
+}
+]
+}
+]
+"SV":[1 item
+0:{5 items
+"executionStatus":"skipped"
+"domain":"SV"
+"variables":[]0 items
+"message":NULL
+"errors":[]0 items
+}
+]
+"TV":[1 item
+0:{5 items
+"executionStatus":"success"
+"domain":"TV"
+"variables":[1 item
+0:"VISITNUM"
+]
+"message":"VISITNUM is not among VISITNUM in SV domain."
+"errors":[2 items
+0:{2 items
+"value":{1 item
+"VISITNUM":101
+}
+"row":13
+}
+1:{2 items
+"value":{1 item
+"VISITNUM":201
+}
+"row":14
+}
+]
+}
+]
+"VS":[1 item
+0:{5 items
+"executionStatus":"success"
+"domain":"VS"
+"variables":[]0 items
+"message":NULL
+"errors":[]0 items
+}
+]
+}

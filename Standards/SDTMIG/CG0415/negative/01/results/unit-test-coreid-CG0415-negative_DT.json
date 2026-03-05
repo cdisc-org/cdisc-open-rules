@@ -1,0 +1,20 @@
+{
+  "TA": [
+    {
+      "domain": "TA",
+      "errors": [
+        {
+          "row": 2,
+          "value": {
+            "ARMCD": "AAAAAAAAAAAAAAAAAAAAA"
+          }
+        }
+      ],
+      "executionStatus": "success",
+      "message": "Length of ARMCD must be less than or equal to 20 characters",
+      "variables": [
+        "ARMCD"
+      ]
+    }
+  ]
+}

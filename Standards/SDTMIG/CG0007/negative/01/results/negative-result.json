@@ -1,0 +1,128 @@
+{
+  "AE": [
+    {
+      "domain": "AE",
+      "errors": [
+        {
+          "error": "Column not found in data",
+          "message": "AEDY"
+        }
+      ],
+      "executionStatus": "execution_error",
+      "message": "rule execution error",
+      "variables": []
+    }
+  ],
+  "DM": [
+    {
+      "domain": "DM",
+      "errors": [
+        {
+          "error": "Column not found in data",
+          "message": "DMDY"
+        }
+      ],
+      "executionStatus": "execution_error",
+      "message": "rule execution error",
+      "variables": []
+    }
+  ],
+  "EX": [
+    {
+      "domain": "EX",
+      "errors": [
+        {
+          "error": "Column not found in data",
+          "message": "EXDY"
+        }
+      ],
+      "executionStatus": "execution_error",
+      "message": "rule execution error",
+      "variables": []
+    }
+  ],
+  "LB": [
+    {
+      "domain": "LB",
+      "errors": [
+        {
+          "row": 0,
+          "seq": 1,
+          "uSubjId": "123102",
+          "value": {
+            "LBDTC": "2005-09-28",
+            "LBDY": -15,
+            "RFSTDTC": "2005-10"
+          }
+        },
+        {
+          "row": 4,
+          "seq": 5,
+          "uSubjId": "123102",
+          "value": {
+            "LBDTC": "2005-09-28",
+            "LBDY": -15,
+            "RFSTDTC": "2005-10"
+          }
+        },
+        {
+          "row": 5,
+          "seq": 6,
+          "uSubjId": "123102",
+          "value": {
+            "LBDTC": "",
+            "LBDY": 1,
+            "RFSTDTC": "2005-10"
+          }
+        },
+        {
+          "row": 6,
+          "seq": 7,
+          "uSubjId": "123102",
+          "value": {
+            "LBDTC": "",
+            "LBDY": 141,
+            "RFSTDTC": "2005-10"
+          }
+        },
+        {
+          "row": 8,
+          "seq": 1,
+          "uSubjId": "123101",
+          "value": {
+            "LBDTC": "2005-09",
+            "LBDY": -15,
+            "RFSTDTC": "2005-10-13T10:15"
+          }
+        },
+        {
+          "row": 10,
+          "seq": 3,
+          "uSubjId": "123101",
+          "value": {
+            "LBDTC": "",
+            "LBDY": 141,
+            "RFSTDTC": "2005-10-13T10:15"
+          }
+        },
+        {
+          "row": 11,
+          "seq": 4,
+          "uSubjId": "123101",
+          "value": {
+            "LBDTC": "2006-05",
+            "LBDY": 213,
+            "RFSTDTC": "2005-10-13T10:15"
+          }
+        }
+      ],
+      "executionStatus": "success",
+      "message": "The date portion of LBDTC is not complete date or the date portion of DM.RFSTDTC is not compleate date, but LBDY is not empty",
+      "variables": [
+        "LBDTC",
+        "LBDY",
+        "RFSTDTC"
+      ]
+    }
+  ]
+}

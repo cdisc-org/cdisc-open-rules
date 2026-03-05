@@ -1,0 +1,23 @@
+dataset,variable,label,type,length
+it.xpt,STUDYID,Study Identifier,Char,50
+it.xpt,DOMAIN,Domain Abbreviation,Char,50
+it.xpt,SPTOBID,Applicant-Defined Tobacco Product ID,Char,50
+it.xpt,IGDCMPID,Ingredient or Component Identifier,Char,50
+it.xpt,TPMF,Tobacco Product Master File ID,Char,50
+it.xpt,ITSPECIF,Specification or Variety of Tobacco Ingr,Char,50
+it.xpt,ITIGDPLX,Ingredient Complexity,Char,50
+it.xpt,ITCIGIND,Applicant-Customized Ingredient Indic,Char,50
+it.xpt,ITCURMTH,Cure Method,Char,50
+iq.xpt,STUDYID,Study Identifier,Char,50
+iq.xpt,DOMAIN,Domain Abbreviation,Char,50
+iq.xpt,SPTOBID,Applicant-Defined Tobacco Product ID,Char,50
+iq.xpt,IGDCMPID,Ingredient or Component Identifier,Char,50
+iq.xpt,IQCAT,Category of Ingredient or Component,Char,50
+iq.xpt,IQIGDPLX,Ingredient Complexity,Char,50
+iq.xpt,IQPARENT,Parent of Ingredient or Component,Char,50
+iq.xpt,IQLEVEL,Ingredient Level in Hierarchy,Num,50
+iq.xpt,IQFUNCT,Ingredient Function,Char,50
+iq.xpt,IQVALTRG,Ingredient Target Value,Num,50
+iq.xpt,IQVALMIN,Ingredient Minimum Value,Num,50
+iq.xpt,IQVALMAX,Ingredient Maximum Value,Num,50
+iq.xpt,IQVALU,Ingredient Value Unit,Char,50

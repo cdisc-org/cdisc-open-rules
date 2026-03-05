@@ -1,0 +1,67 @@
+dataset,variable,label,type,length
+ds.xpt,STUDYID,Study Identifier,Char,12
+ds.xpt,DOMAIN,Domain Abbreviation,Char,2
+ds.xpt,USUBJID,Unique Subject Identifier,Char,20
+ds.xpt,DSSEQ,Sequence Number,Num,8
+ds.xpt,DSTERM,Reported Term for the Disposition Event,Char,200
+ds.xpt,DSDECOD,Standardized Disposition Term,Char,50
+ss1.xpt,STUDYID,Study Identifier,Char,12
+ss1.xpt,DOMAIN,Domain Abbreviation,Char,2
+ss1.xpt,USUBJID,Unique Subject Identifier,Char,20
+ss1.xpt,SSSEQ,Sequence Number,Num,8
+ss1.xpt,SSTESTCD,Status Short Name,Char,8
+ss1.xpt,SSTEST,Status Name,Char,50
+ss1.xpt,SSORRES,"Result or Finding
+Original Result",Char,50
+ss1.xpt,SSSTRESC,"Character
+Result/Finding in
+Std Format",Char,50
+ss2.xpt,STUDYID,Study Identifier,Char,12
+ss2.xpt,DOMAIN,Domain Abbreviation,Char,2
+ss2.xpt,USUBJID,Unique Subject Identifier,Char,20
+ss2.xpt,SSSEQ,Sequence Number,Num,8
+ss2.xpt,SSTESTCD,Status Short Name,Char,8
+ss2.xpt,SSTEST,Status Name,Char,50
+ss2.xpt,SSORRES,"Result or Finding
+Original Result",Char,50
+ss2.xpt,SSSTRESC,"Character
+Result/Finding in
+Std Format",Char,50
+ae.xpt,STUDYID,Study Identifier,Char,12
+ae.xpt,DOMAIN,Domain Abbreviation,Char,2
+ae.xpt,POOLID,Pool Identifier,Char,20
+ae.xpt,AESEQ,Sequence Number,Num,8
+ae.xpt,AETERM,Reported Term for the Adverse Event,Char,200
+ae.xpt,AEDECOD,Standardized Disposition Term,Char,50
+lbae.xpt,STUDYID,Study Identifier,Char,12
+lbae.xpt,DOMAIN,Domain Abbreviation,Char,2
+lbae.xpt,POOLID,Pool Identifier,Char,20
+lbae.xpt,LBSEQ,Sequence Number,Num,8
+lbae.xpt,LBTESTCD,Status Short Name,Char,8
+lbae.xpt,LBTEST,Status Name,Char,50
+lbae.xpt,LBORRES,"Result or Finding
+Original Result",Char,50
+lbae.xpt,LBSTRESC,"Character
+Result/Finding in
+Std Format",Char,50
+lbds.xpt,STUDYID,Study Identifier,Char,12
+lbds.xpt,DOMAIN,Domain Abbreviation,Char,2
+lbds.xpt,POOLID,Pool Identifier,Char,20
+lbds.xpt,LBSEQ,Sequence Number,Num,8
+lbds.xpt,LBTESTCD,Status Short Name,Char,8
+lbds.xpt,LBTEST,Status Name,Char,50
+lbds.xpt,LBORRES,"Result or Finding
+Original Result",Char,50
+lbds.xpt,LBSTRESC,"Character
+Result/Finding in
+Std Format",Char,50
+supplb.xpt,STUDYID,Study Identifier,Char,10
+supplb.xpt,RDOMAIN,Related Domain Abbreviation,Char,2
+supplb.xpt,USUBJID,Unique Subject Identifier,Char,14
+supplb.xpt,IDVAR,Identifying Variable,Char,6
+supplb.xpt,IDVARVAL,Identifying Variable Value,Char,4
+supplb.xpt,QNAM,Qualifier Variable Name,Char,11
+supplb.xpt,QLABEL,Qualifier Variable Label,Char,49
+supplb.xpt,QVAL,Data Value,Char,1
+supplb.xpt,QORIG,Origin,Char,8
+supplb.xpt,QEVAL,Evaluator,Char,22

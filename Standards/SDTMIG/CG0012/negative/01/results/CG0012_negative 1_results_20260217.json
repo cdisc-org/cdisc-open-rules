@@ -1,0 +1,119 @@
+{
+    "LB": [
+        {
+            "executionStatus": "issue_reported",
+            "dataset": "lb.xpt",
+            "domain": "LB",
+            "variables": [
+                "variable_name",
+                "variable_data_type",
+                "library_variable_data_type"
+            ],
+            "message": "Variable data type specified in the dataset does not match the variable data type in the IG or the Model.",
+            "errors": [
+                {
+                    "value": {
+                        "variable_name": "LBORRES",
+                        "library_variable_data_type": "Char",
+                        "variable_data_type": "Num"
+                    },
+                    "dataset": "lb.xpt",
+                    "row": 7
+                },
+                {
+                    "value": {
+                        "variable_name": "LBCHENDY",
+                        "library_variable_data_type": "Num",
+                        "variable_data_type": "Char"
+                    },
+                    "dataset": "lb.xpt",
+                    "row": 13
+                },
+                {
+                    "value": {
+                        "variable_name": "LBDURATION",
+                        "library_variable_data_type": null,
+                        "variable_data_type": "Char"
+                    },
+                    "dataset": "lb.xpt",
+                    "row": 14
+                }
+            ]
+        }
+    ],
+    "DM": [
+        {
+            "executionStatus": "issue_reported",
+            "dataset": "dm.xpt",
+            "domain": "DM",
+            "variables": [
+                "variable_name",
+                "variable_data_type",
+                "library_variable_data_type"
+            ],
+            "message": "Variable data type specified in the dataset does not match the variable data type in the IG or the Model.",
+            "errors": [
+                {
+                    "value": {
+                        "variable_name": "STUDYID",
+                        "library_variable_data_type": "Char",
+                        "variable_data_type": "Num"
+                    },
+                    "dataset": "dm.xpt",
+                    "row": 1
+                },
+                {
+                    "value": {
+                        "variable_name": "RFXSTDTC",
+                        "library_variable_data_type": "Char",
+                        "variable_data_type": "Num"
+                    },
+                    "dataset": "dm.xpt",
+                    "row": 7
+                },
+                {
+                    "value": {
+                        "variable_name": "COUNTRY",
+                        "library_variable_data_type": "Char",
+                        "variable_data_type": "Num"
+                    },
+                    "dataset": "dm.xpt",
+                    "row": 22
+                }
+            ]
+        }
+    ],
+    "XY": [
+        {
+            "executionStatus": "issue_reported",
+            "dataset": "xy.xpt",
+            "domain": "XY",
+            "variables": [
+                "variable_name",
+                "variable_data_type",
+                "library_variable_data_type"
+            ],
+            "message": "Variable data type specified in the dataset does not match the variable data type in the IG or the Model.",
+            "errors": [
+                {
+                    "value": {
+                        "variable_name": "XYSEQ",
+                        "library_variable_data_type": "Num",
+                        "variable_data_type": "Char"
+                    },
+                    "dataset": "xy.xpt",
+                    "row": 4
+                },
+                {
+                    "value": {
+                        "variable_name": "XYDY",
+                        "library_variable_data_type": "Num",
+                        "variable_data_type": "Char"
+                    },
+                    "dataset": "xy.xpt",
+                    "row": 12
+                }
+            ]
+        }
+    ]
+}

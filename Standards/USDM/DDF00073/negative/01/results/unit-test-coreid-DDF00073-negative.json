@@ -1,0 +1,127 @@
+{
+    "Code": [
+        {
+            "executionStatus": "success",
+            "dataset": "Code.xpt",
+            "domain": "Code",
+            "variables": [
+                "$record_count",
+                "codeSystem",
+                "codeSystemVersion"
+            ],
+            "message": "More than one code system version is used for the code system.",
+            "errors": [
+                {
+                    "value": {
+                        "codeSystemVersion": "2023-12-15",
+                        "$record_count": 526,
+                        "codeSystem": "http://www.cdisc.org"
+                    },
+                    "dataset": "Code.xpt",
+                    "row": 1,
+                    "instance_id": "Code_1"
+                },
+                {
+                    "value": {
+                        "codeSystemVersion": "2020-08",
+                        "$record_count": 2,
+                        "codeSystem": "ISO 3166 1 alpha3"
+                    },
+                    "dataset": "Code.xpt",
+                    "row": 9,
+                    "instance_id": "Code_74"
+                },
+                {
+                    "value": {
+                        "codeSystemVersion": "12",
+                        "$record_count": 3,
+                        "codeSystem": "SPONSOR"
+                    },
+                    "dataset": "Code.xpt",
+                    "row": 18,
+                    "instance_id": "Code_134"
+                },
+                {
+                    "value": {
+                        "codeSystemVersion": "January 31, 2018",
+                        "$record_count": 2,
+                        "codeSystem": "SNOMED"
+                    },
+                    "dataset": "Code.xpt",
+                    "row": 19,
+                    "instance_id": "Code_135"
+                },
+                {
+                    "value": {
+                        "codeSystemVersion": "2024-09-26",
+                        "$record_count": 1,
+                        "codeSystem": "http://www.cdisc.org"
+                    },
+                    "dataset": "Code.xpt",
+                    "row": 50,
+                    "instance_id": "Code_110"
+                },
+                {
+                    "value": {
+                        "codeSystemVersion": "January 31, 2019",
+                        "$record_count": 1,
+                        "codeSystem": "SNOMED"
+                    },
+                    "dataset": "Code.xpt",
+                    "row": 63,
+                    "instance_id": "Code_80"
+                },
+                {
+                    "value": {
+                        "codeSystemVersion": "15",
+                        "$record_count": 1,
+                        "codeSystem": "SPONSOR"
+                    },
+                    "dataset": "Code.xpt",
+                    "row": 65,
+                    "instance_id": "Code_82"
+                },
+                {
+                    "value": {
+                        "codeSystemVersion": "2023-12-16",
+                        "$record_count": 1,
+                        "codeSystem": "http://www.cdisc.org"
+                    },
+                    "dataset": "Code.xpt",
+                    "row": 488,
+                    "instance_id": "Code_558"
+                },
+                {
+                    "value": {
+                        "codeSystemVersion": "2024-09-27",
+                        "$record_count": 48,
+                        "codeSystem": "http://www.cdisc.org"
+                    },
+                    "dataset": "Code.xpt",
+                    "row": 531,
+                    "instance_id": "Code_14"
+                },
+                {
+                    "value": {
+                        "codeSystemVersion": "2021-08",
+                        "$record_count": 2,
+                        "codeSystem": "ISO 3166 1 alpha3"
+                    },
+                    "dataset": "Code.xpt",
+                    "row": 580,
+                    "instance_id": "Code_599"
+                },
+                {
+                    "value": {
+                        "codeSystemVersion": "2022-08",
+                        "$record_count": 1,
+                        "codeSystem": "ISO 3166 1 alpha3"
+                    },
+                    "dataset": "Code.xpt",
+                    "row": 588,
+                    "instance_id": "Code_12"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,56 @@
+{
+    "AE123": [
+        {
+            "executionStatus": "skipped",
+            "domain": "AE123",
+            "variables": [],
+            "message": null,
+            "errors": []
+        }
+    ],
+    "APMHE": [
+        {
+            "executionStatus": "success",
+            "domain": "APMHE",
+            "variables": [
+                "DOMAIN"
+            ],
+            "message": "APAPMHE Domain value length is not equal to 4.",
+            "errors": [
+                {
+                    "value": {
+                        "DOMAIN": "APMHE"
+                    },
+                    "row": 1
+                },
+                {
+                    "value": {
+                        "DOMAIN": "APMHE"
+                    },
+                    "row": 2
+                },
+                {
+                    "value": {
+                        "DOMAIN": "APMHE"
+                    },
+                    "row": 3
+                },
+                {
+                    "value": {
+                        "DOMAIN": "APMHE"
+                    },
+                    "row": 4
+                }
+            ]
+        }
+    ],
+    "DMAAA": [
+        {
+            "executionStatus": "skipped",
+            "domain": "DMAAA",
+            "variables": [],
+            "message": null,
+            "errors": []
+        }
+    ]
+}

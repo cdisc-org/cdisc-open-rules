@@ -1,0 +1,31 @@
+dataset,variable,label,type,length
+supplb.xpt,STUDYID,Study Identifier,Char,50
+supplb.xpt,RDOMAIN,Related Domain Abbreviation,Char,50
+supplb.xpt,USUBJID,Unique Subject Identifier,Char,50
+supplb.xpt,IDVAR,Identifying Variable,Char,50
+supplb.xpt,IDVARVAL,Identifying Variable Value,Char,50
+supplb.xpt,QNAM,Qualifier Variable Name,Char,50
+supplb.xpt,QLABEL,Qualifier Variable Label,Char,50
+supplb.xpt,QVAL,Data Value,Char,50
+supplb.xpt,QORIG,Origin,Char,50
+supplb.xpt,QEVAL,Evaluator,Char,50
+relrec.xpt,STUDYID,Study Identifier,Char,50
+relrec.xpt,RDOMAIN,Related Domain Abbreviation,Char,50
+relrec.xpt,USUBJID,Unique Subject Identifier,Char,50
+relrec.xpt,IDVAR,Identifying Variable,Char,50
+relrec.xpt,IDVARVAL,Identifying Variable Value,Char,50
+relrec.xpt,RELTYPE,Relationship Type,Char,50
+relrec.xpt,RELID,Relationship Identifier,Char,50
+co.xpt,STUDYID,Study Identifier,Char,50
+co.xpt,DOMAIN,Domain Abbreviation,Char,50
+co.xpt,RDOMAIN,Related Domain Abbreviation,Char,50
+co.xpt,USUBJID,Unique Subject Identifier,Char,50
+co.xpt,COSEQ,Sequence Number,Num,8
+co.xpt,IDVAR,Identifying Variable,Char,50
+co.xpt,IDVARVAL,Identifying Variable Value,Char,50
+co.xpt,COREF,Comment Reference,Char,50
+co.xpt,COVAL,Comment,Char,50
+co.xpt,COEVAL,Evaluator,Char,50
+co.xpt,COEVALID,Evaluator Identifier,Char,50
+co.xpt,CODTC,Date/Time of Comment,Char,50
+co.xpt,CODY,Study Day of Comment,Num,8

@@ -1,0 +1,145 @@
+{
+    "Organization": [
+        {
+            "executionStatus": "success",
+            "dataset": "Organization.xpt",
+            "domain": "Organization",
+            "variables": [
+                "$code_for_decode_pref_term",
+                "$code_for_decode_value",
+                "$codelist_code",
+                "$codelist_extensible",
+                "$codelist_extensible_override",
+                "$pref_term_for_code",
+                "$value_for_code",
+                "id",
+                "name",
+                "parent_entity",
+                "parent_id",
+                "parent_rel",
+                "type.code",
+                "type.codeSystem",
+                "type.codeSystemVersion",
+                "type.decode"
+            ],
+            "message": "The organization type is not specified according to the extensible organization type (C188724) DDF codelist - codeSystem is not \"http://www.cdisc.org\", codeSystemVersion is not a valid terminology package date, and/or the code or decode (either as preferred term or as submission value) is found in the codelist (case insensitive) but the corresponding decode or code does not match the codelist value (case sensitive).",
+            "errors": [
+                {
+                    "value": {
+                        "id": "Organization_1",
+                        "$code_for_decode_value": null,
+                        "type.decode": "Pharmaceutical Company",
+                        "type.codeSystem": "http://www.cdisc.org",
+                        "$value_for_code": "Clinical Study Sponsor",
+                        "name": "LILLY",
+                        "$codelist_extensible": false,
+                        "type.code": "C70793",
+                        "parent_entity": "StudyVersion",
+                        "$codelist_extensible_override": "Y",
+                        "$code_for_decode_pref_term": null,
+                        "$codelist_code": "C188724",
+                        "$pref_term_for_code": "Clinical Study Sponsor",
+                        "parent_rel": "organizations",
+                        "type.codeSystemVersion": "2023-12-15",
+                        "parent_id": "StudyVersion_1"
+                    },
+                    "dataset": "Organization.xpt",
+                    "row": 1,
+                    "instance_id": "Organization_1"
+                },
+                {
+                    "value": {
+                        "id": "Organization_2",
+                        "$code_for_decode_value": null,
+                        "type.decode": "Study Register",
+                        "type.codeSystem": "http://www.cdisc.org",
+                        "$value_for_code": "Clinical Study Registry",
+                        "name": "CT-GOV",
+                        "$codelist_extensible": false,
+                        "type.code": "C93453",
+                        "parent_entity": "StudyVersion",
+                        "$codelist_extensible_override": "Y",
+                        "$code_for_decode_pref_term": null,
+                        "$codelist_code": "C188724",
+                        "$pref_term_for_code": "Study Registry",
+                        "parent_rel": "organizations",
+                        "type.codeSystemVersion": "2023-12-15",
+                        "parent_id": "StudyVersion_1"
+                    },
+                    "dataset": "Organization.xpt",
+                    "row": 2,
+                    "instance_id": "Organization_2"
+                },
+                {
+                    "value": {
+                        "id": "Organization_3",
+                        "$code_for_decode_value": "C188863",
+                        "type.decode": "Regulatory Agency",
+                        "type.codeSystem": "http://www.cdisc.org",
+                        "$value_for_code": null,
+                        "name": "REG1",
+                        "$codelist_extensible": false,
+                        "type.code": "C188863xx",
+                        "parent_entity": "StudyVersion",
+                        "$codelist_extensible_override": "Y",
+                        "$code_for_decode_pref_term": "C188863",
+                        "$codelist_code": "C188724",
+                        "$pref_term_for_code": null,
+                        "parent_rel": "organizations",
+                        "type.codeSystemVersion": "2023-12-15",
+                        "parent_id": "StudyVersion_1"
+                    },
+                    "dataset": "Organization.xpt",
+                    "row": 3,
+                    "instance_id": "Organization_3"
+                },
+                {
+                    "value": {
+                        "id": "Organization_4",
+                        "$code_for_decode_value": null,
+                        "type.decode": "Healthcare Facility",
+                        "type.codeSystem": "CDISC Organization Type",
+                        "$value_for_code": null,
+                        "name": "ORG1",
+                        "$codelist_extensible": false,
+                        "type.code": "C21541",
+                        "parent_entity": "StudyVersion",
+                        "$codelist_extensible_override": "Y",
+                        "$code_for_decode_pref_term": null,
+                        "$codelist_code": "C188724",
+                        "$pref_term_for_code": null,
+                        "parent_rel": "organizations",
+                        "type.codeSystemVersion": "2023-12-15",
+                        "parent_id": "StudyVersion_1"
+                    },
+                    "dataset": "Organization.xpt",
+                    "row": 4,
+                    "instance_id": "Organization_4"
+                },
+                {
+                    "value": {
+                        "id": "Organization_5",
+                        "$code_for_decode_value": null,
+                        "type.decode": "Pharmaceutical Company",
+                        "type.codeSystem": "http://www.cdisc.org",
+                        "$value_for_code": null,
+                        "name": "ORG2",
+                        "$codelist_extensible": null,
+                        "type.code": "C54149",
+                        "parent_entity": "StudyVersion",
+                        "$codelist_extensible_override": null,
+                        "$code_for_decode_pref_term": null,
+                        "$codelist_code": "C188724",
+                        "$pref_term_for_code": null,
+                        "parent_rel": "organizations",
+                        "type.codeSystemVersion": "2023-15-12",
+                        "parent_id": "StudyVersion_1"
+                    },
+                    "dataset": "Organization.xpt",
+                    "row": 5,
+                    "instance_id": "Organization_5"
+                }
+            ]
+        }
+    ]
+}

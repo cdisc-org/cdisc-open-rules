@@ -1,0 +1,24 @@
+{
+  "SE": [
+    {
+      "executionStatus": "success",
+      "domain": "SE",
+      "variables": [
+        "ETCD",
+        "SEUPDES"
+      ],
+      "message": "SEUPDES variable has a null value when ETCD has a value of 'UNPLAN'",
+      "errors": [
+        {
+          "value": {
+            "ETCD": "UNPLAN",
+            "SEUPDES": ""
+          },
+          "row": 5,
+          "uSubjId": "456",
+          "seq": 3
+        }
+      ]
+    }
+  ]
+}

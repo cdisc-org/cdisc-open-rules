@@ -1,0 +1,3 @@
+parent_entity,parent_id,parent_rel,rel_type,id,name,description,label,defaultConditionId,epochId,timelineId,timelineExitId,instanceType,activityIds,encounterId
+ScheduleTimeline,ScheduleTimeline_1,instances,definition,ScheduledActivityInstance_1,SCREEN1,,,ScheduledDecisionInstance_1,StudyEpoch_1,,,ScheduledActivityInstance,False,Encounter_1
+Timing,Timing_1,relativeFromScheduledInstanceId,reference,ScheduledActivityInstance_1,SCREEN1,,,ScheduledDecisionInstance_1,StudyEpoch_1,,,ScheduledActivityInstance,False,Encounter_1

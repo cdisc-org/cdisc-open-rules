@@ -1,0 +1,43 @@
+{
+  "SUPPLB": [
+    {
+      "executionStatus": "success",
+      "domain": "SUPPLB",
+      "variables": [
+        "IDVAR",
+        "IDVARVAL",
+        "QNAM"
+      ],
+      "message": "SUPPLBQNAM value must be uppercase",
+      "errors": [
+        {
+          "value": {
+            "IDVARVAL": "10",
+            "QNAM": "Biosig_2",
+            "IDVAR": "LBSEQ"
+          },
+          "row": 2,
+          "uSubjId": "CDISC-TEST-001"
+        },
+        {
+          "value": {
+            "IDVARVAL": "13",
+            "QNAM": "BIOSIG$",
+            "IDVAR": "LBSEQ"
+          },
+          "row": 5,
+          "uSubjId": "CDISC-TEST-001"
+        },
+        {
+          "value": {
+            "IDVARVAL": "15",
+            "QNAM": "biosig",
+            "IDVAR": "LBSEQ"
+          },
+          "row": 7,
+          "uSubjId": "CDISC-TEST-001"
+        }
+      ]
+    }
+  ]
+}

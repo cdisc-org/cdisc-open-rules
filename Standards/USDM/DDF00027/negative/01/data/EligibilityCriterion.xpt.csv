@@ -1,0 +1,303 @@
+parent_entity,parent_id,parent_rel,rel_type,id,name,description,label,text,dictionaryId,identifier,instanceType,category,category.id,category.code,category.codeSystem,category.codeSystemVersion,category.decode,contextId,nextId,previousId
+StudyDesignPopulation,StudyDesignPopulation_1,criteria,definition,EligibilityCriterion_1,IN01,,Age greater than 50,"<p>Males and postmenopausal females at least <usdm:tag name=""min_age""/> years of age.</p>",SyntaxTemplateDictionary_1,01,EligibilityCriterion,True,Code_567,C25532,http://www.cdisc.org,2023-12-15,Inclusion Criteria,,EligibilityCriterion_2,
+StudyDesignPopulation,StudyDesignPopulation_1,criteria,definition,EligibilityCriterion_2,IN02,,Diagnosis of Alzheimer's,"<p><usdm:tag name=""StudyPopulation""/> as defined by National Institute of Neurological and Communicative Disorders and Stroke (NINCDS) and the Alzheimer's Disease and Related Disorders Association (ADRDA) guidelines (Attachment LZZT.7).</p>",SyntaxTemplateDictionary_1,02,EligibilityCriterion,True,Code_568,C25532,http://www.cdisc.org,2023-12-15,Inclusion Criteria,,EligibilityCriterion_3,EligibilityCriterion_1
+StudyDesignPopulation,StudyDesignPopulation_1,criteria,definition,EligibilityCriterion_3,IN03,,MMSE Score,"<p><usdm:tag name=""Activity1""/> score of 10 to 23.</p>",SyntaxTemplateDictionary_2,03,EligibilityCriterion,True,Code_569,C25532,http://www.cdisc.org,2023-12-15,Inclusion Criteria,,EligibilityCriterion_4,EligibilityCriterion_2
+StudyDesignPopulation,StudyDesignPopulation_1,criteria,definition,EligibilityCriterion_4,IN04,,Hachinski Ischemic Score,"<p><usdm:tag name=""Activity2""/>  score of ≤4 (Attachment LZZT.8).</p>",SyntaxTemplateDictionary_2,04,EligibilityCriterion,True,Code_570,C25532,http://www.cdisc.org,2023-12-15,Inclusion Criteria,,EligibilityCriterion_5,EligibilityCriterion_3
+StudyDesignPopulation,StudyDesignPopulation_1,criteria,definition,EligibilityCriterion_5,IN05,,CNS imaging comptaible with Alzheimer's,"<p>CNS imaging (CT scan or MRI of brain) compatible with AD within past 1 year.</p>
+<p>The following findings are incompatible with AD:</p>
+<ol type=""a"">
+  <li>
+    <p>Large vessel strokes</p>
+    <ol>
+      <li>
+        <p>Any definite area of encephalomalacia consistent with ischemic necrosis in any cerebral artery territory.</p>
+      </li>
+      <li>
+        <p>Large, confluent areas of encephalomalacia in parieto-occipital or frontal regions consistent with watershed
+          infarcts.</p>
+        <p>The above are exclusionary. Exceptions are made for small areas of cortical asymmetry which may represent a
+          small cortical stroke or a focal area of atrophy provided there is no abnormal signal intensity in the
+          immediately underlying parenchyma. Only one such questionable area allowed per scan, and size is restricted to
+          ≤1cm in frontal/parietal/temporal cortices and ≤2 cm in occipital cortex.</p>
+      </li>
+    </ol>
+  </li>
+  <li>
+    <p>Small vessel ischemia</p>
+    <ol>
+      <li>
+        <p>Lacunar infarct is defined as an area of abnormal intensity seen on CT scan or on both T1 and T2 weighted MRI
+          images in the basal ganglia, thalamus or deep white matter which is ≤1 cm in maximal diameter. A maximum of
+          one
+          lacune is allowed per scan.</p>
+      </li>
+      <li>
+        <p>Leukoariosis or leukoencephalopathy is regarded as an abnormality seen on T2 but not T1 weighted MRIs, or on
+          CT. This is accepted if mild or moderate in extent, meaning involvement of less than 25% of cortical white
+          matter.
+      </li>
+    </ol>
+  </li>
+  <li>
+    <p>Miscellaneous</p>
+    <ol>
+      <li>
+        <p>Benign small extra-axial tumors (ie, meningiomas) are accepted if they do not contact or indent the brain
+          parenchyma.</p>
+      </li>
+      <li>
+        <p>Small extra-axial arachnoid cysts are accepted if they do not indent or deform the brain parenchyma.</p>
+      </li>
+    </ol>
+  </li>
+</ol>",,05,EligibilityCriterion,True,Code_571,C25532,http://www.cdisc.org,2023-12-15,Inclusion Criteria,,EligibilityCriterion_6,EligibilityCriterion_4
+StudyDesignPopulation,StudyDesignPopulation_1,criteria,definition,EligibilityCriterion_6,IN06,,Informed consent criteria,<p>Investigator has obtained informed consent signed by the patient (and/or legal representative) and by the caregiver.</p>,,06,EligibilityCriterion,True,Code_572,C25532,http://www.cdisc.org,2023-12-15,Inclusion Criteria,,EligibilityCriterion_7,EligibilityCriterion_5
+StudyDesignPopulation,StudyDesignPopulation_1,criteria,definition,EligibilityCriterion_7,IN07,,Geographic proximity criteria,<p>Geographic proximity to investigator's site that allows adequate follow-up.</p>,,07,EligibilityCriterion,True,Code_573,C25532,http://www.cdisc.org,2023-12-15,Inclusion Criteria,,EligibilityCriterion_8,EligibilityCriterion_6
+StudyDesignPopulation,StudyDesignPopulation_1,criteria,definition,EligibilityCriterion_8,IN08,,Reliable caregiver criteria,"<p>A reliable caregiver who is in frequent or daily contact with the patient and who will accompany the patient to the office and/or be available by telephone at designated times, will monitor administration of prescribed medications, and will be responsible for the overall care of the patient at home. The caregiver and the patient must be able to communicate in English and willing to comply with 26 weeks of transdermal therapy.</p>",,08,EligibilityCriterion,True,Code_574,C25532,http://www.cdisc.org,2023-12-15,Inclusion Criteria,,,EligibilityCriterion_7
+StudyDesignPopulation,StudyDesignPopulation_1,criteria,definition,EligibilityCriterion_9,EX01,,Previous study criteria,<p>Persons who have previously completed or withdrawn from this study or any other study investigating xanomeline TTS or the oral formulation of xanomeline.</p>,,09,EligibilityCriterion,True,Code_575,C25370,http://www.cdisc.org,2023-12-15,Exclusion Criteria,,EligibilityCriterion_2,
+StudyDesignPopulation,StudyDesignPopulation_1,criteria,definition,EligibilityCriterion_10,EX02,,Other Alzheimer's therapy criteria,<p>Use of any investigational agent or approved Alzheimer's therapeutic medication within 30 days prior to enrollment into the study.</p>,,10,EligibilityCriterion,True,Code_576,C25370,http://www.cdisc.org,2023-12-15,Exclusion Criteria,,EligibilityCriterion_3,EligibilityCriterion_1
+StudyDesignPopulation,StudyDesignPopulation_1,criteria,definition,EligibilityCriterion_11,EX03,,Serious illness criteria,<p>Serious illness which required hospitalization within 3 months of screening.</p>,,11,EligibilityCriterion,True,Code_577,C25370,http://www.cdisc.org,2023-12-15,Exclusion Criteria,,EligibilityCriterion_4,EligibilityCriterion_2
+StudyDesignPopulation,StudyDesignPopulation_1,criteria,definition,EligibilityCriterion_12,EX04,,Serious neurolocal conditions criteria,"<p>Diagnosis of serious neurological conditions, including </p>
+<ol type=""a"">
+<li><p>Stroke or vascular dementia documented by clinical history and/or radiographic findings interpretable by the investigator as indicative of these disorders</p></li>
+<li><p>Seizure disorder other than simple childhood febrile seizures</p></li>
+<li><p>Severe head trauma resulting in protracted loss of consciousness within the last 5 years, or multiple episodes of head trauma</p></li>
+<li><p>Parkinson's disease</p></li>
+<li><p>Multiple sclerosis</p></li>
+<li><p>Amyotrophic lateral sclerosis</p></li>
+<li><p>Myasthenia gravis.</p></li>
+</ol>",,12,EligibilityCriterion,True,Code_578,C25370,http://www.cdisc.org,2023-12-15,Exclusion Criteria,,EligibilityCriterion_5,EligibilityCriterion_3
+StudyDesignPopulation,StudyDesignPopulation_1,criteria,definition,EligibilityCriterion_13,EX05,,Depression criteria,<p>Episode of depression meeting DSM-IV criteria within 3 months of screening.</p>,,13,EligibilityCriterion,True,Code_579,C25370,http://www.cdisc.org,2023-12-15,Exclusion Criteria,,EligibilityCriterion_6,EligibilityCriterion_4
+StudyDesignPopulation,StudyDesignPopulation_1,criteria,definition,EligibilityCriterion_14,EX06,,"Schizophrenia, Bipolar, Ethanol or psychoactive abuse criteria","<p>A history within the last 5 years of the following:</p>
+<ol type=""a"">
+<li><p>Schizophrenia</p></li>
+<li><p>Bipolar Disease</p></li>
+<li><p>Ethanol or psychoactive drug abuse or dependence. </p></li>
+</ol>",,14,EligibilityCriterion,True,Code_580,C25370,http://www.cdisc.org,2023-12-15,Exclusion Criteria,,EligibilityCriterion_7,EligibilityCriterion_5
+StudyDesignPopulation,StudyDesignPopulation_1,criteria,definition,EligibilityCriterion_15,EX07,,Syncope criteria,<p>A history of syncope within the last 5 years.</p>,,15,EligibilityCriterion,True,Code_581,C25370,http://www.cdisc.org,2023-12-15,Exclusion Criteria,,EligibilityCriterion_8,EligibilityCriterion_6
+StudyDesignPopulation,StudyDesignPopulation_1,criteria,definition,EligibilityCriterion_16,EX08,,ECG Criteria,"<p>Evidence from ECG recording at screening of any of the following conditions :</p>
+<ol type=""a"">
+<li><p>Left bundle branch block</p></li>
+<li><p>Bradycardia ≤50 beats per minute</p></li>
+<li><p>Sinus pauses &gt;2 seconds</p></li>
+<li><p>Second or third degree heart block unless treated with a pacemaker</p></li>
+<li><p>Wolff-Parkinson-White syndrome</p></li>
+<li><p>Sustained supraventricular tachyarrhythmia including SVT≥10 sec, atrial fibrillation, atrial flutter.</p></li>
+<li><p>Ventricular tachycardia at a rate of ≥120 beats per minute lasting≥10 seconds.</p></li>
+</ol>",,16b,EligibilityCriterion,True,Code_582,C25370,http://www.cdisc.org,2023-12-15,Exclusion Criteria,,,EligibilityCriterion_7
+StudyDesignPopulation,EligibilityCriterion_2,previousId,reference,EligibilityCriterion_1,IN01,,Age greater than 50,"<p>Males and postmenopausal females at least <usdm:tag name=""min_age""/> years of age.</p>",SyntaxTemplateDictionary_1,01,EligibilityCriterion,True,Code_567,C25532,http://www.cdisc.org,2023-12-15,Inclusion Criteria,,EligibilityCriterion_2,
+StudyDesignPopulation,EligibilityCriterion_3,previousId,reference,EligibilityCriterion_2,IN02,,Diagnosis of Alzheimer's,"<p><usdm:tag name=""StudyPopulation""/> as defined by National Institute of Neurological and Communicative Disorders and Stroke (NINCDS) and the Alzheimer's Disease and Related Disorders Association (ADRDA) guidelines (Attachment LZZT.7).</p>",SyntaxTemplateDictionary_1,02,EligibilityCriterion,True,Code_568,C25532,http://www.cdisc.org,2023-12-15,Inclusion Criteria,,EligibilityCriterion_3,EligibilityCriterion_1
+StudyDesignPopulation,EligibilityCriterion_4,previousId,reference,EligibilityCriterion_3,IN03,,MMSE Score,"<p><usdm:tag name=""Activity1""/> score of 10 to 23.</p>",SyntaxTemplateDictionary_2,03,EligibilityCriterion,True,Code_569,C25532,http://www.cdisc.org,2023-12-15,Inclusion Criteria,,EligibilityCriterion_4,EligibilityCriterion_2
+StudyDesignPopulation,EligibilityCriterion_5,previousId,reference,EligibilityCriterion_4,IN04,,Hachinski Ischemic Score,"<p><usdm:tag name=""Activity2""/>  score of ≤4 (Attachment LZZT.8).</p>",SyntaxTemplateDictionary_2,04,EligibilityCriterion,True,Code_570,C25532,http://www.cdisc.org,2023-12-15,Inclusion Criteria,,EligibilityCriterion_5,EligibilityCriterion_3
+StudyDesignPopulation,EligibilityCriterion_6,previousId,reference,EligibilityCriterion_5,IN05,,CNS imaging comptaible with Alzheimer's,"<p>CNS imaging (CT scan or MRI of brain) compatible with AD within past 1 year.</p>
+<p>The following findings are incompatible with AD:</p>
+<ol type=""a"">
+  <li>
+    <p>Large vessel strokes</p>
+    <ol>
+      <li>
+        <p>Any definite area of encephalomalacia consistent with ischemic necrosis in any cerebral artery territory.</p>
+      </li>
+      <li>
+        <p>Large, confluent areas of encephalomalacia in parieto-occipital or frontal regions consistent with watershed
+          infarcts.</p>
+        <p>The above are exclusionary. Exceptions are made for small areas of cortical asymmetry which may represent a
+          small cortical stroke or a focal area of atrophy provided there is no abnormal signal intensity in the
+          immediately underlying parenchyma. Only one such questionable area allowed per scan, and size is restricted to
+          ≤1cm in frontal/parietal/temporal cortices and ≤2 cm in occipital cortex.</p>
+      </li>
+    </ol>
+  </li>
+  <li>
+    <p>Small vessel ischemia</p>
+    <ol>
+      <li>
+        <p>Lacunar infarct is defined as an area of abnormal intensity seen on CT scan or on both T1 and T2 weighted MRI
+          images in the basal ganglia, thalamus or deep white matter which is ≤1 cm in maximal diameter. A maximum of
+          one
+          lacune is allowed per scan.</p>
+      </li>
+      <li>
+        <p>Leukoariosis or leukoencephalopathy is regarded as an abnormality seen on T2 but not T1 weighted MRIs, or on
+          CT. This is accepted if mild or moderate in extent, meaning involvement of less than 25% of cortical white
+          matter.
+      </li>
+    </ol>
+  </li>
+  <li>
+    <p>Miscellaneous</p>
+    <ol>
+      <li>
+        <p>Benign small extra-axial tumors (ie, meningiomas) are accepted if they do not contact or indent the brain
+          parenchyma.</p>
+      </li>
+      <li>
+        <p>Small extra-axial arachnoid cysts are accepted if they do not indent or deform the brain parenchyma.</p>
+      </li>
+    </ol>
+  </li>
+</ol>",,05,EligibilityCriterion,True,Code_571,C25532,http://www.cdisc.org,2023-12-15,Inclusion Criteria,,EligibilityCriterion_6,EligibilityCriterion_4
+StudyDesignPopulation,EligibilityCriterion_7,previousId,reference,EligibilityCriterion_6,IN06,,Informed consent criteria,<p>Investigator has obtained informed consent signed by the patient (and/or legal representative) and by the caregiver.</p>,,06,EligibilityCriterion,True,Code_572,C25532,http://www.cdisc.org,2023-12-15,Inclusion Criteria,,EligibilityCriterion_7,EligibilityCriterion_5
+StudyDesignPopulation,EligibilityCriterion_8,previousId,reference,EligibilityCriterion_7,IN07,,Geographic proximity criteria,<p>Geographic proximity to investigator's site that allows adequate follow-up.</p>,,07,EligibilityCriterion,True,Code_573,C25532,http://www.cdisc.org,2023-12-15,Inclusion Criteria,,EligibilityCriterion_8,EligibilityCriterion_6
+StudyDesignPopulation,EligibilityCriterion_10,previousId,reference,EligibilityCriterion_1,IN01,,Age greater than 50,"<p>Males and postmenopausal females at least <usdm:tag name=""min_age""/> years of age.</p>",SyntaxTemplateDictionary_1,01,EligibilityCriterion,True,Code_567,C25532,http://www.cdisc.org,2023-12-15,Inclusion Criteria,,EligibilityCriterion_2,
+StudyDesignPopulation,EligibilityCriterion_11,previousId,reference,EligibilityCriterion_2,IN02,,Diagnosis of Alzheimer's,"<p><usdm:tag name=""StudyPopulation""/> as defined by National Institute of Neurological and Communicative Disorders and Stroke (NINCDS) and the Alzheimer's Disease and Related Disorders Association (ADRDA) guidelines (Attachment LZZT.7).</p>",SyntaxTemplateDictionary_1,02,EligibilityCriterion,True,Code_568,C25532,http://www.cdisc.org,2023-12-15,Inclusion Criteria,,EligibilityCriterion_3,EligibilityCriterion_1
+StudyDesignPopulation,EligibilityCriterion_12,previousId,reference,EligibilityCriterion_3,IN03,,MMSE Score,"<p><usdm:tag name=""Activity1""/> score of 10 to 23.</p>",SyntaxTemplateDictionary_2,03,EligibilityCriterion,True,Code_569,C25532,http://www.cdisc.org,2023-12-15,Inclusion Criteria,,EligibilityCriterion_4,EligibilityCriterion_2
+StudyDesignPopulation,EligibilityCriterion_13,previousId,reference,EligibilityCriterion_4,IN04,,Hachinski Ischemic Score,"<p><usdm:tag name=""Activity2""/>  score of ≤4 (Attachment LZZT.8).</p>",SyntaxTemplateDictionary_2,04,EligibilityCriterion,True,Code_570,C25532,http://www.cdisc.org,2023-12-15,Inclusion Criteria,,EligibilityCriterion_5,EligibilityCriterion_3
+StudyDesignPopulation,EligibilityCriterion_14,previousId,reference,EligibilityCriterion_5,IN05,,CNS imaging comptaible with Alzheimer's,"<p>CNS imaging (CT scan or MRI of brain) compatible with AD within past 1 year.</p>
+<p>The following findings are incompatible with AD:</p>
+<ol type=""a"">
+  <li>
+    <p>Large vessel strokes</p>
+    <ol>
+      <li>
+        <p>Any definite area of encephalomalacia consistent with ischemic necrosis in any cerebral artery territory.</p>
+      </li>
+      <li>
+        <p>Large, confluent areas of encephalomalacia in parieto-occipital or frontal regions consistent with watershed
+          infarcts.</p>
+        <p>The above are exclusionary. Exceptions are made for small areas of cortical asymmetry which may represent a
+          small cortical stroke or a focal area of atrophy provided there is no abnormal signal intensity in the
+          immediately underlying parenchyma. Only one such questionable area allowed per scan, and size is restricted to
+          ≤1cm in frontal/parietal/temporal cortices and ≤2 cm in occipital cortex.</p>
+      </li>
+    </ol>
+  </li>
+  <li>
+    <p>Small vessel ischemia</p>
+    <ol>
+      <li>
+        <p>Lacunar infarct is defined as an area of abnormal intensity seen on CT scan or on both T1 and T2 weighted MRI
+          images in the basal ganglia, thalamus or deep white matter which is ≤1 cm in maximal diameter. A maximum of
+          one
+          lacune is allowed per scan.</p>
+      </li>
+      <li>
+        <p>Leukoariosis or leukoencephalopathy is regarded as an abnormality seen on T2 but not T1 weighted MRIs, or on
+          CT. This is accepted if mild or moderate in extent, meaning involvement of less than 25% of cortical white
+          matter.
+      </li>
+    </ol>
+  </li>
+  <li>
+    <p>Miscellaneous</p>
+    <ol>
+      <li>
+        <p>Benign small extra-axial tumors (ie, meningiomas) are accepted if they do not contact or indent the brain
+          parenchyma.</p>
+      </li>
+      <li>
+        <p>Small extra-axial arachnoid cysts are accepted if they do not indent or deform the brain parenchyma.</p>
+      </li>
+    </ol>
+  </li>
+</ol>",,05,EligibilityCriterion,True,Code_571,C25532,http://www.cdisc.org,2023-12-15,Inclusion Criteria,,EligibilityCriterion_6,EligibilityCriterion_4
+StudyDesignPopulation,EligibilityCriterion_15,previousId,reference,EligibilityCriterion_6,IN06,,Informed consent criteria,<p>Investigator has obtained informed consent signed by the patient (and/or legal representative) and by the caregiver.</p>,,06,EligibilityCriterion,True,Code_572,C25532,http://www.cdisc.org,2023-12-15,Inclusion Criteria,,EligibilityCriterion_7,EligibilityCriterion_5
+StudyDesignPopulation,EligibilityCriterion_16,previousId,reference,EligibilityCriterion_7,IN07,,Geographic proximity criteria,<p>Geographic proximity to investigator's site that allows adequate follow-up.</p>,,07,EligibilityCriterion,True,Code_573,C25532,http://www.cdisc.org,2023-12-15,Inclusion Criteria,,EligibilityCriterion_8,EligibilityCriterion_6
+StudyDesignPopulation,EligibilityCriterion_1,nextId,reference,EligibilityCriterion_2,IN02,,Diagnosis of Alzheimer's,"<p><usdm:tag name=""StudyPopulation""/> as defined by National Institute of Neurological and Communicative Disorders and Stroke (NINCDS) and the Alzheimer's Disease and Related Disorders Association (ADRDA) guidelines (Attachment LZZT.7).</p>",SyntaxTemplateDictionary_1,02,EligibilityCriterion,True,Code_568,C25532,http://www.cdisc.org,2023-12-15,Inclusion Criteria,,EligibilityCriterion_3,EligibilityCriterion_1
+StudyDesignPopulation,EligibilityCriterion_2,nextId,reference,EligibilityCriterion_3,IN03,,MMSE Score,"<p><usdm:tag name=""Activity1""/> score of 10 to 23.</p>",SyntaxTemplateDictionary_2,03,EligibilityCriterion,True,Code_569,C25532,http://www.cdisc.org,2023-12-15,Inclusion Criteria,,EligibilityCriterion_4,EligibilityCriterion_2
+StudyDesignPopulation,EligibilityCriterion_3,nextId,reference,EligibilityCriterion_4,IN04,,Hachinski Ischemic Score,"<p><usdm:tag name=""Activity2""/>  score of ≤4 (Attachment LZZT.8).</p>",SyntaxTemplateDictionary_2,04,EligibilityCriterion,True,Code_570,C25532,http://www.cdisc.org,2023-12-15,Inclusion Criteria,,EligibilityCriterion_5,EligibilityCriterion_3
+StudyDesignPopulation,EligibilityCriterion_4,nextId,reference,EligibilityCriterion_5,IN05,,CNS imaging comptaible with Alzheimer's,"<p>CNS imaging (CT scan or MRI of brain) compatible with AD within past 1 year.</p>
+<p>The following findings are incompatible with AD:</p>
+<ol type=""a"">
+  <li>
+    <p>Large vessel strokes</p>
+    <ol>
+      <li>
+        <p>Any definite area of encephalomalacia consistent with ischemic necrosis in any cerebral artery territory.</p>
+      </li>
+      <li>
+        <p>Large, confluent areas of encephalomalacia in parieto-occipital or frontal regions consistent with watershed
+          infarcts.</p>
+        <p>The above are exclusionary. Exceptions are made for small areas of cortical asymmetry which may represent a
+          small cortical stroke or a focal area of atrophy provided there is no abnormal signal intensity in the
+          immediately underlying parenchyma. Only one such questionable area allowed per scan, and size is restricted to
+          ≤1cm in frontal/parietal/temporal cortices and ≤2 cm in occipital cortex.</p>
+      </li>
+    </ol>
+  </li>
+  <li>
+    <p>Small vessel ischemia</p>
+    <ol>
+      <li>
+        <p>Lacunar infarct is defined as an area of abnormal intensity seen on CT scan or on both T1 and T2 weighted MRI
+          images in the basal ganglia, thalamus or deep white matter which is ≤1 cm in maximal diameter. A maximum of
+          one
+          lacune is allowed per scan.</p>
+      </li>
+      <li>
+        <p>Leukoariosis or leukoencephalopathy is regarded as an abnormality seen on T2 but not T1 weighted MRIs, or on
+          CT. This is accepted if mild or moderate in extent, meaning involvement of less than 25% of cortical white
+          matter.
+      </li>
+    </ol>
+  </li>
+  <li>
+    <p>Miscellaneous</p>
+    <ol>
+      <li>
+        <p>Benign small extra-axial tumors (ie, meningiomas) are accepted if they do not contact or indent the brain
+          parenchyma.</p>
+      </li>
+      <li>
+        <p>Small extra-axial arachnoid cysts are accepted if they do not indent or deform the brain parenchyma.</p>
+      </li>
+    </ol>
+  </li>
+</ol>",,05,EligibilityCriterion,True,Code_571,C25532,http://www.cdisc.org,2023-12-15,Inclusion Criteria,,EligibilityCriterion_6,EligibilityCriterion_4
+StudyDesignPopulation,EligibilityCriterion_5,nextId,reference,EligibilityCriterion_6,IN06,,Informed consent criteria,<p>Investigator has obtained informed consent signed by the patient (and/or legal representative) and by the caregiver.</p>,,06,EligibilityCriterion,True,Code_572,C25532,http://www.cdisc.org,2023-12-15,Inclusion Criteria,,EligibilityCriterion_7,EligibilityCriterion_5
+StudyDesignPopulation,EligibilityCriterion_6,nextId,reference,EligibilityCriterion_7,IN07,,Geographic proximity criteria,<p>Geographic proximity to investigator's site that allows adequate follow-up.</p>,,07,EligibilityCriterion,True,Code_573,C25532,http://www.cdisc.org,2023-12-15,Inclusion Criteria,,EligibilityCriterion_8,EligibilityCriterion_6
+StudyDesignPopulation,EligibilityCriterion_7,nextId,reference,EligibilityCriterion_8,IN08,,Reliable caregiver criteria,"<p>A reliable caregiver who is in frequent or daily contact with the patient and who will accompany the patient to the office and/or be available by telephone at designated times, will monitor administration of prescribed medications, and will be responsible for the overall care of the patient at home. The caregiver and the patient must be able to communicate in English and willing to comply with 26 weeks of transdermal therapy.</p>",,08,EligibilityCriterion,True,Code_574,C25532,http://www.cdisc.org,2023-12-15,Inclusion Criteria,,,EligibilityCriterion_7
+StudyDesignPopulation,EligibilityCriterion_9,nextId,reference,EligibilityCriterion_2,IN02,,Diagnosis of Alzheimer's,"<p><usdm:tag name=""StudyPopulation""/> as defined by National Institute of Neurological and Communicative Disorders and Stroke (NINCDS) and the Alzheimer's Disease and Related Disorders Association (ADRDA) guidelines (Attachment LZZT.7).</p>",SyntaxTemplateDictionary_1,02,EligibilityCriterion,True,Code_568,C25532,http://www.cdisc.org,2023-12-15,Inclusion Criteria,,EligibilityCriterion_3,EligibilityCriterion_1
+StudyDesignPopulation,EligibilityCriterion_10,nextId,reference,EligibilityCriterion_3,IN03,,MMSE Score,"<p><usdm:tag name=""Activity1""/> score of 10 to 23.</p>",SyntaxTemplateDictionary_2,03,EligibilityCriterion,True,Code_569,C25532,http://www.cdisc.org,2023-12-15,Inclusion Criteria,,EligibilityCriterion_4,EligibilityCriterion_2
+StudyDesignPopulation,EligibilityCriterion_11,nextId,reference,EligibilityCriterion_4,IN04,,Hachinski Ischemic Score,"<p><usdm:tag name=""Activity2""/>  score of ≤4 (Attachment LZZT.8).</p>",SyntaxTemplateDictionary_2,04,EligibilityCriterion,True,Code_570,C25532,http://www.cdisc.org,2023-12-15,Inclusion Criteria,,EligibilityCriterion_5,EligibilityCriterion_3
+StudyDesignPopulation,EligibilityCriterion_12,nextId,reference,EligibilityCriterion_5,IN05,,CNS imaging comptaible with Alzheimer's,"<p>CNS imaging (CT scan or MRI of brain) compatible with AD within past 1 year.</p>
+<p>The following findings are incompatible with AD:</p>
+<ol type=""a"">
+  <li>
+    <p>Large vessel strokes</p>
+    <ol>
+      <li>
+        <p>Any definite area of encephalomalacia consistent with ischemic necrosis in any cerebral artery territory.</p>
+      </li>
+      <li>
+        <p>Large, confluent areas of encephalomalacia in parieto-occipital or frontal regions consistent with watershed
+          infarcts.</p>
+        <p>The above are exclusionary. Exceptions are made for small areas of cortical asymmetry which may represent a
+          small cortical stroke or a focal area of atrophy provided there is no abnormal signal intensity in the
+          immediately underlying parenchyma. Only one such questionable area allowed per scan, and size is restricted to
+          ≤1cm in frontal/parietal/temporal cortices and ≤2 cm in occipital cortex.</p>
+      </li>
+    </ol>
+  </li>
+  <li>
+    <p>Small vessel ischemia</p>
+    <ol>
+      <li>
+        <p>Lacunar infarct is defined as an area of abnormal intensity seen on CT scan or on both T1 and T2 weighted MRI
+          images in the basal ganglia, thalamus or deep white matter which is ≤1 cm in maximal diameter. A maximum of
+          one
+          lacune is allowed per scan.</p>
+      </li>
+      <li>
+        <p>Leukoariosis or leukoencephalopathy is regarded as an abnormality seen on T2 but not T1 weighted MRIs, or on
+          CT. This is accepted if mild or moderate in extent, meaning involvement of less than 25% of cortical white
+          matter.
+      </li>
+    </ol>
+  </li>
+  <li>
+    <p>Miscellaneous</p>
+    <ol>
+      <li>
+        <p>Benign small extra-axial tumors (ie, meningiomas) are accepted if they do not contact or indent the brain
+          parenchyma.</p>
+      </li>
+      <li>
+        <p>Small extra-axial arachnoid cysts are accepted if they do not indent or deform the brain parenchyma.</p>
+      </li>
+    </ol>
+  </li>
+</ol>",,05,EligibilityCriterion,True,Code_571,C25532,http://www.cdisc.org,2023-12-15,Inclusion Criteria,,EligibilityCriterion_6,EligibilityCriterion_4
+StudyDesignPopulation,EligibilityCriterion_13,nextId,reference,EligibilityCriterion_6,IN06,,Informed consent criteria,<p>Investigator has obtained informed consent signed by the patient (and/or legal representative) and by the caregiver.</p>,,06,EligibilityCriterion,True,Code_572,C25532,http://www.cdisc.org,2023-12-15,Inclusion Criteria,,EligibilityCriterion_7,EligibilityCriterion_5
+StudyDesignPopulation,EligibilityCriterion_14,nextId,reference,EligibilityCriterion_7,IN07,,Geographic proximity criteria,<p>Geographic proximity to investigator's site that allows adequate follow-up.</p>,,07,EligibilityCriterion,True,Code_573,C25532,http://www.cdisc.org,2023-12-15,Inclusion Criteria,,EligibilityCriterion_8,EligibilityCriterion_6
+StudyDesignPopulation,EligibilityCriterion_15,nextId,reference,EligibilityCriterion_8,IN08,,Reliable caregiver criteria,"<p>A reliable caregiver who is in frequent or daily contact with the patient and who will accompany the patient to the office and/or be available by telephone at designated times, will monitor administration of prescribed medications, and will be responsible for the overall care of the patient at home. The caregiver and the patient must be able to communicate in English and willing to comply with 26 weeks of transdermal therapy.</p>",,08,EligibilityCriterion,True,Code_574,C25532,http://www.cdisc.org,2023-12-15,Inclusion Criteria,,,EligibilityCriterion_7

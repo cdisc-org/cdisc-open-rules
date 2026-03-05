@@ -1,0 +1,574 @@
+{2 items
+"datasets":[1 item
+0:{5 items
+"filename":"ae.xpt"
+"label":"Adverse Events"
+"domain":"AE"
+"variables":[28 items
+0:{4 items
+"name":"STUDYID"
+"label":"Study Identifier"
+"type":"Char"
+"length":10
+}
+1:{4 items
+"name":"DOMAIN"
+"label":"Domain Abbreviation"
+"type":"Char"
+"length":2
+}
+2:{4 items
+"name":"USUBJID"
+"label":"Unique Subject Identifier"
+"type":"Char"
+"length":14
+}
+3:{4 items
+"name":"AESEQ"
+"label":"Sequence Number"
+"type":"Num"
+"length":8
+}
+4:{4 items
+"name":"AESPID"
+"label":"Sponsor-Defined Identifier"
+"type":"Char"
+"length":4
+}
+5:{4 items
+"name":"AETERM"
+"label":"Reported Term for the Adverse Event"
+"type":"Char"
+"length":38
+}
+6:{4 items
+"name":"AELLT"
+"label":"Lowest Level Term"
+"type":"Char"
+"length":38
+}
+7:{4 items
+"name":"AELLTCD"
+"label":"Lowest Level Term Code"
+"type":"Num"
+"length":8
+}
+8:{4 items
+"name":"AEDECOD"
+"label":"Dictionary-Derived Term"
+"type":"Char"
+"length":38
+}
+9:{4 items
+"name":"AEPTCD"
+"label":"Preferred Term Code"
+"type":"Num"
+"length":8
+}
+10:{4 items
+"name":"AEHLT"
+"label":"High Level Term"
+"type":"Char"
+"length":65
+}
+11:{4 items
+"name":"AEHLTCD"
+"label":"High Level Term Code"
+"type":"Num"
+"length":8
+}
+12:{4 items
+"name":"AEHLGT"
+"label":"High Level Group Term"
+"type":"Char"
+"length":55
+}
+13:{4 items
+"name":"AEHLGTCD"
+"label":"High Level Group Term Code"
+"type":"Num"
+"length":8
+}
+14:{4 items
+"name":"AECAT"
+"label":"Category for Adverse Event"
+"type":"Char"
+"length":200
+}
+15:{4 items
+"name":"AEBODSYS"
+"label":"Body System or Organ Class"
+"type":"Char"
+"length":52
+}
+16:{4 items
+"name":"AEBDSYCD"
+"label":"Body System or Organ Class Code"
+"type":"Num"
+"length":8
+}
+17:{4 items
+"name":"AESOC"
+"label":"Primary System Organ Class"
+"type":"Char"
+"length":52
+}
+18:{4 items
+"name":"AESOCCD"
+"label":"Primary System Organ Class Code"
+"type":"Num"
+"length":8
+}
+19:{4 items
+"name":"AESEV"
+"label":"Severity/Intensity"
+"type":"Char"
+"length":8
+}
+20:{4 items
+"name":"AESER"
+"label":"Serious Event"
+"type":"Char"
+"length":1
+}
+21:{4 items
+"name":"AEACN"
+"label":"Action Taken with Study Treatment"
+"type":"Char"
+"length":1
+}
+22:{4 items
+"name":"AEREL"
+"label":"Causality"
+"type":"Char"
+"length":1
+}
+23:{4 items
+"name":"AEOUT"
+"label":"Outcome of Adverse Event"
+"type":"Char"
+"length":26
+}
+24:{4 items
+"name":"AESHOSP"
+"label":"Requires or Prolongs Hospitalization"
+"type":"Char"
+"length":1
+}
+25:{4 items
+"name":"AESTDTC"
+"label":"Start Date/Time of Adverse Event"
+"type":"Char"
+"length":10
+}
+26:{4 items
+"name":"AEENDTC"
+"label":"End Date/Time of Adverse Event"
+"type":"Char"
+"length":1
+}
+27:{4 items
+"name":"AESTDY"
+"label":"Study Day of Start of Adverse Event"
+"type":"Num"
+"length":8
+}
+]
+"records":{28 items
+"STUDYID":[12 items
+0:"CDISC-TEST"
+1:"CDISC-TEST"
+2:"CDISC-TEST"
+3:"CDISC-TEST"
+4:"CDISC-TEST"
+5:"CDISC-TEST"
+6:"CDISC-TEST"
+7:"CDISC-TEST"
+8:"CDISC-TEST"
+9:"CDISC-TEST"
+10:"CDISC-TEST"
+11:"CDISC-TEST"
+]
+"DOMAIN":[12 items
+0:"AE"
+1:"AE"
+2:"AE"
+3:"AE"
+4:"AE"
+5:"AE"
+6:"AE"
+7:"AE"
+8:"AE"
+9:"AE"
+10:"AE"
+11:"AE"
+]
+"USUBJID":[12 items
+0:"CDISC-TEST-054"
+1:"CDISC-TEST-054"
+2:"CDISC-TEST-055"
+3:"CDISC-TEST-055"
+4:"CDISC-TEST-099"
+5:"CDISC-TEST-099"
+6:"CDISC-TEST-099"
+7:"CDISC-TEST-099"
+8:"CDISC-TEST-100"
+9:"CDISC-TEST-100"
+10:"CDISC-TEST-100"
+11:"CDISC-TEST-100"
+]
+"AESEQ":[12 items
+0:879
+1:880
+2:881
+3:882
+4:1591
+5:1592
+6:1593
+7:1594
+8:1596
+9:1597
+10:1598
+11:1599
+]
+"AESPID":[12 items
+0:"866"
+1:"874"
+2:"899"
+3:"895"
+4:"1589"
+5:"1588"
+6:"1586"
+7:"1584"
+8:"1603"
+9:"1616"
+10:"1615"
+11:"1614"
+]
+"AETERM":[12 items
+0:"NASOPHARYNGITIS"
+1:"PNEUMONIA"
+2:"CARDIAC ARREST"
+3:"DIARRHOEA"
+4:"HYPOGLYCAEMIA"
+5:"HYPOGLYCAEMIA"
+6:"PNEUMONIA"
+7:"PNEUMONIA"
+8:"UPSET STOMACH"
+9:"ATRIAL FIBRILLATION"
+10:"BACK PAIN"
+11:"BACK PAIN"
+]
+"AELLT":[12 items
+0:"Nasopharyngitis"
+1:"Pneumonia"
+2:"Cardiac arrest"
+3:"Diarrhoea"
+4:"Hypoglycaemia"
+5:"Hypoglycaemia"
+6:"Pneumonia"
+7:"Pneumonia"
+8:"Upset stomach"
+9:"Atrial fibrillation"
+10:"Back pain"
+11:"Back pain"
+]
+"AELLTCD":[12 items
+0:10028810
+1:10035664
+2:10007515
+3:10012735
+4:10020993
+5:10020993
+6:10035664
+7:10035664
+8:10046318
+9:10003658
+10:10003988
+11:10003988
+]
+"AEDECOD":[12 items
+0:"Nasopharyngitis"
+1:"Pneumonia"
+2:"Cardiac arrest"
+3:"Diarrhoea"
+4:"Hypoglycaemia"
+5:"Hypoglycaemia"
+6:"Pneumonia"
+7:"Pneumonia"
+8:"Abdominal discomfort"
+9:"Atrial fibrillation"
+10:"Back pain"
+11:"Back pain"
+]
+"AEPTCD":[12 items
+0:10028810
+1:10035664
+2:10007515
+3:10012735
+4:10020993
+5:10020993
+6:10035664
+7:10035664
+8:10000059
+9:10003658
+10:10003988
+11:10003988
+]
+"AEHLT":[12 items
+0:"Upper respiratory tract infections"
+1:"Lower respiratory tract and lung infections"
+2:"Ventricular arrhythmias and cardiac arrest"
+3:"Diarrhoea (excl infective)"
+4:"Hypoglycaemic conditions NEC"
+5:"Hypoglycaemic conditions NEC"
+6:"Lower respiratory tract and lung infections"
+7:"Lower respiratory tract and lung infections"
+8:"Gastrointestinal signs and symptoms NEC"
+9:"Supraventricular arrhythmias"
+10:"Musculoskeletal and connective tissue pain and discomfort"
+11:"Musculoskeletal and connective tissue pain and discomfort"
+]
+"AEHLTCD":[12 items
+0:10046309
+1:10025101
+2:10047283
+3:10012736
+4:10021001
+5:10021001
+6:10025101
+7:10025101
+8:10027678
+9:10042600
+10:10068757
+11:10068757
+]
+"AEHLGT":[12 items
+0:"Infections - pathogen unspecified"
+1:"Infections - pathogen unspecified"
+2:"Cardiac arrhythmias"
+3:"Gastrointestinal motility and defaecation conditions"
+4:"Glucose metabolism disorders (incl diabetes mellitus)"
+5:"Glucose metabolism disorders (incl diabetes mellitus)"
+6:"Infections - pathogen unspecified"
+7:"Infections - pathogen unspecified"
+8:"Gastrointestinal signs and symptoms"
+9:"Cardiac arrhythmias"
+10:"Musculoskeletal and connective tissue disorders NEC"
+11:"Musculoskeletal and connective tissue disorders NEC"
+]
+"AEHLGTCD":[12 items
+0:10021879
+1:10021879
+2:10007521
+3:10017977
+4:10018424
+5:10018424
+6:10021879
+7:10021879
+8:10018012
+9:10007521
+10:10028393
+11:10028393
+]
+"AECAT":[12 items
+0:""
+1:""
+2:""
+3:""
+4:""
+5:""
+6:"AESI"
+7:"AESI"
+8:""
+9:"Gastrointestinal disorders"
+10:""
+11:"CARDIAC DISORDERS"
+]
+"AEBODSYS":[12 items
+0:"Infections and infestations"
+1:"Infections and infestations"
+2:"Cardiac disorders"
+3:"Gastrointestinal disorders"
+4:"Metabolism and nutrition disorders"
+5:"Metabolism and nutrition disorders"
+6:"Infections and infestations"
+7:"Infections and infestations"
+8:"Gastrointestinal disorders"
+9:"Cardiac disorders"
+10:"Musculoskeletal and connective tissue disorders"
+11:"Musculoskeletal and connective tissue disorders"
+]
+"AEBDSYCD":[12 items
+0:10021881
+1:10021881
+2:10007541
+3:10017947
+4:10027433
+5:10027433
+6:10021881
+7:10021881
+8:10017947
+9:10007541
+10:10028395
+11:10028395
+]
+"AESOC":[12 items
+0:"Infections and infestations"
+1:"Infections and infestations"
+2:"Cardiac disorders"
+3:"Gastrointestinal disorders"
+4:"Metabolism and nutrition disorders"
+5:"Metabolism and nutrition disorders"
+6:"Infections and infestations"
+7:"Infections and infestations"
+8:"Gastrointestinal disorders"
+9:"Cardiac disorders"
+10:"Musculoskeletal and connective tissue disorders"
+11:"Musculoskeletal and connective tissue disorders"
+]
+"AESOCCD":[12 items
+0:10021881
+1:10021881
+2:10007541
+3:10017947
+4:10027433
+5:10027433
+6:10021881
+7:10021881
+8:10017947
+9:10007541
+10:10028395
+11:10028395
+]
+"AESEV":[12 items
+0:"MILD"
+1:"MODERATE"
+2:"SEVERE"
+3:"MILD"
+4:"MILD"
+5:"MODERATE"
+6:"MODERATE"
+7:"MILD"
+8:"MILD"
+9:"SEVERE"
+10:"MILD"
+11:"MILD"
+]
+"AESER":[12 items
+0:"N"
+1:"N"
+2:"Y"
+3:"N"
+4:"N"
+5:"N"
+6:"N"
+7:"N"
+8:"N"
+9:"Y"
+10:"N"
+11:"N"
+]
+"AEACN":[12 items
+0:""
+1:""
+2:""
+3:""
+4:""
+5:""
+6:""
+7:""
+8:""
+9:""
+10:""
+11:""
+]
+"AEREL":[12 items
+0:""
+1:""
+2:""
+3:""
+4:""
+5:""
+6:""
+7:""
+8:""
+9:""
+10:""
+11:""
+]
+"AEOUT":[12 items
+0:"RECOVERED/RESOLVED"
+1:"RECOVERED/RESOLVED"
+2:"NOT RECOVERED/NOT RESOLVED"
+3:"RECOVERED/RESOLVED"
+4:"RECOVERED/RESOLVED"
+5:"RECOVERED/RESOLVED"
+6:"RECOVERED/RESOLVED"
+7:"RECOVERED/RESOLVED"
+8:"RECOVERED/RESOLVED"
+9:"FATAL"
+10:"RECOVERED/RESOLVED"
+11:"RECOVERED/RESOLVED"
+]
+"AESHOSP":[12 items
+0:"N"
+1:"Y"
+2:"Y"
+3:"N"
+4:"N"
+5:"N"
+6:"Y"
+7:"N"
+8:"N"
+9:"Y"
+10:"N"
+11:"N"
+]
+"AESTDTC":[12 items
+0:"2019-07-12"
+1:"2019-05-22"
+2:"2019-08-31"
+3:"2019-04-18"
+4:"2019-05-28"
+5:"2019-05-31"
+6:"2019-06-07"
+7:"2019-07-28"
+8:"2019-05-30"
+9:"2019-08-27"
+10:"2019-03-05"
+11:"2019-03-06"
+]
+"AEENDTC":[12 items
+0:""
+1:""
+2:""
+3:""
+4:""
+5:""
+6:""
+7:""
+8:""
+9:""
+10:""
+11:""
+]
+"AESTDY":[12 items
+0:136
+1:85
+2:178
+3:43
+4:87
+5:90
+6:97
+7:148
+8:88
+9:177
+10:2
+11:3
+]
+}
+}
+]
+"codelists":[]0 items
+}

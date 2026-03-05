@@ -1,0 +1,385 @@
+{
+  "rule": {
+    "_links": {},
+    "core_id": "CDISC.SDTMIG.CG0123",
+    "reference": [
+      {
+        "Origin": "SDTM and SDTMIG Conformance Rules",
+        "Rule Identifier": {
+          "Id": "CG0123",
+          "Version": "1"
+        },
+        "Version": "2.0"
+      }
+    ],
+    "sensitivity": "Record",
+    "severity": "error",
+    "description": "Trigger error if length of ACTARMCD is greater than 20 characters",
+    "authority": {
+      "Organization": "CDISC"
+    },
+    "standards": [
+      {
+        "Name": "SDTMIG",
+        "Version": "3.4"
+      }
+    ],
+    "classes": {
+      "Include": [
+        "Special-Purpose"
+      ]
+    },
+    "domains": {
+      "Include": [
+        "DM"
+      ]
+    },
+    "rule_type": "Variable Length",
+    "conditions": {
+      "all": [
+        {
+          "name": "get_dataset",
+          "operator": "longer_than",
+          "value": {
+            "target": "ACTARMCD",
+            "comparator": 20
+          }
+        }
+      ]
+    },
+    "output_variables": [
+      "ACTARMCD"
+    ],
+    "actions": [
+      {
+        "name": "generate_dataset_error_objects",
+        "params": {
+          "message": "Length of ACTARMCD is greater than 20 characters"
+        }
+      }
+    ]
+  },
+  "datasets": [
+    {
+      "filename": "dm.xpt",
+      "label": "Demographics",
+      "domain": "DM",
+      "variables": [
+        {
+          "name": "STUDYID",
+          "label": "Study Identifier",
+          "type": "Char",
+          "length": 12
+        },
+        {
+          "name": "DOMAIN",
+          "label": "Domain Abbreviation",
+          "type": "Char",
+          "length": 2
+        },
+        {
+          "name": "USUBJID",
+          "label": "Unique Subject Identifier",
+          "type": "Char",
+          "length": 20
+        },
+        {
+          "name": "SUBJID",
+          "label": "Subject Identifier for the Study",
+          "type": "Char",
+          "length": 12
+        },
+        {
+          "name": "RFSTDTC",
+          "label": "Subject Reference Start Date/Time",
+          "type": "Char",
+          "length": 10
+        },
+        {
+          "name": "RFENDTC",
+          "label": "Subject Reference End Date/Time",
+          "type": "Char",
+          "length": 10
+        },
+        {
+          "name": "RFXSTDTC",
+          "label": "Date/Time of First Study Treatment",
+          "type": "Char",
+          "length": 10
+        },
+        {
+          "name": "RFXENDTC",
+          "label": "Date/Time of Last Study Treatment",
+          "type": "Char",
+          "length": 10
+        },
+        {
+          "name": "RFICDTC",
+          "label": "Date/Time of Informed Consent",
+          "type": "Char",
+          "length": 10
+        },
+        {
+          "name": "RFPENDTC",
+          "label": "Date/Time of End of Participation",
+          "type": "Char",
+          "length": 10
+        },
+        {
+          "name": "DTHDTC",
+          "label": "Date/Time of Death",
+          "type": "Char",
+          "length": 10
+        },
+        {
+          "name": "DTHFL",
+          "label": "Subject Death Flag",
+          "type": "Char",
+          "length": 1
+        },
+        {
+          "name": "SITEID",
+          "label": "Study Site Identifier",
+          "type": "Char",
+          "length": 3
+        },
+        {
+          "name": "BRTHDTC",
+          "label": "Date/Time of Birth",
+          "type": "Char",
+          "length": 10
+        },
+        {
+          "name": "AGE",
+          "label": "Age",
+          "type": "Num",
+          "length": 8
+        },
+        {
+          "name": "AGEU",
+          "label": "Age Units",
+          "type": "Char",
+          "length": 5
+        },
+        {
+          "name": "SEX",
+          "label": "Sex",
+          "type": "Char",
+          "length": 1
+        },
+        {
+          "name": "RACE",
+          "label": "Race",
+          "type": "Char",
+          "length": 41
+        },
+        {
+          "name": "ETHNIC",
+          "label": "Ethnicity",
+          "type": "Char",
+          "length": 22
+        },
+        {
+          "name": "ARMCD",
+          "label": "Planned Arm Code",
+          "type": "Char",
+          "length": 8
+        },
+        {
+          "name": "ARM",
+          "label": "Description of Planned Arm",
+          "type": "Char",
+          "length": 28
+        },
+        {
+          "name": "ACTARMCD",
+          "label": "Actual Arm Code",
+          "type": "Char",
+          "length": 20
+        },
+        {
+          "name": "ACTARM",
+          "label": "Description of Actual Arm",
+          "type": "Char",
+          "length": 28
+        },
+        {
+          "name": "ARMNRS",
+          "label": "Reason Arm and/or Actual Arm is Null",
+          "type": "Char",
+          "length": 14
+        },
+        {
+          "name": "ACTARMUD",
+          "label": "Description of Unplanned Actual Arm",
+          "type": "Char",
+          "length": 200
+        },
+        {
+          "name": "COUNTRY",
+          "label": "Country",
+          "type": "Char",
+          "length": 3
+        }
+      ],
+      "records": {
+        "STUDYID": [
+          "CDISCCORE01",
+          "CDISCCORE01",
+          "CDISCCORE01",
+          "CDISCCORE01"
+        ],
+        "DOMAIN": [
+          "DM",
+          "DM",
+          "DM",
+          "DM"
+        ],
+        "USUBJID": [
+          "015246-099-0000-00000",
+          "015246-099-0000-00001",
+          "015246-099-0000-00002",
+          "015246-099-0000-00003"
+        ],
+        "SUBJID": [
+          "099000000000",
+          "099000000001",
+          "099000000002",
+          "099000000003"
+        ],
+        "RFSTDTC": [
+          "",
+          "",
+          "",
+          "2018-05-08T11:20"
+        ],
+        "RFENDTC": [
+          "",
+          "",
+          "",
+          "2018-08-29T10:35"
+        ],
+        "RFXSTDTC": [
+          "",
+          "",
+          "",
+          "2018-05-08T11:20"
+        ],
+        "RFXENDTC": [
+          "",
+          "",
+          "",
+          "2018-08-29T10:35"
+        ],
+        "RFICDTC": [
+          "2018-04-16",
+          "2018-05-20",
+          "2018-05-20",
+          "2018-04-17"
+        ],
+        "RFPENDTC": [
+          "2018-05-04",
+          "2018-06-10",
+          "2018-06-10",
+          "2018-09-04"
+        ],
+        "DTHDTC": [
+          "",
+          "",
+          "2018-06-10",
+          "2018-09-04"
+        ],
+        "DTHFL": [
+          "N",
+          "U",
+          "",
+          "N"
+        ],
+        "SITEID": [
+          "0990000",
+          "0990000",
+          "0990000",
+          "0990000"
+        ],
+        "BRTHDTC": [
+          "1940-08-14",
+          "1941-08-14",
+          "1942-08-14",
+          "1947-12-23"
+        ],
+        "AGE": [
+          77,
+          76,
+          null,
+          70
+        ],
+        "AGEU": [
+          "YEARS",
+          "YEARS",
+          "YEARS",
+          "YEARS"
+        ],
+        "SEX": [
+          "M",
+          "M",
+          "F",
+          "F"
+        ],
+        "RACE": [
+          "WHITE",
+          "WHITE",
+          "BLACK OR\r\nAFRICAN\r\nAMERICAN",
+          "WHITE"
+        ],
+        "ETHNIC": [
+          "NOT HISPANIC OR LATINO",
+          "NOT HISPANIC OR LATINO",
+          "NOT HISPANIC OR LATINO",
+          "NOT HISPANIC OR LATINO"
+        ],
+        "ARMCD": [
+          "",
+          "",
+          "",
+          "IKD"
+        ],
+        "ARM": [
+          "IKd",
+          "",
+          "",
+          "IKd"
+        ],
+        "ACTARMCD": [
+          "",
+          "THIS IS LONGER THAN 20 CHARACTERS",
+          "",
+          "THIS IS LONGER THAN 20 CHARACTERS"
+        ],
+        "ACTARM": [
+          "",
+          "IKD",
+          "",
+          "Placebo"
+        ],
+        "ARMNRS": [
+          "ASSIGNED, NOT TREATED",
+          "NOT ASSIGNED",
+          "SCREEN FAILURE",
+          "UNPLANNED TREATMENT"
+        ],
+        "ACTARMUD": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "COUNTRY": [
+          "USA",
+          "USA",
+          "USA",
+          "GRC"
+        ]
+      }
+    }
+  ]
+}

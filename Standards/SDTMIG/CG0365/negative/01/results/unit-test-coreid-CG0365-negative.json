@@ -1,0 +1,51 @@
+{3 items
+"APRELSUB":[1 item
+0:{5 items
+"executionStatus":"success"
+"domain":"APRELSUB"
+"variables":[2 items
+0:"RDEVID"
+1:"RSUBJID"
+]
+"message":"RDEVID must be empty when RSUBJID is populated"
+"errors":[1 item
+0:{2 items
+"value":{2 items
+"RDEVID":"AB0001"
+"RSUBJID":"HEM021-002"
+}
+"row":1
+}
+]
+}
+]
+"APLB":[1 item
+0:{5 items
+"executionStatus":"success"
+"domain":"APLB"
+"variables":[2 items
+0:"RDEVID"
+1:"RSUBJID"
+]
+"message":"RDEVID must be empty when RSUBJID is populated"
+"errors":[1 item
+0:{2 items
+"value":{2 items
+"RDEVID":"ABCD001"
+"RSUBJID":"GRNMO13"
+}
+"row":1
+}
+]
+}
+]
+"LB":[1 item
+0:{5 items
+"executionStatus":"skipped"
+"domain":"LB"
+"variables":[]0 items
+"message":NULL
+"errors":[]0 items
+}
+]
+}

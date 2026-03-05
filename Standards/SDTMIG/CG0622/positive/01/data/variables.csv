@@ -1,0 +1,11 @@
+dataset,variable,label,type,length
+cm.xpt,STUDYID,Study Identifier,Char,50
+cm.xpt,DOMAIN,Domain Abbreviation,Char,50
+cm.xpt,USUBJID,Unique Subject Identifier,Char,50
+cm.xpt,CMSEQ,Sequence Number,Num,8
+cm.xpt,CMTRT,"Reported Name of Drug, Med, or Therapy",Char,50
+cm.xpt,CMDOSE,Dose per Administration,Num,8
+cm.xpt,CMDOSU,Dose Units,Char,50
+cm.xpt,CMDOSFRQ,Dosing Frequency per Interval,Char,50
+cm.xpt,CMSTDTC,Start Date/Time of Medication,Char,50
+cm.xpt,CMENDTC,End Date/Time of Medication,Char,50

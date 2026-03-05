@@ -1,0 +1,71 @@
+{
+    "FT": [
+        {
+            "executionStatus": "success",
+            "dataset": "ft.xpt",
+            "domain": "FT",
+            "variables": [
+                "DOMAIN",
+                "FTELTM",
+                "FTTPT",
+                "FTTPTNUM",
+                "VISITNUM"
+            ],
+            "message": "FTELTM is not the same value across records with the same values of DOMAIN, VISITNUM, FTTPTREF, and FTTPTNUM.",
+            "errors": [
+                {
+                    "value": {
+                        "FTELTM": "PT30M",
+                        "FTTPT": "30 MIN POST",
+                        "FTTPTNUM": 1,
+                        "DOMAIN": "FT",
+                        "VISITNUM": 2
+                    },
+                    "dataset": "ft.xpt",
+                    "row": 1,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 120
+                },
+                {
+                    "value": {
+                        "FTELTM": "PT03M",
+                        "FTTPT": "30 MIN POST",
+                        "FTTPTNUM": 1,
+                        "DOMAIN": "FT",
+                        "VISITNUM": 2
+                    },
+                    "dataset": "ft.xpt",
+                    "row": 2,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 121
+                },
+                {
+                    "value": {
+                        "FTELTM": "PT1H",
+                        "FTTPT": "90 MIN POST",
+                        "FTTPTNUM": 2,
+                        "DOMAIN": "FT",
+                        "VISITNUM": 201
+                    },
+                    "dataset": "ft.xpt",
+                    "row": 3,
+                    "USUBJID": "CDISC007",
+                    "SEQ": 134
+                },
+                {
+                    "value": {
+                        "FTELTM": "PT2H",
+                        "FTTPT": "90 MIN POST",
+                        "FTTPTNUM": 2,
+                        "DOMAIN": "FT",
+                        "VISITNUM": 201
+                    },
+                    "dataset": "ft.xpt",
+                    "row": 4,
+                    "USUBJID": "CDISC007",
+                    "SEQ": 135
+                }
+            ]
+        }
+    ]
+}

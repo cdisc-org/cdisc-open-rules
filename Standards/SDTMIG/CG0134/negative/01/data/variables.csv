@@ -1,0 +1,31 @@
+dataset,variable,label,type,length
+dm.xpt,STUDYID,Study Identifier,Char,50
+dm.xpt,DOMAIN,Domain Abbreviation,Char,50
+dm.xpt,USUBJID,Unique Subject Identifier,Char,50
+dm.xpt,ARMCD,Planned Arm Code,Char,50
+dm.xpt,ARM,Description of Planned Arm,Char,50
+dm.xpt,ACTARMCD,Actual Arm Code,Char,50
+dm.xpt,ACTARM,Description of Actual Arm,Char,50
+dm.xpt,ARMNRS,Reason Arm and/or Actual Arm is Null,Char,50
+dm.xpt,ACTARMUD,Description of Unplanned Actual Arm,Char,50
+dm.xpt,RFSTDTC,Subject Reference Start Date/Time,Char,10
+dm.xpt,RFENDTC,Subject Reference End Date/Time,Char,10
+dm.xpt,DTHFL,Subject Death Flag,Char,10
+ae.xpt,STUDYID,Study Identifier,Char,50
+ae.xpt,DOMAIN,Domain Abbreviation,Char,50
+ae.xpt,USUBJID,Unique Subject Identifier,Char,50
+ae.xpt,AESEQ,Sequence Number,Num,8
+ae.xpt,AETERM,Reported Term for the Adverse Event,Char,50
+ae.xpt,AEDECOD,Dictionary-Derived Term,Char,50
+ae.xpt,AEBODSYS,Body System or Organ Class,Char,50
+ae.xpt,AEOUT,Outcome of Adverse Event,Char,50
+ae.xpt,AESDTH,Results in Death,Char,5
+dd.xpt,STUDYID,Study Identifier,Char,50
+dd.xpt,DOMAIN,Domain Abbreviation,Char,50
+dd.xpt,USUBJID,Unique Subject Identifier,Char,50
+dd.xpt,DDSEQ,Sequence Number,Num,8
+dd.xpt,DDTESTCD,Death Detail Assessment Short Name,Char,8
+dd.xpt,DDTEST,Death Detail Assessment Name,Char,40
+dd.xpt,DDORRES,Result or Finding as Collected,Char,200
+dd.xpt,DDSTRESC,Character Result/Finding in Std Format,Char,200
+dd.xpt,DDDTC,Date/Time of Collection,Char,50

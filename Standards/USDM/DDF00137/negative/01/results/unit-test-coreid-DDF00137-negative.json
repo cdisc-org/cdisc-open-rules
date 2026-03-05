@@ -1,0 +1,128 @@
+{
+    "ParameterMap": [
+        {
+            "executionStatus": "success",
+            "dataset": "ParameterMap.xpt",
+            "domain": "ParameterMap",
+            "variables": [
+                "id",
+                "parent_entity",
+                "parent_id",
+                "parent_rel",
+                "reference",
+                "tag"
+            ],
+            "message": "The reference is not a fixed value (it contains \"usdm:ref\") but it is not specified in the correct format.",
+            "errors": [
+                {
+                    "value": {
+                        "parent_entity": "SyntaxTemplateDictionary",
+                        "id": "ParameterMap_1",
+                        "parent_rel": "parameterMaps",
+                        "parent_id": "SyntaxTemplateDictionary_1",
+                        "tag": "class_with_number",
+                        "reference": "<usdm:ref klass=\"Range1\" id=\"Range_3\" attribute=\"maxValue\"></usdm:ref>"
+                    },
+                    "dataset": "ParameterMap.xpt",
+                    "row": 1
+                },
+                {
+                    "value": {
+                        "parent_entity": "SyntaxTemplateDictionary",
+                        "id": "ParameterMap_3",
+                        "parent_rel": "parameterMaps",
+                        "parent_id": "SyntaxTemplateDictionary_1",
+                        "tag": "attribute_with_non_alpha",
+                        "reference": "<usdm:ref id=\"StudyDesignPopulation_1\" klass=\"StudyDesignPopulation\" attribute=\"description!\"></usdm:ref>"
+                    },
+                    "dataset": "ParameterMap.xpt",
+                    "row": 2
+                },
+                {
+                    "value": {
+                        "parent_entity": "SyntaxTemplateDictionary",
+                        "id": "ParameterMap_4",
+                        "parent_rel": "parameterMaps",
+                        "parent_id": "SyntaxTemplateDictionary_2",
+                        "tag": "class_not_klass",
+                        "reference": "<usdm:ref id=\"Activity_6\" attribute=\"label\" class=\"Activity\"></usdm:ref>"
+                    },
+                    "dataset": "ParameterMap.xpt",
+                    "row": 3
+                },
+                {
+                    "value": {
+                        "parent_entity": "SyntaxTemplateDictionary",
+                        "id": "ParameterMap_5",
+                        "parent_rel": "parameterMaps",
+                        "parent_id": "SyntaxTemplateDictionary_2",
+                        "tag": "missing_attribute",
+                        "reference": "<usdm:ref klass=\"Activity\" id=\"Activity_5\"></usdm:ref>"
+                    },
+                    "dataset": "ParameterMap.xpt",
+                    "row": 4
+                },
+                {
+                    "value": {
+                        "parent_entity": "SyntaxTemplateDictionary",
+                        "id": "ParameterMap_6",
+                        "parent_rel": "parameterMaps",
+                        "parent_id": "SyntaxTemplateDictionary_2",
+                        "tag": "trailing_spaces",
+                        "reference": "<usdm:ref attribute=\"label\" klass=\"Activity\" id=\"Activity_9\"></usdm:ref>  "
+                    },
+                    "dataset": "ParameterMap.xpt",
+                    "row": 5
+                },
+                {
+                    "value": {
+                        "parent_entity": "SyntaxTemplateDictionary",
+                        "id": "ParameterMap_6",
+                        "parent_rel": "parameterMaps",
+                        "parent_id": "SyntaxTemplateDictionary_2",
+                        "tag": "leading_space",
+                        "reference": " <usdm:ref attribute=\"label\" klass=\"Activity\" id=\"Activity_9\"></usdm:ref>"
+                    },
+                    "dataset": "ParameterMap.xpt",
+                    "row": 6
+                },
+                {
+                    "value": {
+                        "parent_entity": "SyntaxTemplateDictionary",
+                        "id": "ParameterMap_7",
+                        "parent_rel": "parameterMaps",
+                        "parent_id": "SyntaxTemplateDictionary_3",
+                        "tag": "missing_closing_slash_or_tag",
+                        "reference": "<usdm:ref attribute=\"maxValue\" id=\"Range_1\" klass=\"MissingCloseSlash\">"
+                    },
+                    "dataset": "ParameterMap.xpt",
+                    "row": 7
+                },
+                {
+                    "value": {
+                        "parent_entity": "SyntaxTemplateDictionary",
+                        "id": "ParameterMap_8",
+                        "parent_rel": "parameterMaps",
+                        "parent_id": "SyntaxTemplateDictionary_3",
+                        "tag": "missing_leading_bracket",
+                        "reference": "usdm:ref attribute=\"maxValue\" id=\"Range_1\" klass=\"MissingCloseSlash\"/>"
+                    },
+                    "dataset": "ParameterMap.xpt",
+                    "row": 8
+                },
+                {
+                    "value": {
+                        "parent_entity": "SyntaxTemplateDictionary",
+                        "id": "ParameterMap_9",
+                        "parent_rel": "parameterMaps",
+                        "parent_id": "SyntaxTemplateDictionary_3",
+                        "tag": "fixed_string",
+                        "reference": "a piece of text that includes usdm:ref"
+                    },
+                    "dataset": "ParameterMap.xpt",
+                    "row": 9
+                }
+            ]
+        }
+    ]
+}

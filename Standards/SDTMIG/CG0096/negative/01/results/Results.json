@@ -1,0 +1,24 @@
+{
+    "CM": [
+        {
+            "executionStatus": "success",
+            "domain": "CM",
+            "variables": [
+                "CMDECOD",
+                "CMTRT"
+            ],
+            "message": "CMDECOD must be populated when CMTRT is populated",
+            "errors": [
+                {
+                    "value": {
+                        "CMDECOD": "",
+                        "CMTRT": "IBUPROFEN"
+                    },
+                    "row": 2,
+                    "USUBJID": "CDISC002",
+                    "SEQ": 1
+                }
+            ]
+        }
+    ]
+}

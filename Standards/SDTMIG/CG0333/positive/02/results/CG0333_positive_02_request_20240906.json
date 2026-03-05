@@ -1,0 +1,1061 @@
+{
+    "rule": {
+        "Authorities": [
+            {
+                "Organization": "CDISC",
+                "Standards": [
+                    {
+                        "Name": "SDTMIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "IG v3.4",
+                                        "Item": "6",
+                                        "Section": "4.1.7",
+                                        "Cited_Guidance": "If splitting Findings About by parent domain, then the dataset name would be the domain code, \"FA\", plus the two-character domain code for parent domain code (e.g., \"FACM\"). "
+                                    }
+                                ],
+                                "Origin": "SDTM and SDTMIG Conformance Rules",
+                                "Version": "2.0",
+                                "Rule_Identifier": {
+                                    "Id": "CG0333",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.4"
+                    },
+                    {
+                        "Name": "SDTMIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "IG v3.2",
+                                        "Item": "6",
+                                        "Section": "4.1.1.7",
+                                        "Cited_Guidance": "Split dataset names can be up to four characters in length. For example; if splitting by --CAT; then dataset names would be the domain name plus up to two additional characters (e.g., QS36 for SF-36). If splitting Findings About by parent domain; then the dataset name would be the domain name plus the two-character domain code describing the parent domain code (e.g., FACM). The four-character dataset-name limitation allows the use of a Supplemental Qualifier dataset associated with the split dataset."
+                                    }
+                                ],
+                                "Origin": "SDTM and SDTMIG Conformance Rules",
+                                "Version": "2.0",
+                                "Rule_Identifier": {
+                                    "Id": "CG0333",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.2"
+                    },
+                    {
+                        "Name": "SDTMIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "IG v3.3",
+                                        "Item": "6",
+                                        "Section": "4.1.7",
+                                        "Cited_Guidance": "Split dataset names can be up to four characters in length. For example; if splitting by --CAT; then dataset names would be the domain name plus up to two additional characters (e.g., QS36 for SF-36). If splitting Findings About by parent domain; then the dataset name would be the domain name plus the two-character domain code describing the parent domain code (e.g., FACM). The four-character dataset-name limitation allows the use of a Supplemental Qualifier dataset associated with the split dataset."
+                                    }
+                                ],
+                                "Origin": "SDTM and SDTMIG Conformance Rules",
+                                "Version": "2.0",
+                                "Rule_Identifier": {
+                                    "Id": "CG0333",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.3"
+                    }
+                ]
+            }
+        ],
+        "Check": {
+            "all": [
+                {
+                    "name": "dataset_name",
+                    "operator": "matches_regex",
+                    "value": "^[a-z(?-i)]{2}[a-z0-9(?-i)]{1,2}"
+                },
+                {
+                    "name": "dataset_name",
+                    "operator": "prefix_matches_regex",
+                    "prefix": 2,
+                    "value": "FA"
+                },
+                {
+                    "name": "dataset_name",
+                    "operator": "suffix_is_not_contained_by",
+                    "suffix": 2,
+                    "value": "$list_dataset_names"
+                }
+            ]
+        },
+        "Core": {
+            "Id": "CDISC.SDTMIG.CG0333",
+            "Status": "Draft",
+            "Version": "1"
+        },
+        "Description": "Raise an error when parent domain referenced in Findings About dataset name is not present in the study.",
+        "Executability": "Fully Executable",
+        "Operations": [
+            {
+                "id": "$list_dataset_names",
+                "operator": "dataset_names"
+            }
+        ],
+        "Outcome": {
+            "Message": "Parent domain referenced in Findings About dataset name is not present in the study",
+            "Output_Variables": [
+                "dataset_name",
+                "$list_dataset_names"
+            ]
+        },
+        "Scope": {
+            "Classes": {
+                "Include": [
+                    "ALL"
+                ]
+            },
+            "Domains": {
+                "Include": [
+                    "ALL"
+                ]
+            }
+        },
+        "Sensitivity": "Record",
+        "Rule_Type": "Dataset Metadata Check"
+    },
+    "datasets": [
+        {
+            "filename": "facm.xpt",
+            "label": "Findings About CM Records",
+            "domain": "FA",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 12
+                },
+                {
+                    "name": "DOMAIN",
+                    "label": "Domain Abbreviation",
+                    "type": "Char",
+                    "length": 2
+                },
+                {
+                    "name": "USUBJID",
+                    "label": "Unique Subject Identifier",
+                    "type": "Char",
+                    "length": 8
+                },
+                {
+                    "name": "FASEQ",
+                    "label": "Sequence Number",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "FALNKGRP",
+                    "label": "Link Group ID",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "FATESTCD",
+                    "label": "Findings About Test Short Name",
+                    "type": "Char",
+                    "length": 5
+                },
+                {
+                    "name": "FATEST",
+                    "label": "Findings About Test Name",
+                    "type": "Char",
+                    "length": 20
+                },
+                {
+                    "name": "FAOBJ",
+                    "label": "Object of the Observation",
+                    "type": "Char",
+                    "length": 10
+                },
+                {
+                    "name": "FACAT",
+                    "label": "Category for Findings About",
+                    "type": "Char",
+                    "length": 23
+                },
+                {
+                    "name": "FAORRES",
+                    "label": "Result or Finding in Original Units",
+                    "type": "Char",
+                    "length": 8
+                },
+                {
+                    "name": "FASTRESC",
+                    "label": "Character Result/Finding in Std Format",
+                    "type": "Char",
+                    "length": 8
+                },
+                {
+                    "name": "FALOC",
+                    "label": "Location of the Finding About",
+                    "type": "Char",
+                    "length": 3
+                },
+                {
+                    "name": "VISITNUM",
+                    "label": "Visit Number",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "EPOCH",
+                    "label": "Epoch",
+                    "type": "Char",
+                    "length": 9
+                },
+                {
+                    "name": "FADTC",
+                    "label": "Date/Time of Collection",
+                    "type": "Char",
+                    "length": 10
+                },
+                {
+                    "name": "FADY",
+                    "label": "Study Day of Collection",
+                    "type": "Num",
+                    "length": 8
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "CDISCPILOT01",
+                    "CDISCPILOT01"
+                ],
+                "DOMAIN": [
+                    "FA",
+                    "FA"
+                ],
+                "USUBJID": [
+                    "CDISC001",
+                    "CDISC001"
+                ],
+                "FASEQ": [
+                    1,
+                    4
+                ],
+                "FALNKGRP": [
+                    "1",
+                    "1"
+                ],
+                "FATESTCD": [
+                    "OCCUR",
+                    "OCCUR"
+                ],
+                "FATEST": [
+                    "Occurrence Indicator",
+                    "Occurrence Indicator"
+                ],
+                "FAOBJ": [
+                    "OMEPRAZOLE",
+                    "OMEPRAZOLE"
+                ],
+                "FACAT": [
+                    "INJECTION SITE REACTION",
+                    "INJECTION SITE REACTION"
+                ],
+                "FAORRES": [
+                    "Y",
+                    "N"
+                ],
+                "FASTRESC": [
+                    "Y",
+                    "N"
+                ],
+                "FALOC": [
+                    "ARM",
+                    "ARM"
+                ],
+                "VISITNUM": [
+                    null,
+                    null
+                ],
+                "EPOCH": [
+                    "TREATMENT",
+                    "TREATMENT"
+                ],
+                "FADTC": [
+                    "2012-12-02",
+                    "2012-12-02"
+                ],
+                "FADY": [
+                    3,
+                    3
+                ]
+            }
+        },
+        {
+            "filename": "cm.xpt",
+            "label": "Concomitant Medications",
+            "domain": "CM",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 12
+                },
+                {
+                    "name": "DOMAIN",
+                    "label": "Domain Abbreviation",
+                    "type": "Char",
+                    "length": 2
+                },
+                {
+                    "name": "USUBJID",
+                    "label": "Unique Subject Identifier",
+                    "type": "Char",
+                    "length": 8
+                },
+                {
+                    "name": "CMSEQ",
+                    "label": "Sequence Number",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "CMTRT",
+                    "label": "Reported Name of Drug, Med, or Therapy",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "CMINDC",
+                    "label": "Indication",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "CMDOSE",
+                    "label": "Dose per Administration",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "CMDOSU",
+                    "label": "Dose Units",
+                    "type": "Char",
+                    "length": 6
+                },
+                {
+                    "name": "CMDOSFRQ",
+                    "label": "Dosing Frequency per Interval",
+                    "type": "Char",
+                    "length": 3
+                },
+                {
+                    "name": "CMROUTE",
+                    "label": "Route of Administration",
+                    "type": "Char",
+                    "length": 24
+                },
+                {
+                    "name": "EPOCH",
+                    "label": "Epoch",
+                    "type": "Char",
+                    "length": 9
+                },
+                {
+                    "name": "CMSTDTC",
+                    "label": "Start Date/Time of Medication",
+                    "type": "Char",
+                    "length": 10
+                },
+                {
+                    "name": "CMENDTC",
+                    "label": "End Date/Time of Medication",
+                    "type": "Char",
+                    "length": 10
+                },
+                {
+                    "name": "CMSTDY",
+                    "label": "Study Day of Start of Medication",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "CMENDY",
+                    "label": "Study Day of End of Medication",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "CMENRTPT",
+                    "label": "End Relative to Reference Time Point",
+                    "type": "Char",
+                    "length": 7
+                },
+                {
+                    "name": "CMENTPT",
+                    "label": "End Reference Time Point",
+                    "type": "Char",
+                    "length": 10
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01"
+                ],
+                "DOMAIN": [
+                    "CM",
+                    "CM",
+                    "CM",
+                    "CM",
+                    "CM",
+                    "CM"
+                ],
+                "USUBJID": [
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC001"
+                ],
+                "CMSEQ": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6
+                ],
+                "CMTRT": [
+                    "ASPIRIN",
+                    "METAMUCIL",
+                    "HYDROCORTISONE, TOPICAL",
+                    "HYTRIN",
+                    "ASPIRIN",
+                    "FEOSOL"
+                ],
+                "CMINDC": [
+                    "PROPHYLAXIS OR NON-THERAPEUTIC USE",
+                    "PROPHYLAXIS OR NON-THERAPEUTIC USE",
+                    "PROPHYLAXIS OR NON-THERAPEUTIC USE",
+                    "PROPHYLAXIS OR NON-THERAPEUTIC USE",
+                    "PROPHYLAXIS OR NON-THERAPEUTIC USE",
+                    "PROPHYLAXIS OR NON-THERAPEUTIC USE"
+                ],
+                "CMDOSE": [
+                    1,
+                    1,
+                    1,
+                    2,
+                    80,
+                    325
+                ],
+                "CMDOSU": [
+                    "TABLET",
+                    "TABLET",
+                    "TABLET",
+                    "TABLET",
+                    "mg",
+                    "mg"
+                ],
+                "CMDOSFRQ": [
+                    "QD",
+                    "PRN",
+                    "BID",
+                    "Q4H",
+                    "QID",
+                    "Q6H"
+                ],
+                "CMROUTE": [
+                    "ORAL",
+                    "ORAL",
+                    "TOPICAL",
+                    "ORAL",
+                    "ORAL",
+                    "ORAL"
+                ],
+                "EPOCH": [
+                    "SCREENING",
+                    "SCREENING",
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT"
+                ],
+                "CMSTDTC": [
+                    "2011",
+                    "2012-08",
+                    "2013-01-11",
+                    "2013-04-19",
+                    "2013-04-29",
+                    "2013-04-29"
+                ],
+                "CMENDTC": [
+                    "2013-04-29",
+                    "",
+                    "",
+                    "2013-05-14",
+                    "",
+                    ""
+                ],
+                "CMSTDY": [
+                    null,
+                    null,
+                    43,
+                    141,
+                    151,
+                    151
+                ],
+                "CMENDY": [
+                    151,
+                    null,
+                    null,
+                    166,
+                    null,
+                    null
+                ],
+                "CMENRTPT": [
+                    "",
+                    "ONGOING",
+                    "ONGOING",
+                    "",
+                    "ONGOING",
+                    "ONGOING"
+                ],
+                "CMENTPT": [
+                    "",
+                    "2013-05-20",
+                    "2013-05-20",
+                    "",
+                    "2013-05-20",
+                    "2013-05-20"
+                ]
+            }
+        },
+        {
+            "filename": "famh.xpt",
+            "label": "Findings About Medical History",
+            "domain": "FA",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 12
+                },
+                {
+                    "name": "DOMAIN",
+                    "label": "Domain Abbreviation",
+                    "type": "Char",
+                    "length": 2
+                },
+                {
+                    "name": "USUBJID",
+                    "label": "Unique Subject Identifier",
+                    "type": "Char",
+                    "length": 8
+                },
+                {
+                    "name": "FASEQ",
+                    "label": "Sequence Number",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "FALNKGRP",
+                    "label": "Link Group ID",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "FATESTCD",
+                    "label": "Findings About Test Short Name",
+                    "type": "Char",
+                    "length": 5
+                },
+                {
+                    "name": "FATEST",
+                    "label": "Findings About Test Name",
+                    "type": "Char",
+                    "length": 20
+                },
+                {
+                    "name": "FAOBJ",
+                    "label": "Object of the Observation",
+                    "type": "Char",
+                    "length": 10
+                },
+                {
+                    "name": "FACAT",
+                    "label": "Category for Findings About",
+                    "type": "Char",
+                    "length": 23
+                },
+                {
+                    "name": "FAORRES",
+                    "label": "Result or Finding in Original Units",
+                    "type": "Char",
+                    "length": 8
+                },
+                {
+                    "name": "FASTRESC",
+                    "label": "Character Result/Finding in Std Format",
+                    "type": "Char",
+                    "length": 8
+                },
+                {
+                    "name": "FALOC",
+                    "label": "Location of the Finding About",
+                    "type": "Char",
+                    "length": 3
+                },
+                {
+                    "name": "VISITNUM",
+                    "label": "Visit Number",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "EPOCH",
+                    "label": "Epoch",
+                    "type": "Char",
+                    "length": 9
+                },
+                {
+                    "name": "FADTC",
+                    "label": "Date/Time of Collection",
+                    "type": "Char",
+                    "length": 10
+                },
+                {
+                    "name": "FADY",
+                    "label": "Study Day of Collection",
+                    "type": "Num",
+                    "length": 8
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01"
+                ],
+                "DOMAIN": [
+                    "FA",
+                    "FA",
+                    "FA",
+                    "FA",
+                    "FA",
+                    "FA",
+                    "FA",
+                    "FA",
+                    "FA",
+                    "FA"
+                ],
+                "USUBJID": [
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC002",
+                    "CDISC002",
+                    "CDISC002",
+                    "CDISC002"
+                ],
+                "FASEQ": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    1,
+                    2,
+                    3,
+                    4
+                ],
+                "FALNKGRP": [
+                    "1",
+                    "1",
+                    "1",
+                    "1",
+                    "1",
+                    "1",
+                    "1",
+                    "1",
+                    "1",
+                    "1"
+                ],
+                "FATESTCD": [
+                    "OCCUR",
+                    "SEV",
+                    "OCCUR",
+                    "OCCUR",
+                    "OCCUR",
+                    "OCCUR",
+                    "OCCUR",
+                    "OCCUR",
+                    "OCCUR",
+                    "OCCUR"
+                ],
+                "FATEST": [
+                    "Occurrence Indicator",
+                    "Severity/Intensity",
+                    "Occurrence Indicator",
+                    "Occurrence Indicator",
+                    "Occurrence Indicator",
+                    "Occurrence Indicator",
+                    "Occurrence Indicator",
+                    "Occurrence Indicator",
+                    "Occurrence Indicator",
+                    "Occurrence Indicator"
+                ],
+                "FAOBJ": [
+                    "ERYTHEMA",
+                    "ERYTHEMA",
+                    "PAIN",
+                    "INDURATION",
+                    "PRURITIS",
+                    "EDEMA",
+                    "ERYTHEMA",
+                    "PAIN",
+                    "INDURATION",
+                    "PRURITIS"
+                ],
+                "FACAT": [
+                    "INJECTION SITE REACTION",
+                    "INJECTION SITE REACTION",
+                    "INJECTION SITE REACTION",
+                    "INJECTION SITE REACTION",
+                    "INJECTION SITE REACTION",
+                    "INJECTION SITE REACTION",
+                    "INJECTION SITE REACTION",
+                    "INJECTION SITE REACTION",
+                    "INJECTION SITE REACTION",
+                    "INJECTION SITE REACTION"
+                ],
+                "FAORRES": [
+                    "Y",
+                    "MODERATE",
+                    "N",
+                    "N",
+                    "N",
+                    "N",
+                    "N",
+                    "N",
+                    "N",
+                    "Y"
+                ],
+                "FASTRESC": [
+                    "Y",
+                    "MODERATE",
+                    "N",
+                    "N",
+                    "N",
+                    "N",
+                    "N",
+                    "N",
+                    "N",
+                    "Y"
+                ],
+                "FALOC": [
+                    "ARM",
+                    "ARM",
+                    "ARM",
+                    "ARM",
+                    "ARM",
+                    "ARM",
+                    "ARM",
+                    "ARM",
+                    "ARM",
+                    "ARM"
+                ],
+                "VISITNUM": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                "EPOCH": [
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT"
+                ],
+                "FADTC": [
+                    "2012-12-02",
+                    "2012-12-02",
+                    "2012-12-02",
+                    "2012-12-02",
+                    "2012-12-02",
+                    "2012-12-02",
+                    "2012-11-16",
+                    "2012-11-16",
+                    "2012-11-16",
+                    "2012-11-16"
+                ],
+                "FADY": [
+                    3,
+                    3,
+                    3,
+                    3,
+                    3,
+                    3,
+                    2,
+                    2,
+                    2,
+                    2
+                ]
+            }
+        },
+        {
+            "filename": "mh.xpt",
+            "label": "Medical History",
+            "domain": "MH",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 12
+                },
+                {
+                    "name": "DOMAIN",
+                    "label": "Domain Abbreviation",
+                    "type": "Char",
+                    "length": 2
+                },
+                {
+                    "name": "USUBJID",
+                    "label": "Unique Subject Identifier",
+                    "type": "Char",
+                    "length": 8
+                },
+                {
+                    "name": "MHSEQ",
+                    "label": "Sequence Number",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "MHTERM",
+                    "label": "Reported Term for the Medical History",
+                    "type": "Char",
+                    "length": 19
+                },
+                {
+                    "name": "MHEVDTYP",
+                    "label": "Medical History Event Date Type",
+                    "type": "Char",
+                    "length": 13
+                },
+                {
+                    "name": "MHSTDTC",
+                    "label": "Start Date/Time of Medical History Event",
+                    "type": "Char",
+                    "length": 10
+                },
+                {
+                    "name": "MHSTDY",
+                    "label": "Study Day of Start of Observation",
+                    "type": "Num",
+                    "length": 8
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01"
+                ],
+                "DOMAIN": [
+                    "MH",
+                    "MH",
+                    "MH",
+                    "MH",
+                    "MH",
+                    "MH",
+                    "MH",
+                    "MH",
+                    "MH",
+                    "MH",
+                    "MH",
+                    "MH",
+                    "MH",
+                    "MH",
+                    "MH",
+                    "MH",
+                    "MH"
+                ],
+                "USUBJID": [
+                    "CDISC001",
+                    "CDISC002",
+                    "CDISC003",
+                    "CDISC004",
+                    "CDISC005",
+                    "CDISC006",
+                    "CDISC007",
+                    "CDISC008",
+                    "CDISC009",
+                    "CDISC010",
+                    "CDISC011",
+                    "CDISC012",
+                    "CDISC013",
+                    "CDISC014",
+                    "CDISC016",
+                    "CDISC017",
+                    "CDISC018"
+                ],
+                "MHSEQ": [
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1
+                ],
+                "MHTERM": [
+                    "ALZHEIMER'S DISEASE",
+                    "ALZHEIMER'S DISEASE",
+                    "ALZHEIMER'S DISEASE",
+                    "ALZHEIMER'S DISEASE",
+                    "ALZHEIMER'S DISEASE",
+                    "ALZHEIMER'S DISEASE",
+                    "ALZHEIMER'S DISEASE",
+                    "ALZHEIMER'S DISEASE",
+                    "ALZHEIMER'S DISEASE",
+                    "ALZHEIMER'S DISEASE",
+                    "ALZHEIMER'S DISEASE",
+                    "ALZHEIMER'S DISEASE",
+                    "ALZHEIMER'S DISEASE",
+                    "ALZHEIMER'S DISEASE",
+                    "ALZHEIMER'S DISEASE",
+                    "ALZHEIMER'S DISEASE",
+                    "ALZHEIMER'S DISEASE"
+                ],
+                "MHEVDTYP": [
+                    "SYMPTOM ONSET",
+                    "SYMPTOM ONSET",
+                    "SYMPTOM ONSET",
+                    "SYMPTOM ONSET",
+                    "SYMPTOM ONSET",
+                    "SYMPTOM ONSET",
+                    "SYMPTOM ONSET",
+                    "SYMPTOM ONSET",
+                    "SYMPTOM ONSET",
+                    "SYMPTOM ONSET",
+                    "SYMPTOM ONSET",
+                    "SYMPTOM ONSET",
+                    "SYMPTOM ONSET",
+                    "SYMPTOM ONSET",
+                    "SYMPTOM ONSET",
+                    "SYMPTOM ONSET",
+                    "SYMPTOM ONSET"
+                ],
+                "MHSTDTC": [
+                    "2004-05-28",
+                    "2010-03-19",
+                    "2007-02-09",
+                    "2010-11-05",
+                    "2006-08-20",
+                    "2008-06-17",
+                    "2008-05-21",
+                    "2012-11-11",
+                    "2008-09-02",
+                    "2012-09-08",
+                    "2002-12-01",
+                    "2009-03-16",
+                    "2011-07-19",
+                    "2011-07-25",
+                    "2011-04-29",
+                    "2008-08-20",
+                    "2010-05-03"
+                ],
+                "MHSTDY": [
+                    -3108,
+                    -972,
+                    -2393,
+                    -1068,
+                    -2360,
+                    -1736,
+                    -1690,
+                    -546,
+                    -1511,
+                    -378,
+                    -3659,
+                    -1632,
+                    -734,
+                    -618,
+                    -705,
+                    -1858,
+                    -959
+                ]
+            }
+        }
+    ],
+    "standard": {
+        "product": "sdtmig",
+        "version": "3-4"
+    },
+    "codelists": []
+}

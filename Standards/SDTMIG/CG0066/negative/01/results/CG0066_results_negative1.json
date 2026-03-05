@@ -1,0 +1,39 @@
+{
+  "DS": [
+    {
+      "executionStatus": "success",
+      "domain": "DS",
+      "variables": [
+        "DSDECOD",
+        "DSTERM"
+      ],
+      "message": "DSCAT equals PROTOCOL MILESTONE but DSTERM is not equal to DSDECOD",
+      "errors": [
+        {
+          "value": {
+            "DSTERM": "FUTURE USE OF SAMPLES INFORMED CONSENT OBTAINED",
+            "DSDECOD": "Future USE OF SAMPLES INFORMED CONSENT OBTAINED"
+          },
+          "row": 1,
+          "USUBJID": "015246-076-0003-00003"
+        },
+        {
+          "value": {
+            "DSTERM": "STUDY INFORMED CONSENT OBTAINED",
+            "DSDECOD": "STUDY INFORMED CONSENT OBTAINE"
+          },
+          "row": 2,
+          "USUBJID": "015246-203-0003-00001"
+        },
+        {
+          "value": {
+            "DSTERM": "COMPLETED",
+            "DSDECOD": "ADVERSE EVENT"
+          },
+          "row": 3,
+          "USUBJID": "015246-300-0004-00002"
+        }
+      ]
+    }
+  ]
+}

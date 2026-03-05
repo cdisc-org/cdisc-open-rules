@@ -1,0 +1,6 @@
+parent_entity,parent_id,parent_rel,rel_type,id,name,description,label,instanceType,type,type.id,type.code,type.codeSystem,type.codeSystemVersion,type.decode,previousId,nextId
+StudyDesign,StudyDesign_1,epochs,definition,StudyEpoch_1,Screening,The period of time during which screening activities are performed,Screening,StudyEpoch,True,Code_1,C48262,http://www.cdisc.org,2022-12-16,SCREENING,,StudyEpoch_2
+StudyDesign,StudyDesign_1,epochs,definition,StudyEpoch_2,Treatment,The period of time during which treatment performed,Treatment,StudyEpoch,True,Code_5,C101526,http://www.cdisc.org,2022-12-16,TREATMENT,StudyEpoch_1,
+StudyEpoch,StudyEpoch_2,previousId,reference,StudyEpoch_1,Screening,The period of time during which screening activities are performed,Screening,StudyEpoch,True,Code_1,C48262,http://www.cdisc.org,2022-12-16,SCREENING,,StudyEpoch_2
+StudyEpoch,StudyEpoch_1,nextId,reference,StudyEpoch_2,Treatment,The period of time during which treatment performed,Treatment,StudyEpoch,True,Code_5,C101526,http://www.cdisc.org,2022-12-16,TREATMENT,StudyEpoch_1,
+StudyCell,StudyCell_1,epochId,reference,StudyEpoch_1,Screening,The period of time during which screening activities are performed,Screening,StudyEpoch,True,Code_1,C48262,http://www.cdisc.org,2022-12-16,SCREENING,,StudyEpoch_2

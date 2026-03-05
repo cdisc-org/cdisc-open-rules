@@ -1,0 +1,21 @@
+dataset,variable,label,type,length
+adsl.xpt,STUDYID,Study Identifier,Char,50
+adsl.xpt,USUBJID,Unique Subject Identifier,Char,50
+adsl.xpt,FASFL,Full Analysis Set Population Flag,Char,50
+adsl.xpt,SAFFL,Safety Population Flag,Char,50
+adsl.xpt,ITTFL,Intent-To-Treat Population Flag,Char,50
+adsl.xpt,PPROTFL,Per-Protocol Population Flag,Char,50
+adsl.xpt,COMPLFL,Completers Population Flag xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx,Char,50
+adsl.xpt,RANDFL,Randomized Population Flag,Char,50
+adsl.xpt,ENRLFL,Enrolled Population Flag,Char,50
+advs.xpt,SUBJID,Subject Identifier for the Study,Char,50
+advs.xpt,AVISIT,Analysis Visit,Char,50
+advs.xpt,ADY,Analysis Relative Day,Num,8
+advs.xpt,PARAM,Parameter,Char,50
+advs.xpt,BASE,Baseline Value,Num,8
+advs.xpt,CHG,Change from Baseline,Num,8
+advs.xpt,AVAL,Analysis Value,Num,8
+advs.xpt,DTYPE,Derivation Type,Char,50
+advs.xpt,ANL01FL,Analysis Flag zz xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx,Char,50
+advs.xpt,CRIT1,Analysis Criterion yxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx,Char,50
+advs.xpt,CRIT1FL,Criterion y Evaluation Result Flag,Char,50

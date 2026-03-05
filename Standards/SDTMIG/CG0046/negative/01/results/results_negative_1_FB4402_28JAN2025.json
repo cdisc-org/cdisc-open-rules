@@ -1,0 +1,70 @@
+{
+    "CM": [
+        {
+            "executionStatus": "success",
+            "dataset": "cm.xpt",
+            "domain": "CM",
+            "variables": [
+                "CMENRTPT",
+                "CMENTPT"
+            ],
+            "message": "CMENRTPT is completed, but CMENTPT is not completed.",
+            "errors": [
+                {
+                    "value": {
+                        "CMENRTPT": "ONGOING",
+                        "CMENTPT": ""
+                    },
+                    "row": 1,
+                    "USUBJID": "CDISC003",
+                    "SEQ": 1
+                },
+                {
+                    "value": {
+                        "CMENRTPT": "ONGOING",
+                        "CMENTPT": ""
+                    },
+                    "row": 2,
+                    "USUBJID": "CDISC005",
+                    "SEQ": 2
+                },
+                {
+                    "value": {
+                        "CMENRTPT": "ONGOING",
+                        "CMENTPT": ""
+                    },
+                    "row": 3,
+                    "USUBJID": "CDISC017",
+                    "SEQ": 1
+                },
+                {
+                    "value": {
+                        "CMENRTPT": "ONGOING",
+                        "CMENTPT": ""
+                    },
+                    "row": 4,
+                    "USUBJID": "CDISC017",
+                    "SEQ": 2
+                },
+                {
+                    "value": {
+                        "CMENRTPT": "ONGOING",
+                        "CMENTPT": ""
+                    },
+                    "row": 5,
+                    "USUBJID": "CDISC017",
+                    "SEQ": 3
+                },
+                {
+                    "value": {
+                        "CMENRTPT": "ONGOING",
+                        "CMENTPT": ""
+                    },
+                    "row": 6,
+                    "USUBJID": "CDISC017",
+                    "SEQ": 4
+                }
+            ]
+        }
+    ]
+}

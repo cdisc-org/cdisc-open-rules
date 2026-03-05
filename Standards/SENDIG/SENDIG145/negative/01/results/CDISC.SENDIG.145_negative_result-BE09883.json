@@ -1,0 +1,32 @@
+{
+  "VS": [
+    {
+      "executionStatus": "success",
+      "domain": "VS",
+      "variables": [
+        "VSORRES",
+        "VSSTAT"
+      ],
+      "message": "When VSORRES is populated, VSSTAT may not be populated.",
+      "errors": [
+        {
+          "value": {
+            "VSORRES": "71",
+            "VSSTAT": "NOT DONE"
+          },
+          "row": 2,
+          "seq": 2
+        }
+      ]
+    }
+  ],
+  "SC": [
+    {
+      "executionStatus": "skipped",
+      "domain": "SC",
+      "variables": [],
+      "message": null,
+      "errors": []
+    }
+  ]
+}

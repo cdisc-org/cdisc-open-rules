@@ -1,0 +1,59 @@
+{
+    "ScheduleTimeline": [
+        {
+            "executionStatus": "skipped",
+            "dataset": "ScheduleTimeline.xpt",
+            "domain": "",
+            "variables": [],
+            "message": "Rule skipped - doesn't apply to entity for rule id=CORE-000870, dataset=ScheduleTimeline",
+            "errors": []
+        }
+    ],
+    "ScheduledActivityInstance": [
+        {
+            "executionStatus": "success",
+            "dataset": "ScheduledActivityInstance.xpt",
+            "domain": "ScheduledActivityInstance",
+            "variables": [
+                "epochId",
+                "id",
+                "mainTimeline",
+                "name",
+                "parent_entity",
+                "parent_id",
+                "parent_rel"
+            ],
+            "message": "The scheduled activity instance is in the main timeline but does not refer to an epoch.",
+            "errors": [
+                {
+                    "value": {
+                        "id": "ScheduledActivityInstance_10",
+                        "mainTimeline": true,
+                        "name": "SCREEN2",
+                        "epochId": null,
+                        "parent_entity": "ScheduleTimeline",
+                        "parent_rel": "instances",
+                        "parent_id": "ScheduleTimeline_4"
+                    },
+                    "dataset": "ScheduledActivityInstance.xpt",
+                    "row": 3,
+                    "instance_id": "ScheduledActivityInstance_10"
+                },
+                {
+                    "value": {
+                        "id": "ScheduledActivityInstance_1",
+                        "mainTimeline": true,
+                        "name": "AE",
+                        "epochId": null,
+                        "parent_entity": "ScheduleTimeline",
+                        "parent_rel": "instances",
+                        "parent_id": "ScheduleTimeline_1"
+                    },
+                    "dataset": "ScheduledActivityInstance.xpt",
+                    "row": 28,
+                    "instance_id": "ScheduledActivityInstance_1"
+                }
+            ]
+        }
+    ]
+}

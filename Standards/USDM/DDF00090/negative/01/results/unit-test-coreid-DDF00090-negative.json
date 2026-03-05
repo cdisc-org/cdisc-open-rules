@@ -1,0 +1,54 @@
+{
+    "Activity": [
+        {
+            "executionStatus": "skipped",
+            "dataset": "Activity.xpt",
+            "domain": "",
+            "variables": [],
+            "message": "Rule skipped - doesn't apply to entity for rule id=CORE-000811, dataset=Activity",
+            "errors": []
+        }
+    ],
+    "BiomedicalConceptCategory": [
+        {
+            "executionStatus": "success",
+            "dataset": "BiomedicalConceptCategory.xpt",
+            "domain": "BiomedicalConceptCategory",
+            "variables": [
+                "id",
+                "name",
+                "name.Activity",
+                "parent_entity",
+                "parent_id",
+                "parent_rel"
+            ],
+            "message": "The biomedical concept category is referenced more than once from the same activity.",
+            "errors": [
+                {
+                    "value": {
+                        "parent_rel": "bcCategoryIds",
+                        "id": "BiomedicalConceptCategory_1",
+                        "name.Activity": "Vital signs tests",
+                        "parent_id": "Activity_13",
+                        "parent_entity": "Activity",
+                        "name": "Vital Signs Category"
+                    },
+                    "dataset": "BiomedicalConceptCategory.xpt",
+                    "row": 2
+                },
+                {
+                    "value": {
+                        "parent_rel": "bcCategoryIds",
+                        "id": "BiomedicalConceptCategory_1",
+                        "name.Activity": "Vital signs tests",
+                        "parent_id": "Activity_13",
+                        "parent_entity": "Activity",
+                        "name": "Vital Signs Category"
+                    },
+                    "dataset": "BiomedicalConceptCategory.xpt",
+                    "row": 3
+                }
+            ]
+        }
+    ]
+}

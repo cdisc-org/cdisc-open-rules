@@ -1,0 +1,71 @@
+dataset,variable,label,type,length
+cm.xpt,STUDYID,Study Identifier,Char,50
+cm.xpt,DOMAIN,Domain Abbreviation,Char,50
+cm.xpt,USUBJID,Unique Subject Identifier,Char,50
+cm.xpt,CMSEQ,Sequence Number,Num,8
+cm.xpt,CMGRPID,Group ID,Char,30
+cm.xpt,CMTRT,"Reported Name of Drug, Med, or Therapy",Char,50
+cm.xpt,CMDECOD,Standardized Medication Name,Char,50
+cm.xpt,CMCAT,Category for Medication,Char,50
+cm.xpt,CMSCAT,Subcategory for Medication,Char,50
+cm.xpt,CMINDC,Indication,Char,50
+cm.xpt,CMDOSE,Dose per Administration,Num,8
+cm.xpt,CMDOSU,Dose Units,Char,50
+cm.xpt,CMDOSFRQ,Dosing Frequency per Interval,Char,50
+cm.xpt,CMROUTE,Route of Administration,Char,50
+cm.xpt,EPOCH,Epoch,Char,50
+cm.xpt,CMSTDTC,Start Date/Time of Medication,Char,50
+cm.xpt,CMENDTC,End Date/Time of Medication,Char,50
+cm.xpt,CMSTDY,Study Day of Start of Medication,Num,8
+cm.xpt,CMENDY,Study Day of End of Medication,Num,8
+cm.xpt,CMENRTPT,End Relative to Reference Time Point,Char,50
+cm.xpt,CMENTPT,End Reference Time Point,Char,50
+ae.xpt,STUDYID,Study Identifier,Char,50
+ae.xpt,DOMAIN,Domain Abbreviation,Char,50
+ae.xpt,USUBJID,Unique Subject Identifier,Char,50
+ae.xpt,AESEQ,Sequence Number,Num,8
+ae.xpt,AEGRPID,Group ID,Char,50
+ae.xpt,AETERM,Reported Term for the Adverse Event,Char,50
+ae.xpt,AEDECOD,Dictionary-Derived Term,Char,50
+ae.xpt,AESER,Serious Event,Char,50
+ae.xpt,AEACN,Action Taken with Study Treatment,Char,50
+ae.xpt,AEREL,Causality,Char,50
+ae.xpt,AEOUT,Outcome of Adverse Event,Char,50
+ae.xpt,AESCAN,Involves Cancer,Char,50
+ae.xpt,AESCONG,Congenital Anomaly or Birth Defect,Char,50
+ae.xpt,AESDISAB,Persist or Signif Disability/Incapacity,Char,50
+ae.xpt,AESDTH,Results in Death,Char,50
+ae.xpt,AESHOSP,Requires or Prolongs Hospitalization,Char,50
+ae.xpt,AESLIFE,Is Life Threatening,Char,50
+ae.xpt,AECONTRT,Concomitant or Additional Trtmnt Given,Char,50
+ae.xpt,AETOXGR,Standard Toxicity Grade,Char,50
+ae.xpt,EPOCH,Epoch,Char,50
+ae.xpt,AESTDTC,Start Date/Time of Adverse Event,Char,50
+ae.xpt,AEENDTC,End Date/Time of Adverse Event,Char,50
+ae.xpt,AESTDY,Study Day of Start of Adverse Event,Num,8
+ae.xpt,AEENDY,Study Day of End of Adverse Event,Num,8
+ae.xpt,AEENRTPT,End Relative to Reference Time Point,Char,50
+ae.xpt,AEENTPT,End Reference Time Point,Char,50
+fa.xpt,STUDYID,Study Identifier,Char,50
+fa.xpt,DOMAIN,Domain Abbreviation,Char,50
+fa.xpt,USUBJID,Unique Subject Identifier,Char,50
+fa.xpt,FASEQ,Sequence Number,Num,8
+fa.xpt,FAGRPID,Group ID,Char,50
+fa.xpt,FATESTCD,Findings About Test Short Name,Char,50
+fa.xpt,FATEST,Findings About Test Name,Char,50
+fa.xpt,FAOBJ,Object of the Observation,Char,50
+fa.xpt,FACAT,Category for Findings About,Char,50
+fa.xpt,FAORRES,Result or Finding in Original Units,Char,50
+fa.xpt,FASTRESC,Character Result/Finding in Std Format,Char,50
+fa.xpt,FALOC,Location of the Finding About,Char,50
+fa.xpt,VISITNUM,Visit Number,Num,8
+fa.xpt,EPOCH,Epoch,Char,50
+fa.xpt,FADTC,Date/Time of Collection,Char,50
+fa.xpt,FADY,Study Day of Collection,Num,8
+relrec.xpt,STUDYID,Study Identifier,Char,50
+relrec.xpt,RDOMAIN,Related Domain Abbreviation,Char,50
+relrec.xpt,USUBJID,Unique Subject Identifier,Char,50
+relrec.xpt,IDVAR,Identifying Variable,Char,50
+relrec.xpt,IDVARVAL,Identifying Variable Value,Char,50
+relrec.xpt,RELTYPE,Relationship Type,Char,50
+relrec.xpt,RELID,Relationship Identifier,Char,50

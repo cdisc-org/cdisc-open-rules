@@ -1,0 +1,94 @@
+{
+    "CM": [
+        {
+            "executionStatus": "success",
+            "dataset": "cm.xpt",
+            "domain": "CM",
+            "variables": [
+                "CMDECOD",
+                "RELREC.FAOBJ"
+            ],
+            "message": "Parent record exists and CMDECOD is not null, but FAOBJ is not equal to CMDECOD.",
+            "errors": [
+                {
+                    "value": {
+                        "CMDECOD": "TEST",
+                        "RELREC.FAOBJ": "ASPIRINA"
+                    },
+                    "dataset": "cm.xpt",
+                    "row": 1,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 1
+                }
+            ]
+        }
+    ],
+    "AE": [
+        {
+            "executionStatus": "success",
+            "dataset": "ae.xpt",
+            "domain": "AE",
+            "variables": [
+                "AEDECOD",
+                "RELREC.FAOBJ"
+            ],
+            "message": "Parent record exists and AEDECOD is not null, but FAOBJ is not equal to AEDECOD.",
+            "errors": [
+                {
+                    "value": {
+                        "AEDECOD": "TEST",
+                        "RELREC.FAOBJ": "ERYTHEMA"
+                    },
+                    "dataset": "ae.xpt",
+                    "row": 1,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 1
+                }
+            ]
+        }
+    ],
+    "FA": [
+        {
+            "executionStatus": "success",
+            "dataset": "fa.xpt",
+            "domain": "FA",
+            "variables": [
+                "FADECOD",
+                "RELREC.FAOBJ"
+            ],
+            "message": "Parent record exists and FADECOD is not null, but FAOBJ is not equal to FADECOD.",
+            "errors": [
+                {
+                    "value": {
+                        "FADECOD": "TEST",
+                        "RELREC.FAOBJ": "Not in dataset"
+                    },
+                    "dataset": "fa.xpt",
+                    "row": 1,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 1
+                },
+                {
+                    "value": {
+                        "FADECOD": "TEST",
+                        "RELREC.FAOBJ": "Not in dataset"
+                    },
+                    "dataset": "fa.xpt",
+                    "row": 1,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 1
+                }
+            ]
+        }
+    ],
+    "RELREC": [
+        {
+            "executionStatus": "skipped",
+            "dataset": "relrec.xpt",
+            "domain": "",
+            "variables": [],
+            "message": "Rule skipped - doesn't apply to class for rule id=CDISC.SDTMIG.CG0603, dataset=RELREC",
+            "errors": []
+        }
+    ]
+}

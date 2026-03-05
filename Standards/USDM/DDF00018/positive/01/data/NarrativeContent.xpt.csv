@@ -1,0 +1,8 @@
+parent_entity,parent_id,parent_rel,rel_type,id,name,text,sectionNumber,sectionTitle,instanceType,previousId,nextId,childIds
+StudyProtocolDocumentVersion,StudyProtocolDocumentVersion_1,contents,definition,NarrativeContent_1,ROOT,,0,Root,NarrativeContent,,NarrativeContent_2,True
+StudyProtocolDocumentVersion,StudyProtocolDocumentVersion_1,contents,definition,NarrativeContent_2,SECTION 0,"<div><usdm:section name=""M11-title-page""></div>",0,TITLE PAGE,NarrativeContent,NarrativeContent_1,NarrativeContent_3,False
+StudyProtocolDocumentVersion,StudyProtocolDocumentVersion_1,contents,definition,NarrativeContent_3,SECTION 1,<div></div>,1,PROTOCOL SUMMARY,NarrativeContent,NarrativeContent_2,NarrativeContent_4,True
+StudyProtocolDocumentVersion,StudyProtocolDocumentVersion_1,contents,definition,NarrativeContent_4,SECTION 1.1,<div></div>,1.1,Protocol Synopsis,NarrativeContent,NarrativeContent_3,,True
+NarrativeContent,NarrativeContent_1,childIds,reference,NarrativeContent_2,SECTION 0,"<div><usdm:section name=""M11-title-page""></div>",0,TITLE PAGE,NarrativeContent,NarrativeContent_1,NarrativeContent_3,False
+NarrativeContent,NarrativeContent_1,childIds,reference,NarrativeContent_3,SECTION 1,<div></div>,1,PROTOCOL SUMMARY,NarrativeContent,NarrativeContent_2,NarrativeContent_4,True
+NarrativeContent,NarrativeContent_3,childIds,reference,NarrativeContent_4,SECTION 1.1,<div></div>,1.1,Protocol Synopsis,NarrativeContent,NarrativeContent_3,,True

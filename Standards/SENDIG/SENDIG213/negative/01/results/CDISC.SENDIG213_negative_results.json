@@ -1,0 +1,29 @@
+{
+  "TE": [
+    {
+      "executionStatus": "success",
+      "domain": "TE",
+      "variables": [
+        "ELEMENT",
+        "ETCD"
+      ],
+      "message": "ELEMENT and ETCD do not have a one-to-one relationship.",
+      "errors": [
+        {
+          "value": {
+            "ELEMENT": "Placebo A",
+            "ETCD": "PLACEBO"
+          },
+          "row": 2
+        },
+        {
+          "value": {
+            "ELEMENT": "Placebo B",
+            "ETCD": "PLACEBO"
+          },
+          "row": 3
+        }
+      ]
+    }
+  ]
+}

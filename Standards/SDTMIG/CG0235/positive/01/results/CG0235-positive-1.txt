@@ -1,0 +1,28 @@
+{
+  "CM": [
+    {
+      "executionStatus": "execution_error",
+      "dataset": "cm.xpt",
+      "domain": "CM",
+      "variables": [],
+      "message": "rule execution error",
+      "errors": [
+        {
+          "dataset": "cm.xpt",
+          "error": "An unknown exception has occurred",
+          "message": "Unknown string format: CMDTC"
+        }
+      ]
+    }
+  ],
+  "MH": [
+    {
+      "executionStatus": "success",
+      "dataset": "mh.xpt",
+      "domain": "MH",
+      "variables": [],
+      "message": null,
+      "errors": []
+    }
+  ]
+}

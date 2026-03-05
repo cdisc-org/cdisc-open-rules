@@ -1,0 +1,249 @@
+{
+    "StudyAmendmentReason": [
+        {
+            "executionStatus": "success",
+            "dataset": "StudyAmendmentReason.xpt",
+            "domain": "StudyAmendmentReason",
+            "variables": [
+                "$code_for_decode_pref_term",
+                "$code_for_decode_value",
+                "$codelist_code",
+                "$codelist_extensible",
+                "$pref_term_for_code",
+                "$value_for_code",
+                "code.code",
+                "code.codeSystem",
+                "code.codeSystemVersion",
+                "code.decode",
+                "description",
+                "id",
+                "parent_entity",
+                "parent_id",
+                "parent_rel"
+            ],
+            "message": "The study amendment reason is not coded using the study amendment reason (C207415) DDF codelist - codeSystem is not \"http://www.cdisc.org\", codeSystemVersion is not a valid terminology package date, and/or the code or decode (either as preferred term or as submission value) is found in the codelist (case insensitive) but the corresponding decode or code does not match the codelist value (case sensitive).",
+            "errors": [
+                {
+                    "value": {
+                        "code.decode": "Change In Strategy",
+                        "$code_for_decode_value": "C207601",
+                        "code.code": "C207600",
+                        "parent_id": "StudyAmendment_1",
+                        "code.codeSystemVersion": "2024-09-27",
+                        "code.codeSystem": "http://www.cdisc.org",
+                        "$codelist_extensible": false,
+                        "parent_entity": "StudyAmendment",
+                        "parent_rel": "primaryReason",
+                        "$pref_term_for_code": "Change In Standard Of Care",
+                        "$code_for_decode_pref_term": "C207601",
+                        "$value_for_code": "Change In Standard Of Care",
+                        "$codelist_code": "C207415",
+                        "id": "StudyAmendmentReason_1",
+                        "description": "Not in dataset"
+                    },
+                    "dataset": "StudyAmendmentReason.xpt",
+                    "row": 1,
+                    "instance_id": "StudyAmendmentReason_1"
+                },
+                {
+                    "value": {
+                        "code.decode": "Change In Strategy",
+                        "$code_for_decode_value": "C207601",
+                        "code.code": "C207601xx",
+                        "parent_id": "StudyAmendment_1",
+                        "code.codeSystemVersion": "2024-09-27",
+                        "code.codeSystem": "http://www.cdisc.org",
+                        "$codelist_extensible": false,
+                        "parent_entity": "StudyAmendment",
+                        "parent_rel": "secondaryReasons",
+                        "$pref_term_for_code": null,
+                        "$code_for_decode_pref_term": "C207601",
+                        "$value_for_code": null,
+                        "$codelist_code": "C207415",
+                        "id": "StudyAmendmentReason_2",
+                        "description": "Not in dataset"
+                    },
+                    "dataset": "StudyAmendmentReason.xpt",
+                    "row": 2,
+                    "instance_id": "StudyAmendmentReason_2"
+                },
+                {
+                    "value": {
+                        "code.decode": "IMP Addition",
+                        "$code_for_decode_value": "C207602",
+                        "code.code": "C207602",
+                        "parent_id": "StudyAmendment_1",
+                        "code.codeSystemVersion": "2024-09-27",
+                        "code.codeSystem": "CDISC Terminology",
+                        "$codelist_extensible": false,
+                        "parent_entity": "StudyAmendment",
+                        "parent_rel": "secondaryReasons",
+                        "$pref_term_for_code": "IMP Addition",
+                        "$code_for_decode_pref_term": "C207602",
+                        "$value_for_code": "IMP Addition",
+                        "$codelist_code": "C207415",
+                        "id": "StudyAmendmentReason_3",
+                        "description": "Not in dataset"
+                    },
+                    "dataset": "StudyAmendmentReason.xpt",
+                    "row": 3,
+                    "instance_id": "StudyAmendmentReason_3"
+                },
+                {
+                    "value": {
+                        "code.decode": "Inconsistency And/Or Error In The Protocol",
+                        "$code_for_decode_value": "C207603",
+                        "code.code": "C207603",
+                        "parent_id": "StudyAmendment_1",
+                        "code.codeSystemVersion": "2024-09-27",
+                        "code.codeSystem": "http://www.cdisc.org",
+                        "$codelist_extensible": false,
+                        "parent_entity": "StudyAmendment",
+                        "parent_rel": "secondaryReasons",
+                        "$pref_term_for_code": "Inconsistency and/or Error In The Protocol",
+                        "$code_for_decode_pref_term": "C207603",
+                        "$value_for_code": "Inconsistency And/or Error In The Protocol",
+                        "$codelist_code": "C207415",
+                        "id": "StudyAmendmentReason_4",
+                        "description": "Not in dataset"
+                    },
+                    "dataset": "StudyAmendmentReason.xpt",
+                    "row": 4,
+                    "instance_id": "StudyAmendmentReason_4"
+                },
+                {
+                    "value": {
+                        "code.decode": "Investigator/Site Feedback",
+                        "$code_for_decode_value": null,
+                        "code.code": "C207604",
+                        "parent_id": "StudyAmendment_1",
+                        "code.codeSystemVersion": "2024-SEP-27",
+                        "code.codeSystem": "http://www.cdisc.org",
+                        "$codelist_extensible": null,
+                        "parent_entity": "StudyAmendment",
+                        "parent_rel": "secondaryReasons",
+                        "$pref_term_for_code": null,
+                        "$code_for_decode_pref_term": null,
+                        "$value_for_code": null,
+                        "$codelist_code": "C207415",
+                        "id": "StudyAmendmentReason_5",
+                        "description": "Not in dataset"
+                    },
+                    "dataset": "StudyAmendmentReason.xpt",
+                    "row": 5,
+                    "instance_id": "StudyAmendmentReason_5"
+                },
+                {
+                    "value": {
+                        "code.decode": "OTHER",
+                        "$code_for_decode_value": null,
+                        "code.code": "C17649",
+                        "parent_id": "StudyAmendment_1",
+                        "code.codeSystemVersion": "2024-09-27",
+                        "code.codeSystem": "http://www.cdisc.org",
+                        "$codelist_extensible": false,
+                        "parent_entity": "StudyAmendment",
+                        "parent_rel": "secondaryReasons",
+                        "$pref_term_for_code": null,
+                        "$code_for_decode_pref_term": null,
+                        "$value_for_code": null,
+                        "$codelist_code": "C207415",
+                        "id": "StudyAmendmentReason_14",
+                        "description": "Not in dataset"
+                    },
+                    "dataset": "StudyAmendmentReason.xpt",
+                    "row": 6,
+                    "instance_id": "StudyAmendmentReason_14"
+                },
+                {
+                    "value": {
+                        "code.decode": "NOT APPLICABLE",
+                        "$code_for_decode_value": null,
+                        "code.code": "C48660",
+                        "parent_id": "StudyAmendment_1",
+                        "code.codeSystemVersion": "2024-09-27",
+                        "code.codeSystem": "http://www.cdisc.org",
+                        "$codelist_extensible": false,
+                        "parent_entity": "StudyAmendment",
+                        "parent_rel": "secondaryReasons",
+                        "$pref_term_for_code": null,
+                        "$code_for_decode_pref_term": null,
+                        "$value_for_code": null,
+                        "$codelist_code": "C207415",
+                        "id": "StudyAmendmentReason_15",
+                        "description": "Not in dataset"
+                    },
+                    "dataset": "StudyAmendmentReason.xpt",
+                    "row": 7,
+                    "instance_id": "StudyAmendmentReason_15"
+                },
+                {
+                    "value": {
+                        "code.decode": "Other",
+                        "$code_for_decode_value": null,
+                        "code.code": "C17649",
+                        "parent_id": "StudyAmendment_1",
+                        "code.codeSystemVersion": "2024-09-27",
+                        "code.codeSystem": "http://www.cdisc.org",
+                        "$codelist_extensible": false,
+                        "parent_entity": "StudyAmendment",
+                        "parent_rel": "secondaryReasons",
+                        "$pref_term_for_code": null,
+                        "$code_for_decode_pref_term": null,
+                        "$value_for_code": null,
+                        "$codelist_code": "C207415",
+                        "id": "StudyAmendmentReason_17",
+                        "description": "Not in dataset"
+                    },
+                    "dataset": "StudyAmendmentReason.xpt",
+                    "row": 8,
+                    "instance_id": "StudyAmendmentReason_17"
+                },
+                {
+                    "value": {
+                        "code.decode": "Not Applicable",
+                        "$code_for_decode_value": null,
+                        "code.code": "C48660",
+                        "parent_id": "StudyAmendment_1",
+                        "code.codeSystemVersion": "2024-09-27",
+                        "code.codeSystem": "http://www.cdisc.org",
+                        "$codelist_extensible": false,
+                        "parent_entity": "StudyAmendment",
+                        "parent_rel": "secondaryReasons",
+                        "$pref_term_for_code": null,
+                        "$code_for_decode_pref_term": null,
+                        "$value_for_code": null,
+                        "$codelist_code": "C207415",
+                        "id": "StudyAmendmentReason_18",
+                        "description": "Not in dataset"
+                    },
+                    "dataset": "StudyAmendmentReason.xpt",
+                    "row": 9,
+                    "instance_id": "StudyAmendmentReason_18"
+                },
+                {
+                    "value": {
+                        "code.decode": "Extension",
+                        "$code_for_decode_value": null,
+                        "code.code": "C0031X",
+                        "parent_id": "StudyAmendment_1",
+                        "code.codeSystemVersion": "2024-09-27",
+                        "code.codeSystem": "http://www.cdisc.org",
+                        "$codelist_extensible": false,
+                        "parent_entity": "StudyAmendment",
+                        "parent_rel": "secondaryReasons",
+                        "$pref_term_for_code": null,
+                        "$code_for_decode_pref_term": null,
+                        "$value_for_code": null,
+                        "$codelist_code": "C207415",
+                        "id": "StudyAmendmentReason_19",
+                        "description": "Not in dataset"
+                    },
+                    "dataset": "StudyAmendmentReason.xpt",
+                    "row": 10,
+                    "instance_id": "StudyAmendmentReason_19"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "VS": [
+        {
+            "executionStatus": "success",
+            "domain": "VS",
+            "variables": [
+                "VSELTM",
+                "VSTPTREF"
+            ],
+            "message": "VSTPTREF must be present when VSELTM is present in a dataset",
+            "errors": [
+                {
+                    "value": {
+                        "VSELTM": "PT30M",
+                        "VSTPTREF": "Not in dataset"
+                    }
+                }
+            ]
+        }
+    ]
+}

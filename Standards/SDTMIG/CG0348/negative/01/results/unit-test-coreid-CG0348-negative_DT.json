@@ -1,0 +1,30 @@
+{
+  "LB": [
+    {
+      "domain": "LB",
+      "errors": [
+        {
+          "row": 0,
+          "seq": 1,
+          "uSubjId": "CDISC001",
+          "value": {
+            "LBORRES": "",
+            "LBSTAT": ""
+          }
+        },
+        {
+          "row": 0,
+          "value": {
+            "LBDRVFL": "Not in dataset"
+          }
+        }
+      ],
+      "executionStatus": "success",
+      "message": "LBORRES cannot be null when LBSTAT is null or LBDRVFL not equal to 'Y'",
+      "variables": [
+        "LBORRES",
+        "LBSTAT"
+      ]
+    }
+  ]
+}

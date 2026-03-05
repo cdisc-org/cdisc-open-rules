@@ -1,0 +1,208 @@
+{
+  "AE": [
+    {
+      "executionStatus": "success",
+      "domain": "AE",
+      "variables": [
+        "$dataset_variables",
+        "$expected_variables"
+      ],
+      "message": "At least one expected variable is missing from dataset",
+      "errors": [
+        {
+          "value": {
+            "$expected_variables": [
+              "AEHLGT",
+              "AEBDSYCD",
+              "AESTDTC",
+              "AESOC",
+              "AEHLTCD",
+              "AEPTCD",
+              "AESOCCD",
+              "AEHLT",
+              "AEENDTC",
+              "AESER",
+              "AEREL",
+              "AEHLGTCD",
+              "AELLTCD",
+              "AELLT",
+              "AEBODSYS",
+              "AEACN"
+            ],
+            "$dataset_variables": [
+              "STUDYID",
+              "DOMAIN",
+              "USUBJID",
+              "AESEQ",
+              "AELNKID",
+              "AETERM",
+              "AELLT",
+              "AELLTCD",
+              "AEDECOD",
+              "AEPTCD",
+              "AEHLT",
+              "AEHLTCD",
+              "AEHLGT",
+              "AEHLGTCD",
+              "AEBDSYCD",
+              "AESOC",
+              "AESOCCD",
+              "AESEV",
+              "AEACN",
+              "AEREL",
+              "AEOUT",
+              "AESCAN",
+              "AESCONG",
+              "AESDISAB",
+              "AESDTH",
+              "AESHOSP",
+              "AESLIFE",
+              "AESOD",
+              "EPOCH",
+              "AESTDTC",
+              "AEENDTC",
+              "AESTDY",
+              "AEENDY",
+              "AEENRTPT",
+              "AEENTPT"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "EX": [
+    {
+      "executionStatus": "success",
+      "domain": "EX",
+      "variables": [
+        "$dataset_variables",
+        "$expected_variables"
+      ],
+      "message": "At least one expected variable is missing from dataset",
+      "errors": [
+        {
+          "value": {
+            "$expected_variables": [
+              "EXDOSU",
+              "EXENDTC",
+              "EXDOSFRM",
+              "EXDOSE",
+              "EXSTDTC"
+            ],
+            "$dataset_variables": [
+              "STUDYID",
+              "DOMAIN",
+              "USUBJID",
+              "SPDEVID",
+              "EXSEQ",
+              "EXTRT",
+              "EXDOSU",
+              "EXDOSFRM",
+              "EXDOSFRQ",
+              "EXROUTE",
+              "EXLOT",
+              "EPOCH",
+              "EXSTDTC",
+              "EXENDTC",
+              "EXSTDY",
+              "EXENDY"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "LB": [
+    {
+      "executionStatus": "success",
+      "domain": "LB",
+      "variables": [
+        "$dataset_variables",
+        "$expected_variables"
+      ],
+      "message": "At least one expected variable is missing from dataset",
+      "errors": [
+        {
+          "value": {
+            "$expected_variables": [
+              "LBLOBXFL",
+              "VISITNUM",
+              "LBORRES",
+              "LBNRIND",
+              "LBSTRESN",
+              "LBSTNRLO",
+              "LBSTNRHI",
+              "LBSTREFC",
+              "LBCAT",
+              "LBORRESU",
+              "LBORNRHI",
+              "LBSTRESC",
+              "LBSTRESU",
+              "LBDTC",
+              "LBORNRLO"
+            ],
+            "$dataset_variables": [
+              "STUDYID",
+              "DOMAIN",
+              "USUBJID",
+              "LBSEQ",
+              "LBTESTCD",
+              "LBTEST",
+              "LBORRES",
+              "LBORRESU",
+              "LBORNRLO",
+              "LBORNRHI",
+              "LBSTRESC",
+              "LBSTRESN",
+              "LBSTRESU",
+              "LBSTNRLO",
+              "LBSTNRHI",
+              "LBNRIND",
+              "LBLOBXFL",
+              "VISITNUM",
+              "VISIT",
+              "EPOCH",
+              "LBDTC",
+              "LBDY",
+              "LBDTC2",
+              "LBDY3"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "TA": [
+    {
+      "executionStatus": "success",
+      "domain": "TA",
+      "variables": [
+        "$dataset_variables",
+        "$expected_variables"
+      ],
+      "message": "At least one expected variable is missing from dataset",
+      "errors": [
+        {
+          "value": {
+            "$expected_variables": [
+              "TATRANS",
+              "TABRANCH"
+            ],
+            "$dataset_variables": [
+              "STUDYID",
+              "DOMAIN",
+              "ARMCD",
+              "ARM",
+              "TAETORD",
+              "ETCD",
+              "ELEMENT",
+              "TABRANCH",
+              "EPOCH"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "DM": [
+    {
+      "domain": "DM",
+      "errors": [
+        {
+          "row": 0,
+          "uSubjId": "CDISC-TEST-001",
+          "value": {
+            "AGE": 26,
+            "AGEU": ""
+          }
+        },
+        {
+          "row": 1,
+          "uSubjId": "CDISC-TEST-003",
+          "value": {
+            "AGE": 57,
+            "AGEU": ""
+          }
+        },
+        {
+          "row": 2,
+          "uSubjId": "CDISC-TEST-005",
+          "value": {
+            "AGE": 21,
+            "AGEU": ""
+          }
+        }
+      ],
+      "message": "AGEU is missing when AGE is provided.",
+      "variables": [
+        "AGE",
+        "AGEU"
+      ]
+    }
+  ]
+}

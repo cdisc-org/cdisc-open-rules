@@ -1,0 +1,85 @@
+{
+    "Authorities": [
+        {
+            "Organization": "CDISC",
+            "Standards": [
+                {
+                    "Name": "SDTMIG",
+                    "Version": "3.2",
+                    "References": [
+                        {
+                            "Origin": "SDTM and SDTMIG Conformance Rules",
+                            "Rule Identifier": {
+                                "Id": "CG0109",
+                                "Version": "1"
+                            },
+                            "Version": "2.0",
+                            "Citations": [
+                                {
+                                    "Cited Guidance": "Specification[ACTARMCD: Randomized subjects who were not treated will be given a value of NOTTRT. Values should be \"SCRNFAIL\" for screen failures and \"NOTASSGN\" for subjects not assigned to treatment]|Assumption 4[Subjects withdrawn from a trial before assignment to an Arm, if they are not screen failures, should have ARMCD = 'NOTASSGN' and ARM = 'Not Assigned'.]|Assumption 10[subjects who are ineligible for treatment (e.g., screen failures with ARMCD=SCRNFAIL), subjects who were enrolled but not assigned to an arm (ARMCD=NOTASSGN), or subjects who were randomized but not treated (ACTARMCD=NOTTRT), RFSTDTC will be null.]",
+                                    "Document": "IG v3.2",
+                                    "Item": "Specification|Assumption 4|Assumption 10",
+                                    "Section": "5"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "Core": {
+        "Id": "CDISC.SDTMIG.CG0109",
+        "Version": "1",
+        "Status": "Draft"
+    },
+    "Description": "Raise an error when no EX record exists for a subject, and ACTARMCD does not equal SCRNFAIL, NOTASSGN, or NOTTRT in DM",
+    "Outcome": {
+        "Message": "No EX record exists for a subject, but ACTARMCD does not equal SCRNFAIL, NOTASSGN, or NOTTRT in DM",
+        "Output Variables": [
+            "ACTARMCD",
+            "$USUBJIDS_IN_EX"
+        ]
+    },
+    "Rule Type": "Record Data",
+    "Sensitivity": "Record",
+    "Scope": {
+        "Classes": {
+            "Include": [
+                "SPECIAL PURPOSE"
+            ]
+        },
+        "Domains": {
+            "Include": [
+                "DM"
+            ]
+        }
+    },
+    "Executability": "Fully Executable",
+    "Check": {
+        "all": [
+            {
+                "name": "ACTARMCD",
+                "operator": "is_not_contained_by",
+                "value": [
+                    "SCRNFAIL",
+                    "NOTASSGN",
+                    "NOTTRT"
+                ]
+            },
+            {
+                "name": "USUBJID",
+                "operator": "is_not_contained_by",
+                "value": "$USUBJIDS_IN_EX"
+            }
+        ]
+    },
+    "Operations": [
+        {
+            "operator": "distinct",
+            "domain": "EX",
+            "name": "USUBJID",
+            "id": "$USUBJIDS_IN_EX"
+        }
+    ]
+}

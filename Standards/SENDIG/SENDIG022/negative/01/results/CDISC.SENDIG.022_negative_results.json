@@ -1,0 +1,25 @@
+{
+  "SUPPLB": [
+    {
+      "executionStatus": "success",
+      "domain": "SUPPLB",
+      "variables": [
+        "IDVAR",
+        "IDVARVAL",
+        "QNAM"
+      ],
+      "message": "QNAM value cannot contain characters other than letters, numbers or underscores",
+      "errors": [
+        {
+          "value": {
+            "QNAM": "BIOSIG$",
+            "IDVAR": "LBSEQ",
+            "IDVARVAL": "13"
+          },
+          "row": 5,
+          "USUBJID": "CDISC-TEST-001"
+        }
+      ]
+    }
+  ]
+}

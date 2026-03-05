@@ -1,0 +1,58 @@
+{
+    "SCHEDULEDACTIVITYINSTANCE": [
+        {
+            "executionStatus": "success",
+            "domain": "SCHEDULEDACTIVITYINSTANCE",
+            "variables": [
+                "defaultConditionId",
+                "id",
+                "name",
+                "parent_entity",
+                "parent_id",
+                "parent_rel"
+            ],
+            "message": "A scheduled activity/decision instance is referencing itself as its default condition.",
+            "errors": [
+                {
+                    "value": {
+                        "parent_entity": "ScheduleTimeline",
+                        "parent_rel": "instances",
+                        "name": "SCREEN1",
+                        "id": "ScheduledActivityInstance_1",
+                        "defaultConditionId": "ScheduledActivityInstance_1",
+                        "parent_id": "ScheduleTimeline_1"
+                    },
+                    "row": 1
+                }
+            ]
+        }
+    ],
+    "SCHEDULEDDECISIONINSTANCE": [
+        {
+            "executionStatus": "success",
+            "domain": "SCHEDULEDDECISIONINSTANCE",
+            "variables": [
+                "defaultConditionId",
+                "id",
+                "name",
+                "parent_entity",
+                "parent_id",
+                "parent_rel"
+            ],
+            "message": "A scheduled activity/decision instance is referencing itself as its default condition.",
+            "errors": [
+                {
+                    "value": {
+                        "parent_entity": "ScheduleTimeline",
+                        "parent_rel": "instances",
+                        "name": "SWITCH1",
+                        "id": "ScheduledDecisionInstance_1",
+                        "defaultConditionId": "ScheduledDecisionInstance_1",
+                        "parent_id": "ScheduleTimeline_1"
+                    },
+                    "row": 1
+                }
+            ]
+        }
+    ]
+}

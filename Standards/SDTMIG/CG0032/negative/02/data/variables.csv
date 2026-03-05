@@ -1,0 +1,58 @@
+dataset,variable,label,type,length
+sv.xpt,STUDYID,Study Identifier,Char,10
+sv.xpt,DOMAIN,Domain Abbreviation,Char,2
+sv.xpt,USUBJID,Unique Subject Identifier,Char,14
+sv.xpt,VISITNUM,Visit Number,Num,8
+sv.xpt,VISIT,Visit Name,Char,18
+sv.xpt,VISITDY,Planned Study Day of Visit,Num,8
+sv.xpt,EPOCH,Epoch,Char,9
+sv.xpt,SVSTDTC,Start Date/Time of Visit,Char,10
+sv.xpt,SVENDTC,End Date/Time of Visit,Char,1
+sv.xpt,SVSTDY,Study Day of Start of Visit,Num,8
+lb.xpt,STUDYID,Study Identifier,Char,10
+lb.xpt,DOMAIN,Domain Abbreviation,Char,2
+lb.xpt,USUBJID,Unique Subject Identifier,Char,14
+lb.xpt,LBSEQ,Sequence Number,Num,8
+lb.xpt,LBSPID,Sponsor-Defined Identifier,Char,4
+lb.xpt,LBTESTCD,Lab Test or Examination Short Name,Char,8
+lb.xpt,LBTEST,Lab Test or Examination Name,Char,25
+lb.xpt,LBCAT,Category for Lab Test,Char,18
+lb.xpt,LBORRES,Result or Finding in Original Units,Char,6
+lb.xpt,LBORRESU,Original Units,Char,8
+lb.xpt,LBORNRLO,Reference Range Lower Limit in Orig Unit,Char,1
+lb.xpt,LBORNRHI,Reference Range Upper Limit in Orig Unit,Char,1
+lb.xpt,LBSTRESC,Character Result/Finding in Std Format,Char,6
+lb.xpt,LBSTRESN,Numeric Result/Finding in Standard Units,Num,8
+lb.xpt,LBSTRESU,Standard Units,Char,8
+lb.xpt,LBSTNRLO,Reference Range Lower Limit-Std Units,Num,8
+lb.xpt,LBSTNRHI,Reference Range Upper Limit-Std Units,Num,8
+lb.xpt,LBNRIND,Reference Range Indicator,Char,1
+lb.xpt,LBLOINC,LOINC Code,Char,7
+lb.xpt,LBSPEC,Specimen Type,Char,5
+lb.xpt,LBBLFL,Baseline Flag,Char,1
+lb.xpt,EPOCH,Epoch,Char,9
+lb.xpt,VISITNUM,Visit Number,Num,8
+lb.xpt,VISIT,Visit Name,Char,18
+lb.xpt,LBDTC,Date/Time of Specimen Collection,Char,10
+lb.xpt,LBDY,Study Day of Specimen Collection,Num,8
+ds.xpt,STUDYID,Study Identifier,Char,10
+ds.xpt,DOMAIN,Domain Abbreviation,Char,2
+ds.xpt,USUBJID,Unique Subject Identifier,Char,14
+ds.xpt,DSSEQ,Sequence Number,Num,8
+ds.xpt,DSTERM,Reported Term for the Disposition Event,Char,27
+ds.xpt,DSDECOD,Standardized Disposition Term,Char,27
+ds.xpt,DSCAT,Category for Disposition Event,Char,18
+ds.xpt,EPOCH,Epoch,Char,9
+ds.xpt,VISITNUM,Visit Number,Num,8
+ds.xpt,VISIT,Visit Name,Char,18
+ds.xpt,VISITDY,Planned Study Day of Visit,Num,8
+ds.xpt,DSSTDTC,Start Date/Time of Disposition Event,Char,10
+ds.xpt,DSDY,Study Day of Visit/Collection/Exam,Num,8
+tv.xpt,STUDYID,Study Identifier,Char,10
+tv.xpt,DOMAIN,Domain Abbreviation,Char,2
+tv.xpt,VISITNUM,Visit Number,Num,8
+tv.xpt,VISIT,Visit Name,Char,18
+tv.xpt,VISITDY,Planned Study Day of Visit,Num,8
+tv.xpt,ARMCD,Planned Arm Code,Char,1
+tv.xpt,TVSTRL,Visit Start Rule,Char,61
+tv.xpt,TVENRL,Visit End Rule,Char,21

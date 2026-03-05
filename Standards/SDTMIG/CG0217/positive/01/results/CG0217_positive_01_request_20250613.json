@@ -1,0 +1,684 @@
+{
+    "rule": {
+        "Authorities": [
+            {
+                "Organization": "CDISC",
+                "Standards": [
+                    {
+                        "Name": "SDTMIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "IG v3.4",
+                                        "Item": "Assumption 11",
+                                        "Section": "5.5",
+                                        "Cited_Guidance": "If TAETORD and/or EPOCH are added, then the values must be those at the start of the visit."
+                                    }
+                                ],
+                                "Origin": "SDTM and SDTMIG Conformance Rules",
+                                "Version": "2.0",
+                                "Rule_Identifier": {
+                                    "Id": "CG0217",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.4"
+                    },
+                    {
+                        "Name": "SDTMIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "IG v3.2",
+                                        "Item": "Assumption 11",
+                                        "Section": "5 SV",
+                                        "Cited_Guidance": "If TAETORD and/or EPOCH are added, then the values must be those at the start of the visit.It would be inappropriate to add the variables that support time points (--TPT, --TPTNUM, --ELTM, --TPTREF, and --RFTDTC), since the topic of this dataset is visits."
+                                    }
+                                ],
+                                "Origin": "SDTM and SDTMIG Conformance Rules",
+                                "Version": "2.0",
+                                "Rule_Identifier": {
+                                    "Id": "CG0217",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.2"
+                    },
+                    {
+                        "Name": "SDTMIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "IG v3.3",
+                                        "Item": "Assumption 11",
+                                        "Section": "5.5",
+                                        "Cited_Guidance": "If TAETORD and/or EPOCH are added, then the values must be those at the start of the visit.It would be inappropriate to add the variables that support time points (--TPT, --TPTNUM, --ELTM, --TPTREF, and --RFTDTC), since the topic of this dataset is visits."
+                                    }
+                                ],
+                                "Origin": "SDTM and SDTMIG Conformance Rules",
+                                "Version": "2.0",
+                                "Rule_Identifier": {
+                                    "Id": "CG0217",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.3"
+                    },
+                    {
+                        "Name": "TIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "TIG 1.0",
+                                        "Item": "Assumption 11",
+                                        "Section": "2.8.10.25",
+                                        "Cited_Guidance": "If TAETORD and/or EPOCH are added, then the values must be those at the start of the visit."
+                                    }
+                                ],
+                                "Origin": "TIG Conformance Rules",
+                                "Version": "1.0",
+                                "Rule_Identifier": {
+                                    "Id": "TIG0431",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Substandard": "SDTM",
+                        "Version": "1.0"
+                    }
+                ]
+            }
+        ],
+        "Check": {
+            "all": [
+                {
+                    "name": "TAETORD",
+                    "operator": "exists"
+                },
+                {
+                    "name": "SVSTDTC",
+                    "operator": "date_greater_than_or_equal_to",
+                    "value": "SESTDTC"
+                },
+                {
+                    "name": "SVSTDTC",
+                    "operator": "date_less_than_or_equal_to",
+                    "value": "SEENDTC"
+                },
+                {
+                    "name": "TAETORD",
+                    "operator": "not_equal_to",
+                    "value": "SE.TAETORD"
+                }
+            ]
+        },
+        "Core": {
+            "Id": "CDISC.SDTMIG.CG0217",
+            "Status": "Draft",
+            "Version": "1"
+        },
+        "Description": "Raise an error when variable TAETORD values don't match between Subject Visits (SV) and Subject Elements (SE) datasets.",
+        "Executability": "Fully Executable",
+        "Outcome": {
+            "Message": "TAETORD values don't match between Subject Visits (SV) and Subject Elements (SE) datasets.",
+            "Output_Variables": [
+                "SESTDTC",
+                "SEENDTC",
+                "SVSTDTC",
+                "TAETORD",
+                "SE.TAETORD"
+            ]
+        },
+        "Scope": {
+            "Classes": {
+                "Include": [
+                    "SPECIAL PURPOSE"
+                ]
+            },
+            "Domains": {
+                "Include": [
+                    "SV"
+                ]
+            },
+            "Use_Case": "INDH"
+        },
+        "Sensitivity": "Record",
+        "Match_Datasets": [
+            {
+                "Keys": [
+                    "USUBJID"
+                ],
+                "Name": "SE"
+            }
+        ],
+        "Rule_Type": "Record Data"
+    },
+    "datasets": [
+        {
+            "filename": "se.xpt",
+            "label": "Subject Elements",
+            "domain": "SE",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "DOMAIN",
+                    "label": "Domain Abbreviation",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "USUBJID",
+                    "label": "Unique Subject Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "SESEQ",
+                    "label": "Sequence Number",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "ETCD",
+                    "label": "Element Code",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "ELEMENT",
+                    "label": "Description of Element",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "TAETORD",
+                    "label": "Planned Order of Element within Arm",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "EPOCH",
+                    "label": "Epoch",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "SESTDTC",
+                    "label": "Start Date/Time of Element",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "SEENDTC",
+                    "label": "End Date/Time of Element",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "SESTDY",
+                    "label": "Study Day of Start of Element",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "SEENDY",
+                    "label": "Study Day of End of Element",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "SEUPDES",
+                    "label": "Description of Unplanned Element",
+                    "type": "Char",
+                    "length": 50
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "Sample001",
+                    "Sample001",
+                    "Sample001",
+                    "Sample001",
+                    "Sample001",
+                    "Sample001",
+                    "Sample001",
+                    "Sample001"
+                ],
+                "DOMAIN": [
+                    "SE",
+                    "SE",
+                    "SE",
+                    "SE",
+                    "SE",
+                    "SE",
+                    "SE",
+                    "SE"
+                ],
+                "USUBJID": [
+                    "1201001",
+                    "1201001",
+                    "1201001",
+                    "1201002",
+                    "1201002",
+                    "1201003",
+                    "1201003",
+                    "1201003"
+                ],
+                "SESEQ": [
+                    1,
+                    2,
+                    3,
+                    1,
+                    2,
+                    1,
+                    2,
+                    3
+                ],
+                "ETCD": [
+                    "SCRN",
+                    "TRTZ",
+                    "FU",
+                    "SCRN",
+                    "TRTZ",
+                    "SCRN",
+                    "TRTZ",
+                    "FU"
+                ],
+                "ELEMENT": [
+                    "Screen",
+                    "TRTMTA",
+                    "Follow-up",
+                    "Screen",
+                    "TRTMTA",
+                    "Screen",
+                    "TRTMTA",
+                    "Follow-up"
+                ],
+                "TAETORD": [
+                    1,
+                    2,
+                    3,
+                    1,
+                    2,
+                    1,
+                    2,
+                    3
+                ],
+                "EPOCH": [
+                    "SCREENING",
+                    "OPEN LABEL\r\nTREATMENT",
+                    "FOLLOW-UP",
+                    "SCREENING",
+                    "OPEN LABEL\r\nTREATMENT",
+                    "SCREENING",
+                    "OPEN LABEL\r\nTREATMENT",
+                    "FOLLOW-UP"
+                ],
+                "SESTDTC": [
+                    "2018-06-29",
+                    "2018-08-13",
+                    "2019-05-13",
+                    "2018-11-20",
+                    "2019-01-07T06:11",
+                    "2019-01-10",
+                    "2019-02-06",
+                    "2019-04-24"
+                ],
+                "SEENDTC": [
+                    "2018-08-13",
+                    "2019-05-13",
+                    "2020-03-22",
+                    "2019-01-07T06:09",
+                    "2022-01-04",
+                    "2019-02-06",
+                    "2019-04-24",
+                    "2019-06-21"
+                ],
+                "SESTDY": [
+                    -45,
+                    1,
+                    274,
+                    -48,
+                    1,
+                    -27,
+                    1,
+                    78
+                ],
+                "SEENDY": [
+                    1,
+                    274,
+                    588,
+                    1,
+                    1094,
+                    1,
+                    78,
+                    136
+                ],
+                "SEUPDES": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ]
+            }
+        },
+        {
+            "filename": "sv.xpt",
+            "label": "Subject Visits",
+            "domain": "SV",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "DOMAIN",
+                    "label": "Domain Abbreviation",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "USUBJID",
+                    "label": "Unique Subject Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "VISITNUM",
+                    "label": "Visit Number",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "VISIT",
+                    "label": "Visit Name",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "EPOCH",
+                    "label": "Epoch",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "SVSTDTC",
+                    "label": "Start Date/Time of Observation",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "SVENDTC",
+                    "label": "End Date/Time of Observation",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "SVSTDY",
+                    "label": "Study Day of Start of Observation",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "SVENDY",
+                    "label": "Study Day of End of Observation",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "SVUPDES",
+                    "label": "Description of Unplanned Visit",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "TAETORD",
+                    "label": "Planned Order of Element within Arm",
+                    "type": "Num",
+                    "length": 8
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "Sample001",
+                    "Sample001",
+                    "Sample001",
+                    "Sample001",
+                    "Sample001",
+                    "Sample001",
+                    "Sample001",
+                    "Sample001",
+                    "Sample001",
+                    "Sample001",
+                    "Sample001",
+                    "Sample001",
+                    "Sample001",
+                    "Sample001",
+                    "Sample001",
+                    "Sample001"
+                ],
+                "DOMAIN": [
+                    "SV",
+                    "SV",
+                    "SV",
+                    "SV",
+                    "SV",
+                    "SV",
+                    "SV",
+                    "SV",
+                    "SV",
+                    "SV",
+                    "SV",
+                    "SV",
+                    "SV",
+                    "SV",
+                    "SV",
+                    "SV"
+                ],
+                "USUBJID": [
+                    "1201001",
+                    "1201001",
+                    "1201001",
+                    "1201001",
+                    "1201001",
+                    "1201001",
+                    "1201002",
+                    "1201002",
+                    "1201002",
+                    "1201002",
+                    "1201002",
+                    "1201002",
+                    "1201003",
+                    "1201003",
+                    "1201003",
+                    "1201003"
+                ],
+                "VISITNUM": [
+                    10000,
+                    10101,
+                    10102,
+                    10116,
+                    84000,
+                    81000,
+                    10000,
+                    10101,
+                    10102,
+                    10601,
+                    10608,
+                    12215,
+                    10000,
+                    10101,
+                    10102,
+                    10108
+                ],
+                "VISIT": [
+                    "SCREENING",
+                    "CYCLE1DAY1",
+                    "CYCLE1DAY2",
+                    "CYCLE1DAY16",
+                    "SURVIVAL FOLLOW-UP",
+                    "90-DAY SAFETY\r\nFOLLOW-UP",
+                    "SCREENING",
+                    "CYCLE1DAY1",
+                    "CYCLE1DAY2",
+                    "CYCLE6DAY1",
+                    "CYCLE6DAY8",
+                    "CYCLE22DAY15",
+                    "SCREENING",
+                    "CYCLE1DAY1",
+                    "CYCLE1DAY2",
+                    "CYCLE1DAY8"
+                ],
+                "EPOCH": [
+                    "SCREENING",
+                    "SCREENING",
+                    "OPEN LABEL\r\nTREATMENT",
+                    "OPEN LABEL\r\nTREATMENT",
+                    "FOLLOW-UP",
+                    "FOLLOW-UP",
+                    "SCREENING",
+                    "SCREENING",
+                    "OPEN LABEL\r\nTREATMENT",
+                    "OPEN LABEL\r\nTREATMENT",
+                    "OPEN LABEL\r\nTREATMENT",
+                    "OPEN LABEL\r\nTREATMENT",
+                    "SCREENING",
+                    "SCREENING",
+                    "OPEN LABEL\r\nTREATMENT",
+                    "OPEN LABEL\r\nTREATMENT"
+                ],
+                "SVSTDTC": [
+                    "2018-06-29",
+                    "2018-08-12",
+                    "2018-08-14",
+                    "2018-08-28",
+                    "2019-05-20",
+                    "2019-07-22",
+                    "2018-11-20",
+                    "2019-01-06",
+                    "2019-01-07T06:10",
+                    "2019-04-22",
+                    "2019-04-29",
+                    "2020-04-06",
+                    "2018-01-10",
+                    "2019-02-05",
+                    "2019-02-07",
+                    "2019-04-12"
+                ],
+                "SVENDTC": [
+                    "2018-08-06",
+                    "2018-08-13",
+                    "2018-08-14",
+                    "2018-08-28",
+                    "2020-03-30",
+                    "2019-07-22",
+                    "2018-12-21",
+                    "2019-01-07",
+                    "2019-01-08",
+                    "2019-04-23",
+                    "2019-04-30",
+                    "2020-04-07",
+                    "2018-01-24",
+                    "2019-02-07",
+                    "2019-02-07",
+                    "2019-02-13"
+                ],
+                "SVSTDY": [
+                    -45,
+                    -1,
+                    2,
+                    16,
+                    281,
+                    344,
+                    -48,
+                    -1,
+                    2,
+                    106,
+                    113,
+                    456,
+                    -27,
+                    -1,
+                    2,
+                    7
+                ],
+                "SVENDY": [
+                    -7,
+                    1,
+                    2,
+                    16,
+                    596,
+                    344,
+                    -17,
+                    1,
+                    2,
+                    107,
+                    114,
+                    457,
+                    -13,
+                    2,
+                    2,
+                    8
+                ],
+                "SVUPDES": [
+                    " ",
+                    " ",
+                    " ",
+                    " ",
+                    " ",
+                    " ",
+                    " ",
+                    " ",
+                    " ",
+                    " ",
+                    " ",
+                    " ",
+                    " ",
+                    " ",
+                    " ",
+                    " "
+                ],
+                "TAETORD": [
+                    1,
+                    1,
+                    2,
+                    2,
+                    3,
+                    3,
+                    1,
+                    1,
+                    28,
+                    2,
+                    2,
+                    2,
+                    1,
+                    1,
+                    2,
+                    2
+                ]
+            }
+        }
+    ],
+    "standard": {
+        "product": "sdtmig",
+        "version": "3-3"
+    },
+    "codelists": []
+}
