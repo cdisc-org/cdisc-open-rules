@@ -1,0 +1,110 @@
+{
+    "SV": [
+        {
+            "executionStatus": "issue_reported",
+            "dataset": "sv.xpt",
+            "domain": "SV",
+            "variables": [
+                "define_variable_role",
+                "define_variable_name",
+                "library_variable_role"
+            ],
+            "message": "Variable role specified in the define-xml does not match the variable role in the IG (for domains) or in the model (for custom domains).",
+            "errors": [
+                {
+                    "value": {
+                        "define_variable_role": "Timing",
+                        "library_variable_role": "Identifier",
+                        "define_variable_name": "DOMAIN"
+                    },
+                    "dataset": "sv.xpt",
+                    "row": 2
+                },
+                {
+                    "value": {
+                        "define_variable_role": "Record Qualifier",
+                        "library_variable_role": "Timing",
+                        "define_variable_name": "SVENDY"
+                    },
+                    "dataset": "sv.xpt",
+                    "row": 9
+                },
+                {
+                    "value": {
+                        "define_variable_role": "Topic",
+                        "library_variable_role": "Record Qualifier",
+                        "define_variable_name": "SVUPDES"
+                    },
+                    "dataset": "sv.xpt",
+                    "row": 10
+                }
+            ]
+        }
+    ],
+    "XD": [
+        {
+            "executionStatus": "issue_reported",
+            "dataset": "xd.xpt",
+            "domain": "XD",
+            "variables": [
+                "define_variable_role",
+                "define_variable_name",
+                "library_variable_role"
+            ],
+            "message": "Variable role specified in the define-xml does not match the variable role in the IG (for domains) or in the model (for custom domains).",
+            "errors": [
+                {
+                    "value": {
+                        "define_variable_role": "Topic",
+                        "library_variable_role": "Identifier",
+                        "define_variable_name": "XDSEQ"
+                    },
+                    "dataset": "xd.xpt",
+                    "row": 4
+                },
+                {
+                    "value": {
+                        "define_variable_role": "Topic",
+                        "library_variable_role": "Result Qualifier",
+                        "define_variable_name": "XDORRES"
+                    },
+                    "dataset": "xd.xpt",
+                    "row": 7
+                }
+            ]
+        }
+    ],
+    "LB": [
+        {
+            "executionStatus": "issue_reported",
+            "dataset": "lb.xpt",
+            "domain": "LB",
+            "variables": [
+                "define_variable_role",
+                "define_variable_name",
+                "library_variable_role"
+            ],
+            "message": "Variable role specified in the define-xml does not match the variable role in the IG (for domains) or in the model (for custom domains).",
+            "errors": [
+                {
+                    "value": {
+                        "define_variable_role": "Timing",
+                        "library_variable_role": "Synonym Qualifier",
+                        "define_variable_name": "LBTEST"
+                    },
+                    "dataset": "lb.xpt",
+                    "row": 6
+                },
+                {
+                    "value": {
+                        "define_variable_role": "Identifier",
+                        "library_variable_role": "Timing",
+                        "define_variable_name": "EPOCH"
+                    },
+                    "dataset": "lb.xpt",
+                    "row": 21
+                }
+            ]
+        }
+    ]
+}

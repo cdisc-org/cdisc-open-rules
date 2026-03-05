@@ -1,0 +1,204 @@
+{7 items
+"AG":[1 item
+0:{5 items
+"domain":"AG"
+"errors":[2 items
+0:{4 items
+"row":1
+"seq":2
+"uSubjId":"XYZ-001-001"
+"value":{3 items
+"AGDOSE":250
+"AGDOSTXT":""
+"AGDOSU":""
+}
+}
+1:{2 items
+"row":0
+"value":{1 item
+"AGDOSTOT":"Not in dataset"
+}
+}
+]
+"executionStatus":"success"
+"message":"Missing value for --DOSU, when --DOSE, --DOSTXT or --DOSTOT is provided"
+"variables":[3 items
+0:"AGDOSE"
+1:"AGDOSTXT"
+2:"AGDOSU"
+]
+}
+]
+"CM":[1 item
+0:{5 items
+"domain":"CM"
+"errors":[1 item
+0:{4 items
+"row":1
+"seq":2
+"uSubjId":"ABC-0002"
+"value":{4 items
+"CMDOSE":100
+"CMDOSTOT":200
+"CMDOSTXT":""
+"CMDOSU":""
+}
+}
+]
+"executionStatus":"success"
+"message":"Missing value for --DOSU, when --DOSE, --DOSTXT or --DOSTOT is provided"
+"variables":[4 items
+0:"CMDOSE"
+1:"CMDOSTOT"
+2:"CMDOSTXT"
+3:"CMDOSU"
+]
+}
+]
+"EC":[1 item
+0:{5 items
+"domain":"EC"
+"errors":[2 items
+0:{4 items
+"row":1
+"seq":1
+"uSubjId":"ABC2001"
+"value":{3 items
+"ECDOSE":2
+"ECDOSTXT":""
+"ECDOSU":""
+}
+}
+1:{2 items
+"row":0
+"value":{1 item
+"ECDOSTOT":"Not in dataset"
+}
+}
+]
+"executionStatus":"success"
+"message":"Missing value for --DOSU, when --DOSE, --DOSTXT or --DOSTOT is provided"
+"variables":[3 items
+0:"ECDOSE"
+1:"ECDOSTXT"
+2:"ECDOSU"
+]
+}
+]
+"EX":[1 item
+0:{5 items
+"domain":"EX"
+"errors":[2 items
+0:{4 items
+"row":0
+"seq":1
+"uSubjId":"ABC1001"
+"value":{3 items
+"EXDOSE":1000
+"EXDOSTXT":""
+"EXDOSU":""
+}
+}
+1:{2 items
+"row":0
+"value":{1 item
+"EXDOSTOT":"Not in dataset"
+}
+}
+]
+"executionStatus":"success"
+"message":"Missing value for --DOSU, when --DOSE, --DOSTXT or --DOSTOT is provided"
+"variables":[3 items
+0:"EXDOSE"
+1:"EXDOSTXT"
+2:"EXDOSU"
+]
+}
+]
+"ML":[1 item
+0:{5 items
+"domain":"ML"
+"errors":[2 items
+0:{4 items
+"row":0
+"seq":1
+"uSubjId":"XYZ-001-001"
+"value":{3 items
+"MLDOSE":""
+"MLDOSTXT":"2"
+"MLDOSU":""
+}
+}
+1:{2 items
+"row":0
+"value":{1 item
+"MLDOSTOT":"Not in dataset"
+}
+}
+]
+"executionStatus":"success"
+"message":"Missing value for --DOSU, when --DOSE, --DOSTXT or --DOSTOT is provided"
+"variables":[3 items
+0:"MLDOSE"
+1:"MLDOSTXT"
+2:"MLDOSU"
+]
+}
+]
+"PR":[1 item
+0:{5 items
+"domain":"PR"
+"errors":[2 items
+0:{4 items
+"row":0
+"seq":1
+"uSubjId":"ABC123-1001"
+"value":{3 items
+"PRDOSE":70
+"PRDOSTXT":""
+"PRDOSU":""
+}
+}
+1:{2 items
+"row":0
+"value":{1 item
+"PRDOSTOT":"Not in dataset"
+}
+}
+]
+"executionStatus":"success"
+"message":"Missing value for --DOSU, when --DOSE, --DOSTXT or --DOSTOT is provided"
+"variables":[3 items
+0:"PRDOSE"
+1:"PRDOSTXT"
+2:"PRDOSU"
+]
+}
+]
+"SU":[1 item
+0:{5 items
+"domain":"SU"
+"errors":[1 item
+0:{4 items
+"row":1
+"seq":2
+"uSubjId":"1234005"
+"value":{4 items
+"SUDOSE":""
+"SUDOSTOT":3
+"SUDOSTXT":""
+"SUDOSU":""
+}
+}
+]
+"executionStatus":"success"
+"message":"Missing value for --DOSU, when --DOSE, --DOSTXT or --DOSTOT is provided"
+"variables":[4 items
+0:"SUDOSE"
+1:"SUDOSTOT"
+2:"SUDOSTXT"
+3:"SUDOSU"
+]
+}
+]
+}

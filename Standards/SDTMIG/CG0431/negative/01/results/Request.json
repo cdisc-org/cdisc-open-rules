@@ -1,0 +1,413 @@
+{
+    "rule": {
+        "Authorities": [
+            {
+                "Organization": "CDISC",
+                "Standards": [
+                    {
+                        "Name": "SDTMIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "IG v3.4",
+                                        "Section": "4.1.5",
+                                        "Cited_Guidance": "When the study does not include the data item for an expected variable, however, a null column must still be included in the dataset, and a comment must be included in the Define-XML document to state that the study does not include the data item."
+                                    }
+                                ],
+                                "Origin": "SDTM and SDTMIG Conformance Rules",
+                                "Version": "2.0",
+                                "Rule_Identifier": {
+                                    "Id": "CG0431",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.4"
+                    },
+                    {
+                        "Name": "SDTMIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "IG v3.2",
+                                        "Section": "4.1.1.5",
+                                        "Cited_Guidance": "When no data has been collected for an expected variable; however; a null column must still be included in the dataset; and a comment must be included in the define.xml to state that data was not collected."
+                                    }
+                                ],
+                                "Origin": "SDTM and SDTMIG Conformance Rules",
+                                "Version": "2.0",
+                                "Rule_Identifier": {
+                                    "Id": "CG0431",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.2"
+                    },
+                    {
+                        "Name": "SDTMIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "IG v3.3",
+                                        "Section": "4.1.5",
+                                        "Cited_Guidance": "When the study does not include the data item for an expected variable; however; a null column must still be included in the dataset; and a comment must be included in the Define-XML document to state that the study does not include the data item."
+                                    }
+                                ],
+                                "Origin": "SDTM and SDTMIG Conformance Rules",
+                                "Version": "2.0",
+                                "Rule_Identifier": {
+                                    "Id": "CG0431",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.3"
+                    }
+                ]
+            }
+        ],
+        "Check": {
+            "any": [
+                {
+                    "all": [
+                        {
+                            "metadata": "$var_exp",
+                            "operator": "variable_metadata_equal_to",
+                            "value": "Exp"
+                        },
+                        {
+                            "operator": "empty"
+                        }
+                    ]
+                }
+            ]
+        },
+        "Core": {
+            "Id": "CDISC.SDTMIG.CG0431",
+            "Status": "Draft",
+            "Version": "1"
+        },
+        "Description": "Raise an error when variable Core Status = Expected and data is collected, but variable is not present",
+        "Executability": "Fully Executable",
+        "Operations": [
+            {
+                "id": "$var_exp",
+                "name": "core",
+                "operator": "variable_library_metadata"
+            }
+        ],
+        "Outcome": {
+            "Message": "Variable is empty, where variable core status is expected and data is collected.",
+            "Output_Variables": [
+                "$var_exp"
+            ]
+        },
+        "Scope": {
+            "Classes": {
+                "Include": [
+                    "ALL"
+                ]
+            },
+            "Domains": {
+                "Include": [
+                    "ALL"
+                ]
+            }
+        },
+        "Sensitivity": "Record",
+        "Rule_Type": "Record Data"
+    },
+    "datasets": [
+        {
+            "filename": "sv.xpt",
+            "label": "Subject Visits",
+            "domain": "SV",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 12
+                },
+                {
+                    "name": "DOMAIN",
+                    "label": "Domain Abbreviation",
+                    "type": "Char",
+                    "length": 2
+                },
+                {
+                    "name": "USUBJID",
+                    "label": "Unique Subject Identifier",
+                    "type": "Char",
+                    "length": 15
+                },
+                {
+                    "name": "SUBJID",
+                    "label": "Subject Identifier for the Study",
+                    "type": "Char",
+                    "length": 7
+                },
+                {
+                    "name": "VISITNUM",
+                    "label": "Visit Number",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "VISIT",
+                    "label": "Visit Name",
+                    "type": "Char",
+                    "length": 17
+                },
+                {
+                    "name": "VISITDY",
+                    "label": "Planned Study Day of Visit",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "EPOCH",
+                    "label": "Epoch",
+                    "type": "Char",
+                    "length": 20
+                },
+                {
+                    "name": "SVSTDTC",
+                    "label": "Start Date/Time of Visit",
+                    "type": "Char",
+                    "length": 12
+                },
+                {
+                    "name": "SVENDTC",
+                    "label": "End Date/Time of Visit",
+                    "type": "Char",
+                    "length": 12
+                },
+                {
+                    "name": "SVSTDY",
+                    "label": "Study Day of Start of Visit",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "SVENDY",
+                    "label": "Study Day of End of Visit",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "SVUPDES",
+                    "label": "Description of Unplanned Visit",
+                    "type": "Char",
+                    "length": 30
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01"
+                ],
+                "DOMAIN": [
+                    "SV",
+                    "SV",
+                    "SV",
+                    "SV"
+                ],
+                "USUBJID": [
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC001"
+                ],
+                "SUBJID": [
+                    "1",
+                    "1",
+                    "1",
+                    "1"
+                ],
+                "VISITNUM": [
+                    1,
+                    2,
+                    3,
+                    4
+                ],
+                "VISIT": [
+                    "testing",
+                    "testing",
+                    "testing",
+                    "testing"
+                ],
+                "VISITDY": [
+                    -28,
+                    1,
+                    3,
+                    5
+                ],
+                "EPOCH": [
+                    "SCREENING",
+                    "SCREENING",
+                    "SCREENING",
+                    "SCREENING"
+                ],
+                "SVSTDTC": [
+                    "2021-04-27",
+                    "",
+                    "2021-04-27",
+                    ""
+                ],
+                "SVENDTC": [
+                    "",
+                    "2021-05-01",
+                    "",
+                    "2021-04-27"
+                ],
+                "SVSTDY": [
+                    -28,
+                    1,
+                    -28,
+                    10
+                ],
+                "SVENDY": [
+                    -28,
+                    1,
+                    -28,
+                    45
+                ],
+                "SVUPDES": [
+                    "Evaluation of AE",
+                    "Evaluation of AE",
+                    "Evaluation of AE",
+                    "Evaluation of AE"
+                ]
+            }
+        },
+        {
+            "filename": "tv.xpt",
+            "label": "Trial Visits",
+            "domain": "TV",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 12
+                },
+                {
+                    "name": "DOMAIN",
+                    "label": "Domain Abbreviation",
+                    "type": "Char",
+                    "length": 2
+                },
+                {
+                    "name": "VISITNUM",
+                    "label": "Visit Number",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "VISIT",
+                    "label": "Visit Name",
+                    "type": "Char",
+                    "length": 9
+                },
+                {
+                    "name": "VISITDY",
+                    "label": "Planned Study Day of Visit",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "ARMCD",
+                    "label": "Planned Arm Code",
+                    "type": "Char",
+                    "length": 1
+                },
+                {
+                    "name": "ARM",
+                    "label": "Description of Arm",
+                    "type": "Char",
+                    "length": 1
+                },
+                {
+                    "name": "TVSTRL",
+                    "label": "Visit Start Rule",
+                    "type": "Num",
+                    "length": 52
+                },
+                {
+                    "name": "TVENRL",
+                    "label": "Visit End Rule",
+                    "type": "Num",
+                    "length": 1
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01"
+                ],
+                "DOMAIN": [
+                    "TV",
+                    "TV",
+                    "TV",
+                    "TV"
+                ],
+                "VISITNUM": [
+                    1,
+                    2,
+                    3,
+                    4
+                ],
+                "VISIT": [
+                    "SCREENING",
+                    "DAY 2",
+                    "DAY 3",
+                    "DAY 4"
+                ],
+                "VISITDY": [
+                    1,
+                    2,
+                    3,
+                    4
+                ],
+                "ARMCD": [
+                    "test",
+                    "",
+                    "test",
+                    ""
+                ],
+                "ARM": [
+                    "A",
+                    "A",
+                    "A",
+                    "A"
+                ],
+                "TVSTRL": [
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                "TVENRL": [
+                    1,
+                    1,
+                    1,
+                    1
+                ]
+            }
+        }
+    ],
+    "standard": {
+        "product": "sdtmig",
+        "version": "3-3"
+    },
+    "codelists": []
+}

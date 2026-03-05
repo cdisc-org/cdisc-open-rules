@@ -1,0 +1,39 @@
+{
+    "CO": [
+        {
+            "executionStatus": "success",
+            "dataset": "co.xpt",
+            "domain": "CO",
+            "variables": [
+                "IDVAR",
+                "IDVARVAL",
+                "RDOMAIN"
+            ],
+            "message": "RDOMAIN has a missing value when IDVARVAL has a non-missing value.",
+            "errors": [
+                {
+                    "value": {
+                        "IDVARVAL": "7",
+                        "IDVAR": "AESEQ",
+                        "RDOMAIN": null
+                    },
+                    "dataset": "co.xpt",
+                    "row": 3,
+                    "USUBJID": "YY-20",
+                    "SEQ": 3
+                },
+                {
+                    "value": {
+                        "IDVARVAL": "VS2",
+                        "IDVAR": "VSGRPID",
+                        "RDOMAIN": null
+                    },
+                    "dataset": "co.xpt",
+                    "row": 5,
+                    "USUBJID": "AB-99",
+                    "SEQ": 5
+                }
+            ]
+        }
+    ]
+}

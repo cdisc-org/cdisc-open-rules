@@ -1,0 +1,31 @@
+{
+    "SCHEDULEDDECISIONINSTANCE": [
+        {
+            "executionStatus": "success",
+            "dataset": "ScheduledDecisionInstance.xpt",
+            "domain": "SCHEDULEDDECISIONINSTANCE",
+            "variables": [
+                "defaultConditionId",
+                "id",
+                "name",
+                "parent_entity",
+                "parent_id",
+                "parent_rel"
+            ],
+            "message": "The scheduled decision instance does not refer to a default condition.",
+            "errors": [
+                {
+                    "value": {
+                        "id": "ScheduledDecisionInstance_24",
+                        "parent_id": "ScheduleTimeline_4",
+                        "parent_rel": "instances",
+                        "name": "WK26",
+                        "parent_entity": "ScheduleTimeline",
+                        "defaultConditionId": "Not in dataset"
+                    },
+                    "row": 1
+                }
+            ]
+        }
+    ]
+}

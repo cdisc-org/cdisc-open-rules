@@ -1,0 +1,42 @@
+{1 item
+"FT":[1 item
+0:{5 items
+"domain":"FT"
+"errors":[3 items
+0:{4 items
+"row":1
+"seq":120
+"uSubjId":"CDISC001"
+"value":{2 items
+"FTTPT":"30 MIN POST"
+"FTTPTNUM":30
+}
+}
+1:{4 items
+"row":2
+"seq":121
+"uSubjId":"CDISC001"
+"value":{2 items
+"FTTPT":"30 MIN POST"
+"FTTPTNUM":1
+}
+}
+2:{4 items
+"row":3
+"seq":134
+"uSubjId":"CDISC007"
+"value":{2 items
+"FTTPT":"60 MIN POST"
+"FTTPTNUM":1
+}
+}
+]
+"executionStatus":"success"
+"message":"FTTPT and FTTPTNUM do not have a one-to-one relationship"
+"variables":[2 items
+0:"FTTPT"
+1:"FTTPTNUM"
+]
+}
+]
+}

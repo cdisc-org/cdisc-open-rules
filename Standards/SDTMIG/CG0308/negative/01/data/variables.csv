@@ -1,0 +1,34 @@
+dataset,variable,label,type,length
+dmx.xpt,STUDYID,Study Identifier,Char,50
+dmx.xpt,DOMAIN,Domain Abbreviation,Char,50
+dmx.xpt,USUBJID,Unique Subject Identifier,Char,50
+dmx.xpt,ARMCD,Planned Arm Code,Char,50
+dmx.xpt,ARM,Description of Planned Arm,Char,50
+dmx.xpt,ACTARMCD,Actual Arm Code,Char,50
+dmx.xpt,ACTARM,Description of Actual Arm,Char,50
+dmx.xpt,ARMNRS,Reason Arm and/or Actual Arm is Null,Char,50
+dmx.xpt,ACTARMUD,Description of Unplanned Actual Arm,Char,50
+ae1.xpt,STUDYID,Study Identifier,Char,50
+ae1.xpt,DOMAIN,Domain Abbreviation,Char,50
+ae1.xpt,USUBJID,Unique Subject Identifier,Char,50
+ae1.xpt,AESEQ,Sequence Number,Num,8
+ae1.xpt,AETERM,Reported Term for the Adverse Event,Char,50
+ae1.xpt,AEMODIFY,Modified Reported Term,Char,50
+ae1.xpt,AEDECOD,Dictionary-Derived Term,Char,50
+ae1.xpt,AEBODSYS,Body System or Organ Class,Char,50
+ae1.xpt,AESEV,Severity/Intensity,Char,50
+ae1.xpt,AESER,Serious Event,Char,50
+ae1.xpt,AEACN,Action Taken with Study Treatment,Char,50
+ae1.xpt,AEREL,Causality,Char,50
+ae1.xpt,AEOUT,Outcome of Adverse Event,Char,50
+ae1.xpt,AESCONG,Congenital Anomaly or Birth Defect,Char,50
+ae1.xpt,AESDISAB,Persist or Signif Disability/Incapacity,Char,50
+ae1.xpt,AESDTH,Results in Death,Char,50
+ae1.xpt,AESHOSP,Requires or Prolongs Hospitalization,Char,50
+ae1.xpt,AESLIFE,Is Life Threatening,Char,50
+ae1.xpt,EPOCH,Epoch,Char,50
+ae1.xpt,AESTDTC,Start Date/Time of Adverse Event,Char,50
+ae1.xpt,AEENDTC,End Date/Time of Adverse Event,Char,50
+ae1.xpt,AESTDY,Study Day of Start of Adverse Event,Num,8
+ae1.xpt,AEENDY,Study Day of End of Adverse Event,Num,8
+ae1.xpt,AEENRF,End Relative to Reference Period,Char,50

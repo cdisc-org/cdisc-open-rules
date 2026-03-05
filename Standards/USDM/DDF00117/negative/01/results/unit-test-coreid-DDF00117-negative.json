@@ -1,0 +1,155 @@
+{
+    "StudyProtocolDocumentVersion": [
+        {
+            "executionStatus": "success",
+            "dataset": "StudyProtocolDocumentVersio.xpt",
+            "domain": "StudyProtocolDocumentVersion",
+            "variables": [
+                "$code_for_decode_pref_term",
+                "$code_for_decode_value",
+                "$codelist_code",
+                "$codelist_extensible",
+                "$pref_term_for_code",
+                "$value_for_code",
+                "id",
+                "parent_entity",
+                "parent_id",
+                "parent_rel",
+                "protocolStatus.code",
+                "protocolStatus.codeSystem",
+                "protocolStatus.codeSystemVersion",
+                "protocolStatus.decode",
+                "protocolVersion"
+            ],
+            "message": "The study protocol document version's protocol status is not specified using the Protocol Status Value Set Terminology (C188723) DDF codelist - codeSystem is not \"http://www.cdisc.org\", codeSystemVersion is not a valid terminology package date, the code or decode (either as preferred term or as submission value) is found in the codelist (case insensitive) but the corresponding decode or code does not match the codelist value (case sensitive), and/or neither code nor decode is found in the codelist.",
+            "errors": [
+                {
+                    "value": {
+                        "protocolStatus.codeSystemVersion": "2023-12-15",
+                        "$value_for_code": null,
+                        "$code_for_decode_pref_term": "C85255",
+                        "id": "StudyProtocolDocumentVersion_1",
+                        "$code_for_decode_value": "C85255",
+                        "protocolStatus.codeSystem": "http://www.cdisc.org",
+                        "$codelist_code": "C188723",
+                        "$pref_term_for_code": null,
+                        "protocolVersion": "2",
+                        "parent_id": "StudyProtocolDocument_1",
+                        "$codelist_extensible": false,
+                        "parent_entity": "StudyProtocolDocument",
+                        "protocolStatus.code": "C85255-DRAFT",
+                        "parent_rel": "versions",
+                        "protocolStatus.decode": "Draft"
+                    },
+                    "dataset": "StudyProtocolDocumentVersio.xpt",
+                    "row": 1
+                },
+                {
+                    "value": {
+                        "protocolStatus.codeSystemVersion": "2023-12-15",
+                        "$value_for_code": "Pending Review",
+                        "$code_for_decode_pref_term": null,
+                        "id": "StudyProtocolDocumentVersion_2",
+                        "$code_for_decode_value": null,
+                        "protocolStatus.codeSystem": "http://www.cdisc.org",
+                        "$codelist_code": "C188723",
+                        "$pref_term_for_code": "Pending Review",
+                        "protocolVersion": "3",
+                        "parent_id": "StudyProtocolDocument_1",
+                        "$codelist_extensible": false,
+                        "parent_entity": "StudyProtocolDocument",
+                        "protocolStatus.code": "C188862",
+                        "parent_rel": "versions",
+                        "protocolStatus.decode": "Draft Pending Review"
+                    },
+                    "dataset": "StudyProtocolDocumentVersio.xpt",
+                    "row": 2
+                },
+                {
+                    "value": {
+                        "protocolStatus.codeSystemVersion": "2023-12-15",
+                        "$value_for_code": "Approved",
+                        "$code_for_decode_pref_term": null,
+                        "id": "StudyProtocolDocumentVersion_3",
+                        "$code_for_decode_value": "C25425",
+                        "protocolStatus.codeSystem": "CDISC",
+                        "$codelist_code": "C188723",
+                        "$pref_term_for_code": "Approval",
+                        "protocolVersion": "4",
+                        "parent_id": "StudyProtocolDocument_1",
+                        "$codelist_extensible": false,
+                        "parent_entity": "StudyProtocolDocument",
+                        "protocolStatus.code": "C25425",
+                        "parent_rel": "versions",
+                        "protocolStatus.decode": "Approved"
+                    },
+                    "dataset": "StudyProtocolDocumentVersio.xpt",
+                    "row": 3
+                },
+                {
+                    "value": {
+                        "protocolStatus.codeSystemVersion": "Package 61",
+                        "$value_for_code": null,
+                        "$code_for_decode_pref_term": null,
+                        "id": "StudyProtocolDocumentVersion_4",
+                        "$code_for_decode_value": null,
+                        "protocolStatus.codeSystem": "http://www.cdisc.org",
+                        "$codelist_code": "C188723",
+                        "$pref_term_for_code": null,
+                        "protocolVersion": "5",
+                        "parent_id": "StudyProtocolDocument_1",
+                        "$codelist_extensible": null,
+                        "parent_entity": "StudyProtocolDocument",
+                        "protocolStatus.code": "C63553",
+                        "parent_rel": "versions",
+                        "protocolStatus.decode": "Obsolete"
+                    },
+                    "dataset": "StudyProtocolDocumentVersio.xpt",
+                    "row": 4
+                },
+                {
+                    "value": {
+                        "protocolStatus.codeSystemVersion": "2023-12-15",
+                        "$value_for_code": "Final",
+                        "$code_for_decode_pref_term": "C25425",
+                        "id": "StudyProtocolDocumentVersion_5",
+                        "$code_for_decode_value": null,
+                        "protocolStatus.codeSystem": "http://www.cdisc.org",
+                        "$codelist_code": "C188723",
+                        "$pref_term_for_code": "Final",
+                        "protocolVersion": "6",
+                        "parent_id": "StudyProtocolDocument_1",
+                        "$codelist_extensible": false,
+                        "parent_entity": "StudyProtocolDocument",
+                        "protocolStatus.code": "C25508",
+                        "parent_rel": "versions",
+                        "protocolStatus.decode": "Approval"
+                    },
+                    "dataset": "StudyProtocolDocumentVersio.xpt",
+                    "row": 5
+                },
+                {
+                    "value": {
+                        "protocolStatus.codeSystemVersion": "2023-12-15",
+                        "$value_for_code": null,
+                        "$code_for_decode_pref_term": null,
+                        "id": "StudyProtocolDocumentVersion_6",
+                        "$code_for_decode_value": null,
+                        "protocolStatus.codeSystem": "http://www.cdisc.org",
+                        "$codelist_code": "C188723",
+                        "$pref_term_for_code": null,
+                        "protocolVersion": "7",
+                        "parent_id": "StudyProtocolDocument_1",
+                        "$codelist_extensible": false,
+                        "parent_entity": "StudyProtocolDocument",
+                        "protocolStatus.code": "C0008X",
+                        "parent_rel": "versions",
+                        "protocolStatus.decode": "Recovered"
+                    },
+                    "dataset": "StudyProtocolDocumentVersio.xpt",
+                    "row": 6
+                }
+            ]
+        }
+    ]
+}

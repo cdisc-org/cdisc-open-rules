@@ -1,0 +1,171 @@
+{
+    "Code": [
+        {
+            "executionStatus": "skipped",
+            "dataset": "Code.xpt",
+            "domain": "",
+            "variables": [],
+            "message": "Rule skipped - doesn't apply to entity for rule id=, dataset=Code",
+            "errors": []
+        }
+    ],
+    "ObservationalStudyDesign": [
+        {
+            "executionStatus": "success",
+            "dataset": "ObservationalStudyDesign.xpt",
+            "domain": "ObservationalStudyDesign",
+            "variables": [
+                "$code_for_decode_pref_term",
+                "$code_for_decode_value",
+                "$codelist_code",
+                "$codelist_extensible",
+                "$pref_term_for_code",
+                "$value_for_code",
+                "code",
+                "codeSystem",
+                "codeSystemVersion",
+                "decode",
+                "id",
+                "name",
+                "parent_entity",
+                "parent_id",
+                "parent_rel"
+            ],
+            "message": "The observational study design's sub type is not specified according to the extensible observational study design subtype (C215486) DDF codelist - codeSystem is not \"http://www.cdisc.org\", codeSystemVersion is not a valid terminology package date, and/or the code or decode (either as preferred term or as submission value) is found in the codelist (case insensitive) but the corresponding decode or code does not match the codelist value (case sensitive).",
+            "errors": [
+                {
+                    "value": {
+                        "codeSystemVersion": "2024-09-27",
+                        "id": "ObservationalStudyDesign_1",
+                        "$code_for_decode_value": null,
+                        "codeSystem": "http://www.cdisc.org",
+                        "$value_for_code": null,
+                        "name": "Study Design 1",
+                        "$codelist_extensible": null,
+                        "parent_entity": "StudyVersion",
+                        "decode": "Clinical Education",
+                        "$code_for_decode_pref_term": null,
+                        "code": "C215657",
+                        "$codelist_code": "C215486",
+                        "$pref_term_for_code": null,
+                        "parent_rel": "studyDesigns",
+                        "parent_id": "StudyVersion_1"
+                    },
+                    "dataset": "ObservationalStudyDesign.xpt",
+                    "row": 1,
+                    "instance_id": "ObservationalStudyDesign_1"
+                },
+                {
+                    "value": {
+                        "codeSystemVersion": "2025-09-26",
+                        "id": "ObservationalStudyDesign_1",
+                        "$code_for_decode_value": "C215658",
+                        "codeSystem": "http://www.cdisc.org",
+                        "$value_for_code": "Disease Determinants",
+                        "name": "Study Design 1",
+                        "$codelist_extensible": true,
+                        "parent_entity": "StudyVersion",
+                        "decode": "Disease Etiology",
+                        "$code_for_decode_pref_term": null,
+                        "code": "C215654",
+                        "$codelist_code": "C215486",
+                        "$pref_term_for_code": "Disease Determinants Study",
+                        "parent_rel": "studyDesigns",
+                        "parent_id": "StudyVersion_1"
+                    },
+                    "dataset": "ObservationalStudyDesign.xpt",
+                    "row": 1,
+                    "instance_id": "ObservationalStudyDesign_1"
+                },
+                {
+                    "value": {
+                        "codeSystemVersion": "2025-09-26",
+                        "id": "ObservationalStudyDesign_1",
+                        "$code_for_decode_value": null,
+                        "codeSystem": "http://www.cdisc.org",
+                        "$value_for_code": "Disease Etiology",
+                        "name": "Study Design 1",
+                        "$codelist_extensible": true,
+                        "parent_entity": "StudyVersion",
+                        "decode": "Etiology",
+                        "$code_for_decode_pref_term": null,
+                        "code": "C215658",
+                        "$codelist_code": "C215486",
+                        "$pref_term_for_code": "Disease Etiology Study",
+                        "parent_rel": "studyDesigns",
+                        "parent_id": "StudyVersion_1"
+                    },
+                    "dataset": "ObservationalStudyDesign.xpt",
+                    "row": 1,
+                    "instance_id": "ObservationalStudyDesign_1"
+                },
+                {
+                    "value": {
+                        "codeSystemVersion": "2025-09-26",
+                        "id": "ObservationalStudyDesign_1",
+                        "$code_for_decode_value": "C215653",
+                        "codeSystem": "http://www.cdisc.org",
+                        "$value_for_code": null,
+                        "name": "Study Design 1",
+                        "$codelist_extensible": true,
+                        "parent_entity": "StudyVersion",
+                        "decode": "Disease Incidence",
+                        "$code_for_decode_pref_term": null,
+                        "code": "C215653xx",
+                        "$codelist_code": "C215486",
+                        "$pref_term_for_code": null,
+                        "parent_rel": "studyDesigns",
+                        "parent_id": "StudyVersion_1"
+                    },
+                    "dataset": "ObservationalStudyDesign.xpt",
+                    "row": 1,
+                    "instance_id": "ObservationalStudyDesign_1"
+                },
+                {
+                    "value": {
+                        "codeSystemVersion": "2025-09-26",
+                        "id": "ObservationalStudyDesign_1",
+                        "$code_for_decode_value": "C215675",
+                        "codeSystem": "http://www.cdisc.org/C215486",
+                        "$value_for_code": "Disease Prevalence",
+                        "name": "Study Design 1",
+                        "$codelist_extensible": true,
+                        "parent_entity": "StudyVersion",
+                        "decode": "Disease Prevalence",
+                        "$code_for_decode_pref_term": null,
+                        "code": "C215675",
+                        "$codelist_code": "C215486",
+                        "$pref_term_for_code": "Disease Prevalence Study",
+                        "parent_rel": "studyDesigns",
+                        "parent_id": "StudyVersion_1"
+                    },
+                    "dataset": "ObservationalStudyDesign.xpt",
+                    "row": 1,
+                    "instance_id": "ObservationalStudyDesign_1"
+                },
+                {
+                    "value": {
+                        "codeSystemVersion": "Q3-2025",
+                        "id": "ObservationalStudyDesign_1",
+                        "$code_for_decode_value": null,
+                        "codeSystem": "http://www.cdisc.org",
+                        "$value_for_code": null,
+                        "name": "Study Design 1",
+                        "$codelist_extensible": null,
+                        "parent_entity": "StudyVersion",
+                        "decode": "Disease Prognosis",
+                        "$code_for_decode_pref_term": null,
+                        "code": "C215655",
+                        "$codelist_code": "C215486",
+                        "$pref_term_for_code": null,
+                        "parent_rel": "studyDesigns",
+                        "parent_id": "StudyVersion_1"
+                    },
+                    "dataset": "ObservationalStudyDesign.xpt",
+                    "row": 1,
+                    "instance_id": "ObservationalStudyDesign_1"
+                }
+            ]
+        }
+    ]
+}

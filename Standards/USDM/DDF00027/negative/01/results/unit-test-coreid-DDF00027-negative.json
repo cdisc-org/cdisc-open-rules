@@ -1,0 +1,469 @@
+{
+    "STUDYEPOCH": [
+        {
+            "executionStatus": "success",
+            "dataset": "StudyEpoch.xpt",
+            "domain": "STUDYEPOCH",
+            "variables": [
+                "id",
+                "name",
+                "nextId",
+                "parent_entity",
+                "parent_id",
+                "parent_rel",
+                "previousId"
+            ],
+            "message": "The same instance is referenced more than once as previous or next - nextId or previousId values are not unique.",
+            "errors": [
+                {
+                    "value": {
+                        "parent_entity": "StudyDesign",
+                        "previousId": null,
+                        "name": "Screening",
+                        "parent_id": "StudyDesign_1",
+                        "nextId": "StudyEpoch_2",
+                        "parent_rel": "epochs",
+                        "id": "StudyEpoch_1"
+                    },
+                    "row": 1
+                },
+                {
+                    "value": {
+                        "parent_entity": "StudyDesign",
+                        "previousId": "StudyEpoch_4",
+                        "name": "Treatment 2",
+                        "parent_id": "StudyDesign_1",
+                        "nextId": "StudyEpoch_4",
+                        "parent_rel": "epochs",
+                        "id": "StudyEpoch_3"
+                    },
+                    "row": 3
+                },
+                {
+                    "value": {
+                        "parent_entity": "StudyDesign",
+                        "previousId": "StudyEpoch_3",
+                        "name": "Treatment 3",
+                        "parent_id": "StudyDesign_1",
+                        "nextId": "StudyEpoch_2",
+                        "parent_rel": "epochs",
+                        "id": "StudyEpoch_4"
+                    },
+                    "row": 4
+                },
+                {
+                    "value": {
+                        "parent_entity": "StudyDesign",
+                        "previousId": "StudyEpoch_4",
+                        "name": "Follow-Up",
+                        "parent_id": "StudyDesign_1",
+                        "nextId": null,
+                        "parent_rel": "epochs",
+                        "id": "StudyEpoch_5"
+                    },
+                    "row": 5
+                }
+            ]
+        }
+    ],
+    "ENCOUNTER": [
+        {
+            "executionStatus": "success",
+            "dataset": "Encounter.xpt",
+            "domain": "ENCOUNTER",
+            "variables": [
+                "id",
+                "name",
+                "nextId",
+                "parent_entity",
+                "parent_id",
+                "parent_rel",
+                "previousId"
+            ],
+            "message": "The same instance is referenced more than once as previous or next - nextId or previousId values are not unique.",
+            "errors": [
+                {
+                    "value": {
+                        "parent_entity": "StudyDesign",
+                        "previousId": "Encounter_1",
+                        "name": "E2",
+                        "parent_id": "StudyDesign_1",
+                        "nextId": "Encounter_4",
+                        "parent_rel": "encounters",
+                        "id": "Encounter_2"
+                    },
+                    "row": 2
+                },
+                {
+                    "value": {
+                        "parent_entity": "StudyDesign",
+                        "previousId": "Encounter_2",
+                        "name": "E3",
+                        "parent_id": "StudyDesign_1",
+                        "nextId": "Encounter_4",
+                        "parent_rel": "encounters",
+                        "id": "Encounter_3"
+                    },
+                    "row": 3
+                },
+                {
+                    "value": {
+                        "parent_entity": "StudyDesign",
+                        "previousId": "Encounter_5",
+                        "name": "E7",
+                        "parent_id": "StudyDesign_1",
+                        "nextId": "Encounter_7",
+                        "parent_rel": "encounters",
+                        "id": "Encounter_6"
+                    },
+                    "row": 6
+                },
+                {
+                    "value": {
+                        "parent_entity": "StudyDesign",
+                        "previousId": "Encounter_5",
+                        "name": "E8",
+                        "parent_id": "StudyDesign_1",
+                        "nextId": "Encounter_8",
+                        "parent_rel": "encounters",
+                        "id": "Encounter_7"
+                    },
+                    "row": 7
+                }
+            ]
+        }
+    ],
+    "ACTIVITY": [
+        {
+            "executionStatus": "success",
+            "dataset": "Activity.xpt",
+            "domain": "ACTIVITY",
+            "variables": [
+                "id",
+                "name",
+                "nextId",
+                "parent_entity",
+                "parent_id",
+                "parent_rel",
+                "previousId"
+            ],
+            "message": "The same instance is referenced more than once as previous or next - nextId or previousId values are not unique.",
+            "errors": [
+                {
+                    "value": {
+                        "parent_entity": "StudyDesign",
+                        "previousId": "Activity_1",
+                        "name": "Inclusion/exclusion criteria",
+                        "parent_id": "StudyDesign_1",
+                        "nextId": "Activity_3",
+                        "parent_rel": "activities",
+                        "id": "Activity_2"
+                    },
+                    "row": 2
+                },
+                {
+                    "value": {
+                        "parent_entity": "StudyDesign",
+                        "previousId": "Activity_1",
+                        "name": "Hachinski",
+                        "parent_id": "StudyDesign_1",
+                        "nextId": "Activity_6",
+                        "parent_rel": "activities",
+                        "id": "Activity_5"
+                    },
+                    "row": 5
+                },
+                {
+                    "value": {
+                        "parent_entity": "StudyDesign",
+                        "previousId": "Activity_6",
+                        "name": "Physical examination",
+                        "parent_id": "StudyDesign_1",
+                        "nextId": "Activity_9",
+                        "parent_rel": "activities",
+                        "id": "Activity_7"
+                    },
+                    "row": 7
+                },
+                {
+                    "value": {
+                        "parent_entity": "StudyDesign",
+                        "previousId": "Activity_7",
+                        "name": "Medical history",
+                        "parent_id": "StudyDesign_1",
+                        "nextId": "Activity_9",
+                        "parent_rel": "activities",
+                        "id": "Activity_8"
+                    },
+                    "row": 8
+                }
+            ]
+        }
+    ],
+    "NARRATIVECONTENT": [
+        {
+            "executionStatus": "success",
+            "dataset": "NarrativeContent.xpt",
+            "domain": "NARRATIVECONTENT",
+            "variables": [
+                "id",
+                "name",
+                "nextId",
+                "parent_entity",
+                "parent_id",
+                "parent_rel",
+                "previousId"
+            ],
+            "message": "The same instance is referenced more than once as previous or next - nextId or previousId values are not unique.",
+            "errors": [
+                {
+                    "value": {
+                        "parent_entity": "StudyProtocolDocumentVersion",
+                        "previousId": "NarrativeContent_1",
+                        "name": "SECTION 0",
+                        "parent_id": "StudyProtocolDocumentVersion_1",
+                        "nextId": "NarrativeContent_3",
+                        "parent_rel": "contents",
+                        "id": "NarrativeContent_2"
+                    },
+                    "row": 2
+                },
+                {
+                    "value": {
+                        "parent_entity": "StudyProtocolDocumentVersion",
+                        "previousId": "NarrativeContent_1",
+                        "name": "SECTION 2",
+                        "parent_id": "StudyProtocolDocumentVersion_1",
+                        "nextId": "NarrativeContent_8",
+                        "parent_rel": "contents",
+                        "id": "NarrativeContent_4"
+                    },
+                    "row": 4
+                },
+                {
+                    "value": {
+                        "parent_entity": "StudyProtocolDocumentVersion",
+                        "previousId": "NarrativeContent_6",
+                        "name": "SECTION 3",
+                        "parent_id": "StudyProtocolDocumentVersion_1",
+                        "nextId": "NarrativeContent_8",
+                        "parent_rel": "contents",
+                        "id": "NarrativeContent_7"
+                    },
+                    "row": 7
+                }
+            ]
+        }
+    ],
+    "ELIGIBILITYCRITERION": [
+        {
+            "executionStatus": "success",
+            "dataset": "EligibilityCriterion.xpt",
+            "domain": "ELIGIBILITYCRITERION",
+            "variables": [
+                "id",
+                "name",
+                "nextId",
+                "parent_entity",
+                "parent_id",
+                "parent_rel",
+                "previousId"
+            ],
+            "message": "The same instance is referenced more than once as previous or next - nextId or previousId values are not unique.",
+            "errors": [
+                {
+                    "value": {
+                        "parent_entity": "StudyDesignPopulation",
+                        "previousId": null,
+                        "name": "IN01",
+                        "parent_id": "StudyDesignPopulation_1",
+                        "nextId": "EligibilityCriterion_2",
+                        "parent_rel": "criteria",
+                        "id": "EligibilityCriterion_1"
+                    },
+                    "row": 1
+                },
+                {
+                    "value": {
+                        "parent_entity": "StudyDesignPopulation",
+                        "previousId": "EligibilityCriterion_1",
+                        "name": "IN02",
+                        "parent_id": "StudyDesignPopulation_1",
+                        "nextId": "EligibilityCriterion_3",
+                        "parent_rel": "criteria",
+                        "id": "EligibilityCriterion_2"
+                    },
+                    "row": 2
+                },
+                {
+                    "value": {
+                        "parent_entity": "StudyDesignPopulation",
+                        "previousId": "EligibilityCriterion_2",
+                        "name": "IN03",
+                        "parent_id": "StudyDesignPopulation_1",
+                        "nextId": "EligibilityCriterion_4",
+                        "parent_rel": "criteria",
+                        "id": "EligibilityCriterion_3"
+                    },
+                    "row": 3
+                },
+                {
+                    "value": {
+                        "parent_entity": "StudyDesignPopulation",
+                        "previousId": "EligibilityCriterion_3",
+                        "name": "IN04",
+                        "parent_id": "StudyDesignPopulation_1",
+                        "nextId": "EligibilityCriterion_5",
+                        "parent_rel": "criteria",
+                        "id": "EligibilityCriterion_4"
+                    },
+                    "row": 4
+                },
+                {
+                    "value": {
+                        "parent_entity": "StudyDesignPopulation",
+                        "previousId": "EligibilityCriterion_4",
+                        "name": "IN05",
+                        "parent_id": "StudyDesignPopulation_1",
+                        "nextId": "EligibilityCriterion_6",
+                        "parent_rel": "criteria",
+                        "id": "EligibilityCriterion_5"
+                    },
+                    "row": 5
+                },
+                {
+                    "value": {
+                        "parent_entity": "StudyDesignPopulation",
+                        "previousId": "EligibilityCriterion_5",
+                        "name": "IN06",
+                        "parent_id": "StudyDesignPopulation_1",
+                        "nextId": "EligibilityCriterion_7",
+                        "parent_rel": "criteria",
+                        "id": "EligibilityCriterion_6"
+                    },
+                    "row": 6
+                },
+                {
+                    "value": {
+                        "parent_entity": "StudyDesignPopulation",
+                        "previousId": "EligibilityCriterion_6",
+                        "name": "IN07",
+                        "parent_id": "StudyDesignPopulation_1",
+                        "nextId": "EligibilityCriterion_8",
+                        "parent_rel": "criteria",
+                        "id": "EligibilityCriterion_7"
+                    },
+                    "row": 7
+                },
+                {
+                    "value": {
+                        "parent_entity": "StudyDesignPopulation",
+                        "previousId": "EligibilityCriterion_7",
+                        "name": "IN08",
+                        "parent_id": "StudyDesignPopulation_1",
+                        "nextId": null,
+                        "parent_rel": "criteria",
+                        "id": "EligibilityCriterion_8"
+                    },
+                    "row": 8
+                },
+                {
+                    "value": {
+                        "parent_entity": "StudyDesignPopulation",
+                        "previousId": null,
+                        "name": "EX01",
+                        "parent_id": "StudyDesignPopulation_1",
+                        "nextId": "EligibilityCriterion_2",
+                        "parent_rel": "criteria",
+                        "id": "EligibilityCriterion_9"
+                    },
+                    "row": 9
+                },
+                {
+                    "value": {
+                        "parent_entity": "StudyDesignPopulation",
+                        "previousId": "EligibilityCriterion_1",
+                        "name": "EX02",
+                        "parent_id": "StudyDesignPopulation_1",
+                        "nextId": "EligibilityCriterion_3",
+                        "parent_rel": "criteria",
+                        "id": "EligibilityCriterion_10"
+                    },
+                    "row": 10
+                },
+                {
+                    "value": {
+                        "parent_entity": "StudyDesignPopulation",
+                        "previousId": "EligibilityCriterion_2",
+                        "name": "EX03",
+                        "parent_id": "StudyDesignPopulation_1",
+                        "nextId": "EligibilityCriterion_4",
+                        "parent_rel": "criteria",
+                        "id": "EligibilityCriterion_11"
+                    },
+                    "row": 11
+                },
+                {
+                    "value": {
+                        "parent_entity": "StudyDesignPopulation",
+                        "previousId": "EligibilityCriterion_3",
+                        "name": "EX04",
+                        "parent_id": "StudyDesignPopulation_1",
+                        "nextId": "EligibilityCriterion_5",
+                        "parent_rel": "criteria",
+                        "id": "EligibilityCriterion_12"
+                    },
+                    "row": 12
+                },
+                {
+                    "value": {
+                        "parent_entity": "StudyDesignPopulation",
+                        "previousId": "EligibilityCriterion_4",
+                        "name": "EX05",
+                        "parent_id": "StudyDesignPopulation_1",
+                        "nextId": "EligibilityCriterion_6",
+                        "parent_rel": "criteria",
+                        "id": "EligibilityCriterion_13"
+                    },
+                    "row": 13
+                },
+                {
+                    "value": {
+                        "parent_entity": "StudyDesignPopulation",
+                        "previousId": "EligibilityCriterion_5",
+                        "name": "EX06",
+                        "parent_id": "StudyDesignPopulation_1",
+                        "nextId": "EligibilityCriterion_7",
+                        "parent_rel": "criteria",
+                        "id": "EligibilityCriterion_14"
+                    },
+                    "row": 14
+                },
+                {
+                    "value": {
+                        "parent_entity": "StudyDesignPopulation",
+                        "previousId": "EligibilityCriterion_6",
+                        "name": "EX07",
+                        "parent_id": "StudyDesignPopulation_1",
+                        "nextId": "EligibilityCriterion_8",
+                        "parent_rel": "criteria",
+                        "id": "EligibilityCriterion_15"
+                    },
+                    "row": 15
+                },
+                {
+                    "value": {
+                        "parent_entity": "StudyDesignPopulation",
+                        "previousId": "EligibilityCriterion_7",
+                        "name": "EX08",
+                        "parent_id": "StudyDesignPopulation_1",
+                        "nextId": null,
+                        "parent_rel": "criteria",
+                        "id": "EligibilityCriterion_16"
+                    },
+                    "row": 16
+                }
+            ]
+        }
+    ]
+}

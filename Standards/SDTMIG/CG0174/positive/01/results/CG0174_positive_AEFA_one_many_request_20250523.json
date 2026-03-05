@@ -1,0 +1,1174 @@
+{
+    "rule": {
+        "Authorities": [
+            {
+                "Organization": "CDISC",
+                "Standards": [
+                    {
+                        "Name": "SDTMIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "IG v3.4",
+                                        "Section": "6.4.3",
+                                        "Cited_Guidance": "If an FA record does have a parent record, the value in FAOBJ should match the value in --TERM or --TRT, unless the parent domain is dictionary coded or subject to controlled terminology, in which case FAOBJ should match the value in --DECOD."
+                                    }
+                                ],
+                                "Origin": "SDTM and SDTMIG Conformance Rules",
+                                "Version": "2.0",
+                                "Rule_Identifier": {
+                                    "Id": "CG0174",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.4"
+                    },
+                    {
+                        "Name": "SDTMIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "IG v3.3",
+                                        "Section": "6.4.3",
+                                        "Cited_Guidance": "In general, the value in FAOBJ should match the value in --TERM or --TRT, unless the parent domain is dictionary coded or subject to controlled terminology, in which case FAOBJ should then match the value in --DECOD."
+                                    }
+                                ],
+                                "Origin": "SDTM and SDTMIG Conformance Rules",
+                                "Version": "2.0",
+                                "Rule_Identifier": {
+                                    "Id": "CG0174",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.3"
+                    },
+                    {
+                        "Name": "SDTMIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "IG v3.2",
+                                        "Section": "6.4.3",
+                                        "Cited_Guidance": "In general, the value in FAOBJ should match the value in --TERM or --TRT, unless the parent domain is dictionary coded or subject to controlled terminology, in which case FAOBJ should then match the value in --DECOD."
+                                    }
+                                ],
+                                "Origin": "SDTM and SDTMIG Conformance Rules",
+                                "Version": "2.0",
+                                "Rule_Identifier": {
+                                    "Id": "CG0174",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.2"
+                    },
+                    {
+                        "Name": "TIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "TIG 1.0",
+                                        "Section": "2.8.4",
+                                        "Cited_Guidance": "A record in FA may or may not have a parent record in an events or interventions domain. If an FA record does have a parent record, the value in FAOBJ should match the value in --TERM or --TRT, unless the parent domain is dictionary coded or subject to controlled terminology. In such cases, the value represented in FAOBJ will match the value represented in --DECOD."
+                                    }
+                                ],
+                                "Origin": "TIG Conformance Rules",
+                                "Version": "1.0",
+                                "Rule_Identifier": {
+                                    "Id": "TIG0403",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Substandard": "SDTM",
+                        "Version": "1.0"
+                    }
+                ]
+            }
+        ],
+        "Check": {
+            "all": [
+                {
+                    "name": "FAOBJ",
+                    "operator": "not_equal_to",
+                    "value": "RELREC.**TERM"
+                },
+                {
+                    "name": "FAOBJ",
+                    "operator": "not_equal_to",
+                    "value": "RELREC.**TRT"
+                },
+                {
+                    "name": "FAOBJ",
+                    "operator": "not_equal_to_case_insensitive",
+                    "value": "RELREC.**DECOD"
+                }
+            ]
+        },
+        "Core": {
+            "Id": "CDISC.SDTMIG.CG0174",
+            "Status": "Draft",
+            "Version": "1"
+        },
+        "Description": "Raise an error when a related record is present in the parent domain dataset but FAOBJ is not equal to the --TERM, --TRT or --DECOD of the parent domain.",
+        "Executability": "Fully Executable",
+        "Outcome": {
+            "Message": "Related record is present in the parent domain dataset but FAOBJ is not equal to the \"TERM\", \"TRT\" or \"DECOD\" of the parent domain.",
+            "Output_Variables": [
+                "FAOBJ",
+                "RELREC.**TERM",
+                "RELREC.**TRT",
+                "RELREC.**DECOD"
+            ]
+        },
+        "Scope": {
+            "Classes": {
+                "Include": [
+                    "FINDINGS ABOUT"
+                ]
+            },
+            "Domains": {
+                "Include": [
+                    "FA"
+                ]
+            },
+            "Use_Case": "INDH"
+        },
+        "Sensitivity": "Record",
+        "Match_Datasets": [
+            {
+                "Name": "RELREC"
+            }
+        ],
+        "Rule_Type": "Record Data"
+    },
+    "datasets": [
+        {
+            "filename": "ae.xpt",
+            "label": "Adverse Events",
+            "domain": "AE",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Var Label",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "DOMAIN",
+                    "label": "Var Label",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "USUBJID",
+                    "label": "Var Label",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "AESEQ",
+                    "label": "Var Label",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "AELNKID",
+                    "label": "Var Label",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "AETERM",
+                    "label": "Var Label",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "AESEV",
+                    "label": "Var Label",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "AESER",
+                    "label": "Var Label",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "AEACN",
+                    "label": "Var Label",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "AEREL",
+                    "label": "Var Label",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "AEOUT",
+                    "label": "Var Label",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "AESCAN",
+                    "label": "Var Label",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "AESCONG",
+                    "label": "Var Label",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "AESDISAB",
+                    "label": "Var Label",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "AESDTH",
+                    "label": "Var Label",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "AESHOSP",
+                    "label": "Var Label",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "AESLIFE",
+                    "label": "Var Label",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "AESOD",
+                    "label": "Var Label",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "EPOCH",
+                    "label": "Var Label",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "AESTDTC",
+                    "label": "Var Label",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "AEENDTC",
+                    "label": "Var Label",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "AESTDY",
+                    "label": "Var Label",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "AEENDY",
+                    "label": "Var Label",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "AEENRTPT",
+                    "label": "Var Label",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "AEENTPT",
+                    "label": "Var Label",
+                    "type": "Char",
+                    "length": 200
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01"
+                ],
+                "DOMAIN": [
+                    "AE",
+                    "AE",
+                    "AE",
+                    "AE",
+                    "AE",
+                    "AE",
+                    "AE",
+                    "AE",
+                    "AE",
+                    "AE",
+                    "AE"
+                ],
+                "USUBJID": [
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC002",
+                    "CDISC002",
+                    "CDISC002",
+                    "CDISC002",
+                    "CDISC002",
+                    "CDISC002",
+                    "CDISC002",
+                    "CDISC002",
+                    "CDISC002"
+                ],
+                "AESEQ": [
+                    "1",
+                    "2",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7",
+                    "8",
+                    "9"
+                ],
+                "AELNKID": [
+                    "1",
+                    "2",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7",
+                    "8",
+                    "9"
+                ],
+                "AETERM": [
+                    "INJECTION SITE REACTION",
+                    "FATIGUE",
+                    "INJECTION SITE REACTION",
+                    "SHOULDER PAIN",
+                    "JOINT DISLOCATION",
+                    "INCONTINENCE",
+                    "INJECTION SITE REACTION",
+                    "SKIN LACERATION",
+                    "CONFUSIONAL STATE",
+                    "DYSPNOEA",
+                    "SUDDEN DEATH"
+                ],
+                "AESEV": [
+                    "MODERATE",
+                    "MODERATE",
+                    "MILD",
+                    "MILD",
+                    "MODERATE",
+                    "MILD",
+                    "MILD",
+                    "MILD",
+                    "MODERATE",
+                    "MODERATE",
+                    "SEVERE"
+                ],
+                "AESER": [
+                    "N",
+                    "N",
+                    "N",
+                    "N",
+                    "N",
+                    "N",
+                    "N",
+                    "N",
+                    "N",
+                    "N",
+                    "Y"
+                ],
+                "AEACN": [
+                    "DRUG WITHDRAWN",
+                    "DOSE NOT CHANGED",
+                    "DOSE NOT CHANGED",
+                    "DOSE NOT CHANGED",
+                    "DOSE NOT CHANGED",
+                    "DOSE NOT CHANGED",
+                    "DOSE NOT CHANGED",
+                    "DOSE NOT CHANGED",
+                    "DOSE NOT CHANGED",
+                    "DOSE NOT CHANGED",
+                    "DRUG WITHDRAWN"
+                ],
+                "AEREL": [
+                    "RELATED",
+                    "UNLIKELY RELATED",
+                    "POSSIBLY RELATED",
+                    "NOT RELATED",
+                    "NOT RELATED",
+                    "NOT RELATED",
+                    "POSSIBLY RELATED",
+                    "NOT RELATED",
+                    "NOT RELATED",
+                    "NOT RELATED",
+                    "NOT RELATED"
+                ],
+                "AEOUT": [
+                    "NOT RECOVERED/NOT RESOLVED",
+                    "NOT RECOVERED/NOT RESOLVED",
+                    "NOT RECOVERED/NOT RESOLVED",
+                    "NOT RECOVERED/NOT RESOLVED",
+                    "RECOVERED/RESOLVED",
+                    "NOT RECOVERED/NOT RESOLVED",
+                    "NOT RECOVERED/NOT RESOLVED",
+                    "NOT RECOVERED/NOT RESOLVED",
+                    "NOT RECOVERED/NOT RESOLVED",
+                    "NOT RECOVERED/NOT RESOLVED",
+                    "FATAL"
+                ],
+                "AESCAN": [
+                    "N",
+                    "N",
+                    "N",
+                    "N",
+                    "N",
+                    "N",
+                    "N",
+                    "N",
+                    "N",
+                    "N",
+                    "N"
+                ],
+                "AESCONG": [
+                    "N",
+                    "N",
+                    "N",
+                    "N",
+                    "N",
+                    "N",
+                    "N",
+                    "N",
+                    "N",
+                    "N",
+                    "N"
+                ],
+                "AESDISAB": [
+                    "N",
+                    "N",
+                    "N",
+                    "N",
+                    "N",
+                    "N",
+                    "N",
+                    "N",
+                    "N",
+                    "N",
+                    "N"
+                ],
+                "AESDTH": [
+                    "N",
+                    "N",
+                    "N",
+                    "N",
+                    "N",
+                    "N",
+                    "N",
+                    "N",
+                    "N",
+                    "N",
+                    "Y"
+                ],
+                "AESHOSP": [
+                    "N",
+                    "N",
+                    "N",
+                    "N",
+                    "N",
+                    "N",
+                    "N",
+                    "N",
+                    "N",
+                    "N",
+                    "N"
+                ],
+                "AESLIFE": [
+                    "N",
+                    "N",
+                    "N",
+                    "N",
+                    "N",
+                    "N",
+                    "N",
+                    "N",
+                    "N",
+                    "N",
+                    "Y"
+                ],
+                "AESOD": [
+                    "N",
+                    "N",
+                    "N",
+                    "N",
+                    "N",
+                    "N",
+                    "N",
+                    "N",
+                    "N",
+                    "N",
+                    "N"
+                ],
+                "EPOCH": [
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT"
+                ],
+                "AESTDTC": [
+                    "2012-12-02",
+                    "2013-01-14",
+                    "2012-11-16",
+                    "2012-11-21",
+                    "2012-11-21",
+                    "2012-11-22",
+                    "2012-11-29",
+                    "2012-12-09",
+                    "2013-01-11",
+                    "2013-01-11",
+                    "2013-01-14"
+                ],
+                "AEENDTC": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "2012-11-21",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "2013-01-14"
+                ],
+                "AESTDY": [
+                    "3",
+                    "46",
+                    "2",
+                    "7",
+                    "7",
+                    "8",
+                    "15",
+                    "25",
+                    "58",
+                    "58",
+                    "61"
+                ],
+                "AEENDY": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "7",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "61"
+                ],
+                "AEENRTPT": [
+                    "ONGOING",
+                    "ONGOING",
+                    "ONGOING",
+                    "ONGOING",
+                    "",
+                    "ONGOING",
+                    "ONGOING",
+                    "ONGOING",
+                    "ONGOING",
+                    "ONGOING",
+                    ""
+                ],
+                "AEENTPT": [
+                    "2013-05-20",
+                    "2013-05-20",
+                    "2013-01-14",
+                    "2013-01-14",
+                    "",
+                    "2013-01-14",
+                    "2013-01-14",
+                    "2013-01-14",
+                    "2013-01-14",
+                    "2013-01-14",
+                    ""
+                ]
+            }
+        },
+        {
+            "filename": "fa.xpt",
+            "label": "Findings About",
+            "domain": "FA",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Var Label",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "DOMAIN",
+                    "label": "Var Label",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "USUBJID",
+                    "label": "Var Label",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "FASEQ",
+                    "label": "Var Label",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "FALNKGRP",
+                    "label": "Var Label",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "FATESTCD",
+                    "label": "Var Label",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "FATEST",
+                    "label": "Var Label",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "FAOBJ",
+                    "label": "Var Label",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "FACAT",
+                    "label": "Var Label",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "FAORRES",
+                    "label": "Var Label",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "FASTRESC",
+                    "label": "Var Label",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "FALOC",
+                    "label": "Var Label",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "VISITNUM",
+                    "label": "Var Label",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "EPOCH",
+                    "label": "Var Label",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "FADTC",
+                    "label": "Var Label",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "FADY",
+                    "label": "Var Label",
+                    "type": "Char",
+                    "length": 200
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01"
+                ],
+                "DOMAIN": [
+                    "FA",
+                    "FA",
+                    "FA",
+                    "FA",
+                    "FA",
+                    "FA",
+                    "FA",
+                    "FA",
+                    "FA",
+                    "FA",
+                    "FA",
+                    "FA",
+                    "FA",
+                    "FA",
+                    "FA",
+                    "FA",
+                    "FA",
+                    "FA"
+                ],
+                "USUBJID": [
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC002",
+                    "CDISC002",
+                    "CDISC002",
+                    "CDISC002",
+                    "CDISC002",
+                    "CDISC002",
+                    "CDISC002",
+                    "CDISC002",
+                    "CDISC002",
+                    "CDISC002",
+                    "CDISC002",
+                    "CDISC002"
+                ],
+                "FASEQ": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7",
+                    "8",
+                    "9",
+                    "10",
+                    "11",
+                    "12"
+                ],
+                "FALNKGRP": [
+                    "1",
+                    "1",
+                    "1",
+                    "1",
+                    "2",
+                    "2",
+                    "1",
+                    "1",
+                    "1",
+                    "1",
+                    "1",
+                    "1",
+                    "5",
+                    "5",
+                    "5",
+                    "5",
+                    "5",
+                    "5"
+                ],
+                "FATESTCD": [
+                    "OCCUR",
+                    "SEV",
+                    "OCCUR",
+                    "OCCUR",
+                    "OCCUR",
+                    "OCCUR",
+                    "OCCUR",
+                    "OCCUR",
+                    "OCCUR",
+                    "OCCUR",
+                    "SEV",
+                    "OCCUR",
+                    "OCCUR",
+                    "SEV",
+                    "OCCUR",
+                    "OCCUR",
+                    "OCCUR",
+                    "OCCUR"
+                ],
+                "FATEST": [
+                    "Occurrence Indicator",
+                    "Severity/Intensity",
+                    "Occurrence Indicator",
+                    "Occurrence Indicator",
+                    "Occurrence Indicator",
+                    "Occurrence Indicator",
+                    "Occurrence Indicator",
+                    "Occurrence Indicator",
+                    "Occurrence Indicator",
+                    "Occurrence Indicator",
+                    "Severity/Intensity",
+                    "Occurrence Indicator",
+                    "Occurrence Indicator",
+                    "Severity/Intensity",
+                    "Occurrence Indicator",
+                    "Occurrence Indicator",
+                    "Occurrence Indicator",
+                    "Occurrence Indicator"
+                ],
+                "FAOBJ": [
+                    "INJECTION SITE REACTION",
+                    "INJECTION SITE REACTION",
+                    "INJECTION SITE REACTION",
+                    "INJECTION SITE REACTION",
+                    "FATIGUE",
+                    "FATIGUE",
+                    "INJECTION SITE REACTION",
+                    "INJECTION SITE REACTION",
+                    "INJECTION SITE REACTION",
+                    "INJECTION SITE REACTION",
+                    "INJECTION SITE REACTION",
+                    "INJECTION SITE REACTION",
+                    "INJECTION SITE REACTION",
+                    "INJECTION SITE REACTION",
+                    "INJECTION SITE REACTION",
+                    "INJECTION SITE REACTION",
+                    "INJECTION SITE REACTION",
+                    "INJECTION SITE REACTION"
+                ],
+                "FACAT": [
+                    "ERYTHEMA",
+                    "ERYTHEMA",
+                    "PAIN",
+                    "INDURATION",
+                    "PRURITIS",
+                    "EDEMA",
+                    "ERYTHEMA",
+                    "PAIN",
+                    "INDURATION",
+                    "PRURITIS",
+                    "PRURITIS",
+                    "EDEMA",
+                    "ERYTHEMA",
+                    "ERYTHEMA",
+                    "PAIN",
+                    "INDURATION",
+                    "PRURITIS",
+                    "EDEMA"
+                ],
+                "FAORRES": [
+                    "Y",
+                    "MODERATE",
+                    "N",
+                    "N",
+                    "N",
+                    "N",
+                    "N",
+                    "N",
+                    "N",
+                    "Y",
+                    "MILD",
+                    "N",
+                    "Y",
+                    "MILD",
+                    "N",
+                    "N",
+                    "N",
+                    "N"
+                ],
+                "FASTRESC": [
+                    "Y",
+                    "MODERATE",
+                    "N",
+                    "N",
+                    "N",
+                    "N",
+                    "N",
+                    "N",
+                    "N",
+                    "Y",
+                    "MILD",
+                    "N",
+                    "Y",
+                    "MILD",
+                    "N",
+                    "N",
+                    "N",
+                    "N"
+                ],
+                "FALOC": [
+                    "ARM",
+                    "ARM",
+                    "ARM",
+                    "ARM",
+                    "ARM",
+                    "ARM",
+                    "ARM",
+                    "ARM",
+                    "ARM",
+                    "ARM",
+                    "ARM",
+                    "ARM",
+                    "ARM",
+                    "ARM",
+                    "ARM",
+                    "ARM",
+                    "ARM",
+                    "ARM"
+                ],
+                "VISITNUM": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "EPOCH": [
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT"
+                ],
+                "FADTC": [
+                    "2012-12-02",
+                    "2012-12-02",
+                    "2012-12-02",
+                    "2012-12-02",
+                    "2012-12-02",
+                    "2012-12-02",
+                    "2012-11-16",
+                    "2012-11-16",
+                    "2012-11-16",
+                    "2012-11-16",
+                    "2012-11-16",
+                    "2012-11-16",
+                    "2012-11-29",
+                    "2012-11-29",
+                    "2012-11-29",
+                    "2012-11-29",
+                    "2012-11-29",
+                    "2012-11-29"
+                ],
+                "FADY": [
+                    "3",
+                    "3",
+                    "3",
+                    "3",
+                    "3",
+                    "3",
+                    "2",
+                    "2",
+                    "2",
+                    "2",
+                    "2",
+                    "2",
+                    "15",
+                    "15",
+                    "15",
+                    "15",
+                    "15",
+                    "15"
+                ]
+            }
+        },
+        {
+            "filename": "relrec.xpt",
+            "label": "Related Records",
+            "domain": "RELREC",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Var Label",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "RDOMAIN",
+                    "label": "Var Label",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "USUBJID",
+                    "label": "Var Label",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "IDVAR",
+                    "label": "Var Label",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "IDVARVAL",
+                    "label": "Var Label",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "RELTYPE",
+                    "label": "Var Label",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "RELID",
+                    "label": "Var Label",
+                    "type": "Char",
+                    "length": 200
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01"
+                ],
+                "RDOMAIN": [
+                    "AE",
+                    "DS",
+                    "AE",
+                    "DD",
+                    "AE",
+                    "FA"
+                ],
+                "USUBJID": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "IDVAR": [
+                    "AELNKID",
+                    "DSLNKID",
+                    "AELNKID",
+                    "DDLNKID",
+                    "AELNKID",
+                    "FALNKGRP"
+                ],
+                "IDVARVAL": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "RELTYPE": [
+                    "ONE",
+                    "ONE",
+                    "ONE",
+                    "ONE",
+                    "ONE",
+                    "MANY"
+                ],
+                "RELID": [
+                    "AEDS",
+                    "AEDS",
+                    "AEDD",
+                    "AEDD",
+                    "AEFA",
+                    "AEFA"
+                ]
+            }
+        }
+    ],
+    "standard": {
+        "product": "sdtmig",
+        "version": "3-4"
+    },
+    "codelists": []
+}

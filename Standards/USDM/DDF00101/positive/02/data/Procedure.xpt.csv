@@ -1,0 +1,8 @@
+parent_entity,parent_id,parent_rel,rel_type,id,name,description,label,procedureType,instanceType,code,code.id,code.code,code.codeSystem,code.codeSystemVersion,code.decode,studyInterventionId
+Activity,Activity_18,definedProcedures,definition,Procedure_1,PR1,CT Scan,CT Scan,CT Scan,Procedure,True,Code_80,383371000119108,SNOMED,"January 31, 2018",CT of head without contrast,
+Activity,Activity_33,definedProcedures,definition,Procedure_2,PR_SUPINE,Subject Supine,,,Procedure,True,Code_81,123,SPONSOR,12,Subject Supine,
+Activity,Activity_35,definedProcedures,definition,Procedure_3,PR_STAND,Subject Standing,,,Procedure,True,Code_82,124,SPONSOR,12,Subject Standing,
+Activity,Activity_36,definedProcedures,definition,Procedure_4,D1ADMIN,Drug 1 Administration,,,Procedure,True,Code_83,125,SPONSOR,12,Drug Administration,StudyIntervention_1
+Activity,Activity_37,definedProcedures,definition,Procedure_5,D2ADMIN,Drug 2 Administration,,,Procedure,True,Code_83,125,SPONSOR,12,Drug Administration,StudyIntervention_2
+Activity,Activity_38,definedProcedures,definition,Procedure_6,D3ADMIN,Drug 3 Administration,,,Procedure,True,Code_83,125,SPONSOR,12,Drug Administration,StudyIntervention_3
+Activity,Activity_38,definedProcedures,definition,Procedure_7,D6ADMIN,Drug 6 Administration,,,Procedure,True,Code_83,125,SPONSOR,12,Drug Administration,StudyIntervention_6

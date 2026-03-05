@@ -1,0 +1,91 @@
+{1 item
+"TS":[1 item
+0:{5 items
+"executionStatus":"success"
+{1 item
+"TS":[1 item
+0:{5 items
+"executionStatus":"success"
+"domain":"TS"
+"variables":[2 items
+0:"TSPARMCD"
+1:"TSVAL"
+]
+"message":"TSPARMCD = ACTSUB but the value provided in TSVAL is not a positive integer."
+"errors":[3 items
+0:{3 items
+"value":{2 items
+"TSPARMCD":"ACTSUB"
+"TSVAL":"-1"
+}
+{1 item
+"TS":[1 item
+0:{5 items
+"executionStatus":"success"
+"domain":"TS"
+"variables":[2 items
+0:"TSPARMCD"
+1:"TSVCDREF"
+]
+"message":"TSPARMCD = FCNTRY but TSVCDREF is not equal to 'ISO 3166-1 alpha-3'"
+"errors":[7 items
+0:{3 items
+"value":{2 items
+"TSVCDREF":"ISO3166-1 alpha-3"
+"TSPARMCD":"FCNTRY"
+}
+"row":15
+"SEQ":1
+}
+1:{3 items
+"value":{2 items
+"TSVCDREF":"ISO 3166-1alpha-3"
+"TSPARMCD":"FCNTRY"
+}
+"row":16
+"SEQ":2
+}
+2:{3 items
+"value":{2 items
+"TSVCDREF":"ISO3166-1alpha-3"
+"TSPARMCD":"FCNTRY"
+}
+"row":17
+"SEQ":3
+}
+3:{3 items
+"value":{2 items
+"TSVCDREF":"ISO 3166 1 alpha 3"
+"TSPARMCD":"FCNTRY"
+}
+"row":18
+"SEQ":4
+}
+4:{3 items
+"value":{2 items
+"TSVCDREF":"ISO 3166-1 alpha-"
+"TSPARMCD":"FCNTRY"
+}
+"row":19
+"SEQ":5
+}
+5:{3 items
+"value":{2 items
+"TSVCDREF":"3166-1 alpha-3"
+"TSPARMCD":"FCNTRY"
+}
+"row":20
+"SEQ":6
+}
+6:{3 items
+"value":{2 items
+"TSVCDREF":"SO 3166-1 alpha-3"
+"TSPARMCD":"FCNTRY"
+}
+"row":21
+"SEQ":7
+}
+]
+}
+]
+}

@@ -1,0 +1,198 @@
+{
+    "CM": [
+        {
+            "executionStatus": "success",
+            "dataset": "cm.xpt",
+            "domain": "CM",
+            "variables": [
+                "CMOCCUR",
+                "CMPRESP"
+            ],
+            "message": "CMPRESP should be populated as \"Y\" when CMOCCUR is provided.",
+            "errors": [
+                {
+                    "value": {
+                        "CMPRESP": "",
+                        "CMOCCUR": "Y"
+                    },
+                    "dataset": "cm.xpt",
+                    "row": 1,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 1
+                },
+                {
+                    "value": {
+                        "CMPRESP": "",
+                        "CMOCCUR": "N"
+                    },
+                    "dataset": "cm.xpt",
+                    "row": 2,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 2
+                },
+                {
+                    "value": {
+                        "CMPRESP": "",
+                        "CMOCCUR": "Y"
+                    },
+                    "dataset": "cm.xpt",
+                    "row": 3,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 3
+                }
+            ]
+        }
+    ],
+    "EC": [
+        {
+            "executionStatus": "success",
+            "dataset": "ec.xpt",
+            "domain": "EC",
+            "variables": [
+                "ECOCCUR",
+                "ECPRESP"
+            ],
+            "message": "ECPRESP should be populated as \"Y\" when ECOCCUR is provided.",
+            "errors": [
+                {
+                    "value": {
+                        "ECOCCUR": "Y",
+                        "ECPRESP": "Not in dataset"
+                    },
+                    "dataset": "ec.xpt",
+                    "row": 1,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 1
+                },
+                {
+                    "value": {
+                        "ECOCCUR": "N",
+                        "ECPRESP": "Not in dataset"
+                    },
+                    "dataset": "ec.xpt",
+                    "row": 2,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 2
+                },
+                {
+                    "value": {
+                        "ECOCCUR": "Y",
+                        "ECPRESP": "Not in dataset"
+                    },
+                    "dataset": "ec.xpt",
+                    "row": 3,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 3
+                }
+            ]
+        }
+    ],
+    "AE": [
+        {
+            "executionStatus": "skipped",
+            "dataset": null,
+            "domain": "AE",
+            "variables": [],
+            "message": null,
+            "errors": []
+        }
+    ],
+    "EM": [
+        {
+            "executionStatus": "success",
+            "dataset": "em.xpt",
+            "domain": "EM",
+            "variables": [
+                "EMOCCUR",
+                "EMPRESP"
+            ],
+            "message": "EMPRESP should be populated as \"Y\" when EMOCCUR is provided.",
+            "errors": [
+                {
+                    "value": {
+                        "EMPRESP": "N",
+                        "EMOCCUR": "Y"
+                    },
+                    "dataset": "em.xpt",
+                    "row": 1,
+                    "USUBJID": "2029",
+                    "SEQ": 1
+                },
+                {
+                    "value": {
+                        "EMPRESP": "YES",
+                        "EMOCCUR": "Y"
+                    },
+                    "dataset": "em.xpt",
+                    "row": 2,
+                    "USUBJID": "1059",
+                    "SEQ": 1
+                },
+                {
+                    "value": {
+                        "EMPRESP": "",
+                        "EMOCCUR": "Y"
+                    },
+                    "dataset": "em.xpt",
+                    "row": 3,
+                    "USUBJID": "3067",
+                    "SEQ": 1
+                }
+            ]
+        }
+    ],
+    "MH": [
+        {
+            "executionStatus": "success",
+            "dataset": "mh.xpt",
+            "domain": "MH",
+            "variables": [
+                "MHOCCUR",
+                "MHPRESP"
+            ],
+            "message": "MHPRESP should be populated as \"Y\" when MHOCCUR is provided.",
+            "errors": [
+                {
+                    "value": {
+                        "MHOCCUR": "Y",
+                        "MHPRESP": ""
+                    },
+                    "dataset": "mh.xpt",
+                    "row": 1,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 1
+                },
+                {
+                    "value": {
+                        "MHOCCUR": "Y",
+                        "MHPRESP": ""
+                    },
+                    "dataset": "mh.xpt",
+                    "row": 2,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 2
+                },
+                {
+                    "value": {
+                        "MHOCCUR": "Y",
+                        "MHPRESP": ""
+                    },
+                    "dataset": "mh.xpt",
+                    "row": 3,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 3
+                },
+                {
+                    "value": {
+                        "MHOCCUR": "N",
+                        "MHPRESP": ""
+                    },
+                    "dataset": "mh.xpt",
+                    "row": 4,
+                    "USUBJID": "CDISC002",
+                    "SEQ": 1
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,656 @@
+{
+    "rule": {
+        "Authorities": [
+            {
+                "Organization": "CDISC",
+                "Standards": [
+                    {
+                        "Name": "SDTMIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "Model v2.0",
+                                        "Section": "Events",
+                                        "Cited_Guidance": "Events[--PRESP][An indication that the event was prospectively stated or detailed on the CRF. Values should be \"Y\" or null.]|Events|[--OCCUR][An indication as to whether a prespecified event has occurred.]"
+                                    },
+                                    {
+                                        "Document": "Model v2.0",
+                                        "Section": "Interventions",
+                                        "Cited_Guidance": "Interventions[--PRESP][An indication that the intervention was prospectively stated or detailed on the CRF. Values should be \"Y\" or null.]|Interventions[--OCCUR][An indication as to whether a prespecified intervention has occurred.]"
+                                    }
+                                ],
+                                "Origin": "SDTM and SDTMIG Conformance Rules",
+                                "Version": "2.0",
+                                "Rule_Identifier": {
+                                    "Id": "CG0089",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.4"
+                    },
+                    {
+                        "Name": "SDTMIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "Model v1.4",
+                                        "Section": "Model v1.4[2.2.1 (Interventions )]|Model v1.4[2.2.2 (Events)]",
+                                        "Cited_Guidance": "Model v1.4[2.2.1 (Interventions )][--PRESP: Used when a specific intervention is pre-specified on a CRF. Values should be \"Y\" or null.][--OCCUR: Used to record whether a pre-specified event occurred when information about the occurrence of a specific event is solicited.]|Model v1.4[2.2.2 (Events)][--PRESP: Used to indicate whether the event describe by --TERM was pre-specified on a CRF. Value is Y for pre-specified events, null for spontaneously reported events.][--OCCUR: Used to record whether a pre-specified event occurred when information about the occurrence of a specific event is solicited.]"
+                                    }
+                                ],
+                                "Origin": "SDTM and SDTMIG Conformance Rules",
+                                "Version": "2.0",
+                                "Rule_Identifier": {
+                                    "Id": "CG0089",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.2"
+                    },
+                    {
+                        "Name": "SDTMIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "Model v1.7",
+                                        "Section": "Model v1.7[2.2.1 (Interventions )]|Model v1.7[2.2.2 (Events)]",
+                                        "Cited_Guidance": "Model v1.7[2.2.1 (Interventions )][--PRESP: Used when a specific intervention is pre-specified on a CRF. Values should be \"Y\" or null.][--OCCUR: Used to record whether a pre-specified event occurred when information about the occurrence of a specific event is solicited.]|Model v1.7[2.2.2 (Events)][--PRESP: Used to indicate whether the event describe by --TERM was pre-specified on a CRF. Value is Y for pre-specified events, null for spontaneously reported events.][--OCCUR: Used to record whether a pre-specified event occurred when information about the occurrence of a specific event is solicited.]"
+                                    }
+                                ],
+                                "Origin": "SDTM and SDTMIG Conformance Rules",
+                                "Version": "2.0",
+                                "Rule_Identifier": {
+                                    "Id": "CG0089",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.3"
+                    },
+                    {
+                        "Name": "TIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "SDTM v2.1",
+                                        "Item": "--PRESP|--OCCUR",
+                                        "Section": "Section 3.1.2 The Events Observation Class",
+                                        "Cited_Guidance": "(--PRESP) An indication that the event was prospectively stated or detailed on the CRF. Values should be \"Y\" or null. (--OCCUR) An indication as to whether a prespecified event has occurred."
+                                    },
+                                    {
+                                        "Document": "SDTM v2.1",
+                                        "Item": "--PRESP|--OCCUR",
+                                        "Section": "3.1.1 The Interventions Observation Class",
+                                        "Cited_Guidance": "(--PRESP) An indication that the intervention was prospectively stated or detailed on the CRF. Values should be \"Y\" or null.(--OCCUR) An indication as to whether a prespecified intervention has occurred."
+                                    }
+                                ],
+                                "Origin": "TIG Conformance Rules",
+                                "Version": "1.0",
+                                "Rule_Identifier": {
+                                    "Id": "TIG0354",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Substandard": "SDTM",
+                        "Version": "1.0"
+                    }
+                ]
+            }
+        ],
+        "Check": {
+            "all": [
+                {
+                    "name": "--OCCUR",
+                    "operator": "non_empty"
+                },
+                {
+                    "any": [
+                        {
+                            "name": "--PRESP",
+                            "operator": "not_exists"
+                        },
+                        {
+                            "name": "--PRESP",
+                            "operator": "not_equal_to",
+                            "value": "Y",
+                            "value_is_literal": true
+                        }
+                    ]
+                }
+            ]
+        },
+        "Core": {
+            "Id": "CORE-000016",
+            "Status": "Published",
+            "Version": "1"
+        },
+        "Description": "Raise an error when --OCCUR is not empty and --PRESP is not equal to \"Y\".",
+        "Executability": "Fully Executable",
+        "Outcome": {
+            "Message": "--PRESP should be populated as \"Y\" when --OCCUR is provided.",
+            "Output_Variables": [
+                "--PRESP",
+                "--OCCUR"
+            ]
+        },
+        "Scope": {
+            "Classes": {
+                "Include": [
+                    "EVENTS",
+                    "INTERVENTIONS"
+                ]
+            },
+            "Domains": {
+                "Exclude": [
+                    "AE",
+                    "DS",
+                    "DV",
+                    "EX"
+                ]
+            },
+            "Use_Case": "INDH"
+        },
+        "Sensitivity": "Record",
+        "Rule_Type": "Record Data"
+    },
+    "datasets": [
+        {
+            "filename": "cm.xpt",
+            "label": "Concomitant/Prior Medications",
+            "domain": "CM",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "DOMAIN",
+                    "label": "Domain Abbreviation",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "USUBJID",
+                    "label": "Unique Subject Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "CMSEQ",
+                    "label": "Sequence Number",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "CMTRT",
+                    "label": "Reported Name of Drug, Med, or Therapy",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "CMPRESP",
+                    "label": "CM Pre-specified",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "CMOCCUR",
+                    "label": "CM Occurrence",
+                    "type": "Char",
+                    "length": 50
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01"
+                ],
+                "DOMAIN": [
+                    "CM",
+                    "CM",
+                    "CM"
+                ],
+                "USUBJID": [
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC001"
+                ],
+                "CMSEQ": [
+                    1,
+                    2,
+                    3
+                ],
+                "CMTRT": [
+                    "ASPIRIN",
+                    "METAMUCIL",
+                    "HYDROCORTISONE, TOPICAL"
+                ],
+                "CMPRESP": [
+                    "",
+                    "",
+                    ""
+                ],
+                "CMOCCUR": [
+                    "Y",
+                    "N",
+                    "Y"
+                ]
+            }
+        },
+        {
+            "filename": "ec.xpt",
+            "label": "Exposure as Collected",
+            "domain": "EC",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 12
+                },
+                {
+                    "name": "DOMAIN",
+                    "label": "Domain Abbreviation",
+                    "type": "Char",
+                    "length": 2
+                },
+                {
+                    "name": "USUBJID",
+                    "label": "Unique Subject Identifier",
+                    "type": "Char",
+                    "length": 8
+                },
+                {
+                    "name": "ECSEQ",
+                    "label": "Sequence Number",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "ECTRT",
+                    "label": "Name of Treatment",
+                    "type": "Char",
+                    "length": 10
+                },
+                {
+                    "name": "ECOCCUR",
+                    "label": "Occurrence",
+                    "type": "Char",
+                    "length": 1
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01"
+                ],
+                "DOMAIN": [
+                    "EC",
+                    "EC",
+                    "EC"
+                ],
+                "USUBJID": [
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC001"
+                ],
+                "ECSEQ": [
+                    1,
+                    2,
+                    3
+                ],
+                "ECTRT": [
+                    "ZANOMALINE",
+                    "ZANOMALINE",
+                    "ZANOMALINE"
+                ],
+                "ECOCCUR": [
+                    "Y",
+                    "N",
+                    "Y"
+                ]
+            }
+        },
+        {
+            "filename": "ae.xpt",
+            "label": "Adverse Events",
+            "domain": "AE",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 12
+                },
+                {
+                    "name": "DOMAIN",
+                    "label": "Domain Abbreviation",
+                    "type": "Char",
+                    "length": 2
+                },
+                {
+                    "name": "USUBJID",
+                    "label": "Unique Subject Identifier",
+                    "type": "Char",
+                    "length": 8
+                },
+                {
+                    "name": "AESEQ",
+                    "label": "Sequence Number",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "AELNKID",
+                    "label": "Link ID",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AETERM",
+                    "label": "Reported Term for the Adverse Event",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "AEPRESP",
+                    "label": "Pre-Specified Adverse Event",
+                    "type": "Char",
+                    "length": 50
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "CDISCPILOT01",
+                    "CDISCPILOT01"
+                ],
+                "DOMAIN": [
+                    "AE",
+                    "AE"
+                ],
+                "USUBJID": [
+                    "CDISC001",
+                    "CDISC001"
+                ],
+                "AESEQ": [
+                    1,
+                    2
+                ],
+                "AELNKID": [
+                    "1",
+                    "2"
+                ],
+                "AETERM": [
+                    "INJECTION SITE REACTION",
+                    "FATIGUE"
+                ],
+                "AEPRESP": [
+                    "",
+                    ""
+                ]
+            }
+        },
+        {
+            "filename": "em.xpt",
+            "label": "Tobacco Product Events and Malfunctions",
+            "domain": "EM",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "DOMAIN",
+                    "label": "Domain Abbreviation",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "USUBJID",
+                    "label": "Unique Subject Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "SPTOBID",
+                    "label": "Applicant-Defined Tobacco Product ID",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "EMSEQ",
+                    "label": "Device Events Sequence Number",
+                    "type": "Num",
+                    "length": 50
+                },
+                {
+                    "name": "EMTERM",
+                    "label": "Reported Term for Device Event",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "EMDECOD",
+                    "label": "Device Events Dictionary-Derived Term",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "EMPRESP",
+                    "label": "Device Event Pre-Specified",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "EMOCCUR",
+                    "label": "Device Event Occurrence",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "EMCAT",
+                    "label": "Category of Device Event",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "EMACNDEV",
+                    "label": "Action Taken with Device",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "EMPATT",
+                    "label": "Pattern of Device Event",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "EMSTDTC",
+                    "label": "Start Date/Time of Device Event",
+                    "type": "Char",
+                    "length": 50
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "TB123",
+                    "TB123",
+                    "TB123"
+                ],
+                "DOMAIN": [
+                    "EM",
+                    "EM",
+                    "EM"
+                ],
+                "USUBJID": [
+                    "2029",
+                    "1059",
+                    "3067"
+                ],
+                "SPTOBID": [
+                    "VAPE-Z01",
+                    "VAPE-Z01",
+                    "VAPE-Z01"
+                ],
+                "EMSEQ": [
+                    1,
+                    1,
+                    1
+                ],
+                "EMTERM": [
+                    "Broken Heater",
+                    "Won't charge",
+                    "Battery Malfunction"
+                ],
+                "EMDECOD": [
+                    "Mechanical Problem",
+                    "Charging Problem",
+                    "Battery Problem"
+                ],
+                "EMPRESP": [
+                    "N",
+                    "YES",
+                    ""
+                ],
+                "EMOCCUR": [
+                    "Y",
+                    "Y",
+                    "Y"
+                ],
+                "EMCAT": [
+                    "Mechanical Problem",
+                    "Charging Problem",
+                    "Battery Problem"
+                ],
+                "EMACNDEV": [
+                    "DEVICE REPLACED",
+                    "BATTERY REPLACED",
+                    "BATTERY REPLACED"
+                ],
+                "EMPATT": [
+                    "SINGLE",
+                    "SINGLE",
+                    "INTERMITTENT"
+                ],
+                "EMSTDTC": [
+                    "2024-08-03",
+                    "2024-08-04",
+                    "2024-08-05"
+                ]
+            }
+        },
+        {
+            "filename": "mh.xpt",
+            "label": "Medical History",
+            "domain": "MH",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "DOMAIN",
+                    "label": "Domain Abbreviation",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "USUBJID",
+                    "label": "Unique Subject Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "MHSEQ",
+                    "label": "Sequence Number",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "MHTERM",
+                    "label": "Reported Term for the Medical History",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "MHPRESP",
+                    "label": "Medical History Event Pre-Specified",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "MHOCCUR",
+                    "label": "Medical History Occurrence",
+                    "type": "Char",
+                    "length": 50
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01"
+                ],
+                "DOMAIN": [
+                    "MH",
+                    "MH",
+                    "MH",
+                    "MH"
+                ],
+                "USUBJID": [
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC002"
+                ],
+                "MHSEQ": [
+                    1,
+                    2,
+                    3,
+                    1
+                ],
+                "MHTERM": [
+                    "ASTHMA",
+                    "CONGESTIVE HEART FAILURE",
+                    "BROKEN LEG",
+                    "HEADACHES"
+                ],
+                "MHPRESP": [
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "MHOCCUR": [
+                    "Y",
+                    "Y",
+                    "Y",
+                    "N"
+                ]
+            }
+        }
+    ],
+    "standard": {
+        "product": "tig",
+        "version": "1-0",
+        "substandard": "sdtm"
+    },
+    "codelists": []
+}

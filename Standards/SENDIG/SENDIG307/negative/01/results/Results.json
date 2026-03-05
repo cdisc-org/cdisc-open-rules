@@ -1,0 +1,47 @@
+{
+    "TX": [
+        {
+            "executionStatus": "success",
+            "dataset": "tx.xpt",
+            "domain": "TX",
+            "variables": [
+                "$species_count",
+                "SETCD",
+                "TXPARMCD"
+            ],
+            "message": "One Trial Set cannot contain more than one species for the same SETCD.",
+            "errors": [
+                {
+                    "value": {
+                        "$species_count": 2,
+                        "TXPARMCD": "ARMCD ",
+                        "SETCD": "2R"
+                    },
+                    "dataset": "tx.xpt",
+                    "row": 12,
+                    "SEQ": 31
+                },
+                {
+                    "value": {
+                        "$species_count": 2,
+                        "TXPARMCD": "SPECIES",
+                        "SETCD": "2R"
+                    },
+                    "dataset": "tx.xpt",
+                    "row": 13,
+                    "SEQ": 41
+                },
+                {
+                    "value": {
+                        "$species_count": 2,
+                        "TXPARMCD": "SPECIES",
+                        "SETCD": "2R"
+                    },
+                    "dataset": "tx.xpt",
+                    "row": 14,
+                    "SEQ": 41
+                }
+            ]
+        }
+    ]
+}

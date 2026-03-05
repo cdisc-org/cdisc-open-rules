@@ -1,0 +1,13 @@
+dataset,variable,label,type,length
+StudyDesignPopulation.xpt,parent_entity,Parent Entity Name,String,[1]
+StudyDesignPopulation.xpt,parent_id,Parent Entity Id,String,[1]
+StudyDesignPopulation.xpt,parent_rel,Name of Relationship from Parent Entity,String,[1]
+StudyDesignPopulation.xpt,rel_type,Type of Relationship,String,[1]
+StudyDesignPopulation.xpt,id,(Study Design Population Id),String,[1]
+StudyDesignPopulation.xpt,name,Target Study Population Name,String,[1]
+StudyDesignPopulation.xpt,description,Target Study Population Description,String,[0..1]
+StudyDesignPopulation.xpt,label,Study Design Population Label,String,[0..1]
+StudyDesignPopulation.xpt,includesHealthySubjects,Study Design Population Includes Healthy Subjects Indicator,Boolean,[1]
+StudyDesignPopulation.xpt,criteria,(Study Design Population Criteria) [Any Exists],Boolean,EligibilityCriterion[1..*]
+StudyDesignPopulation.xpt,instanceType,Instance Type,String,[1]
+StudyDesignPopulation.xpt,cohorts,(Study Design Population Cohorts) [Any Exists],Boolean,StudyCohort[0..*]

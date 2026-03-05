@@ -1,0 +1,48 @@
+{
+    "ZB": [
+        {
+            "executionStatus": "skipped",
+            "dataset": "zb.xpt",
+            "domain": "ZB",
+            "variables": [],
+            "message": "rule evaluation skipped - missing metadata",
+            "errors": [
+                {
+                    "dataset": "zb.xpt",
+                    "error": "Missing field during execution",
+                    "message": "Missing field during execution, rule may not be applicable- unable to process dataset"
+                }
+            ]
+        }
+    ],
+    "CM": [
+        {
+            "executionStatus": "success",
+            "dataset": "cm.xpt",
+            "domain": "CM",
+            "variables": [],
+            "message": null,
+            "errors": []
+        }
+    ],
+    "FA": [
+        {
+            "executionStatus": "success",
+            "dataset": "fa.xpt",
+            "domain": "FA",
+            "variables": [],
+            "message": null,
+            "errors": []
+        }
+    ],
+    "VS": [
+        {
+            "executionStatus": "success",
+            "dataset": "vs.xpt",
+            "domain": "VS",
+            "variables": [],
+            "message": null,
+            "errors": []
+        }
+    ]
+}

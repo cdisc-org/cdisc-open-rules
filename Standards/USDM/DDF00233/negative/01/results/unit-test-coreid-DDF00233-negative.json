@@ -1,0 +1,161 @@
+{
+    "Quantity": [
+        {
+            "executionStatus": "success",
+            "dataset": "Quantity.xpt",
+            "domain": "Quantity",
+            "variables": [
+                "$code_for_decode_pref_term",
+                "$code_for_decode_value",
+                "$codelist_code",
+                "$codelist_extensible",
+                "$pref_term_for_code",
+                "$value_for_code",
+                "id",
+                "parent_entity",
+                "parent_id",
+                "parent_rel",
+                "unit.standardCode.code",
+                "unit.standardCode.codeSystem",
+                "unit.standardCode.codeSystemVersion",
+                "unit.standardCode.decode",
+                "value"
+            ],
+            "message": "The unit is not coded according to the extensible unit (C71620) SDTM codelist - codeSystem is not \"http://www.cdisc.org\", codeSystemVersion is not a valid terminology package date, and/or the code or decode (either as preferred term or as submission value) is found in the codelist (case insensitive) but the corresponding decode or code does not match the codelist value (case sensitive).",
+            "errors": [
+                {
+                    "value": {
+                        "value": 50,
+                        "id": "Quantity_27",
+                        "$code_for_decode_value": "C25613",
+                        "unit.standardCode.codeSystem": "http://www.cdisc.org",
+                        "$value_for_code": "U",
+                        "unit.standardCode.code": "C44278",
+                        "$codelist_extensible": true,
+                        "parent_entity": "Range",
+                        "$code_for_decode_pref_term": null,
+                        "$codelist_code": "C71620",
+                        "$pref_term_for_code": "Unit",
+                        "unit.standardCode.decode": "%",
+                        "parent_rel": "minValue",
+                        "unit.standardCode.codeSystemVersion": "2023-12-15",
+                        "parent_id": "Range_4"
+                    },
+                    "dataset": "Quantity.xpt",
+                    "row": 1,
+                    "instance_id": "Quantity_27"
+                },
+                {
+                    "value": {
+                        "value": 100,
+                        "id": "Quantity_28",
+                        "$code_for_decode_value": "C198376",
+                        "unit.standardCode.codeSystem": "http://www.cdisc.org",
+                        "$value_for_code": "10^4 IU/mL",
+                        "unit.standardCode.code": "C198376",
+                        "$codelist_extensible": true,
+                        "parent_entity": "Range",
+                        "$code_for_decode_pref_term": null,
+                        "$codelist_code": "C71620",
+                        "$pref_term_for_code": "Ten Thousand International Units per Milliliter",
+                        "unit.standardCode.decode": "10^4 IU/ml",
+                        "parent_rel": "maxValue",
+                        "unit.standardCode.codeSystemVersion": "2023-12-15",
+                        "parent_id": "Range_4"
+                    },
+                    "dataset": "Quantity.xpt",
+                    "row": 2,
+                    "instance_id": "Quantity_28"
+                },
+                {
+                    "value": {
+                        "value": 1,
+                        "id": "Quantity_4",
+                        "$code_for_decode_value": "C25301",
+                        "unit.standardCode.codeSystem": "http://www.cdisc.org",
+                        "$value_for_code": null,
+                        "unit.standardCode.code": "C25301xx",
+                        "$codelist_extensible": true,
+                        "parent_entity": "StudyIntervention",
+                        "$code_for_decode_pref_term": null,
+                        "$codelist_code": "C71620",
+                        "$pref_term_for_code": null,
+                        "unit.standardCode.decode": "DAYS",
+                        "parent_rel": "minimumResponseDuration",
+                        "unit.standardCode.codeSystemVersion": "2024-03-29",
+                        "parent_id": "StudyIntervention_1"
+                    },
+                    "dataset": "Quantity.xpt",
+                    "row": 3,
+                    "instance_id": "Quantity_4"
+                },
+                {
+                    "value": {
+                        "value": 24,
+                        "id": "Quantity_2",
+                        "$code_for_decode_value": "C44278",
+                        "unit.standardCode.codeSystem": "UNIT",
+                        "$value_for_code": "U",
+                        "unit.standardCode.code": "C44278",
+                        "$codelist_extensible": true,
+                        "parent_entity": "Duration",
+                        "$code_for_decode_pref_term": null,
+                        "$codelist_code": "C71620",
+                        "$pref_term_for_code": "Unit",
+                        "unit.standardCode.decode": "U",
+                        "parent_rel": "quantity",
+                        "unit.standardCode.codeSystemVersion": "2024-03-29",
+                        "parent_id": "Duration_1"
+                    },
+                    "dataset": "Quantity.xpt",
+                    "row": 4,
+                    "instance_id": "Quantity_2"
+                },
+                {
+                    "value": {
+                        "value": 1,
+                        "id": "Quantity_15",
+                        "$code_for_decode_value": null,
+                        "unit.standardCode.codeSystem": "http://www.cdisc.org",
+                        "$value_for_code": null,
+                        "unit.standardCode.code": "C0051X",
+                        "$codelist_extensible": null,
+                        "parent_entity": "StudyIntervention",
+                        "$code_for_decode_pref_term": null,
+                        "$codelist_code": "C71620",
+                        "$pref_term_for_code": null,
+                        "unit.standardCode.decode": "Extension",
+                        "parent_rel": "minimumResponseDuration",
+                        "unit.standardCode.codeSystemVersion": "XXXX-XX-XX",
+                        "parent_id": "StudyIntervention_2"
+                    },
+                    "dataset": "Quantity.xpt",
+                    "row": 5,
+                    "instance_id": "Quantity_15"
+                },
+                {
+                    "value": {
+                        "value": 1,
+                        "id": "Quantity_31",
+                        "$code_for_decode_value": "C25301",
+                        "unit.standardCode.codeSystem": "http://www.cdisc.org",
+                        "$value_for_code": "DAYS",
+                        "unit.standardCode.code": "C25301",
+                        "$codelist_extensible": true,
+                        "parent_entity": "StudyIntervention",
+                        "$code_for_decode_pref_term": null,
+                        "$codelist_code": "C71620",
+                        "$pref_term_for_code": "Day",
+                        "unit.standardCode.decode": "Days",
+                        "parent_rel": "minimumResponseDuration",
+                        "unit.standardCode.codeSystemVersion": "2025-09-26",
+                        "parent_id": "StudyIntervention_2"
+                    },
+                    "dataset": "Quantity.xpt",
+                    "row": 6,
+                    "instance_id": "Quantity_31"
+                }
+            ]
+        }
+    ]
+}

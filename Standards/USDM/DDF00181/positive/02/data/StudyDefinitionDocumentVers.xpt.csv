@@ -1,0 +1,3 @@
+parent_entity,parent_id,parent_rel,rel_type,id,status,status.id,status.code,status.codeSystem,status.codeSystemVersion,status.decode,status.instanceType,version,notes,dateValues,contents,instanceType
+StudyDefinitionDocument,StudyDefinitionDocument_1,versions,definition,StudyDefinitionDocumentVersion_1,True,Code_8,C25508,http://www.cdisc.org,2023-12-15,Final,Code,2,False,True,True,StudyDefinitionDocumentVersion
+StudyVersion,StudyVersion_1,documentVersionIds,reference,StudyDefinitionDocumentVersion_1,True,Code_8,C25508,http://www.cdisc.org,2023-12-15,Final,Code,2,False,True,True,StudyDefinitionDocumentVersion

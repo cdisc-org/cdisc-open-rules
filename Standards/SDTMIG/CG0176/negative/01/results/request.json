@@ -1,0 +1,211 @@
+{
+  "rule": {
+    "_links": {},
+    "core_id": "CDISC.SDTMIG.CG0176",
+    "reference": [
+      {
+        "Origin": "SDTM and SDTMIG Conformance Rules",
+        "Rule Identifier": {
+          "Id": "CG0176",
+          "Version": "1"
+        },
+        "Version": "2.0"
+      }
+    ],
+    "sensitivity": "Record",
+    "severity": "warning",
+    "description": "Raise an error when IECAT=\"INCLUSION\" and IEORRES^=\"N\".",
+    "authority": {
+      "Organization": "CDISC"
+    },
+    "standards": [
+      {
+        "Name": "SDTMIG",
+        "Version": "3.4"
+      }
+    ],
+    "classes": {
+      "Include": [
+        "Findings"
+      ]
+    },
+    "domains": {
+      "Include": [
+        "IE"
+      ]
+    },
+    "rule_type": "Range & Limit",
+    "conditions": {
+      "all": [
+        {
+          "name": "get_dataset",
+          "operator": "equal_to",
+          "value": {
+            "target": "IECAT",
+            "comparator": "INCLUSION"
+          }
+        },
+        {
+          "name": "get_dataset",
+          "operator": "not_equal_to",
+          "value": {
+            "target": "IEORRES",
+            "comparator": "N"
+          }
+        }
+      ]
+    },
+    "output_variables": [],
+    "actions": [
+      {
+        "name": "generate_dataset_error_objects",
+        "params": {
+          "message": "IECAT equals \"INCLUSION\" and IEORRES is not equal to \"N\"."
+        }
+      }
+    ]
+  },
+  "datasets": [
+    {
+      "filename": "ie.xpt",
+      "label": "Inclusion/Exclusion Criteria Not Met",
+      "domain": "IE",
+      "variables": [
+        {
+          "name": "STUDYID",
+          "label": "Study Identifier",
+          "type": "Char",
+          "length": 12
+        },
+        {
+          "name": "DOMAIN",
+          "label": "Domain Abbreviation",
+          "type": "Char",
+          "length": 2
+        },
+        {
+          "name": "USUBJID",
+          "label": "Unique Subject Identifier",
+          "type": "Char",
+          "length": 8
+        },
+        {
+          "name": "IESEQ",
+          "label": "Sequence Number",
+          "type": "Num",
+          "length": 8
+        },
+        {
+          "name": "IETESTCD",
+          "label": "Inclusion/Exclusion Criterion Short Name",
+          "type": "Char",
+          "length": 7
+        },
+        {
+          "name": "IETEST",
+          "label": "Inclusion/Exclusion Criterion",
+          "type": "Char",
+          "length": 196
+        },
+        {
+          "name": "IECAT",
+          "label": "Inclusion/Exclusion Category",
+          "type": "Char",
+          "length": 9
+        },
+        {
+          "name": "IEORRES",
+          "label": "I/E Criterion Original Result",
+          "type": "Char",
+          "length": 1
+        },
+        {
+          "name": "IESTRESC",
+          "label": "I/E Criterion Result in Std Format",
+          "type": "Char",
+          "length": 1
+        },
+        {
+          "name": "EPOCH",
+          "label": "Epoch",
+          "type": "Char",
+          "length": 9
+        },
+        {
+          "name": "IEDTC",
+          "label": "Date/Time of Collection",
+          "type": "Char",
+          "length": 10
+        },
+        {
+          "name": "IEDY",
+          "label": "Study Day of Collection",
+          "type": "Num",
+          "length": 8
+        }
+      ],
+      "records": {
+        "STUDYID": [
+          "CDISCPILOT01",
+          "CDISCPILOT01",
+          "CDISCPILOT01"
+        ],
+        "DOMAIN": [
+          "IE",
+          "IE",
+          "IE"
+        ],
+        "USUBJID": [
+          "CDISC015",
+          "CDISC016",
+          "CDISC017"
+        ],
+        "IESEQ": [
+          1,
+          1,
+          1
+        ],
+        "IETESTCD": [
+          "INCL03",
+          "INCL03",
+          "INCL03"
+        ],
+        "IETEST": [
+          "Is not pregnant or nursing.",
+          "Is not pregnant or nursing.",
+          "Is not pregnant or nursing."
+        ],
+        "IECAT": [
+          "INCLUSION",
+          "INCLUSION",
+          "INCLUSION"
+        ],
+        "IEORRES": [
+          "Y",
+          "Yes",
+          "Nope"
+        ],
+        "IESTRESC": [
+          "Y",
+          "Yes",
+          "Nope"
+        ],
+        "EPOCH": [
+          "SCREENING",
+          "SCREENING",
+          "SCREENING"
+        ],
+        "IEDTC": [
+          "2014-03-17",
+          "2014-03-17",
+          "2014-03-17"
+        ],
+        "IEDY": [
+          null,
+          null,
+          null
+        ]
+      }
+    }
+  ]
+}

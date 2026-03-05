@@ -1,0 +1,27 @@
+dataset,variable,label,type,length
+ae.xpt,STUDYID,Study Identifier,Char,10
+ae.xpt,DOMAIN,Domain Abbreviation,Char,2
+ae.xpt,USUBJID,Unique Subject Identifier,Char,14
+ae.xpt,AESEQ,Sequence Number,Num,8
+ae.xpt,AESPID,Sponsor-Defined Identifier,Char,4
+ae.xpt,AEOCCUR,Adverse Event Occurence,Char,1
+ae.xpt,AETERM,Reported Term for the Adverse Event,Char,38
+ae.xpt,AELLT,Lowest Level Term,Char,38
+ae.xpt,AELLTCD,Lowest Level Term Code,Num,8
+ae.xpt,AEDECOD,Dictionary-Derived Term,Char,38
+ae.xpt,AEPTCD,Preferred Term Code,Num,8
+ae.xpt,AEHLT,High Level Term,Char,65
+ae.xpt,AEHLTCD,High Level Term Code,Num,8
+ae.xpt,AEHLGT,High Level Group Term,Char,55
+ae.xpt,AEHLGTCD,High Level Group Term Code,Num,8
+ae.xpt,AEBODSYS,Body System or Organ Class,Char,52
+ae.xpt,AEBDSYCD,Body System or Organ Class Code,Num,8
+ae.xpt,AESOC,Primary System Organ Class,Char,52
+ae.xpt,AESOCCD,Primary System Organ Class Code,Num,8
+ae.xpt,AESEV,Severity/Intensity,Char,8
+ae.xpt,AESER,Serious Event,Char,1
+ae.xpt,AEACN,Action Taken with Study Treatment,Char,1
+ae.xpt,AEREL,Causality,Char,1
+ae.xpt,AEOUT,Outcome of Adverse Event,Char,26
+ae.xpt,AESHOSP,Requires or Prolongs Hospitalization,Char,1
+ae.xpt,AESTDTC,Start Date/Time of Adverse Event,Char,10

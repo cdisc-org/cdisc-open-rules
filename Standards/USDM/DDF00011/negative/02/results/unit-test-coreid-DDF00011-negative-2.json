@@ -1,0 +1,38 @@
+{
+    "Timing": [
+        {
+            "executionStatus": "success",
+            "dataset": "Timing.xpt",
+            "domain": "Timing",
+            "variables": [
+                "id",
+                "id.ScheduledActivityInstance",
+                "name",
+                "parent_entity",
+                "parent_id",
+                "parent_rel",
+                "relativeFromScheduledInstanceId",
+                "type.code",
+                "type.decode"
+            ],
+            "message": "The timing has a type of \"Fixed Reference\" (type.code=C201358) but it is not related to a scheduled activity instance via a relativeFromScheduledInstance relationship - the value of relativeFromScheduledInstanceId is missing or it does not match the id value of a ScheduledActivityInstance.",
+            "errors": [
+                {
+                    "value": {
+                        "name": "TIM19",
+                        "parent_rel": "timings",
+                        "id": "Timing_19",
+                        "parent_entity": "ScheduleTimeline",
+                        "parent_id": "ScheduleTimeline_3",
+                        "type.code": "C201358",
+                        "type.decode": "Fixed Reference",
+                        "relativeFromScheduledInstanceId": "ScheduledActivityInstance_2",
+                        "id.ScheduledActivityInstance": "Not in dataset"
+                    },
+                    "dataset": "Timing.xpt",
+                    "row": 1
+                }
+            ]
+        }
+    ]
+}

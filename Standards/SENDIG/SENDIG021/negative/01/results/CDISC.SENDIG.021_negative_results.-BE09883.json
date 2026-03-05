@@ -1,0 +1,25 @@
+{
+  "SUPPLB": [
+    {
+      "executionStatus": "success",
+      "domain": "SUPPLB",
+      "variables": [
+        "IDVAR",
+        "IDVARVAL",
+        "QNAM"
+      ],
+      "message": "QNAM may not start with a number",
+      "errors": [
+        {
+          "value": {
+            "IDVARVAL": "11",
+            "QNAM": "5BIOSIG",
+            "IDVAR": "LBSEQ"
+          },
+          "row": 3,
+          "uSubjId": "CDISC-TEST-001"
+        }
+      ]
+    }
+  ]
+}

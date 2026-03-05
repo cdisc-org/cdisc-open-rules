@@ -1,0 +1,36 @@
+{
+  "LB": [
+    {
+      "executionStatus": "success",
+      "domain": "LB",
+      "variables": [
+        "LBUSCHFL"
+      ],
+      "message": "LBUSCHFL must be either Y or null",
+      "errors": [
+        {
+          "value": {
+            "LBUSCHFL": "maybe"
+          },
+          "row": 4,
+          "USUBJID": "CDISC002",
+          "SEQ": 2
+        }
+      ]
+    }
+  ],
+  "PP": [
+    {
+      "executionStatus": "execution_error",
+      "domain": "PP",
+      "variables": [],
+      "message": "rule execution error",
+      "errors": [
+        {
+          "error": "Column not found in data",
+          "message": "PPUSCHFL"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,766 @@
+{
+  "rule": {
+    "Authority": {
+      "Organization": "CDISC"
+    },
+    "Check": {
+      "all": [
+        {
+          "name": "VISITDY",
+          "operator": "exists"
+        },
+        {
+          "name": "VISITNUM",
+          "operator": "is_contained_by",
+          "value": "$tv_visitnum"
+        },
+        {
+          "name": "VISITDY",
+          "operator": "not_equal_to",
+          "value": "TV.VISITDY"
+        }
+      ]
+    },
+    "Citations": [
+      {
+        "Document": "IG v3.4",
+        "Item": "",
+        "Section": "4.4.5",
+        "Cited_Guidance": "For planned visits, values of VISIT, VISITNUM, and VISITDY must be those defined in the Trial Visits (TV) dataset (Section 7.3.1, Trial Visits)."
+      },
+      {
+        "Document": "IG v3.3",
+        "Item": "",
+        "Section": "4.4.5",
+        "Cited_Guidance": "For planned visits, values of VISIT, VISITNUM, and VISITDY must be those defined in the Trial Visits dataset,"
+      },
+      {
+        "Document": "IG v3.2",
+        "Item": "",
+        "Section": "4.1.4.5",
+        "Cited_Guidance": "For planned visits, values of VISIT, VISITNUM, and VISITDY must be those defined in the Trial Visits dataset,"
+      }
+    ],
+    "Core": {
+      "Id": "CDISC.SDTMIG.CG0032",
+      "Version": "1"
+    },
+    "Description": "Verify that visitdy is planned and exists in TV",
+    "Operations": [
+      {
+        "domain": "TV",
+        "id": "$tv_visitnum",
+        "name": "VISITNUM",
+        "operator": "distinct"
+      }
+    ],
+    "Outcome": {
+      "Message": "Visit Day cannot be found in Trial Visit (TV) domain",
+      "Output_Variables": [
+        "VISITDY",
+        "VISITNUM"
+      ]
+    },
+    "References": [
+      {
+        "Origin": "SDTM and SDTMIG Conformance Rules",
+        "Version": "2.0",
+        "Rule_Identifier": {
+          "Id": "CG0032",
+          "Version": "2"
+        }
+      }
+    ],
+    "Scopes": {
+      "Classes": {
+        "Include": [
+          "All"
+        ]
+      },
+      "Domains": {
+        "Exclude": [
+          "TV"
+        ]
+      },
+      "Standards": [
+        {
+          "Name": "SDTMIG",
+          "Version": "3.4"
+        },
+        {
+          "Name": "SDTMIG",
+          "Version": "3.3"
+        },
+        {
+          "Name": "SDTMIG",
+          "Version": "3.2"
+        }
+      ]
+    },
+    "Sensitivity": "Record",
+    "Severity": "Error",
+    "Match_Datasets": [
+      {
+        "Name": "TV",
+        "Keys": [
+          "VISITNUM"
+        ]
+      }
+    ],
+    "Rule_Type": "Range & Limit"
+  },
+  "datasets": [
+    {
+      "filename": "lb.xpt",
+      "label": "Laboratory Test Results",
+      "domain": "LB",
+      "variables": [
+        {
+          "name": "STUDYID",
+          "label": "Study Identifier",
+          "type": "Char",
+          "length": 10
+        },
+        {
+          "name": "DOMAIN",
+          "label": "Domain Abbreviation",
+          "type": "Char",
+          "length": 2
+        },
+        {
+          "name": "USUBJID",
+          "label": "Unique Subject Identifier",
+          "type": "Char",
+          "length": 14
+        },
+        {
+          "name": "LBSEQ",
+          "label": "Sequence Number",
+          "type": "Num",
+          "length": 8
+        },
+        {
+          "name": "LBSPID",
+          "label": "Sponsor-Defined Identifier",
+          "type": "Char",
+          "length": 4
+        },
+        {
+          "name": "LBTESTCD",
+          "label": "Lab Test or Examination Short Name",
+          "type": "Char",
+          "length": 8
+        },
+        {
+          "name": "LBTEST",
+          "label": "Lab Test or Examination Name",
+          "type": "Char",
+          "length": 25
+        },
+        {
+          "name": "LBCAT",
+          "label": "Category for Lab Test",
+          "type": "Char",
+          "length": 18
+        },
+        {
+          "name": "LBORRES",
+          "label": "Result or Finding in Original Units",
+          "type": "Char",
+          "length": 6
+        },
+        {
+          "name": "LBORRESU",
+          "label": "Original Units",
+          "type": "Char",
+          "length": 8
+        },
+        {
+          "name": "LBORNRLO",
+          "label": "Reference Range Lower Limit in Orig Unit",
+          "type": "Char",
+          "length": 1
+        },
+        {
+          "name": "LBORNRHI",
+          "label": "Reference Range Upper Limit in Orig Unit",
+          "type": "Char",
+          "length": 1
+        },
+        {
+          "name": "LBSTRESC",
+          "label": "Character Result/Finding in Std Format",
+          "type": "Char",
+          "length": 6
+        },
+        {
+          "name": "LBSTRESN",
+          "label": "Numeric Result/Finding in Standard Units",
+          "type": "Num",
+          "length": 8
+        },
+        {
+          "name": "LBSTRESU",
+          "label": "Standard Units",
+          "type": "Char",
+          "length": 8
+        },
+        {
+          "name": "LBSTNRLO",
+          "label": "Reference Range Lower Limit-Std Units",
+          "type": "Num",
+          "length": 8
+        },
+        {
+          "name": "LBSTNRHI",
+          "label": "Reference Range Upper Limit-Std Units",
+          "type": "Num",
+          "length": 8
+        },
+        {
+          "name": "LBNRIND",
+          "label": "Reference Range Indicator",
+          "type": "Char",
+          "length": 1
+        },
+        {
+          "name": "LBLOINC",
+          "label": "LOINC Code",
+          "type": "Char",
+          "length": 7
+        },
+        {
+          "name": "LBSPEC",
+          "label": "Specimen Type",
+          "type": "Char",
+          "length": 5
+        },
+        {
+          "name": "LBBLFL",
+          "label": "Baseline Flag",
+          "type": "Char",
+          "length": 1
+        },
+        {
+          "name": "EPOCH",
+          "label": "Epoch",
+          "type": "Char",
+          "length": 9
+        },
+        {
+          "name": "VISITNUM",
+          "label": "Visit Number",
+          "type": "Num",
+          "length": 8
+        },
+        {
+          "name": "VISIT",
+          "label": "Visit Name",
+          "type": "Char",
+          "length": 18
+        },
+        {
+          "name": "LBDTC",
+          "label": "Date/Time of Specimen Collection",
+          "type": "Char",
+          "length": 10
+        },
+        {
+          "name": "VISITDY",
+          "label": "Study Day of Specimen Collection",
+          "type": "Num",
+          "length": 8
+        }
+      ],
+      "records": {
+        "STUDYID": [
+          "CDISC-TEST",
+          "CDISC-TEST",
+          "CDISC-TEST",
+          "CDISC-TEST",
+          "CDISC-TEST"
+        ],
+        "DOMAIN": [
+          "LB",
+          "LB",
+          "LB",
+          "LB",
+          "LB"
+        ],
+        "USUBJID": [
+          "CDISC-TEST-001",
+          "CDISC-TEST-001",
+          "CDISC-TEST-001",
+          "CDISC-TEST-001",
+          "CDISC-TEST-001"
+        ],
+        "LBSEQ": [
+          1,
+          2,
+          3,
+          4,
+          2
+        ],
+        "LBSPID": [
+          "46",
+          "37",
+          "21",
+          "11",
+          "37"
+        ],
+        "LBTESTCD": [
+          "ALB",
+          "ALB",
+          "ALB",
+          "ALB",
+          "ALB"
+        ],
+        "LBTEST": [
+          "Albumin",
+          "Albumin",
+          "Albumin",
+          "Albumin",
+          "Albumin"
+        ],
+        "LBCAT": [
+          "BIOCHEMISTRY",
+          "BIOCHEMISTRY",
+          "BIOCHEMISTRY",
+          "BIOCHEMISTRY",
+          "BIOCHEMISTRY"
+        ],
+        "LBORRES": [
+          "4.46",
+          "4.31",
+          "3.62",
+          "4.17",
+          "4.31"
+        ],
+        "LBORRESU": [
+          "g/dL",
+          "g/dL",
+          "g/dL",
+          "g/dL",
+          "g/dL"
+        ],
+        "LBORNRLO": [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "LBORNRHI": [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "LBSTRESC": [
+          "4.46",
+          "4.31",
+          "3.62",
+          "4.17",
+          "4.31"
+        ],
+        "LBSTRESN": [
+          4.46,
+          4.31,
+          3.62,
+          4.17,
+          4.31
+        ],
+        "LBSTRESU": [
+          "g/dL",
+          "g/dL",
+          "g/dL",
+          "g/dL",
+          "g/dL"
+        ],
+        "LBSTNRLO": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "LBSTNRHI": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "LBNRIND": [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "LBLOINC": [
+          "1751-7",
+          "1751-7",
+          "1751-7",
+          "1751-7",
+          "1751-7"
+        ],
+        "LBSPEC": [
+          "SERUM",
+          "SERUM",
+          "SERUM",
+          "SERUM",
+          "SERUM"
+        ],
+        "LBBLFL": [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "EPOCH": [
+          "SCREENING",
+          "TREATMENT",
+          "TREATMENT",
+          "FOLLOW-UP",
+          "TREATMENT"
+        ],
+        "VISITNUM": [
+          99999,
+          200,
+          2200,
+          2900,
+          200
+        ],
+        "VISIT": [
+          "VISIT 1 (WEEK -2)",
+          "VISIT 2 (WEEK 0)",
+          "VISIT 22 (WEEK 20)",
+          "END OF TRIAL",
+          "VISIT 2 (WEEK 0)"
+        ],
+        "LBDTC": [
+          "2019-02-25",
+          "2019-03-12",
+          "2019-07-30",
+          "2019-10-10",
+          "2019-03-12"
+        ],
+        "VISITDY": [
+          -15,
+          1,
+          141,
+          213,
+          -15
+        ]
+      }
+    },
+    {
+      "filename": "tv.xpt",
+      "label": "Trial Visits",
+      "domain": "TV",
+      "variables": [
+        {
+          "name": "STUDYID",
+          "label": "Study Identifier",
+          "type": "Char",
+          "length": 10
+        },
+        {
+          "name": "DOMAIN",
+          "label": "Domain Abbreviation",
+          "type": "Char",
+          "length": 2
+        },
+        {
+          "name": "VISITNUM",
+          "label": "Visit Number",
+          "type": "Num",
+          "length": 8
+        },
+        {
+          "name": "VISIT",
+          "label": "Visit Name",
+          "type": "Char",
+          "length": 18
+        },
+        {
+          "name": "VISITDY",
+          "label": "Planned Study Day of Visit",
+          "type": "Num",
+          "length": 8
+        },
+        {
+          "name": "ARMCD",
+          "label": "Planned Arm Code",
+          "type": "Char",
+          "length": 1
+        },
+        {
+          "name": "TVSTRL",
+          "label": "Visit Start Rule",
+          "type": "Char",
+          "length": 61
+        },
+        {
+          "name": "TVENRL",
+          "label": "Visit End Rule",
+          "type": "Char",
+          "length": 21
+        }
+      ],
+      "records": {
+        "STUDYID": [
+          "CDISC-TEST",
+          "CDISC-TEST",
+          "CDISC-TEST",
+          "CDISC-TEST",
+          "CDISC-TEST",
+          "CDISC-TEST",
+          "CDISC-TEST",
+          "CDISC-TEST",
+          "CDISC-TEST",
+          "CDISC-TEST",
+          "CDISC-TEST",
+          "CDISC-TEST",
+          "CDISC-TEST",
+          "CDISC-TEST",
+          "CDISC-TEST",
+          "CDISC-TEST",
+          "CDISC-TEST",
+          "CDISC-TEST",
+          "CDISC-TEST",
+          "CDISC-TEST",
+          "CDISC-TEST",
+          "CDISC-TEST",
+          "CDISC-TEST",
+          "CDISC-TEST",
+          "CDISC-TEST",
+          "CDISC-TEST",
+          "CDISC-TEST",
+          "CDISC-TEST",
+          "CDISC-TEST"
+        ],
+        "DOMAIN": [
+          "TV",
+          "TV",
+          "TV",
+          "TV",
+          "TV",
+          "TV",
+          "TV",
+          "TV",
+          "TV",
+          "TV",
+          "TV",
+          "TV",
+          "TV",
+          "TV",
+          "TV",
+          "TV",
+          "TV",
+          "TV",
+          "TV",
+          "TV",
+          "TV",
+          "TV",
+          "TV",
+          "TV",
+          "TV",
+          "TV",
+          "TV",
+          "TV",
+          "TV"
+        ],
+        "VISITNUM": [
+          100,
+          200,
+          300,
+          400,
+          500,
+          600,
+          700,
+          800,
+          900,
+          1000,
+          1100,
+          1200,
+          1300,
+          1400,
+          1500,
+          1600,
+          1700,
+          1800,
+          1900,
+          2000,
+          2100,
+          2200,
+          2300,
+          2400,
+          2500,
+          2600,
+          2700,
+          2800,
+          2900
+        ],
+        "VISIT": [
+          "VISIT 1 (WEEK -2)",
+          "VISIT 2 (WEEK 0)",
+          "VISIT 3 (WEEK 1)",
+          "VISIT 4 (WEEK 2)",
+          "VISIT 5 (WEEK 3)",
+          "VISIT 6 (WEEK 4)",
+          "VISIT 7 (WEEK 5)",
+          "VISIT 8 (WEEK 6)",
+          "VISIT 9 (WEEK 7)",
+          "VISIT 10 (WEEK 8)",
+          "VISIT 11 (WEEK 9)",
+          "VISIT 12 (WEEK 10)",
+          "VISIT 13 (WEEK 11)",
+          "VISIT 14 (WEEK 12)",
+          "VISIT 15 (WEEK 13)",
+          "VISIT 16 (WEEK 14)",
+          "VISIT 17 (WEEK 15)",
+          "VISIT 18 (WEEK 16)",
+          "VISIT 19 (WEEK 17)",
+          "VISIT 20 (WEEK 18)",
+          "VISIT 21 (WEEK 19)",
+          "VISIT 22 (WEEK 20)",
+          "VISIT 23 (WEEK 21)",
+          "VISIT 24 (WEEK 22)",
+          "VISIT 25 (WEEK 23)",
+          "VISIT 26 (WEEK 24)",
+          "VISIT 27 (WEEK 25)",
+          "VISIT 28 (WEEK 26)",
+          "END OF TRIAL"
+        ],
+        "VISITDY": [
+          -14,
+          1,
+          8,
+          15,
+          22,
+          29,
+          36,
+          43,
+          50,
+          57,
+          64,
+          71,
+          78,
+          85,
+          92,
+          99,
+          106,
+          113,
+          120,
+          127,
+          134,
+          141,
+          148,
+          155,
+          162,
+          169,
+          176,
+          183,
+          213
+        ],
+        "ARMCD": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "TVSTRL": [
+          "SCREENING 2 WEEKS PRIOR TO RANDOMISATION",
+          "BASELINE VISIT DAY 0",
+          "7 DAYS AFTER BASELINE",
+          "14 DAYS AFTER BASELINE",
+          "21 DAYS AFTER BASELINE",
+          "28 DAYS AFTER BASELINE",
+          "35 DAYS AFTER BASELINE",
+          "42 DAYS AFTER BASELINE",
+          "49 DAYS AFTER BASELINE",
+          "56 DAYS AFTER BASELINE",
+          "63 DAYS AFTER BASELINE",
+          "70 DAYS AFTER BASELINE",
+          "77 DAYS AFTER BASELINE",
+          "84 DAYS AFTER BASELINE",
+          "91 DAYS AFTER BASELINE",
+          "98 DAYS AFTER BASELINE",
+          "105 DAYS AFTER BASELINE",
+          "112 DAYS AFTER BASELINE",
+          "119 DAYS AFTER BASELINE",
+          "126 DAYS AFTER BASELINE",
+          "133 DAYS AFTER BASELINE",
+          "140 DAYS AFTER BASELINE",
+          "147 DAYS AFTER BASELINE",
+          "154 DAYS AFTER BASELINE",
+          "161 DAYS AFTER BASELINE",
+          "168 DAYS AFTER BASELINE",
+          "175 DAYS AFTER BASELINE",
+          "182 DAYS AFTER BASELINE",
+          "MUST TAKE PLACE AT LEAST 30 DAYS AFTER END OF TREATMENT VISIT"
+        ],
+        "TVENRL": [
+          "1 DAY BEFORE BASELINE",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      }
+    }
+  ]
+}

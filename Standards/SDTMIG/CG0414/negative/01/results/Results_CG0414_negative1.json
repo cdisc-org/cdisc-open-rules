@@ -1,0 +1,47 @@
+{2 items
+"SE":[1 item
+0:{5 items
+"domain":"SE"
+"errors":[3 items
+0:{4 items
+"row":1
+"seq":2
+"uSubjId":"CDISC001"
+"value":{1 item
+"ETCD":"LOWER"
+}
+}
+1:{4 items
+"row":2
+"seq":1
+"uSubjId":"CDISC002"
+"value":{1 item
+"ETCD":"SCREENING"
+}
+}
+2:{4 items
+"row":3
+"seq":2
+"uSubjId":"CDISC002"
+"value":{1 item
+"ETCD":"HIGHEST"
+}
+}
+]
+"executionStatus":"success"
+"message":"ETCD is not equal to 'UNPLAN' and not equal to TE.ETCD"
+"variables":[1 item
+0:"ETCD"
+]
+}
+]
+"TE":[1 item
+0:{5 items
+"domain":"TE"
+"errors":[]0 items
+"executionStatus":"skipped"
+"message":NULL
+"variables":[]0 items
+}
+]
+}

@@ -1,0 +1,30 @@
+{
+  "VS": [
+    {
+      "executionStatus": "success",
+      "domain": "VS",
+      "variables": [
+        "VSTESTCD"
+      ],
+      "message": "VSTESTCD may not start with a number",
+      "errors": [
+        {
+          "value": {
+            "VSTESTCD": "1DIABP"
+          },
+          "row": 2,
+          "uSubjId": "CDISC001",
+          "seq": 2
+        },
+        {
+          "value": {
+            "VSTESTCD": "9PULSE"
+          },
+          "row": 12,
+          "uSubjId": "CDISC001",
+          "seq": 22
+        }
+      ]
+    }
+  ]
+}

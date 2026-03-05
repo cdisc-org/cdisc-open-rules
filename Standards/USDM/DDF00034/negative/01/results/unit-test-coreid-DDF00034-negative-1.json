@@ -1,0 +1,73 @@
+{
+    "Duration": [
+        {
+            "executionStatus": "success",
+            "dataset": "Duration.xpt",
+            "domain": "Duration",
+            "variables": [
+                "durationWillVary",
+                "id",
+                "parent_entity",
+                "parent_id",
+                "parent_rel",
+                "reasonDurationWillVary",
+                "text"
+            ],
+            "message": "The duration will vary (durationWillVary is not 'false' or reasonDurationWillVary is populated), but it is not fully defined (durationWillVary is not 'true' or reasonDurationWillVary is missing).",
+            "errors": [
+                {
+                    "value": {
+                        "reasonDurationWillVary": null,
+                        "parent_rel": "duration",
+                        "durationWillVary": true,
+                        "text": "About a month",
+                        "parent_entity": "Administration",
+                        "parent_id": "Administration_1",
+                        "id": "Duration_1"
+                    },
+                    "dataset": "Duration.xpt",
+                    "row": 1
+                },
+                {
+                    "value": {
+                        "reasonDurationWillVary": "Depends on dosing rate",
+                        "parent_rel": "duration",
+                        "durationWillVary": false,
+                        "text": "Two weeks",
+                        "parent_entity": "Administration",
+                        "parent_id": "Administration_2",
+                        "id": "Duration_2"
+                    },
+                    "dataset": "Duration.xpt",
+                    "row": 2
+                },
+                {
+                    "value": {
+                        "reasonDurationWillVary": null,
+                        "parent_rel": "plannedDuration",
+                        "durationWillVary": null,
+                        "text": "Three years",
+                        "parent_entity": "ScheduleTimeline",
+                        "parent_id": "ScheduleTimeline_1",
+                        "id": "Duration_3"
+                    },
+                    "dataset": "Duration.xpt",
+                    "row": 3
+                },
+                {
+                    "value": {
+                        "reasonDurationWillVary": "Depends on clinical evaluation",
+                        "parent_rel": "plannedDuration",
+                        "durationWillVary": null,
+                        "text": "Three months",
+                        "parent_entity": "ScheduleTimeline",
+                        "parent_id": "ScheduleTimeline_2",
+                        "id": "Duration_4"
+                    },
+                    "dataset": "Duration.xpt",
+                    "row": 4
+                }
+            ]
+        }
+    ]
+}

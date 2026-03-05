@@ -1,0 +1,65 @@
+{
+  "LB": [
+    {
+      "executionStatus": "success",
+      "domain": "LB",
+      "variables": [
+        "LBTPT",
+        "LBTPTNUM"
+      ],
+      "message": "The relationship between LBTPT and LBTPTNUM is not a one-to-one relationship",
+      "errors": [
+        {
+          "value": {
+            "LBTPT": "TP1",
+            "LBTPTNUM": 1
+          },
+          "row": 1,
+          "uSubjId": "CDISC001",
+          "seq": 1
+        },
+        {
+          "value": {
+            "LBTPT": "TP2",
+            "LBTPTNUM": 2
+          },
+          "row": 2,
+          "uSubjId": "CDISC001",
+          "seq": 2
+        },
+        {
+          "value": {
+            "LBTPT": "TP3",
+            "LBTPTNUM": 1
+          },
+          "row": 3,
+          "uSubjId": "CDISC002",
+          "seq": 2
+        },
+        {
+          "value": {
+            "LBTPT": "TP4",
+            "LBTPTNUM": 2
+          },
+          "row": 4,
+          "uSubjId": "CDISC002",
+          "seq": 2
+        }
+      ]
+    }
+  ],
+  "PP": [
+    {
+      "executionStatus": "execution_error",
+      "domain": "PP",
+      "variables": [],
+      "message": "rule execution error",
+      "errors": [
+        {
+          "error": "Column not found in data",
+          "message": "PPTPTNUM"
+        }
+      ]
+    }
+  ]
+}

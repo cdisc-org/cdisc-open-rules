@@ -1,0 +1,47 @@
+{
+    "RANGE": [
+        {
+            "executionStatus": "success",
+            "domain": "RANGE",
+            "variables": [
+                "id",
+                "maxValue",
+                "minValue",
+                "parent_entity",
+                "parent_id",
+                "parent_rel",
+                "unit",
+                "unit.decode"
+            ],
+            "message": "A unit is specified for a planned enrollment number or a planned completion number.",
+            "errors": [
+                {
+                    "value": {
+                        "parent_rel": "plannedCompletionNumber",
+                        "parent_entity": "StudyDesignPopulation",
+                        "minValue": 300,
+                        "unit": true,
+                        "unit.decode": "U",
+                        "maxValue": 300,
+                        "parent_id": "StudyDesignPopulation_1",
+                        "id": "Range_1"
+                    },
+                    "row": 1
+                },
+                {
+                    "value": {
+                        "parent_rel": "plannedEnrollmentNumber",
+                        "parent_entity": "StudyDesignPopulation",
+                        "minValue": 300,
+                        "unit": true,
+                        "unit.decode": "U",
+                        "maxValue": 300,
+                        "parent_id": "StudyDesignPopulation_1",
+                        "id": "Range_2"
+                    },
+                    "row": 2
+                }
+            ]
+        }
+    ]
+}

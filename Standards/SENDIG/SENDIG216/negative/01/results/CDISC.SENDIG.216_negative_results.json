@@ -1,0 +1,25 @@
+{
+  "TE": [
+    {
+      "executionStatus": "success",
+      "domain": "TE",
+      "variables": [
+        "ELEMENT",
+        "TEDUR",
+        "TEENRL",
+        "TESTRL"
+      ],
+      "message": "The combination of ELEMENT, TESTRL, TEENRL, and TEDUR is not unique for each ETCD",
+      "errors": [
+        {
+          "value": {
+            "TEDUR": "P4W",
+            "TESTRL": "ATTEND FOLLOW-UP VISIT 0 TO 30 DAYS AFTER LAST DOSE",
+            "ELEMENT": "FOLLOW-UP",
+            "TEENRL": "Not in dataset"
+          }
+        }
+      ]
+    }
+  ]
+}

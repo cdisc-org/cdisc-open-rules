@@ -1,0 +1,4 @@
+parent_entity,parent_id,parent_rel,rel_type,id,name,description,label,entryCondition,mainTimeline,instanceType,instances,entryId,exits,timings
+StudyDesign,StudyDesign_1,scheduleTimelines,definition,ScheduleTimeline_4,Main Timeline,This is the main timeline for the study design.,Main Timeline,Potential subject identified,True,ScheduleTimeline,True,ScheduledActivityInstance_9,False,True
+StudyDesign,StudyDesign_1,scheduleTimelines,definition,ScheduleTimeline_1,Adverse Event Timeline,This is the adverse event timeline,Adverse Event Timeline,Subject suffers an adverse event,False,ScheduleTimeline,True,ScheduledActivityInstance_1,,True
+Activity,Activity_32,timelineId,reference,ScheduleTimeline_1,Adverse Event Timeline,This is the adverse event timeline,Adverse Event Timeline,Subject suffers an adverse event,False,ScheduleTimeline,True,ScheduledActivityInstance_1,,True

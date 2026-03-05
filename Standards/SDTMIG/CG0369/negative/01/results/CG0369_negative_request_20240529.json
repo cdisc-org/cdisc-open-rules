@@ -1,0 +1,440 @@
+{
+  "rule": {
+    "Authorities": [
+      {
+        "Organization": "CDISC",
+        "Standards": [
+          {
+            "Name": "SDTMIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Document": "Model v2.0",
+                    "Item": "RDOMAIN",
+                    "Section": "Comments",
+                    "Cited_Guidance": "Each study must include 1 standardized set of observations in a specific structure; this is the Demographics domain described here."
+                  },
+                  {
+                    "Document": "Model v2.0",
+                    "Item": "RDOMAIN",
+                    "Section": "Supplemental Qualifiers",
+                    "Cited_Guidance": "Each study must include 1 standardized set of observations in a specific structure; this is the Demographics domain described here."
+                  },
+                  {
+                    "Document": "Model v2.0",
+                    "Item": "RDOMAIN",
+                    "Section": "Related Records",
+                    "Cited_Guidance": "Each study must incude 1 standardized set of observations in a specific structure; this is the Demographics domain described here."
+                  }
+                ],
+                "Origin": "SDTM and SDTMIG Conformance Rules",
+                "Version": "2.0",
+                "Rule_Identifier": {
+                  "Id": "CG0369",
+                  "Version": "1"
+                }
+              }
+            ],
+            "Version": "3.4"
+          },
+          {
+            "Name": "SDTMIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Document": "Model v1.4",
+                    "Section": "2.2.7",
+                    "Cited_Guidance": "Domain Abbreviation of the parent record(s)."
+                  }
+                ],
+                "Origin": "SDTM and SDTMIG Conformance Rules",
+                "Version": "2.0",
+                "Rule_Identifier": {
+                  "Id": "CG0369",
+                  "Version": "1"
+                }
+              }
+            ],
+            "Version": "3.2"
+          },
+          {
+            "Name": "SDTMIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Document": "Model v1.7",
+                    "Section": "2.2.7",
+                    "Cited_Guidance": "Domain Abbreviation of the parent record(s)."
+                  }
+                ],
+                "Origin": "SDTM and SDTMIG Conformance Rules",
+                "Version": "2.0",
+                "Rule_Identifier": {
+                  "Id": "CG0369",
+                  "Version": "1"
+                }
+              }
+            ],
+            "Version": "3.3"
+          }
+        ]
+      }
+    ],
+    "Check": {
+      "all": [
+        {
+          "name": "RDOMAIN",
+          "operator": "non_empty"
+        },
+        {
+          "name": "RDOMAIN",
+          "operator": "is_not_contained_by",
+          "value": "$study_domains"
+        }
+      ]
+    },
+    "Core": {
+      "Id": "CDISC.SDTMIG.CG0369",
+      "Status": "Draft",
+      "Version": "1"
+    },
+    "Description": "Raise an error when RDOMAIN is populated but the referenced RDOMAIN doesn't exist as a dataset in the present study",
+    "Executability": "Fully Executable",
+    "Operations": [
+      {
+        "id": "$study_domains",
+        "operator": "study_domains"
+      }
+    ],
+    "Outcome": {
+      "Message": "RDOMAIN does not represent a dataset present in the study.",
+      "Output_Variables": [
+        "RDOMAIN",
+        "$study_domains"
+      ]
+    },
+    "Scope": {
+      "Classes": {
+        "Include": [
+          "ALL"
+        ]
+      },
+      "Domains": {
+        "Include": [
+          "CO",
+          "RELREC",
+          "SUPP--"
+        ]
+      }
+    },
+    "Sensitivity": "Dataset",
+    "Rule_Type": "Record Data"
+  },
+  "datasets": [
+    {
+      "filename": "co.xpt",
+      "label": "Comments",
+      "domain": "CO",
+      "variables": [
+        {
+          "name": "STUDYID",
+          "label": "Study Identifier",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "DOMAIN",
+          "label": "Domain Abbreviation",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "RDOMAIN",
+          "label": "Related Domain Abbreviation",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "USUBJID",
+          "label": "Unique Subject Identifier",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "COSEQ",
+          "label": "Sequence Number",
+          "type": "Num",
+          "length": 8
+        },
+        {
+          "name": "IDVAR",
+          "label": "Identifying Variable",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "IDVARVAL",
+          "label": "Identifying Variable Value",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "COREF",
+          "label": "Comment Reference",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "COVAL",
+          "label": "Comment",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "COEVAL",
+          "label": "Evaluator",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "COEVALID",
+          "label": "Evaluator Identifier",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "CODTC",
+          "label": "Date/Time of Comment",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "CODY",
+          "label": "Study Day of Comment",
+          "type": "Num",
+          "length": 8
+        }
+      ],
+      "records": {
+        "STUDYID": [
+          "CDISC-PILOT-01"
+        ],
+        "DOMAIN": [
+          "CO"
+        ],
+        "RDOMAIN": [
+          "IS"
+        ],
+        "USUBJID": [
+          "S001"
+        ],
+        "COSEQ": [
+          1
+        ],
+        "IDVAR": [
+          "LBSEQ"
+        ],
+        "IDVARVAL": [
+          "320"
+        ],
+        "COREF": [
+          ""
+        ],
+        "COVAL": [
+          "test comment"
+        ],
+        "COEVAL": [
+          ""
+        ],
+        "COEVALID": [
+          ""
+        ],
+        "CODTC": [
+          ""
+        ],
+        "CODY": [
+          null
+        ]
+      }
+    },
+    {
+      "filename": "relrec.xpt",
+      "label": "Related Records",
+      "domain": "RELREC",
+      "variables": [
+        {
+          "name": "STUDYID",
+          "label": "Study Identifier",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "RDOMAIN",
+          "label": "Related Domain Abbreviation",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "USUBJID",
+          "label": "Unique Subject Identifier",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "IDVAR",
+          "label": "Identifying Variable",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "IDVARVAL",
+          "label": "Identifying Variable Value",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "RELTYPE",
+          "label": "Relationship Type",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "RELID",
+          "label": "Relationship Identifier",
+          "type": "Char",
+          "length": 50
+        }
+      ],
+      "records": {
+        "STUDYID": [
+          "CDISC-PILOT-01"
+        ],
+        "RDOMAIN": [
+          "LB"
+        ],
+        "USUBJID": [
+          "S001"
+        ],
+        "IDVAR": [
+          "LBSEQ"
+        ],
+        "IDVARVAL": [
+          "320"
+        ],
+        "RELTYPE": [
+          "ONE"
+        ],
+        "RELID": [
+          "1"
+        ]
+      }
+    },
+    {
+      "filename": "supplb.xpt",
+      "label": "Supplemental Qualifiers for Laboratory",
+      "domain": "SUPPLB",
+      "variables": [
+        {
+          "name": "STUDYID",
+          "label": "Study Identifier",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "RDOMAIN",
+          "label": "Related Domain Abbreviation",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "USUBJID",
+          "label": "Unique Subject Identifier",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "IDVAR",
+          "label": "Identifying Variable",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "IDVARVAL",
+          "label": "Identifying Variable Value",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "QNAM",
+          "label": "Qualifier Variable Name",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "QLABEL",
+          "label": "Qualifier Variable Label",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "QVAL",
+          "label": "Data Value",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "QORIG",
+          "label": "Origin",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "QEVAL",
+          "label": "Evaluator",
+          "type": "Char",
+          "length": 50
+        }
+      ],
+      "records": {
+        "STUDYID": [
+          "CDISC-PILOT-01"
+        ],
+        "RDOMAIN": [
+          "LB"
+        ],
+        "USUBJID": [
+          "S001"
+        ],
+        "IDVAR": [
+          "LBSEQ"
+        ],
+        "IDVARVAL": [
+          "320"
+        ],
+        "QNAM": [
+          "LBCLSIG"
+        ],
+        "QLABEL": [
+          "Clinically Significant"
+        ],
+        "QVAL": [
+          "Y"
+        ],
+        "QORIG": [
+          "CRF"
+        ],
+        "QEVAL": [
+          ""
+        ]
+      }
+    }
+  ],
+  "standard": {
+    "product": "sdtmig",
+    "version": "3-3"
+  },
+  "codelists": []
+}

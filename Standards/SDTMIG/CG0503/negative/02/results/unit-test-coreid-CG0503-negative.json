@@ -1,0 +1,55 @@
+{
+  "AE": [],
+  "CM": [
+    {
+      "domain": "CM",
+      "errors": [
+        {
+          "row": 0,
+          "seq": 1,
+          "uSubjId": "CDISC001",
+          "value": {
+            "MIDSDTC": "2012-11-23"
+          }
+        },
+        {
+          "row": 1,
+          "seq": 2,
+          "uSubjId": "CDISC001",
+          "value": {
+            "MIDSDTC": "2012-11-28"
+          }
+        },
+        {
+          "row": 2,
+          "seq": 3,
+          "uSubjId": "CDISC001",
+          "value": {
+            "MIDSDTC": "2012-11-30"
+          }
+        },
+        {
+          "row": 0,
+          "value": {
+            "MIDS": "Not in dataset"
+          }
+        }
+      ],
+      "message": "MIDS variable is missing when MIDSDTC variable is present in a dataset.",
+      "variables": [
+        "MIDSDTC"
+      ]
+    }
+  ],
+  "DM": [],
+  "DS": [],
+  "EC": [],
+  "IE": [],
+  "LB": [],
+  "MH": [],
+  "SV": [],
+  "TA": [],
+  "TE": [],
+  "TI": [],
+  "VS": []
+}

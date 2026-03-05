@@ -1,0 +1,722 @@
+{
+  "rule": {
+    "Authorities": [
+      {
+        "Organization": "CDISC",
+        "Standards": [
+          {
+            "Name": "SDTMIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Document": "IG v3.4",
+                    "Item": "Assumption 8",
+                    "Section": "5.3",
+                    "Cited_Guidance": "Since there are, by definition, no gaps between Elements, the value of SEENDTC for one Element will always be the same as the value of SESTDTC for the next Element. "
+                  },
+                  {
+                    "Document": "IG v3.4",
+                    "Item": "Assumption 9",
+                    "Section": "5.3",
+                    "Cited_Guidance": "\"Note that SESTDTC is required, although --STDTC is not required in any other subject-level dataset. The purpose of the dataset is to record the Elements a subject actually passed through. We assume that if it is known that a subject passed through a particular Element, then there must be some information on when it started, even if that information is imprecise. Thus, SESTDTC may not be null, although some records may not have all the components (e.g., year, month, day, hour, minute) of the date/time value collected.\""
+                  }
+                ],
+                "Origin": "SDTM and SDTMIG Conformance Rules",
+                "Version": "2.0",
+                "Rule_Identifier": {
+                  "Id": "CG0209",
+                  "Version": "2"
+                }
+              }
+            ],
+            "Version": "3.4"
+          },
+          {
+            "Name": "SDTMIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Document": "IG v3.2",
+                    "Item": "Assumption 10|Assumption 11",
+                    "Section": "5 SE",
+                    "Cited_Guidance": "Assumption 10[Since there are, by definition, no gaps between Elements, the value of SEENDTC for one Element will always be the same as the value of SESTDTC for the next Element.]|Assumption 11[Note that SESTDTC is required, although --STDTC is not required in any other subject-level dataset. The purpose of the dataset is to record the Elements a subject actually passed through. We assume that if it is known that a subject passed through a particular Element, then there must be some information on when it started, even if that information is imprecise. Thus, SESTDTC may not be null, although some records may not have all the components (e.g., year, month, day, hour, minute) of the date/time value collected.]"
+                  }
+                ],
+                "Origin": "SDTM and SDTMIG Conformance Rules",
+                "Version": "2.0",
+                "Rule_Identifier": {
+                  "Id": "CG0209",
+                  "Version": "2"
+                }
+              }
+            ],
+            "Version": "3.2"
+          },
+          {
+            "Name": "SDTMIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Document": "IG v3.3",
+                    "Item": "Assumption 8|Assumption 9",
+                    "Section": "5.3",
+                    "Cited_Guidance": "Assumption 8[Since there are, by definition, no gaps between Elements, the value of SEENDTC for one Element will always be the same as the value of SESTDTC for the next Element.]|Assumption 9[Note that SESTDTC is required, although --STDTC is not required in any other subject-level dataset. The purpose of the dataset is to record the Elements a subject actually passed through. We assume that if it is known that a subject passed through a particular Element, then there must be some information on when it started, even if that information is imprecise. Thus, SESTDTC may not be null, although some records may not have all the components (e.g., year, month, day, hour, minute) of the date/time value collected.]"
+                  }
+                ],
+                "Origin": "SDTM and SDTMIG Conformance Rules",
+                "Version": "2.0",
+                "Rule_Identifier": {
+                  "Id": "CG0209",
+                  "Version": "2"
+                }
+              }
+            ],
+            "Version": "3.3"
+          }
+        ]
+      }
+    ],
+    "Check": {
+      "all": [
+        {
+          "name": "SEENDTC",
+          "operator": "empty_within_except_last_row",
+          "ordering": "SESTDTC",
+          "value": "USUBJID"
+        }
+      ]
+    },
+    "Core": {
+      "Id": "CDISC.SDTMIG.CG0209",
+      "Status": "Draft",
+      "Version": "1"
+    },
+    "Description": "Trigger error where element is not the last element and SEENDTC is null.",
+    "Executability": "Fully Executable",
+    "Outcome": {
+      "Message": "SEENDTC is null when element is not the last."
+    },
+    "Scope": {
+      "Classes": {
+        "Include": [
+          "SPECIAL PURPOSE"
+        ]
+      },
+      "Domains": {
+        "Include": [
+          "SE"
+        ]
+      }
+    },
+    "Sensitivity": "Record",
+    "Rule_Type": "Record Data"
+  },
+  "datasets": [
+    {
+      "filename": "qscg.xpt",
+      "label": "Clinical Global Impressions",
+      "domain": "QS",
+      "variables": [
+        {
+          "name": "STUDYID",
+          "label": "Study Identifier",
+          "type": "Char",
+          "length": 12
+        },
+        {
+          "name": "DOMAIN",
+          "label": "Domain Abbreviation",
+          "type": "Char",
+          "length": 4
+        },
+        {
+          "name": "USUBJID",
+          "label": "Unique Subject Identifier",
+          "type": "Char",
+          "length": 8
+        },
+        {
+          "name": "QSSEQ",
+          "label": "Sequence Number",
+          "type": "Num",
+          "length": 8
+        },
+        {
+          "name": "QSTESTCD",
+          "label": "Question Short Name",
+          "type": "Char",
+          "length": 7
+        },
+        {
+          "name": "QSTEST",
+          "label": "Question Name",
+          "type": "Char",
+          "length": 40
+        },
+        {
+          "name": "QSCAT",
+          "label": "Category of Question",
+          "type": "Char",
+          "length": 5
+        },
+        {
+          "name": "QSORRES",
+          "label": "Finding in Original Units",
+          "type": "Char",
+          "length": 23
+        },
+        {
+          "name": "QSSTRESC",
+          "label": "Character Result/Finding in Std Format",
+          "type": "Char",
+          "length": 20
+        },
+        {
+          "name": "QSSTRESN",
+          "label": "Numeric Finding in Standard Units",
+          "type": "Num",
+          "length": 8
+        },
+        {
+          "name": "QSLOBXFL",
+          "label": "Last Observation Before Exposure Flag",
+          "type": "Char",
+          "length": 1
+        },
+        {
+          "name": "VISITNUM",
+          "label": "Visit Number",
+          "type": "Num",
+          "length": 8
+        },
+        {
+          "name": "VISIT",
+          "label": "Visit Name",
+          "type": "Char",
+          "length": 200
+        },
+        {
+          "name": "QSDTC",
+          "label": "Date/Time of Finding",
+          "type": "Char",
+          "length": 10
+        },
+        {
+          "name": "QSDY",
+          "label": "Study Day of Finding",
+          "type": "Num",
+          "length": 8
+        }
+      ],
+      "records": {
+        "STUDYID": [
+          "CDISC01"
+        ],
+        "DOMAIN": [
+          "QS"
+        ],
+        "USUBJID": [
+          "CDISC01.100008"
+        ],
+        "QSSEQ": [
+          1
+        ],
+        "QSTESTCD": [
+          "CGI0201"
+        ],
+        "QSTEST": [
+          "CGI02-Severity"
+        ],
+        "QSCAT": [
+          "CGI"
+        ],
+        "QSORRES": [
+          "Moderate"
+        ],
+        "QSSTRESC": [
+          "4"
+        ],
+        "QSSTRESN": [
+          4
+        ],
+        "QSLOBXFL": [
+          "Y"
+        ],
+        "VISITNUM": [
+          1
+        ],
+        "VISIT": [
+          "WEEK 1"
+        ],
+        "QSDTC": [
+          "2003-04-15"
+        ],
+        "QSDY": [
+          1
+        ]
+      }
+    },
+    {
+      "filename": "qspg.xpt",
+      "label": "Patient Global Impressions",
+      "domain": "QS",
+      "variables": [
+        {
+          "name": "STUDYID",
+          "label": "Study Identifier",
+          "type": "Char",
+          "length": 12
+        },
+        {
+          "name": "DOMAIN",
+          "label": "Domain Abbreviation",
+          "type": "Char",
+          "length": 4
+        },
+        {
+          "name": "USUBJID",
+          "label": "Unique Subject Identifier",
+          "type": "Char",
+          "length": 14
+        },
+        {
+          "name": "QSSEQ",
+          "label": "Sequence Number",
+          "type": "Num",
+          "length": 8
+        },
+        {
+          "name": "QSTESTCD",
+          "label": "Question Short Name",
+          "type": "Char",
+          "length": 7
+        },
+        {
+          "name": "QSTEST",
+          "label": "Question Name",
+          "type": "Char",
+          "length": 40
+        },
+        {
+          "name": "QSCAT",
+          "label": "Category of Question",
+          "type": "Char",
+          "length": 5
+        },
+        {
+          "name": "QSORRES",
+          "label": "Finding in Original Units",
+          "type": "Char",
+          "length": 23
+        },
+        {
+          "name": "QSSTRESC",
+          "label": "Character Result/Finding in Std Format",
+          "type": "Char",
+          "length": 20
+        },
+        {
+          "name": "QSSTRESN",
+          "label": "Numeric Finding in Standard Units",
+          "type": "Num",
+          "length": 8
+        },
+        {
+          "name": "QSLOBXFL",
+          "label": "Last Observation Before Exposure Flag",
+          "type": "Char",
+          "length": 1
+        },
+        {
+          "name": "VISITNUM",
+          "label": "Visit Number",
+          "type": "Num",
+          "length": 8
+        },
+        {
+          "name": "VISIT",
+          "label": "Visit Name",
+          "type": "Char",
+          "length": 200
+        },
+        {
+          "name": "QSDTC",
+          "label": "Date/Time of Finding",
+          "type": "Char",
+          "length": 10
+        },
+        {
+          "name": "QSDY",
+          "label": "Study Day of Finding",
+          "type": "Num",
+          "length": 8
+        }
+      ],
+      "records": {
+        "STUDYID": [
+          "CDISC01"
+        ],
+        "DOMAIN": [
+          "QS"
+        ],
+        "USUBJID": [
+          "CDISC01.100008"
+        ],
+        "QSSEQ": [
+          1
+        ],
+        "QSTESTCD": [
+          "PGI0201"
+        ],
+        "QSTEST": [
+          "PGI02-Severity"
+        ],
+        "QSCAT": [
+          "CGI"
+        ],
+        "QSORRES": [
+          "Moderate"
+        ],
+        "QSSTRESC": [
+          "4"
+        ],
+        "QSSTRESN": [
+          4
+        ],
+        "QSLOBXFL": [
+          "Y"
+        ],
+        "VISITNUM": [
+          1
+        ],
+        "VISIT": [
+          "WEEK 1"
+        ],
+        "QSDTC": [
+          "2003-04-15"
+        ],
+        "QSDY": [
+          1
+        ]
+      }
+    },
+    {
+      "filename": "suppqscg.xpt",
+      "label": "Supplemental Qualifiers for QSCG",
+      "domain": "SUPPQSCG",
+      "variables": [
+        {
+          "name": "STUDYID",
+          "label": "Study Identifier",
+          "type": "Char",
+          "length": 12
+        },
+        {
+          "name": "RDOMAIN",
+          "label": "Related Domain Abbreviation",
+          "type": "Char",
+          "length": 6
+        },
+        {
+          "name": "USUBJID",
+          "label": "Unique Subject Identifier",
+          "type": "Char",
+          "length": 8
+        },
+        {
+          "name": "IDVAR",
+          "label": "Identifying Variable",
+          "type": "Char",
+          "length": 200
+        },
+        {
+          "name": "IDVARVAL",
+          "label": "Identifying Variable Value",
+          "type": "Char",
+          "length": 200
+        },
+        {
+          "name": "QNAM",
+          "label": "Qualifier Variable Name",
+          "type": "Char",
+          "length": 8
+        },
+        {
+          "name": "QLABEL",
+          "label": "Qualifier Variable Label",
+          "type": "Char",
+          "length": 40
+        },
+        {
+          "name": "QVAL",
+          "label": "Data Value",
+          "type": "Char",
+          "length": 200
+        },
+        {
+          "name": "QORIG",
+          "label": "Origin",
+          "type": "Char",
+          "length": 13
+        },
+        {
+          "name": "QEVAL",
+          "label": "Evaluator",
+          "type": "Char",
+          "length": 200
+        }
+      ],
+      "records": {
+        "STUDYID": [
+          "CDISC01",
+          "CDISC01",
+          "CDISC01"
+        ],
+        "RDOMAIN": [
+          "QS",
+          "QS",
+          "QS"
+        ],
+        "USUBJID": [
+          "CDISC01.100008",
+          "CDISC01.100009",
+          "CDISC01.100010"
+        ],
+        "IDVAR": [
+          "QSSEQ",
+          "QSCAT",
+          "QSTESTCD"
+        ],
+        "IDVARVAL": [
+          "122",
+          "123",
+          "124"
+        ],
+        "QNAM": [
+          "QSREASOC",
+          "QSREASOC",
+          "QSREASOC"
+        ],
+        "QLABEL": [
+          "Reason for Occur Value",
+          "Reason for Occur Value",
+          "Reason for Occur Value"
+        ],
+        "QVAL": [
+          "INVESTIGATOR DECISION",
+          "INVESTIGATOR DECISION",
+          "INVESTIGATOR DECISION"
+        ],
+        "QORIG": [
+          "ASSIGNED",
+          "COLLECTED",
+          "COLLECTED"
+        ],
+        "QEVAL": [
+          "",
+          "INVESTIGATOR",
+          "INVESTIGATOR"
+        ]
+      }
+    },
+    {
+      "filename": "se.xpt",
+      "label": "Subject Elements",
+      "domain": "SE",
+      "variables": [
+        {
+          "name": "STUDYID",
+          "label": "Study Identifier",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "DOMAIN",
+          "label": "Domain Abbreviation",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "USUBJID",
+          "label": "Unique Subject Identifier",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "SESEQ",
+          "label": "Sequence Number",
+          "type": "Num",
+          "length": 8
+        },
+        {
+          "name": "ETCD",
+          "label": "Element Code",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "ELEMENT",
+          "label": "Description of Element",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "TAETORD",
+          "label": "Planned Order of Element within Arm",
+          "type": "Num",
+          "length": 8
+        },
+        {
+          "name": "EPOCH",
+          "label": "Epoch",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "SESTDTC",
+          "label": "Start Date/Time of Element",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "SEENDTC",
+          "label": "End Date/Time of Element",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "SESTDY",
+          "label": "Study Day of Start of Element",
+          "type": "Num",
+          "length": 8
+        },
+        {
+          "name": "SEENDY",
+          "label": "Study Day of End of Element",
+          "type": "Num",
+          "length": 8
+        },
+        {
+          "name": "SEUPDES",
+          "label": "Description of Unplanned Element",
+          "type": "Char",
+          "length": 50
+        }
+      ],
+      "records": {
+        "STUDYID": [
+          "CDISC01",
+          "CDISC01",
+          "CDISC01",
+          "CDISC01",
+          "CDISC01",
+          "CDISC01"
+        ],
+        "DOMAIN": [
+          "SE",
+          "SE",
+          "SE",
+          "SE",
+          "SE",
+          "SE"
+        ],
+        "USUBJID": [
+          "CDISC01.100008",
+          "CDISC01.100008",
+          "CDISC01.100010",
+          "CDISC01.100010",
+          "CDISC01.100010",
+          "CDISC01.100010"
+        ],
+        "SESEQ": [
+          1,
+          2,
+          1,
+          2,
+          3,
+          4
+        ],
+        "ETCD": [
+          "SCRN",
+          "DBA",
+          "SCRN",
+          "DBA",
+          "UNPLAN",
+          "RSC"
+        ],
+        "ELEMENT": [
+          "Screening",
+          "Drug A",
+          "Screening",
+          "Drug A",
+          "",
+          "Rescue Medication"
+        ],
+        "TAETORD": [
+          1,
+          2,
+          1,
+          2,
+          null,
+          3
+        ],
+        "EPOCH": [
+          "SCREENING",
+          "BLINDED TREATMENT",
+          "SCREENING",
+          "BLINDED TREATMENT",
+          "BLINDED TREATMENT",
+          "OPEN LABEL TREATMENT"
+        ],
+        "SESTDTC": [
+          "2006-06-01",
+          "2006-06-03",
+          "2006-05-01",
+          "2006-05-03",
+          "2006-05-31",
+          "2006-06-13"
+        ],
+        "SEENDTC": [
+          "2006-06-03",
+          "2006-06-10",
+          "2006-05-03",
+          "2006-05-31",
+          "2006-06-13",
+          "2006-07-30"
+        ],
+        "SESTDY": [
+          -2,
+          1,
+          -2,
+          1,
+          29,
+          42
+        ],
+        "SEENDY": [
+          1,
+          8,
+          1,
+          29,
+          42,
+          89
+        ],
+        "SEUPDES": [
+          "",
+          "",
+          "",
+          "",
+          "Drug B dispensed in error",
+          ""
+        ]
+      }
+    }
+  ],
+  "standard": {
+    "product": "sdtmig",
+    "version": "3-4"
+  },
+  "codelists": []
+}

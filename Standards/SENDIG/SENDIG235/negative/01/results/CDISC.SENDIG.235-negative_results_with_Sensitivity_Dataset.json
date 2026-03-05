@@ -1,0 +1,43 @@
+{
+  "DM": [
+    {
+      "executionStatus": "skipped",
+      "dataset": null,
+      "domain": "DM",
+      "variables": [],
+      "message": null,
+      "errors": []
+    }
+  ],
+  "TA": [
+    {
+      "executionStatus": "skipped",
+      "dataset": null,
+      "domain": "TA",
+      "variables": [],
+      "message": null,
+      "errors": []
+    }
+  ],
+  "TX": [
+    {
+      "executionStatus": "success",
+      "dataset": "tx.xpt",
+      "domain": "TX",
+      "variables": [
+        "$armcd_count",
+        "SETCD"
+      ],
+      "message": "There may be only 1 record for TXPARMCD=ARMCD per group of SETCD values",
+      "errors": [
+        {
+          "value": {
+            "$armcd_count": 2,
+            "SETCD": "SET2"
+          },
+          "dataset": "tx.xpt"
+        }
+      ]
+    }
+  ]
+}

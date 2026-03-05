@@ -1,0 +1,51 @@
+{
+  "CM": [
+    {
+      "domain": "CM",
+      "errors": [
+        {
+          "row": 0,
+          "seq": 1,
+          "uSubjId": "CDISC001",
+          "value": {
+            "CMENRTPT": "",
+            "CMENTPT": "Not in dataset"
+          }
+        },
+        {
+          "row": 1,
+          "seq": 2,
+          "uSubjId": "CDISC001",
+          "value": {
+            "CMENRTPT": "ONGOING",
+            "CMENTPT": "Not in dataset"
+          }
+        },
+        {
+          "row": 2,
+          "seq": 3,
+          "uSubjId": "CDISC001",
+          "value": {
+            "CMENRTPT": "ONGOING",
+            "CMENTPT": "Not in dataset"
+          }
+        },
+        {
+          "row": 3,
+          "seq": 4,
+          "uSubjId": "CDISC001",
+          "value": {
+            "CMENRTPT": "",
+            "CMENTPT": "Not in dataset"
+          }
+        }
+      ],
+      "executionStatus": "success",
+      "message": "CMENTPT should be present when CMENRTPT is present in a dataset",
+      "variables": [
+        "CMENRTPT",
+        "CMENTPT"
+      ]
+    }
+  ]
+}

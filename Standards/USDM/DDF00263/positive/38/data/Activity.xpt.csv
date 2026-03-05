@@ -1,0 +1,9 @@
+parent_entity,parent_id,parent_rel,rel_type,id,name,label,description,notes,definedProcedures,biomedicalConceptIds,childIds,previousId,nextId,timelineId,instanceType
+InterventionalStudyDesign,InterventionalStudyDesign_1,activities,definition,Activity_382,A382,,,FALSE,False,False,False,,Activity_383,ScheduleTimeline_4,Activity
+InterventionalStudyDesign,InterventionalStudyDesign_1,activities,definition,Activity_383,A383,,,FALSE,False,False,,Activity_382,Activity_446,ScheduleTimeline_4,Activity
+InterventionalStudyDesign,InterventionalStudyDesign_1,activities,definition,Activity_446,A446,,,FALSE,False,,False,Activity_383,Activity_447,ScheduleTimeline_4,Activity
+InterventionalStudyDesign,InterventionalStudyDesign_1,activities,definition,Activity_447,A447,,,FALSE,False,,,Activity_446,Activity_638,ScheduleTimeline_4,Activity
+InterventionalStudyDesign,InterventionalStudyDesign_1,activities,definition,Activity_638,A638,,,FALSE,,False,False,Activity_447,Activity_639,ScheduleTimeline_4,Activity
+InterventionalStudyDesign,InterventionalStudyDesign_1,activities,definition,Activity_639,A639,,,FALSE,,False,,Activity_638,Activity_702,ScheduleTimeline_4,Activity
+InterventionalStudyDesign,InterventionalStudyDesign_1,activities,definition,Activity_702,A702,,,FALSE,,,False,Activity_639,Activity_703,ScheduleTimeline_4,Activity
+InterventionalStudyDesign,InterventionalStudyDesign_1,activities,definition,Activity_703,A703,,,FALSE,,,,Activity_702,,ScheduleTimeline_4,Activity

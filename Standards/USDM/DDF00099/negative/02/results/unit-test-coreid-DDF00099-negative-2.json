@@ -1,0 +1,52 @@
+{
+    "StudyEpoch": [
+        {
+            "executionStatus": "success",
+            "dataset": "StudyEpoch.xpt",
+            "domain": "StudyEpoch",
+            "variables": [
+                "id",
+                "name",
+                "parent_entity",
+                "parent_id",
+                "parent_rel"
+            ],
+            "message": "The epoch is not referenced by any scheduled activity instances.",
+            "errors": [
+                {
+                    "value": {
+                        "parent_entity": "StudyDesign",
+                        "id": "StudyEpoch_1",
+                        "parent_rel": "epochs",
+                        "name": "Screening",
+                        "parent_id": "StudyDesign_1"
+                    },
+                    "dataset": "StudyEpoch.xpt",
+                    "row": 1
+                },
+                {
+                    "value": {
+                        "parent_entity": "StudyDesign",
+                        "id": "StudyEpoch_2",
+                        "parent_rel": "epochs",
+                        "name": "Treatment 1",
+                        "parent_id": "StudyDesign_1"
+                    },
+                    "dataset": "StudyEpoch.xpt",
+                    "row": 2
+                },
+                {
+                    "value": {
+                        "parent_entity": "StudyDesign",
+                        "id": "StudyEpoch_5",
+                        "parent_rel": "epochs",
+                        "name": "Follow-Up",
+                        "parent_id": "StudyDesign_1"
+                    },
+                    "dataset": "StudyEpoch.xpt",
+                    "row": 3
+                }
+            ]
+        }
+    ]
+}

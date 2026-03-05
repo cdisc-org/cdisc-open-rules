@@ -1,0 +1,47 @@
+{
+    "RELSUB": [
+        {
+            "executionStatus": "success",
+            "domain": "RELSUB",
+            "variables": [
+                "RSUBJID",
+                "USUBJID"
+            ],
+            "message": "RSUBJID when populated cannot equal USUBJID",
+            "errors": [
+                {
+                    "value": {
+                        "RSUBJID": "HEM021-001",
+                        "USUBJID": "HEM021-001"
+                    },
+                    "row": 1,
+                    "USUBJID": "HEM021-001"
+                },
+                {
+                    "value": {
+                        "RSUBJID": "HEM021-002",
+                        "USUBJID": "HEM021-002"
+                    },
+                    "row": 2,
+                    "USUBJID": "HEM021-002"
+                },
+                {
+                    "value": {
+                        "RSUBJID": "HEM021-003",
+                        "USUBJID": "HEM021-003"
+                    },
+                    "row": 3,
+                    "USUBJID": "HEM021-003"
+                },
+                {
+                    "value": {
+                        "RSUBJID": "HEM021-004",
+                        "USUBJID": "HEM021-004"
+                    },
+                    "row": 4,
+                    "USUBJID": "HEM021-004"
+                }
+            ]
+        }
+    ]
+}

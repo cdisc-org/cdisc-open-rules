@@ -1,0 +1,45 @@
+{
+    "AE": [
+        {
+            "executionStatus": "success",
+            "dataset": "ae.xpt",
+            "domain": "AE",
+            "variables": [
+                "variable_label"
+            ],
+            "message": "Variable label is not in title case.",
+            "errors": [
+                {
+                    "value": {
+                        "variable_label": "study identifier"
+                    },
+                    "row": 1
+                },
+                {
+                    "value": {
+                        "variable_label": "domain abbreviation"
+                    },
+                    "row": 2
+                },
+                {
+                    "value": {
+                        "variable_label": "unique subject identifier"
+                    },
+                    "row": 3
+                },
+                {
+                    "value": {
+                        "variable_label": "serious event"
+                    },
+                    "row": 4
+                },
+                {
+                    "value": {
+                        "variable_label": "causality"
+                    },
+                    "row": 6
+                }
+            ]
+        }
+    ]
+}

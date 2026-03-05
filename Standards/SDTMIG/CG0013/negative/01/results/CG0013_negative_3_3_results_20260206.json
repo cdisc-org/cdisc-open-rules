@@ -1,0 +1,102 @@
+{
+    "AE": [
+        {
+            "executionStatus": "success",
+            "dataset": "ae.xpt",
+            "domain": "AE",
+            "variables": [
+                "variable_name"
+            ],
+            "message": "Variables not listed in the Model List of Allowed Variables for Observation Class should be in SUPPQUAL.",
+            "errors": [
+                {
+                    "value": {
+                        "variable_name": "AESTDYXX"
+                    },
+                    "dataset": "ae.xpt",
+                    "row": 22
+                }
+            ]
+        }
+    ],
+    "DM": [
+        {
+            "executionStatus": "success",
+            "dataset": "dm.xpt",
+            "domain": "DM",
+            "variables": [
+                "variable_name"
+            ],
+            "message": "Variables not listed in the Model List of Allowed Variables for Observation Class should be in SUPPQUAL.",
+            "errors": [
+                {
+                    "value": {
+                        "variable_name": "ARMCDXX"
+                    },
+                    "dataset": "dm.xpt",
+                    "row": 4
+                }
+            ]
+        }
+    ],
+    "EG": [
+        {
+            "executionStatus": "success",
+            "dataset": "eg.xpt",
+            "domain": "EG",
+            "variables": [
+                "variable_name"
+            ],
+            "message": "Variables not listed in the Model List of Allowed Variables for Observation Class should be in SUPPQUAL.",
+            "errors": [
+                {
+                    "value": {
+                        "variable_name": "XEGBEATNO"
+                    },
+                    "dataset": "eg.xpt",
+                    "row": 7
+                }
+            ]
+        }
+    ],
+    "LB": [
+        {
+            "executionStatus": "success",
+            "dataset": "lb.xpt",
+            "domain": "LB",
+            "variables": [
+                "variable_name"
+            ],
+            "message": "Variables not listed in the Model List of Allowed Variables for Observation Class should be in SUPPQUAL.",
+            "errors": [
+                {
+                    "value": {
+                        "variable_name": "LBSPIDXX"
+                    },
+                    "dataset": "lb.xpt",
+                    "row": 5
+                }
+            ]
+        }
+    ],
+    "APEG": [
+        {
+            "executionStatus": "success",
+            "dataset": "apeg.xpt",
+            "domain": "APEG",
+            "variables": [
+                "variable_name"
+            ],
+            "message": "Variables not listed in the Model List of Allowed Variables for Observation Class should be in SUPPQUAL.",
+            "errors": [
+                {
+                    "value": {
+                        "variable_name": "XEGBEATNO"
+                    },
+                    "dataset": "apeg.xpt",
+                    "row": 9
+                }
+            ]
+        }
+    ]
+}

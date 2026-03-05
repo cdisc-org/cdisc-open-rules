@@ -1,0 +1,37 @@
+dataset,variable,label,type,length
+ec.xpt,STUDYID,Study Identifier,Char,50
+ec.xpt,DOMAIN,Domain Abbreviation,Char,50
+ec.xpt,USUBJID,Unique Subject Identifier,Char,50
+ec.xpt,ECSEQ,Sequence Number,Num,8
+ec.xpt,ECLNKID,Link ID,Char,50
+ec.xpt,ECTRT,Name of Treatment,Char,50
+ec.xpt,ECPRESP,Pre-Specified,Char,50
+ec.xpt,ECOCCUR,Occurrence,Char,50
+ec.xpt,ECREASOC,Reason for Occur Value,Char,50
+ec.xpt,ECDOSE,Dose,Num,8
+ec.xpt,ECDOSTXT,Dose Description,Char,50
+ec.xpt,ECDOSU,Dose Units,Char,50
+ec.xpt,ECDOSFRM,Dose Form,Char,50
+ec.xpt,EcROUTE,Route of Administration,Char,50
+ec.xpt,ECSTDTC,Start Date/Time of Treatment,Char,50
+ec.xpt,ECENDTC,End Date/Time of Treatment,Char,50
+ec.xpt,ECSTDY,Study Day of Start of Treatment,Num,8
+ec.xpt,ECENDY,Study Day of End of Treatment,Num,8
+ex.xpt,STUDYID,Study Identifier,Char,50
+ex.xpt,DOMAIN,Domain Abbreviation,Char,50
+ex.xpt,USUBJID,Unique Subject Identifier,Char,50
+ex.xpt,EXSEQ,Sequence Number,Num,8
+ex.xpt,EXLNKID,Link ID,Char,50
+ex.xpt,EXTRT,Name of Treatment,Char,50
+ex.xpt,EXDOSE,Dose,Num,8
+ex.xpt,EXDOSTXT,Dose Description,Char,50
+ex.xpt,EXDOSU,Dose Units,Char,50
+ex.xpt,EXDOSFRM,Dose Form,Char,50
+ex.xpt,EXDOSFRQ,Dosing Frequency per Interval,Char,50
+ex.xpt,EXROUTE,Route of Administration,Char,50
+ex.xpt,EXVAMT,Treatment Vehicle Amount,Num,8
+ex.xpt,EXVAMTU,Treatment Vehicle Amount Units,Char,50
+ex.xpt,EXSTDTC,Start Date/Time of Treatment,Char,50
+ex.xpt,EXENDTC,End Date/Time of Treatment,Char,50
+ex.xpt,EXSTDY,Study Day of Start of Treatment,Num,8
+ex.xpt,EXENDY,Study Day of End of Treatment,Num,8

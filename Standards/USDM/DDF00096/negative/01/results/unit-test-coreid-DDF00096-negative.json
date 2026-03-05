@@ -1,0 +1,82 @@
+{
+    "Objective": [
+        {
+            "executionStatus": "skipped",
+            "dataset": "Objective.xpt",
+            "domain": "",
+            "variables": [],
+            "message": "Rule skipped - doesn't apply to entity for rule id=, dataset=Objective",
+            "errors": []
+        }
+    ],
+    "Endpoint": [
+        {
+            "executionStatus": "success",
+            "dataset": "Endpoint.xpt",
+            "domain": "Endpoint",
+            "variables": [
+                "id",
+                "level.code",
+                "level.code.Objective",
+                "level.decode",
+                "level.decode.Objective",
+                "name",
+                "name.Objective",
+                "parent_entity",
+                "parent_id",
+                "parent_rel"
+            ],
+            "message": "The primary endpoint (level.code = C94496) is not referenced by a primary objective (level.code.Objective = C85826).",
+            "errors": [
+                {
+                    "value": {
+                        "name": "END1",
+                        "parent_rel": "endpoints",
+                        "id": "Endpoint_1",
+                        "level.code": "C94496",
+                        "parent_entity": "Objective",
+                        "parent_id": "Objective_1",
+                        "name.Objective": "OBJ1",
+                        "level.code.Objective": "C85827",
+                        "level.decode": "Primary Endpoint",
+                        "level.decode.Objective": "Primary Objective"
+                    },
+                    "dataset": "Endpoint.xpt",
+                    "row": 1
+                },
+                {
+                    "value": {
+                        "name": "END2",
+                        "parent_rel": "endpoints",
+                        "id": "Endpoint_2",
+                        "level.code": "C94496",
+                        "parent_entity": "Objective",
+                        "parent_id": "Objective_1",
+                        "name.Objective": "OBJ1",
+                        "level.code.Objective": "C85827",
+                        "level.decode": "Primary Endpoint",
+                        "level.decode.Objective": "Primary Objective"
+                    },
+                    "dataset": "Endpoint.xpt",
+                    "row": 2
+                },
+                {
+                    "value": {
+                        "name": "END3",
+                        "parent_rel": "endpoints",
+                        "id": "Endpoint_3",
+                        "level.code": "C94496",
+                        "parent_entity": "Objective",
+                        "parent_id": "Objective_2",
+                        "name.Objective": "OBJ2",
+                        "level.code.Objective": "C85827",
+                        "level.decode": "Primary Endpoint",
+                        "level.decode.Objective": "Secondary Objective"
+                    },
+                    "dataset": "Endpoint.xpt",
+                    "row": 3
+                }
+            ]
+        }
+    ]
+}

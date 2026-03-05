@@ -1,0 +1,47 @@
+{
+    "Duration": [
+        {
+            "executionStatus": "success",
+            "dataset": "Duration.xpt",
+            "domain": "Duration",
+            "variables": [
+                "durationWillVary",
+                "id",
+                "parent_entity",
+                "parent_id",
+                "parent_rel",
+                "reasonDurationWillVary",
+                "text"
+            ],
+            "message": "The duration will vary (durationWillVary is not 'false' or reasonDurationWillVary is populated), but it is not fully defined (durationWillVary is not 'true' or reasonDurationWillVary is missing).",
+            "errors": [
+                {
+                    "value": {
+                        "parent_rel": "duration",
+                        "text": "About a month",
+                        "durationWillVary": true,
+                        "parent_entity": "Administration",
+                        "parent_id": "Administration_1",
+                        "id": "Duration_1",
+                        "reasonDurationWillVary": "Not in dataset"
+                    },
+                    "dataset": "Duration.xpt",
+                    "row": 1
+                },
+                {
+                    "value": {
+                        "parent_rel": "plannedDuration",
+                        "text": "Three years",
+                        "durationWillVary": null,
+                        "parent_entity": "ScheduleTimeline",
+                        "parent_id": "ScheduleTimeline_1",
+                        "id": "Duration_3",
+                        "reasonDurationWillVary": "Not in dataset"
+                    },
+                    "dataset": "Duration.xpt",
+                    "row": 2
+                }
+            ]
+        }
+    ]
+}

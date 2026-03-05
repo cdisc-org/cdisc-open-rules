@@ -1,0 +1,128 @@
+{
+    "GovernanceDate": [
+        {
+            "executionStatus": "skipped",
+            "dataset": "GovernanceDate.xpt",
+            "domain": "",
+            "variables": [],
+            "message": "Rule skipped - doesn't apply to entity for rule id=, dataset=GovernanceDate",
+            "errors": []
+        }
+    ],
+    "StudyVersion": [
+        {
+            "executionStatus": "success",
+            "dataset": "StudyVersion.xpt",
+            "domain": "StudyVersion",
+            "variables": [
+                "code.standardCode.code",
+                "code.standardCode.decode",
+                "dateValue",
+                "id",
+                "id.GovernanceDate",
+                "name",
+                "parent_entity",
+                "parent_id",
+                "parent_rel",
+                "type.code",
+                "type.code.GeographicScope",
+                "type.decode",
+                "type.decode.GeographicScope",
+                "versionIdentifier"
+            ],
+            "message": "The study version has more than one governance date with the same type and geographic scope.",
+            "errors": [
+                {
+                    "value": {
+                        "code.standardCode.code": null,
+                        "parent_rel": "versions",
+                        "type.code.GeographicScope": "C68846",
+                        "id.GovernanceDate": "GovernanceDate_1",
+                        "type.code": "C132352",
+                        "parent_entity": "Study",
+                        "name": "D_APPROVE",
+                        "versionIdentifier": "2",
+                        "type.decode": "Sponsor Approval Date",
+                        "parent_id": "Study_1",
+                        "id": "StudyVersion_1",
+                        "code.standardCode.decode": null,
+                        "dateValue": "2006-06-01",
+                        "type.decode.GeographicScope": "Global"
+                    },
+                    "dataset": "StudyVersion.xpt",
+                    "row": 1
+                },
+                {
+                    "value": {
+                        "code.standardCode.code": null,
+                        "parent_rel": "versions",
+                        "type.code.GeographicScope": "C68846",
+                        "id.GovernanceDate": "GovernanceDate_1",
+                        "type.code": "C132352",
+                        "parent_entity": "Study",
+                        "name": "D_APPROVE",
+                        "versionIdentifier": "2",
+                        "type.decode": "Sponsor Approval Date",
+                        "parent_id": "Study_1",
+                        "id": "StudyVersion_1",
+                        "code.standardCode.decode": null,
+                        "dateValue": "2006-06-01",
+                        "type.decode.GeographicScope": "Worldwide"
+                    },
+                    "dataset": "StudyVersion.xpt",
+                    "row": 1
+                },
+                {
+                    "value": {
+                        "code.standardCode.code": "120",
+                        "parent_rel": "versions",
+                        "type.code.GeographicScope": "C41129",
+                        "id.GovernanceDate": "GovernanceDate_3",
+                        "type.code": "C99903x0",
+                        "parent_entity": "Study",
+                        "name": "D_IDMCAPPR",
+                        "versionIdentifier": "2",
+                        "type.decode": "IDMC Approval Date",
+                        "parent_id": "Study_1",
+                        "id": "StudyVersion_1",
+                        "code.standardCode.decode": "Asia",
+                        "dateValue": "2006-06-15",
+                        "type.decode.GeographicScope": "Region"
+                    },
+                    "dataset": "StudyVersion.xpt",
+                    "row": 1
+                },
+                {
+                    "value": {
+                        "code.standardCode.code": "120",
+                        "parent_rel": "versions",
+                        "type.code.GeographicScope": "C41129",
+                        "id.GovernanceDate": "GovernanceDate_4",
+                        "type.code": "C99903x0",
+                        "parent_entity": "Study",
+                        "name": "D_IDMCAPPR",
+                        "versionIdentifier": "2",
+                        "type.decode": "IDMC Approval Date",
+                        "parent_id": "Study_1",
+                        "id": "StudyVersion_1",
+                        "code.standardCode.decode": "ASIA",
+                        "dateValue": "2006-06-16",
+                        "type.decode.GeographicScope": "Region"
+                    },
+                    "dataset": "StudyVersion.xpt",
+                    "row": 1
+                }
+            ]
+        }
+    ],
+    "GeographicScope": [
+        {
+            "executionStatus": "skipped",
+            "dataset": "GeographicScope.xpt",
+            "domain": "",
+            "variables": [],
+            "message": "Rule skipped - doesn't apply to entity for rule id=, dataset=GeographicScope",
+            "errors": []
+        }
+    ]
+}

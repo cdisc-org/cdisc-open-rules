@@ -1,0 +1,127 @@
+{
+    "EG": [
+        {
+            "executionStatus": "success",
+            "dataset": "eg.xpt",
+            "domain": "EG",
+            "variables": [
+                "EGSTRESC",
+                "EGSTRESN",
+                "EGTESTCD"
+            ],
+            "message": "EGSTRESC is numeric but EGSTRESN is not populated or not equal to EGSTRESC.",
+            "errors": [
+                {
+                    "value": {
+                        "EGTESTCD": "PRAG",
+                        "EGSTRESC": "150",
+                        "EGSTRESN": null
+                    },
+                    "dataset": "eg.xpt",
+                    "row": 2,
+                    "USUBJID": "123101",
+                    "SEQ": 2
+                }
+            ]
+        }
+    ],
+    "FA": [
+        {
+            "executionStatus": "success",
+            "dataset": "fa.xpt",
+            "domain": "FA",
+            "variables": [],
+            "message": null,
+            "errors": []
+        }
+    ],
+    "MI": [
+        {
+            "executionStatus": "success",
+            "dataset": "mi.xpt",
+            "domain": "MI",
+            "variables": [
+                "MISTRESC",
+                "MISTRESN",
+                "MITESTCD"
+            ],
+            "message": "MISTRESC is numeric but MISTRESN is not populated or not equal to MISTRESC.",
+            "errors": [
+                {
+                    "value": {
+                        "MISTRESC": "0",
+                        "MISTRESN": null,
+                        "MITESTCD": "HER2"
+                    },
+                    "dataset": "mi.xpt",
+                    "row": 1,
+                    "USUBJID": "ABC-1001",
+                    "SEQ": 1
+                }
+            ]
+        }
+    ],
+    "LB": [
+        {
+            "executionStatus": "success",
+            "dataset": "lb.xpt",
+            "domain": "LB",
+            "variables": [
+                "LBSTRESC",
+                "LBSTRESN",
+                "LBTESTCD"
+            ],
+            "message": "LBSTRESC is numeric but LBSTRESN is not populated or not equal to LBSTRESC.",
+            "errors": [
+                {
+                    "value": {
+                        "LBSTRESN": null,
+                        "LBSTRESC": "200",
+                        "LBTESTCD": "Prot"
+                    },
+                    "dataset": "lb.xpt",
+                    "row": 2,
+                    "USUBJID": "123101",
+                    "SEQ": 1
+                }
+            ]
+        }
+    ],
+    "VS": [
+        {
+            "executionStatus": "success",
+            "dataset": "vs.xpt",
+            "domain": "VS",
+            "variables": [
+                "VSSTRESC",
+                "VSSTRESN",
+                "VSTESTCD"
+            ],
+            "message": "VSSTRESC is numeric but VSSTRESN is not populated or not equal to VSSTRESC.",
+            "errors": [
+                {
+                    "value": {
+                        "VSTESTCD": "DIABP",
+                        "VSSTRESC": "44",
+                        "VSSTRESN": null
+                    },
+                    "dataset": "vs.xpt",
+                    "row": 2,
+                    "USUBJID": "123101",
+                    "SEQ": 2
+                },
+                {
+                    "value": {
+                        "VSTESTCD": "HR",
+                        "VSSTRESC": "77",
+                        "VSSTRESN": 75
+                    },
+                    "dataset": "vs.xpt",
+                    "row": 4,
+                    "USUBJID": "123101",
+                    "SEQ": 3
+                }
+            ]
+        }
+    ]
+}

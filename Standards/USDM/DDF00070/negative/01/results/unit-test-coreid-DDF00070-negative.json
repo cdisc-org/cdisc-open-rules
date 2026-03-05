@@ -1,0 +1,31 @@
+{
+    "RANGE": [
+        {
+            "executionStatus": "success",
+            "dataset": "Range.xpt",
+            "domain": "RANGE",
+            "variables": [
+                "id",
+                "maxValue",
+                "minValue",
+                "parent_entity",
+                "parent_id",
+                "parent_rel"
+            ],
+            "message": "The minimum value of the range is not less than or equal to the maximum value.",
+            "errors": [
+                {
+                    "value": {
+                        "id": "Range_1",
+                        "maxValue": "300",
+                        "parent_rel": "plannedCompletionNumber",
+                        "parent_entity": "StudyDesignPopulation",
+                        "parent_id": "StudyDesignPopulation_1",
+                        "minValue": "350"
+                    },
+                    "row": 1
+                }
+            ]
+        }
+    ]
+}

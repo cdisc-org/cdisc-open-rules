@@ -1,0 +1,142 @@
+{
+    "CM": [
+        {
+            "executionStatus": "success",
+            "dataset": "cm.xpt",
+            "domain": "CM",
+            "variables": [
+                "CMDTC",
+                "CMSTRTPT",
+                "CMSTTPT"
+            ],
+            "message": "CMSTRTPT is not in ('BEFORE', 'COINCIDENT', 'AFTER', 'UNKNOWN')",
+            "errors": [
+                {
+                    "value": {
+                        "CMSTRTPT": "",
+                        "CMSTTPT": "2013-05-19",
+                        "CMDTC": "2013-05-20"
+                    },
+                    "dataset": "cm.xpt",
+                    "row": 2,
+                    "USUBJID": "CDISC002",
+                    "SEQ": 2
+                },
+                {
+                    "value": {
+                        "CMSTRTPT": "ONGOING",
+                        "CMSTTPT": "2013-05-10",
+                        "CMDTC": "2013-05-20"
+                    },
+                    "dataset": "cm.xpt",
+                    "row": 3,
+                    "USUBJID": "CDISC002",
+                    "SEQ": 3
+                },
+                {
+                    "value": {
+                        "CMSTRTPT": "ONGOING",
+                        "CMSTTPT": "2013-05-10",
+                        "CMDTC": "2013-05-20"
+                    },
+                    "dataset": "cm.xpt",
+                    "row": 7,
+                    "USUBJID": "CDISC002",
+                    "SEQ": 3
+                },
+                {
+                    "value": {
+                        "CMSTRTPT": "POST",
+                        "CMSTTPT": "2013-05-10",
+                        "CMDTC": "2013-05-20"
+                    },
+                    "dataset": "cm.xpt",
+                    "row": 10,
+                    "USUBJID": "CDISC002",
+                    "SEQ": 3
+                },
+                {
+                    "value": {
+                        "CMSTRTPT": "UNK",
+                        "CMSTTPT": "2013-05-10",
+                        "CMDTC": "2013-05-20"
+                    },
+                    "dataset": "cm.xpt",
+                    "row": 13,
+                    "USUBJID": "CDISC002",
+                    "SEQ": 3
+                }
+            ]
+        }
+    ],
+    "MH": [
+        {
+            "executionStatus": "success",
+            "dataset": "mh.xpt",
+            "domain": "MH",
+            "variables": [
+                "MHDTC",
+                "MHSTRTPT",
+                "MHSTTPT"
+            ],
+            "message": "MHSTRTPT is not in ('BEFORE', 'COINCIDENT', 'AFTER', 'UNKNOWN')",
+            "errors": [
+                {
+                    "value": {
+                        "MHSTTPT": "2013-02-18",
+                        "MHDTC": "2013-05-20",
+                        "MHSTRTPT": "ONGOING"
+                    },
+                    "dataset": "mh.xpt",
+                    "row": 2,
+                    "USUBJID": "CDISC002",
+                    "SEQ": 1
+                },
+                {
+                    "value": {
+                        "MHSTTPT": "2007-04-20",
+                        "MHDTC": "2013-05-20",
+                        "MHSTRTPT": "ONGOING"
+                    },
+                    "dataset": "mh.xpt",
+                    "row": 6,
+                    "USUBJID": "CDISC006",
+                    "SEQ": 1
+                },
+                {
+                    "value": {
+                        "MHSTTPT": "2012-05-20",
+                        "MHDTC": "2013-05-20",
+                        "MHSTRTPT": "ONGOING"
+                    },
+                    "dataset": "mh.xpt",
+                    "row": 7,
+                    "USUBJID": "CDISC007",
+                    "SEQ": 1
+                },
+                {
+                    "value": {
+                        "MHSTTPT": "2013-05-02",
+                        "MHDTC": "2013-05-03",
+                        "MHSTRTPT": ""
+                    },
+                    "dataset": "mh.xpt",
+                    "row": 8,
+                    "USUBJID": "CDISC012",
+                    "SEQ": 1
+                },
+                {
+                    "value": {
+                        "MHSTTPT": "2013-04-04",
+                        "MHDTC": "2013-05-04",
+                        "MHSTRTPT": ""
+                    },
+                    "dataset": "mh.xpt",
+                    "row": 9,
+                    "USUBJID": "CDISC013",
+                    "SEQ": 1
+                }
+            ]
+        }
+    ]
+}

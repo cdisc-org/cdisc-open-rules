@@ -1,0 +1,37 @@
+parent_entity,parent_id,parent_rel,rel_type,id,name,description,label,instanceType,definedProcedures,biomedicalConceptIds,nextId,timelineId,previousId,bcSurrogateIds,bcCategoryIds
+StudyDesign,StudyDesign_1,activities,definition,Activity_1,Informed consent,,Informed consent,Activity,False,False,Activity_2,,,False,False
+StudyDesign,StudyDesign_1,activities,definition,Activity_2,Inclusion/exclusion criteria,,Inclusion and exclusion criteria,Activity,False,False,Activity_3,,Activity_1,False,False
+StudyDesign,StudyDesign_1,activities,definition,Activity_3,Patient number assigned,,Patient number assigned,Activity,False,False,Activity_4,,Activity_2,False,False
+StudyDesign,StudyDesign_1,activities,definition,Activity_4,Demographics,,Demographics,Activity,False,True,Activity_5,,Activity_3,True,False
+StudyDesign,StudyDesign_1,activities,definition,Activity_5,Hachinski,,Hachinski Ischemic Scale,Activity,False,False,Activity_6,,Activity_1,False,False
+StudyDesign,StudyDesign_1,activities,definition,Activity_6,MMSE,,MMSE,Activity,False,False,Activity_7,,Activity_5,False,False
+StudyDesign,StudyDesign_1,activities,definition,Activity_7,Physical examination,,Physical examination,Activity,False,False,Activity_9,,Activity_6,False,False
+StudyDesign,StudyDesign_1,activities,definition,Activity_8,Medical history,,Medical history,Activity,False,False,Activity_9,,Activity_7,False,False
+StudyDesign,StudyDesign_1,activities,definition,Activity_9,Habits,,Habits,Activity,False,False,,,Activity_8,False,False
+Activity,Activity_1,nextId,reference,Activity_2,Inclusion/exclusion criteria,,Inclusion and exclusion criteria,Activity,False,False,Activity_3,,Activity_1,False,False
+Activity,Activity_2,previousId,reference,Activity_1,Informed consent,,Informed consent,Activity,False,False,Activity_2,,,False,False
+Activity,Activity_2,nextId,reference,Activity_3,Patient number assigned,,Patient number assigned,Activity,False,False,Activity_4,,Activity_2,False,False
+Activity,Activity_3,previousId,reference,Activity_2,Inclusion/exclusion criteria,,Inclusion and exclusion criteria,Activity,False,False,Activity_3,,Activity_1,False,False
+Activity,Activity_3,nextId,reference,Activity_4,Demographics,,Demographics,Activity,False,True,Activity_5,,Activity_3,True,False
+Activity,Activity_4,previousId,reference,Activity_3,Patient number assigned,,Patient number assigned,Activity,False,False,Activity_4,,Activity_2,False,False
+Activity,Activity_4,nextId,reference,Activity_5,Hachinski,,Hachinski Ischemic Scale,Activity,False,False,Activity_6,,Activity_1,False,False
+Activity,Activity_5,previousId,reference,Activity_1,Informed consent,,Informed consent,Activity,False,False,Activity_2,,,False,False
+Activity,Activity_5,nextId,reference,Activity_6,MMSE,,MMSE,Activity,False,False,Activity_7,,Activity_5,False,False
+Activity,Activity_6,previousId,reference,Activity_5,Hachinski,,Hachinski Ischemic Scale,Activity,False,False,Activity_6,,Activity_1,False,False
+Activity,Activity_6,nextId,reference,Activity_7,Physical examination,,Physical examination,Activity,False,False,Activity_9,,Activity_6,False,False
+Activity,Activity_7,previousId,reference,Activity_6,MMSE,,MMSE,Activity,False,False,Activity_7,,Activity_5,False,False
+Activity,Activity_7,nextId,reference,Activity_9,Habits,,Habits,Activity,False,False,,,Activity_8,False,False
+Activity,Activity_8,previousId,reference,Activity_7,Physical examination,,Physical examination,Activity,False,False,Activity_9,,Activity_6,False,False
+Activity,Activity_8,nextId,reference,Activity_9,Habits,,Habits,Activity,False,False,,,Activity_8,False,False
+Activity,Activity_9,previousId,reference,Activity_8,Medical history,,Medical history,Activity,False,False,Activity_9,,Activity_7,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_9,activityIds,reference,Activity_1,Informed consent,,Informed consent,Activity,False,False,Activity_2,,,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_9,activityIds,reference,Activity_2,Inclusion/exclusion criteria,,Inclusion and exclusion criteria,Activity,False,False,Activity_3,,Activity_1,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_9,activityIds,reference,Activity_3,Patient number assigned,,Patient number assigned,Activity,False,False,Activity_4,,Activity_2,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_9,activityIds,reference,Activity_4,Demographics,,Demographics,Activity,False,True,Activity_5,,Activity_3,True,False
+ScheduledActivityInstance,ScheduledActivityInstance_9,activityIds,reference,Activity_5,Hachinski,,Hachinski Ischemic Scale,Activity,False,False,Activity_6,,Activity_1,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_9,activityIds,reference,Activity_6,MMSE,,MMSE,Activity,False,False,Activity_7,,Activity_5,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_9,activityIds,reference,Activity_7,Physical examination,,Physical examination,Activity,False,False,Activity_9,,Activity_6,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_9,activityIds,reference,Activity_8,Medical history,,Medical history,Activity,False,False,Activity_9,,Activity_7,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_9,activityIds,reference,Activity_9,Habits,,Habits,Activity,False,False,,,Activity_8,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_24,activityIds,reference,Activity_7,Physical examination,,Physical examination,Activity,False,False,Activity_9,,Activity_6,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_2,activityIds,reference,Activity_7,Physical examination,,Physical examination,Activity,False,False,Activity_9,,Activity_6,False,False

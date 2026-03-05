@@ -1,0 +1,29 @@
+{
+    "SUPPQS": [
+        {
+            "executionStatus": "success",
+            "dataset": "suppqscqi.xpt, suppqsswls.xpt",
+            "domain": "SUPPQS",
+            "variables": [
+                "dataset_name"
+            ],
+            "message": "Supplemental qualifier dataset associated with a split dataset is greater than 8 characters in length",
+            "errors": [
+                {
+                    "value": {
+                        "dataset_name": "SUPPQSCQI"
+                    },
+                    "dataset": "suppqscqi.xpt",
+                    "row": 1
+                },
+                {
+                    "value": {
+                        "dataset_name": "SUPPQSSWLS"
+                    },
+                    "dataset": "suppqsswls.xpt",
+                    "row": 1
+                }
+            ]
+        }
+    ]
+}

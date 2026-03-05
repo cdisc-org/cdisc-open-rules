@@ -1,0 +1,47 @@
+{
+  "DM": [
+    {
+      "executionStatus": "success",
+      "domain": "DM",
+      "variables": [
+        "AGE",
+        "AGETXT",
+        "BRTHDTC",
+        "USUBJID"
+      ],
+      "message": "AGETXT is populated, so neither BRTHDTC nor AGE may be populated",
+      "errors": [
+        {
+          "value": {
+            "AGETXT": "11-20",
+            "AGE": 14,
+            "USUBJID": "001",
+            "BRTHDTC": "2008-12-01"
+          },
+          "row": 1,
+          "USUBJID": "001"
+        },
+        {
+          "value": {
+            "AGETXT": "40-50",
+            "AGE": 45,
+            "USUBJID": "004",
+            "BRTHDTC": ""
+          },
+          "row": 4,
+          "USUBJID": "004"
+        },
+        {
+          "value": {
+            "AGETXT": "60-70",
+            "AGE": null,
+            "USUBJID": "006",
+            "BRTHDTC": "1957-05-07"
+          },
+          "row": 6,
+          "USUBJID": "006"
+        }
+      ]
+    }
+  ]
+}

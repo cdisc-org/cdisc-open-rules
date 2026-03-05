@@ -1,0 +1,703 @@
+{
+    "rule": {
+        "Authorities": [
+            {
+                "Organization": "CDISC",
+                "Standards": [
+                    {
+                        "Name": "SDTMIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "Model v2.0",
+                                        "Item": "--STRESC",
+                                        "Section": "Findings",
+                                        "Cited_Guidance": "Operationally-derived indicator used to identify the last non-missing value prior to RFXSTDTC. Result value is in --STRESC."
+                                    }
+                                ],
+                                "Origin": "SDTM and SDTMIG Conformance Rules",
+                                "Version": "2.0",
+                                "Rule_Identifier": {
+                                    "Id": "CG0569",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.4"
+                    },
+                    {
+                        "Name": "SDTMIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "Model v1.7",
+                                        "Item": "--LOXBFL",
+                                        "Section": "Table 2.2.3",
+                                        "Cited_Guidance": "Operationally-derived indicator used to identify the last non-missing value prior to RFXSTDTC. Should be \"Y\" or null."
+                                    }
+                                ],
+                                "Origin": "SDTM and SDTMIG Conformance Rules",
+                                "Version": "2.0",
+                                "Rule_Identifier": {
+                                    "Id": "CG0569",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.3"
+                    },
+                    {
+                        "Name": "TIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "SDTM v2.1",
+                                        "Item": "--STRESC",
+                                        "Section": "3.1.3 The Findings Observation Class",
+                                        "Cited_Guidance": "Operationally-derived indicator used to identify the last non-missing value prior to RFXSTDTC. Result value is in --STRESC."
+                                    }
+                                ],
+                                "Origin": "TIG Conformance Rules",
+                                "Version": "1.0",
+                                "Rule_Identifier": {
+                                    "Id": "TIG0653",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Substandard": "SDTM",
+                        "Version": "1.0"
+                    }
+                ]
+            },
+            {
+                "Organization": "FDA",
+                "Standards": [
+                    {
+                        "Name": "SDTMIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "FDA",
+                                        "Section": "FDAB026",
+                                        "Cited_Guidance": "Records with a baseline flag should have a corresponding standard result with a standardized unit where available."
+                                    }
+                                ],
+                                "Origin": "FDA Business Rules",
+                                "Version": "1.5",
+                                "Rule_Identifier": {
+                                    "Id": "FB2602",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.3"
+                    },
+                    {
+                        "Name": "SDTMIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "FDA",
+                                        "Section": "FDAB026",
+                                        "Cited_Guidance": "Records with a baseline flag should have a corresponding standard result with a standardized unit where available."
+                                    }
+                                ],
+                                "Origin": "FDA Business Rules",
+                                "Version": "1.5",
+                                "Rule_Identifier": {
+                                    "Id": "FB2602",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.4"
+                    }
+                ]
+            }
+        ],
+        "Check": {
+            "all": [
+                {
+                    "name": "--LOBXFL",
+                    "operator": "equal_to",
+                    "value": "Y",
+                    "value_is_literal": true
+                },
+                {
+                    "name": "--STRESC",
+                    "operator": "empty"
+                }
+            ]
+        },
+        "Core": {
+            "Id": "CORE-000105",
+            "Status": "Published",
+            "Version": "1"
+        },
+        "Description": "Raise an error when --LOBXFL = 'Y' and --STRESC is empty.",
+        "Executability": "Fully Executable",
+        "Outcome": {
+            "Message": "--LOBXFL = 'Y', but --STRESC is empty.",
+            "Output_Variables": [
+                "--LOBXFL",
+                "--TESTCD",
+                "--STRESC"
+            ]
+        },
+        "Scope": {
+            "Classes": {
+                "Include": [
+                    "FINDINGS"
+                ]
+            },
+            "Domains": {
+                "Include": [
+                    "ALL"
+                ]
+            },
+            "Use_Case": "INDH"
+        },
+        "Sensitivity": "Record",
+        "Rule_Type": "Record Data"
+    },
+    "datasets": [
+        {
+            "filename": "oe.xpt",
+            "label": "Opthalmic Examinations",
+            "domain": "OE",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 12
+                },
+                {
+                    "name": "DOMAIN",
+                    "label": "Domain Abbreviation",
+                    "type": "Char",
+                    "length": 2
+                },
+                {
+                    "name": "USUBJID",
+                    "label": "Unique Subject Identifier",
+                    "type": "Char",
+                    "length": 8
+                },
+                {
+                    "name": "FOCID",
+                    "label": "Focus of Study-Specific Interest",
+                    "type": "Char",
+                    "length": 2
+                },
+                {
+                    "name": "OESEQ",
+                    "label": "Sequence Number",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "OETESTCD",
+                    "label": "Short Name of Ophthalmic Test or Exam",
+                    "type": "Char",
+                    "length": 8
+                },
+                {
+                    "name": "OETEST",
+                    "label": "Name of Ophthalmic Test or Exam",
+                    "type": "Char",
+                    "length": 18
+                },
+                {
+                    "name": "OEORRES",
+                    "label": "Result or Finding in Original Units",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "OESTRESC",
+                    "label": "Character Result/Finding in Std Format",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "OELOC",
+                    "label": "Location Used for the Measurement",
+                    "type": "Char",
+                    "length": 21
+                },
+                {
+                    "name": "OELAT",
+                    "label": "Laterality",
+                    "type": "Char",
+                    "length": 5
+                },
+                {
+                    "name": "OEMETHOD",
+                    "label": "Method of Test or Examination",
+                    "type": "Char",
+                    "length": 9
+                },
+                {
+                    "name": "OELOBXFL",
+                    "label": "Last Observation Before Exposure Flag",
+                    "type": "Char",
+                    "length": 1
+                },
+                {
+                    "name": "VISITNUM",
+                    "label": "Visit Number",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "VISIT",
+                    "label": "Visit Name",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "EPOCH",
+                    "label": "Epoch",
+                    "type": "Char",
+                    "length": 9
+                },
+                {
+                    "name": "OEDTC",
+                    "label": "Date/Time of Collection",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "OEDY",
+                    "label": "Study Day of Visit/Collection/Exam",
+                    "type": "Num",
+                    "length": 8
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01"
+                ],
+                "DOMAIN": [
+                    "OE",
+                    "OE",
+                    "OE",
+                    "OE",
+                    "OE",
+                    "OE",
+                    "OE",
+                    "OE",
+                    "OE",
+                    "OE",
+                    "OE",
+                    "OE",
+                    "OE",
+                    "OE",
+                    "OE",
+                    "OE",
+                    "OE",
+                    "OE",
+                    "OE",
+                    "OE",
+                    "OE"
+                ],
+                "USUBJID": [
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC003",
+                    "CDISC003",
+                    "CDISC003",
+                    "CDISC004",
+                    "CDISC004",
+                    "CDISC004",
+                    "CDISC004",
+                    "CDISC004",
+                    "CDISC004",
+                    "CDISC004"
+                ],
+                "FOCID": [
+                    "OD",
+                    "OS",
+                    "OS",
+                    "OD",
+                    "OS",
+                    "OS",
+                    "OD",
+                    "OS",
+                    "OS",
+                    "OD",
+                    "OS",
+                    "OD",
+                    "OS",
+                    "OD",
+                    "OD",
+                    "OS",
+                    "OS",
+                    "OD",
+                    "OS",
+                    "OS",
+                    "OD"
+                ],
+                "OESEQ": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    5,
+                    6,
+                    7,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13
+                ],
+                "OETESTCD": [
+                    "INTP",
+                    "INTP",
+                    "ABDETAIL",
+                    "INTP",
+                    "INTP",
+                    "ABDETAIL",
+                    "INTP",
+                    "INTP",
+                    "ABDETAIL",
+                    "INTP",
+                    "INTP",
+                    "INTP",
+                    "INTP",
+                    "INTP",
+                    "INTP",
+                    "INTP",
+                    "ABDETAIL",
+                    "INTP",
+                    "INTP",
+                    "ABDETAIL",
+                    "INTP"
+                ],
+                "OETEST": [
+                    "Interpretation",
+                    "Interpretation",
+                    "Abnormality Detail",
+                    "Interpretation",
+                    "Interpretation",
+                    "Abnormality Detail",
+                    "Interpretation",
+                    "Interpretation",
+                    "Abnormality Detail",
+                    "Interpretation",
+                    "Interpretation",
+                    "Interpretation",
+                    "Interpretation",
+                    "Interpretation",
+                    "Interpretation",
+                    "Interpretation",
+                    "Abnormality Detail",
+                    "Interpretation",
+                    "Interpretation",
+                    "Abnormality Detail",
+                    "Interpretation"
+                ],
+                "OEORRES": [
+                    "NORMAL",
+                    "ABNORMAL",
+                    "SUPERFICIAL PUNCTATE KERATOPATHY",
+                    "NORMAL",
+                    "ABNORMAL",
+                    "SUPERFICIAL PUNCTATE KERATOPATHY",
+                    "NORMAL",
+                    "ABNORMAL",
+                    "SUPERFICIAL PUNCTATE KERATOPATHY",
+                    "NORMAL",
+                    "ABNORMAL",
+                    "NORMAL",
+                    "NORMAL",
+                    "NORMAL",
+                    "NORMAL",
+                    "ABNORMAL",
+                    "PTOSIS",
+                    "NORMAL",
+                    "ABNORMAL",
+                    "PTOSIS",
+                    "NORMAL"
+                ],
+                "OESTRESC": [
+                    "NORMAL",
+                    "ABNORMAL",
+                    "SUPERFICIAL PUNCTATE KERATOPATHY",
+                    "NORMAL",
+                    "ABNORMAL",
+                    "SUPERFICIAL PUNCTATE KERATOPATHY",
+                    "NORMAL",
+                    "ABNORMAL",
+                    "SUPERFICIAL PUNCTATE KERATOPATHY",
+                    "NORMAL",
+                    "ABNORMAL",
+                    "NORMAL",
+                    "NORMAL",
+                    "NORMAL",
+                    "NORMAL",
+                    "ABNORMAL",
+                    "PTOSIS",
+                    "NORMAL",
+                    "ABNORMAL",
+                    "PTOSIS",
+                    "NORMAL"
+                ],
+                "OELOC": [
+                    "EYE",
+                    "EYE",
+                    "CORNEA",
+                    "EYE",
+                    "EYE",
+                    "CORNEA",
+                    "EYE",
+                    "EYE",
+                    "CORNEA",
+                    "EYE",
+                    "EYE",
+                    "EYE",
+                    "EYE",
+                    "EYE",
+                    "EYE",
+                    "EYE",
+                    "IRIS",
+                    "EYE",
+                    "EYE",
+                    "IRIS",
+                    "EYE"
+                ],
+                "OELAT": [
+                    "RIGHT",
+                    "LEFT",
+                    "LEFT",
+                    "RIGHT",
+                    "LEFT",
+                    "LEFT",
+                    "RIGHT",
+                    "LEFT",
+                    "LEFT",
+                    "RIGHT",
+                    "LEFT",
+                    "RIGHT",
+                    "LEFT",
+                    "RIGHT",
+                    "RIGHT",
+                    "LEFT",
+                    "LEFT",
+                    "RIGHT",
+                    "LEFT",
+                    "LEFT",
+                    "RIGHT"
+                ],
+                "OEMETHOD": [
+                    "SLIT LAMP",
+                    "SLIT LAMP",
+                    "SLIT LAMP",
+                    "SLIT LAMP",
+                    "SLIT LAMP",
+                    "SLIT LAMP",
+                    "SLIT LAMP",
+                    "SLIT LAMP",
+                    "SLIT LAMP",
+                    "SLIT LAMP",
+                    "SLIT LAMP",
+                    "SLIT LAMP",
+                    "SLIT LAMP",
+                    "SLIT LAMP",
+                    "SLIT LAMP",
+                    "SLIT LAMP",
+                    "SLIT LAMP",
+                    "SLIT LAMP",
+                    "SLIT LAMP",
+                    "SLIT LAMP",
+                    "SLIT LAMP"
+                ],
+                "OELOBXFL": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "Y",
+                    "Y",
+                    "",
+                    "",
+                    "",
+                    "Y",
+                    "Y",
+                    "",
+                    "Y",
+                    "Y",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "VISITNUM": [
+                    1,
+                    1,
+                    1,
+                    2,
+                    2,
+                    2,
+                    3,
+                    3,
+                    3,
+                    4,
+                    4,
+                    3,
+                    3,
+                    4,
+                    3,
+                    3,
+                    3,
+                    4,
+                    4,
+                    4,
+                    5
+                ],
+                "VISIT": [
+                    "SCREENING 1",
+                    "SCREENING 1",
+                    "SCREENING 1",
+                    "SCREENING 2",
+                    "SCREENING 2",
+                    "SCREENING 2",
+                    "BASELINE",
+                    "BASELINE",
+                    "BASELINE",
+                    "WEEK 2",
+                    "WEEK 2",
+                    "BASELINE",
+                    "BASELINE",
+                    "WEEK 2",
+                    "BASELINE",
+                    "BASELINE",
+                    "BASELINE",
+                    "WEEK 2",
+                    "WEEK 2",
+                    "WEEK 2",
+                    "WEEK 4"
+                ],
+                "EPOCH": [
+                    "SCREENING",
+                    "SCREENING",
+                    "SCREENING",
+                    "SCREENING",
+                    "SCREENING",
+                    "SCREENING",
+                    "SCREENING",
+                    "SCREENING",
+                    "SCREENING",
+                    "TREATMENT",
+                    "TREATMENT",
+                    "SCREENING",
+                    "SCREENING",
+                    "TREATMENT",
+                    "SCREENING",
+                    "SCREENING",
+                    "SCREENING",
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT"
+                ],
+                "OEDTC": [
+                    "2012-11-23",
+                    "2012-11-23",
+                    "2012-11-23",
+                    "2012-11-28",
+                    "2012-11-28",
+                    "2012-11-28",
+                    "2012-11-30",
+                    "2012-11-30",
+                    "2012-11-30",
+                    "2012-12-13",
+                    "2012-12-13",
+                    "2013-08-29",
+                    "2013-08-29",
+                    "2013-09-15",
+                    "2013-10-08",
+                    "2013-10-08",
+                    "2013-10-08",
+                    "2013-10-24",
+                    "2013-10-24",
+                    "2013-10-24",
+                    "2013-11-08"
+                ],
+                "OEDY": [
+                    -7,
+                    -7,
+                    -7,
+                    -2,
+                    -2,
+                    -2,
+                    1,
+                    1,
+                    1,
+                    14,
+                    14,
+                    1,
+                    1,
+                    18,
+                    1,
+                    1,
+                    1,
+                    17,
+                    17,
+                    17,
+                    32
+                ]
+            }
+        }
+    ],
+    "codelists": []
+}

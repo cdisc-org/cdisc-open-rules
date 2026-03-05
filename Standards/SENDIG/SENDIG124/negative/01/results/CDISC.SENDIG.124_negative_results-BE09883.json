@@ -1,0 +1,24 @@
+{
+  "SE": [
+    {
+      "executionStatus": "success",
+      "domain": "SE",
+      "variables": [
+        "ELEMENT",
+        "ETCD"
+      ],
+      "message": "ELEMENT variable has a non-null value when ETCD has a value of 'UNPLAN'",
+      "errors": [
+        {
+          "value": {
+            "ELEMENT": "Unplanned Drug B",
+            "ETCD": "UNPLAN"
+          },
+          "row": 5,
+          "uSubjId": "456",
+          "seq": 3
+        }
+      ]
+    }
+  ]
+}

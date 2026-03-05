@@ -1,0 +1,39 @@
+{1 item
+"SV":[1 item
+0:{5 items
+"domain":"SV"
+"errors":[3 items
+0:{3 items
+"row":6
+"uSubjId":"CDISC001"
+"value":{2 items
+"SVPRESP":""
+"VISITDY":31
+}
+}
+1:{3 items
+"row":9
+"uSubjId":"CDISC001"
+"value":{2 items
+"SVPRESP":""
+"VISITDY":62
+}
+}
+2:{3 items
+"row":10
+"uSubjId":"CDISC001"
+"value":{2 items
+"SVPRESP":""
+"VISITDY":63
+}
+}
+]
+"executionStatus":"success"
+"message":"VISITDY is populated when SVPRESP is null. VISITDY is the Planned Study Day of a visit. It should not be populated for unplanned visits."
+"variables":[2 items
+0:"SVPRESP"
+1:"VISITDY"
+]
+}
+]
+}

@@ -1,0 +1,37 @@
+{
+  "DM": [
+    {
+      "executionStatus": "success",
+      "domain": "DM",
+      "variables": [
+        "ARMCD"
+      ],
+      "message": "ARMCD is not present in TA.ARMCD",
+      "errors": [
+        {
+          "value": {
+            "ARMCD": "ZANLOW"
+          },
+          "row": 1,
+          "uSubjId": "CDISC001"
+        },
+        {
+          "value": {
+            "ARMCD": "ZANHIGH"
+          },
+          "row": 2,
+          "uSubjId": "CDISC003"
+        }
+      ]
+    }
+  ],
+  "TA": [
+    {
+      "executionStatus": "skipped",
+      "domain": "TA",
+      "variables": [],
+      "message": null,
+      "errors": []
+    }
+  ]
+}

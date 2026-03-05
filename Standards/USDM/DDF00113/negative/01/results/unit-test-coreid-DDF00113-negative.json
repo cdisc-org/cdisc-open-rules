@@ -1,0 +1,176 @@
+{
+    "AgentAdministration": [
+        {
+            "executionStatus": "success",
+            "dataset": "AgentAdministration.xpt",
+            "domain": "AgentAdministration",
+            "variables": [
+                "$code_for_decode_pref_term",
+                "$code_for_decode_value",
+                "$codelist_code",
+                "$codelist_extensible",
+                "$pref_term_for_code",
+                "$value_for_code",
+                "frequency.standardCode.code",
+                "frequency.standardCode.codeSystem",
+                "frequency.standardCode.codeSystemVersion",
+                "frequency.standardCode.decode",
+                "id",
+                "name",
+                "parent_entity",
+                "parent_id",
+                "parent_rel"
+            ],
+            "message": "The agent administration's frequency is not specified according to the extensible Frequency (C71113) SDTM codelist - codeSystem is not \"http://www.cdisc.org\", codeSystemVersion is not a valid terminology package date, and/or the code or decode (either as preferred term or as submission value) is found in the codelist (case insensitive) but the corresponding decode or code does not match the codelist value (case sensitive).",
+            "errors": [
+                {
+                    "value": {
+                        "frequency.standardCode.codeSystemVersion": "2023-12-15",
+                        "$value_for_code": "3 TIMES PER WEEK",
+                        "frequency.standardCode.code": "C64528",
+                        "id": "AgentAdministration_1",
+                        "$code_for_decode_pref_term": null,
+                        "$code_for_decode_value": "C64528",
+                        "$codelist_code": "C71113",
+                        "$pref_term_for_code": "Three Times Weekly",
+                        "parent_id": "StudyIntervention_1",
+                        "$codelist_extensible": true,
+                        "parent_entity": "StudyIntervention",
+                        "name": "LY_ADMIN1",
+                        "parent_rel": "administrations",
+                        "frequency.standardCode.decode": "3 Times Per Week",
+                        "frequency.standardCode.codeSystem": "http://www.cdisc.org"
+                    },
+                    "dataset": "AgentAdministration.xpt",
+                    "row": 1
+                },
+                {
+                    "value": {
+                        "frequency.standardCode.codeSystemVersion": "2023-12-15",
+                        "$value_for_code": null,
+                        "frequency.standardCode.code": "C71129xx",
+                        "id": "AgentAdministration_2",
+                        "$code_for_decode_pref_term": null,
+                        "$code_for_decode_value": "C71129",
+                        "$codelist_code": "C71113",
+                        "$pref_term_for_code": null,
+                        "parent_id": "StudyIntervention_1",
+                        "$codelist_extensible": true,
+                        "parent_entity": "StudyIntervention",
+                        "name": "LY_ADMIN2",
+                        "parent_rel": "administrations",
+                        "frequency.standardCode.decode": "BIM",
+                        "frequency.standardCode.codeSystem": "http://www.cdisc.org"
+                    },
+                    "dataset": "AgentAdministration.xpt",
+                    "row": 2
+                },
+                {
+                    "value": {
+                        "frequency.standardCode.codeSystemVersion": "2023-12-15",
+                        "$value_for_code": "Q18H",
+                        "frequency.standardCode.code": "C64508",
+                        "id": "AgentAdministration_3",
+                        "$code_for_decode_pref_term": null,
+                        "$code_for_decode_value": "C64508",
+                        "$codelist_code": "C71113",
+                        "$pref_term_for_code": "Every Eighteen Hours",
+                        "parent_id": "StudyIntervention_1",
+                        "$codelist_extensible": true,
+                        "parent_entity": "StudyIntervention",
+                        "name": "LY_ADMIN3",
+                        "parent_rel": "administrations",
+                        "frequency.standardCode.decode": "Q18H",
+                        "frequency.standardCode.codeSystem": "FREQ"
+                    },
+                    "dataset": "AgentAdministration.xpt",
+                    "row": 3
+                },
+                {
+                    "value": {
+                        "frequency.standardCode.codeSystemVersion": "P59",
+                        "$value_for_code": null,
+                        "frequency.standardCode.code": "C64528",
+                        "id": "AgentAdministration_4",
+                        "$code_for_decode_pref_term": null,
+                        "$code_for_decode_value": null,
+                        "$codelist_code": "C71113",
+                        "$pref_term_for_code": null,
+                        "parent_id": "StudyIntervention_1",
+                        "$codelist_extensible": null,
+                        "parent_entity": "StudyIntervention",
+                        "name": "LY_ADMIN4",
+                        "parent_rel": "administrations",
+                        "frequency.standardCode.decode": "Three Times Weekly",
+                        "frequency.standardCode.codeSystem": "http://www.cdisc.org"
+                    },
+                    "dataset": "AgentAdministration.xpt",
+                    "row": 4
+                },
+                {
+                    "value": {
+                        "frequency.standardCode.codeSystemVersion": "2023-12-15",
+                        "$value_for_code": "BIM",
+                        "frequency.standardCode.code": "C71129",
+                        "id": "AgentAdministration_5",
+                        "$code_for_decode_pref_term": "C64525",
+                        "$code_for_decode_value": null,
+                        "$codelist_code": "C71113",
+                        "$pref_term_for_code": "Twice Per Month",
+                        "parent_id": "StudyIntervention_1",
+                        "$codelist_extensible": true,
+                        "parent_entity": "StudyIntervention",
+                        "name": "LY_ADMIN5",
+                        "parent_rel": "administrations",
+                        "frequency.standardCode.decode": "Every Other Day",
+                        "frequency.standardCode.codeSystem": "http://www.cdisc.org"
+                    },
+                    "dataset": "AgentAdministration.xpt",
+                    "row": 5
+                },
+                {
+                    "value": {
+                        "frequency.standardCode.codeSystemVersion": "2024-09-27",
+                        "$value_for_code": null,
+                        "frequency.standardCode.code": "C0006X",
+                        "id": "AgentAdministration_8",
+                        "$code_for_decode_pref_term": "C17998",
+                        "$code_for_decode_value": "C17998",
+                        "$codelist_code": "C71113",
+                        "$pref_term_for_code": null,
+                        "parent_id": "StudyIntervention_2",
+                        "$codelist_extensible": true,
+                        "parent_entity": "StudyIntervention",
+                        "name": "IMG_ADMIN2",
+                        "parent_rel": "administrations",
+                        "frequency.standardCode.decode": "Unknown",
+                        "frequency.standardCode.codeSystem": "http://www.cdisc.org"
+                    },
+                    "dataset": "AgentAdministration.xpt",
+                    "row": 6
+                },
+                {
+                    "value": {
+                        "frequency.standardCode.codeSystemVersion": "2024-03-29",
+                        "$value_for_code": "QOD",
+                        "frequency.standardCode.code": "C64525",
+                        "id": "AgentAdministration_9",
+                        "$code_for_decode_pref_term": "C64525",
+                        "$code_for_decode_value": null,
+                        "$codelist_code": "C71113",
+                        "$pref_term_for_code": "Every Other Day",
+                        "parent_id": "StudyIntervention_2",
+                        "$codelist_extensible": true,
+                        "parent_entity": "StudyIntervention",
+                        "name": "IMG_ADMIN3",
+                        "parent_rel": "administrations",
+                        "frequency.standardCode.decode": "EVERY OTHER DAY",
+                        "frequency.standardCode.codeSystem": "http://www.cdisc.org"
+                    },
+                    "dataset": "AgentAdministration.xpt",
+                    "row": 7
+                }
+            ]
+        }
+    ]
+}

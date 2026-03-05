@@ -1,0 +1,30 @@
+{
+  "MA": [
+    {
+      "executionStatus": "success",
+      "domain": "MA",
+      "variables": [
+        "MASPCUFL"
+      ],
+      "message": "MASPCUFL must be 'N' or null.",
+      "errors": [
+        {
+          "value": {
+            "MASPCUFL": "Y"
+          },
+          "row": 2,
+          "USUBJID": "CDISC-TEST-001",
+          "SEQ": 1
+        },
+        {
+          "value": {
+            "MASPCUFL": "Maybe"
+          },
+          "row": 3,
+          "USUBJID": "CDISC-TEST-001",
+          "SEQ": 1
+        }
+      ]
+    }
+  ]
+}

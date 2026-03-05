@@ -1,0 +1,9 @@
+dataset,variable,label,type,length
+tv.xpt,STUDYID,Study Identifier,Char,10
+tv.xpt,DOMAIN,Domain Abbreviation,Char,2
+tv.xpt,VISITNUM,Visit Number,Num,8
+tv.xpt,VISIT,Visit Name,Char,18
+tv.xpt,VISITDY,Planned Study Day of Visit,Num,8
+tv.xpt,ARMCD,Planned Arm Code,Char,21
+tv.xpt,TVSTRL,Visit Start Rule,Char,61
+tv.xpt,TVENRL,Visit End Rule,Char,21

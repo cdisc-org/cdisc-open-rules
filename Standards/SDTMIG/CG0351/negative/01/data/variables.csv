@@ -1,0 +1,81 @@
+dataset,variable,label,type,length
+dm.xpt,STUDYID,Study Identifier,Char,50
+dm.xpt,DOMAIN,Domain Abbreviation,Char,50
+dm.xpt,USUBJID,Unique Subject Identifier,Char,50
+dm.xpt,ARMCDXX,Planned Arm Code,Char,50
+dm.xpt,ARM,Description of Planned Arm,Char,50
+dm.xpt,ACTARMCD,Actual Arm Code,Char,50
+dm.xpt,ACTARM,Description of Actual Arm,Char,50
+dm.xpt,ARMNRS,Reason Arm and/or Actual Arm is Null,Char,50
+dm.xpt,ACTARMUD,Description of Unplanned Actual Arm,Char,50
+dm.xpt,RFSTDTC,Subject Reference Start Date/Time,Char,10
+ae.xpt,STUDYID,Study Identifier,Char,50
+ae.xpt,DOMAIN,Domain Abbreviation,Char,50
+ae.xpt,USUBJID,Unique Subject Identifier,Char,50
+ae.xpt,AESEQ,Sequence Number,Num,8
+ae.xpt,AETERM,Reported Term for the Adverse Event,Char,50
+ae.xpt,AEMODIFY,Modified Reported Term,Char,50
+ae.xpt,AEDECOD,Dictionary-Derived Term,Char,50
+ae.xpt,AEBODSYS,Body System or Organ Class,Char,50
+ae.xpt,AESEV,Severity/Intensity,Char,50
+ae.xpt,AESER,Serious Event,Char,50
+ae.xpt,AEACN,Action Taken with Study Treatment,Char,50
+ae.xpt,AEREL,Causality,Char,50
+ae.xpt,AEOUT,Outcome of Adverse Event,Char,50
+ae.xpt,AESCONG,Congenital Anomaly or Birth Defect,Char,50
+ae.xpt,AESDISAB,Persist or Signif Disability/Incapacity,Char,50
+ae.xpt,AESDTH,Results in Death,Char,50
+ae.xpt,AESHOSP,Requires or Prolongs Hospitalization,Char,50
+ae.xpt,AESLIFE,Is Life Threatening,Char,50
+ae.xpt,EPOCH,Epoch,Char,50
+ae.xpt,AESTDTC,Start Date/Time of Adverse Event,Char,50
+ae.xpt,AEENDTC,End Date/Time of Adverse Event,Char,50
+ae.xpt,AESTDYXX,Study Day of Start of Adverse Event,Num,8
+ae.xpt,AEENDY,Study Day of End of Adverse Event,Num,8
+ae.xpt,AEENRF,End Relative to Reference Period,Char,50
+supplb.xpt,STUDYID,Study Identifier,Char,50
+supplb.xpt,RDOMAIN,Related Domain Abbreviation,Char,50
+supplb.xpt,USUBJID,Unique Subject Identifier,Char,50
+supplb.xpt,IDVAR,Identifying Variable,Char,50
+supplb.xpt,IDVARVAL,Identifying Variable Value,Char,50
+supplb.xpt,QNAM,Qualifier Variable Name,Char,50
+supplb.xpt,QLABEL,Qualifier Variable Label,Char,50
+supplb.xpt,QVAL,Data Value,Char,50
+supplb.xpt,QORIG,Origin,Char,50
+supplb.xpt,QEVAL,Evaluator,Char,50
+suppae.xpt,STUDYID,Study Identifier,Char,50
+suppae.xpt,RDOMAIN,Related Domain Abbreviation,Char,50
+suppae.xpt,USUBJID,Unique Subject Identifier,Char,50
+suppae.xpt,IDVAR,Identifying Variable,Char,50
+suppae.xpt,IDVARVAL,Identifying Variable Value,Char,50
+suppae.xpt,QNAM,Qualifier Variable Name,Char,50
+suppae.xpt,QLABEL,Qualifier Variable Label,Char,50
+suppae.xpt,QVAL,Data Value,Char,50
+suppae.xpt,QORIG,Origin,Char,50
+suppae.xpt,QEVAL,Evaluator,Char,50
+lb.xpt,STUDYID,Study Identifier,Char,10
+lb.xpt,DOMAIN,Domain Abbreviation,Char,2
+lb.xpt,USUBJID,Unique Subject Identifier,Char,14
+lb.xpt,LBSEQ,Sequence Number,Num,8
+lb.xpt,LBSPIDXX,Sponsor-Defined Identifier,Char,4
+lb.xpt,LBTESTCD,Lab Test or Examination Short Name,Char,8
+lb.xpt,LBTEST,Lab Test or Examination Name,Char,25
+lb.xpt,LBCAT,Category for Lab Test,Char,18
+lb.xpt,LBORRES,Result or Finding in Original Units,Char,6
+lb.xpt,LBORRESU,Original Units,Char,8
+lb.xpt,LBORNRLO,Reference Range Lower Limit in Orig Unit,Char,1
+lb.xpt,LBORNRHI,Reference Range Upper Limit in Orig Unit,Char,1
+lb.xpt,LBSTRESC,Character Result/Finding in Std Format,Char,6
+lb.xpt,LBSTRESN,Numeric Result/Finding in Standard Units,Num,8
+lb.xpt,LBSTRESU,Standard Units,Char,8
+lb.xpt,LBSTNRLO,Reference Range Lower Limit-Std Units,Num,8
+lb.xpt,LBSTNRHI,Reference Range Upper Limit-Std Units,Num,8
+lb.xpt,LBNRIND,Reference Range Indicator,Char,1
+lb.xpt,LBLOINC,LOINC Code,Char,7
+lb.xpt,LBSPEC,Specimen Type,Char,5
+lb.xpt,LBBLFL,Baseline Flag,Char,1
+lb.xpt,EPOCH,Epoch,Char,9
+lb.xpt,VISITNUM,Visit Number,Num,8
+lb.xpt,VISIT,Visit Name,Char,18
+lb.xpt,LBDTC,Date/Time of Specimen Collection,Char,10
+lb.xpt,LBDY,Study Day of Specimen Collection,Num,8

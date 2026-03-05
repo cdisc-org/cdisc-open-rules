@@ -1,0 +1,38 @@
+{
+    "ADMINISTRATIONDURATION": [
+        {
+            "executionStatus": "success",
+            "domain": "ADMINISTRATIONDURATION",
+            "variables": [
+                "description",
+                "durationWillVary",
+                "id",
+                "parent_entity",
+                "parent_id",
+                "parent_rel",
+                "quantity",
+                "quantity.id",
+                "quantity.unit.standardCode.decode",
+                "quantity.value"
+            ],
+            "message": "A duration quantity has been specified when the duration will vary, or a duration quantity has not been specified when the duration will not vary.",
+            "errors": [
+                {
+                    "value": {
+                        "parent_id": "AgentAdministration_3",
+                        "parent_rel": "duration",
+                        "description": "Exactly one month",
+                        "id": "AdministrationDuration_3",
+                        "parent_entity": "AgentAdministration",
+                        "durationWillVary": false,
+                        "quantity.unit.standardCode.decode": "Not in dataset",
+                        "quantity.value": "Not in dataset",
+                        "quantity": "Not in dataset",
+                        "quantity.id": "Not in dataset"
+                    },
+                    "row": 1
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,33 @@
+{
+  "EX": [
+    {
+      "executionStatus": "success",
+      "domain": "EX",
+      "variables": [
+        "EXDOSE",
+        "EXDOSTXT"
+      ],
+      "message": "The value of COSEQ is not unique within POOLID",
+      "errors": [
+        {
+          "value": {
+            "EXDOSE": 54,
+            "EXDOSTXT": "50-60"
+          },
+          "row": 1,
+          "uSubjId": "CDISC001",
+          "seq": 1
+        },
+        {
+          "value": {
+            "EXDOSE": 1,
+            "EXDOSTXT": "0-2"
+          },
+          "row": 6,
+          "uSubjId": "CDISC004",
+          "seq": 2
+        }
+      ]
+    }
+  ]
+}

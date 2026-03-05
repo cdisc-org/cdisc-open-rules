@@ -1,0 +1,254 @@
+{2 items
+"datasets":[1 item
+0:{5 items
+"filename":"lb.xpt"
+"label":"Laboratory Test Results"
+"domain":"LB"
+"variables":[24 items
+0:{4 items
+"name":"STUDYID"
+"label":"Study Identifier"
+"type":"Char"
+"length":12
+}
+1:{4 items
+"name":"DOMAIN"
+"label":"Domain Abbreviation"
+"type":"Char"
+"length":2
+}
+2:{4 items
+"name":"USUBJID"
+"label":"Unique Subject Identifier"
+"type":"Char"
+"length":8
+}
+3:{4 items
+"name":"LBSEQ"
+"label":"Sequence Number"
+"type":"Num"
+"length":8
+}
+4:{4 items
+"name":"LBTESTCD"
+"label":"Lab Test or Examination Short Name"
+"type":"Char"
+"length":7
+}
+5:{4 items
+"name":"LBTEST"
+"label":"Lab Test or Examination Name"
+"type":"Char"
+"length":39
+}
+6:{4 items
+"name":"LBCAT"
+"label":"Category for Lab Test"
+"type":"Char"
+"length":10
+}
+7:{4 items
+"name":"LBORRESU"
+"label":"Original Units"
+"type":"Char"
+"length":7
+}
+8:{4 items
+"name":"LBORNRLO"
+"label":"Reference Range Lower Limit in Orig Unit"
+"type":"Char"
+"length":200
+}
+9:{4 items
+"name":"LBORNRHI"
+"label":"Reference Range Upper Limit in Orig Unit"
+"type":"Char"
+"length":200
+}
+10:{4 items
+"name":"LBSTRESC"
+"label":"Character Result/Finding in Std Format"
+"type":"Char"
+"length":8
+}
+11:{4 items
+"name":"LBSTRESN"
+"label":"Numeric Result/Finding in Standard Units"
+"type":"Num"
+"length":8
+}
+12:{4 items
+"name":"LBSTRESU"
+"label":"Standard Units"
+"type":"Char"
+"length":7
+}
+13:{4 items
+"name":"LBSTNRLO"
+"label":"Reference Range Lower Limit-Std Units"
+"type":"Num"
+"length":8
+}
+14:{4 items
+"name":"LBSTNRHI"
+"label":"Reference Range Upper Limit-Std Units"
+"type":"Num"
+"length":8
+}
+15:{4 items
+"name":"LBNRIND"
+"label":"Reference Range Indicator"
+"type":"Char"
+"length":8
+}
+16:{4 items
+"name":"LBLOBXFL"
+"label":"Last Observation Before Exposure Flag"
+"type":"Char"
+"length":1
+}
+17:{4 items
+"name":"VISITNUM"
+"label":"Visit Number"
+"type":"Num"
+"length":8
+}
+18:{4 items
+"name":"VISIT"
+"label":"Visit Name"
+"type":"Char"
+"length":200
+}
+19:{4 items
+"name":"EPOCH"
+"label":"Epoch"
+"type":"Char"
+"length":9
+}
+20:{4 items
+"name":"LBDTC"
+"label":"Date/Time of Specimen Collection"
+"type":"Char"
+"length":19
+}
+21:{4 items
+"name":"LBDY"
+"label":"Study Day of Specimen Collection"
+"type":"Num"
+"length":8
+}
+22:{4 items
+"name":"LBDRVFL"
+"label":"Derived Flag"
+"type":"Char"
+"length":50
+}
+23:{4 items
+"name":"LBORRES"
+"label":"Result or Finding in Original Units"
+"type":"Char"
+"length":6
+}
+]
+"records":{24 items
+"STUDYID":[2 items
+0:"CDISCPILOT01"
+1:"CDISCPILOT01"
+]
+"DOMAIN":[2 items
+0:"LB"
+1:"LB"
+]
+"USUBJID":[2 items
+0:"CDISC001"
+1:"CDISC001"
+]
+"LBSEQ":[2 items
+0:1
+1:2
+]
+"LBTESTCD":[2 items
+0:"ALB"
+1:"ALP"
+]
+"LBTEST":[2 items
+0:"Albumin"
+1:"Alkaline Phosphatase"
+]
+"LBCAT":[2 items
+0:"CHEMISTRY"
+1:"CHEMISTRY"
+]
+"LBORRESU":[2 items
+0:"g/dL"
+1:"U/L"
+]
+"LBORNRLO":[2 items
+0:"3.5"
+1:"35"
+]
+"LBORNRHI":[2 items
+0:"4.6"
+1:"115"
+]
+"LBSTRESC":[2 items
+0:"39"
+1:"93"
+]
+"LBSTRESN":[2 items
+0:39
+1:93
+]
+"LBSTRESU":[2 items
+0:"g/L"
+1:"U/L"
+]
+"LBSTNRLO":[2 items
+0:35
+1:35
+]
+"LBSTNRHI":[2 items
+0:46
+1:115
+]
+"LBNRIND":[2 items
+0:"NORMAL"
+1:"NORMAL"
+]
+"LBLOBXFL":[2 items
+0:"Y"
+1:"Y"
+]
+"VISITNUM":[2 items
+0:1
+1:1
+]
+"VISIT":[2 items
+0:"SCREENING 1"
+1:"SCREENING 1"
+]
+"EPOCH":[2 items
+0:"SCREENING"
+1:"SCREENING"
+]
+"LBDTC":[2 items
+0:"2012-11-23T11:20"
+1:"2012-11-23T11:20"
+]
+"LBDY":[2 items
+0:-7
+1:-7
+]
+"LBDRVFL":[2 items
+0:""
+1:"N"
+]
+"LBORRES":[2 items
+0:""
+1:""
+]
+}
+}
+]
+"codelists":[]0 items
+}

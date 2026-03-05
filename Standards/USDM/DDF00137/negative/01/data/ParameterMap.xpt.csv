@@ -1,0 +1,10 @@
+parent_entity,parent_id,parent_rel,rel_type,id,tag,reference,instanceType
+SyntaxTemplateDictionary,SyntaxTemplateDictionary_1,parameterMaps,definition,ParameterMap_1,class_with_number,"<usdm:ref klass=""Range1"" id=""Range_3"" attribute=""maxValue""></usdm:ref>",ParameterMap
+SyntaxTemplateDictionary,SyntaxTemplateDictionary_1,parameterMaps,definition,ParameterMap_3,attribute_with_non_alpha,"<usdm:ref id=""StudyDesignPopulation_1"" klass=""StudyDesignPopulation"" attribute=""description!""></usdm:ref>",ParameterMap
+SyntaxTemplateDictionary,SyntaxTemplateDictionary_2,parameterMaps,definition,ParameterMap_4,class_not_klass,"<usdm:ref id=""Activity_6"" attribute=""label"" class=""Activity""></usdm:ref>",ParameterMap
+SyntaxTemplateDictionary,SyntaxTemplateDictionary_2,parameterMaps,definition,ParameterMap_5,missing_attribute,"<usdm:ref klass=""Activity"" id=""Activity_5""></usdm:ref>",ParameterMap
+SyntaxTemplateDictionary,SyntaxTemplateDictionary_2,parameterMaps,definition,ParameterMap_6,trailing_spaces,"<usdm:ref attribute=""label"" klass=""Activity"" id=""Activity_9""></usdm:ref>  ",ParameterMap
+SyntaxTemplateDictionary,SyntaxTemplateDictionary_2,parameterMaps,definition,ParameterMap_6,leading_space," <usdm:ref attribute=""label"" klass=""Activity"" id=""Activity_9""></usdm:ref>",ParameterMap
+SyntaxTemplateDictionary,SyntaxTemplateDictionary_3,parameterMaps,definition,ParameterMap_7,missing_closing_slash_or_tag,"<usdm:ref attribute=""maxValue"" id=""Range_1"" klass=""MissingCloseSlash"">",ParameterMap
+SyntaxTemplateDictionary,SyntaxTemplateDictionary_3,parameterMaps,definition,ParameterMap_8,missing_leading_bracket,"usdm:ref attribute=""maxValue"" id=""Range_1"" klass=""MissingCloseSlash""/>",ParameterMap
+SyntaxTemplateDictionary,SyntaxTemplateDictionary_3,parameterMaps,definition,ParameterMap_9,fixed_string,a piece of text that includes usdm:ref,ParameterMap

@@ -1,0 +1,42 @@
+{
+  "TF": [
+    {
+      "executionStatus": "success",
+      "domain": "TF",
+      "variables": [
+        "TFANTREG",
+        "TFORRES",
+        "TFSPEC",
+        "TFTESTCD",
+        "USUBJID"
+      ],
+      "message": "The Tumor Findings test result is not unique for this subject and specimen.",
+      "errors": [
+        {
+          "value": {
+            "USUBJID": "123101",
+            "TFSPEC": "PANCREAS",
+            "TFTESTCD": "TUMEX",
+            "TFORRES": "ACINAR CELL ADENOMA, PRIMARY ",
+            "TFANTREG": "Not in dataset"
+          },
+          "row": 1,
+          "USUBJID": "123101",
+          "SEQ": 1
+        },
+        {
+          "value": {
+            "USUBJID": "123101",
+            "TFSPEC": "PANCREAS",
+            "TFTESTCD": "TUMEX",
+            "TFORRES": "ACINAR CELL ADENOMA, PRIMARY ",
+            "TFANTREG": "Not in dataset"
+          },
+          "row": 4,
+          "USUBJID": "123101",
+          "SEQ": 4
+        }
+      ]
+    }
+  ]
+}

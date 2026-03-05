@@ -1,0 +1,46 @@
+{
+  "SE": [
+    {
+      "executionStatus": "success",
+      "domain": "SE",
+      "variables": [
+        "ETCD"
+      ],
+      "message": "ETCD value is greater than 8",
+      "errors": [
+        {
+          "value": {
+            "ETCD": "SCREENPERIOD"
+          },
+          "row": 1,
+          "uSubjId": "CDISC001",
+          "seq": 1
+        },
+        {
+          "value": {
+            "ETCD": "LOWERDOSE"
+          },
+          "row": 2,
+          "uSubjId": "CDISC001",
+          "seq": 2
+        },
+        {
+          "value": {
+            "ETCD": "SCREENINGS"
+          },
+          "row": 3,
+          "uSubjId": "CDISC002",
+          "seq": 1
+        },
+        {
+          "value": {
+            "ETCD": "HIGHESTDOSE"
+          },
+          "row": 4,
+          "uSubjId": "CDISC002",
+          "seq": 2
+        }
+      ]
+    }
+  ]
+}

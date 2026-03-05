@@ -1,0 +1,82 @@
+{
+    "Encounter": [
+        {
+            "executionStatus": "success",
+            "dataset": "Encounter.xpt",
+            "domain": "Encounter",
+            "variables": [
+                "id",
+                "name",
+                "name.Timing",
+                "parent_entity",
+                "parent_id",
+                "parent_id.ScheduleTimeline",
+                "parent_rel",
+                "scheduledAtId"
+            ],
+            "message": "The encounter is scheduled at a timing that either is not defined in the same study design (the parent_id of the timing's parent schedule timeline does not match the parent_id of the encounter) or is invalid (schedulateAtId does not match the id of any timing).",
+            "errors": [
+                {
+                    "value": {
+                        "parent_entity": "StudyDesign",
+                        "id": "Encounter_2",
+                        "name.Timing": "TIM2",
+                        "scheduledAtId": "Timing_2",
+                        "parent_rel": "encounters",
+                        "name": "E2",
+                        "parent_id.ScheduleTimeline": "StudyDesign_2",
+                        "parent_id": "StudyDesign_1"
+                    },
+                    "dataset": "Encounter.xpt",
+                    "row": 2
+                },
+                {
+                    "value": {
+                        "parent_entity": "StudyDesign",
+                        "id": "Encounter_4",
+                        "name.Timing": null,
+                        "scheduledAtId": "Timing_xx",
+                        "parent_rel": "encounters",
+                        "name": "E4",
+                        "parent_id.ScheduleTimeline": null,
+                        "parent_id": "StudyDesign_1"
+                    },
+                    "dataset": "Encounter.xpt",
+                    "row": 4
+                }
+            ]
+        }
+    ],
+    "ScheduleTimeline": [
+        {
+            "executionStatus": "execution_error",
+            "dataset": "ScheduleTimeline.xpt",
+            "domain": "",
+            "variables": [],
+            "message": "rule execution error",
+            "errors": [
+                {
+                    "dataset": "ScheduleTimeline.xpt",
+                    "error": "Column not found in data",
+                    "message": "scheduledAtId"
+                }
+            ]
+        }
+    ],
+    "Timing": [
+        {
+            "executionStatus": "execution_error",
+            "dataset": "Timing.xpt",
+            "domain": "",
+            "variables": [],
+            "message": "rule execution error",
+            "errors": [
+                {
+                    "dataset": "Timing.xpt",
+                    "error": "Column not found in data",
+                    "message": "parent_id.Timing"
+                }
+            ]
+        }
+    ]
+}

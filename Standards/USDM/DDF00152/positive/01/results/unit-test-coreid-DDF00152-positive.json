@@ -1,0 +1,28 @@
+{
+    "Activity": [
+        {
+            "executionStatus": "success",
+            "dataset": "Activity.xpt",
+            "domain": null,
+            "variables": [],
+            "message": null,
+            "errors": []
+        }
+    ],
+    "ScheduleTimeline": [
+        {
+            "executionStatus": "execution_error",
+            "dataset": "ScheduleTimeline.xpt",
+            "domain": "",
+            "variables": [],
+            "message": "rule execution error",
+            "errors": [
+                {
+                    "dataset": "ScheduleTimeline.xpt",
+                    "error": "Column not found in data",
+                    "message": "timelineId"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "Timing": [
+        {
+            "executionStatus": "success",
+            "dataset": "Timing.xpt",
+            "domain": "Timing",
+            "variables": [
+                "id",
+                "name",
+                "parent_entity",
+                "parent_id",
+                "parent_rel",
+                "relativeFromScheduledInstanceId",
+                "relativeToScheduledInstanceId",
+                "type.code",
+                "type.decode"
+            ],
+            "message": "The Timing type is \"Fixed Reference\" (type.code=C201358) but it does not point to only one scheduled instance - relativeToScheduledInstanceId is not missing and does not contain the same value as relativeFromScheduledInstanceId.",
+            "errors": [
+                {
+                    "value": {
+                        "name": "TIM3",
+                        "parent_rel": "timings",
+                        "id": "Timing_3",
+                        "parent_entity": "ScheduleTimeline",
+                        "parent_id": "ScheduleTimeline_4",
+                        "type.code": "C201358",
+                        "type.decode": "Fixed Reference",
+                        "relativeFromScheduledInstanceId": "ScheduledActivityInstance_10",
+                        "relativeToScheduledInstanceId": "ScheduledActivityInstance_11"
+                    },
+                    "dataset": "Timing.xpt",
+                    "row": 1
+                }
+            ]
+        }
+    ]
+}

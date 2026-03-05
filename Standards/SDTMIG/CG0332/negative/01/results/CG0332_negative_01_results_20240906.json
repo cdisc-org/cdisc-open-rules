@@ -1,0 +1,36 @@
+{
+    "QS": [
+        {
+            "executionStatus": "success",
+            "dataset": "qs1.xpt",
+            "domain": "QS",
+            "variables": [
+                "$list_dataset_names",
+                "dataset_name"
+            ],
+            "message": "Split dataset is present but the two-Letter parent domain is missing.",
+            "errors": [
+                {
+                    "value": {
+                        "dataset_name": "QS1",
+                        "$list_dataset_names": [
+                            "QS1",
+                            "QSAE"
+                        ]
+                    },
+                    "row": 1
+                },
+                {
+                    "value": {
+                        "dataset_name": "QSAE",
+                        "$list_dataset_names": [
+                            "QS1",
+                            "QSAE"
+                        ]
+                    },
+                    "row": 2
+                }
+            ]
+        }
+    ]
+}

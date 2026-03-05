@@ -1,0 +1,38 @@
+{
+    "ScheduledActivityInstance": [
+        {
+            "executionStatus": "success",
+            "dataset": "ScheduledActivityInstance.xpt",
+            "domain": null,
+            "variables": [],
+            "message": null,
+            "errors": []
+        }
+    ],
+    "ScheduledDecisionInstance": [
+        {
+            "executionStatus": "success",
+            "dataset": "ScheduledDecisionInstance.xpt",
+            "domain": null,
+            "variables": [],
+            "message": null,
+            "errors": []
+        }
+    ],
+    "Timing": [
+        {
+            "executionStatus": "execution_error",
+            "dataset": "Timing.xpt",
+            "domain": "",
+            "variables": [],
+            "message": "rule execution error",
+            "errors": [
+                {
+                    "dataset": "Timing.xpt",
+                    "error": "Column not found in data",
+                    "message": "rel_type.Timing"
+                }
+            ]
+        }
+    ]
+}

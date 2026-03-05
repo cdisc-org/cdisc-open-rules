@@ -1,0 +1,8 @@
+dataset,variable,label,type,length
+ae.xpt,STUDYID,Study Identifier,Char,12
+ae.xpt,DOMAIN,Domain Abbreviation,Char,2
+ae.xpt,USUBJID,Unique Subject Identifier,Char,8
+ae.xpt,AESEQ,Sequence Number,Num,8
+ae.xpt,AETERM,Reported Term for the Adverse Event,Char,50
+ae.xpt,AEOCCUR,Occurrence Indicator,Char,50
+ae.xpt,AESTRF,Start Relative to Reference Period,Char,50

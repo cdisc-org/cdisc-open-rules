@@ -1,0 +1,74 @@
+{
+  "DM": [
+    {
+      "executionStatus": "skipped",
+      "domain": "DM",
+      "variables": [],
+      "message": null,
+      "errors": []
+    }
+  ],
+  "TA": [
+    {
+      "executionStatus": "skipped",
+      "domain": "TA",
+      "variables": [],
+      "message": null,
+      "errors": []
+    }
+  ],
+  "TX": [
+    {
+      "executionStatus": "success",
+      "domain": "TX",
+      "variables": [
+        "SETCD"
+      ],
+      "message": "The combination of SETCD and SET is not a unique pair",
+      "errors": [
+        {
+          "value": {
+            "SETCD": "SET1"
+          },
+          "row": 1,
+          "seq": 1
+        },
+        {
+          "value": {
+            "SETCD": "SET1"
+          },
+          "row": 2,
+          "seq": 2
+        },
+        {
+          "value": {
+            "SETCD": "SET1"
+          },
+          "row": 3,
+          "seq": 3
+        },
+        {
+          "value": {
+            "SETCD": "SET2"
+          },
+          "row": 4,
+          "seq": 4
+        },
+        {
+          "value": {
+            "SETCD": "SET2"
+          },
+          "row": 5,
+          "seq": 5
+        },
+        {
+          "value": {
+            "SETCD": "SET1"
+          },
+          "row": 6,
+          "seq": 6
+        }
+      ]
+    }
+  ]
+}

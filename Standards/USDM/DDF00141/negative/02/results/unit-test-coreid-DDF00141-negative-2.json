@@ -1,0 +1,192 @@
+{
+    "Code": [
+        {
+            "executionStatus": "skipped",
+            "dataset": "Code.xpt",
+            "domain": "",
+            "variables": [],
+            "message": "Rule skipped - doesn't apply to entity for rule id=CORE-000857, dataset=Code",
+            "errors": []
+        }
+    ],
+    "StudyCohort": [
+        {
+            "executionStatus": "success",
+            "dataset": "StudyCohort.xpt",
+            "domain": "StudyCohort",
+            "variables": [
+                "$code_for_decode_pref_term",
+                "$code_for_decode_value",
+                "$codelist_code",
+                "$codelist_extensible",
+                "$pref_term_for_code",
+                "$value_for_code",
+                "code",
+                "codeSystem",
+                "codeSystemVersion",
+                "decode",
+                "id",
+                "name",
+                "parent_entity",
+                "parent_id",
+                "parent_rel"
+            ],
+            "message": "The planned sex is not specified using the Sex of Participants (C66732) SDTM codelist - codeSystem is not \"http://www.cdisc.org\", codeSystemVersion is not a valid terminology package date, the code or decode (either as preferred term or as submission value) is found in the codelist (case insensitive) but the corresponding decode or code does not match the codelist value (case sensitive), and/or neither code nor decode is found in the codelist.",
+            "errors": [
+                {
+                    "value": {
+                        "parent_rel": "cohorts",
+                        "name": "COHORT3",
+                        "$codelist_code": "C66732",
+                        "code": "C16576",
+                        "$value_for_code": "F",
+                        "decode": "FEMALE",
+                        "$code_for_decode_value": null,
+                        "$codelist_extensible": false,
+                        "parent_entity": "StudyDesignPopulation",
+                        "$pref_term_for_code": "Female",
+                        "$code_for_decode_pref_term": "C16576",
+                        "id": "StudyCohort_3",
+                        "codeSystem": "http://www.cdisc.org",
+                        "parent_id": "StudyDesignPopulation_2",
+                        "codeSystemVersion": "2023-12-15"
+                    },
+                    "dataset": "StudyCohort.xpt",
+                    "row": 3
+                },
+                {
+                    "value": {
+                        "parent_rel": "cohorts",
+                        "name": "COHORT3",
+                        "$codelist_code": "C66732",
+                        "code": "C20197xx",
+                        "$value_for_code": null,
+                        "decode": "Male",
+                        "$code_for_decode_value": null,
+                        "$codelist_extensible": false,
+                        "parent_entity": "StudyDesignPopulation",
+                        "$pref_term_for_code": null,
+                        "$code_for_decode_pref_term": "C20197",
+                        "id": "StudyCohort_3",
+                        "codeSystem": "http://www.cdisc.org",
+                        "parent_id": "StudyDesignPopulation_2",
+                        "codeSystemVersion": "2023-12-15"
+                    },
+                    "dataset": "StudyCohort.xpt",
+                    "row": 3
+                },
+                {
+                    "value": {
+                        "parent_rel": "cohorts",
+                        "name": "COHORT4",
+                        "$codelist_code": "C66732",
+                        "code": "C16576",
+                        "$value_for_code": "F",
+                        "decode": "F",
+                        "$code_for_decode_value": "C16576",
+                        "$codelist_extensible": false,
+                        "parent_entity": "StudyDesignPopulation",
+                        "$pref_term_for_code": "Female",
+                        "$code_for_decode_pref_term": null,
+                        "id": "StudyCohort_4",
+                        "codeSystem": "CDISC SEXPOP Codelist",
+                        "parent_id": "StudyDesignPopulation_2",
+                        "codeSystemVersion": "2023-12-15"
+                    },
+                    "dataset": "StudyCohort.xpt",
+                    "row": 4
+                },
+                {
+                    "value": {
+                        "parent_rel": "cohorts",
+                        "name": "COHORT4",
+                        "$codelist_code": "C66732",
+                        "code": "C20197",
+                        "$value_for_code": null,
+                        "decode": "M",
+                        "$code_for_decode_value": null,
+                        "$codelist_extensible": null,
+                        "parent_entity": "StudyDesignPopulation",
+                        "$pref_term_for_code": null,
+                        "$code_for_decode_pref_term": null,
+                        "id": "StudyCohort_4",
+                        "codeSystem": "http://www.cdisc.org",
+                        "parent_id": "StudyDesignPopulation_2",
+                        "codeSystemVersion": "2023-12-15-15"
+                    },
+                    "dataset": "StudyCohort.xpt",
+                    "row": 4
+                }
+            ]
+        }
+    ],
+    "StudyDesignPopulation": [
+        {
+            "executionStatus": "success",
+            "dataset": "StudyDesignPopulation.xpt",
+            "domain": "StudyDesignPopulation",
+            "variables": [
+                "$code_for_decode_pref_term",
+                "$code_for_decode_value",
+                "$codelist_code",
+                "$codelist_extensible",
+                "$pref_term_for_code",
+                "$value_for_code",
+                "code",
+                "codeSystem",
+                "codeSystemVersion",
+                "decode",
+                "id",
+                "name",
+                "parent_entity",
+                "parent_id",
+                "parent_rel"
+            ],
+            "message": "The planned sex is not specified using the Sex of Participants (C66732) SDTM codelist - codeSystem is not \"http://www.cdisc.org\", codeSystemVersion is not a valid terminology package date, the code or decode (either as preferred term or as submission value) is found in the codelist (case insensitive) but the corresponding decode or code does not match the codelist value (case sensitive), and/or neither code nor decode is found in the codelist.",
+            "errors": [
+                {
+                    "value": {
+                        "parent_rel": "population",
+                        "name": "POP1",
+                        "$codelist_code": "C66732",
+                        "code": "C49636",
+                        "$value_for_code": "BOTH",
+                        "decode": "Male",
+                        "$code_for_decode_value": null,
+                        "$codelist_extensible": false,
+                        "parent_entity": "InterventionalStudyDesign",
+                        "$pref_term_for_code": "Both",
+                        "$code_for_decode_pref_term": "C20197",
+                        "id": "StudyDesignPopulation_1",
+                        "codeSystem": "http://www.cdisc.org",
+                        "parent_id": "InterventionalStudyDesign_1",
+                        "codeSystemVersion": "2024-09-27"
+                    },
+                    "dataset": "StudyDesignPopulation.xpt",
+                    "row": 1
+                },
+                {
+                    "value": {
+                        "parent_rel": "population",
+                        "name": "POP4",
+                        "$codelist_code": "C66732",
+                        "code": "C0029X",
+                        "$value_for_code": null,
+                        "decode": "Extension",
+                        "$code_for_decode_value": null,
+                        "$codelist_extensible": false,
+                        "parent_entity": "InterventionalStudyDesign",
+                        "$pref_term_for_code": null,
+                        "$code_for_decode_pref_term": null,
+                        "id": "StudyDesignPopulation_4",
+                        "codeSystem": "http://www.cdisc.org",
+                        "parent_id": "InterventionalStudyDesign_4",
+                        "codeSystemVersion": "2023-12-15"
+                    },
+                    "dataset": "StudyDesignPopulation.xpt",
+                    "row": 4
+                }
+            ]
+        }
+    ]
+}

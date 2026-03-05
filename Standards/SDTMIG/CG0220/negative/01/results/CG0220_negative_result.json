@@ -1,0 +1,61 @@
+{2 items
+"DM":[1 item
+0:{6 items
+"executionStatus":"skipped"
+"dataset":NULL
+"domain":"DM"
+"variables":[]0 items
+"message":NULL
+"errors":[]0 items
+}
+]
+"CM":[1 item
+0:{6 items
+"executionStatus":"success"
+"dataset":"cm.xpt"
+"domain":"CM"
+"variables":[4 items
+0:"$val_stdy"
+1:"CMSTDTC"
+2:"CMSTDY"
+3:"RFSTDTC"
+]
+"message":"CMSTDY is not properly calculated per study day algorithm"
+"errors":[3 items
+0:{4 items
+"value":{4 items
+"CMSTDY":NULL
+"RFSTDTC":"2013-01-05"
+"CMSTDTC":"2013-02-18"
+"$val_stdy":45
+}
+"row":7
+"USUBJID":"CDISC007"
+"SEQ":5
+}
+1:{4 items
+"value":{4 items
+"CMSTDY":45
+"RFSTDTC":"2014-05-11"
+"CMSTDTC":"2013-02-18"
+"$val_stdy":-447
+}
+"row":8
+"USUBJID":"CDISC008"
+"SEQ":6
+}
+2:{4 items
+"value":{4 items
+"CMSTDY":-511
+"RFSTDTC":"2013-09-21"
+"CMSTDTC":"2011-07-15"
+"$val_stdy":-799
+}
+"row":10
+"USUBJID":"CDISC010"
+"SEQ":2
+}
+]
+}
+]
+}

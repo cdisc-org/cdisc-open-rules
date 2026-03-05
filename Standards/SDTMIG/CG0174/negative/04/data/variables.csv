@@ -1,0 +1,43 @@
+dataset,variable,label,type,length
+ex.xpt,STUDYID,Study Identifier,Char,6
+ex.xpt,DOMAIN,Domain Abbreviation,Char,2
+ex.xpt,USUBJID,Unique Subject Identifier,Char,20
+ex.xpt,EXSEQ,Sequence Number,Num,1
+ex.xpt,EXLNKID,Link ID,Char,20
+ex.xpt,EXLNKGRP,Link Group ID,Char,2
+ex.xpt,EXTRT,Name of Treatment,Char,10
+ex.xpt,EXDOSE,Dose,Num,4
+ex.xpt,EXDOSU,Dose Units,Char,5
+ex.xpt,EXDOSFRM,Dose Form,Char,20
+ex.xpt,EXDOSFRQ,Dosing Frequency per Interval,Char,20
+ex.xpt,EXROUTE,Route of Administration,Char,20
+ex.xpt,EXADJ,Reason for Dose Adjustment,,100
+ex.xpt,VISITNUM,Visit Number,Num,2
+ex.xpt,VISIT,Visit Name,Char,2
+ex.xpt,EPOCH,Epoch,Char,20
+ex.xpt,EXSTDTC,Start Date/Time of Treatment,Char,20
+ex.xpt,EXENDTC,End Date/Time of Treatment,,20
+ex.xpt,EXSTDY,Study Day of Start of Treatment,Num,2
+ex.xpt,EXENDY,Study Day of End of Treatment,Num,2
+fa.xpt,STUDYID,Study Identifier,Char,200
+fa.xpt,DOMAIN,Domain Abbreviation,Char,200
+fa.xpt,USUBJID,Unique Subject Identifier,Char,200
+fa.xpt,FASEQ,Sequence Number,Char,200
+fa.xpt,FALNKID,Var Label,Char,200
+fa.xpt,FATESTCD,Findings About Test Short Name,Char,8
+fa.xpt,FATEST,Findings About Test Name,Char,40
+fa.xpt,FAOBJ,Object of the Observation,Char,200
+fa.xpt,FAORRES,Result or Finding in Original Units,Char,200
+fa.xpt,FAORRESU,Original Units,Char,10
+fa.xpt,FASTRESC,Character Result/Finding in Std Format,Char,200
+fa.xpt,FASTRESU,Standard Units,Char,200
+fa.xpt,VISITNUM,Visit Number,Char,200
+fa.xpt,VISIT,Visit Name,Char,20
+fa.xpt,EPOCH,Var Label,Char,200
+relrec.xpt,STUDYID,Var Label,Char,200
+relrec.xpt,RDOMAIN,Var Label,Char,200
+relrec.xpt,USUBJID,Var Label,Char,200
+relrec.xpt,IDVAR,Var Label,Char,200
+relrec.xpt,IDVARVAL,Var Label,Char,200
+relrec.xpt,RELTYPE,Var Label,Char,200
+relrec.xpt,RELID,Var Label,Char,200

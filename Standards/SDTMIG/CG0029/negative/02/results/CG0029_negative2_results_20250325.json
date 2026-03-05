@@ -1,0 +1,80 @@
+{
+    "AE": [
+        {
+            "executionStatus": "success",
+            "dataset": "ae.xpt",
+            "domain": "AE",
+            "variables": [
+                "USUBJID"
+            ],
+            "message": "USUBJID is not found in DM.USUBJID",
+            "errors": [
+                {
+                    "value": {
+                        "USUBJID": "002"
+                    },
+                    "dataset": "ae.xpt",
+                    "row": 2,
+                    "USUBJID": "002",
+                    "SEQ": 2
+                },
+                {
+                    "value": {
+                        "USUBJID": "003"
+                    },
+                    "dataset": "ae.xpt",
+                    "row": 3,
+                    "USUBJID": "003",
+                    "SEQ": 3
+                }
+            ]
+        }
+    ],
+    "DM": [
+        {
+            "executionStatus": "success",
+            "dataset": "dm.xpt",
+            "domain": "DM",
+            "variables": [],
+            "message": null,
+            "errors": []
+        }
+    ],
+    "RELREC": [
+        {
+            "executionStatus": "success",
+            "dataset": "relrec.xpt",
+            "domain": "RELREC",
+            "variables": [
+                "USUBJID"
+            ],
+            "message": "USUBJID is not found in DM.USUBJID",
+            "errors": [
+                {
+                    "value": {
+                        "USUBJID": "005"
+                    },
+                    "dataset": "relrec.xpt",
+                    "row": 1,
+                    "USUBJID": "005"
+                },
+                {
+                    "value": {
+                        "USUBJID": "006"
+                    },
+                    "dataset": "relrec.xpt",
+                    "row": 2,
+                    "USUBJID": "006"
+                },
+                {
+                    "value": {
+                        "USUBJID": "007"
+                    },
+                    "dataset": "relrec.xpt",
+                    "row": 3,
+                    "USUBJID": "007"
+                }
+            ]
+        }
+    ]
+}

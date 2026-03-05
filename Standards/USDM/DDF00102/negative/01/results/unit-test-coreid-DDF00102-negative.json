@@ -1,0 +1,49 @@
+{
+    "ScheduledActivityInstance": [
+        {
+            "executionStatus": "success",
+            "dataset": "ScheduledActivityInstance.xpt",
+            "domain": "ScheduledActivityInstance",
+            "variables": [
+                "id",
+                "name",
+                "parent_entity",
+                "parent_id",
+                "parent_id.ScheduleTimelineExit",
+                "parent_rel",
+                "timelineExitId"
+            ],
+            "message": "The scheduled activity instance references a timeline exit that is not defined within the same schedule timeline as the scheduled activity instance.",
+            "errors": [
+                {
+                    "value": {
+                        "name": "WK26",
+                        "id": "ScheduledActivityInstance_24",
+                        "parent_id.ScheduleTimelineExit": "ScheduleTimeline_5",
+                        "parent_id": "ScheduleTimeline_4",
+                        "parent_rel": "instances",
+                        "parent_entity": "ScheduleTimeline",
+                        "timelineExitId": "ScheduleTimelineExit_4"
+                    },
+                    "row": 1
+                }
+            ]
+        }
+    ],
+    "ScheduleTimelineExit": [
+        {
+            "executionStatus": "execution_error",
+            "dataset": "ScheduleTimelineExit.xpt",
+            "domain": "",
+            "variables": [],
+            "message": "rule execution error",
+            "errors": [
+                {
+                    "dataset": "ScheduleTimelineExit.xpt",
+                    "error": "Column not found in data",
+                    "message": "timelineExitId"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,302 @@
+{
+    "rule": {
+        "Authorities": [
+            {
+                "Organization": "CDISC",
+                "Standards": [
+                    {
+                        "Name": "SENDIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "SENDIG v3.0",
+                                        "Item": "POOLID CDISC Notes",
+                                        "Section": "6.1.1",
+                                        "Cited_Guidance": "If POOLID is entered, POOLDEF records must exist for each subject and the USUBJID must be null."
+                                    }
+                                ],
+                                "Origin": "SEND Conformance Rules",
+                                "Version": "5.0",
+                                "Rule_Identifier": {
+                                    "Id": "SEND139",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.0"
+                    },
+                    {
+                        "Name": "SENDIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "SENDIG v3.1",
+                                        "Item": "POOLID CDISC Notes",
+                                        "Section": "6.1.1",
+                                        "Cited_Guidance": "If POOLID is entered, POOLDEF records must exist for each subject and the USUBJID must be null."
+                                    }
+                                ],
+                                "Origin": "SEND Conformance Rules",
+                                "Version": "5.0",
+                                "Rule_Identifier": {
+                                    "Id": "SEND139",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.1"
+                    },
+                    {
+                        "Name": "SENDIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "SENDIG v3.1.1",
+                                        "Item": "POOLID CDISC Notes",
+                                        "Section": "6.1.1",
+                                        "Cited_Guidance": "If POOLID is entered, POOLDEF records must exist for each subject and the USUBJID must be null."
+                                    }
+                                ],
+                                "Origin": "SEND Conformance Rules",
+                                "Version": "5.0",
+                                "Rule_Identifier": {
+                                    "Id": "SEND139",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.1.1"
+                    },
+                    {
+                        "Name": "SENDIG-DART",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "SENDIG v3.1",
+                                        "Item": "POOLID CDISC Notes",
+                                        "Section": "6.1.1",
+                                        "Cited_Guidance": "If POOLID is entered, POOLDEF records must exist for each subject and the USUBJID must be null."
+                                    }
+                                ],
+                                "Origin": "SEND Conformance Rules",
+                                "Version": "5.0",
+                                "Rule_Identifier": {
+                                    "Id": "SEND139",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "1.1"
+                    },
+                    {
+                        "Name": "SENDIG-DART",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "SENDIG v3.1.1",
+                                        "Item": "POOLID CDISC Notes",
+                                        "Section": "6.1.1",
+                                        "Cited_Guidance": "If POOLID is entered, POOLDEF records must exist for each subject and the USUBJID must be null."
+                                    }
+                                ],
+                                "Origin": "SEND Conformance Rules",
+                                "Version": "5.0",
+                                "Rule_Identifier": {
+                                    "Id": "SEND139",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "1.2"
+                    },
+                    {
+                        "Name": "SENDIG-GENETOX",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "SENDIG v3.1.1",
+                                        "Item": "POOLID CDISC Notes",
+                                        "Section": "6.1.1",
+                                        "Cited_Guidance": "If POOLID is entered, POOLDEF records must exist for each subject and the USUBJID must be null."
+                                    }
+                                ],
+                                "Origin": "SEND Conformance Rules",
+                                "Version": "5.0",
+                                "Rule_Identifier": {
+                                    "Id": "SEND139",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "1.0"
+                    },
+                    {
+                        "Name": "TIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "TIG v1.0",
+                                        "Item": "POOLID CDISC Notes",
+                                        "Section": "2.8.9.22",
+                                        "Cited_Guidance": "If POOLID is entered, POOLDEF records must exist for each subject and the USUBJID must be null."
+                                    }
+                                ],
+                                "Origin": "TIG Conformance Rules",
+                                "Version": "1.0",
+                                "Rule_Identifier": {
+                                    "Id": "TIG0075",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Substandard": "SEND",
+                        "Version": "1.0"
+                    }
+                ]
+            }
+        ],
+        "Check": {
+            "all": [
+                {
+                    "name": "$poolid_exists",
+                    "operator": "equal_to",
+                    "value": true
+                },
+                {
+                    "name": "POOLDEF",
+                    "operator": "not_exists"
+                }
+            ]
+        },
+        "Core": {
+            "Id": "CDISC.SENDIG.139",
+            "Status": "Draft",
+            "Version": "1"
+        },
+        "Description": "Part A - Raise error when POOLID exists in the dataset but POOLDEF does not exist.",
+        "Executability": "Fully Executable",
+        "Operations": [
+            {
+                "id": "$poolid_exists",
+                "name": "POOLID",
+                "operator": "variable_exists"
+            }
+        ],
+        "Outcome": {
+            "Message": "POOLID variable exists in the dataset but POOLDEF dataset does not exist."
+        },
+        "Scope": {
+            "Classes": {
+                "Include": [
+                    "ALL"
+                ]
+            },
+            "Domains": {
+                "Include": [
+                    "ALL"
+                ]
+            },
+            "Use_Case": "NONCLIN"
+        },
+        "Sensitivity": "Dataset",
+        "Rule_Type": "Domain Presence Check"
+    },
+    "datasets": [
+        {
+            "filename": "vs.xpt",
+            "label": "Vital Signs",
+            "domain": "VS",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 12
+                },
+                {
+                    "name": "DOMAIN",
+                    "label": "Domain Abbreviation",
+                    "type": "Char",
+                    "length": 2
+                },
+                {
+                    "name": "USUBJID",
+                    "label": "Unique Subject Identifier",
+                    "type": "Char",
+                    "length": 8
+                },
+                {
+                    "name": "POOLID",
+                    "label": "Pool Identfier",
+                    "type": "Char",
+                    "length": 8
+                },
+                {
+                    "name": "VSSEQ",
+                    "label": "Sequence Number",
+                    "type": "Num",
+                    "length": 8
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01"
+                ],
+                "DOMAIN": [
+                    "VS",
+                    "VS",
+                    "VS",
+                    "VS",
+                    "VS",
+                    "VS",
+                    "VS"
+                ],
+                "USUBJID": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "POOLID": [
+                    "POOL1",
+                    "POOL1",
+                    "POOL1",
+                    "POOL2",
+                    "POOL2",
+                    "POOL2",
+                    "POOL3"
+                ],
+                "VSSEQ": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    6,
+                    7,
+                    8
+                ]
+            }
+        }
+    ],
+    "standard": {
+        "product": "sendig",
+        "version": "3-1"
+    },
+    "codelists": []
+}

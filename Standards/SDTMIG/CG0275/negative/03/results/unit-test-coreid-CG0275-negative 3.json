@@ -1,0 +1,35 @@
+{
+  "TS": [
+    {
+      "executionStatus": "success",
+      "domain": "TS",
+      "variables": [
+        "$ADDON_Y",
+        "TSGRPID",
+        "TSPARMCD",
+        "TSVAL"
+      ],
+      "message": "A record exists in TS where TSPARMCD = ADDON and TSVAL = Y but TSVAL for TSPARMCD = CURTRT is empty.",
+      "errors": [
+        {
+          "value": {
+            "TSPARMCD": "CURTRT",
+            "TSGRPID": "DRUG A",
+            "TSVAL": "",
+            "$ADDON_Y": 1
+          },
+          "row": 8
+        },
+        {
+          "value": {
+            "TSPARMCD": "CURTRT",
+            "TSGRPID": "",
+            "TSVAL": "",
+            "$ADDON_Y": 1
+          },
+          "row": 11
+        }
+      ]
+    }
+  ]
+}

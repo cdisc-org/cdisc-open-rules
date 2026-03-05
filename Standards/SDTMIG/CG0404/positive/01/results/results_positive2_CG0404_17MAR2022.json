@@ -1,0 +1,18 @@
+## --PRESP / --OCCUR/ --STAT/ --REASND removed from MH domain in positive case
+{
+  "CM": [],
+  "MH": [
+    {
+      "domain": "MH",
+      "errors": [
+        {
+          "error": "Column not found in data",
+          "message": "MHPRESP"
+        }
+      ],
+      "executionStatus": "execution_error",
+      "message": "rule execution error",
+      "variables": []
+    }
+  ]
+}

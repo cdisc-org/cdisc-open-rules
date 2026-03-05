@@ -1,0 +1,43 @@
+{3 items
+"CO":[1 item
+0:{6 items
+"executionStatus":"skipped"
+"dataset":"co.xpt"
+"domain":"CO"
+"variables":[]0 items
+"message":"Rule skipped - doesn't apply to domain for rule id=CORE-000384, dataset=CO"
+"errors":[]0 items
+}
+]
+"RELREC":[1 item
+0:{6 items
+"executionStatus":"success"
+"dataset":"relrec.xpt"
+"domain":"RELREC"
+"variables":[1 item
+0:"RDOMAIN"
+]
+"message":"RELREC.RDOMAIN does not represent a dataset present in the study"
+"errors":[1 item
+0:{4 items
+"value":{1 item
+"RDOMAIN":"LB"
+}
+"dataset":"relrec.xpt"
+"row":1
+"USUBJID":"S001"
+}
+]
+}
+]
+"SUPPLB":[1 item
+0:{6 items
+"executionStatus":"skipped"
+"dataset":"supplb.xpt"
+"domain":"LB"
+"variables":[]0 items
+"message":"Rule skipped - doesn't apply to domain for rule id=CORE-000384, dataset=SUPPLB"
+"errors":[]0 items
+}
+]
+}

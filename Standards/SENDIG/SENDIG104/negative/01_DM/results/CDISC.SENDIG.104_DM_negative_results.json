@@ -1,0 +1,61 @@
+{
+  "DM": [
+    {
+      "executionStatus": "success",
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "variables": [
+        "AGE",
+        "AGETXT",
+        "AGEU",
+        "USUBJID"
+      ],
+      "message": "AGE or AGETXT is populated, but AGEU is not populated",
+      "errors": [
+        {
+          "value": {
+            "AGE": "null",
+            "AGEU": "null",
+            "USUBJID": "002",
+            "AGETXT": "20-30"
+          },
+          "dataset": "dm.xpt",
+          "row": 2,
+          "USUBJID": "002"
+        },
+        {
+          "value": {
+            "AGE": "null",
+            "AGEU": "null",
+            "USUBJID": "003",
+            "AGETXT": "30-40"
+          },
+          "dataset": "dm.xpt",
+          "row": 3,
+          "USUBJID": "003"
+        },
+        {
+          "value": {
+            "AGE": 45,
+            "AGEU": "null",
+            "USUBJID": "004",
+            "AGETXT": "null"
+          },
+          "dataset": "dm.xpt",
+          "row": 4,
+          "USUBJID": "004"
+        }
+      ]
+    }
+  ],
+  "TS": [
+    {
+      "executionStatus": "skipped",
+      "dataset": "ts.xpt",
+      "domain": "TS",
+      "variables": [],
+      "message": "Rule skipped - doesn't apply to domain for rule id=CDISC.SENDIG.104, dataset=TS",
+      "errors": []
+    }
+  ]
+}

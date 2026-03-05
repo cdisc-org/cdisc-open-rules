@@ -1,0 +1,94 @@
+{
+    "StudyProtocolDocumentVersion": [
+        {
+            "executionStatus": "execution_error",
+            "dataset": "StudyProtocolDocumentVersio.xpt",
+            "domain": "",
+            "variables": [],
+            "message": "rule execution error",
+            "errors": [
+                {
+                    "dataset": "StudyProtocolDocumentVersio.xpt",
+                    "error": "Column not found in data",
+                    "message": "id.StudyProtocolDocumentVersion"
+                }
+            ]
+        }
+    ],
+    "GovernanceDate": [
+        {
+            "executionStatus": "execution_error",
+            "dataset": "GovernanceDate.xpt",
+            "domain": "",
+            "variables": [],
+            "message": "rule execution error",
+            "errors": [
+                {
+                    "dataset": "GovernanceDate.xpt",
+                    "error": "Column not found in data",
+                    "message": "parent_id.GovernanceDate"
+                }
+            ]
+        }
+    ],
+    "GeographicScope": [
+        {
+            "executionStatus": "success",
+            "dataset": "GeographicScope.xpt",
+            "domain": "GeographicScope",
+            "variables": [
+                "$num_dates_of_this_type",
+                "$num_geographic_scopes_for_this_date",
+                "dateValue",
+                "id.StudyProtocolDocumentVersion",
+                "parent_entity.StudyProtocolDocumentVersion",
+                "parent_id.StudyProtocolDocumentVersion",
+                "parent_rel.StudyProtocolDocumentVersion",
+                "protocolVersion",
+                "type.code",
+                "type.code.GovernanceDate",
+                "type.decode",
+                "type.decode.GovernanceDate"
+            ],
+            "message": "The study protocol document version has a type of governance date with a global geographic scope and either another date of the same type or additional geographic scope(s) defined for the date.",
+            "errors": [
+                {
+                    "value": {
+                        "$num_geographic_scopes_for_this_date": 1,
+                        "parent_rel.StudyProtocolDocumentVersion": "versions",
+                        "type.code": "C68846",
+                        "id.StudyProtocolDocumentVersion": "StudyProtocolDocumentVersion_1",
+                        "type.code.GovernanceDate": "C99903x1",
+                        "parent_entity.StudyProtocolDocumentVersion": "StudyProtocolDocument",
+                        "protocolVersion": "2",
+                        "parent_id.StudyProtocolDocumentVersion": "StudyProtocolDocument_1",
+                        "$num_dates_of_this_type": 2,
+                        "type.decode": "Global",
+                        "type.decode.GovernanceDate": "Protocol Effective Date",
+                        "dateValue": "2006-07-02"
+                    },
+                    "dataset": "GeographicScope.xpt",
+                    "row": 3
+                },
+                {
+                    "value": {
+                        "$num_geographic_scopes_for_this_date": 2,
+                        "parent_rel.StudyProtocolDocumentVersion": "versions",
+                        "type.code": "C68846",
+                        "id.StudyProtocolDocumentVersion": "StudyProtocolDocumentVersion_2",
+                        "type.code.GovernanceDate": "C99903x1",
+                        "parent_entity.StudyProtocolDocumentVersion": "StudyProtocolDocument",
+                        "protocolVersion": "3",
+                        "parent_id.StudyProtocolDocumentVersion": "StudyProtocolDocument_1",
+                        "$num_dates_of_this_type": 1,
+                        "type.decode": "Global",
+                        "type.decode.GovernanceDate": "Protocol Effective Date",
+                        "dateValue": "2007-07-01"
+                    },
+                    "dataset": "GeographicScope.xpt",
+                    "row": 5
+                }
+            ]
+        }
+    ]
+}

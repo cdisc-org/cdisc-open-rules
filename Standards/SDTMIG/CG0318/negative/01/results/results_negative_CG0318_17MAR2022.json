@@ -1,0 +1,71 @@
+{
+  "AE": [
+    {
+      "domain": "AE",
+      "errors": [],
+      "executionStatus": "skipped",
+      "message": null,
+      "variables": []
+    }
+  ],
+  "DM": [
+    {
+      "domain": "DM",
+      "errors": [
+        {
+          "row": 0,
+          "value": {
+            "PC": "Not in dataset",
+            "PP": "pp.xpt"
+          }
+        }
+      ],
+      "executionStatus": "success",
+      "message": "PP dataset presents in study, but PC dataset doesn't present in study.",
+      "variables": [
+        "PC",
+        "PP"
+      ]
+    }
+  ],
+  "FT": [
+    {
+      "domain": "FT",
+      "errors": [
+        {
+          "row": 0,
+          "value": {
+            "PC": "Not in dataset",
+            "PP": "pp.xpt"
+          }
+        }
+      ],
+      "executionStatus": "success",
+      "message": "PP dataset presents in study, but PC dataset doesn't present in study.",
+      "variables": [
+        "PC",
+        "PP"
+      ]
+    }
+  ],
+  "PP": [
+    {
+      "domain": "PP",
+      "errors": [
+        {
+          "row": 0,
+          "value": {
+            "PC": "Not in dataset",
+            "PP": "pp.xpt"
+          }
+        }
+      ],
+      "executionStatus": "success",
+      "message": "PP dataset presents in study, but PC dataset doesn't present in study.",
+      "variables": [
+        "PC",
+        "PP"
+      ]
+    }
+  ]
+}

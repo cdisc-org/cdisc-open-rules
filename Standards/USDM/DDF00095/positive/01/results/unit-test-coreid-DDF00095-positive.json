@@ -1,0 +1,44 @@
+{
+    "StudyProtocolDocumentVersion": [
+        {
+            "executionStatus": "execution_error",
+            "dataset": "StudyProtocolDocumentVersio.xpt",
+            "domain": "",
+            "variables": [],
+            "message": "rule execution error",
+            "errors": [
+                {
+                    "dataset": "StudyProtocolDocumentVersio.xpt",
+                    "error": "Column not found in data",
+                    "message": "id.StudyProtocolDocumentVersion"
+                }
+            ]
+        }
+    ],
+    "GovernanceDate": [
+        {
+            "executionStatus": "execution_error",
+            "dataset": "GovernanceDate.xpt",
+            "domain": "",
+            "variables": [],
+            "message": "rule execution error",
+            "errors": [
+                {
+                    "dataset": "GovernanceDate.xpt",
+                    "error": "Column not found in data",
+                    "message": "parent_id.GovernanceDate"
+                }
+            ]
+        }
+    ],
+    "GeographicScope": [
+        {
+            "executionStatus": "success",
+            "dataset": "GeographicScope.xpt",
+            "domain": null,
+            "variables": [],
+            "message": null,
+            "errors": []
+        }
+    ]
+}

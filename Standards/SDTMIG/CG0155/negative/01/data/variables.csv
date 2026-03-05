@@ -1,0 +1,51 @@
+dataset,variable,label,type,length
+apcb.xpt,STUDYID,Study Identifier,Char,50
+apcb.xpt,DOMAIN,Domain Abbreviation,Char,50
+apcb.xpt,USUBJID,Unique Subject Identifier,Char,50
+apcb.xpt,CBSEQ,Sequence Number,Num,8
+apcb.xpt,CBLNKID,Link ID,Char,50
+apcb.xpt,CBTRT,Name of Treatment,Char,50
+apcb.xpt,CBPRESP,Pre-Specified,Char,50
+apcb.xpt,CBOCCUR,Occurrence,Char,50
+apcb.xpt,CBREASOC,Reason for Occur Value,Char,50
+apcb.xpt,CBDOSE,Dose,Num,8
+apcb.xpt,CBDOSTXT,Dose Description,Char,50
+apcb.xpt,CBDOSU,Dose Units,Char,50
+apcb.xpt,CBDOSFRM,Dose Form,Char,50
+apcb.xpt,CBROUTE,Route of Administration,Char,50
+apcb.xpt,CBSTDTC,Start Date/Time of Treatment,Char,50
+apcb.xpt,CBENDTC,End Date/Time of Treatment,Char,50
+ape.xpt,STUDYID,Study Identifier,Char,50
+ape.xpt,DOMAIN,Domain Abbreviation,Char,50
+ape.xpt,USUBJID,Unique Subject Identifier,Char,50
+ape.xpt,ECSEQ,Sequence Number,Num,8
+ape.xpt,ECLNKID,Link ID,Char,50
+ape.xpt,ECTRT,Name of Treatment,Char,50
+ape.xpt,ECPRESP,Pre-Specified,Char,50
+ape.xpt,ECOCCUR,Occurrence,Char,50
+ape.xpt,ECREASOC,Reason for Occur Value,Char,50
+ape.xpt,ECDOSE,Dose,Num,8
+ape.xpt,ECDOSTXT,Dose Description,Char,50
+ape.xpt,ECDOSU,Dose Units,Char,50
+ape.xpt,ECDOSFRM,Dose Form,Char,50
+ape.xpt,EcROUTE,Route of Administration,Char,50
+ape.xpt,ECSTDTC,Start Date/Time of Treatment,Char,50
+ape.xpt,ECENDTC,End Date/Time of Treatment,Char,50
+ape.xpt,ECSTDY,Study Day of Start of Treatment,Num,8
+ape.xpt,ECENDY,Study Day of End of Treatment,Num,8
+apexa.xpt,STUDYID,Study Identifier,Char,50
+apexa.xpt,DOMAIN,Domain Abbreviation,Char,50
+apexa.xpt,USUBJID,Unique Subject Identifier,Char,50
+apexa.xpt,EXSEQ,Sequence Number,Num,8
+apexa.xpt,EXLNKID,Link ID,Char,50
+apexa.xpt,EXTRT,Name of Treatment,Char,50
+apexa.xpt,EXDOSE,Dose,Num,8
+apexa.xpt,EXDOSTXT,Dose Description,Char,50
+apexa.xpt,EXDOSU,Dose Units,Char,50
+apexa.xpt,EXDOSFRM,Dose Form,Char,50
+apexa.xpt,EXDOSFRQ,Dosing Frequency per Interval,Char,50
+apexa.xpt,EXROUTE,Route of Administration,Char,50
+apexa.xpt,EXSTDTC,Start Date/Time of Treatment,Char,50
+apexa.xpt,EXENDTC,End Date/Time of Treatment,Char,50
+apexa.xpt,EXSTDY,Study Day of Start of Treatment,Num,8
+apexa.xpt,EXENDY,Study Day of End of Treatment,Num,8

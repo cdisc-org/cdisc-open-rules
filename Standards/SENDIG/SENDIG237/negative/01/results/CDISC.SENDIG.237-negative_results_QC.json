@@ -1,0 +1,81 @@
+{
+  "DM": [
+    {
+      "executionStatus": "skipped",
+      "domain": "DM",
+      "variables": [],
+      "message": null,
+      "errors": []
+    }
+  ],
+  "TA": [
+    {
+      "executionStatus": "skipped",
+      "domain": "TA",
+      "variables": [],
+      "message": null,
+      "errors": []
+    }
+  ],
+  "TX": [
+    {
+      "executionStatus": "success",
+      "domain": "TX",
+      "variables": [
+        "SET",
+        "SETCD"
+      ],
+      "message": "The combination of SETCD and SET is not a unique pair",
+      "errors": [
+        {
+          "value": {
+            "SETCD": "SET1",
+            "SET": "Control Group, Vehicle Control once daily "
+          },
+          "row": 1,
+          "SEQ": 1
+        },
+        {
+          "value": {
+            "SETCD": "SET1",
+            "SET": "Control Group, Vehicle Control once daily "
+          },
+          "row": 2,
+          "SEQ": 2
+        },
+        {
+          "value": {
+            "SETCD": "SET1",
+            "SET": "Control Group, Vehicle Control once daily "
+          },
+          "row": 3,
+          "SEQ": 3
+        },
+        {
+          "value": {
+            "SETCD": "SET2",
+            "SET": "Control Group, Vehicle Control once daily "
+          },
+          "row": 4,
+          "SEQ": 4
+        },
+        {
+          "value": {
+            "SETCD": "SET2",
+            "SET": "Low-Dose Group, 100 mg/kg Drug a once daily "
+          },
+          "row": 5,
+          "SEQ": 5
+        },
+        {
+          "value": {
+            "SETCD": "SET1",
+            "SET": "Low-Dose Group, 100 mg/kg Drug a once daily "
+          },
+          "row": 6,
+          "SEQ": 6
+        }
+      ]
+    }
+  ]
+}

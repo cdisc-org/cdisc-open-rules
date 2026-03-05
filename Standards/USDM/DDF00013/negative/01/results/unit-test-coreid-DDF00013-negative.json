@@ -1,0 +1,52 @@
+{
+    "BIOMEDICALCONCEPTPROPERTY": [
+        {
+            "executionStatus": "success",
+            "domain": "BIOMEDICALCONCEPTPROPERTY",
+            "variables": [
+                "id",
+                "isEnabled",
+                "isRequired",
+                "name",
+                "parent_entity",
+                "parent_id"
+            ],
+            "message": "A required biomedical concept property (isRequired=true) is not enabled (isEnabled is not true), or a disabled biomedical concept property (isEnabled=false) is required (isRequired is not false).",
+            "errors": [
+                {
+                    "value": {
+                        "parent_id": "BiomedicalConcept_1",
+                        "parent_entity": "BiomedicalConcept",
+                        "isRequired": true,
+                        "id": "BiomedicalConceptProperty_1",
+                        "name": "Sex",
+                        "isEnabled": false
+                    },
+                    "row": 1
+                },
+                {
+                    "value": {
+                        "parent_id": "BiomedicalConcept_2",
+                        "parent_entity": "BiomedicalConcept",
+                        "isRequired": null,
+                        "id": "BiomedicalConceptProperty_2",
+                        "name": "Race",
+                        "isEnabled": false
+                    },
+                    "row": 2
+                },
+                {
+                    "value": {
+                        "parent_id": "BiomedicalConcept_3",
+                        "parent_entity": "BiomedicalConcept",
+                        "isRequired": true,
+                        "id": "BiomedicalConceptProperty_3",
+                        "name": "Vital Signs Result",
+                        "isEnabled": null
+                    },
+                    "row": 3
+                }
+            ]
+        }
+    ]
+}

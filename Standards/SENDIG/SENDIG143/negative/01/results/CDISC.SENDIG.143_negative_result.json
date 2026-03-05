@@ -1,0 +1,30 @@
+{
+  "VS": [
+    {
+      "executionStatus": "success",
+      "domain": "VS",
+      "variables": [
+        "VSSTAT"
+      ],
+      "message": "VSSTAT does not contain a value from the (ND) codelist",
+      "errors": [
+        {
+          "value": {
+            "VSSTAT": "MAYBE"
+          },
+          "row": 3,
+          "seq": 3
+        }
+      ]
+    }
+  ],
+  "SC": [
+    {
+      "executionStatus": "skipped",
+      "domain": "SC",
+      "variables": [],
+      "message": null,
+      "errors": []
+    }
+  ]
+}

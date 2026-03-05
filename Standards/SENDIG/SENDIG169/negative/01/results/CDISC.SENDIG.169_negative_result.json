@@ -1,0 +1,64 @@
+{
+  "LB": [
+    {
+      "executionStatus": "success",
+      "domain": "LB",
+      "variables": [
+        "LBDTC",
+        "LBSPEC",
+        "LBTESTCD",
+        "POOLID",
+        "USUBJID"
+      ],
+      "message": "The Clinical Observation test result is not unique for this subject and date/time.",
+      "errors": [
+        {
+          "value": {
+            "POOLID": "",
+            "LBTESTCD": "PLAT",
+            "LBSPEC": "BLOOD",
+            "LBDTC": "2019-10-10",
+            "USUBJID": "CDISC-TEST-001"
+          },
+          "row": 46,
+          "uSubjId": "CDISC-TEST-001",
+          "seq": 46
+        },
+        {
+          "value": {
+            "POOLID": "",
+            "LBTESTCD": "PLAT",
+            "LBSPEC": "BLOOD",
+            "LBDTC": "2019-10-10",
+            "USUBJID": "CDISC-TEST-001"
+          },
+          "row": 47,
+          "uSubjId": "CDISC-TEST-001",
+          "seq": 46
+        },
+        {
+          "value": {
+            "POOLID": "POOL1",
+            "LBTESTCD": "PLAT",
+            "LBSPEC": "BLOOD",
+            "LBDTC": "2019-10-10T02:02:03",
+            "USUBJID": ""
+          },
+          "row": 48,
+          "seq": 1
+        },
+        {
+          "value": {
+            "POOLID": "POOL1",
+            "LBTESTCD": "PLAT",
+            "LBSPEC": "BLOOD",
+            "LBDTC": "2019-10-10T02:02:03",
+            "USUBJID": ""
+          },
+          "row": 49,
+          "seq": 2
+        }
+      ]
+    }
+  ]
+}

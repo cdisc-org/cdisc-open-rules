@@ -1,0 +1,207 @@
+{
+    "rule": {
+        "Authorities": [
+            {
+                "Organization": "CDISC",
+                "Standards": [
+                    {
+                        "Name": "SDTMIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "Model v2.0",
+                                        "Item": "USUBJID",
+                                        "Section": "RELSUB",
+                                        "Cited_Guidance": "Either USUBJID or POOILD must be populated."
+                                    },
+                                    {
+                                        "Document": "Model v2.0",
+                                        "Item": "POOLID",
+                                        "Section": "RELSUB",
+                                        "Cited_Guidance": "Either USUBJID or POOLID must be populated."
+                                    }
+                                ],
+                                "Origin": "SDTM and SDTMIG Conformance Rules",
+                                "Version": "2.0",
+                                "Rule_Identifier": {
+                                    "Id": "CG0362",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.4"
+                    },
+                    {
+                        "Name": "SDTMIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "Model v1.4",
+                                        "Section": "",
+                                        "Cited_Guidance": "Either USUBJID or POOLID must be populated."
+                                    }
+                                ],
+                                "Origin": "SDTM and SDTMIG Conformance Rules",
+                                "Version": "2.0",
+                                "Rule_Identifier": {
+                                    "Id": "CG0362",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.2"
+                    },
+                    {
+                        "Name": "SDTMIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "Model v1.7",
+                                        "Section": "Table 4.1.4.1",
+                                        "Cited_Guidance": "Either USUBJID or POOLID must be populated."
+                                    }
+                                ],
+                                "Origin": "SDTM and SDTMIG Conformance Rules",
+                                "Version": "2.0",
+                                "Rule_Identifier": {
+                                    "Id": "CG0362",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.3"
+                    }
+                ]
+            }
+        ],
+        "Check": {
+            "all": [
+                {
+                    "name": "POOLID",
+                    "operator": "non_empty"
+                },
+                {
+                    "name": "USUBJID",
+                    "operator": "non_empty"
+                }
+            ]
+        },
+        "Core": {
+            "Id": "CORE-000230",
+            "Status": "Draft",
+            "Version": "1"
+        },
+        "Description": "Verify that when POOLID is populated, USUBJID is not populated",
+        "Executability": "Fully Executable",
+        "Outcome": {
+            "Message": "USUBJID must be null when POOLID is populated",
+            "Output_Variables": [
+                "POOLID",
+                "USUBJID"
+            ]
+        },
+        "Scope": {
+            "Classes": {
+                "Include": [
+                    "ALL"
+                ]
+            },
+            "Domains": {
+                "Include": [
+                    "RELSUB"
+                ]
+            }
+        },
+        "Sensitivity": "Record",
+        "Rule_Type": "Record Data"
+    },
+    "datasets": [
+        {
+            "filename": "relsub.xpt",
+            "label": "Related Subjects ",
+            "domain": "RELSUB",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "USUBJID",
+                    "label": "Unique Subject Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "POOLID",
+                    "label": "Pool Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "RSUBJID",
+                    "label": "Related Subject or Pool Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "SREL",
+                    "label": "Subject Relationship",
+                    "type": "Char",
+                    "length": 50
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "HEM021",
+                    "HEM021",
+                    "HEM021",
+                    "HEM021",
+                    "HEM021",
+                    "HEM021"
+                ],
+                "USUBJID": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "HEM021-003"
+                ],
+                "POOLID": [
+                    "HEM021-001",
+                    "HEM021-001",
+                    "HEM021-002",
+                    "HEM021-002",
+                    "HEM021-003",
+                    ""
+                ],
+                "RSUBJID": [
+                    "HEM021-002",
+                    "HEM021-003",
+                    "HEM021-001",
+                    "HEM021-003",
+                    "HEM021-001",
+                    "HEM021-002"
+                ],
+                "SREL": [
+                    "MOTHER,BIOLOGICAL",
+                    "MOTHER,BIOLOGICAL",
+                    "CHILD, BIOLOGICAL",
+                    "TWIN,DIZYGOTIC",
+                    "CHILD, BIOLOGICAL",
+                    "TWIN,DIZYGOTIC"
+                ]
+            }
+        }
+    ],
+    "standard": {
+        "product": "sdtmig",
+        "version": "3-4"
+    },
+    "codelists": []
+}

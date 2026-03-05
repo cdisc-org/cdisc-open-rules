@@ -1,0 +1,33 @@
+{
+  "LB": [
+    {
+      "domain": "LB",
+      "errors": [
+        {
+          "row": 1,
+          "seq": 1,
+          "uSubjId": "CDISC001",
+          "value": {
+            "LBTOX": "",
+            "LBTOXGR": " XXXXXx 44"
+          }
+        },
+        {
+          "row": 4,
+          "seq": 1,
+          "uSubjId": "CDISC002",
+          "value": {
+            "LBTOX": "",
+            "LBTOXGR": "    Grade 2"
+          }
+        }
+      ],
+      "executionStatus": "success",
+      "message": "Verify that LBTOXGR value is not from a numeric scale",
+      "variables": [
+        "LBTOX",
+        "LBTOXGR"
+      ]
+    }
+  ]
+}

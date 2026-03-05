@@ -1,0 +1,23 @@
+{
+  "TS": [
+    {
+      "executionStatus": "success",
+      "domain": "TS",
+      "variables": [
+        "TSPARMCD",
+        "TSVAL"
+      ],
+      "message": "Invalid date for TSVAL for TSPARMCD = DCUTDTC (Data Cutoff Date)",
+      "errors": [
+        {
+          "value": {
+            "TSPARMCD": "DCUTDTC",
+            "TSVAL": "2023-02-30"
+          },
+          "row": 1,
+          "SEQ": 1
+        }
+      ]
+    }
+  ]
+}

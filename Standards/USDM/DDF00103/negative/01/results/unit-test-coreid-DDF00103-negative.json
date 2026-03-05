@@ -1,0 +1,98 @@
+{
+    "StudyProtocolDocument": [
+        {
+            "executionStatus": "skipped",
+            "dataset": "StudyProtocolDocument.xpt",
+            "domain": "",
+            "variables": [],
+            "message": "Rule skipped - doesn't apply to entity for rule id=, dataset=StudyProtocolDocument",
+            "errors": []
+        }
+    ],
+    "StudyProtocolDocumentVersion": [
+        {
+            "executionStatus": "skipped",
+            "dataset": "StudyProtocolDocumentVersio.xpt",
+            "domain": "",
+            "variables": [],
+            "message": "Rule skipped - doesn't apply to entity for rule id=, dataset=StudyProtocolDocumentVersion",
+            "errors": []
+        }
+    ],
+    "NarrativeContent": [
+        {
+            "executionStatus": "success",
+            "dataset": "NarrativeContent.xpt",
+            "domain": "NarrativeContent",
+            "variables": [
+                "id",
+                "name",
+                "name.StudyProtocolDocument",
+                "parent_entity",
+                "parent_id",
+                "parent_rel",
+                "protocolVersion",
+                "sectionNumber"
+            ],
+            "message": "The section number is not unique within the document version.",
+            "errors": [
+                {
+                    "value": {
+                        "sectionNumber": "3.4.2.",
+                        "parent_rel": "contents",
+                        "parent_entity": "StudyProtocolDocumentVersion",
+                        "name": "SECTION 3.4.2.",
+                        "name.StudyProtocolDocument": "Protocol_Document_CDISC PILOT - LZZT",
+                        "parent_id": "StudyProtocolDocumentVersion_1",
+                        "protocolVersion": "2",
+                        "id": "NarrativeContent_14"
+                    },
+                    "dataset": "NarrativeContent.xpt",
+                    "row": 14
+                },
+                {
+                    "value": {
+                        "sectionNumber": "3.4.2.",
+                        "parent_rel": "contents",
+                        "parent_entity": "StudyProtocolDocumentVersion",
+                        "name": "SECTION 3.4.2.3",
+                        "name.StudyProtocolDocument": "Protocol_Document_CDISC PILOT - LZZT",
+                        "parent_id": "StudyProtocolDocumentVersion_1",
+                        "protocolVersion": "2",
+                        "id": "NarrativeContent_17"
+                    },
+                    "dataset": "NarrativeContent.xpt",
+                    "row": 17
+                },
+                {
+                    "value": {
+                        "sectionNumber": "0",
+                        "parent_rel": "contents",
+                        "parent_entity": "StudyProtocolDocumentVersion",
+                        "name": "ROOT",
+                        "name.StudyProtocolDocument": "Protocol_Document_CDISC PILOT - LZZT",
+                        "parent_id": "StudyProtocolDocumentVersion_2",
+                        "protocolVersion": "3",
+                        "id": "NarrativeContent_21"
+                    },
+                    "dataset": "NarrativeContent.xpt",
+                    "row": 21
+                },
+                {
+                    "value": {
+                        "sectionNumber": "0",
+                        "parent_rel": "contents",
+                        "parent_entity": "StudyProtocolDocumentVersion",
+                        "name": "SECTION 0",
+                        "name.StudyProtocolDocument": "Protocol_Document_CDISC PILOT - LZZT",
+                        "parent_id": "StudyProtocolDocumentVersion_2",
+                        "protocolVersion": "3",
+                        "id": "NarrativeContent_22"
+                    },
+                    "dataset": "NarrativeContent.xpt",
+                    "row": 22
+                }
+            ]
+        }
+    ]
+}

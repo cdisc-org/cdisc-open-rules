@@ -1,0 +1,25 @@
+dataset,variable,label,type,length
+aplb.xpt,STUDYID,Study Identifier,Char,50
+aplb.xpt,DOMAIN,Unique Subject Identifier,Char,50
+aplb.xpt,APID,Associated Persons Identifier,Char,50
+aplb.xpt,LBSEQ,Sequence Number,Num,8
+aplb.xpt,RSUBJID,Related Subject or Pool Identifier,Char,50
+aplb.xpt,RDEVID,Related Device Identifier,Char,50
+aplb.xpt,SREL,Subject Relationship,Char,50
+aplb.xpt,LBTESTCD,Lab Test or Examination Short Name,Char,50
+aplb.xpt,LBTEST,Lab Test or Examination Name,Char,50
+aplb.xpt,LBORRES,Result or Finding in Original Units,Char,50
+aplb.xpt,LBSTRESC,Character Result/Finding in Std Format,Char,50
+aplb.xpt,LBDTC,Date/Time of Specimen Collection,Char,50
+aprelsub.xpt,STUDYID,Study Identifier,Char,50
+aprelsub.xpt,USUBJID,Unique Subject Identifier,Char,50
+aprelsub.xpt,POOLID,Pool Identifier,Char,50
+aprelsub.xpt,RSUBJID,Related Subject or Pool Identifier,Char,50
+aprelsub.xpt,SREL,Subject Relationship,Char,50
+aprelsub.xpt,RDEVID,Related Device Identifier,Char,50
+lb.xpt,STUDYID,Study Identifier,Char,50
+lb.xpt,USUBJID,Unique Subject Identifier,Char,50
+lb.xpt,POOLID,Pool Identifier,Char,50
+lb.xpt,RSUBJID,Related Subject or Pool Identifier,Char,50
+lb.xpt,SREL,Subject Relationship,Char,50
+lb.xpt,RDEVID,Related Device Identifier,Char,50

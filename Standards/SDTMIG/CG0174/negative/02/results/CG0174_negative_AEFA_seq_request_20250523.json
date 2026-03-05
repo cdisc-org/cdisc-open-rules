@@ -1,0 +1,701 @@
+{
+    "rule": {
+        "Authorities": [
+            {
+                "Organization": "CDISC",
+                "Standards": [
+                    {
+                        "Name": "SDTMIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "IG v3.4",
+                                        "Section": "6.4.3",
+                                        "Cited_Guidance": "If an FA record does have a parent record, the value in FAOBJ should match the value in --TERM or --TRT, unless the parent domain is dictionary coded or subject to controlled terminology, in which case FAOBJ should match the value in --DECOD."
+                                    }
+                                ],
+                                "Origin": "SDTM and SDTMIG Conformance Rules",
+                                "Version": "2.0",
+                                "Rule_Identifier": {
+                                    "Id": "CG0174",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.4"
+                    },
+                    {
+                        "Name": "SDTMIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "IG v3.3",
+                                        "Section": "6.4.3",
+                                        "Cited_Guidance": "In general, the value in FAOBJ should match the value in --TERM or --TRT, unless the parent domain is dictionary coded or subject to controlled terminology, in which case FAOBJ should then match the value in --DECOD."
+                                    }
+                                ],
+                                "Origin": "SDTM and SDTMIG Conformance Rules",
+                                "Version": "2.0",
+                                "Rule_Identifier": {
+                                    "Id": "CG0174",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.3"
+                    },
+                    {
+                        "Name": "SDTMIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "IG v3.2",
+                                        "Section": "6.4.3",
+                                        "Cited_Guidance": "In general, the value in FAOBJ should match the value in --TERM or --TRT, unless the parent domain is dictionary coded or subject to controlled terminology, in which case FAOBJ should then match the value in --DECOD."
+                                    }
+                                ],
+                                "Origin": "SDTM and SDTMIG Conformance Rules",
+                                "Version": "2.0",
+                                "Rule_Identifier": {
+                                    "Id": "CG0174",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.2"
+                    },
+                    {
+                        "Name": "TIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "TIG 1.0",
+                                        "Section": "2.8.4",
+                                        "Cited_Guidance": "A record in FA may or may not have a parent record in an events or interventions domain. If an FA record does have a parent record, the value in FAOBJ should match the value in --TERM or --TRT, unless the parent domain is dictionary coded or subject to controlled terminology. In such cases, the value represented in FAOBJ will match the value represented in --DECOD."
+                                    }
+                                ],
+                                "Origin": "TIG Conformance Rules",
+                                "Version": "1.0",
+                                "Rule_Identifier": {
+                                    "Id": "TIG0403",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Substandard": "SDTM",
+                        "Version": "1.0"
+                    }
+                ]
+            }
+        ],
+        "Check": {
+            "all": [
+                {
+                    "name": "FAOBJ",
+                    "operator": "not_equal_to",
+                    "value": "RELREC.**TERM"
+                },
+                {
+                    "name": "FAOBJ",
+                    "operator": "not_equal_to",
+                    "value": "RELREC.**TRT"
+                },
+                {
+                    "name": "FAOBJ",
+                    "operator": "not_equal_to_case_insensitive",
+                    "value": "RELREC.**DECOD"
+                }
+            ]
+        },
+        "Core": {
+            "Id": "CDISC.SDTMIG.CG0174",
+            "Status": "Draft",
+            "Version": "1"
+        },
+        "Description": "Raise an error when a related record is present in the parent domain dataset but FAOBJ is not equal to the --TERM, --TRT or --DECOD of the parent domain.",
+        "Executability": "Fully Executable",
+        "Outcome": {
+            "Message": "Related record is present in the parent domain dataset but FAOBJ is not equal to the \"TERM\", \"TRT\" or \"DECOD\" of the parent domain.",
+            "Output_Variables": [
+                "FAOBJ",
+                "RELREC.**TERM",
+                "RELREC.**TRT",
+                "RELREC.**DECOD"
+            ]
+        },
+        "Scope": {
+            "Classes": {
+                "Include": [
+                    "FINDINGS ABOUT"
+                ]
+            },
+            "Domains": {
+                "Include": [
+                    "FA"
+                ]
+            },
+            "Use_Case": "INDH"
+        },
+        "Sensitivity": "Record",
+        "Match_Datasets": [
+            {
+                "Name": "RELREC"
+            }
+        ],
+        "Rule_Type": "Record Data"
+    },
+    "datasets": [
+        {
+            "filename": "ae.xpt",
+            "label": "Adverse Events",
+            "domain": "AE",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "DOMAIN",
+                    "label": "Domain Abbreviation",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "USUBJID",
+                    "label": "Unique Subject Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AESEQ",
+                    "label": "Sequence Number",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "AESPID",
+                    "label": "Sponsor-Defined Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AETERM",
+                    "label": "Reported Term for the Adverse Event",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AEDECOD",
+                    "label": "Dictionary-Derived Term",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AEBODSYS",
+                    "label": "Body System or Organ Class",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AESEV",
+                    "label": "Severity/Intensity",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AESER",
+                    "label": "Serious Event",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AEACN",
+                    "label": "Action Taken with Study Treatment",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AEREL",
+                    "label": "Causality",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AEOUT",
+                    "label": "Outcome of Adverse Event",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AESCONG",
+                    "label": "Congenital Anomaly or Birth Defect",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AESDISAB",
+                    "label": "Persist or Signif Disability/Incapacity",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AESDTH",
+                    "label": "Results in Death",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AESHOSP",
+                    "label": "Requires or Prolongs Hospitalization",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AESLIFE",
+                    "label": "Is Life Threatening",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "EPOCH",
+                    "label": "Epoch",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AESTDTC",
+                    "label": "Start Date/Time of Adverse Event",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AEENDTC",
+                    "label": "End Date/Time of Adverse Event",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AESTDY",
+                    "label": "Study Day of Start of Adverse Event",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "AEENDY",
+                    "label": "Study Day of End of Adverse Event",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "AEENRF",
+                    "label": "End Relative to Reference Period",
+                    "type": "Char",
+                    "length": 50
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "CDISCPILOT01",
+                    "CDISCPILOT01"
+                ],
+                "DOMAIN": [
+                    "AE",
+                    "AE"
+                ],
+                "USUBJID": [
+                    "CDISC001",
+                    "CDISC001"
+                ],
+                "AESEQ": [
+                    1,
+                    2
+                ],
+                "AESPID": [
+                    "1",
+                    "2"
+                ],
+                "AETERM": [
+                    "INJECTION SITE REACTIONS",
+                    ""
+                ],
+                "AEDECOD": [
+                    "",
+                    "Headache"
+                ],
+                "AEBODSYS": [
+                    "Nervous system disorders",
+                    "Nervous system disorders"
+                ],
+                "AESEV": [
+                    "SEVERE",
+                    "SEVERE"
+                ],
+                "AESER": [
+                    "N",
+                    "N"
+                ],
+                "AEACN": [
+                    "NOT APPLICABLE",
+                    "NOT APPLICABLE"
+                ],
+                "AEREL": [
+                    "DEFINITELY NOT RELATED",
+                    "DEFINITELY NOT RELATED"
+                ],
+                "AEOUT": [
+                    "RECOVERED/RESOLVED",
+                    "RECOVERED/RESOLVED"
+                ],
+                "AESCONG": [
+                    "",
+                    ""
+                ],
+                "AESDISAB": [
+                    "",
+                    ""
+                ],
+                "AESDTH": [
+                    "",
+                    ""
+                ],
+                "AESHOSP": [
+                    "",
+                    ""
+                ],
+                "AESLIFE": [
+                    "",
+                    ""
+                ],
+                "EPOCH": [
+                    "SCREENING",
+                    "SCREENING"
+                ],
+                "AESTDTC": [
+                    "2022-03-19",
+                    "2022-03-20"
+                ],
+                "AEENDTC": [
+                    "2022-03-19",
+                    "2022-03-20"
+                ],
+                "AESTDY": [
+                    -2,
+                    0
+                ],
+                "AEENDY": [
+                    -2,
+                    0
+                ],
+                "AEENRF": [
+                    "",
+                    ""
+                ]
+            }
+        },
+        {
+            "filename": "fa.xpt",
+            "label": "Findings About",
+            "domain": "FA",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "DOMAIN",
+                    "label": "Domain Abbreviation",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "USUBJID",
+                    "label": "Unique Subject Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "FASEQ",
+                    "label": "Sequence Number",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "FASPID",
+                    "label": "Sponsor-Defined Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "FATESTCD",
+                    "label": "Var Label",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "FATEST",
+                    "label": "Findings About Test Short Name",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "FAOBJ",
+                    "label": "Object of the Observation",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "FACAT",
+                    "label": "Category for Findings About",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "FAORRES",
+                    "label": "Result or Finding in Original Units",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "FASTRESC",
+                    "label": "Character Result/Finding in Std Format",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "FALOC",
+                    "label": "Location of the Finding About",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "VISITNUM",
+                    "label": "Visit Number",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "EPOCH",
+                    "label": "Epoch",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "FADTC",
+                    "label": "Date/Time of Collection",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "FADY",
+                    "label": "Study Day of Collection",
+                    "type": "Num",
+                    "length": 8
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01"
+                ],
+                "DOMAIN": [
+                    "FA",
+                    "FA",
+                    "FA",
+                    "FA"
+                ],
+                "USUBJID": [
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC001"
+                ],
+                "FASEQ": [
+                    1,
+                    2,
+                    3,
+                    4
+                ],
+                "FASPID": [
+                    "1",
+                    "1",
+                    "1",
+                    "2"
+                ],
+                "FATESTCD": [
+                    "OCCUR",
+                    "SEV",
+                    "OCCUR",
+                    "OCCUR"
+                ],
+                "FATEST": [
+                    "Occurrence Indicator",
+                    "Severity/Intensity",
+                    "Occurrence Indicator",
+                    "Occurrence Indicator"
+                ],
+                "FAOBJ": [
+                    "INJECTION SITE REACTION",
+                    "INJECTION SITE REACTION",
+                    "INJECTION SITE REACTION",
+                    "FATIGUE"
+                ],
+                "FACAT": [
+                    "ERYTHEMA",
+                    "ERYTHEMA",
+                    "PAIN",
+                    "PAIN"
+                ],
+                "FAORRES": [
+                    "Y",
+                    "MODERATE",
+                    "N",
+                    "N"
+                ],
+                "FASTRESC": [
+                    "Y",
+                    "MODERATE",
+                    "N",
+                    "N"
+                ],
+                "FALOC": [
+                    "ARM",
+                    "ARM",
+                    "ARM",
+                    "ARM"
+                ],
+                "VISITNUM": [
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                "EPOCH": [
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT"
+                ],
+                "FADTC": [
+                    "2012-12-02",
+                    "2012-12-02",
+                    "2012-12-02",
+                    "2012-12-03"
+                ],
+                "FADY": [
+                    3,
+                    3,
+                    3,
+                    4
+                ]
+            }
+        },
+        {
+            "filename": "relrec.xpt",
+            "label": "Related Records",
+            "domain": "RELREC",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "RDOMAIN",
+                    "label": "Related Domain Abbreviation",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "USUBJID",
+                    "label": "Unique Subject Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "IDVAR",
+                    "label": "Identifying Variable",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "IDVARVAL",
+                    "label": "Identifying Variable Value",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "RELTYPE",
+                    "label": "Relationship Type",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "RELID",
+                    "label": "Relationship Identifier",
+                    "type": "Char",
+                    "length": 50
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01"
+                ],
+                "RDOMAIN": [
+                    "AE",
+                    "FA",
+                    "AE",
+                    "FA"
+                ],
+                "USUBJID": [
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC001"
+                ],
+                "IDVAR": [
+                    "AESEQ",
+                    "FASEQ",
+                    "AESEQ",
+                    "FASEQ"
+                ],
+                "IDVARVAL": [
+                    "2",
+                    "4",
+                    "1",
+                    "3"
+                ],
+                "RELTYPE": [
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "RELID": [
+                    "1",
+                    "1",
+                    "2",
+                    "2"
+                ]
+            }
+        }
+    ],
+    "standard": {
+        "product": "sdtmig",
+        "version": "3-4"
+    },
+    "codelists": []
+}

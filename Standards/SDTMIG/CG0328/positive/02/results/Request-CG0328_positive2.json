@@ -1,0 +1,102 @@
+{3 items
+"datasets":[1 item
+0:{5 items
+"filename":"te.xpt"
+"label":"Trial Elements"
+"domain":"TE"
+"variables":[7 items
+0:{4 items
+"name":"STUDYID"
+"label":"Study Identifier"
+"type":"Char"
+"length":10
+}
+1:{4 items
+"name":"DOMAIN"
+"label":"Domain Abbreviation"
+"type":"Char"
+"length":2
+}
+2:{4 items
+"name":"ETCD"
+"label":"Element Code"
+"type":"Char"
+"length":4
+}
+3:{4 items
+"name":"ELEMENT"
+"label":"Description of Element"
+"type":"Char"
+"length":13
+}
+4:{4 items
+"name":"TESTRL"
+"label":"Rule for Start of Element"
+"type":"Char"
+"length":51
+}
+5:{4 items
+"name":"TEENRL"
+"label":"Rule for End of Element"
+"type":"Char"
+"length":51
+}
+6:{4 items
+"name":"TEDUR"
+"label":"Planned Duration of Element"
+"type":"Char"
+"length":4
+}
+]
+"records":{7 items
+"STUDYID":[4 items
+0:"CDISC-TEST"
+1:"CDISC-TEST"
+2:"CDISC-TEST"
+3:"CDISC-TEST"
+]
+"DOMAIN":[4 items
+0:"TE"
+1:"TE"
+2:"TE"
+3:"TE"
+]
+"ETCD":[4 items
+0:"E000"
+1:"E001"
+2:"E002"
+3:"E003"
+]
+"ELEMENT":[4 items
+0:"SCREENING"
+1:"HUMAN INSULIN"
+2:"METFORMIN"
+3:"FOLLOW-UP"
+]
+"TESTRL":[4 items
+0:"INFORMED CONSENT SIGNED"
+1:"FIRST DOSE OF HUMAN INSULIN"
+2:"FIRST DOSE OF METFORMIN"
+3:"ATTEND FOLLOW-UP VISIT 0 TO 30 DAYS AFTER LAST DOSE"
+]
+"TEENRL":[4 items
+0:""
+1:"XXXX"
+2:"FIRST DOSE OF METFORMIN"
+3:"ATTEND FOLLOW-UP VISIT 0 TO 30 DAYS AFTER LAST DOSE"
+]
+"TEDUR":[4 items
+0:"P2W"
+1:"P26W"
+2:""
+3:"P4W"
+]
+}
+}
+]
+"standard":{2 items
+"product":"sdtmig"
+"version":"3-3"
+}
+"codelists":[]0 items
+}

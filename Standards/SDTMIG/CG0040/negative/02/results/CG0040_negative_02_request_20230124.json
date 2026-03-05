@@ -1,0 +1,486 @@
+{
+  "rule": {
+    "Authority": {
+      "Organization": "CDISC"
+    },
+    "Check": {
+      "all": [
+        {
+          "name": "AEOCCUR",
+          "operator": "exists"
+        }
+      ]
+    },
+    "Citations": [
+      {
+        "Document": "SDTMIG v3.4",
+        "Item": "Assumption 9",
+        "Section": "6.2.1",
+        "Cited_Guidance": "The following Qualifiers would not be used in AE; --OCCUR, --STAT, and --REASND. They are the only Qualifiers from the SDTM Events Class not in the AE domain. They are not permitted because the AE domain contains only records for adverse events that actually occurred."
+      },
+      {
+        "Document": "SDTMIG v3.3",
+        "Item": "Assumption 9",
+        "Section": "6.2.1",
+        "Cited_Guidance": "The following Qualifiers would not be used in AE; --OCCUR, --STAT, and--REASND. They are the only Qualifiers from the SDTM Events Class not in the AE domain. They are not permitted because the AE domain contains only records for adverse events that actually occurred."
+      },
+      {
+        "Document": "SDTMIG v3.2",
+        "Item": "Assumption 8",
+        "Section": "6.2.",
+        "Cited_Guidance": "The following Qualifiers would not be used in AE; --OCCUR, --STAT, and--REASND. They are the only Qualifiers from the SDTM Events Class not in the AE domain. They are not permitted because the AE domain contains only records for adverse events that actually occurred."
+      }
+    ],
+    "Core": {
+      "Id": "CDISC.SDTMIG.CG0040",
+      "Version": "1"
+    },
+    "Description": "Raise an error when AEOCCUR exists in AE dataset.",
+    "Outcome": {
+      "Message": "AEOCCUR is present in AE dataset.",
+      "Output_Variables": [
+        "AEOCCUR"
+      ]
+    },
+    "References": [
+      {
+        "Origin": "SDTM and SDTMIG Conformance Rules",
+        "Version": "2.0",
+        "Rule_Identifier": {
+          "Id": "CG0040",
+          "Version": "1"
+        }
+      }
+    ],
+    "Scopes": {
+      "Classes": {
+        "Include": [
+          "Events"
+        ]
+      },
+      "Domains": {
+        "Include": [
+          "AE"
+        ]
+      },
+      "Standards": [
+        {
+          "Name": "SDTMIG",
+          "Version": "3.4"
+        },
+        {
+          "Name": "SDTMIG",
+          "Version": "3.3"
+        },
+        {
+          "Name": "SDTMIG",
+          "Version": "3.2"
+        }
+      ]
+    },
+    "Sensitivity": "Dataset",
+    "Severity": "Error",
+    "Rule_Type": "Variable Presence"
+  },
+  "datasets": [
+    {
+      "filename": "ae.xpt",
+      "label": "Adverse Events",
+      "domain": "AE",
+      "variables": [
+        {
+          "name": "STUDYID",
+          "label": "Study Identifier",
+          "type": "Char",
+          "length": 10
+        },
+        {
+          "name": "DOMAIN",
+          "label": "Domain Abbreviation",
+          "type": "Char",
+          "length": 2
+        },
+        {
+          "name": "USUBJID",
+          "label": "Unique Subject Identifier",
+          "type": "Char",
+          "length": 14
+        },
+        {
+          "name": "AESEQ",
+          "label": "Sequence Number",
+          "type": "Num",
+          "length": 8
+        },
+        {
+          "name": "AESPID",
+          "label": "Sponsor-Defined Identifier",
+          "type": "Char",
+          "length": 4
+        },
+        {
+          "name": "AEOCCUR",
+          "label": "Adverse Event Occurence",
+          "type": "Char",
+          "length": 1
+        },
+        {
+          "name": "AETERM",
+          "label": "Reported Term for the Adverse Event",
+          "type": "Char",
+          "length": 38
+        },
+        {
+          "name": "AELLT",
+          "label": "Lowest Level Term",
+          "type": "Char",
+          "length": 38
+        },
+        {
+          "name": "AELLTCD",
+          "label": "Lowest Level Term Code",
+          "type": "Num",
+          "length": 8
+        },
+        {
+          "name": "AEDECOD",
+          "label": "Dictionary-Derived Term",
+          "type": "Char",
+          "length": 38
+        },
+        {
+          "name": "AEPTCD",
+          "label": "Preferred Term Code",
+          "type": "Num",
+          "length": 8
+        },
+        {
+          "name": "AEHLT",
+          "label": "High Level Term",
+          "type": "Char",
+          "length": 65
+        },
+        {
+          "name": "AEHLTCD",
+          "label": "High Level Term Code",
+          "type": "Num",
+          "length": 8
+        },
+        {
+          "name": "AEHLGT",
+          "label": "High Level Group Term",
+          "type": "Char",
+          "length": 55
+        },
+        {
+          "name": "AEHLGTCD",
+          "label": "High Level Group Term Code",
+          "type": "Num",
+          "length": 8
+        },
+        {
+          "name": "AEBODSYS",
+          "label": "Body System or Organ Class",
+          "type": "Char",
+          "length": 52
+        },
+        {
+          "name": "AEBDSYCD",
+          "label": "Body System or Organ Class Code",
+          "type": "Num",
+          "length": 8
+        },
+        {
+          "name": "AESOC",
+          "label": "Primary System Organ Class",
+          "type": "Char",
+          "length": 52
+        },
+        {
+          "name": "AESOCCD",
+          "label": "Primary System Organ Class Code",
+          "type": "Num",
+          "length": 8
+        },
+        {
+          "name": "AESEV",
+          "label": "Severity/Intensity",
+          "type": "Char",
+          "length": 8
+        },
+        {
+          "name": "AESER",
+          "label": "Serious Event",
+          "type": "Char",
+          "length": 1
+        },
+        {
+          "name": "AEACN",
+          "label": "Action Taken with Study Treatment",
+          "type": "Char",
+          "length": 1
+        },
+        {
+          "name": "AEREL",
+          "label": "Causality",
+          "type": "Char",
+          "length": 1
+        },
+        {
+          "name": "AEOUT",
+          "label": "Outcome of Adverse Event",
+          "type": "Char",
+          "length": 26
+        },
+        {
+          "name": "AESHOSP",
+          "label": "Requires or Prolongs Hospitalization",
+          "type": "Char",
+          "length": 1
+        },
+        {
+          "name": "AESTDTC",
+          "label": "Start Date/Time of Adverse Event",
+          "type": "Char",
+          "length": 10
+        }
+      ],
+      "records": {
+        "STUDYID": [
+          "CDISC-TEST",
+          "CDISC-TEST",
+          "CDISC-TEST",
+          "CDISC-TEST",
+          "CDISC-TEST",
+          "CDISC-TEST",
+          "CDISC-TEST"
+        ],
+        "DOMAIN": [
+          "AE",
+          "AE",
+          "AE",
+          "AE",
+          "AE",
+          "AE",
+          "AE"
+        ],
+        "USUBJID": [
+          "CDISC-TEST-001",
+          "CDISC-TEST-001",
+          "CDISC-TEST-001",
+          "CDISC-TEST-001",
+          "CDISC-TEST-001",
+          "CDISC-TEST-001",
+          "CDISC-TEST-003"
+        ],
+        "AESEQ": [
+          1,
+          4,
+          7,
+          8,
+          9,
+          10,
+          33
+        ],
+        "AESPID": [
+          "1",
+          "15",
+          "9",
+          "10",
+          "13",
+          "2",
+          "39"
+        ],
+        "AEOCCUR": [
+          "Y",
+          "Y",
+          "",
+          "",
+          "",
+          "N",
+          "Y"
+        ],
+        "AETERM": [
+          "UPSET STOMACH",
+          "BACK PAIN",
+          "HYPOGLYCAEMIA",
+          "HYPOGLYCAEMIA",
+          "HYPOGLYCAEMIA",
+          "HYPOGLYCAEMIA",
+          "UPSET STOMACH"
+        ],
+        "AELLT": [
+          "Upset stomach",
+          "Back pain",
+          "Hypoglycaemia",
+          "Hypoglycaemia",
+          "Hypoglycaemia",
+          "Hypoglycaemia",
+          "Upset stomach"
+        ],
+        "AELLTCD": [
+          10046318,
+          10003988,
+          10020993,
+          10020993,
+          10020993,
+          10020993,
+          10046318
+        ],
+        "AEDECOD": [
+          "Abdominal discomfort",
+          "Back pain",
+          "Hypoglycaemia",
+          "Hypoglycaemia",
+          "Hypoglycaemia",
+          "Hypoglycaemia",
+          "Abdominal discomfort"
+        ],
+        "AEPTCD": [
+          10000059,
+          10003988,
+          10020993,
+          10020993,
+          10020993,
+          10020993,
+          10000059
+        ],
+        "AEHLT": [
+          "Gastrointestinal signs and symptoms NEC",
+          "Musculoskeletal and connective tissue pain and discomfort",
+          "Hypoglycaemic conditions NEC",
+          "Hypoglycaemic conditions NEC",
+          "Hypoglycaemic conditions NEC",
+          "Hypoglycaemic conditions NEC",
+          "Gastrointestinal signs and symptoms NEC"
+        ],
+        "AEHLTCD": [
+          10027678,
+          10068757,
+          10021001,
+          10021001,
+          10021001,
+          10021001,
+          10027678
+        ],
+        "AEHLGT": [
+          "Gastrointestinal signs and symptoms",
+          "Musculoskeletal and connective tissue disorders NEC",
+          "Glucose metabolism disorders (incl diabetes mellitus)",
+          "Glucose metabolism disorders (incl diabetes mellitus)",
+          "Glucose metabolism disorders (incl diabetes mellitus)",
+          "Glucose metabolism disorders (incl diabetes mellitus)",
+          "Gastrointestinal signs and symptoms"
+        ],
+        "AEHLGTCD": [
+          10018012,
+          10028393,
+          10018424,
+          10018424,
+          10018424,
+          10018424,
+          10018012
+        ],
+        "AEBODSYS": [
+          "Gastrointestinal disorders",
+          "Musculoskeletal and connective tissue disorders",
+          "Metabolism and nutrition disorders",
+          "Metabolism and nutrition disorders",
+          "Metabolism and nutrition disorders",
+          "Metabolism and nutrition disorders",
+          "Gastrointestinal disorders"
+        ],
+        "AEBDSYCD": [
+          10017947,
+          10028395,
+          10027433,
+          10027433,
+          10027433,
+          10027433,
+          10017947
+        ],
+        "AESOC": [
+          "Gastrointestinal disorders",
+          "Musculoskeletal and connective tissue disorders",
+          "Metabolism and nutrition disorders",
+          "Metabolism and nutrition disorders",
+          "Metabolism and nutrition disorders",
+          "Metabolism and nutrition disorders",
+          "Gastrointestinal disorders"
+        ],
+        "AESOCCD": [
+          10017947,
+          10028395,
+          10027433,
+          10027433,
+          10027433,
+          10027433,
+          10017947
+        ],
+        "AESEV": [
+          "MILD",
+          "MILD",
+          "MILD",
+          "MILD",
+          "MILD",
+          "MILD",
+          "MILD"
+        ],
+        "AESER": [
+          "N",
+          "N",
+          "N",
+          "N",
+          "N",
+          "N",
+          "N"
+        ],
+        "AEACN": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "AEREL": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "AEOUT": [
+          "RECOVERED/RESOLVED",
+          "RECOVERED/RESOLVED",
+          "RECOVERED/RESOLVED",
+          "RECOVERED/RESOLVED",
+          "RECOVERED/RESOLVED",
+          "RECOVERED/RESOLVED",
+          "RECOVERED/RESOLVED"
+        ],
+        "AESHOSP": [
+          "N",
+          "N",
+          "N",
+          "N",
+          "N",
+          "N",
+          "N"
+        ],
+        "AESTDTC": [
+          "2019-05-21",
+          "2019-04-29",
+          "2019-05-06",
+          "2019-05-10",
+          "2019-05-22",
+          "2019-09-05",
+          "2019-05-30"
+        ]
+      }
+    }
+  ]
+}

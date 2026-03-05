@@ -1,0 +1,36 @@
+{
+    "Quantity": [
+        {
+            "executionStatus": "success",
+            "dataset": "Quantity.xpt",
+            "domain": "Quantity",
+            "variables": [
+                "id",
+                "parent_entity",
+                "parent_id",
+                "parent_rel",
+                "unit.standardCode.code",
+                "unit.standardCode.codeSystem",
+                "unit.standardCode.decode",
+                "value"
+            ],
+            "message": "The unit for a subject enrollement quantity is not empty or coded as % (codeSystem = http://www.cdisc.org, code = C25613 and decode = %).",
+            "errors": [
+                {
+                    "value": {
+                        "unit.standardCode.codeSystem": "http://www.cdisc.org",
+                        "value": 15,
+                        "parent_id": "SubjectEnrollment_1",
+                        "parent_entity": "SubjectEnrollment",
+                        "id": "Quantity_1",
+                        "parent_rel": "quantity",
+                        "unit.standardCode.code": "C44278",
+                        "unit.standardCode.decode": "U"
+                    },
+                    "dataset": "Quantity.xpt",
+                    "row": 1
+                }
+            ]
+        }
+    ]
+}

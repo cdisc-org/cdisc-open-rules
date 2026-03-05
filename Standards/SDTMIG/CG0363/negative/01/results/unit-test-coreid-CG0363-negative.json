@@ -1,0 +1,21 @@
+{
+  "RELSUB": [
+    {
+      "domain": "RELSUB",
+      "errors": [
+        {
+          "row": 0,
+          "uSubjId": "HEM021-001",
+          "value": {
+            "RSUBJID": "HEM021-001"
+          }
+        }
+      ],
+      "executionStatus": "success",
+      "message": "RSUBJID when populated cannot equal USUBJID.",
+      "variables": [
+        "RSUBJID"
+      ]
+    }
+  ]
+}

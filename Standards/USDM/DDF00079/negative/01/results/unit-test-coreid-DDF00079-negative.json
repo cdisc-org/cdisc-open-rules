@@ -1,0 +1,97 @@
+{
+    "BiomedicalConcept": [
+        {
+            "executionStatus": "success",
+            "dataset": "BiomedicalConcept.xpt",
+            "domain": "BiomedicalConcept",
+            "variables": [
+                "id",
+                "name",
+                "parent_entity",
+                "parent_id",
+                "parent_rel",
+                "parent_rel.string",
+                "value"
+            ],
+            "message": "The biomedical concept synonym value is the same as the biomedical concept name (case insensitive).",
+            "errors": [
+                {
+                    "value": {
+                        "parent_rel.string": "synonyms",
+                        "name": "Adverse Event Prespecified",
+                        "id": "BiomedicalConcept_1",
+                        "parent_id": "StudyDesign_1",
+                        "parent_rel": "biomedicalConcepts",
+                        "parent_entity": "StudyDesign",
+                        "value": "Adverse Event PRESPECIFIED"
+                    },
+                    "row": 1
+                },
+                {
+                    "value": {
+                        "parent_rel.string": "synonyms",
+                        "name": "Race",
+                        "id": "BiomedicalConcept_21",
+                        "parent_id": "StudyDesign_1",
+                        "parent_rel": "biomedicalConcepts",
+                        "parent_entity": "StudyDesign",
+                        "value": "Race"
+                    },
+                    "row": 2
+                },
+                {
+                    "value": {
+                        "parent_rel.string": "synonyms",
+                        "name": "Temperature",
+                        "id": "BiomedicalConcept_22",
+                        "parent_id": "StudyDesign_1",
+                        "parent_rel": "biomedicalConcepts",
+                        "parent_entity": "StudyDesign",
+                        "value": "TEMPERATURE"
+                    },
+                    "row": 3
+                },
+                {
+                    "value": {
+                        "parent_rel.string": "synonyms",
+                        "name": "Weight",
+                        "id": "BiomedicalConcept_23",
+                        "parent_id": "StudyDesign_1",
+                        "parent_rel": "biomedicalConcepts",
+                        "parent_entity": "StudyDesign",
+                        "value": "weight"
+                    },
+                    "row": 4
+                },
+                {
+                    "value": {
+                        "parent_rel.string": "synonyms",
+                        "name": "Height",
+                        "id": "BiomedicalConcept_24",
+                        "parent_id": "StudyDesign_1",
+                        "parent_rel": "biomedicalConcepts",
+                        "parent_entity": "StudyDesign",
+                        "value": "HeIgHt"
+                    },
+                    "row": 5
+                }
+            ]
+        }
+    ],
+    "string": [
+        {
+            "executionStatus": "execution_error",
+            "dataset": "string.xpt",
+            "domain": "",
+            "variables": [],
+            "message": "rule execution error",
+            "errors": [
+                {
+                    "dataset": "string.xpt",
+                    "error": "Column not found in data",
+                    "message": "instanceType"
+                }
+            ]
+        }
+    ]
+}

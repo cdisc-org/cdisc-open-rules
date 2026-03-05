@@ -1,0 +1,145 @@
+{
+  "rule": {
+    "Authorities": [
+      {
+        "Organization": "CDISC",
+        "Standards": [
+          {
+            "Name": "DDF",
+            "References": [
+              {
+                "Origin": "DDF Conformance Rules",
+                "Version": "1",
+                "Rule_Identifier": {
+                  "Id": "DDF00001"
+                }
+              }
+            ],
+            "Version": "1.0"
+          }
+        ]
+      }
+    ],
+    "Check": {
+      "any": [
+        {
+          "name": "studyElementName",
+          "operator": "is_not_unique_relationship",
+          "value": "studyElementDescription"
+        }
+      ]
+    },
+    "Core": {
+      "Id": "",
+      "Status": "Draft",
+      "Version": "1"
+    },
+    "Description": "studyElementName should have a one-to-one relationship with studyElementDescription",
+    "Executability": "Fully Executable",
+    "Outcome": {
+      "Message": "studyElementName does not have a one-to-one relationship with studyElementDescription",
+      "Output_Variables": [
+        "studyElementName",
+        "studyElementDescription"
+      ]
+    },
+    "Scope": {
+      "Classes": {
+        "Include": [
+          "ALL"
+        ]
+      },
+      "Domains": {
+        "Include": [
+          "STUDYDESIGNELEMENTS"
+        ]
+      }
+    },
+    "Sensitivity": "Record",
+    "Rule_Type": "Record Data"
+  },
+  "datasets": [
+    {
+      "filename": "studyDesignElements.xpt",
+      "label": "Study Design Elements",
+      "domain": "STUDYDESIGNELEMENTS",
+      "variables": [
+        {
+          "name": "xref",
+          "label": "EL1",
+          "type": "EL2",
+          "length": null
+        },
+        {
+          "name": "studyElementName",
+          "label": "Screening",
+          "type": "Treatment 1",
+          "length": null
+        },
+        {
+          "name": "studyElementDescription",
+          "label": "Screening Element",
+          "type": "Treatment Element 1",
+          "length": null
+        },
+        {
+          "name": "transitionStartRule",
+          "label": "Study Start",
+          "type": "Radomized",
+          "length": null
+        },
+        {
+          "name": "transitionEndRule",
+          "label": "Screened",
+          "type": "Completed treatment 1",
+          "length": null
+        },
+        {
+          "name": "Domain",
+          "label": "STUDYDESIGNELEMENTS",
+          "type": "STUDYDESIGNELEMENTS",
+          "length": null
+        }
+      ],
+      "records": {
+        "xref": [
+          "EL4",
+          "EL5",
+          "EL6",
+          "EL7"
+        ],
+        "studyElementName": [
+          "Wash Out",
+          "Follow Up",
+          "Follow Up",
+          "A Duplicate Label"
+        ],
+        "studyElementDescription": [
+          "Wash Out Element",
+          "Follow Up Element",
+          "A Duplicate Name",
+          "Wash Out Element"
+        ],
+        "transitionStartRule": [
+          "Completed treatment 1 or 2",
+          "Treated",
+          "Treated",
+          "Treated"
+        ],
+        "transitionEndRule": [
+          "Wash out complete",
+          "Leave Study",
+          "Leave Study",
+          "Leave Study"
+        ],
+        "Domain": [
+          "STUDYDESIGNELEMENTS",
+          "STUDYDESIGNELEMENTS",
+          "STUDYDESIGNELEMENTS",
+          "STUDYDESIGNELEMENTS"
+        ]
+      }
+    }
+  ],
+  "codelists": []
+}

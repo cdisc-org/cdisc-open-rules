@@ -1,0 +1,773 @@
+{3 items
+"EG":[1 item
+0:{6 items
+"executionStatus":"success"
+"dataset":"eg.xpt"
+"domain":"EG"
+"variables":[13 items
+0:"$TIMING_VARIABLES"
+1:"EGDTC"
+2:"EGDY"
+3:"EGELTM"
+4:"EGREPNUM"
+5:"EGRFTDTC"
+6:"EGTESTCD"
+7:"EGTPT"
+8:"EGTPTNUM"
+9:"EGTPTREF"
+10:"USUBJID"
+11:"VISIT"
+12:"VISITNUM"
+]
+"message":"EGREPNUM is null or is not unique per subject per test per timing variables."
+"errors":[6 items
+0:{5 items
+"value":{13 items
+"EGTPTNUM":-1
+"EGELTM":NULL
+"EGRFTDTC":NULL
+"EGREPNUM":1
+"VISITNUM":1
+"EGDTC":"2022-01-14"
+"USUBJID":"TEST123"
+"VISIT":"DAY1"
+"EGDY":NULL
+"EGTESTCD":"QTCFAG"
+"EGTPTREF":"DOSE"
+"$TIMING_VARIABLES":[9 items
+0:"VISITNUM"
+1:"VISIT"
+2:"EGDTC"
+3:"EGDY"
+4:"EGTPT"
+5:"EGTPTNUM"
+6:"EGELTM"
+7:"EGTPTREF"
+8:"EGRFTDTC"
+]
+"EGTPT":"PREDOSE"
+}
+"dataset":"eg.xpt"
+"row":1
+"USUBJID":"TEST123"
+"SEQ":1
+}
+1:{5 items
+"value":{13 items
+"EGTPTNUM":-1
+"EGELTM":NULL
+"EGRFTDTC":NULL
+"EGREPNUM":1
+"VISITNUM":1
+"EGDTC":"2022-01-14T07:00"
+"USUBJID":"TEST123"
+"VISIT":"DAY1"
+"EGDY":NULL
+"EGTESTCD":"QTCFAG"
+"EGTPTREF":"DOSE"
+"$TIMING_VARIABLES":[9 items
+0:"VISITNUM"
+1:"VISIT"
+2:"EGDTC"
+3:"EGDY"
+4:"EGTPT"
+5:"EGTPTNUM"
+6:"EGELTM"
+7:"EGTPTREF"
+8:"EGRFTDTC"
+]
+"EGTPT":"PREDOSE"
+}
+"dataset":"eg.xpt"
+"row":2
+"USUBJID":"TEST123"
+"SEQ":2
+}
+2:{5 items
+"value":{13 items
+"EGTPTNUM":-1
+"EGELTM":NULL
+"EGRFTDTC":NULL
+"EGREPNUM":1
+"VISITNUM":1
+"EGDTC":"2022-01-14"
+"USUBJID":"TEST123"
+"VISIT":"DAY1"
+"EGDY":NULL
+"EGTESTCD":"QTCFAG"
+"EGTPTREF":"DOSE"
+"$TIMING_VARIABLES":[9 items
+0:"VISITNUM"
+1:"VISIT"
+2:"EGDTC"
+3:"EGDY"
+4:"EGTPT"
+5:"EGTPTNUM"
+6:"EGELTM"
+7:"EGTPTREF"
+8:"EGRFTDTC"
+]
+"EGTPT":"PREDOSE"
+}
+"dataset":"eg.xpt"
+"row":3
+"USUBJID":"TEST123"
+"SEQ":3
+}
+3:{5 items
+"value":{13 items
+"EGTPTNUM":360
+"EGELTM":NULL
+"EGRFTDTC":NULL
+"EGREPNUM":NULL
+"VISITNUM":2
+"EGDTC":"2022-01-20T13:01"
+"USUBJID":"TEST123"
+"VISIT":"DAY1"
+"EGDY":NULL
+"EGTESTCD":"QTCFAG"
+"EGTPTREF":"DOSE"
+"$TIMING_VARIABLES":[9 items
+0:"VISITNUM"
+1:"VISIT"
+2:"EGDTC"
+3:"EGDY"
+4:"EGTPT"
+5:"EGTPTNUM"
+6:"EGELTM"
+7:"EGTPTREF"
+8:"EGRFTDTC"
+]
+"EGTPT":"6H"
+}
+"dataset":"eg.xpt"
+"row":4
+"USUBJID":"TEST123"
+"SEQ":4
+}
+4:{5 items
+"value":{13 items
+"EGTPTNUM":360
+"EGELTM":NULL
+"EGRFTDTC":NULL
+"EGREPNUM":NULL
+"VISITNUM":2
+"EGDTC":"2022-01-20T13:01"
+"USUBJID":"TEST123"
+"VISIT":"DAY1"
+"EGDY":NULL
+"EGTESTCD":"QTCFAG"
+"EGTPTREF":"DOSE"
+"$TIMING_VARIABLES":[9 items
+0:"VISITNUM"
+1:"VISIT"
+2:"EGDTC"
+3:"EGDY"
+4:"EGTPT"
+5:"EGTPTNUM"
+6:"EGELTM"
+7:"EGTPTREF"
+8:"EGRFTDTC"
+]
+"EGTPT":"6H"
+}
+"dataset":"eg.xpt"
+"row":5
+"USUBJID":"TEST123"
+"SEQ":5
+}
+5:{5 items
+"value":{13 items
+"EGTPTNUM":360
+"EGELTM":NULL
+"EGRFTDTC":NULL
+"EGREPNUM":NULL
+"VISITNUM":2
+"EGDTC":"2022-01-20T13:02"
+"USUBJID":"TEST123"
+"VISIT":"DAY1"
+"EGDY":NULL
+"EGTESTCD":"QTCFAG"
+"EGTPTREF":"DOSE"
+"$TIMING_VARIABLES":[9 items
+0:"VISITNUM"
+1:"VISIT"
+2:"EGDTC"
+3:"EGDY"
+4:"EGTPT"
+5:"EGTPTNUM"
+6:"EGELTM"
+7:"EGTPTREF"
+8:"EGRFTDTC"
+]
+"EGTPT":"6H"
+}
+"dataset":"eg.xpt"
+"row":6
+"USUBJID":"TEST123"
+"SEQ":6
+}
+]
+}
+]
+"VS":[1 item
+0:{6 items
+"executionStatus":"success"
+"dataset":"vs.xpt"
+"domain":"VS"
+"variables":[9 items
+0:"$TIMING_VARIABLES"
+1:"EPOCH"
+2:"USUBJID"
+3:"VISIT"
+4:"VISITNUM"
+5:"VSDTC"
+6:"VSDY"
+7:"VSREPNUM"
+8:"VSTESTCD"
+]
+"message":"VSREPNUM is null or is not unique per subject per test per timing variables."
+"errors":[23 items
+0:{5 items
+"value":{9 items
+"VISITNUM":7
+"USUBJID":"CDISC001"
+"VISIT":"WEEK 6"
+"VSDTC":"2013-01-10"
+"VSDY":42
+"VSTESTCD":"DIABP"
+"VSREPNUM":1
+"$TIMING_VARIABLES":[5 items
+0:"VISITNUM"
+1:"VISIT"
+2:"EPOCH"
+3:"VSDTC"
+4:"VSDY"
+]
+"EPOCH":"TREATMENT"
+}
+"dataset":"vs.xpt"
+"row":6
+"USUBJID":"CDISC001"
+"SEQ":6
+}
+1:{5 items
+"value":{9 items
+"VISITNUM":7
+"USUBJID":"CDISC001"
+"VISIT":"WEEK 6"
+"VSDTC":"2013-01-10"
+"VSDY":42
+"VSTESTCD":"DIABP"
+"VSREPNUM":1
+"$TIMING_VARIABLES":[5 items
+0:"VISITNUM"
+1:"VISIT"
+2:"EPOCH"
+3:"VSDTC"
+4:"VSDY"
+]
+"EPOCH":"TREATMENT"
+}
+"dataset":"vs.xpt"
+"row":7
+"USUBJID":"CDISC001"
+"SEQ":7
+}
+2:{5 items
+"value":{9 items
+"VISITNUM":7
+"USUBJID":"CDISC001"
+"VISIT":"WEEK 6"
+"VSDTC":"2013-01-10"
+"VSDY":42
+"VSTESTCD":"DIABP"
+"VSREPNUM":1
+"$TIMING_VARIABLES":[5 items
+0:"VISITNUM"
+1:"VISIT"
+2:"EPOCH"
+3:"VSDTC"
+4:"VSDY"
+]
+"EPOCH":"TREATMENT"
+}
+"dataset":"vs.xpt"
+"row":8
+"USUBJID":"CDISC001"
+"SEQ":8
+}
+3:{5 items
+"value":{9 items
+"VISITNUM":8
+"USUBJID":"CDISC001"
+"VISIT":"WEEK 8"
+"VSDTC":"2013-01-23T08:00"
+"VSDY":55
+"VSTESTCD":"DIABP"
+"VSREPNUM":2
+"$TIMING_VARIABLES":[5 items
+0:"VISITNUM"
+1:"VISIT"
+2:"EPOCH"
+3:"VSDTC"
+4:"VSDY"
+]
+"EPOCH":"TREATMENT"
+}
+"dataset":"vs.xpt"
+"row":9
+"USUBJID":"CDISC001"
+"SEQ":9
+}
+4:{5 items
+"value":{9 items
+"VISITNUM":8
+"USUBJID":"CDISC001"
+"VISIT":"WEEK 8"
+"VSDTC":"2013-01-23T08:00"
+"VSDY":55
+"VSTESTCD":"DIABP"
+"VSREPNUM":2
+"$TIMING_VARIABLES":[5 items
+0:"VISITNUM"
+1:"VISIT"
+2:"EPOCH"
+3:"VSDTC"
+4:"VSDY"
+]
+"EPOCH":"TREATMENT"
+}
+"dataset":"vs.xpt"
+"row":10
+"USUBJID":"CDISC001"
+"SEQ":10
+}
+5:{5 items
+"value":{9 items
+"VISITNUM":201
+"USUBJID":"CDISC001"
+"VISIT":"EARLY DISCONTINUATION RETRIEVAL"
+"VSDTC":"2013-05-20T10:01"
+"VSDY":172
+"VSTESTCD":"DIABP"
+"VSREPNUM":NULL
+"$TIMING_VARIABLES":[5 items
+0:"VISITNUM"
+1:"VISIT"
+2:"EPOCH"
+3:"VSDTC"
+4:"VSDY"
+]
+"EPOCH":"TREATMENT"
+}
+"dataset":"vs.xpt"
+"row":12
+"USUBJID":"CDISC001"
+"SEQ":12
+}
+6:{5 items
+"value":{9 items
+"VISITNUM":201
+"USUBJID":"CDISC001"
+"VISIT":"EARLY DISCONTINUATION RETRIEVAL"
+"VSDTC":"2013-05-20T10:02"
+"VSDY":172
+"VSTESTCD":"DIABP"
+"VSREPNUM":NULL
+"$TIMING_VARIABLES":[5 items
+0:"VISITNUM"
+1:"VISIT"
+2:"EPOCH"
+3:"VSDTC"
+4:"VSDY"
+]
+"EPOCH":"TREATMENT"
+}
+"dataset":"vs.xpt"
+"row":13
+"USUBJID":"CDISC001"
+"SEQ":13
+}
+7:{5 items
+"value":{9 items
+"VISITNUM":201
+"USUBJID":"CDISC001"
+"VISIT":"EARLY DISCONTINUATION RETRIEVAL"
+"VSDTC":"2013-05-20T10:03"
+"VSDY":172
+"VSTESTCD":"DIABP"
+"VSREPNUM":NULL
+"$TIMING_VARIABLES":[5 items
+0:"VISITNUM"
+1:"VISIT"
+2:"EPOCH"
+3:"VSDTC"
+4:"VSDY"
+]
+"EPOCH":"TREATMENT"
+}
+"dataset":"vs.xpt"
+"row":14
+"USUBJID":"CDISC001"
+"SEQ":14
+}
+8:{5 items
+"value":{9 items
+"VISITNUM":7
+"USUBJID":"CDISC001"
+"VISIT":"WEEK 6"
+"VSDTC":"2013-01-10"
+"VSDY":42
+"VSTESTCD":"PULSE"
+"VSREPNUM":1
+"$TIMING_VARIABLES":[5 items
+0:"VISITNUM"
+1:"VISIT"
+2:"EPOCH"
+3:"VSDTC"
+4:"VSDY"
+]
+"EPOCH":"TREATMENT"
+}
+"dataset":"vs.xpt"
+"row":15
+"USUBJID":"CDISC001"
+"SEQ":21
+}
+9:{5 items
+"value":{9 items
+"VISITNUM":7
+"USUBJID":"CDISC001"
+"VISIT":"WEEK 6"
+"VSDTC":"2013-01-10"
+"VSDY":42
+"VSTESTCD":"PULSE"
+"VSREPNUM":1
+"$TIMING_VARIABLES":[5 items
+0:"VISITNUM"
+1:"VISIT"
+2:"EPOCH"
+3:"VSDTC"
+4:"VSDY"
+]
+"EPOCH":"TREATMENT"
+}
+"dataset":"vs.xpt"
+"row":16
+"USUBJID":"CDISC001"
+"SEQ":22
+}
+10:{5 items
+"value":{9 items
+"VISITNUM":7
+"USUBJID":"CDISC001"
+"VISIT":"WEEK 6"
+"VSDTC":"2013-01-10"
+"VSDY":42
+"VSTESTCD":"PULSE"
+"VSREPNUM":1
+"$TIMING_VARIABLES":[5 items
+0:"VISITNUM"
+1:"VISIT"
+2:"EPOCH"
+3:"VSDTC"
+4:"VSDY"
+]
+"EPOCH":"TREATMENT"
+}
+"dataset":"vs.xpt"
+"row":17
+"USUBJID":"CDISC001"
+"SEQ":23
+}
+11:{5 items
+"value":{9 items
+"VISITNUM":8
+"USUBJID":"CDISC001"
+"VISIT":"WEEK 8"
+"VSDTC":"2013-01-23T15:10"
+"VSDY":55
+"VSTESTCD":"PULSE"
+"VSREPNUM":2
+"$TIMING_VARIABLES":[5 items
+0:"VISITNUM"
+1:"VISIT"
+2:"EPOCH"
+3:"VSDTC"
+4:"VSDY"
+]
+"EPOCH":"TREATMENT"
+}
+"dataset":"vs.xpt"
+"row":18
+"USUBJID":"CDISC001"
+"SEQ":24
+}
+12:{5 items
+"value":{9 items
+"VISITNUM":8
+"USUBJID":"CDISC001"
+"VISIT":"WEEK 8"
+"VSDTC":"2013-01-23T15:11"
+"VSDY":55
+"VSTESTCD":"PULSE"
+"VSREPNUM":2
+"$TIMING_VARIABLES":[5 items
+0:"VISITNUM"
+1:"VISIT"
+2:"EPOCH"
+3:"VSDTC"
+4:"VSDY"
+]
+"EPOCH":"TREATMENT"
+}
+"dataset":"vs.xpt"
+"row":19
+"USUBJID":"CDISC001"
+"SEQ":25
+}
+13:{5 items
+"value":{9 items
+"VISITNUM":8
+"USUBJID":"CDISC001"
+"VISIT":"WEEK 8"
+"VSDTC":"2013-01-23T15:12"
+"VSDY":55
+"VSTESTCD":"PULSE"
+"VSREPNUM":2
+"$TIMING_VARIABLES":[5 items
+0:"VISITNUM"
+1:"VISIT"
+2:"EPOCH"
+3:"VSDTC"
+4:"VSDY"
+]
+"EPOCH":"TREATMENT"
+}
+"dataset":"vs.xpt"
+"row":20
+"USUBJID":"CDISC001"
+"SEQ":26
+}
+14:{5 items
+"value":{9 items
+"VISITNUM":201
+"USUBJID":"CDISC001"
+"VISIT":"EARLY DISCONTINUATION RETRIEVAL"
+"VSDTC":"2013-05-20"
+"VSDY":172
+"VSTESTCD":"PULSE"
+"VSREPNUM":3
+"$TIMING_VARIABLES":[5 items
+0:"VISITNUM"
+1:"VISIT"
+2:"EPOCH"
+3:"VSDTC"
+4:"VSDY"
+]
+"EPOCH":"TREATMENT"
+}
+"dataset":"vs.xpt"
+"row":21
+"USUBJID":"CDISC001"
+"SEQ":27
+}
+15:{5 items
+"value":{9 items
+"VISITNUM":201
+"USUBJID":"CDISC001"
+"VISIT":"EARLY DISCONTINUATION RETRIEVAL"
+"VSDTC":"2013-05-20"
+"VSDY":172
+"VSTESTCD":"PULSE"
+"VSREPNUM":3
+"$TIMING_VARIABLES":[5 items
+0:"VISITNUM"
+1:"VISIT"
+2:"EPOCH"
+3:"VSDTC"
+4:"VSDY"
+]
+"EPOCH":"TREATMENT"
+}
+"dataset":"vs.xpt"
+"row":22
+"USUBJID":"CDISC001"
+"SEQ":28
+}
+16:{5 items
+"value":{9 items
+"VISITNUM":201
+"USUBJID":"CDISC001"
+"VISIT":"EARLY DISCONTINUATION RETRIEVAL"
+"VSDTC":"2013-05-20"
+"VSDY":172
+"VSTESTCD":"PULSE"
+"VSREPNUM":3
+"$TIMING_VARIABLES":[5 items
+0:"VISITNUM"
+1:"VISIT"
+2:"EPOCH"
+3:"VSDTC"
+4:"VSDY"
+]
+"EPOCH":"TREATMENT"
+}
+"dataset":"vs.xpt"
+"row":23
+"USUBJID":"CDISC001"
+"SEQ":29
+}
+17:{5 items
+"value":{9 items
+"VISITNUM":8
+"USUBJID":"CDISC002"
+"VISIT":"WEEK 8"
+"VSDTC":"2013-01-23"
+"VSDY":55
+"VSTESTCD":"DIABP"
+"VSREPNUM":2
+"$TIMING_VARIABLES":[5 items
+0:"VISITNUM"
+1:"VISIT"
+2:"EPOCH"
+3:"VSDTC"
+4:"VSDY"
+]
+"EPOCH":"TREATMENT"
+}
+"dataset":"vs.xpt"
+"row":24
+"USUBJID":"CDISC002"
+"SEQ":7
+}
+18:{5 items
+"value":{9 items
+"VISITNUM":8
+"USUBJID":"CDISC002"
+"VISIT":"WEEK 8"
+"VSDTC":"2013-01-23"
+"VSDY":55
+"VSTESTCD":"DIABP"
+"VSREPNUM":2
+"$TIMING_VARIABLES":[5 items
+0:"VISITNUM"
+1:"VISIT"
+2:"EPOCH"
+3:"VSDTC"
+4:"VSDY"
+]
+"EPOCH":"TREATMENT"
+}
+"dataset":"vs.xpt"
+"row":25
+"USUBJID":"CDISC002"
+"SEQ":8
+}
+19:{5 items
+"value":{9 items
+"VISITNUM":8
+"USUBJID":"CDISC002"
+"VISIT":"WEEK 8"
+"VSDTC":"2013-01-23"
+"VSDY":55
+"VSTESTCD":"DIABP"
+"VSREPNUM":2
+"$TIMING_VARIABLES":[5 items
+0:"VISITNUM"
+1:"VISIT"
+2:"EPOCH"
+3:"VSDTC"
+4:"VSDY"
+]
+"EPOCH":"TREATMENT"
+}
+"dataset":"vs.xpt"
+"row":26
+"USUBJID":"CDISC002"
+"SEQ":9
+}
+20:{5 items
+"value":{9 items
+"VISITNUM":8
+"USUBJID":"CDISC002"
+"VISIT":"WEEK 8"
+"VSDTC":"2013-01-23"
+"VSDY":55
+"VSTESTCD":"PULSE"
+"VSREPNUM":2
+"$TIMING_VARIABLES":[5 items
+0:"VISITNUM"
+1:"VISIT"
+2:"EPOCH"
+3:"VSDTC"
+4:"VSDY"
+]
+"EPOCH":"TREATMENT"
+}
+"dataset":"vs.xpt"
+"row":27
+"USUBJID":"CDISC002"
+"SEQ":17
+}
+21:{5 items
+"value":{9 items
+"VISITNUM":8
+"USUBJID":"CDISC002"
+"VISIT":"WEEK 8"
+"VSDTC":"2013-01-23"
+"VSDY":55
+"VSTESTCD":"PULSE"
+"VSREPNUM":2
+"$TIMING_VARIABLES":[5 items
+0:"VISITNUM"
+1:"VISIT"
+2:"EPOCH"
+3:"VSDTC"
+4:"VSDY"
+]
+"EPOCH":"TREATMENT"
+}
+"dataset":"vs.xpt"
+"row":28
+"USUBJID":"CDISC002"
+"SEQ":18
+}
+22:{5 items
+"value":{9 items
+"VISITNUM":8
+"USUBJID":"CDISC002"
+"VISIT":"WEEK 8"
+"VSDTC":"2013-01-23"
+"VSDY":55
+"VSTESTCD":"PULSE"
+"VSREPNUM":2
+"$TIMING_VARIABLES":[5 items
+0:"VISITNUM"
+1:"VISIT"
+2:"EPOCH"
+3:"VSDTC"
+4:"VSDY"
+]
+"EPOCH":"TREATMENT"
+}
+"dataset":"vs.xpt"
+"row":29
+"USUBJID":"CDISC002"
+"SEQ":19
+}
+]
+}
+]
+"SV":[1 item
+0:{6 items
+"executionStatus":"skipped"
+"dataset":"sv.xpt"
+"domain":"SV"
+"variables":[]0 items
+"message":"Rule skipped - doesn't apply to class for rule id=CDISC.SDTMIG.CG0562, dataset=SV"
+"errors":[]0 items
+}
+]
+}

@@ -1,0 +1,161 @@
+#Request:
+[
+  {
+    "filename": "cm.xpt",
+    "label": "Concomitant/Prior Medications",
+    "domain": "CM",
+    "variables": [
+      {
+        "name": "STUDYID",
+        "label": "Study Identifier",
+        "type": "Char",
+        "length": 50
+      },
+      {
+        "name": "DOMAIN",
+        "label": "Domain Abbreviation",
+        "type": "Char",
+        "length": 50
+      },
+      {
+        "name": "USUBJID",
+        "label": "Unique Subject Identifier",
+        "type": "Char",
+        "length": 50
+      },
+      {
+        "name": "CMSEQ",
+        "label": "Sequence Number",
+        "type": "Num",
+        "length": 8
+      },
+      {
+        "name": "CMTRT",
+        "label": "Reported Name of Drug, Med, or Therapy",
+        "type": "Char",
+        "length": 50
+      },
+      {
+        "name": "CMPRESP",
+        "label": "CM Pre-specified",
+        "type": "Char",
+        "length": 50
+      },
+      {
+        "name": "CMOCCUR",
+        "label": "CM Occurrence",
+        "type": "Char",
+        "length": 50
+      },
+      {
+        "name": "CMSTAT",
+        "label": "Completion Status",
+        "type": "Char",
+        "length": 50
+      },
+      {
+        "name": "CMREASND",
+        "label": "Reason Medication Not Collected",
+        "type": "Char",
+        "length": 50
+      }
+    ],
+    "records": {
+      "STUDYID": [
+        "CDISCPILOT01",
+        "CDISCPILOT01",
+        "CDISCPILOT01"
+      ],
+      "DOMAIN": [
+        "CM",
+        "CM",
+        "CM"
+      ],
+      "USUBJID": [
+        "CDISC001",
+        "CDISC001",
+        "CDISC001"
+      ],
+      "CMSEQ": [
+        1,
+        2,
+        3
+      ],
+      "CMTRT": [
+        "ASPIRIN",
+        "METAMUCIL",
+        ""
+      ],
+      "CMPRESP": [
+        "Y",
+        "Y",
+        "Y"
+      ],
+      "CMOCCUR": [
+        "N",
+        "Y",
+        ""
+      ],
+      "CMSTAT": [
+        "",
+        "",
+        "NOT DONE"
+      ],
+      "CMREASND": [
+        "",
+        "",
+        "Subject's Decision"
+      ]
+    }
+  },
+  {
+    "filename": "mh.xpt",
+    "label": "Medical History",
+    "domain": "MH",
+    "variables": [
+      {
+        "name": "STUDYID",
+        "label": "Study Identifier",
+        "type": "Char",
+        "length": 50
+      },
+      {
+        "name": "DOMAIN",
+        "label": "Domain Abbreviation",
+        "type": "Char",
+        "length": 50
+      },
+      {
+        "name": "USUBJID",
+        "label": "Unique Subject Identifier",
+        "type": "Char",
+        "length": 50
+      },
+      {
+        "name": "MHSEQ",
+        "label": "Sequence Number",
+        "type": "Num",
+        "length": 8
+      },
+      {
+        "name": "MHTERM",
+        "label": "Reported Term for the Medical History",
+        "type": "Char",
+        "length": 50
+      }
+    ],
+    "records": {
+      "STUDYID": [],
+      "DOMAIN": [],
+      "USUBJID": [],
+      "MHSEQ": [],
+      "MHTERM": []
+    }
+  }
+]
+
+#results:
+{
+  "CM": [],
+  "MH": []
+}

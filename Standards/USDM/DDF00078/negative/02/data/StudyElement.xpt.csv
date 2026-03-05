@@ -1,0 +1,5 @@
+parent_entity,parent_id,parent_rel,rel_type,id,name,description,label,instanceType,transitionStartRule,transitionStartRule.id,transitionStartRule.name,transitionStartRule.description,transitionStartRule.label,transitionStartRule.text,studyInterventionIds
+StudyDesign,StudyDesign_1,elements,definition,StudyElement_1,EL1,Screening Element,Screening,StudyElement,True,TransitionRule_7,ELEMENT_START_RULE_1,,,Informed consent,False
+StudyCell,StudyCell_1,elementIds,reference,StudyElement_1,EL1,Screening Element,Screening,StudyElement,True,TransitionRule_7,ELEMENT_START_RULE_1,,,Informed consent,False
+StudyCell,StudyCell_6,elementIds,reference,StudyElement_1,EL1,Screening Element,Screening,StudyElement,True,TransitionRule_7,ELEMENT_START_RULE_1,,,Informed consent,False
+StudyCell,StudyCell_11,elementIds,reference,StudyElement_1,EL1,Screening Element,Screening,StudyElement,True,TransitionRule_7,ELEMENT_START_RULE_1,,,Informed consent,False

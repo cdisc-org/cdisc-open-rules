@@ -1,0 +1,6 @@
+parent_entity,parent_id,parent_rel,rel_type,id,instanceType,code,code.id,code.standardCode,code.standardCode.id,code.standardCode.code,code.standardCode.codeSystem,code.standardCode.codeSystemVersion,code.standardCode.decode,code.standardCodeAliases,type,type.id,type.code,type.codeSystem,type.codeSystemVersion,type.decode
+GovernanceDate,GovernanceDate_1,geographicScopes,definition,GeographicScope_1,GeographicScope,,,,,,,,,,True,Code_10,C68846,http://www.cdisc.org,2023-12-15,Global
+GovernanceDate,GovernanceDate_1,geographicScopes,definition,GeographicScope_2,GeographicScope,FALSE,,,,,,,,,True,Code_131,C68846,http://www.cdisc.org,2023-12-15,Worldwide
+GovernanceDate,GovernanceDate_2,geographicScopes,definition,GeographicScope_3,GeographicScope,True,AliasCode_2,True,Code_12,150,ISO 3166 1 alpha3,2020-08,Europe,False,True,Code_130,C41129,http://www.cdisc.org,2023-12-15,Region
+GovernanceDate,GovernanceDate_3,geographicScopes,definition,GeographicScope_4,GeographicScope,True,AliasCode_20,True,Code_120,120,ISO 3166 1 alpha3,2020-08,Asia,False,True,Code_132,C41129,http://www.cdisc.org,2023-12-15,Region
+GovernanceDate,GovernanceDate_4,geographicScopes,definition,GeographicScope_5,GeographicScope,True,AliasCode_21,True,Code_121,120,ISO 3166 1 alpha3,2020-08,ASIA,False,True,Code_133,C41129,http://www.cdisc.org,2023-12-15,Region

@@ -1,0 +1,21 @@
+dataset,variable,label,type,length
+ex.xpt,STUDYID,Study Identifier,Char,12
+ex.xpt,DOMAIN,Domain Abbreviation,Char,2
+ex.xpt,USUBJID,Unique Subject Identifier,Char,8
+ex.xpt,SPDEVID,Sponsor Device Identifier,Char,200
+ex.xpt,EXSEQ,Sequence Number,Num,8
+ex.xpt,EXTRT,Name of Treatment,Char,10
+ex.xpt,EXDOSE,Dose,Num,8
+ex.xpt,EXDOSU,Dose Units,Char,2
+ex.xpt,EXDOSFRM,Dose Form,Char,9
+ex.xpt,EXDOSFRQ,Dosing Frequency per Interval,Char,2
+ex.xpt,EXROUTE,Route of Administration,Char,12
+ex.xpt,EXLOT,Lot Number,Char,200
+ex.xpt,EPOCH,Epoch,Char,9
+ex.xpt,EXSTDTC,Start Date/Time of Treatment,Char,10
+ex.xpt,EXENDTC,End Date/Time of Treatment,Char,10
+ex.xpt,EXSTDY,Study Day of Start of Treatment,Num,8
+ex.xpt,EXENDY,Study Day of End of Treatment,Num,8
+adsl.xpt,STUDYID,Study Identifier,Char,12
+adsl.xpt,USUBJID,Unique Subject Identifier,Char,8
+adsl.xpt,TRTSDTM,Date of First Exposure to Treatment,Num,8

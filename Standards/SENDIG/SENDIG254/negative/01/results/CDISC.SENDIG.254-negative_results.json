@@ -1,0 +1,28 @@
+{
+  "SUPPLB": [
+    {
+      "executionStatus": "success",
+      "domain": "SUPPLB",
+      "variables": [
+        "QNAM"
+      ],
+      "message": "Duplicate value of the combination of USUBJID or POOLID with QNAM",
+      "errors": [
+        {
+          "value": {
+            "QNAM": "BIOSIG1"
+          },
+          "row": 6,
+          "uSubjId": "CDISC-TEST-002"
+        },
+        {
+          "value": {
+            "QNAM": "BIOSIG1"
+          },
+          "row": 8,
+          "uSubjId": "CDISC-TEST-002"
+        }
+      ]
+    }
+  ]
+}

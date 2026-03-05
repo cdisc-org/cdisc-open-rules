@@ -1,0 +1,11 @@
+parent_entity,parent_id,parent_rel,rel_type,id,name,description,label,instanceType,definedProcedures,biomedicalConceptIds,nextId,timelineId,previousId,bcSurrogateIds,bcCategoryIds
+StudyDesign,StudyDesign_1,activities,definition,Activity_35,Stand,,Subject Standing,Activity,True,False,Activity_36,,,False,False
+StudyDesign,StudyDesign_1,activities,definition,Activity_36,Vital Signs Standing,,Vital signs while standing,Activity,False,True,,,Activity_35,False,False
+Activity,Activity_35,nextId,reference,Activity_36,Vital Signs Standing,,Vital signs while standing,Activity,False,True,,,Activity_35,False,False
+Activity,Activity_36,previousId,reference,Activity_35,Stand,,Subject Standing,Activity,True,False,Activity_36,,,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_5,activityIds,reference,Activity_35,Stand,,Subject Standing,Activity,True,False,Activity_36,,,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_6,activityIds,reference,Activity_36,Vital Signs Standing,,Vital signs while standing,Activity,False,True,,,Activity_35,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_7,activityIds,reference,Activity_35,Stand,,Subject Standing,Activity,True,False,Activity_36,,,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_8,activityIds,reference,Activity_36,Vital Signs Standing,,Vital signs while standing,Activity,False,True,,,Activity_35,False,False
+Condition,Condition_1,contextIds,reference,Activity_35,Stand,,Subject Standing,Activity,True,False,Activity_36,,,False,False
+Condition,Condition_1,contextIds,reference,Activity_36,Vital Signs Standing,,Vital signs while standing,Activity,False,True,,,Activity_35,False,False

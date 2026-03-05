@@ -1,0 +1,18 @@
+dataset,variable,label,type,length
+ta.xpt,STUDYID,Study Identifier,Char,12
+ta.xpt,DOMAIN,Domain Abbreviation,Char,2
+ta.xpt,ARMCD,Planned Arm Code,Char,8
+ta.xpt,ARM,Description of Planned Arm,Char,28
+ta.xpt,TAETORD,Planned Order of Element within Arm,Num,8
+ta.xpt,ETCD,Element Code,Char,7
+ta.xpt,ELEMENT,Description of Element,Char,26
+ta.xpt,TABRANCH,Branch,Char,200
+ta.xpt,TATRANS,Transition Rule,Char,200
+ta.xpt,EPOCH,Epoch,Char,9
+tv.xpt,STUDYID,Study Identifier,Char,12
+tv.xpt,DOMAIN,Domain Abbreviation,Char,2
+tv.xpt,VISITNUM,Visit Number,Num,8
+tv.xpt,VISIT,Visit Name,Char,200
+tv.xpt,ARM,Description of Planned Arm,Char,28
+tv.xpt,TVSTRL,Visit Start Rule,Char,200
+tv.xpt,TVENRL,Visit End Rule,Char,200

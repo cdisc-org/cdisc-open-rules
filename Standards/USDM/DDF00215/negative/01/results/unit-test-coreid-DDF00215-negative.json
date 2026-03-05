@@ -1,0 +1,149 @@
+{
+    "Code": [
+        {
+            "executionStatus": "skipped",
+            "dataset": "Code.xpt",
+            "domain": "",
+            "variables": [],
+            "message": "Rule skipped - doesn't apply to entity for rule id=, dataset=Code",
+            "errors": []
+        }
+    ],
+    "InterventionalStudyDesign": [
+        {
+            "executionStatus": "success",
+            "dataset": "InterventionalStudyDesign.xpt",
+            "domain": "InterventionalStudyDesign",
+            "variables": [
+                "$code_for_decode_pref_term",
+                "$code_for_decode_value",
+                "$codelist_code",
+                "$codelist_extensible",
+                "$pref_term_for_code",
+                "$value_for_code",
+                "code",
+                "codeSystem",
+                "codeSystemVersion",
+                "decode",
+                "id",
+                "name",
+                "parent_entity",
+                "parent_id",
+                "parent_rel"
+            ],
+            "message": "The interventional study design's sub type is not specified according to the extensible Trial Type Response (C66739) SDTM codelist - codeSystem is not \"http://www.cdisc.org\", codeSystemVersion is not a valid terminology package date, and/or the code or decode (either as preferred term or as submission value) is found in the codelist (case insensitive) but the corresponding decode or code does not match the codelist value (case sensitive).",
+            "errors": [
+                {
+                    "value": {
+                        "codeSystemVersion": "2023-12-15",
+                        "id": "InterventionalStudyDesign_1",
+                        "$code_for_decode_value": "C158283",
+                        "codeSystem": "http://www.cdisc.org",
+                        "$value_for_code": "WATER EFFECT",
+                        "name": "Study Design 1",
+                        "$codelist_extensible": true,
+                        "parent_entity": "StudyVersion",
+                        "decode": "ADHESION PERFORMANCE",
+                        "$code_for_decode_pref_term": null,
+                        "code": "C161480",
+                        "$codelist_code": "C66739",
+                        "$pref_term_for_code": "Water Effect Trial",
+                        "parent_rel": "studyDesigns",
+                        "parent_id": "StudyVersion_1"
+                    },
+                    "dataset": "InterventionalStudyDesign.xpt",
+                    "row": 1,
+                    "instance_id": "InterventionalStudyDesign_1"
+                },
+                {
+                    "value": {
+                        "codeSystemVersion": "2025-09-26",
+                        "id": "InterventionalStudyDesign_1",
+                        "$code_for_decode_value": null,
+                        "codeSystem": "http://www.cdisc.org",
+                        "$value_for_code": "ALCOHOL EFFECT",
+                        "name": "Study Design 1",
+                        "$codelist_extensible": true,
+                        "parent_entity": "StudyVersion",
+                        "decode": "Effect of Alcohol",
+                        "$code_for_decode_pref_term": null,
+                        "code": "C158284",
+                        "$codelist_code": "C66739",
+                        "$pref_term_for_code": "Alcohol Effect Study",
+                        "parent_rel": "studyDesigns",
+                        "parent_id": "StudyVersion_1"
+                    },
+                    "dataset": "InterventionalStudyDesign.xpt",
+                    "row": 1,
+                    "instance_id": "InterventionalStudyDesign_1"
+                },
+                {
+                    "value": {
+                        "codeSystemVersion": "2025-09-26",
+                        "id": "InterventionalStudyDesign_2",
+                        "$code_for_decode_value": "C127803",
+                        "codeSystem": "http://www.cdisc.org",
+                        "$value_for_code": null,
+                        "name": "Study Design 2",
+                        "$codelist_extensible": true,
+                        "parent_entity": "StudyVersion",
+                        "decode": "DOSE RESPONSE",
+                        "$code_for_decode_pref_term": null,
+                        "code": "C127803xx",
+                        "$codelist_code": "C66739",
+                        "$pref_term_for_code": null,
+                        "parent_rel": "studyDesigns",
+                        "parent_id": "StudyVersion_1"
+                    },
+                    "dataset": "InterventionalStudyDesign.xpt",
+                    "row": 2,
+                    "instance_id": "InterventionalStudyDesign_2"
+                },
+                {
+                    "value": {
+                        "codeSystemVersion": "2024-03-29",
+                        "id": "InterventionalStudyDesign_2",
+                        "$code_for_decode_value": "C158286",
+                        "codeSystem": "http://www.cdisc.org/TTYPE",
+                        "$value_for_code": "DRUG-DRUG INTERACTION",
+                        "name": "Study Design 2",
+                        "$codelist_extensible": true,
+                        "parent_entity": "StudyVersion",
+                        "decode": "DRUG-DRUG INTERACTION",
+                        "$code_for_decode_pref_term": null,
+                        "code": "C158286",
+                        "$codelist_code": "C66739",
+                        "$pref_term_for_code": "Drug-Drug Interaction Study",
+                        "parent_rel": "studyDesigns",
+                        "parent_id": "StudyVersion_1"
+                    },
+                    "dataset": "InterventionalStudyDesign.xpt",
+                    "row": 2,
+                    "instance_id": "InterventionalStudyDesign_2"
+                },
+                {
+                    "value": {
+                        "codeSystemVersion": "Most recent",
+                        "id": "InterventionalStudyDesign_3",
+                        "$code_for_decode_value": null,
+                        "codeSystem": "http://www.cdisc.org",
+                        "$value_for_code": null,
+                        "name": "Study Design 3",
+                        "$codelist_extensible": null,
+                        "parent_entity": "StudyVersion",
+                        "decode": "Extension",
+                        "$code_for_decode_pref_term": null,
+                        "code": "C0039X",
+                        "$codelist_code": "C66739",
+                        "$pref_term_for_code": null,
+                        "parent_rel": "studyDesigns",
+                        "parent_id": "StudyVersion_1"
+                    },
+                    "dataset": "InterventionalStudyDesign.xpt",
+                    "row": 3,
+                    "instance_id": "InterventionalStudyDesign_3"
+                }
+            ]
+        }
+    ]
+}

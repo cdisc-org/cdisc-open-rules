@@ -1,0 +1,9 @@
+dataset,variable,label,type,length
+pd.xpt,STUDYID,Study Identifier,Char,200
+pd.xpt,DOMAIN,Domain Abbreviation,Char,200
+pd.xpt,SPTOBID,Applicant-Defined Tobacco Product ID,Char,40
+pd.xpt,PDSEQ,Sequence Number,Num,10
+pd.xpt,PDPARMCD,Design Parameter Element Short Name,Char,8
+pd.xpt,PDPARM,Design Parameter Element Name,Char,40
+pd.xpt,PDVALMAX,Design Parameter Element Maximum Value,Char,50
+pd.xpt,PDVALU,Design Parameter Element Value Unit,Char,50

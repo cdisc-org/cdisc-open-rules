@@ -1,0 +1,20 @@
+dataset,variable,label,type,length
+mi.xpt,STUDYID,Study Identifier,Char,50
+mi.xpt,DOMAIN,Domain Abbreviation,Char,50
+mi.xpt,USUBJID,Unique Subject Identifier,Char,50
+mi.xpt,NHOID,Non-host Organism ID,Char,50
+mi.xpt,MISEQ,Sequence Number,Num,8
+mi.xpt,MIREFID,Reference ID,Char,50
+mi.xpt,MITESTCD,Short Name of Assessment,Char,50
+mi.xpt,MITEST,Name of Assessment,Char,50
+mi.xpt,MIAGENT,Agent Name,Char,50
+mi.xpt,MICONC,Agent Concentration,Num,8
+mi.xpt,MICONCU,Agent Concentration Units,Char,50
+mi.xpt,MIORRES,Result or Finding in Original Units,Char,50
+mi.xpt,MIORRESU,Original Units,Char,50
+mi.xpt,MISTRESC,Result or Finding in Standard Format,Char,50
+mi.xpt,MISTRESN,Numeric Result/Finding in Standard Units,Num,8
+mi.xpt,MISTRESU,Standard Units,Char,50
+mi.xpt,MINAM,Laboratory/Vendor Name,Char,50
+mi.xpt,MIMETHOD,Method of Test or Examination,Char,50
+mi.xpt,MIDTC,Date/Time of Collection,Char,50

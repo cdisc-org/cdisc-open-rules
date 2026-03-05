@@ -1,0 +1,115 @@
+{
+    "CO": [
+        {
+            "executionStatus": "success",
+            "dataset": "co.xpt",
+            "domain": "CO",
+            "variables": [
+                "IDVAR",
+                "IDVARVAL",
+                "RDOMAIN",
+                "USUBJID"
+            ],
+            "message": "IDVARVAL does not equal a value of the variable referenced by IDVAR in domain = RDOMAIN.",
+            "errors": [
+                {
+                    "value": {
+                        "IDVAR": "LBGRPID",
+                        "USUBJID": "S001",
+                        "IDVARVAL": "20",
+                        "RDOMAIN": "LB"
+                    },
+                    "dataset": "co.xpt",
+                    "row": 1,
+                    "USUBJID": "S001",
+                    "SEQ": 1
+                }
+            ]
+        }
+    ],
+    "RELREC": [
+        {
+            "executionStatus": "success",
+            "dataset": "relrec.xpt",
+            "domain": "RELREC",
+            "variables": [
+                "IDVAR",
+                "IDVARVAL",
+                "RDOMAIN",
+                "USUBJID"
+            ],
+            "message": "IDVARVAL does not equal a value of the variable referenced by IDVAR in domain = RDOMAIN.",
+            "errors": [
+                {
+                    "value": {
+                        "IDVAR": "AESEQ",
+                        "USUBJID": "S001",
+                        "IDVARVAL": "2",
+                        "RDOMAIN": "AE"
+                    },
+                    "dataset": "relrec.xpt",
+                    "row": 2,
+                    "USUBJID": "S001"
+                },
+                {
+                    "value": {
+                        "IDVAR": "LBSEQ",
+                        "USUBJID": "S001",
+                        "IDVARVAL": "320",
+                        "RDOMAIN": "LB"
+                    },
+                    "dataset": "relrec.xpt",
+                    "row": 1,
+                    "USUBJID": "S001"
+                }
+            ]
+        }
+    ],
+    "SUPPLB": [
+        {
+            "executionStatus": "success",
+            "dataset": "supplb.xpt",
+            "domain": "SUPPLB",
+            "variables": [
+                "IDVAR",
+                "IDVARVAL",
+                "RDOMAIN",
+                "USUBJID"
+            ],
+            "message": "IDVARVAL does not equal a value of the variable referenced by IDVAR in domain = RDOMAIN.",
+            "errors": [
+                {
+                    "value": {
+                        "IDVAR": "LBSEQ",
+                        "USUBJID": "S001",
+                        "IDVARVAL": "320",
+                        "RDOMAIN": "LB"
+                    },
+                    "dataset": "supplb.xpt",
+                    "row": 1,
+                    "USUBJID": "S001"
+                }
+            ]
+        }
+    ],
+    "AE": [
+        {
+            "executionStatus": "skipped",
+            "dataset": "ae.xpt",
+            "domain": "AE",
+            "variables": [],
+            "message": "Rule skipped - doesn't apply to domain for rule id=CORE-000206, dataset=AE",
+            "errors": []
+        }
+    ],
+    "LB": [
+        {
+            "executionStatus": "skipped",
+            "dataset": "lb.xpt",
+            "domain": "LB",
+            "variables": [],
+            "message": "Rule skipped - doesn't apply to domain for rule id=CORE-000206, dataset=LB",
+            "errors": []
+        }
+    ]
+}

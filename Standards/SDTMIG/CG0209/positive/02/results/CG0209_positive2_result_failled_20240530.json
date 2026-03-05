@@ -1,0 +1,34 @@
+{
+  "QS": [
+    {
+      "executionStatus": "skipped",
+      "domain": "QS",
+      "variables": [],
+      "message": null,
+      "errors": []
+    }
+  ],
+  "SUPPQSCG": [
+    {
+      "executionStatus": "skipped",
+      "domain": "SUPPQSCG",
+      "variables": [],
+      "message": null,
+      "errors": []
+    }
+  ],
+  "SE": [
+    {
+      "executionStatus": "execution_error",
+      "domain": "SE",
+      "variables": [],
+      "message": "rule execution error",
+      "errors": [
+        {
+          "error": "An unknown exception has occurred",
+          "message": "'PandasDataset' object has no attribute 'sort_values'"
+        }
+      ]
+    }
+  ]
+}

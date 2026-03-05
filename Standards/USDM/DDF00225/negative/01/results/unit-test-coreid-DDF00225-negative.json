@@ -1,0 +1,161 @@
+{
+    "ObservationalStudyDesign": [
+        {
+            "executionStatus": "success",
+            "dataset": "ObservationalStudyDesign.xpt",
+            "domain": "ObservationalStudyDesign",
+            "variables": [
+                "$code_for_decode_pref_term",
+                "$code_for_decode_value",
+                "$codelist_code",
+                "$codelist_extensible",
+                "$pref_term_for_code",
+                "$value_for_code",
+                "id",
+                "name",
+                "parent_entity",
+                "parent_id",
+                "parent_rel",
+                "samplingMethod.code",
+                "samplingMethod.codeSystem",
+                "samplingMethod.codeSystemVersion",
+                "samplingMethod.decode"
+            ],
+            "message": "The observational study design's sampling method is not specified according to the extensible Observational Study Sampling Method (C127260) SDTM codelist - codeSystem is not \"http://www.cdisc.org\", codeSystemVersion is not a valid terminology package date, and/or the code or decode (either as preferred term or as submission value) is found in the codelist (case insensitive) but the corresponding decode or code does not match the codelist value (case sensitive).",
+            "errors": [
+                {
+                    "value": {
+                        "samplingMethod.codeSystemVersion": "2025-09-26",
+                        "id": "ObservationalStudyDesign_1",
+                        "$code_for_decode_value": "C127781",
+                        "$value_for_code": "PROBABILITY SAMPLE",
+                        "samplingMethod.decode": "NON-PROBABILITY SAMPLE",
+                        "name": "Study Design 1",
+                        "$codelist_extensible": true,
+                        "parent_entity": "StudyVersion",
+                        "$code_for_decode_pref_term": null,
+                        "samplingMethod.codeSystem": "http://www.cdisc.org",
+                        "$codelist_code": "C127260",
+                        "$pref_term_for_code": "Equal Probability Sampling Method",
+                        "samplingMethod.code": "C71517",
+                        "parent_rel": "studyDesigns",
+                        "parent_id": "StudyVersion_1"
+                    },
+                    "dataset": "ObservationalStudyDesign.xpt",
+                    "row": 1,
+                    "instance_id": "ObservationalStudyDesign_1"
+                },
+                {
+                    "value": {
+                        "samplingMethod.codeSystemVersion": "2025-09-26",
+                        "id": "ObservationalStudyDesign_2",
+                        "$code_for_decode_value": null,
+                        "$value_for_code": "PROBABILITY SAMPLE",
+                        "samplingMethod.decode": "PROBABILITY SAMPLING",
+                        "name": "Study Design 2",
+                        "$codelist_extensible": true,
+                        "parent_entity": "StudyVersion",
+                        "$code_for_decode_pref_term": null,
+                        "samplingMethod.codeSystem": "http://www.cdisc.org",
+                        "$codelist_code": "C127260",
+                        "$pref_term_for_code": "Equal Probability Sampling Method",
+                        "samplingMethod.code": "C71517",
+                        "parent_rel": "studyDesigns",
+                        "parent_id": "StudyVersion_1"
+                    },
+                    "dataset": "ObservationalStudyDesign.xpt",
+                    "row": 2,
+                    "instance_id": "ObservationalStudyDesign_2"
+                },
+                {
+                    "value": {
+                        "samplingMethod.codeSystemVersion": "2025-09-26",
+                        "id": "ObservationalStudyDesign_3",
+                        "$code_for_decode_value": null,
+                        "$value_for_code": null,
+                        "samplingMethod.decode": "Extension",
+                        "name": "Study Design 3",
+                        "$codelist_extensible": true,
+                        "parent_entity": "StudyVersion",
+                        "$code_for_decode_pref_term": null,
+                        "samplingMethod.codeSystem": "CDISC Observational Study Sampling Method (C127260)",
+                        "$codelist_code": "C127260",
+                        "$pref_term_for_code": null,
+                        "samplingMethod.code": "C0047X",
+                        "parent_rel": "studyDesigns",
+                        "parent_id": "StudyVersion_1"
+                    },
+                    "dataset": "ObservationalStudyDesign.xpt",
+                    "row": 3,
+                    "instance_id": "ObservationalStudyDesign_3"
+                },
+                {
+                    "value": {
+                        "samplingMethod.codeSystemVersion": "2025-09-26",
+                        "id": "ObservationalStudyDesign_4",
+                        "$code_for_decode_value": "C127781",
+                        "$value_for_code": null,
+                        "samplingMethod.decode": "NON-PROBABILITY SAMPLE",
+                        "name": "Study Design 4",
+                        "$codelist_extensible": true,
+                        "parent_entity": "StudyVersion",
+                        "$code_for_decode_pref_term": null,
+                        "samplingMethod.codeSystem": "http://www.cdisc.org",
+                        "$codelist_code": "C127260",
+                        "$pref_term_for_code": null,
+                        "samplingMethod.code": "C12778xx",
+                        "parent_rel": "studyDesigns",
+                        "parent_id": "StudyVersion_1"
+                    },
+                    "dataset": "ObservationalStudyDesign.xpt",
+                    "row": 4,
+                    "instance_id": "ObservationalStudyDesign_4"
+                },
+                {
+                    "value": {
+                        "samplingMethod.codeSystemVersion": "sdtmct-2024-09-27",
+                        "id": "ObservationalStudyDesign_5",
+                        "$code_for_decode_value": null,
+                        "$value_for_code": null,
+                        "samplingMethod.decode": "Extension",
+                        "name": "Study Design 5",
+                        "$codelist_extensible": null,
+                        "parent_entity": "StudyVersion",
+                        "$code_for_decode_pref_term": null,
+                        "samplingMethod.codeSystem": "http://www.cdisc.org",
+                        "$codelist_code": "C127260",
+                        "$pref_term_for_code": null,
+                        "samplingMethod.code": "C0047X",
+                        "parent_rel": "studyDesigns",
+                        "parent_id": "StudyVersion_1"
+                    },
+                    "dataset": "ObservationalStudyDesign.xpt",
+                    "row": 5,
+                    "instance_id": "ObservationalStudyDesign_5"
+                },
+                {
+                    "value": {
+                        "samplingMethod.codeSystemVersion": "2016-03-25",
+                        "id": "ObservationalStudyDesign_6",
+                        "$code_for_decode_value": null,
+                        "$value_for_code": null,
+                        "samplingMethod.decode": "PROBABILITY SAMPLE",
+                        "name": "Study Design 6",
+                        "$codelist_extensible": null,
+                        "parent_entity": "StudyVersion",
+                        "$code_for_decode_pref_term": null,
+                        "samplingMethod.codeSystem": "http://www.cdisc.org",
+                        "$codelist_code": "C127260",
+                        "$pref_term_for_code": null,
+                        "samplingMethod.code": "C71517",
+                        "parent_rel": "studyDesigns",
+                        "parent_id": "StudyVersion_1"
+                    },
+                    "dataset": "ObservationalStudyDesign.xpt",
+                    "row": 6,
+                    "instance_id": "ObservationalStudyDesign_6"
+                }
+            ]
+        }
+    ]
+}

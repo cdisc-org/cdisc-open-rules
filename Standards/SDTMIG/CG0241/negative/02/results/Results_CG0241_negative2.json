@@ -1,0 +1,56 @@
+{1 item
+"VS":[1 item
+0:{5 items
+"domain":"VS"
+"errors":[4 items
+0:{4 items
+"row":1
+"seq":3
+"uSubjId":"CDISC001"
+"value":{3 items
+"VSELTM":"-PT4H"
+"VSTPT":"4H PREDOSE"
+"VSTPTNUM":10
+}
+}
+1:{4 items
+"row":2
+"seq":4
+"uSubjId":"CDISC001"
+"value":{3 items
+"VSELTM":"-PT4H"
+"VSTPT":"4H PREDOSE"
+"VSTPTNUM":5
+}
+}
+2:{4 items
+"row":3
+"seq":6
+"uSubjId":"CDISC002"
+"value":{3 items
+"VSELTM":"10"
+"VSTPT":"10MIN POSTDOSE"
+"VSTPTNUM":5
+}
+}
+3:{4 items
+"row":4
+"seq":7
+"uSubjId":"CDISC002"
+"value":{3 items
+"VSELTM":"10"
+"VSTPT":"10MIN POSTDOSE"
+"VSTPTNUM":10
+}
+}
+]
+"executionStatus":"success"
+"message":"VSELTM is not the same value across records with the same values of DOMAIN, VISITNUM, VSTPTREF, and VSTPTNUM"
+"variables":[3 items
+0:"VSELTM"
+1:"VSTPT"
+2:"VSTPTNUM"
+]
+}
+]
+}

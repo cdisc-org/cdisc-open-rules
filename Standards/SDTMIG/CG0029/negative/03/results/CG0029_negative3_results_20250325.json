@@ -1,0 +1,41 @@
+{
+    "RELREC": [
+        {
+            "executionStatus": "success",
+            "dataset": "relrec.xpt",
+            "domain": "RELREC",
+            "variables": [
+                "USUBJID"
+            ],
+            "message": "USUBJID is not found in DM.USUBJID",
+            "errors": [
+                {
+                    "value": {
+                        "USUBJID": "S01"
+                    },
+                    "dataset": "relrec.xpt",
+                    "row": 1,
+                    "USUBJID": "S01"
+                },
+                {
+                    "value": {
+                        "USUBJID": "S02"
+                    },
+                    "dataset": "relrec.xpt",
+                    "row": 2,
+                    "USUBJID": "S02"
+                }
+            ]
+        }
+    ],
+    "DM": [
+        {
+            "executionStatus": "success",
+            "dataset": "dm.xpt",
+            "domain": "DM",
+            "variables": [],
+            "message": null,
+            "errors": []
+        }
+    ]
+}

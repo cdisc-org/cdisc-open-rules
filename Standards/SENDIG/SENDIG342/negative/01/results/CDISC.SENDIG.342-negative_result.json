@@ -1,0 +1,28 @@
+{
+  "TS": [
+    {
+      "executionStatus": "success",
+      "domain": "TS",
+      "variables": [
+        "TSPARMCD"
+      ],
+      "message": "Only one record with TSPARMCD=SDESIGN is allowed",
+      "errors": [
+        {
+          "value": {
+            "TSPARMCD": "SDESIGN"
+          },
+          "row": 59,
+          "seq": 59
+        },
+        {
+          "value": {
+            "TSPARMCD": "SDESIGN"
+          },
+          "row": 60,
+          "seq": 60
+        }
+      ]
+    }
+  ]
+}

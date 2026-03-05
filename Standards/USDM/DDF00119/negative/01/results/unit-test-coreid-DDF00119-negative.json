@@ -1,0 +1,165 @@
+{
+    "StudyDesign": [
+        {
+            "executionStatus": "success",
+            "dataset": "StudyDesign.xpt",
+            "domain": "StudyDesign",
+            "variables": [
+                "$code_for_decode_pref_term",
+                "$code_for_decode_value",
+                "$codelist_code",
+                "$codelist_extensible",
+                "$pref_term_for_code",
+                "$value_for_code",
+                "code",
+                "codeSystem",
+                "codeSystemVersion",
+                "decode",
+                "id",
+                "name",
+                "parent_entity",
+                "parent_id",
+                "parent_rel"
+            ],
+            "message": "The study design's trial type is not specified according to the extensible Trial Type Response (C66739) SDTM codelist - codeSystem is not \"http://www.cdisc.org\", codeSystemVersion is not a valid terminology package date, and/or the code or decode (either as preferred term or as submission value) is found in the codelist (case insensitive) but the corresponding decode or code does not match the codelist value (case sensitive).",
+            "errors": [
+                {
+                    "value": {
+                        "$value_for_code": "BIO-AVAILABILITY",
+                        "$code_for_decode_pref_term": null,
+                        "id": "StudyDesign_1",
+                        "codeSystem": "http://www.cdisc.org",
+                        "$code_for_decode_value": "C49666",
+                        "$codelist_code": "C66739",
+                        "$pref_term_for_code": "Bioavailability Study",
+                        "decode": "EFFICACY",
+                        "parent_id": "StudyVersion_1",
+                        "$codelist_extensible": true,
+                        "parent_entity": "StudyVersion",
+                        "name": "Study Design 1",
+                        "parent_rel": "studyDesigns",
+                        "code": "C49664",
+                        "codeSystemVersion": "2023-12-15"
+                    },
+                    "dataset": "StudyDesign.xpt",
+                    "row": 1
+                },
+                {
+                    "value": {
+                        "$value_for_code": "BIO-AVAILABILITY",
+                        "$code_for_decode_pref_term": null,
+                        "id": "StudyDesign_1",
+                        "codeSystem": "http://www.cdisc.org",
+                        "$code_for_decode_value": null,
+                        "$codelist_code": "C66739",
+                        "$pref_term_for_code": "Bioavailability Study",
+                        "decode": "Bioavailability",
+                        "parent_id": "StudyVersion_1",
+                        "$codelist_extensible": true,
+                        "parent_entity": "StudyVersion",
+                        "name": "Study Design 1",
+                        "parent_rel": "studyDesigns",
+                        "code": "C49664",
+                        "codeSystemVersion": "2023-12-15"
+                    },
+                    "dataset": "StudyDesign.xpt",
+                    "row": 1
+                },
+                {
+                    "value": {
+                        "$value_for_code": null,
+                        "$code_for_decode_pref_term": null,
+                        "id": "StudyDesign_1",
+                        "codeSystem": "http://www.cdisc.org",
+                        "$code_for_decode_value": "C158285",
+                        "$codelist_code": "C66739",
+                        "$pref_term_for_code": null,
+                        "decode": "DEVICE-DRUG INTERACTION",
+                        "parent_id": "StudyVersion_1",
+                        "$codelist_extensible": true,
+                        "parent_entity": "StudyVersion",
+                        "name": "Study Design 1",
+                        "parent_rel": "studyDesigns",
+                        "code": "C158285xx",
+                        "codeSystemVersion": "2023-12-15"
+                    },
+                    "dataset": "StudyDesign.xpt",
+                    "row": 1
+                },
+                {
+                    "value": {
+                        "$value_for_code": "DEVICE-DRUG INTERACTION",
+                        "$code_for_decode_pref_term": "C158285",
+                        "id": "StudyDesign_1",
+                        "codeSystem": "CDISC Trial Type Response",
+                        "$code_for_decode_value": null,
+                        "$codelist_code": "C66739",
+                        "$pref_term_for_code": "Device-Drug Interaction Study",
+                        "decode": "Device-Drug Interaction Study",
+                        "parent_id": "StudyVersion_1",
+                        "$codelist_extensible": true,
+                        "parent_entity": "StudyVersion",
+                        "name": "Study Design 1",
+                        "parent_rel": "studyDesigns",
+                        "code": "C158285",
+                        "codeSystemVersion": "2023-12-15"
+                    },
+                    "dataset": "StudyDesign.xpt",
+                    "row": 1
+                },
+                {
+                    "value": {
+                        "$value_for_code": null,
+                        "$code_for_decode_pref_term": null,
+                        "id": "StudyDesign_1",
+                        "codeSystem": "http://www.cdisc.org",
+                        "$code_for_decode_value": null,
+                        "$codelist_code": "C66739",
+                        "$pref_term_for_code": null,
+                        "decode": "DOSE PROPORTIONALITY",
+                        "parent_id": "StudyVersion_1",
+                        "$codelist_extensible": null,
+                        "parent_entity": "StudyVersion",
+                        "name": "Study Design 1",
+                        "parent_rel": "studyDesigns",
+                        "code": "C158290",
+                        "codeSystemVersion": "P60"
+                    },
+                    "dataset": "StudyDesign.xpt",
+                    "row": 1
+                },
+                {
+                    "value": {
+                        "$value_for_code": "EFFICACY",
+                        "$code_for_decode_pref_term": "C49666",
+                        "id": "StudyDesign_2",
+                        "codeSystem": "http://www.cdisc.org",
+                        "$code_for_decode_value": null,
+                        "$codelist_code": "C66739",
+                        "$pref_term_for_code": "Efficacy Study",
+                        "decode": "EFFICACY STUDY",
+                        "parent_id": "StudyVersion_1",
+                        "$codelist_extensible": true,
+                        "parent_entity": "StudyVersion",
+                        "name": "Study Design 2",
+                        "parent_rel": "studyDesigns",
+                        "code": "C49666",
+                        "codeSystemVersion": "2023-12-15"
+                    },
+                    "dataset": "StudyDesign.xpt",
+                    "row": 2
+                }
+            ]
+        }
+    ],
+    "Code": [
+        {
+            "executionStatus": "skipped",
+            "dataset": "Code.xpt",
+            "domain": "",
+            "variables": [],
+            "message": "Rule skipped - doesn't apply to entity for rule id=, dataset=Code",
+            "errors": []
+        }
+    ]
+}

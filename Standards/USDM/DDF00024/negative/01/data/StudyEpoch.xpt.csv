@@ -1,0 +1,4 @@
+parent_entity,parent_id,parent_rel,rel_type,id,name,description,label,instanceType,type,type.id,type.code,type.codeSystem,type.codeSystemVersion,type.decode,previousId,nextId
+StudyDesign,StudyDesign_1,epochs,definition,StudyEpoch_1,Screening,Screening Epoch,Screening,StudyEpoch,True,Code_129,C202487,http://www.cdisc.org,2023-12-15,Screening Epoch,,StudyEpoch_2
+StudyDesign,StudyDesign_1,epochs,definition,StudyEpoch_2,Treatment,Treatment Epoch,Treatment,StudyEpoch,True,Code_130,C101526,http://www.cdisc.org,2023-12-15,Treatment Epoch,StudyEpoch_1,StudyEpoch_3
+StudyDesign,StudyDesign_2,epochs,definition,StudyEpoch_3,Follow-Up,Follow-up Epoch,Follow Up,StudyEpoch,True,Code_133,C202578,http://www.cdisc.org,2023-12-15,Follow-Up Epoch,StudyEpoch_2,

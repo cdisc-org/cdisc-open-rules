@@ -1,0 +1,47 @@
+{
+  "AE": [
+    {
+      "executionStatus": "success",
+      "domain": "AE",
+      "variables": [
+        "USUBJID"
+      ],
+      "message": "USUBJID is not found in DM.USUBJID",
+      "errors": [
+        {
+          "value": {
+            "USUBJID": "002"
+          },
+          "row": 2,
+          "uSubjId": "002",
+          "seq": 2
+        },
+        {
+          "value": {
+            "USUBJID": "003"
+          },
+          "row": 3,
+          "uSubjId": "003",
+          "seq": 3
+        },
+        {
+          "value": {
+            "USUBJID": "CDISC-TEST-005"
+          },
+          "row": 5,
+          "uSubjId": "CDISC-TEST-005",
+          "seq": 1
+        }
+      ]
+    }
+  ],
+  "DM": [
+    {
+      "executionStatus": "success",
+      "domain": "DM",
+      "variables": [],
+      "message": null,
+      "errors": []
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+    "ScheduledActivityInstance": [
+        {
+            "executionStatus": "skipped",
+            "dataset": "ScheduledActivityInstance.xpt",
+            "domain": "",
+            "variables": [],
+            "message": "Rule skipped - doesn't apply to entity for rule id=, dataset=ScheduledActivityInstance",
+            "errors": []
+        }
+    ],
+    "ScheduleTimeline": [
+        {
+            "executionStatus": "success",
+            "dataset": "ScheduleTimeline.xpt",
+            "domain": "ScheduleTimeline",
+            "variables": [
+                "id",
+                "name",
+                "parent_entity",
+                "parent_id",
+                "parent_rel"
+            ],
+            "message": "The schedule timeline does not contain an anchor (i.e., a scheduled activity instance that is referenced by a Fixed Reference timing).",
+            "errors": [
+                {
+                    "value": {
+                        "parent_entity": "StudyDesign",
+                        "parent_rel": "scheduleTimelines",
+                        "name": "Adverse Event Timeline",
+                        "id": "ScheduleTimeline_1",
+                        "parent_id": "StudyDesign_1"
+                    },
+                    "dataset": "ScheduleTimeline.xpt",
+                    "row": 2
+                },
+                {
+                    "value": {
+                        "parent_entity": "StudyDesign",
+                        "parent_rel": "scheduleTimelines",
+                        "name": "Early Termination Timeline",
+                        "id": "ScheduleTimeline_2",
+                        "parent_id": "StudyDesign_1"
+                    },
+                    "dataset": "ScheduleTimeline.xpt",
+                    "row": 3
+                },
+                {
+                    "value": {
+                        "parent_entity": "StudyDesign",
+                        "parent_rel": "scheduleTimelines",
+                        "name": "Vital Sign Blood Pressure Timeline",
+                        "id": "ScheduleTimeline_3",
+                        "parent_id": "StudyDesign_1"
+                    },
+                    "dataset": "ScheduleTimeline.xpt",
+                    "row": 4
+                }
+            ]
+        }
+    ],
+    "Timing": [
+        {
+            "executionStatus": "skipped",
+            "dataset": "Timing.xpt",
+            "domain": "",
+            "variables": [],
+            "message": "Rule skipped - doesn't apply to entity for rule id=, dataset=Timing",
+            "errors": []
+        }
+    ]
+}

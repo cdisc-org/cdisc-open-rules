@@ -1,0 +1,175 @@
+{
+    "GeographicScope": [
+        {
+            "executionStatus": "success",
+            "dataset": "GeographicScope.xpt",
+            "domain": "GeographicScope",
+            "variables": [
+                "$code_for_decode_pref_term",
+                "$code_for_decode_value",
+                "$codelist_code",
+                "$codelist_extensible",
+                "$pref_term_for_code",
+                "$value_for_code",
+                "id",
+                "parent_entity",
+                "parent_id",
+                "parent_rel",
+                "type.code",
+                "type.codeSystem",
+                "type.codeSystemVersion",
+                "type.decode"
+            ],
+            "message": "The study geographic scope type is not specified using the geographic scope type (C207412) DDF codelist - codeSystem is not \"http://www.cdisc.org\", codeSystemVersion is not a valid terminology package date, the code or decode (either as preferred term or as submission value) is found in the codelist (case insensitive) but the corresponding decode or code does not match the codelist value (case sensitive), and/or neither code nor decode is found in the codelist.",
+            "errors": [
+                {
+                    "value": {
+                        "$value_for_code": null,
+                        "$codelist_code": "C207412",
+                        "$code_for_decode_pref_term": null,
+                        "$pref_term_for_code": null,
+                        "id": "GeographicScope_1",
+                        "type.code": "C68846",
+                        "parent_id": "GovernanceDate_1",
+                        "parent_rel": "geographicScopes",
+                        "$code_for_decode_value": null,
+                        "parent_entity": "GovernanceDate",
+                        "$codelist_extensible": null,
+                        "type.codeSystem": "http://www.cdisc.org",
+                        "type.decode": "Global",
+                        "type.codeSystemVersion": "2023-12-15"
+                    },
+                    "dataset": "GeographicScope.xpt",
+                    "row": 1,
+                    "instance_id": "GeographicScope_1"
+                },
+                {
+                    "value": {
+                        "$value_for_code": "Global",
+                        "$codelist_code": "C207412",
+                        "$code_for_decode_pref_term": "C41129",
+                        "$pref_term_for_code": "Global",
+                        "id": "GeographicScope_2",
+                        "type.code": "C68846",
+                        "parent_id": "GovernanceDate_2",
+                        "parent_rel": "geographicScopes",
+                        "$code_for_decode_value": "C41129",
+                        "parent_entity": "GovernanceDate",
+                        "$codelist_extensible": false,
+                        "type.codeSystem": "http://www.cdisc.org",
+                        "type.decode": "Region",
+                        "type.codeSystemVersion": "2024-09-27"
+                    },
+                    "dataset": "GeographicScope.xpt",
+                    "row": 2,
+                    "instance_id": "GeographicScope_2"
+                },
+                {
+                    "value": {
+                        "$value_for_code": "Country",
+                        "$codelist_code": "C207412",
+                        "$code_for_decode_pref_term": "C25464",
+                        "$pref_term_for_code": "Country",
+                        "id": "GeographicScope_3",
+                        "type.code": "C25464",
+                        "parent_id": "GovernanceDate_3",
+                        "parent_rel": "geographicScopes",
+                        "$code_for_decode_value": "C25464",
+                        "parent_entity": "GovernanceDate",
+                        "$codelist_extensible": false,
+                        "type.codeSystem": "http://www.cdisc.org",
+                        "type.decode": "COUNTRY",
+                        "type.codeSystemVersion": "2024-09-27"
+                    },
+                    "dataset": "GeographicScope.xpt",
+                    "row": 3,
+                    "instance_id": "GeographicScope_3"
+                },
+                {
+                    "value": {
+                        "$value_for_code": null,
+                        "$codelist_code": "C207412",
+                        "$code_for_decode_pref_term": "C25464",
+                        "$pref_term_for_code": null,
+                        "id": "GeographicScope_4",
+                        "type.code": "C25464xx",
+                        "parent_id": "GovernanceDate_3",
+                        "parent_rel": "geographicScopes",
+                        "$code_for_decode_value": "C25464",
+                        "parent_entity": "GovernanceDate",
+                        "$codelist_extensible": false,
+                        "type.codeSystem": "http://www.cdisc.org",
+                        "type.decode": "Country",
+                        "type.codeSystemVersion": "2024-09-27"
+                    },
+                    "dataset": "GeographicScope.xpt",
+                    "row": 4,
+                    "instance_id": "GeographicScope_4"
+                },
+                {
+                    "value": {
+                        "$value_for_code": "Country",
+                        "$codelist_code": "C207412",
+                        "$code_for_decode_pref_term": "C25464",
+                        "$pref_term_for_code": "Country",
+                        "id": "GeographicScope_5",
+                        "type.code": "C25464",
+                        "parent_id": "GovernanceDate_3",
+                        "parent_rel": "geographicScopes",
+                        "$code_for_decode_value": "C25464",
+                        "parent_entity": "GovernanceDate",
+                        "$codelist_extensible": false,
+                        "type.codeSystem": "CDISC",
+                        "type.decode": "Country",
+                        "type.codeSystemVersion": "2024-09-27"
+                    },
+                    "dataset": "GeographicScope.xpt",
+                    "row": 5,
+                    "instance_id": "GeographicScope_5"
+                },
+                {
+                    "value": {
+                        "$value_for_code": null,
+                        "$codelist_code": "C207412",
+                        "$code_for_decode_pref_term": null,
+                        "$pref_term_for_code": null,
+                        "id": "GeographicScope_6",
+                        "type.code": "C25464",
+                        "parent_id": "GovernanceDate_3",
+                        "parent_rel": "geographicScopes",
+                        "$code_for_decode_value": null,
+                        "parent_entity": "GovernanceDate",
+                        "$codelist_extensible": null,
+                        "type.codeSystem": "http://www.cdisc.org",
+                        "type.decode": "Country",
+                        "type.codeSystemVersion": "P59"
+                    },
+                    "dataset": "GeographicScope.xpt",
+                    "row": 6,
+                    "instance_id": "GeographicScope_6"
+                },
+                {
+                    "value": {
+                        "$value_for_code": null,
+                        "$codelist_code": "C207412",
+                        "$code_for_decode_pref_term": null,
+                        "$pref_term_for_code": null,
+                        "id": "GeographicScope_7",
+                        "type.code": "C0031X",
+                        "parent_id": "GovernanceDate_3",
+                        "parent_rel": "geographicScopes",
+                        "$code_for_decode_value": null,
+                        "parent_entity": "GovernanceDate",
+                        "$codelist_extensible": false,
+                        "type.codeSystem": "http://www.cdisc.org",
+                        "type.decode": "Extension",
+                        "type.codeSystemVersion": "2024-09-27"
+                    },
+                    "dataset": "GeographicScope.xpt",
+                    "row": 7,
+                    "instance_id": "GeographicScope_7"
+                }
+            ]
+        }
+    ]
+}

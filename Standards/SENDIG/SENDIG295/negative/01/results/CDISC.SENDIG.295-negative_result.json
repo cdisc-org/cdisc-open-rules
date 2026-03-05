@@ -1,0 +1,31 @@
+[
+  {
+    "executionStatus": "success",
+    "domain": "LB",
+    "variables": [
+      "LBENINT",
+      "LBSTINT"
+    ],
+    "message": "LBSTINT and LBENINT must both be populated or none of them must be populated",
+    "errors": [
+      {
+        "value": {
+          "LBENINT": "",
+          "LBSTINT": "PT05M"
+        },
+        "row": 3,
+        "USUBJID": "CDISC002",
+        "SEQ": 2
+      },
+      {
+        "value": {
+          "LBENINT": "PT08M",
+          "LBSTINT": ""
+        },
+        "row": 4,
+        "USUBJID": "CDISC002",
+        "SEQ": 2
+      }
+    ]
+  }
+]

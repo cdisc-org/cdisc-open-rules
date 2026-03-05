@@ -1,0 +1,71 @@
+{
+    "StudyDesignPopulation": [
+        {
+            "executionStatus": "success",
+            "dataset": "StudyDesignPopulation.xpt",
+            "domain": "StudyDesignPopulation",
+            "variables": [
+                "id",
+                "id.StudyCohort",
+                "name",
+                "name.StudyCohort",
+                "parent_entity",
+                "parent_id",
+                "parent_rel",
+                "plannedAge",
+                "plannedAge.StudyCohort",
+                "plannedAge.maxValue",
+                "plannedAge.maxValue.StudyCohort",
+                "plannedAge.minValue",
+                "plannedAge.minValue.StudyCohort",
+                "plannedAge.unit.decode",
+                "plannedAge.unit.decode.StudyCohort"
+            ],
+            "message": "Planned age has not been specified for either the study population or the cohort, or it has been specified for both.",
+            "errors": [
+                {
+                    "value": {
+                        "parent_entity": "StudyDesign",
+                        "plannedAge.minValue": null,
+                        "plannedAge.unit.decode": null,
+                        "id": "StudyDesignPopulation_1",
+                        "parent_rel": "population",
+                        "plannedAge": null,
+                        "plannedAge.maxValue": null,
+                        "name": "POP1",
+                        "parent_id": "StudyDesign_1",
+                        "plannedAge.maxValue.StudyCohort": "Not in dataset",
+                        "plannedAge.unit.decode.StudyCohort": "Not in dataset",
+                        "plannedAge.minValue.StudyCohort": "Not in dataset",
+                        "plannedAge.StudyCohort": "Not in dataset",
+                        "name.StudyCohort": "Not in dataset",
+                        "id.StudyCohort": "Not in dataset"
+                    },
+                    "dataset": "StudyDesignPopulation.xpt",
+                    "row": 1
+                },
+                {
+                    "value": {
+                        "parent_entity": "StudyDesign",
+                        "plannedAge.minValue": null,
+                        "plannedAge.unit.decode": null,
+                        "id": "StudyDesignPopulation_4",
+                        "parent_rel": "population",
+                        "plannedAge": false,
+                        "plannedAge.maxValue": null,
+                        "name": "POP4",
+                        "parent_id": "StudyDesign_4",
+                        "plannedAge.maxValue.StudyCohort": "Not in dataset",
+                        "plannedAge.unit.decode.StudyCohort": "Not in dataset",
+                        "plannedAge.minValue.StudyCohort": "Not in dataset",
+                        "plannedAge.StudyCohort": "Not in dataset",
+                        "name.StudyCohort": "Not in dataset",
+                        "id.StudyCohort": "Not in dataset"
+                    },
+                    "dataset": "StudyDesignPopulation.xpt",
+                    "row": 2
+                }
+            ]
+        }
+    ]
+}

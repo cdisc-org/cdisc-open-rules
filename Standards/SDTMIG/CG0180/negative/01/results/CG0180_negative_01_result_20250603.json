@@ -1,0 +1,36 @@
+{1 item
+"LB":[1 item
+0:{6 items
+"executionStatus":"success"
+"dataset":"lb.xpt"
+"domain":"LB"
+"variables":[2 items
+0:"LBORNRLO"
+1:"LBORRES"
+]
+"message":"LBORRES is not a continuous measurement but LBORNRLO is not empty."
+"errors":[2 items
+0:{5 items
+"value":{2 items
+"LBORNRLO":"30"
+"LBORRES":"NEGATIVE"
+}
+"dataset":"lb.xpt"
+"row":1
+"USUBJID":"ALB"
+"SEQ":1
+}
+1:{5 items
+"value":{2 items
+"LBORNRLO":"POSITIVE"
+"LBORRES":"POSITIVE"
+}
+"dataset":"lb.xpt"
+"row":2
+"USUBJID":"Prot"
+"SEQ":2
+}
+]
+}
+]
+}

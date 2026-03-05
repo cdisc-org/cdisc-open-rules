@@ -1,0 +1,174 @@
+{3 items
+"datasets":[1 item
+0:{5 items
+"filename":"lb.xpt"
+"label":"Laboratory Test Results"
+"domain":"LB"
+"variables":[13 items
+0:{4 items
+"name":"STUDYID"
+"label":"Study Identifier"
+"type":"Char"
+"length":50
+}
+1:{4 items
+"name":"DOMAIN"
+"label":"Domain Abbreviation"
+"type":"Char"
+"length":50
+}
+2:{4 items
+"name":"USUBJID"
+"label":"Unique Subject Identifier"
+"type":"Char"
+"length":50
+}
+3:{4 items
+"name":"LBSEQ"
+"label":"Sequence Number"
+"type":"Num"
+"length":8
+}
+4:{4 items
+"name":"LBTESTCD"
+"label":"Lab Test or Examination Short Name"
+"type":"Char"
+"length":50
+}
+5:{4 items
+"name":"LBTEST"
+"label":"Lab Test or Examination Name"
+"type":"Char"
+"length":50
+}
+6:{4 items
+"name":"LBORRES"
+"label":"Result or Finding in Original Units"
+"type":"Char"
+"length":50
+}
+7:{4 items
+"name":"LBORRESU"
+"label":"Original Units"
+"type":"Char"
+"length":50
+}
+8:{4 items
+"name":"LBSTRESC"
+"label":"Character Result/Finding in Std Format"
+"type":"Char"
+"length":50
+}
+9:{4 items
+"name":"LBSTRESN"
+"label":"Numeric Result/Finding in Standard Units"
+"type":"Num"
+"length":8
+}
+10:{4 items
+"name":"LBSTRESU"
+"label":"Standard Units"
+"type":"Char"
+"length":50
+}
+11:{4 items
+"name":"LBSTNRLO"
+"label":"Reference Range Lower Limit-Std Units"
+"type":"Char"
+"length":50
+}
+12:{4 items
+"name":"LBSTNRHI"
+"label":"Reference Range Upper Limit-Std Units"
+"type":"Char"
+"length":50
+}
+]
+"records":{13 items
+"STUDYID":[4 items
+0:"123101"
+1:"123101"
+2:"123101"
+3:"123101"
+]
+"DOMAIN":[4 items
+0:"LB"
+1:"LB"
+2:"LB"
+3:"LB"
+]
+"USUBJID":[4 items
+0:"ALB"
+1:"Prot"
+2:"Prot"
+3:"Prot"
+]
+"LBSEQ":[4 items
+0:1
+1:2
+2:3
+3:4
+]
+"LBTESTCD":[4 items
+0:"ALB"
+1:"ALP"
+2:"ALP"
+3:"ALP"
+]
+"LBTEST":[4 items
+0:"Albumin"
+1:"Alkaline Phosphatase"
+2:"Alkaline Phosphatase"
+3:"Alkaline Phosphatase"
+]
+"LBORRES":[4 items
+0:"NEGATIVE"
+1:"POSITIVE"
+2:"40"
+3:".45"
+]
+"LBORRESU":[4 items
+0:"g/L"
+1:"IU/L"
+2:"IU/L"
+3:"IU/L"
+]
+"LBSTRESC":[4 items
+0:"3.0"
+1:"398"
+2:"398"
+3:"398"
+]
+"LBSTRESN":[4 items
+0:3
+1:398
+2:398
+3:398
+]
+"LBSTRESU":[4 items
+0:"g/L"
+1:"IU/L"
+2:"IU/L"
+3:"IU/L"
+]
+"LBSTNRLO":[4 items
+0:""
+1:""
+2:"0"
+3:"10"
+]
+"LBSTNRHI":[4 items
+0:"5"
+1:"POSITIVE"
+2:"40"
+3:"40"
+]
+}
+}
+]
+"standard":{2 items
+"product":"sdtmig"
+"version":"3-4"
+}
+"codelists":[]0 items
+}

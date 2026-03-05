@@ -1,0 +1,61 @@
+{
+    "VS": [
+        {
+            "executionStatus": "success",
+            "dataset": "vs.xpt",
+            "domain": "VS",
+            "variables": [
+                "VSLOBXFL",
+                "VSSTRESC",
+                "VSTESTCD"
+            ],
+            "message": "VSLOBXFL = 'Y', but VSSTRESC is empty.",
+            "errors": [
+                {
+                    "value": {
+                        "VSSTRESC": null,
+                        "VSLOBXFL": "Y",
+                        "VSTESTCD": "DIABP"
+                    },
+                    "dataset": "vs.xpt",
+                    "row": 3,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 3
+                },
+                {
+                    "value": {
+                        "VSSTRESC": null,
+                        "VSLOBXFL": "Y",
+                        "VSTESTCD": "SYSBP"
+                    },
+                    "dataset": "vs.xpt",
+                    "row": 22,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 32
+                },
+                {
+                    "value": {
+                        "VSSTRESC": null,
+                        "VSLOBXFL": "Y",
+                        "VSTESTCD": "TEMP"
+                    },
+                    "dataset": "vs.xpt",
+                    "row": 23,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 46
+                },
+                {
+                    "value": {
+                        "VSSTRESC": null,
+                        "VSLOBXFL": "Y",
+                        "VSTESTCD": "WEIGHT"
+                    },
+                    "dataset": "vs.xpt",
+                    "row": 30,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 53
+                }
+            ]
+        }
+    ]
+}

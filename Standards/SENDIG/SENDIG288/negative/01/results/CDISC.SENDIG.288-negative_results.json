@@ -1,0 +1,48 @@
+{
+  "TS": [
+    {
+      "executionStatus": "success",
+      "dataset": "ts.xpt",
+      "domain": "TS",
+      "variables": [
+        "TSVAL",
+        "TSVALNF"
+      ],
+      "message": "Either both TSVALNF and TSVAL are populated, or both are empty.",
+      "errors": [
+        {
+          "value": {
+            "TSVAL": "100",
+            "TSVALNF": "NA"
+          },
+          "row": 1,
+          "SEQ": 1
+        },
+        {
+          "value": {
+            "TSVAL": "METFORMIN",
+            "TSVALNF": "UNK"
+          },
+          "row": 6,
+          "SEQ": 6
+        },
+        {
+          "value": {
+            "TSVAL": "2",
+            "TSVALNF": "INF"
+          },
+          "row": 21,
+          "SEQ": 21
+        },
+        {
+          "value": {
+            "TSVAL": "",
+            "TSVALNF": ""
+          },
+          "row": 37,
+          "SEQ": 37
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,129 @@
+{
+    "TIMING": [
+        {
+            "executionStatus": "success",
+            "dataset": "Timing.xpt",
+            "domain": "TIMING",
+            "variables": [
+                "id",
+                "name",
+                "parent_entity",
+                "parent_id",
+                "parent_rel",
+                "windowLabel",
+                "windowUpper"
+            ],
+            "message": "The upper limit of the timing window (windowUpper) is not a non-negative duration in ISO 8601 format.",
+            "errors": [
+                {
+                    "value": {
+                        "parent_id": "ScheduleTimeline_4",
+                        "parent_entity": "ScheduleTimeline",
+                        "parent_rel": "timings",
+                        "name": "TIM1",
+                        "windowLabel": "None",
+                        "windowUpper": "-",
+                        "id": "Timing_1"
+                    },
+                    "row": 1
+                },
+                {
+                    "value": {
+                        "parent_id": "ScheduleTimeline_4",
+                        "parent_entity": "ScheduleTimeline",
+                        "parent_rel": "timings",
+                        "name": "TIM2",
+                        "windowLabel": "-4..0 hours",
+                        "windowUpper": "P0H",
+                        "id": "Timing_2"
+                    },
+                    "row": 2
+                },
+                {
+                    "value": {
+                        "parent_id": "ScheduleTimeline_4",
+                        "parent_entity": "ScheduleTimeline",
+                        "parent_rel": "timings",
+                        "name": "TIM3",
+                        "windowLabel": "No upper/lower",
+                        "windowUpper": "NA",
+                        "id": "Timing_3"
+                    },
+                    "row": 3
+                },
+                {
+                    "value": {
+                        "parent_id": "ScheduleTimeline_4",
+                        "parent_entity": "ScheduleTimeline",
+                        "parent_rel": "timings",
+                        "name": "TIM4",
+                        "windowLabel": "-3..3 days",
+                        "windowUpper": "-P3D",
+                        "id": "Timing_4"
+                    },
+                    "row": 4
+                },
+                {
+                    "value": {
+                        "parent_id": "ScheduleTimeline_4",
+                        "parent_entity": "ScheduleTimeline",
+                        "parent_rel": "timings",
+                        "name": "TIM5",
+                        "windowLabel": "-3..3 days",
+                        "windowUpper": "3 days",
+                        "id": "Timing_5"
+                    },
+                    "row": 5
+                },
+                {
+                    "value": {
+                        "parent_id": "ScheduleTimeline_4",
+                        "parent_entity": "ScheduleTimeline",
+                        "parent_rel": "timings",
+                        "name": "TIM6",
+                        "windowLabel": "-3..3 hours",
+                        "windowUpper": "P3H",
+                        "id": "Timing_6"
+                    },
+                    "row": 6
+                },
+                {
+                    "value": {
+                        "parent_id": "ScheduleTimeline_4",
+                        "parent_entity": "ScheduleTimeline",
+                        "parent_rel": "timings",
+                        "name": "TIM7",
+                        "windowLabel": "No upper/lower",
+                        "windowUpper": "0",
+                        "id": "Timing_7"
+                    },
+                    "row": 7
+                },
+                {
+                    "value": {
+                        "parent_id": "ScheduleTimeline_4",
+                        "parent_entity": "ScheduleTimeline",
+                        "parent_rel": "timings",
+                        "name": "TIM8",
+                        "windowLabel": "-3..3 days",
+                        "windowUpper": "3D",
+                        "id": "Timing_8"
+                    },
+                    "row": 8
+                },
+                {
+                    "value": {
+                        "parent_id": "ScheduleTimeline_4",
+                        "parent_entity": "ScheduleTimeline",
+                        "parent_rel": "timings",
+                        "name": "TIM9",
+                        "windowLabel": "-4..0 hours",
+                        "windowUpper": "PT0HR",
+                        "id": "Timing_9"
+                    },
+                    "row": 9
+                }
+            ]
+        }
+    ]
+}

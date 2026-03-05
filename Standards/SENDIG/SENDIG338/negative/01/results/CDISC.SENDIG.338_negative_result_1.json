@@ -1,0 +1,93 @@
+{
+  "EG": [
+    {
+      "executionStatus": "skipped",
+      "domain": "EG",
+      "variables": [],
+      "message": null,
+      "errors": []
+    }
+  ],
+  "FA": [
+    {
+      "executionStatus": "skipped",
+      "domain": "FA",
+      "variables": [],
+      "message": null,
+      "errors": []
+    }
+  ],
+  "MI": [
+    {
+      "executionStatus": "skipped",
+      "domain": "MI",
+      "variables": [],
+      "message": null,
+      "errors": []
+    }
+  ],
+  "LB": [
+    {
+      "executionStatus": "skipped",
+      "domain": "LB",
+      "variables": [],
+      "message": null,
+      "errors": []
+    }
+  ],
+  "VS": [
+    {
+      "executionStatus": "skipped",
+      "domain": "VS",
+      "variables": [],
+      "message": null,
+      "errors": []
+    }
+  ],
+  "CV": [
+    {
+      "executionStatus": "skipped",
+      "domain": "CV",
+      "variables": [],
+      "message": null,
+      "errors": []
+    }
+  ],
+  "RE": [
+    {
+      "executionStatus": "success",
+      "domain": "RE",
+      "variables": [
+        "REDTC",
+        "RESTINT",
+        "RETESTCD",
+        "USUBJID"
+      ],
+      "message": "The respiratory test is not unique for this subject and measurement datetime and/or evaluation interval.",
+      "errors": [
+        {
+          "value": {
+            "RESTINT": "",
+            "USUBJID": "AAA-111-3",
+            "RETESTCD": "RESPRATE",
+            "REDTC": "1999-06-19T08:45"
+          },
+          "row": 1,
+          "USUBJID": "AAA-111-3",
+          "SEQ": 1
+        },
+        {
+          "value": {
+            "RESTINT": "",
+            "USUBJID": "AAA-111-3",
+            "RETESTCD": "RESPRATE",
+            "REDTC": "1999-06-19T08:45"
+          },
+          "row": 2,
+          "USUBJID": "AAA-111-3",
+          "SEQ": 2
+        }
+      ]
+    }
+  ]
+}

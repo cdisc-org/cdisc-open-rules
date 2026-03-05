@@ -1,0 +1,270 @@
+{4 items
+"rule":{9 items
+"Authorities":[1 item
+0:{2 items
+"Organization":"CDISC"
+"Standards":[4 items
+0:{3 items
+"Name":"SDTMIG"
+"References":[1 item
+0:{4 items
+"Citations":[2 items
+0:{4 items
+"Document":"SDTMIG v3.4"
+"Item":"Specification"
+"Section":"7.2.2"
+"Cited_Guidance":"Either TEENRL or TEDUR must be present for each Element."
+}
+1:{4 items
+"Document":"SDTMIG v3.4"
+"Item":"Assumption 12"
+"Section":"7.2.2"
+"Cited_Guidance":"At least one of TEENRL and TEDUR must be populated. Both may be populated."
+}
+]
+"Origin":"SDTM and SDTMIG Conformance Rules"
+"Version":"2.0"
+"Rule_Identifier":{2 items
+"Id":"CG0328"
+"Version":"1"
+}
+}
+]
+"Version":"3.4"
+}
+1:{3 items
+"Name":"SDTMIG"
+"References":[1 item
+0:{4 items
+"Citations":[1 item
+0:{4 items
+"Document":"IG v3.2"
+"Item":"Specification|Assumption 12"
+"Section":"7.2"
+"Cited_Guidance":"Specification[Either TEENRL or TEDUR must be present for each Element.]|Assumption 12[At least one of TEENRL or TEDUR must be populated. Both may be populated.]"
+}
+]
+"Origin":"SDTM and SDTMIG Conformance Rules"
+"Version":"2.0"
+"Rule_Identifier":{2 items
+"Id":"CG0328"
+"Version":"1"
+}
+}
+]
+"Version":"3.2"
+}
+2:{3 items
+"Name":"SDTMIG"
+"References":[1 item
+0:{4 items
+"Citations":[1 item
+0:{4 items
+"Document":"IG v3.3"
+"Item":"Specification|Assumption 12"
+"Section":"7.2.2"
+"Cited_Guidance":"Specification[Either TEENRL or TEDUR must be present for each Element.]|Assumption 12[At least one of TEENRL or TEDUR must be populated. Both may be populated.]"
+}
+]
+"Origin":"SDTM and SDTMIG Conformance Rules"
+"Version":"2.0"
+"Rule_Identifier":{2 items
+"Id":"CG0328"
+"Version":"1"
+}
+}
+]
+"Version":"3.3"
+}
+3:{4 items
+"Name":"TIG"
+"References":[1 item
+0:{4 items
+"Citations":[2 items
+0:{4 items
+"Document":"TIG 1.0"
+"Item":"Specification TEENRL"
+"Section":"2.8.10.28"
+"Cited_Guidance":"Either TEENRL or TEDUR must be present for each Element."
+}
+1:{4 items
+"Document":"TIG 1.0"
+"Item":"Assumption 12"
+"Section":"2.8.10.28"
+"Cited_Guidance":"At least one of TEENRL and TEDUR must be populated. Both may be populated."
+}
+]
+"Origin":"TIG Conformance Rules"
+"Version":"1.0"
+"Rule_Identifier":{2 items
+"Id":"TIG0496"
+"Version":"1"
+}
+}
+]
+"Substandard":"SDTM"
+"Version":"1.0"
+}
+]
+}
+]
+"Check":{1 item
+"all":[2 items
+0:{1 item
+"any":[2 items
+0:{2 items
+"name":"TEDUR"
+"operator":"empty"
+}
+1:{2 items
+"name":"TEDUR"
+"operator":"not_exists"
+}
+]
+}
+1:{1 item
+"any":[2 items
+0:{2 items
+"name":"TEENRL"
+"operator":"empty"
+}
+1:{2 items
+"name":"TEENRL"
+"operator":"not_exists"
+}
+]
+}
+]
+}
+"Core":{3 items
+"Id":"CORE-000027"
+"Status":"Published"
+"Version":"1"
+}
+"Description":"Either TEENRL or TEDUR must be present for each Element."
+"Executability":"Fully Executable"
+"Outcome":{2 items
+"Message":"At least one of TEENRL and TEDUR must be populated."
+"Output_Variables":[3 items
+0:"ETCD"
+1:"TEDUR"
+2:"TEENRL"
+]
+}
+"Scope":{3 items
+"Classes":{1 item
+"Include":[1 item
+0:"TRIAL DESIGN"
+]
+}
+"Domains":{1 item
+"Include":[1 item
+0:"TE"
+]
+}
+"Use_Case":"INDH"
+}
+"Sensitivity":"Record"
+"Rule_Type":"Record Data"
+}
+"datasets":[1 item
+0:{5 items
+"filename":"te.xpt"
+"label":"Trial Elements"
+"domain":"TE"
+"variables":[7 items
+0:{4 items
+"name":"STUDYID"
+"label":"Study Identifier"
+"type":"Char"
+"length":10
+}
+1:{4 items
+"name":"DOMAIN"
+"label":"Domain Abbreviation"
+"type":"Char"
+"length":2
+}
+2:{4 items
+"name":"ETCD"
+"label":"Element Code"
+"type":"Char"
+"length":4
+}
+3:{4 items
+"name":"ELEMENT"
+"label":"Description of Element"
+"type":"Char"
+"length":13
+}
+4:{4 items
+"name":"TESTRL"
+"label":"Rule for Start of Element"
+"type":"Char"
+"length":51
+}
+5:{4 items
+"name":"TEENRL"
+"label":"Rule for End of Element"
+"type":"Char"
+"length":51
+}
+6:{4 items
+"name":"TEDUR"
+"label":"Planned Duration of Element"
+"type":"Char"
+"length":4
+}
+]
+"records":{7 items
+"STUDYID":[4 items
+0:"CDISC-TEST"
+1:"CDISC-TEST"
+2:"CDISC-TEST"
+3:"CDISC-TEST"
+]
+"DOMAIN":[4 items
+0:"TE"
+1:"TE"
+2:"TE"
+3:"TE"
+]
+"ETCD":[4 items
+0:"E000"
+1:"E001"
+2:"E002"
+3:"E003"
+]
+"ELEMENT":[4 items
+0:"SCREENING"
+1:"HUMAN INSULIN"
+2:"METFORMIN"
+3:"FOLLOW-UP"
+]
+"TESTRL":[4 items
+0:"INFORMED CONSENT SIGNED"
+1:"FIRST DOSE OF HUMAN INSULIN"
+2:"FIRST DOSE OF METFORMIN"
+3:"ATTEND FOLLOW-UP VISIT 0 TO 30 DAYS AFTER LAST DOSE"
+]
+"TEENRL":[4 items
+0:""
+1:"XXXX"
+2:""
+3:""
+]
+"TEDUR":[4 items
+0:"P2W"
+1:"P26W"
+2:""
+3:""
+]
+}
+}
+]
+"standard":{2 items
+"product":"sdtmig"
+"version":"3-3"
+}
+"codelists":[]0 items
+}

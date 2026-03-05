@@ -1,0 +1,101 @@
+{
+    "ScheduleTimeline": [
+        {
+            "executionStatus": "skipped",
+            "dataset": "ScheduleTimeline.xpt",
+            "domain": "",
+            "variables": [],
+            "message": "Rule skipped - doesn't apply to entity for rule id=CORE-000870, dataset=ScheduleTimeline",
+            "errors": []
+        }
+    ],
+    "ScheduledActivityInstance": [
+        {
+            "executionStatus": "success",
+            "dataset": "ScheduledActivityInstance.xpt",
+            "domain": "ScheduledActivityInstance",
+            "variables": [
+                "epochId",
+                "id",
+                "mainTimeline",
+                "name",
+                "parent_entity",
+                "parent_id",
+                "parent_rel"
+            ],
+            "message": "The scheduled activity instance is in the main timeline but does not refer to an epoch.",
+            "errors": [
+                {
+                    "value": {
+                        "id": "ScheduledActivityInstance_9",
+                        "mainTimeline": true,
+                        "name": "SCREEN1",
+                        "parent_entity": "ScheduleTimeline",
+                        "parent_rel": "instances",
+                        "parent_id": "ScheduleTimeline_4",
+                        "epochId": "Not in dataset"
+                    },
+                    "dataset": "ScheduledActivityInstance.xpt",
+                    "row": 2,
+                    "instance_id": "ScheduledActivityInstance_9"
+                },
+                {
+                    "value": {
+                        "id": "ScheduledActivityInstance_10",
+                        "mainTimeline": true,
+                        "name": "SCREEN2",
+                        "parent_entity": "ScheduleTimeline",
+                        "parent_rel": "instances",
+                        "parent_id": "ScheduleTimeline_4",
+                        "epochId": "Not in dataset"
+                    },
+                    "dataset": "ScheduledActivityInstance.xpt",
+                    "row": 3,
+                    "instance_id": "ScheduledActivityInstance_10"
+                },
+                {
+                    "value": {
+                        "id": "ScheduledActivityInstance_11",
+                        "mainTimeline": true,
+                        "name": "DOSE",
+                        "parent_entity": "ScheduleTimeline",
+                        "parent_rel": "instances",
+                        "parent_id": "ScheduleTimeline_4",
+                        "epochId": "Not in dataset"
+                    },
+                    "dataset": "ScheduledActivityInstance.xpt",
+                    "row": 4,
+                    "instance_id": "ScheduledActivityInstance_11"
+                },
+                {
+                    "value": {
+                        "id": "ScheduledActivityInstance_12",
+                        "mainTimeline": true,
+                        "name": "WK2",
+                        "parent_entity": "ScheduleTimeline",
+                        "parent_rel": "instances",
+                        "parent_id": "ScheduleTimeline_4",
+                        "epochId": "Not in dataset"
+                    },
+                    "dataset": "ScheduledActivityInstance.xpt",
+                    "row": 5,
+                    "instance_id": "ScheduledActivityInstance_12"
+                },
+                {
+                    "value": {
+                        "id": "ScheduledActivityInstance_1",
+                        "mainTimeline": true,
+                        "name": "AE",
+                        "parent_entity": "ScheduleTimeline",
+                        "parent_rel": "instances",
+                        "parent_id": "ScheduleTimeline_1",
+                        "epochId": "Not in dataset"
+                    },
+                    "dataset": "ScheduledActivityInstance.xpt",
+                    "row": 28,
+                    "instance_id": "ScheduledActivityInstance_1"
+                }
+            ]
+        }
+    ]
+}

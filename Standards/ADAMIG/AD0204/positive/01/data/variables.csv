@@ -1,0 +1,45 @@
+dataset,variable,label,type,length
+adsl.xpt,STUDYID,Study Identifier,Char,50
+adsl.xpt,USUBJID,Unique Subject Identifier,Char,50
+adsl.xpt,FASFL,Full Analysis Set Population Flag,Char,50
+adsl.xpt,SAFFL,Safety Population Flag,Char,50
+adsl.xpt,ITTFL,Intent-To-Treat Population Flag,Char,50
+adsl.xpt,PPROTFL,Per-Protocol Population Flag,Char,50
+adsl.xpt,COMPLFL,Completers Population Flag,Char,50
+adsl.xpt,RANDFL,Randomized Population Flag,Char,50
+adsl.xpt,ENRLFL,Enrolled Population Flag,Char,50
+adsl.xpt,ARM,Description of Planned Arm,Char,50
+adsl.xpt,ACTARM,Description of Actual Arm,Char,50
+adsl.xpt,Age,Num,Num,8
+dm.xpt,STUDYID,Study Identifier,Char,50
+dm.xpt,DOMAIN,Domain Abbreviation,Char,50
+dm.xpt,USUBJID,Unique Subject Identifier,Char,50
+dm.xpt,SUBJID,Subject Identifier for the Study,Char,50
+dm.xpt,RFSTDTC,Subject Reference Start Date/Time,Char,50
+dm.xpt,RFENDTC,Subject Reference End Date/Time,Char,50
+dm.xpt,RFXSTDTC,Date/Time of First Study Treatment,Char,50
+dm.xpt,RFXENDTC,Date/Time of Last Study Treatment,Char,50
+dm.xpt,RFCSTDTC,Date/Time of First Challenge Agent Admin,Char,50
+dm.xpt,RFCENDTC,Date/Time of Last Challenge Agent Admin,Char,50
+dm.xpt,RFICDTC,Date/Time of Informed Consent,Char,50
+dm.xpt,RFPENDTC,Date/Time of End of Participation,Char,50
+dm.xpt,DTHDTC,Date/Time of Death,Char,50
+dm.xpt,DTHFL,Subject Death Flag,Char,50
+dm.xpt,SITEID,Study Site Identifier,Char,50
+dm.xpt,INVID,Investigator Identifier,Char,50
+dm.xpt,INVNAM,Investigator Name,Char,50
+dm.xpt,BRTHDTC,Date/Time of Birth,Char,50
+dm.xpt,AGE,Age,Num,8
+dm.xpt,AGEU,Age Units,Char,50
+dm.xpt,SEX,Sex,Char,50
+dm.xpt,RACE,Race,Char,50
+dm.xpt,ETHNIC,Ethnicity,Char,50
+dm.xpt,ARMCD,Planned Arm Code,Char,50
+dm.xpt,ARM,Description of Planned Arm,Char,50
+dm.xpt,ACTARMCD,Actual Arm Code,Char,50
+dm.xpt,ACTARM,Description of Actual Arm,Char,50
+dm.xpt,ARMNRS,Reason Arm and/or Actual Arm is Null,Char,50
+dm.xpt,ACTARMUD,Description of Unplanned Actual Arm,Char,50
+dm.xpt,COUNTRY,Country,Char,50
+dm.xpt,DMDTC,Date/Time of Collection,Char,50
+dm.xpt,DMDY,Study Day of Collection,Num,8

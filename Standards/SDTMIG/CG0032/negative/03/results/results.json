@@ -1,0 +1,33 @@
+{
+  "LB": [
+    {
+      "executionStatus": "success",
+      "domain": "LB",
+      "variables": [
+        "VISITDY",
+        "VISITNUM"
+      ],
+      "message": "Visit Day cannot be found in Trial Visit (TV) domain",
+      "errors": [
+        {
+          "value": {
+            "VISITNUM": 200,
+            "VISITDY": -15
+          },
+          "row": 2,
+          "uSubjId": "CDISC-TEST-001",
+          "seq": 2
+        }
+      ]
+    }
+  ],
+  "TV": [
+    {
+      "executionStatus": "skipped",
+      "domain": "TV",
+      "variables": [],
+      "message": null,
+      "errors": []
+    }
+  ]
+}

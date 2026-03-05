@@ -1,0 +1,21 @@
+{
+  "TA": [
+    {
+      "executionStatus": "success",
+      "dataset": "ta.xpt",
+      "domain": "TA",
+      "variables": [
+        "ARMCD"
+      ],
+      "message": "Length of ARMCD must be less than or equal to 20 characters",
+      "errors": [
+        {
+          "value": {
+            "ARMCD": "AAAAAAAAAAAAAAAAAAAAA"
+          },
+          "row": 3
+        }
+      ]
+    }
+  ]
+}

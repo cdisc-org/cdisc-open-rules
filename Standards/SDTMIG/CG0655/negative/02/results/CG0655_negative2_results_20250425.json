@@ -1,0 +1,98 @@
+{
+    "SV": [
+        {
+            "executionStatus": "success",
+            "dataset": "sv.xpt",
+            "domain": "SV",
+            "variables": [
+                "SVPRESP",
+                "VISITNUM"
+            ],
+            "message": "VISITNUM for planned visit is not in TV.",
+            "errors": [
+                {
+                    "value": {
+                        "VISITNUM": 14,
+                        "SVPRESP": "Y"
+                    },
+                    "dataset": "sv.xpt",
+                    "row": 3,
+                    "USUBJID": "CDISC001"
+                },
+                {
+                    "value": {
+                        "VISITNUM": 15,
+                        "SVPRESP": "Y"
+                    },
+                    "dataset": "sv.xpt",
+                    "row": 4,
+                    "USUBJID": "CDISC001"
+                },
+                {
+                    "value": {
+                        "VISITNUM": 16,
+                        "SVPRESP": "Y"
+                    },
+                    "dataset": "sv.xpt",
+                    "row": 5,
+                    "USUBJID": "CDISC001"
+                },
+                {
+                    "value": {
+                        "VISITNUM": 5.01,
+                        "SVPRESP": "Y"
+                    },
+                    "dataset": "sv.xpt",
+                    "row": 6,
+                    "USUBJID": "CDISC001"
+                },
+                {
+                    "value": {
+                        "VISITNUM": 17,
+                        "SVPRESP": "Y"
+                    },
+                    "dataset": "sv.xpt",
+                    "row": 7,
+                    "USUBJID": "CDISC001"
+                },
+                {
+                    "value": {
+                        "VISITNUM": 19,
+                        "SVPRESP": "Y"
+                    },
+                    "dataset": "sv.xpt",
+                    "row": 8,
+                    "USUBJID": "CDISC001"
+                },
+                {
+                    "value": {
+                        "VISITNUM": 101,
+                        "SVPRESP": "Y"
+                    },
+                    "dataset": "sv.xpt",
+                    "row": 9,
+                    "USUBJID": "CDISC001"
+                },
+                {
+                    "value": {
+                        "VISITNUM": 201,
+                        "SVPRESP": "Y"
+                    },
+                    "dataset": "sv.xpt",
+                    "row": 10,
+                    "USUBJID": "CDISC001"
+                }
+            ]
+        }
+    ],
+    "TV": [
+        {
+            "executionStatus": "skipped",
+            "dataset": "tv.xpt",
+            "domain": "TV",
+            "variables": [],
+            "message": "Rule skipped - doesn't apply to domain for rule id=CORE-000039, dataset=TV",
+            "errors": []
+        }
+    ]
+}

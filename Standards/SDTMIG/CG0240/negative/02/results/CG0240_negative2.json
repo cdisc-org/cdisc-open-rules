@@ -1,0 +1,69 @@
+{1 item
+"VS":[1 item
+0:{5 items
+"domain":"VS"
+"errors":[6 items
+0:{4 items
+"row":1
+"seq":1
+"uSubjId":"CDISC001"
+"value":{2 items
+"VSTPT":"10MIN POSTDOSE"
+"VSTPTNUM":NULL
+}
+}
+1:{4 items
+"row":2
+"seq":2
+"uSubjId":"CDISC001"
+"value":{2 items
+"VSTPT":""
+"VSTPTNUM":NULL
+}
+}
+2:{4 items
+"row":3
+"seq":3
+"uSubjId":"CDISC001"
+"value":{2 items
+"VSTPT":"PREDOSE"
+"VSTPTNUM":NULL
+}
+}
+3:{4 items
+"row":4
+"seq":4
+"uSubjId":"CDISC001"
+"value":{2 items
+"VSTPT":"PREDOSE"
+"VSTPTNUM":-1
+}
+}
+4:{4 items
+"row":5
+"seq":6
+"uSubjId":"CDISC001"
+"value":{2 items
+"VSTPT":"10MIN POSTDOSE"
+"VSTPTNUM":5
+}
+}
+5:{4 items
+"row":6
+"seq":7
+"uSubjId":"CDISC001"
+"value":{2 items
+"VSTPT":"5MIN POSTDOSE"
+"VSTPTNUM":5
+}
+}
+]
+"executionStatus":"success"
+"message":"VSTPT and VSTPTNUM do not have a one-to-one relationship"
+"variables":[2 items
+0:"VSTPT"
+1:"VSTPTNUM"
+]
+}
+]
+}

@@ -1,0 +1,80 @@
+{
+  "datasets": [
+    {
+      "filename": "studyDesignElements.xpt",
+      "label": "Study Design Elements",
+      "domain": "STUDYDESIGNELEMENTS",
+      "variables": [
+        {
+          "name": "xref",
+          "label": "EL1",
+          "type": "EL2",
+          "length": null
+        },
+        {
+          "name": "studyElementName",
+          "label": "Screening",
+          "type": "Treatment 1",
+          "length": null
+        },
+        {
+          "name": "studyElementDescription",
+          "label": "Screening Element",
+          "type": "Treatment Element 1",
+          "length": null
+        },
+        {
+          "name": "transitionStartRule",
+          "label": "Study Start",
+          "type": "Randomized",
+          "length": null
+        },
+        {
+          "name": "transitionEndRule",
+          "label": "Screened",
+          "type": "Completed treatment 1",
+          "length": null
+        },
+        {
+          "name": "Domain",
+          "label": "STUDYDESIGNELEMENTS",
+          "type": "STUDYDESIGNELEMENTS",
+          "length": null
+        }
+      ],
+      "records": {
+        "xref": [
+          "EL4",
+          "EL5",
+          "EL6"
+        ],
+        "studyElementName": [
+          "Wash Out",
+          "Follow Up",
+          "Complete"
+        ],
+        "studyElementDescription": [
+          "Wash Out Element",
+          "Follow Up Element",
+          null
+        ],
+        "transitionStartRule": [
+          "Completed treatment 1 or 2",
+          "Treated",
+          null
+        ],
+        "transitionEndRule": [
+          "Wash out complete",
+          "Leave Study",
+          null
+        ],
+        "Domain": [
+          "STUDYDESIGNELEMENTS",
+          "STUDYDESIGNELEMENTS",
+          null
+        ]
+      }
+    }
+  ],
+  "codelists": []
+}

@@ -1,0 +1,28 @@
+{
+    "ScheduledActivityInstance": [
+        {
+            "executionStatus": "success",
+            "dataset": "ScheduledActivityInstance.xpt",
+            "domain": null,
+            "variables": [],
+            "message": null,
+            "errors": []
+        }
+    ],
+    "ScheduleTimelineExit": [
+        {
+            "executionStatus": "execution_error",
+            "dataset": "ScheduleTimelineExit.xpt",
+            "domain": "",
+            "variables": [],
+            "message": "rule execution error",
+            "errors": [
+                {
+                    "dataset": "ScheduleTimelineExit.xpt",
+                    "error": "Column not found in data",
+                    "message": "timelineExitId"
+                }
+            ]
+        }
+    ]
+}

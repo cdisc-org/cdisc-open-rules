@@ -1,0 +1,291 @@
+{
+  "rule": {
+    "Authorities": [
+      {
+        "Organization": "CDISC",
+        "Standards": [
+          {
+            "Name": "SENDIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Document": "IG v3.0",
+                    "Section": "7.2.1.1",
+                    "Cited_Guidance": "Elements with different start and end rules are different Elements and must be represented as unique values in ELEMENT and ETCD (i.e., Elements involving the same treatment but different durations are different Elements). The same applies to nontreatment Elements (e.g., a washout with a fixed duration of 14 days is different from a washout that ends after 7 days if drug cannot be detected in a blood sample or after 14 days if drug can be detected in a blood sample). Additional factors beyond treatment, start rule, and either end rule or duration do not distinguish separate Elements."
+                  }
+                ],
+                "Origin": "SEND Conformance Rules",
+                "Version": "5.0",
+                "Rule_Identifier": {
+                  "Id": "SEND216",
+                  "Version": "2"
+                }
+              }
+            ],
+            "Version": "3.0"
+          },
+          {
+            "Name": "SENDIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Document": "IG v3.1",
+                    "Section": "7.2.1.1",
+                    "Cited_Guidance": "Elements with different start and end rules are different Elements and must be represented as unique values in ELEMENT and ETCD (i.e., Elements involving the same treatment but different durations are different Elements). The same applies to nontreatment Elements (e.g., a washout with a fixed duration of 14 days is different from a washout that ends after 7 days if drug cannot be detected in a blood sample or after 14 days if drug can be detected in a blood sample). Additional factors beyond treatment, start rule, and either end rule or duration do not distinguish separate Elements."
+                  }
+                ],
+                "Origin": "SEND Conformance Rules",
+                "Version": "5.0",
+                "Rule_Identifier": {
+                  "Id": "SEND216",
+                  "Version": "2"
+                }
+              }
+            ],
+            "Version": "3.1"
+          },
+          {
+            "Name": "SENDIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Document": "IG v3.1.1",
+                    "Section": "7.2.1.1",
+                    "Cited_Guidance": "Elements with different start and end rules are different Elements and must be represented as unique values in ELEMENT and ETCD (i.e., Elements involving the same treatment but different durations are different Elements). The same applies to nontreatment Elements (e.g., a washout with a fixed duration of 14 days is different from a washout that ends after 7 days if drug cannot be detected in a blood sample or after 14 days if drug can be detected in a blood sample). Additional factors beyond treatment, start rule, and either end rule or duration do not distinguish separate Elements."
+                  }
+                ],
+                "Origin": "SEND Conformance Rules",
+                "Version": "5.0",
+                "Rule_Identifier": {
+                  "Id": "SEND216",
+                  "Version": "2"
+                }
+              }
+            ],
+            "Version": "3.1.1"
+          },
+          {
+            "Name": "SENDIG-DART",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Document": "IG v3.1",
+                    "Section": "7.2.1.1",
+                    "Cited_Guidance": "Elements with different start and end rules are different Elements and must be represented as unique values in ELEMENT and ETCD (i.e., Elements involving the same treatment but different durations are different Elements). The same applies to nontreatment Elements (e.g., a washout with a fixed duration of 14 days is different from a washout that ends after 7 days if drug cannot be detected in a blood sample or after 14 days if drug can be detected in a blood sample). Additional factors beyond treatment, start rule, and either end rule or duration do not distinguish separate Elements."
+                  }
+                ],
+                "Origin": "SEND Conformance Rules",
+                "Version": "5.0",
+                "Rule_Identifier": {
+                  "Id": "SEND216",
+                  "Version": "2"
+                }
+              }
+            ],
+            "Version": "1.1"
+          },
+          {
+            "Name": "SENDIG-DART",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Document": "IG v3.1.1",
+                    "Section": "7.2.1.1",
+                    "Cited_Guidance": "Elements with different start and end rules are different Elements and must be represented as unique values in ELEMENT and ETCD (i.e., Elements involving the same treatment but different durations are different Elements). The same applies to nontreatment Elements (e.g., a washout with a fixed duration of 14 days is different from a washout that ends after 7 days if drug cannot be detected in a blood sample or after 14 days if drug can be detected in a blood sample). Additional factors beyond treatment, start rule, and either end rule or duration do not distinguish separate Elements."
+                  }
+                ],
+                "Origin": "SEND Conformance Rules",
+                "Version": "5.0",
+                "Rule_Identifier": {
+                  "Id": "SEND216",
+                  "Version": "2"
+                }
+              }
+            ],
+            "Version": "1.2"
+          },
+          {
+            "Name": "SENDIG-GENETOX",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Document": "IG v3.1.1",
+                    "Section": "7.2.1.1",
+                    "Cited_Guidance": "Elements with different start and end rules are different Elements and must be represented as unique values in ELEMENT and ETCD (i.e., Elements involving the same treatment but different durations are different Elements). The same applies to nontreatment Elements (e.g., a washout with a fixed duration of 14 days is different from a washout that ends after 7 days if drug cannot be detected in a blood sample or after 14 days if drug can be detected in a blood sample). Additional factors beyond treatment, start rule, and either end rule or duration do not distinguish separate Elements."
+                  }
+                ],
+                "Origin": "SEND Conformance Rules",
+                "Version": "5.0",
+                "Rule_Identifier": {
+                  "Id": "SEND216",
+                  "Version": "2"
+                }
+              }
+            ],
+            "Version": "1.0"
+          }
+        ]
+      }
+    ],
+    "Check": {
+      "any": [
+        {
+          "all": [
+            {
+              "name": "ETCD",
+              "operator": "is_not_unique_set",
+              "value": [
+                "ELEMENT",
+                "TESTRL",
+                "TEENRL"
+              ]
+            },
+            {
+              "name": "TEDUR",
+              "operator": "not_exists"
+            }
+          ]
+        },
+        {
+          "all": [
+            {
+              "name": "ETCD",
+              "operator": "is_not_unique_set",
+              "value": [
+                "ELEMENT",
+                "TESTRL",
+                "TEDUR"
+              ]
+            },
+            {
+              "name": "TEENRL",
+              "operator": "not_exists"
+            }
+          ]
+        },
+        {
+          "name": "ETCD",
+          "operator": "is_not_unique_set",
+          "value": [
+            "ELEMENT",
+            "TESTRL",
+            "TEENRL",
+            "TEDUR"
+          ]
+        }
+      ]
+    },
+    "Core": {
+      "Id": "CDISC.SENDIG.216",
+      "Status": "Draft",
+      "Version": "1"
+    },
+    "Description": "The combination of ELEMENT, TESTRL, TEENRL, and TEDUR must be unique for each ETCD.",
+    "Executability": "Fully Executable",
+    "Outcome": {
+      "Message": "The combination of ELEMENT, TESTRL, TEENRL, and TEDUR is not unique for each ETCD",
+      "Output_Variables": [
+        "ELEMENT",
+        "TESTRL",
+        "TEENRL",
+        "TEDUR"
+      ]
+    },
+    "Scope": {
+      "Classes": {
+        "Include": [
+          "TRIAL DESIGN"
+        ]
+      },
+      "Domains": {
+        "Include": [
+          "TE"
+        ]
+      }
+    },
+    "Sensitivity": "Dataset",
+    "Rule_Type": "Record Data"
+  },
+  "datasets": [
+    {
+      "filename": "te.xpt",
+      "label": "Trial Elements",
+      "domain": "TE",
+      "variables": [
+        {
+          "name": "STUDYID",
+          "label": "Study Identifier",
+          "type": "Char",
+          "length": 10
+        },
+        {
+          "name": "DOMAIN",
+          "label": "Domain Abbreviation",
+          "type": "Char",
+          "length": 2
+        },
+        {
+          "name": "ETCD",
+          "label": "Element Code",
+          "type": "Char",
+          "length": 4
+        },
+        {
+          "name": "ELEMENT",
+          "label": "Description of Element",
+          "type": "Char",
+          "length": 13
+        },
+        {
+          "name": "TESTRL",
+          "label": "Rule for Start of Element",
+          "type": "Char",
+          "length": 51
+        }
+      ],
+      "records": {
+        "STUDYID": [
+          "CDISC-TEST",
+          "CDISC-TEST",
+          "CDISC-TEST",
+          "CDISC-TEST"
+        ],
+        "DOMAIN": [
+          "TE",
+          "TE",
+          "TE",
+          "TE"
+        ],
+        "ETCD": [
+          "E000",
+          "E001",
+          "E002",
+          "E002"
+        ],
+        "ELEMENT": [
+          "SCREENING",
+          "HUMAN INSULIN",
+          "FOLLOW-UP",
+          "FOLLOW-UP"
+        ],
+        "TESTRL": [
+          "INFORMED CONSENT SIGNED",
+          "FIRST DOSE OF HUMAN INSULIN",
+          "ATTEND FOLLOW-UP VISIT 0 TO 30 DAYS AFTER LAST DOSE",
+          "ATTEND FOLLOW-UP VISIT 0 TO 10 DAYS AFTER LAST DOSE"
+        ]
+      }
+    }
+  ],
+  "standard": {
+    "product": "sendig",
+    "version": "3-1"
+  },
+  "codelists": []
+}

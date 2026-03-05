@@ -1,0 +1,28 @@
+{
+    "Code": [
+        {
+            "executionStatus": "execution_error",
+            "dataset": "Code.xpt",
+            "domain": "",
+            "variables": [],
+            "message": "rule execution error",
+            "errors": [
+                {
+                    "dataset": "Code.xpt",
+                    "error": "Column not found in data",
+                    "message": "parent_rel.Code"
+                }
+            ]
+        }
+    ],
+    "AliasCode": [
+        {
+            "executionStatus": "success",
+            "dataset": "AliasCode.xpt",
+            "domain": null,
+            "variables": [],
+            "message": null,
+            "errors": []
+        }
+    ]
+}

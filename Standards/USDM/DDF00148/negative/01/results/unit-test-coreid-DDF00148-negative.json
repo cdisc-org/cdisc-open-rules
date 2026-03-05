@@ -1,0 +1,161 @@
+{
+    "Endpoint": [
+        {
+            "executionStatus": "success",
+            "dataset": "Endpoint.xpt",
+            "domain": "Endpoint",
+            "variables": [
+                "$code_for_decode_pref_term",
+                "$code_for_decode_value",
+                "$codelist_code",
+                "$codelist_extensible",
+                "$pref_term_for_code",
+                "$value_for_code",
+                "id",
+                "level.code",
+                "level.codeSystem",
+                "level.codeSystemVersion",
+                "level.decode",
+                "name",
+                "parent_entity",
+                "parent_id",
+                "parent_rel"
+            ],
+            "message": "The endpoint level is not specified using the endpoint level (C188726) DDF codelist - codeSystem is not \"http://www.cdisc.org\", codeSystemVersion is not a valid terminology package date, the code or decode (either as preferred term or as submission value) is found in the codelist (case insensitive) but the corresponding decode or code does not match the codelist value (case sensitive), and/or neither code nor decode is found in the codelist.",
+            "errors": [
+                {
+                    "value": {
+                        "$value_for_code": "Primary Endpoint",
+                        "$codelist_code": "C188726",
+                        "level.codeSystem": "http://www.cdisc.org",
+                        "$code_for_decode_pref_term": "C139173",
+                        "$pref_term_for_code": "Primary Endpoint",
+                        "id": "Endpoint_1",
+                        "level.codeSystemVersion": "2023-12-15",
+                        "level.code": "C94496",
+                        "parent_id": "Objective_1",
+                        "parent_rel": "endpoints",
+                        "$code_for_decode_value": "C139173",
+                        "parent_entity": "Objective",
+                        "$codelist_extensible": false,
+                        "name": "END1",
+                        "level.decode": "Secondary Endpoint"
+                    },
+                    "dataset": "Endpoint.xpt",
+                    "row": 1,
+                    "instance_id": "Endpoint_1"
+                },
+                {
+                    "value": {
+                        "$value_for_code": "Secondary Endpoint",
+                        "$codelist_code": "C188726",
+                        "level.codeSystem": "http://www.cdisc.org",
+                        "$code_for_decode_pref_term": null,
+                        "$pref_term_for_code": "Secondary Endpoint",
+                        "id": "Endpoint_2",
+                        "level.codeSystemVersion": "2024-09-27",
+                        "level.code": "C139173",
+                        "parent_id": "Objective_1",
+                        "parent_rel": "endpoints",
+                        "$code_for_decode_value": null,
+                        "parent_entity": "Objective",
+                        "$codelist_extensible": false,
+                        "name": "END2",
+                        "level.decode": "Study Secondary Endpoint"
+                    },
+                    "dataset": "Endpoint.xpt",
+                    "row": 2,
+                    "instance_id": "Endpoint_2"
+                },
+                {
+                    "value": {
+                        "$value_for_code": null,
+                        "$codelist_code": "C188726",
+                        "level.codeSystem": "http://www.cdisc.org",
+                        "$code_for_decode_pref_term": "C170559",
+                        "$pref_term_for_code": null,
+                        "id": "Endpoint_3",
+                        "level.codeSystemVersion": "2024-09-27",
+                        "level.code": "C170559xx",
+                        "parent_id": "Objective_2",
+                        "parent_rel": "endpoints",
+                        "$code_for_decode_value": "C170559",
+                        "parent_entity": "Objective",
+                        "$codelist_extensible": false,
+                        "name": "END3",
+                        "level.decode": "Exploratory Endpoint"
+                    },
+                    "dataset": "Endpoint.xpt",
+                    "row": 3,
+                    "instance_id": "Endpoint_3"
+                },
+                {
+                    "value": {
+                        "$value_for_code": "Exploratory Endpoint",
+                        "$codelist_code": "C188726",
+                        "level.codeSystem": "CDISC",
+                        "$code_for_decode_pref_term": "C170559",
+                        "$pref_term_for_code": "Exploratory Endpoint",
+                        "id": "Endpoint_3",
+                        "level.codeSystemVersion": "2024-09-27",
+                        "level.code": "C170559",
+                        "parent_id": "Objective_2",
+                        "parent_rel": "endpoints",
+                        "$code_for_decode_value": "C170559",
+                        "parent_entity": "Objective",
+                        "$codelist_extensible": false,
+                        "name": "END3",
+                        "level.decode": "Exploratory Endpoint"
+                    },
+                    "dataset": "Endpoint.xpt",
+                    "row": 4,
+                    "instance_id": "Endpoint_3"
+                },
+                {
+                    "value": {
+                        "$value_for_code": null,
+                        "$codelist_code": "C188726",
+                        "level.codeSystem": "http://www.cdisc.org",
+                        "$code_for_decode_pref_term": null,
+                        "$pref_term_for_code": null,
+                        "id": "Endpoint_3",
+                        "level.codeSystemVersion": "2024-09-72",
+                        "level.code": "C170559",
+                        "parent_id": "Objective_2",
+                        "parent_rel": "endpoints",
+                        "$code_for_decode_value": null,
+                        "parent_entity": "Objective",
+                        "$codelist_extensible": null,
+                        "name": "END3",
+                        "level.decode": "Exploratory Endpoint"
+                    },
+                    "dataset": "Endpoint.xpt",
+                    "row": 5,
+                    "instance_id": "Endpoint_3"
+                },
+                {
+                    "value": {
+                        "$value_for_code": null,
+                        "$codelist_code": "C188726",
+                        "level.codeSystem": "http://www.cdisc.org",
+                        "$code_for_decode_pref_term": null,
+                        "$pref_term_for_code": null,
+                        "id": "Endpoint_3",
+                        "level.codeSystemVersion": "2024-09-27",
+                        "level.code": "C0034X",
+                        "parent_id": "Objective_2",
+                        "parent_rel": "endpoints",
+                        "$code_for_decode_value": null,
+                        "parent_entity": "Objective",
+                        "$codelist_extensible": false,
+                        "name": "END3",
+                        "level.decode": "Extension"
+                    },
+                    "dataset": "Endpoint.xpt",
+                    "row": 6,
+                    "instance_id": "Endpoint_3"
+                }
+            ]
+        }
+    ]
+}

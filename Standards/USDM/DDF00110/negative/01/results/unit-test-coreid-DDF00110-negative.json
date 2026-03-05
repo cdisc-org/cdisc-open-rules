@@ -1,0 +1,155 @@
+{
+    "EligibilityCriterion": [
+        {
+            "executionStatus": "success",
+            "dataset": "EligibilityCriterion.xpt",
+            "domain": "EligibilityCriterion",
+            "variables": [
+                "$code_for_decode_pref_term",
+                "$code_for_decode_value",
+                "$codelist_code",
+                "$codelist_extensible",
+                "$pref_term_for_code",
+                "$value_for_code",
+                "category.code",
+                "category.codeSystem",
+                "category.codeSystemVersion",
+                "category.decode",
+                "id",
+                "name",
+                "parent_entity",
+                "parent_id",
+                "parent_rel"
+            ],
+            "message": "The eligibility criterion's category is not specified using the Category of Inclusion/Exclusion (C66797) SDTM codelist - codeSystem is not \"http://www.cdisc.org\", codeSystemVersion is not a valid terminology package date, the code or decode (either as preferred term or as submission value) is found in the codelist (case insensitive) but the corresponding decode or code does not match the codelist value (case sensitive), and/or neither code nor decode is found in the codelist.",
+            "errors": [
+                {
+                    "value": {
+                        "category.decode": "EXCLUSION",
+                        "$value_for_code": "INCLUSION",
+                        "category.codeSystemVersion": "2023-12-15",
+                        "id": "EligibilityCriterion_1",
+                        "category.codeSystem": "http://www.cdisc.org",
+                        "$code_for_decode_value": "C25370",
+                        "$codelist_code": "C66797",
+                        "$pref_term_for_code": "Inclusion Criteria",
+                        "category.code": "C25532",
+                        "parent_id": "StudyDesignPopulation_1",
+                        "$codelist_extensible": false,
+                        "parent_entity": "StudyDesignPopulation",
+                        "name": "IN01",
+                        "parent_rel": "criteria",
+                        "$code_for_decode_pref_term": null
+                    },
+                    "dataset": "EligibilityCriterion.xpt",
+                    "row": 1
+                },
+                {
+                    "value": {
+                        "category.decode": "INCLUSION CRITERIA",
+                        "$value_for_code": "INCLUSION",
+                        "category.codeSystemVersion": "2023-12-15",
+                        "id": "EligibilityCriterion_2",
+                        "category.codeSystem": "http://www.cdisc.org",
+                        "$code_for_decode_value": null,
+                        "$codelist_code": "C66797",
+                        "$pref_term_for_code": "Inclusion Criteria",
+                        "category.code": "C25532",
+                        "parent_id": "StudyDesignPopulation_1",
+                        "$codelist_extensible": false,
+                        "parent_entity": "StudyDesignPopulation",
+                        "name": "IN02",
+                        "parent_rel": "criteria",
+                        "$code_for_decode_pref_term": "C25532"
+                    },
+                    "dataset": "EligibilityCriterion.xpt",
+                    "row": 2
+                },
+                {
+                    "value": {
+                        "category.decode": "EXCLUSION",
+                        "$value_for_code": "EXCLUSION",
+                        "category.codeSystemVersion": "2023-12-15",
+                        "id": "EligibilityCriterion_9",
+                        "category.codeSystem": "http://www.cdisc.org/sdtm",
+                        "$code_for_decode_value": "C25370",
+                        "$codelist_code": "C66797",
+                        "$pref_term_for_code": "Exclusion Criteria",
+                        "category.code": "C25370",
+                        "parent_id": "StudyDesignPopulation_1",
+                        "$codelist_extensible": false,
+                        "parent_entity": "StudyDesignPopulation",
+                        "name": "EX01",
+                        "parent_rel": "criteria",
+                        "$code_for_decode_pref_term": null
+                    },
+                    "dataset": "EligibilityCriterion.xpt",
+                    "row": 3
+                },
+                {
+                    "value": {
+                        "category.decode": "Exclusion Criteria",
+                        "$value_for_code": null,
+                        "category.codeSystemVersion": "2023-15-12",
+                        "id": "EligibilityCriterion_10",
+                        "category.codeSystem": "http://www.cdisc.org",
+                        "$code_for_decode_value": null,
+                        "$codelist_code": "C66797",
+                        "$pref_term_for_code": null,
+                        "category.code": "C25370",
+                        "parent_id": "StudyDesignPopulation_1",
+                        "$codelist_extensible": null,
+                        "parent_entity": "StudyDesignPopulation",
+                        "name": "EX02",
+                        "parent_rel": "criteria",
+                        "$code_for_decode_pref_term": null
+                    },
+                    "dataset": "EligibilityCriterion.xpt",
+                    "row": 4
+                },
+                {
+                    "value": {
+                        "category.decode": "Randomization Criteria",
+                        "$value_for_code": null,
+                        "category.codeSystemVersion": "2024-09-27",
+                        "id": "EligibilityCriterion_11",
+                        "category.codeSystem": "http://www.cdisc.org",
+                        "$code_for_decode_value": null,
+                        "$codelist_code": "C66797",
+                        "$pref_term_for_code": null,
+                        "category.code": "C0003x",
+                        "parent_id": "StudyDesignPopulation_1",
+                        "$codelist_extensible": false,
+                        "parent_entity": "StudyDesignPopulation",
+                        "name": "RN01",
+                        "parent_rel": "criteria",
+                        "$code_for_decode_pref_term": null
+                    },
+                    "dataset": "EligibilityCriterion.xpt",
+                    "row": 5
+                },
+                {
+                    "value": {
+                        "category.decode": "Exclusion Criteria",
+                        "$value_for_code": null,
+                        "category.codeSystemVersion": "2024-09-27",
+                        "id": "EligibilityCriterion_12",
+                        "category.codeSystem": "http://www.cdisc.org",
+                        "$code_for_decode_value": null,
+                        "$codelist_code": "C66797",
+                        "$pref_term_for_code": null,
+                        "category.code": "C25370xx",
+                        "parent_id": "StudyDesignPopulation_1",
+                        "$codelist_extensible": false,
+                        "parent_entity": "StudyDesignPopulation",
+                        "name": "EX03",
+                        "parent_rel": "criteria",
+                        "$code_for_decode_pref_term": "C25370"
+                    },
+                    "dataset": "EligibilityCriterion.xpt",
+                    "row": 6
+                }
+            ]
+        }
+    ]
+}

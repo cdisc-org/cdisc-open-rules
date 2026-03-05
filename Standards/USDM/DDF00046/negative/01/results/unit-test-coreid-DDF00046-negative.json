@@ -1,0 +1,281 @@
+{
+    "ScheduledActivityInstance": [
+        {
+            "executionStatus": "success",
+            "dataset": "ScheduledActivityInstance.xpt",
+            "domain": "ScheduledActivityInstance",
+            "variables": [
+                "$parent_of_scheduled_instance",
+                "id",
+                "name",
+                "parent_entity",
+                "parent_id",
+                "parent_id.Timing",
+                "parent_rel"
+            ],
+            "message": "The relative to/from scheduled instance of a timing was not defined within the same timeline as the timing: the parent_id of the scheduled instance ($parent_of_scheduled_instance) is not the same as parent_id of the timing (parent_id.Timing).",
+            "errors": [
+                {
+                    "value": {
+                        "name": "SCREEN1",
+                        "parent_id.Timing": "ScheduleTimeline_1",
+                        "parent_rel": "relativeFromScheduledInstanceId",
+                        "parent_id": "Timing_1",
+                        "$parent_of_scheduled_instance": [
+                            "ScheduleTimeline_4"
+                        ],
+                        "id": "ScheduledActivityInstance_9",
+                        "parent_entity": "Timing"
+                    },
+                    "dataset": "ScheduledActivityInstance.xpt",
+                    "row": 9
+                },
+                {
+                    "value": {
+                        "name": "DOSE",
+                        "parent_id.Timing": "ScheduleTimeline_1",
+                        "parent_rel": "relativeToScheduledInstanceId",
+                        "parent_id": "Timing_1",
+                        "$parent_of_scheduled_instance": [
+                            "ScheduleTimeline_4"
+                        ],
+                        "id": "ScheduledActivityInstance_11",
+                        "parent_entity": "Timing"
+                    },
+                    "dataset": "ScheduledActivityInstance.xpt",
+                    "row": 10
+                },
+                {
+                    "value": {
+                        "name": "SCREEN2",
+                        "parent_id.Timing": "ScheduleTimeline_1",
+                        "parent_rel": "relativeFromScheduledInstanceId",
+                        "parent_id": "Timing_2",
+                        "$parent_of_scheduled_instance": [
+                            "ScheduleTimeline_4"
+                        ],
+                        "id": "ScheduledActivityInstance_10",
+                        "parent_entity": "Timing"
+                    },
+                    "dataset": "ScheduledActivityInstance.xpt",
+                    "row": 11
+                },
+                {
+                    "value": {
+                        "name": "DOSE",
+                        "parent_id.Timing": "ScheduleTimeline_1",
+                        "parent_rel": "relativeToScheduledInstanceId",
+                        "parent_id": "Timing_2",
+                        "$parent_of_scheduled_instance": [
+                            "ScheduleTimeline_4"
+                        ],
+                        "id": "ScheduledActivityInstance_11",
+                        "parent_entity": "Timing"
+                    },
+                    "dataset": "ScheduledActivityInstance.xpt",
+                    "row": 12
+                },
+                {
+                    "value": {
+                        "name": "DOSE",
+                        "parent_id.Timing": "ScheduleTimeline_1",
+                        "parent_rel": "relativeFromScheduledInstanceId",
+                        "parent_id": "Timing_3",
+                        "$parent_of_scheduled_instance": [
+                            "ScheduleTimeline_4"
+                        ],
+                        "id": "ScheduledActivityInstance_11",
+                        "parent_entity": "Timing"
+                    },
+                    "dataset": "ScheduledActivityInstance.xpt",
+                    "row": 13
+                },
+                {
+                    "value": {
+                        "name": "DOSE",
+                        "parent_id.Timing": "ScheduleTimeline_1",
+                        "parent_rel": "relativeToScheduledInstanceId",
+                        "parent_id": "Timing_3",
+                        "$parent_of_scheduled_instance": [
+                            "ScheduleTimeline_4"
+                        ],
+                        "id": "ScheduledActivityInstance_11",
+                        "parent_entity": "Timing"
+                    },
+                    "dataset": "ScheduledActivityInstance.xpt",
+                    "row": 14
+                },
+                {
+                    "value": {
+                        "name": "WK2",
+                        "parent_id.Timing": "ScheduleTimeline_1",
+                        "parent_rel": "relativeFromScheduledInstanceId",
+                        "parent_id": "Timing_4",
+                        "$parent_of_scheduled_instance": [
+                            "ScheduleTimeline_4"
+                        ],
+                        "id": "ScheduledActivityInstance_12",
+                        "parent_entity": "Timing"
+                    },
+                    "dataset": "ScheduledActivityInstance.xpt",
+                    "row": 15
+                },
+                {
+                    "value": {
+                        "name": "DOSE",
+                        "parent_id.Timing": "ScheduleTimeline_1",
+                        "parent_rel": "relativeToScheduledInstanceId",
+                        "parent_id": "Timing_4",
+                        "$parent_of_scheduled_instance": [
+                            "ScheduleTimeline_4"
+                        ],
+                        "id": "ScheduledActivityInstance_11",
+                        "parent_entity": "Timing"
+                    },
+                    "dataset": "ScheduledActivityInstance.xpt",
+                    "row": 16
+                },
+                {
+                    "value": {
+                        "name": "WK4",
+                        "parent_id.Timing": "ScheduleTimeline_1",
+                        "parent_rel": "relativeFromScheduledInstanceId",
+                        "parent_id": "Timing_5",
+                        "$parent_of_scheduled_instance": [
+                            "ScheduleTimeline_4"
+                        ],
+                        "id": "ScheduledActivityInstance_13",
+                        "parent_entity": "Timing"
+                    },
+                    "dataset": "ScheduledActivityInstance.xpt",
+                    "row": 17
+                },
+                {
+                    "value": {
+                        "name": "DOSE",
+                        "parent_id.Timing": "ScheduleTimeline_1",
+                        "parent_rel": "relativeToScheduledInstanceId",
+                        "parent_id": "Timing_5",
+                        "$parent_of_scheduled_instance": [
+                            "ScheduleTimeline_4"
+                        ],
+                        "id": "ScheduledActivityInstance_11",
+                        "parent_entity": "Timing"
+                    },
+                    "dataset": "ScheduledActivityInstance.xpt",
+                    "row": 18
+                },
+                {
+                    "value": {
+                        "name": "WK4",
+                        "parent_id.Timing": "ScheduleTimeline_1",
+                        "parent_rel": "relativeFromScheduledInstanceId",
+                        "parent_id": "Timing_6",
+                        "$parent_of_scheduled_instance": [
+                            "ScheduleTimeline_4"
+                        ],
+                        "id": "ScheduledActivityInstance_13",
+                        "parent_entity": "Timing"
+                    },
+                    "dataset": "ScheduledActivityInstance.xpt",
+                    "row": 19
+                },
+                {
+                    "value": {
+                        "name": "WK6",
+                        "parent_id.Timing": "ScheduleTimeline_1",
+                        "parent_rel": "relativeFromScheduledInstanceId",
+                        "parent_id": "Timing_7",
+                        "$parent_of_scheduled_instance": [
+                            "ScheduleTimeline_4"
+                        ],
+                        "id": "ScheduledActivityInstance_14",
+                        "parent_entity": "Timing"
+                    },
+                    "dataset": "ScheduledActivityInstance.xpt",
+                    "row": 20
+                },
+                {
+                    "value": {
+                        "name": "DOSE",
+                        "parent_id.Timing": "ScheduleTimeline_1",
+                        "parent_rel": "relativeToScheduledInstanceId",
+                        "parent_id": "Timing_7",
+                        "$parent_of_scheduled_instance": [
+                            "ScheduleTimeline_4"
+                        ],
+                        "id": "ScheduledActivityInstance_11",
+                        "parent_entity": "Timing"
+                    },
+                    "dataset": "ScheduledActivityInstance.xpt",
+                    "row": 21
+                },
+                {
+                    "value": {
+                        "name": "DOSE",
+                        "parent_id.Timing": "ScheduleTimeline_1",
+                        "parent_rel": "relativeToScheduledInstanceId",
+                        "parent_id": "Timing_8",
+                        "$parent_of_scheduled_instance": [
+                            "ScheduleTimeline_4"
+                        ],
+                        "id": "ScheduledActivityInstance_11",
+                        "parent_entity": "Timing"
+                    },
+                    "dataset": "ScheduledActivityInstance.xpt",
+                    "row": 22
+                }
+            ]
+        }
+    ],
+    "ScheduledDecisionInstance": [
+        {
+            "executionStatus": "success",
+            "dataset": "ScheduledDecisionInstance.xpt",
+            "domain": "ScheduledDecisionInstance",
+            "variables": [
+                "$parent_of_scheduled_instance",
+                "id",
+                "name",
+                "parent_entity",
+                "parent_id",
+                "parent_id.Timing",
+                "parent_rel"
+            ],
+            "message": "The relative to/from scheduled instance of a timing was not defined within the same timeline as the timing: the parent_id of the scheduled instance ($parent_of_scheduled_instance) is not the same as parent_id of the timing (parent_id.Timing).",
+            "errors": [
+                {
+                    "value": {
+                        "name": "Meet requirements for WK6 or end",
+                        "parent_id.Timing": "ScheduleTimeline_1",
+                        "parent_rel": "relativeToScheduledInstanceId",
+                        "parent_id": "Timing_6",
+                        "$parent_of_scheduled_instance": [
+                            "ScheduleTimeline_4"
+                        ],
+                        "id": "ScheduledDecisionInstance_1",
+                        "parent_entity": "Timing"
+                    },
+                    "dataset": "ScheduledDecisionInstance.xpt",
+                    "row": 3
+                }
+            ]
+        }
+    ],
+    "Timing": [
+        {
+            "executionStatus": "execution_error",
+            "dataset": "Timing.xpt",
+            "domain": "",
+            "variables": [],
+            "message": "rule execution error",
+            "errors": [
+                {
+                    "dataset": "Timing.xpt",
+                    "error": "Column not found in data",
+                    "message": "rel_type.Timing"
+                }
+            ]
+        }
+    ]
+}

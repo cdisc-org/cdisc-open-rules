@@ -1,0 +1,23 @@
+{
+  "TS": [
+    {
+      "executionStatus": "success",
+      "domain": "TS",
+      "variables": [
+        "TSPARMCD",
+        "TSVAL"
+      ],
+      "message": "The value of TSVAL is not \"Y\" or \"N\" for TSPARMCD=SRANDOM",
+      "errors": [
+        {
+          "value": {
+            "TSPARMCD": "SRANDOM",
+            "TSVAL": "Maybe"
+          },
+          "row": 5,
+          "SEQ": 5
+        }
+      ]
+    }
+  ]
+}

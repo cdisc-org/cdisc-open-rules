@@ -1,0 +1,1677 @@
+{
+    "rule": {
+        "Authorities": [
+            {
+                "Organization": "CDISC",
+                "Standards": [
+                    {
+                        "Name": "SDTMIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "Model v2.0",
+                                        "Item": "IDVARVAL",
+                                        "Section": "Comments",
+                                        "Cited_Guidance": "Value of identifying variable of the parent record(s)."
+                                    },
+                                    {
+                                        "Document": "Model v2.0",
+                                        "Item": "IDVARVAL",
+                                        "Section": "Supplemental Qualifiers",
+                                        "Cited_Guidance": "Value of identifying variable of the parent record(s)."
+                                    },
+                                    {
+                                        "Document": "Model v2.0",
+                                        "Item": "IDVARVAL",
+                                        "Section": "Related Records",
+                                        "Cited_Guidance": "Value of identifying variable described in IDVAR."
+                                    }
+                                ],
+                                "Origin": "SDTM and SDTMIG Conformance Rules",
+                                "Version": "2.0",
+                                "Rule_Identifier": {
+                                    "Id": "CG0371",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.4"
+                    },
+                    {
+                        "Name": "SDTMIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "Model v1.4",
+                                        "Section": "2.2.7",
+                                        "Cited_Guidance": "Value of identifying variable of the parent record(s)."
+                                    }
+                                ],
+                                "Origin": "SDTM and SDTMIG Conformance Rules",
+                                "Version": "2.0",
+                                "Rule_Identifier": {
+                                    "Id": "CG0371",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.2"
+                    },
+                    {
+                        "Name": "SDTMIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "Model v1.7",
+                                        "Section": "2.2.7",
+                                        "Cited_Guidance": "Value of identifying variable of the parent record(s)."
+                                    }
+                                ],
+                                "Origin": "SDTM and SDTMIG Conformance Rules",
+                                "Version": "2.0",
+                                "Rule_Identifier": {
+                                    "Id": "CG0371",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.3"
+                    },
+                    {
+                        "Name": "TIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "SDTM v2.1",
+                                        "Item": "IDVARVAL",
+                                        "Section": "3.2.2 Comments",
+                                        "Cited_Guidance": "Identifying variable in the parent dataset that identifies the record(s) to which the comment applies."
+                                    },
+                                    {
+                                        "Document": "SDTM v2.1",
+                                        "Item": "IDVARVAL",
+                                        "Section": "6.2 Supplemental Qualifiers Datasets",
+                                        "Cited_Guidance": "Name of the identifying variable in the general-observation-class dataset that identifies the related record(s)."
+                                    },
+                                    {
+                                        "Document": "SDTM v2.1",
+                                        "Item": "IDVARVAL",
+                                        "Section": "Section 6.1 Related Records Dataset",
+                                        "Cited_Guidance": "Name of the  identifying variable in the general-observation-class dataset that identifies the related record(s)."
+                                    }
+                                ],
+                                "Origin": "TIG Conformance Rules",
+                                "Version": "1.0",
+                                "Rule_Identifier": {
+                                    "Id": "TIG0535",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Substandard": "SDTM",
+                        "Version": "1.0"
+                    },
+                    {
+                        "Name": "SENDIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "SENDIG v3.0",
+                                        "Item": "Assumption 3.a",
+                                        "Section": "5.2.1",
+                                        "Cited_Guidance": "CDISC Notes for IDVAR and IDVARVAL: 'Identifiying variable of the parent record(s)to which the comment applies.' and 'Value of identifying variable of the parent record(s).', respectively."
+                                    }
+                                ],
+                                "Origin": "SEND Conformance Rules",
+                                "Version": "5.0",
+                                "Rule_Identifier": {
+                                    "Id": "SEND121",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.0"
+                    },
+                    {
+                        "Name": "SENDIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "SENDIG v3.1",
+                                        "Item": "Assumption 3.a",
+                                        "Section": "5.2.1.1",
+                                        "Cited_Guidance": "Related to a specific parent record or group of parent records, in which case the value of the variable RDOMAIN is set to the DOMAIN code of the parent record(s), and the variables IDVAR and IDVARVAL are populated with the key variable name and value of the parent record(s). Assumptions for populating IDVAR and IDVARVAL are further described in Section 8.2."
+                                    }
+                                ],
+                                "Origin": "SEND Conformance Rules",
+                                "Version": "5.0",
+                                "Rule_Identifier": {
+                                    "Id": "SEND121",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.1"
+                    },
+                    {
+                        "Name": "SENDIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "SENDIG v3.1.1",
+                                        "Item": "Assumption 3.a",
+                                        "Section": "5.2.1.1",
+                                        "Cited_Guidance": "Related to a specific parent record or group of parent records, in which case the value of the variable RDOMAIN is set to the DOMAIN code of the parent record(s), and the variables IDVAR and IDVARVAL are populated with the key variable name and value of the parent record(s). Assumptions for populating IDVAR and IDVARVAL are further described in Section 8.2."
+                                    }
+                                ],
+                                "Origin": "SEND Conformance Rules",
+                                "Version": "5.0",
+                                "Rule_Identifier": {
+                                    "Id": "SEND121",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.1.1"
+                    },
+                    {
+                        "Name": "SENDIG-DART",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "SENDIG v3.1",
+                                        "Item": "Assumption 3.a",
+                                        "Section": "5.2.1.1",
+                                        "Cited_Guidance": "Related to a specific parent record or group of parent records, in which case the value of the variable RDOMAIN is set to the DOMAIN code of the parent record(s), and the variables IDVAR and IDVARVAL are populated with the key variable name and value of the parent record(s). Assumptions for populating IDVAR and IDVARVAL are further described in Section 8.2."
+                                    }
+                                ],
+                                "Origin": "SEND Conformance Rules",
+                                "Version": "5.0",
+                                "Rule_Identifier": {
+                                    "Id": "SEND121",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "1.1"
+                    },
+                    {
+                        "Name": "SENDIG-DART",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "SENDIG v3.1.1",
+                                        "Item": "Assumption 3.a",
+                                        "Section": "5.2.1.1",
+                                        "Cited_Guidance": "Related to a specific parent record or group of parent records, in which case the value of the variable RDOMAIN is set to the DOMAIN code of the parent record(s), and the variables IDVAR and IDVARVAL are populated with the key variable name and value of the parent record(s). Assumptions for populating IDVAR and IDVARVAL are further described in Section 8.2."
+                                    }
+                                ],
+                                "Origin": "SEND Conformance Rules",
+                                "Version": "5.0",
+                                "Rule_Identifier": {
+                                    "Id": "SEND121",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "1.2"
+                    },
+                    {
+                        "Name": "SENDIG-GENETOX",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "SENDIG v3.1.1",
+                                        "Item": "Assumption 3.a",
+                                        "Section": "5.2.1.1",
+                                        "Cited_Guidance": "Related to a specific parent record or group of parent records, in which case the value of the variable RDOMAIN is set to the DOMAIN code of the parent record(s), and the variables IDVAR and IDVARVAL are populated with the key variable name and value of the parent record(s). Assumptions for populating IDVAR and IDVARVAL are further described in Section 8.2."
+                                    }
+                                ],
+                                "Origin": "SEND Conformance Rules",
+                                "Version": "5.0",
+                                "Rule_Identifier": {
+                                    "Id": "SEND121",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "1.0"
+                    },
+                    {
+                        "Name": "TIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "TIG v1.0",
+                                        "Item": "Assumption 3.a",
+                                        "Section": "2.8.9.4 SEND Comments (CO)",
+                                        "Cited_Guidance": "Related to a specific parent record or group of parent records, in which case the value of the variable RDOMAIN is set to the DOMAIN code of the parent record(s), and the variables IDVAR and IDVARVAL are populated with the key variable name and value of the parent record(s)."
+                                    }
+                                ],
+                                "Origin": "TIG Conformance Rules",
+                                "Version": "1.0",
+                                "Rule_Identifier": {
+                                    "Id": "TIG0058",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Substandard": "SEND",
+                        "Version": "1.0"
+                    }
+                ]
+            }
+        ],
+        "Check": {
+            "all": [
+                {
+                    "name": "IDVAR",
+                    "operator": "non_empty"
+                },
+                {
+                    "name": "IDVARVAL",
+                    "operator": "non_empty"
+                },
+                {
+                    "name": "IDVARVAL",
+                    "operator": "not_equal_to",
+                    "type_insensitive": true,
+                    "value": "IDVAR",
+                    "value_is_reference": true
+                }
+            ]
+        },
+        "Core": {
+            "Id": "CORE-000206",
+            "Status": "Published",
+            "Version": "1"
+        },
+        "Description": "When IDVAR is populated, IDVARVAL must equal a value of the variable referenced by IDVAR within the domain referenced by RDOMAIN",
+        "Executability": "Fully Executable",
+        "Outcome": {
+            "Message": "IDVARVAL does not equal a value of the variable referenced by IDVAR in domain = RDOMAIN.",
+            "Output_Variables": [
+                "RDOMAIN",
+                "USUBJID",
+                "IDVAR",
+                "IDVARVAL"
+            ]
+        },
+        "Scope": {
+            "Classes": {
+                "Include": [
+                    "SPECIAL PURPOSE",
+                    "RELATIONSHIP"
+                ]
+            },
+            "Domains": {
+                "Include": [
+                    "CO",
+                    "SUPP--",
+                    "RELREC"
+                ]
+            },
+            "Use_Case": "NONCLIN, INDH, PROD"
+        },
+        "Sensitivity": "Record",
+        "Match_Datasets": [
+            {
+                "Child": true,
+                "Keys": [
+                    "USUBJID",
+                    "IDVAR",
+                    "IDVARVAL"
+                ],
+                "Name": "SUPP--",
+                "Is_Relationship": true
+            },
+            {
+                "Child": true,
+                "Keys": [
+                    "USUBJID",
+                    "IDVAR",
+                    "IDVARVAL"
+                ],
+                "Name": "CO",
+                "Is_Relationship": true
+            },
+            {
+                "Child": true,
+                "Keys": [
+                    "USUBJID",
+                    "IDVAR",
+                    "IDVARVAL"
+                ],
+                "Name": "RELREC",
+                "Is_Relationship": true
+            }
+        ],
+        "Rule_Type": "Record Data"
+    },
+    "datasets": [
+        {
+            "filename": "co.xpt",
+            "label": "Comments",
+            "domain": "CO",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "DOMAIN",
+                    "label": "Domain Abbreviation",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "RDOMAIN",
+                    "label": "Related Domain Abbreviation",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "USUBJID",
+                    "label": "Unique Subject Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "COSEQ",
+                    "label": "Sequence Number",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "COREF",
+                    "label": "Comment Reference",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "COVAL",
+                    "label": "Comment",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "COEVAL",
+                    "label": "Evaluator",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "COEVALID",
+                    "label": "Evaluator Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "CODTC",
+                    "label": "Date/Time of Comment",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "CODY",
+                    "label": "Study Day of Comment",
+                    "type": "Num",
+                    "length": 8
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "CDISC-PILOT-01",
+                    "CDISC-PILOT-02"
+                ],
+                "DOMAIN": [
+                    "CO",
+                    "CO"
+                ],
+                "RDOMAIN": [
+                    "LB",
+                    "LB"
+                ],
+                "USUBJID": [
+                    "S001",
+                    "S002"
+                ],
+                "COSEQ": [
+                    1,
+                    2
+                ],
+                "COREF": [
+                    "",
+                    ""
+                ],
+                "COVAL": [
+                    "test comment",
+                    "test comment"
+                ],
+                "COEVAL": [
+                    "",
+                    ""
+                ],
+                "COEVALID": [
+                    "",
+                    ""
+                ],
+                "CODTC": [
+                    "",
+                    ""
+                ],
+                "CODY": [
+                    null,
+                    null
+                ]
+            }
+        },
+        {
+            "filename": "relrec.xpt",
+            "label": "Related Records",
+            "domain": "RELREC",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "RDOMAIN",
+                    "label": "Related Domain Abbreviation",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "USUBJID",
+                    "label": "Unique Subject Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "IDVAR",
+                    "label": "Identifying Variable",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "IDVARVAL",
+                    "label": "Identifying Variable Value",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "RELTYPE",
+                    "label": "Relationship Type",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "RELID",
+                    "label": "Relationship Identifier",
+                    "type": "Char",
+                    "length": 50
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "CDISC-PILOT-01"
+                ],
+                "RDOMAIN": [
+                    "LB"
+                ],
+                "USUBJID": [
+                    "S001"
+                ],
+                "IDVAR": [
+                    "LBSEQ"
+                ],
+                "IDVARVAL": [
+                    "320"
+                ],
+                "RELTYPE": [
+                    "ONE"
+                ],
+                "RELID": [
+                    "1"
+                ]
+            }
+        },
+        {
+            "filename": "supplb.xpt",
+            "label": "Supplemental Qualifiers for Laboratory",
+            "domain": "SUPPLB",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "RDOMAIN",
+                    "label": "Related Domain Abbreviation",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "USUBJID",
+                    "label": "Unique Subject Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "IDVAR",
+                    "label": "Identifying Variable",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "QNAM",
+                    "label": "Qualifier Variable Name",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "QLABEL",
+                    "label": "Qualifier Variable Label",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "QVAL",
+                    "label": "Data Value",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "QORIG",
+                    "label": "Origin",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "QEVAL",
+                    "label": "Evaluator",
+                    "type": "Char",
+                    "length": 50
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "CDISC-PILOT-01",
+                    "CDISC-PILOT-02"
+                ],
+                "RDOMAIN": [
+                    "LB",
+                    "LB"
+                ],
+                "USUBJID": [
+                    "S001",
+                    "S002"
+                ],
+                "IDVAR": [
+                    "LBSEQ",
+                    ""
+                ],
+                "QNAM": [
+                    "LBCLSIG",
+                    "LBCLSIG"
+                ],
+                "QLABEL": [
+                    "Clinically Significant",
+                    "Clinically Significant"
+                ],
+                "QVAL": [
+                    "Y",
+                    "Y"
+                ],
+                "QORIG": [
+                    "CRF",
+                    "CRF"
+                ],
+                "QEVAL": [
+                    "",
+                    ""
+                ]
+            }
+        },
+        {
+            "filename": "lb.xpt",
+            "label": "Labotory Results",
+            "domain": "LB",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "DOMAIN",
+                    "label": "Domain Abbreviation",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "USUBJID",
+                    "label": "Unique Subject Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "LBSEQ",
+                    "label": "Sequence Number",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "LBGRPID",
+                    "label": "Group ID",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "LBREFID",
+                    "label": "Specimen ID",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "LBSPID",
+                    "label": "Sponsor-Defined Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "LBTESTCD",
+                    "label": "Lab Test or Examination Short Name",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "LBTEST",
+                    "label": "Lab Test or Examination Name",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "LBTSTCND",
+                    "label": "Test Condition",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "LBBDAGNT",
+                    "label": "Binding Agent",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "LBTSTOPO",
+                    "label": "Test Operational Objective",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "LBCAT",
+                    "label": "Category for Lab Test",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "LBSCAT",
+                    "label": "Subcategory for Lab Test",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "LBORRES",
+                    "label": "Result or Finding in Original Units",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "LBORRESU",
+                    "label": "Original Units",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "LBRESSCL",
+                    "label": "Result Scale",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "LBRESTYP",
+                    "label": "Result Type",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "LBCOLSRT",
+                    "label": "Collected Summary Result Type",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "LBORNRLO",
+                    "label": "Reference Range Lower Limit in Orig Unit",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "LBORNRHI",
+                    "label": "Reference Range Upper Limit in Orig Unit",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "LBLLOD",
+                    "label": "Lower Limit of Detection",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "LBSTRESC",
+                    "label": "Character Result/Finding in Std Format",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "LBSTRESN",
+                    "label": "Numeric Result/Finding in Standard Units",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "LBSTRESU",
+                    "label": "Standard Units",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "LBSTNRLO",
+                    "label": "Reference Range Lower Limit-Std Units",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "LBSTNRHI",
+                    "label": "Reference Range Upper Limit-Std Units",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "LBSTNRC",
+                    "label": "Reference Range for Char Rslt-Std Units",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "LBNRIND",
+                    "label": "Reference Range Indicator",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "LBSTAT",
+                    "label": "Completion Status",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "LBREASND",
+                    "label": "Reason Test Not Done",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "LBNAM",
+                    "label": "Vendor Name",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "LBLOINC",
+                    "label": "LOINC Code",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "LBSPEC",
+                    "label": "Specimen Type",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "LBSPCCND",
+                    "label": "Specimen Condition",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "LBSPCUFL",
+                    "label": "Specimen Usability for the Test",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "LBMETHOD",
+                    "label": "Method of Test or Examination",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "LBANMETH",
+                    "label": "Analysis Method",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "LBTMTHSN",
+                    "label": "Test Method Sensitivity",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "LBLOBXFL",
+                    "label": "Last Observation Before Exposure Flag",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "LBBLFL",
+                    "label": "Baseline Flag",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "LBFAST",
+                    "label": "Fasting Status",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "LBDRVFL",
+                    "label": "Derived Flag",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "LBTOX",
+                    "label": "Toxicity",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "LBTOXGR",
+                    "label": "Standard Toxicity Grade",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "LBCLSIG",
+                    "label": "Clinically Significant, Collected",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "VISITNUM",
+                    "label": "Visit Number",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "VISIT",
+                    "label": "Visit Name",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "VISITDY",
+                    "label": "Planned Study Day of Visit",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "TAETORD",
+                    "label": "Planned Order of Element within Arm",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "EPOCH",
+                    "label": "Epoch",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "LBDTC",
+                    "label": "Date/Time of Specimen Collection",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "LBENDTC",
+                    "label": "End Date/Time of Specimen Collection",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "LBDY",
+                    "label": "Study Day of Specimen Collection",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "LBENDY",
+                    "label": "Study Day of End of Observation",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "LBTPT",
+                    "label": "Planned Time Point Name",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "LBTPTNUM",
+                    "label": "Planned Time Point Number",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "LBELTM",
+                    "label": "Planned Elapsed Time from Time Point Ref",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "LBTPTREF",
+                    "label": "Time Point Reference",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "LBRFTDTC",
+                    "label": "Date/Time of Reference Time Point",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "LBPTFL",
+                    "label": "Point in Time Flag",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "LBPDUR",
+                    "label": "Planned Duration",
+                    "type": "Char",
+                    "length": 50
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "CDISC-PILOT-01"
+                ],
+                "DOMAIN": [
+                    "LB"
+                ],
+                "USUBJID": [
+                    "S001"
+                ],
+                "LBSEQ": [
+                    320
+                ],
+                "LBGRPID": [
+                    ""
+                ],
+                "LBREFID": [
+                    ""
+                ],
+                "LBSPID": [
+                    ""
+                ],
+                "LBTESTCD": [
+                    ""
+                ],
+                "LBTEST": [
+                    ""
+                ],
+                "LBTSTCND": [
+                    ""
+                ],
+                "LBBDAGNT": [
+                    ""
+                ],
+                "LBTSTOPO": [
+                    ""
+                ],
+                "LBCAT": [
+                    ""
+                ],
+                "LBSCAT": [
+                    ""
+                ],
+                "LBORRES": [
+                    ""
+                ],
+                "LBORRESU": [
+                    ""
+                ],
+                "LBRESSCL": [
+                    ""
+                ],
+                "LBRESTYP": [
+                    ""
+                ],
+                "LBCOLSRT": [
+                    ""
+                ],
+                "LBORNRLO": [
+                    ""
+                ],
+                "LBORNRHI": [
+                    ""
+                ],
+                "LBLLOD": [
+                    ""
+                ],
+                "LBSTRESC": [
+                    ""
+                ],
+                "LBSTRESN": [
+                    null
+                ],
+                "LBSTRESU": [
+                    ""
+                ],
+                "LBSTNRLO": [
+                    null
+                ],
+                "LBSTNRHI": [
+                    null
+                ],
+                "LBSTNRC": [
+                    ""
+                ],
+                "LBNRIND": [
+                    ""
+                ],
+                "LBSTAT": [
+                    ""
+                ],
+                "LBREASND": [
+                    ""
+                ],
+                "LBNAM": [
+                    ""
+                ],
+                "LBLOINC": [
+                    ""
+                ],
+                "LBSPEC": [
+                    ""
+                ],
+                "LBSPCCND": [
+                    ""
+                ],
+                "LBSPCUFL": [
+                    ""
+                ],
+                "LBMETHOD": [
+                    ""
+                ],
+                "LBANMETH": [
+                    ""
+                ],
+                "LBTMTHSN": [
+                    ""
+                ],
+                "LBLOBXFL": [
+                    ""
+                ],
+                "LBBLFL": [
+                    ""
+                ],
+                "LBFAST": [
+                    ""
+                ],
+                "LBDRVFL": [
+                    ""
+                ],
+                "LBTOX": [
+                    ""
+                ],
+                "LBTOXGR": [
+                    ""
+                ],
+                "LBCLSIG": [
+                    ""
+                ],
+                "VISITNUM": [
+                    null
+                ],
+                "VISIT": [
+                    ""
+                ],
+                "VISITDY": [
+                    null
+                ],
+                "TAETORD": [
+                    null
+                ],
+                "EPOCH": [
+                    ""
+                ],
+                "LBDTC": [
+                    ""
+                ],
+                "LBENDTC": [
+                    ""
+                ],
+                "LBDY": [
+                    null
+                ],
+                "LBENDY": [
+                    null
+                ],
+                "LBTPT": [
+                    ""
+                ],
+                "LBTPTNUM": [
+                    null
+                ],
+                "LBELTM": [
+                    ""
+                ],
+                "LBTPTREF": [
+                    ""
+                ],
+                "LBRFTDTC": [
+                    ""
+                ],
+                "LBPTFL": [
+                    ""
+                ],
+                "LBPDUR": [
+                    ""
+                ]
+            }
+        },
+        {
+            "filename": "dm.xpt",
+            "label": "Demographics",
+            "domain": "DM",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "DOMAIN",
+                    "label": "Domain Abbreviation",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "USUBJID",
+                    "label": "Unique Subject Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "SUBJID",
+                    "label": "Subject Identifier for the Study",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "RFSTDTC",
+                    "label": "Subject Reference Start Date/Time",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "RFENDTC",
+                    "label": "Subject Reference End Date/Time",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "RFXSTDTC",
+                    "label": "Date/Time of First Study Treatment",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "RFXENDTC",
+                    "label": "Date/Time of Last Study Treatment",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "RFCSTDTC",
+                    "label": "Date/Time of First Challenge Agent Admin",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "RFCENDTC",
+                    "label": "Date/Time of Last Challenge Agent Admin",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "RFICDTC",
+                    "label": "Date/Time of Informed Consent",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "RFPENDTC",
+                    "label": "Date/Time of End of Participation",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "DTHDTC",
+                    "label": "Date/Time of Death",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "DTHFL",
+                    "label": "Subject Death Flag",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "SITEID",
+                    "label": "Study Site Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "INVID",
+                    "label": "Investigator Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "INVNAM",
+                    "label": "Investigator Name",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "BRTHDTC",
+                    "label": "Date/Time of Birth",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AGE",
+                    "label": "Age",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "AGEU",
+                    "label": "Age Units",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "SEX",
+                    "label": "Sex",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "RACE",
+                    "label": "Race",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "ETHNIC",
+                    "label": "Ethnicity",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "ARMCD",
+                    "label": "Planned Arm Code",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "ARM",
+                    "label": "Description of Planned Arm",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "ACTARMCD",
+                    "label": "Actual Arm Code",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "ACTARM",
+                    "label": "Description of Actual Arm",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "ARMNRS",
+                    "label": "Reason Arm and/or Actual Arm is Null",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "ACTARMUD",
+                    "label": "Description of Unplanned Actual Arm",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "COUNTRY",
+                    "label": "Country",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "DMDTC",
+                    "label": "Date/Time of Collection",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "DMDY",
+                    "label": "Study Day of Collection",
+                    "type": "Num",
+                    "length": 8
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "TEST-1",
+                    "TEST-1",
+                    "TEST-1"
+                ],
+                "DOMAIN": [
+                    "DM",
+                    "DM",
+                    "DM"
+                ],
+                "USUBJID": [
+                    "001",
+                    "002",
+                    "003"
+                ],
+                "SUBJID": [
+                    "001",
+                    "001",
+                    "001"
+                ],
+                "RFSTDTC": [
+                    "2022-03-20",
+                    "2022-03-22",
+                    "2022-03-25"
+                ],
+                "RFENDTC": [
+                    "",
+                    "",
+                    ""
+                ],
+                "RFXSTDTC": [
+                    "",
+                    "",
+                    ""
+                ],
+                "RFXENDTC": [
+                    "",
+                    "",
+                    ""
+                ],
+                "RFCSTDTC": [
+                    "",
+                    "",
+                    ""
+                ],
+                "RFCENDTC": [
+                    "",
+                    "",
+                    ""
+                ],
+                "RFICDTC": [
+                    "",
+                    "",
+                    ""
+                ],
+                "RFPENDTC": [
+                    "",
+                    "",
+                    ""
+                ],
+                "DTHDTC": [
+                    "",
+                    "",
+                    ""
+                ],
+                "DTHFL": [
+                    "",
+                    "",
+                    ""
+                ],
+                "SITEID": [
+                    "",
+                    "",
+                    ""
+                ],
+                "INVID": [
+                    "",
+                    "",
+                    ""
+                ],
+                "INVNAM": [
+                    "",
+                    "",
+                    ""
+                ],
+                "BRTHDTC": [
+                    "",
+                    "",
+                    ""
+                ],
+                "AGE": [
+                    null,
+                    null,
+                    null
+                ],
+                "AGEU": [
+                    "",
+                    "",
+                    ""
+                ],
+                "SEX": [
+                    "",
+                    "",
+                    ""
+                ],
+                "RACE": [
+                    "",
+                    "",
+                    ""
+                ],
+                "ETHNIC": [
+                    "",
+                    "",
+                    ""
+                ],
+                "ARMCD": [
+                    "",
+                    "",
+                    ""
+                ],
+                "ARM": [
+                    "",
+                    "",
+                    ""
+                ],
+                "ACTARMCD": [
+                    "",
+                    "",
+                    ""
+                ],
+                "ACTARM": [
+                    "",
+                    "",
+                    ""
+                ],
+                "ARMNRS": [
+                    "",
+                    "",
+                    ""
+                ],
+                "ACTARMUD": [
+                    "",
+                    "",
+                    ""
+                ],
+                "COUNTRY": [
+                    "",
+                    "",
+                    ""
+                ],
+                "DMDTC": [
+                    "",
+                    "",
+                    ""
+                ],
+                "DMDY": [
+                    null,
+                    null,
+                    null
+                ]
+            }
+        },
+        {
+            "filename": "suppdm.xpt",
+            "label": "Supplemental Qualifiers for Demographics",
+            "domain": "SUPPDM",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "RDOMAIN",
+                    "label": "Related Domain Abbreviation",
+                    "type": "Char",
+                    "length": 2
+                },
+                {
+                    "name": "USUBJID",
+                    "label": "Unique Subject Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "IDVARVAL",
+                    "label": "Identifying Variable Value",
+                    "type": "Char",
+                    "length": 10
+                },
+                {
+                    "name": "QNAM",
+                    "label": "Qualifier Variable Name",
+                    "type": "Char",
+                    "length": 10
+                },
+                {
+                    "name": "QLABEL",
+                    "label": "Qualifier Variable Label",
+                    "type": "Char",
+                    "length": 10
+                },
+                {
+                    "name": "QVAL",
+                    "label": "Qualifier Variable Value",
+                    "type": "Char",
+                    "length": 10
+                },
+                {
+                    "name": "QORIG",
+                    "label": "Origin",
+                    "type": "Char",
+                    "length": 10
+                },
+                {
+                    "name": "QEVAL",
+                    "label": "Evaluator",
+                    "type": "Char",
+                    "length": 10
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "TEST-1"
+                ],
+                "RDOMAIN": [
+                    "DM"
+                ],
+                "USUBJID": [
+                    "003"
+                ],
+                "IDVARVAL": [
+                    ""
+                ],
+                "QNAM": [
+                    "RACEOTH"
+                ],
+                "QLABEL": [
+                    "Other Race"
+                ],
+                "QVAL": [
+                    "Antartican"
+                ],
+                "QORIG": [
+                    ""
+                ],
+                "QEVAL": [
+                    ""
+                ]
+            }
+        }
+    ],
+    "standard": {
+        "product": "sdtmig",
+        "version": "3-4"
+    },
+    "codelists": []
+}

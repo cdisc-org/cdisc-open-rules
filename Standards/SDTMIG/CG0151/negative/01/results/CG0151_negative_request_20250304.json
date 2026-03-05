@@ -1,0 +1,624 @@
+{
+    "rule": {
+        "Authorities": [
+            {
+                "Organization": "CDISC",
+                "Standards": [
+                    {
+                        "Name": "SDTMIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "IG v3.4",
+                                        "Item": "Specification",
+                                        "Section": "5.2",
+                                        "Cited_Guidance": "Identifier used to uniquely identify a subject across all studies for all applications or submissions involving the product."
+                                    }
+                                ],
+                                "Origin": "SDTM and SDTMIG Conformance Rules",
+                                "Version": "2.0",
+                                "Rule_Identifier": {
+                                    "Id": "CG0151",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.4"
+                    },
+                    {
+                        "Name": "SDTMIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "IG v3.2",
+                                        "Item": "Specification",
+                                        "Section": "5",
+                                        "Cited_Guidance": "Identifier used to uniquely identify a subject across all studies"
+                                    }
+                                ],
+                                "Origin": "SDTM and SDTMIG Conformance Rules",
+                                "Version": "2.0",
+                                "Rule_Identifier": {
+                                    "Id": "CG0151",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.2"
+                    },
+                    {
+                        "Name": "SDTMIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "IG v3.3",
+                                        "Item": "Specification",
+                                        "Section": "5.2",
+                                        "Cited_Guidance": "Identifier used to uniquely identify a subject across all studies"
+                                    }
+                                ],
+                                "Origin": "SDTM and SDTMIG Conformance Rules",
+                                "Version": "2.0",
+                                "Rule_Identifier": {
+                                    "Id": "CG0151",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.3"
+                    },
+                    {
+                        "Name": "TIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "TIG 1.0",
+                                        "Item": "Specification",
+                                        "Section": "2.8.10.4",
+                                        "Cited_Guidance": "Identifier used to uniquely identify a subject across all studies for all applications or submissions involving the product."
+                                    }
+                                ],
+                                "Origin": "TIG Conformance Rules",
+                                "Version": "1.0",
+                                "Rule_Identifier": {
+                                    "Id": "TIG0392",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Substandard": "SDTM",
+                        "Version": "1.0"
+                    },
+                    {
+                        "Name": "SENDIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "SENDIG v3.0",
+                                        "Item": "Text",
+                                        "Section": "4.2.3",
+                                        "Cited_Guidance": "No more than one animal may have the same USUBJID within a submission."
+                                    }
+                                ],
+                                "Origin": "SEND Conformance Rules",
+                                "Version": "5.0",
+                                "Rule_Identifier": {
+                                    "Id": "SEND37",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.0"
+                    },
+                    {
+                        "Name": "SENDIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "SENDIG v3.1",
+                                        "Item": "Text",
+                                        "Section": "4.2.3",
+                                        "Cited_Guidance": "No more than one animal may have the same USUBJID within a submission."
+                                    }
+                                ],
+                                "Origin": "SEND Conformance Rules",
+                                "Version": "5.0",
+                                "Rule_Identifier": {
+                                    "Id": "SEND37",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.1"
+                    },
+                    {
+                        "Name": "SENDIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "SENDIG v3.1.1",
+                                        "Item": "Text",
+                                        "Section": "4.2.3",
+                                        "Cited_Guidance": "No more than one animal may have the same USUBJID within a submission."
+                                    }
+                                ],
+                                "Origin": "SEND Conformance Rules",
+                                "Version": "5.0",
+                                "Rule_Identifier": {
+                                    "Id": "SEND37",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.1.1"
+                    },
+                    {
+                        "Name": "SENDIG-DART",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "SENDIG v3.1",
+                                        "Item": "Text",
+                                        "Section": "4.2.3",
+                                        "Cited_Guidance": "No more than one animal may have the same USUBJID within a submission."
+                                    }
+                                ],
+                                "Origin": "SEND Conformance Rules",
+                                "Version": "5.0",
+                                "Rule_Identifier": {
+                                    "Id": "SEND37",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "1.1"
+                    },
+                    {
+                        "Name": "SENDIG-DART",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "SENDIG v3.1.1",
+                                        "Item": "Text",
+                                        "Section": "4.2.3",
+                                        "Cited_Guidance": "No more than one animal may have the same USUBJID within a submission."
+                                    }
+                                ],
+                                "Origin": "SEND Conformance Rules",
+                                "Version": "5.0",
+                                "Rule_Identifier": {
+                                    "Id": "SEND37",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "1.2"
+                    },
+                    {
+                        "Name": "SENDIG-GENETOX",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "SENDIG v3.1.1",
+                                        "Item": "Text",
+                                        "Section": "4.2.3",
+                                        "Cited_Guidance": "No more than one animal may have the same USUBJID within a submission."
+                                    }
+                                ],
+                                "Origin": "SEND Conformance Rules",
+                                "Version": "5.0",
+                                "Rule_Identifier": {
+                                    "Id": "SEND37",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "1.0"
+                    },
+                    {
+                        "Name": "TIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "TIG v1.0",
+                                        "Item": "Text",
+                                        "Section": "SDTM v2.1, Identifiers for All Classes, USUBJID",
+                                        "Cited_Guidance": "A sequence of characters used to uniquely identify a subject across all studies for all applications or submissions involving the product."
+                                    }
+                                ],
+                                "Origin": "TIG Conformance Rules",
+                                "Version": "1.0",
+                                "Rule_Identifier": {
+                                    "Id": "TIG0255",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Substandard": "SEND",
+                        "Version": "1.0"
+                    }
+                ]
+            }
+        ],
+        "Check": {
+            "all": [
+                {
+                    "name": "USUBJID",
+                    "operator": "is_not_unique_set",
+                    "value": "DOMAIN"
+                }
+            ]
+        },
+        "Core": {
+            "Id": "CORE-000351",
+            "Status": "Published",
+            "Version": "1"
+        },
+        "Description": "USUBJID must be unique across all studies",
+        "Executability": "Partially Executable",
+        "Outcome": {
+            "Message": "USUBJID is not unique within study",
+            "Output_Variables": [
+                "USUBJID"
+            ]
+        },
+        "Scope": {
+            "Classes": {
+                "Include": [
+                    "SPECIAL PURPOSE"
+                ]
+            },
+            "Domains": {
+                "Include": [
+                    "DM"
+                ]
+            },
+            "Use_Case": "NONCLIN, INDH"
+        },
+        "Sensitivity": "Record",
+        "Rule_Type": "Record Data"
+    },
+    "datasets": [
+        {
+            "filename": "dm.xpt",
+            "label": "Demographics",
+            "domain": "DM",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "DOMAIN",
+                    "label": "Domain Abbreviation",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "USUBJID",
+                    "label": "Unique Subject Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "SUBJID",
+                    "label": "Subject Identifier for the Study",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "RFSTDTC",
+                    "label": "Subject Reference Start Date/Time",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "RFENDTC",
+                    "label": "Subject Reference End Date/Time",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "RFXSTDTC",
+                    "label": "Date/Time of First Study Treatment",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "RFXENDTC",
+                    "label": "Date/Time of Last Study Treatment",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "RFCSTDTC",
+                    "label": "Date/Time of First Challenge Agent Admin",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "RFCENDTC",
+                    "label": "Date/Time of Last Challenge Agent Admin",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "RFICDTC",
+                    "label": "Date/Time of Informed Consent",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "RFPENDTC",
+                    "label": "Date/Time of End of Participation",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "DTHDTC",
+                    "label": "Date/Time of Death",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "DTHFL",
+                    "label": "Subject Death Flag",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "SITEID",
+                    "label": "Study Site Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "INVID",
+                    "label": "Investigator Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "INVNAM",
+                    "label": "Investigator Name",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "BRTHDTC",
+                    "label": "Date/Time of Birth",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AGE",
+                    "label": "Age",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "AGEU",
+                    "label": "Age Units",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "SEX",
+                    "label": "Sex",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "RACE",
+                    "label": "Race",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "ETHNIC",
+                    "label": "Ethnicity",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "ARMCD",
+                    "label": "Planned Arm Code",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "ARM",
+                    "label": "Description of Planned Arm",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "ACTARMCD",
+                    "label": "Actual Arm Code",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "ACTARM",
+                    "label": "Description of Actual Arm",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "ARMNRS",
+                    "label": "Reason Arm and/or Actual Arm is Null",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "ACTARMUD",
+                    "label": "Description of Unplanned Actual Arm",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "COUNTRY",
+                    "label": "Country",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "DMDTC",
+                    "label": "Date/Time of Collection",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "DMDY",
+                    "label": "Study Day of Collection",
+                    "type": "Num",
+                    "length": 8
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "TEST-1",
+                    "TEST-2"
+                ],
+                "DOMAIN": [
+                    "DM",
+                    "DM"
+                ],
+                "USUBJID": [
+                    "001",
+                    "001"
+                ],
+                "SUBJID": [
+                    "001",
+                    "001"
+                ],
+                "RFSTDTC": [
+                    "2022-03-20",
+                    "2022-03-20"
+                ],
+                "RFENDTC": [
+                    "",
+                    ""
+                ],
+                "RFXSTDTC": [
+                    "",
+                    ""
+                ],
+                "RFXENDTC": [
+                    "",
+                    ""
+                ],
+                "RFCSTDTC": [
+                    "",
+                    ""
+                ],
+                "RFCENDTC": [
+                    "",
+                    ""
+                ],
+                "RFICDTC": [
+                    "",
+                    ""
+                ],
+                "RFPENDTC": [
+                    "",
+                    ""
+                ],
+                "DTHDTC": [
+                    "",
+                    ""
+                ],
+                "DTHFL": [
+                    "",
+                    ""
+                ],
+                "SITEID": [
+                    "",
+                    ""
+                ],
+                "INVID": [
+                    "",
+                    ""
+                ],
+                "INVNAM": [
+                    "",
+                    ""
+                ],
+                "BRTHDTC": [
+                    "",
+                    ""
+                ],
+                "AGE": [
+                    null,
+                    null
+                ],
+                "AGEU": [
+                    "",
+                    ""
+                ],
+                "SEX": [
+                    "",
+                    ""
+                ],
+                "RACE": [
+                    "",
+                    ""
+                ],
+                "ETHNIC": [
+                    "",
+                    ""
+                ],
+                "ARMCD": [
+                    "",
+                    ""
+                ],
+                "ARM": [
+                    "",
+                    ""
+                ],
+                "ACTARMCD": [
+                    "",
+                    ""
+                ],
+                "ACTARM": [
+                    "",
+                    ""
+                ],
+                "ARMNRS": [
+                    "",
+                    ""
+                ],
+                "ACTARMUD": [
+                    "",
+                    ""
+                ],
+                "COUNTRY": [
+                    "",
+                    ""
+                ],
+                "DMDTC": [
+                    "",
+                    ""
+                ],
+                "DMDY": [
+                    null,
+                    null
+                ]
+            }
+        }
+    ],
+    "codelists": []
+}

@@ -1,0 +1,40 @@
+{2 items
+"SV":[1 item
+0:{5 items
+"domain":"SV"
+"errors":[2 items
+0:{3 items
+"row":1
+"uSubjId":"CDISC001"
+"value":{2 items
+"SVPRESP":"Y"
+"VISIT":"SCREENING 1"
+}
+}
+1:{3 items
+"row":2
+"uSubjId":"CDISC001"
+"value":{2 items
+"SVPRESP":"Y"
+"VISIT":"SCREENING 2"
+}
+}
+]
+"executionStatus":"success"
+"message":"Planned visit is not found in TV."
+"variables":[2 items
+0:"SVPRESP"
+1:"VISIT"
+]
+}
+]
+"TV":[1 item
+0:{5 items
+"domain":"TV"
+"errors":[]0 items
+"executionStatus":"skipped"
+"message":NULL
+"variables":[]0 items
+}
+]
+}
