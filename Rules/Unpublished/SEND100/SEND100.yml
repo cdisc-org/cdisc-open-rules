@@ -1,0 +1,111 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: The sponsor must define what collected date is used to populate
+                  RFSTDTC in the data define file.
+                Document: IG v3.0
+                Section: 5.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND100
+              Version: '1'
+            Version: '5.0'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: The sponsor must define what collected date is used to populate
+                  RFSTDTC in the data define file.
+                Document: IG v3.1
+                Section: 5.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND100
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: The sponsor must define what collected date is used to populate
+                  RFSTDTC in the data define file.
+                Document: IG v3.1
+                Section: 5.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND100
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: The sponsor must define what collected date is used to populate
+                  RFSTDTC in the data define file.
+                Document: IG v3.1.1
+                Section: 5.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND100
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: The sponsor must define what collected date is used to populate
+                  RFSTDTC in the data define file.
+                Document: IG v3.1
+                Section: 5.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND100
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: The sponsor must define what collected date is used to populate
+                  RFSTDTC in the data define file.
+                Document: IG v3.1.1
+                Section: 5.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND100
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+Check:
+  all:
+    - name: RFSTDTC
+      operator: non_empty
+    # TODO: change into "has_method" (function requested: https://github.com/cdisc-org/cdisc-rules-engine/issues/1047)
+    - name: define_variable_has_comment
+      operator: equal_to
+      value: false
+Core:
+  Id: SEND100
+  Status: Draft
+  Version: '1'
+Description: Check in the define.xml whether there is a "Method"
+  (@MethodOID/MethodDef) attached to the DM variable DM
+Executability: Fully Executable
+Outcome:
+  Message: No 'method' (through @MethodOID/MethodDef) has been assigned to the
+    variable RFSTDTC
+  Output Variables:
+    - RFSTDTC
+    - RFENDTC
+Rule Type: Variable Metadata Check against Define XML
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - DM
+Sensitivity: Record

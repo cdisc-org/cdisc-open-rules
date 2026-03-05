@@ -1,0 +1,79 @@
+# Variable: TEENRL
+# Condition: 
+# Rule: TEENRL value does not refer to any specific ARM
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        Version: '3.4'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0324
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: The Trial Arms dataset, not the Trial Elements dataset,
+                  describes where the subject moves next, so TEENRL must be expressed
+                  without referring to Arm.
+                Document: IG v3.4
+                Item: Assumption 13
+                Section: 7.2.2
+      - Name: SDTMIG
+        Version: '3.2'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0324
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: The Trial Arms dataset; not the Trial Elements dataset;
+                  describes where the subject moves next; so TEENRL must be expressed
+                  without referring to Arm.
+                Document: IG v3.2
+                Item: Assumption 13 for TE
+                Section: '7.2'
+      - Name: SDTMIG
+        Version: '3.3'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0324
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: The Trial Arms dataset; not the Trial Elements dataset;
+                  describes where the subject moves next; so TEENRL must be expressed
+                  without referring to Arm.
+                Document: IG v3.3
+                Item: Assumption 13
+                Section: 7.2.2
+Check:
+  all:
+    - name: TEENRL
+      operator: contains
+      value: $ta_arm
+Core:
+  Id: CDISC.SDTMIG.CG0324
+  Status: Draft
+  Version: '1'
+Description: TEENRL should not reference a specific ARM.  This rule has only been
+  partially executed to identify explicit references to ARM.
+Executability: Fully Executable
+Operations:
+  - domain: TA
+    id: $ta_arm
+    name: ARM
+    operator: distinct
+Outcome:
+  Message: TEENRL refers to a specific ARM
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - STUDY REFERENCE
+  Domains:
+    Include:
+      - TE
+Sensitivity: Record

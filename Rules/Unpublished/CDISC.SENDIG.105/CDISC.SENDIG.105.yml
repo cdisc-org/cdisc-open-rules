@@ -1,0 +1,141 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: If this variable is excluded in the DM domain, the information
+                  must be present at a higher level (either Trial Sets or Trial
+                  Summary).
+                Document: IG v3.1
+                Item: Specification
+                Section: 5.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND105
+              Version: '2'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: If this variable is excluded in the DM domain, the information
+                  must be present at a higher level (either Trial Sets or Trial
+                  Summary).
+                Document: IG v3.1.1
+                Item: Specification
+                Section: 5.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND105
+              Version: '2'
+            Version: '5.0'
+        Version: '3.1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: If this variable is excluded in the DM domain, the information
+                  must be present at a higher level (either Trial Sets or Trial
+                  Summary).
+                Document: IG v3.1
+                Item: Specification
+                Section: 5.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND105
+              Version: '2'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: If this variable is excluded in the DM domain, the information
+                  must be present at a higher level (either Trial Sets or Trial
+                  Summary).
+                Document: IG v3.1.2
+                Item: Specification
+                Section: 5.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND105
+              Version: '2'
+            Version: '5.0'
+        Version: '1.2'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: If this variable is excluded in the DM domain, the information
+                  must be present at a higher level (either Trial Sets or Trial
+                  Summary).
+                Document: IG v3.1.2
+                Item: Specification
+                Section: 5.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND105
+              Version: '2'
+            Version: '5.0'
+        Version: '1.0'
+Check:
+  # Rule applies for the case that all of DM, TS, and TX are all present
+  # which applies to >99% of the cases
+  # When one of the above domains is not present, the rule may be skipped
+  all:
+    # DM: SPECIES variable does not exists
+    - name: SPECIES
+      operator: not_exists
+    # There is no TSPARMCD=SPECIES in TS  
+    #- name: $distinct_tsparmcd
+    #  operator: does_not_contain
+    #  value: SPECIES
+    #  value_is_literal: true
+    #- all:
+    #    #- name: TX
+    #    #  operator: non_empty
+    #    - name: $distinct_txparmcd
+    #      operator: is_not_contained_by
+    #      value: SPECIES
+    #      #value_is_literal: true
+Core:
+  Id: CDISC.SENDIG.105
+  Status: Draft
+  Version: '1'
+Description: Raise an error when the variable SPECIES is not present in DM, and
+  there is no record TSPARMCD=SPECIES in TS and there is no record
+  TXPARMCD=SPECIES in TX
+Executability: Fully Executable
+#Operations:
+# gets the distinct values of TSPARMCD
+#- domain: TS
+#  id: $distinct_tsparmcd
+#  name: TSPARMCD
+#  operator: distinct
+# no grouping or so, this is Trial Design domain
+# group:
+#  - STUDYID
+
+# gets the distinct values of TXPARMCD
+#- domain: TX
+#  id: $distinct_txparmcd
+#  name: TXPARMCD
+#  operator: distinct
+Outcome:
+  Message: SPECIES in not present in DM and there is no record TSPARMCD=SPECIES in
+    TS and there is no record TXPARMCD=SPECIES in TX
+  #Output Variables:
+  #  - $distinct_tsparmcd
+  #  - $distinct_txparmcd
+  # Rule Type: Record Data
+Rule Type: Variable Metadata Check
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  #    #- TRIAL DESIGN
+  #    - ALL
+  Domains:
+    Include:
+      - DM
+      # - ALL
+      # Sensitivity: Record
+Sensitivity: Dataset

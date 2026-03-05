@@ -1,0 +1,60 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'If a synonym is specified then it is not expected to be equal
+                  to the name of the biomedical concept (case insensitive).'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00079'
+              Version: '1'
+            Version: '1.0'
+        Version: '3.0'
+Check:
+  all:
+    - name: instanceType
+      operator: equal_to
+      value: 'BiomedicalConcept'
+    - name: rel_type
+      operator: equal_to
+      value: 'definition'
+    - name: parent_rel.string
+      operator: equal_to
+      value: 'synonyms'
+      value_is_literal: true
+    - name: value
+      operator: equal_to_case_insensitive
+      value: name
+Core:
+  Id: 'CORE-000803'
+  Status: Published
+  Version: '1'
+Description: 'If a synonym is specified then it is not expected to be equal to
+  the name of the biomedical concept (case insensitive).'
+Executability: Partially Executable - Possible Overreporting
+Match Datasets:
+  - Keys:
+      - Left: id
+        Right: parent_id
+      - rel_type
+    Name: string
+Outcome:
+  Message: 'The biomedical concept synonym value is the same as the biomedical
+    concept name (case insensitive).'
+  Output Variables:
+    - parent_entity
+    - parent_id
+    - parent_rel
+    - id
+    - name
+    - parent_rel.string
+    - value
+Rule Type: Record Data
+Scope:
+  Entities:
+    Include:
+      - 'BiomedicalConcept'
+Sensitivity: Record

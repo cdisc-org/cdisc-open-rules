@@ -1,0 +1,82 @@
+# Variable: UNII, CASNO
+# Condition: CASNO = null / UNII = null
+# Rule: UNII ^= null / CASNO ^= null
+Authorities:
+  - Organization: 'CDISC'
+    Standards:
+      - Name: 'TIG'
+        References:
+          - Citations:
+              - Cited Guidance: At least one of the two permissible variables CASNO or UNII
+                  should also be provided if available.
+                Document: 'TIG 1.0'
+                Item: 'assumption 3.d.ii'
+                Section: '2.8.8.5'
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: 'TIG0010'
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+  - Organization: 'CDISC'
+    Standards:
+      - Name: 'TIG'
+        References:
+          - Citations:
+              - Cited Guidance: At least one of the two permissible variables CASNO or UNII
+                  should also be provided if available.
+                Document: 'TIG 1.0'
+                Item: 'assumption 3.d.ii'
+                Section: '2.8.8.5'
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: 'TIG0011'
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  any:
+    - all:
+        - name: UNII
+          operator: empty
+        - name: CASNO
+          operator: empty
+    - all:
+        - name: UNII
+          operator: not_exists
+        - name: CASNO
+          operator: not_exists
+    - all:
+        - name: UNII
+          operator: not_exists
+        - name: CASNO
+          operator: empty
+    - all:
+        - name: CASNO
+          operator: not_exists
+        - name: UNII
+          operator: empty
+Core:
+  Id: CORE-000595
+  Status: Published
+  Version: '1'
+Description: Raise an error when UNII and CASNO are both not populated.
+Executability: Fully Executable
+Outcome:
+  Message: At least one of the UNII and CASNO variables should be present and
+    populated for each ingredient if available.
+  Output Variables:
+    - UNII
+    - CASNO
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - IN
+  Use Case: PROD
+Sensitivity: Record

@@ -1,0 +1,97 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Trial Sets - Trial Design. One record per Trial Set parameter
+                  per Trial Set
+                Document: IG v3.0
+                Item: Specification
+                Section: 7.4.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND230
+              Version: '1'
+            Version: '5.0'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Trial Sets - Trial Design. One record per Trial Set parameter
+                  per Trial Set
+                Document: IG v3.1
+                Item: Specification
+                Section: 7.4.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND230
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Trial Sets - Trial Design. One record per Trial Set parameter
+                  per Trial Set
+                Document: IG v3.1.1
+                Item: Specification
+                Section: 7.4.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND230
+              Version: '1'
+            Version: '5.0'
+        Version: 3.1.1
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: Trial Sets - Trial Design. One record per Trial Set parameter
+                  per Trial Set
+                Document: IG v3.1
+                Item: Specification
+                Section: 7.4.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND230
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: Trial Sets - Trial Design. One record per Trial Set parameter
+                  per Trial Set.
+                Document: TIG v1.0
+                Item: Domain Table Header
+                Section: 2.8.9.28
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0158
+              Version: '1'
+            Version: '1.0'
+        Substandard: SEND
+        Version: '1.0'
+Check:
+  all:
+    - name: TXPARMCD
+      operator: is_not_unique_set
+      value: SETCD
+Core:
+  Id: CORE-000500
+  Status: Published
+  Version: '1'
+Description: Combination of SETCD and TXPARMCD must be unique
+Executability: Fully Executable
+Outcome:
+  Message: The combination of the values of SETCD and TXPARMCD is not unique
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - TRIAL DESIGN
+  Domains:
+    Include:
+      - TX
+  Use Case: NONCLIN
+Sensitivity: Record

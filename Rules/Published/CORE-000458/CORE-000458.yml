@@ -1,0 +1,141 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Sequence number given to ensure uniqueness of subject records
+                  within a domain. May be any valid number.
+                Document: SENDIG v3.0
+                Item: EXSEQ CDISC Notes
+                Section: 6.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND138
+              Version: '1'
+            Version: '5.0'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: The Sequence Number (--SEQ) variable uniquely identifies a
+                  record for a given USUBJID within a domain.
+                Document: SENDIG v3.1
+                Item: Text
+                Section: '8'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND138
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: The Sequence Number (--SEQ) variable uniquely identifies a
+                  record for a given USUBJID within a domain.
+                Document: SENDIG v3.1.1
+                Item: Text
+                Section: '8'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND138
+              Version: '1'
+            Version: '5.0'
+        Version: 3.1.1
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: The Sequence Number (--SEQ) variable uniquely identifies a
+                  record for a given USUBJID within a domain.
+                Document: SENDIG v3.1
+                Item: Text
+                Section: '8'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND138
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: The Sequence Number (--SEQ) variable uniquely identifies a
+                  record for a given USUBJID within a domain.
+                Document: SENDIG v3.1.1
+                Item: Text
+                Section: '8'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND138
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: The Sequence Number (--SEQ) variable uniquely identifies a
+                  record for a given USUBJID within a domain.
+                Document: SENDIG v3.1.1
+                Item: Text
+                Section: '8'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND138
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: --SEQ Values uniquely identify records for subjects within a
+                  domain
+                Document: TIG v1.0
+                Item: Table Row 4
+                Section: 2.8.7.1
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0074
+              Version: '1'
+            Version: '1.0'
+        Substandard: SEND
+        Version: '1.0'
+Check:
+  any:
+    - all:
+        - name: USUBJID
+          operator: non_empty
+        - name: --SEQ
+          operator: is_not_unique_set
+          value: USUBJID
+    - all:
+        - name: POOLID
+          operator: non_empty
+        - name: --SEQ
+          operator: is_not_unique_set
+          value: POOLID
+Core:
+  Id: CORE-000458
+  Status: Published
+  Version: '1'
+Description: Sequence number given to ensure uniqueness of subject records
+  within a domain. May be any valid number.
+Executability: Fully Executable
+Outcome:
+  Message: --SEQ is not unique within USUBJID or POOLID
+  Output Variables:
+    - USUBJID
+    - POOLID
+    - --SEQ
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - INTERVENTIONS
+      - EVENTS
+      - FINDINGS
+  Domains:
+    Include:
+      - ALL
+  Use Case: NONCLIN
+Sensitivity: Record

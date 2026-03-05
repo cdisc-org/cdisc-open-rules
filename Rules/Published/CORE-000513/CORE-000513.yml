@@ -1,0 +1,43 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: BGENDTC must be populated when BGTESTCD is representing Average
+                  Body Weight Gain (BWGAINA)
+                Document: IG v3.0
+                Section: 6.3.2
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND152.1
+              Version: '1'
+            Version: '5.0'
+        Version: '3.0'
+# REMARK: this rule is only applicable to SENDIG-3.0, not to later versions
+Check:
+  all:
+    - name: BGTESTCD
+      operator: equal_to
+      value: BWGAINA
+    - name: BGENDTC
+      operator: empty
+Core:
+  Id: CORE-000513
+  Status: Published
+  Version: '1'
+Description: Raise an error when BGENDTC is empty when BGTESTCD=BWGAINA
+Executability: Fully Executable
+Outcome:
+  Message: BGENDTC is empty for BGTESTCD=BWGAINA
+  Output Variables:
+    - BGTESTCD
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - BG
+Sensitivity: Record

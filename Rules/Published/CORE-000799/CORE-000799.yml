@@ -1,0 +1,74 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'A study arm must only reference populations that are defined
+                  within the same study design as the study arm.'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00049'
+              Version: '1'
+            Version: '1.0'
+        Version: '3.0'
+Check:
+  all:
+    - name: instanceType
+      operator: equal_to
+      value: 'StudyDesignPopulation'
+    - name: rel_type
+      operator: equal_to
+      value: 'reference'
+    - name: parent_rel
+      operator: equal_to
+      value: 'populationIds'
+      value_is_literal: true
+    - name: rel_type.StudyArm
+      operator: equal_to
+      value: 'definition'
+    - name: parent_id.StudyArm
+      operator: is_not_contained_by
+      value: $parent_of_population
+Core:
+  Id: 'CORE-000799'
+  Status: Published
+  Version: '1'
+Description: 'A study arm must only reference populations that are defined
+  within the same study design as the study arm.'
+Executability: Fully Executable
+Match Datasets:
+  - Keys:
+      - Left: parent_id
+        Right: id
+    Name: StudyArm
+Operations:
+  - group:
+      - id
+      - rel_type
+    group_aliases:
+      - id
+      - rel_type.StudyArm
+    id: $parent_of_population
+    name: parent_id
+    operator: distinct
+Outcome:
+  Message: 'The study population is referenced by a study arm but was not defined
+    within the same study design as the study arm: the parent_id of the study
+    population ($parent_of_population) is not the same as parent_id of the study
+    arm (parent_id.StudyArm).'
+  Output Variables:
+    - parent_entity
+    - parent_id
+    - parent_rel
+    - id
+    - name
+    - parent_id.StudyArm
+    - $parent_of_population
+Rule Type: Record Data
+Scope:
+  Entities:
+    Include:
+      - StudyDesignPopulation
+Sensitivity: Record

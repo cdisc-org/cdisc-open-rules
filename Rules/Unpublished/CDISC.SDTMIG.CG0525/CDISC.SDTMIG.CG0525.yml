@@ -1,0 +1,63 @@
+# Variable: RACE
+# Condition: Sponsor collects Other, specify and chooses to map the value to SUPPDM
+# Rule: RACE = 'OTHER' or RACE = 'MULTIPLE'
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        Version: '3.4'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0525
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: If the race was collected via an "Other, Specify"
+                  field and the sponsor chooses not to map the value as described
+                  in the current FDA guidance (see CDISC Notes for RACE in the domain
+                  specification), then the value of RACE should be “OTHER”.
+                Document: IG v3.4
+                Item: Assumption 6
+                Section: '5.2'
+      - Name: SDTMIG
+        Version: '3.3'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0525
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: If the race was collected via an "Other; Specify"
+                  field and the sponsor chooses not to map the value as described
+                  in the current FDA guidance (see CDISC Notes for RACE in the domain
+                  specification) then the value of RACE should be 'OTHER'.
+                Document: IG v3.3
+                Item: Assumption 6
+                Section: '5.2'
+Check:
+  all:
+    - name:
+      operator:
+    - name: RACE
+      operator: not_equal_to
+      value: UNKNOWN
+Core:
+  Id: CDISC.SDTMIG.CG0525
+  Status: Draft
+  Version: '1'
+Description: Trigger error when Sponsor collects Other, specify and chooses to map
+  the value to SUPPDM, and NOT - RACE = 'OTHER' or RACE = 'MULTIPLE'
+Executability: Fully Executable
+Outcome:
+  Message: ???
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - DM
+Sensitivity: Record

@@ -1,0 +1,144 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: In general, each Set should have a distinct combination of
+                  TXPARMCD, TXPARM, and TXVAL whenever possible. If two Trial
+                  Sets (identified by distinct SETCD values) have the same set
+                  of TXPARMCD, TXPARM, and TXVAL entries, the SET variable must
+                  contain nformation that distinguishes the two Trial Sets from
+                  each other.
+                Document: IG v3.0
+                Item: Specification
+                Section: 7.4.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND238
+              Version: '1'
+            Version: '5.0'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: In general, each Set should have a distinct combination of
+                  TXPARMCD, TXPARM, and TXVAL whenever possible. If two Trial
+                  Sets (identified by distinct SETCD values) have the same set
+                  of TXPARMCD, TXPARM, and TXVAL entries, the SET variable must
+                  contain nformation that distinguishes the two Trial Sets from
+                  each other.
+                Document: IG v3.1
+                Item: Specification
+                Section: 7.4.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND238
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: In general, each Set should have a distinct combination of
+                  TXPARMCD, TXPARM, and TXVAL whenever possible. If two Trial
+                  Sets (identified by distinct SETCD values) have the same set
+                  of TXPARMCD, TXPARM, and TXVAL entries, the SET variable must
+                  contain nformation that distinguishes the two Trial Sets from
+                  each other.
+                Document: IG v3.1.1
+                Item: Specification
+                Section: 7.4.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND238
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1.1'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: In general, each Set should have a distinct combination of
+                  TXPARMCD, TXPARM, and TXVAL whenever possible. If two Trial
+                  Sets (identified by distinct SETCD values) have the same set
+                  of TXPARMCD, TXPARM, and TXVAL entries, the SET variable must
+                  contain nformation that distinguishes the two Trial Sets from
+                  each other.
+                Document: IG v3.1.1
+                Item: Specification
+                Section: 7.4.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND238
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: In general, each Set should have a distinct combination of
+                  TXPARMCD, TXPARM, and TXVAL whenever possible. If two Trial
+                  Sets (identified by distinct SETCD values) have the same set
+                  of TXPARMCD, TXPARM, and TXVAL entries, the SET variable must
+                  contain nformation that distinguishes the two Trial Sets from
+                  each other.
+                Document: IG v3.1
+                Item: Specification
+                Section: 7.4.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND238
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: In general, each Set should have a distinct combination of
+                  TXPARMCD, TXPARM, and TXVAL whenever possible. If two Trial
+                  Sets (identified by distinct SETCD values) have the same set
+                  of TXPARMCD, TXPARM, and TXVAL entries, the SET variable must
+                  contain nformation that distinguishes the two Trial Sets from
+                  each other.
+                Document: IG v3.1.1
+                Item: Specification
+                Section: 7.4.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND238
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+Check:
+  all:
+    # We only report a violation when the texts in SET are identical.
+    # This is very probably underreporting
+    - name: 'SET'
+      operator: 'is_not_unique_set'
+      value:
+        - TXPARMCD
+        - TXPARM
+        - TXVAL
+Core:
+  Status: Draft
+  Version: '1'
+Description: 'Report a violation when the texts in SET are identical for the
+  combination of SET, TXPARMCD, TXPARM'
+Executability: Fully Executable
+Outcome:
+  Message: 'The combination of SET, TXPARMCD, TXPARM and TXVAL must be unique'
+  Output Variables:
+    - SETCD
+    - SET
+    - TXPARMCD
+    - TXPARM
+    - TXVAL
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - TRIAL DESIGN
+  Domains:
+    Include:
+      - TX
+Sensitivity: Record

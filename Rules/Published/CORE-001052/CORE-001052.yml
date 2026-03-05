@@ -1,0 +1,45 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'A study definition document version must not be referenced more
+                  than once by the same study version.'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00167'
+              Version: '1'
+            Version: '1.0'
+        Version: '4.0'
+Check: |-
+  study.versions.
+    {
+      "instanceType": instanceType,
+      "id": id,
+      "path": _path,
+      "versionIdentifier": versionIdentifier,
+      "Duplicate documentVersionIds":
+        $filter(documentVersionIds,function($v,$i,$a){$count($a[$=$v])>1}) ~> $sort
+    }[`Duplicate documentVersionIds`]
+Core:
+  Id: 'CORE-001052'
+  Status: Published
+  Version: '1'
+Description: 'A study definition document version must not be referenced more
+  than once by the same study version.'
+Executability: Fully Executable
+Outcome:
+  Message: "The study version references the same study definition document
+    version more than once (there are duplicate id values in
+    documentVersionIds)."
+  Output Variables:
+    - versionIdentifier
+    - "Duplicate documentVersionIds"
+Rule Type: JSONata
+Scope:
+  Entities:
+    Include:
+      - 'StudyVersion'
+Sensitivity: Record

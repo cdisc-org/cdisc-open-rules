@@ -1,0 +1,788 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: ''
+                Document: ''
+                Item: ''
+                Section: ''
+            Criteria:
+              Logical Expression:
+                Condition: ''
+                Rule: ''
+              Plain Language Expression: This is where you describe the rule in human
+                readable sentence(s).
+              Type: Success
+            Origin: SEND Conformance Rules
+            Related Rules:
+              - Id: ''
+                Relationship: Predecessor | Related | Successor
+            Release Notes: ''
+            Rule Identifier:
+              Id: SEND_AUTHORING_TEMPLATE
+              Version: '0.1'
+            Validator Rule Message: This is where you enter the message that will
+              be output when this rule is triggered.
+            Version: '5.0'
+        Version: 3.0 | 3.1 | 3.1.1
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: ''
+                Document: ''
+                Item: ''
+                Section: ''
+            Criteria:
+              Logical Expression:
+                Condition: ''
+                Rule: ''
+              Plain Language Expression: ''
+              Type: Success
+            Origin: SEND Conformance Rules
+            Related Rules:
+              - Id: ''
+                Relationship: Predecessor | Related | Successor
+            Release Notes: ''
+            Rule Identifier:
+              Id: ''
+              Version: ''
+            Validator Rule Message: ''
+            Version: '5.0'
+        Version: '1.1'
+Check:
+  all:
+    - operator: variable_metadata_not_equal_to
+    - '...': ''
+  any:
+    - operator: variable_metadata_not_equal_to
+    - '...': ''
+  not:
+    operator: variable_metadata_not_equal_to
+Core:
+  Id: ''
+  Status: Draft
+Description: ''
+Executability: >-
+  Fully Executable | Partially Executable | Partially Executable - Possible
+  Overreporting | Partially Executable - Possible Underreporting
+Match Datasets:
+  - Is Relationship: true
+    Keys:
+      - ''
+    Name: >-
+      ALL | AP-- | APRELSUB | POOLDEF | RELREC | RELSPEC | RELSUB | SUPP-- |
+      ADAM OTHER | BASIC DATA STRUCTURE | ...
+Operations:
+  - attribute_name: variable_value_length
+    ct_attribute: ''
+    ct_packages:
+      - ''
+    ct_version: ''
+    domain: >-
+      ALL | AP-- | APRELSUB | POOLDEF | RELREC | RELSPEC | RELSUB | SUPP-- |
+      ADAM OTHER | BASIC DATA STRUCTURE | ...
+    group:
+      - ''
+    id: ''
+    key_name: >-
+      definition | examples | label | name | notes | ordinal | role |
+      simpleDatatype | variableCcode
+    key_value: ''
+    name: ''
+    operator: define_variable_metadata
+  - attribute_name: variable_value_length
+    ct_attribute: ''
+    ct_packages:
+      - ''
+    ct_version: ''
+    domain: >-
+      ALL | AP-- | APRELSUB | POOLDEF | RELREC | RELSPEC | RELSUB | SUPP-- |
+      ADAM OTHER | BASIC DATA STRUCTURE | ...
+    group:
+      - ''
+    id: ''
+    key_name: >-
+      definition | examples | label | name | notes | ordinal | role |
+      simpleDatatype | variableCcode
+    key_value: ''
+    name: ''
+    operator: distinct
+  - attribute_name: variable_value_length
+    ct_attribute: ''
+    ct_packages:
+      - ''
+    ct_version: ''
+    domain: >-
+      ALL | AP-- | APRELSUB | POOLDEF | RELREC | RELSPEC | RELSUB | SUPP-- |
+      ADAM OTHER | BASIC DATA STRUCTURE | ...
+    group:
+      - ''
+    id: ''
+    key_name: >-
+      definition | examples | label | name | notes | ordinal | role |
+      simpleDatatype | variableCcode
+    key_value: ''
+    name: ''
+    operator: domain_is_custom
+  - attribute_name: variable_value_length
+    ct_attribute: ''
+    ct_packages:
+      - ''
+    ct_version: ''
+    domain: >-
+      ALL | AP-- | APRELSUB | POOLDEF | RELREC | RELSPEC | RELSUB | SUPP-- |
+      ADAM OTHER | BASIC DATA STRUCTURE | ...
+    group:
+      - ''
+    id: ''
+    key_name: >-
+      definition | examples | label | name | notes | ordinal | role |
+      simpleDatatype | variableCcode
+    key_value: ''
+    name: ''
+    operator: domain_label
+  - attribute_name: variable_value_length
+    ct_attribute: ''
+    ct_packages:
+      - ''
+    ct_version: ''
+    domain: >-
+      ALL | AP-- | APRELSUB | POOLDEF | RELREC | RELSPEC | RELSUB | SUPP-- |
+      ADAM OTHER | BASIC DATA STRUCTURE | ...
+    group:
+      - ''
+    id: ''
+    key_name: >-
+      definition | examples | label | name | notes | ordinal | role |
+      simpleDatatype | variableCcode
+    key_value: ''
+    name: ''
+    operator: dy
+  - attribute_name: variable_value_length
+    ct_attribute: ''
+    ct_packages:
+      - ''
+    ct_version: ''
+    domain: >-
+      ALL | AP-- | APRELSUB | POOLDEF | RELREC | RELSPEC | RELSUB | SUPP-- |
+      ADAM OTHER | BASIC DATA STRUCTURE | ...
+    group:
+      - ''
+    id: ''
+    key_name: >-
+      definition | examples | label | name | notes | ordinal | role |
+      simpleDatatype | variableCcode
+    key_value: ''
+    name: ''
+    operator: extract_metadata
+  - attribute_name: variable_value_length
+    ct_attribute: ''
+    ct_packages:
+      - ''
+    ct_version: ''
+    domain: >-
+      ALL | AP-- | APRELSUB | POOLDEF | RELREC | RELSPEC | RELSUB | SUPP-- |
+      ADAM OTHER | BASIC DATA STRUCTURE | ...
+    group:
+      - ''
+    id: ''
+    key_name: >-
+      definition | examples | label | name | notes | ordinal | role |
+      simpleDatatype | variableCcode
+    key_value: ''
+    name: ''
+    operator: expected_variables
+  - attribute_name: variable_value_length
+    ct_attribute: ''
+    ct_packages:
+      - ''
+    ct_version: ''
+    domain: >-
+      ALL | AP-- | APRELSUB | POOLDEF | RELREC | RELSPEC | RELSUB | SUPP-- |
+      ADAM OTHER | BASIC DATA STRUCTURE | ...
+    group:
+      - ''
+    id: ''
+    key_name: >-
+      definition | examples | label | name | notes | ordinal | role |
+      simpleDatatype | variableCcode
+    key_value: ''
+    name: ''
+    operator: get_codelist_attributes
+  - attribute_name: variable_value_length
+    ct_attribute: ''
+    ct_packages:
+      - ''
+    ct_version: ''
+    domain: >-
+      ALL | AP-- | APRELSUB | POOLDEF | RELREC | RELSPEC | RELSUB | SUPP-- |
+      ADAM OTHER | BASIC DATA STRUCTURE | ...
+    group:
+      - ''
+    id: ''
+    key_name: >-
+      definition | examples | label | name | notes | ordinal | role |
+      simpleDatatype | variableCcode
+    key_value: ''
+    name: ''
+    operator: get_column_order_from_dataset
+  - attribute_name: variable_value_length
+    ct_attribute: ''
+    ct_packages:
+      - ''
+    ct_version: ''
+    domain: >-
+      ALL | AP-- | APRELSUB | POOLDEF | RELREC | RELSPEC | RELSUB | SUPP-- |
+      ADAM OTHER | BASIC DATA STRUCTURE | ...
+    group:
+      - ''
+    id: ''
+    key_name: >-
+      definition | examples | label | name | notes | ordinal | role |
+      simpleDatatype | variableCcode
+    key_value: ''
+    name: ''
+    operator: get_column_order_from_library
+  - attribute_name: variable_value_length
+    ct_attribute: ''
+    ct_packages:
+      - ''
+    ct_version: ''
+    domain: >-
+      ALL | AP-- | APRELSUB | POOLDEF | RELREC | RELSPEC | RELSUB | SUPP-- |
+      ADAM OTHER | BASIC DATA STRUCTURE | ...
+    group:
+      - ''
+    id: ''
+    key_name: >-
+      definition | examples | label | name | notes | ordinal | role |
+      simpleDatatype | variableCcode
+    key_value: ''
+    name: ''
+    operator: get_model_column_order
+  - attribute_name: variable_value_length
+    ct_attribute: ''
+    ct_packages:
+      - ''
+    ct_version: ''
+    domain: >-
+      ALL | AP-- | APRELSUB | POOLDEF | RELREC | RELSPEC | RELSUB | SUPP-- |
+      ADAM OTHER | BASIC DATA STRUCTURE | ...
+    group:
+      - ''
+    id: ''
+    key_name: >-
+      definition | examples | label | name | notes | ordinal | role |
+      simpleDatatype | variableCcode
+    key_value: ''
+    name: ''
+    operator: get_model_filtered_variables
+  - attribute_name: variable_value_length
+    ct_attribute: ''
+    ct_packages:
+      - ''
+    ct_version: ''
+    domain: >-
+      ALL | AP-- | APRELSUB | POOLDEF | RELREC | RELSPEC | RELSUB | SUPP-- |
+      ADAM OTHER | BASIC DATA STRUCTURE | ...
+    group:
+      - ''
+    id: ''
+    key_name: >-
+      definition | examples | label | name | notes | ordinal | role |
+      simpleDatatype | variableCcode
+    key_value: ''
+    name: ''
+    operator: get_parent_model_column_order
+  - attribute_name: variable_value_length
+    ct_attribute: ''
+    ct_packages:
+      - ''
+    ct_version: ''
+    domain: >-
+      ALL | AP-- | APRELSUB | POOLDEF | RELREC | RELSPEC | RELSUB | SUPP-- |
+      ADAM OTHER | BASIC DATA STRUCTURE | ...
+    group:
+      - ''
+    id: ''
+    key_name: >-
+      definition | examples | label | name | notes | ordinal | role |
+      simpleDatatype | variableCcode
+    key_value: ''
+    name: ''
+    operator: label_referenced_variable_metadata
+  - attribute_name: variable_value_length
+    ct_attribute: ''
+    ct_packages:
+      - ''
+    ct_version: ''
+    domain: >-
+      ALL | AP-- | APRELSUB | POOLDEF | RELREC | RELSPEC | RELSUB | SUPP-- |
+      ADAM OTHER | BASIC DATA STRUCTURE | ...
+    group:
+      - ''
+    id: ''
+    key_name: >-
+      definition | examples | label | name | notes | ordinal | role |
+      simpleDatatype | variableCcode
+    key_value: ''
+    name: ''
+    operator: max
+  - attribute_name: variable_value_length
+    ct_attribute: ''
+    ct_packages:
+      - ''
+    ct_version: ''
+    domain: >-
+      ALL | AP-- | APRELSUB | POOLDEF | RELREC | RELSPEC | RELSUB | SUPP-- |
+      ADAM OTHER | BASIC DATA STRUCTURE | ...
+    group:
+      - ''
+    id: ''
+    key_name: >-
+      definition | examples | label | name | notes | ordinal | role |
+      simpleDatatype | variableCcode
+    key_value: ''
+    name: ''
+    operator: max_date
+  - attribute_name: variable_value_length
+    ct_attribute: ''
+    ct_packages:
+      - ''
+    ct_version: ''
+    domain: >-
+      ALL | AP-- | APRELSUB | POOLDEF | RELREC | RELSPEC | RELSUB | SUPP-- |
+      ADAM OTHER | BASIC DATA STRUCTURE | ...
+    group:
+      - ''
+    id: ''
+    key_name: >-
+      definition | examples | label | name | notes | ordinal | role |
+      simpleDatatype | variableCcode
+    key_value: ''
+    name: ''
+    operator: mean
+  - attribute_name: variable_value_length
+    ct_attribute: ''
+    ct_packages:
+      - ''
+    ct_version: ''
+    domain: >-
+      ALL | AP-- | APRELSUB | POOLDEF | RELREC | RELSPEC | RELSUB | SUPP-- |
+      ADAM OTHER | BASIC DATA STRUCTURE | ...
+    group:
+      - ''
+    id: ''
+    key_name: >-
+      definition | examples | label | name | notes | ordinal | role |
+      simpleDatatype | variableCcode
+    key_value: ''
+    name: ''
+    operator: min
+  - attribute_name: variable_value_length
+    ct_attribute: ''
+    ct_packages:
+      - ''
+    ct_version: ''
+    domain: >-
+      ALL | AP-- | APRELSUB | POOLDEF | RELREC | RELSPEC | RELSUB | SUPP-- |
+      ADAM OTHER | BASIC DATA STRUCTURE | ...
+    group:
+      - ''
+    id: ''
+    key_name: >-
+      definition | examples | label | name | notes | ordinal | role |
+      simpleDatatype | variableCcode
+    key_value: ''
+    name: ''
+    operator: min_date
+  - attribute_name: variable_value_length
+    ct_attribute: ''
+    ct_packages:
+      - ''
+    ct_version: ''
+    domain: >-
+      ALL | AP-- | APRELSUB | POOLDEF | RELREC | RELSPEC | RELSUB | SUPP-- |
+      ADAM OTHER | BASIC DATA STRUCTURE | ...
+    group:
+      - ''
+    id: ''
+    key_name: >-
+      definition | examples | label | name | notes | ordinal | role |
+      simpleDatatype | variableCcode
+    key_value: ''
+    name: ''
+    operator: name_referenced_variable_metadata
+  - attribute_name: variable_value_length
+    ct_attribute: ''
+    ct_packages:
+      - ''
+    ct_version: ''
+    domain: >-
+      ALL | AP-- | APRELSUB | POOLDEF | RELREC | RELSPEC | RELSUB | SUPP-- |
+      ADAM OTHER | BASIC DATA STRUCTURE | ...
+    group:
+      - ''
+    id: ''
+    key_name: >-
+      definition | examples | label | name | notes | ordinal | role |
+      simpleDatatype | variableCcode
+    key_value: ''
+    name: ''
+    operator: permissible_variables
+  - attribute_name: variable_value_length
+    ct_attribute: ''
+    ct_packages:
+      - ''
+    ct_version: ''
+    domain: >-
+      ALL | AP-- | APRELSUB | POOLDEF | RELREC | RELSPEC | RELSUB | SUPP-- |
+      ADAM OTHER | BASIC DATA STRUCTURE | ...
+    group:
+      - ''
+    id: ''
+    key_name: >-
+      definition | examples | label | name | notes | ordinal | role |
+      simpleDatatype | variableCcode
+    key_value: ''
+    name: ''
+    operator: record_count
+  - attribute_name: variable_value_length
+    ct_attribute: ''
+    ct_packages:
+      - ''
+    ct_version: ''
+    domain: >-
+      ALL | AP-- | APRELSUB | POOLDEF | RELREC | RELSPEC | RELSUB | SUPP-- |
+      ADAM OTHER | BASIC DATA STRUCTURE | ...
+    group:
+      - ''
+    id: ''
+    key_name: >-
+      definition | examples | label | name | notes | ordinal | role |
+      simpleDatatype | variableCcode
+    key_value: ''
+    name: ''
+    operator: required_variables
+  - attribute_name: variable_value_length
+    ct_attribute: ''
+    ct_packages:
+      - ''
+    ct_version: ''
+    domain: >-
+      ALL | AP-- | APRELSUB | POOLDEF | RELREC | RELSPEC | RELSUB | SUPP-- |
+      ADAM OTHER | BASIC DATA STRUCTURE | ...
+    group:
+      - ''
+    id: ''
+    key_name: >-
+      definition | examples | label | name | notes | ordinal | role |
+      simpleDatatype | variableCcode
+    key_value: ''
+    name: ''
+    operator: study_domains
+  - attribute_name: variable_value_length
+    ct_attribute: ''
+    ct_packages:
+      - ''
+    ct_version: ''
+    domain: >-
+      ALL | AP-- | APRELSUB | POOLDEF | RELREC | RELSPEC | RELSUB | SUPP-- |
+      ADAM OTHER | BASIC DATA STRUCTURE | ...
+    group:
+      - ''
+    id: ''
+    key_name: >-
+      definition | examples | label | name | notes | ordinal | role |
+      simpleDatatype | variableCcode
+    key_value: ''
+    name: ''
+    operator: valid_codelist_dates
+  - attribute_name: variable_value_length
+    ct_attribute: ''
+    ct_packages:
+      - ''
+    ct_version: ''
+    domain: >-
+      ALL | AP-- | APRELSUB | POOLDEF | RELREC | RELSPEC | RELSUB | SUPP-- |
+      ADAM OTHER | BASIC DATA STRUCTURE | ...
+    group:
+      - ''
+    id: ''
+    key_name: >-
+      definition | examples | label | name | notes | ordinal | role |
+      simpleDatatype | variableCcode
+    key_value: ''
+    name: ''
+    operator: valid_meddra_code_references
+  - attribute_name: variable_value_length
+    ct_attribute: ''
+    ct_packages:
+      - ''
+    ct_version: ''
+    domain: >-
+      ALL | AP-- | APRELSUB | POOLDEF | RELREC | RELSPEC | RELSUB | SUPP-- |
+      ADAM OTHER | BASIC DATA STRUCTURE | ...
+    group:
+      - ''
+    id: ''
+    key_name: >-
+      definition | examples | label | name | notes | ordinal | role |
+      simpleDatatype | variableCcode
+    key_value: ''
+    name: ''
+    operator: valid_meddra_code_term_pairs
+  - attribute_name: variable_value_length
+    ct_attribute: ''
+    ct_packages:
+      - ''
+    ct_version: ''
+    domain: >-
+      ALL | AP-- | APRELSUB | POOLDEF | RELREC | RELSPEC | RELSUB | SUPP-- |
+      ADAM OTHER | BASIC DATA STRUCTURE | ...
+    group:
+      - ''
+    id: ''
+    key_name: >-
+      definition | examples | label | name | notes | ordinal | role |
+      simpleDatatype | variableCcode
+    key_value: ''
+    name: ''
+    operator: valid_meddra_term_references
+  - attribute_name: variable_value_length
+    ct_attribute: ''
+    ct_packages:
+      - ''
+    ct_version: ''
+    domain: >-
+      ALL | AP-- | APRELSUB | POOLDEF | RELREC | RELSPEC | RELSUB | SUPP-- |
+      ADAM OTHER | BASIC DATA STRUCTURE | ...
+    group:
+      - ''
+    id: ''
+    key_name: >-
+      definition | examples | label | name | notes | ordinal | role |
+      simpleDatatype | variableCcode
+    key_value: ''
+    name: ''
+    operator: valid_whodrug_references
+  - attribute_name: variable_value_length
+    ct_attribute: ''
+    ct_packages:
+      - ''
+    ct_version: ''
+    domain: >-
+      ALL | AP-- | APRELSUB | POOLDEF | RELREC | RELSPEC | RELSUB | SUPP-- |
+      ADAM OTHER | BASIC DATA STRUCTURE | ...
+    group:
+      - ''
+    id: ''
+    key_name: >-
+      definition | examples | label | name | notes | ordinal | role |
+      simpleDatatype | variableCcode
+    key_value: ''
+    name: ''
+    operator: variable_count
+  - attribute_name: variable_value_length
+    ct_attribute: ''
+    ct_packages:
+      - ''
+    ct_version: ''
+    domain: >-
+      ALL | AP-- | APRELSUB | POOLDEF | RELREC | RELSPEC | RELSUB | SUPP-- |
+      ADAM OTHER | BASIC DATA STRUCTURE | ...
+    group:
+      - ''
+    id: ''
+    key_name: >-
+      definition | examples | label | name | notes | ordinal | role |
+      simpleDatatype | variableCcode
+    key_value: ''
+    name: ''
+    operator: variable_exists
+  - attribute_name: variable_value_length
+    ct_attribute: ''
+    ct_packages:
+      - ''
+    ct_version: ''
+    domain: >-
+      ALL | AP-- | APRELSUB | POOLDEF | RELREC | RELSPEC | RELSUB | SUPP-- |
+      ADAM OTHER | BASIC DATA STRUCTURE | ...
+    group:
+      - ''
+    id: ''
+    key_name: >-
+      definition | examples | label | name | notes | ordinal | role |
+      simpleDatatype | variableCcode
+    key_value: ''
+    name: ''
+    operator: variable_is_null
+  - attribute_name: variable_value_length
+    ct_attribute: ''
+    ct_packages:
+      - ''
+    ct_version: ''
+    domain: >-
+      ALL | AP-- | APRELSUB | POOLDEF | RELREC | RELSPEC | RELSUB | SUPP-- |
+      ADAM OTHER | BASIC DATA STRUCTURE | ...
+    group:
+      - ''
+    id: ''
+    key_name: >-
+      definition | examples | label | name | notes | ordinal | role |
+      simpleDatatype | variableCcode
+    key_value: ''
+    name: ''
+    operator: variable_library_metadata
+  - attribute_name: variable_value_length
+    ct_attribute: ''
+    ct_packages:
+      - ''
+    ct_version: ''
+    domain: >-
+      ALL | AP-- | APRELSUB | POOLDEF | RELREC | RELSPEC | RELSUB | SUPP-- |
+      ADAM OTHER | BASIC DATA STRUCTURE | ...
+    group:
+      - ''
+    id: ''
+    key_name: >-
+      definition | examples | label | name | notes | ordinal | role |
+      simpleDatatype | variableCcode
+    key_value: ''
+    name: ''
+    operator: variable_names
+  - attribute_name: variable_value_length
+    ct_attribute: ''
+    ct_packages:
+      - ''
+    ct_version: ''
+    domain: >-
+      ALL | AP-- | APRELSUB | POOLDEF | RELREC | RELSPEC | RELSUB | SUPP-- |
+      ADAM OTHER | BASIC DATA STRUCTURE | ...
+    group:
+      - ''
+    id: ''
+    key_name: >-
+      definition | examples | label | name | notes | ordinal | role |
+      simpleDatatype | variableCcode
+    key_value: ''
+    name: ''
+    operator: variable_value_count
+  - attribute_name: variable_value_length
+    ct_attribute: ''
+    ct_packages:
+      - ''
+    ct_version: ''
+    domain: >-
+      ALL | AP-- | APRELSUB | POOLDEF | RELREC | RELSPEC | RELSUB | SUPP-- |
+      ADAM OTHER | BASIC DATA STRUCTURE | ...
+    group:
+      - ''
+    id: ''
+    key_name: >-
+      definition | examples | label | name | notes | ordinal | role |
+      simpleDatatype | variableCcode
+    key_value: ''
+    name: ''
+    operator: whodrug_code_hierarchy
+Outcome:
+  Message: ''
+  Output Variables:
+    - variable_value_length
+Rule Type: Variable Metadata Check against Library Metadata
+Scope:
+  Classes:
+    Exclude:
+      - ALL
+      - EVENTS
+      - FINDINGS
+      - FINDINGS ABOUT
+      - INTERVENTIONS
+      - RELATIONSHIP
+      - SPECIAL PURPOSE
+      - STUDY REFERENCE
+      - TRIAL DESIGN
+    Include:
+      - ALL
+      - EVENTS
+      - FINDINGS
+      - FINDINGS ABOUT
+      - INTERVENTIONS
+      - RELATIONSHIP
+      - SPECIAL PURPOSE
+      - STUDY REFERENCE
+      - TRIAL DESIGN
+  Data Structures:
+    Exclude:
+      - ADAM OTHER
+      - ALL
+      - BASIC DATA STRUCTURE
+      - DEVICE LEVEL ANALYSIS DATASET
+      - MEDICAL DEVICE BASIC DATA STRUCTURE
+      - MEDICAL DEVICE OCCURRENCE DATA STRUCTURE
+      - OCCURRENCE DATA STRUCTURE
+      - SUBJECT LEVEL ANALYSIS DATASET
+    Include:
+      - ADAM OTHER
+      - ALL
+      - BASIC DATA STRUCTURE
+      - DEVICE LEVEL ANALYSIS DATASET
+      - MEDICAL DEVICE BASIC DATA STRUCTURE
+      - MEDICAL DEVICE OCCURRENCE DATA STRUCTURE
+      - OCCURRENCE DATA STRUCTURE
+      - SUBJECT LEVEL ANALYSIS DATASET
+  Datasets:
+    Exclude:
+      - ALL
+      - AP--
+      - APRELSUB
+      - POOLDEF
+      - RELREC
+      - RELSPEC
+      - RELSUB
+      - SUPP--
+    Include:
+      - ALL
+      - AP--
+      - APRELSUB
+      - POOLDEF
+      - RELREC
+      - RELSPEC
+      - RELSUB
+      - SUPP--
+  Domains:
+    Exclude:
+      - ALL
+      - AP--
+      - APRELSUB
+      - POOLDEF
+      - RELREC
+      - RELSPEC
+      - RELSUB
+      - SUPP--
+    Include:
+      - ALL
+      - AP--
+      - APRELSUB
+      - POOLDEF
+      - RELREC
+      - RELSPEC
+      - RELSUB
+      - SUPP--
+    include_split_datasets: true | false
+  Subclasses:
+    Exclude:
+      - ADVERSE EVENT
+      - ALL
+      - MEDICAL DEVICE TIME-TO-EVENT
+      - NON-COMPARTMENTAL ANALYSIS
+      - TIME-TO-EVENT
+    Include:
+      - ADVERSE EVENT
+      - ALL
+      - MEDICAL DEVICE TIME-TO-EVENT
+      - NON-COMPARTMENTAL ANALYSIS
+      - TIME-TO-EVENT
+Sensitivity: Record

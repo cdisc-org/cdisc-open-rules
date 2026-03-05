@@ -1,0 +1,123 @@
+Authorities:
+  # TODO in future? Possibly merge with CG0013, TIG0298
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: 'New variables (other than those that are from the same general
+                  observation class) must not be added, and existing variables
+                  must not be renamed or modified for novel usage.'
+                Document: IG v3.0
+                Section: '2.3'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND270
+              Version: '1'
+            Version: '5.0'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: 'New variables (other than those from the same general
+                  observation class) must not be added, and existing variables
+                  must not be renamed or modified for novel usage.'
+                Document: IG v3.1
+                Section: '2.3'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND270.1
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: 'New variables (other than those from the same general
+                  observation class) must not be added, and existing variables
+                  must not be renamed or modified for novel usage.'
+                Document: IG v3.1.1
+                Section: '2.3'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND270.1
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1.1'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: 'New variables (other than those from the same general
+                  observation class) must not be added, and existing variables
+                  must not be renamed or modified for novel usage.'
+                Document: IG v3.1.1
+                Section: '2.3'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND270.1
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: 'New variables (other than those from the same general
+                  observation class) must not be added, and existing variables
+                  must not be renamed or modified for novel usage.'
+                Document: IG v3.1
+                Section: '2.3'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND270.1
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: 'New variables (other than those from the same general
+                  observation class) must not be added, and existing variables
+                  must not be renamed or modified for novel usage.'
+                Document: IG v3.1.1
+                Section: '2.3'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND270.1
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+Check:
+  all:
+    # TODO in future?: add to rule implementation of rules CG0013, TIG0298
+    # Difference is that the current SEND rule is limited to Interventions, Findings, Events
+    # Whereas CG0013, TIG0298 is for all classes
+    - name: 'variable_name'
+      operator: 'is_not_contained_by'
+      value: $allowed_variables
+Core:
+  Status: Published
+  Version: '1'
+  Id: CORE-000947
+Description: 'Report a violation when the variable is not found in the
+  underlying SDTM model for the same observation class'
+# Set to "partially executable" as the second part "and use is consistent with SDTM v1.5 definition"
+# cannot be implemented as machine-executable
+Executability: Partially Executable
+Operations:
+  - id: $allowed_variables
+    operator: get_model_column_order
+Outcome:
+  Message: 'The variable is not found in the underlying SDTM model for the same
+    observation class'
+# Rule Type: Variable Metadata Check against Library Metadata
+Rule Type: Variable Metadata Check
+Scope:
+  Classes:
+    Include:
+      - INTERVENTIONS
+      - EVENTS
+      - FINDINGS
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Dataset

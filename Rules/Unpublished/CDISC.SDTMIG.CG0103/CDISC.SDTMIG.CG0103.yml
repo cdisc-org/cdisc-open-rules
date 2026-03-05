@@ -1,0 +1,73 @@
+# Variable: EXDOSU
+# Condition: 
+# Rule: EXDOSU = protocol-specified unit
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        Version: '3.4'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0103
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: Units for EXDOSE, EXDOSTOT, or EXDOSTXT representing
+                  protocol-specified values.
+                Document: IG v3.4
+                Item: Specification
+                Section: 6.1.3.1
+      - Name: SDTMIG
+        Version: '3.2'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0103
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: Units for EXDOSE, EXDOSTOT, or EXDOSTXT representing
+                  protocol-specified values.
+                Document: IG v3.2
+                Item: Specification
+                Section: '6.1'
+      - Name: SDTMIG
+        Version: '3.3'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0103
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: Units for EXDOSE, EXDOSTOT, or EXDOSTXT representing
+                  protocol-specified values.
+                Document: IG v3.3
+                Item: Specification
+                Section: 6.1.3.1
+Check:
+  all:
+    - name: EXDOSU
+      operator: not_equal_to
+      value: TS.TSVAL
+    - name: TS.TSPARMCD
+      operator: starts_with
+      value: DOSU
+Core:
+  Id: CDISC.SDTMIG.CG0103
+  Status: Draft
+  Version: '1'
+Description: Trigger error if EXDOSU not expressed in protocol-specified units
+Executability: Fully Executable
+Outcome:
+  Message: EXDOSU is not expressed using protocol-specific units
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - INTERVENTIONS
+  Domains:
+    Include:
+      - EX
+Sensitivity: Domain

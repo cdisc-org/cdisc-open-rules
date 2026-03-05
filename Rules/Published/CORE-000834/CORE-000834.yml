@@ -1,0 +1,99 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'If geographic scope type is global then there must be only one
+                  geographic scope specified.'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00151'
+              Version: '1'
+            Version: '1.0'
+        Version: '3.0'
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'If geographic scope type is global then there must be only one
+                  geographic scope specified.'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00151'
+              Version: '1'
+            Version: '1.0'
+        Version: '4.0'
+Check:
+  all:
+    - name: instanceType
+      operator: equal_to
+      value: 'GovernanceDate'
+    - name: rel_type
+      operator: equal_to
+      value: 'definition'
+    - name: $num_of_geographic_scopes
+      operator: greater_than
+      value: 1
+    - any:
+        - name: $geographic_scope_type_codes
+          operator: contains_case_insensitive
+          value: 'C68846'
+        - name: $geographic_scope_type_decodes
+          operator: contains_case_insensitive
+          value: 'Global'
+Core:
+  Id: 'CORE-000834'
+  Status: Published
+  Version: '1'
+Description: 'If geographic scope type is global then there must be only one
+  geographic scope specified.'
+Executability: Fully Executable
+Operations:
+  - domain: GeographicScope
+    group:
+      - parent_id
+      - rel_type
+    group_aliases:
+      - id
+    id: $num_of_geographic_scopes
+    operator: record_count
+  - domain: GeographicScope
+    group:
+      - parent_id
+      - rel_type
+    group_aliases:
+      - id
+    id: $geographic_scope_type_codes
+    name: type.code
+    operator: distinct
+  - domain: GeographicScope
+    group:
+      - parent_id
+      - rel_type
+    group_aliases:
+      - id
+    id: $geographic_scope_type_decodes
+    name: type.decode
+    operator: distinct
+Outcome:
+  Message: 'The governance date has more than one geographic scope defined, at
+    least one of which has type of "Global" (type.code = C68846 or type.decode =
+    "Global", both case insensitive).'
+  Output Variables:
+    - parent_entity
+    - parent_id
+    - parent_rel
+    - id
+    - name
+    - dateValue
+    - $num_of_geographic_scopes
+    - $geographic_scope_type_codes
+    - $geographic_scope_type_decodes
+Rule Type: Record Data
+Scope:
+  Entities:
+    Include:
+      - 'GovernanceDate'
+Sensitivity: Record

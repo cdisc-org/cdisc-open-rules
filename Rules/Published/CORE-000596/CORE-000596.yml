@@ -1,0 +1,61 @@
+# Variable: INGRADE, INPURITY
+# Condition: INGRADE = null AND INPURITY = null
+# Rule: TPMF ^= null
+Authorities:
+  - Organization: 'CDISC'
+    Standards:
+      - Name: 'TIG'
+        References:
+          - Citations:
+              - Cited Guidance: Ingredient grade (INGRADE) and purity (INPURITY). According to
+                  the PMTA rule, at least one of these two attributes must be
+                  included. If the data are proprietary and only available via
+                  the TPMF, then TPMF should be populated.
+                Document: 'TIG 1.0'
+                Item: 'assumption 3.f'
+                Section: '2.8.8.5'
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: 'TIG0012'
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: INGRADE
+      operator: empty
+    - name: INPURITY
+      operator: empty
+    - any:
+        - name: TPMF
+          operator: empty
+        - name: TPMF
+          operator: not_exists
+Core:
+  Status: Published
+  Version: '1'
+  Id: CORE-000596
+Description: Raise an error when INGRADE, INPURITY and TPMF are all not populated.
+Executability: Fully Executable
+Outcome:
+  Message: At least one of INGRADE or INPURITY should be populated. If neither is
+    available due to the ingredient being proprietary and originating from a
+    third-party supplier, populate TPMF with the Tobacco Product Master File
+    number provided by the supplier.
+  Output Variables:
+    - INGRADE
+    - INPURITY
+    - TPMF
+    - IGDCMPID
+    - SPTOBID
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - IN
+  Use Case: PROD
+Sensitivity: Record

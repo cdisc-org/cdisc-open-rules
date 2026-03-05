@@ -1,0 +1,104 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: One record per test per observation time per subject
+                Document: SENDIG v3.0
+                Section: 6.3.16
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND208
+              Version: '1'
+            Version: '5.0'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: One record per test per observation time per subject
+                Document: SENDIG v3.1
+                Section: 6.3.16
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND208.1
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: One record per test per observation time per subject
+                Document: SENDIG v3.1.1
+                Section: 6.3.16
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND208.1
+              Version: '1'
+            Version: '5.0'
+        Version: 3.1.1
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: One record per test per observation time per subject
+                Document: SENDIG v3.1
+                Section: 6.3.16
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND208.1
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: One record per test per observation time per subject
+                Document: SENDIG v3.1.1
+                Section: 6.3.16
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND208.1
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: One record per test per observation time per subject
+                Document: SENDIG v3.1.1
+                Section: 6.3.16
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND208.1
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+Check:
+  all:
+    - name: EGTESTCD
+      operator: is_not_unique_set
+      value:
+        - USUBJID
+        - EGDTC
+Core:
+  Id: CORE-000474
+  Status: Published
+  Version: '1'
+Description: Raise an error when there is more than one record present for any
+  particular ECG test for a subject and measurement date/time.
+Executability: Partially Executable - Possible Underreporting
+Outcome:
+  Message: The ECG test is not unique for this subject and measurement datetime.
+  Output Variables:
+    - USUBJID
+    - EGTESTCD
+    - EGDTC
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - EG
+Sensitivity: Record

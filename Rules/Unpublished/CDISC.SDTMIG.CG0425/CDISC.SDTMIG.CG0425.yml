@@ -1,0 +1,67 @@
+# Variable: --STRESU
+# Condition: --STRESC ^= null and units are applicable for the result
+# Rule: --STRESU ^= null
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: 'The unit of measure for the standardized result of the
+                  measurement, test, or examination.  Variable(s) Qualified:
+                  --STRESC and --STRESN and --STNRLO and --STNRHI and --STREFC
+                  and --STREFN and --LLOQ and --ULOQ.'
+                Document: Model v2.0
+                Item: --STRESU
+                Section: Findings
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0425
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: '--STRESU: Standardized units used for --STRESC and --STRESN.'
+                Document: Model v1.4
+                Section: 2.2.3
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0425
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: '--STRESU:Standardized units used for --STRESC, --STRESN,
+                  --STREFC, and --STREFN. Example: "mol/L".'
+                Document: Model v1.7
+                Section: 2.2.3
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0425
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+Check:
+Core:
+  Id: CDISC.SDTMIG.CG0425
+  Status: Draft
+  Version: '1'
+Description: Trigger error if --STRESU is null when --STRESC ^= null and units
+  are applicable for the result
+Executability: Not Executable
+Outcome:
+  Message: --STRESU is null when --STRESC ^= null and units are applicable for the
+    result
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record

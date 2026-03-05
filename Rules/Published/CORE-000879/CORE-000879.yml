@@ -1,0 +1,70 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: "For CDISC codelist references (where the code system is
+                  'http://www.cdisc.org'), the code system version must be a
+                  valid CDISC terminology release date in ISO 8601 date format."
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00155'
+              Version: '1'
+            Version: '1.0'
+        Version: '3.0'
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: "For CDISC codelist references (where the code system is
+                  'http://www.cdisc.org'), the code system version must be a
+                  valid CDISC terminology release date in ISO 8601 date format."
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00155'
+              Version: '1'
+            Version: '1.0'
+        Version: '4.0'
+Check:
+  all:
+    - name: codeSystem
+      operator: equal_to
+      value: 'http://www.cdisc.org'
+    - name: codeSystemVersion
+      operator: is_not_contained_by
+      value: $valid_versions
+Core:
+  Id: 'CORE-000879'
+  Status: Published
+  Version: '1'
+Description: "For CDISC codelist references (where the code system is
+  'http://www.cdisc.org'), the code system version must be a valid CDISC
+  terminology release date in ISO 8601 date format."
+Executability: Fully Executable
+Operations:
+  - ct_package_types:
+      - DDF
+      - SDTM
+      - PROTOCOL
+    id: $valid_versions
+    operator: valid_codelist_dates
+Outcome:
+  Message: 'The code system is "http://www.cdisc.org" but the code system version
+    is not a valid CDISC terminology release date in ISO 8601 date format.'
+  Output Variables:
+    - parent_entity
+    - parent_id
+    - parent_rel
+    - id
+    - code
+    - codeSystem
+    - codeSystemVersion
+    - decode
+Rule Type: Record Data
+Scope:
+  Entities:
+    Include:
+      - 'Code'
+Sensitivity: Record

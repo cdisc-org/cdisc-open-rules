@@ -1,0 +1,71 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'All primary endpoints must be referenced by a primary
+                  objective.'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00096'
+              Version: '1'
+            Version: '1.0'
+        Version: '3.0'
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'All primary endpoints must be referenced by a primary
+                  objective.'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00096'
+              Version: '1'
+            Version: '1.0'
+        Version: '4.0'
+Check:
+  all:
+    - name: rel_type
+      operator: equal_to
+      value: 'definition'
+    - name: level.code
+      operator: equal_to
+      value: 'C94496'
+    - name: level.code.Objective
+      operator: not_equal_to
+      value: 'C85826'
+Core:
+  Id: 'CORE-000874'
+  Status: Published
+  Version: '1'
+Description: 'All primary endpoints must be referenced by a primary objective.'
+Executability: Fully Executable
+Match Datasets:
+  - Join Type: left
+    Keys:
+      - Left: parent_id
+        Right: id
+      - rel_type
+    Name: Objective
+Outcome:
+  Message: 'The primary endpoint (level.code = C94496) is not referenced by a
+    primary objective (level.code.Objective = C85826).'
+  Output Variables:
+    - parent_entity
+    - parent_id
+    - parent_rel
+    - id
+    - name
+    - level.code
+    - level.decode
+    - name.Objective
+    - level.code.Objective
+    - level.decode.Objective
+Rule Type: Record Data
+Scope:
+  Entities:
+    Include:
+      - 'Endpoint'
+Sensitivity: Record

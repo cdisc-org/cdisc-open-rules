@@ -1,0 +1,106 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'Within a study version, if a date of a specific type exists
+                  with a global geographic scope then no other dates are
+                  expected with the same type.'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00094'
+              Version: '1'
+            Version: '1.0'
+        Version: '3.0'
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'Within a study version, if a date of a specific type exists
+                  with a global geographic scope then no other dates are
+                  expected with the same type.'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00094'
+              Version: '1'
+            Version: '1.0'
+        Version: '4.0'
+Check:
+  all:
+    - name: instanceType
+      operator: equal_to
+      value: 'GeographicScope'
+    - name: rel_type
+      operator: equal_to
+      value: 'definition'
+    - any:
+        - name: type.code
+          operator: equal_to
+          value: 'C68846'
+        - name: type.decode
+          operator: equal_to_case_insensitive
+          value: 'Global'
+    - any:
+        - name: $num_geographic_scopes_for_this_date
+          operator: greater_than
+          value: 1
+        - name: $num_dates_of_this_type
+          operator: greater_than
+          value: 1
+Core:
+  Id: 'CORE-000814'
+  Status: Published
+  Version: '1'
+Description: 'Within a study version, if a date of a specific type exists with a
+  global geographic scope then no other dates are expected with the same type.'
+Executability: Partially Executable - Possible Overreporting
+Match Datasets:
+  - Keys:
+      - Left: parent_id
+        Right: id
+      - rel_type
+    Name: GovernanceDate
+  - Keys:
+      - Left: parent_id.GovernanceDate
+        Right: id
+      - rel_type
+    Name: StudyVersion
+Operations:
+  - group:
+      - parent_id
+    id: $num_geographic_scopes_for_this_date
+    operator: record_count
+  - domain: GovernanceDate
+    group:
+      - parent_id
+      - type.code
+    group_aliases:
+      - id.StudyVersion
+      - type.code.GovernanceDate
+    id: $num_dates_of_this_type
+    operator: record_count
+Outcome:
+  Message: 'The study version has a type of governance date with a global
+    geographic scope and either another date of the same type or additional
+    geographic scope(s) defined for the date.'
+  Output Variables:
+    - parent_entity.StudyVersion
+    - parent_id.StudyVersion
+    - parent_rel.StudyVersion
+    - id.StudyVersion
+    - versionIdentifier
+    - type.code.GovernanceDate
+    - type.decode.GovernanceDate
+    - dateValue
+    - type.code
+    - type.decode
+    - $num_dates_of_this_type
+    - $num_geographic_scopes_for_this_date
+Rule Type: Record Data
+Scope:
+  Entities:
+    Include:
+      - 'GeographicScope'
+Sensitivity: Record

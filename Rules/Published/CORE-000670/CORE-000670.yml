@@ -1,0 +1,66 @@
+Authorities:
+  - Organization: 'CDISC'
+    Standards:
+      - Name: 'SENDIG'
+        References:
+          - Citations:
+              - Cited Guidance: 'The DD domain should only be utilized for subjects with an
+                  unscheduled death'
+                Document: SENDIG v3.0
+                Section: '6.3.4.1'
+            Origin: 'SEND Conformance Rules'
+            Rule Identifier:
+              Id: 'SEND167'
+              Version: '1'
+            Validator Rule Message: ''
+            Version: '5.0'
+        Version: '3.0'
+Check:
+  all:
+    - name: 'DDTESTCD'
+      operator: non_empty
+    # For SENDIG-3.0, there is no DDUSCHFL, so a check is done on DSDECOD
+    # which has ACCIDENTAL DEATH, FOUND DEAD, MORIBUND SACRIFICE, NON-MORIBUND SACRIFICE
+    # for "unscheduled"
+    - name: 'DSDECOD'
+      # "is_not_contained_by" gives an error "'list' object has no attribute 'startswith'"
+      # WHY?
+      #operator: is_not_contained_by
+      #value:
+      #  - 'ACCIDENTAL DEATH'
+      #  - 'FOUND DEAD'
+      #  - 'MORIBUND SACRIFICE'
+      # - 'NON-MORIBUND SACRIFICE'
+      operator: not_equal_to
+      value: 'ACCIDENTAL DEATH'
+    - name: 'DSDECOD'
+      operator: not_equal_to
+      value: 'FOUND DEAD'
+    - name: 'DSDECOD'
+      operator: not_equal_to
+      value: 'MORIBUND SACRIFICE'
+    - name: 'DSDECOD'
+      operator: not_equal_to
+      value: 'NON-MORIBUND SACRIFICE'
+Core:
+  Id: CORE-000670
+  Status: Published
+  Version: '1'
+Description: ''
+Executability: Fully Executable
+Match Datasets:
+  - Keys:
+      - USUBJID
+    Name: DS
+Outcome:
+  Message: 'Record does not have DDSTRESC=ACCIDENTAL DEATH,FOUND DEAD,MORIBUND
+    SACRIFICE,NON-MORIBUND SACRIFICE indicating unscheduled death'
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - DD
+Sensitivity: Record

@@ -1,0 +1,128 @@
+Authorities:
+  - Organization: 'FDA'
+    Standards:
+      - Name: 'SENDIG'
+        References:
+          - Citations:
+              - Cited Guidance: 'DS, CL, EG, EX, LB, MA, MI, PC, PP, and VS should be submitted
+                  if collected.'
+                Document: 'FDA'
+                Section: 'FDAB056'
+            Origin: 'FDA Business Rules'
+            Rule Identifier:
+              Id: 'FB6508'
+              Version: '1'
+            Version: '1.5'
+        Version: '3.0'
+      - Name: 'SENDIG'
+        References:
+          - Citations:
+              - Cited Guidance: 'DS, CL, EG, EX, LB, MA, MI, PC, PP, and VS should be submitted
+                  if collected.'
+                Document: 'FDA'
+                Section: 'FDAB056'
+            Origin: 'FDA Business Rules'
+            Rule Identifier:
+              Id: 'FB6508'
+              Version: '1'
+            Version: '1.5'
+        Version: '3.1'
+      - Name: 'SENDIG'
+        References:
+          - Citations:
+              - Cited Guidance: 'DS, CL, EG, EX, LB, MA, MI, PC, PP, and VS should be submitted
+                  if collected.'
+                Document: 'FDA'
+                Section: 'FDAB056'
+            Origin: 'FDA Business Rules'
+            Rule Identifier:
+              Id: 'FB6508'
+              Version: '1'
+            Version: '1.5'
+        Version: '3.1.1'
+      - Name: 'SENDIG-GENETOX'
+        References:
+          - Citations:
+              - Cited Guidance: 'DS, CL, EG, EX, LB, MA, MI, PC, PP, and VS should be submitted
+                  if collected.'
+                Document: 'FDA'
+                Section: 'FDAB056'
+            Origin: 'FDA Business Rules'
+            Rule Identifier:
+              Id: 'FB6508'
+              Version: '1'
+            Version: '1.5'
+        Version: '1.0'
+      - Name: 'SENDIG-DART'
+        References:
+          - Citations:
+              - Cited Guidance: 'DS, CL, EG, EX, LB, MA, MI, PC, PP, and VS should be submitted
+                  if collected.'
+                Document: 'FDA'
+                Section: 'FDAB056'
+            Origin: 'FDA Business Rules'
+            Rule Identifier:
+              Id: 'FB6508'
+              Version: '1'
+            Version: '1.5'
+        Version: '1.1'
+      - Name: 'SENDIG-DART'
+        References:
+          - Citations:
+              - Cited Guidance: 'DS, CL, EG, EX, LB, MA, MI, PC, PP, and VS should be submitted
+                  if collected.'
+                Document: 'FDA'
+                Section: 'FDAB056'
+            Origin: 'FDA Business Rules'
+            Rule Identifier:
+              Id: 'FB6508'
+              Version: '1'
+            Version: '1.5'
+        Version: '1.2'
+      - Name: 'SENDIG-AR'
+        References:
+          - Citations:
+              - Cited Guidance: 'DS, CL, EG, EX, LB, MA, MI, PC, PP, and VS should be submitted
+                  if collected.'
+                Document: 'FDA'
+                Section: 'FDAB056'
+            Origin: 'FDA Business Rules'
+            Rule Identifier:
+              Id: 'FB6508'
+              Version: '1'
+            Version: '1.5'
+        Version: '1.0'
+# Rule FB6507: When PC domain is present in the define.xml, but no PC dataset is present in the submission
+# then the define.xml must contain ItemGroupDef for PC with attribute def:HasNoData marked as "Yes"
+Check:
+  all:
+    # Also SEE FB0405
+    - name: define_dataset_name
+      operator: equal_to
+      value: PC
+    - name: define_dataset_has_no_data
+      operator: equal_to
+      value: false
+    - name: filename
+      operator: empty
+#    
+Core:
+  Status: Draft
+  Version: '1'
+Description: 'PC dataset should be present in the submission when related data is collected'
+Executability: Fully Executable
+Outcome:
+  Message: Missing PC dataset.
+  Output Variables:
+    - PC
+    - define_dataset_has_no_data
+Rule Type: Domain Presence Check against Define XML
+# Scope: Important here to have "ALL", not "PC" ...
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Study

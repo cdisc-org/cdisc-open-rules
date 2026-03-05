@@ -1,0 +1,125 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      # Remark: does not apply to SENDIG-3.0
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: 'The SDTM includes three types of special-purpose datasets, each
+                  of which has a fixed structure: ... Trial Design Model
+                  datasets, consisting of Trial Elements (TE), Trial Arms (TA),
+                  Trial Sets (TX), and Trial Summary (TS), contain information
+                  about the study design but do not contain subject data. These
+                  are described in Section 7 ...'
+                Document: IG v3.1
+                Item: Specification
+                Section: '2.2'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND298
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: 'The SDTM includes three types of special-purpose datasets, each
+                  of which has a fixed structure: rial Design Model datasets,
+                  consisting of Trial Elements (TE), Trial Arms (TA), Trial Sets
+                  (TX), and Trial Summary (TS), contain information about the
+                  study design but do not contain subject data. These are
+                  described in Section 7 ...'
+                Document: IG v3.1.1
+                Item: Specification
+                Section: '2.2'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND298
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1.1'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: 'The SDTM includes three types of special-purpose datasets, each
+                  of which has a fixed structure: ... Trial Design Model
+                  datasets, consisting of Trial Elements (TE), Trial Arms (TA),
+                  Trial Sets (TX), and Trial Summary (TS), contain information
+                  about the study design but do not contain subject data. These
+                  are described in Section 7 ...'
+                Document: IG v3.1.1
+                Item: Specification
+                Section: '2.2'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND298
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: 'The SDTM includes three types of special-purpose datasets, each
+                  of which has a fixed structure: ... Trial Design Model
+                  datasets, consisting of Trial Elements (TE), Trial Arms (TA),
+                  Trial Sets (TX), and Trial Summary (TS), contain information
+                  about the study design but do not contain subject data. These
+                  are described in Section 7 ...'
+                Document: IG v3.1
+                Item: Specification
+                Section: '2.2'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND298
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: 'The SDTM includes three types of special-purpose datasets, each
+                  of which has a fixed structure: ... Trial Design Model
+                  datasets, consisting of Trial Elements (TE), Trial Arms (TA),
+                  Trial Sets (TX), and Trial Summary (TS), contain information
+                  about the study design but do not contain subject data. These
+                  are described in Section 7 ...'
+                Document: IG v3.1.1
+                Item: Specification
+                Section: '2.2'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND298
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+Check:
+  all:
+    - name: variable_name
+      operator: is_not_contained_by
+      value: $allowed_variables
+Core:
+  Status: Draft
+  Version: '1'
+Description: 'Trigger error when variable is not an allowed variable for the TE,
+  TA, TX, or TS domain'
+Executability: Fully Executable
+Operations:
+  - id: $allowed_variables
+    # operator: get_model_column_order - NO !!!
+    operator: get_column_order_from_library
+Outcome:
+  Message: 'The variable is not an allowed variable for the domain'
+Rule Type: Variable Metadata Check
+# Rule Type: Variable Metadata Check against Library Metadata
+Scope:
+  Classes:
+    Include:
+      - TRIAL DESIGN
+  Domains:
+    Include:
+      - TE
+      - TA
+      - TX
+      - TS
+# We use "Record" as when using "Dataset", only the first violation is reported
+Sensitivity: Record

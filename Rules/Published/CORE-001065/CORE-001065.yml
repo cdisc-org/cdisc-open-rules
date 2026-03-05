@@ -1,0 +1,69 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'Within a study design, if study type is Interventional then at
+                  least one intervention is expected to be referenced from a
+                  procedure.'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00101'
+              Version: '1'
+            Version: '1.0'
+        Version: '3.0'
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'Within a study design, if study type is Interventional then at
+                  least one intervention is expected to be referenced from a
+                  procedure.'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00101'
+              Version: '1'
+            Version: '1.0'
+        Version: '4.0'
+Check: |-
+  ($.study.versions[$not("studyType" in $keys($)) or studyType.code = "C98388"])@$sv.
+    ($sv.studyDesigns[$not("studyType" in $keys($)) or studyType.code = "C98388"])@$sd.
+      {
+        "instanceType": $sd.instanceType,
+        "id": $sd.id,
+        "path": $sd._path,
+        "name": $sd.name,
+        "studyType.code": $append($sv.studyType.code,$sd.studyType.code),
+        "studyType.decode": $append($sv.studyType.decode,$sd.studyType.decode),
+        "# Referenced Study Interventions":
+            $count($sd.activities.definedProcedures
+              [
+                studyInterventionId in
+                  $append($sd.studyInterventionIds[$ in $sv.studyInterventions.id],$sd.studyInterventions.id)
+              ]
+            )
+      }[`# Referenced Study Interventions` < 1][]
+Core:
+  Id: 'CORE-001065'
+  Status: Published
+  Version: '1'
+Description: 'Within a study design, if study type is Interventional then at
+  least one intervention is expected to be referenced from a procedure.'
+Executability: Partially Executable - Possible Overreporting
+Outcome:
+  Message: 'The study type is Interventional (code=C98388) but a study
+    intervention is not referenced from any procedure.'
+  Output Variables:
+    - name
+    - studyType.code
+    - studyType.decode
+    - '# Referenced Study Interventions'
+Rule Type: JSONata
+Scope:
+  Entities:
+    Include:
+      - 'StudyDesign'
+      - 'InterventionalStudyDesign'
+Sensitivity: Record

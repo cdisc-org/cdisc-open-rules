@@ -1,0 +1,136 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: The variable, --STRESC, is derived either by the conversion of
+                  values in --ORRES to values with standard units, or by the
+                  assignment of the value of --ORRES.
+                Document: SENDIG v3.0
+                Item: Text
+                Section: 4.5.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND264
+              Version: "1"
+            Version: "5.0"
+        Version: "3.0"
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: The variable, --STRESC, is derived either by the conversion of
+                  values in --ORRES to values with standard units, or by the
+                  assignment of the value of --ORRES.
+                Document: SENDIG v3.1
+                Item: Text
+                Section: 4.5.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND264
+              Version: "1"
+            Version: "5.0"
+        Version: "3.1"
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: The variable, --STRESC, is derived either by the conversion of
+                  values in --ORRES to values with standard units, or by the
+                  assignment of the value of --ORRES.
+                Document: SENDIG v3.1.1
+                Item: Text
+                Section: 4.5.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND264
+              Version: "1"
+            Version: "5.0"
+        Version: 3.1.1
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: The variable, --STRESC, is derived either by the conversion of
+                  values in --ORRES to values with standard units, or by the
+                  assignment of the value of --ORRES.
+                Document: SENDIG v3.1
+                Item: Text
+                Section: 4.5.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND264
+              Version: "1"
+            Version: "5.0"
+        Version: "1.1"
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: The variable, --STRESC, is derived either by the conversion of
+                  values in --ORRES to values with standard units, or by the
+                  assignment of the value of --ORRES.
+                Document: SENDIG v3.1.1
+                Item: Text
+                Section: 4.5.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND264
+              Version: "1"
+            Version: "5.0"
+        Version: "1.2"
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: WThe variable, --STRESC, is derived either by the conversion of
+                  values in --ORRES to values with standard units, or by the
+                  assignment of the value of --ORRES.
+                Document: SENDIG v3.1.1
+                Item: Text
+                Section: 4.5.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND264
+              Version: "1"
+            Version: "5.0"
+        Version: "1.0"
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: Derived by the conversion of numeric values in --ORRES to
+                  numeric values with standard units. The assigned of the value
+                  of --ORRES.
+                Document: TIG v1.0
+                Item: Second Table, Num 2
+                Section: 2.8.7.1 General Guidance
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0183
+              Version: "1"
+            Version: "1.0"
+        Substandard: SEND
+        Version: "1.0"
+Check:
+  all:
+    - name: --ORRES
+      operator: empty
+    - name: --STRESC
+      operator: non_empty
+Core:
+  Id: CORE-000430
+  Status: Published
+  Version: "1"
+Description: When --ORRES is null, --STRESC must also be null
+Executability: Fully Executable
+Outcome:
+  Message: --STRESC must be be null as --ORRES is null.
+  Output Variables:
+    - --ORRES
+    - --STRESC
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - ALL
+  Use Case: NONCLIN
+Sensitivity: Record

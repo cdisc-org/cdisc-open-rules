@@ -1,0 +1,70 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'A masking is expected to be defined for at least two study
+                  roles in a study design with a double blind blinding schema.'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00192'
+              Version: '1'
+            Version: '1.0'
+        Version: '4.0'
+Check: |-
+  ($.study.versions)@$sv.
+    ($sv.studyDesigns)@$sd
+      [
+        $sd.blindingSchema.standardCode.code = "C15228"
+      ].[
+          ( 
+            $maskedRoles := $sv.roles@$r
+                              [
+                                $sv.id in $r.appliesToIds or
+                                $sd.id in $r.appliesToIds
+                              ].{
+                                  "id": $r.id,
+                                  "code": $r.code.decode,
+                                  "isMasked": $r.masking.isMasked
+                                };
+            {
+              "instanceType": $sd.instanceType,
+              "id": $sd.id,
+              "path": $sd._path,
+              "name": $sd.name,
+              "blindingSchema.code": $sd.blindingSchema.standardCode.code,
+              "blindingSchema.decode": $sd.blindingSchema.standardCode.decode,
+              "# Masked Roles": $count($maskedRoles[isMasked=true]),
+              "Applicable Roles":
+                $maskedRoles
+                ~>  $map(function($v)
+                      {$join([$v.code,'[',$v.id,',',$v.isMasked=true?'Masked':'Not Masked',']'])}
+                    )
+                ~> $join("; ")
+            }
+          )
+        ][`# Masked Roles` < 2]
+Core:
+  Id: 'CORE-001071'
+  Status: Published
+  Version: '1'
+Description: 'A masking is expected to be defined for at least two study roles
+  in a study design with a double blind blinding schema.'
+Executability: Partially Executable - Possible Overreporting
+Outcome:
+  Message: 'The study design has a double blind blinding schema (code=C15228) but
+    there are not at least two applicable study roles that are masked.'
+  Output Variables:
+    - name
+    - blindingSchema.code
+    - blindingSchema.decode
+    - "# Masked Roles"
+    - "Applicable Roles"
+Rule Type: JSONata
+Scope:
+  Entities:
+    Include:
+      - 'InterventionalStudyDesign'
+Sensitivity: Record

@@ -1,0 +1,130 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: 'The define.xml specification includes seven distinct attributes
+                  to describe variable-level metadata; ...The data Type.'
+                Document: SENDIG v3.0
+                Section: '3.2.2'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND4
+              Version: '1'
+            Version: '5.0'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: 'The define.xml specification includes seven distinct attributes
+                  to describe variable-level metadata; ... The data Type.'
+                Document: SENDIG v3.1
+                Section: '3.2.2'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND4
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: 'The define.xml specification includes seven distinct attributes
+                  to describe variable-level metadata; ...The data Type.'
+                Document: SENDIG v3.1.1
+                Section: '3.2.2'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND4
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1.1'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: 'The define.xml specification includes seven distinct attributes
+                  to describe variable-level metadata; ...The data Type.'
+                Document: SENDIG v3.1.1
+                Section: '3.2.2'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND4
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: 'The define.xml specification includes seven distinct attributes
+                  to describe variable-level metadata; ...The data Type.'
+                Document: SENDIG v3.1
+                Section: '3.2.2'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND4
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: 'The define.xml specification includes seven distinct attributes
+                  to describe variable-level metadata; ...The data Type.'
+                Document: SENDIG v3.1.1
+                Section: '3.2.2'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND4
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+Check:
+  all:
+    #- name: variable_data_type
+    #  operator: not_equal_to
+    #  # value: 'Char' # temporary (uppercase)
+    #  value: define_variable_data_type
+    - name: variable_name # JUST TRYING ...
+      operator: equal_to
+      value: define_variable_name
+    - name: variable_data_type
+      # ALTHOUGH equivalent: variable_data_type equal_to "Char" DOES NOT WORK !!!
+      #operator: equal_to
+      #value: "Char"
+      operator: not_equal_to # Character
+      value: "Num"
+      #- all:
+      #    # ALTHOUGH mostly equivalent, define_variable_data_type equal_to "text" DOES NOT WORK !!!
+      #    - name: define_variable_data_type
+      #      operator: not_equal_to
+      #      value: "integer"
+      #- any:
+      #    - name: define_variable_data_type
+      #      operator: equal_to
+      #      value: 'integer'
+      #    - name: define_variable_data_type
+      #      operator: equal_to
+      #      value: 'float'
+Core:
+  Status: Draft
+  Version: '1'
+Description: ''
+Executability: Fully Executable
+Outcome:
+  Message: 'variable data type mismatch'
+  Output Variables:
+    - variable_name
+    - define_variable_name
+    - variable_data_type
+    - define_variable_data_type
+# Rule Type: Record Data
+Rule Type: Variable Metadata Check against Define XML
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record

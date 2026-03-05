@@ -1,0 +1,156 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Time points can be represented using the time point variables,
+                  --TPT, --TPTNUM, --ELTM, and the time point anchors, --TPTREF
+                  (text description) and --RFTDTC (the date/time).; See also
+                  --ELTM CDISC Notes in Domain Tables (e.g., "Planned elapsed
+                  time (in ISO 8601) format relative to the planned fixed
+                  reference (EXTPTREF).")
+                Document: IG v3.0
+                Item: Specification
+                Section: 4.4.7
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: "SEND279"
+              Version: "1"
+            Version: "5.0"
+        Version: "3.0"
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: "--TPTREF: the description of the fixed reference point event or
+                  anchor from which the planned observation will be made,
+                  usually the dose ...--ELTM: the planned elapsed time from the
+                  fixed reference point event (e.g., a dose) to the planned
+                  observation."
+                Document: IG v3.1
+                Item: Specification
+                Section: 4.4.7.2.2
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: "SEND279.1"
+              Version: "1"
+            Version: "5.0"
+        Version: "3.1"
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: "--TPTREF: the description of the fixed reference point event or
+                  anchor from which the planned observation will be made,
+                  usually the dose ...--ELTM: the planned elapsed time from the
+                  fixed reference point event (e.g., a dose) to the planned
+                  observation."
+                Document: IG v3.1.1
+                Item: Specification
+                Section: 4.4.7.2.2
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: "SEND279.1"
+              Version: "1"
+            Version: "5.0"
+        Version: "3.1.1"
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: "--TPTREF: the description of the fixed reference point event or
+                  anchor from which the planned observation will be made,
+                  usually the dose ...--ELTM: the planned elapsed time from the
+                  fixed reference point event (e.g., a dose) to the planned
+                  observation."
+                Document: IG v3.1.1
+                Item: Specification
+                Section: 4.4.7.2.2
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: "SEND279.1"
+              Version: "1"
+            Version: "5.0"
+        Version: "1.0"
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: "--TPTREF: the description of the fixed reference point event or
+                  anchor from which the planned observation will be made,
+                  usually the dose ...--ELTM: the planned elapsed time from the
+                  fixed reference point event (e.g., a dose) to the planned
+                  observation."
+                Document: IG v3.1
+                Item: Specification
+                Section: 4.4.7.2.2
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: "SEND279.1"
+              Version: "1"
+            Version: "5.0"
+        Version: "1.1"
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: "--TPTREF: the description of the fixed reference point event or
+                  anchor from which the planned observation will be made,
+                  usually the dose ...--ELTM: the planned elapsed time from the
+                  fixed reference point event (e.g., a dose) to the planned
+                  observation."
+                Document: IG v3.1.1
+                Item: Specification
+                Section: 4.4.7.2.2
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: "SEND279.1"
+              Version: "1"
+            Version: "5.0"
+        Version: "1.2"
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: >-
+                  When instances of an activity are scheduled at planned  time
+                  intervals relative to a fixed reference point (e.g., an
+                  exposure), the following timing variables will be
+                  used:…  --TPTREF Represents a description of the fixed
+                  reference point from which the planned observation will be
+                  made.  --ELTM Represents the planned elapsed time from the
+                  fixed timepoint reference to the planned observation. 
+                Document: TIG v1.0
+                Item: Table Num 3
+                Section: 2.8.7.6 Representing References and Relative Timing, Timing Relative to
+                  Reference Points
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0195
+              Version: "1"
+            Version: "1.0"
+        Substandard: SEND
+        Version: "1.0"
+Check:
+  all:
+    - name: --TPTREF
+      operator: empty
+    - name: --ELTM
+      operator: non_empty
+Core:
+  Id: CORE-000393
+  Status: Published
+  Version: "1"
+Description: Raise an error when --TPTREF is empty, but --ELTM is not empty
+Executability: Fully Executable
+Outcome:
+  Message: --TPTREF is empty and --ELTM is not empty
+  Output Variables:
+    - --TPTREF
+    - --ELTM
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+      - INTERVENTIONS
+  Domains:
+    Include:
+      - ALL
+  Use Case: NONCLIN
+Sensitivity: Record

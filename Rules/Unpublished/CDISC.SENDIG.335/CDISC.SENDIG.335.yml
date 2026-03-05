@@ -1,0 +1,98 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: PMSTRESC should contain the finding without the location
+                  specified in PMLOC.
+                Document: SENDIG v3.0
+                Section: 6.3.10
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND335
+              Version: '1'
+            Version: '5.0'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: PMSTRESC should contain the finding without the location
+                  specified in PMLOC.
+                Document: SENDIG v3.1
+                Section: 6.3.10
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND335
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: PMSTRESC should contain the finding without the location
+                  specified in PMLOC.
+                Document: SENDIG v3.1.1
+                Section: 6.3.10
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND335
+              Version: '1'
+            Version: '5.0'
+        Version: 3.1.1
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: One record per test per palpable mass per observation time per
+                  subject
+                Document: SENDIG v3.1
+                Section: 6.3.10
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND335
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+Check:
+  all:
+    - name: PMLOC
+      operator: non_empty
+    - name: PMSTRESC
+      operator: non_empty
+    - name: PMSTRESC
+      # operator: contains_case_insensitive
+      # EXAMPLE: PSLOC = LEFT HIND LIMB
+      #       PSSTRESC = NON-ULCERATED LEFT HIND LIMB
+      # operator: equals_string_part - BUT we do not know at what position to start ...
+      operator: equals_string_part
+      regex: ".{*}(..).*"
+      value: PMLOC
+      #operator: matches_regex
+      # regex: "[a-zA-Z](..)[a-zA-Z]"
+      #regex: "*(..)*"
+      #value: PMLOC
+Core:
+  Id: CDISC.SENDIG.335
+  Status: Draft
+  Version: '1'
+Description: Raise an error when PMSTRESC contains (case insensitive) the value of PMLOC
+Executability: Fully Executable
+# Operations:
+
+Outcome:
+  Message: PMSTRESC may not contain the finding with the location specified in PMLOC.
+  Output Variables:
+    - USUBJID
+    - PMTESTCD
+    - PMORRES
+    - PMSTRESC
+    - PMLOC
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - PM
+Sensitivity: Record

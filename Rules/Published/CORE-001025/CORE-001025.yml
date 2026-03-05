@@ -1,0 +1,52 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'If a biospecimen retention indicates that a type of biospecimen
+                  is retained, then there must be an indication of whether the
+                  type of biospecimen includes DNA.'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00231'
+              Version: '1'
+            Version: '1.0'
+        Version: '4.0'
+Check: |-
+  (study.versions)@$sv.
+    $sv.studyDesigns@$sd.
+    $sd.biospecimenRetentions.    [({
+                    "instanceType": instanceType,
+                    "id": id,
+                    "path": _path,
+                    "StudyDesign.id": $sd.id,
+                    "StudyDesign.name": $sd.name,
+                    "name": name,
+                    "isRetained": isRetained,
+                    "check": isRetained=true and $not(includesDNA in [true,false])
+                }
+        )][check=true]
+Core:
+  Id: 'CORE-001025'
+  Status: Published
+  Version: '1'
+Description: 'If a biospecimen retention indicates that a type of biospecimen is
+  retained, then there must be an indication of whether the type of biospecimen
+  includes DNA.'
+Executability: Fully Executable
+Outcome:
+  Message: 'The biospecimen retention is indicated as retained (isRetained=true)
+    but information whether it includes DNA (includesDNA attribute) is missing.'
+  Output Variables:
+    - StudyDesign.id
+    - StudyDesign.name
+    - name
+    - isRetained
+Rule Type: JSONata
+Scope:
+  Entities:
+    Include:
+      - 'BiospecimenRetention'
+Sensitivity: Record

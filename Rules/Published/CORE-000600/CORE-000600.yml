@@ -1,0 +1,67 @@
+# Variable: PARENT
+# Rule: For each value in PARENT there must exist one record with REFID value = PARENT value.
+Authorities:
+  - Organization: 'CDISC'
+    Standards:
+      - Name: 'TIG'
+        References:
+          - Citations:
+              - Cited Guidance: Every value of PARENT must be defined once and only once. Every
+                  PARENT must have a unique REFID which may be referenced by
+                  multiple records with the same PARENT. (Each REFID with a
+                  PARENT, has only one PARENT and that PARENT is described in a
+                  unique PARENT record.).
+                Document: 'TIG 1.0'
+                Item: 'assumption 4'
+                Section: '2.8.9.23'
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: 'TIG0030'
+              Version: '1'
+            Version: '1.0'
+        Substandard: SEND
+        Version: '1.0'
+Check:
+  all:
+    - name: LEVEL
+      operator: not_equal_to
+      value: 1
+    - any:
+        - name: PARENT
+          operator: is_not_contained_by
+          value: $relref_refid
+          within: SETCD
+        - name: PARENT
+          operator: equal_to
+          value: REFID
+Core:
+  Status: Published
+  Version: '1'
+  Id: CORE-000600
+Description: Raise an error when a record has a PARENT value but no other record
+  exists with REFID value = PARENT value.
+Executability: Fully Executable
+Operations:
+  - domain: RELREF
+    group:
+      - SETCD
+    id: $relref_refid
+    name: REFID
+    operator: distinct
+Outcome:
+  Message: Value for PARENT does not equal a REFID value from another record.
+  Output Variables:
+    - LEVEL
+    - PARENT
+    - SETCD
+    - $relref_refid
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - RELATIONSHIP
+  Domains:
+    Include:
+      - RELREF
+  Use Case: NONCLIN
+Sensitivity: Record

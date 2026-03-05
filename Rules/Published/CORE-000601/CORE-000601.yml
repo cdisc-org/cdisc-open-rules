@@ -1,0 +1,65 @@
+# Variable: IQPARENT
+# Rule: IQPARENT in IGDCMPID
+Authorities:
+  - Organization: 'CDISC'
+    Standards:
+      - Name: 'TIG'
+        References:
+          - Citations:
+              - Cited Guidance: IQPARENT must equal the IDGCMPID of another record in IQ (i.e.,
+                  the parent ingredient/component must be listed in IQ).
+                Document: 'TIG 1.0'
+                Item: 'assumption 4.a.i.'
+                Section: '2.8.8.6'
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: 'TIG0015'
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: IQLEVEL
+      operator: not_equal_to
+      value: 1
+    - any:
+        - name: IQPARENT
+          operator: is_not_contained_by
+          value: $iq_igdcmpid
+          within: SPTOBID
+        - name: IQPARENT
+          operator: equal_to
+          value: IGDCMPID
+Core:
+  Status: Published
+  Version: '1'
+  Id: CORE-000601
+Description: Raise an error when per SPTOBID, the IQPARENT value does not match
+  any IGDCMPID value of another record.
+Executability: Fully Executable
+Operations:
+  - domain: IQ
+    group:
+      - SPTOBID
+    id: $iq_igdcmpid
+    name: IGDCMPID
+    operator: distinct
+Outcome:
+  Message: IQPARENT value does not match an ingredient represented in another
+    records IGDCMPID value.
+  Output Variables:
+    - SPTOBID
+    - IGDCMPID
+    - IQPARENT
+    - $iq_igdcmpid
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - IQ
+  Use Case: PROD
+Sensitivity: Record

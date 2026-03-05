@@ -1,0 +1,124 @@
+Authorities:
+  - Organization: 'FDA'
+    Standards:
+      # Not applicable to SEND 3.0
+      - Name: 'SENDIG'
+        References:
+          - Citations:
+              - Cited Guidance: 'In SEND 3.1 data elements that would be mapped to RE and CV
+                  should be submitted if collected and included in the study
+                  report.'
+                Document: 'FDA'
+                Section: 'FDAB066'
+            Origin: 'FDA Business Rules'
+            Rule Identifier:
+              Id: 'FB6602'
+              Version: '1'
+            Version: '1.5'
+        Version: '3.1'
+      - Name: 'SENDIG'
+        References:
+          - Citations:
+              - Cited Guidance: 'In SEND 3.1 data elements that would be mapped to RE and CV
+                  should be submitted if collected and included in the study
+                  report.'
+                Document: 'FDA'
+                Section: 'FDAB066'
+            Origin: 'FDA Business Rules'
+            Rule Identifier:
+              Id: 'FB6602'
+              Version: '1'
+            Version: '1.5'
+        Version: '3.1.1'
+      - Name: 'SENDIG-GENETOX'
+        References:
+          - Citations:
+              - Cited Guidance: 'In SEND 3.1 data elements that would be mapped to RE and CV
+                  should be submitted if collected and included in the study
+                  report.'
+                Document: 'FDA'
+                Section: 'FDAB066'
+            Origin: 'FDA Business Rules'
+            Rule Identifier:
+              Id: 'FB6602'
+              Version: '1'
+            Version: '1.5'
+        Version: '1.0'
+      - Name: 'SENDIG-DART'
+        References:
+          - Citations:
+              - Cited Guidance: 'In SEND 3.1 data elements that would be mapped to RE and CV
+                  should be submitted if collected and included in the study
+                  report.'
+                Document: 'FDA'
+                Section: 'FDAB066'
+            Origin: 'FDA Business Rules'
+            Rule Identifier:
+              Id: 'FB6602'
+              Version: '1'
+            Version: '1.5'
+        Version: '1.1'
+      - Name: 'SENDIG-DART'
+        References:
+          - Citations:
+              - Cited Guidance: 'In SEND 3.1 data elements that would be mapped to RE and CV
+                  should be submitted if collected and included in the study
+                  report..'
+                Document: 'FDA'
+                Section: 'FDAB066'
+            Origin: 'FDA Business Rules'
+            Rule Identifier:
+              Id: 'FB6602'
+              Version: '1'
+            Version: '1.5'
+        Version: '1.2'
+      - Name: 'SENDIG-AR'
+        References:
+          - Citations:
+              - Cited Guidance: 'In SEND 3.1 data elements that would be mapped to RE and CV
+                  should be submitted if collected and included in the study
+                  report.'
+                Document: 'FDA'
+                Section: 'FDAB066'
+            Origin: 'FDA Business Rules'
+            Rule Identifier:
+              Id: 'FB6602'
+              Version: '1'
+            Version: '1.5'
+        Version: '1.0'
+# Rule FB6602: When RE domain is present in the define.xml, but no RE dataset is present in the submission
+# then the define.xml must contain ItemGroupDef for RE with attribute def:HasNoData marked as "Yes" 
+Check:
+  all:
+    # Also SEE FB0405
+    - name: define_dataset_name
+      operator: equal_to
+      value: RE
+    - name: define_dataset_has_no_data
+      operator: equal_to
+      value: false
+    - name: filename
+      operator: empty
+#    
+Core:
+  Status: Draft
+  Version: '1'
+Description: 'RE dataset should be present in the submission when related data is collected'
+Executability: Fully Executable
+Outcome:
+  Message: Missing RE dataset.
+  Output Variables:
+    - RE
+    - define_dataset_has_no_data
+Rule Type: Domain Presence Check against Define XML
+
+# Scope: Important here to have "ALL", not "RE" ...
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+# Sensitivity: Dataset
+Sensitivity: Study

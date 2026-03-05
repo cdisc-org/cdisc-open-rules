@@ -1,0 +1,73 @@
+# Variable: ARMCD
+# Condition: The timing and number of Visits for a trial does not depend on which ARM a subject is in
+# Rule: ARMCD = null
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        Version: '3.4'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0295
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: If the timing of Visits for a trial does not depend
+                  on which ARM a subject is in, then ARMCD should be null.
+                Document: IG v3.4
+                Item: Specification
+                Section: 7.3.1
+      - Name: SDTMIG
+        Version: '3.2'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0295
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: If the timing of Visits for a trial does not depend
+                  on which ARM a subject is in, then ARMCD should be null.
+                Document: IG v3.2
+                Item: Specification
+                Section: '7'
+      - Name: SDTMIG
+        Version: '3.3'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0295
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: If the timing of Visits for a trial does not depend
+                  on which ARM a subject is in, then ARMCD should be null.
+                Document: IG v3.3
+                Item: Specification
+                Section: 7.3.1
+Check:
+  all:
+    - name:
+      operator:
+    - name: ARMCD
+      operator: non_empty
+Core:
+  Id: CDISC.SDTMIG.CG0295
+  Status: Draft
+  Version: '1'
+Description: Trigger error when ARMCD is populated and the timing and number of Visits
+  for a trial does not depend on which ARM a subject is in
+Executability: Fully Executable
+Outcome:
+  Message: ARMCD is populated and the timing and number of Visits for a trial does
+    not depend on which ARM a subject is in
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - TRIAL DESIGN
+  Domains:
+    Include:
+      - TV
+Sensitivity: Dataset

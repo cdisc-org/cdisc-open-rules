@@ -1,0 +1,134 @@
+# FDAB1119 is just one of the many parts of FDAB011. This is currently just a temporary solution, Core:
+# as the better solution is to have all the SEND-required PARMCD-s in the CDISC Library and iterate over them
+Authorities:
+  - Organization: FDA
+    Standards:
+      # ONLY applicable to SENDIG, NOT to SDTMIG
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: 'All trial design data should be submitted as specified in the
+                  FDA Study Data Technical Conformance Guide (TCG).'
+                Document: FDA
+                Section: FDAB011
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1119
+              Version: '1'
+            Version: '1.5'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: 'All trial design data should be submitted as specified in the
+                  FDA Study Data Technical Conformance Guide (TCG).'
+                Document: FDA
+                Section: FDAB011
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1119
+              Version: '1'
+            Version: '1.5'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: 'All trial design data should be submitted as specified in the
+                  FDA Study Data Technical Conformance Guide (TCG).'
+                Document: FDA
+                Section: FDAB011
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1119
+              Version: '1'
+            Version: '1.5'
+        Version: '3.1.1'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: 'All trial design data should be submitted as specified in the
+                  FDA Study Data Technical Conformance Guide (TCG).'
+                Document: FDA
+                Section: FDAB011
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1119
+              Version: '1'
+            Version: '1.5'
+        Version: '1.0'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: 'All trial design data should be submitted as specified in the
+                  FDA Study Data Technical Conformance Guide (TCG).'
+                Document: FDA
+                Section: FDAB011
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1119
+              Version: '1'
+            Version: '1.5'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: 'All trial design data should be submitted as specified in the
+                  FDA Study Data Technical Conformance Guide (TCG).'
+                Document: FDA
+                Section: FDAB011
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1119
+              Version: '1'
+            Version: '1.5'
+        Version: '1.2'
+      - Name: SENDIG-AR
+        References:
+          - Citations:
+              - Cited Guidance: 'TSPARAMCD=RECSAC is included in TS with TSVAL populated.'
+                Document: FDA
+                Section: FDAB011
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1119
+              Version: '1'
+            Version: '1.5'
+        Version: '1.0'
+# FDAB1119 is just one of the many parts of FDAB011. This is currently just a temporary solution, Core:
+# as the better solution is to have all the SEND-required PARMCD-s in the CDISC Library and iterate over them
+Check:
+  any:
+    # No record with TSPARMCD=RECSAC
+    # REMARK: test at the dataset level
+    - all:
+        - name: TSPARMCD
+          operator: does_not_contain
+          value: RECSAC
+    # TSVAL empty for TSPARMCD=RECSAC
+    # REMARK: test at the record level
+    # OR: should we use a "filter" here?
+    - all:
+        - name: TSPARMCD
+          operator: equal_to
+          value: RECSAC
+        - name: TSVAL
+          operator: empty
+
+Core:
+  Id: FFDA.SENDIG.FB1119
+  Status: Draft
+  Version: '1'
+Description: 'Raise an error when TSPARMCD=RECSAC is not in the TS dataset, or
+  when its TSVAL is not populated'
+Executability: Fully Executable
+Outcome:
+  Message: TSPARMCD=RECSAC is missing or it's TSVAL value is empty
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - TRIAL DESIGN
+  Domains:
+    Include:
+      - TS
+Sensitivity: Dataset

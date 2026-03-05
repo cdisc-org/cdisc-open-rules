@@ -1,0 +1,80 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'An encounter must only be scheduled at a timing that is defined
+                  within the same study design as the encounter.'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00127'
+              Version: '1'
+            Version: '1.0'
+        Version: '3.0'
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'An encounter must only be scheduled at a timing that is defined
+                  within the same study design as the encounter.'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00127'
+              Version: '1'
+            Version: '1.0'
+        Version: '4.0'
+Check:
+  all:
+    - name: instanceType
+      operator: equal_to
+      value: 'Encounter'
+    - name: rel_type
+      operator: equal_to
+      value: 'definition'
+    - name: scheduledAtId
+      operator: non_empty
+    - name: parent_id
+      operator: not_equal_to
+      value: parent_id.ScheduleTimeline
+Core:
+  Id: 'CORE-000827'
+  Status: Published
+  Version: '1'
+Description: 'An encounter must only be scheduled at a timing that is defined
+  within the same study design as the encounter.'
+Executability: Fully Executable
+Match Datasets:
+  - Join Type: left
+    Keys:
+      - Left: scheduledAtId
+        Right: id
+      - rel_type
+    Name: Timing
+  - Join Type: left
+    Keys:
+      - Left: parent_id.Timing
+        Right: id
+      - rel_type
+    Name: ScheduleTimeline
+Outcome:
+  Message: 'The encounter is scheduled at a timing that either is not defined in
+    the same study design (the parent_id of the timing''s parent schedule
+    timeline does not match the parent_id of the encounter) or is invalid
+    (schedulateAtId does not match the id of any timing).'
+  Output Variables:
+    - parent_entity
+    - parent_id
+    - parent_rel
+    - id
+    - name
+    - scheduledAtId
+    - name.Timing
+    - parent_id.ScheduleTimeline
+Rule Type: Record Data
+Scope:
+  Entities:
+    Include:
+      - 'Encounter'
+Sensitivity: Record

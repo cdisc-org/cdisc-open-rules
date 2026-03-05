@@ -1,0 +1,89 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: CLRESCAT is used for post collection categorization
+                  of results and should not be a duplication of CLTEST or CLSCAT which
+                  are considered categories at the time of collection.
+                Document: IG v.3.0
+                Section: 6.3.3.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND161
+              Version: '1'
+            Version: '5.0'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: CLRESCAT is used for post collection categorization
+                  of results and should not be a duplication of CLTEST or CLSCAT which
+                  are considered categories at the time of collection.
+                Document: IG v.3.1
+                Section: 6.3.3.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND161
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: CLRESCAT is used for post collection categorization
+                  of results and should not be a duplication of CLTEST or CLSCAT which
+                  are considered categories at the time of collection.
+                Document: IG v.3.1.1
+                Section: 6.3.3.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND161
+              Version: '1'
+            Version: '5.0'
+        Version: 3.1.1
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: CLRESCAT is used for post collection categorization
+                  of results and should not be a duplication of CLTEST or CLSCAT which
+                  are considered categories at the time of collection.
+                Document: IG v.3.1
+                Section: 6.3.3.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND161
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+Check:
+  any:
+    - name: CLRESCAT
+      operator: equal_to
+      value: CLTEST
+    - name: CLRESCAT
+      operator: equal_to
+      value: CLSCAT
+Core:
+  Id: CDISC.SENDIG.161
+  Status: Draft
+  Version: '1'
+Description: Trigger error when CLRESCAT is equal to CLTEST or when CLRESCAT is equal
+  to CLSCAT
+Executability: Fully Executable
+Outcome:
+  Message: CLRESCAT may not be equal to CLTEST and CLRESCAT may not be equal to CLSCAT
+  Output Variables:
+    - CLRESCAT
+    - CLTEST
+    - CLSCAT
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - CL
+Sensitivity: Record

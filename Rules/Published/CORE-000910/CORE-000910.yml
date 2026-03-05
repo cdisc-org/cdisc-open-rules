@@ -1,0 +1,150 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'A study protocol document version''s protocol status must be
+                  specified using the Protocol Status Value Set Terminology
+                  (C188723) DDF codelist.'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00117'
+              Version: '1'
+            Version: '1.0'
+        Version: '3.0'
+Check:
+  all:
+    - name: rel_type
+      operator: equal_to
+      value: 'definition'
+    - name: protocolStatus
+      operator: equal_to
+      value: true
+    - not:
+        all:
+          - name: protocolStatus.codeSystem
+            operator: equal_to
+            value: 'http://www.cdisc.org'
+          - name: protocolStatus.codeSystemVersion
+            operator: is_contained_by
+            value: $valid_versions
+          - any:
+              - all:
+                  - name: $pref_term_for_code
+                    operator: non_empty
+                  - name: $value_for_code
+                    operator: non_empty
+                  - any:
+                      - name: $code_for_decode_pref_term
+                        operator: non_empty
+                      - name: $code_for_decode_value
+                        operator: non_empty
+                  - any:
+                      - name: protocolStatus.code
+                        operator: equal_to
+                        value: $code_for_decode_pref_term
+                      - name: protocolStatus.code
+                        operator: equal_to
+                        value: $code_for_decode_value
+                  - any:
+                      - name: protocolStatus.decode
+                        operator: equal_to
+                        value: $pref_term_for_code
+                      - name: protocolStatus.decode
+                        operator: equal_to
+                        value: $value_for_code
+              - all:
+                  - name: $codelist_extensible
+                    operator: equal_to
+                    value: true
+                  - name: $code_for_decode_pref_term
+                    operator: empty
+                  - name: $code_for_decode_value
+                    operator: empty
+                  - name: $pref_term_for_code
+                    operator: empty
+                  - name: $value_for_code
+                    operator: empty
+Core:
+  Id: 'CORE-000910'
+  Status: Published
+  Version: '1'
+Description: 'A study protocol document version''s protocol status must be
+  specified using the Protocol Status Value Set Terminology (C188723) DDF
+  codelist.'
+Executability: Fully Executable
+Operations:
+  - id: $codelist_code
+    map:
+      - output: C188723
+    operator: map
+  - ct_package_types:
+      - DDF
+    id: $valid_versions
+    operator: valid_codelist_dates
+  - codelist_code: $codelist_code
+    ct_package_type: DDF
+    id: $codelist_extensible
+    operator: codelist_extensible
+    version: protocolStatus.codeSystemVersion
+  - codelist_code: $codelist_code
+    ct_package_type: DDF
+    id: $value_for_code
+    operator: codelist_terms
+    returntype: value
+    term_code: protocolStatus.code
+    version: protocolStatus.codeSystemVersion
+  - codelist_code: $codelist_code
+    ct_package_type: DDF
+    id: $pref_term_for_code
+    operator: codelist_terms
+    returntype: pref_term
+    term_code: protocolStatus.code
+    version: protocolStatus.codeSystemVersion
+  - codelist_code: $codelist_code
+    ct_package_type: DDF
+    id: $code_for_decode_pref_term
+    operator: codelist_terms
+    returntype: code
+    term_pref_term: protocolStatus.decode
+    version: protocolStatus.codeSystemVersion
+  - codelist_code: $codelist_code
+    ct_package_type: DDF
+    id: $code_for_decode_value
+    operator: codelist_terms
+    returntype: code
+    term_value: protocolStatus.decode
+    version: protocolStatus.codeSystemVersion
+Outcome:
+  Message: 'The study protocol document version''s protocol status is not
+    specified using the Protocol Status Value Set Terminology (C188723) DDF
+    codelist - codeSystem is not "http://www.cdisc.org", codeSystemVersion is
+    not a valid terminology package date, the code or decode (either as
+    preferred term or as submission value) is found in the codelist (case
+    insensitive) but the corresponding decode or code does not match the
+    codelist value (case sensitive), and/or neither code nor decode is found in
+    the codelist.'
+  Output Variables:
+    - parent_entity
+    - parent_id
+    - parent_rel
+    - id
+    - protocolVersion
+    - $codelist_code
+    - $codelist_extensible
+    - protocolStatus.code
+    - $code_for_decode_value
+    - $code_for_decode_pref_term
+    - protocolStatus.codeSystem
+    - protocolStatus.codeSystemVersion
+    - protocolStatus.decode
+    - $value_for_code
+    - $pref_term_for_code
+Rule Type: Record Data
+Scope:
+  Entities:
+    Include:
+      - 'StudyProtocolDocumentVersion'
+Sensitivity: Record

@@ -1,0 +1,68 @@
+# Variable: STRAIN
+# Rule: Record with TSPARMCD = "STRAIN" is present in TS and TSVAL ^= null for that record OR Record with TXPARMCD = "STRAIN" is present in TX and TXVAL ^= null for that record
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: If this variable is excluded in the DM domain, the information
+                  must be present at a higher level (either Trial Sets or Trial
+                  Summary).
+                Document: TIG 1.0
+                Item: STRAIN CDISC Notes
+                Section: 2.8.9.6 SEND Demographics (DM)
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0044
+              Version: '1'
+            Version: '1.0'
+        Substandard: SEND
+        Version: '1.0'
+Check:
+  all:
+    - name: $tsparmcdstrain_count
+      operator: equal_to
+      value: 0
+    - name: $txparmcdstrain_count
+      operator: equal_to
+      value: 0
+Core:
+  Id:
+  Status: Draft
+  Version: '1'
+Description: Part A - Raise an error when there is no record with TSPARMCD =
+  "STRAIN" present in TS or TSVAL is not completed and no record with TXPARMCD =
+  "STRAIN" present in TX or TXVAL is not completed.
+Executability: Fully Executable
+Operations:
+  - domain: TX
+    filter:
+      TXPARMCD: STRAIN
+    group:
+      - SETCD
+    id: $txparmcdstrain_count
+    name: TXPARMCD
+    operator: record_count
+  - domain: TS
+    filter:
+      TSPARMCD: STRAIN
+    id: $tsparmcdstrain_count
+    name: TSPARMCD
+    operator: record_count
+Outcome:
+  Message: There should be a record in TS with TSPARMCD = "STRAIN" and completed
+    TSVAL or a record in TX with TXPARMCD = "STRAIN" and completed TXVAL.
+  Output Variables:
+    - $txparmcdstrain_count
+    - $tsparmcdstrain_count
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - TRIAL DESIGN
+  Domains:
+    Include:
+      - TS
+  Use Case: NONCLIN
+Sensitivity: Record

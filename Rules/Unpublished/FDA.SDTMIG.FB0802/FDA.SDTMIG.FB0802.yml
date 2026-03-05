@@ -1,0 +1,164 @@
+Authorities:
+  - Organization: FDA
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All treatment exposure date/time should be between first and
+                  last study treatment date/time.
+                Document: FDA
+                Section: FDAB080
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0802
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All treatment exposure date/time should be between first and
+                  last study treatment date/time.
+                Document: FDA
+                Section: FDAB008
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0802
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: All treatment exposure date/time should be between first and
+                  last study treatment date/time.
+                Document: FDA
+                Section: FDAB008
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0802
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+      # Not applicable to SENDIG-3.0
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: All treatment exposure date/time should be between first and
+                  last study treatment date/time.
+                Document: FDA
+                Section: FDAB008
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0802
+              Version: '1'
+            Version: '1.5'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: All treatment exposure date/time should be between first and
+                  last study treatment date/time.
+                Document: FDA
+                Section: FDAB008
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0802
+              Version: '1'
+            Version: '1.5'
+        Version: '3.1.1'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: All treatment exposure date/time should be between first and
+                  last study treatment date/time.
+                Document: FDA
+                Section: FDAB008
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0802
+              Version: '1'
+            Version: '1.5'
+        Version: '1.0'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: All treatment exposure date/time should be between first and
+                  last study treatment date/time.
+                Document: FDA
+                Section: FDAB008
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0802
+              Version: '1'
+            Version: '1.5'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: All treatment exposure date/time should be between first and
+                  last study treatment date/time.
+                Document: FDA
+                Section: FDAB008
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0802
+              Version: '1'
+            Version: '1.5'
+        Version: '1.2'
+      - Name: SENDIG-AR
+        References:
+          - Citations:
+              - Cited Guidance: All treatment exposure date/time should be between first and
+                  last study treatment date/time.
+                Document: FDA
+                Section: FDAB008
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0802
+              Version: '1'
+            Version: '1.5'
+        Version: '1.0'
+Check:
+  any:
+    # This part of the rule is solely about --ENDTC, NOT about --STDTC
+    # Remark that date_less_than and date_greater_than compare the shortest common part of the two dates.
+    # For example, when 2025-11-03 is compared with 2025-11-02T15:26, 
+    # the comparison done is between 2025-11-03 and 2025-11-02.
+    # Similarly, when the comparison is done between 2025-11-03T07 and 2025-11-03T07:45
+    # then the comparison done is between 2025-11-03T07 and 2025-11-03T07
+    - name: RFXSTDTC
+      operator: date_greater_than
+      value: --ENDTC
+    - name: --ENDTC
+      operator: date_greater_than
+      value: RFXENDTC
+Core:
+  Id: FDA.SDTMIG.FB0802
+  Status: Draft
+  Version: '1'
+Description: Treatment exposure end date/time (--ENDTC) should fall on or
+  between first (RFXSTDTC) and last (RFXENDTC) study treatment date/time in the
+  DM dataset.
+Executability: Fully Executable
+Match Datasets:
+  - Keys:
+      - USUBJID
+    Name: DM
+Outcome:
+  Message: --ENDTC does not fall on or between RFXSTDTC and RFENDTC.
+  Output Variables:
+    - "USUBJID"
+    - "--ENDTC"
+    - "RFXSTDTC"
+    - "RFXENDTC"
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - INTERVENTIONS
+  Domains:
+    Include:
+      - EC
+      - EX
+Sensitivity: Record

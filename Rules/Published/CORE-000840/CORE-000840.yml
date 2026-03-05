@@ -1,0 +1,74 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'An activity must only reference timelines that are specified
+                  within the same study design.'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00152'
+              Version: '1'
+            Version: '1.0'
+        Version: '3.0'
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'An activity must only reference timelines that are specified
+                  within the same study design.'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00152'
+              Version: '1'
+            Version: '1.0'
+        Version: '4.0'
+Check:
+  all:
+    - name: instanceType
+      operator: equal_to
+      value: 'Activity'
+    - name: rel_type
+      operator: equal_to
+      value: 'definition'
+    - name: timelineId
+      operator: exists
+    - name: timelineId
+      operator: non_empty
+    - name: timelineId
+      operator: is_not_contained_by
+      value: $timeline_ids_for_study_design
+Core:
+  Id: 'CORE-000840'
+  Status: Published
+  Version: '1'
+Description: 'An activity must only reference timelines that are specified
+  within the same study design.'
+Executability: Fully Executable
+Operations:
+  - domain: ScheduleTimeline
+    group:
+      - parent_id
+      - rel_type
+    id: $timeline_ids_for_study_design
+    name: id
+    operator: distinct
+Outcome:
+  Message: 'The activity references a timeline that is not specified within the
+    same study design.'
+  Output Variables:
+    - parent_entity
+    - parent_id
+    - parent_rel
+    - id
+    - name
+    - timelineId
+    - $timeline_ids_for_study_design
+Rule Type: Record Data
+Scope:
+  Entities:
+    Include:
+      - 'Activity'
+Sensitivity: Record

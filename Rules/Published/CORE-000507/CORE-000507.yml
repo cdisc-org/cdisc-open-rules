@@ -1,0 +1,111 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Metadata in Define-XML document should match both the SENDIG
+                  label and the label in the .xpt datasets
+                Document: SENDIG v3.0
+                Section: 3.2.2 | 4.21
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND6
+              Version: '1'
+            Version: '5.0'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Metadata in Define-XML document should match both the SENDIG
+                  label and the label in the .xpt datasets
+                Document: SENDIG v3.1
+                Section: 3.2.2 | 4.21
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND6
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Metadata in Define-XML document should match both the SENDIG
+                  label and the label in the .xpt datasets
+                Document: SENDIG v3.1.1
+                Section: 3.2.2 | 4.21
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND6
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: Metadata in Define-XML document should match both the SENDIG
+                  label and the label in the .xpt datasets
+                Document: SENDIG v3.1
+                Section: 3.2.2 | 4.21
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND6
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: Metadata in Define-XML document should match both the SENDIG
+                  label and the label in the .xpt datasets
+                Document: SENDIG v3.1.1
+                Section: 3.2.2 | 4.21
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND6
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: Metadata in Define-XML document should match both the SENDIG
+                  label and the label in the .xpt datasets
+                Document: SENDIG v3.1.1
+                Section: 3.2.2 | 4.21
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND6
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+Check:
+  all:
+    # IMPORTANT: Order is important ...
+    - name: variable_label
+      operator: not_equal_to
+      value: define_variable_label
+Core:
+  Id: CORE-000507
+  Status: Published
+  Version: '1'
+Description: 'Raise an error when the variable label in the define.xml does not
+  correspond to the variable label dataset. NOTE: This rule has been split in
+  two parts: A. check define variable label against IG label B. check define
+  variable label against the label in the dataset '
+Executability: Fully Executable
+Outcome:
+  Message: The label of the variable is incorrect
+  Output Variables:
+    - define_variable_name
+    - define_variable_label
+    - variable_label
+Rule Type: Variable Metadata Check against Define XML
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record

@@ -1,0 +1,45 @@
+# Variable: MBTEST
+# Condition: Test targets an organism, group of organisms, or antigen
+# Rule: MBTEST = name of the organism or antigen
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        Version: '3.4'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0607
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: In cases of tests that target an organism, group of
+                  organisms, or antigen for  identification, MBTEST equals the name
+                  of the organism/antigen targeted  by the identification assay.
+                Document: SDTMIG v3.4
+                Item: Assumption 1
+                Section: 6.3.5.7.1
+Check:
+  all:
+    - name: MBTEST
+      operator: not_equal_to
+      value:
+Core:
+  Id: CDISC.SDTMIG.CG0607
+  Status: Draft
+  Version: '1'
+Description: Verify MBTEST equals the name of the organism/antigen targeted by the
+  identification assay.
+Executability: Fully Executable
+Outcome:
+  Message: Test targets an organism, group of organisms, or antigen, but MBTEST is
+    not the name of the  organism/antigen.
+Rule Type: Range and limit
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - MB
+Sensitivity: Record

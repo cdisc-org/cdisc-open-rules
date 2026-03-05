@@ -1,0 +1,70 @@
+# Variable: --SEQ
+# Condition: Variable is not TS.TSSEQ
+# Rule: --SEQ is a unique number per USUBJID per domain, or a unique number per POOLID per domain, including when the domain is split into multiple files
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: A number used to uniquely identify records for a subject within
+                  a domain. The Trial Summary domain does not contain subject
+                  data, and TSSEQ is a sequence number to ensure uniqueness
+                  within the dataset.
+                Document: SDTM v2.1
+                Item: --SEQ
+                Section: '3.1.4 Identifiers for All Classes'
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0310
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  any:
+    - all:
+        - name: USUBJID
+          operator: non_empty
+        - name: --SEQ
+          operator: exists
+        - name: --SEQ
+          operator: is_not_unique_set
+          value:
+            - DOMAIN
+            - USUBJID
+    - all:
+        - name: POOLID
+          operator: non_empty
+        - name: --SEQ
+          operator: exists
+        - name: --SEQ
+          operator: is_not_unique_set
+          value:
+            - DOMAIN
+            - POOLID
+Core:
+  Id: "CORE-000750"
+  Status: Published
+  Version: '1'
+Description: Part A - Excluding TS.TSSEQ, raise an error when --SEQ is not a
+  unique number per USUBJID per domain, or not a unique number per POOLID per
+  domain, including when the domain is split into multiple files.
+Executability: Fully Executable
+Outcome:
+  Message: --SEQ is not a unique number per one of the following identifier
+    variables, per domain; USUBJID or POOLID.
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Exclude:
+      - TS
+      - EM
+      - DU
+      - DO
+      - DI
+  Use Case: INDH
+Sensitivity: Record

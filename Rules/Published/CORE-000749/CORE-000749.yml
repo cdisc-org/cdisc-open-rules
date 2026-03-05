@@ -1,0 +1,128 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: ts.xpt, Trial Summary - Trial Design. One record per Trial
+                  Summary parameter value, Tabulation.
+                Document: SENDIG v3.0
+                Item: Domain Table Header
+                Section: 7.6.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND245
+              Version: '1'
+            Version: '5.0'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: ts.xpt, Trial Summary - Trial Design. One record per Trial
+                  Summary parameter value, Tabulation.
+                Document: SENDIG v3.1
+                Item: Domain Table Header
+                Section: 7.6.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND245
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: ts.xpt, Trial Summary - Trial Design. One record per Trial
+                  Summary parameter value, Tabulation.
+                Document: SENDIG v3.1.1
+                Item: Domain Table Header
+                Section: 7.6.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND245
+              Version: '1'
+            Version: '5.0'
+        Version: 3.1.1
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: ts.xpt, Trial Summary - Trial Design. One record per Trial
+                  Summary parameter value, Tabulation.
+                Document: SENDIG v3.1
+                Item: Domain Table Header
+                Section: 7.6.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND245
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: ts.xpt, Trial Summary - Trial Design. One record per Trial
+                  Summary parameter value, Tabulation.
+                Document: SENDIG v3.1.1
+                Item: Domain Table Header
+                Section: 7.6.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND245
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: ts.xpt, Trial Summary - Trial Design. One record per Trial
+                  Summary parameter value, Tabulation.
+                Document: SENDIG v3.1.1
+                Item: Domain Table Header
+                Section: 7.6.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND245
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: ts.xpt, Trial Summary - Trial Design. One record per Trial
+                  Summary parameter value, Tabulation.
+                Document: TIG v1.0
+                Item: Domain Table Header
+                Section: 2.8.9.32
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0166
+              Version: '1'
+            Version: '1.0'
+        Substandard: SEND
+        Version: '1.0'
+Check:
+  all:
+    - name: TSVAL
+      operator: is_not_unique_set
+      value: TSPARMCD
+Core:
+  Id: CORE-000749
+  Status: Published
+  Version: '1'
+Description: TSVAL must be unique within each distinct value of TSPARMCD
+Executability: Fully Executable
+Outcome:
+  Message: The value of TSVAL is not unique within the value for TSPARMCD
+  Output Variables:
+    - TSPARMCD
+    - TSVAL
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - TRIAL DESIGN
+  Domains:
+    Include:
+      - TS
+  Use Case: NONCLIN
+Sensitivity: Record

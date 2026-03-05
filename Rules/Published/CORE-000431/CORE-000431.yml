@@ -1,0 +1,104 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: A pool must consist of at least one subject.
+                Document: IG v3.0
+                Item: Assumption 1.b
+                Section: 8.7.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND263
+              Version: "1"
+            Version: "5.0"
+        Version: "3.0"
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: A pool must consist of at least one subject.
+                Document: IG v3.1
+                Item: Assumption 1.b
+                Section: 8.5.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND263
+              Version: "1"
+            Version: "5.0"
+        Version: "3.1"
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: A pool must consist of at least one subject.
+                Document: IG v3.1.1
+                Item: Assumption 1.b
+                Section: 8.5.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND263
+              Version: "1"
+            Version: "5.0"
+        Version: 3.1.1
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: A pool must consist of at least one subject.
+                Document: IG v3.1
+                Item: Assumption 1.b
+                Section: 8.5.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND263
+              Version: "1"
+            Version: "5.0"
+        Version: "1.1"
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: A pool must consist of at least one subject.
+                Document: IG v3.1.1
+                Item: Assumption 1.b
+                Section: 8.5.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND263
+              Version: "1"
+            Version: "5.0"
+        Version: "1.2"
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: A pool must consist of at least one subject.
+                Document: IG v3.1.1
+                Item: Assumption 1.b
+                Section: 8.5.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND263
+              Version: "1"
+            Version: "5.0"
+        Version: "1.0"
+Check:
+  all:
+    - name: POOLID
+      operator: non_empty
+    - name: USUBJID
+      operator: empty
+Core:
+  Id: CORE-000431
+  Status: Published
+  Version: "1"
+Description: Trigger an error when POOLID does not contain a subject in POOLDEF
+Executability: Fully Executable
+Outcome:
+  Message: No subject is defined in POOLDEF for POOLID
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - RELATIONSHIP
+  Domains:
+    Include:
+      - POOLDEF
+Sensitivity: Record

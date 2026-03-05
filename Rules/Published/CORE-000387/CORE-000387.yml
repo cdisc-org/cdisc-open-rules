@@ -1,0 +1,108 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      # REMARK: Not applicable to SENDIG-3.0
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: The sequence number must be unique for each record within a
+                  USUBJID or POOLID, whichever applies for the record.
+                Document: IG v3.1
+                Item: COSEQ CDISC Notes
+                Section: '5.2'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND311
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: The sequence number must be unique for each record within a
+                  USUBJID or POOLID, whichever applies for the record.
+                Document: IG v3.1.1
+                Item: COSEQ CDISC Notes
+                Section: '5.2'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND311
+              Version: '1'
+            Version: '5.0'
+        Version: 3.1.1
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: The sequence number must be unique for each record within a
+                  USUBJID or POOLID, whichever applies for the record.
+                Document: IG v3.1
+                Item: COSEQ CDISC Notes
+                Section: '5.2'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND311
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: The sequence number must be unique for each record within a
+                  USUBJID or POOLID, whichever applies for the record.
+                Document: IG v3.1.1
+                Item: COSEQ CDISC Notes
+                Section: '5.2'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND311
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: The sequence number must be unique for each record within a
+                  USUBJID or POOLID, whichever applies for the record.
+                Document: IG v3.1.1
+                Item: COSEQ CDISC Notes
+                Section: '5.2'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND311
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+Check:
+  # case that USUBJID ("expected") is populated
+  all:
+    - name: USUBJID
+      operator: non_empty
+    - name: COSEQ
+      operator: is_not_unique_set
+      value: USUBJID
+    # case that USUBJID is not populated
+    #- all:
+    #    - name: USUBJID
+    #      operator: empty
+    #    - name: POOLID
+    #      operator: non_empty
+    #    - name: COSEQ
+    #      operator: is_not_unique_set
+    #      value: POOLID
+Core:
+  Id: CORE-000387
+  Status: Published
+  Version: '1'
+Description: Raise an error when COSEQ is not unique within USUBJID
+Executability: Fully Executable
+Outcome:
+  Message: The value of COSEQ is not unique within USUBJID
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - CO
+Sensitivity: Record

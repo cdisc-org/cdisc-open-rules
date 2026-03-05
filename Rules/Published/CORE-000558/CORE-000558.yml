@@ -1,0 +1,129 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: All Study Day values are integers.
+                Document: IG v3.0
+                Section: 4.4.4
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND72.1
+              Version: '1'
+            Version: '5.0'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: All Study Day values are integers.
+                Document: IG v3.1
+                Section: 4.4.4
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND72.1
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: All Study Day values are integers.
+                Document: IG v3.1.1
+                Section: 4.4.4
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND72.1
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: All Study Day values are integers.
+                Document: IG v3.1
+                Section: 4.4.4
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND72.1
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: All Study Day values are integers.
+                Document: IG v3.1.1
+                Section: 4.4.4
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND72.1
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: All Study Day values are integers.
+                Document: IG v3.1.1
+                Section: 4.4.4
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND72.1
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: All Study Day values are integers.
+                Document: TIG v1.0
+                Item: Text
+                Section: 2.8.7.6
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0273
+              Version: '1'
+            Version: '1.0'
+        Substandard: SEND
+        Version: '1.0'
+Check:
+  any:
+    #- name: --DY
+    #  operator: equal_to
+    #  value: 0
+    - name: --DY
+      operator: not_matches_regex
+      value: ^-?[1-9]{1}\d*$
+    - name: --STDY
+      operator: not_matches_regex
+      value: ^-?[1-9]{1}\d*$
+    - name: --ENDY
+      operator: not_matches_regex
+      value: ^-?[1-9]{1}\d*$
+    - name: VISITDY
+      operator: not_matches_regex
+      value: ^-?[1-9]{1}\d*$
+Core:
+  Id: CORE-000558
+  Status: Published
+  Version: '1'
+Description: --DY must be a non-zero integer
+Executability: Fully Executable
+Outcome:
+  Message: Study day variable (--DY/--STDY/--ENDY/VISITDY) is not a non-zero integer
+  Output Variables:
+    - --DY
+    - --STDY
+    - --ENDY
+    - VISITDY
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+  Use Case: NONCLIN
+Sensitivity: Record

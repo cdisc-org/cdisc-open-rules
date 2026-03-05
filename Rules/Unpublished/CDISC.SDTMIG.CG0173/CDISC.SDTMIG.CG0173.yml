@@ -1,0 +1,86 @@
+# Variable: FATESTCD
+# Condition: Collected data fit a Qualifier variable listed in SDTM: Sections 2.2.1, 2.2.2, or 2.2.3, and are represented in the Findings About domain
+# Rule: The name of the variable is used as the value of FATESTCD.
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: 'When collected data fit a Qualifier variable listed in SDTM:
+                  Sections 3.1.1, 3.1.2, or 3.1.3, and are represented in the
+                  Findings About domain, then the name of the variable should be
+                  used as the value of FATESTCD.'
+                Document: IG v3.4
+                Section: 6.4.3
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0173
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: 'When collected data fit a Qualifier variable listed in SDTM:
+                  Sections 2.2.1, 2.2.2, or 2.2.3, and are represented in the
+                  Findings About domain, then the name of the variable should be
+                  used as the value of FATESTCD.'
+                Document: IG v3.2
+                Section: 6.4.3
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0173
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: 'When collected data fit a Qualifier variable listed in SDTM:
+                  Sections 2.2.1, 2.2.2, or 2.2.3, and are represented in the
+                  Findings About domain, then the name of the variable should be
+                  used as the value of FATESTCD.'
+                Document: IG v3.3
+                Section: 6.4.3
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0173
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+Check:
+  all:
+    - name: $label_referenced_variable_role
+      operator: is_contained_by
+      value: "Qualifier"
+    - name: FATESTCD
+      operator: is_contained_by
+      value: $label_referenced_variable_name
+Core:
+  Id: CDISC.SDTMIG.CG0173
+  Status: Draft
+  Version: '1'
+Description: Trigger error when collected data fits a Qualifier variable listed
+  in specified SDTM Sections and are represented in the Findings About domain,
+  and the name of the variable is used as FATESTCD
+Executability: Partially Executable - Possible Underreporting
+Operations:
+  - id: $label_referenced_variable_name
+    name: FATESTCD
+    operator: label_referenced_variable_metadata
+Outcome:
+  Message: Collected data fits a Qualifier variable listed in specified SDTM
+    Sections and are represented in the Findings About domain, and the name of
+    the variable is used as FATESTCD
+  Output Variables:
+    - $label_referenced_variable_name
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record

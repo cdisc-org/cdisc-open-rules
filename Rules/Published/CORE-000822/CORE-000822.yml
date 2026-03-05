@@ -1,0 +1,68 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: "There must be at least one exit defined for each timeline
+                  (i.e., at least one instance of StudyTimelineExit linked via
+                  the 'exits' relationship)."
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00108'
+              Version: '1'
+            Version: '1.0'
+        Version: '3.0'
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: "There must be at least one exit defined for each timeline
+                  (i.e., at least one instance of StudyTimelineExit linked via
+                  the 'exits' relationship)."
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00108'
+              Version: '1'
+            Version: '1.0'
+        Version: '4.0'
+Check:
+  all:
+    - name: instanceType
+      operator: equal_to
+      value: 'ScheduleTimeline'
+    - name: rel_type
+      operator: equal_to
+      value: 'definition'
+    - any:
+        - name: exits
+          operator: not_exists
+        - name: exits
+          operator: empty
+        - name: exits
+          operator: equal_to
+          value: false
+Core:
+  Id: 'CORE-000822'
+  Status: Published
+  Version: '1'
+Description: "There must be at least one exit defined for each timeline (i.e.,
+  at least one instance of StudyTimelineExit linked via the 'exits'
+  relationship)."
+Executability: Fully Executable
+Outcome:
+  Message: 'There is no exit defined for the timeline.'
+  Output Variables:
+    - parent_entity
+    - parent_id
+    - parent_rel
+    - id
+    - name
+    - exits
+Rule Type: Record Data
+Scope:
+  Entities:
+    Include:
+      - 'ScheduleTimeline'
+Sensitivity: Record

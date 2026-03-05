@@ -1,0 +1,163 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Values of --TESTCD and QNAM values must be limited to 8
+                  characters, and cannot start with a number, nor can they
+                  contain characters other than letters, numbers, or
+                  underscores.
+                Document: IG v3.0
+                Section: 4.2.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: 'SEND23'
+              Version: '1'
+            Version: '5.0'
+        Version: '3.0'
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Values of --TESTCD and QNAM values must be limited to 8
+                  characters, and cannot start with a number, nor can they
+                  contain characters other than letters, numbers, or
+                  underscores.
+                Document: IG v3.1
+                Section: 4.2.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: 'SEND23'
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Values of --TESTCD and QNAM values must be limited to 8
+                  characters, and cannot start with a number, nor can they
+                  contain characters other than letters, numbers, or
+                  underscores.
+                Document: IG v3.1.1
+                Section: 4.2.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: 'SEND23'
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1.1'
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: Values of --TESTCD and QNAM values must be limited to 8
+                  characters, and cannot start with a number, nor can they
+                  contain characters other than letters, numbers, or
+                  underscores.
+                Document: IG v3.1
+                Section: 4.2.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: 'SEND23'
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: Values of --TESTCD and QNAM values must be limited to 8
+                  characters, and cannot start with a number, nor can they
+                  contain characters other than letters, numbers, or
+                  underscores.
+                Document: IG v3.1.1
+                Section: 4.2.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: 'SEND23'
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: Values of --TESTCD and QNAM values must be limited to 8
+                  characters, and cannot start with a number, nor can they
+                  contain characters other than letters, numbers, or
+                  underscores.
+                Document: IG v3.1.1
+                Section: 4.2.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: 'SEND23'
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+  - Organization: CDISC
+    Standards:
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: QNAM serves the same purpose as --TESTCD within supplemental
+                  qualifier datasets, and so values of QNAM are subject to the
+                  same restrictions as values of --TESTCD
+                Document: TIG v1.0
+                Item: Tabulation Datasets Table, Num 4
+                Section: 2.6 Guidance for Datasets
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0157
+              Version: '1'
+            Version: '1.0'
+        Substandard: SEND
+        Version: '1.0'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: When extending a controlled terminology list, the
+                  case-sensitivity convention of that list should be followed.
+                Document: TIG v1.0
+                Item: QNAM CDISC Notes
+                Section: 2.8.9.27 SEND Supplemental Qualifiers (--SUPP)
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0157
+              Version: '1'
+            Version: '1.0'
+        Substandard: SEND
+        Version: '1.0'
+Check:
+  all:
+    - name: QNAM
+      operator: not_matches_regex
+      value: ^[A-Z0-9_]*$
+Core:
+  Id: CORE-000490
+  Status: Published
+  Version: '1'
+Description: Raise an error when QNAM has lowercase characters
+Executability: Partially Executable - Possible Overreporting
+Outcome:
+  Message: --QNAM value must be uppercase
+  Output Variables:
+    - IDVAR
+    - IDVARVAL
+    - QNAM
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - RELATIONSHIP
+  Domains:
+    Include:
+      - SUPP--
+  Use Case: NONCLIN
+Sensitivity: Record

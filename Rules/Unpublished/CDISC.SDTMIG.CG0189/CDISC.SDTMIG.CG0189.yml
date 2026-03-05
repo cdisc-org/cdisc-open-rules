@@ -1,0 +1,75 @@
+# Variable: LBSTNRHI
+# Condition: 
+# Rule: LBSTNRHI is expressed using the units in LBSTRESU
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        Version: '3.4'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0189
+              Version: '2'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: Upper end of reference range for continuous measurements
+                  in standardized units.
+                Document: IG v3.4
+                Item: Specification
+                Section: 6.3.5.6
+      - Name: SDTMIG
+        Version: '3.2'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0189
+              Version: '2'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: Upper end of reference range for continuous measurements
+                  in standardized units.
+                Document: IG v3.2
+                Item: Specification
+                Section: '6.3'
+      - Name: SDTMIG
+        Version: '3.3'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0189
+              Version: '2'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: Upper end of reference range for continuous measurements
+                  in standardized units.
+                Document: IG v3.3
+                Item: Specification
+                Section: 6.3.6
+Check:
+  all:
+    - name: LBSTRESU
+      operator: non_empty
+    - name: LBORRESU
+      operator: equal_to
+      value: LBSTRESU
+    - name: LBORNRHI
+      operator: not_equal_to
+      value: LBSTNRHI
+Core:
+  Id: CDISC.SDTMIG.CG0189
+  Status: Draft
+  Version: '1'
+Description: Trigger error if LBSTNRHI is not expressed using the units in LBSTRESU
+Executability: Fully Executable
+Outcome:
+  Message: LBSTNRHI is not expressed using the units in LBSTRESU
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - LB
+Sensitivity: Record

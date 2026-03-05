@@ -1,0 +1,42 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: --SPCUFL describes the usability of the specimen for the test.
+                  Example, N = the specimen is not usable; otherwise null.
+                Document: SENDIG v3.0
+                Section: 6.3.7 | 6.3.8
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND182
+              Version: '1'
+            Version: '5.0'
+        # ATTENTION: for SENDIG 3.0, only applicable to MA, MI. Not to LB, PC.
+        Version: '3.0'
+Check:
+  all:
+    - name: --SPCUFL
+      operator: non_empty
+    - name: --SPCUFL
+      operator: not_equal_to
+      value: N
+Core:
+  Id: CORE-000461
+  Status: Published
+  Version: '1'
+Description: Raise an error when --SPCUFL is not null and is not equal to 'N'
+Executability: Fully Executable
+Outcome:
+  Message: --SPCUFL must be 'N' or null.
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - MA
+      - MI
+Sensitivity: Record

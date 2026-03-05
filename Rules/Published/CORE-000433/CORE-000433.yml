@@ -1,0 +1,132 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Unique number for this record within this dataset. (This
+                  sequence should be unique within the entire dataset because
+                  there is no USUBJID.)
+                Document: IG v3.0
+                Item: Specification
+                Section: 7.4.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND231
+              Version: "1"
+            Version: "5.0"
+        Version: "3.0"
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Unique number for this record within this dataset. (This
+                  sequence should be unique within the entire dataset because
+                  there is no USUBJID.)
+                Document: IG v3.1
+                Item: Specification
+                Section: 7.4.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND231
+              Version: "1"
+            Version: "5.0"
+        Version: "3.1"
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Unique number for this record within this dataset. (This
+                  sequence should be unique within the entire dataset because
+                  there is no USUBJID.)
+                Document: IG v3.1.1
+                Item: Specification
+                Section: 7.4.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND231
+              Version: "1"
+            Version: "5.0"
+        Version: 3.1.1
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: Unique number for this record within this dataset. (This
+                  sequence should be unique within the entire dataset because
+                  there is no USUBJID.)
+                Document: IG v3.1
+                Item: Specification
+                Section: 7.4.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND231
+              Version: "1"
+            Version: "5.0"
+        Version: "1.1"
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: Unique number for this record within this dataset. (This
+                  sequence should be unique within the entire dataset because
+                  there is no USUBJID.)
+                Document: IG v3.1.1
+                Item: Specification
+                Section: 7.4.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND231
+              Version: "1"
+            Version: "5.0"
+        Version: "1.2"
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: Unique number for this record within this dataset. (This
+                  sequence should be unique within the entire dataset because
+                  there is no USUBJID.)
+                Document: IG v3.1.1
+                Item: Specification
+                Section: 7.4.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND231
+              Version: "1"
+            Version: "5.0"
+        Version: "1.0"
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: Unique number for this record within this dataset. (This
+                  sequence should be unique within the entire dataset because
+                  there is no USUBJID.)
+                Document: TIG v1.0
+                Item: TXSEQ CDISC Notes
+                Section: 2.8.9.28
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0159
+              Version: "1"
+            Version: "1.0"
+        Substandard: SEND
+        Version: "1.0"
+Check:
+  all:
+    - name: TXSEQ
+      operator: is_not_unique_set
+      value: DOMAIN
+Core:
+  Id: CORE-000433
+  Status: Published
+  Version: "1"
+Description: TXSEQ should be unique for each record within the TX dataset.
+Executability: Fully Executable
+Outcome:
+  Message: TXSEQ is not unique in TX
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - TRIAL DESIGN
+  Domains:
+    Include:
+      - TX
+  Use Case: NONCLIN
+Sensitivity: Record

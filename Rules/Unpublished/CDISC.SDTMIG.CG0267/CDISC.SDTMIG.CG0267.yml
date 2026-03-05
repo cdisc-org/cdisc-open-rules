@@ -1,0 +1,64 @@
+# Variable: TSVCDVER
+# Condition: Reference Terminology is versioned.
+# Rule: TSVCDVER ^= null
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: The version number of the Reference Terminology, if applicable.
+                Document: IG v3.4
+                Item: Specification
+                Section: 7.4.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0267
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: The version number of the Reference Terminology, if applicable.
+                Document: IG v3.2
+                Item: Specification
+                Section: '7.4'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0267
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: The version number of the Reference Terminology, if applicable.
+                Document: IG v3.3
+                Item: Specification
+                Section: 7.4.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0267
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+Check:
+  all:
+Core:
+  Id: CDISC.SDTMIG.CG0267
+  Status: Draft
+  Version: '1'
+Description: Trigger error when Reference Terminology is versioned and TSVCDVER is null
+Executability: Not Executable
+Outcome:
+  Message: TSVCDVER is null when Reference Terminology is versioned
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - TRIAL DESIGN
+  Domains:
+    Include:
+      - TS
+Sensitivity: Record

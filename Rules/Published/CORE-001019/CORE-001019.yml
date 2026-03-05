@@ -1,0 +1,57 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'An eligibility criterion must not be referenced by both a study
+                  design population and any of the cohorts of the same study
+                  design population.'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00159'
+              Version: '1'
+            Version: '1.0'
+        Version: '4.0'
+Check: |-
+  ($.**.studyDesigns)@$s.
+    $s.eligibilityCriteria@$ec
+      [
+        $ec.id in $s.population.criterionIds and
+        $ec.id in $s.population.cohorts.criterionIds
+      ].
+      {
+        "instanceType": $ec.instanceType,
+        "id": $ec.id,
+        "path": $ec._path,
+        "StudyDesign.id": $s.id,
+        "StudyDesign.name": $s.name,
+        "name": $ec.name,
+        "category": $ec.category.decode,
+        "identifier": $ec.identifier,
+        "Used in": $s.**[$ec.id in $.criterionIds].(id&(name?"["&name&"]"))
+      }
+Core:
+  Id: 'CORE-001019'
+  Status: Published
+  Version: '1'
+Description: 'An eligibility criterion must not be referenced by both a study
+  design population and any of the cohorts of the same study design population.'
+Executability: Fully Executable
+Outcome:
+  Message: "The eligibility criterion is referenced by both the study design's
+    population and at least one of its cohorts."
+  Output Variables:
+    - StudyDesign.id
+    - StudyDesign.name
+    - name
+    - category
+    - identifier
+    - "Used in"
+Rule Type: JSONata
+Scope:
+  Entities:
+    Include:
+      - 'EligibilityCriterion'
+Sensitivity: Record

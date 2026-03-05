@@ -1,0 +1,75 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'Any parameter name referenced in a tag in the text should be
+                  specified in the data dictionary parameter maps.'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00089'
+              Version: '1'
+            Version: '1.0'
+        Version: '3.0'
+Check: |-
+  **.study.versions@$sv.
+    ($sv.studyDesigns)@$sd.($sd.**[$type(text)="string" and $contains(text,/usdm:tag/)])@$st.
+      (
+        $dict := $sd.dictionaries[id=$st.dictionaryId];
+        $valid_tags := $dict.parameterMaps.tag;
+        $match ($st.text,
+                    /<usdm:tag((?=[^>]* name=\"(\w+)\")[^>]*)(\/>|><\/usdm:tag>)/
+        ) [
+            $not(
+              $st.dictionaryId and
+              $dict and
+              groups[1] in $valid_tags
+            )
+          ].
+          {
+            "instanceType": $st.instanceType,
+            "id": $st.id,
+            "path": $st._path,
+            "name": $st.name,
+            "Parameter reference": match,
+            "Parameter name": groups[1],
+            "dictionaryId": $st.dictionaryId,
+            "SyntaxTemplateDictionary.name": $dict.name,
+            "Issue": $st.dictionaryId 
+                      ? $dict
+                          ? "Parameter not in dictionary"
+                          : "dictionaryId is invalid"
+                      : "dictionaryId is missing"
+          }
+      )
+Core:
+  Id: 'CORE-001037'
+  Status: Published
+  Version: '1'
+Description: 'Any parameter name referenced in a tag in the text should be
+  specified in the data dictionary parameter maps.'
+Executability: Fully Executable
+Outcome:
+  Message: "The parameter name referenced in the text is not specified in the data
+    dictionary parameter map - the dictionaryId is missing or invalid, or the
+    parameter name does not match a tag in any of the dictionary's parameter
+    maps."
+  Output Variables:
+    - name
+    - Parameter reference
+    - Parameter name
+    - dictionaryId
+    - SyntaxTemplateDictionary.name
+    - Issue
+Rule Type: JSONata
+Scope:
+  Entities:
+    Include:
+      - 'EligibilityCriterion'
+      - 'Characteristic'
+      - 'Condition'
+      - 'Objective'
+      - 'Endpoint'
+Sensitivity: Record

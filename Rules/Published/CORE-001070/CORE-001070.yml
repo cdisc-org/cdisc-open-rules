@@ -1,0 +1,64 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'A masking is not expected to be defined for any study role in a
+                  study design with an open label blinding schema.'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00191'
+              Version: '1'
+            Version: '1.0'
+        Version: '4.0'
+Check: |-
+  $.study.versions@$sv.
+    [
+      ($sv.roles)@$r.($sv.studyDesigns)@$sd
+        [
+          (
+              $sv.id in $r.appliesToIds or
+              $sd.id in $r.appliesToIds
+          ) and
+          $r.masking.isMasked and
+          $sd.blindingSchema.standardCode.code = "C49659"
+        ].{
+            "instanceType": $r.instanceType,
+            "id": $r.id,
+            "path": $r._path,
+            "name": $r.name,
+            "code": $r.code.decode,
+            "masking.text": $r.masking.text,
+            "masking.isMasked": $r.masking.isMasked,
+            "appliesToIds": $r.appliesToIds,
+            "StudyDesign.id": $sd.id,
+            "StudyDesign.name": $sd.name,
+            "StudyDesign.blindingSchema": $sd.blindingSchema.standardCode.decode
+          }
+    ]
+Core:
+  Id: 'CORE-001070'
+  Status: Published
+  Version: '1'
+Description: 'A masking is not expected to be defined for any study role in a
+  study design with an open label blinding schema.'
+Executability: Partially Executable - Possible Overreporting
+Outcome:
+  Message: 'A masking is defined for the study role, but the role applies to a
+    study design with an open label blinding schema.'
+  Output Variables:
+    - name
+    - code
+    - masking.text
+    - masking.isMasked
+    - appliesToIds
+    - StudyDesign.id
+    - StudyDesign.blindingSchema
+Rule Type: JSONata
+Scope:
+  Entities:
+    Include:
+      - 'StudyRole'
+Sensitivity: Record

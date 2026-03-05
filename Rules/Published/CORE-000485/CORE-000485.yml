@@ -1,0 +1,135 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Values of --TESTCD and QNAM values must be limited to 8
+                  characters, and cannot start with a number, nor can they
+                  contain characters other than letters, numbers, or
+                  underscores.
+                Document: IG v3.0
+                Section: 4.2.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND20
+              Version: '1'
+            Version: '5.0'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Values of --TESTCD and QNAM values must be limited to 8
+                  characters, and cannot start with a number, nor can they
+                  contain characters other than letters, numbers, or
+                  underscores.
+                Document: IG v3.1
+                Section: 4.2.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND20
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Values of --TESTCD and QNAM values must be limited to 8
+                  characters, and cannot start with a number, nor can they
+                  contain characters other than letters, numbers, or
+                  underscores.
+                Document: IG v3.1.1
+                Section: 4.2.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND20
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: Values of --TESTCD and QNAM values must be limited to 8
+                  characters, and cannot start with a number, nor can they
+                  contain characters other than letters, numbers, or
+                  underscores.
+                Document: IG v3.1
+                Section: 4.2.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND20
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: Values of --TESTCD and QNAM values must be limited to 8
+                  characters, and cannot start with a number, nor can they
+                  contain characters other than letters, numbers, or
+                  underscores.
+                Document: IG v3.1.1
+                Section: 4.2.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND20
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: Values of --TESTCD and QNAM values must be limited to 8
+                  characters, and cannot start with a number, nor can they
+                  contain characters other than letters, numbers, or
+                  underscores.
+                Document: IG v3.1.1
+                Section: 4.2.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND20
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: The value in QNAM cannot be longer than 8 characters nor can it
+                  start with a number (e.g., "1TEST" is not valid).
+                Document: TIG v1.0
+                Item: QNAM CDISC Notes
+                Section: 2.8.9.27 SEND Supplemental Qualifiers (--SUPP)
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0129
+              Version: '1'
+            Version: '1.0'
+        Substandard: SEND
+        Version: '1.0'
+Check:
+  all:
+    - name: QNAM
+      operator: longer_than
+      value: 8
+Core:
+  Id: CORE-000485
+  Status: Published
+  Version: '1'
+Description: Raise an error when QNAM > 8 chars
+Executability: Fully Executable
+Outcome:
+  Message: The value of QNAM has more than 8 chars
+  Output Variables:
+    - IDVAR
+    - IDVARVAL
+    - QNAM
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - RELATIONSHIP
+  Domains:
+    Include:
+      - SUPP--
+  Use Case: NONCLIN
+Sensitivity: Record

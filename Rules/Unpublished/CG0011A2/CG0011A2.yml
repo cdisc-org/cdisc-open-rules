@@ -1,0 +1,70 @@
+# CG0011A = --DUR variables
+Authorities:
+  - Organization: 'CDISC'
+    Standards:
+      - Name: 'SDTMIG'
+        References:
+          - Citations:
+              - Cited Guidance: 'Following SDTM-specified controlled terminology and format
+                  guidelines for variables, when provided'
+                Document: 'SDTMIG'
+                Section: '3.2.2'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: 'CG0011A2'
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: 'SDTMIG'
+        References:
+          - Citations:
+              - Cited Guidance: 'Following SDTM-specified controlled terminology and format
+                  guidelines for variables, when provided'
+                Document: 'SDTMIG'
+                Section: '3.2.2'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: 'CG0011A2'
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: 'SDTMIG'
+        References:
+          - Citations:
+              - Cited Guidance: 'Following SDTM-specifieda controlled terminology and format
+                  guidelines for variables, when provided'
+                Document: 'SDTMIG'
+                Section: '3.2.2'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: 'CG0011A2'
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+# Part A2: check whether --DUR is declared as "durationDatetime"
+Check:
+  all:
+    - name: --DUR
+      negative: true
+      operator: invalid_duration
+      #operator: non_conformant_value_data_type
+      #value: 'durationDatetime'
+Core:
+  Status: Draft
+  Version: '1'
+Description: ''
+Executability: Fully Executable
+Outcome:
+  Message: ''
+Rule Type: Variable Metadata Check against Define XML
+# Rule Type: Variable Metadata Check against Library Metadata
+# Alternative: 
+
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Dataset

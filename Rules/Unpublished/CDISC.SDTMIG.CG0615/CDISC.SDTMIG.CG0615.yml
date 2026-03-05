@@ -1,0 +1,41 @@
+# Variable: MBTSTDTL
+# Condition: Test targets an organism, group of organisms, or antigen
+# Rule: MBTSTDTL = 'DETECTION'
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        Version: '3.4'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0615
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: In cases of tests that target an organism, group of
+                  organisms, or antigen for identification, MBTEST equals the name
+                  of the organism/antigen targeted by the identification assay, and
+                  MBTSTDTL should be “DETECTION”.
+                Document: IG v3.4
+                Item: Assumption 1
+                Section: 6.3.5.7.1
+Check:
+  all: []
+Core:
+  Id: CDISC.SDTMIG.CG0615
+  Status: Draft
+  Version: '1'
+Description: ''
+Executability: Fully Executable
+Outcome:
+  Message: ''
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - MB
+Sensitivity: Record

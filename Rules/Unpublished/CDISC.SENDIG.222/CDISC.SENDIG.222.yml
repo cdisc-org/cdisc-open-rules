@@ -1,0 +1,123 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: The values of ETCD used in the Trial Arms dataset must match
+                  values for the same Element in the Trial Elements dataset.
+                Document: IG v3.0
+                Section: 7.2.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND222
+              Version: '1'
+            Version: '5.0'
+        Version: '3.0'
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: The values of ETCD used in the Trial Arms dataset must match
+                  values for the same Element in the Trial Elements dataset.
+                Document: IG v3.1
+                Section: 7.2.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND222
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: The values of ETCD used in the Trial Arms dataset must match
+                  values for the same Element in the Trial Elements dataset.
+                Document: IG v3.1.1
+                Section: 7.2.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND222
+              Version: '1'
+            Version: '5.0'
+        Version: 3.1.1
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: The values of ETCD used in the Trial Arms dataset must match
+                  values for the same Element in the Trial Elements dataset.
+                Document: IG v3.1
+                Section: 7.2.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND222
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: The values of ETCD used in the Trial Arms dataset must match
+                  values for the same Element in the Trial Elements dataset.
+                Document: IG v3.1.1
+                Section: 7.2.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND222
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: The values of ETCD used in the Trial Arms dataset must match
+                  values for the same Element in the Trial Elements dataset.
+                Document: IG v3.1.1
+                Section: 7.2.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND222
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+Check:
+  all:
+    # TA.ETCD non-empty. Required as otherwise the "blank" value is checked against TE
+    - name: ETCD
+      operator: non_empty
+    # TA.ETCD is not in the list of distinct values of ETCD in TE
+    - name: ETCD
+      operator: is_not_contained_by
+      value: $te_etcd
+Core:
+  Id: CDISC.SENDIG.222
+  Status: Draft
+  Version: '1'
+Description: The values of ETCD used in the Trial Arms dataset must match values
+  for the same Element in the Trial Elements dataset.
+Executability: Fully Executable
+Operations:
+  - domain: TE
+    id: $te_etcd
+    name: ETCD
+    operator: distinct
+Outcome:
+  Message: TA.ETCD is not present in TE.ETCD
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - TRIAL DESIGN
+  Domains:
+    Include:
+      - TA
+Sensitivity: Record

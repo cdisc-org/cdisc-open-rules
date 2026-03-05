@@ -1,0 +1,79 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: The ICIMPLBL must be populated for each result, i.e. for each
+                  implantation site. In the situation where the implantations
+                  were not evaluated (ICSTAT = NOT DONE) per protocol, the
+                  artificial label, ALL, is used to represent missing results
+                  (see Example 5).
+                Document: DART-IG v1.1
+                Section: '5.1.2'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND363
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: The ICIMPLBL must be populated for each result, i.e. for each
+                  implantation site. In the situation where the implantations
+                  were not evaluated (ICSTAT = NOT DONE) per protocol, the
+                  artificial label, ALL, is used to represent missing results
+                  (see Example 5).
+                Document: DART-IG v1.2
+                Section: '5.1.2'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND363
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+Check:
+  # Rule has 2 parts: 
+  # a) number of records for this subject = 1
+  # b) when ICSTAT='NOT DONE', ICIMPLBL = "ALL" 
+  all:
+    - name: $record_count_USUBJID
+      operator: equal_to
+      value: 1
+    - name: ICSTAT
+      operator: equal_to
+      value: 'NOT DONE'
+    # Raise issue when ICIMPLBL is not "ALL"
+    - name: ICIMPLBL
+      operator: not_equal_to
+      value: ALL
+Core:
+  Id: CORE-000899
+  Status: Published
+  Version: '1'
+Description: "Raise an issue when there is only one record for this subject in
+  IC, LBSTAT='NOT DONE', and ICIMPLBL is not 'ALL'"
+Executability: Fully Executable
+Operations:
+  # This counts the number of records for the current USUBJID
+  - group:
+      - USUBJID
+    id: $record_count_USUBJID
+    operator: record_count
+Outcome:
+  Message: "ICIMPLBL must be 'ALL' when there is only one record for the subject
+    and ICSTAT is 'NOT DONE'"
+  Output Variables:
+    - $record_count_USUBJID
+    - ICSTAT
+    - ICIMPLBL
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - IC
+Sensitivity: Record

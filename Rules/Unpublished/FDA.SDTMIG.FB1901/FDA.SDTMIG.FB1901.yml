@@ -1,0 +1,279 @@
+# Variable: GEN
+# Condition: Variable Core Status = Required
+# Rule: Variable present in dataset and ^= null
+Authorities:
+  - Organization: FDA
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: 'Controlled terms should use the exact term (case, spelling, and
+                  punctuation) used by the terminology maintenance organizations
+                  (e.g., MedDRA, CDISC controlled terminology).'
+                Document: FDA
+                Section: FDAB017
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1701
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: 'Controlled terms should use the exact term (case, spelling, and
+                  punctuation) used by the terminology maintenance organizations
+                  (e.g., MedDRA, CDISC controlled terminology).'
+                Document: FDA
+                Section: FDAB017
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1701
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: 'Controlled terms should use the exact term (case, spelling, and
+                  punctuation) used by the terminology maintenance organizations
+                  (e.g., MedDRA, CDISC controlled terminology).'
+                Document: FDA
+                Section: FDAB017
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1701
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: 'Controlled terms should use the exact term (case, spelling, and
+                  punctuation) used by the terminology maintenance organizations
+                  (e.g., MedDRA, CDISC controlled terminology).'
+                Document: FDA
+                Section: FDAB017
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1701
+              Version: '1'
+            Version: '1.5'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: 'Controlled terms should use the exact term (case, spelling, and
+                  punctuation) used by the terminology maintenance organizations
+                  (e.g., MedDRA, CDISC controlled terminology).'
+                Document: FDA
+                Section: FDAB017
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1701
+              Version: '1'
+            Version: '1.5'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: 'Controlled terms should use the exact term (case, spelling, and
+                  punctuation) used by the terminology maintenance organizations
+                  (e.g., MedDRA, CDISC controlled terminology).'
+                Document: FDA
+                Section: FDAB017
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1701
+              Version: '1'
+            Version: '1.5'
+        Version: '3.1.1'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: 'Controlled terms should use the exact term (case, spelling, and
+                  punctuation) used by the terminology maintenance organizations
+                  (e.g., MedDRA, CDISC controlled terminology).'
+                Document: FDA
+                Section: FDAB017
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1701
+              Version: '1'
+            Version: '1.5'
+        Version: '1.0'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: 'Controlled terms should use the exact term (case, spelling, and
+                  punctuation) used by the terminology maintenance organizations
+                  (e.g., MedDRA, CDISC controlled terminology).'
+                Document: FDA
+                Section: FDAB017
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1701
+              Version: '1'
+            Version: '1.5'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: 'Controlled terms should use the exact term (case, spelling, and
+                  punctuation) used by the terminology maintenance organizations
+                  (e.g., MedDRA, CDISC controlled terminology).'
+                Document: FDA
+                Section: FDAB017
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1701
+              Version: '1'
+            Version: '1.5'
+        Version: '1.2'
+      - Name: SENDIG-AR
+        References:
+          - Citations:
+              - Cited Guidance: 'Controlled terms should use the exact term (case, spelling, and
+                  punctuation) used by the terminology maintenance organizations
+                  (e.g., MedDRA, CDISC controlled terminology).'
+                Document: FDA
+                Section: FDAB017
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1701
+              Version: '1'
+            Version: '1.5'
+        Version: '1.0'
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: The SEND CT indicates whether a particular codelist is
+                  extensible or not.
+                Document: IG v3.0
+                Section: 4.1.3
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND296
+              Version: '1'
+            Version: '5.0'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: The SEND CT indicates whether a particular codelist is
+                  extensible or not.
+                Document: IG v3.1
+                Section: 4.1.3
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND296
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: The SEND CT indicates whether a particular codelist is
+                  extensible or not.
+                Document: IG v3.1.1
+                Section: 4.1.3
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND296
+              Version: '1'
+            Version: '5.0'
+        Version: 3.1.1
+# Comment/Answer Christy Kubin: 
+# The intent of this rule is to check the values in the dataset against the CT in the CDISC library.  
+# The define file should not be checked in this case.
+Check:
+  all:
+    - name: LBTESTCD ## only for exploring
+      operator: not_equal_to
+      value: 'test variable'
+    # See DDF00110 (Richard Marshall)
+    - name: $codelist_extensible
+      operator: equal_to
+      value: false
+      #- codelistcheck: value
+      #  codelistlevel: term
+      #  name: --STAT
+      #  operator: does_not_use_valid_codelist_terms
+      #  value: true
+      #- name: $variable
+      #  operator: empty
+      #- name: library_variable_has_codelist
+      #  operator: equal_to
+      #  value: true
+      #- codelist: 'LBTESTCD'
+      #  name: $codelist_extensible
+      #  operator: equal_to
+      #  value: false
+      #- name: $column_order_from_dataset
+      #  operator: is_not_ordered_by
+      #  order: asc
+      #  value: $column_order_from_library
+Core:
+  Id: FDA.SDTMIG.FB1901
+  Status: Draft
+  Version: '1'
+Description: When CDISC published Controlled Terminology indicates that a
+  codelist is non-extensible then only terms from the codelist should be used.
+Executability: Fully Executable
+Operations:
+  # See DDF00110 (Richard Marshall)
+  - codelist_code: $codelist_code
+    ct_package_type: SDTM
+    id: $codelist_extensible
+    operator: codelist_extensible
+    version: category.codeSystemVersion
+  #- id: $column_order_from_library
+  #  operator: get_column_order_from_library
+  # P.S. it would be nice whem instead of the codelist name, one could also provide the NCI Code of the codelist
+  # TODO: as we need to iterate over ALL variables that do have a codelist
+  # How do I pass the variable name and/or its codelist name as an argument to this?
+  #  - codelist: 'NOT DONE' # Can ignore schema warning - it IS required, and is name of the Codelist for which CT is checked
+  #   id: $codelist_extensible
+  #   operator: codelist_extensible
+  #
+
+  #  - id: $codelist_terms
+  #    operator: codelist_terms
+  #  ct_packages:
+  #    - sdtmct-2020-03-27
+  #  ct_version: LBVERSION
+  #  id: $CODELISTEXTENSIBLE
+  #  name: LBTESTCD
+  #  operator: get_codelist_attributes
+  #- id: $column_order_from_library
+  #  operator: get_column_order_from_library
+
+  #  - ct_attribute: extensible
+  #    ct_packages:
+  #      - sdtmct-2020-03-27
+  #    ct_version: 'LBVERSION'
+  #    id: $CODELISTEXTENSIBLE
+  #    name: LBTESTCD
+  #    operator: get_codelist_attributes
+
+Outcome:
+  Message: A new term has been added to a non-extensible code list.
+  Output Variables:
+    # - $column_order_from_library
+    - $codelist_extensible
+    - $codelist_code
+    # - variable_name
+    # - $var_codelist
+    # - $CODELISTEXTENSIBLE
+Rule Type: Record Data
+# Rule Type: Variable Metadata Check against Library Metadata
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record

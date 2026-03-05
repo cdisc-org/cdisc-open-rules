@@ -1,0 +1,67 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Neoplastic findings must be populated using the NEOPLASM
+                  controlled list.
+                Document: IG v3.1
+                Section: 6.3.8
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: 'SEND321'
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+Check:
+  all:
+    - any:
+        - name: MIRESCAT
+          operator: equal_to
+          value: 'MALIGNANT'
+        - name: MIRESCAT
+          operator: equal_to
+          value: 'BENIGN'
+    - name: MISTRESC
+      operator: is_not_contained_by
+      # REMARK: the NEOPLASM codelist is NOT the standard codelist for MISTRESC !!!
+      value: $NEOPASM_CODELIST
+    # The following does not seem to work => "invalid operator"
+    #- name: MISTRESC
+    #  operator: does_not_use_valid_codelist_terms
+    #  value: NEOPLASM
+Core:
+  Status: Draft
+  Version: '1'
+Description: 'Report an issue when MIRESCAT is either MALIGNANT or BENIGN, and
+  the value in MISTRESC is not from the NEOPLASM codelist (NCI C88025)'
+Executability: Fully Executable
+Operations:
+  # 2025-09-11: This still returns an EMPTY list!
+  # or just - codelist: NEOPLASM
+  - codelists:
+      - NEOPLASM
+    ct_package_type: SEND
+    id: $NEOPASM_CODELIST
+    level: term
+    # level: codelist
+    operator: codelist_terms
+    returntype: value
+    # version: '2024-03-29'
+    #version: codeSystemVersion
+Outcome:
+  Message: 'The term for the record is not present in the NEOPLASM codelist and
+    may be a term added to the extensible list'
+  Output Variables:
+    - MISTRESC
+    - $NEOPASM_CODELIST
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - MI
+Sensitivity: Record

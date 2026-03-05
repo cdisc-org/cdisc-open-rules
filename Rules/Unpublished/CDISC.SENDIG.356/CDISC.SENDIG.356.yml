@@ -1,0 +1,59 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      # REMARK: Only applicable to SENDIG-DART 1.1 and 1.2
+      # FETUSID is "expected" in IC and FM, "required in FX"
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: The value for the fetus identifier is unique per subject within
+                  a study.
+                Document: IG-DART v1.1
+                Section: '5.1.1'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND356
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: The value for the fetus identifier is unique per subject within
+                  a study.
+                Document: IG-DART v1.2
+                Section: '5.1.1'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND356
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+
+Check:
+  all:
+    - name: FETUSID
+      operator: non_empty
+    - name: FETUSID
+      operator: is_not_unique_set
+      value:
+        - USUBJID
+Core:
+  Id: CDISC.SENDIG.356
+  Status: Draft
+  Version: '1'
+Description: Raise an error when the combination of USUBJID and FETUSID in not unique
+Executability: Fully Executable
+Outcome:
+  Message: The value of FETUSID is not unique within USUBJID
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - IC
+      - FM
+      - FX
+Sensitivity: Record

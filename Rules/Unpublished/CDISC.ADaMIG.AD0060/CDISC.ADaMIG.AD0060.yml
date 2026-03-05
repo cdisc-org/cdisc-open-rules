@@ -1,0 +1,84 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: ADaMIG
+        References:
+          - Citations:
+              - Cited Guidance: >-
+                  Variables whose names end in DTM are numeric datetimes
+                Document: ADaM IG v1.3
+                Item: '3'
+                Section: 3.1.2
+            Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '60'
+            Version: '5.0'
+        Version: '1.3'
+
+      - Name: ADaMIG
+        References:
+          - Citations:
+              - Cited Guidance: >-
+                  Variables whose names end in DTM are numeric datetimes
+                Document: ADaM IG v1.3
+                Item: '3'
+                Section: 3.1.2
+            Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '60'
+            Version: '5.0'
+        Version: '1.2'
+      - Name: ADaMIG
+        References:
+          - Citations:
+              - Cited Guidance: >-
+                  Variables whose names end in DTM are numeric datetimes
+                Document: ADaM IG v1.3
+                Item: '3'
+                Section: 3.1.2
+            Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '60'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: ADaMIG
+        References:
+          - Citations:
+              - Cited Guidance: >-
+                  Variables whose names end in DTM are numeric datetimes
+                Document: ADaM IG v1.3
+                Item: '3 (General Timing Variable Conventions)'
+                Section: '3'
+            Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '60'
+            Version: '5.0'
+        Version: '1.0'
+Check:
+  all:
+    - name: -- DTM
+      operator: is_not_numeric
+
+Core:
+  Id: CDISC.ADaMIG.AD0060
+  Status: Draft
+  Version: '1'
+Description: >-
+  'A variable with a suffix of DTM must be numeric'
+Executability: Fully Executable
+Outcome:
+  Message: Variable with a suffix of DTM  must be numeric
+  Output Variables:
+    - SUBJID
+    - --DTM
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+      - ALL
+
+  Subclasses:
+    Include:
+      - ALL
+
+Sensitivity: Record

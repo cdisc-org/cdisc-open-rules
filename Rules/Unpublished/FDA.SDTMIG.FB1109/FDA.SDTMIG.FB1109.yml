@@ -1,0 +1,171 @@
+Authorities:
+  - Organization: 'FDA'
+    Standards:
+      - Name: 'SDTMIG'
+        References:
+          - Citations:
+              - Cited Guidance: 'TCG, Appendix B'
+                Document: 'FDA'
+                Section: 'FDAB011'
+            Origin: 'FDA Business Rules'
+            Rule Identifier:
+              Id: 'FB1109'
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+      - Name: 'SDTMIG'
+        References:
+          - Citations:
+              - Cited Guidance: 'TCG, Appendix B'
+                Document: 'FDA'
+                Section: 'FDAB011'
+            Origin: 'FDA Business Rules'
+            Rule Identifier:
+              Id: 'FB1109'
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: 'SDTMIG'
+        References:
+          - Citations:
+              - Cited Guidance: 'TCG, Appendix B'
+                Document: 'FDA'
+                Section: 'FDAB011'
+            Origin: 'FDA Business Rules'
+            Rule Identifier:
+              Id: 'FB1109'
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+Check:
+  all:
+    - name: TSPARMCD
+      operator: equal_to
+      value: CTAUG
+    - name: TSVAL
+      operator: starts_with
+      value: QT
+    - any:
+        - name: TSPARMCD
+          operator: not_contains_all
+          value:
+            - EGBLIND
+            - EGCTMON
+            - EGLEADPR
+            - EGLEADSM
+            - EGRDMETH
+            - EGREPLBL
+            - EGREPLTR
+            - EGTWVALG
+        - name: $blind_count
+          operator: equal_to
+          value: 1
+        - name: $ctmon_count
+          operator: equal_to
+          value: 1
+        - name: $leadpr_count
+          operator: equal_to
+          value: 1
+        - name: $leadsm_count
+          operator: equal_to
+          value: 1
+        - name: $rdmeth_count
+          operator: equal_to
+          value: 1
+        - name: $replbl_count
+          operator: equal_to
+          value: 1
+        - name: $repltr_count
+          operator: equal_to
+          value: 1
+        - name: $twvalg_count
+          operator: equal_to
+          value: 1
+Core:
+  Id: FDA.SDTMIG.FB1109
+  Status: Draft
+  Version: '1'
+Description: 'The set (EGBLIND, EGCTMON, EGLEADPR, EGLEADSM, EGRDMETH, EGREPLBL,
+  EGREPLTR, EGTWVALG) is included in the list of TSPARAMCD with TSVAL
+  populated.'
+Executability: Fully Executable
+Operations:
+  - domain: TS
+    filter:
+      TSPARMCD: EGBLIND
+      TSVAL: ''
+    id: $blind_count
+    name: TSPARMCD
+    operator: record_count
+  - domain: TS
+    filter:
+      TSPARMCD: EGCTMON
+      TSVAL: ''
+    id: $ctmon_count
+    name: TSPARMCD
+    operator: record_count
+  - domain: TS
+    filter:
+      TSPARMCD: EGLEADPR
+      TSVAL: ''
+    id: $leadpr_count
+    name: TSPARMCD
+    operator: record_count
+  - domain: TS
+    filter:
+      TSPARMCD: EGLEADSM
+      TSVAL: ''
+    id: $leadsm_count
+    name: TSPARMCD
+    operator: record_count
+  - domain: TS
+    filter:
+      TSPARMCD: EGRDMETH
+      TSVAL: ''
+    id: $rdmeth_count
+    name: TSPARMCD
+    operator: record_count
+  - domain: TS
+    filter:
+      TSPARMCD: EGREPLBL
+      TSVAL: ''
+    id: $replbl_count
+    name: TSPARMCD
+    operator: record_count
+  - domain: TS
+    filter:
+      TSPARMCD: EGREPLTR
+      TSVAL: ''
+    id: $repltr_count
+    name: TSPARMCD
+    operator: record_count
+  - domain: TS
+    filter:
+      TSPARMCD: EGTWVALG
+      TSVAL: ''
+    id: $twvalg_count
+    name: TSPARMCD
+    operator: record_count
+Outcome:
+  Message: 'The set (EGBLIND, EGCTMON, EGLEADPR, EGLEADSM, EGRDMETH, EGREPLBL,
+    EGREPLTR, EGTWVALG) is included in the list of TSPARAMCD with TSVAL
+    populated.'
+  Output Variables:
+    - TSVAL
+    - $blind_count
+    - $ctmon_count
+    - $leadpr_count
+    - $leadsm_count
+    - $rdmeth_count
+    - $replbl_count
+    - $repltr_count
+    - $twvalg_count
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record

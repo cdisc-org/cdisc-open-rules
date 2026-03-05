@@ -1,0 +1,44 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Because there are no time gaps between Elements, the
+                  SEENDTC value for the last Element is the date of subject disposition.
+                # ATTENTION: only applicable to SENDIG-3.0
+                # REPLACED by rule 284 as of SENDIG-3-1
+                Document: IG v3.0
+                Item: Specification
+                Section: 5.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND127
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+Check:
+  all:
+    # TODO: operator "exists" must act on the set of datasets (i.e. the whole submission)
+    - name: SEENDTC
+      operator: not_equal_to
+      value: '2006-06-10'
+Core:
+  Id: CDISC.SENDIG.127
+  Status: Draft
+  Version: '1'
+Description: Because there are no time gaps between Elements, the SEENDTC value for
+  the last Element is the date of subject disposition.
+Executability: Fully Executable
+Outcome:
+  Message: SEENDTC value of last element in SE is not equal to DSSTDTC in DS for the
+    subject
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - SE
+Sensitivity: Record

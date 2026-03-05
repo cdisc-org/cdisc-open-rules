@@ -1,0 +1,128 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Values for --CAT and --SCAT should not be redundant with the
+                  domain or dictionary classification provided by --DECOD and
+                  --BODSYS.
+                Document: IG v.3.0
+                Section: 4.2.6
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND45
+              Version: '1'
+            Version: '5.0'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Values for --CAT and --SCAT should not be redundant with the
+                  domain or dictionary classification provided by --DECOD and
+                  --BODSYS.
+                Document: IG v.3.1
+                Section: 4.2.6
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND45
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Values for --CAT and --SCAT should not be redundant with the
+                  domain or dictionary classification provided by --DECOD and
+                  --BODSYS.
+                Document: IG v.3.1.1
+                Section: 4.2.6
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND45
+              Version: '1'
+            Version: '5.0'
+        Version: 3.1.1
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: --STRESN will only contain data values if the data values
+                  presented in --STRESC are numeric values
+                Document: IG v3.1
+                Section: 4.5.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND45
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: --STRESN will only contain data values if the data values
+                  presented in --STRESC are numeric values
+                Document: IG v3.1.1
+                Section: 4.5.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND45
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: --STRESN will only contain data values if the data values
+                  presented in --STRESC are numeric values
+                Document: IG v3.1.1
+                Section: 4.5.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND45
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+
+Check:
+  any:
+    #- name: --SCAT
+    #  operator: non_empty
+    - all:
+        - name: --SCAT
+          operator: non_empty
+        - name: --DECOD
+          operator: non_empty
+        - name: --SCAT
+          operator: equal_to
+          value: --DECOD
+    - all:
+        - name: --SCAT
+          operator: non_empty
+        - name: --BODSYS
+          operator: non_empty
+        - name: --SCAT
+          operator: equal_to
+          value: --BODSYS
+Core:
+  Id: CORE-000545
+  Status: Published
+  Version: '1'
+Description: Trigger error when --SCAT is not null and --SCAT is equal to
+  --DECOD or --SCAT is equal to --BODSYS
+Executability: Fully Executable
+Outcome:
+  Message: --SCAT is equal to --DECOD, or --SCAT is equal to --BODSYS
+  Output Variables:
+    - --CAT
+    - --SCAT
+    - --DECOD
+    - --BODSYS
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record

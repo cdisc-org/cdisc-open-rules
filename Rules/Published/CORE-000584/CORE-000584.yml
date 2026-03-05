@@ -1,0 +1,152 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: lb.xpt, Laboratory - Findings. One record per test per specimen
+                  per observation time per subject or pool, Tabulation.
+                Document: SENDIG v3.0
+                Item: Domain Table Header
+                Section: 6.3.6
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: 'SEND169'
+              Version: '1'
+            Version: '5.0'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: lb.xpt, Laboratory - Findings. One record per test per specimen
+                  per observation time per subject or pool, Tabulation.
+                Document: SENDIG v3.1
+                Item: Domain Table Header
+                Section: 6.3.6
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: 'SEND169'
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: lb.xpt, Laboratory - Findings. One record per test per specimen
+                  per observation time per subject or pool, Tabulation.
+                Document: SENDIG v3.1.1
+                Item: Domain Table Header
+                Section: 6.3.6
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: 'SEND169'
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: lb.xpt, Laboratory - Findings. One record per test per specimen
+                  per observation time per subject or pool, Tabulation.
+                Document: SENDIG v3.1
+                Item: Domain Table Header
+                Section: 6.3.6
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: 'SEND169'
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: lb.xpt, Laboratory - Findings. One record per test per specimen
+                  per observation time per subject or pool, Tabulation.
+                Document: SENDIG v3.1.1
+                Item: Domain Table Header
+                Section: 6.3.6
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: 'SEND169'
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: lb.xpt, Laboratory - Findings. One record per test per specimen
+                  per observation time per subject or pool, Tabulation.
+                Document: SENDIG v3.1.1
+                Item: Domain Table Header
+                Section: 6.3.6
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: 'SEND169'
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: lb.xpt, Laboratory Test Results — Findings. One record per test
+                  per specimen per observation time per subject or pool,
+                  Tabulation.
+                Document: TIG v1.0
+                Item: Domain Table Header
+                Section: 2.8.9.14
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0098
+              Version: '1'
+            Version: '1.0'
+        Substandard: SEND
+        Version: '1.0'
+Check:
+  any:
+    - all:
+        - name: LBDTC
+          operator: non_empty
+        - name: USUBJID
+          operator: non_empty
+        - name: LBTESTCD
+          operator: is_not_unique_set
+          value:
+            - USUBJID
+            - LBSPEC
+            - LBDTC
+    - all:
+        - name: LBDTC
+          operator: non_empty
+        - name: POOLID
+          operator: non_empty
+        - name: LBTESTCD
+          operator: is_not_unique_set
+          value:
+            - POOLID
+            - LBSPEC
+            - LBDTC
+Core:
+  Id: CORE-000584
+  Status: Published
+  Version: '1'
+Description: Raise an error when there is more than one record present per test
+  per specimen, in the LB Domain, for a subject or pool on a particular date.
+Executability: Fully Executable
+Outcome:
+  Message: The LB test result is not unique per specimen per subject or pool and
+    date/time.
+  Output Variables:
+    - POOLID
+    - LBTESTCD
+    - LBSPEC
+    - LBDTC
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - LB
+  Use Case: NONCLIN
+Sensitivity: Record
