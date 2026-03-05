@@ -1,0 +1,44 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: The controlled terminology or a link to the controlled
+                  terminology should be included in the data definition file
+                  wherever applicable. See the define.xml specification for
+                  details on including or referencing controlled terminology
+                  lists. Transport format)"
+                Document: IG v3.0
+                Item: Specification
+                Section: 4.3.3
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND50.99
+              Version: "1"
+            Version: "5.0"
+        Version: "3.0"
+Check:
+  all:
+    - name: define_variable_name
+      operator: not_equal_to
+      value: STUDYID
+    - name: define_vlm_ccode
+      operator: 'not_equal_to'
+      value: '99999'
+Core:
+  Status: Draft
+  Version: '1'
+Description: ''
+Executability: Fully Executable
+Outcome:
+  Message: 'test message'
+Rule Type: Define Item Metadata Check against Library Metadata
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Dataset

@@ -1,0 +1,49 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'The minimum value of a range must be less than or equal to the
+                  maximum value of the range.'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00070'
+              Version: '1'
+            Version: '1.0'
+        Version: '3.0'
+Check:
+  all:
+    - name: instanceType
+      operator: equal_to
+      value: 'Range'
+    - name: rel_type
+      operator: equal_to
+      value: 'definition'
+    - name: minValue
+      operator: greater_than
+      value: maxValue
+Core:
+  Id: 'CORE-000684'
+  Status: Published
+  Version: '1'
+Description: 'The minimum value of a range must be less than or equal to the
+  maximum value of the range.'
+Executability: Fully Executable
+Outcome:
+  Message: 'The minimum value of the range is not less than or equal to the
+    maximum value.'
+  Output Variables:
+    - parent_entity
+    - parent_id
+    - parent_rel
+    - id
+    - minValue
+    - maxValue
+Rule Type: Record Data
+Scope:
+  Entities:
+    Include:
+      - 'Range'
+Sensitivity: Record

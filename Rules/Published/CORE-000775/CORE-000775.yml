@@ -1,0 +1,144 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: "TRTDOSU: For more complex dosing regimens, sponsor should enter
+                  'SEE PROTOCOL' to match the associated TRTDOS value."
+                Document: IG v3.0
+                Item: Specification
+                Section: 7.4.2
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND241.1
+              Version: '1'
+            Version: '5.0'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: "For more complex dosing regimens, sponsor should enter 'SEE
+                  PROTOCOL' to match the associated TRTDOS value."
+                Document: IG v3.1
+                Item: Specification
+                Section: 7.4.2
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND241.1
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: "For more complex dosing regimens, sponsor should enter 'SEE
+                  PROTOCOL' to match the associated TRTDOS value."
+                Document: IG v3.1.1
+                Item: Specification
+                Section: 7.4.2
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND241.1
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1.1'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: "For more complex dosing regimens, sponsor should enter 'SEE
+                  PROTOCOL' to match the associated TRTDOS value."
+                Document: IG v3.1.1
+                Item: Specification
+                Section: 7.4.2
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND241.1
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: "For more complex dosing regimens, sponsor should enter 'SEE
+                  PROTOCOL' to match the associated TRTDOS value."
+                Document: IG v3.1
+                Item: Specification
+                Section: 7.4.2
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND241.1
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: "For more complex dosing regimens, sponsor should enter 'SEE
+                  PROTOCOL' to match the associated TRTDOS value."
+                Document: IG v3.1.1
+                Item: Specification
+                Section: 7.4.2
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND241.1
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+Check:
+  # With thanks to Richard Marshall 2025-03-16 
+  all:
+    - name: TXPARMCD
+      operator: is_contained_by
+      value:
+        - TRTDOS
+        - TRTDOSU
+    - name: $num_trtdos_see_protocol
+      operator: equal_to
+      value: 1
+    - name: $num_trtdosu_see_protocol
+      operator: not_equal_to
+      value: 1
+Core:
+  Status: Published
+  Version: '1'
+  Id: CORE-000775
+Description: ''
+Executability: Fully Executable
+# Group by value of SETCD
+Operations:
+  # With thanks to Richard Marshall 2025-03-16 
+  # counts the records with TRTDOS='SEE PROTOCOL' within the group
+  - filter:
+      TXPARMCD: TRTDOS
+      TXVAL: 'SEE PROTOCOL'
+    group:
+      - SETCD
+    id: $num_trtdos_see_protocol
+    operator: record_count
+  # counts the records with TRTDOSU='SEE PROTOCOL' within the group
+  - filter:
+      TXPARMCD: TRTDOSU
+      TXVAL: 'SEE PROTOCOL'
+    group:
+      - SETCD
+    id: $num_trtdosu_see_protocol
+    operator: record_count
+Outcome:
+  Message: "Within a single set, when TXPARMCD='TRTDOS' with the value for
+    TXVAL='SEE PROTOCOL', then for the record with TXPARMCD=TRTDOSU in the same
+    set, the value for TXVAL must also be 'SEE PROTOCOL'"
+  Output Variables:
+    - STUDYID
+    - $num_trtdos_see_protocol
+    - $num_trtdosu_see_protocol
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - TRIAL DESIGN
+  Domains:
+    Include:
+      - TX
+# Keeping Sensitivity to "Record" as otherwise only the first violation is reported
+Sensitivity: Record

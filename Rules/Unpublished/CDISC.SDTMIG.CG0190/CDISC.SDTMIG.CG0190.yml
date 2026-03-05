@@ -1,0 +1,70 @@
+# Variable: LBSTNRC
+# Condition: LBSTRESU ^= null
+# Rule: LBSTNRC  is expressed using the units in LBSTRESU
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        Version: '3.4'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0190
+              Version: '2'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: Reference Range for Char Rslt-Std Units
+                Document: IG v3.4
+                Item: Specification
+                Section: 6.3.5.6
+      - Name: SDTMIG
+        Version: '3.2'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0190
+              Version: '2'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: Reference Range for Char Rslt-Std Units
+                Document: IG v3.2
+                Item: Specification
+                Section: '6.3'
+      - Name: SDTMIG
+        Version: '3.3'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0190
+              Version: '2'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: Reference Range for Char Rslt-Std Units
+                Document: IG v3.3
+                Item: Specification
+                Section: 6.3.6
+Check:
+  all:
+    - name: LBSTRESU
+      operator: non_empty
+    - name:
+      operator:
+      value:
+Core:
+  Id: CDISC.SDTMIG.CG0190
+  Status: Draft
+  Version: '1'
+Description: Trigger error if LBSTRESU is not null and LBSTNRC is not expressed using
+  the units in LBSTRESU
+Executability: Fully Executable
+Outcome:
+  Message: LBSTNRC is not expressed using the units in LBSTRESU when LBSTRESU is populated.
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - LB
+Sensitivity: Record

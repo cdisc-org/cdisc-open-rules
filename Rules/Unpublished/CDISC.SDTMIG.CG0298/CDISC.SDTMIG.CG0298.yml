@@ -1,0 +1,66 @@
+# Variable: VISIT
+# Condition: 
+# Rule: VISIT is described in protocol
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        Version: '3.4'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0298
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: Protocol-defined description of clinical encounter.
+                Document: IG v3.4
+                Item: Specification
+                Section: 7.3.1
+      - Name: SDTMIG
+        Version: '3.2'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0298
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: Protocol-defined description of clinical encounter.
+                Document: IG v3.2
+                Item: Specification
+                Section: '7'
+      - Name: SDTMIG
+        Version: '3.3'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0298
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: Protocol-defined description of clinical encounter.
+                Document: IG v3.3
+                Item: Specification
+                Section: 7.3.1
+Check:
+  all:
+    - name:
+      operator:
+Core:
+  Id: CDISC.SDTMIG.CG0298
+  Status: Draft
+  Version: '1'
+Description: Trigger error when a visit is not described in the protocol
+Executability: Fully Executable
+Outcome:
+  Message: VISIT is not described in the protocol
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - TRIAL DESIGN
+  Domains:
+    Include:
+      - TV
+Sensitivity: Record

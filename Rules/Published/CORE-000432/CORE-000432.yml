@@ -1,0 +1,126 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: TXPARMCD Short character value for the Trial Set parameter
+                  described in TXPARM.  Maximum 8 characters.
+                Document: IG v3.0
+                Item: Specification
+                Section: 7.4.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND232
+              Version: "1"
+            Version: "5.0"
+        Version: "3.0"
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: TXPARMCD Short character value for the Trial Set parameter
+                  described in TXPARM.  Maximum 8 characters.
+                Document: IG v3.1
+                Item: Specification
+                Section: 7.4.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND232
+              Version: "1"
+            Version: "5.0"
+        Version: "3.1"
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: TXPARMCD Short character value for the Trial Set parameter
+                  described in TXPARM.  Maximum 8 characters.
+                Document: IG v3.1.1
+                Item: Specification
+                Section: 7.4.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND232
+              Version: "1"
+            Version: "5.0"
+        Version: 3.1.1
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: TXPARMCD Short character value for the Trial Set parameter
+                  described in TXPARM.  Maximum 8 characters.
+                Document: IG v3.1
+                Item: Specification
+                Section: 7.4.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND232
+              Version: "1"
+            Version: "5.0"
+        Version: "1.1"
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: TXPARMCD Short character value for the Trial Set parameter
+                  described in TXPARM.  Maximum 8 characters.
+                Document: IG v3.1.1
+                Item: Specification
+                Section: 7.4.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND232
+              Version: "1"
+            Version: "5.0"
+        Version: "1.2"
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: TXPARMCD Short character value for the Trial Set parameter
+                  described in TXPARM.  Maximum 8 characters.
+                Document: IG v3.1.1
+                Item: Specification
+                Section: 7.4.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND232
+              Version: "1"
+            Version: "5.0"
+        Version: "1.0"
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: Short character value for the Trial Set parameter described in
+                  TXPARM.  Maximum 8 characters.
+                Document: TIG v1.0
+                Item: TXPARMCD CDISC Notes
+                Section: 2.8.9.28
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0160
+              Version: "1"
+            Version: "1.0"
+        Substandard: SEND
+        Version: "1.0"
+Check:
+  all:
+    - name: TXPARMCD
+      operator: longer_than
+      value: 8
+Core:
+  Id: CORE-000432
+  Status: Published
+  Version: "1"
+Description: TXPARMCD Short character value for the Trial Set parameter
+  described in TXPARM.  Maximum 8 characters.
+Executability: Fully Executable
+Outcome:
+  Message: TXPARMCD value has more than 8 characters
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - TRIAL DESIGN
+  Domains:
+    Include:
+      - TX
+  Use Case: NONCLIN
+Sensitivity: Record

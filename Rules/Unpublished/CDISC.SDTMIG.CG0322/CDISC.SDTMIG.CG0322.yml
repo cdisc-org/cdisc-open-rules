@@ -1,0 +1,79 @@
+# Variable: ELEMENT
+# Condition: ELEMENT is associated with > 1 ARM
+# Rule: ELEMENT value does not refer to any specific ARM
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        Version: '3.4'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0322
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: TESTRL should be expressed without referring to Arm.
+                  If the Element appears in more than one Arm in the Trial Arms dataset,
+                  then the Element description (ELEMENT) must not refer to any Arms
+                Document: IG v3.4
+                Item: Assumption 8
+                Section: 7.2.2
+      - Name: SDTMIG
+        Version: '3.2'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0322
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: TESTRL should be expressed without referring to Arm.
+                  If the Element appears in more than one Arm in the Trial Arms dataset;
+                  then the Element description (ELEMENT) must not refer to any Arms.
+                Document: IG v3.2
+                Item: Assumption 8 for TE
+                Section: '7.2'
+      - Name: SDTMIG
+        Version: '3.3'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0322
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: TESTRL should be expressed without referring to Arm.
+                  If the Element appears in more than one Arm in the Trial Arms dataset;
+                  then the Element description (ELEMENT) must not refer to any Arms.
+                Document: IG v3.3
+                Item: Assumption 8
+                Section: 7.2.2
+Check:
+  all:
+    - name: ELEMENT
+      operator: contains
+      value: ARM
+Core:
+  Id: CDISC.SDTMIG.CG0322
+  Status: Draft
+  Version: '1'
+Description: When ELEMENT is associated with more than 1 arm, the ELEMENT value must
+  not refer to a specific ARM
+Executability: Fully Executable
+Match Datasets:
+  - Name: TA
+    Keys:
+      - ARM
+Outcome:
+  Message: ELEMENT value refers to a specific ARM when ELEMENT is associated with
+    more than 1 arm
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - TRIAL DESIGN
+  Domains:
+    Include:
+      - TE
+Sensitivity: Record

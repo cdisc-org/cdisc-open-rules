@@ -1,0 +1,114 @@
+Authorities:
+  - Organization: 'FDA'
+    # FB6601 is not applicable to SENDIG-3.0
+    Standards:
+      - Name: 'SENDIG'
+        References:
+          - Citations:
+              - Cited Guidance: 'In SEND 3.1 data elements that would be mapped to RE and CV
+                  should be submitted if collected and included in the study
+                  report.'
+                Document: 'FDA'
+                Section: 'FDAB066'
+            Origin: 'FDA Business Rules'
+            Rule Identifier:
+              Id: 'FB6601'
+              Version: '1'
+            Version: '1.5'
+        Version: '3.1'
+      - Name: 'SENDIG'
+        References:
+          - Citations:
+              - Cited Guidance: 'In SEND 3.1 data elements that would be mapped to RE and CV
+                  should be submitted if collected and included in the study
+                  report.'
+                Document: 'FDA'
+                Section: 'FDAB066'
+            Origin: 'FDA Business Rules'
+            Rule Identifier:
+              Id: 'FB6601'
+              Version: '1'
+            Version: '1.5'
+        Version: '3.1.1'
+      - Name: 'SENDIG-GENETOX'
+        References:
+          - Citations:
+              - Cited Guidance: 'In SEND 3.1 data elements that would be mapped to RE and CV
+                  should be submitted if collected and included in the study
+                  report.'
+                Document: 'FDA'
+                Section: 'FDAB066'
+            Origin: 'FDA Business Rules'
+            Rule Identifier:
+              Id: 'FB6601'
+              Version: '1'
+            Version: '1.5'
+        Version: '1.0'
+      - Name: 'SENDIG-DART'
+        References:
+          - Citations:
+              - Cited Guidance: 'In SEND 3.1 data elements that would be mapped to RE and CV
+                  should be submitted if collected and included in the study
+                  report.'
+                Document: 'FDA'
+                Section: 'FDAB066'
+            Origin: 'FDA Business Rules'
+            Rule Identifier:
+              Id: 'FB6601'
+              Version: '1'
+            Version: '1.5'
+        Version: '1.1'
+      - Name: 'SENDIG-DART'
+        References:
+          - Citations:
+              - Cited Guidance: 'In SEND 3.1 data elements that would be mapped to RE and CV
+                  should be submitted if collected and included in the study
+                  report.'
+                Document: 'FDA'
+                Section: 'FDAB066'
+            Origin: 'FDA Business Rules'
+            Rule Identifier:
+              Id: 'FB6601'
+              Version: '1'
+            Version: '1.5'
+        Version: '1.2'
+      - Name: 'SENDIG-AR'
+        References:
+          - Citations:
+              - Cited Guidance: 'In SEND 3.1 data elements that would be mapped to RE and CV
+                  should be submitted if collected and included in the study
+                  report.'
+                Document: 'FDA'
+                Section: 'FDAB066'
+            Origin: 'FDA Business Rules'
+            Rule Identifier:
+              Id: 'FB6601'
+              Version: '1'
+            Version: '1.5'
+        Version: '1.0'
+# Rule FB5610: When CV domain is present in the define.xml, but no CV dataset is present in the submission
+# then the define.xml must contain ItemGroupDef for CV with attribute def:HasNoData marked as "Yes" 
+Check:
+  all:
+    - name: CV
+      operator: not_exists
+    - name: define_dataset_has_no_data
+      operator: equal_to
+      value: false
+Core:
+  Id: FDA.SENDIG.FB6601
+  Status: Draft
+  Version: '1'
+Description: 'CV dataset should be present in the submission when related data is collected'
+Executability: Fully Executable
+Outcome:
+  Message: Missing CV dataset.
+Rule Type: Domain Presence Check # Is this correct?
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Dataset

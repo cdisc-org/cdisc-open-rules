@@ -1,0 +1,45 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: TFDTHREL must be "Y", "N", or "U"
+                Document: SENDIG v3.0
+                Section: 6.3.14
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND201
+              Version: '1'
+            Version: '5.0'
+        # ATTENTION: for SENDIG 3.0 only
+        Version: '3.0'
+Check:
+  all:
+    # Remark: TFTDTREL cannot be null
+    - name: TFDTHREL
+      operator: not_equal_to
+      value: Y
+    - name: TFDTHREL
+      operator: not_equal_to
+      value: N
+    - name: TFDTHREL
+      operator: not_equal_to
+      value: U
+Core:
+  Id: CORE-000441
+  Status: Published
+  Version: '1'
+Description: Raise an error when record is TFDTHREL is not 'N', 'Y' or 'U'
+Executability: Fully Executable
+Outcome:
+  Message: TFDTHREL must be 'N', 'Y' or 'U'.
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - TF
+Sensitivity: Record

@@ -1,0 +1,101 @@
+Authorities:
+  - Organization: 'CDISC'
+    Standards:
+      - Name: 'SENDIG'
+        References:
+          - Citations:
+              - Cited Guidance: 'The DD domain should only be utilized for subjects with an
+                  unscheduled death'
+                Document: SENDIG v3.1
+                Section: '6.3.4.1'
+            Origin: 'SEND Conformance Rules'
+            Rule Identifier:
+              Id: 'SEND167'
+              Version: '1'
+            Validator Rule Message: ''
+            Version: '5.0'
+        Version: '3.1'
+      - Name: 'SENDIG'
+        References:
+          - Citations:
+              - Cited Guidance: 'The DD domain should only be utilized for subjects with an
+                  unscheduled death'
+                Document: SENDIG v3.1.1
+                Section: '6.3.4.1'
+            Origin: 'SEND Conformance Rules'
+            Rule Identifier:
+              Id: 'SEND167'
+              Version: '1'
+            Validator Rule Message: ''
+            Version: '5.0'
+        Version: '3.1.1'
+      - Name: 'SENDIG-DART'
+        References:
+          - Citations:
+              - Cited Guidance: 'The DD domain should only be utilized for subjects with an
+                  unscheduled death'
+                Document: SENDIG v3.1
+                Section: '6.3.4.1'
+            Origin: 'SEND Conformance Rules'
+            Rule Identifier:
+              Id: 'SEND167'
+              Version: '1'
+            Validator Rule Message: ''
+            Version: '5.0'
+        Version: '1.1'
+      - Name: 'SENDIG-DART'
+        References:
+          - Citations:
+              - Cited Guidance: 'The DD domain should only be utilized for subjects with an
+                  unscheduled death'
+                Document: SENDIG v3.1.1
+                Section: '6.3.4.1'
+            Origin: 'SEND Conformance Rules'
+            Rule Identifier:
+              Id: 'SEND167'
+              Version: '1'
+            Validator Rule Message: ''
+            Version: '5.0'
+        Version: '1.2'
+      - Name: 'SENDIG-GENETOX'
+        References:
+          - Citations:
+              - Cited Guidance: 'The DD domain should only be utilized for subjects with an
+                  unscheduled death'
+                Document: SENDIG v3.1.1
+                Section: '6.3.4.1'
+            Origin: 'SEND Conformance Rules'
+            Rule Identifier:
+              Id: 'SEND167'
+              Version: '1'
+            Validator Rule Message: ''
+            Version: '5.0'
+        Version: '1.0'
+Check:
+  all:
+    - name: 'DDTESTCD'
+      operator: non_empty
+    - name: 'DSUSCHFL'
+      operator: not_equal_to
+      value: 'Y'
+Core:
+  Id: CORE-000671
+  Status: Published
+  Version: '1'
+Description: ''
+Executability: Fully Executable
+Match Datasets:
+  - Keys:
+      - USUBJID
+    Name: DS
+Outcome:
+  Message: 'Record does not have DSUSCHFL=Y in DS'
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - DD
+Sensitivity: Record

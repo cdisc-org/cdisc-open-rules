@@ -1,0 +1,96 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'An activity is expected to refer to at least one procedure,
+                  biomedical concept, biomedical concept category, biomedical
+                  concept surrogate, child activity, or timeline.'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00263'
+              Version: '1'
+            Version: '1.0'
+        Version: '4.0'
+Check:
+  all:
+    - name: rel_type
+      operator: equal_to
+      value: 'definition'
+    - any:
+        - name: definedProcedures
+          operator: not_exists
+        - name: definedProcedures
+          operator: empty
+        - name: definedProcedures
+          operator: equal_to
+          value: false
+    - any:
+        - name: biomedicalConceptIds
+          operator: not_exists
+        - name: biomedicalConceptIds
+          operator: empty
+        - name: biomedicalConceptIds
+          operator: equal_to
+          value: false
+    - any:
+        - name: bcCategoryIds
+          operator: not_exists
+        - name: bcCategoryIds
+          operator: empty
+        - name: bcCategoryIds
+          operator: equal_to
+          value: false
+    - any:
+        - name: bcSurrogateIds
+          operator: not_exists
+        - name: bcSurrogateIds
+          operator: empty
+        - name: bcSurrogateIds
+          operator: equal_to
+          value: false
+    - any:
+        - name: childIds
+          operator: not_exists
+        - name: childIds
+          operator: empty
+        - name: childIds
+          operator: equal_to
+          value: false
+    - any:
+        - name: timelineId
+          operator: not_exists
+        - name: timelineId
+          operator: empty
+Core:
+  Id: 'CORE-001076'
+  Status: Published
+  Version: '1'
+Description: 'An activity is expected to refer to at least one procedure,
+  biomedical concept, biomedical concept category, biomedical concept surrogate,
+  child activity, or timeline.'
+Executability: Partially Executable - Possible Overreporting
+Outcome:
+  Message: 'The activity does not refer to any procedure, biomedical concept,
+    biomedical concept category, biomedical concept surrogate, child activity,
+    or timeline.'
+  Output Variables:
+    - parent_entity
+    - parent_id
+    - parent_rel
+    - id
+    - name
+    - definedProcedures
+    - biomedicalConceptIds
+    - bcCategoryIds
+    - bcSurrogateIds
+    - childIds
+    - timelineId
+Rule Type: Record Data
+Scope:
+  Entities:
+    Include:
+      - 'Activity'
+Sensitivity: Record

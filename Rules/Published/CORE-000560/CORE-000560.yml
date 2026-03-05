@@ -1,0 +1,104 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: ADaMIG
+        References:
+          - Citations:
+              - Cited Guidance: ADSL and its related metadata are required in a CDISC-based
+                  submission of data from a clinical trial even if no other
+                  analysis datasets are submitted.
+                Document: Model v2.1
+                Section: '6'
+              - Cited Guidance: ADSL contains one record per subject, regardless of the type of
+                  clinical trial design. The label of the ADSL dataset is
+                  "Subject-Level Analysis Dataset." In a study, there is only
+                  one dataset in the class of "SUBJECT LEVEL ANALYSIS DATASET",
+                  and its name is ADSL.
+                Document: ADaM IG v1.3
+                Section: 2.3.1
+            Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '1'
+              Version: '1'
+            Version: '5.0'
+        Version: '1.3'
+      - Name: ADaMIG
+        References:
+          - Citations:
+              - Cited Guidance: ADSL and its related metadata are required in a CDISC-based
+                  submission of data from a clinical trial even if no other
+                  analysis datasets are submitted.
+                Document: Model v2.1
+                Section: '6'
+              - Cited Guidance: ADSL contains one record per subject, regardless of the type of
+                  clinical trial design. The label of the ADSL dataset is
+                  "Subject-Level Analysis Dataset." In a study, there is only
+                  one dataset in the class of "SUBJECT LEVEL ANALYSIS DATASET",
+                  and its name is ADSL.
+                Document: ADaM IG v1.2
+                Section: 2.3.1
+            Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '1'
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+      - Name: ADaMIG
+        References:
+          - Citations:
+              - Cited Guidance: ADSL and its related metadata are required in a CDISC-based
+                  submission of data from a clinical trial even if no other
+                  analysis datasets are submitted.
+                Document: Model v2.1
+                Section: '6'
+              - Cited Guidance: ADSL and its related metadata are required in a CDISC-based
+                  submission of data from a clinical trial even if no other
+                  analysis datasets are submitted.
+                Document: ADaM IG v1.1
+                Section: 2.3.1
+            Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '1'
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: ADaMIG
+        References:
+          - Citations:
+              - Cited Guidance: ADSL and its related metadata are required in a CDISC-based
+                  submission of data from a clinical trial even if no other
+                  analysis datasets are submitted.
+                Document: Model v2.1
+                Section: '6'
+              - Cited Guidance: ADSL and its related metadata are required in a CDISC-based
+                  submission of data from a clinical trial even if no other
+                  analysis datasets are submitted.
+                Document: ADaM IG v1.0
+                Section: 2.3.1
+            Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '1'
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+Check:
+  all:
+    - name: ADSL
+      operator: not_exists
+Core:
+  Id: CORE-000560
+  Status: Published
+  Version: '1'
+Description: The ADSL dataset must exist
+Executability: Fully Executable
+Outcome:
+  Message: Dataset ADSL does not exist
+Rule Type: Domain Presence Check
+Scope:
+  Data Structures:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Dataset

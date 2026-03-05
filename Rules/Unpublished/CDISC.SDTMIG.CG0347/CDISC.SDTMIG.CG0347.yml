@@ -1,0 +1,85 @@
+# Variable: --ORRES
+# Condition: The use of 'MULTIPLE' reflects multiple values (as opposed to a valid response in the context of the finding (e.g., Questionnaire CT).
+# Rule: --ORRES ^ = 'MULTIPLE'
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: If multiple result values (--ORRES) are reported for a test in a
+                  Findings class dataset, multiple records should be submitted
+                  for that --TESTCD. When a finding can have multiple results,
+                  the key structure for the findings dataset must be adequate to
+                  distinguish between the multiple results.  See Section 4.1.9
+                  Assigning Natural Keys in the Metadata.
+                Document: IG v3.4
+                Section: 4.2.8.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0347
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: 'Multiple Values for a Findings Result Variable. If multiple
+                  result values (--ORRES) are reported for a test in a Findings
+                  class dataset; multiple records should be submitted for that
+                  --TESTCD. Example: - EGTESTCD=RHYRATE; EGTEST=Rhythm and Rate;
+                  EGORRES=ATRIAL FIBRILLATION. - EGTESTCD=RHYRATE; EGTEST=Rhythm
+                  and Rate; EGORRES=ATRIAL FLUTTER'
+                Document: IG v3.2
+                Section: 4.1.2.8.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0347
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: If multiple result values (--ORRES) are reported for a test in a
+                  Findings class dataset; multiple records should be submitted
+                  for that --TESTCD. When a finding can have multiple results;
+                  the key structure for the findings dataset must be adequate to
+                  distinguish between the multiple results. See Section 4.1.9
+                  Assigning Natural Keys in the Metadata.
+                Document: IG v3.3
+                Section: 4.2.8.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0347
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+Check:
+  all:
+    - name: --ORRES
+      operator: does_not_contain
+      value:
+        - Questionnaire CT
+    - name: --ORRES
+      operator: equal_to
+      value: MULTIPLE
+Core:
+  Id: CDISC.SDTMIG.CG0347
+  Status: Draft
+  Version: '1'
+Description: Trigger error when --ORRES is equal to MULTIPLE when it is not a
+  valid response in the context of the finding (e.g., Questionnaire CT)
+Executability: Fully Executable
+Outcome:
+  Message: --ORRES is equal to MULTIPLE when it is not a valid response in the
+    context of the finding (e.g., Questionnaire CT)
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record

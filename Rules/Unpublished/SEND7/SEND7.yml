@@ -1,0 +1,128 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: "The define.xml specification includes seven distinct attributes
+                  to describe variable-level metadata: ...The set of controlled
+                  terminology for the value or the presentation format of the
+                  variable (Controlled Term, Codelist or Format). Refer to
+                  Section 4.3 for more information on Controlled Terminology."
+                Document: SENDIG v3.0
+                Section: 3.2.2
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND7
+              Version: '1'
+            Version: '5.0'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: "The define.xml specification includes seven distinct attributes
+                  to describe variable-level metadata: ...The set of controlled
+                  terminology for the value or the presentation format of the
+                  variable (Controlled Term, Codelist or Format). Refer to
+                  Section 4.3 for more information on Controlled Terminology."
+                Document: SENDIG v3.1
+                Section: 3.2.2
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND7
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: "The define.xml specification includes seven distinct attributes
+                  to describe variable-level metadata: ...The set of controlled
+                  terminology for the value or the presentation format of the
+                  variable (Controlled Term, Codelist or Format). Refer to
+                  Section 4.3 for more information on Controlled Terminology."
+                Document: SENDIG v3.1.1
+                Section: 3.2.2
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND7
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: "The define.xml specification includes seven distinct attributes
+                  to describe variable-level metadata: ...The set of controlled
+                  terminology for the value or the presentation format of the
+                  variable (Controlled Term, Codelist or Format). Refer to
+                  Section 4.3 for more information on Controlled Terminology."
+                Document: SENDIG v3.1
+                Section: 3.2.2
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND7
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: "The define.xml specification includes seven distinct attributes
+                  to describe variable-level metadata: ...The set of controlled
+                  terminology for the value or the presentation format of the
+                  variable (Controlled Term, Codelist or Format). Refer to
+                  Section 4.3 for more information on Controlled Terminology."
+                Document: SENDIG v3.1.1
+                Section: 3.2.2
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND7
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: "The define.xml specification includes seven distinct attributes
+                  to describe variable-level metadata: ...The set of controlled
+                  terminology for the value or the presentation format of the
+                  variable (Controlled Term, Codelist or Format). Refer to
+                  Section 4.3 for more information on Controlled Terminology."
+                Document: SENDIG v3.1.1
+                Section: 3.2.2
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND7
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+Check:
+  all:
+    #- name: library_variable_has_codelist
+    #  operator: equal_to
+    #  value: true
+    - name: define_variable_ccode
+      operator: not_equal_to
+      value: library_variable_ccode
+Core:
+  Status: Draft
+  Version: '1'
+Description: ''
+Executability: Fully Executable
+Outcome:
+  Message: Variable Codelist does not match with the one provided by the CDISC Library
+  Output Variables:
+    - define_variable_name
+    - define_variable_ccode
+    # THE FOLLOWING causes "not in dataset"
+    # - library_variable_ccode
+Rule Type: Define Item Metadata Check against Library Metadata
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record

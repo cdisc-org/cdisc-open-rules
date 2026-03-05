@@ -1,0 +1,57 @@
+# Variable: --STREFN
+# Condition: 
+# Rule: --STREFN in same units as --STRESN
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        Version: '3.4'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0551
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: Reference value for continuous or numeric results
+                  or findings in standard format or in standard units. --STREFN uses
+                  the same units as --STRESN, if applicable.
+                Document: Model v2.0
+                Item: --STREFN
+                Section: Findings
+      - Name: SDTMIG
+        Version: '3.3'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0551
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: Reference value for continuous or numeric results
+                  or findings in standard format or in standard units. --STREFN uses
+                  the same units as --STRESN, if applicable.
+                Document: Model v1.7
+                Item: --STREFN
+                Section: Table 2.2.3
+Check:
+  all:
+    - name: --STREFN
+      operator:
+Core:
+  Id: CDISC.SDTMIG.CG0551
+  Status: Draft
+  Version: '1'
+Description: Trigger error when --STREFN is not in the same units as --STRESN
+Executability: Fully Executable
+Outcome:
+  Message: --STREFN is not in the same units as --STRESN
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record

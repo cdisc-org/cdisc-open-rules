@@ -1,0 +1,269 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: The parameters listed as "Yes" in the "Should Include" column
+                  should always be included in the Trial Summary dataset, in
+                  order to provide proper study definition. (AGEU, SDESIGN,
+                  DOSDUR, EXPENDTC, EXPSTDTC, GLPTYP, ROUTE, SNDIGVER, SNDCTVER,
+                  SPECIES, SPLRNAM, SPREFID, SSPONSOR, STCAT, STDIR, STRAIN,
+                  STSTDTC, STITLE, SSTYP, TRT, TFCNTRY, TSTFLOC, TSTFNAM,
+                  TRMSAC, TRTCAS, TRTV)
+                Document: IG v3.0
+                Item: Specification
+                Section: 7.6.1 | 7.6.3
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND247
+              Version: '1'
+            Version: '5.0'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: The parameters listed as "Yes" in the "Should Include" column
+                  should always be included in the Trial Summary dataset, in
+                  order to provide proper study definition. (AGEU, SDESIGN,
+                  DOSDUR, EXPENDTC, EXPSTDTC, GLPTYP, ROUTE, SNDIGVER, SNDCTVER,
+                  SPECIES, SPLRNAM, SPREFID, SSPONSOR, STCAT, STDIR, STRAIN,
+                  STSTDTC, STITLE, SSTYP, TRT, TFCNTRY, TSTFLOC, TSTFNAM,
+                  TRMSAC, TRTCAS, TRTV)
+                Document: IG v3.1
+                Item: Specification
+                Section: 7.6.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND247.1
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: The parameters listed as "Yes" in the "Should Include" column
+                  should always be included in the Trial Summary dataset, in
+                  order to provide proper study definition. (AGEU, SDESIGN,
+                  DOSDUR, EXPENDTC, EXPSTDTC, GLPTYP, ROUTE, SNDIGVER, SNDCTVER,
+                  SPECIES, SPLRNAM, SPREFID, SSPONSOR, STCAT, STDIR, STRAIN,
+                  STSTDTC, STITLE, SSTYP, TRT, TFCNTRY, TSTFLOC, TSTFNAM,
+                  TRMSAC, TRTCAS, TRTV)
+                Document: IG v3.1.1
+                Item: Specification
+                Section: 7.6.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND247.1
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1.1'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: The parameters listed as "Yes" in the "Should Include" column
+                  should always be included in the Trial Summary dataset, in
+                  order to provide proper study definition. (AGEU, SDESIGN,
+                  DOSDUR, EXPENDTC, EXPSTDTC, GLPTYP, ROUTE, SNDIGVER, SNDCTVER,
+                  SPECIES, SPLRNAM, SPREFID, SSPONSOR, STCAT, STDIR, STRAIN,
+                  STSTDTC, STITLE, SSTYP, TRT, TFCNTRY, TSTFLOC, TSTFNAM,
+                  TRMSAC, TRTCAS, TRTV)
+                Document: IG v3.1.1
+                Item: Specification
+                Section: 7.6.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND247.1
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: The parameters listed as "Yes" in the "Should Include" column
+                  should always be included in the Trial Summary dataset, in
+                  order to provide proper study definition. (AGEU, SDESIGN,
+                  DOSDUR, EXPENDTC, EXPSTDTC, GLPTYP, ROUTE, SNDIGVER, SNDCTVER,
+                  SPECIES, SPLRNAM, SPREFID, SSPONSOR, STCAT, STDIR, STRAIN,
+                  STSTDTC, STITLE, SSTYP, TRT, TFCNTRY, TSTFLOC, TSTFNAM,
+                  TRMSAC, TRTCAS, TRTV)
+                Document: IG v3.1
+                Item: Specification
+                Section: 7.6.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND247.1
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: The parameters listed as "Yes" in the "Should Include" column
+                  should always be included in the Trial Summary dataset, in
+                  order to provide proper study definition. (AGEU, SDESIGN,
+                  DOSDUR, EXPENDTC, EXPSTDTC, GLPTYP, ROUTE, SNDIGVER, SNDCTVER,
+                  SPECIES, SPLRNAM, SPREFID, SSPONSOR, STCAT, STDIR, STRAIN,
+                  STSTDTC, STITLE, SSTYP, TRT, TFCNTRY, TSTFLOC, TSTFNAM,
+                  TRMSAC, TRTCAS, TRTV)
+                Document: IG v3.1.1
+                Item: Specification
+                Section: 7.6.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND247.1
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+
+Check:
+  any:
+    # 2023-10-09: using not_contains_all causes a false positive as soon as one of the list is missing
+    # but always shows the first of the list, even when that one is present
+    #- name: TSPARMCD
+    #  operator: not_contains_all
+    #  value:
+    #    - AGEU
+    #    - SDESIGN
+    #    - DOSDUR
+    #    - ROUTE
+    # etc ...
+
+    # TODO: the following works, but it does not allow to show which one is missing
+    # but I also do not think we should split this rule in 26 parts do we?
+    - name: $distinct_tsparmcd
+      operator: does_not_contain
+      value: AGEU
+      value_is_literal: true
+    - name: $distinct_tsparmcd
+      operator: does_not_contain
+      value: SDESIGN
+      value_is_literal: true
+    - name: $distinct_tsparmcd
+      operator: does_not_contain
+      value: DOSDUR
+      value_is_literal: true
+    - name: $distinct_tsparmcd
+      operator: does_not_contain
+      value: EXPENDTC
+      value_is_literal: true
+    - name: $distinct_tsparmcd
+      operator: does_not_contain
+      value: EXPSTDTC
+      value_is_literal: true
+    - name: $distinct_tsparmcd
+      operator: does_not_contain
+      value: GLPFL
+      value_is_literal: true
+    ## GLPTYP is only mandatory in SENDIG-3.0
+    ## SO TODO? split off SENDIG-3.0 in separate file/rule
+    ##- name: $distinct_tsparmcd
+    ##  operator: does_not_contain
+    ## value: GLPTYP
+    ##  value_is_literal: true
+    - name: $distinct_tsparmcd
+      operator: does_not_contain
+      value: ROUTE
+      value_is_literal: true
+    - name: $distinct_tsparmcd
+      operator: does_not_contain
+      value: SNDIGVER
+      value_is_literal: true
+    - name: $distinct_tsparmcd
+      operator: does_not_contain
+      value: SNDCTVER
+      value_is_literal: true
+    - name: $distinct_tsparmcd
+      operator: does_not_contain
+      value: SPECIES
+      value_is_literal: true
+    - name: $distinct_tsparmcd
+      operator: does_not_contain
+      value: SPLRNAM
+      value_is_literal: true
+    - name: $distinct_tsparmcd
+      operator: does_not_contain
+      value: SPREFID
+      value_is_literal: true
+    - name: $distinct_tsparmcd
+      operator: does_not_contain
+      value: SSPONSOR
+      value_is_literal: true
+    - name: $distinct_tsparmcd
+      operator: does_not_contain
+      value: STCAT
+      value_is_literal: true
+    - name: $distinct_tsparmcd
+      operator: does_not_contain
+      value: STDIR
+      value_is_literal: true
+    - name: $distinct_tsparmcd
+      operator: does_not_contain
+      value: STRAIN
+      value_is_literal: true
+    - name: $distinct_tsparmcd
+      operator: does_not_contain
+      value: STSTDTC
+      value_is_literal: true
+    - name: $distinct_tsparmcd
+      operator: does_not_contain
+      value: STITLE
+      value_is_literal: true
+    - name: $distinct_tsparmcd
+      operator: does_not_contain
+      value: SSTYP
+      value_is_literal: true
+    - name: $distinct_tsparmcd
+      operator: does_not_contain
+      value: TRT
+      value_is_literal: true
+    - name: $distinct_tsparmcd
+      operator: does_not_contain
+      value: TFCNTRY
+      value_is_literal: true
+    - name: $distinct_tsparmcd
+      operator: does_not_contain
+      value: TSTFLOC
+      value_is_literal: true
+    - name: $distinct_tsparmcd
+      operator: does_not_contain
+      value: TSTFNAM
+      value_is_literal: true
+    - name: $distinct_tsparmcd
+      operator: does_not_contain
+      value: TRMSAC
+      value_is_literal: true
+    - name: $distinct_tsparmcd
+      operator: does_not_contain
+      value: TRTCAS
+      value_is_literal: true
+    - name: $distinct_tsparmcd
+      operator: does_not_contain
+      value: TRTV
+      value_is_literal: true
+Core:
+  Id: CDISC.SENDIG.247
+  Status: Draft
+  Version: '1'
+Description: For each TSPARMCD = AGEU, SDESIGN, DOSDUR, EXPENDTC, EXPSTDTC,
+  GLPTYP, ROUTE, SNDIGVER, SNDCTVER, SPECIES, SPLRNAM, SPREFID, SSPONSOR, STCAT,
+  STDIR, STRAIN, STSTDTC, STITLE, SSTYP, TRT, TFCNTRY, TSTFLOC, TSTFNAM, TRMSAC,
+  TRTCAS, TRTV, a record must be present in TS
+Executability: Fully Executable
+Operations:
+  - id: $distinct_tsparmcd
+    name: TSPARMCD
+    operator: distinct
+Outcome:
+  # TODO? Can we add soemthing here that shows which one is missing:
+  # showing "A not in the list of B"
+  Message: A record with TXPARMCD from the list is missing
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - TRIAL DESIGN
+  Domains:
+    Include:
+      - TS
+Sensitivity: Dataset

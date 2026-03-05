@@ -1,0 +1,119 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: One record per diagnosis per subject (for unscheduled deaths
+                  only)
+                Document: SENDIG v3.0
+                Section: 6.3.4
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND163
+              Version: '1'
+            Version: '5.0'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: One record per diagnosis per subject (for unscheduled deaths
+                  only)
+                Document: SENDIG v3.1
+                Section: 6.3.4
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND163
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: One record per diagnosis per subject (for unscheduled deaths
+                  only)
+                Document: SENDIG v3.1.1
+                Section: 6.3.4
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND163
+              Version: '1'
+            Version: '5.0'
+        Version: 3.1.1
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: One record per diagnosis per subject (for unscheduled deaths
+                  only)
+                Document: SENDIG v3.1
+                Section: 6.3.4
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND163
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: One record per diagnosis per subject (for unscheduled deaths
+                  only)
+                Document: SENDIG v3.1.1
+                Section: 6.3.4
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND163
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: One record per diagnosis per subject (for unscheduled deaths
+                  only)
+                Document: SENDIG v3.1.1
+                Section: 6.3.4
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND163
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+
+Check:
+  # Implemented as uniqueness of DDORRES and/or DDSTRESC per USUBJID
+  # as decided by the SEND team
+  any:
+    - name: DDORRES
+      operator: is_not_unique_set
+      value:
+        - USUBJID
+    - name: DDSTRESC
+      operator: is_not_unique_set
+      value:
+        - USUBJID
+
+Core:
+  Id: CORE-000555
+  Status: Published
+  Version: '1'
+Description: Raise an error when there is more than one record present the
+  combination of USUBJID and DDORRES or for the combination of USUBJID and
+  DDSTRESC.
+Executability: Fully Executable
+Outcome:
+  Message: There is more than one for the combination of USUBJID and DDORRES or
+    the combination of USUBJID and DDSTRESC
+  Output Variables:
+    - USUBJID
+    - DDORRES
+    - DDSTRESC
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - DD
+Sensitivity: Record

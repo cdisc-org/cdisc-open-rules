@@ -1,0 +1,106 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Two character domain identifier used as a prefix in the variable
+                  is limited to A to Z for the first character
+                Document: IG v3.0
+                Section: 4.2.2
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND31
+              Version: '1'
+            Version: '5.0'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Two character domain identifier used as a prefix in the variable
+                  is limited to A to Z for the first character
+                Document: IG v3.1
+                Section: 4.2.2
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND31
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Two character domain identifier used as a prefix in the variable
+                  is limited to A to Z for the first character
+                Document: IG v3.1.1
+                Section: 4.2.2
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND31
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1.1'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: Two character domain identifier used as a prefix in the variable
+                  is limited to A to Z for the first character
+                Document: IG v3.1.1
+                Section: 4.2.2
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND31
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: Two character domain identifier used as a prefix in the variable
+                  is limited to A to Z for the first character
+                Document: IG v3.1.1
+                Section: 4.2.2
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND31
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: Two character domain identifier used as a prefix in the variable
+                  is limited to A to Z for the first character
+                Document: IG v3.1.1
+                Section: 4.2.2
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND31
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+Check:
+  all:
+    - name: DOMAIN
+      operator: not_matches_regex
+      value: ^[A-Z].*
+Core:
+  Id: CORE-000519
+  Status: Published
+  Version: '1'
+Description: Raise an error when the value of DOMAIN has a character other than
+  A-Z as the first character
+Executability: Fully Executable
+Outcome:
+  Message: First character of DOMAIN value must be in the range A-Z
+  Output Variables:
+    - DOMAIN
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record

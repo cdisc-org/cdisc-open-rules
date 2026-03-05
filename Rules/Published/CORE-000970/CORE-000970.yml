@@ -1,0 +1,62 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'Every study role must apply to either a study version or at
+                  least one study design, but not both.'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00189'
+              Version: '1'
+            Version: '1.0'
+        Version: '4.0'
+Check: |-
+  study.versions@$sv.
+    ($sv.roles
+      [
+        $not(
+            appliesToIds and
+              (
+                  ($count(appliesToIds)=1 and appliesToIds[0]=$sv.id) or
+                  $count(appliesToIds)=$count(appliesToIds[$ in $sv.studyDesigns.id])
+              )
+        )
+      ]
+    )@$r.
+      {
+        "instanceType": $r.instanceType,
+        "id": $r.id,
+        "path": $r._path,
+        "name": $r.name,
+        "code": $r.code.decode,
+        "appliesToIds": $r.appliesToIds[],
+        "StudyVersion.id": $sv.id,
+        "StudyVersion.studyDesigns.id": $sv.studyDesigns.id
+      }
+Core:
+  Id: 'CORE-000970'
+  Status: Published
+  Version: '1'
+Description: 'Every study role must apply to either a study version or at least
+  one study design, but not both.'
+Executability: Fully Executable
+Outcome:
+  Message: 'The study role does not only apply to the study version or at least
+    one study design - it does not apply to anything, it applies to both the
+    study version and at least one study design, or it applies to something that
+    is not a study version or a study design.'
+  Output Variables:
+    - name
+    - code
+    - appliesToIds
+    - StudyVersion.id
+    - StudyVersion.studyDesigns.id
+Rule Type: JSONata
+Scope:
+  Entities:
+    Include:
+      - 'StudyRole'
+Sensitivity: Record

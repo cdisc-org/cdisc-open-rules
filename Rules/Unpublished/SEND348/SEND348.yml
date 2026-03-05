@@ -1,0 +1,120 @@
+Authorities:
+  # Only applicable to SENDIG-3.1.1, SENDIG-GENETOX-1.0 and SENDIG-DART-1.2
+  - Organization: 'CDISC'
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: 'For PC records contributing to a time concentration profile,
+                  the timing variables PCNOMDY, PCTPTREF, and PCELTM must all be
+                  populated.'
+                Document: IG v3.1.1
+                Section: 6.3.11.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: 'SEND348'
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1.1'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: 'For PC records contributing to a time concentration profile,
+                  the timing variables PCNOMDY, PCTPTREF, and PCELTM must all be
+                  populated.'
+                Document: IG v3.1.1
+                Section: 6.3.11.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: 'SEND348'
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: 'For PC records contributing to a time concentration profile,
+                  the timing variables PCNOMDY, PCTPTREF, and PCELTM must all be
+                  populated.'
+                Document: IG v3.1.1
+                Section: 6.3.11.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: 'SEND348'
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+Check:
+  any:
+    # Case that USUBJID is populated
+    - all:
+        - name: PCTESTCD
+          operator: is_contained_by
+          value: $pp_ppcat_usubjid
+
+        - any:
+            - name: PCNOMDY
+              operator: empty
+            - name: PCTPTREF
+              operator: empty
+            - name: PCELTM
+              operator: empty
+    # case that POOLID is populated. ATTENTION: POOLID is permissible!
+    - all:
+        # PC-POOLID column is present
+        - name: POOLID
+          operator: exists
+        # PC-POOLID is populated
+        - name: POOLID
+          operator: non_empty
+        - name: PCTESTCD
+          operator: is_contained_by
+          value: $pp_ppcat_poolid
+        - any:
+            - name: PCNOMDY
+              operator: empty
+            - name: PCTPTREF
+              operator: empty
+            - name: PCELTM
+              operator: empty
+Core:
+  Status: Draft
+  Version: '1'
+Description: 'When PCTESTCD = PPCAT, then PCNOMDY, PCTPTREF and PCELTM must be populated'
+Executability: Fully Executable
+Operations:
+  - domain: PP
+    # group by USUBJID
+    group:
+      - USUBJID
+    id: $pp_ppcat_usubjid
+    name: PPCAT
+    operator: distinct
+  - domain: PP
+    # group by POOLID
+    group:
+      - POOLID
+    id: $pp_ppcat_poolid
+    name: PPCAT
+    operator: distinct
+
+Outcome:
+  Message: 'PCNOMDY, PCTPTREF and PCELTM must be populated as the record
+    contributes to a concentration profile in PP'
+  Output Variables:
+    - USUBJID
+    - POOLID # can this lead to a "skip" when POOLID column absent?
+    - PCNOMDY
+    - PCTPTREF
+    - PCELTM
+    - $pp_ppcat_usubjid
+    - $pp_ppcat_poolid
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - PC
+Sensitivity: Record

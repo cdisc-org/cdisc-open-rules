@@ -1,0 +1,67 @@
+# Variable: PEORRES
+# Condition: PEORRES ^= null and no abnormal findings
+# Rule: PEORRES = 'NORMAL'
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        Version: '3.2'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0196
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: Text description of any abnormal findings. If the
+                  examination was completed and there were no abnormal findings, the
+                  value should be NORMAL.
+                Document: IG v3.2
+                Section: '6.3'
+      - Name: SDTMIG
+        Version: '3.3'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0196
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: Text description of any abnormal findings. If the
+                  examination was completed and there were no abnormal findings, the
+                  value should be NORMAL.
+                Document: IG v3.3
+                Section: 6.3.12
+      - Name: SDTMIG
+        Version: '3.4'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0196
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: If the examination was completed and there were no
+                  abnormal findings, the value should be "NORMAL".
+                Document: IG v3.4
+                Item: Specification
+                Section: 6.3.8
+Check:
+  all: []
+Core:
+  Id: CDISC.SDTMIG.CG0196
+  Status: Draft
+  Version: '1'
+Description: ''
+Executability: Fully Executable
+Outcome:
+  Message: ''
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - PE
+Sensitivity: Record

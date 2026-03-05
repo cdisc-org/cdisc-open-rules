@@ -1,0 +1,57 @@
+# Variable: LEVEL
+# Condition: Record has an associated PARENT record
+# Rule: Value for LEVEL = value for PARENT LEVEL + 1 
+Authorities:
+  - Organization: 'CDISC'
+    Standards:
+      - Name: 'TIG'
+        References:
+          - Citations:
+              - Cited Guidance: If a record has a PARENT, LEVEL must be populated with a LEVEL
+                  that is sequentially one greater than the PARENT record (e.g.,
+                  value for LEVEL = value for PARENT LEVEL + 1).
+                Document: 'TIG 1.0'
+                Item: 'assumption 6'
+                Section: '2.8.9.23'
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: 'TIG0031'
+              Version: '1'
+            Version: '1.0'
+        Version: '1.0'
+Check:
+  all:
+    - name: PARENT
+      operator: non_empty
+    - name: LEVEL
+      operator: equal_to
+      value: $LEVEL_join + 1
+Core:
+  Status: Draft
+  Version: '1'
+Description: Raise an error when a record has a PARENT record but the value for
+  LEVEL does not equal the level of the PARENT LEVEL + 1.
+Executability: Fully Executable
+Match Datasets:
+  - Keys:
+      - SETCD
+      - Left: PARENT
+        Right: REFID
+    Name: RELREF
+Outcome:
+  Message: Record has a PARENT record but the value for LEVEL does not equal the
+    level of the PARENT LEVEL + 1.
+  Output Variables:
+    - LEVEL
+    - PARENT
+    - SETCD
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - RELATIONSHIP
+  Domains:
+    Include:
+      - RELREF
+  Use Case: NONCLIN
+Sensitivity: Record

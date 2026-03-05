@@ -1,0 +1,99 @@
+Authorities:
+  - Organization: FDA
+    Standards:
+      # ONLY applicable to SDTMIG, not to SEND
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: 'All trial design data should be submitted as specified in the
+                  FDA Study Data Technical Conformance Guide (TCG) Page 13: In
+                  addition to the study parameters indicated in the appendix
+                  section, if the study data submitted follows a Therapeutic
+                  Area User Guide (TAUG) or an FDA Technical Specification,30
+                  use the values for TSPARM/TSPARMCD and TSVAL from the table
+                  below in the TS domain.'
+                Document: FDA
+                Section: FDAB011
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1103
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: 'All trial design data should be submitted as specified in the
+                  FDA Study Data Technical Conformance Guide (TCG) Page 13: In
+                  addition to the study parameters indicated in the appendix
+                  section, if the study data submitted follows a Therapeutic
+                  Area User Guide (TAUG) or an FDA Technical Specification,30
+                  use the values for TSPARM/TSPARMCD and TSVAL from the table
+                  below in the TS domain.'
+                Document: FDA
+                Section: FDAB011
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1103
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: 'All trial design data should be submitted as specified in the
+                  FDA Study Data Technical Conformance Guide (TCG) Page 13: In
+                  addition to the study parameters indicated in the appendix
+                  section, if the study data submitted follows a Therapeutic
+                  Area User Guide (TAUG) or an FDA Technical Specification,30
+                  use the values for TSPARM/TSPARMCD and TSVAL from the table
+                  below in the TS domain.'
+                Document: FDA
+                Section: FDAB011
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1103
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+Check:
+  all:
+    - name: TSPARMCD
+      operator: equal_to
+      value: 'CTAUG'
+    - name: TSVAL
+      operator: is_not_contained_by
+      value: $terms
+Core:
+  Id: FDA.SDTMIG.FB1103
+  Status: Draft
+  Version: '1'
+Description: 'Raise an issue when TSVAL (Standard Name) does not match
+  corresponding name as listed in section 5.2 of the TCG for TAUGs and is in the
+  CTAUGRS codelist (C160925), as published in the CDISC Library.'
+Executability: Fully Executable
+# 2025-09-29: still throws an error when tested on an Excel file
+# See Github ticket 1338: https://github.com/cdisc-org/cdisc-rules-engine/issues/1338
+Operations:
+  - codelists:
+      - CTAUGRS
+    id: $terms
+    level: term
+    operator: codelist_terms
+    returntype: value
+Outcome:
+  Message: 'TSVAL (Standard Name) does not match corresponding name as listed in
+    section 5.2 of the TCG for TAUGs and is in the CTAUGRS codelist (C160925),
+    as published in the CDISC Library.'
+  Output Variables:
+    - TSPARMCD
+    - TSVAL
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - TRIAL DESIGN
+  Domains:
+    Include:
+      - TS
+Sensitivity: Record

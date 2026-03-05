@@ -1,0 +1,124 @@
+Authorities:
+  - Organization: 'CDISC'
+    Standards:
+      - Name: 'SDTMIG'
+        References:
+          - Citations:
+              - Cited Guidance: 'Following SDTM-specified controlled terminology and format
+                  guidelines for variables, when provided'
+                Document: 'SDTMIG'
+                Section: '3.2.2'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: 'CG0011B1'
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: 'SDTMIG'
+        References:
+          - Citations:
+              - Cited Guidance: 'Following SDTM-specified controlled terminology and format
+                  guidelines for variables, when provided'
+                Document: 'SDTMIG'
+                Section: '3.2.2'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: 'CG0011B1'
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: 'SDTMIG'
+        References:
+          - Citations:
+              - Cited Guidance: 'Following SDTM-specifieda controlled terminology and format
+                  guidelines for variables, when provided'
+                Document: 'SDTMIG'
+                Section: '3.2.2'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: 'CG0011B1'
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+# TODO?: when 2 violations in same row, this is reported as 1 violation 
+Check:
+  any:
+    - all:
+        - name: --DTC
+          operator: non_empty
+        - name: --DTC
+          operator: invalid_date
+    - all:
+        - name: --STDTC
+          operator: non_empty
+        - name: --STDTC
+          operator: invalid_date
+    - all:
+        - name: --ENDTC
+          operator: non_empty
+        - name: --ENDTC
+          operator: invalid_date
+    # DM-specific date/time variables
+    - all:
+        - name: RFSTDTC
+          operator: non_empty
+        - name: RFSTDTC
+          operator: invalid_date
+    - all:
+        - name: RFENDTC
+          operator: non_empty
+        - name: RFENDTC
+          operator: invalid_date
+    - all:
+        - name: RFXSTDTC
+          operator: non_empty
+        - name: RFXSTDTC
+          operator: invalid_date
+    - all:
+        - name: RFXENDTC
+          operator: non_empty
+        - name: RFXENDTC
+          operator: invalid_date
+    - all:
+        - name: RFCSTDTC
+          operator: non_empty
+        - name: RFCSTDTC
+          operator: invalid_date
+    - all:
+        - name: RFCENDTC
+          operator: non_empty
+        - name: RFCENDTC
+          operator: invalid_date
+    - all:
+        - name: RFICDTC
+          operator: non_empty
+        - name: RFICDTC
+          operator: invalid_date
+    - all:
+        - name: RFPENDTC
+          operator: non_empty
+        - name: RFPENDTC
+          operator: invalid_date
+    - all:
+        - name: DTHDTC
+          operator: non_empty
+        - name: DTHDTC
+          operator: invalid_date
+    - name: BRTHDTC
+      operator: invalid_date
+Core:
+  Status: Draft
+  Version: '1'
+Description: ''
+Executability: Fully Executable
+Outcome:
+  Message: ''
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record

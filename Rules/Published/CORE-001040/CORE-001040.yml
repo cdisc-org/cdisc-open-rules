@@ -1,0 +1,59 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'A study element must only reference study interventions that
+                  are defined within the same study design as the study
+                  element.'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00109'
+              Version: '1'
+            Version: '1.0'
+        Version: '3.0'
+Check: |-
+  (
+      $lkp:=$merge($.**.studyDesigns.studyInterventions.{id:%.id});
+      ($.**.studyDesigns)@$s.
+          [
+              $s.elements.studyInterventionIds
+                  [
+                      $not($ in $s.studyDesigns.studyInterventions.id)
+                  ].
+              {
+              "instanceType": %.instanceType,
+              "id": %.id,
+              "path": %._path,
+              "StudyDesign.id": $s.id,
+              "StudyDesign.name": $s.name,
+              "name": %.name,
+              "studyInterventionIds value": $,
+              "Referenced intervention's parent StudyDesign.id": $ in $keys($lkp) ? $lookup($lkp,$) : "[Invalid studyInterventionIds value]"
+              }
+          ]
+  )
+Core:
+  Id: 'CORE-001040'
+  Status: Published
+  Version: '1'
+Description: 'A study element must only reference study interventions that are
+  defined within the same study design as the study element.'
+Executability: Fully Executable
+Outcome:
+  Message: 'The study element references a study intervention that is not defined
+    within the same study design.'
+  Output Variables:
+    - StudyDesign.id
+    - StudyDesign.name
+    - name
+    - "studyInterventionIds value"
+    - "Referenced intervention's parent StudyDesign.id"
+Rule Type: JSONata
+Scope:
+  Entities:
+    Include:
+      - 'StudyElement'
+Sensitivity: Record

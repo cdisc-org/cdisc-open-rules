@@ -1,0 +1,118 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: --DTHREL Describes the relationship of a particular finding to
+                  the death of a subject (Y=caused death, N=did not cause death,
+                  U=unknown). May be left null if not available.
+                Document: SENDIG v3.0
+                Section: Section 6.3.7-6.3.8
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND183
+              Version: '1'
+            Version: '5.0'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: --DTHREL Describes the relationship of a particular finding to
+                  the death of a subject (Y=caused death, N=did not cause death,
+                  U=unknown). May be left null if not available.
+                Document: SENDIG v3.1
+                Section: Section 6.3.7-6.3.8
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND183
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: --DTHREL Describes the relationship of a particular finding to
+                  the death of a subject (Y=caused death, N=did not cause death,
+                  U=unknown). May be left null if not available.
+                Document: SENDIG v3.1.1
+                Section: Section 6.3.7-6.3.8
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND183
+              Version: '1'
+            Version: '5.0'
+        Version: 3.1.1
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: --DTHREL Describes the relationship of a particular finding to
+                  the death of a subject (Y=caused death, N=did not cause death,
+                  U=unknown). May be left null if not available.
+                Document: SENDIG v3.1
+                Section: Section 6.3.7-6.3.8
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND183
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: --DTHREL Describes the relationship of a particular finding to
+                  the death of a subject (Y=caused death, N=did not cause death,
+                  U=unknown). May be left null if not available.
+                Document: SENDIG v3.1.1
+                Section: Section 6.3.7-6.3.8
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND183
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: --DTHREL Describes the relationship of a particular finding to
+                  the death of a subject (Y=caused death, N=did not cause death,
+                  U=unknown). May be left null if not available.
+                Document: SENDIG v3.1.1
+                Section: Section 6.3.7-6.3.8
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND183
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+Check:
+  all:
+    - name: --DTHREL
+      operator: non_empty
+    - name: --DTHREL
+      operator: not_equal_to
+      value: Y
+    - name: --DTHREL
+      operator: not_equal_to
+      value: U
+    - name: --DTHREL
+      operator: not_equal_to
+      value: N
+Core:
+  Id: CORE-000446
+  Status: Published
+  Version: '1'
+Description: Raise an error when --DTHREL is neither null nor 'Y', 'N' or 'U'
+Executability: Fully Executable
+Outcome:
+  Message: --DTHREF must be either 'Y, 'N', 'U' or null.
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - MA
+      - MI
+Sensitivity: Record

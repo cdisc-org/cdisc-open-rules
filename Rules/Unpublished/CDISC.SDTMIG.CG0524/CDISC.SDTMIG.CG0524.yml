@@ -1,0 +1,59 @@
+# Variable: ACTARMCD
+# Condition: Subject not assigned to treatment
+# Rule: ACTARMCD = null
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        Version: '3.4'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0524
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: Both ARMCD and ACTARMCD will be null for subjects
+                  who were not assigned to treatment.  The same reason will provide
+                  the reason that both are null.
+                Document: IG v3.4
+                Item: Assumption 4
+                Section: '5.2'
+      - Name: SDTMIG
+        Version: '3.3'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0524
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: Both ARMCD and ACTARMCD will be null for subjects
+                  who were not assigned to treatment
+                Document: IG v3.3
+                Item: Assumption 4
+                Section: '5.2'
+Check:
+  all:
+    - name:
+      operator:
+    - name: ACTARMCD
+      operator: non_empty
+Core:
+  Id: CDISC.SDTMIG.CG0524
+  Status: Draft
+  Version: '1'
+Description: Trigger error when ACTARMCD is populated for a subject who was not assigned
+  to treatment
+Executability: Fully Executable
+Outcome:
+  Message: ACTARMCD is populated for a subject who was not assigned to treatment
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - DM
+Sensitivity: Record

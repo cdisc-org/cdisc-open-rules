@@ -1,0 +1,54 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'Within a study design, if more characteristics are defined,
+                  they must be distinct.'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00219'
+              Version: '1'
+            Version: '1.0'
+        Version: '4.0'
+Check: |-
+  study.versions.studyDesigns.
+    (
+      characteristics
+        {
+            code: $count(id)>1?"["&$join($.(id&": "&decode&" ("&code&")"),"; ")&"]"
+        } ~>
+      $each(
+        function($v){
+          {
+            "instanceType": instanceType,
+            "id": id,
+            "path": _path,
+            "name": name,
+            "characteristics": $v
+          }
+        }
+      )
+    )  
+Core:
+  Id: 'CORE-000980'
+  Status: Published
+  Version: '1'
+Description: 'Within a study design, if more characteristics are defined, they
+  must be distinct.'
+Executability: Fully Executable
+Outcome:
+  Message: 'The same characteristics code is used more than once within the study
+    design.'
+  Output Variables:
+    - name
+    - characteristics
+Rule Type: JSONata
+Scope:
+  Entities:
+    Include:
+      - 'InterventionalStudyDesign'
+      - 'ObservationalStudyDesign'
+Sensitivity: Record

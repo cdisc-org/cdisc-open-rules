@@ -1,0 +1,52 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'A specified condition for assessments must apply to at least to
+                  a procedure, biomedical concept, biomedical concept surrogate,
+                  biomedical concept category or a whole activity.'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00016'
+              Version: '1'
+            Version: '1.0'
+        Version: '3.0'
+Check:
+  all:
+    - name: instanceType
+      operator: equal_to
+      value: 'Condition'
+    - any:
+        - name: appliesToIds
+          operator: not_exists
+        - name: appliesToIds
+          operator: not_equal_to
+          value: true
+Core:
+  Id: 'CORE-000796'
+  Status: Published
+  Version: '1'
+Description: 'A specified condition for assessments must apply to at least to a
+  procedure, biomedical concept, biomedical concept surrogate, biomedical
+  concept category or a whole activity.'
+Executability: Fully Executable
+Outcome:
+  Message: 'The condition does not apply to a procedure, biomedical concept,
+    biomedical concept surrogate, biomedical concept category or a whole
+    activity.'
+  Output Variables:
+    - parent_entity
+    - parent_id
+    - parent_rel
+    - id
+    - name
+    - appliesToIds
+Rule Type: Record Data
+Scope:
+  Entities:
+    Include:
+      - Condition
+Sensitivity: Record

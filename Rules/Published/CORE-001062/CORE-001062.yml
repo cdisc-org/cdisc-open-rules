@@ -1,0 +1,50 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'An activity must only reference child activities that are
+                  specified within the same study design.'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00254'
+              Version: '1'
+            Version: '1.0'
+        Version: '4.0'
+Check: |-
+  $.**.studyDesigns@$s.
+    [
+      $s.activities.childIds[$not($ in $s.activities.id)].
+        {
+          "instanceType": %.instanceType,
+          "id": %.id,
+          "path": %._path,
+          "StudyDesign.id": $s.id,
+          "StudyDesign.name": $s.name,
+          "name": %.name,
+          "childId": $
+        }
+    ]
+Core:
+  Id: 'CORE-001062'
+  Status: Published
+  Version: '1'
+Description: 'An activity must only reference child activities that are
+  specified within the same study design.'
+Executability: Fully Executable
+Outcome:
+  Message: 'The activity references a childId that does not match the id of any
+    activity defined within the same study design as the activity.'
+  Output Variables:
+    - StudyDesign.id
+    - StudyDesign.name
+    - name
+    - childId
+Rule Type: JSONata
+Scope:
+  Entities:
+    Include:
+      - 'Activity'
+Sensitivity: Record

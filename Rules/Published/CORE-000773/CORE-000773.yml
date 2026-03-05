@@ -1,0 +1,105 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: For a specimen collected or observed post mortem, this is the
+                  date/time of subject disposition in ISO 8601 format
+                Document: IG v3.1
+                Section: 6.3.7 | 6.3.8 | 6.3.14
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: 'SEND320'
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: For a specimen collected or observed post mortem, this is the
+                  date/time of subject disposition in ISO 8601 format
+                Document: IG v3.1.1
+                Section: 6.3.7 | 6.3.8 | 6.3.14
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: 'SEND320'
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1.1'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: For a specimen collected or observed post mortem, this is the
+                  date/time of subject disposition in ISO 8601 format
+                Document: IG v3.1.1
+                Section: 6.3.7 | 6.3.8 | 6.3.14
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: 'SEND320'
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: For a specimen collected or observed post mortem, this is the
+                  date/time of subject disposition in ISO 8601 format
+                Document: IG v3.1
+                Section: 6.3.7 | 6.3.8 | 6.3.14
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: 'SEND320'
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: For a specimen collected or observed post mortem, this is the
+                  date/time of subject disposition in ISO 8601 format
+                Document: IG v3.1.1
+                Section: 6.3.7 | 6.3.8 | 6.3.14
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: 'SEND320'
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+Check:
+  all:
+    - name: --DTC
+      operator: non_empty
+    - name: --DTC
+      operator: date_greater_than
+      value: $dsstdtc
+Core:
+  Id: CORE-000773
+  Status: Published
+  Version: '1'
+Description: --DTC may not be later than DS.DSSTDTC
+Executability: Fully Executable
+Operations:
+  # Though there should be only one record per subject in DS
+  - domain: DS
+    group:
+      - USUBJID
+    id: $dsstdtc
+    name: DSSTDTC
+    operator: max_date
+Outcome:
+  Message: --DTC may not be later than DS.DSSTDTC (date/time of death)
+  Output Variables:
+    - --DTC
+    - $dsstdtc
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - MI
+      - MA
+      - TF
+Sensitivity: Record

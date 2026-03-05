@@ -1,0 +1,115 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: The unique subject identifier (USUBJID) or pool identifier
+                  (POOLID) is Required in all datasets containing subject-level
+                  or pool-level data, respectively.
+                Document: IG v3.0
+                Section: 4.2.3
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND36
+              Version: '1'
+            Version: '5.0'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: The unique subject identifier (USUBJID) or pool identifier
+                  (POOLID) is Required in all datasets containing subject-level
+                  or pool-level data, respectively.
+                Document: IG v3.1
+                Section: 4.2.3
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND36
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: The unique subject identifier (USUBJID) or pool identifier
+                  (POOLID) is Required in all datasets containing subject-level
+                  or pool-level data, respectively.
+                Document: IG v3.1.1
+                Section: 4.2.3
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND36
+              Version: '1'
+            Version: '5.0'
+        Version: 3.1.1
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: The unique subject identifier (USUBJID) or pool identifier
+                  (POOLID) is Required in all datasets containing subject-level
+                  or pool-level data, respectively.
+                Document: IG v3.1
+                Section: 4.2.3
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND36
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: The unique subject identifier (USUBJID) or pool identifier
+                  (POOLID) is Required in all datasets containing subject-level
+                  or pool-level data, respectively.
+                Document: IG v3.1.1
+                Section: 4.2.3
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND36
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: The unique subject identifier (USUBJID) or pool identifier
+                  (POOLID) is Required in all datasets containing subject-level
+                  or pool-level data, respectively.
+                Document: IG v3.1.1
+                Section: 4.2.3
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND36
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+Check:
+  all:
+    - name: USUBJID
+      operator: empty
+    - name: POOLID
+      operator: empty
+Core:
+  Id: CORE-000570
+  Status: Published
+  Version: '1'
+Description: Raise an error when both USUBJID and POOLID are empty
+Executability: Fully Executable
+Outcome:
+  Message: Both USUBJID and POOID are empty
+  Output Variables:
+    - USUBJID
+    - POOLID
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - INTERVENTIONS
+      - FINDINGS
+      - EVENTS
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record

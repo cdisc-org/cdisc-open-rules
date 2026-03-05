@@ -1,0 +1,38 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: When extending a controlled terminology list, the
+                  case-sensitivity convention of that list should be followed.
+                Document: IG v3.0
+                Item: Specification
+                Section: 4.2.4 | 4.3.2
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: 'SEND41'
+              Version: '1'
+            Version: '5.0'
+        Version: '3.0'
+Check:
+  all:
+    - name: SITEID
+      operator: 'equal_to'
+      value: '701'
+Core:
+  Status: Draft
+  Version: '1'
+Description: ''
+Executability: Fully Executable
+Outcome:
+  Message: 'Value may not be 701'
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - DM
+Sensitivity: Record

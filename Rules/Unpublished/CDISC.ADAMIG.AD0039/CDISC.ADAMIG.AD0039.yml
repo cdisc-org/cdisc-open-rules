@@ -1,0 +1,63 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: ADAMIG
+        Version: '1.3'
+        References:
+  # Origin for ADaM/ADaMIG should be defined in yaml validation schema
+          - Origin: ADaM and ADaMIG Conformance Rules
+            Rule Identifier:
+              Id: AD0039
+              Version: '1'
+    # Version 4.0 for ADaM/ADaMIG should be allowed according to yaml validation schema
+            Version: '4.0'
+            Citations:
+              - Document: IG v1.3
+                Section: 3.1.3
+                Item: '1'
+                Cited Guidance: >-
+                  ADaM IG v1.3, Section 3.1.3, Item 1:  As described in Table 3.1.5.1,
+                  variables whose names end in DTF are date imputation flags. *DTF
+                  variables represent the
+                  highest level of imputation of the *DT variable based on the source
+                  SDTM dataset DTC variable. *DTF = Y if the year is
+                  imputed. *DTF = M if year is present and month is imputed. *DTF
+                  = D if only day is imputed. *DTF = null if *DT equals the
+                  SDTM dataset DTC variable date part equivalent. If a date was imputed,
+                  *DTF must be populated and is required. Both *DTF and
+                  *TMF may be needed to describe the level of imputation in *DTM if
+                  imputation was done. Note that the list of examples in
+                  Table 3.1.3.1 is not exhaustive.
+Check:
+  all:
+#     - name: "variable_name"
+#       operator: matches_regex
+#       value: ^[A-Z][A-Z0-9]{0,4}DTF$
+#     - name: "variable_name"
+#       operator: non_empty
+    - name: ADTF
+      operator: does_not_use_valid_codelist_terms
+      value: DATEFL
+Core:
+  # Need to make yaml validation accept ADAMIG
+  # Will we need to prepend ADaM rules with "AD0..."? 
+  # (column "Check Number" in ADaM_Conformance_Rules_v4.0 is 1-3 digits only, some with a ",1" (e.g. "37,01") )
+  Id: CDISC.ADAMIG.AD0039
+  Status: Draft
+  Version: '1'
+Description: Raise an error when a variable ends with DTF and values are not according
+  to the DATEFL controlled terminology codelist
+Outcome:
+  Message: The values of ADTF are not following the DATEFL codelist
+  Output Variables:
+    - ADTF
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      # What ADaM classes will be defined? ADSL, BDS, OCCDS, OTHER?
+      - ALL
+  Domains:
+    Include:
+      - ADLB
+Sensitivity: Variable

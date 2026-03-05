@@ -1,0 +1,134 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Last date/time of exposure to any protocol-specified treatment
+                  or therapy, equal to the latest value of EXENDTC (or the
+                  latest value of EXSTDTC if EXENDTC was not collected or is
+                  missing).
+                Document: IG v3.1
+                Item: Specification
+                Section: 5.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND306
+              Version: '2'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Last date/time of exposure to any protocol-specified treatment
+                  or therapy, equal to the latest value of EXENDTC (or the
+                  latest value of EXSTDTC if EXENDTC was not collected or is
+                  missing).
+                Document: IG v3.1.1
+                Item: Specification
+                Section: 5.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND306
+              Version: '2'
+            Version: '5.0'
+        Version: 3.1.1
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: Last date/time of exposure to any protocol-specified treatment
+                  or therapy, equal to the latest value of EXENDTC (or the
+                  latest value of EXSTDTC if EXENDTC was not collected or is
+                  missing).
+                Document: IG v3.1
+                Item: Specification
+                Section: 5.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND306
+              Version: '2'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: Last date/time of exposure to any protocol-specified treatment
+                  or therapy, equal to the latest value of EXENDTC (or the
+                  latest value of EXSTDTC if EXENDTC was not collected or is
+                  missing).
+                Document: IG v3.1.1
+                Item: Specification
+                Section: 5.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND306
+              Version: '2'
+            Version: '5.0'
+        Version: '1.2'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: Last date/time of exposure to any protocol-specified treatment
+                  or therapy, equal to the latest value of EXENDTC (or the
+                  latest value of EXSTDTC if EXENDTC was not collected or is
+                  missing).
+                Document: IG v3.1.1
+                Item: Specification
+                Section: 5.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND306
+              Version: '2'
+            Version: '5.0'
+        Version: '1.0'
+Check:
+  all:
+    - name: USUBJID
+      operator: is_contained_by
+      value: $ex_usubjid
+    - name: RFXENDTC
+      operator: not_equal_to
+      value: $max_ex_exendtc
+    - name: RFXENDTC
+      operator: not_equal_to
+      value: $max_ex_exstdtc
+Core:
+  Id: CORE-000454
+  Status: Published
+  Version: '1'
+Description: Raise an error when EX records are present for subject but RFXENDTC
+  does not equal the latest value of EX.EXENDTC
+Executability: Fully Executable
+Operations:
+  - domain: EX
+    id: $ex_usubjid
+    name: USUBJID
+    operator: distinct
+  - domain: EX
+    group:
+      - USUBJID
+    id: $max_ex_exstdtc
+    name: EXSTDTC
+    operator: max_date
+  - domain: EX
+    group:
+      - USUBJID
+    id: $max_ex_exendtc
+    name: EXENDTC
+    operator: max_date
+Outcome:
+  Message: RFXSTDTC does not equal the latest value of EX.EXENDTC or the latest
+    value of EX.EXSTDTC if EX.EXENDTC is not present or not populated.
+  Output Variables:
+    - RFXSTDTC
+    - $max_ex_exendtc
+    - $max_ex_exstdtc
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - DM
+Sensitivity: Record

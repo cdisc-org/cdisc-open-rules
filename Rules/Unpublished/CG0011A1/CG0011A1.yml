@@ -1,0 +1,78 @@
+Authorities:
+  - Organization: 'CDISC'
+    Standards:
+      - Name: 'SDTMIG'
+        References:
+          - Citations:
+              - Cited Guidance: 'Following SDTM-specified controlled terminology and format
+                  guidelines for variables, when provided'
+                Document: 'SDTMIG'
+                Section: '3.2.2'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: 'CG0011A1'
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: 'SDTMIG'
+        References:
+          - Citations:
+              - Cited Guidance: 'Following SDTM-specified controlled terminology and format
+                  guidelines for variables, when provided'
+                Document: 'SDTMIG'
+                Section: '3.2.2'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: 'CG0011A1'
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: 'SDTMIG'
+        References:
+          - Citations:
+              - Cited Guidance: 'Following SDTM-specifieda controlled terminology and format
+                  guidelines for variables, when provided'
+                Document: 'SDTMIG'
+                Section: '3.2.2'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: 'CG0011A1'
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+Check:
+  # PART A1: --DUR must be in ISO-8601 "duration" format
+  all:
+    - name: --DUR
+      operator: non_empty
+    - name: --DUR
+      # negative: true means: allow negative durations
+      negative: true
+      operator: invalid_duration
+    #- name: --DUR
+    #  operator: not_matches_regex
+    #  value: ^-?P([0-9]+Y)?([0-9]+M)?([0-9]+D)?(T([0-9]+H)?([0-9]+M)?([0-9]+(\.?[0-9]+)?S)?)?$
+    #- name: --DUR
+    #  operator: not_matches_regex
+    #  value: ^-?P([0-9]+W)$
+
+Core:
+  Status: Draft
+  Version: '1'
+Description: ''
+Executability: Fully Executable
+Outcome:
+  Message: 'Variable value for --DUR does not comply with ISO-8601-duration format'
+  #Output Variables:
+  #  - library_variable_ccode
+  #  - define_variable_ccode
+  # Rule Type: Variable Metadata Check against Library Metadata
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record

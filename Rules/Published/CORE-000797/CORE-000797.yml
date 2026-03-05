@@ -1,0 +1,78 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'Each StudyArm must have one StudyCell for each StudyEpoch.'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00068'
+              Version: '1'
+            Version: '1.0'
+        Version: '3.0'
+Check:
+  all:
+    - name: instanceType
+      operator: equal_to
+      value: 'StudyArm'
+    - name: id.StudyEpoch
+      operator: is_unique_set
+      value: id
+    - any:
+        - all:
+            - name: parent_entity
+              operator: equal_to
+              value: 'StudyDesign'
+            - name: rel_type
+              operator: equal_to
+              value: 'definition'
+            - name: parent_rel
+              operator: equal_to
+              value: 'arms'
+            - name: parent_rel.StudyEpoch
+              operator: equal_to
+              value: 'epochs'
+        - all:
+            - name: parent_entity
+              operator: equal_to
+              value: 'StudyCell'
+            - name: rel_type
+              operator: equal_to
+              value: 'reference'
+            - name: parent_rel
+              operator: equal_to
+              value: 'armId'
+            - name: parent_rel.StudyEpoch
+              operator: equal_to
+              value: 'epochId'
+Core:
+  Id: 'CORE-000797'
+  Status: Published
+  Version: '1'
+Description: 'Each StudyArm must have one StudyCell for each StudyEpoch.'
+Executability: Fully Executable
+Match Datasets:
+  - Join Type: left
+    Keys:
+      - parent_entity
+      - parent_id
+      - rel_type
+    Name: StudyEpoch
+Outcome:
+  Message: 'The StudyArm does not have a StudyCell for the StudyEpoch.'
+  Output Variables:
+    - parent_entity
+    - parent_id
+    - parent_rel
+    - id
+    - name
+    - id.StudyEpoch
+    - name.StudyEpoch
+Rule Type: Record Data
+Scope:
+  Entities:
+    Include:
+      - 'StudyArm'
+Sensitivity: Record

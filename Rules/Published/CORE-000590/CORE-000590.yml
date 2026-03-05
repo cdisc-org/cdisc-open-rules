@@ -1,0 +1,49 @@
+# Dataset: TO
+# Condition: Study of tobacco product(s)
+# Rule: TO dataset is required in all studies of tobacco products
+Authorities:
+  - Organization: 'CDISC'
+    Standards:
+      - Name: 'TIG'
+        References:
+          - Citations:
+              - Cited Guidance: 'TO is a study reference dataset that provides a consistent
+                  identifier, the Applicant-defined Tobacco Product Identifier
+                  (SPTOBID), for a tobacco product in a study. It contains the
+                  identifying and descriptive characteristics of a tobacco
+                  product and merges those characteristics on this single
+                  identifier. This dataset is required for studies of tobacco
+                  products.'
+                Document: 'TIG 1.0'
+                Item: 'assumption 1'
+                Section: '2.8.8.1'
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: 'TIG0001'
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: TO
+      operator: not_exists
+Core:
+  Id: CORE-000590
+  Status: Published
+  Version: '1'
+Description: Raise an error when the study is a study of tobacco product(s) but
+  the TO dataset is not present.
+Executability: Fully Executable
+Outcome:
+  Message: Required TO dataset for study of tobacco product(s) is not present.
+Rule Type: Domain Presence Check
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+  Use Case: PROD
+Sensitivity: Dataset

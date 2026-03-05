@@ -1,0 +1,132 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: If POOLID is entered, POOLDEF records must exist for each
+                  subject and the USUBJID must be null.
+                Document: SENDIG v3.0
+                Item: POOLID CDISC Notes
+                Section: 6.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND139
+              Version: '1'
+            Version: '5.0'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: If POOLID is entered, POOLDEF records must exist for each
+                  subject and the USUBJID must be null.
+                Document: SENDIG v3.1
+                Item: POOLID CDISC Notes
+                Section: 6.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND139
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: If POOLID is entered, POOLDEF records must exist for each
+                  subject and the USUBJID must be null.
+                Document: SENDIG v3.1.1
+                Item: POOLID CDISC Notes
+                Section: 6.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND139
+              Version: '1'
+            Version: '5.0'
+        Version: 3.1.1
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: If POOLID is entered, POOLDEF records must exist for each
+                  subject and the USUBJID must be null.
+                Document: SENDIG v3.1
+                Item: POOLID CDISC Notes
+                Section: 6.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND139
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: If POOLID is entered, POOLDEF records must exist for each
+                  subject and the USUBJID must be null.
+                Document: SENDIG v3.1.1
+                Item: POOLID CDISC Notes
+                Section: 6.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND139
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: If POOLID is entered, POOLDEF records must exist for each
+                  subject and the USUBJID must be null.
+                Document: SENDIG v3.1.1
+                Item: POOLID CDISC Notes
+                Section: 6.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND139
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: If POOLID is entered, POOLDEF records must exist for each
+                  subject and the USUBJID must be null.
+                Document: TIG v1.0
+                Item: POOLID CDISC Notes
+                Section: 2.8.9.22
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0075
+              Version: '1'
+            Version: '1.0'
+        Substandard: SEND
+        Version: '1.0'
+Check:
+  all:
+    - name: $poolid_exists
+      operator: equal_to
+      value: true
+    - name: POOLDEF
+      operator: not_exists
+Core:
+  Id: CORE-000677
+  Status: Published
+  Version: '1'
+Description: Part A - Raise error when POOLID exists in the dataset but POOLDEF
+  does not exist.
+Executability: Fully Executable
+Operations:
+  - id: $poolid_exists
+    name: POOLID
+    operator: variable_exists
+Outcome:
+  Message: POOLID variable exists in the dataset but POOLDEF dataset does not exist.
+Rule Type: Domain Presence Check
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+  Use Case: NONCLIN
+Sensitivity: Dataset

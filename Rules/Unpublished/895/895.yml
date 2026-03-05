@@ -1,0 +1,80 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: ADaMIG
+        References:
+          - Citations:
+              - Cited Guidance: ANLzzFL has label= Analysis Flag zz.
+                Document: ADaM IG v1.1
+                Item: Table 3.3.8.1
+                Section: 3.2.3
+            Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '895'
+              Version: '1'
+            Version: '5.0'
+        Version: '1.3'
+      - Name: ADaMIG
+        References:
+          - Citations:
+              - Cited Guidance: ANLzzFL has label= Analysis Flag zz.
+                Document: ADaM IG v1.1
+                Item: Table 3.3.8.1
+                Section: 3.2.3
+            Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '895'
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+      - Name: ADaMIG
+        References:
+          - Citations:
+              - Cited Guidance: ANLzzFL has label= Analysis Flag zz.
+                Document: ADaM IG v1.1
+                Item: Table 3.3.8.1
+                Section: 3.2.3
+            Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '895'
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: ADaMIG
+        References:
+          - Citations:
+              - Cited Guidance: ANLzzFL has label= Analysis Flag zz.
+                Document: ADaM IG v1.1
+                Item: Table 3.3.8.1
+                Section: 3.2.3
+            Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '895'
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+Check:
+  all:
+    - name: ANL02FL
+      operator: exists
+    - name: variable_label
+      operator: does_not_contain
+      value: '02'
+Core:
+  Id:
+  Status: Draft
+  Version: '1'
+Description: For analysis flag ANLzzFL, the label should contain the number zz.
+Executability: Fully Executable
+Outcome:
+  Message: trigger an error when zz in variable label is not equal to zz in
+    ANLzzFL variable name.
+Rule Type: Variable Metadata Check
+Scope:
+  Classes:
+    Exclude:
+      - ADSL
+  Domains:
+    Exclude:
+      - ADSL
+Sensitivity: Record

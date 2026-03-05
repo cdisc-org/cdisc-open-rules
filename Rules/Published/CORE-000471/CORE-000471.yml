@@ -1,0 +1,109 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      # Not applicable to SENDIG-3.0
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: 'EGEVAL: Role of the person who provided the evaluation. Should
+                  be null for records that contain collected or derived data.'
+                Document: IG v3.1
+                Section: 6.3.16
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: 'SEND334'
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: 'EGEVAL: Role of the person who provided the evaluation. Should
+                  be null for records that contain collected or derived data.'
+                Document: IG v3.1.1
+                Section: 6.3.16
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: 'SEND334'
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: 'EGEVAL: Role of the person who provided the evaluation. Should
+                  be null for records that contain collected or derived data.'
+                Document: IG v3.1
+                Section: 6.3.16
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: 'SEND334'
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: 'EGEVAL: Role of the person who provided the evaluation. Should
+                  be null for records that contain collected or derived data.'
+                Document: IG v3.1.1
+                Section: 6.3.16
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: 'SEND334'
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: 'EGEVAL: Role of the person who provided the evaluation. Should
+                  be null for records that contain collected or derived data.'
+                Document: IG v3.1.1
+                Section: 6.3.16
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: 'SEND334'
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+Check:
+  # After discussion with SEND team: implemented as that 
+  # - When EGCAT = MEASUREMENT then EGEVAL is null
+  # - When EGORRESU is not null then EGEVAL is null 
+  # - P.S. Reason for taking EGORRESU (and not EGORRES) 
+  #    is that a value with a unit is not expected to be a subjective value 
+  any:
+    # report an error when EGCAT=MEASUREMENT (case-insensitive) and EGEVAL is populated
+    # Q: shouldn't be "case-sensitive" as it is under controlled terminology (which is uppercase)
+    - all:
+        - name: EGCAT
+          operator: equal_to_case_insensitive
+          value: 'MEASUREMENT'
+        - name: EGEVAL
+          operator: non_empty
+    # report an error when EGORRESU is not null and EGEVAL is populated
+    # the idea is that evaluations do not have a unit
+    - all:
+        - name: EGORRESU
+          operator: non_empty
+        - name: EGEVAL
+          operator: non_empty
+Core:
+  Id: CORE-000471
+  Status: Published
+  Version: '1'
+Description: 'Report an error when EGCAT=MEASUREMENT (case-insensitive) and
+  EGEVAL is populated, or when EGORRESU is not null and EGEVAL is populated'
+Executability: Partially Executable
+Outcome:
+  Message: EGEVAL must be null for results that are collected or derived
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - EG
+Sensitivity: Record

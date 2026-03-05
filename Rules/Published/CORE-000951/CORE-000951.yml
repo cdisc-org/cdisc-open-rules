@@ -1,0 +1,148 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'A study definition document version''s status must be specified
+                  using the status Value Set Terminology (C188723) DDF
+                  codelist.'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00169'
+              Version: '1'
+            Version: '1.0'
+        Version: '4.0'
+Check:
+  all:
+    - name: rel_type
+      operator: equal_to
+      value: 'definition'
+    - name: status
+      operator: equal_to
+      value: true
+    - not:
+        all:
+          - name: status.codeSystem
+            operator: equal_to
+            value: 'http://www.cdisc.org'
+          - name: status.codeSystemVersion
+            operator: is_contained_by
+            value: $valid_versions
+          - any:
+              - all:
+                  - name: $pref_term_for_code
+                    operator: non_empty
+                  - name: $value_for_code
+                    operator: non_empty
+                  - any:
+                      - name: $code_for_decode_pref_term
+                        operator: non_empty
+                      - name: $code_for_decode_value
+                        operator: non_empty
+                  - any:
+                      - name: status.code
+                        operator: equal_to
+                        value: $code_for_decode_pref_term
+                      - name: status.code
+                        operator: equal_to
+                        value: $code_for_decode_value
+                  - any:
+                      - name: status.decode
+                        operator: equal_to
+                        value: $pref_term_for_code
+                      - name: status.decode
+                        operator: equal_to
+                        value: $value_for_code
+              - all:
+                  - name: $codelist_extensible
+                    operator: equal_to
+                    value: true
+                  - name: $code_for_decode_pref_term
+                    operator: empty
+                  - name: $code_for_decode_value
+                    operator: empty
+                  - name: $pref_term_for_code
+                    operator: empty
+                  - name: $value_for_code
+                    operator: empty
+Core:
+  Id: 'CORE-000951'
+  Status: Published
+  Version: '1'
+Description: 'A study definition document version''s status must be specified
+  using the status Value Set Terminology (C188723) DDF codelist.'
+Executability: Fully Executable
+Operations:
+  - id: $codelist_code
+    map:
+      - output: C188723
+    operator: map
+  - ct_package_types:
+      - DDF
+    id: $valid_versions
+    operator: valid_codelist_dates
+  - codelist_code: $codelist_code
+    ct_package_type: DDF
+    id: $codelist_extensible
+    operator: codelist_extensible
+    version: status.codeSystemVersion
+  - codelist_code: $codelist_code
+    ct_package_type: DDF
+    id: $value_for_code
+    operator: codelist_terms
+    returntype: value
+    term_code: status.code
+    version: status.codeSystemVersion
+  - codelist_code: $codelist_code
+    ct_package_type: DDF
+    id: $pref_term_for_code
+    operator: codelist_terms
+    returntype: pref_term
+    term_code: status.code
+    version: status.codeSystemVersion
+  - codelist_code: $codelist_code
+    ct_package_type: DDF
+    id: $code_for_decode_pref_term
+    operator: codelist_terms
+    returntype: code
+    term_pref_term: status.decode
+    version: status.codeSystemVersion
+  - codelist_code: $codelist_code
+    ct_package_type: DDF
+    id: $code_for_decode_value
+    operator: codelist_terms
+    returntype: code
+    term_value: status.decode
+    version: status.codeSystemVersion
+Outcome:
+  Message: 'The study definition document version''s status is not specified using
+    the status Value Set Terminology (C188723) DDF codelist - codeSystem is not
+    "http://www.cdisc.org", codeSystemVersion is not a valid terminology package
+    date, the code or decode (either as preferred term or as submission value)
+    is found in the codelist (case insensitive) but the corresponding decode or
+    code does not match the codelist value (case sensitive), and/or neither code
+    nor decode is found in the codelist.'
+  Output Variables:
+    - parent_entity
+    - parent_id
+    - parent_rel
+    - id
+    - version
+    - $codelist_code
+    - $codelist_extensible
+    - status.code
+    - $code_for_decode_value
+    - $code_for_decode_pref_term
+    - status.codeSystem
+    - status.codeSystemVersion
+    - status.decode
+    - $value_for_code
+    - $pref_term_for_code
+Rule Type: Record Data
+Scope:
+  Entities:
+    Include:
+      - 'StudyDefinitionDocumentVersion'
+Sensitivity: Record

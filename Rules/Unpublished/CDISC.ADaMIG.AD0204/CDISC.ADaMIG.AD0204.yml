@@ -1,0 +1,121 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: ADaMIG
+        References:
+          - Citations:
+              - Cited Guidance: If the variable is not a copy of DM.AGE, then an additional
+                  differently named variable must be added.
+                Document: ADaMIG
+                Item: Table 3.1.1
+                Section: '3.1'
+            Criteria:
+              Logical Expression:
+                Condition: ''
+                Rule: ''
+              Plain Language Expression: ''
+              Type: Failure
+            Origin: ADaM Conformance Rules
+            Release Notes: ''
+            Rule Identifier:
+              Id: '204'
+              Version: ''
+            Validator Rule Message: ''
+            Version: '5.0'
+        Version: '1.0'
+      - Name: ADaMIG
+        References:
+          - Citations:
+              - Cited Guidance: When the value of ADSL.USUBJID is equal to the value of
+                  DM.USUBJID, ADSL.AGE must equal to DM.AGE
+                Document: ADaMIG
+                Item: 'Table 3.2.2: DM.AGE'
+                Section: '3.2'
+            Criteria:
+              Logical Expression:
+                Condition: ''
+                Rule: ''
+              Plain Language Expression: ''
+              Type: Failure
+            Origin: ADaM Conformance Rules
+            Release Notes: ''
+            Rule Identifier:
+              Id: '204'
+              Version: ''
+            Validator Rule Message: ''
+            Version: '5.0'
+        Version: '1.1'
+      - Name: ADaMIG
+        References:
+          - Citations:
+              - Cited Guidance: When the value of ADSL.USUBJID is equal to the value of
+                  DM.USUBJID, ADSL.AGE must equal to DM.AGE
+                Document: ADaMIG
+                Item: 'Table 3.2.2: DM.AGE'
+                Section: '3.2'
+            Criteria:
+              Logical Expression:
+                Condition: ''
+                Rule: ''
+              Plain Language Expression: ''
+              Type: Failure
+            Origin: ADaM Conformance Rules
+            Release Notes: ''
+            Rule Identifier:
+              Id: '204'
+              Version: ''
+            Validator Rule Message: ''
+            Version: '5.0'
+        Version: '1.2'
+      - Name: ADaMIG
+        References:
+          - Citations:
+              - Cited Guidance: When the value of ADSL.USUBJID is equal to the value of
+                  DM.USUBJID, ADSL.AGE must equal to DM.AGE
+                Document: ADaMIG
+                Item: 'Table 3.2.2: DM.AGE'
+                Section: '3.2'
+            Criteria:
+              Logical Expression:
+                Condition: ''
+                Rule: ''
+              Plain Language Expression: ''
+              Type: Failure
+            Origin: ADaM Conformance Rules
+            Release Notes: ''
+            Rule Identifier:
+              Id: '204'
+              Version: ''
+            Validator Rule Message: ''
+            Version: '5.0'
+        Version: '1.3'
+Check:
+  all:
+    # - name: USUBJID
+    #   operator: equal_to
+    #   value: DM.USUBJID
+    - name: AGE
+      operator: not_equal_to
+      value: AGE #DM.AGE?
+Core:
+  Id: CDISC.ADaMIG.AD0204
+  Status: Draft
+  Version: '1'
+Description: ''
+Executability: Fully Executable
+Match Datasets:
+  - Keys:
+      - USUBJID
+    Name: DM
+
+Outcome:
+  Message: ADSL age not equal to DM Age
+  Output Variables:
+    - USUBJID
+    - AGE
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+      - SUBJECT LEVEL ANALYSIS DATASET
+Sensitivity: Record

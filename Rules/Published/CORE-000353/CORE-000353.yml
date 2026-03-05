@@ -1,0 +1,199 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Dates or durations represented in TSVAL must be in the
+                  appropriate ISO 8601 format.
+                Document: IG v3.0
+                Item: Specification
+                Section: 7.6.3
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND248.1
+              Version: '1'
+            Version: '5.0'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Dates or durations represented in TSVAL must be in the
+                  appropriate ISO 8601 format.
+                Document: IG v3.1
+                Item: Specification
+                Section: 7.6.3
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND248.1
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Dates or durations represented in TSVAL must be in the
+                  appropriate ISO 8601 format.
+                Document: IG v3.1.1
+                Item: Specification
+                Section: 7.6.3
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND248.1
+              Version: '1'
+            Version: '5.0'
+        Version: 3.1.1
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: Dates or durations represented in TSVAL must be in the
+                  appropriate ISO 8601 format.
+                Document: IG v3.1
+                Item: Specification
+                Section: 7.6.3
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND248.1
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: Dates or durations represented in TSVAL must be in the
+                  appropriate ISO 8601 format.
+                Document: IG v3.1.1
+                Item: Specification
+                Section: 7.6.3
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND248.1
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: Dates or durations represented in TSVAL must be in the
+                  appropriate ISO 8601 format.
+                Document: IG v3.1.1
+                Item: Specification
+                Section: 7.6.3
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND248.1
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+# Applies for:
+# date/datetime: TSVAL = EXPENDTC, EXPSTDTC, STSTENDTC, DOSENDTC, DOSSTDTC, or STENDTC
+# duration: TRMSAC, INTSAC, SLENGTH, RECSAC
+Check:
+  any:
+    # Date/datetime parameter values
+    - all:
+        - name: TSPARMCD
+          operator: equal_to
+          value: EXPENDTC
+        - name: TSVAL
+          operator: invalid_date
+    - all:
+        - name: TSPARMCD
+          operator: equal_to
+          value: EXPSTDTC
+        - name: TSVAL
+          operator: invalid_date
+    - all:
+        - name: TSPARMCD
+          operator: equal_to
+          value: STSTDTC
+        - name: TSVAL
+          operator: invalid_date
+    - all:
+        - name: TSPARMCD
+          operator: equal_to
+          value: DOSENDTC
+        - name: TSVAL
+          operator: invalid_date
+    - all:
+        - name: TSPARMCD
+          operator: equal_to
+          value: DOSSTDTC
+        - name: TSVAL
+          operator: invalid_date
+    - all:
+        - name: TSPARMCD
+          operator: equal_to
+          value: STENDTC
+        - name: TSVAL
+          operator: invalid_date
+    # Duration parameter values - P.S. negative durations are allowed
+    - all:
+        - name: TSPARMCD
+          operator: equal_to
+          value: DOSDUR
+        - name: TSVAL
+          operator: not_matches_regex
+          value: ^-?P([0-9]+Y)?([0-9]+M)?([0-9]+D)?(T([0-9]+H)?([0-9]+M)?([0-9]+(\.?[0-9]+)?S)?)?$
+        - name: TSVAL
+          operator: not_matches_regex
+          value: ^-?P([0-9]+W)$
+    - all:
+        - name: TSPARMCD
+          operator: equal_to
+          value: TRMSAC
+        - name: TSVAL
+          operator: not_matches_regex
+          value: ^-?P([0-9]+Y)?([0-9]+M)?([0-9]+D)?(T([0-9]+H)?([0-9]+M)?([0-9]+(\.?[0-9]+)?S)?)?$
+        - name: TSVAL
+          operator: not_matches_regex
+          value: ^-?P([0-9]+W)$
+    - all:
+        - name: TSPARMCD
+          operator: equal_to
+          value: INTSAC
+        - name: TSVAL
+          operator: not_matches_regex
+          value: ^-?P([0-9]+Y)?([0-9]+M)?([0-9]+D)?(T([0-9]+H)?([0-9]+M)?([0-9]+(\.?[0-9]+)?S)?)?$
+        - name: TSVAL
+          operator: not_matches_regex
+          value: ^-?P([0-9]+W)$
+    - all:
+        - name: TSPARMCD
+          operator: equal_to
+          value: SLENGTH
+        - name: TSVAL
+          operator: not_matches_regex
+          value: ^-?P([0-9]+Y)?([0-9]+M)?([0-9]+D)?(T([0-9]+H)?([0-9]+M)?([0-9]+(\.?[0-9]+)?S)?)?$
+        - name: TSVAL
+          operator: not_matches_regex
+          value: ^-?P([0-9]+W)$
+    - all:
+        - name: TSPARMCD
+          operator: equal_to
+          value: RECSAC
+        - name: TSVAL
+          operator: not_matches_regex
+          value: ^-?P([0-9]+Y)?([0-9]+M)?([0-9]+D)?(T([0-9]+H)?([0-9]+M)?([0-9]+(\.?[0-9]+)?S)?)?$
+        - name: TSVAL
+          operator: not_matches_regex
+          value: ^-?P([0-9]+W)$
+
+Core:
+  Id: CORE-000353
+  Status: Published
+  Version: '1'
+Description: Dates or durations represented in TSVAL must be in the appropriate
+  ISO 8601 format.
+Executability: Fully Executable
+Outcome:
+  Message: Invalid date/datetime or duration format
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - TRIAL DESIGN
+  Domains:
+    Include:
+      - TS
+Sensitivity: Record

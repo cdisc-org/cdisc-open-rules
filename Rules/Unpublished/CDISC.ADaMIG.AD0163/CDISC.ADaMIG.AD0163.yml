@@ -1,0 +1,138 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: ADaMIG
+        References:
+          - Citations:
+              - Cited Guidance: ATOXGR of the baseline record identified by ABLFL.
+                Document: ADaMIG v1.0
+                Item: Table 3.2.5.2
+                Section: 3.2.5, Table 3.2.5.4
+            Criteria:
+              Logical Expression:
+                Condition: BTOXGR is present and ATOXGR is not present
+                Rule: BTOXGR is present and ATOXGR is present
+              Plain Language Expression: When BTOXGR is present, ATOXGR must also be present
+              Type: Failure
+            Origin: ADaM Conformance Rules
+            Release Notes: ''
+            Rule Identifier:
+              Id: '163'
+              Version: ''
+            Validator Rule Message: BTOXGR is present but ATOXGR is not present
+            Version: '5.0'
+        Version: '1.0'
+      - Name: ADaMIG
+        References:
+          - Citations:
+              - Cited Guidance: ATOXGR of the baseline record identified by ABLFL
+                Document: ADaMIG v1.1
+                Item: Table 3.3.5.2
+                Section: 3.3.5
+            Criteria:
+              Logical Expression:
+                Condition: BTOXGR is present and ATOXGR is not present
+                Rule: BTOXGR is present and ATOXGR is present
+              Plain Language Expression: When BTOXGR is present, ATOXGR must also be present
+              Type: Failure
+            Origin: ADaM Conformance Rules
+            Release Notes: ''
+            Rule Identifier:
+              Id: '163'
+              Version: ''
+            Validator Rule Message: BTOXGR is present but ATOXGR is not present
+            Version: '5.0'
+        Version: '1.1'
+
+      - Name: ADaMIG
+        References:
+          - Citations:
+              - Cited Guidance: ATOXGR of the baseline record identified by ABLFL
+                Document: ADaMIG v1.2
+                Item: Table 3.3.5.2
+                Section: 3.3.5
+            Criteria:
+              Logical Expression:
+                Condition: BTOXGR is present and ATOXGR is not present
+                Rule: BTOXGR is present and ATOXGR is present
+              Plain Language Expression: When BTOXGR is present, ATOXGR must also be present
+              Type: Failure
+            Origin: ADaM Conformance Rules
+            Release Notes: ''
+            Rule Identifier:
+              Id: '163'
+              Version: ''
+            Validator Rule Message: BTOXGR is present but ATOXGR is not present
+            Version: '5.0'
+        Version: '1.2'
+      - Name: ADaMIG
+        References:
+          - Citations:
+              - Cited Guidance: ATOXGR of the baseline record identified by ABLFL.
+                Document: ADaMIG
+                Item: ''
+                Section: 3.3.7, Table 3.3.7.1
+            Criteria:
+              Logical Expression:
+                Condition: BTOXGR is present and ATOXGR is not present
+                Rule: BTOXGR is present and ATOXGR is present
+              Plain Language Expression: When BTOXGR is present, ATOXGR must also be present
+              Type: Failure
+            Origin: ADaM Conformance Rules
+            Release Notes: ''
+            Rule Identifier:
+              Id: '163'
+              Version: '2'
+            Validator Rule Message: BTOXGR is present but ATOXGR is not present
+            Version: '5.0'
+        Version: '1.3'
+      - Name: ADaMIG-MD
+        References:
+          - Citations:
+              - Cited Guidance: The MDBDS supports analysis needs by adding SPDEVID as a
+                  required key variable and USUBJID as a conditionally required
+                  variable. See the BDS class for further details."
+                Document: ADaMIG-MD v1.0
+                Item: ''
+                Section: '3.1'
+            Criteria:
+              Logical Expression:
+                Condition: BTOXGR is present and ATOXGR is not present
+                Rule: BTOXGR is present and ATOXGR is present
+              Plain Language Expression: When BTOXGR is present, ATOXGR must also be present
+              Type: Failure
+            Origin: ADaM Conformance Rules
+            Release Notes: ''
+            Rule Identifier:
+              Id: '163'
+              Version: '2'
+            Validator Rule Message: BTOXGR is present but ATOXGR is not present
+            Version: '5.0'
+        Version: '1.0'
+
+Check:
+  all:
+    - name: BTOXGR
+      operator: exists
+    - name: ATOXGR
+      operator: not_exists
+
+Core:
+  Id: CDISC.ADaMIG.AD0163
+  Status: Draft
+  Version: '1'
+Description: ''
+Executability: Fully Executable
+Outcome:
+  Message: BTOXGR is present but ATOXGR is not present
+  Output Variables:
+    - USUBJID
+    - ABTOXGR
+    - BTOXGR
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+      - BASIC DATA STRUCTURE
+      - MEDICAL DEVICE OCCURRENCE DATA STRUCTURE
+Sensitivity: Record

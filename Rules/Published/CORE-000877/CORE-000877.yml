@@ -1,0 +1,86 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'A scheduled activity instance must only have a sub-timeline
+                  that is defined within the same study design as the scheduled
+                  activity instance.'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00107'
+              Version: '1'
+            Version: '1.0'
+        Version: '3.0'
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'A scheduled activity instance must only have a sub-timeline
+                  that is defined within the same study design as the scheduled
+                  activity instance.'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00107'
+              Version: '1'
+            Version: '1.0'
+        Version: '4.0'
+Check:
+  all:
+    - name: instanceType
+      operator: equal_to
+      value: 'ScheduledActivityInstance'
+    - name: rel_type
+      operator: equal_to
+      value: 'definition'
+    - name: timelineId
+      operator: non_empty
+    - name: $study_design_id_for_subtimeline
+      operator: not_equal_to
+      value: $study_design_id_for_scheduled_instance
+Core:
+  Id: 'CORE-000877'
+  Status: Published
+  Version: '1'
+Description: 'A scheduled activity instance must only have a sub-timeline that
+  is defined within the same study design as the scheduled activity instance.'
+Executability: Fully Executable
+Operations:
+  - domain: ScheduleTimeline
+    group:
+      - id
+      - rel_type
+    group_aliases:
+      - parent_id
+    id: $study_design_id_for_scheduled_instance
+    name: parent_id
+    operator: distinct
+  - domain: ScheduleTimeline
+    group:
+      - id
+      - rel_type
+    group_aliases:
+      - timelineId
+    id: $study_design_id_for_subtimeline
+    name: parent_id
+    operator: distinct
+Outcome:
+  Message: 'The scheduled activity instance has a sub-timeline that is not defined
+    within the same study design.'
+  Output Variables:
+    - parent_entity
+    - parent_id
+    - parent_rel
+    - id
+    - name
+    - timelineId
+    - $study_design_id_for_scheduled_instance
+    - $study_design_id_for_subtimeline
+Rule Type: Record Data
+Scope:
+  Entities:
+    Include:
+      - 'ScheduledActivityInstance'
+Sensitivity: Record

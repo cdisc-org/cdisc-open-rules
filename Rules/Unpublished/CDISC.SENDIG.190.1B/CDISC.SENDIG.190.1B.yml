@@ -1,0 +1,125 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      # ATTENTION: NOT APPLICABLE to SENDIG v.3.0! For SENDIG 3.0, only "%" is allowed.
+      # This is part 2 of the rule: i.e. that within OMTESTCD, OMSTRESU=% and OMSTRESU=RATIO may not be mixed
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Organ weight measurement ratios should be presented as pure
+                  ratios ('RATIO') or percentages (unit = %). Ratios and
+                  percentages should not be mixed.
+                Document: IG v3.1
+                Item: Assumption 3
+                Section: 6.3.9.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND190.1
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Organ weight measurement ratios should be presented as pure
+                  ratios ('RATIO') or percentages (unit = %). Ratios and
+                  percentages should not be mixed.
+                Document: IG v3.1.1
+                Item: Assumption 3
+                Section: 6.3.9.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND190.1
+              Version: '1'
+            Version: '5.0'
+        Version: 3.1.1
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: Organ weight measurement ratios should be presented as pure
+                  ratios ('RATIO') or percentages (unit = %). Ratios and
+                  percentages should not be mixed.
+                Document: IG v3.1
+                Item: Assumption 3
+                Section: 6.3.9.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND190.1
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: Organ weight measurement ratios should be presented as pure
+                  ratios ('RATIO') or percentages (unit = %). Ratios and
+                  percentages should not be mixed.
+                Document: IG v3.1.1
+                Item: Assumption 3
+                Section: 6.3.9.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND190.1
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: Organ weight measurement ratios should be presented as pure
+                  ratios ('RATIO') or percentages (unit = %). Ratios and
+                  percentages should not be mixed.
+                Document: IG v3.1.1
+                Item: Assumption 3
+                Section: 6.3.9.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND190.1
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+Check:
+  all:
+    # Precondition SEND190.1:
+    # Rule is for OMTESTCD=OWBR,OWBW,OWHT
+    - any:
+        - name: OMTESTCD
+          operator: equal_to
+          value: OWBR
+        - name: OMTESTCD
+          operator: equal_to
+          value: OWBW
+        - name: OMTESTCD
+          operator: equal_to
+          value: OWHT
+    # Part: Ratios and percentages should not be mixed.
+    - all:
+        - name: OMSTRESU
+          operator: is_inconsistent_across_dataset
+          value:
+            - OMTESTCD
+Core:
+  Id: CDISC.SENDIG.190.1B
+  Status: Draft
+  Version: '1'
+Description: "Second part of the rule: trigger error when, for the given test,
+  the value of OMSTRESU is inconsistent  in the dataset when OMTESTCD is either
+  OWBR, OWBW or OWHT"
+Executability: Fully Executable
+Outcome:
+  Message: The organ weight standardized measurement unit must be consistent for
+    the given OMTESTCD.
+  Output Variables:
+    - OMTESTCD
+    - OMSTRESC
+    - OMSTRESN
+    - OMSTRESU
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - OM
+Sensitivity: Record

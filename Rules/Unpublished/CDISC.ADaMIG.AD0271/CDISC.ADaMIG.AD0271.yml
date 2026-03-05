@@ -1,0 +1,228 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: ADaMIG-MD
+        References:
+          - Citations:
+              - Cited Guidance: The MDBDS supports analysis needs by adding SPDEVID as a
+                  required key variable and allowing USUBJID as a conditionally
+                  required variable. See the OCCDS class for further details.
+                Document: ADaMIG-MD v1.0
+                Item: ''
+                Section: '3.1'
+            Criteria:
+              Logical Expression:
+                Condition: ''
+                Rule: ''
+              Plain Language Expression: ''
+              Type: Failure
+            Origin: ADaM Conformance Rules
+            Release Notes: ''
+            Rule Identifier:
+              Id: '271'
+              Version: '2'
+            Validator Rule Message: ''
+            Version: '5.0'
+        Version: '1.3'
+
+      - Name: OCCDS
+        References:
+          - Citations:
+              - Cited Guidance: <-Code List / Controlled Terms have allowable values of':'' "Y"
+                Document: OCCDS v1.1
+                Item: 'Table 3.2.5.5'
+                Section: '3.2.5'
+            Criteria:
+              Logical Expression:
+                Condition: ''
+                Rule: ''
+              Plain Language Expression: ''
+              Type: Failure
+            Origin: ADaM Conformance Rules
+            Release Notes: ''
+            Rule Identifier:
+              Id: '271'
+              Version: '2'
+            Validator Rule Message: ''
+            Version: '5.0'
+
+          - Citations:
+              - Cited Guidance: <- Code List / Controlled Terms have allowable values of':'' "Y"
+                Document: OCCDS v1.0
+                Item: 'Table 3.2.5.5'
+                Section: '3.2.5'
+            Criteria:
+              Logical Expression:
+                Condition: ''
+                Rule: ''
+              Plain Language Expression: ''
+              Type: Failure
+            Origin: ADaM Conformance Rules
+            Release Notes: ''
+            Rule Identifier:
+              Id: '271'
+              Version: '2'
+            Validator Rule Message: ''
+            Version: '5.0'
+        Version: '1.3'
+
+      - Name: OCCDS
+        References:
+          - Citations:
+              - Cited Guidance: <-Code List / Controlled Terms have allowable values of':'' "Y"
+                Document: OCCDS v1.1
+                Item: 'Table 3.2.5.5'
+                Section: '3.2.5'
+            Criteria:
+              Logical Expression:
+                Condition: ''
+                Rule: ''
+              Plain Language Expression: ''
+              Type: Failure
+            Origin: ADaM Conformance Rules
+            Release Notes: ''
+            Rule Identifier:
+              Id: '271'
+              Version: '1'
+            Validator Rule Message: ''
+            Version: '5.0'
+
+          - Citations:
+              - Cited Guidance: <-Code List / Controlled Terms have allowable values of':'' "Y"
+                Document: OCCDS v1.0
+                Item: 'Table 3.2.5.5'
+                Section: '3.2.5'
+            Criteria:
+              Logical Expression:
+                Condition: ''
+                Rule: ''
+              Plain Language Expression: ''
+              Type: Failure
+            Origin: ADaM Conformance Rules
+            Release Notes: ''
+            Rule Identifier:
+              Id: '271'
+              Version: '1'
+            Validator Rule Message: ''
+            Version: '5.0'
+        Version: '1.2'
+
+      - Name: OCCDS
+        References:
+          - Citations:
+              - Cited Guidance: <-Code List / Controlled Terms have allowable values of':'' "Y"
+                Document: OCCDS v1.1
+                Item: 'Table 3.2.5.5'
+                Section: '3.2.5'
+            Criteria:
+              Logical Expression:
+                Condition: ''
+                Rule: ''
+              Plain Language Expression: ''
+              Type: Failure
+            Origin: ADaM Conformance Rules
+            Release Notes: ''
+            Rule Identifier:
+              Id: '271'
+              Version: '1'
+            Validator Rule Message: ''
+            Version: '5.0'
+
+          - Citations:
+              - Cited Guidance: <-Code List / Controlled Terms have allowable values of':'' "Y"
+                Document: OCCDS v1.1
+                Item: 'Table 3.2.5.5'
+                Section: '3.2.5'
+            Criteria:
+              Logical Expression:
+                Condition: ''
+                Rule: ''
+              Plain Language Expression: ''
+              Type: Failure
+            Origin: ADaM Conformance Rules
+            Release Notes: ''
+            Rule Identifier:
+              Id: '271'
+              Version: '1'
+            Validator Rule Message: ''
+            Version: '5.0'
+
+        Version: '1.1'
+
+      - Name: OCCDS
+        References:
+          - Citations:
+              - Cited Guidance: <-Code List / Controlled Terms have allowable values of':'' "Y"
+                Document: OCCDS v1.1
+                Item: 'Table 3.2.5.5'
+                Section: '3.2.5'
+            Criteria:
+              Logical Expression:
+                Condition: ''
+                Rule: ''
+              Plain Language Expression: ''
+              Type: Failure
+            Origin: ADaM Conformance Rules
+            Release Notes: ''
+            Rule Identifier:
+              Id: '271'
+              Version: '1'
+            Validator Rule Message: ''
+            Version: '5.0'
+
+      - Name: OCCDS
+        References:
+          - Citations:
+              - Cited Guidance: <-Code List / Controlled Terms have allowable values of':'' "Y"
+                Document: OCCDS v1.1
+                Item: 'Table 3.2.5.5'
+                Section: '3.2.5'
+            Criteria:
+              Logical Expression:
+                Condition: ''
+                Rule: ''
+              Plain Language Expression: ''
+              Type: Failure
+            Origin: ADaM Conformance Rules
+            Release Notes: ''
+            Rule Identifier:
+              Id: '271'
+              Version: '1'
+            Validator Rule Message: ''
+            Version: '5.0'
+        Version: '1.0'
+
+Check:
+  all:
+    - name: FUPFL
+      operator: is_not_contained_by
+      value:
+        - 'Y'
+        - ''
+  #  - name: FUPFL
+  #    operator: non_empty
+  #  - name: FUPFL
+  #    operator: not_equal_to
+  #    value: 'Y'
+Core:
+  Id: CDISC.ADaMIG.AD0271
+  Status: Draft
+  Version: '1'
+Description: ''
+Executability: Fully Executable
+Outcome:
+  Message: FUPFL not equal to Y or null
+  Output Variables:
+    - USUBJID
+    - SUBJID
+    - FUPFL
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+      - OCCURRENCE DATA STRUCTURE
+      - MEDICAL DEVICE OCCURRENCE DATA STRUCTURE
+  Subclasses:
+    Include:
+      - ALL
+Sensitivity: Record

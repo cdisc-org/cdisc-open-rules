@@ -1,0 +1,68 @@
+# Variable: RSDRFVL
+# Condition: Record is derived in a data collection tool.
+# Rule: RSDRVFL = 'Y'
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        Version: '3.4'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0563
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: Used to indicate a derived record (e.g., a record
+                  that represents the average of other records such as a computed
+                  baseline). Should be "Y" or null.
+                Document: SDTMIG v3.4
+                Section: Section 6.3.9.3
+      - Name: SDTMIG
+        Version: '3.3'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0563
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: The RS domain is intended for collected data. This
+                  includes records derived by the investigator or with a data collection
+                  tool, but not sponsor-derived records. Sponsor-derived records and
+                  results should be provided in an analysis dataset. For example,
+                  BEST Response assessment records must be included in the RS domain
+                  only when provided by an assessor, not the sponsor. a. Totals and
+                  sub-totals in clinical classification measures are considered collected
+                  data if recorded by an assessor. If these totals are operationally
+                  derived through a data collection tool, such as an eCRF or ePRO
+                  device, then RSDRVL should be "Y".
+                Document: IG v3.3
+                Item: Assumption 4
+                Section: 6.3.13.3
+Check:
+  all:
+    - name:
+      operator:
+    - name: RSDRVFL
+      operator: not_equal_to
+      value: Y
+Core:
+  Id: CDISC.SDTMIG.CG0563
+  Status: Draft
+  Version: '1'
+Description: Raise an error when record is derived in a data collection tool and RSDRVFL
+  is not equal to "Y"
+Executability: Fully Executable
+Outcome:
+  Message: Record is derived in a data collection tool and RSDRVFL is not equal to
+    "Y"
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - RS
+Sensitivity: Record

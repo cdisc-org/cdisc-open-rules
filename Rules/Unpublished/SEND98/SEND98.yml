@@ -1,0 +1,47 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Unique identifier for a study site within a submission. Use only
+                  if subjects are housed at different sites.
+                Document: IG v3.0
+                Section: 5.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND98
+              Version: '1'
+            Version: '5.0'
+        Version: '3.0'
+# SITEID should only be used if the in-life portion of the study is conducted at different sites
+# When in-life portion is conducted at a single site, SITEID must me null
+Check:
+  all:
+    # With thanks to Richard Marshall for the suggestion in cdisccore.slack
+    - name: SITEID
+      operator: non_empty
+    - name: SITEID
+      operator: has_same_values
+Core:
+  Status: Draft
+  Version: '1'
+Description: ''
+Executability: Fully Executable
+Operations:
+  - domain: DM
+    id: $distinct_siteid
+    name: SITEID
+    operator: distinct
+Outcome:
+  Message: 'SITEID may only be populated when there is more than one site where
+    the in-life portion of the study was conducted'
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - DM
+Sensitivity: Dataset

@@ -1,0 +1,57 @@
+# Variable: SPTOBID
+# Rule: SPTOBID in TO.SPTOBID
+Authorities:
+  - Organization: 'CDISC'
+    Standards:
+      - Name: 'TIG'
+        References:
+          - Citations:
+              - Cited Guidance: SPTOBID is used in the Product Design (PD), Tobacco Ingredients
+                  (IT), Non-Tobacco Ingredients (IN), and Ingredient Quantities
+                  by Component (IQ) domains, as well as any domain in the
+                  general observation classes where there are records pertaining
+                  to the tobacco product it identifies/describes (e.g., PT).
+                  Every value of SPTOBID in any dataset must correspond to a
+                  product described in the TO dataset.
+                Document: 'TIG 1.0'
+                Item: 'assumption 1b'
+                Section: '2.8.8.1'
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: 'TIG0002'
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: SPTOBID
+      operator: is_not_contained_by
+      value: $to_sptobid
+Core:
+  Status: Published
+  Version: '1'
+  Id: CORE-000660
+Description: Part A - Raise an error when the value of SPTOBID in the dataset
+  does not correspond to a SPTOBID value present in TO.
+Executability: Fully Executable
+Operations:
+  - domain: TO
+    id: $to_sptobid
+    name: SPTOBID
+    operator: distinct
+Outcome:
+  Message: SPTOBID value in the dataset does not correspond to a SPTOBID value in TO.
+  Output Variables:
+    - SPTOBID
+    - $to_sptobid
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+  Use Case: INDH, PROD
+Sensitivity: Record

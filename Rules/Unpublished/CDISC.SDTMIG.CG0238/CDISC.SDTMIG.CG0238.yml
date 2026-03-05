@@ -1,0 +1,141 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: "\"Dates are generally used only as timing variables, ... but
+                  there may be occasions when it may be preferable\ 
+
+                  \ to model a date as a result (--ORRES) in a
+                  Findings dataset. ... this situation may occasionally occur
+                  when\ 
+
+                  \ a) a group of questions (each of which has
+                  a date response) is asked and analyzed together; or b) the
+                  Event(s)\ 
+
+                  \ and Intervention(s) in question are not
+                  medically significant (often the case when included in
+                  questionnaires).\ 
+
+                  \ Consider the following cases - Calculated
+                  due date, Date of last day on the job, Date of high school
+                  graduation.\ 
+
+                  \ One approach to modeling these data would
+                  be to place the text of the question in --TEST and the
+                  response to the\ 
+
+                  \ question, a date represented in ISO 8601
+                  format, in --ORRES and --STRESC as long as these date results
+                  do not\ 
+
+                  \ contain the dates of medically significant
+                  events or interventions. Again, use extreme caution when
+                  storing dates\ 
+
+                  \ as the results of Findings. Remember, in
+                  most cases, these dates should be timing variables associated
+                  with a\ 
+
+                  \ record in an Intervention or Events
+                  dataset.\""
+                Document: IG v3.4
+                Section: 4.4.9
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0238
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: 'Dates are generally used only as timing variables, ... but
+                  there may be occasions when it may be preferable to model a
+                  date as a result (--ORRES) in a Findings dataset. ... this
+                  situation may occasionally occur when a) a group of questions
+                  (each of which has a date response) is asked and analyzed
+                  together; or b) the Event(s) and Intervention(s) in question
+                  are not medically significant (often the case when included in
+                  questionnaires). Consider the following cases: Calculated due
+                  date; Date of last day on the job; Date of high school
+                  graduation. One approach to modeling these data would be to
+                  place the text of the question in --TEST and the response to
+                  the question, a date represented in ISO 8601 format, in
+                  --ORRES and --STRESC as long as these date results do not
+                  contain the dates of medically significant events or
+                  interventions. Again, use extreme caution when storing dates
+                  as the results of Findings. Remember, in most cases, these
+                  dates should be timing variables associated with a record in
+                  an Intervention or Events dataset.'
+                Document: IG v3.2
+                Section: 4.1.4.9
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0238
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: 'Dates are generally used only as timing variables, ... but
+                  there may be occasions when it may be preferable to model a
+                  date as a result (--ORRES) in a Findings dataset. ... this
+                  situation may occasionally occur when a) a group of questions
+                  (each of which has a date response) is asked and analyzed
+                  together; or b) the Event(s) and Intervention(s) in question
+                  are not medically significant (often the case when included in
+                  questionnaires). Consider the following cases: Calculated due
+                  date, Date of last day on the job, Date of high school
+                  graduation. One approach to modeling these data would be to
+                  place the text of the question in --TEST and the response to
+                  the question, a date represented in ISO 8601 format, in
+                  --ORRES and --STRESC as long as these date results do not
+                  contain the dates of medically significant events or
+                  interventions. Again, use extreme caution when storing dates
+                  as the results of Findings. Remember, in most cases, these
+                  dates should be timing variables associated with a record in
+                  an Intervention or Events dataset.'
+                Document: IG v3.3
+                Section: 4.4.9
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0238
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+# Variable: --ORRES
+# Condition: Date Value
+# Rule: --ORRES in ISO 8601 date format
+Check:
+  all:
+    - any:
+        - name: --TEST
+          operator: contains_case_insensitive
+          value: date
+        - name: --TEST
+          operator: contains_case_insensitive
+          value: time
+    - name: --ORRES
+      operator: invalid_date
+Core:
+  Id: CDISC.SDTMIG.CG0238
+  Status: Draft
+  Version: '1'
+Description: Where -ORRES is a date or time, it must be entered in an ISO 8601 format
+Executability: Partially Executable
+# this rule is actually not executable
+Outcome:
+  Message: --ORRES date/time value is not in ISO 8601 date format
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record

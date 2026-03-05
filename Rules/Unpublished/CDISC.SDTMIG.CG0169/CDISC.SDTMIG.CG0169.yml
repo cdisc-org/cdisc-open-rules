@@ -1,0 +1,78 @@
+# Variable: COVAL
+# Condition: No comment > 200 characters
+# Rule: COVALn not present in dataset
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        Version: '3.4'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0169
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: 'When the comment text is longer than 200 characters,
+                  the first 200 characters of the comment will be in COVAL, the next
+                  200 in COVAL1, and additional text stored as needed to COVALn. See
+                  example, Rows 3-4. '
+                Document: IG v3.4
+                Item: Assumption 3
+                Section: '5.1'
+      - Name: SDTMIG
+        Version: '3.2'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0169
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: When the comment text is longer than 200 characters,
+                  the first 200 characters of the comment will be in COVAL, the next
+                  200 in COVAL1, and additional text stored as needed to COVALn. See
+                  example, Rows 3-4.
+                Document: IG v3.2
+                Item: Assumption 3
+                Section: '5'
+      - Name: SDTMIG
+        Version: '3.3'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0169
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: When the comment text is longer than 200 characters,
+                  the first 200 characters of the comment will be in COVAL, the next
+                  200 in COVAL1, and additional text stored as needed to COVALn. See
+                  example, Rows 3-4.
+                Document: IG v3.3
+                Item: Assumption 3
+                Section: '5.1'
+Check:
+  all:
+    - name: COVAL1
+      operator: exists
+    - name: COVAL1
+      operator: empty
+Core:
+  Id: CDISC.SDTMIG.CG0169
+  Status: Draft
+  Version: '1'
+Description: Trigger error when there are no comments greater than 200 characters
+  and COVALn is present
+Executability: Fully Executable
+Outcome:
+  Message: COVALn is present in dataset when no comments are greater than 200 characters
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - CO
+Sensitivity: Dataset

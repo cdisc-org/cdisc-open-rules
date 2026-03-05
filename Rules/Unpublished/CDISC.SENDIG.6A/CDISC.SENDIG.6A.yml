@@ -1,0 +1,121 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          # IMPORTANT TO PROVIDE THE RIGHT TYPE OF RULE CHECK HERE!
+          - Citations:
+              - Cited Guidance: Metadata in Define-XML document should match both the SENDIG
+                  label and the label in the .xpt datasets
+                Document: SENDIG v3.1
+                Section: 3.2.2 | 4.21
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND6
+              Version: '1'
+            Version: '5.0'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          # IMPORTANT TO PROVIDE THE RIGHT TYPE OF RULE CHECK HERE!
+          - Citations:
+              - Cited Guidance: Metadata in Define-XML document should match both the SENDIG
+                  label and the label in the .xpt datasets
+                Document: SENDIG v3.1
+                Section: 3.2.2 | 4.21
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND6
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          # IMPORTANT TO PROVIDE THE RIGHT TYPE OF RULE CHECK HERE!
+          - Citations:
+              - Cited Guidance: Metadata in Define-XML document should match both the SENDIG
+                  label and the label in the .xpt datasets
+                Document: SENDIG v3.1
+                Section: 3.2.2 | 4.21
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND6
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1.1'
+      - Name: SENDIG-DART
+        References:
+          # IMPORTANT TO PROVIDE THE RIGHT TYPE OF RULE CHECK HERE!
+          - Citations:
+              - Cited Guidance: Metadata in Define-XML document should match both the SENDIG
+                  label and the label in the .xpt datasets
+                Document: SENDIG v3.1
+                Section: 3.2.2 | 4.21
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND6
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          # IMPORTANT TO PROVIDE THE RIGHT TYPE OF RULE CHECK HERE!
+          - Citations:
+              - Cited Guidance: Metadata in Define-XML document should match both the SENDIG
+                  label and the label in the .xpt datasets
+                Document: SENDIG v3.1.1
+                Section: 3.2.2 | 4.21
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND6
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+      - Name: SENDIG-GENETOX
+        References:
+          # IMPORTANT TO PROVIDE THE RIGHT TYPE OF RULE CHECK HERE!
+          - Citations:
+              - Cited Guidance: Metadata in Define-XML document should match both the SENDIG
+                  label and the label in the .xpt datasets
+                Document: SENDIG v3.1.1
+                Section: 3.2.2 | 4.21
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND6
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+Check:
+  all:
+    # Precondition: define variable name = library variable name
+    - name: define_variable_name
+      operator: equal_to
+      value: library_variable_name
+    - name: define_variable_label
+      operator: not_equal_to
+      # Look up in the CDISC-Library API - see https://github.com/cdisc-org/cdisc-rules-engine/issues/243
+      value: library_variable_label
+Core:
+  Id: CDISC.SENDIG.6A
+  Status: Draft
+  Version: '1'
+Description: 'Raise an error when the variable label in the define.xml does not
+  correspond to the variable label in the Implementation Guide. NOTE: This rule
+  has been split in two parts: A. check define variable label against IG label
+  B. check define variable label against the label in the dataset '
+Executability: Fully Executable
+Outcome:
+  Message: The label of the variable is incorrect
+  Output Variables:
+    - define_variable_name
+    - define_variable_label
+    - library_variable_label
+Rule Type: Define Item Metadata Check against Library Metadata
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record

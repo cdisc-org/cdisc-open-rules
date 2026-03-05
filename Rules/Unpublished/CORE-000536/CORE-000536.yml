@@ -1,0 +1,80 @@
+# Variable: ARMCD
+# Condition: 
+# Rule: ARMCD is a valid planned arm code
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: A trial design domain that contains each planned arm in the
+                  trial.
+                Document: IG 3.4
+                Item: ''
+                Section: 7.2.1 TA
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0415
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: The trial arms table describes each planned arm in the trial.
+                Document: IG v3.2
+                Section: '7.2'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0415
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: A trial design domain that contains each planned arm in the
+                  trial.
+                Document: IG v3.3
+                Section: 7.2.1
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0415
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: A trial design domain that contains each planned arm in the
+                  trial.
+                Document: TIG 1.0
+                Item: ''
+                Section: 2.8.10.27
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0570
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+Core:
+  Id: CORE-000536
+  Status: Draft
+  Version: '1'
+Description: Verify that ARMCD in TA domain is valid planned arm code
+Executability: Not Executable
+Outcome:
+  Message: Length of ARMCD must be less than or equal to 20 characters
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - TRIAL DESIGN
+  Domains:
+    Include:
+      - TA
+  Use Case: INDH
+Sensitivity: Record

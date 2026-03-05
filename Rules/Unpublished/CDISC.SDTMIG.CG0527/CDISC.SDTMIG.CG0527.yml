@@ -1,0 +1,62 @@
+# Variable: RACE
+# Condition: Mulitple races collected and primary race not specified
+# Rule: RACE = 'MULTIPLE'
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        Version: '3.4'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0527
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: If multiple races are collected, then the value of
+                  RACE should be “MULTIPLE” and the additional information will be
+                  included in the Supplemental Qualifiers dataset.
+                Document: IG v3.4
+                Item: Assumption 6
+                Section: '5.2'
+      - Name: SDTMIG
+        Version: '3.3'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0527
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: If multiple races were collected and one was designated
+                  as primary; RACE in DM should be the primary race and additional
+                  races should be reported in SUPPDM
+                Document: IG v3.3
+                Item: Assumption 6
+                Section: '5.2'
+Check:
+  all:
+    - name:
+      operator:
+    - name: RACE
+      operator: not_equal_to
+      value: MULTIPLE
+Core:
+  Id: CDISC.SDTMIG.CG0527
+  Status: Draft
+  Version: '1'
+Description: Trigger error when RACE does not equal "MULTIPLE" when multiple races
+  collected and primary race not specified
+Executability: Fully Executable
+Outcome:
+  Message: RACE does not equal "MULTIPLE" when multiple races collected and primary
+    race not specified
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - DM
+Sensitivity: Record

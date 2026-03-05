@@ -1,0 +1,127 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: One record per finding per specimen per subject
+                Document: SENDIG v3.0
+                Section: 6.3.7
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND175
+              Version: '1'
+            Version: '5.0'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: One record per finding per specimen per subject
+                Document: SENDIG v3.1
+                Section: 6.3.7
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND175
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: One record per finding per specimen per subject
+                Document: SENDIG v3.1.1
+                Section: 6.3.7
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND175
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: One record per finding per specimen per subject
+                Document: SENDIG v3.1
+                Section: 6.3.7
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND175
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: One record per finding per specimen per subject
+                Document: SENDIG v3.1.1
+                Section: 6.3.7
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND175
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: One record per finding per specimen per subject
+                Document: SENDIG v3.1.1
+                Section: 6.3.7
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND175
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: ma.xpt, Macroscopic Findings - Findings. One record per finding
+                  per specimen per subject, Tabulation.
+                Document: TIG v1.0
+                Item: Domain Table Header
+                Section: 2.8.9.15
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0104
+              Version: '1'
+            Version: '1.0'
+        Substandard: SEND
+        Version: '1.0'
+Check:
+  all:
+    - name: MAORRES
+      operator: non_empty
+    - name: MASPEC
+      operator: non_empty
+    - name: MAORRES
+      operator: is_not_unique_set
+      value:
+        - USUBJID
+        - MATESTCD
+        - MASPEC
+Core:
+  Id: CORE-000495
+  Status: Published
+  Version: '1'
+Description: Raise an error when there is more than one record present for any
+  particular Macroscopic Finding test and result in the MA Domain, within a
+  subject.
+Executability: Fully Executable
+Outcome:
+  Message: The Macroscopic Finding test result is not unique for this subject and test.
+  Output Variables:
+    - USUBJID
+    - MATESTCD
+    - MAORRES
+    - MASPEC
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - MA
+  Use Case: NONCLIN
+Sensitivity: Record

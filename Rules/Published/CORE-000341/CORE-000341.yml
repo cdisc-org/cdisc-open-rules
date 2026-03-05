@@ -1,0 +1,124 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: When --ORRES is populated, --STRESC must also be populated,
+                  regardless of whether the data values are character or numeric
+                Document: IG v3.0
+                Section: 4.5.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND87
+              Version: '1'
+            Version: '5.0'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: When --ORRES is populated, --STRESC must also be populated,
+                  regardless of whether the data values are character or numeric
+                Document: IG v3.1
+                Section: 4.5.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND87
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: When --ORRES is populated, --STRESC must also be populated,
+                  regardless of whether the data values are character or numeric
+                Document: IG v3.1.1
+                Section: 4.5.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND87
+              Version: '1'
+            Version: '5.0'
+        Version: 3.1.1
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: When --ORRES is populated, --STRESC must also be populated,
+                  regardless of whether the data values are character or numeric
+                Document: IG v3.1
+                Section: 4.5.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND87
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: When --ORRES is populated, --STRESC must also be populated,
+                  regardless of whether the data values are character or numeric
+                Document: IG v3.1.1
+                Section: 4.5.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND87
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: When --ORRES is populated, --STRESC must also be populated,
+                  regardless of whether the data values are character or numeric
+                Document: IG v3.1.1
+                Section: 4.5.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND87
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: When --ORRES is populated, --STRESC must also be populated,
+                  regardless of whether the data values are character or
+                  numeric.
+                Document: TIG v1.0
+                Item: Text
+                Section: 2.8.7.1
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0279
+              Version: '1'
+            Version: '1.0'
+        Substandard: SEND
+        Version: '1.0'
+Check:
+  all:
+    - name: --ORRES
+      operator: non_empty
+    - name: --STRESC
+      operator: empty
+Core:
+  Id: CORE-000341
+  Status: Published
+  Version: '1'
+Description: When --ORRES is populated, --STRESC must also be populated.
+Executability: Fully Executable
+Outcome:
+  Message: --STRESC must be populated as --ORRES is populated.
+  Output Variables:
+    - --ORRES
+    - --STRESC
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - ALL
+  Use Case: NONCLIN
+Sensitivity: Record

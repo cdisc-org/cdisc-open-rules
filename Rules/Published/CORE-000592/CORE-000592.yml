@@ -1,0 +1,50 @@
+# Variable: TOVAL, TOPARMCD
+# Condition: TOPARMCD = TBPRDCAT
+# Rule: TOVAL ^= null
+Authorities:
+  - Organization: 'CDISC'
+    Standards:
+      - Name: 'TIG'
+        References:
+          - Citations:
+              - Cited Guidance: A minimally meaningful TO dataset must include at least the
+                  parameter for tobacco product category (TOPARMCD = TPRDCAT)
+                Document: 'TIG 1.0'
+                Item: 'assumption 2'
+                Section: '2.8.8.1'
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: 'TIG0004'
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: TOPARMCD
+      operator: equal_to
+      value: TBPRDCAT
+    - name: TOVAL
+      operator: empty
+Core:
+  Status: Published
+  Version: '1'
+  Id: CORE-000592
+Description: Raise an error when TOVAL is not completed for records where
+  TOPARMCD equals TBPRDCAT.
+Executability: Fully Executable
+Outcome:
+  Message: TOVAL is not completed when TOPARMCD = TBPRDCAT.
+  Output Variables:
+    - TOPARMCD
+    - TOVAL
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - STUDY REFERENCE
+  Domains:
+    Include:
+      - TO
+  Use Case: PROD
+Sensitivity: Record

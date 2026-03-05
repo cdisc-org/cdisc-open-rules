@@ -1,0 +1,52 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'If a geographic scope type is global then no code is expected
+                  to specify the specific area within scope while if it is not
+                  global then a code is expected to specify the specific area
+                  within scope.'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00261'
+              Version: '1'
+            Version: '1.0'
+        Version: '4.0'
+Check: |-
+  **[instanceType="GeographicScope" and (type.code="C68846")=($exists(code) and code)].
+    {
+      "instanceType": instanceType,
+      "id": id,
+      "path": _path,
+      "type.code": type.code,
+      "type.decode": type.decode,
+      "code.standardCode.code": code.standardCode.code,
+      "code.standardCode.decode": code.standardCode.decode
+    }
+Core:
+  Id: 'CORE-001042'
+  Status: Published
+  Version: '1'
+Description: 'If a geographic scope type is global then no code is expected to
+  specify the specific area within scope while if it is not global then a code
+  is expected to specify the specific area within scope.'
+Executability: Partially Executable - Possible Overreporting
+Outcome:
+  Message: 'The geographic scope is global (type.code = C68846) and a code has
+    been specified for the specific area or the geographic scope is not global
+    (type.code is not C68846) and no code has been specified for the specific
+    area.'
+  Output Variables:
+    - type.code
+    - type.decode
+    - code.standardCode.code
+    - code.standardCode.decode
+Rule Type: JSONata
+Scope:
+  Entities:
+    Include:
+      - 'GeographicScope'
+Sensitivity: Record

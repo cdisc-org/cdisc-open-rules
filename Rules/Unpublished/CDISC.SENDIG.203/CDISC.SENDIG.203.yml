@@ -1,0 +1,147 @@
+Authorities:
+  - Organization: 'CDISC'
+    Standards:
+      - Name: 'SENDIG'
+        References:
+          - Citations:
+              - Cited Guidance: 'TFDETECT: If the tumor was detected as a palpable mass, then
+                  TFDETECT is based off the PM domain variable PMDTC (Start
+                  Date/Time of Observation). This is calculated as (PMDTC -
+                  EXSTDTC) + 1.'
+                Document: 'SENDIG v3.0'
+                Item: 'Assumption 3.b'
+                Section: '6.3.14.1'
+            Origin: 'SEND Conformance Rules'
+            Rule Identifier:
+              Id: 'SEND203'
+              Version: '2'
+            Version: '5.0'
+        Version: '3.0'
+      - Name: 'SENDIG'
+        References:
+          - Citations:
+              - Cited Guidance: 'TFDETECT: If the tumor was detected as a palpable mass, then
+                  TFDETECT is based off the PM domain variable PMDTC (Start
+                  Date/Time of Observation). This is calculated as (PMDTC -
+                  EXSTDTC) + 1.'
+                Document: 'SENDIG v3.0'
+                Item: 'Assumption 4.b'
+                Section: '6.3.14.1'
+            Origin: 'SEND Conformance Rules'
+            Rule Identifier:
+              Id: 'SEND203'
+              Version: '2'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: 'SENDIG'
+        References:
+          - Citations:
+              - Cited Guidance: 'TFDETECT: If the tumor was detected as a palpable mass, then
+                  TFDETECT is based off the PM domain variable PMDTC (Start
+                  Date/Time of Observation). This is calculated as (PMDTC -
+                  EXSTDTC) + 1.'
+                Document: 'SENDIG v3.0'
+                Item: 'Assumption 4.b'
+                Section: '6.3.14.1'
+            Origin: 'SEND Conformance Rules'
+            Rule Identifier:
+              Id: 'SEND203'
+              Version: '2'
+            Version: '5.0'
+        Version: '3.1.1'
+      - Name: 'SENDIG-DART'
+        References:
+          - Citations:
+              - Cited Guidance: 'TFDETECT: If the tumor was detected as a palpable mass, then
+                  TFDETECT is based off the PM domain variable PMDTC (Start
+                  Date/Time of Observation). This is calculated as (PMDTC -
+                  EXSTDTC) + 1.'
+                Document: 'SENDIG v3.0'
+                Item: 'Assumption 4.b'
+                Section: '6.3.14.1'
+            Origin: 'SEND Conformance Rules'
+            Rule Identifier:
+              Id: 'SEND203'
+              Version: '2'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: 'SENDIG-DART'
+        References:
+          - Citations:
+              - Cited Guidance: 'TFDETECT: If the tumor was detected as a palpable mass, then
+                  TFDETECT is based off the PM domain variable PMDTC (Start
+                  Date/Time of Observation). This is calculated as (PMDTC -
+                  EXSTDTC) + 1.'
+                Document: 'SENDIG v3.0'
+                Item: 'Assumption 4.b'
+                Section: '6.3.14.1'
+            Origin: 'SEND Conformance Rules'
+            Rule Identifier:
+              Id: 'SEND203'
+              Version: '2'
+            Version: '5.0'
+        Version: '1.2'
+      - Name: 'SENDIG-GENETOX'
+        References:
+          - Citations:
+              - Cited Guidance: 'TFDETECT: If the tumor was detected as a palpable mass, then
+                  TFDETECT is based off the PM domain variable PMDTC (Start
+                  Date/Time of Observation). This is calculated as (PMDTC -
+                  EXSTDTC) + 1.'
+                Document: 'SENDIG v3.0'
+                Item: 'Assumption 4.b'
+                Section: '6.3.14.1'
+            Origin: 'SEND Conformance Rules'
+            Rule Identifier:
+              Id: 'SEND203'
+              Version: '2'
+            Version: '5.0'
+        Version: '1.0'
+Check:
+  all:
+    - name: PMDTC
+      operator: is_complete_date
+    - name: EXSTDTC
+      operator: is_complete_date
+    - name: TFDETECT # checking failure criteria
+      operator: not_equal_to
+      value: 2 #$val_dy # this is created in the operations statement that follows
+  # Questions Jozef (Discussion with Christy Kubin):
+  # I presume we must add that PMSPID = TFSPID
+  # Does this assume that all the records with a specific PMSPID all have the same 
+  # TFDTC (or at least the data part of it)?
+
+Core:
+  Id: CDISC.SENDIG.203
+  Status: Draft
+  Version: '1'
+Description: 'Raise an error when TFDETECT is not equal to the date portion of
+  PMDTC - date portion of EXSTDTC + 1.'
+Executability: Fully Executable
+Match Datasets:
+  - Keys:
+      - USUBJID
+    Name: PM
+  - Keys:
+      - USUBJID
+    Name: EX
+Operations:
+  - id: $val_dy
+    name: --DTC
+    operator: dy # does dy op take into acct +1?
+Outcome:
+  Message: 'TFDETECT is not equal to (PMDTC - EXSTDTC) + 1'
+  Output Variables:
+    #- $val_dy
+    - TFDETECT
+    - PMDTC
+    - EXSTDTC
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - TF
+Sensitivity: Record

@@ -1,0 +1,37 @@
+Authorities:
+  - Organization: 'CDISC'
+    Standards:
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: GVSCAT is always populated with the analysis intention.
+                Document: SENDIG-DART
+                Section: 5.1.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND411
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+Check:
+  # GVSCAT must be populated with the analysis intention
+  all:
+    - name: 'GVSCAT'
+      operator: empty
+Core:
+  Id: CDISC.SENDIG.SEND411
+  Status: Draft
+  Version: '1'
+Description: 'GVSCAT must be populated with the analysis intention'
+Executability: Partially Executable - Possible Underreporting
+Outcome:
+  Message: 'GVSCAT must be populated with the analysis intention'
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - GV
+Sensitivity: Record

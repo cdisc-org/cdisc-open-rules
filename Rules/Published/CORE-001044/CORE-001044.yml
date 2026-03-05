@@ -1,0 +1,135 @@
+Authorities:
+  - Organization: FDA
+    Standards:
+      # Applicable only to SENDIG-3.0, 3.1, 3.1.1 ; SENDIG-GENETOX 1.0 ; SENDIG-DART-1.1, 1.2 & SENDIG-AR 1.0
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: 'When possible, RFSTDTC should be the first day of exposure to
+                  test compound rather than challenge agents or other
+                  interventions.'
+                Document: FDA
+                Section: FDAB064
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB6401
+              Version: '1'
+            Version: '1.5'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: 'When possible, RFSTDTC should be the first day of exposure to
+                  test compound rather than challenge agents or other
+                  interventions.'
+                Document: FDA
+                Section: FDAB064
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB6401
+              Version: '1'
+            Version: '1.5'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: 'When possible, RFSTDTC should be the first day of exposure to
+                  test compound rather than challenge agents or other
+                  interventions.'
+                Document: FDA
+                Section: FDAB064
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB6401
+              Version: '1'
+            Version: '1.5'
+        Version: '3.1.1'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: 'When possible, RFSTDTC should be the first day of exposure to
+                  test compound rather than challenge agents or other
+                  interventions.'
+                Document: FDA
+                Section: FDAB064
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB6401
+              Version: '1'
+            Version: '1.5'
+        Version: '1.0'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: 'When possible, RFSTDTC should be the first day of exposure to
+                  test compound rather than challenge agents or other
+                  interventions.'
+                Document: FDA
+                Section: FDAB064
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB6401
+              Version: '1'
+            Version: '1.5'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: 'When possible, RFSTDTC should be the first day of exposure to
+                  test compound rather than challenge agents or other
+                  interventions.'
+                Document: FDA
+                Section: FDAB064
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB6401
+              Version: '1'
+            Version: '1.5'
+        Version: '1.2'
+      - Name: SENDIG-AR
+        References:
+          - Citations:
+              - Cited Guidance: 'When possible, RFSTDTC should be the first day of exposure to
+                  test compound rather than challenge agents or other
+                  interventions.'
+                Document: FDA
+                Section: FDAB064
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB6401
+              Version: '1'
+            Version: '1.5'
+        Version: '1.0'
+Check:
+  all:
+    - name: "RFSTDTC"
+      operator: "date_not_equal_to"
+      value: "$ex_exstdtc"
+Core:
+  Id: CORE-001044
+  Status: Published
+  Version: '1'
+Description: Subject Reference Start Date/Time (RFSTDTC) should be equal to the
+  first Start Date/Time of Treatment (EXSDTC).
+Executability: Fully Executable
+Operations:
+  - domain: "EX"
+    group:
+      - USUBJID
+    id: "$ex_exstdtc"
+    name: "EXSTDTC"
+    operator: "min_date"
+Outcome:
+  Message: RFSTDTC is not equal to the first EXSTDTC.
+  Output Variables:
+    - RFSTDTC
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - INTERVENTIONS
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - DM
+Sensitivity: Record

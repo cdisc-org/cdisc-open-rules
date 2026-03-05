@@ -1,0 +1,154 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'If specified, the context of a condition must point to a valid
+                  instance in the activity or scheduled activity instance
+                  class.'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00114'
+              Version: '1'
+            Version: '1.0'
+        Version: '3.0'
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'If specified, the context of a condition must point to a valid
+                  instance in the activity or scheduled activity instance
+                  class.'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00114'
+              Version: '1'
+            Version: '1.0'
+        Version: '4.0'
+Check:
+  all:
+    - name: parent_rel
+      operator: equal_to
+      value: 'contextIds'
+      value_is_literal: true
+    - name: $condition_count
+      operator: non_empty
+Core:
+  Id: 'CORE-000878'
+  Status: Published
+  Version: '1'
+Description: 'If specified, the context of a condition must point to a valid
+  instance in the activity or scheduled activity instance class.'
+Executability: Fully Executable
+Operations:
+  - domain: Condition
+    filter:
+      rel_type: definition
+    group:
+      - id
+      - instanceType
+    group_aliases:
+      - parent_id
+      - parent_entity
+    id: $condition_count
+    operator: record_count
+  - domain: Condition
+    filter:
+      rel_type: definition
+    group:
+      - id
+      - instanceType
+    group_aliases:
+      - parent_id
+      - parent_entity
+    id: $condition_parent_entity
+    name: parent_entity
+    operator: distinct
+  - domain: Condition
+    filter:
+      rel_type: definition
+    group:
+      - id
+      - instanceType
+    group_aliases:
+      - parent_id
+      - parent_entity
+    id: $condition_parent_id
+    name: parent_id
+    operator: distinct
+  - domain: Condition
+    filter:
+      rel_type: definition
+    group:
+      - id
+      - instanceType
+    group_aliases:
+      - parent_id
+      - parent_entity
+    id: $condition_parent_rel
+    name: parent_rel
+    operator: distinct
+  - domain: Condition
+    filter:
+      rel_type: definition
+    group:
+      - id
+      - instanceType
+    group_aliases:
+      - parent_id
+      - parent_entity
+    id: $condition_rel_type
+    name: rel_type
+    operator: distinct
+  - domain: Condition
+    filter:
+      rel_type: definition
+    group:
+      - id
+      - instanceType
+    group_aliases:
+      - parent_id
+      - parent_entity
+    id: $condition_name
+    name: name
+    operator: distinct
+  - id: $error_type
+    map:
+      - output: The id value references an invalid instance type.
+        parent_entity: Condition
+        rel_type: reference
+      - output: The referenced id value is not valid.
+        parent_entity: Condition
+        rel_type: definition
+    operator: map
+Outcome:
+  Message: 'The specified context of the condition is not a valid instance of
+    either the Activity or ScheduledActivityInstance class (the value of the
+    condition''s contextIds attribute either matches the id of an instance that
+    is not an Activity or ScheduledActivityInstance, or it does not match the id
+    of any class instance).'
+  Output Variables:
+    - $condition_parent_entity
+    - $condition_parent_id
+    - $condition_parent_rel
+    - $condition_rel_type
+    - $condition_name
+    - id
+    - name
+    - parent_id
+    - parent_rel
+    - rel_type
+    - instanceType
+    - value
+    - $error_type
+Rule Type: Record Data
+Scope:
+  Entities:
+    Exclude:
+      - 'Activity'
+      - 'ScheduledActivityInstance'
+    Include:
+      - ALL
+Sensitivity: Record

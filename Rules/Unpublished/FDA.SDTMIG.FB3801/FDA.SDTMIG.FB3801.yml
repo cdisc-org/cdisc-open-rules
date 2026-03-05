@@ -1,0 +1,170 @@
+Authorities:
+  - Organization: 'FDA'
+    Standards:
+      - Name: 'SDTMIG'
+        References:
+          - Citations:
+              - Cited Guidance: 'Timing information of interventions, findings and events should
+                  be submitted, if collected.'
+                Document: 'FDA'
+                Section: 'FDAB038'
+            Origin: 'FDA Business Rules'
+            Rule Identifier:
+              Id: 'FB3801'
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+      - Name: 'SDTMIG'
+        References:
+          - Citations:
+              - Cited Guidance: 'Timing information of interventions, findings and events should
+                  be submitted, if collected.'
+                Document: 'FDA'
+                Section: 'FDAB038'
+            Origin: 'FDA Business Rules'
+            Rule Identifier:
+              Id: 'FB3801'
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: 'SDTMIG'
+        References:
+          - Citations:
+              - Cited Guidance: 'Timing information of interventions, findings and events should
+                  be submitted, if collected.'
+                Document: 'FDA'
+                Section: 'FDAB038'
+            Origin: 'FDA Business Rules'
+            Rule Identifier:
+              Id: 'FB3801'
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+      - Name: 'SENDIG'
+        References:
+          - Citations:
+              - Cited Guidance: 'Timing information of interventions, findings and events should
+                  be submitted, if collected.'
+                Document: 'FDA'
+                Section: 'FDAB038'
+            Origin: 'FDA Business Rules'
+            Rule Identifier:
+              Id: 'FB3801'
+              Version: '1'
+            Version: '1.5'
+        Version: '3.0'
+      - Name: 'SENDIG'
+        References:
+          - Citations:
+              - Cited Guidance: 'Timing information of interventions, findings and events should
+                  be submitted, if collected.'
+                Document: 'FDA'
+                Section: 'FDAB038'
+            Origin: 'FDA Business Rules'
+            Rule Identifier:
+              Id: 'FB3801'
+              Version: '1'
+            Version: '1.5'
+        Version: '3.1'
+      - Name: 'SENDIG'
+        References:
+          - Citations:
+              - Cited Guidance: 'Timing information of interventions, findings and events should
+                  be submitted, if collected.'
+                Document: 'FDA'
+                Section: 'FDAB038'
+            Origin: 'FDA Business Rules'
+            Rule Identifier:
+              Id: 'FB3801'
+              Version: '1'
+            Version: '1.5'
+        Version: '3.1.1'
+      - Name: 'SENDIG-GENETOX'
+        References:
+          - Citations:
+              - Cited Guidance: 'Timing information of interventions, findings and events should
+                  be submitted, if collected.'
+                Document: 'FDA'
+                Section: 'FDAB038'
+            Origin: 'FDA Business Rules'
+            Rule Identifier:
+              Id: 'FB3801'
+              Version: '1'
+            Version: '1.5'
+        Version: '1.0'
+      - Name: 'SENDIG-DART'
+        References:
+          - Citations:
+              - Cited Guidance: 'Timing information of interventions, findings and events should
+                  be submitted, if collected.'
+                Document: 'FDA'
+                Section: 'FDAB038'
+            Origin: 'FDA Business Rules'
+            Rule Identifier:
+              Id: 'FB3801'
+              Version: '1'
+            Version: '1.5'
+        Version: '1.1'
+      - Name: 'SENDIG-DART'
+        References:
+          - Citations:
+              - Cited Guidance: 'Timing information of interventions, findings and events should
+                  be submitted, if collected.'
+                Document: 'FDA'
+                Section: 'FDAB038'
+            Origin: 'FDA Business Rules'
+            Rule Identifier:
+              Id: 'FB3801'
+              Version: '1'
+            Version: '1.5'
+        Version: '1.2'
+      - Name: 'SENDIG-AR'
+        References:
+          - Citations:
+              - Cited Guidance: 'Timing information of interventions, findings and events should
+                  be submitted, if collected.'
+                Document: 'FDA'
+                Section: 'FDAB038'
+            Origin: 'FDA Business Rules'
+            Rule Identifier:
+              Id: 'FB3801'
+              Version: '1'
+            Version: '1.5'
+        Version: '1.0'
+Check:
+  all:
+    - name: define_variable_is_collected
+      operator: equal_to
+      value: true
+    - name: $timing_variables
+      operator: shares_exactly_one_element_with
+      value: $dataset_variables
+Core:
+  Id: FDA.SDTMIG.FB3801
+  Status: Draft
+  Version: '1'
+Description: 'Timing information should be submitted when collected.'''
+Executability: Partially Executable
+Operations:
+  - id: $dataset_variables
+    operator: get_column_order_from_dataset
+  - id: $timing_variables
+    key_name: role
+    key_value: Timing
+    operator: get_model_filtered_variables
+Outcome:
+  Message: 'Timing information is collected but not submitted.'
+  Output Variables:
+    - $dataset_variables
+    - $timing_variables
+Rule Type: Value Check against Define XML Variable
+Scope:
+  Classes:
+    Include:
+      - INTERVENTIONS
+      - EVENTS
+      - FINDINGS
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Dataset

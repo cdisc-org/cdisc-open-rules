@@ -1,0 +1,242 @@
+Authorities:
+  - Organization: CDISC
+    # REMARK: not applicable to SENDIG-3.0
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: For each unique planned time point (--TPT), there must be a
+                  one-to-one relationship between the values of --TPT and
+                  --TPTNUM. Uniqueness for these time points is determined by a
+                  combination of the domain, study day, and, if present,
+                  category and/or subcategory (--CAT/--SCAT). Other variables,
+                  such as --TESTCD and --METHOD, may also be needed in some
+                  cases to define uniqueness. When this occurs, clarification
+                  should be provided as a comment to --TPTNUM in the define
+                  file.
+                Document: IG v3.1
+                Section: '4.4.7.2.1'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: 'SEND290'
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: For each unique planned time point (--TPT), there must be a
+                  one-to-one relationship between the values of --TPT and
+                  --TPTNUM. Uniqueness for these time points is determined by a
+                  combination of the domain, study day, and, if present,
+                  category and/or subcategory (--CAT/--SCAT). Other variables,
+                  such as --TESTCD and --METHOD, may also be needed in some
+                  cases to define uniqueness. When this occurs, clarification
+                  should be provided as a comment to --TPTNUM in the define
+                  file.
+                Document: IG v3.1.1
+                Section: '4.4.7.2.1'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: 'SEND290'
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: For each unique planned time point (--TPT), there must be a
+                  one-to-one relationship between the values of --TPT and
+                  --TPTNUM. Uniqueness for these time points is determined by a
+                  combination of the domain, study day, and, if present,
+                  category and/or subcategory (--CAT/--SCAT). Other variables,
+                  such as --TESTCD and --METHOD, may also be needed in some
+                  cases to define uniqueness. When this occurs, clarification
+                  should be provided as a comment to --TPTNUM in the define
+                  file.
+                Document: IG v3.1
+                Section: '4.4.7.2.1'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: 'SEND290'
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: For each unique planned time point (--TPT), there must be a
+                  one-to-one relationship between the values of --TPT and
+                  --TPTNUM. Uniqueness for these time points is determined by a
+                  combination of the domain, study day, and, if present,
+                  category and/or subcategory (--CAT/--SCAT). Other variables,
+                  such as --TESTCD and --METHOD, may also be needed in some
+                  cases to define uniqueness. When this occurs, clarification
+                  should be provided as a comment to --TPTNUM in the define
+                  file.
+                Document: IG v3.1.1
+                Section: '4.4.7.2.1'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: 'SEND290'
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: For each unique planned time point (--TPT), there must be a
+                  one-to-one relationship between the values of --TPT and
+                  --TPTNUM. Uniqueness for these time points is determined by a
+                  combination of the domain, study day, and, if present,
+                  category and/or subcategory (--CAT/--SCAT). Other variables,
+                  such as --TESTCD and --METHOD, may also be needed in some
+                  cases to define uniqueness. When this occurs, clarification
+                  should be provided as a comment to --TPTNUM in the define
+                  file.
+                Document: IG v3.1.1
+                Section: '4.4.7.2.1'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: 'SEND290'
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+  - Organization: FDA
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: All paired variables should have a one-to-one relationship.
+                  Examples include short name and name of test; parameter name
+                  and parameter code or number; variable name and variable
+                  label, etc.
+                Document: FDA
+                Section: FDAB009
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0926
+              Version: '1'
+            Version: '1.5'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: All paired variables should have a one-to-one relationship.
+                  Examples include short name and name of test; parameter name
+                  and parameter code or number; variable name and variable
+                  label, etc.
+                Document: FDA
+                Section: FDAB009
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0926
+              Version: '1'
+            Version: '1.5'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: All paired variables should have a one-to-one relationship.
+                  Examples include short name and name of test; parameter name
+                  and parameter code or number; variable name and variable
+                  label, etc.
+                Document: FDA
+                Section: FDAB009
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0913
+              Version: '1'
+            Version: '1.5'
+        Version: '3.1.1'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: All paired variables should have a one-to-one relationship.
+                  Examples include short name and name of test; parameter name
+                  and parameter code or number; variable name and variable
+                  label, etc.
+                Document: FDA
+                Section: FDAB009
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0913
+              Version: '1'
+            Version: '1.5'
+        Version: '1.0'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: All paired variables should have a one-to-one relationship.
+                  Examples include short name and name of test; parameter name
+                  and parameter code or number; variable name and variable
+                  label, etc.
+                Document: FDA
+                Section: FDAB009
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0913
+              Version: '1'
+            Version: '1.5'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: All paired variables should have a one-to-one relationship.
+                  Examples include short name and name of test; parameter name
+                  and parameter code or number; variable name and variable
+                  label, etc.
+                Document: FDA
+                Section: FDAB009
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0913
+              Version: '1'
+            Version: '1.5'
+        Version: '1.2'
+      - Name: SENDIG-AR
+        References:
+          - Citations:
+              - Cited Guidance: All paired variables should have a one-to-one relationship.
+                  Examples include short name and name of test; parameter name
+                  and parameter code or number; variable name and variable
+                  label, etc.
+                Document: FDA
+                Section: FDAB009
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0913
+              Version: '1'
+            Version: '1.5'
+        Version: '1.0'
+# The implementation only checks 1:1 relationship between --TPT and --TPTNUM
+Check:
+  all:
+    - name: --TPTNUM
+      operator: exists
+    - name: --TPT
+      operator: exists
+    - name: --TPTNUM
+      operator: non_empty
+    - name: --TPT
+      operator: non_empty
+    - name: --TPTNUM
+      operator: is_not_unique_relationship
+      value: --TPT
+Core:
+  Id: CORE-000651
+  Status: Published
+  Version: '1'
+Description: --TPT and --TPTNUM should have a one-to-one relationship.
+Executability: Fully Executable
+Outcome:
+  Message: --TPT and --TPTNUM do not have not a one-to-one relationship.
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record

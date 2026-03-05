@@ -1,0 +1,66 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'A scheduled activity instance must not point (via the
+                  "timeline" relationship) to the timeline in which it is
+                  specified.'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00026'
+              Version: '1'
+            Version: '1.0'
+        Version: '3.0'
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'A scheduled activity instance must not point (via the
+                  "timeline" relationship) to the timeline in which it is
+                  specified.'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00026'
+              Version: '1'
+            Version: '1.0'
+        Version: '4.0'
+Check:
+  all:
+    - name: instanceType
+      operator: equal_to
+      value: 'ScheduledActivityInstance'
+    - name: rel_type
+      operator: equal_to
+      value: 'definition'
+    - name: parent_rel
+      operator: equal_to
+      value: 'instances'
+    - name: timelineId
+      operator: equal_to
+      value: parent_id
+Core:
+  Id: CORE-000818
+  Status: Published
+  Version: '1'
+Description: 'A scheduled activity instance must not point (via the "timeline"
+  relationship) to the timeline in which it is specified.'
+Executability: Fully Executable
+Outcome:
+  Message: 'The scheduled activity instance is referencing its parent timeline as
+    its sub-timeline.'
+  Output Variables:
+    - parent_entity
+    - parent_id
+    - parent_rel
+    - id
+    - name
+    - timelineId
+Rule Type: Record Data
+Scope:
+  Entities:
+    Include:
+      - ScheduledActivityInstance
+Sensitivity: Record

@@ -1,0 +1,47 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'For each range, a unit must be specified either for both the
+                  minimum and the maximum value, or for neither of them.'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00242'
+              Version: '1'
+            Version: '1.0'
+        Version: '4.0'
+Check: |-
+  (study.**[instanceType="Range"])@$rg.
+    $rg.
+        [($ValU:=function($v){$v.value&($v.unit? " " & $v.unit.standardCode.decode & " ("&$v.unit.standardCode.code&")": " (unit not specified)")};
+            {
+                "instanceType": instanceType,
+                "id": id,
+                "path": _path,
+                "minValue": $ValU(minValue) ,
+                "maxValue": $ValU(maxValue) ,
+                "check": $exists(minValue.unit.id) != $exists(maxValue.unit.id)
+            }
+        )][check=true]
+Core:
+  Id: 'CORE-001012'
+  Status: Published
+  Version: '1'
+Description: 'For each range, a unit must be specified either for both the
+  minimum and the maximum value, or for neither of them.'
+Executability: Fully Executable
+Outcome:
+  Message: 'The unit is specified either for the minimum or the maximum value but
+    not for both.'
+  Output Variables:
+    - minValue
+    - maxValue
+Rule Type: JSONata
+Scope:
+  Entities:
+    Include:
+      - 'Range'
+Sensitivity: Record

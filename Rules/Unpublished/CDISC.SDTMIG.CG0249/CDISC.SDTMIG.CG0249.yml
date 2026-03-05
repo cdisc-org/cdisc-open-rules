@@ -1,0 +1,73 @@
+# Variable: TATRANS
+# Condition: Element does not end with a decision that could lead to a shortened path within the Arm
+# Rule: TATRANS = null
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        Version: '3.4'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0249
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: If an Element does not end with a decision that could
+                  lead to a shortened path within the Arm, then TATRANS will be blank.
+                Document: IG v3.4
+                Item: Assumption 7
+                Section: 7.2.1
+      - Name: SDTMIG
+        Version: '3.2'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0249
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: If an Element does not end with a decision that could
+                  lead to a shortened path within the Arm, then TATRANS will be blank.
+                Document: IG v3.2
+                Item: Assumption 7
+                Section: '7.2'
+      - Name: SDTMIG
+        Version: '3.3'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0249
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: If an Element does not end with a decision that could
+                  lead to a shortened path within the Arm, then TATRANS will be blank.
+                Document: IG v3.3
+                Item: Assumption 7
+                Section: 7.2.1
+Check:
+  all:
+    - name:
+      operator:
+    - name: TATRANS
+      operator: non_empty
+Core:
+  Id: CDISC.SDTMIG.CG0249
+  Status: Draft
+  Version: '1'
+Description: Trigger error when element does not end with a decision that could lead
+  to a shortened path within the Arm and TATRANS is not null
+Executability: Fully Executable
+Outcome:
+  Message: TATRANS is populated when the element does not end with a decision that
+    could lead to a shortened path within the Arm
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - TRIAL DESIGN
+  Domains:
+    Include:
+      - TA
+Sensitivity: Record

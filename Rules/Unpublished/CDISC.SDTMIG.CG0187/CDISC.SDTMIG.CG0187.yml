@@ -1,0 +1,67 @@
+# Variable: LBORNRHI
+# Condition: 
+# Rule: LBORNRHI is expressed using the units in LBORRESU
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        Version: '3.2'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0187
+              Version: '2'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: Upper end of reference range for continuous measurements
+                  in original units.
+                Document: IG v3.2
+                Item: Specification
+                Section: '6.3'
+      - Name: SDTMIG
+        Version: '3.3'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0187
+              Version: '2'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: Upper end of reference range for continuous measurements
+                  in original units.
+                Document: IG v3.3
+                Item: Specification
+                Section: 6.3.6
+      - Name: SDTMIG
+        Version: '3.4'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0187
+              Version: '2'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: Upper end of reference range for continuous measurement
+                  in original units.
+                Document: IG v3.4
+                Item: Specification
+                Section: 6.3.5.6
+Check:
+  all: []
+Core:
+  Id: CDISC.SDTMIG.CG0187
+  Status: Draft
+  Version: '1'
+Description: ''
+Executability: Fully Executable
+Outcome:
+  Message: ''
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - LB
+Sensitivity: Record

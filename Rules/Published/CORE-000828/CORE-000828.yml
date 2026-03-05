@@ -1,0 +1,90 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'A standard code alias is not expected to be equal to the
+                  standard code (e.g. no equal code or decode for the same
+                  coding system version is expected).'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00063'
+              Version: '1'
+            Version: '1.0'
+        Version: '3.0'
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'A standard code alias is not expected to be equal to the
+                  standard code (e.g. no equal code or decode for the same
+                  coding system version is expected).'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00063'
+              Version: '1'
+            Version: '1.0'
+        Version: '4.0'
+Check:
+  all:
+    - name: instanceType
+      operator: equal_to
+      value: 'AliasCode'
+    - name: parent_rel.Code
+      operator: equal_to
+      value: 'standardCodeAliases'
+      value_is_literal: true
+    - name: standardCode.codeSystem
+      operator: equal_to_case_insensitive
+      value: codeSystem
+    - name: standardCode.codeSystemVersion
+      operator: equal_to_case_insensitive
+      value: codeSystemVersion
+    - any:
+        - name: standardCode.code
+          operator: equal_to_case_insensitive
+          value: code
+        - name: standardCode.decode
+          operator: equal_to_case_insensitive
+          value: decode
+Core:
+  Id: 'CORE-000828'
+  Status: Published
+  Version: '1'
+Description: 'A standard code alias is not expected to be equal to the standard
+  code (e.g. no equal code or decode for the same coding system version is
+  expected).'
+Executability: Partially Executable - Possible Overreporting
+Match Datasets:
+  - Keys:
+      - Left: id
+        Right: parent_id
+      - Left: instanceType
+        Right: parent_entity
+    Name: Code
+Outcome:
+  Message: 'The standard code alias is the same as the standard code - the same
+    combination of code system, code system version and either code or decode is
+    used for both the standard code and the standard code alias (case
+    insensitive).'
+  Output Variables:
+    - parent_entity
+    - parent_id
+    - parent_rel
+    - id
+    - standardCode.codeSystem
+    - standardCode.codeSystemVersion
+    - standardCode.code
+    - standardCode.decode
+    - codeSystem
+    - codeSystemVersion
+    - code
+    - decode
+Rule Type: Record Data
+Scope:
+  Entities:
+    Include:
+      - 'AliasCode'
+Sensitivity: Record

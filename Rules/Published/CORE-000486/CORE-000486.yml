@@ -1,0 +1,102 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: One record per characteristic per subject
+                Document: SENDIG v3.0
+                Section: 6.3.13
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND199
+              Version: '1'
+            Version: '5.0'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: One record per characteristic per subject
+                Document: SENDIG v3.1
+                Section: 6.3.13
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND199
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: One record per characteristic per subject
+                Document: SENDIG v3.1.1
+                Section: 6.3.13
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND199
+              Version: '1'
+            Version: '5.0'
+        Version: 3.1.1
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: One record per characteristic per subject
+                Document: SENDIG v3.1
+                Section: 6.3.13
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND199
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: One record per characteristic per subject
+                Document: SENDIG v3.1.1
+                Section: 6.3.13
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND199
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: One record per characteristic per subject
+                Document: SENDIG v3.1.1
+                Section: 6.3.13
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND199
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+Check:
+  all:
+    - name: SCTESTCD
+      operator: is_not_unique_set
+      value:
+        - USUBJID
+Core:
+  Id: CORE-000486
+  Status: Published
+  Version: '1'
+Description: Raise an error when there is more than one record present for any
+  particular Subject Characteristics test for a subject.
+Executability: Fully Executable
+Outcome:
+  Message: The Subject Characteristics test is not unique for this subject.
+  Output Variables:
+    - USUBJID
+    - SCTESTCD
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - SC
+Sensitivity: Record

@@ -1,0 +1,150 @@
+Authorities:
+  - Organization: 'CDISC'
+    Standards:
+      - Name: 'SENDIG'
+        References:
+          - Citations:
+              - Cited Guidance: 'Food and Water Consumption - Findings. One record per test per
+                  interval per subject or pool'
+                Document: 'IG v.3.0'
+                Item: 'Domain table header'
+                Section: '6.3.5'
+            # REMARK: Both FWDTC and FWENDTC are "expected" variables
+            Origin: 'SEND Conformance Rules'
+            Rule Identifier:
+              Id: 'SEND168'
+              Version: '1'
+            Version: '5.0'
+        Version: '3.0'
+      - Name: 'SENDIG'
+        References:
+          - Citations:
+              - Cited Guidance: 'Food and Water Consumption - Findings. One record per test per
+                  interval per subject or pool'
+                Document: 'IG v.3.1'
+                Item: 'Domain table header'
+                Section: '6.3.5'
+            # REMARK: Both FWDTC and FWENDTC are "expected" variables
+            Origin: 'SEND Conformance Rules'
+            Rule Identifier:
+              Id: 'SEND168'
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: 'SENDIG'
+        References:
+          - Citations:
+              - Cited Guidance: 'Food and Water Consumption - Findings. One record per test per
+                  interval per subject or pool'
+                Document: 'IG v.3.1.1'
+                Item: 'Domain table header'
+                Section: '6.3.5'
+            # REMARK: Both FWDTC and FWENDTC are "expected" variables
+            Origin: 'SEND Conformance Rules'
+            Rule Identifier:
+              Id: 'SEND168'
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1.1'
+      - Name: 'SENDIG-DART'
+        References:
+          - Citations:
+              - Cited Guidance: 'Food and Water Consumption - Findings. One record per test per
+                  interval per subject or pool'
+                Document: 'IG v.3.1'
+                Item: 'Domain table header'
+                Section: '6.3.5'
+            # REMARK: Both FWDTC and FWENDTC are "expected" variables
+            Origin: 'SEND Conformance Rules'
+            Rule Identifier:
+              Id: 'SEND168'
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: 'SENDIG-DART'
+        References:
+          - Citations:
+              - Cited Guidance: 'Food and Water Consumption - Findings. One record per test per
+                  interval per subject or pool'
+                Document: 'IG v.3.1.1'
+                Item: 'Domain table header'
+                Section: '6.3.5'
+            # REMARK: Both FWDTC and FWENDTC are "expected" variables
+            Origin: 'SEND Conformance Rules'
+            Rule Identifier:
+              Id: 'SEND168'
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+      - Name: 'SENDIG-GENETOX'
+        References:
+          - Citations:
+              - Cited Guidance: 'Food and Water Consumption - Findings. One record per test per
+                  interval per subject or pool'
+                Document: 'IG v.3.1'
+                Item: 'Domain table header'
+                Section: '6.3.5'
+            # REMARK: Both FWDTC and FWENDTC are "expected" variables
+            Origin: 'SEND Conformance Rules'
+            Rule Identifier:
+              Id: 'SEND168'
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: fw.xpt, Food and Water Consumption - Findings. One record per
+                  test per interval per subject or pool, Tabulation.
+                Document: TIG v1.0
+                Item: Domain Table Header
+                Section: 2.8.9.12
+            # REMARK: Both FWDTC and FWENDTC are "expected" variables
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0097
+              Version: '1'
+            Version: '1.0'
+        Substandard: SEND
+        Version: '1.0'
+Check:
+  any:
+    - all:
+        # we must first test on USUBJID being populated
+        - name: USUBJID
+          operator: non_empty
+        - name: FWTESTCD
+          operator: 'is_not_unique_set'
+          value:
+            - USUBJID
+            - FWDTC
+            - FWENDTC
+    - all:
+        # we must first test on POOLID being populated
+        - name: POOLID
+          operator: non_empty
+        - name: FWTESTCD
+          operator: 'is_not_unique_set'
+          value:
+            - POOLID
+            - FWDTC
+            - FWENDTC
+Core:
+  Id: CORE-000496
+  Status: Published
+  Version: '1'
+Description: ''
+Executability: Fully Executable
+Outcome:
+  Message: 'Structure must be one record per test per interval (as defined by
+    FWDTC and FWENDTC) per subject or pool'
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - FW
+  Use Case: NONCLIN
+Sensitivity: Record

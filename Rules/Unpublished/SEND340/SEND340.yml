@@ -1,0 +1,72 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: If expected variables in a domain are all null, a comment should
+                  be included in the Define-XML document to explain why all
+                  records are null.
+                Document: SENDIG
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND340
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+Check:
+  all:
+    #- name: variable_name
+    #  operator: not_contains_all
+    #  # operator: contains_all # only used for testing which variables are 'expected'
+    #  value:
+    #    - $expected_variables
+    # Get any "expected" columns that are empty
+    - all:
+        # This checks on the individual record, not for an empty column
+        - metadata: $var_perm
+          operator: variable_metadata_not_equal_to
+          value: 'Exp'
+        #- operator: non_empty
+        #- name: USUBJID
+        #  operator: not_equal_to
+        #  value: BLABLA
+        #- name: $VARIABLE_NULL
+        #  operator: equal_to
+        #  value: TRUE
+        #- name: define_variable_has_comment
+        #  operator: equal_to
+        #  value: false
+Core:
+  Id: SEND340
+  Status: Draft
+  Version: '1'
+Description: If expected variables in a domain are all null, a comment should be
+  included in the Define-XML document to explain why all records are null.
+Executability: Fully Executable
+Operations:
+  - id: $var_perm
+    name: core
+    operator: variable_library_metadata
+    #- id: $expected_variables
+    #  operator: expected_variables
+    #- id: $VARIABLE_NULL
+    # what do we need for "name" here?
+    #operator: variable_is_null
+Outcome:
+  Message: Expected variable with missing value for all records
+  Output Variables:
+    - $var_perm
+  #  - $expected_variables
+  # Rule Type: 'Variable Metadata Check against Library Metadata'
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record
+
+#Sensitivity: Dataset

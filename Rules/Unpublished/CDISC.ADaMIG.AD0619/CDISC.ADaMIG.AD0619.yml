@@ -1,0 +1,73 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: ADaMIG
+        References:
+          - Citations:
+              - Cited Guidance: Code List / Controlled Terms for LVOTFL have allowable values
+                  of':' "Y"
+                Document: ADaMIG
+                Item: Table 3.2.6.1
+                Section: 3.2.6
+            Criteria:
+              Logical Expression:
+                Condition: ''
+                Rule: LVOTFL have allowable values of "Y"
+              Plain Language Expression: LVOTFL is equal to Y
+              Type: Failure
+            Origin: ADaM Conformance Rules
+            Release Notes: ''
+            Rule Identifier:
+              Id: '619'
+              Version: ''
+            Validator Rule Message: LVOTFL can only have values of "Y"
+            Version: '5.0'
+        Version: '1.0'
+      - Name: ADaMIG
+        References:
+          - Citations:
+              - Cited Guidance: Code List / Controlled Terms for LVOTFL have allowable values
+                  of':' "Y"
+                Document: ADaMIG
+                Item: Table 3.3.8.1
+                Section: 3.3.8
+            Criteria:
+              Logical Expression:
+                Condition: LVOTFL have allowable values of "Y"
+                Rule: LVOTFL have allowable values of "Y"
+              Plain Language Expression: LVOTFL is equal to Y or missing
+              Type: Failure
+            Origin: ADaM Conformance Rules
+            Release Notes: ''
+            Rule Identifier:
+              Id: '619'
+              Version: ''
+            Validator Rule Message: LVOTFL must equal to Y or missing
+            Version: '5.0'
+        Version: '1.1'
+Check:
+  all:
+    - name: LVOTFL
+      operator: non_empty
+    - name: LVOTFL
+      operator: is_not_contained_by
+      value:
+        - 'Y'
+
+Core:
+  Id: CDISC.ADaMIG.AD0619
+  Status: Draft
+  Version: '1'
+Description: ''
+Executability: Fully Executable
+Outcome:
+  Message: LVOTFL is not equal to Y or missing
+  Output Variables:
+    - SUBJID
+    - LVOTFL
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+      - BASIC DATA STRUCTURE
+Sensitivity: Record

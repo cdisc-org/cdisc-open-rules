@@ -1,0 +1,46 @@
+# Variable: MBTEST
+# Condition: Test for culture characteristics
+# Rule: MBTEST = name of the organism or group of organisms
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        Version: '3.4'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0610
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: Culture characteristics covers concepts such as growth/no
+                  growth, colony quantification measures,  colony color, colony morphology,
+                  etc.... MBTESTCD/MBTEST should be the name of the organism or  group
+                  of organisms being characterized.
+                Document: SDTMIG v3.4
+                Item: Assumption 1
+                Section: 6.3.5.7.1
+Check:
+  all:
+    - name: MBTEST
+      operator: not_equal_to
+      value:
+Core:
+  Id: CDISC.SDTMIG.CG0610
+  Status: Draft
+  Version: '1'
+Description: If the test is for culture characteristics, verify that MBTEST equals
+  the name of the  organism/antigen being characterized.
+Executability: Fully Executable
+Outcome:
+  Message: Test is for culture characteristics, but MBTEST is not the name of the  organism
+    or group of organisms.
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - MB
+Sensitivity: Record

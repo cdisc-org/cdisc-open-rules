@@ -1,0 +1,109 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      # SEND299 is not applicable to SENDIG-3.0 - see CORE rule SEND10
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: "The SDTM includes three types of special-purpose datasets, each
+                  of which has a fixed structure: ...RELREC, SUPP--, and POOLDEF
+                  are relationship datasets. These are described in Section 8."
+                Document: IG v3.1
+                Item: Specification
+                Section: '2.2'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND299.1
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: "The SDTM includes three types of special-purpose datasets, each
+                  of which has a fixed structure: ...RELREC, SUPP--, and POOLDEF
+                  are relationship datasets. These are described in Section 8."
+                Document: IG v3.1.1
+                Item: Specification
+                Section: '2.2'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND299.1
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: "The SDTM includes three types of special-purpose datasets, each
+                  of which has a fixed structure: ...RELREC, SUPP--, and POOLDEF
+                  are relationship datasets. These are described in Section 8."
+                Document: IG v3.1.1
+                Item: Specification
+                Section: '2.2'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND299.1
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: "The SDTM includes three types of special-purpose datasets, each
+                  of which has a fixed structure: ...RELREC, SUPP--, and POOLDEF
+                  are relationship datasets. These are described in Section 8."
+                Document: IG v3.1
+                Item: Specification
+                Section: '2.2'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND299.1
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: "The SDTM includes three types of special-purpose datasets, each
+                  of which has a fixed structure: ...RELREC, SUPP--, and POOLDEF
+                  are relationship datasets. These are described in Section 8."
+                Document: IG v3.1.1
+                Item: Specification
+                Section: '2.2'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND299.1
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+Check:
+  all:
+    - name: 'variable_name'
+      operator: not_equal_to
+      value: 'STUDYID'
+    - name: 'variable_name'
+      operator: not_equal_to
+      value: 'USUBJID'
+    - name: 'variable_name'
+      operator: not_equal_to
+      value: 'POOLID'
+Core:
+  Id: CDISC.SENDIG.299A
+  Status: Draft
+  Version: '1'
+Description: 'No other variables than STUDYID, USUBJID and POOLID may be present
+  in the POOLDEF dataset'
+Executability: Fully Executable
+Outcome:
+  Message: 'No other variables than STUDYID, USUBJID and POOLID may be present in
+    POOLDEF'
+Rule Type: Variable Metadata Check
+Scope:
+  Classes:
+    Include:
+      - RELATIONSHIP
+  Domains:
+    Include:
+      - POOLDEF
+Sensitivity: Dataset

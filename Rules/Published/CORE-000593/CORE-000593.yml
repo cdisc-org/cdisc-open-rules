@@ -1,0 +1,72 @@
+# Variable: PTXFN, PTMETHOD
+# Condition: PTMETHOD = null / PTXFN = null
+# Rule: PTXFN ^= null / PTMETHOD ^= null
+Authorities:
+  - Organization: 'CDISC'
+    Standards:
+      - Name: 'TIG'
+        References:
+          - Citations:
+              - Cited Guidance: When lab methodology is too complex for the single PTMETHOD
+                  variable, PTXFN should be used to reference a file name or
+                  path to a file in the application that describes the
+                  methodology used. One or the other of PTMETHOD or PTXFN should
+                  be included in the data.
+                Document: 'TIG 1.0'
+                Item: 'assumption 6'
+                Section: '2.8.8.3'
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: 'TIG0006'
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+  - Organization: 'CDISC'
+    Standards:
+      - Name: 'TIG'
+        References:
+          - Citations:
+              - Cited Guidance: When lab methodology is too complex for the single PTMETHOD
+                  variable, PTXFN should be used to reference a file name or
+                  path to a file in the application that describes the
+                  methodology used. One or the other of PTMETHOD or PTXFN should
+                  be included in the data.
+                Document: 'TIG 1.0'
+                Item: 'assumption 6'
+                Section: '2.8.8.3'
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: 'TIG0007'
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: PTMETHOD
+      operator: empty
+    - name: PTXFN
+      operator: empty
+Core:
+  Status: Published
+  Version: '1'
+  Id: CORE-000593
+Description: Raise an error when PTMETHOD and PTXFN are both not populated.
+Executability: Fully Executable
+Outcome:
+  Message: At least one of PTMETHOD and PTXFN variables should be populated.
+  Output Variables:
+    - SPTOBID
+    - PTMETHOD
+    - PTXFN
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - PT
+  Use Case: PROD
+Sensitivity: Record

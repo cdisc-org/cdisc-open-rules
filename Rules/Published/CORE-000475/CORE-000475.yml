@@ -1,0 +1,131 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: One record per test per specimen per observation time per
+                  subject or pool
+                Document: SENDIG v3.0
+                Section: 6.3.11
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND192
+              Version: '1'
+            Version: '5.0'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: One record per test per specimen per observation time per
+                  subject or pool
+                Document: SENDIG v3.1
+                Section: 6.3.11
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND192
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: One record per test per specimen per observation time per
+                  subject or pool
+                Document: SENDIG v3.1.1
+                Section: 6.3.11
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND192
+              Version: '1'
+            Version: '5.0'
+        Version: 3.1.1
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: One record per test per specimen per observation time per
+                  subject or pool
+                Document: SENDIG v3.1
+                Section: 6.3.11
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND192
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: One record per test per specimen per observation time per
+                  subject or pool
+                Document: SENDIG v3.1.1
+                Section: 6.3.11
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND192
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: One record per test per specimen per observation time per
+                  subject or pool
+                Document: SENDIG v3.1.1
+                Section: 6.3.11
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND192
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+Check:
+  any:
+    - all:
+        - name: PCDTC
+          operator: non_empty
+        - name: USUBJID
+          operator: non_empty
+        - name: PCTESTCD
+          operator: is_not_unique_set
+          value:
+            - USUBJID
+            - PCSPEC
+            - PCDTC
+    - all:
+        - name: PCDTC
+          operator: non_empty
+        - name: POOLID
+          operator: non_empty
+        - name: PCTESTCD
+          operator: is_not_unique_set
+          value:
+            - POOLID
+            - PCSPEC
+            - PCDTC
+Core:
+  Id: CORE-000475
+  Status: Published
+  Version: '1'
+Description: Raise an error when there is more than one record present for any
+  particular Pharmacokinetics Concentration, in the PC Domain, for a subject or
+  pool on a particular date.
+Executability: Fully Executable
+Outcome:
+  Message: The Pharmacokinetics Concentration test is not unique for this subject
+    or pool and specimen and date/time.
+  Output Variables:
+    - USUBJID
+    - POOLID
+    - PCTESTCD
+    - PCSPEC
+    - PCDTC
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - PC
+Sensitivity: Record

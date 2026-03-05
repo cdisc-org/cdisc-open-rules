@@ -1,0 +1,70 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: "The SDTM includes three types of special-purpose datasets, each
+                  of which has a fixed structure; ..Demographics (DM), Comments
+                  (CO), and Subject Elements (SE) include study data that do not
+                  conform to one of the three general observation classes. These
+                  are described in Section 5"
+                Document: SENDIG v3.1
+                Section: '2.2'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND297
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: "The SDTM includes three types of special-purpose datasets, each
+                  of which has a fixed structure; ..Demographics (DM), Comments
+                  (CO), and Subject Elements (SE) include study data that do not
+                  conform to one of the three general observation classes. These
+                  are described in Section 5"
+                Document: SENDIG v3.1
+                Section: '2.2'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND297
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      # P.S. Not applicable to SENDIG-3.1.1, DART-1.2 and GENETOX
+Check:
+  all:
+    # select variable (is present) in dataset
+    - name: variable_name
+      operator: exists
+      # check whether the variable is known in the CDISC Library 
+    - name: variable_name
+      operator: not_equal_to
+      value: library_variable_name
+Core:
+  Id: CORE-000903
+  Status: Published
+  Version: '1'
+Description: "Additional variables not specified in the SENDIG description of
+  the domain (including both the domain  table and assumptions) may not be added
+  to DM, CO, or SE"
+Executability: Fully Executable
+Outcome:
+  Message: The variable is not allowed in this domain as it is not specified in
+    the SENDIG for the specific domain
+  Output Variables:
+    - variable_name
+    # - library_variable_name
+Rule Type: Variable Metadata Check against Library Metadata
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - DM
+      - SE
+      - CO
+Sensitivity: Dataset
