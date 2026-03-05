@@ -1,0 +1,84 @@
+name: Publish Rules
+
+on:
+  workflow_call:
+  push:
+    branches:
+      - main
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Get changed files
+        id: changed-files
+        uses: tj-actions/changed-files@v44
+        with:
+          files_ignore: |
+            .github/**
+            scripts/**
+            README.md
+            .gitignore
+
+      - name: Debug changed files
+        run: |
+          echo "Added files:"
+          echo "${{ steps.changed-files.outputs.added_files }}"
+
+      - name: Extract new rule directories
+        id: newdirs
+        run: |
+          NEW_DIRS=""
+
+          for file in ${{ steps.changed-files.outputs.added_files }}; do
+            dir=$(dirname "$file")
+
+            if [ -f "$dir/rule.yaml" ]; then
+              NEW_DIRS="$NEW_DIRS $dir"
+            fi
+          done
+
+          NEW_DIRS=$(echo $NEW_DIRS | xargs -n1 | sort -u | xargs)
+
+          echo "NEW_DIRS=$NEW_DIRS"
+          echo "NEW_DIRS=$NEW_DIRS" >> $GITHUB_OUTPUT
+
+      - name: Find existing CORE IDs
+        id: coreids
+        run: |
+          COREIDS=$(ls -d CORE-* 2>/dev/null | sed 's/CORE-//' | sort -n | xargs)
+
+          echo "COREIDS=$COREIDS"
+          echo "COREIDS=$COREIDS" >> $GITHUB_OUTPUT
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install pyyaml
+
+      - name: Run publish script
+        run: |
+          python scripts/publish.py \
+            --new-dirs "${{ steps.newdirs.outputs.NEW_DIRS }}" \
+            --existing "${{ steps.coreids.outputs.COREIDS }}" \
+            --algorithm min
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add .
+          git commit -m "Auto-publish new rules" || exit 0
+
+      - name: Push changes
+        if: ${{ !env.ACT }}
+        run: |
+          git push
