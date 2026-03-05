@@ -1,0 +1,30 @@
+{
+  "LB": [
+    {
+      "executionStatus": "success",
+      "domain": "LB",
+      "variables": [
+        "LBDRVFL"
+      ],
+      "message": "LBDRVFL must be null or 'Y'",
+      "errors": [
+        {
+          "value": {
+            "LBDRVFL": "maybe"
+          },
+          "row": 3,
+          "uSubjId": "CDISC-TEST-001",
+          "seq": 3
+        },
+        {
+          "value": {
+            "LBDRVFL": "possibly"
+          },
+          "row": 10,
+          "uSubjId": "CDISC-TEST-001",
+          "seq": 10
+        }
+      ]
+    }
+  ]
+}

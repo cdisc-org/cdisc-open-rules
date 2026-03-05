@@ -1,0 +1,86 @@
+{
+  "AE": [
+    {
+      "domain": "AE",
+      "errors": [
+        {
+          "row": 6,
+          "seq": 1593,
+          "uSubjId": "CDISC-TEST-099",
+          "value": {
+            "AEBODSYS": "Infections and infestations",
+            "AECAT": "INFECTIONS AND INFESTATIONS",
+            "AETERM": "PNEUMONIA"
+          }
+        },
+        {
+          "row": 7,
+          "seq": 1594,
+          "uSubjId": "CDISC-TEST-099",
+          "value": {
+            "AEBODSYS": "Infections and infestations",
+            "AECAT": "INFECTIONS AND INFESTATIONS",
+            "AETERM": "PNEUMONIA"
+          }
+        },
+        {
+          "row": 8,
+          "seq": 1595,
+          "uSubjId": "CDISC-TEST-099",
+          "value": {
+            "AEBODSYS": "INFECTIONS AND INFESTATIONS",
+            "AECAT": "INFECTIONS AND INFESTATIONS",
+            "AETERM": "URINARY TRACT INFECTION"
+          }
+        },
+        {
+          "row": 9,
+          "seq": 1596,
+          "uSubjId": "CDISC-TEST-100",
+          "value": {
+            "AEBODSYS": "Gastrointestinal disorders",
+            "AECAT": "Gastrointestinal disorders",
+            "AETERM": "UPSET STOMACH"
+          }
+        },
+        {
+          "row": 10,
+          "seq": 1597,
+          "uSubjId": "CDISC-TEST-100",
+          "value": {
+            "AEBODSYS": "Cardiac disorders",
+            "AECAT": "CARDIAC DISORDERS",
+            "AETERM": "ATRIAL FIBRILLATION"
+          }
+        },
+        {
+          "row": 11,
+          "seq": 1598,
+          "uSubjId": "CDISC-TEST-100",
+          "value": {
+            "AEBODSYS": "Musculoskeletal and connective tissue disorders",
+            "AECAT": "MUSCULOSKELETAL AND CONNECTIVE TISSUE DISORDERS",
+            "AETERM": "BACK PAIN"
+          }
+        },
+        {
+          "row": 12,
+          "seq": 1599,
+          "uSubjId": "CDISC-TEST-100",
+          "value": {
+            "AEBODSYS": "Musculoskeletal and connective tissue disorders",
+            "AECAT": "MUSCULOSKELETAL AND CONNECTIVE TISSUE DISORDERS",
+            "AETERM": "BACK PAIN"
+          }
+        }
+      ],
+      "executionStatus": "success",
+      "message": "--CAT is equal to --BODSYS.",
+      "variables": [
+        "AEBODSYS",
+        "AECAT",
+        "AETERM"
+      ]
+    }
+  ]
+}

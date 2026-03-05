@@ -1,0 +1,20 @@
+{
+    "LB": [
+        {
+            "executionStatus": "success",
+            "dataset": "alb.xpt",
+            "domain": "LB",
+            "variables": [
+                "dataset_name"
+            ],
+            "message": "Dataset name does not begin with DOMAIN value",
+            "errors": [
+                {
+                    "value": {
+                        "dataset_name": "ALB"
+                    }
+                }
+            ]
+        }
+    ]
+}

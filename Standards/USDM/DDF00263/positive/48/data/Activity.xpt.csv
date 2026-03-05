@@ -1,0 +1,17 @@
+parent_entity,parent_id,parent_rel,rel_type,id,name,label,description,notes,biomedicalConceptIds,bcSurrogateIds,bcCategoryIds,childIds,previousId,nextId,timelineId,instanceType
+InterventionalStudyDesign,InterventionalStudyDesign_1,activities,definition,Activity_854,A854,,,FALSE,False,False,False,False,,Activity_855,ScheduleTimeline_4,Activity
+InterventionalStudyDesign,InterventionalStudyDesign_1,activities,definition,Activity_855,A855,,,FALSE,False,False,False,,Activity_854,Activity_858,ScheduleTimeline_4,Activity
+InterventionalStudyDesign,InterventionalStudyDesign_1,activities,definition,Activity_858,A858,,,FALSE,False,False,,False,Activity_855,Activity_859,ScheduleTimeline_4,Activity
+InterventionalStudyDesign,InterventionalStudyDesign_1,activities,definition,Activity_859,A859,,,FALSE,False,False,,,Activity_858,Activity_870,ScheduleTimeline_4,Activity
+InterventionalStudyDesign,InterventionalStudyDesign_1,activities,definition,Activity_870,A870,,,FALSE,False,,False,False,Activity_859,Activity_871,ScheduleTimeline_4,Activity
+InterventionalStudyDesign,InterventionalStudyDesign_1,activities,definition,Activity_871,A871,,,FALSE,False,,False,,Activity_870,Activity_874,ScheduleTimeline_4,Activity
+InterventionalStudyDesign,InterventionalStudyDesign_1,activities,definition,Activity_874,A874,,,FALSE,False,,,False,Activity_871,Activity_875,ScheduleTimeline_4,Activity
+InterventionalStudyDesign,InterventionalStudyDesign_1,activities,definition,Activity_875,A875,,,FALSE,False,,,,Activity_874,Activity_918,ScheduleTimeline_4,Activity
+InterventionalStudyDesign,InterventionalStudyDesign_1,activities,definition,Activity_918,A918,,,FALSE,,False,False,False,Activity_875,Activity_919,ScheduleTimeline_4,Activity
+InterventionalStudyDesign,InterventionalStudyDesign_1,activities,definition,Activity_919,A919,,,FALSE,,False,False,,Activity_918,Activity_922,ScheduleTimeline_4,Activity
+InterventionalStudyDesign,InterventionalStudyDesign_1,activities,definition,Activity_922,A922,,,FALSE,,False,,False,Activity_919,Activity_923,ScheduleTimeline_4,Activity
+InterventionalStudyDesign,InterventionalStudyDesign_1,activities,definition,Activity_923,A923,,,FALSE,,False,,,Activity_922,Activity_934,ScheduleTimeline_4,Activity
+InterventionalStudyDesign,InterventionalStudyDesign_1,activities,definition,Activity_934,A934,,,FALSE,,,False,False,Activity_923,Activity_935,ScheduleTimeline_4,Activity
+InterventionalStudyDesign,InterventionalStudyDesign_1,activities,definition,Activity_935,A935,,,FALSE,,,False,,Activity_934,Activity_938,ScheduleTimeline_4,Activity
+InterventionalStudyDesign,InterventionalStudyDesign_1,activities,definition,Activity_938,A938,,,FALSE,,,,False,Activity_935,Activity_939,ScheduleTimeline_4,Activity
+InterventionalStudyDesign,InterventionalStudyDesign_1,activities,definition,Activity_939,A939,,,FALSE,,,,,Activity_938,,ScheduleTimeline_4,Activity

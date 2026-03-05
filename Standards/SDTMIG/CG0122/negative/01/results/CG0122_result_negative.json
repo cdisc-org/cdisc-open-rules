@@ -1,0 +1,35 @@
+{1 item
+"DM":[1 item
+0:{5 items
+"executionStatus":"success"
+"domain":"DM"
+"variables":[1 item
+0:"ARM"
+]
+"message":"DM.ACTARM must equal DM.ARM when subject is a screen failure or not assigned to treatment"
+"errors":[3 items
+0:{3 items
+"value":{1 item
+"ARM":"Screen Failure"
+}
+"row":1
+"USUBJID":"015246-076-0003-00003"
+}
+1:{3 items
+"value":{1 item
+"ARM":"Not Assigned"
+}
+"row":2
+"USUBJID":"015246-300-0004-00002"
+}
+2:{3 items
+"value":{1 item
+"ARM":"Screen Failure"
+}
+"row":7
+"USUBJID":"015246-300-0004-00007"
+}
+]
+}
+]
+}

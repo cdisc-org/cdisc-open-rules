@@ -1,0 +1,117 @@
+{
+  "SUPPAE": [
+    {
+      "domain": "SUPPAE",
+      "errors": [
+        {
+          "row": 0,
+          "uSubjId": "CDISC-TEST-001",
+          "value": {
+            "IDVAR": "",
+            "IDVARVAL": "1",
+            "QNAM": "DICTVER",
+            "RDOMAIN": "AE"
+          }
+        },
+        {
+          "row": 1,
+          "uSubjId": "CDISC-TEST-001",
+          "value": {
+            "IDVAR": "",
+            "IDVARVAL": "10",
+            "QNAM": "DICTVER",
+            "RDOMAIN": "AE"
+          }
+        },
+        {
+          "row": 2,
+          "uSubjId": "CDISC-TEST-001",
+          "value": {
+            "IDVAR": "",
+            "IDVARVAL": "11",
+            "QNAM": "DICTVER",
+            "RDOMAIN": "AE"
+          }
+        },
+        {
+          "row": 3,
+          "uSubjId": "CDISC-TEST-001",
+          "value": {
+            "IDVAR": "",
+            "IDVARVAL": "12",
+            "QNAM": "DICTVER",
+            "RDOMAIN": "AE"
+          }
+        },
+        {
+          "row": 4,
+          "uSubjId": "CDISC-TEST-001",
+          "value": {
+            "IDVAR": "",
+            "IDVARVAL": "13",
+            "QNAM": "DICTVER",
+            "RDOMAIN": "AE"
+          }
+        },
+        {
+          "row": 5,
+          "uSubjId": "CDISC-TEST-001",
+          "value": {
+            "IDVAR": "",
+            "IDVARVAL": "14",
+            "QNAM": "DICTVER",
+            "RDOMAIN": "AE"
+          }
+        },
+        {
+          "row": 6,
+          "uSubjId": "CDISC-TEST-001",
+          "value": {
+            "IDVAR": "",
+            "IDVARVAL": "15",
+            "QNAM": "DICTVER",
+            "RDOMAIN": "AE"
+          }
+        },
+        {
+          "row": 7,
+          "uSubjId": "CDISC-TEST-001",
+          "value": {
+            "IDVAR": "",
+            "IDVARVAL": "2",
+            "QNAM": "DICTVER",
+            "RDOMAIN": "AE"
+          }
+        },
+        {
+          "row": 8,
+          "uSubjId": "CDISC-TEST-001",
+          "value": {
+            "IDVAR": "",
+            "IDVARVAL": "3",
+            "QNAM": "DICTVER",
+            "RDOMAIN": "AE"
+          }
+        },
+        {
+          "row": 9,
+          "uSubjId": "CDISC-TEST-001",
+          "value": {
+            "IDVAR": "",
+            "IDVARVAL": "4",
+            "QNAM": "DICTVER",
+            "RDOMAIN": "AE"
+          }
+        }
+      ],
+      "executionStatus": "success",
+      "message": "RDOMAIN is not 'DM' but IDVAR is empty.",
+      "variables": [
+        "IDVAR",
+        "IDVARVAL",
+        "QNAM",
+        "RDOMAIN"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "DM": [
+    {
+      "executionStatus": "skipped",
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "variables": [],
+      "message": "Rule skipped - doesn't apply to class for rule id=CDISC.SENDIG.318, dataset=DM",
+      "errors": []
+    }
+  ],
+  "DS": [
+    {
+      "executionStatus": "success",
+      "dataset": "ds.xpt",
+      "domain": "DS",
+      "variables": [],
+      "message": null,
+      "errors": []
+    }
+  ],
+  "EX": [
+    {
+      "executionStatus": "skipped",
+      "dataset": "ex.xpt",
+      "domain": "EX",
+      "variables": [],
+      "message": "Rule skipped - doesn't apply to class for rule id=CDISC.SENDIG.318, dataset=EX",
+      "errors": []
+    }
+  ],
+  "LB": [
+    {
+      "executionStatus": "success",
+      "dataset": "lb.xpt",
+      "domain": "LB",
+      "variables": [
+        "LBNOMDY"
+      ],
+      "message": "The value of -NOMDY must be an integer",
+      "errors": [
+        {
+          "value": {
+            "LBNOMDY": 1.5
+          },
+          "dataset": "lb.xpt",
+          "row": 3,
+          "USUBJID": "CDISC002",
+          "SEQ": 2
+        }
+      ]
+    }
+  ]
+}

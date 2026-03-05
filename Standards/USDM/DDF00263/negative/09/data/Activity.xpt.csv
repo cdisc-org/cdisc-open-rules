@@ -1,0 +1,17 @@
+parent_entity,parent_id,parent_rel,rel_type,id,name,label,description,notes,definedProcedures,bcSurrogateIds,bcCategoryIds,childIds,previousId,nextId,timelineId,instanceType
+InterventionalStudyDesign,InterventionalStudyDesign_1,activities,definition,Activity_470,A470,,,FALSE,False,False,False,False,,Activity_471,,Activity
+InterventionalStudyDesign,InterventionalStudyDesign_1,activities,definition,Activity_471,A471,,,FALSE,False,False,False,,Activity_470,Activity_474,,Activity
+InterventionalStudyDesign,InterventionalStudyDesign_1,activities,definition,Activity_474,A474,,,FALSE,False,False,,False,Activity_471,Activity_475,,Activity
+InterventionalStudyDesign,InterventionalStudyDesign_1,activities,definition,Activity_475,A475,,,FALSE,False,False,,,Activity_474,Activity_486,,Activity
+InterventionalStudyDesign,InterventionalStudyDesign_1,activities,definition,Activity_486,A486,,,FALSE,False,,False,False,Activity_475,Activity_487,,Activity
+InterventionalStudyDesign,InterventionalStudyDesign_1,activities,definition,Activity_487,A487,,,FALSE,False,,False,,Activity_486,Activity_490,,Activity
+InterventionalStudyDesign,InterventionalStudyDesign_1,activities,definition,Activity_490,A490,,,FALSE,False,,,False,Activity_487,Activity_491,,Activity
+InterventionalStudyDesign,InterventionalStudyDesign_1,activities,definition,Activity_491,A491,,,FALSE,False,,,,Activity_490,Activity_726,,Activity
+InterventionalStudyDesign,InterventionalStudyDesign_1,activities,definition,Activity_726,A726,,,FALSE,,False,False,False,Activity_491,Activity_727,,Activity
+InterventionalStudyDesign,InterventionalStudyDesign_1,activities,definition,Activity_727,A727,,,FALSE,,False,False,,Activity_726,Activity_730,,Activity
+InterventionalStudyDesign,InterventionalStudyDesign_1,activities,definition,Activity_730,A730,,,FALSE,,False,,False,Activity_727,Activity_731,,Activity
+InterventionalStudyDesign,InterventionalStudyDesign_1,activities,definition,Activity_731,A731,,,FALSE,,False,,,Activity_730,Activity_742,,Activity
+InterventionalStudyDesign,InterventionalStudyDesign_1,activities,definition,Activity_742,A742,,,FALSE,,,False,False,Activity_731,Activity_743,,Activity
+InterventionalStudyDesign,InterventionalStudyDesign_1,activities,definition,Activity_743,A743,,,FALSE,,,False,,Activity_742,Activity_746,,Activity
+InterventionalStudyDesign,InterventionalStudyDesign_1,activities,definition,Activity_746,A746,,,FALSE,,,,False,Activity_743,Activity_747,,Activity
+InterventionalStudyDesign,InterventionalStudyDesign_1,activities,definition,Activity_747,A747,,,FALSE,,,,,Activity_746,,,Activity

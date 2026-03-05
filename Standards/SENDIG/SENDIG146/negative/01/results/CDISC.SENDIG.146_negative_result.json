@@ -1,0 +1,32 @@
+{
+  "VS": [
+    {
+      "executionStatus": "success",
+      "domain": "VS",
+      "variables": [
+        "VSREASND",
+        "VSSTAT"
+      ],
+      "message": "When VSSTAT is not populated, VSREASND may not be populated.",
+      "errors": [
+        {
+          "value": {
+            "VSREASND": "subject refused",
+            "VSSTAT": ""
+          },
+          "row": 3,
+          "seq": 3
+        }
+      ]
+    }
+  ],
+  "SC": [
+    {
+      "executionStatus": "skipped",
+      "domain": "SC",
+      "variables": [],
+      "message": null,
+      "errors": []
+    }
+  ]
+}

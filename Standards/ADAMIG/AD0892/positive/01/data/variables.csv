@@ -1,0 +1,72 @@
+dataset,variable,label,type,length
+adtte.xpt,USUBJID,Unique Subject Identifier,Char,50
+adtte.xpt,PARAM,Parameter,Char,50
+adtte.xpt,PARAMCD,Parameter Code,Char,50
+adtte.xpt,AVAL,Analysis Value,Num,8
+adtte.xpt,CNSR,Censor,Num,
+adtte.xpt,EVNTDESC,Event or Censoring Description,Char,50
+adtte.xpt,SRCDOM,Source Data,Char,50
+adtte.xpt,SRCVAR,Source Variable,Char,50
+adtte.xpt,SRCSEQ,Source Sequence Number,Num,8
+adnca.xpt,USUBJID,Unique Subject Identifier,Char,50
+adnca.xpt,USUBJIDN,Unique Subject,Num,8
+adnca.xpt,SUBJID,Subject Identifier for the Study,Char,50
+adnca.xpt,NCAXFL,PK NCA Exclusion Flag,Char,50
+adnca.xpt,NCAXFN,PK NCA Exclusion Flag (N),Num,8
+adnca.xpt,NCAwXRS,Reason w for PK NCA Exclusion,Char,50
+adnca.xpt,NCAwXRSN,Reason for PK NCA Exclusion of w (N),Num,8
+adnca.xpt,PKSUMXF,PK Summary Exclusion Flag,Char,50
+adnca.xpt,PKSUMXFN,PK Summary Exclusion Flag (N),Num,8
+adnca.xpt,METABFL,Metabolite Flag,Char,50
+adnca.xpt,COHORT,Subject Cohort,Char,50
+adnca.xpt,COHORTN,Subject Cohort (N),Num,8
+adnca.xpt,ROUTE,Route,Char,50
+adnca.xpt,TRTRINT,Planned Treatment Interval,Num,8
+adnca.xpt,TRTRINTU,Planned Treatment Interval Units,Char,50
+adnca.xpt,DOSPCTDF,Percent Diff. Nominal vs. Actual Dose,Num,8
+adnca.xpt,DOSEFRQ,Dose Frequency,Char,50
+adnca.xpt,ACYCLE,Analysis Cycle,Num,8
+adnca.xpt,ACYCLEC,Analysis Cycle (C),Char,50
+adnca.xpt,FANLDT,First Date of Dose for Analyte,Num,8
+adnca.xpt,FANLTM,First Time of Dose for Analyte,Num,8
+adnca.xpt,FANLDTM,First Datetime of Dose for Analyte,Num,8
+adnca.xpt,FANLEDT,First End Date of Dose for Analyte,Num,8
+adnca.xpt,FANLETM,First End Time of Dose for Analyte,Num,8
+adnca.xpt,FANLEDTM,First End Datetime of Dose for Analyte,Num,8
+adnca.xpt,PCRFTDT,Reference Date of Dose for Analyte,Num,8
+adnca.xpt,PCRFTTM,Reference Time of Dose for Analyte,Num,8
+adnca.xpt,PCRFTDTM,Reference Datetime of Dose for Analyte,Num,8
+adnca.xpt,PCRFEDT,Reference End Date of Dose for Analyte,Num,8
+adnca.xpt,PCRFETM,Reference End Time of Dose for Analyte,Num,8
+adnca.xpt,PCRFEDTM,Ref. End Datetime of Dose for Analyte,Num,8
+adnca.xpt,NFRLT,Nom. Rel. Time from Analyte First Dose,Num,8
+adnca.xpt,AFRLT,Act. Rel. Time from Analyte First Dose,Num,8
+adnca.xpt,NEFRLT,Nom. Rel. End Time from First Dose,Num,8
+adnca.xpt,AEFRLT,Act. Rel. End Time from First Dose,Num,8
+adnca.xpt,FRLTU,Rel. Time from First Dose Unit,Char,8
+adnca.xpt,NRRLT,Nominal Rel. Time from Ref. Dose,Num,8
+adnca.xpt,ARRLT,Actual Rel. Time from Ref. Dose,Num,8
+adnca.xpt,MRRLT,Modified Rel. Time from Ref. Dose,Num,8
+adnca.xpt,NERRLT,Nominal Rel. End Time from Ref. Dose,Num,8
+adnca.xpt,AERRLT,Actual Rel. End Time from Ref. Dose,Num,8
+adnca.xpt,MERRLT,Modified Rel. End Time from Ref. Dose,Num,8
+adnca.xpt,RRLTU,Rel. Time from Ref. Dose Unit,Char,50
+adnca.xpt,TMPCTDF,Percent Diff. Nominal vs. Actual Time,Num,8
+adnca.xpt,ADOSEDUR,Actual Duration of Treatment Dose,Num,8
+adnca.xpt,NDOSEDUR,Nominal duration of Treatment Dose,Num,8
+adnca.xpt,DOSEDURU,Duration of Treatment Dose Units,Char,50
+adnca.xpt,AVALU,Analysis Value Unit,Char,50
+adnca.xpt,PCSPEC,Specimen Material Type,Char,50
+adnca.xpt,PCSTRESC,Character Result/Finding in Std Format,Char,50
+adnca.xpt,PCSTRESU,Standard Units,Char,50
+adnca.xpt,ALLOQ,Analysis Lower Limit of Quantitation,Num,8
+adnca.xpt,PCLLOQ,Lower Limit of Quantitation,Num,8
+adnca.xpt,VOLUME,Volume Value,Num,8
+adnca.xpt,VOLUMEU,Volume Value Unit,Char,50
+adnca.xpt,SPWEIGHT,Specimen Weight Value,Num,8
+adnca.xpt,SPWEIGHU,Specimen Weight Value Unit,Char,50
+adnca.xpt,PCGRPID,Group ID,Char,50
+adnca.xpt,PCSEQ,Sequence Number,Num,8
+adnca.xpt,DOSEA,Actual Treatment Dose,Num,8
+adnca.xpt,DOSEU,Treatment Dose Units,Char,50
+adnca.xpt,AVISIT,Analysis Visit,Char,50

@@ -1,0 +1,28 @@
+{
+  "SUPPEC": [
+    {
+      "executionStatus": "success",
+      "domain": "SUPPEC",
+      "variables": [
+        "QNAM"
+      ],
+      "message": "A SUPP domain other than SUPPDM contains population flags (name fragments reserved)",
+      "errors": [
+        {
+          "value": {
+            "QNAM": "SAFETY"
+          }
+        }
+      ]
+    }
+  ],
+  "SUPPDM": [
+    {
+      "executionStatus": "skipped",
+      "domain": "SUPPDM",
+      "variables": [],
+      "message": null,
+      "errors": []
+    }
+  ]
+}

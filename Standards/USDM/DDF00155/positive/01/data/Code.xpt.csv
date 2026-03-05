@@ -1,0 +1,54 @@
+parent_entity,parent_id,parent_rel,rel_type,id,code,codeSystem,codeSystemVersion,decode,instanceType
+StudyVersion,StudyVersion_1,studyType,definition,Code_1,C98388,http://www.cdisc.org,2014-09-26,Interventional Study,Code
+AliasCode,AliasCode_1,standardCode,definition,Code_2,C15601,http://www.cdisc.org,2014-12-19,Phase II Trial,Code
+GovernanceDate,GovernanceDate_1,type,definition,Code_9,C132352,http://www.cdisc.org,2015-03-27,Sponsor Approval Date,Code
+GeographicScope,GeographicScope_1,type,definition,Code_10,C68846,http://www.cdisc.org,2015-06-26,Global,Code
+StudyAmendmentReason,StudyAmendmentReason_1,code,definition,Code_72,C99904x3,http://www.cdisc.org,2015-09-25,IRB/IEC Feedback,Code
+StudyAmendmentReason,StudyAmendmentReason_2,code,definition,Code_73,C17649,http://www.cdisc.org,2015-12-18,Other,Code
+SubjectEnrollment,SubjectEnrollment_1,type,definition,Code_75,C41129,http://www.cdisc.org,2016-03-25,Region,Code
+Organization,Organization_1,organizationType,definition,Code_76,C70793,http://www.cdisc.org,2016-06-24,Clinical Study Sponsor,Code
+Organization,Organization_2,organizationType,definition,Code_78,C93453,http://www.cdisc.org,2016-09-30,Study Registry,Code
+StudyDesign,StudyDesign_1,trialIntentTypes,definition,Code_137,C49656,http://www.cdisc.org,2016-12-16,Treatment Study,Code
+StudyDesign,StudyDesign_1,trialTypes,definition,Code_138,C49666,http://www.cdisc.org,2017-03-31,Efficacy Study,Code
+StudyDesign,StudyDesign_1,trialTypes,definition,Code_139,C49667,http://www.cdisc.org,2017-06-30,Safety Study,Code
+StudyDesign,StudyDesign_1,trialTypes,definition,Code_140,C49663,http://www.cdisc.org,2017-09-29,Pharmacokinetic Study,Code
+StudyDesign,StudyDesign_1,characteristics,definition,Code_143,C99907x1,http://www.cdisc.org,2017-12-22,EXTENSION,Code
+StudyDesign,StudyDesign_1,characteristics,definition,Code_144,C98704,http://www.cdisc.org,2018-03-30,ADAPTIVE,Code
+StudyDesign,StudyDesign_1,interventionModel,definition,Code_141,C82639,http://www.cdisc.org,2018-06-29,Parallel Study,Code
+Encounter,Encounter_1,type,definition,Code_83,C25716,http://www.cdisc.org,2018-09-28,Visit,Code
+Encounter,Encounter_1,environmentalSetting,definition,Code_84,C51282,http://www.cdisc.org,2018-12-21,Clinic,Code
+Encounter,Encounter_1,contactModes,definition,Code_85,C175574,http://www.cdisc.org,2019-03-29,In Person,Code
+Encounter,Encounter_2,type,definition,Code_86,C25716,http://www.cdisc.org,2019-06-28,Visit,Code
+Encounter,Encounter_2,environmentalSetting,definition,Code_87,C51282,http://www.cdisc.org,2019-09-27,Clinic,Code
+Encounter,Encounter_2,contactModes,definition,Code_88,C175574,http://www.cdisc.org,2019-12-20,In Person,Code
+Encounter,Encounter_3,type,definition,Code_89,C25716,http://www.cdisc.org,2020-03-27,Visit,Code
+Encounter,Encounter_3,environmentalSetting,definition,Code_90,C51282,http://www.cdisc.org,2020-06-26,Clinic,Code
+Encounter,Encounter_3,contactModes,definition,Code_91,C175574,http://www.cdisc.org,2020-11-06,In Person,Code
+Encounter,Encounter_4,type,definition,Code_92,C25716,http://www.cdisc.org,2020-12-18,Visit,Code
+Encounter,Encounter_4,environmentalSetting,definition,Code_93,C51282,http://www.cdisc.org,2021-03-26,Clinic,Code
+Encounter,Encounter_4,contactModes,definition,Code_94,C175574,http://www.cdisc.org,2021-06-25,In Person,Code
+Encounter,Encounter_5,type,definition,Code_95,C25716,http://www.cdisc.org,2021-09-24,Visit,Code
+Encounter,Encounter_5,environmentalSetting,definition,Code_96,C51282,http://www.cdisc.org,2021-12-17,Clinic,Code
+Encounter,Encounter_5,contactModes,definition,Code_97,C175574,http://www.cdisc.org,2022-03-25,In Person,Code
+Encounter,Encounter_6,type,definition,Code_98,C25716,http://www.cdisc.org,2022-06-24,Visit,Code
+Encounter,Encounter_6,environmentalSetting,definition,Code_99,C51282,http://www.cdisc.org,2022-09-30,Clinic,Code
+Encounter,Encounter_6,contactModes,definition,Code_100,C175574,http://www.cdisc.org,2022-12-16,In Person,Code
+Encounter,Encounter_7,type,definition,Code_101,C25716,http://www.cdisc.org,2023-03-31,Visit,Code
+Encounter,Encounter_7,environmentalSetting,definition,Code_102,C51282,http://www.cdisc.org,2023-06-30,Clinic,Code
+Encounter,Encounter_7,contactModes,definition,Code_103,C175574,http://www.cdisc.org,2023-09-29,In Person,Code
+Encounter,Encounter_7,contactModes,definition,Code_104,C171537,http://www.cdisc.org,2023-12-15,Telephone Call,Code
+Encounter,Encounter_8,type,definition,Code_105,C25716,http://www.cdisc.org,2024-03-29,Visit,Code
+Encounter,Encounter_8,environmentalSetting,definition,Code_106,C51282,http://www.cdisc.org,2024-09-27,Clinic,Code
+Encounter,Encounter_8,contactModes,definition,Code_107,C175574,http://www.cdisc.org,2025-03-28,In Person,Code
+AliasCode,AliasCode_3,standardCode,definition,Code_74,150,ISO 3166 1 alpha3,2020-08,Europe,Code
+Address,Address_1,country,definition,Code_77,USA,ISO 3166 1 alpha3,2020-08,United States of America,Code
+Address,Address_2,country,definition,Code_79,USA,ISO 3166 1 alpha3,2020-08,United States of America,Code
+Address,Address_3,country,definition,Code_599,GBR,ISO 3166 1 alpha3,2020-08,United Kingdom of Great Britain and Northern Ireland,Code
+AliasCode,AliasCode_2,standardCode,definition,Code_12,150,ISO 3166 1 alpha3,2020-08,Europe,Code
+StudyDesign,StudyDesign_1,therapeuticAreas,definition,Code_135,26929004,SNOMED,"January 31, 2018",Alzheimer's disease,Code
+Procedure,Procedure_1,code,definition,Code_80,383371000119108,SNOMED,"January 31, 2018",CT of head without contrast,Code
+Indication,Indication_2,codes,definition,Code_547,26929004,SNOMED,"January 31, 2018",Alzheimer's disease,Code
+StudyVersion,StudyVersion_1,businessTherapeuticAreas,definition,Code_4,PHARMA,SPONSOR,12,Eli Lilly,Code
+StudyDesign,StudyDesign_1,therapeuticAreas,definition,Code_134,MILD_MOD_ALZ,SPONSOR,12,Mild to Moderate Alzheimer's Disease,Code
+Procedure,Procedure_2,code,definition,Code_81,123,SPONSOR,12,Subject Supine,Code
+Procedure,Procedure_3,code,definition,Code_82,124,SPONSOR,12,Subject Standing,Code

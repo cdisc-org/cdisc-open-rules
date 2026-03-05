@@ -1,0 +1,47 @@
+{
+  "TS": [
+    {
+      "executionStatus": "success",
+      "domain": "TS",
+      "variables": [
+        "$STYPE_INTERVENTIONAL",
+        "TSGRPID",
+        "TSPARMCD",
+        "TSVAL"
+      ],
+      "message": "A record exists in TS where TSPARMCD = STYPE and TSVAL = INTERVENTIONAL but TSVAL for TSPARMCD = TRT is empty.",
+      "errors": [
+        {
+          "value": {
+            "TSVAL": "",
+            "TSGRPID": "1",
+            "$STYPE_INTERVENTIONAL": 1,
+            "TSPARMCD": "TRT"
+          },
+          "row": 52,
+          "SEQ": 1
+        },
+        {
+          "value": {
+            "TSVAL": "",
+            "TSGRPID": "2",
+            "$STYPE_INTERVENTIONAL": 1,
+            "TSPARMCD": "TRT"
+          },
+          "row": 53,
+          "SEQ": 2
+        },
+        {
+          "value": {
+            "TSVAL": "",
+            "TSGRPID": "",
+            "$STYPE_INTERVENTIONAL": 2,
+            "TSPARMCD": "TRT"
+          },
+          "row": 54,
+          "SEQ": 3
+        }
+      ]
+    }
+  ]
+}

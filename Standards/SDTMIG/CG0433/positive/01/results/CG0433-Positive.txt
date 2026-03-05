@@ -1,0 +1,193 @@
+{
+  "rule": {
+    "Authorities": [
+      {
+        "Organization": "CDISC",
+        "Standards": [
+          {
+            "Name": "SDTMIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Document": "Model v1.4",
+                    "Section": "2.2.6",
+                    "Cited_Guidance": "Units associated with AGE or AGETXT."
+                  }
+                ],
+                "Origin": "SDTM and SDTMIG Conformance Rules",
+                "Version": "2.0",
+                "Rule_Identifier": {
+                  "Id": "CG0433",
+                  "Version": "1"
+                }
+              }
+            ],
+            "Version": "3.2"
+          },
+          {
+            "Name": "SDTMIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Document": "Model v1.7",
+                    "Section": "Table 2.2.6.1",
+                    "Cited_Guidance": "Units associated with AGE or AGETXT."
+                  }
+                ],
+                "Origin": "SDTM and SDTMIG Conformance Rules",
+                "Version": "2.0",
+                "Rule_Identifier": {
+                  "Id": "CG0433",
+                  "Version": "1"
+                }
+              }
+            ],
+            "Version": "3.3"
+          }
+        ]
+      }
+    ],
+    "Check": {
+      "all": [
+        {
+          "name": "AGEU",
+          "operator": "non_empty"
+        },
+        {
+          "name": "AGETXT",
+          "operator": "empty"
+        },
+        {
+          "name": "AGE",
+          "operator": "empty"
+        }
+      ]
+    },
+    "Core": {
+      "Id": "CDISC.SDTMIG.CG0433",
+      "Status": "Draft",
+      "Version": "1"
+    },
+    "Description": "Raise an error when AGE is empty, but AGEU is not empty.",
+    "Executability": "Fully Executable",
+    "Outcome": {
+      "Message": "Missing value for AGE, when AGEU is provided",
+      "Output_Variables": [
+        "AGE",
+        "AGEU"
+      ]
+    },
+    "Scope": {
+      "Classes": {
+        "Include": [
+          "SPECIAL PURPOSE"
+        ]
+      },
+      "Domains": {
+        "Include": [
+          "DM"
+        ]
+      }
+    },
+    "Sensitivity": "Record",
+    "Rule_Type": "Record Data"
+  },
+  "datasets": [
+    {
+      "filename": "dm.xpt",
+      "label": "Demographics",
+      "domain": "DM",
+      "variables": [
+        {
+          "name": "STUDYID",
+          "label": "Study Identifier",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "DOMAIN",
+          "label": "Domain Abbreviation",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "USUBJID",
+          "label": "Unique Subject Identifier",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "SUBJID",
+          "label": "Subject Identifier for the Study",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "SITEID",
+          "label": "Study Site Identifier",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "AGE",
+          "label": "Age",
+          "type": "Num",
+          "length": 8
+        },
+        {
+          "name": "AGETXT",
+          "label": "Age Text",
+          "type": "Char",
+          "length": 4
+        },
+        {
+          "name": "AGEU",
+          "label": "Age Units",
+          "type": "Char",
+          "length": 50
+        }
+      ],
+      "records": {
+        "STUDYID": [
+          "CDISC-TEST",
+          "CDISC-TEST"
+        ],
+        "DOMAIN": [
+          "DM",
+          "DM"
+        ],
+        "USUBJID": [
+          "CDISC-TEST-002",
+          "CDISC-TEST-004"
+        ],
+        "SUBJID": [
+          "002",
+          "004"
+        ],
+        "SITEID": [
+          "103",
+          "102"
+        ],
+        "AGE": [
+          34,
+          31
+        ],
+        "AGETXT": [
+          "",
+          ""
+        ],
+        "AGEU": [
+          "YEARS",
+          "YEARS"
+        ]
+      }
+    }
+  ],
+  "standard": {
+    "product": "sdtmig",
+    "version": "3-3"
+  },
+  "codelists": []
+}

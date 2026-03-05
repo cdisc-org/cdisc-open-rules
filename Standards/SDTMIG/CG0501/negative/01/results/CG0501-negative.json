@@ -1,0 +1,21 @@
+{
+  "MH": [
+    {
+      "executionStatus": "success",
+      "domain": "MH",
+      "variables": [
+        "$MIDS_EXISTS",
+        "TM"
+      ],
+      "message": "TM dataset is missing when MIDS variable is present in one of the dataset.",
+      "errors": [
+        {
+          "value": {
+            "$MIDS_EXISTS": true,
+            "TM": "Not in dataset"
+          }
+        }
+      ]
+    }
+  ]
+}

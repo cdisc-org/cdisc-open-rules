@@ -1,0 +1,71 @@
+{
+  "CO": [
+    {
+      "executionStatus": "success",
+      "domain": "CO",
+      "variables": [
+        "$study_domains",
+        "RDOMAIN"
+      ],
+      "message": "RDOMAIN does not represent a dataset present in the study.",
+      "errors": [
+        {
+          "value": {
+            "RDOMAIN": "IS",
+            "$study_domains": [
+              "CO",
+              "SUPPLB",
+              "RELREC"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "RELREC": [
+    {
+      "executionStatus": "success",
+      "domain": "RELREC",
+      "variables": [
+        "$study_domains",
+        "RDOMAIN"
+      ],
+      "message": "RDOMAIN does not represent a dataset present in the study.",
+      "errors": [
+        {
+          "value": {
+            "RDOMAIN": "LB",
+            "$study_domains": [
+              "CO",
+              "SUPPLB",
+              "RELREC"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "SUPPLB": [
+    {
+      "executionStatus": "success",
+      "domain": "SUPPLB",
+      "variables": [
+        "$study_domains",
+        "RDOMAIN"
+      ],
+      "message": "RDOMAIN does not represent a dataset present in the study.",
+      "errors": [
+        {
+          "value": {
+            "RDOMAIN": "LB",
+            "$study_domains": [
+              "CO",
+              "SUPPLB",
+              "RELREC"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

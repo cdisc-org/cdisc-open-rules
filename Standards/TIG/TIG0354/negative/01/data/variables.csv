@@ -1,0 +1,41 @@
+dataset,variable,label,type,length
+cm.xpt,STUDYID,Study Identifier,Char,50
+cm.xpt,DOMAIN,Domain Abbreviation,Char,50
+cm.xpt,USUBJID,Unique Subject Identifier,Char,50
+cm.xpt,CMSEQ,Sequence Number,Num,8
+cm.xpt,CMTRT,"Reported Name of Drug, Med, or Therapy",Char,50
+cm.xpt,CMPRESP,CM Pre-specified,Char,50
+cm.xpt,CMOCCUR,CM Occurrence,Char,50
+ec.xpt,STUDYID,Study Identifier,Char,12
+ec.xpt,DOMAIN,Domain Abbreviation,Char,2
+ec.xpt,USUBJID,Unique Subject Identifier,Char,8
+ec.xpt,ECSEQ,Sequence Number,Num,8
+ec.xpt,ECTRT,Name of Treatment,Char,10
+ec.xpt,ECOCCUR,Occurrence,Char,1
+ae.xpt,STUDYID,Study Identifier,Char,12
+ae.xpt,DOMAIN,Domain Abbreviation,Char,2
+ae.xpt,USUBJID,Unique Subject Identifier,Char,8
+ae.xpt,AESEQ,Sequence Number,Num,8
+ae.xpt,AELNKID,Link ID,Char,50
+ae.xpt,AETERM,Reported Term for the Adverse Event,Char,200
+ae.xpt,AEPRESP,Pre-Specified Adverse Event,Char,50
+mh.xpt,STUDYID,Study Identifier,Char,50
+mh.xpt,DOMAIN,Domain Abbreviation,Char,50
+mh.xpt,USUBJID,Unique Subject Identifier,Char,50
+mh.xpt,MHSEQ,Sequence Number,Num,8
+mh.xpt,MHTERM,Reported Term for the Medical History,Char,50
+mh.xpt,MHPRESP,Medical History Event Pre-Specified,Char,50
+mh.xpt,MHOCCUR,Medical History Occurrence,Char,50
+em.xpt,STUDYID,Study Identifier,Char,50
+em.xpt,DOMAIN,Domain Abbreviation,Char,50
+em.xpt,USUBJID,Unique Subject Identifier,Char,50
+em.xpt,SPTOBID,Applicant-Defined Tobacco Product ID,Char,50
+em.xpt,EMSEQ,Device Events Sequence Number,Num,50
+em.xpt,EMTERM,Reported Term for Device Event,Char,50
+em.xpt,EMDECOD,Device Events Dictionary-Derived Term,Char,50
+em.xpt,EMPRESP,Device Event Pre-Specified,Char,50
+em.xpt,EMOCCUR,Device Event Occurrence,Char,50
+em.xpt,EMCAT,Category of Device Event,Char,50
+em.xpt,EMACNDEV,Action Taken with Device,Char,50
+em.xpt,EMPATT,Pattern of Device Event,Char,50
+em.xpt,EMSTDTC,Start Date/Time of Device Event,Char,50

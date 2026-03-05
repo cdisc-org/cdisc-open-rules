@@ -1,0 +1,68 @@
+{
+    "AE": [
+        {
+            "executionStatus": "success",
+            "dataset": "ae.xpt",
+            "domain": "AE",
+            "variables": [
+                "library_variable_label",
+                "variable_label",
+                "variable_name"
+            ],
+            "message": "The label of the variable does not correspond to the label in the IG",
+            "errors": [
+                {
+                    "value": {
+                        "library_variable_label": "Results in Death",
+                        "variable_label": "Death",
+                        "variable_name": "AESDTH"
+                    }
+                }
+            ]
+        }
+    ],
+    "LB": [
+        {
+            "executionStatus": "success",
+            "dataset": "lb.xpt",
+            "domain": "LB",
+            "variables": [
+                "library_variable_label",
+                "variable_label",
+                "variable_name"
+            ],
+            "message": "The label of the variable does not correspond to the label in the IG",
+            "errors": [
+                {
+                    "value": {
+                        "library_variable_label": "Method of Test or Examination",
+                        "variable_label": "Metho of Test or Examination",
+                        "variable_name": "LBMETHOD"
+                    }
+                }
+            ]
+        }
+    ],
+    "EC": [
+        {
+            "executionStatus": "success",
+            "dataset": "ec.xpt",
+            "domain": "EC",
+            "variables": [
+                "library_variable_label",
+                "variable_label",
+                "variable_name"
+            ],
+            "message": "The label of the variable does not correspond to the label in the IG",
+            "errors": [
+                {
+                    "value": {
+                        "library_variable_label": "Route of Administration",
+                        "variable_label": "Route of Something",
+                        "variable_name": "ECROUTE"
+                    }
+                }
+            ]
+        }
+    ]
+}

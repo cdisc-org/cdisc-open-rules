@@ -1,0 +1,28 @@
+dataset,variable,label,type,length
+adsl.xpt,STUDYID,Study Identifier,Char,12
+adsl.xpt,USUBJID,Unique Subject Identifier,Char,8
+adsl.xpt,SITEID,Study Site Identifier,Char,50
+adsl.xpt,AGE,Age,Num,8
+adsl.xpt,AGEU,Age Units,Char,50
+adsl.xpt,SEX,Sex,Char,50
+adsl.xpt,RACE,Race,Char,50
+adsl.xpt,SAFFL,Safety Population Flag,Char,50
+adsl.xpt,ARM,Description of Planned Arm,Char,50
+adsl.xpt,ACTARM,Description of Actual Arm,Char,50
+adsl.xpt,TRTxxP,Planned Treatment for Period xx,Char,50
+adsl.xpt,TRTxxPN,Planned Treatment for Period xx (N),Num,8
+advs.xpt,STUDYID,Study Identifier,Char,12
+advs.xpt,USUBJID,Unique Subject Identifier,Char,8
+advs.xpt,TRTP,Planned Treatment,Char,50
+advs.xpt,TRTPN,Planned Treatment (N),Num,8
+advs.xpt,TRTA,Actual Treatment,Char,50
+advs.xpt,TRTAN,Actual Treatment (N),Num,8
+advs.xpt,PARAM,Parameter,Char,50
+advs.xpt,PARAMCD,Parameter Code,Char,50
+advs.xpt,PARAMN,Parameter (N),Num,8
+advs.xpt,PARCAT1,Parameter Category 1,Char,50
+advs.xpt,PARCAT1N,Parameter Category 1 (N),Num,8
+advs.xpt,AVAL,Analysis Value,Num,8
+advs.xpt,AVALC,Analysis Value (C),Char,50
+advs.xpt,ABLFL,Baseline Record Flag,Char,50
+advs.xpt,ABLFN,Baseline Record Flag (N),Num,8

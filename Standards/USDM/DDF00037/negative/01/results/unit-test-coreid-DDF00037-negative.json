@@ -1,0 +1,92 @@
+{
+    "ScheduledActivityInstance": [
+        {
+            "executionStatus": "success",
+            "dataset": "ScheduledActivityInstance.xpt",
+            "domain": null,
+            "variables": [],
+            "message": null,
+            "errors": []
+        }
+    ],
+    "ScheduleTimeline": [
+        {
+            "executionStatus": "success",
+            "dataset": "ScheduleTimeline.xpt",
+            "domain": "ScheduleTimeline",
+            "variables": [
+                "id",
+                "name",
+                "parent_entity",
+                "parent_id",
+                "parent_rel"
+            ],
+            "message": "The schedule timeline does not have a defined exit: none of its scheduled activity instances has a timeline exit.",
+            "errors": [
+                {
+                    "value": {
+                        "name": "Main Timeline",
+                        "parent_rel": "scheduleTimelines",
+                        "parent_id": "StudyDesign_1",
+                        "id": "ScheduleTimeline_1",
+                        "parent_entity": "StudyDesign"
+                    },
+                    "dataset": "ScheduleTimeline.xpt",
+                    "row": 1
+                },
+                {
+                    "value": {
+                        "name": "Contingent timeline",
+                        "parent_rel": "scheduleTimelines",
+                        "parent_id": "StudyDesign_1",
+                        "id": "ScheduleTimeline_2",
+                        "parent_entity": "StudyDesign"
+                    },
+                    "dataset": "ScheduleTimeline.xpt",
+                    "row": 2
+                },
+                {
+                    "value": {
+                        "name": "Main Timeline",
+                        "parent_rel": "scheduleTimelines",
+                        "parent_id": "StudyDesign_2",
+                        "id": "ScheduleTimeline_3",
+                        "parent_entity": "StudyDesign"
+                    },
+                    "dataset": "ScheduleTimeline.xpt",
+                    "row": 3
+                }
+            ]
+        }
+    ],
+    "ScheduleTimelineExit": [
+        {
+            "executionStatus": "success",
+            "dataset": "ScheduleTimelineExit.xpt",
+            "domain": null,
+            "variables": [],
+            "message": null,
+            "errors": []
+        }
+    ],
+    "ScheduledDecisionInstance": [
+        {
+            "executionStatus": "success",
+            "dataset": "ScheduledDecisionInstance.xpt",
+            "domain": null,
+            "variables": [],
+            "message": null,
+            "errors": []
+        }
+    ],
+    "ConditionAssignment": [
+        {
+            "executionStatus": "success",
+            "dataset": "ConditionAssignment.xpt",
+            "domain": null,
+            "variables": [],
+            "message": null,
+            "errors": []
+        }
+    ]
+}

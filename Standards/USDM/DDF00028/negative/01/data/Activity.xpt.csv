@@ -1,0 +1,5 @@
+parent_entity,parent_id,parent_rel,rel_type,id,name,description,label,instanceType,definedProcedures,biomedicalConceptIds,nextId,timelineId,previousId,bcSurrogateIds,bcCategoryIds
+parent_entity,parent_id,parent_rel,rel_type,id,name,description,label,instanceType,definedProcedures,biomedicalConceptIds,nextId,timelineId,previousId,bcSurrogateIds,bcCategoryIds
+StudyDesign,StudyDesign_1,activities,definition,Activity_1,Informed consent,,Informed consent,Activity,False,False,Activity_2,,,False,False
+StudyDesign,StudyDesign_1,activities,definition,Activity_2,Inclusion/exclusion criteria,,Inclusion and exclusion criteria,Activity,False,False,Activity_3,,Activity_1,False,False
+StudyDesign,StudyDesign_2,activities,definition,Activity_3,Patient number assigned,,Patient number assigned,Activity,False,False,,,Activity_2,False,False

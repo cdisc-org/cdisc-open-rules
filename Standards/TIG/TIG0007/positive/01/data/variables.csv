@@ -1,0 +1,19 @@
+dataset,variable,label,type,length
+pt.xpt,STUDYID,Study Identifier,Char,200
+pt.xpt,DOMAIN,Domain Abbreviation,Char,200
+pt.xpt,SPTOBID,Applicant-Defined Tobacco Product ID,Char,40
+pt.xpt,PTSEQ,Sequence Number,Num,8
+pt.xpt,PTREFID,Reference ID,Char,50
+pt.xpt,PTTESTCD,Test or Examination Short Name.,Char,50
+pt.xpt,PTTEST,Test or Examination Name,Char,50
+pt.xpt,PTCAT,Category of Test,Char,50
+pt.xpt,PTSCAT,Subcategory of Test,Char,50
+pt.xpt,PTORRES,Result or Finding in Original Units,Char,50
+pt.xpt,PTORRESU,Original Units,Char,50
+pt.xpt,PTSTRESC,Character Result/Finding in Std Format,Char,50
+pt.xpt,PTSTRESN,Numeric Result/Finding in Standard Units,Num,50
+pt.xpt,PTSTRESU,Standard Units,Char,50
+pt.xpt,PTXFN,External File Path,Char,50
+pt.xpt,PTSPEC,Specimen Material Type,Char,50
+pt.xpt,PTMETHOD,Method of Test or Examination,Char,50
+pt.xpt,PTDTC,Date/Time of Sample Testing,Char,50

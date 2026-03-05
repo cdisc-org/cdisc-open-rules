@@ -1,0 +1,358 @@
+REQUEST:
+
+{
+  "rule": {
+    "_links": {},
+    "core_id": "CDISC.SDTMIG.CG0164",
+    "reference": [
+      {
+        "Origin": "SDTM and SDTMIG Conformance Rules",
+        "Version": "2.0",
+        "Rule Identifier": {
+          "Id": "CG0164",
+          "Version": "1"
+        }
+      }
+    ],
+    "sensitivity": "Record",
+    "severity": "error",
+    "description": "Verify IDVAR is null when RDOMAIN is null",
+    "authority": {
+      "Organization": "CDISC"
+    },
+    "standards": [
+      {
+        "Name": "SDTMIG",
+        "Version": "3.4"
+      }
+    ],
+    "classes": {
+      "Include": [
+        "Special-Purpose"
+      ]
+    },
+    "domains": {
+      "Include": [
+        "CO"
+      ]
+    },
+    "rule_type": "Value Presence",
+    "conditions": {
+      "all": [
+        {
+          "name": "get_dataset",
+          "operator": "non_empty",
+          "value": {
+            "target": "IDVAR"
+          }
+        },
+        {
+          "name": "get_dataset",
+          "operator": "empty",
+          "value": {
+            "target": "RDOMAIN"
+          }
+        }
+      ]
+    },
+    "output_variables": [
+      "RDOMAIN",
+      "IDVAR"
+    ],
+    "actions": [
+      {
+        "name": "generate_dataset_error_objects",
+        "params": {
+          "message": "RDOMAIN has a missing value but IDVAR has a non-missing value"
+        }
+      }
+    ]
+  },
+  "datasets": [
+    {
+      "filename": "co.xpt",
+      "label": "Comments",
+      "domain": "CO",
+      "variables": [
+        {
+          "name": "STUDYID",
+          "label": "Study Identifier",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "DOMAIN",
+          "label": "Domain Abbreviation",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "RDOMAIN",
+          "label": "Related Domain Abbreviation",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "USUBJID",
+          "label": "Unique Subject Identifier",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "COSEQ",
+          "label": "Sequence Number",
+          "type": "Num",
+          "length": 8
+        },
+        {
+          "name": "IDVAR",
+          "label": "Identifying Variable",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "IDVARVAL",
+          "label": "Identifying Variable Value",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "COREF",
+          "label": "Comment Reference",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "COVAL",
+          "label": "Comment",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "COVAL1",
+          "label": "Comment",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "COVAL2",
+          "label": "Comment",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "COEVAL",
+          "label": "Evaluator",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "VISITNUM",
+          "label": "Visitnumber",
+          "type": "Num",
+          "length": 8
+        },
+        {
+          "name": "CODTC",
+          "label": "Date/Time of Comment",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "CODY",
+          "label": "Study Day of Comment",
+          "type": "Num",
+          "length": 8
+        }
+      ],
+      "records": {
+        "STUDYID": [
+          "1234",
+          "1234",
+          "1234",
+          "1234",
+          "1234",
+          "1234",
+          "1234",
+          "1234"
+        ],
+        "DOMAIN": [
+          "CO",
+          "CO",
+          "CO",
+          "CO",
+          "CO",
+          "CO",
+          "CO",
+          "CO"
+        ],
+        "RDOMAIN": [
+          "",
+          "PE",
+          "",
+          "EX",
+          "",
+          "SV",
+          "",
+          ""
+        ],
+        "USUBJID": [
+          "AB-99",
+          "XX-11",
+          "YY-20",
+          "ZZ-23",
+          "AB-99",
+          "XX-11",
+          "YY-20",
+          "ZZ-23"
+        ],
+        "COSEQ": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "IDVAR": [
+          "",
+          "",
+          "AESEQ",
+          "EXGRPID",
+          "VSGRPID",
+          "VISITNUM",
+          "",
+          ""
+        ],
+        "IDVARVAL": [
+          "",
+          "",
+          "7",
+          "COMBO1",
+          "VS2",
+          "4",
+          "",
+          ""
+        ],
+        "COREF": [
+          "",
+          "VISIT 7",
+          "PAGE 650",
+          "PAGE 320-355",
+          "",
+          "",
+          "VISIT 4",
+          ""
+        ],
+        "COVAL": [
+          "Patient was then transferred to tertiary care centre since his condition continued to deteriorate ",
+          "Visit was delayed by a day due to strike at hospital",
+          "On 01JAN2020 the woman and her son were bitten by a stray dog while walking nearby to their house. The woman sustained bites on her thigh while her son had bites on his left foot. Dog was killed and ",
+          "Medicine was administered under supervision of Sub investigator as PI was on leave",
+          "Vital signs were recorded by casualty physician",
+          "Visit was delayed by a day due to hospital holiday",
+          "Visit was delayed by a day due to hospital holiday",
+          "Visit was delayed by a day due to hospital holiday"
+        ],
+        "COVAL1": [
+          "",
+          "",
+          "buried without laboratory investigation for rabies. Women washed the wounds of her child shortly after the incident and then took him to the healthcare unit where he received a rabies vaccine and",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "COVAL2": [
+          "",
+          "",
+          "completed a full course of standard vaccines.",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "COEVAL": [
+          "PRINCIPAL INVESTIGATOR",
+          "PRINCIPAL INVESTIGATOR",
+          "PRINCIPAL INVESTIGATOR",
+          "PRINCIPAL INVESTIGATOR",
+          "PRINCIPAL INVESTIGATOR",
+          "PRINCIPAL INVESTIGATOR",
+          "PRINCIPAL INVESTIGATOR",
+          "PRINCIPAL INVESTIGATOR"
+        ],
+        "VISITNUM": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          4
+        ],
+        "CODTC": [
+          "2019-11-08",
+          "2020-01-14",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "CODY": [
+          134,
+          201,
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      }
+    }
+  ]
+}
+
+RESULTS:
+
+{
+  "CO": [
+    {
+      "domain": "CO",
+      "errors": [
+        {
+          "row": 2,
+          "seq": 3,
+          "uSubjId": "YY-20",
+          "value": {
+            "IDVAR": "AESEQ",
+            "RDOMAIN": ""
+          }
+        },
+        {
+          "row": 4,
+          "seq": 5,
+          "uSubjId": "AB-99",
+          "value": {
+            "IDVAR": "VSGRPID",
+            "RDOMAIN": ""
+          }
+        }
+      ],
+      "executionStatus": "success",
+      "message": "RDOMAIN has a missing value but IDVAR has a non-missing value",
+      "variables": [
+        "IDVAR",
+        "RDOMAIN"
+      ]
+    }
+  ]
+}

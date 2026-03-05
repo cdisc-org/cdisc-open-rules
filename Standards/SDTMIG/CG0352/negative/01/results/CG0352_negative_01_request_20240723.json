@@ -1,0 +1,376 @@
+{
+    "rule": {
+        "Authorities": [
+            {
+                "Organization": "CDISC",
+                "Standards": [
+                    {
+                        "Name": "SDTMIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "Model v1.4",
+                                        "Item": "   ",
+                                        "Section": "2.7",
+                                        "Cited_Guidance": "The following SDTM variables, defined for use in non-clinical studies (SEND), must  NEVER be used in the submission of SDTM-based data for human clinical trials: --DTHREL (Findings) --EXCLFL (Findings) --REASEX (Findings) --DETECT (Findings)"
+                                    }
+                                ],
+                                "Origin": "SDTM and SDTMIG Conformance Rules",
+                                "Version": "2.0",
+                                "Rule_Identifier": {
+                                    "Id": "CG0352",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.4"
+                    },
+                    {
+                        "Name": "SDTMIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "IG v3.2",
+                                        "Section": "2.7",
+                                        "Cited_Guidance": "The following SDTM variables; defined for use in non-clinical studies (SEND); must NEVER be used in the submission of SDTM-based data for human clinical trials: --DTHREL (Findings) --EXCLFL (Findings) --REASEX (Findings) --DETECT (Findings)"
+                                    }
+                                ],
+                                "Origin": "SDTM and SDTMIG Conformance Rules",
+                                "Version": "2.0",
+                                "Rule_Identifier": {
+                                    "Id": "CG0352",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.2"
+                    },
+                    {
+                        "Name": "SDTMIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "IG v3.3",
+                                        "Section": "2.7",
+                                        "Cited_Guidance": "The following SDTM variables; defined for use in non-clinical studies (SEND); must NEVER be used in the submission of SDTM-based data for human clinical trials: --USCHFL (Interventions; Events; Findings) --DTHREL (Findings) --EXCLFL (Findings) --REASEX (Findings) --IMPLBL (Findings) FETUSID (Identifiers) --DETECT (Timing Variables) --NOMDY (Timing Variables) --NOMLBL (Timing Variables)"
+                                    }
+                                ],
+                                "Origin": "SDTM and SDTMIG Conformance Rules",
+                                "Version": "2.0",
+                                "Rule_Identifier": {
+                                    "Id": "CG0352",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.3"
+                    }
+                ]
+            }
+        ],
+        "Check": {
+            "all": [
+                {
+                    "name": "--DTHREL",
+                    "operator": "exists"
+                }
+            ]
+        },
+        "Core": {
+            "Id": "CORE-000226",
+            "Status": "Draft",
+            "Version": "1"
+        },
+        "Description": "Verifying presence of SEND variable --DTHREL",
+        "Executability": "Fully Executable",
+        "Outcome": {
+            "Message": "--DTHREL must never be used in SDTM-based data for human clinical trials",
+            "Output_Variables": [
+                "--DTHREL"
+            ]
+        },
+        "Scope": {
+            "Classes": {
+                "Include": [
+                    "ALL"
+                ]
+            },
+            "Domains": {
+                "Include": [
+                    "ALL"
+                ]
+            }
+        },
+        "Sensitivity": "Dataset",
+        "Rule_Type": "Record Data"
+    },
+    "datasets": [
+        {
+            "filename": "ft.xpt",
+            "label": "Functional Tests",
+            "domain": "FT",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 12
+                },
+                {
+                    "name": "DOMAIN",
+                    "label": "Domain Abbreviation",
+                    "type": "Char",
+                    "length": 2
+                },
+                {
+                    "name": "USUBJID",
+                    "label": "Unique Subject Identifier",
+                    "type": "Char",
+                    "length": 8
+                },
+                {
+                    "name": "FTSEQ",
+                    "label": "Sequence Number",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "FTTESTCD",
+                    "label": "Short Name of Test",
+                    "type": "Char",
+                    "length": 7
+                },
+                {
+                    "name": "FTTEST",
+                    "label": "Name of Test",
+                    "type": "Char",
+                    "length": 23
+                },
+                {
+                    "name": "FTCAT",
+                    "label": "Category",
+                    "type": "Char",
+                    "length": 8
+                },
+                {
+                    "name": "FTSCAT",
+                    "label": "Subcategory",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "FTORRES",
+                    "label": "Result or Finding in Original Units",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "FTSTRESC",
+                    "label": "Result or Finding in Standard Format",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "FTSTRESN",
+                    "label": "Numeric Result/Finding in Standard Units",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "FTLOBXFL",
+                    "label": "Last Observation Before Exposure Flag",
+                    "type": "Char",
+                    "length": 1
+                },
+                {
+                    "name": "FTREPNUM",
+                    "label": "Repetition Number",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "VISITNUM",
+                    "label": "Visit Number",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "VISIT",
+                    "label": "Visit Name",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "EPOCH",
+                    "label": "Epoch",
+                    "type": "Char",
+                    "length": 9
+                },
+                {
+                    "name": "FTDTC",
+                    "label": "Date/Time of Test",
+                    "type": "Char",
+                    "length": 19
+                },
+                {
+                    "name": "FTDY",
+                    "label": "Study Day of Test",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "FTTPT",
+                    "label": "Planned Time Point Name",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "FTTPTNUM",
+                    "label": "Planned Time Point Number",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "FTELTM",
+                    "label": "Planned Elapsed Time from Time Point Ref",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "FTTPTREF",
+                    "label": "Time Point Reference",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "FTDTHREL",
+                    "label": "Relationship to Death ",
+                    "type": "Char",
+                    "length": 1
+                },
+                {
+                    "name": "FTSTAT",
+                    "label": "Completion Status",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "FTDRVFL",
+                    "label": "Derived Flag",
+                    "type": "Char",
+                    "length": 50
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "CDISCPILOT01",
+                    "CDISCPILOT01"
+                ],
+                "DOMAIN": [
+                    "FT",
+                    "FT"
+                ],
+                "USUBJID": [
+                    "CDISC001",
+                    "CDISC001"
+                ],
+                "FTSEQ": [
+                    1,
+                    2
+                ],
+                "FTTESTCD": [
+                    "AVL0201",
+                    "AVL0202"
+                ],
+                "FTTEST": [
+                    "AVL02-List A Word 1",
+                    "AVL02-List A Word 2"
+                ],
+                "FTCAT": [
+                    "AVLT-REY",
+                    "AVLT-REY"
+                ],
+                "FTSCAT": [
+                    "FORM 1",
+                    "FORM 1"
+                ],
+                "FTORRES": [
+                    "",
+                    "RECALLED"
+                ],
+                "FTSTRESC": [
+                    "RECALLED",
+                    "RECALLED"
+                ],
+                "FTSTRESN": [
+                    null,
+                    null
+                ],
+                "FTLOBXFL": [
+                    "Y",
+                    "Y"
+                ],
+                "FTREPNUM": [
+                    1,
+                    1
+                ],
+                "VISITNUM": [
+                    2,
+                    2
+                ],
+                "VISIT": [
+                    "SCREENING 2",
+                    "SCREENING 2"
+                ],
+                "EPOCH": [
+                    "SCREENING",
+                    "SCREENING"
+                ],
+                "FTDTC": [
+                    "2012-11-28T12:00",
+                    "2012-11-28T12:00"
+                ],
+                "FTDY": [
+                    -2,
+                    -2
+                ],
+                "FTTPT": [
+                    "",
+                    ""
+                ],
+                "FTTPTNUM": [
+                    null,
+                    null
+                ],
+                "FTELTM": [
+                    "",
+                    ""
+                ],
+                "FTTPTREF": [
+                    "",
+                    ""
+                ],
+                "FTDTHREL": [
+                    "",
+                    ""
+                ],
+                "FTSTAT": [
+                    "",
+                    ""
+                ],
+                "FTDRVFL": [
+                    "",
+                    ""
+                ]
+            }
+        }
+    ],
+    "standard": {
+        "product": "sdtmig",
+        "version": "3-3"
+    },
+    "codelists": []
+}

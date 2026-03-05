@@ -1,0 +1,293 @@
+{
+    "rule": {
+        "Authorities": [
+            {
+                "Organization": "CDISC",
+                "Standards": [
+                    {
+                        "Name": "SDTMIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "SDTMIG v3.4",
+                                        "Item": "Assumption 1",
+                                        "Section": "6.3.4",
+                                        "Cited_Guidance": "The intent of the domain model is to collect responses to only those criteria that the subject did not meet, and not the responses to all criteria. "
+                                    }
+                                ],
+                                "Origin": "SDTM and SDTMIG Conformance Rules",
+                                "Version": "2.0",
+                                "Rule_Identifier": {
+                                    "Id": "CG0175",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.4"
+                    },
+                    {
+                        "Name": "SDTMIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "IG v3.2",
+                                        "Item": "Assumption 2",
+                                        "Section": "6.3",
+                                        "Cited_Guidance": "The intent of the domain model is to collect response to only those criteria that the subject did not meet, and not the responses to all criteria."
+                                    }
+                                ],
+                                "Origin": "SDTM and SDTMIG Conformance Rules",
+                                "Version": "2.0",
+                                "Rule_Identifier": {
+                                    "Id": "CG0175",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.2"
+                    },
+                    {
+                        "Name": "SDTMIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "IG v3.3",
+                                        "Item": "Assumption 1",
+                                        "Section": "6.3.4",
+                                        "Cited_Guidance": "The intent of the domain model is to collect response to only those criteria that the subject did not meet, and not the responses to all criteria."
+                                    }
+                                ],
+                                "Origin": "SDTM and SDTMIG Conformance Rules",
+                                "Version": "2.0",
+                                "Rule_Identifier": {
+                                    "Id": "CG0175",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.3"
+                    },
+                    {
+                        "Name": "TIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "TIG 1.0",
+                                        "Item": "Assumption 1",
+                                        "Section": "2.8.10.13",
+                                        "Cited_Guidance": "The intent of the domain model is to collect responses to only those criteria that the subject did not meet, and not the responses to all criteria."
+                                    }
+                                ],
+                                "Origin": "TIG Conformance Rules",
+                                "Version": "1.0",
+                                "Rule_Identifier": {
+                                    "Id": "TIG0404",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Substandard": "SDTM",
+                        "Version": "1.0"
+                    }
+                ]
+            }
+        ],
+        "Check": {
+            "all": [
+                {
+                    "name": "IECAT",
+                    "operator": "equal_to",
+                    "value": "EXCLUSION",
+                    "value_is_literal": true
+                },
+                {
+                    "name": "IEORRES",
+                    "operator": "not_equal_to",
+                    "value": "Y",
+                    "value_is_literal": true
+                }
+            ]
+        },
+        "Core": {
+            "Id": "CORE-000011",
+            "Status": "Published",
+            "Version": "1"
+        },
+        "Description": "Raise an error when IECAT is equal to 'EXCLUSION' and IEORRES is not equal to 'Y'.",
+        "Executability": "Fully Executable",
+        "Outcome": {
+            "Message": "IEORRES is not equal to 'Y' when IECAT equals 'EXCLUSION'.",
+            "Output_Variables": [
+                "IECAT",
+                "IEORRES"
+            ]
+        },
+        "Scope": {
+            "Classes": {
+                "Include": [
+                    "FINDINGS"
+                ]
+            },
+            "Domains": {
+                "Include": [
+                    "IE"
+                ]
+            },
+            "Use_Case": "INDH"
+        },
+        "Sensitivity": "Record",
+        "Rule_Type": "Record Data"
+    },
+    "datasets": [
+        {
+            "filename": "ie.xpt",
+            "label": "Inclusion/Exclusion Criteria Not Met",
+            "domain": "IE",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 12
+                },
+                {
+                    "name": "DOMAIN",
+                    "label": "Domain Abbreviation",
+                    "type": "Char",
+                    "length": 2
+                },
+                {
+                    "name": "USUBJID",
+                    "label": "Unique Subject Identifier",
+                    "type": "Char",
+                    "length": 8
+                },
+                {
+                    "name": "IESEQ",
+                    "label": "Sequence Number",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "IETESTCD",
+                    "label": "Inclusion/Exclusion Criterion Short Name",
+                    "type": "Char",
+                    "length": 7
+                },
+                {
+                    "name": "IETEST",
+                    "label": "Inclusion/Exclusion Criterion",
+                    "type": "Char",
+                    "length": 196
+                },
+                {
+                    "name": "IECAT",
+                    "label": "Inclusion/Exclusion Category",
+                    "type": "Char",
+                    "length": 9
+                },
+                {
+                    "name": "IEORRES",
+                    "label": "I/E Criterion Original Result",
+                    "type": "Char",
+                    "length": 1
+                },
+                {
+                    "name": "IESTRESC",
+                    "label": "I/E Criterion Result in Std Format",
+                    "type": "Char",
+                    "length": 1
+                },
+                {
+                    "name": "EPOCH",
+                    "label": "Epoch",
+                    "type": "Char",
+                    "length": 9
+                },
+                {
+                    "name": "IEDTC",
+                    "label": "Date/Time of Collection",
+                    "type": "Char",
+                    "length": 10
+                },
+                {
+                    "name": "IEDY",
+                    "label": "Study Day of Collection",
+                    "type": "Num",
+                    "length": 8
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01"
+                ],
+                "DOMAIN": [
+                    "IE",
+                    "IE",
+                    "IE"
+                ],
+                "USUBJID": [
+                    "CDISC015",
+                    "CDISC016",
+                    "CDISC017"
+                ],
+                "IESEQ": [
+                    1,
+                    1,
+                    1
+                ],
+                "IETESTCD": [
+                    "EXCL04",
+                    "EXCL04",
+                    "EXCL04"
+                ],
+                "IETEST": [
+                    "Is pregnant or nursing.",
+                    "Is pregnant or nursing.",
+                    "Is pregnant or nursing."
+                ],
+                "IECAT": [
+                    "EXCLUSION",
+                    "EXCLUSION",
+                    "EXCLUSION"
+                ],
+                "IEORRES": [
+                    "N",
+                    "",
+                    "NOT DONE"
+                ],
+                "IESTRESC": [
+                    "N",
+                    "N",
+                    "N"
+                ],
+                "EPOCH": [
+                    "SCREENING",
+                    "SCREENING",
+                    "SCREENING"
+                ],
+                "IEDTC": [
+                    "2014-03-17",
+                    "2014-03-18",
+                    "2014-03-19"
+                ],
+                "IEDY": [
+                    null,
+                    null,
+                    null
+                ]
+            }
+        }
+    ],
+    "standard": {
+        "product": "sdtmig",
+        "version": "3-4"
+    },
+    "codelists": []
+}

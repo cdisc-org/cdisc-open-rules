@@ -1,0 +1,37 @@
+{
+  "TS": [
+    {
+      "executionStatus": "skipped",
+      "dataset": null,
+      "domain": "TS",
+      "variables": [],
+      "message": null,
+      "errors": []
+    }
+  ],
+  "RELREC": [
+    {
+      "executionStatus": "success",
+      "dataset": "relrec.xpt",
+      "domain": "RELREC",
+      "variables": [
+        "IDVARVAL",
+        "POOLID",
+        "RELTYPE",
+        "USUBJID"
+      ],
+      "message": "For RELTYPE, only \"ONE\" and \"MANY\" are allowed when USUBJID, POOLID, and IDVARVAL are null",
+      "errors": [
+        {
+          "value": {
+            "USUBJID": "",
+            "POOLID": "",
+            "RELTYPE": "MORE",
+            "IDVARVAL": ""
+          },
+          "row": 2
+        }
+      ]
+    }
+  ]
+}

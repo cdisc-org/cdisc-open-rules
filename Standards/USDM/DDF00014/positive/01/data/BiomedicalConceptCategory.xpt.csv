@@ -1,0 +1,6 @@
+parent_entity,parent_id,parent_rel,rel_type,id,name,description,label,instanceType,code,code.id,code.standardCode,code.standardCode.id,code.standardCode.code,code.standardCode.codeSystem,code.standardCode.codeSystemVersion,code.standardCode.decode,code.standardCodeAliases,memberIds,childIds
+StudyDesign,StudyDesign_1,bcCategories,definition,BiomedicalConceptCategory_1,BCCAT1,Contains only a child sub-category,Category 1,BiomedicalConceptCategory,false,,,,,,,,,false,true
+StudyDesign,StudyDesign_1,bcCategories,definition,BiomedicalConceptCategory_2,BCCAT2,Contains both a child sub-category and members,Sub-category 1a,BiomedicalConceptCategory,false,,,,,,,,,true,true
+StudyDesign,StudyDesign_1,bcCategories,definition,BiomedicalConceptCategory_3,BCCAT3,Contains only members,Sub-category 1ai,BiomedicalConceptCategory,false,,,,,,,,,true,false
+BiomedicalConceptCategory,BiomedicalConceptCategory_1,childIds,reference,BiomedicalConceptCategory_2,BCCAT2,Contains both a child sub-category and members,Sub-category 1a,BiomedicalConceptCategory,false,,,,,,,,,true,true
+BiomedicalConceptCategory,BiomedicalConceptCategory_2,childIds,reference,BiomedicalConceptCategory_3,BCCAT3,Contains only members,Sub-category 1ai,BiomedicalConceptCategory,false,,,,,,,,,true,false

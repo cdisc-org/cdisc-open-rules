@@ -1,0 +1,26 @@
+{
+  "FT": [
+    {
+      "domain": "FT",
+      "errors": [
+        {
+          "row": 0,
+          "seq": 1,
+          "uSubjId": "CDISC001",
+          "value": {
+            "FTDRVFL": "",
+            "FTORRES": "",
+            "FTSTAT": ""
+          }
+        }
+      ],
+      "executionStatus": "success",
+      "message": "--ORRES cannot be null when --STAT is null or --DRVFL not equal to 'Y'",
+      "variables": [
+        "FTDRVFL",
+        "FTORRES",
+        "FTSTAT"
+      ]
+    }
+  ]
+}

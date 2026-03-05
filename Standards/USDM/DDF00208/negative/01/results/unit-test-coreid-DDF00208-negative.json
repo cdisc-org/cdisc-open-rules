@@ -1,0 +1,161 @@
+{
+    "AdministrableProduct": [
+        {
+            "executionStatus": "success",
+            "dataset": "AdministrableProduct.xpt",
+            "domain": "AdministrableProduct",
+            "variables": [
+                "$code_for_decode_pref_term",
+                "$code_for_decode_value",
+                "$codelist_code",
+                "$codelist_extensible",
+                "$pref_term_for_code",
+                "$value_for_code",
+                "id",
+                "name",
+                "parent_entity",
+                "parent_id",
+                "parent_rel",
+                "sourcing.code",
+                "sourcing.codeSystem",
+                "sourcing.codeSystemVersion",
+                "sourcing.decode"
+            ],
+            "message": "The administrable product sourcing is not specified according to the extensible administrable product sourcing (C215483) DDF codelist - codeSystem is not \"http://www.cdisc.org\", codeSystemVersion is not a valid terminology package date, and/or the code or decode (either as preferred term or as submission value) is found in the codelist (case insensitive) but the corresponding decode or code does not match the codelist value (case sensitive).",
+            "errors": [
+                {
+                    "value": {
+                        "id": "AdmProd_1",
+                        "$code_for_decode_value": null,
+                        "sourcing.codeSystem": "http://www.cdisc.org",
+                        "$value_for_code": null,
+                        "name": "AdmProd1",
+                        "$codelist_extensible": null,
+                        "parent_entity": "StudyVersion",
+                        "$code_for_decode_pref_term": null,
+                        "$codelist_code": "C215483",
+                        "$pref_term_for_code": null,
+                        "sourcing.decode": "Centrally Sourced",
+                        "parent_rel": "administrableProducts",
+                        "sourcing.code": "C215659",
+                        "sourcing.codeSystemVersion": "2024-09-27",
+                        "parent_id": "StudyVersion_1"
+                    },
+                    "dataset": "AdministrableProduct.xpt",
+                    "row": 1,
+                    "instance_id": "AdmProd_1"
+                },
+                {
+                    "value": {
+                        "id": "AdmProd_2",
+                        "$code_for_decode_value": "C215659",
+                        "sourcing.codeSystem": "http://www.cdisc.org",
+                        "$value_for_code": "Locally Sourced",
+                        "name": "AdmProd2",
+                        "$codelist_extensible": true,
+                        "parent_entity": "StudyVersion",
+                        "$code_for_decode_pref_term": null,
+                        "$codelist_code": "C215483",
+                        "$pref_term_for_code": "Locally Sourced Indicator",
+                        "sourcing.decode": "Centrally Sourced",
+                        "parent_rel": "administrableProducts",
+                        "sourcing.code": "C215660",
+                        "sourcing.codeSystemVersion": "2025-09-26",
+                        "parent_id": "StudyVersion_1"
+                    },
+                    "dataset": "AdministrableProduct.xpt",
+                    "row": 2,
+                    "instance_id": "AdmProd_2"
+                },
+                {
+                    "value": {
+                        "id": "AdmProd_3",
+                        "$code_for_decode_value": null,
+                        "sourcing.codeSystem": "http://www.cdisc.org",
+                        "$value_for_code": "Centrally Sourced",
+                        "name": "AdmProd1",
+                        "$codelist_extensible": true,
+                        "parent_entity": "StudyVersion",
+                        "$code_for_decode_pref_term": null,
+                        "$codelist_code": "C215483",
+                        "$pref_term_for_code": "Centrally Sourced Indicator",
+                        "sourcing.decode": "Central",
+                        "parent_rel": "administrableProducts",
+                        "sourcing.code": "C215659",
+                        "sourcing.codeSystemVersion": "2025-09-26",
+                        "parent_id": "StudyVersion_1"
+                    },
+                    "dataset": "AdministrableProduct.xpt",
+                    "row": 3,
+                    "instance_id": "AdmProd_3"
+                },
+                {
+                    "value": {
+                        "id": "AdmProd_4",
+                        "$code_for_decode_value": null,
+                        "sourcing.codeSystem": "http://www.cdisc.org",
+                        "$value_for_code": null,
+                        "name": "AdmProd2",
+                        "$codelist_extensible": true,
+                        "parent_entity": "StudyVersion",
+                        "$code_for_decode_pref_term": "C215660",
+                        "$codelist_code": "C215483",
+                        "$pref_term_for_code": null,
+                        "sourcing.decode": "Locally Sourced Indicator",
+                        "parent_rel": "administrableProducts",
+                        "sourcing.code": "C215660xx",
+                        "sourcing.codeSystemVersion": "2025-09-26",
+                        "parent_id": "StudyVersion_1"
+                    },
+                    "dataset": "AdministrableProduct.xpt",
+                    "row": 4,
+                    "instance_id": "AdmProd_4"
+                },
+                {
+                    "value": {
+                        "id": "AdmProd_5",
+                        "$code_for_decode_value": "C215659",
+                        "sourcing.codeSystem": "CDISC Administrable Product Sourcing Value Set Terminology",
+                        "$value_for_code": "Centrally Sourced",
+                        "name": "AdmProd3",
+                        "$codelist_extensible": true,
+                        "parent_entity": "StudyVersion",
+                        "$code_for_decode_pref_term": null,
+                        "$codelist_code": "C215483",
+                        "$pref_term_for_code": "Centrally Sourced Indicator",
+                        "sourcing.decode": "Centrally Sourced",
+                        "parent_rel": "administrableProducts",
+                        "sourcing.code": "C215659",
+                        "sourcing.codeSystemVersion": "2025-09-26",
+                        "parent_id": "StudyVersion_1"
+                    },
+                    "dataset": "AdministrableProduct.xpt",
+                    "row": 5,
+                    "instance_id": "AdmProd_5"
+                },
+                {
+                    "value": {
+                        "id": "AdmProd_6",
+                        "$code_for_decode_value": null,
+                        "sourcing.codeSystem": "http://www.cdisc.org",
+                        "$value_for_code": null,
+                        "name": "AdmProd4",
+                        "$codelist_extensible": null,
+                        "parent_entity": "StudyVersion",
+                        "$code_for_decode_pref_term": null,
+                        "$codelist_code": "C215483",
+                        "$pref_term_for_code": null,
+                        "sourcing.decode": "Centrally Sourced",
+                        "parent_rel": "administrableProducts",
+                        "sourcing.code": "C215659",
+                        "sourcing.codeSystemVersion": "26-09-2025",
+                        "parent_id": "StudyVersion_1"
+                    },
+                    "dataset": "AdministrableProduct.xpt",
+                    "row": 6,
+                    "instance_id": "AdmProd_6"
+                }
+            ]
+        }
+    ]
+}

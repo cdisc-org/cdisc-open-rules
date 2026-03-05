@@ -1,0 +1,49 @@
+{
+  "DM": [
+    {
+      "executionStatus": "skipped",
+      "domain": "DM",
+      "variables": [],
+      "message": null,
+      "errors": []
+    }
+  ],
+  "TA": [
+    {
+      "executionStatus": "skipped",
+      "domain": "TA",
+      "variables": [],
+      "message": null,
+      "errors": []
+    }
+  ],
+  "TX": [
+    {
+      "executionStatus": "success",
+      "domain": "TX",
+      "variables": [
+        "TXPARMCD",
+        "TXVAL"
+      ],
+      "message": "The value of TXVAL is not in ISO 8601 date/datetime format",
+      "errors": [
+        {
+          "value": {
+            "TXPARMCD": "DOSSTDTC",
+            "TXVAL": "2022-03-a"
+          },
+          "row": 9,
+          "seq": 9
+        },
+        {
+          "value": {
+            "TXPARMCD": "DOSENDTC",
+            "TXVAL": "2022-03-22T05-x"
+          },
+          "row": 10,
+          "seq": 10
+        }
+      ]
+    }
+  ]
+}

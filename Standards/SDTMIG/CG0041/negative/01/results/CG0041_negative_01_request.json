@@ -1,0 +1,797 @@
+{
+  "rule": {
+    "Authority": {
+      "Organization": "CDISC"
+    },
+    "Check": {
+      "all": [
+        {
+          "any": [
+            {
+              "name": "AESCAN",
+              "operator": "equal_to",
+              "value": "Y"
+            },
+            {
+              "name": "AESCONG",
+              "operator": "equal_to",
+              "value": "Y"
+            },
+            {
+              "name": "AESDISAB",
+              "operator": "equal_to",
+              "value": "Y"
+            },
+            {
+              "name": "AESDTH",
+              "operator": "equal_to",
+              "value": "Y"
+            },
+            {
+              "name": "AESHOSP",
+              "operator": "equal_to",
+              "value": "Y"
+            },
+            {
+              "name": "AESLIFE",
+              "operator": "equal_to",
+              "value": "Y"
+            },
+            {
+              "name": "AESOD",
+              "operator": "equal_to",
+              "value": "Y"
+            },
+            {
+              "name": "AESMIE",
+              "operator": "equal_to",
+              "value": "Y"
+            }
+          ]
+        },
+        {
+          "name": "AESER",
+          "operator": "not_equal_to",
+          "value": "Y"
+        }
+      ]
+    },
+    "Citations": [
+      {
+        "Document": "SDTMIG v3.4",
+        "Item": "Assumption 6a",
+        "Section": "6.2.1",
+        "Cited_Guidance": "If categories of serious events are collected secondarily to a leading question, as in the example below, the values of the variables that capture reasons an event is considered serious (i.e., AESCAN, AESCONG, etc.) may be null. For example, if Serious is answered \"No\", the values for these variables maybe null. However, if Serious is answered \"Yes\", at least one of them will have a \"Y\" response."
+      },
+      {
+        "Document": "SDTMIG v3.3",
+        "Item": "Assumption 6a",
+        "Section": "6.2.1",
+        "Cited_Guidance": "If categories of serious events are collected secondarily to a leading question, as in the example below, the values of the variables that capture reasons an event is considered serious (i.e., AESCAN, AESCONG, etc.) may be null. For example, if Serious is answered \"No\", the values for these variables maybe null. However, if Serious is answered \"Yes\", at least one of them will have a \"Y\" response."
+      },
+      {
+        "Document": "SDTMIG v3.2",
+        "Item": "Assumption 6a",
+        "Section": "6.2.",
+        "Cited_Guidance": "If categories of serious events are collected secondarily to a leading question, as in the example below, the values of the variables that capture reasons an event is considered serious (i.e., AESCAN, AESCONG, etc.) may be null. For example, if Serious is answered \"No\", the values for these variables may be null. However, if Serious is answered \"Yes\", at least one of them will have a \"Y\" response."
+      }
+    ],
+    "Core": {
+      "Id": "CDISC.SDTMIG.CG0041",
+      "Version": "1"
+    },
+    "Description": "Raise an error when AESCAN, AESCONG, AESDISAB, AESDTH, AESHOSP, AESLIFE, AESOD or AESMIE = 'Y' and AESER = 'N' or is empty.",
+    "Outcome": {
+      "Message": "At least one of the Seriousness criteria (AESCAN, AESCONG, AESDISAB, AESDTH, AESHOSP, AESLIFE, AESOD or AESMIE)  = 'Y', but AESER = 'N' or empty.",
+      "Output_Variables": [
+        "AETERM",
+        "AESTDTC",
+        "AESER",
+        "AESCAN",
+        "AESCONG",
+        "AESDISAB",
+        "AESDTH",
+        "AESHOSP",
+        "AESLIFE",
+        "AESOD",
+        "AESMIE"
+      ]
+    },
+    "References": [
+      {
+        "Origin": "SDTM and SDTMIG Conformance Rules",
+        "Version": "2.0",
+        "Rule_Identifier": {
+          "Id": "CG0041",
+          "Version": "1"
+        }
+      }
+    ],
+    "Scopes": {
+      "Classes": {
+        "Include": [
+          "Events"
+        ]
+      },
+      "Domains": {
+        "Include": [
+          "AE"
+        ]
+      },
+      "Standards": [
+        {
+          "Name": "SDTMIG",
+          "Version": "3.4"
+        },
+        {
+          "Name": "SDTMIG",
+          "Version": "3.3"
+        },
+        {
+          "Name": "SDTMIG",
+          "Version": "3.2"
+        }
+      ]
+    },
+    "Sensitivity": "Record",
+    "Severity": "Error",
+    "Rule_Type": "Functional Dependency"
+  },
+  "datasets": [
+    {
+      "filename": "ae.xpt",
+      "label": "Adverse Events",
+      "domain": "AE",
+      "variables": [
+        {
+          "name": "STUDYID",
+          "label": "Study Identifier",
+          "type": "Char",
+          "length": 10
+        },
+        {
+          "name": "DOMAIN",
+          "label": "Domain Abbreviation",
+          "type": "Char",
+          "length": 2
+        },
+        {
+          "name": "USUBJID",
+          "label": "Unique Subject Identifier",
+          "type": "Char",
+          "length": 14
+        },
+        {
+          "name": "AESEQ",
+          "label": "Sequence Number",
+          "type": "Num",
+          "length": 8
+        },
+        {
+          "name": "AESPID",
+          "label": "Sponsor-Defined Identifier",
+          "type": "Char",
+          "length": 4
+        },
+        {
+          "name": "AETERM",
+          "label": "Reported Term for the Adverse Event",
+          "type": "Char",
+          "length": 38
+        },
+        {
+          "name": "AELLT",
+          "label": "Lowest Level Term",
+          "type": "Char",
+          "length": 38
+        },
+        {
+          "name": "AELLTCD",
+          "label": "Lowest Level Term Code",
+          "type": "Num",
+          "length": 8
+        },
+        {
+          "name": "AEDECOD",
+          "label": "Dictionary-Derived Term",
+          "type": "Char",
+          "length": 38
+        },
+        {
+          "name": "AEPTCD",
+          "label": "Preferred Term Code",
+          "type": "Num",
+          "length": 8
+        },
+        {
+          "name": "AEHLT",
+          "label": "High Level Term",
+          "type": "Char",
+          "length": 65
+        },
+        {
+          "name": "AEHLTCD",
+          "label": "High Level Term Code",
+          "type": "Num",
+          "length": 8
+        },
+        {
+          "name": "AEHLGT",
+          "label": "High Level Group Term",
+          "type": "Char",
+          "length": 55
+        },
+        {
+          "name": "AEHLGTCD",
+          "label": "High Level Group Term Code",
+          "type": "Num",
+          "length": 8
+        },
+        {
+          "name": "AEBODSYS",
+          "label": "Body System or Organ Class",
+          "type": "Char",
+          "length": 52
+        },
+        {
+          "name": "AEBDSYCD",
+          "label": "Body System or Organ Class Code",
+          "type": "Num",
+          "length": 8
+        },
+        {
+          "name": "AESOC",
+          "label": "Primary System Organ Class",
+          "type": "Char",
+          "length": 52
+        },
+        {
+          "name": "AESOCCD",
+          "label": "Primary System Organ Class Code",
+          "type": "Num",
+          "length": 8
+        },
+        {
+          "name": "AESEV",
+          "label": "Severity/Intensity",
+          "type": "Char",
+          "length": 8
+        },
+        {
+          "name": "AESER",
+          "label": "Serious Event",
+          "type": "Char",
+          "length": 1
+        },
+        {
+          "name": "AEACN",
+          "label": "Action Taken with Study Treatment",
+          "type": "Char",
+          "length": 1
+        },
+        {
+          "name": "AEREL",
+          "label": "Causality",
+          "type": "Char",
+          "length": 1
+        },
+        {
+          "name": "AEOUT",
+          "label": "Outcome of Adverse Event",
+          "type": "Char",
+          "length": 26
+        },
+        {
+          "name": "AESCAN",
+          "label": "Involves Cancer",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "AESCONG",
+          "label": "Congenital Anomaly or Birth Defect",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "AESDISAB",
+          "label": "Persist or Signif Disability/Incapacity",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "AESDTH",
+          "label": "Results in Death",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "AESHOSP",
+          "label": "Requires or Prolongs Hospitalization",
+          "type": "Char",
+          "length": 1
+        },
+        {
+          "name": "AESLIFE",
+          "label": "Is Life Threatening",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "AESOD",
+          "label": "Occurred with Overdose",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "AESMIE",
+          "label": "Other Medically Important Serious Event",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "AESTDTC",
+          "label": "Start Date/Time of Adverse Event",
+          "type": "Char",
+          "length": 10
+        },
+        {
+          "name": "AEENDTC",
+          "label": "End Date/Time of Adverse Event",
+          "type": "Char",
+          "length": 1
+        },
+        {
+          "name": "AESTDY",
+          "label": "Study Day of Start of Adverse Event",
+          "type": "Num",
+          "length": 8
+        }
+      ],
+      "records": {
+        "STUDYID": [
+          "CDISC-TEST",
+          "CDISC-TEST",
+          "CDISC-TEST",
+          "CDISC-TEST",
+          "CDISC-TEST",
+          "CDISC-TEST",
+          "CDISC-TEST",
+          "CDISC-TEST",
+          "CDISC-TEST",
+          "CDISC-TEST",
+          "CDISC-TEST"
+        ],
+        "DOMAIN": [
+          "AE",
+          "AE",
+          "AE",
+          "AE",
+          "AE",
+          "AE",
+          "AE",
+          "AE",
+          "AE",
+          "AE",
+          "AE"
+        ],
+        "USUBJID": [
+          "CDISC-TEST-046",
+          "CDISC-TEST-046",
+          "CDISC-TEST-049",
+          "CDISC-TEST-049",
+          "CDISC-TEST-052",
+          "CDISC-TEST-052",
+          "CDISC-TEST-052",
+          "CDISC-TEST-052",
+          "CDISC-TEST-055",
+          "CDISC-TEST-055",
+          "CDISC-TEST-055"
+        ],
+        "AESEQ": [
+          727,
+          735,
+          782,
+          783,
+          839,
+          840,
+          843,
+          844,
+          881,
+          882,
+          897
+        ],
+        "AESPID": [
+          "744",
+          "738",
+          "792",
+          "798",
+          "842",
+          "849",
+          "838",
+          "850",
+          "899",
+          "895",
+          "898"
+        ],
+        "AETERM": [
+          "UPSET STOMACH",
+          "HEADACHE",
+          "HEADACHE",
+          "HEADACHE",
+          "HEADACHE",
+          "HYPERTENSION",
+          "HYPERTENSION",
+          "HYPOGLYCAEMIA",
+          "CARDIAC ARREST",
+          "DIARRHOEA",
+          "PNEUMONIA"
+        ],
+        "AELLT": [
+          "Upset stomach",
+          "Headache",
+          "Headache",
+          "Headache",
+          "Headache",
+          "Hypertension",
+          "Hypertension",
+          "Hypoglycaemia",
+          "Cardiac arrest",
+          "Diarrhoea",
+          "Pneumonia"
+        ],
+        "AELLTCD": [
+          10046318,
+          10019211,
+          10019211,
+          10019211,
+          10019211,
+          10020772,
+          10020772,
+          10020993,
+          10007515,
+          10012735,
+          10035664
+        ],
+        "AEDECOD": [
+          "Abdominal discomfort",
+          "Headache",
+          "Headache",
+          "Headache",
+          "Headache",
+          "Hypertension",
+          "Hypertension",
+          "Hypoglycaemia",
+          "Cardiac arrest",
+          "Diarrhoea",
+          "Pneumonia"
+        ],
+        "AEPTCD": [
+          10000059,
+          10019211,
+          10019211,
+          10019211,
+          10019211,
+          10020772,
+          10020772,
+          10020993,
+          10007515,
+          10012735,
+          10035664
+        ],
+        "AEHLT": [
+          "Gastrointestinal signs and symptoms NEC",
+          "Headaches NEC",
+          "Headaches NEC",
+          "Headaches NEC",
+          "Headaches NEC",
+          "Vascular hypertensive disorders NEC",
+          "Vascular hypertensive disorders NEC",
+          "Hypoglycaemic conditions NEC",
+          "Ventricular arrhythmias and cardiac arrest",
+          "Diarrhoea (excl infective)",
+          "Lower respiratory tract and lung infections"
+        ],
+        "AEHLTCD": [
+          10027678,
+          10019233,
+          10019233,
+          10019233,
+          10019233,
+          10020774,
+          10020774,
+          10021001,
+          10047283,
+          10012736,
+          10025101
+        ],
+        "AEHLGT": [
+          "Gastrointestinal signs and symptoms",
+          "Headaches",
+          "Headaches",
+          "Headaches",
+          "Headaches",
+          "Vascular hypertensive disorders",
+          "Vascular hypertensive disorders",
+          "Glucose metabolism disorders (incl diabetes mellitus)",
+          "Cardiac arrhythmias",
+          "Gastrointestinal motility and defaecation conditions",
+          "Infections - pathogen unspecified"
+        ],
+        "AEHLGTCD": [
+          10018012,
+          10019231,
+          10019231,
+          10019231,
+          10019231,
+          10057166,
+          10057166,
+          10018424,
+          10007521,
+          10017977,
+          10021879
+        ],
+        "AEBODSYS": [
+          "Gastrointestinal disorders",
+          "Nervous system disorders",
+          "Nervous system disorders",
+          "Nervous system disorders",
+          "Nervous system disorders",
+          "Vascular disorders",
+          "Vascular disorders",
+          "Metabolism and nutrition disorders",
+          "Cardiac disorders",
+          "Gastrointestinal disorders",
+          "Infections and infestations"
+        ],
+        "AEBDSYCD": [
+          10017947,
+          10029205,
+          10029205,
+          10029205,
+          10029205,
+          10047065,
+          10047065,
+          10027433,
+          10007541,
+          10017947,
+          10021881
+        ],
+        "AESOC": [
+          "Gastrointestinal disorders",
+          "Nervous system disorders",
+          "Nervous system disorders",
+          "Nervous system disorders",
+          "Nervous system disorders",
+          "Vascular disorders",
+          "Vascular disorders",
+          "Metabolism and nutrition disorders",
+          "Cardiac disorders",
+          "Gastrointestinal disorders",
+          "Infections and infestations"
+        ],
+        "AESOCCD": [
+          10017947,
+          10029205,
+          10029205,
+          10029205,
+          10029205,
+          10047065,
+          10047065,
+          10027433,
+          10007541,
+          10017947,
+          10021881
+        ],
+        "AESEV": [
+          "MILD",
+          "MILD",
+          "MILD",
+          "MILD",
+          "MODERATE",
+          "MILD",
+          "MILD",
+          "MILD",
+          "SEVERE",
+          "MILD",
+          "MILD"
+        ],
+        "AESER": [
+          "N",
+          "N",
+          "N",
+          "N",
+          "N",
+          "N",
+          "N",
+          "N",
+          "",
+          "",
+          ""
+        ],
+        "AEACN": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "AEREL": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "AEOUT": [
+          "RECOVERED/RESOLVED",
+          "RECOVERED/RESOLVED",
+          "RECOVERED/RESOLVED",
+          "RECOVERED/RESOLVED",
+          "RECOVERED/RESOLVED",
+          "RECOVERED/RESOLVED",
+          "RECOVERED/RESOLVED",
+          "RECOVERED/RESOLVED",
+          "NOT RECOVERED/NOT RESOLVED",
+          "RECOVERED/RESOLVED",
+          "RECOVERED/RESOLVED"
+        ],
+        "AESCAN": [
+          "Y",
+          "N",
+          "N",
+          "N",
+          "N",
+          "N",
+          "N",
+          "N",
+          "N",
+          "Y",
+          ""
+        ],
+        "AESCONG": [
+          "N",
+          "Y",
+          "N",
+          "N",
+          "N",
+          "N",
+          "N",
+          "N",
+          "Y",
+          "",
+          ""
+        ],
+        "AESDISAB": [
+          "N",
+          "N",
+          "Y",
+          "N",
+          "N",
+          "N",
+          "N",
+          "N",
+          "N",
+          "",
+          ""
+        ],
+        "AESDTH": [
+          "N",
+          "N",
+          "N",
+          "Y",
+          "N",
+          "N",
+          "N",
+          "N",
+          "N",
+          "",
+          "Y"
+        ],
+        "AESHOSP": [
+          "N",
+          "N",
+          "N",
+          "N",
+          "Y",
+          "N",
+          "N",
+          "N",
+          "N",
+          "",
+          ""
+        ],
+        "AESLIFE": [
+          "N",
+          "N",
+          "N",
+          "N",
+          "N",
+          "Y",
+          "N",
+          "N",
+          "N",
+          "",
+          ""
+        ],
+        "AESOD": [
+          "N",
+          "N",
+          "N",
+          "N",
+          "N",
+          "N",
+          "Y",
+          "N",
+          "N",
+          "",
+          ""
+        ],
+        "AESMIE": [
+          "N",
+          "N",
+          "N",
+          "N",
+          "N",
+          "N",
+          "N",
+          "Y",
+          "N",
+          "",
+          ""
+        ],
+        "AESTDTC": [
+          "2019-03-24",
+          "2019-04-29",
+          "2019-03-09",
+          "2019-03-15",
+          "2019-05-08",
+          "2019-03-30",
+          "2019-07-10",
+          "2019-03-26",
+          "2019-08-31",
+          "2019-04-18",
+          "2019-03-21"
+        ],
+        "AEENDTC": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "AESTDY": [
+          32,
+          68,
+          28,
+          34,
+          83,
+          44,
+          146,
+          40,
+          178,
+          43,
+          15
+        ]
+      }
+    }
+  ]
+}

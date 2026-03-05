@@ -1,0 +1,69 @@
+{
+  "PR": [
+    {
+      "domain": "PR",
+      "errors": [
+        {
+          "row": 0,
+          "seq": 1,
+          "uSubjId": "CDISC009",
+          "value": {
+            "PRSTRTPT": "AFTER",
+            "PRSTTPT": ""
+          }
+        },
+        {
+          "row": 1,
+          "seq": 2,
+          "uSubjId": "CDISC010",
+          "value": {
+            "PRSTRTPT": "AFTER",
+            "PRSTTPT": ""
+          }
+        },
+        {
+          "row": 2,
+          "seq": 3,
+          "uSubjId": "CDISC011",
+          "value": {
+            "PRSTRTPT": "AFTER",
+            "PRSTTPT": ""
+          }
+        },
+        {
+          "row": 3,
+          "seq": 1,
+          "uSubjId": "CDISC012",
+          "value": {
+            "PRSTRTPT": "BEFORE",
+            "PRSTTPT": ""
+          }
+        },
+        {
+          "row": 4,
+          "seq": 10,
+          "uSubjId": "CDISC013",
+          "value": {
+            "PRSTRTPT": "BEFORE",
+            "PRSTTPT": ""
+          }
+        },
+        {
+          "row": 5,
+          "seq": 11,
+          "uSubjId": "CDISC014",
+          "value": {
+            "PRSTRTPT": "BEFORE",
+            "PRSTTPT": ""
+          }
+        }
+      ],
+      "executionStatus": "success",
+      "message": "--STRTPT is completed, but --STTPT is not completed.",
+      "variables": [
+        "PRSTRTPT",
+        "PRSTTPT"
+      ]
+    }
+  ]
+}

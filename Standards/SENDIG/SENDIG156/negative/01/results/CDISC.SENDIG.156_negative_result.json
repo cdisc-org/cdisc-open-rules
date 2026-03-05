@@ -1,0 +1,64 @@
+{
+  "CL": [
+    {
+      "executionStatus": "success",
+      "domain": "CL",
+      "variables": [
+        "CLDTC",
+        "CLORRES",
+        "CLTESTCD",
+        "POOLID",
+        "USUBJID"
+      ],
+      "message": "The Clinical Observation test result is not unique for this subject and date/time.",
+      "errors": [
+        {
+          "value": {
+            "CLORRES": "Difficulty Walking",
+            "CLDTC": "2012-11-23",
+            "POOLID": null,
+            "CLTESTCD": "CS",
+            "USUBJID": "CDISC005"
+          },
+          "row": 5,
+          "uSubjId": "CDISC005",
+          "seq": 1
+        },
+        {
+          "value": {
+            "CLORRES": "Difficulty Walking",
+            "CLDTC": "2012-11-23",
+            "POOLID": null,
+            "CLTESTCD": "CS",
+            "USUBJID": "CDISC005"
+          },
+          "row": 6,
+          "uSubjId": "CDISC005",
+          "seq": 2
+        },
+        {
+          "value": {
+            "CLORRES": "Red skin",
+            "CLDTC": "2012-11-25",
+            "POOLID": "POOL2",
+            "CLTESTCD": "CS",
+            "USUBJID": ""
+          },
+          "row": 9,
+          "seq": 1
+        },
+        {
+          "value": {
+            "CLORRES": "Red skin",
+            "CLDTC": "2012-11-25",
+            "POOLID": "POOL2",
+            "CLTESTCD": "CS",
+            "USUBJID": ""
+          },
+          "row": 11,
+          "seq": 3
+        }
+      ]
+    }
+  ]
+}

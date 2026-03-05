@@ -1,0 +1,58 @@
+dataset,variable,label,type,length
+lb.xpt,STUDYID,Study Identifier,Char,12
+lb.xpt,DOMAIN,Domain Abbreviation,Char,2
+lb.xpt,USUBJID,Unique Subject Identifier,Char,8
+lb.xpt,LBSEQ,Sequence Number,Num,8
+lb.xpt,LBTESTCD,Lab Test or Examination Short Name,Char,3
+lb.xpt,LBTEST,Lab Test or Examination Name,Char,20
+lb.xpt,LBCAT,Category for Lab Test,Char,9
+lb.xpt,LBORRES,Result or Finding in Original Units,Char,3
+lb.xpt,LBORRESU,Original Units,Char,4
+lb.xpt,LBSTRESC,Character Result/Finding in Std Format,Char,2
+lb.xpt,LBSTRESN,Numeric Result/Finding in Standard Units,Num,8
+lb.xpt,LBSTRESU,Standard Units,Char,3
+lb.xpt,LBSTAT,Completion Status,Char,8
+lb.xpt,LBREASND,Reason Not Done,Char,13
+lb.xpt,LBDTC,Date/Time of Specimen Collection,Char,16
+lb.xpt,LBDY,Study Day of Specimen Collection,Num,8
+lb.xpt,LBNOMDY,"Nominal Study Day
+for Tabulations",Num,8
+lb.xpt,LBNOMLBL,"Label for Nominal
+Study Day",Char,5
+lb.xpt,LBTPT,Planned Time Point Name ,Char,3
+lb.xpt,LBTPTNUM,Planned Time Point Number,Num,8
+pc.xpt,STUDYID,Study Identifier,Char,12
+pc.xpt,DOMAIN,Domain Abbreviation,Char,2
+pc.xpt,USUBJID,Unique Subject Identifier,Char,8
+pc.xpt,"PC
+SEQ",Sequence Number,Num,8
+pc.xpt,"PC
+TESTCD",Test Short Name,Char,6
+pc.xpt,"PC
+TEST",Test Name,Char,15
+pc.xpt,"PC
+CAT",Test Category,Char,7
+pc.xpt,"PC
+ORRES",Result or Finding as Collected,Char,3
+pc.xpt,"PC
+ORRESU",Unit of the Original Result,Char,5
+pc.xpt,"PC
+STRESC",Standardized Result in Character Format,Char,3
+pc.xpt,"PC
+STRESN",Standardized Result in Numeric Format,Num,8
+pc.xpt,"PC
+STRESU",Unit of the Standardized Results,Char,5
+pc.xpt,"PC
+STAT",Completion Status,Char,8
+pc.xpt,"PC
+REASND",Reason Not Done,Char,18
+pc.xpt,"PC
+SPEC",Specimen Material Type,Char,6
+pc.xpt,PCDTC,Date/Time of Specimen Collection,Char,16
+pc.xpt,PCDY,Study Day of Specimen Collection,Num,8
+pc.xpt,PCNOMDY,"Nominal Study Day
+for Tabulations",Num,8
+pc.xpt,PCNOMLBL,"Label for Nominal
+Study Day",Char,6
+pc.xpt,PCTPT,Planned Time Point Name ,Char,3
+pc.xpt,PCTPTNUM,Planned Time Point Number,Num,8

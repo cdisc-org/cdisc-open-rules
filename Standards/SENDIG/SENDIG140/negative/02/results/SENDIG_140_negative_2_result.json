@@ -1,0 +1,30 @@
+{
+  "DM": [
+    {
+      "executionStatus": "success",
+      "domain": "DM",
+      "variables": [
+        "USUBJID"
+      ],
+      "message": "There is no record in DS for a record in DM or there is no record in DM for a record in DS",
+      "errors": [
+        {
+          "value": {
+            "USUBJID": "015246-222-0002-00005_NOT_IN_DS"
+          },
+          "row": 4,
+          "USUBJID": "015246-222-0002-00005_NOT_IN_DS"
+        }
+      ]
+    }
+  ],
+  "DS": [
+    {
+      "executionStatus": "success",
+      "domain": "DS",
+      "variables": [],
+      "message": null,
+      "errors": []
+    }
+  ]
+}

@@ -1,0 +1,260 @@
+{
+    "NarrativeContent": [
+        {
+            "executionStatus": "success",
+            "dataset": "NarrativeContent.xpt",
+            "domain": "NarrativeContent",
+            "variables": [
+                "$xhtml_errors",
+                "name",
+                "parent_entity",
+                "parent_id",
+                "parent_rel"
+            ],
+            "message": "The narrative content text contains non-conformant XHTML.",
+            "errors": [
+                {
+                    "value": {
+                        "parent_id": "StudyProtocolDocumentVersion_1",
+                        "name": "ROOT",
+                        "parent_rel": "contents",
+                        "parent_entity": "StudyProtocolDocumentVersion",
+                        "$xhtml_errors": [
+                            "Invalid XHTML line 1 [ERROR]: Element 'DIV': This element is not expected."
+                        ]
+                    },
+                    "dataset": "NarrativeContent.xpt",
+                    "row": 1,
+                    "instance_id": "NarrativeContent_1"
+                },
+                {
+                    "value": {
+                        "parent_id": "StudyProtocolDocumentVersion_1",
+                        "name": "SECTION 0",
+                        "parent_rel": "contents",
+                        "parent_entity": "StudyProtocolDocumentVersion",
+                        "$xhtml_errors": [
+                            "Invalid XHTML line 9 [ERROR]: Element 'usdm:ref': The attribute 'id' is required but missing.",
+                            "Invalid XHTML line 14 [ERROR]: Element 'usdm:ref': The attribute 'attribute' is required but missing.",
+                            "Invalid XHTML line 19 [ERROR]: Element 'usdm:ref': The attribute 'klass' is required but missing."
+                        ]
+                    },
+                    "dataset": "NarrativeContent.xpt",
+                    "row": 2,
+                    "instance_id": "NarrativeContent_2"
+                },
+                {
+                    "value": {
+                        "parent_id": "StudyProtocolDocumentVersion_1",
+                        "name": "SECTION 1",
+                        "parent_rel": "contents",
+                        "parent_entity": "StudyProtocolDocumentVersion",
+                        "$xhtml_errors": [
+                            "Invalid XHTML line 4, col 1306 [FATAL]: Opening and ending tag mismatch: p line 4 and div",
+                            "Invalid XHTML line 4, col 1310 [FATAL]: Opening and ending tag mismatch: div line 1 and p"
+                        ]
+                    },
+                    "dataset": "NarrativeContent.xpt",
+                    "row": 3,
+                    "instance_id": "NarrativeContent_3"
+                },
+                {
+                    "value": {
+                        "parent_id": "StudyProtocolDocumentVersion_1",
+                        "name": "SECTION 2",
+                        "parent_rel": "contents",
+                        "parent_entity": "StudyProtocolDocumentVersion",
+                        "$xhtml_errors": [
+                            "Invalid XHTML (wrapper end) [FATAL]: Opening and ending tag mismatch: div line 1 and body",
+                            "Invalid XHTML (wrapper end) [FATAL]: Opening and ending tag mismatch: body (wrapper start) and html"
+                        ]
+                    },
+                    "dataset": "NarrativeContent.xpt",
+                    "row": 4,
+                    "instance_id": "NarrativeContent_4"
+                },
+                {
+                    "value": {
+                        "parent_id": "StudyProtocolDocumentVersion_1",
+                        "name": "SECTION 2.1.",
+                        "parent_rel": "contents",
+                        "parent_entity": "StudyProtocolDocumentVersion",
+                        "$xhtml_errors": [
+                            "Invalid XHTML line 4, col 66 [FATAL]: Unescaped '<' not allowed in attributes values",
+                            "Invalid XHTML line 4, col 66 [FATAL]: attributes construct error",
+                            "Invalid XHTML line 4, col 66 [FATAL]: Couldn't find end of Start Tag ref line 4",
+                            "Invalid XHTML line 4, col 77 [FATAL]: Opening and ending tag mismatch: li line 4 and usdm:ref",
+                            "Invalid XHTML line 4, col 82 [FATAL]: Opening and ending tag mismatch: ul line 2 and li",
+                            "Invalid XHTML line 5, col 6 [FATAL]: Opening and ending tag mismatch: div line 1 and ul",
+                            "Invalid XHTML line 5, col 12 [FATAL]: Opening and ending tag mismatch: body (wrapper start) and div",
+                            "Invalid XHTML (wrapper end) [FATAL]: Opening and ending tag mismatch: html (wrapper start) and body"
+                        ]
+                    },
+                    "dataset": "NarrativeContent.xpt",
+                    "row": 5,
+                    "instance_id": "NarrativeContent_5"
+                },
+                {
+                    "value": {
+                        "parent_id": "StudyProtocolDocumentVersion_1",
+                        "name": "SECTION 2.2",
+                        "parent_rel": "contents",
+                        "parent_entity": "StudyProtocolDocumentVersion",
+                        "$xhtml_errors": [
+                            "Invalid XHTML line 6 [ERROR]: Element 'usdm:reference': This element is not expected."
+                        ]
+                    },
+                    "dataset": "NarrativeContent.xpt",
+                    "row": 6,
+                    "instance_id": "NarrativeContent_6"
+                },
+                {
+                    "value": {
+                        "parent_id": "StudyProtocolDocumentVersion_1",
+                        "name": "SECTION 3",
+                        "parent_rel": "contents",
+                        "parent_entity": "StudyProtocolDocumentVersion",
+                        "$xhtml_errors": [
+                            "Invalid XHTML line 1, col 15 [FATAL]: xmlParseEntityRef: no name"
+                        ]
+                    },
+                    "dataset": "NarrativeContent.xpt",
+                    "row": 7,
+                    "instance_id": "NarrativeContent_7"
+                },
+                {
+                    "value": {
+                        "parent_id": "StudyProtocolDocumentVersion_1",
+                        "name": "SECTION 3.1.",
+                        "parent_rel": "contents",
+                        "parent_entity": "StudyProtocolDocumentVersion",
+                        "$xhtml_errors": [
+                            "Invalid XHTML line 8 [ERROR]: Element 'img': The attribute 'alt' is required but missing."
+                        ]
+                    },
+                    "dataset": "NarrativeContent.xpt",
+                    "row": 8,
+                    "instance_id": "NarrativeContent_8"
+                },
+                {
+                    "value": {
+                        "parent_id": "StudyProtocolDocumentVersion_1",
+                        "name": "SECTION 3.2.",
+                        "parent_rel": "contents",
+                        "parent_entity": "StudyProtocolDocumentVersion",
+                        "$xhtml_errors": [
+                            "Invalid XHTML line 1, col 243 [FATAL]: StartTag: invalid element name"
+                        ]
+                    },
+                    "dataset": "NarrativeContent.xpt",
+                    "row": 9,
+                    "instance_id": "NarrativeContent_9"
+                },
+                {
+                    "value": {
+                        "parent_id": "StudyProtocolDocumentVersion_1",
+                        "name": "SECTION 3.9.1.1.",
+                        "parent_rel": "contents",
+                        "parent_entity": "StudyProtocolDocumentVersion",
+                        "$xhtml_errors": [
+                            "Invalid XHTML line 2 [ERROR]: Element 'ol', attribute 'type': The attribute 'type' is not allowed."
+                        ]
+                    },
+                    "dataset": "NarrativeContent.xpt",
+                    "row": 10,
+                    "instance_id": "NarrativeContent_28"
+                },
+                {
+                    "value": {
+                        "parent_id": "StudyProtocolDocumentVersion_1",
+                        "name": "SECTION 3.9.3.3.",
+                        "parent_rel": "contents",
+                        "parent_entity": "StudyProtocolDocumentVersion",
+                        "$xhtml_errors": [
+                            "Invalid XHTML line 3 [ERROR]: Element 'style': This element is not expected."
+                        ]
+                    },
+                    "dataset": "NarrativeContent.xpt",
+                    "row": 11,
+                    "instance_id": "NarrativeContent_36"
+                },
+                {
+                    "value": {
+                        "parent_id": "StudyProtocolDocumentVersion_1",
+                        "name": "SECTION 3.9.3.4",
+                        "parent_rel": "contents",
+                        "parent_entity": "StudyProtocolDocumentVersion",
+                        "$xhtml_errors": [
+                            "Invalid XHTML line 13 [ERROR]: Element 'ol', attribute 'type': The attribute 'type' is not allowed.",
+                            "Invalid XHTML line 28 [ERROR]: Element 'li': This element is not expected."
+                        ]
+                    },
+                    "dataset": "NarrativeContent.xpt",
+                    "row": 12,
+                    "instance_id": "NarrativeContent_37"
+                },
+                {
+                    "value": {
+                        "parent_id": "StudyProtocolDocumentVersion_1",
+                        "name": "SECTION 3.9.3.4.2",
+                        "parent_rel": "contents",
+                        "parent_entity": "StudyProtocolDocumentVersion",
+                        "$xhtml_errors": [
+                            "Invalid XHTML line 7 [ERROR]: Element 'ul': This element is not expected. Expected is ( li )."
+                        ]
+                    },
+                    "dataset": "NarrativeContent.xpt",
+                    "row": 13,
+                    "instance_id": "NarrativeContent_39"
+                },
+                {
+                    "value": {
+                        "parent_id": "StudyProtocolDocumentVersion_1",
+                        "name": "SECTION 3.9.4.",
+                        "parent_rel": "contents",
+                        "parent_entity": "StudyProtocolDocumentVersion",
+                        "$xhtml_errors": [
+                            "Invalid XHTML line 29 [ERROR]: Element 'style': This element is not expected."
+                        ]
+                    },
+                    "dataset": "NarrativeContent.xpt",
+                    "row": 14,
+                    "instance_id": "NarrativeContent_40"
+                },
+                {
+                    "value": {
+                        "parent_id": "StudyProtocolDocumentVersion_1",
+                        "name": "SECTION 3.10.3.1.",
+                        "parent_rel": "contents",
+                        "parent_entity": "StudyProtocolDocumentVersion",
+                        "$xhtml_errors": [
+                            "Invalid XHTML line 2 [ERROR]: Element 'ol', attribute 'type': The attribute 'type' is not allowed."
+                        ]
+                    },
+                    "dataset": "NarrativeContent.xpt",
+                    "row": 15,
+                    "instance_id": "NarrativeContent_47"
+                },
+                {
+                    "value": {
+                        "parent_id": "StudyProtocolDocumentVersion_1",
+                        "name": "SECTION Appendix 1",
+                        "parent_rel": "contents",
+                        "parent_entity": "StudyProtocolDocumentVersion",
+                        "$xhtml_errors": [
+                            "Invalid XHTML (wrapper end) [FATAL]: Unescaped '<' not allowed in attributes values",
+                            "Invalid XHTML (wrapper end) [FATAL]: attributes construct error",
+                            "Invalid XHTML (wrapper end) [FATAL]: Couldn't find end of Start Tag ref line 6",
+                            "Invalid XHTML (wrapper end) [FATAL]: Opening and ending tag mismatch: p line 6 and body",
+                            "Invalid XHTML (wrapper end) [FATAL]: Opening and ending tag mismatch: td line 6 and html",
+                            "Invalid XHTML (wrapper end) [ERROR]: Element 'usdm:ref': The attribute 'klass' is required but missing."
+                        ]
+                    },
+                    "dataset": "NarrativeContent.xpt",
+                    "row": 16,
+                    "instance_id": "NarrativeContent_68"
+                }
+            ]
+        }
+    ]
+}

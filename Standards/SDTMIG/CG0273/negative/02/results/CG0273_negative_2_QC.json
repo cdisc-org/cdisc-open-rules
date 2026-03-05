@@ -1,0 +1,37 @@
+{
+  "TS": [
+    {
+      "executionStatus": "success",
+      "domain": "TS",
+      "variables": [
+        "$HLTSUBJI_N",
+        "TSGRPID",
+        "TSPARMCD",
+        "TSVAL"
+      ],
+      "message": "A record exists in TS where TSPARMCD = HLTSUBJI and TSVAL = N but TSVAL for TSPARMCD = TDIGRP is empty.",
+      "errors": [
+        {
+          "value": {
+            "TSVAL": "",
+            "TSGRPID": "2",
+            "$HLTSUBJI_N": 1,
+            "TSPARMCD": "TDIGRP"
+          },
+          "row": 50,
+          "SEQ": 2
+        },
+        {
+          "value": {
+            "TSVAL": "",
+            "TSGRPID": "3",
+            "$HLTSUBJI_N": 1,
+            "TSPARMCD": "TDIGRP"
+          },
+          "row": 51,
+          "SEQ": 3
+        }
+      ]
+    }
+  ]
+}

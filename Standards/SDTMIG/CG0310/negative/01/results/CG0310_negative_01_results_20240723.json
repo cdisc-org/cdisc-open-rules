@@ -1,0 +1,45 @@
+{
+    "AE": [
+        {
+            "executionStatus": "success",
+            "domain": "AE",
+            "variables": [
+                "variable_name"
+            ],
+            "message": "Variable name length is greater than 8.",
+            "errors": [
+                {
+                    "value": {
+                        "variable_name": "AEDECOD00"
+                    }
+                }
+            ]
+        }
+    ],
+    "APMHE": [
+        {
+            "executionStatus": "success",
+            "domain": "APMHE",
+            "variables": [
+                "variable_name"
+            ],
+            "message": "Variable name length is greater than 8.",
+            "errors": [
+                {
+                    "value": {
+                        "variable_name": "MHPRESPFL"
+                    }
+                }
+            ]
+        }
+    ],
+    "DM": [
+        {
+            "executionStatus": "success",
+            "domain": "DM",
+            "variables": [],
+            "message": null,
+            "errors": []
+        }
+    ]
+}

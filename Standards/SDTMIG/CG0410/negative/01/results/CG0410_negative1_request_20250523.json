@@ -1,0 +1,727 @@
+{
+    "rule": {
+        "Authorities": [
+            {
+                "Organization": "CDISC",
+                "Standards": [
+                    {
+                        "Name": "SDTMIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "IG v3.4",
+                                        "Item": "7.3.1.1 TV",
+                                        "Section": "5.5",
+                                        "Cited_Guidance": "One record per subject per actual visit."
+                                    },
+                                    {
+                                        "Document": "IG v3.4",
+                                        "Item": "TV Issues 4",
+                                        "Section": "7.3.1.1",
+                                        "Cited_Guidance": "Some data collection is contingent on the occurrence of a \"trigger\" event, or disease milestone (see the Trial Disease Milestones (TM) dataset under Section 7.3, Schedule for Assessments (TV, TD, and TM)). When such planned data collection involves an additional clinic visit, a \"contingent\" Visit may be included in the trial visits table, with start a rule that describes the circumstances under which it will take place. Since values of VISITNUM must be assigned to all records in the Trial Visits dataset, a contingent Visit included in the Trial Visits dataset must have a VISITNUM, but the VISITNUM value may not be a \"chronological\" value, due to the uncertain timing of a contingent Visit. If contingent visits are not included in the TV dataset, then they would be treated as unplanned visits in the Subject Visits (SV) domain."
+                                    }
+                                ],
+                                "Origin": "SDTM and SDTMIG Conformance Rules",
+                                "Version": "2.0",
+                                "Rule_Identifier": {
+                                    "Id": "CG0410",
+                                    "Version": "2"
+                                }
+                            }
+                        ],
+                        "Version": "3.4"
+                    },
+                    {
+                        "Name": "SDTMIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "IG v3.2",
+                                        "Section": "5 SV",
+                                        "Cited_Guidance": "One record per subject per actual visit."
+                                    }
+                                ],
+                                "Origin": "SDTM and SDTMIG Conformance Rules",
+                                "Version": "2.0",
+                                "Rule_Identifier": {
+                                    "Id": "CG0410",
+                                    "Version": "2"
+                                }
+                            }
+                        ],
+                        "Version": "3.2"
+                    },
+                    {
+                        "Name": "SDTMIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "IG v3.3",
+                                        "Item": "IG v3.3[5.5 SV]|IG v3.3[7.3.1.1 TV][TV Issues 4]",
+                                        "Section": "IG v3.3[5.5 SV]|IG v3.3[7.3.1.1 TV]",
+                                        "Cited_Guidance": "IG v3.3[5.5 SV][One record per subject per actual visit.]|IG v3.3[7.3.1.1 TV][TV Issues 4][Some data collection is contingent on the occurrence of a \"trigger\" event; or disease milestone (see Section 7.3.3 Trial Disease Milestones). When such planned data collection involves an additional clinic visit; a \"contingent\" Visit may be included in the trial visits table;]"
+                                    }
+                                ],
+                                "Origin": "SDTM and SDTMIG Conformance Rules",
+                                "Version": "2.0",
+                                "Rule_Identifier": {
+                                    "Id": "CG0410",
+                                    "Version": "2"
+                                }
+                            }
+                        ],
+                        "Version": "3.3"
+                    },
+                    {
+                        "Name": "TIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "TIG v1.0",
+                                        "Item": "Assumption 1",
+                                        "Section": "2.8.10.25",
+                                        "Cited_Guidance": "One record per subject per actual visit."
+                                    }
+                                ],
+                                "Origin": "TIG Conformance Rules",
+                                "Version": "1.0",
+                                "Rule_Identifier": {
+                                    "Id": "TIG0566",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Substandard": "SDTM",
+                        "Version": "1.0"
+                    }
+                ]
+            }
+        ],
+        "Check": {
+            "all": [
+                {
+                    "name": "VISITNUM",
+                    "operator": "is_contained_by",
+                    "value": "$tv_visitnum"
+                },
+                {
+                    "name": "VISITNUM",
+                    "operator": "is_not_unique_set",
+                    "value": "USUBJID"
+                }
+            ]
+        },
+        "Core": {
+            "Id": "CORE-000204",
+            "Status": "Published",
+            "Version": "1"
+        },
+        "Description": "When VISITNUM is present in TV.VISITNUM, SV.VISITNUM must be unique within subject",
+        "Executability": "Fully Executable",
+        "Operations": [
+            {
+                "domain": "TV",
+                "id": "$tv_visitnum",
+                "name": "VISITNUM",
+                "operator": "distinct"
+            }
+        ],
+        "Outcome": {
+            "Message": "Scheduled or Contingent visit is not unique within subject",
+            "Output_Variables": [
+                "USUBJID",
+                "VISITNUM"
+            ]
+        },
+        "Scope": {
+            "Classes": {
+                "Include": [
+                    "ALL"
+                ]
+            },
+            "Domains": {
+                "Include": [
+                    "SV"
+                ]
+            },
+            "Use_Case": "INDH"
+        },
+        "Sensitivity": "Record",
+        "Rule_Type": "Record Data"
+    },
+    "datasets": [
+        {
+            "filename": "tv.xpt",
+            "label": "Trial Visits",
+            "domain": "TV",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 12
+                },
+                {
+                    "name": "DOMAIN",
+                    "label": "Domain Abbreviation",
+                    "type": "Char",
+                    "length": 2
+                },
+                {
+                    "name": "VISITNUM",
+                    "label": "Visit Number",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "VISIT",
+                    "label": "Visit Name",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "ARMCD",
+                    "label": "Planned Arm Code",
+                    "type": "Char",
+                    "length": 8
+                },
+                {
+                    "name": "TVSTRL",
+                    "label": "Visit Start Rule",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "TVENRL",
+                    "label": "Visit End Rule",
+                    "type": "Char",
+                    "length": 200
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01"
+                ],
+                "DOMAIN": [
+                    "TV",
+                    "TV",
+                    "TV",
+                    "TV",
+                    "TV",
+                    "TV",
+                    "TV",
+                    "TV",
+                    "TV",
+                    "TV",
+                    "TV",
+                    "TV",
+                    "TV",
+                    "TV"
+                ],
+                "VISITNUM": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    101,
+                    201
+                ],
+                "VISIT": [
+                    "SCREENING 1",
+                    "SCREENING 2",
+                    "BASELINE",
+                    "WEEK 2",
+                    "WEEK 4",
+                    "WEEK 6",
+                    "WEEK 8",
+                    "WEEK 12",
+                    "WEEK 16",
+                    "WEEK 20",
+                    "WEEK 24",
+                    "WEEK 26",
+                    "EARLY DISCONTINUATION",
+                    "EARLY DISCONTINUATION RETRIEVAL"
+                ],
+                "ARMCD": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "TVSTRL": [
+                    "Informed Consent Obtained",
+                    "Day Before Initial Study Treatment",
+                    "Day of Initial Study Treatment",
+                    "2 Weeks After Start of Study Treatment",
+                    "4 Weeks After Start of Study Treatment",
+                    "6 Weeks After Start of Study Treatment",
+                    "8 Weeks After Start of Study Treatment",
+                    "12 Weeks After Start of Study Treatment",
+                    "16 Weeks After Start of Study Treatment",
+                    "20 Weeks After Start of Study Treatment",
+                    "24 Weeks After Start of Study Treatment",
+                    "26 Weeks After Start of Study Treatment",
+                    "Discontinuation Date Prior to Week 24",
+                    "Approximately 24 Weeks After Start of Study Treatment for Early Discontinuations"
+                ],
+                "TVENRL": [
+                    "Screening Assessments Completed",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ]
+            }
+        },
+        {
+            "filename": "sv.xpt",
+            "label": "Subject Visits",
+            "domain": "SV",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 12
+                },
+                {
+                    "name": "DOMAIN",
+                    "label": "Domain Abbreviation",
+                    "type": "Char",
+                    "length": 2
+                },
+                {
+                    "name": "USUBJID",
+                    "label": "Unique Subject Identifier",
+                    "type": "Char",
+                    "length": 8
+                },
+                {
+                    "name": "VISITNUM",
+                    "label": "Visit Number",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "VISIT",
+                    "label": "Visit Name",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "SVPRESP",
+                    "label": "Pre-specified",
+                    "type": "Char",
+                    "length": 2
+                },
+                {
+                    "name": "SVSTDTC",
+                    "label": "Start Date/Time of Visit",
+                    "type": "Char",
+                    "length": 10
+                },
+                {
+                    "name": "SVENDTC",
+                    "label": "End Date/Time of Visit",
+                    "type": "Char",
+                    "length": 10
+                },
+                {
+                    "name": "SVSTDY",
+                    "label": "Study Day of Start of Visit",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "SVENDY",
+                    "label": "Study Day of End of Visit",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "SVUPDES",
+                    "label": "Description of Unplanned Visit",
+                    "type": "Char",
+                    "length": 200
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01"
+                ],
+                "DOMAIN": [
+                    "SV",
+                    "SV",
+                    "SV",
+                    "SV",
+                    "SV",
+                    "SV",
+                    "SV",
+                    "SV",
+                    "SV",
+                    "SV",
+                    "SV",
+                    "SV",
+                    "SV",
+                    "SV",
+                    "SV",
+                    "SV",
+                    "SV",
+                    "SV",
+                    "SV",
+                    "SV",
+                    "SV",
+                    "SV",
+                    "SV",
+                    "SV",
+                    "SV",
+                    "SV",
+                    "SV",
+                    "SV"
+                ],
+                "USUBJID": [
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC002",
+                    "CDISC002",
+                    "CDISC002",
+                    "CDISC002",
+                    "CDISC002",
+                    "CDISC002",
+                    "CDISC002",
+                    "CDISC002",
+                    "CDISC003",
+                    "CDISC003",
+                    "CDISC003",
+                    "CDISC003",
+                    "CDISC003",
+                    "CDISC003",
+                    "CDISC003",
+                    "CDISC003",
+                    "CDISC003",
+                    "CDISC003"
+                ],
+                "VISITNUM": [
+                    1,
+                    1,
+                    3,
+                    4,
+                    5,
+                    5.01,
+                    7,
+                    8,
+                    101,
+                    201,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    7,
+                    8,
+                    9,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    7,
+                    8,
+                    9,
+                    101,
+                    201
+                ],
+                "VISIT": [
+                    "SCREENING 1",
+                    "SCREENING 1",
+                    "BASELINE",
+                    "WEEK 2",
+                    "WEEK 4",
+                    "WEEK 4: UNSCHEDULED 01",
+                    "WEEK 6",
+                    "WEEK 8",
+                    "EARLY DISCONTINUATION",
+                    "EARLY DISCONTINUATION RETRIEVAL",
+                    "SCREENING 1",
+                    "SCREENING 2",
+                    "BASELINE",
+                    "WEEK 2",
+                    "WEEK 4",
+                    "WEEK 6",
+                    "WEEK 8",
+                    "WEEK 12",
+                    "SCREENING 1",
+                    "SCREENING 2",
+                    "BASELINE",
+                    "WEEK 2",
+                    "WEEK 4",
+                    "WEEK 6",
+                    "WEEK 8",
+                    "WEEK 12",
+                    "EARLY DISCONTINUATION",
+                    "EARLY DISCONTINUATION RETRIEVAL"
+                ],
+                "SVPRESP": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "SVSTDTC": [
+                    "2012-11-23",
+                    "2012-11-28",
+                    "2012-11-30",
+                    "2012-12-13",
+                    "2012-12-26",
+                    "2012-12-28",
+                    "2013-01-10",
+                    "2013-01-23",
+                    "2013-02-14",
+                    "2013-05-20",
+                    "2012-10-30",
+                    "2012-11-14",
+                    "2012-11-15",
+                    "2012-11-28",
+                    "2012-12-11",
+                    "2012-12-25",
+                    "2013-01-08",
+                    "2013-01-14",
+                    "2013-08-20",
+                    "2013-08-27",
+                    "2013-08-29",
+                    "2013-09-15",
+                    "2013-09-24",
+                    "2013-10-08",
+                    "2013-10-22",
+                    "2013-11-05",
+                    "2013-12-16",
+                    "2014-02-13"
+                ],
+                "SVENDTC": [
+                    "2012-11-23",
+                    "2012-11-28",
+                    "2012-11-30",
+                    "2012-12-13",
+                    "2012-12-26",
+                    "2012-12-28",
+                    "2013-01-10",
+                    "2013-01-23",
+                    "2013-02-14",
+                    "2013-05-20",
+                    "2012-10-30",
+                    "2012-11-14",
+                    "2012-11-15",
+                    "2012-11-28",
+                    "2012-12-11",
+                    "2012-12-25",
+                    "2013-01-08",
+                    "2013-01-14",
+                    "2013-08-20",
+                    "2013-08-27",
+                    "2013-08-29",
+                    "2013-09-15",
+                    "2013-09-24",
+                    "2013-10-08",
+                    "2013-10-22",
+                    "2013-11-05",
+                    "2013-12-16",
+                    "2014-02-13"
+                ],
+                "SVSTDY": [
+                    -7,
+                    -2,
+                    1,
+                    14,
+                    27,
+                    29,
+                    42,
+                    55,
+                    77,
+                    172,
+                    -16,
+                    -1,
+                    1,
+                    14,
+                    27,
+                    41,
+                    55,
+                    61,
+                    -9,
+                    -2,
+                    1,
+                    18,
+                    27,
+                    41,
+                    55,
+                    69,
+                    110,
+                    169
+                ],
+                "SVENDY": [
+                    -7,
+                    -2,
+                    1,
+                    14,
+                    27,
+                    29,
+                    42,
+                    55,
+                    77,
+                    172,
+                    -16,
+                    -1,
+                    1,
+                    14,
+                    27,
+                    41,
+                    55,
+                    61,
+                    -9,
+                    -2,
+                    1,
+                    18,
+                    27,
+                    41,
+                    55,
+                    69,
+                    110,
+                    169
+                ],
+                "SVUPDES": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "UNSCHEDULED LABS",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ]
+            }
+        }
+    ],
+    "codelists": []
+}

@@ -1,0 +1,302 @@
+{2 items
+"datasets":[3 items
+0:{5 items
+"filename":"co.xpt"
+"label":"Comments"
+"domain":"CO"
+"variables":[13 items
+0:{4 items
+"name":"STUDYID"
+"label":"Study Identifier"
+"type":"Char"
+"length":50
+}
+1:{4 items
+"name":"DOMAIN"
+"label":"Domain Abbreviation"
+"type":"Char"
+"length":50
+}
+2:{4 items
+"name":"RDOMAIN"
+"label":"Related Domain Abbreviation"
+"type":"Char"
+"length":50
+}
+3:{4 items
+"name":"USUBJID"
+"label":"Unique Subject Identifier"
+"type":"Char"
+"length":50
+}
+4:{4 items
+"name":"COSEQ"
+"label":"Sequence Number"
+"type":"Num"
+"length":8
+}
+5:{4 items
+"name":"IDVAR"
+"label":"Identifying Variable"
+"type":"Char"
+"length":50
+}
+6:{4 items
+"name":"IDVARVAL"
+"label":"Identifying Variable Value"
+"type":"Char"
+"length":50
+}
+7:{4 items
+"name":"COREF"
+"label":"Comment Reference"
+"type":"Char"
+"length":50
+}
+8:{4 items
+"name":"COVAL"
+"label":"Comment"
+"type":"Char"
+"length":50
+}
+9:{4 items
+"name":"COEVAL"
+"label":"Evaluator"
+"type":"Char"
+"length":50
+}
+10:{4 items
+"name":"COEVALID"
+"label":"Evaluator Identifier"
+"type":"Char"
+"length":50
+}
+11:{4 items
+"name":"CODTC"
+"label":"Date/Time of Comment"
+"type":"Char"
+"length":50
+}
+12:{4 items
+"name":"CODY"
+"label":"Study Day of Comment"
+"type":"Num"
+"length":8
+}
+]
+"records":{13 items
+"STUDYID":[1 item
+0:"CDISC-PILOT-01"
+]
+"DOMAIN":[1 item
+0:"CO"
+]
+"RDOMAIN":[1 item
+0:"LB"
+]
+"USUBJID":[1 item
+0:"S001"
+]
+"COSEQ":[1 item
+0:1
+]
+"IDVAR":[1 item
+0:"LBSEQ"
+]
+"IDVARVAL":[1 item
+0:"320"
+]
+"COREF":[1 item
+0:""
+]
+"COVAL":[1 item
+0:"test comment"
+]
+"COEVAL":[1 item
+0:""
+]
+"COEVALID":[1 item
+0:""
+]
+"CODTC":[1 item
+0:""
+]
+"CODY":[1 item
+0:NULL
+]
+}
+}
+1:{5 items
+"filename":"relrec.xpt"
+"label":"Related Records"
+"domain":"RELREC"
+"variables":[7 items
+0:{4 items
+"name":"STUDYID"
+"label":"Study Identifier"
+"type":"Char"
+"length":50
+}
+1:{4 items
+"name":"RDOMAIN"
+"label":"Related Domain Abbreviation"
+"type":"Char"
+"length":50
+}
+2:{4 items
+"name":"USUBJID"
+"label":"Unique Subject Identifier"
+"type":"Char"
+"length":50
+}
+3:{4 items
+"name":"IDVAR"
+"label":"Identifying Variable"
+"type":"Char"
+"length":50
+}
+4:{4 items
+"name":"IDVARVAL"
+"label":"Identifying Variable Value"
+"type":"Char"
+"length":50
+}
+5:{4 items
+"name":"RELTYPE"
+"label":"Relationship Type"
+"type":"Char"
+"length":50
+}
+6:{4 items
+"name":"RELID"
+"label":"Relationship Identifier"
+"type":"Char"
+"length":50
+}
+]
+"records":{7 items
+"STUDYID":[1 item
+0:"CDISC-PILOT-01"
+]
+"RDOMAIN":[1 item
+0:"LB"
+]
+"USUBJID":[1 item
+0:"S001"
+]
+"IDVAR":[1 item
+0:"LBSEQ"
+]
+"IDVARVAL":[1 item
+0:"320"
+]
+"RELTYPE":[1 item
+0:"ONE"
+]
+"RELID":[1 item
+0:"1"
+]
+}
+}
+2:{5 items
+"filename":"supplb.xpt"
+"label":"Supplemental Qualifiers for Laboratory"
+"domain":"SUPPLB"
+"variables":[10 items
+0:{4 items
+"name":"STUDYID"
+"label":"Study Identifier"
+"type":"Char"
+"length":50
+}
+1:{4 items
+"name":"RDOMAIN"
+"label":"Related Domain Abbreviation"
+"type":"Char"
+"length":50
+}
+2:{4 items
+"name":"USUBJID"
+"label":"Unique Subject Identifier"
+"type":"Char"
+"length":50
+}
+3:{4 items
+"name":"IDVAR"
+"label":"Identifying Variable"
+"type":"Char"
+"length":50
+}
+4:{4 items
+"name":"IDVARVAL"
+"label":"Identifying Variable Value"
+"type":"Char"
+"length":50
+}
+5:{4 items
+"name":"QNAM"
+"label":"Qualifier Variable Name"
+"type":"Char"
+"length":50
+}
+6:{4 items
+"name":"QLABEL"
+"label":"Qualifier Variable Label"
+"type":"Char"
+"length":50
+}
+7:{4 items
+"name":"QVAL"
+"label":"Data Value"
+"type":"Char"
+"length":50
+}
+8:{4 items
+"name":"QORIG"
+"label":"Origin"
+"type":"Char"
+"length":50
+}
+9:{4 items
+"name":"QEVAL"
+"label":"Evaluator"
+"type":"Char"
+"length":50
+}
+]
+"records":{10 items
+"STUDYID":[1 item
+0:"CDISC-PILOT-01"
+]
+"RDOMAIN":[1 item
+0:"LB"
+]
+"USUBJID":[1 item
+0:"S001"
+]
+"IDVAR":[1 item
+0:"LBSEQ"
+]
+"IDVARVAL":[1 item
+0:"320"
+]
+"QNAM":[1 item
+0:"LBCLSIG"
+]
+"QLABEL":[1 item
+0:"Clinically Significant"
+]
+"QVAL":[1 item
+0:"Y"
+]
+"QORIG":[1 item
+0:"CRF"
+]
+"QEVAL":[1 item
+0:""
+]
+}
+}
+]
+"codelists":[]0 items
+}

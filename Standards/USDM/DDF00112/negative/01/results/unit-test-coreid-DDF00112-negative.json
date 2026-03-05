@@ -1,0 +1,176 @@
+{
+    "StudyIntervention": [
+        {
+            "executionStatus": "success",
+            "dataset": "StudyIntervention.xpt",
+            "domain": "StudyIntervention",
+            "variables": [
+                "$code_for_decode_pref_term",
+                "$code_for_decode_value",
+                "$codelist_code",
+                "$codelist_extensible",
+                "$pref_term_for_code",
+                "$value_for_code",
+                "id",
+                "name",
+                "parent_entity",
+                "parent_id",
+                "parent_rel",
+                "role.code",
+                "role.codeSystem",
+                "role.codeSystemVersion",
+                "role.decode"
+            ],
+            "message": "The study intervention's role is not specified using the study intervention role (C207417) DDF codelist - codeSystem is not \"http://www.cdisc.org\", codeSystemVersion is not a valid terminology package date, the code or decode (either as preferred term or as submission value) is found in the codelist (case insensitive) but the corresponding decode or code does not match the codelist value (case sensitive), and/or neither code nor decode is found in the codelist.",
+            "errors": [
+                {
+                    "value": {
+                        "$value_for_code": "Additional Required Treatment",
+                        "role.codeSystemVersion": "2024-09-27",
+                        "role.code": "C207614",
+                        "id": "StudyIntervention_1",
+                        "$code_for_decode_value": null,
+                        "$codelist_code": "C207417",
+                        "$pref_term_for_code": "Additional Required Medicinal Product",
+                        "parent_id": "StudyDesign_1",
+                        "$codelist_extensible": false,
+                        "parent_entity": "StudyDesign",
+                        "role.codeSystem": "http://www.cdisc.org",
+                        "role.decode": "Additional Treatment",
+                        "name": "LY",
+                        "parent_rel": "studyInterventions",
+                        "$code_for_decode_pref_term": null
+                    },
+                    "dataset": "StudyIntervention.xpt",
+                    "row": 1
+                },
+                {
+                    "value": {
+                        "$value_for_code": null,
+                        "role.codeSystemVersion": "2024-09-27",
+                        "role.code": "C1658222",
+                        "id": "StudyIntervention_2",
+                        "$code_for_decode_value": "C165822",
+                        "$codelist_code": "C207417",
+                        "$pref_term_for_code": null,
+                        "parent_id": "StudyDesign_1",
+                        "$codelist_extensible": false,
+                        "parent_entity": "StudyDesign",
+                        "role.codeSystem": "http://www.cdisc.org",
+                        "role.decode": "Background Treatment",
+                        "name": "LY2",
+                        "parent_rel": "studyInterventions",
+                        "$code_for_decode_pref_term": "C165822"
+                    },
+                    "dataset": "StudyIntervention.xpt",
+                    "row": 2
+                },
+                {
+                    "value": {
+                        "$value_for_code": "Challenge Agent",
+                        "role.codeSystemVersion": "2024-09-27",
+                        "role.code": "C158128",
+                        "id": "StudyIntervention_3",
+                        "$code_for_decode_value": "C158128",
+                        "$codelist_code": "C207417",
+                        "$pref_term_for_code": "Challenge Agent",
+                        "parent_id": "StudyDesign_1",
+                        "$codelist_extensible": false,
+                        "parent_entity": "StudyDesign",
+                        "role.codeSystem": "CDISC DDF Terminology",
+                        "role.decode": "Challenge Agent",
+                        "name": "LY3",
+                        "parent_rel": "studyInterventions",
+                        "$code_for_decode_pref_term": "C158128"
+                    },
+                    "dataset": "StudyIntervention.xpt",
+                    "row": 3
+                },
+                {
+                    "value": {
+                        "$value_for_code": null,
+                        "role.codeSystemVersion": "2024-09-30",
+                        "role.code": "C18020",
+                        "id": "StudyIntervention_4",
+                        "$code_for_decode_value": null,
+                        "$codelist_code": "C207417",
+                        "$pref_term_for_code": null,
+                        "parent_id": "StudyDesign_1",
+                        "$codelist_extensible": null,
+                        "parent_entity": "StudyDesign",
+                        "role.codeSystem": "http://www.cdisc.org",
+                        "role.decode": "Diagnostic",
+                        "name": "LY4",
+                        "parent_rel": "studyInterventions",
+                        "$code_for_decode_pref_term": null
+                    },
+                    "dataset": "StudyIntervention.xpt",
+                    "row": 4
+                },
+                {
+                    "value": {
+                        "$value_for_code": null,
+                        "role.codeSystemVersion": "2024-09-27",
+                        "role.code": "C0071X",
+                        "id": "StudyIntervention_5",
+                        "$code_for_decode_value": null,
+                        "$codelist_code": "C207417",
+                        "$pref_term_for_code": null,
+                        "parent_id": "StudyDesign_1",
+                        "$codelist_extensible": false,
+                        "parent_entity": "StudyDesign",
+                        "role.codeSystem": "http://www.cdisc.org",
+                        "role.decode": "Extension",
+                        "name": "LY5",
+                        "parent_rel": "studyInterventions",
+                        "$code_for_decode_pref_term": null
+                    },
+                    "dataset": "StudyIntervention.xpt",
+                    "row": 5
+                },
+                {
+                    "value": {
+                        "$value_for_code": "Rescue Medicine",
+                        "role.codeSystemVersion": "2024-09-27",
+                        "role.code": "C165835",
+                        "id": "StudyIntervention_7",
+                        "$code_for_decode_value": null,
+                        "$codelist_code": "C207417",
+                        "$pref_term_for_code": "Rescue Medications",
+                        "parent_id": "StudyDesign_1",
+                        "$codelist_extensible": false,
+                        "parent_entity": "StudyDesign",
+                        "role.codeSystem": "http://www.cdisc.org",
+                        "role.decode": "RESCUE MEDICATIONS",
+                        "name": "LY7",
+                        "parent_rel": "studyInterventions",
+                        "$code_for_decode_pref_term": "C165835"
+                    },
+                    "dataset": "StudyIntervention.xpt",
+                    "row": 6
+                },
+                {
+                    "value": {
+                        "$value_for_code": null,
+                        "role.codeSystemVersion": "2024-09-27",
+                        "role.code": "C68609",
+                        "id": "StudyIntervention_8",
+                        "$code_for_decode_value": null,
+                        "$codelist_code": "C207417",
+                        "$pref_term_for_code": null,
+                        "parent_id": "StudyDesign_1",
+                        "$codelist_extensible": false,
+                        "parent_entity": "StudyDesign",
+                        "role.codeSystem": "http://www.cdisc.org",
+                        "role.decode": "Active Comparator",
+                        "name": "LY8",
+                        "parent_rel": "studyInterventions",
+                        "$code_for_decode_pref_term": null
+                    },
+                    "dataset": "StudyIntervention.xpt",
+                    "row": 7
+                }
+            ]
+        }
+    ]
+}

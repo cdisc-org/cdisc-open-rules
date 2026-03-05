@@ -1,0 +1,100 @@
+{
+  "MA": [
+    {
+      "executionStatus": "skipped",
+      "domain": "MA",
+      "variables": [],
+      "message": null,
+      "errors": []
+    }
+  ],
+  "MI": [
+    {
+      "executionStatus": "skipped",
+      "domain": "MI",
+      "variables": [],
+      "message": null,
+      "errors": []
+    }
+  ],
+  "OM": [
+    {
+      "executionStatus": "skipped",
+      "domain": "OM",
+      "variables": [],
+      "message": null,
+      "errors": []
+    }
+  ],
+  "PM": [
+    {
+      "executionStatus": "skipped",
+      "domain": "PM",
+      "variables": [],
+      "message": null,
+      "errors": []
+    }
+  ],
+  "PC": [
+    {
+      "executionStatus": "success",
+      "domain": "PC",
+      "variables": [
+        "PCDTC",
+        "PCSPEC",
+        "PCTESTCD",
+        "POOLID",
+        "USUBJID"
+      ],
+      "message": "The Pharmacokinetics Concentration test is not unique for this subject or pool and specimen and date/time.",
+      "errors": [
+        {
+          "value": {
+            "USUBJID": "CDISC-TEST-001",
+            "PCSPEC": "PLASMA",
+            "POOLID": "",
+            "PCDTC": "2001-02-01T07:45 ",
+            "PCTESTCD": "DRGA_MET "
+          },
+          "row": 1,
+          "uSubjId": "CDISC-TEST-001",
+          "seq": 1
+        },
+        {
+          "value": {
+            "USUBJID": "CDISC-TEST-001",
+            "PCSPEC": "PLASMA",
+            "POOLID": "",
+            "PCDTC": "2001-02-01T07:45 ",
+            "PCTESTCD": "DRGA_MET "
+          },
+          "row": 2,
+          "uSubjId": "CDISC-TEST-001",
+          "seq": 2
+        },
+        {
+          "value": {
+            "USUBJID": "",
+            "PCSPEC": "PLASMA",
+            "POOLID": "POOL1",
+            "PCDTC": "2001-02-01T09:21",
+            "PCTESTCD": "DRGA_MET "
+          },
+          "row": 3,
+          "seq": 1
+        },
+        {
+          "value": {
+            "USUBJID": "",
+            "PCSPEC": "PLASMA",
+            "POOLID": "POOL1",
+            "PCDTC": "2001-02-01T09:21",
+            "PCTESTCD": "DRGA_MET "
+          },
+          "row": 4,
+          "seq": 2
+        }
+      ]
+    }
+  ]
+}

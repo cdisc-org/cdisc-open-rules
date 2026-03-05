@@ -1,0 +1,44 @@
+{2 items
+"CM":[1 item
+0:{5 items
+"executionStatus":"success"
+"domain":"CM"
+"variables":[3 items
+0:"CMENDTC"
+1:"CMENDY"
+2:"RFSTDTC"
+]
+"message":"CMENDY is not null when either CMENDTC or DM.RFSTDTC do not contain complete values in their date portion"
+"errors":[2 items
+0:{4 items
+"value":{3 items
+"CMENDY":151
+"CMENDTC":"2013-04"
+"RFSTDTC":"2012-11-30"
+}
+"row":1
+"uSubjId":"CDISC001"
+"seq":1
+}
+1:{4 items
+"value":{3 items
+"CMENDY":166
+"CMENDTC":"2013----14"
+"RFSTDTC":"2012-11-30"
+}
+"row":4
+"uSubjId":"CDISC001"
+"seq":4
+}
+]
+}
+]
+"DM":[1 item
+0:{5 items
+"executionStatus":"skipped"
+"domain":"DM"
+"variables":[]0 items
+"message":NULL
+"errors":[]0 items
+}
+]

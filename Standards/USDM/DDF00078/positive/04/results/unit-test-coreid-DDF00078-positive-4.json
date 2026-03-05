@@ -1,0 +1,34 @@
+{
+    "StudyElement": [
+        {
+            "executionStatus": "execution_error",
+            "dataset": "StudyElement.xpt",
+            "domain": "",
+            "variables": [],
+            "message": "rule execution error",
+            "errors": [
+                {
+                    "dataset": "StudyElement.xpt",
+                    "error": "Column not found in data",
+                    "message": "transitionEndRule, transitionStartRule"
+                }
+            ]
+        }
+    ],
+    "Encounter": [
+        {
+            "executionStatus": "execution_error",
+            "dataset": "Encounter.xpt",
+            "domain": "",
+            "variables": [],
+            "message": "rule execution error",
+            "errors": [
+                {
+                    "dataset": "Encounter.xpt",
+                    "error": "Column not found in data",
+                    "message": "transitionEndRule, transitionStartRule"
+                }
+            ]
+        }
+    ]
+}

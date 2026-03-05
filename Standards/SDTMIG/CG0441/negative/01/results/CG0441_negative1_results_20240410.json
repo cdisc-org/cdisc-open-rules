@@ -1,0 +1,25 @@
+{
+  "TS": [
+    {
+      "executionStatus": "success",
+      "domain": "TS",
+      "variables": [
+        "TSGRPID",
+        "TSPARMCD",
+        "TSVAL"
+      ],
+      "message": "TSVAL is missing when TSPARMCD = STOPRULE.",
+      "errors": [
+        {
+          "value": {
+            "TSVAL": "",
+            "TSPARMCD": "STOPRULE",
+            "TSGRPID": ""
+          },
+          "row": 46,
+          "SEQ": 1
+        }
+      ]
+    }
+  ]
+}

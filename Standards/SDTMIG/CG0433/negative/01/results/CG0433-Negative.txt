@@ -1,0 +1,25 @@
+{
+  "DM": [
+    {
+      "executionStatus": "success",
+      "domain": "DM",
+      "variables": [
+        "AGE",
+        "AGETXT",
+        "AGEU"
+      ],
+      "message": "Missing value for AGE, when AGEU is provided",
+      "errors": [
+        {
+          "value": {
+            "AGE": null,
+            "AGETXT": "",
+            "AGEU": "YEARS"
+          },
+          "row": 2,
+          "USUBJID": "CDISC-TEST-004"
+        }
+      ]
+    }
+  ]
+}

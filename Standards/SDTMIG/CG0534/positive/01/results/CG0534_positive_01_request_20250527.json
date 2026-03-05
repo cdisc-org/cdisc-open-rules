@@ -1,0 +1,344 @@
+{3 items
+"datasets":[1 item
+0:{6 items
+"filename":"dm.xpt"
+"name":"DM"
+"label":"Demographics"
+"domain":"DM"
+"variables":[25 items
+0:{4 items
+"name":"STUDYID"
+"label":"Study Identifier"
+"type":"Char"
+"length":50
+}
+1:{4 items
+"name":"DOMAIN"
+"label":"Domain Abbreviation"
+"type":"Char"
+"length":50
+}
+2:{4 items
+"name":"USUBJID"
+"label":"Unique Subject Identifier"
+"type":"Char"
+"length":50
+}
+3:{4 items
+"name":"SUBJID"
+"label":"Subject Identifier for the Study"
+"type":"Char"
+"length":50
+}
+4:{4 items
+"name":"RFSTDTC"
+"label":"Subject Reference Start Date/Time"
+"type":"Char"
+"length":50
+}
+5:{4 items
+"name":"RFENDTC"
+"label":"Subject Reference End Date/Time"
+"type":"Char"
+"length":50
+}
+6:{4 items
+"name":"RFXSTDTC"
+"label":"Date/Time of First Study Treatment"
+"type":"Char"
+"length":50
+}
+7:{4 items
+"name":"RFXENDTC"
+"label":"Date/Time of Last Study Treatment"
+"type":"Char"
+"length":50
+}
+8:{4 items
+"name":"RFICDTC"
+"label":"Date/Time of Informed Consent"
+"type":"Char"
+"length":50
+}
+9:{4 items
+"name":"RFPENDTC"
+"label":"Date/Time of End of Participation"
+"type":"Char"
+"length":50
+}
+10:{4 items
+"name":"DTHDTC"
+"label":"Date/Time of Death"
+"type":"Char"
+"length":50
+}
+11:{4 items
+"name":"DTHFL"
+"label":"Subject Death Flag"
+"type":"Char"
+"length":50
+}
+12:{4 items
+"name":"SITEID"
+"label":"Study Site Identifier"
+"type":"Char"
+"length":50
+}
+13:{4 items
+"name":"BRTHDTC"
+"label":"Date/Time of Birth"
+"type":"Char"
+"length":50
+}
+14:{4 items
+"name":"AGE"
+"label":"Age"
+"type":"Num"
+"length":8
+}
+15:{4 items
+"name":"AGEU"
+"label":"Age Units"
+"type":"Char"
+"length":50
+}
+16:{4 items
+"name":"SEX"
+"label":"Sex"
+"type":"Char"
+"length":50
+}
+17:{4 items
+"name":"RACE"
+"label":"Race"
+"type":"Char"
+"length":50
+}
+18:{4 items
+"name":"ETHNIC"
+"label":"Ethnicity"
+"type":"Char"
+"length":50
+}
+19:{4 items
+"name":"ARMCD"
+"label":"Planned Arm Code"
+"type":"Char"
+"length":50
+}
+20:{4 items
+"name":"ARM"
+"label":"Description of Planned Arm"
+"type":"Char"
+"length":50
+}
+21:{4 items
+"name":"ACTARMCD"
+"label":"Actual Arm Code"
+"type":"Char"
+"length":50
+}
+22:{4 items
+"name":"ACTARM"
+"label":"Description of Actual Arm"
+"type":"Char"
+"length":50
+}
+23:{4 items
+"name":"ARMNRS"
+"label":"Reason Arm and/or Actual Arm is Null"
+"type":"Char"
+"length":200
+}
+24:{4 items
+"name":"COUNTRY"
+"label":"Country"
+"type":"Char"
+"length":50
+}
+]
+"records":{25 items
+"STUDYID":[5 items
+0:"CDISCPILOT01"
+1:"CDISCPILOT01"
+2:"CDISCPILOT01"
+3:"CDISCPILOT01"
+4:"CDISCPILOT01"
+]
+"DOMAIN":[5 items
+0:"DM"
+1:"DM"
+2:"DM"
+3:"DM"
+4:"DM"
+]
+"USUBJID":[5 items
+0:"CDISC001"
+1:"CDISC002"
+2:"CDISC003"
+3:"CDISC004"
+4:"CDISC008"
+]
+"SUBJID":[5 items
+0:"1115"
+1:"1211"
+2:"1302"
+3:"1345"
+4:"1445"
+]
+"RFSTDTC":[5 items
+0:""
+1:""
+2:"2013-08-29"
+3:""
+4:"2014-05-11"
+]
+"RFENDTC":[5 items
+0:"2013-01-23"
+1:"2013-01-14"
+2:"2013-11-05"
+3:"2014-03-18"
+4:"2014-11-01"
+]
+"RFXSTDTC":[5 items
+0:"2012-11-30"
+1:"2012-11-15"
+2:"2013-08-29"
+3:"2013-10-08"
+4:"2014-05-11"
+]
+"RFXENDTC":[5 items
+0:"2013-01-23"
+1:"2013-01-12"
+2:"2013-11-05"
+3:"2014-03-18"
+4:"2014-11-01"
+]
+"RFICDTC":[5 items
+0:"2012-11-23"
+1:"2012-10-30"
+2:"2013-08-20"
+3:"2013-10-01"
+4:""
+]
+"RFPENDTC":[5 items
+0:"2013-05-20"
+1:"2013-01-14"
+2:"2014-02-13"
+3:"2014-03-18"
+4:"2014-11-01"
+]
+"DTHDTC":[5 items
+0:""
+1:"2013-01-14"
+2:""
+3:""
+4:"2014-11-01"
+]
+"DTHFL":[5 items
+0:""
+1:"Y"
+2:""
+3:""
+4:""
+]
+"SITEID":[5 items
+0:"701"
+1:"701"
+2:"701"
+3:"701"
+4:"704"
+]
+"BRTHDTC":[5 items
+0:"1928"
+1:"1936"
+2:"1951"
+3:"1950"
+4:"1939"
+]
+"AGE":[5 items
+0:84
+1:76
+2:NULL
+3:63
+4:75
+]
+"AGEU":[5 items
+0:"YEARS"
+1:"YEARS"
+2:"YEARS"
+3:"YEARS"
+4:"YEARS"
+]
+"SEX":[5 items
+0:"M"
+1:"F"
+2:"M"
+3:"F"
+4:"M"
+]
+"RACE":[5 items
+0:"WHITE"
+1:"WHITE"
+2:"WHITE"
+3:"WHITE"
+4:"MULTIPLE"
+]
+"ETHNIC":[5 items
+0:"NOT HISPANIC OR LATINO"
+1:"NOT HISPANIC OR LATINO"
+2:"NOT HISPANIC OR LATINO"
+3:"NOT HISPANIC OR LATINO"
+4:"NOT HISPANIC OR LATINO"
+]
+"ARMCD":[5 items
+0:""
+1:"ZAN_LOW"
+2:"ZAN_HIGH"
+3:""
+4:"PLACEBO"
+]
+"ARM":[5 items
+0:""
+1:"Zanomaline Low Dose (54 mg)"
+2:"Zanomaline High Dose (81 mg)"
+3:""
+4:"Placebo"
+]
+"ACTARMCD":[5 items
+0:""
+1:""
+2:"ZAN_HIGH"
+3:""
+4:"PLACEBO"
+]
+"ACTARM":[5 items
+0:""
+1:""
+2:"Zanomaline High Dose (81 mg)"
+3:""
+4:"Placebo"
+]
+"ARMNRS":[5 items
+0:"SCREEN FAILURE"
+1:"ASSIGNED, NOT TREATED"
+2:""
+3:"NOT ASSIGNED"
+4:"UNPLANNED TREATMENT"
+]
+"COUNTRY":[5 items
+0:"USA"
+1:"USA"
+2:"USA"
+3:"USA"
+4:"USA"
+]
+}
+}
+]
+"standard":{2 items
+"product":"sdtmig"
+"version":"3-4"
+}
+"codelists":[]0 items
+}

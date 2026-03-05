@@ -1,0 +1,39 @@
+{
+  "TS": [
+    {
+      "executionStatus": "success",
+      "domain": "TS",
+      "variables": [
+        "TSVAL",
+        "TSVALNF"
+      ],
+      "message": "Both TSVALNF and TSVAL are populated",
+      "errors": [
+        {
+          "value": {
+            "TSVAL": "100",
+            "TSVALNF": "NA"
+          },
+          "row": 1,
+          "seq": 1
+        },
+        {
+          "value": {
+            "TSVAL": "METFORMIN",
+            "TSVALNF": "UNK"
+          },
+          "row": 6,
+          "seq": 6
+        },
+        {
+          "value": {
+            "TSVAL": "2",
+            "TSVALNF": "INF"
+          },
+          "row": 21,
+          "seq": 21
+        }
+      ]
+    }
+  ]
+}

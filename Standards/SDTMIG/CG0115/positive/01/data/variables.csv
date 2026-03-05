@@ -1,0 +1,40 @@
+dataset,variable,label,type,length
+ec.xpt,STUDYID,Study Identifier,Char,50
+ec.xpt,DOMAIN,Domain Abbreviation,Char,50
+ec.xpt,USUBJID,Unique Subject Identifier,Char,50
+ec.xpt,ECSEQ,Sequence Number,Num,8
+ec.xpt,ECTRT,Name of Treatment,Char,50
+ec.xpt,ECLOC,Location of Dose Administration,Char,50
+ec.xpt,ECLAT,Laterality,Char,50
+ec.xpt,ECDIR,Directionality,Char,50
+ec.xpt,ECPORTOT,Portion or Totality,Char,50
+pr.xpt,STUDYID,Study Identifier,Char,50
+pr.xpt,DOMAIN,Domain Abbreviation,Char,50
+pr.xpt,USUBJID,Unique Subject Identifier,Char,50
+pr.xpt,PRSEQ,Sequence Number,Num,8
+pr.xpt,PRTRT,Reported Name of Procedure,Char,50
+ae.xpt,STUDYID,Study Identifier,Char,50
+ae.xpt,DOMAIN,Domain Abbreviation,Char,50
+ae.xpt,USUBJID,Unique Subject Identifier,Char,50
+ae.xpt,AESEQ,Sequence Number,Num,8
+ae.xpt,AETERM,Reported Term for the Adverse Event,Char,50
+oe.xpt,STUDYID,Study Identifier,Char,50
+oe.xpt,DOMAIN,Domain Abbreviation,Char,50
+oe.xpt,USUBJID,Unique Subject Identifier,Char,50
+oe.xpt,OESEQ,Sequence Number,Num,8
+oe.xpt,OETESTCD,Short Name of Ophthalmic Test or Exam,Char,50
+oe.xpt,OETEST,Name of Ophthalmic Test or Exam,Char,50
+oe.xpt,OELOC,Location Used for the Measurement,Char,50
+oe.xpt,OELAT,Laterality,Char,50
+oe.xpt,OEDIR,Directionality,Char,50
+oe.xpt,OEPORTOT,Portion or Totality,Char,50
+tu.xpt,STUDYID,Study Identifier,Char,50
+tu.xpt,DOMAIN,Domain Abbreviation,Char,50
+tu.xpt,USUBJID,Unique Subject Identifier,Char,50
+tu.xpt,TUSEQ,Sequence Number,Num,8
+tu.xpt,TUTESTCD,Tumor/Lesion ID Short Name,Char,50
+tu.xpt,TUTEST,Tumor/Lesion ID Test Name,Char,50
+tu.xpt,TULOC,Location of the Tumor/Lesion,Char,50
+tu.xpt,TULAT,Laterality,Char,50
+tu.xpt,TUDIR,Directionality,Char,50
+tu.xpt,TUPORTOT,Portion or Totality,Char,50

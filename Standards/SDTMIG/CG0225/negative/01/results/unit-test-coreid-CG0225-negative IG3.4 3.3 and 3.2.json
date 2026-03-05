@@ -1,0 +1,32 @@
+{2 items
+"TV":[1 item
+0:{5 items
+"executionStatus":"success"
+"domain":"TV"
+"variables":[]0 items
+"message":NULL
+"errors":[]0 items
+}
+]
+"SV":[1 item
+0:{5 items
+"executionStatus":"success"
+"domain":"SV"
+"variables":[2 items
+0:"VISITDY"
+1:"VISITNUM"
+]
+"message":"VISITDY is not null when VISITNUM is not in TV.VISITNUM"
+"errors":[1 item
+0:{3 items
+"value":{2 items
+"VISITNUM":5.01
+"VISITDY":40
+}
+"row":6
+"uSubjId":"CDISC001"
+}
+]
+}
+]
+}

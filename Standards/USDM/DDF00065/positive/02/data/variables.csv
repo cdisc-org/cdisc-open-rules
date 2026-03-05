@@ -1,0 +1,12 @@
+dataset,variable,label,type,length
+ScheduledDecisionInstance.xpt,parent_entity,Parent Entity Name,String,[1]
+ScheduledDecisionInstance.xpt,parent_id,Parent Entity Id,String,[1]
+ScheduledDecisionInstance.xpt,parent_rel,Name of Relationship from Parent Entity,String,[1]
+ScheduledDecisionInstance.xpt,rel_type,Type of Relationship,String,[1]
+ScheduledDecisionInstance.xpt,id,(Scheduled Decision Instance Id),String,[1]
+ScheduledDecisionInstance.xpt,name,Scheduled Decision Instance Name,String,[1]
+ScheduledDecisionInstance.xpt,label,Scheduled Decision Instance Label,String,[0..1]
+ScheduledDecisionInstance.xpt,defaultConditionId,(Scheduled Decision Instance Default Condition) [Identifier],String,ScheduledInstance[0..1].id[1]
+ScheduledDecisionInstance.xpt,epochId,(Scheduled Decision Instance Epoch) [Identifier],String,StudyEpoch[0..1].id[1]
+ScheduledDecisionInstance.xpt,instanceType,Instance Type,String,[1]
+ScheduledDecisionInstance.xpt,conditionAssignments,(Scheduled Decision Instance Condition Assignments) [Any Exists],Boolean,ConditionAssignment[1..*]

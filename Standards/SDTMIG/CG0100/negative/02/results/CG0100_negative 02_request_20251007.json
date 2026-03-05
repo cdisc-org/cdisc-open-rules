@@ -1,0 +1,840 @@
+{
+    "rule": {
+        "Authorities": [
+            {
+                "Organization": "CDISC",
+                "Standards": [
+                    {
+                        "Name": "SDTMIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "IG v3.4",
+                                        "Item": "Assumption 4a",
+                                        "Section": "6.1.3.2",
+                                        "Cited_Guidance": "For example, if 0 tablets are taken within a timeframe or 0 mL infused at a visit, then ECOCCUR = 'N' is the standard representation of the collected doses not taken, not given, or missed. Dose amount variables (e.g., ECDOSE, ECDOSTXT) must not be set to zero (0) as an alternative method for indicating doses not taken, not given, or missed."
+                                    },
+                                    {
+                                        "Document": "IG v3.4",
+                                        "Item": "Assumption 4b",
+                                        "Section": "6.1.3.2",
+                                        "Cited_Guidance": "Qualifiers that indicate dose amount (e.g., ECDOSE, ECDOSTXT) may be populated with positive (non-zero) values in cases where the sponsor feels it is necessary and/or appropriate to represent specific dose amounts not taken, not  given, or missed."
+                                    }
+                                ],
+                                "Origin": "SDTM and SDTMIG Conformance Rules",
+                                "Version": "2.0",
+                                "Rule_Identifier": {
+                                    "Id": "CG0100",
+                                    "Version": "2"
+                                }
+                            }
+                        ],
+                        "Version": "3.4"
+                    },
+                    {
+                        "Name": "SDTMIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "IG v3.3",
+                                        "Item": "Assumption 4a",
+                                        "Section": "6.1.3.2",
+                                        "Cited_Guidance": "For example, if 0 tablets are taken within a timeframe or 0 mL infused at a visit, then ECOCCUR = 'N' is the standard representation of the collected doses not taken, not given, or missed. Dose amount variables (e.g., ECDOSE, ECDOSTXT) must not be set to zero (0) as an alternative method for indicating doses not taken, not given, or missed."
+                                    },
+                                    {
+                                        "Document": "IG v3.3",
+                                        "Item": "Assumption 4b",
+                                        "Section": "6.1.3.2",
+                                        "Cited_Guidance": "Qualifiers that indicate dose amount (e.g., ECDOSE, ECDOSTXT) may be populated with positive (non-zero) values in cases where the sponsor feels it is necessary and/or appropriate to represent specific dose amounts not taken, not  given, or missed."
+                                    }
+                                ],
+                                "Origin": "SDTM and SDTMIG Conformance Rules",
+                                "Version": "2.0",
+                                "Rule_Identifier": {
+                                    "Id": "CG0100",
+                                    "Version": "2"
+                                }
+                            }
+                        ],
+                        "Version": "3.3"
+                    },
+                    {
+                        "Name": "SDTMIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "IG v3.2",
+                                        "Item": "Assumption 4a",
+                                        "Section": "6.1.",
+                                        "Cited_Guidance": "For example, if 0 tablets are taken within a timeframe or 0 mL infused at a visit, then ECOCCUR = 'N' is the standard representation of the collected doses not taken, not given, or missed. Dose amount variables (e.g., ECDOSE, ECDOSTXT) must not be set to zero (0) as an alternative method for indicating doses not taken, not given, or missed."
+                                    },
+                                    {
+                                        "Document": "IG v3.2",
+                                        "Item": "Assumption 4b",
+                                        "Section": "6.1.",
+                                        "Cited_Guidance": "Qualifiers that indicate dose amount (e.g., ECDOSE, ECDOSTXT) may be populated with positive (non-zero) values in cases where the sponsor feels it is necessary and/or appropriate to represent specific dose amounts not taken, not given, or missed."
+                                    }
+                                ],
+                                "Origin": "SDTM and SDTMIG Conformance Rules",
+                                "Version": "2.0",
+                                "Rule_Identifier": {
+                                    "Id": "CG0100",
+                                    "Version": "2"
+                                }
+                            }
+                        ],
+                        "Version": "3.2"
+                    },
+                    {
+                        "Name": "TIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "TIG 1.0",
+                                        "Item": "Assumption 4a",
+                                        "Section": "2.8.10.11",
+                                        "Cited_Guidance": "Assumption 4a[For example, if 0 tablets are taken within a timeframe or 0 mL infused at a visit, then ECOCCUR = 'N' is the standard representation of the collected doses not taken, not given, or missed. Dose amount variables (e.g., ECDOSE, ECDOSTXT) must not be set to zero (0) as an alternative method for indicating doses not taken, not given, or missed.]"
+                                    },
+                                    {
+                                        "Document": "TIG 1.0",
+                                        "Item": "Assumption 4b",
+                                        "Section": "2.8.10.11",
+                                        "Cited_Guidance": "Assumption 4b[Qualifiers that indicate dose amount (e.g., ECDOSE, ECDOSTXT) may be populated with positive (non-zero) values in cases where the sponsor feels it is necessary and/or appropriate to represent specific dose amounts not taken, not given, or missed.]"
+                                    }
+                                ],
+                                "Origin": "TIG Conformance Rules",
+                                "Version": "1.0",
+                                "Rule_Identifier": {
+                                    "Id": "TIG0365",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Substandard": "SDTM",
+                        "Version": "1.0"
+                    }
+                ]
+            }
+        ],
+        "Check": {
+            "any": [
+                {
+                    "all": [
+                        {
+                            "name": "ECOCCUR",
+                            "operator": "not_equal_to",
+                            "value": "N",
+                            "value_is_literal": true
+                        },
+                        {
+                            "name": "ECSTAT",
+                            "operator": "empty"
+                        },
+                        {
+                            "name": "ECDOSTXT",
+                            "operator": "empty"
+                        },
+                        {
+                            "name": "ECDOSE",
+                            "operator": "less_than_or_equal_to",
+                            "value": 0
+                        }
+                    ]
+                },
+                {
+                    "all": [
+                        {
+                            "name": "ECOCCUR",
+                            "operator": "not_equal_to",
+                            "value": "N",
+                            "value_is_literal": true
+                        },
+                        {
+                            "name": "ECSTAT",
+                            "operator": "not_exists"
+                        },
+                        {
+                            "name": "ECDOSTXT",
+                            "operator": "empty"
+                        },
+                        {
+                            "name": "ECDOSE",
+                            "operator": "less_than_or_equal_to",
+                            "value": 0
+                        }
+                    ]
+                },
+                {
+                    "all": [
+                        {
+                            "name": "ECOCCUR",
+                            "operator": "not_equal_to",
+                            "value": "N",
+                            "value_is_literal": true
+                        },
+                        {
+                            "name": "ECSTAT",
+                            "operator": "empty"
+                        },
+                        {
+                            "name": "ECDOSTXT",
+                            "operator": "not_exists"
+                        },
+                        {
+                            "name": "ECDOSE",
+                            "operator": "less_than_or_equal_to",
+                            "value": 0
+                        }
+                    ]
+                },
+                {
+                    "all": [
+                        {
+                            "name": "ECOCCUR",
+                            "operator": "not_equal_to",
+                            "value": "N",
+                            "value_is_literal": true
+                        },
+                        {
+                            "name": "ECSTAT",
+                            "operator": "not_exists"
+                        },
+                        {
+                            "name": "ECDOSTXT",
+                            "operator": "not_exists"
+                        },
+                        {
+                            "name": "ECDOSE",
+                            "operator": "less_than_or_equal_to",
+                            "value": 0
+                        }
+                    ]
+                }
+            ]
+        },
+        "Core": {
+            "Id": "CORE-000137",
+            "Status": "Published",
+            "Version": "1"
+        },
+        "Description": "Raise an error when ECOCCUR is not equal to 'N', ECSTAT and ECDOSTXT are both empty but ECDOSE less than or equal to 0.",
+        "Executability": "Fully Executable",
+        "Outcome": {
+            "Message": "ECOCCUR is not 'N', ECSTAT and ECDOSTXT are both empty but ECDOSE is less than or equal to 0.",
+            "Output_Variables": [
+                "ECOCCUR",
+                "ECSTAT",
+                "ECDOSTXT",
+                "ECDOSE",
+                "ECSTDTC"
+            ]
+        },
+        "Scope": {
+            "Classes": {
+                "Include": [
+                    "INTERVENTIONS"
+                ]
+            },
+            "Domains": {
+                "Include": [
+                    "EC"
+                ]
+            },
+            "Use_Case": "INDH"
+        },
+        "Sensitivity": "Record",
+        "Rule_Type": "Record Data"
+    },
+    "datasets": [
+        {
+            "filename": "ec.xpt",
+            "label": "Exposure as Collected",
+            "domain": "EC",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 12
+                },
+                {
+                    "name": "DOMAIN",
+                    "label": "Domain Abbreviation",
+                    "type": "Char",
+                    "length": 2
+                },
+                {
+                    "name": "USUBJID",
+                    "label": "Unique Subject Identifier",
+                    "type": "Char",
+                    "length": 8
+                },
+                {
+                    "name": "SPDEVID",
+                    "label": "Sponsor Device Identifier",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "ECSEQ",
+                    "label": "Sequence Number",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "ECTRT",
+                    "label": "Name of Treatment",
+                    "type": "Char",
+                    "length": 10
+                },
+                {
+                    "name": "ECPRESP",
+                    "label": "Pre-Specified",
+                    "type": "Char",
+                    "length": 1
+                },
+                {
+                    "name": "ECOCCUR",
+                    "label": "Occurrence",
+                    "type": "Char",
+                    "length": 1
+                },
+                {
+                    "name": "ECDOSE",
+                    "label": "Dose",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "ECDOSTXT",
+                    "label": "Dose Description",
+                    "type": "Char",
+                    "length": 8
+                },
+                {
+                    "name": "ECDOSU",
+                    "label": "Dose Units",
+                    "type": "Char",
+                    "length": 2
+                },
+                {
+                    "name": "ECDOSFRM",
+                    "label": "Dose Form",
+                    "type": "Char",
+                    "length": 9
+                },
+                {
+                    "name": "ECDOSFRQ",
+                    "label": "Dosing Frequency per Interval",
+                    "type": "Char",
+                    "length": 2
+                },
+                {
+                    "name": "ECROUTE",
+                    "label": "Route of Administration",
+                    "type": "Char",
+                    "length": 12
+                },
+                {
+                    "name": "ECLOT",
+                    "label": "Lot Number",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "ECPSTRG",
+                    "label": "Pharmaceutical Strength",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "ECPSTRGU",
+                    "label": "Pharmaceutical Strength Units",
+                    "type": "Char",
+                    "length": 3
+                },
+                {
+                    "name": "EPOCH",
+                    "label": "Epoch",
+                    "type": "Char",
+                    "length": 9
+                },
+                {
+                    "name": "ECSTDTC",
+                    "label": "Start Date/Time of Treatment",
+                    "type": "Char",
+                    "length": 10
+                },
+                {
+                    "name": "ECENDTC",
+                    "label": "End Date/Time of Treatment",
+                    "type": "Char",
+                    "length": 10
+                },
+                {
+                    "name": "ECSTDY",
+                    "label": "Study Day of Start of Treatment",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "ECENDY",
+                    "label": "Study Day of End of Treatment",
+                    "type": "Num",
+                    "length": 8
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01"
+                ],
+                "DOMAIN": [
+                    "EC",
+                    "EC",
+                    "EC",
+                    "EC",
+                    "EC",
+                    "EC",
+                    "EC",
+                    "EC",
+                    "EC",
+                    "EC",
+                    "EC",
+                    "EC",
+                    "EC",
+                    "EC",
+                    "EC",
+                    "EC",
+                    "EC",
+                    "EC"
+                ],
+                "USUBJID": [
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC008",
+                    "CDISC008",
+                    "CDISC008",
+                    "CDISC008",
+                    "CDISC008",
+                    "CDISC008",
+                    "CDISC008",
+                    "CDISC008",
+                    "CDISC008",
+                    "CDISC008"
+                ],
+                "SPDEVID": [
+                    "DEV0001",
+                    "DEV0001",
+                    "DEV0001",
+                    "DEV0001",
+                    "DEV0001",
+                    "DEV0001",
+                    "DEV0001",
+                    "DEV0001",
+                    "DEV0008",
+                    "DEV0008",
+                    "DEV0008",
+                    "DEV0008",
+                    "DEV0008",
+                    "DEV0008",
+                    "DEV0008",
+                    "DEV0008",
+                    "DEV0008",
+                    "DEV0008"
+                ],
+                "ECSEQ": [
+                    1,
+                    2,
+                    3,
+                    27,
+                    28,
+                    29,
+                    30,
+                    31,
+                    120,
+                    121,
+                    122,
+                    123,
+                    124,
+                    125,
+                    126,
+                    127,
+                    128,
+                    129
+                ],
+                "ECTRT": [
+                    "ZANOMALINE",
+                    "ZANOMALINE",
+                    "ZANOMALINE",
+                    "ZANOMALINE",
+                    "ZANOMALINE",
+                    "ZANOMALINE",
+                    "ZANOMALINE",
+                    "ZANOMALINE",
+                    "PLACEBO",
+                    "PLACEBO",
+                    "PLACEBO",
+                    "PLACEBO",
+                    "PLACEBO",
+                    "PLACEBO",
+                    "PLACEBO",
+                    "PLACEBO",
+                    "PLACEBO",
+                    "PLACEBO"
+                ],
+                "ECPRESP": [
+                    "Y",
+                    "Y",
+                    "Y",
+                    "Y",
+                    "Y",
+                    "Y",
+                    "Y",
+                    "Y",
+                    "Y",
+                    "Y",
+                    "Y",
+                    "Y",
+                    "Y",
+                    "Y",
+                    "Y",
+                    "Y",
+                    "Y",
+                    "Y"
+                ],
+                "ECOCCUR": [
+                    "Y",
+                    "Y",
+                    "Y",
+                    "Y",
+                    "Y",
+                    "Y",
+                    "Y",
+                    "Y",
+                    "Y",
+                    "Y",
+                    "Y",
+                    "Y",
+                    "Y",
+                    "Y",
+                    "Y",
+                    "",
+                    "Y",
+                    "Y"
+                ],
+                "ECDOSE": [
+                    8,
+                    1,
+                    2,
+                    2,
+                    5,
+                    -1,
+                    5,
+                    1,
+                    3,
+                    4,
+                    5,
+                    100,
+                    0,
+                    1,
+                    0,
+                    -5,
+                    5,
+                    1
+                ],
+                "ECDOSTXT": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "ECDOSU": [
+                    "mL",
+                    "mL",
+                    "mL",
+                    "mL",
+                    "mL",
+                    "mL",
+                    "mL",
+                    "mL",
+                    "mL",
+                    "mL",
+                    "mL",
+                    "mL",
+                    "mL",
+                    "mL",
+                    "mL",
+                    "mL",
+                    "mL",
+                    "mL"
+                ],
+                "ECDOSFRM": [
+                    "INJECTION",
+                    "INJECTION",
+                    "INJECTION",
+                    "INJECTION",
+                    "INJECTION",
+                    "INJECTION",
+                    "INJECTION",
+                    "INJECTION",
+                    "INJECTION",
+                    "INJECTION",
+                    "INJECTION",
+                    "INJECTION",
+                    "INJECTION",
+                    "INJECTION",
+                    "INJECTION",
+                    "INJECTION",
+                    "INJECTION",
+                    "INJECTION"
+                ],
+                "ECDOSFRQ": [
+                    "QD",
+                    "QD",
+                    "QD",
+                    "QD",
+                    "QD",
+                    "QD",
+                    "QD",
+                    "QD",
+                    "QD",
+                    "QD",
+                    "QD",
+                    "QD",
+                    "QD",
+                    "QD",
+                    "QD",
+                    "QD",
+                    "QD",
+                    "QD"
+                ],
+                "ECROUTE": [
+                    "SUBCUTANEOUS",
+                    "SUBCUTANEOUS",
+                    "SUBCUTANEOUS",
+                    "SUBCUTANEOUS",
+                    "SUBCUTANEOUS",
+                    "SUBCUTANEOUS",
+                    "SUBCUTANEOUS",
+                    "SUBCUTANEOUS",
+                    "SUBCUTANEOUS",
+                    "SUBCUTANEOUS",
+                    "SUBCUTANEOUS",
+                    "SUBCUTANEOUS",
+                    "SUBCUTANEOUS",
+                    "SUBCUTANEOUS",
+                    "SUBCUTANEOUS",
+                    "SUBCUTANEOUS",
+                    "SUBCUTANEOUS",
+                    "SUBCUTANEOUS"
+                ],
+                "ECLOT": [
+                    "SDS580-359",
+                    "SDS580-359",
+                    "SDS580-359",
+                    "SDS580-359",
+                    "SDS580-359",
+                    "SDS580-359",
+                    "SDS580-359",
+                    "SDS580-359",
+                    "SDS580-926",
+                    "SDS580-926",
+                    "SDS580-926",
+                    "SDS580-926",
+                    "SDS580-926",
+                    "SDS580-926",
+                    "SDS580-926",
+                    "SDS580-926",
+                    "SDS580-926",
+                    "SDS580-926"
+                ],
+                "ECPSTRG": [
+                    10,
+                    10,
+                    10,
+                    10,
+                    10,
+                    10,
+                    10,
+                    10,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "ECPSTRGU": [
+                    "g/L",
+                    "g/L",
+                    "g/L",
+                    "g/L",
+                    "g/L",
+                    "g/L",
+                    "g/L",
+                    "g/L",
+                    "g/L",
+                    "g/L",
+                    "g/L",
+                    "g/L",
+                    "g/L",
+                    "g/L",
+                    "g/L",
+                    "g/L",
+                    "g/L",
+                    "g/L"
+                ],
+                "EPOCH": [
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT",
+                    "TREATMENT"
+                ],
+                "ECSTDTC": [
+                    "2012-11-30",
+                    "2012-12-01",
+                    "2012-12-02",
+                    "2012-12-26",
+                    "2012-12-27",
+                    "2012-12-28",
+                    "2012-12-29",
+                    "2012-12-30",
+                    "2014-09-07",
+                    "2014-09-08",
+                    "2014-09-09",
+                    "2014-09-10",
+                    "2014-09-11",
+                    "2014-09-12",
+                    "2014-09-13",
+                    "2014-09-14",
+                    "2014-09-15",
+                    "2014-09-16"
+                ],
+                "ECENDTC": [
+                    "2012-11-30",
+                    "2012-12-01",
+                    "2012-12-02",
+                    "2012-12-26",
+                    "2012-12-27",
+                    "2012-12-28",
+                    "2012-12-29",
+                    "2012-12-30",
+                    "2014-09-07",
+                    "2014-09-08",
+                    "2014-09-09",
+                    "2014-09-10",
+                    "2014-09-11",
+                    "2014-09-12",
+                    "2014-09-13",
+                    "2014-09-14",
+                    "2014-09-15",
+                    "2014-09-16"
+                ],
+                "ECSTDY": [
+                    1,
+                    2,
+                    3,
+                    27,
+                    28,
+                    29,
+                    30,
+                    31,
+                    120,
+                    121,
+                    122,
+                    123,
+                    124,
+                    125,
+                    126,
+                    127,
+                    128,
+                    129
+                ],
+                "ECENDY": [
+                    1,
+                    2,
+                    3,
+                    27,
+                    28,
+                    29,
+                    30,
+                    31,
+                    120,
+                    121,
+                    122,
+                    123,
+                    124,
+                    125,
+                    126,
+                    127,
+                    128,
+                    129
+                ]
+            }
+        }
+    ],
+    "standard": {
+        "product": "sdtmig",
+        "version": "3-3"
+    },
+    "codelists": []
+}

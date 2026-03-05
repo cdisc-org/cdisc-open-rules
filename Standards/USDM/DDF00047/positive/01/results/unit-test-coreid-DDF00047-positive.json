@@ -1,0 +1,28 @@
+{
+    "StudyElement": [
+        {
+            "executionStatus": "success",
+            "dataset": "StudyElement.xpt",
+            "domain": null,
+            "variables": [],
+            "message": null,
+            "errors": []
+        }
+    ],
+    "StudyCell": [
+        {
+            "executionStatus": "execution_error",
+            "dataset": "StudyCell.xpt",
+            "domain": "",
+            "variables": [],
+            "message": "rule execution error",
+            "errors": [
+                {
+                    "dataset": "StudyCell.xpt",
+                    "error": "Column not found in data",
+                    "message": "rel_type.StudyCell"
+                }
+            ]
+        }
+    ]
+}

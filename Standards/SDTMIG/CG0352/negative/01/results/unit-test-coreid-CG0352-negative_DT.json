@@ -1,0 +1,30 @@
+{
+  "FT": [
+    {
+      "domain": "FT",
+      "errors": [
+        {
+          "row": 0,
+          "seq": 1,
+          "uSubjId": "CDISC001",
+          "value": {
+            "FTDTHREL": ""
+          }
+        },
+        {
+          "row": 1,
+          "seq": 2,
+          "uSubjId": "CDISC001",
+          "value": {
+            "FTDTHREL": ""
+          }
+        }
+      ],
+      "executionStatus": "success",
+      "message": "FTDTHREL must never be used in SDTM-based data for human clinical trials",
+      "variables": [
+        "FTDTHREL"
+      ]
+    }
+  ]
+}

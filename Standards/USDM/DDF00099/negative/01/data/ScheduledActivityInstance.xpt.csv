@@ -1,0 +1,4 @@
+parent_entity,parent_id,parent_rel,rel_type,id,name,description,label,defaultConditionId,epochId,timelineId,timelineExitId,instanceType,activityIds,encounterId
+ScheduleTimeline,ScheduleTimeline_4,instances,definition,ScheduledActivityInstance_9,SCREEN1,-,Screen One,ScheduledActivityInstance_10,,,,ScheduledActivityInstance,True,Encounter_1
+ScheduleTimeline,ScheduleTimeline_4,instances,definition,ScheduledActivityInstance_11,DOSE,-,Dose,ScheduledActivityInstance_12,StudyEpoch_3,,,ScheduledActivityInstance,True,Encounter_3
+ScheduleTimeline,ScheduleTimeline_4,instances,definition,ScheduledActivityInstance_24,WK26,-,Week 26,,StudyEpoch_5,,ScheduleTimelineExit_4,ScheduledActivityInstance,True,Encounter_12

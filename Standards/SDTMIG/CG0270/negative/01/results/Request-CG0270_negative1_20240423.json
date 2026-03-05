@@ -1,0 +1,117 @@
+{3 items
+"datasets":[1 item
+0:{5 items
+"filename":"ts.xpt"
+"label":"Trial Summary"
+"domain":"TS"
+"variables":[11 items
+0:{4 items
+"name":"STUDYID"
+"label":"Study Identifier"
+"type":"Char"
+"length":10
+}
+1:{4 items
+"name":"DOMAIN"
+"label":"Domain Abbreviation"
+"type":"Char"
+"length":2
+}
+2:{4 items
+"name":"TSSEQ"
+"label":"Sequence Number"
+"type":"Num"
+"length":8
+}
+3:{4 items
+"name":"TSGRPID"
+"label":"Group ID"
+"type":"Char"
+"length":5
+}
+4:{4 items
+"name":"TSPARMCD"
+"label":"Trial Summary Parameter Short Name"
+"type":"Char"
+"length":8
+}
+5:{4 items
+"name":"TSPARM"
+"label":"Trial Summary Parameter"
+"type":"Char"
+"length":40
+}
+6:{4 items
+"name":"TSVAL"
+"label":"Parameter Value"
+"type":"Char"
+"length":149
+}
+7:{4 items
+"name":"TSVALNF"
+"label":"Parameter Null Flavor"
+"type":"Char"
+"length":2
+}
+8:{4 items
+"name":"TSVALCD"
+"label":"Parameter Value Code"
+"type":"Char"
+"length":11
+}
+9:{4 items
+"name":"TSVCDREF"
+"label":"Name of the Reference Terminology"
+"type":"Char"
+"length":18
+}
+10:{4 items
+"name":"TSVCDVER"
+"label":"Version of the Reference Terminology"
+"type":"Char"
+"length":10
+}
+]
+"records":{11 items
+"STUDYID":[1 item
+0:"CDISC-TEST"
+]
+"DOMAIN":[1 item
+0:"TS"
+]
+"TSSEQ":[1 item
+0:4
+]
+"TSGRPID":[1 item
+0:""
+]
+"TSPARMCD":[1 item
+0:"AGEMAX"
+]
+"TSPARM":[1 item
+0:"Planned Maximum Age of Subjects"
+]
+"TSVAL":[1 item
+0:"64"
+]
+"TSVALNF":[1 item
+0:""
+]
+"TSVALCD":[1 item
+0:""
+]
+"TSVCDREF":[1 item
+0:"ISO 8601"
+]
+"TSVCDVER":[1 item
+0:""
+]
+}
+}
+]
+"standard":{2 items
+"product":"sdtmig"
+"version":"3-3"
+}
+"codelists":[]0 items
+}

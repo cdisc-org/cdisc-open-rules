@@ -1,0 +1,24 @@
+{
+  "SE": [
+    {
+      "domain": "SE",
+      "errors": [
+        {
+          "row": 4,
+          "seq": 3,
+          "uSubjId": "456",
+          "value": {
+            "ETCD": "UNPLAN",
+            "TAETORD": 3
+          }
+        }
+      ],
+      "executionStatus": "success",
+      "message": "TAETORD should be null when ETCD = 'UNPLAN'.",
+      "variables": [
+        "ETCD",
+        "TAETORD"
+      ]
+    }
+  ]
+}

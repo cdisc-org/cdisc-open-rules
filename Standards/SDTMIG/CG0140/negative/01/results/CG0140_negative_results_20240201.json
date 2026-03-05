@@ -1,0 +1,56 @@
+{
+  "SUPPDM": [
+    {
+      "executionStatus": "success",
+      "domain": "SUPPDM",
+      "variables": [
+        "QNAM",
+        "RACE"
+      ],
+      "message": "Multiple races are collected in SUPPDM but RACE in DM does not equal \"MULTIPLE\".",
+      "errors": [
+        {
+          "value": {
+            "QNAM": "RACE1",
+            "RACE": "WHITE"
+          },
+          "row": 1,
+          "USUBJID": "CDISC008"
+        },
+        {
+          "value": {
+            "QNAM": "RACE11",
+            "RACE": "WHITE"
+          },
+          "row": 2,
+          "USUBJID": "CDISC008"
+        },
+        {
+          "value": {
+            "QNAM": "RACE10",
+            "RACE": "WHITE"
+          },
+          "row": 3,
+          "USUBJID": "CDISC008"
+        },
+        {
+          "value": {
+            "QNAM": "RACE3",
+            "RACE": "WHITE"
+          },
+          "row": 4,
+          "USUBJID": "CDISC009"
+        }
+      ]
+    }
+  ],
+  "DM": [
+    {
+      "executionStatus": "skipped",
+      "domain": "DM",
+      "variables": [],
+      "message": null,
+      "errors": []
+    }
+  ]
+}

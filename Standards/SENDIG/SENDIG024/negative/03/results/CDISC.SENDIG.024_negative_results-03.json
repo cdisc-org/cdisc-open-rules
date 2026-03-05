@@ -1,0 +1,26 @@
+{
+  "TA": [
+    {
+      "executionStatus": "success",
+      "domain": "TA",
+      "variables": [
+        "ETCD"
+      ],
+      "message": "ETCD value is greater than 8",
+      "errors": [
+        {
+          "value": {
+            "ETCD": "SCREENINGS"
+          },
+          "row": 1
+        },
+        {
+          "value": {
+            "ETCD": "PLACEBOSE"
+          },
+          "row": 2
+        }
+      ]
+    }
+  ]
+}

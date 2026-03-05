@@ -1,0 +1,205 @@
+{
+    "AdministrableProduct": [
+        {
+            "executionStatus": "success",
+            "dataset": "AdministrableProduct.xpt",
+            "domain": "AdministrableProduct",
+            "variables": [
+                "$code_for_decode_pref_term",
+                "$code_for_decode_value",
+                "$codelist_code",
+                "$codelist_extensible",
+                "$pref_term_for_code",
+                "$value_for_code",
+                "id",
+                "name",
+                "parent_entity",
+                "parent_id",
+                "parent_rel",
+                "productDesignation.code",
+                "productDesignation.codeSystem",
+                "productDesignation.codeSystemVersion",
+                "productDesignation.decode"
+            ],
+            "message": "The administrable product's product designation is not specified using the product designation (C207418) DDF codelist - codeSystem is not \"http://www.cdisc.org\", codeSystemVersion is not a valid terminology package date, the code or decode (either as preferred term or as submission value) is found in the codelist (case insensitive) but the corresponding decode or code does not match the codelist value (case sensitive), and/or neither code nor decode is found in the codelist.",
+            "errors": [
+                {
+                    "value": {
+                        "productDesignation.codeSystem": "http://www.cdisc.org",
+                        "id": "AdministrableProduct_1",
+                        "$code_for_decode_value": "C202579",
+                        "productDesignation.code": "C156473",
+                        "$value_for_code": "NIMP (AxMP)",
+                        "name": "AP_FORME_54",
+                        "$codelist_extensible": false,
+                        "parent_entity": "StudyVersion",
+                        "$code_for_decode_pref_term": null,
+                        "productDesignation.decode": "IMP",
+                        "$codelist_code": "C207418",
+                        "$pref_term_for_code": "Auxiliary Medicinal Product",
+                        "parent_rel": "administrableProducts",
+                        "productDesignation.codeSystemVersion": "2024-09-27",
+                        "parent_id": "StudyVersion_1"
+                    },
+                    "dataset": "AdministrableProduct.xpt",
+                    "row": 1,
+                    "instance_id": "AdministrableProduct_1"
+                },
+                {
+                    "value": {
+                        "productDesignation.codeSystem": "http://www.cdisc.org",
+                        "id": "AdministrableProduct_2",
+                        "$code_for_decode_value": null,
+                        "productDesignation.code": "C156473",
+                        "$value_for_code": "NIMP (AxMP)",
+                        "name": "AP_FORME_27",
+                        "$codelist_extensible": false,
+                        "parent_entity": "StudyVersion",
+                        "$code_for_decode_pref_term": null,
+                        "productDesignation.decode": "NIMP",
+                        "$codelist_code": "C207418",
+                        "$pref_term_for_code": "Auxiliary Medicinal Product",
+                        "parent_rel": "administrableProducts",
+                        "productDesignation.codeSystemVersion": "2024-09-27",
+                        "parent_id": "StudyVersion_1"
+                    },
+                    "dataset": "AdministrableProduct.xpt",
+                    "row": 2,
+                    "instance_id": "AdministrableProduct_2"
+                },
+                {
+                    "value": {
+                        "productDesignation.codeSystem": "http://www.cdisc.org",
+                        "id": "AdministrableProduct_3",
+                        "$code_for_decode_value": "C202579",
+                        "productDesignation.code": "C202579xx",
+                        "$value_for_code": null,
+                        "name": "AP_FORME_81",
+                        "$codelist_extensible": false,
+                        "parent_entity": "StudyVersion",
+                        "$code_for_decode_pref_term": null,
+                        "productDesignation.decode": "IMP",
+                        "$codelist_code": "C207418",
+                        "$pref_term_for_code": null,
+                        "parent_rel": "administrableProducts",
+                        "productDesignation.codeSystemVersion": "2025-09-26",
+                        "parent_id": "StudyVersion_1"
+                    },
+                    "dataset": "AdministrableProduct.xpt",
+                    "row": 3,
+                    "instance_id": "AdministrableProduct_3"
+                },
+                {
+                    "value": {
+                        "productDesignation.codeSystem": "http://www.cdisc.org/Product_Designation",
+                        "id": "AdministrableProduct_4",
+                        "$code_for_decode_value": "C156473",
+                        "productDesignation.code": "C156473",
+                        "$value_for_code": "NIMP",
+                        "name": "AP_FORME_108",
+                        "$codelist_extensible": false,
+                        "parent_entity": "StudyVersion",
+                        "$code_for_decode_pref_term": null,
+                        "productDesignation.decode": "NIMP",
+                        "$codelist_code": "C207418",
+                        "$pref_term_for_code": "Auxiliary Medicinal Product",
+                        "parent_rel": "administrableProducts",
+                        "productDesignation.codeSystemVersion": "2025-09-26",
+                        "parent_id": "StudyVersion_1"
+                    },
+                    "dataset": "AdministrableProduct.xpt",
+                    "row": 4,
+                    "instance_id": "AdministrableProduct_4"
+                },
+                {
+                    "value": {
+                        "productDesignation.codeSystem": "http://www.cdisc.org",
+                        "id": "AdministrableProduct_5",
+                        "$code_for_decode_value": null,
+                        "productDesignation.code": "C202579",
+                        "$value_for_code": null,
+                        "name": "AP_FORME_135",
+                        "$codelist_extensible": null,
+                        "parent_entity": "StudyVersion",
+                        "$code_for_decode_pref_term": null,
+                        "productDesignation.decode": "IMP",
+                        "$codelist_code": "C207418",
+                        "$pref_term_for_code": null,
+                        "parent_rel": "administrableProducts",
+                        "productDesignation.codeSystemVersion": "2023-12-15",
+                        "parent_id": "StudyVersion_1"
+                    },
+                    "dataset": "AdministrableProduct.xpt",
+                    "row": 5,
+                    "instance_id": "AdministrableProduct_5"
+                },
+                {
+                    "value": {
+                        "productDesignation.codeSystem": "http://www.cdisc.org",
+                        "id": "AdministrableProduct_6",
+                        "$code_for_decode_value": null,
+                        "productDesignation.code": "C0037X",
+                        "$value_for_code": null,
+                        "name": "AP_FORME_162",
+                        "$codelist_extensible": false,
+                        "parent_entity": "StudyVersion",
+                        "$code_for_decode_pref_term": null,
+                        "productDesignation.decode": "EXTENSION",
+                        "$codelist_code": "C207418",
+                        "$pref_term_for_code": null,
+                        "parent_rel": "administrableProducts",
+                        "productDesignation.codeSystemVersion": "2025-09-26",
+                        "parent_id": "StudyVersion_1"
+                    },
+                    "dataset": "AdministrableProduct.xpt",
+                    "row": 6,
+                    "instance_id": "AdministrableProduct_6"
+                },
+                {
+                    "value": {
+                        "productDesignation.codeSystem": "http://www.cdisc.org",
+                        "id": "AdministrableProduct_7",
+                        "$code_for_decode_value": null,
+                        "productDesignation.code": "C202579",
+                        "$value_for_code": null,
+                        "name": "AP_FORME_189",
+                        "$codelist_extensible": null,
+                        "parent_entity": "StudyVersion",
+                        "$code_for_decode_pref_term": null,
+                        "productDesignation.decode": "IMP",
+                        "$codelist_code": "C207418",
+                        "$pref_term_for_code": null,
+                        "parent_rel": "administrableProducts",
+                        "productDesignation.codeSystemVersion": "P59",
+                        "parent_id": "StudyVersion_1"
+                    },
+                    "dataset": "AdministrableProduct.xpt",
+                    "row": 7,
+                    "instance_id": "AdministrableProduct_7"
+                },
+                {
+                    "value": {
+                        "productDesignation.codeSystem": "http://www.cdisc.org",
+                        "id": "AdministrableProduct_8",
+                        "$code_for_decode_value": null,
+                        "productDesignation.code": "C156473",
+                        "$value_for_code": "NIMP",
+                        "name": "AP_FORME_216",
+                        "$codelist_extensible": false,
+                        "parent_entity": "StudyVersion",
+                        "$code_for_decode_pref_term": null,
+                        "productDesignation.decode": "NIMP (AxMP)",
+                        "$codelist_code": "C207418",
+                        "$pref_term_for_code": "Auxiliary Medicinal Product",
+                        "parent_rel": "administrableProducts",
+                        "productDesignation.codeSystemVersion": "2025-09-26",
+                        "parent_id": "StudyVersion_1"
+                    },
+                    "dataset": "AdministrableProduct.xpt",
+                    "row": 8,
+                    "instance_id": "AdministrableProduct_8"
+                }
+            ]
+        }
+    ]
+}

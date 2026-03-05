@@ -1,0 +1,49 @@
+dataset,variable,label,type,length
+ae.xpt,STUDYID,Study Identifier,Char,50
+ae.xpt,DOMAIN,Domain Abbreviation,Char,50
+ae.xpt,POOLID,Pool Identifier,Char,20
+ae.xpt,AESEQ,Sequence Number,Num,8
+ae.xpt,AETERM,Reported Term for the Adverse Event,Char,50
+ae.xpt,AEMODIFY,Modified Reported Term,Char,50
+ae.xpt,AEDECOD,Dictionary-Derived Term,Char,50
+ae.xpt,AEBODSYS,Body System or Organ Class,Char,50
+ae.xpt,AESEV,Severity/Intensity,Char,50
+ae.xpt,AESER,Serious Event,Char,50
+ae.xpt,AEACN,Action Taken with Study Treatment,Char,50
+ae.xpt,AEREL,Causality,Char,50
+ae.xpt,AEOUT,Outcome of Adverse Event,Char,50
+ae.xpt,AESCONG,Congenital Anomaly or Birth Defect,Char,50
+ae.xpt,AESDISAB,Persist or Signif Disability/Incapacity,Char,50
+ae.xpt,AESDTH,Results in Death,Char,50
+ae.xpt,AESHOSP,Requires or Prolongs Hospitalization,Char,50
+ae.xpt,AESLIFE,Is Life Threatening,Char,50
+ae.xpt,EPOCH,Epoch,Char,50
+ae.xpt,AESTDTC,Start Date/Time of Adverse Event,Char,50
+ae.xpt,AEENDTC,End Date/Time of Adverse Event,Char,50
+ae.xpt,AESTDY,Study Day of Start of Adverse Event,Num,8
+ae.xpt,AEENDY,Study Day of End of Adverse Event,Num,8
+ae.xpt,AEENRF,End Relative to Reference Period,Char,50
+in.xpt,STUDYID,Study Identifier,Char,50
+in.xpt,DOMAIN,Domain Abbreviation,Char,50
+in.xpt,SPTOBID,Applicant-Defined Tobacco Product ID,Char,50
+in.xpt,IGDCMPID,Ingredient or Component Identifier,Char,50
+in.xpt,INMANUF,Manufacturer Name,Char,50
+in.xpt,INMANUIN,Manufacturer Unique Identifying Item Num,Char,50
+in.xpt,TPMF,Tobacco Product Master File Number,Char,50
+in.xpt,IUPACNAM,Preferred IUPAC Name,Char,50
+in.xpt,CASNO,CAS Registry Number,Char,50
+in.xpt,UNII,Unique Ingredient Identifier,Char,50
+in.xpt,INIGDPLX,Ingredient Complexity,Char,50
+in.xpt,INCIGIND,Applicant-Customized Ingredient Indic,Char,50
+in.xpt,INGRADE,Ingredient Grade,Char,50
+in.xpt,INPURITY,Ingredient Purity,Char,50
+iq.xpt,DOMAIN,Domain Abbreviation,Char,50
+iq.xpt,IGDCMPID,Ingredient or Component Identifier,Char,50
+iq.xpt,IQCAT,Category of Ingredient or Component,Char,50
+iq.xpt,IQPARENT,Parent of Ingredient or Component,Char,50
+iq.xpt,IQLEVEL,Ingredient Level in Hierarchy,Num,50
+iq.xpt,IQFUNCT,Ingredient Function,Char,50
+iq.xpt,IQVALTRG,Ingredient Target Value,Num,50
+iq.xpt,IQVALMIN,Ingredient Minimum Value,Num,50
+iq.xpt,IQVALMAX,Ingredient Maximum Value,Num,50
+iq.xpt,IQVALU,Ingredient Value Unit,Char,50

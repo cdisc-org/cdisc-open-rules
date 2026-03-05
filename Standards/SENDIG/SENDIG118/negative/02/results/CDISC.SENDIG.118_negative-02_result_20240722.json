@@ -1,0 +1,42 @@
+{
+  "CO": [
+    {
+      "executionStatus": "success",
+      "domain": "CO",
+      "variables": [
+        "IDVAR",
+        "IDVARVAL"
+      ],
+      "message": "IDVARVAL may not be populated as IDVAR is null",
+      "errors": [
+        {
+          "value": {
+            "IDVAR": "",
+            "IDVARVAL": "comment without variable"
+          },
+          "row": 3,
+          "USUBJID": "XX-11",
+          "SEQ": 6
+        },
+        {
+          "value": {
+            "IDVAR": "",
+            "IDVARVAL": "comment without variable 2"
+          },
+          "row": 4,
+          "USUBJID": "XX-18",
+          "SEQ": 7
+        }
+      ]
+    }
+  ],
+  "EG": [
+    {
+      "executionStatus": "skipped",
+      "domain": "EG",
+      "variables": [],
+      "message": null,
+      "errors": []
+    }
+  ]
+}

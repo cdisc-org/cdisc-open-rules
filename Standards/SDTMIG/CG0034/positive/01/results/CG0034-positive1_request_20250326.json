@@ -1,0 +1,554 @@
+
+{3 items
+"rule":{10 items
+"Authorities":[1 item
+0:{2 items
+"Organization":"CDISC"
+"Standards":[4 items
+0:{3 items
+"Name":"SDTMIG"
+"References":[1 item
+0:{4 items
+"Citations":[1 item
+0:{3 items
+"Document":"IG v3.4"
+"Section":"5.5"
+"Cited_Guidance":"The Subject Visits domain consolidates information about the timing of subject visits that is otherwise spread over domains that include the visit variables (VISITNUM and possibly VISIT and/or VISITDY)."
+}
+]
+"Origin":"SDTM and SDTMIG Conformance Rules"
+"Version":"2.0"
+"Rule_Identifier":{2 items
+"Id":"CG0034"
+"Version":"2"
+}
+}
+]
+"Version":"3.4"
+}
+1:{3 items
+"Name":"SDTMIG"
+"References":[1 item
+0:{4 items
+"Citations":[1 item
+0:{3 items
+"Document":"IG v3.3"
+"Section":"5.5"
+"Cited_Guidance":"The Subject Visits domain consolidates information about the timing of subject visits that is otherwise spread over domains that include the visit variables (VISITNUM and possibly VISIT and/or VISITDY)."
+}
+]
+"Origin":"SDTM and SDTMIG Conformance Rules"
+"Version":"2.0"
+"Rule_Identifier":{2 items
+"Id":"CG0034"
+"Version":"2"
+}
+}
+]
+"Version":"3.3"
+}
+2:{3 items
+"Name":"SDTMIG"
+"References":[1 item
+0:{4 items
+"Citations":[1 item
+0:{3 items
+"Document":"IG v3.2"
+"Section":"5"
+"Cited_Guidance":"The Subject Visits domain consolidates information about the timing of subject visits that is otherwise spread over domains that include the visit variables (VISITNUM and possibly VISIT and/or VISITDY)."
+}
+]
+"Origin":"SDTM and SDTMIG Conformance Rules"
+"Version":"2.0"
+"Rule_Identifier":{2 items
+"Id":"CG0034"
+"Version":"2"
+}
+}
+]
+"Version":"3.2"
+}
+3:{4 items
+"Name":"TIG"
+"References":[1 item
+0:{4 items
+"Citations":[1 item
+0:{4 items
+"Document":"TIG 1.0"
+"Item":"Assumption 1"
+"Section":"2.8.10.25"
+"Cited_Guidance":"The Subject Visits domain consolidates information about the timing of subject visits that is otherwise spread over domains that include the visit variables (VISITNUM and possibly VISIT and/or VISITDY)."
+}
+]
+"Origin":"TIG Conformance Rules"
+"Version":"1.0"
+"Rule_Identifier":{2 items
+"Id":"TIG0315"
+"Version":"1"
+}
+}
+]
+"Substandard":"SDTM"
+"Version":"1.0"
+}
+]
+}
+]
+"Check":{...}1 item
+"Core":{3 items
+"Id":"CORE-000168"
+"Status":"Published"
+"Version":"1"
+}
+"Description":"If VISITNUM is not null then VISITNUM should be among SV.VISITNUM"
+"Executability":"Fully Executable"
+"Operations":[1 item
+0:{5 items
+"domain":"SV"
+"group":[1 item
+0:"USUBJID"
+]
+"id":"$sv_visitnum"
+"name":"VISITNUM"
+"operator":"distinct"
+}
+]
+"Outcome":{2 items
+"Message":"VISITNUM is not among VISITNUM in SV domain."
+"Output_Variables":[1 item
+0:"VISITNUM"
+]
+}
+"Scope":{3 items
+"Classes":{1 item
+"Include":[1 item
+0:"ALL"
+]
+}
+"Domains":{1 item
+"Exclude":[1 item
+0:"SV"
+]
+}
+"Use_Case":"INDH"
+}
+"Sensitivity":"Record"
+"Rule_Type":"Record Data"
+}
+"datasets":[2 items
+0:{5 items
+"filename":"sv.xpt"
+"label":"Subject Visits"
+"domain":"SV"
+"variables":[12 items
+0:{4 items
+"name":"STUDYID"
+"label":"Study Identifier"
+"type":"Char"
+"length":12
+}
+1:{4 items
+"name":"DOMAIN"
+"label":"Domain Abbreviation"
+"type":"Char"
+"length":2
+}
+2:{4 items
+"name":"USUBJID"
+"label":"Unique Subject Identifier"
+"type":"Char"
+"length":8
+}
+3:{4 items
+"name":"VISITNUM"
+"label":"Visit Number"
+"type":"Num"
+"length":8
+}
+4:{4 items
+"name":"VISIT"
+"label":"Visit Name"
+"type":"Char"
+"length":200
+}
+5:{4 items
+"name":"SVPRESP"
+"label":"Pre-specified"
+"type":"Char"
+"length":1
+}
+6:{4 items
+"name":"SVOCCUR"
+"label":"Occurrence"
+"type":"Char"
+"length":1
+}
+7:{4 items
+"name":"SVSTDTC"
+"label":"Start Date/Time of Visit"
+"type":"Char"
+"length":10
+}
+8:{4 items
+"name":"SVENDTC"
+"label":"End Date/Time of Visit"
+"type":"Char"
+"length":10
+}
+9:{4 items
+"name":"SVSTDY"
+"label":"Study Day of Start of Visit"
+"type":"Num"
+"length":8
+}
+10:{4 items
+"name":"SVENDY"
+"label":"Study Day of End of Visit"
+"type":"Num"
+"length":8
+}
+11:{4 items
+"name":"SVUPDES"
+"label":"Description of Unplanned Visit"
+"type":"Char"
+"length":200
+}
+]
+"records":{12 items
+"STUDYID":[4 items
+0:"CDISCPILOT01"
+1:"CDISCPILOT01"
+2:"CDISCPILOT01"
+3:"CDISCPILOT01"
+]
+"DOMAIN":[4 items
+0:"SV"
+1:"SV"
+2:"SV"
+3:"SV"
+]
+"USUBJID":[4 items
+0:"CDISC004"
+1:"CDISC004"
+2:"CDISC005"
+3:"CDISC005"
+]
+"VISITNUM":[4 items
+0:1
+1:2
+2:1
+3:2
+]
+"VISIT":[4 items
+0:"SCREENING 1"
+1:"SCREENING 2"
+2:"SCREENING 1"
+3:"SCREENING 2"
+]
+"SVPRESP":[4 items
+0:"Y"
+1:"Y"
+2:"Y"
+3:"Y"
+]
+"SVOCCUR":[4 items
+0:"Y"
+1:"Y"
+2:"Y"
+3:"Y"
+]
+"SVSTDTC":[4 items
+0:"2013-10-01"
+1:"2013-10-06"
+2:"2013-01-22"
+3:"2013-02-02"
+]
+"SVENDTC":[4 items
+0:"2013-10-01"
+1:"2013-10-06"
+2:"2013-01-22"
+3:"2013-02-02"
+]
+"SVSTDY":[4 items
+0:-7
+1:-2
+2:-13
+3:-2
+]
+"SVENDY":[4 items
+0:-7
+1:-2
+2:-13
+3:-2
+]
+"SVUPDES":[4 items
+0:""
+1:""
+2:""
+3:""
+]
+}
+}
+1:{5 items
+"filename":"vs.xpt"
+"label":"Vital Signs"
+"domain":"VS"
+"variables":[21 items
+0:{4 items
+"name":"STUDYID"
+"label":"Study Identifier"
+"type":"Char"
+"length":12
+}
+1:{4 items
+"name":"DOMAIN"
+"label":"Domain Abbreviation"
+"type":"Char"
+"length":2
+}
+2:{4 items
+"name":"USUBJID"
+"label":"Unique Subject Identifier"
+"type":"Char"
+"length":8
+}
+3:{4 items
+"name":"VSSEQ"
+"label":"Sequence Number"
+"type":"Num"
+"length":8
+}
+4:{4 items
+"name":"VSTESTCD"
+"label":"Vital Signs Test Short Name"
+"type":"Char"
+"length":6
+}
+5:{4 items
+"name":"VSTEST"
+"label":"Vital Signs Test Name"
+"type":"Char"
+"length":24
+}
+6:{4 items
+"name":"VSPOS"
+"label":"Vital Signs Position of Subject"
+"type":"Char"
+"length":8
+}
+7:{4 items
+"name":"VSORRES"
+"label":"Result or Finding in Original Units"
+"type":"Char"
+"length":8
+}
+8:{4 items
+"name":"VSORRESU"
+"label":"Original Units"
+"type":"Char"
+"length":9
+}
+9:{4 items
+"name":"VSSTRESC"
+"label":"Character Result/Finding in Std Format"
+"type":"Char"
+"length":200
+}
+10:{4 items
+"name":"VSSTRESN"
+"label":"Numeric Result/Finding in Standard Units"
+"type":"Num"
+"length":8
+}
+11:{4 items
+"name":"VSSTRESU"
+"label":"Standard Units"
+"type":"Char"
+"length":9
+}
+12:{4 items
+"name":"VSSTAT"
+"label":"Completion Status"
+"type":"Char"
+"length":8
+}
+13:{4 items
+"name":"VSLOC"
+"label":"Location of Vital Signs Measurement"
+"type":"Char"
+"length":11
+}
+14:{4 items
+"name":"VSLOBXFL"
+"label":"Last Observation Before Exposure Flag"
+"type":"Char"
+"length":1
+}
+15:{4 items
+"name":"VSREPNUM"
+"label":"Repetition Number"
+"type":"Num"
+"length":8
+}
+16:{4 items
+"name":"VISITNUM"
+"label":"Visit Number"
+"type":"Num"
+"length":8
+}
+17:{4 items
+"name":"VISIT"
+"label":"Visit Name"
+"type":"Char"
+"length":200
+}
+18:{4 items
+"name":"EPOCH"
+"label":"Epoch"
+"type":"Char"
+"length":9
+}
+19:{4 items
+"name":"VSDTC"
+"label":"Date/Time of Measurements"
+"type":"Char"
+"length":10
+}
+20:{4 items
+"name":"VSDY"
+"label":"Study Day of Vital Signs"
+"type":"Num"
+"length":8
+}
+]
+"records":{21 items
+"STUDYID":[4 items
+0:"CDISCPILOT01"
+1:"CDISCPILOT01"
+2:"CDISCPILOT01"
+3:"CDISCPILOT01"
+]
+"DOMAIN":[4 items
+0:"VS"
+1:"VS"
+2:"VS"
+3:"VS"
+]
+"USUBJID":[4 items
+0:"CDISC004"
+1:"CDISC004"
+2:"CDISC005"
+3:"CDISC005"
+]
+"VSSEQ":[4 items
+0:1
+1:2
+2:1
+3:2
+]
+"VSTESTCD":[4 items
+0:"DIABP"
+1:"DIABP"
+2:"DIABP"
+3:"DIABP"
+]
+"VSTEST":[4 items
+0:"Diastolic Blood Pressure"
+1:"Diastolic Blood Pressure"
+2:"Diastolic Blood Pressure"
+3:"Diastolic Blood Pressure"
+]
+"VSPOS":[4 items
+0:"SUPINE"
+1:"STANDING"
+2:"SUPINE"
+3:"STANDING"
+]
+"VSORRES":[4 items
+0:"47"
+1:"55"
+2:"72"
+3:"66"
+]
+"VSORRESU":[4 items
+0:"mmHg"
+1:"mmHg"
+2:"mmHg"
+3:"mmHg"
+]
+"VSSTRESC":[4 items
+0:"47"
+1:"55"
+2:"72"
+3:"66"
+]
+"VSSTRESN":[4 items
+0:47
+1:55
+2:72
+3:66
+]
+"VSSTRESU":[4 items
+0:"mmHg"
+1:"mmHg"
+2:"mmHg"
+3:"mmHg"
+]
+"VSSTAT":[4 items
+0:""
+1:""
+2:""
+3:""
+]
+"VSLOC":[4 items
+0:""
+1:""
+2:""
+3:""
+]
+"VSLOBXFL":[4 items
+0:""
+1:""
+2:""
+3:""
+]
+"VSREPNUM":[4 items
+0:1
+1:2
+2:1
+3:2
+]
+"VISITNUM":[4 items
+0:1
+1:2
+2:1
+3:2
+]
+"VISIT":[4 items
+0:"SCREENING 1"
+1:"SCREENING 2"
+2:"SCREENING 1"
+3:"SCREENING 2"
+]
+"EPOCH":[4 items
+0:"SCREENING"
+1:"SCREENING"
+2:"SCREENING"
+3:"SCREENING"
+]
+"VSDTC":[4 items
+0:"2013-10-01"
+1:"2013-10-01"
+2:"2013-01-22"
+3:"2013-01-22"
+]
+"VSDY":[4 items
+0:-7
+1:-2
+2:-13
+3:-2
+]
+}
+}
+]
+"codelists":[]0 items

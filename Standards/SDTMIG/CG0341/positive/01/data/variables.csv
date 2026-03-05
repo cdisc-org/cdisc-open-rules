@@ -1,0 +1,16 @@
+dataset,variable,label,type,length
+fa.xpt,STUDYID,Study Identifier,Char,50
+fa.xpt,DOMAIN,Domain Abbreviation,Char,50
+fa.xpt,USUBJID,Unique Subject Identifier,Char,50
+fa.xpt,FASEQ,Sequence Number,Num,8
+fa.xpt,FAGRPID,Group ID,Char,50
+fa.xpt,FATESTCD,Findings About Test Short Name,Char,50
+fa.xpt,FATEST,Findings About Test Name,Char,50
+fa.xpt,FAOBJ,Object of the Observation,Char,50
+fa.xpt,FACAT,Category for Findings About,Char,50
+fa.xpt,FAORRES,Result or Finding in Original Units,Char,50
+fa.xpt,FASTRESC,Character Result/Finding in Std Format,Char,50
+fa.xpt,FALOC,Location of the Finding About,Char,50
+fa.xpt,EPOCH,Epoch,Char,50
+fa.xpt,FADTC,Date/Time of Collection,Char,50
+fa.xpt,FADY,Study Day of Collection,Num,8

@@ -1,0 +1,61 @@
+{
+  "DM": [
+    {
+      "executionStatus": "skipped",
+      "domain": "DM",
+      "variables": [],
+      "message": null,
+      "errors": []
+    }
+  ],
+  "SS": [
+    {
+      "executionStatus": "success",
+      "domain": "SS",
+      "variables": [
+        "DTHDTC",
+        "SSDTC",
+        "SSSTRESC"
+      ],
+      "message": "SSSTRESC = 'DEAD', but SSDTC < DM.DTHDTC.",
+      "errors": [
+        {
+          "value": {
+            "DTHDTC": "2013-01-14",
+            "SSSTRESC": "DEAD",
+            "SSDTC": "2013-01-13"
+          },
+          "row": 2,
+          "uSubjId": "CDISC002"
+        },
+        {
+          "value": {
+            "DTHDTC": "2021-05-01",
+            "SSSTRESC": "DEAD",
+            "SSDTC": "2021-04-30"
+          },
+          "row": 4,
+          "uSubjId": "CDISC004"
+        },
+        {
+          "value": {
+            "DTHDTC": "2021-07-02",
+            "SSSTRESC": "DEAD",
+            "SSDTC": "2021-05-02"
+          },
+          "row": 7,
+          "uSubjId": "CDISC007"
+        },
+        {
+          "value": {
+            "DTHDTC": "2021-08-13",
+            "SSSTRESC": "DEAD",
+            "SSDTC": "2021-08-12"
+          },
+          "row": 9,
+          "uSubjId": "CDISC009"
+        }
+      ]
+    }
+  ]
+}

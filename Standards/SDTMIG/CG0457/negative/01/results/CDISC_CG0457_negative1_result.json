@@ -1,0 +1,43 @@
+{1 item
+"TS":[1 item
+0:{5 items
+"executionStatus":"success"
+{1 item
+"TS":[1 item
+0:{5 items
+"executionStatus":"success"
+"domain":"TS"
+"variables":[2 items
+0:"TSPARMCD"
+1:"TSVAL"
+]
+"message":"TSPARMCD = ACTSUB but the value provided in TSVAL is not a positive integer."
+"errors":[3 items
+0:{3 items
+"value":{2 items
+"TSPARMCD":"ACTSUB"
+"TSVAL":"-1"
+}
+"row":1
+"SEQ":1
+}
+1:{3 items
+"value":{2 items
+"TSPARMCD":"ACTSUB"
+"TSVAL":"0"
+}
+"row":2
+"SEQ":2
+}
+2:{3 items
+"value":{2 items
+"TSPARMCD":"ACTSUB"
+"TSVAL":"1.5"
+}
+"row":3
+"SEQ":3
+}
+]
+}
+]
+}

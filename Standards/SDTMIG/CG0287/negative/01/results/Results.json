@@ -1,0 +1,23 @@
+{
+    "TS": [
+        {
+            "executionStatus": "success",
+            "dataset": "ts.xpt",
+            "domain": "TS",
+            "variables": [
+                "TSPARMCD"
+            ],
+            "message": "A required value of TSPARMCD is not found",
+            "errors": [
+                {
+                    "value": {
+                        "TSPARMCD": "ADDON"
+                    },
+                    "dataset": "ts.xpt",
+                    "row": 1,
+                    "SEQ": 1
+                }
+            ]
+        }
+    ]
+}

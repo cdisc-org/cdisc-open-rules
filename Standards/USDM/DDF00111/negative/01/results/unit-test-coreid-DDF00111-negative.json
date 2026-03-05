@@ -1,0 +1,224 @@
+{
+    "StudyCohort": [
+        {
+            "executionStatus": "success",
+            "dataset": "StudyCohort.xpt",
+            "domain": "StudyCohort",
+            "variables": [
+                "$code_for_decode_pref_term",
+                "$code_for_decode_value",
+                "$codelist_code",
+                "$codelist_extensible",
+                "$pref_term_for_code",
+                "$value_for_code",
+                "id",
+                "name",
+                "parent_entity",
+                "parent_id",
+                "parent_rel",
+                "plannedAge.unit.code",
+                "plannedAge.unit.codeSystem",
+                "plannedAge.unit.codeSystemVersion",
+                "plannedAge.unit.decode"
+            ],
+            "message": "The unit of the planned age is not specified using the Age Unit (C66781) SDTM codelist - codeSystem is not \"http://www.cdisc.org\", codeSystemVersion is not a valid terminology package date, the code or decode (either as preferred term or as submission value) is found in the codelist (case insensitive) but the corresponding decode or code does not match the codelist value (case sensitive), and/or neither code nor decode is found in the codelist.",
+            "errors": [
+                {
+                    "value": {
+                        "$value_for_code": null,
+                        "id": "StudyCohort_3",
+                        "plannedAge.unit.codeSystemVersion": "2023-12-15",
+                        "$code_for_decode_value": "C25301",
+                        "$codelist_code": "C66781",
+                        "$pref_term_for_code": null,
+                        "plannedAge.unit.code": "C25301xx",
+                        "parent_id": "StudyDesignPopulation_2",
+                        "$codelist_extensible": false,
+                        "parent_entity": "StudyDesignPopulation",
+                        "plannedAge.unit.decode": "DAYS",
+                        "name": "COHORT3",
+                        "parent_rel": "cohorts",
+                        "plannedAge.unit.codeSystem": "http://www.cdisc.org",
+                        "$code_for_decode_pref_term": null
+                    },
+                    "dataset": "StudyCohort.xpt",
+                    "row": 3
+                },
+                {
+                    "value": {
+                        "$value_for_code": "HOURS",
+                        "id": "StudyCohort_4",
+                        "plannedAge.unit.codeSystemVersion": "2023-12-15",
+                        "$code_for_decode_value": "C25529",
+                        "$codelist_code": "C66781",
+                        "$pref_term_for_code": "Hour",
+                        "plannedAge.unit.code": "C25529",
+                        "parent_id": "StudyDesignPopulation_2",
+                        "$codelist_extensible": false,
+                        "parent_entity": "StudyDesignPopulation",
+                        "plannedAge.unit.decode": "HOURS",
+                        "name": "COHORT4",
+                        "parent_rel": "cohorts",
+                        "plannedAge.unit.codeSystem": "CDISC Age Units",
+                        "$code_for_decode_pref_term": null
+                    },
+                    "dataset": "StudyCohort.xpt",
+                    "row": 4
+                },
+                {
+                    "value": {
+                        "$value_for_code": null,
+                        "id": "StudyCohort_5",
+                        "plannedAge.unit.codeSystemVersion": "2026-12-15",
+                        "$code_for_decode_value": null,
+                        "$codelist_code": "C66781",
+                        "$pref_term_for_code": null,
+                        "plannedAge.unit.code": "C29846",
+                        "parent_id": "StudyDesignPopulation_3",
+                        "$codelist_extensible": null,
+                        "parent_entity": "StudyDesignPopulation",
+                        "plannedAge.unit.decode": "MONTHS",
+                        "name": "COHORT5",
+                        "parent_rel": "cohorts",
+                        "plannedAge.unit.codeSystem": "http://www.cdisc.org",
+                        "$code_for_decode_pref_term": null
+                    },
+                    "dataset": "StudyCohort.xpt",
+                    "row": 5
+                },
+                {
+                    "value": {
+                        "$value_for_code": "WEEKS",
+                        "id": "StudyCohort_6",
+                        "plannedAge.unit.codeSystemVersion": "2023-12-15",
+                        "$code_for_decode_value": null,
+                        "$codelist_code": "C66781",
+                        "$pref_term_for_code": "Week",
+                        "plannedAge.unit.code": "C29844",
+                        "parent_id": "StudyDesignPopulation_3",
+                        "$codelist_extensible": false,
+                        "parent_entity": "StudyDesignPopulation",
+                        "plannedAge.unit.decode": "Month",
+                        "name": "COHORT6",
+                        "parent_rel": "cohorts",
+                        "plannedAge.unit.codeSystem": "http://www.cdisc.org",
+                        "$code_for_decode_pref_term": "C29846"
+                    },
+                    "dataset": "StudyCohort.xpt",
+                    "row": 6
+                },
+                {
+                    "value": {
+                        "$value_for_code": "DAYS",
+                        "id": "StudyCohort_7",
+                        "plannedAge.unit.codeSystemVersion": "2023-12-15",
+                        "$code_for_decode_value": "C25301",
+                        "$codelist_code": "C66781",
+                        "$pref_term_for_code": "Day",
+                        "plannedAge.unit.code": "C25301",
+                        "parent_id": "StudyDesignPopulation_5",
+                        "$codelist_extensible": false,
+                        "parent_entity": "StudyDesignPopulation",
+                        "plannedAge.unit.decode": "Days",
+                        "name": "COHORT7",
+                        "parent_rel": "cohorts",
+                        "plannedAge.unit.codeSystem": "http://www.cdisc.org",
+                        "$code_for_decode_pref_term": null
+                    },
+                    "dataset": "StudyCohort.xpt",
+                    "row": 7
+                },
+                {
+                    "value": {
+                        "$value_for_code": null,
+                        "id": "StudyCohort_8",
+                        "plannedAge.unit.codeSystemVersion": "2023-12-15",
+                        "$code_for_decode_value": null,
+                        "$codelist_code": "C66781",
+                        "$pref_term_for_code": null,
+                        "plannedAge.unit.code": "C0004X",
+                        "parent_id": "StudyDesignPopulation_5",
+                        "$codelist_extensible": false,
+                        "parent_entity": "StudyDesignPopulation",
+                        "plannedAge.unit.decode": "DECADES",
+                        "name": "COHORT8",
+                        "parent_rel": "cohorts",
+                        "plannedAge.unit.codeSystem": "http://www.cdisc.org",
+                        "$code_for_decode_pref_term": null
+                    },
+                    "dataset": "StudyCohort.xpt",
+                    "row": 8
+                }
+            ]
+        }
+    ],
+    "StudyDesignPopulation": [
+        {
+            "executionStatus": "success",
+            "dataset": "StudyDesignPopulation.xpt",
+            "domain": "StudyDesignPopulation",
+            "variables": [
+                "$code_for_decode_pref_term",
+                "$code_for_decode_value",
+                "$codelist_code",
+                "$codelist_extensible",
+                "$pref_term_for_code",
+                "$value_for_code",
+                "id",
+                "name",
+                "parent_entity",
+                "parent_id",
+                "parent_rel",
+                "plannedAge.unit.code",
+                "plannedAge.unit.codeSystem",
+                "plannedAge.unit.codeSystemVersion",
+                "plannedAge.unit.decode"
+            ],
+            "message": "The unit of the planned age is not specified using the Age Unit (C66781) SDTM codelist - codeSystem is not \"http://www.cdisc.org\", codeSystemVersion is not a valid terminology package date, the code or decode (either as preferred term or as submission value) is found in the codelist (case insensitive) but the corresponding decode or code does not match the codelist value (case sensitive), and/or neither code nor decode is found in the codelist.",
+            "errors": [
+                {
+                    "value": {
+                        "$value_for_code": "YEARS",
+                        "id": "StudyDesignPopulation_1",
+                        "plannedAge.unit.codeSystemVersion": "2024-09-27",
+                        "$code_for_decode_value": "C29848",
+                        "$codelist_code": "C66781",
+                        "$pref_term_for_code": "Year",
+                        "plannedAge.unit.code": "C29848",
+                        "parent_id": "StudyDesign_1",
+                        "$codelist_extensible": false,
+                        "parent_entity": "StudyDesign",
+                        "plannedAge.unit.decode": "Years",
+                        "name": "POP1",
+                        "parent_rel": "population",
+                        "plannedAge.unit.codeSystem": "http://www.cdisc.org",
+                        "$code_for_decode_pref_term": null
+                    },
+                    "dataset": "StudyDesignPopulation.xpt",
+                    "row": 1
+                },
+                {
+                    "value": {
+                        "$value_for_code": "YEARS",
+                        "id": "StudyDesignPopulation_4",
+                        "plannedAge.unit.codeSystemVersion": "2024-09-27",
+                        "$code_for_decode_value": null,
+                        "$codelist_code": "C66781",
+                        "$pref_term_for_code": "Year",
+                        "plannedAge.unit.code": "C29848",
+                        "parent_id": "StudyDesign_4",
+                        "$codelist_extensible": false,
+                        "parent_entity": "StudyDesign",
+                        "plannedAge.unit.decode": "YEAR",
+                        "name": "POP4",
+                        "parent_rel": "population",
+                        "plannedAge.unit.codeSystem": "http://www.cdisc.org",
+                        "$code_for_decode_pref_term": "C29848"
+                    },
+                    "dataset": "StudyDesignPopulation.xpt",
+                    "row": 4
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,66 @@
+{
+  "AE": [
+    {
+      "domain": "AE",
+      "errors": [
+        {
+          "row": 0,
+          "seq": 1,
+          "uSubjId": "CDISC001",
+          "value": {
+            "AEDECOD": "",
+            "AEPTCD": "This\r\n\r\nis\r\n\r\nCarriage return",
+            "AETERM": "INJECTION SITE REACTION"
+          }
+        },
+        {
+          "row": 2,
+          "seq": 1,
+          "uSubjId": "CDISC002",
+          "value": {
+            "AEDECOD": "",
+            "AEPTCD": "This`\r\n\r\n\"is\"\r\n\r\n<a href=\"www.cdisc.org\">",
+            "AETERM": "INJECTION SITE REACTION"
+          }
+        },
+        {
+          "row": 3,
+          "seq": 2,
+          "uSubjId": "CDISC002",
+          "value": {
+            "AEDECOD": "",
+            "AEPTCD": "PAIN",
+            "AETERM": "SHOULDER PAIN"
+          }
+        },
+        {
+          "row": 4,
+          "seq": 3,
+          "uSubjId": "CDISC002",
+          "value": {
+            "AEDECOD": "",
+            "AEPTCD": "000000001",
+            "AETERM": "JOINT DISLOCATION"
+          }
+        },
+        {
+          "row": 5,
+          "seq": 4,
+          "uSubjId": "CDISC002",
+          "value": {
+            "AEDECOD": "",
+            "AEPTCD": "%^!",
+            "AETERM": "INCONTINENCE"
+          }
+        }
+      ],
+      "executionStatus": "success",
+      "message": "AEDECOD should be populated when AEPTCD is populated",
+      "variables": [
+        "AEDECOD",
+        "AEPTCD",
+        "AETERM"
+      ]
+    }
+  ]
+}

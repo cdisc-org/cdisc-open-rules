@@ -1,0 +1,17 @@
+parent_entity,parent_id,parent_rel,rel_type,id,name,description,label,instanceType,transitionStartRule,transitionStartRule.id,transitionStartRule.name,transitionStartRule.description,transitionStartRule.label,transitionStartRule.text,transitionEndRule,transitionEndRule.id,transitionEndRule.name,transitionEndRule.description,transitionEndRule.label,transitionEndRule.text,studyInterventionIds
+StudyDesign,StudyDesign_1,elements,definition,StudyElement_1,EL1,Screening Element,Screening,StudyElement,True,TransitionRule_7,ELEMENT_START_RULE_1,,,Informed consent,True,TransitionRule_8,ELEMENT_END_RULE_1,,,Completion of all screening activities and no more than 2 weeks from informed consent,False
+StudyDesign,StudyDesign_1,elements,definition,StudyElement_2,EL2,Placebo TTS (adhesive patches),Placebo,StudyElement,FALSE,,,,,,FALSE,,,,,,False
+StudyDesign,StudyDesign_1,elements,definition,StudyElement_3,EL3,"Xanomeline TTS (adhesive patches) 50 cm2, 54 mg",Low,StudyElement,FALSE,,,,,,,,,,,,False
+StudyDesign,StudyDesign_1,elements,definition,StudyElement_4,EL4,"Xanomeline TTS (adhesive patches) 50 cm2, 54 mg",High - Start,StudyElement,,,,,,,FALSE,,,,,,False
+StudyDesign,StudyDesign_1,elements,definition,StudyElement_5,EL5,"Xanomeline TTS (adhesive patches) 50 cm2, 54 mg + 25 cm2, 27 mg",High - Middle,StudyElement,,,,,,,,,,,,,False
+StudyCell,StudyCell_1,elementIds,reference,StudyElement_1,EL1,Screening Element,Screening,StudyElement,True,TransitionRule_7,ELEMENT_START_RULE_1,,,Informed consent,True,TransitionRule_8,ELEMENT_END_RULE_1,,,Completion of all screening activities and no more than 2 weeks from informed consent,False
+StudyCell,StudyCell_2,elementIds,reference,StudyElement_2,EL2,Placebo TTS (adhesive patches),Placebo,StudyElement,FALSE,,,,,,FALSE,,,,,,False
+StudyCell,StudyCell_3,elementIds,reference,StudyElement_2,EL2,Placebo TTS (adhesive patches),Placebo,StudyElement,FALSE,,,,,,FALSE,,,,,,False
+StudyCell,StudyCell_4,elementIds,reference,StudyElement_2,EL2,Placebo TTS (adhesive patches),Placebo,StudyElement,FALSE,,,,,,FALSE,,,,,,False
+StudyCell,StudyCell_6,elementIds,reference,StudyElement_1,EL1,Screening Element,Screening,StudyElement,True,TransitionRule_7,ELEMENT_START_RULE_1,,,Informed consent,True,TransitionRule_8,ELEMENT_END_RULE_1,,,Completion of all screening activities and no more than 2 weeks from informed consent,False
+StudyCell,StudyCell_7,elementIds,reference,StudyElement_3,EL3,"Xanomeline TTS (adhesive patches) 50 cm2, 54 mg",Low,StudyElement,FALSE,,,,,,,,,,,,False
+StudyCell,StudyCell_8,elementIds,reference,StudyElement_3,EL3,"Xanomeline TTS (adhesive patches) 50 cm2, 54 mg",Low,StudyElement,FALSE,,,,,,,,,,,,False
+StudyCell,StudyCell_9,elementIds,reference,StudyElement_3,EL3,"Xanomeline TTS (adhesive patches) 50 cm2, 54 mg",Low,StudyElement,FALSE,,,,,,,,,,,,False
+StudyCell,StudyCell_11,elementIds,reference,StudyElement_1,EL1,Screening Element,Screening,StudyElement,True,TransitionRule_7,ELEMENT_START_RULE_1,,,Informed consent,True,TransitionRule_8,ELEMENT_END_RULE_1,,,Completion of all screening activities and no more than 2 weeks from informed consent,False
+StudyCell,StudyCell_12,elementIds,reference,StudyElement_4,EL4,"Xanomeline TTS (adhesive patches) 50 cm2, 54 mg",High - Start,StudyElement,,,,,,,FALSE,,,,,,False
+StudyCell,StudyCell_13,elementIds,reference,StudyElement_5,EL5,"Xanomeline TTS (adhesive patches) 50 cm2, 54 mg + 25 cm2, 27 mg",High - Middle,StudyElement,,,,,,,,,,,,,False

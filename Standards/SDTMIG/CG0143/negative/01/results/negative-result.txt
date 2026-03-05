@@ -1,0 +1,54 @@
+{2 items
+"DM":[1 item
+0:{5 items
+"domain":"DM"
+"errors":[]0 items
+"executionStatus":"skipped"
+"message":NULL
+"variables":[]0 items
+}
+]
+"DS":[1 item
+0:{5 items
+"domain":"DS"
+"errors":[3 items
+0:{4 items
+"row":6
+"seq":7
+"uSubjId":"015246-076-0003-00003"
+"value":{3 items
+"DSDECOD":"DEATH"
+"DSSTDTC":"2022-02-20"
+"DTHDTC":"2021-02-18"
+}
+}
+1:{4 items
+"row":20
+"seq":4
+"uSubjId":"015246-888-0008-08888"
+"value":{3 items
+"DSDECOD":"DEATH"
+"DSSTDTC":"2019-01-10"
+"DTHDTC":""
+}
+}
+2:{4 items
+"row":25
+"seq":5
+"uSubjId":"015246-999-0003-09999"
+"value":{3 items
+"DSDECOD":"DEATH"
+"DSSTDTC":"2021-01-10"
+"DTHDTC":"2021-01"
+}
+}
+]
+"executionStatus":"success"
+"message":"DSSTDTC does not equal DM.DTHDTC, When DSDECOD equals "DEATH"."
+"variables":[3 items
+0:"DSDECOD"
+1:"DSSTDTC"
+2:"DTHDTC"
+]
+}
+]

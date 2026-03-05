@@ -1,0 +1,33 @@
+{
+  "CO": [
+    {
+      "executionStatus": "success",
+      "domain": "CO",
+      "variables": [
+        "COSEQ",
+        "POOLID"
+      ],
+      "message": "The value of COSEQ is not unique within POOLID",
+      "errors": [
+        {
+          "value": {
+            "POOLID": "POOL1",
+            "COSEQ": 1
+          },
+          "row": 5,
+          "uSubjId": "Chicken1",
+          "seq": 1
+        },
+        {
+          "value": {
+            "POOLID": "POOL1",
+            "COSEQ": 1
+          },
+          "row": 7,
+          "uSubjId": "Chicken3",
+          "seq": 1
+        }
+      ]
+    }
+  ]
+}

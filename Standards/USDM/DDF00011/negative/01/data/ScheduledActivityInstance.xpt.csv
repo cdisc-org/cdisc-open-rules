@@ -1,0 +1,10 @@
+parent_entity,parent_id,parent_rel,rel_type,id,name,description,label,defaultConditionId,epochId,timelineId,timelineExitId,instanceType,activityIds,encounterId
+ScheduleTimeline,ScheduleTimeline_1,instances,definition,ScheduledActivityInstance_2,ET,-,Early Termination,,,,ScheduleTimelineExit_2,ScheduledActivityInstance,True,
+ScheduleTimeline,ScheduleTimeline_1,instances,definition,ScheduledActivityInstance_3,VS_5MIN,,5 minute supine,ScheduledActivityInstance_4,,,,ScheduledActivityInstance,True,
+ScheduleTimeline,ScheduleTimeline_1,entryId,reference,ScheduledActivityInstance_2,ET,-,Early Termination,,,,ScheduleTimelineExit_2,ScheduledActivityInstance,True,
+Timing,Timing_18,relativeFromScheduledInstanceId,reference,ScheduledActivityInstance_2,ET,-,Early Termination,,,,ScheduleTimelineExit_2,ScheduledActivityInstance,True,
+Timing,Timing_18,relativeToScheduledInstanceId,reference,ScheduledActivityInstance_2,ET,-,Early Termination,,,,ScheduleTimelineExit_2,ScheduledActivityInstance,True,
+ScheduleTimeline,ScheduleTimeline_1,entryId,reference,ScheduledActivityInstance_5,VS_5MIN,,5 minute supine,ScheduledActivityInstance_4,,,,ScheduledActivityInstance,True,
+Timing,Timing_19,relativeFromScheduledInstanceId,reference,ScheduledActivityInstance_5,VS_5MIN,,5 minute supine,ScheduledActivityInstance_4,,,,ScheduledActivityInstance,True,
+Timing,Timing_19,relativeToScheduledInstanceId,reference,ScheduledActivityInstance_5,VS_5MIN,,5 minute supine,ScheduledActivityInstance_4,,,,ScheduledActivityInstance,True,
+Timing,Timing_20,relativeToScheduledInstanceId,reference,ScheduledActivityInstance_5,VS_5MIN,,5 minute supine,ScheduledActivityInstance_4,,,,ScheduledActivityInstance,True,

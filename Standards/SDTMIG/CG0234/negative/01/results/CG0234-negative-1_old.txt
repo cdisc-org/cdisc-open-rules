@@ -1,0 +1,64 @@
+{
+  "CM": [
+    {
+      "executionStatus": "execution_error",
+      "dataset": "cm.xpt",
+      "domain": "CM",
+      "variables": [],
+      "message": "rule execution error",
+      "errors": [
+        {
+          "dataset": "cm.xpt",
+          "error": "An unknown exception has occurred",
+          "message": "Unknown string format: CMDTC"
+        }
+      ]
+    }
+  ],
+  "MH": [
+    {
+      "executionStatus": "success",
+      "dataset": "mh.xpt",
+      "domain": "MH",
+      "variables": [
+        "MHDTC",
+        "MHENRTPT",
+        "MHENTPT"
+      ],
+      "message": "MHENRTPT is not in ('BEFORE', 'COINCIDENT', 'ONGOING', 'UNKNOWN')",
+      "errors": [
+        {
+          "value": {
+            "MHDTC": "2013-05-20",
+            "MHENRTPT": "AFTER",
+            "MHENTPT": "2013-05-20"
+          },
+          "row": 3,
+          "USUBJID": "CDISC003",
+          "SEQ": 1
+        },
+        {
+          "value": {
+            "MHDTC": "2013-05-03",
+            "MHENRTPT": "AFTER",
+            "MHENTPT": "2013-05-03"
+          },
+          "row": 12,
+          "USUBJID": "CDISC012",
+          "SEQ": 1
+        },
+        {
+          "value": {
+            "MHDTC": "2013-05-04",
+            "MHENRTPT": "",
+            "MHENTPT": "2013-05-04"
+          },
+          "row": 13,
+          "USUBJID": "CDISC013",
+          "SEQ": 1
+        }
+      ]
+    }
+  ]
+}
+}

@@ -1,0 +1,27 @@
+{
+  "TS": [
+    {
+      "executionStatus": "success",
+      "domain": "TS",
+      "variables": [
+        "$STYPE_INTERVENTIONAL",
+        "TSGRPID",
+        "TSPARMCD",
+        "TSVAL"
+      ],
+      "message": "A record exists in TS where TSPARMCD = STYPE and TSVAL = INTERVENTIONAL but TSVAL for TSPARMCD = PCLAS is empty when PCLAS is applicable.",
+      "errors": [
+        {
+          "value": {
+            "TSGRPID": "",
+            "$STYPE_INTERVENTIONAL": 1,
+            "TSPARMCD": "PCLAS",
+            "TSVAL": ""
+          },
+          "row": 29,
+          "SEQ": 1
+        }
+      ]
+    }
+  ]
+}

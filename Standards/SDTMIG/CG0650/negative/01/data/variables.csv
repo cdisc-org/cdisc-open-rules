@@ -1,0 +1,46 @@
+dataset,variable,label,type,length
+apdm.xpt,STUDYID,Study Identifier,Char,12
+apdm.xpt,DOMAIN,Domain Abbreviation,Char,2
+apdm.xpt,USUBJID,Unique Subject Identifier,Char,20
+apdm.xpt,SUBJID,Subject Identifier for the Study,Char,12
+apdm.xpt,RFSTDTC,Subject Reference Start Date/Time,Char,10
+apdm.xpt,RFENDTC,Subject Reference End Date/Time,Char,10
+apdm.xpt,RFXSTDTC,Date/Time of First Study Treatment,Char,10
+apdm.xpt,RFXENDTC,Date/Time of Last Study Treatment,Char,10
+apdm.xpt,RFICDTC,Date/Time of Informed Consent,Char,10
+apdm.xpt,RFPENDTC,Date/Time of End of Participation,Char,10
+apdm.xpt,DTHDTC,Date/Time of Death,Char,10
+apdm.xpt,DTHFL,Subject Death Flag,Char,1
+apdm.xpt,SITEID,Study Site Identifier,Char,3
+apdm.xpt,BRTHDTC,Date/Time of Birth,Char,10
+apdm.xpt,AGE,Age,Num,8
+apdm.xpt,AGETXT,Age Text,Char,5
+apdm.xpt,AGEU,Age Units,Char,5
+apdm.xpt,SEX,Sex,Char,1
+apdm.xpt,RACE,Race,Char,41
+apdm.xpt,ETHNIC,Ethnicity,Char,22
+apdm.xpt,ARMCD,Planned Arm Code,Char,8
+apdm.xpt,ARM,Description of Planned Arm,Char,28
+apdm.xpt,ACTARMCD,Actual Arm Code,Char,8
+apdm.xpt,ACTARM,Description of Actual Arm,Char,28
+apdm.xpt,ARMNRS,Reason Arm and/or Actual Arm is Null,Char,14
+apdm.xpt,ACTARMUD,Description of Unplanned Actual Arm,Char,200
+apdm.xpt,COUNTRY,Country,Char,3
+apdrug1ex.xpt,STUDYID,Study Identifier,Char,50
+apdrug1ex.xpt,DOMAIN,Domain Abbreviation,Char,50
+apdrug1ex.xpt,USUBJID,Unique Subject Identifier,Char,50
+apdrug1ex.xpt,EXSEQ,Sequence Number,Num,8
+apdrug1ex.xpt,EXLNKID,Link ID,Char,50
+apdrug1ex.xpt,EXTRT,Name of Treatment,Char,50
+apdrug1ex.xpt,EXDOSE,Dose,Num,8
+apdrug1ex.xpt,EXDOSTXT,Dose Description,Char,50
+apdrug1ex.xpt,EXDOSU,Dose Units,Char,50
+apdrug1ex.xpt,EXDOSFRM,Dose Form,Char,50
+apdrug1ex.xpt,EXDOSFRQ,Dosing Frequency per Interval,Char,50
+apdrug1ex.xpt,EXROUTE,Route of Administration,Char,50
+apdrug1ex.xpt,EXVAMT,Dose,Num,8
+apdrug1ex.xpt,EXVAMTU,Dose Units,Char,50
+apdrug1ex.xpt,EXSTDTC,Start Date/Time of Treatment,Char,50
+apdrug1ex.xpt,EXENDTC,End Date/Time of Treatment,Char,50
+apdrug1ex.xpt,EXSTDY,Study Day of Start of Treatment,Num,8
+apdrug1ex.xpt,EXENDY,Study Day of End of Treatment,Num,8

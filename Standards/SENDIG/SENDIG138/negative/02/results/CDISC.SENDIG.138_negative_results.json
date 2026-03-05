@@ -1,0 +1,123 @@
+{
+  "VS": [
+    {
+      "executionStatus": "success",
+      "domain": "VS",
+      "variables": [
+        "POOLID",
+        "USUBJID",
+        "VSSEQ"
+      ],
+      "message": "VSSEQ is not unique within USUBJID or POOLID",
+      "errors": [
+        {
+          "value": {
+            "POOLID": null,
+            "VSSEQ": 1,
+            "USUBJID": "CDISC001"
+          },
+          "row": 1,
+          "uSubjId": "CDISC001",
+          "seq": 1
+        },
+        {
+          "value": {
+            "POOLID": null,
+            "VSSEQ": 1,
+            "USUBJID": "CDISC001"
+          },
+          "row": 3,
+          "uSubjId": "CDISC001",
+          "seq": 1
+        },
+        {
+          "value": {
+            "POOLID": "POOL1",
+            "VSSEQ": 4,
+            "USUBJID": ""
+          },
+          "row": 4,
+          "seq": 4
+        },
+        {
+          "value": {
+            "POOLID": null,
+            "VSSEQ": 5,
+            "USUBJID": "CDISC001"
+          },
+          "row": 5,
+          "uSubjId": "CDISC001",
+          "seq": 5
+        },
+        {
+          "value": {
+            "POOLID": null,
+            "VSSEQ": 5,
+            "USUBJID": "CDISC001"
+          },
+          "row": 6,
+          "uSubjId": "CDISC001",
+          "seq": 5
+        },
+        {
+          "value": {
+            "POOLID": null,
+            "VSSEQ": 3,
+            "USUBJID": "CDISC002"
+          },
+          "row": 8,
+          "uSubjId": "CDISC002",
+          "seq": 3
+        },
+        {
+          "value": {
+            "POOLID": null,
+            "VSSEQ": 3,
+            "USUBJID": "CDISC002"
+          },
+          "row": 9,
+          "uSubjId": "CDISC002",
+          "seq": 3
+        },
+        {
+          "value": {
+            "POOLID": "POOL1",
+            "VSSEQ": 4,
+            "USUBJID": ""
+          },
+          "row": 10,
+          "seq": 4
+        },
+        {
+          "value": {
+            "POOLID": null,
+            "VSSEQ": 6,
+            "USUBJID": "CDISC002"
+          },
+          "row": 11,
+          "uSubjId": "CDISC002",
+          "seq": 6
+        },
+        {
+          "value": {
+            "POOLID": null,
+            "VSSEQ": 6,
+            "USUBJID": "CDISC002"
+          },
+          "row": 12,
+          "uSubjId": "CDISC002",
+          "seq": 6
+        },
+        {
+          "value": {
+            "POOLID": "POOL1",
+            "VSSEQ": 4,
+            "USUBJID": ""
+          },
+          "row": 14,
+          "seq": 4
+        }
+      ]
+    }
+  ]
+}

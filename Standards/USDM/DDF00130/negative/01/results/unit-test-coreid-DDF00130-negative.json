@@ -1,0 +1,155 @@
+{
+    "AgentAdministration": [
+        {
+            "executionStatus": "success",
+            "dataset": "AgentAdministration.xpt",
+            "domain": "AgentAdministration",
+            "variables": [
+                "$code_for_decode_pref_term",
+                "$code_for_decode_value",
+                "$codelist_code",
+                "$codelist_extensible",
+                "$pref_term_for_code",
+                "$value_for_code",
+                "id",
+                "name",
+                "parent_entity",
+                "parent_id",
+                "parent_rel",
+                "route.standardCode.code",
+                "route.standardCode.codeSystem",
+                "route.standardCode.codeSystemVersion",
+                "route.standardCode.decode"
+            ],
+            "message": "The agent administration's route is not specified according to the extensible Route of Administration Response (C66729) SDTM codelist - codeSystem is not \"http://www.cdisc.org\", codeSystemVersion is not a valid terminology package date, and/or the code or decode (either as preferred term or as submission value) is found in the codelist (case insensitive) but the corresponding decode or code does not match the codelist value (case sensitive).",
+            "errors": [
+                {
+                    "value": {
+                        "route.standardCode.code": "C38215",
+                        "route.standardCode.codeSystemVersion": "2023-12-15",
+                        "parent_rel": "administrations",
+                        "route.standardCode.decode": "ORAL",
+                        "route.standardCode.codeSystem": "http://www.cdisc.org",
+                        "$codelist_code": "C66729",
+                        "$pref_term_for_code": "Infiltration Route of Administration",
+                        "$value_for_code": "INFILTRATION",
+                        "$code_for_decode_value": "C38288",
+                        "$codelist_extensible": true,
+                        "name": "LY_ADMIN1",
+                        "parent_id": "StudyIntervention_1",
+                        "$code_for_decode_pref_term": null,
+                        "parent_entity": "StudyIntervention",
+                        "id": "AgentAdministration_1"
+                    },
+                    "dataset": "AgentAdministration.xpt",
+                    "row": 1
+                },
+                {
+                    "value": {
+                        "route.standardCode.code": "C38215",
+                        "route.standardCode.codeSystemVersion": "2023-12-15",
+                        "parent_rel": "administrations",
+                        "route.standardCode.decode": "INFILTRATION ROUTE OF ADMINISTRATION",
+                        "route.standardCode.codeSystem": "http://www.cdisc.org",
+                        "$codelist_code": "C66729",
+                        "$pref_term_for_code": "Infiltration Route of Administration",
+                        "$value_for_code": "INFILTRATION",
+                        "$code_for_decode_value": null,
+                        "$codelist_extensible": true,
+                        "name": "LY_ADMIN2",
+                        "parent_id": "StudyIntervention_1",
+                        "$code_for_decode_pref_term": "C38215",
+                        "parent_entity": "StudyIntervention",
+                        "id": "AgentAdministration_2"
+                    },
+                    "dataset": "AgentAdministration.xpt",
+                    "row": 2
+                },
+                {
+                    "value": {
+                        "route.standardCode.code": "C38257xx",
+                        "route.standardCode.codeSystemVersion": "2023-12-15",
+                        "parent_rel": "administrations",
+                        "route.standardCode.decode": "INTRAPERICARDIAL",
+                        "route.standardCode.codeSystem": "http://www.cdisc.org",
+                        "$codelist_code": "C66729",
+                        "$pref_term_for_code": null,
+                        "$value_for_code": null,
+                        "$code_for_decode_value": "C38257",
+                        "$codelist_extensible": true,
+                        "name": "LY_ADMIN3",
+                        "parent_id": "StudyIntervention_1",
+                        "$code_for_decode_pref_term": null,
+                        "parent_entity": "StudyIntervention",
+                        "id": "AgentAdministration_3"
+                    },
+                    "dataset": "AgentAdministration.xpt",
+                    "row": 3
+                },
+                {
+                    "value": {
+                        "route.standardCode.code": "C38257",
+                        "route.standardCode.codeSystemVersion": "2024-09-27",
+                        "parent_rel": "administrations",
+                        "route.standardCode.decode": "Intrapericardial Route of Administration",
+                        "route.standardCode.codeSystem": "ROUTE",
+                        "$codelist_code": "C66729",
+                        "$pref_term_for_code": "Intrapericardial Route of Administration",
+                        "$value_for_code": "INTRAPERICARDIAL",
+                        "$code_for_decode_value": null,
+                        "$codelist_extensible": true,
+                        "name": "LY_ADMIN4",
+                        "parent_id": "StudyIntervention_1",
+                        "$code_for_decode_pref_term": "C38257",
+                        "parent_entity": "StudyIntervention",
+                        "id": "AgentAdministration_4"
+                    },
+                    "dataset": "AgentAdministration.xpt",
+                    "row": 4
+                },
+                {
+                    "value": {
+                        "route.standardCode.code": "C38288",
+                        "route.standardCode.codeSystemVersion": "2024.09.27",
+                        "parent_rel": "administrations",
+                        "route.standardCode.decode": "ORAL",
+                        "route.standardCode.codeSystem": "http://www.cdisc.org",
+                        "$codelist_code": "C66729",
+                        "$pref_term_for_code": null,
+                        "$value_for_code": null,
+                        "$code_for_decode_value": null,
+                        "$codelist_extensible": null,
+                        "name": "LY_ADMIN5",
+                        "parent_id": "StudyIntervention_1",
+                        "$code_for_decode_pref_term": null,
+                        "parent_entity": "StudyIntervention",
+                        "id": "AgentAdministration_5"
+                    },
+                    "dataset": "AgentAdministration.xpt",
+                    "row": 5
+                },
+                {
+                    "value": {
+                        "route.standardCode.code": "C38288",
+                        "route.standardCode.codeSystemVersion": "2024-09-27",
+                        "parent_rel": "administrations",
+                        "route.standardCode.decode": "Oral",
+                        "route.standardCode.codeSystem": "http://www.cdisc.org",
+                        "$codelist_code": "C66729",
+                        "$pref_term_for_code": "Oral Route of Administration",
+                        "$value_for_code": "ORAL",
+                        "$code_for_decode_value": "C38288",
+                        "$codelist_extensible": true,
+                        "name": "LY_ADMIN6",
+                        "parent_id": "StudyIntervention_1",
+                        "$code_for_decode_pref_term": null,
+                        "parent_entity": "StudyIntervention",
+                        "id": "AgentAdministration_6"
+                    },
+                    "dataset": "AgentAdministration.xpt",
+                    "row": 6
+                }
+            ]
+        }
+    ]
+}

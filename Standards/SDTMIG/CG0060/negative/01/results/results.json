@@ -1,0 +1,78 @@
+{
+    "PR": [
+      {
+        "domain": "PR",
+        "errors": [
+          {
+            "row": 0,
+            "seq": 1,
+            "uSubjId": "CDISC009",
+            "value": {
+              "PRSTTPT": "2021-01-08"
+            }
+          },
+          {
+            "row": 1,
+            "seq": 2,
+            "uSubjId": "CDISC010",
+            "value": {
+              "PRSTTPT": "2021-01-10"
+            }
+          },
+          {
+            "row": 2,
+            "seq": 3,
+            "uSubjId": "CDISC011",
+            "value": {
+              "PRSTTPT": "2020-01-08"
+            }
+          },
+          {
+            "row": 3,
+            "seq": 1,
+            "uSubjId": "CDISC012",
+            "value": {
+              "PRSTTPT": ""
+            }
+          },
+          {
+            "row": 4,
+            "seq": 10,
+            "uSubjId": "CDISC013",
+            "value": {
+              "PRSTTPT": ""
+            }
+          },
+          {
+            "row": 5,
+            "seq": 11,
+            "uSubjId": "CDISC014",
+            "value": {
+              "PRSTTPT": ""
+            }
+          },
+          {
+            "row": 6,
+            "seq": 5,
+            "uSubjId": "CDISC016",
+            "value": {
+              "PRSTTPT": ""
+            }
+          },
+          {
+            "row": 7,
+            "seq": 6,
+            "uSubjId": "CDISC017",
+            "value": {
+              "PRSTTPT": ""
+            }
+          }
+        ],
+        "executionStatus": "success",
+        "message": "--STTPT is present in dataset, but --STRTPT is not present in dataset.",
+        "variables": [
+          "PRSTTPT"
+        ]
+      }
+    ]
+  }

@@ -1,0 +1,22 @@
+parent_entity,parent_id,parent_rel,rel_type,id,name,description,label,instanceType,type,type.id,type.code,type.codeSystem,type.codeSystemVersion,type.decode,previousId,nextId
+StudyDesign,StudyDesign_1,epochs,definition,StudyEpoch_1,Screening,Screening Epoch,Screening,StudyEpoch,True,Code_129,C202487,http://www.cdisc.org,2023-12-15,Screening Epoch,,StudyEpoch_2
+StudyDesign,StudyDesign_1,epochs,definition,StudyEpoch_2,Treatment 1,Treatment Epoch,Treatment One,StudyEpoch,True,Code_130,C101526,http://www.cdisc.org,2023-12-15,Treatment Epoch,StudyEpoch_1,StudyEpoch_5
+StudyDesign,StudyDesign_1,epochs,definition,StudyEpoch_5,Follow-Up,Follow-up Epoch,Follow Up,StudyEpoch,True,Code_133,C202578,http://www.cdisc.org,2023-12-15,Follow-Up Epoch,StudyEpoch_2,
+StudyCell,StudyCell_1,epochId,reference,StudyEpoch_1,Screening,Screening Epoch,Screening,StudyEpoch,True,Code_129,C202487,http://www.cdisc.org,2023-12-15,Screening Epoch,,StudyEpoch_2
+StudyCell,StudyCell_2,epochId,reference,StudyEpoch_2,Treatment 1,Treatment Epoch,Treatment One,StudyEpoch,True,Code_130,C101526,http://www.cdisc.org,2023-12-15,Treatment Epoch,StudyEpoch_1,StudyEpoch_5
+StudyCell,StudyCell_5,epochId,reference,StudyEpoch_5,Follow-Up,Follow-up Epoch,Follow Up,StudyEpoch,True,Code_133,C202578,http://www.cdisc.org,2023-12-15,Follow-Up Epoch,StudyEpoch_2,
+StudyCell,StudyCell_6,epochId,reference,StudyEpoch_1,Screening,Screening Epoch,Screening,StudyEpoch,True,Code_129,C202487,http://www.cdisc.org,2023-12-15,Screening Epoch,,StudyEpoch_2
+StudyCell,StudyCell_7,epochId,reference,StudyEpoch_2,Treatment 1,Treatment Epoch,Treatment One,StudyEpoch,True,Code_130,C101526,http://www.cdisc.org,2023-12-15,Treatment Epoch,StudyEpoch_1,StudyEpoch_5
+StudyCell,StudyCell_10,epochId,reference,StudyEpoch_5,Follow-Up,Follow-up Epoch,Follow Up,StudyEpoch,True,Code_133,C202578,http://www.cdisc.org,2023-12-15,Follow-Up Epoch,StudyEpoch_2,
+StudyCell,StudyCell_11,epochId,reference,StudyEpoch_1,Screening,Screening Epoch,Screening,StudyEpoch,True,Code_129,C202487,http://www.cdisc.org,2023-12-15,Screening Epoch,,StudyEpoch_2
+StudyCell,StudyCell_12,epochId,reference,StudyEpoch_2,Treatment 1,Treatment Epoch,Treatment One,StudyEpoch,True,Code_130,C101526,http://www.cdisc.org,2023-12-15,Treatment Epoch,StudyEpoch_1,StudyEpoch_5
+StudyCell,StudyCell_15,epochId,reference,StudyEpoch_5,Follow-Up,Follow-up Epoch,Follow Up,StudyEpoch,True,Code_133,C202578,http://www.cdisc.org,2023-12-15,Follow-Up Epoch,StudyEpoch_2,
+StudyEpoch,StudyEpoch_1,nextId,reference,StudyEpoch_2,Treatment 1,Treatment Epoch,Treatment One,StudyEpoch,True,Code_130,C101526,http://www.cdisc.org,2023-12-15,Treatment Epoch,StudyEpoch_1,StudyEpoch_5
+StudyEpoch,StudyEpoch_2,previousId,reference,StudyEpoch_1,Screening,Screening Epoch,Screening,StudyEpoch,True,Code_129,C202487,http://www.cdisc.org,2023-12-15,Screening Epoch,,StudyEpoch_2
+StudyEpoch,StudyEpoch_4,previousId,reference,StudyEpoch_2,Treatment 1,Treatment Epoch,Treatment One,StudyEpoch,True,Code_130,C101526,http://www.cdisc.org,2023-12-15,Treatment Epoch,StudyEpoch_1,StudyEpoch_5
+StudyEpoch,StudyEpoch_2,nextId,reference,StudyEpoch_5,Follow-Up,Follow-up Epoch,Follow Up,StudyEpoch,True,Code_133,C202578,http://www.cdisc.org,2023-12-15,Follow-Up Epoch,StudyEpoch_2,
+ScheduledActivityInstance,ScheduledActivityInstance_9,epochId,reference,StudyEpoch_1,Screening,Screening Epoch,Screening,StudyEpoch,True,Code_129,C202487,http://www.cdisc.org,2023-12-15,Screening Epoch,,StudyEpoch_2
+ScheduledActivityInstance,ScheduledActivityInstance_10,epochId,reference,StudyEpoch_1,Screening,Screening Epoch,Screening,StudyEpoch,True,Code_129,C202487,http://www.cdisc.org,2023-12-15,Screening Epoch,,StudyEpoch_2
+ScheduledActivityInstance,ScheduledActivityInstance_11,epochId,reference,StudyEpoch_2,Treatment 1,Treatment Epoch,Treatment One,StudyEpoch,True,Code_130,C101526,http://www.cdisc.org,2023-12-15,Treatment Epoch,StudyEpoch_1,StudyEpoch_5
+ScheduledActivityInstance,ScheduledActivityInstance_12,epochId,reference,StudyEpoch_2,Treatment 1,Treatment Epoch,Treatment One,StudyEpoch,True,Code_130,C101526,http://www.cdisc.org,2023-12-15,Treatment Epoch,StudyEpoch_1,StudyEpoch_5
+ScheduledActivityInstance,ScheduledActivityInstance_24,epochId,reference,StudyEpoch_5,Follow-Up,Follow-up Epoch,Follow Up,StudyEpoch,True,Code_133,C202578,http://www.cdisc.org,2023-12-15,Follow-Up Epoch,StudyEpoch_2,

@@ -1,0 +1,30 @@
+{
+  "VS": [
+    {
+      "executionStatus": "success",
+      "domain": "VS",
+      "variables": [
+        "VSEXFL"
+      ],
+      "message": "VSEXFL value must either be 'Y' or null",
+      "errors": [
+        {
+          "value": {
+            "VSEXFL": "N"
+          },
+          "row": 4,
+          "seq": 4
+        }
+      ]
+    }
+  ],
+  "SC": [
+    {
+      "executionStatus": "skipped",
+      "domain": "SC",
+      "variables": [],
+      "message": null,
+      "errors": []
+    }
+  ]
+}

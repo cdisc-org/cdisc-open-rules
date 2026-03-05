@@ -1,0 +1,121 @@
+{
+  "EG": [
+    {
+      "executionStatus": "success",
+      "domain": "EG",
+      "variables": [
+        "EGORRES",
+        "EGSTAT"
+      ],
+      "message": "EGORRES must be populated as EGSTAT is not equal to 'NOT DONE'",
+      "errors": [
+        {
+          "value": {
+            "EGSTAT": "",
+            "EGORRES": ""
+          },
+          "row": 4,
+          "uSubjId": "123102",
+          "seq": 1
+        }
+      ]
+    }
+  ],
+  "FA": [
+    {
+      "executionStatus": "success",
+      "domain": "FA",
+      "variables": [
+        "FAORRES",
+        "FASTAT"
+      ],
+      "message": "FAORRES must be populated as FASTAT is not equal to 'NOT DONE'",
+      "errors": [
+        {
+          "value": {
+            "FAORRES": "",
+            "FASTAT": ""
+          },
+          "row": 3,
+          "uSubjId": "123101",
+          "seq": 2
+        }
+      ]
+    }
+  ],
+  "MI": [
+    {
+      "executionStatus": "success",
+      "domain": "MI",
+      "variables": [
+        "MIORRES",
+        "MISTAT"
+      ],
+      "message": "MIORRES must be populated as MISTAT is not equal to 'NOT DONE'",
+      "errors": [
+        {
+          "value": {
+            "MISTAT": "POSSIBLY",
+            "MIORRES": ""
+          },
+          "row": 3,
+          "uSubjId": "ABC-1002",
+          "seq": 1
+        }
+      ]
+    }
+  ],
+  "LB": [
+    {
+      "executionStatus": "success",
+      "domain": "LB",
+      "variables": [
+        "LBORRES",
+        "LBSTAT"
+      ],
+      "message": "LBORRES must be populated as LBSTAT is not equal to 'NOT DONE'",
+      "errors": [
+        {
+          "value": {
+            "LBSTAT": "",
+            "LBORRES": ""
+          },
+          "row": 3,
+          "uSubjId": "123101",
+          "seq": 1
+        }
+      ]
+    }
+  ],
+  "VS": [
+    {
+      "executionStatus": "success",
+      "domain": "VS",
+      "variables": [
+        "VSORRES",
+        "VSSTAT"
+      ],
+      "message": "VSORRES must be populated as VSSTAT is not equal to 'NOT DONE'",
+      "errors": [
+        {
+          "value": {
+            "VSORRES": "",
+            "VSSTAT": "MAYBE DONE"
+          },
+          "row": 3,
+          "uSubjId": "123101",
+          "seq": 1
+        },
+        {
+          "value": {
+            "VSORRES": "",
+            "VSSTAT": ""
+          },
+          "row": 4,
+          "uSubjId": "123101",
+          "seq": 2
+        }
+      ]
+    }
+  ]
+}

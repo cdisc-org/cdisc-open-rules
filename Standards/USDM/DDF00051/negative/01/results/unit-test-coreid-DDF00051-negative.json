@@ -1,0 +1,176 @@
+{
+    "Timing": [
+        {
+            "executionStatus": "success",
+            "dataset": "Timing.xpt",
+            "domain": "Timing",
+            "variables": [
+                "$code_for_decode_pref_term",
+                "$code_for_decode_value",
+                "$codelist_code",
+                "$codelist_extensible",
+                "$pref_term_for_code",
+                "$value_for_code",
+                "id",
+                "name",
+                "parent_entity",
+                "parent_id",
+                "parent_rel",
+                "type.code",
+                "type.codeSystem",
+                "type.codeSystemVersion",
+                "type.decode"
+            ],
+            "message": "The timing's type is not specified using the Timing Type Value Set Terminology (C201264) DDF codelist - codeSystem is not \"http://www.cdisc.org\", codeSystemVersion is not a valid terminology package date, the code or decode (either as preferred term or as submission value) is found in the codelist (case insensitive) but the corresponding decode or code does not match the codelist value (case sensitive), and/or neither code nor decode is found in the codelist.",
+            "errors": [
+                {
+                    "value": {
+                        "type.codeSystem": "http://www.cdisc.org",
+                        "$value_for_code": "Before",
+                        "id": "Timing_2",
+                        "type.code": "C201357",
+                        "$code_for_decode_value": null,
+                        "$codelist_code": "C201264",
+                        "$pref_term_for_code": "Before Timing Type",
+                        "parent_id": "ScheduleTimeline_4",
+                        "$codelist_extensible": false,
+                        "parent_entity": "ScheduleTimeline",
+                        "type.codeSystemVersion": "2023-12-15",
+                        "type.decode": "Before/After",
+                        "name": "TIM2",
+                        "parent_rel": "timings",
+                        "$code_for_decode_pref_term": null
+                    },
+                    "dataset": "Timing.xpt",
+                    "row": 1
+                },
+                {
+                    "value": {
+                        "type.codeSystem": "http://www.cdisc.org",
+                        "$value_for_code": "Before",
+                        "id": "Timing_3",
+                        "type.code": "C201357",
+                        "$code_for_decode_value": null,
+                        "$codelist_code": "C201264",
+                        "$pref_term_for_code": "Before Timing Type",
+                        "parent_id": "ScheduleTimeline_4",
+                        "$codelist_extensible": false,
+                        "parent_entity": "ScheduleTimeline",
+                        "type.codeSystemVersion": "2023-12-15",
+                        "type.decode": "BEFORE TIMING TYPE",
+                        "name": "TIM3",
+                        "parent_rel": "timings",
+                        "$code_for_decode_pref_term": "C201357"
+                    },
+                    "dataset": "Timing.xpt",
+                    "row": 2
+                },
+                {
+                    "value": {
+                        "type.codeSystem": "https://www.cdisc.org",
+                        "$value_for_code": "Fixed Reference",
+                        "id": "Timing_4",
+                        "type.code": "C201358",
+                        "$code_for_decode_value": "C201358",
+                        "$codelist_code": "C201264",
+                        "$pref_term_for_code": "Fixed Reference Timing Type",
+                        "parent_id": "ScheduleTimeline_4",
+                        "$codelist_extensible": false,
+                        "parent_entity": "ScheduleTimeline",
+                        "type.codeSystemVersion": "2023-12-15",
+                        "type.decode": "Fixed Reference",
+                        "name": "TIM4",
+                        "parent_rel": "timings",
+                        "$code_for_decode_pref_term": null
+                    },
+                    "dataset": "Timing.xpt",
+                    "row": 3
+                },
+                {
+                    "value": {
+                        "type.codeSystem": "http://www.cdisc.org",
+                        "$value_for_code": "Fixed Reference",
+                        "id": "Timing_5",
+                        "type.code": "C201358",
+                        "$code_for_decode_value": null,
+                        "$codelist_code": "C201264",
+                        "$pref_term_for_code": "Fixed Reference Timing Type",
+                        "parent_id": "ScheduleTimeline_4",
+                        "$codelist_extensible": false,
+                        "parent_entity": "ScheduleTimeline",
+                        "type.codeSystemVersion": "2023-12-15",
+                        "type.decode": "After Timing Type",
+                        "name": "TIM5",
+                        "parent_rel": "timings",
+                        "$code_for_decode_pref_term": "C201356"
+                    },
+                    "dataset": "Timing.xpt",
+                    "row": 4
+                },
+                {
+                    "value": {
+                        "type.codeSystem": "http://www.cdisc.org",
+                        "$value_for_code": null,
+                        "id": "Timing_6",
+                        "type.code": "C201358",
+                        "$code_for_decode_value": null,
+                        "$codelist_code": "C201264",
+                        "$pref_term_for_code": null,
+                        "parent_id": "ScheduleTimeline_4",
+                        "$codelist_extensible": null,
+                        "parent_entity": "ScheduleTimeline",
+                        "type.codeSystemVersion": "2023-12-16",
+                        "type.decode": "Fixed Reference",
+                        "name": "TIM6",
+                        "parent_rel": "timings",
+                        "$code_for_decode_pref_term": null
+                    },
+                    "dataset": "Timing.xpt",
+                    "row": 5
+                },
+                {
+                    "value": {
+                        "type.codeSystem": "http://www.cdisc.org",
+                        "$value_for_code": null,
+                        "id": "Timing_7",
+                        "type.code": "C201356xx",
+                        "$code_for_decode_value": "C201356",
+                        "$codelist_code": "C201264",
+                        "$pref_term_for_code": null,
+                        "parent_id": "ScheduleTimeline_4",
+                        "$codelist_extensible": false,
+                        "parent_entity": "ScheduleTimeline",
+                        "type.codeSystemVersion": "2024-09-27",
+                        "type.decode": "After",
+                        "name": "TIM7",
+                        "parent_rel": "timings",
+                        "$code_for_decode_pref_term": null
+                    },
+                    "dataset": "Timing.xpt",
+                    "row": 6
+                },
+                {
+                    "value": {
+                        "type.codeSystem": "http://www.cdisc.org",
+                        "$value_for_code": null,
+                        "id": "Timing_8",
+                        "type.code": "C0070X",
+                        "$code_for_decode_value": null,
+                        "$codelist_code": "C201264",
+                        "$pref_term_for_code": null,
+                        "parent_id": "ScheduleTimeline_4",
+                        "$codelist_extensible": false,
+                        "parent_entity": "ScheduleTimeline",
+                        "type.codeSystemVersion": "2024-09-27",
+                        "type.decode": "Extension",
+                        "name": "TIM8",
+                        "parent_rel": "timings",
+                        "$code_for_decode_pref_term": null
+                    },
+                    "dataset": "Timing.xpt",
+                    "row": 7
+                }
+            ]
+        }
+    ]
+}

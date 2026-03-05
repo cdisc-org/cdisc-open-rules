@@ -1,0 +1,41 @@
+dataset,variable,label,type,length
+advs.xpt,STUDYID,Study Identifier,Char,50
+advs.xpt,SUBJID,Subject Identifier for the Study,Char,50
+advs.xpt,AVISIT,Analysis Visit,Char,50
+advs.xpt,ADY,Analysis Relative Day,Num,8
+advs.xpt,PARAMCD,Parameter Code,Char,8
+advs.xpt,PARAM,Parameter,Char,50
+advs.xpt,BASE,Baseline Value,Num,8
+advs.xpt,CHG,Change from Baseline,Num,8
+advs.xpt,AVAL,Analysis Value,Num,8
+advs.xpt,DTYPE,Derivation Type,Char,50
+advs.xpt,ANL01FL,Analysis Flag 01,Char,50
+adsl.xpt,STUDYID,Study Identifier,Char,50
+adsl.xpt,USUBJID,Unique Subject Identifier,Char,50
+adsl.xpt,FASFL,Full Analysis Set Population Flag,Char,50
+adsl.xpt,SAFFL,Safety Population Flag,Char,50
+adsl.xpt,ITTFL,Intent-To-Treat Population Flag,Char,50
+adsl.xpt,PPROTFL,Per-Protocol Population Flag,Char,50
+adsl.xpt,COMPLFL,Completers Population Flag,Char,50
+adsl.xpt,RANDFL,Randomized Population Flag,Char,50
+adsl.xpt,ENRLFL,Enrolled Population Flag,Char,50
+adae.xpt,STUDYID,Study Identifier,Char,50
+adae.xpt,USUBJID,Unique Subject Identifier,Char,50
+adae.xpt,SUBJID,Subject Identifier for the Study,Char,50
+adae.xpt,SITEID,Study Site Identifier,Char,50
+adae.xpt,AESEQ,Sequence Number,Num,8
+adae.xpt,AETERM,Reported Term,Char,50
+adae.xpt,AEBODSYS,Body System or Organ Class,Char,50
+adae.xpt,AEBDSYCD,Body System or Organ Class Code,Num,8
+adae.xpt,AELLT,Lowest Level Term,Char,50
+adae.xpt,AELLTCD,Lowest Level Term Code,Num,8
+adae.xpt,AEPTCD,Preferred Term Code,Num,8
+adae.xpt,AEHLT,High Level Term,Char,50
+adae.xpt,AEHLTCD,High Level Term Code,Num,8
+adae.xpt,AEHLGT,High Level Group Term,Char,50
+adae.xpt,AEHLGTCD,High Level Group Term Code,Num,8
+adae.xpt,AESOC,Primary System Organ Class,Char,50
+adae.xpt,AESOCCD,Primary System Organ Class Code,Num,8
+adae.xpt,TRTEMFL,Treatment Emergent Analysis Flag,Char,50
+adae.xpt,AESER,Serious Event,Char,50
+adae.xpt,ANL01FL,Analysis Flag 01,Char,50

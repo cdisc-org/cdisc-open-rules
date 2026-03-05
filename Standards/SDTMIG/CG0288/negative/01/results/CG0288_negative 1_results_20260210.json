@@ -1,0 +1,37 @@
+{
+    "TS": [
+        {
+            "executionStatus": "issue_reported",
+            "dataset": "ts.xpt",
+            "domain": "TS",
+            "variables": [
+                "TSVALCD",
+                "TSPARMCD",
+                "TSVCDVER"
+            ],
+            "message": "TSVALCD is not a valid code in the CDISC CT version identified in TSVCDVER.",
+            "errors": [
+                {
+                    "value": {
+                        "TSVCDVER": "2025-03-28",
+                        "TSPARMCD": "ADDON",
+                        "TSVALCD": "C00001"
+                    },
+                    "dataset": "ts.xpt",
+                    "row": 3,
+                    "SEQ": 1
+                },
+                {
+                    "value": {
+                        "TSVCDVER": "2025-03-28",
+                        "TSPARMCD": "HLTSUBJI",
+                        "TSVALCD": "C00002"
+                    },
+                    "dataset": "ts.xpt",
+                    "row": 16,
+                    "SEQ": 1
+                }
+            ]
+        }
+    ]
+}

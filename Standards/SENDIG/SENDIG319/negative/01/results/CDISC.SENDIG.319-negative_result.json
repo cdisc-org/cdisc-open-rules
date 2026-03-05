@@ -1,0 +1,35 @@
+{
+  "LB": [
+    {
+      "executionStatus": "success",
+      "domain": "LB",
+      "variables": [
+        "LBDTC",
+        "LBDY",
+        "LBNOMDY"
+      ],
+      "message": "LBDTC and LBDY are not populated, so LBNOMDY must be populated",
+      "errors": [
+        {
+          "value": {
+            "LBNOMDY": null,
+            "LBDY": null,
+            "LBDTC": ""
+          },
+          "row": 2,
+          "uSubjId": "CDISC001",
+          "seq": 2
+        }
+      ]
+    }
+  ],
+  "PP": [
+    {
+      "executionStatus": "skipped",
+      "domain": "PP",
+      "variables": [],
+      "message": null,
+      "errors": []
+    }
+  ]
+}

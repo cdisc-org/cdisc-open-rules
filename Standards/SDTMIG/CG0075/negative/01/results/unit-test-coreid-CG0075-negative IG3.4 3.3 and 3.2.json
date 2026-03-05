@@ -1,0 +1,42 @@
+{2 items
+"DM":[1 item
+0:{5 items
+"executionStatus":"skipped"
+"domain":"DM"
+"variables":[]0 items
+"message":NULL
+"errors":[]0 items
+}
+]
+"DV":[1 item
+0:{5 items
+"executionStatus":"success"
+"domain":"DV"
+"variables":[2 items
+0:"DVSTDTC"
+1:"RFICDTC"
+]
+"message":"DVSTDTC is earlier than RFICDTC in DM."
+"errors":[2 items
+0:{4 items
+"value":{2 items
+"DVSTDTC":"2011-01-02"
+"RFICDTC":"2012-11-23"
+}
+"row":1
+"uSubjId":"CDISC001"
+"seq":1
+}
+1:{4 items
+"value":{2 items
+"DVSTDTC":"2012-11-22"
+"RFICDTC":"2012-11-23"
+}
+"row":2
+"uSubjId":"CDISC001"
+"seq":2
+}
+]
+}
+]
+}

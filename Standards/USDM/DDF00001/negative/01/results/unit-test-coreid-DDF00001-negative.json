@@ -1,0 +1,63 @@
+{
+    "STUDYELEMENT": [
+        {
+            "executionStatus": "success",
+            "domain": "STUDYELEMENT",
+            "variables": [
+                "description",
+                "id",
+                "name",
+                "parent_entity",
+                "parent_id",
+                "parent_rel"
+            ],
+            "message": "StudyElement name does not have a one-to-one relationship with description",
+            "errors": [
+                {
+                    "value": {
+                        "parent_id": "StudyDesign_1",
+                        "name": "Wash Out",
+                        "parent_rel": "studyElements",
+                        "parent_entity": "StudyDesign",
+                        "id": "StudyElement_4",
+                        "description": "Wash Out Element"
+                    },
+                    "row": 4
+                },
+                {
+                    "value": {
+                        "parent_id": "StudyDesign_1",
+                        "name": "Follow Up",
+                        "parent_rel": "studyElements",
+                        "parent_entity": "StudyDesign",
+                        "id": "StudyElement_5",
+                        "description": "Follow Up Element"
+                    },
+                    "row": 5
+                },
+                {
+                    "value": {
+                        "parent_id": "StudyDesign_1",
+                        "name": "Follow Up",
+                        "parent_rel": "studyElements",
+                        "parent_entity": "StudyDesign",
+                        "id": "StudyElement_6",
+                        "description": "A Duplicate Name"
+                    },
+                    "row": 6
+                },
+                {
+                    "value": {
+                        "parent_id": "StudyDesign_1",
+                        "name": "A Duplicate Label",
+                        "parent_rel": "studyElements",
+                        "parent_entity": "StudyDesign",
+                        "id": "StudyElement_7",
+                        "description": "Wash Out Element"
+                    },
+                    "row": 7
+                }
+            ]
+        }
+    ]
+}

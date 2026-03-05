@@ -1,0 +1,46 @@
+{3 items
+"EX":[1 item
+0:{5 items
+"executionStatus":"skipped"
+"domain":"EX"
+"variables":[]0 items
+"message":NULL
+"errors":[]0 items
+}
+]
+"FA":[1 item
+0:{5 items
+"executionStatus":"success"
+"domain":"FA"
+"variables":[4 items
+0:"FAOBJ"
+1:"RELREC.__DECOD"
+2:"RELREC.__TERM"
+3:"RELREC.__TRT"
+]
+"message":"Related record is present in the parent domain dataset and FAOBJ is not in (__TERM, __TRT, __DECOD)"
+"errors":[1 item
+0:{4 items
+"value":{4 items
+"RELREC.__TRT":"DRUG Z"
+"FAOBJ":"INVALID VALUE FOR FAOBJ"
+"RELREC.__TERM":"Not in dataset"
+"RELREC.__DECOD":"Not in dataset"
+}
+"row":1
+"USUBJID":"ABC123-0201"
+"SEQ":1
+}
+]
+}
+]
+"RELREC":[1 item
+0:{5 items
+"executionStatus":"skipped"
+"domain":"RELREC"
+"variables":[]0 items
+"message":NULL
+"errors":[]0 items
+}
+]
+}

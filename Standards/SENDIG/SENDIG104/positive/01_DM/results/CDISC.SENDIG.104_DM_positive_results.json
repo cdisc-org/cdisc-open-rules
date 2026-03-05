@@ -1,0 +1,22 @@
+{
+  "DM": [
+    {
+      "executionStatus": "success",
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "variables": [],
+      "message": null,
+      "errors": []
+    }
+  ],
+  "TS": [
+    {
+      "executionStatus": "skipped",
+      "dataset": "ts.xpt",
+      "domain": "TS",
+      "variables": [],
+      "message": "Rule skipped - doesn't apply to domain for rule id=CDISC.SENDIG.104, dataset=TS",
+      "errors": []
+    }
+  ]
+}

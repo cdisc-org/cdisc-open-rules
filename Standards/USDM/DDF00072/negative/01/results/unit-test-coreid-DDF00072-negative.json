@@ -1,0 +1,42 @@
+{
+    "StudyCell": [
+        {
+            "executionStatus": "success",
+            "dataset": "StudyCell.xpt",
+            "domain": "StudyCell",
+            "variables": [
+                "epochId",
+                "id",
+                "parent_entity",
+                "parent_id",
+                "parent_id.StudyEpoch",
+                "parent_rel"
+            ],
+            "message": "The study cell references an epoch that is not defined within the same study design as the study cell.",
+            "errors": [
+                {
+                    "value": {
+                        "parent_id.StudyEpoch": "StudyDesign_1",
+                        "parent_rel": "studyCells",
+                        "parent_id": "StudyDesign_2",
+                        "epochId": "StudyEpoch_3",
+                        "id": "StudyCell_3",
+                        "parent_entity": "StudyDesign"
+                    },
+                    "dataset": "StudyCell.xpt",
+                    "row": 3
+                }
+            ]
+        }
+    ],
+    "StudyEpoch": [
+        {
+            "executionStatus": "success",
+            "dataset": "StudyEpoch.xpt",
+            "domain": null,
+            "variables": [],
+            "message": null,
+            "errors": []
+        }
+    ]
+}

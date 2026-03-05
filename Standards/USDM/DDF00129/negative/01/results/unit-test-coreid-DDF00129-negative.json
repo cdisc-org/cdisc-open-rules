@@ -1,0 +1,176 @@
+{
+    "StudyIntervention": [
+        {
+            "executionStatus": "success",
+            "dataset": "StudyIntervention.xpt",
+            "domain": "StudyIntervention",
+            "variables": [
+                "$code_for_decode_pref_term",
+                "$code_for_decode_value",
+                "$codelist_code",
+                "$codelist_extensible",
+                "$pref_term_for_code",
+                "$value_for_code",
+                "id",
+                "name",
+                "parent_entity",
+                "parent_id",
+                "parent_rel",
+                "productDesignation.code",
+                "productDesignation.codeSystem",
+                "productDesignation.codeSystemVersion",
+                "productDesignation.decode"
+            ],
+            "message": "The study intervention's product designation is not specified using the product designation (C207418) DDF codelist - codeSystem is not \"http://www.cdisc.org\", codeSystemVersion is not a valid terminology package date, the code or decode (either as preferred term or as submission value) is found in the codelist (case insensitive) but the corresponding decode or code does not match the codelist value (case sensitive), and/or neither code nor decode is found in the codelist.",
+            "errors": [
+                {
+                    "value": {
+                        "productDesignation.codeSystemVersion": "2024-09-27",
+                        "productDesignation.codeSystem": "http://www.cdisc.org",
+                        "parent_rel": "studyInterventions",
+                        "$codelist_code": "C207418",
+                        "$pref_term_for_code": "Investigational Medicinal Product",
+                        "$value_for_code": "IMP",
+                        "$code_for_decode_value": "C156473",
+                        "$codelist_extensible": false,
+                        "name": "LY",
+                        "parent_id": "StudyDesign_1",
+                        "$code_for_decode_pref_term": null,
+                        "parent_entity": "StudyDesign",
+                        "id": "StudyIntervention_1",
+                        "productDesignation.code": "C202579",
+                        "productDesignation.decode": "NIMP (AxMP)"
+                    },
+                    "dataset": "StudyIntervention.xpt",
+                    "row": 1
+                },
+                {
+                    "value": {
+                        "productDesignation.codeSystemVersion": "2025-09-26",
+                        "productDesignation.codeSystem": "http://www.cdisc.org",
+                        "parent_rel": "studyInterventions",
+                        "$codelist_code": "C207418",
+                        "$pref_term_for_code": "Auxiliary Medicinal Product",
+                        "$value_for_code": "NIMP",
+                        "$code_for_decode_value": null,
+                        "$codelist_extensible": false,
+                        "name": "LY2",
+                        "parent_id": "StudyDesign_1",
+                        "$code_for_decode_pref_term": null,
+                        "parent_entity": "StudyDesign",
+                        "id": "StudyIntervention_2",
+                        "productDesignation.code": "C156473",
+                        "productDesignation.decode": "NIMP (AxMP)"
+                    },
+                    "dataset": "StudyIntervention.xpt",
+                    "row": 2
+                },
+                {
+                    "value": {
+                        "productDesignation.codeSystemVersion": "2024-09-27",
+                        "productDesignation.codeSystem": "CDISC Terminology",
+                        "parent_rel": "studyInterventions",
+                        "$codelist_code": "C207418",
+                        "$pref_term_for_code": "Investigational Medicinal Product",
+                        "$value_for_code": "IMP",
+                        "$code_for_decode_value": null,
+                        "$codelist_extensible": false,
+                        "name": "LY3",
+                        "parent_id": "StudyDesign_1",
+                        "$code_for_decode_pref_term": "C202579",
+                        "parent_entity": "StudyDesign",
+                        "id": "StudyIntervention_3",
+                        "productDesignation.code": "C202579",
+                        "productDesignation.decode": "Investigational Medicinal Product"
+                    },
+                    "dataset": "StudyIntervention.xpt",
+                    "row": 3
+                },
+                {
+                    "value": {
+                        "productDesignation.codeSystemVersion": "20240927",
+                        "productDesignation.codeSystem": "http://www.cdisc.org",
+                        "parent_rel": "studyInterventions",
+                        "$codelist_code": "C207418",
+                        "$pref_term_for_code": null,
+                        "$value_for_code": null,
+                        "$code_for_decode_value": null,
+                        "$codelist_extensible": null,
+                        "name": "LY4",
+                        "parent_id": "StudyDesign_1",
+                        "$code_for_decode_pref_term": null,
+                        "parent_entity": "StudyDesign",
+                        "id": "StudyIntervention_4",
+                        "productDesignation.code": "C156473",
+                        "productDesignation.decode": "Auxiliary Medicinal Product"
+                    },
+                    "dataset": "StudyIntervention.xpt",
+                    "row": 4
+                },
+                {
+                    "value": {
+                        "productDesignation.codeSystemVersion": "2024-09-27",
+                        "productDesignation.codeSystem": "http://www.cdisc.org",
+                        "parent_rel": "studyInterventions",
+                        "$codelist_code": "C207418",
+                        "$pref_term_for_code": "Auxiliary Medicinal Product",
+                        "$value_for_code": "NIMP (AxMP)",
+                        "$code_for_decode_value": null,
+                        "$codelist_extensible": false,
+                        "name": "LY5",
+                        "parent_id": "StudyDesign_1",
+                        "$code_for_decode_pref_term": null,
+                        "parent_entity": "StudyDesign",
+                        "id": "StudyIntervention_5",
+                        "productDesignation.code": "C156473",
+                        "productDesignation.decode": "NIMP"
+                    },
+                    "dataset": "StudyIntervention.xpt",
+                    "row": 5
+                },
+                {
+                    "value": {
+                        "productDesignation.codeSystemVersion": "2024-09-27",
+                        "productDesignation.codeSystem": "http://www.cdisc.org",
+                        "parent_rel": "studyInterventions",
+                        "$codelist_code": "C207418",
+                        "$pref_term_for_code": null,
+                        "$value_for_code": null,
+                        "$code_for_decode_value": "C202579",
+                        "$codelist_extensible": false,
+                        "name": "LY6",
+                        "parent_id": "StudyDesign_1",
+                        "$code_for_decode_pref_term": null,
+                        "parent_entity": "StudyDesign",
+                        "id": "StudyIntervention_6",
+                        "productDesignation.code": "C202579xx",
+                        "productDesignation.decode": "IMP"
+                    },
+                    "dataset": "StudyIntervention.xpt",
+                    "row": 6
+                },
+                {
+                    "value": {
+                        "productDesignation.codeSystemVersion": "2024-09-27",
+                        "productDesignation.codeSystem": "http://www.cdisc.org",
+                        "parent_rel": "studyInterventions",
+                        "$codelist_code": "C207418",
+                        "$pref_term_for_code": null,
+                        "$value_for_code": null,
+                        "$code_for_decode_value": null,
+                        "$codelist_extensible": false,
+                        "name": "LY7",
+                        "parent_id": "StudyDesign_1",
+                        "$code_for_decode_pref_term": null,
+                        "parent_entity": "StudyDesign",
+                        "id": "StudyIntervention_7",
+                        "productDesignation.code": "C0016X",
+                        "productDesignation.decode": "Extension"
+                    },
+                    "dataset": "StudyIntervention.xpt",
+                    "row": 7
+                }
+            ]
+        }
+    ]
+}

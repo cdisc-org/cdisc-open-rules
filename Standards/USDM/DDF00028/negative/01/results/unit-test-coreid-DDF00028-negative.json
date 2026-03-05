@@ -1,0 +1,53 @@
+{
+    "ACTIVITY": [
+        {
+            "executionStatus": "success",
+            "dataset": "Activity.xpt",
+            "domain": "ACTIVITY",
+            "variables": [
+                "$activity_ids_for_study_design",
+                "id",
+                "name",
+                "nextId",
+                "parent_entity",
+                "parent_id",
+                "parent_rel",
+                "previousId"
+            ],
+            "message": "The activity references a previous or next activity that is not specified within the same study design.",
+            "errors": [
+                {
+                    "value": {
+                        "$activity_ids_for_study_design": [
+                            "Activity_1",
+                            "Activity_2"
+                        ],
+                        "name": "Inclusion/exclusion criteria",
+                        "parent_rel": "activities",
+                        "parent_entity": "StudyDesign",
+                        "parent_id": "StudyDesign_1",
+                        "previousId": "Activity_1",
+                        "nextId": "Activity_3",
+                        "id": "Activity_2"
+                    },
+                    "row": 3
+                },
+                {
+                    "value": {
+                        "$activity_ids_for_study_design": [
+                            "Activity_3"
+                        ],
+                        "name": "Patient number assigned",
+                        "parent_rel": "activities",
+                        "parent_entity": "StudyDesign",
+                        "parent_id": "StudyDesign_2",
+                        "previousId": "Activity_2",
+                        "nextId": null,
+                        "id": "Activity_3"
+                    },
+                    "row": 4
+                }
+            ]
+        }
+    ]
+}

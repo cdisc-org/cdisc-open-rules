@@ -1,0 +1,30 @@
+{
+  "DM": [
+    {
+      "executionStatus": "success",
+      "domain": "DM",
+      "variables": [
+        "ARM"
+      ],
+      "message": "ARM is not present in TA.ARM",
+      "errors": [
+        {
+          "value": {
+            "ARM": "Placebo1"
+          },
+          "row": 3,
+          "USUBJID": "CDISC004"
+        }
+      ]
+    }
+  ],
+  "TA": [
+    {
+      "executionStatus": "skipped",
+      "domain": "TA",
+      "variables": [],
+      "message": null,
+      "errors": []
+    }
+  ]
+}

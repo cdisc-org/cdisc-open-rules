@@ -1,0 +1,88 @@
+{
+    "GeographicScope": [
+        {
+            "executionStatus": "skipped",
+            "dataset": "GeographicScope.xpt",
+            "domain": "",
+            "variables": [],
+            "message": "Rule skipped - doesn't apply to entity for rule id=, dataset=GeographicScope",
+            "errors": []
+        }
+    ],
+    "GovernanceDate": [
+        {
+            "executionStatus": "skipped",
+            "dataset": "GovernanceDate.xpt",
+            "domain": "",
+            "variables": [],
+            "message": "Rule skipped - doesn't apply to entity for rule id=, dataset=GovernanceDate",
+            "errors": []
+        }
+    ],
+    "StudyDefinitionDocumentVersion": [
+        {
+            "executionStatus": "success",
+            "dataset": "StudyDefinitionDocumentVers.xpt",
+            "domain": "StudyDefinitionDocumentVersion",
+            "variables": [
+                "code.standardCode.code",
+                "code.standardCode.decode",
+                "dateValue",
+                "id",
+                "id.GovernanceDate",
+                "name",
+                "parent_entity",
+                "parent_id",
+                "parent_rel",
+                "type.code",
+                "type.code.GeographicScope",
+                "type.decode",
+                "type.decode.GeographicScope",
+                "version"
+            ],
+            "message": "The study definition document version has more than one governance date with the same type and geographic scope.",
+            "errors": [
+                {
+                    "value": {
+                        "version": "2",
+                        "code.standardCode.code": "150",
+                        "parent_rel": "versions",
+                        "type.code.GeographicScope": "C41129",
+                        "id.GovernanceDate": "GovernanceDate_2",
+                        "type.code": "C99903x1",
+                        "parent_entity": "StudyDefinitionDocument",
+                        "name": "P_APPROVE",
+                        "type.decode": "Protocol Effective Date",
+                        "parent_id": "StudyDefinitionDocument_1",
+                        "id": "StudyDefinitionDocumentVersion_1",
+                        "code.standardCode.decode": "Europe",
+                        "dateValue": "2006-07-01",
+                        "type.decode.GeographicScope": "Region"
+                    },
+                    "dataset": "StudyDefinitionDocumentVers.xpt",
+                    "row": 1
+                },
+                {
+                    "value": {
+                        "version": "2",
+                        "code.standardCode.code": "150",
+                        "parent_rel": "versions",
+                        "type.code.GeographicScope": "C41129",
+                        "id.GovernanceDate": "GovernanceDate_3",
+                        "type.code": "C99903x1",
+                        "parent_entity": "StudyDefinitionDocument",
+                        "name": "P_APPROVE2",
+                        "type.decode": "Protocol Effective Date",
+                        "parent_id": "StudyDefinitionDocument_1",
+                        "id": "StudyDefinitionDocumentVersion_1",
+                        "code.standardCode.decode": "EUROPE",
+                        "dateValue": "2006-07-02",
+                        "type.decode.GeographicScope": "Region"
+                    },
+                    "dataset": "StudyDefinitionDocumentVers.xpt",
+                    "row": 1
+                }
+            ]
+        }
+    ]
+}

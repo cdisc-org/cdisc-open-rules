@@ -1,0 +1,135 @@
+{
+    "ACTIVITY": [
+        {
+            "executionStatus": "success",
+            "dataset": "Activity.xpt",
+            "domain": "ACTIVITY",
+            "variables": [
+                "bcCategoryIds",
+                "bcSurrogateIds",
+                "biomedicalConceptIds",
+                "definedProcedures",
+                "id",
+                "name",
+                "parent_entity",
+                "parent_id",
+                "parent_rel"
+            ],
+            "message": "The activity does not refer to any procedure, biomedical concept, biomedical concept category or biomedical concept surrogate.",
+            "errors": [
+                {
+                    "value": {
+                        "parent_entity": "StudyDesign",
+                        "biomedicalConceptIds": false,
+                        "name": "Activity 1",
+                        "parent_id": "StudyDesign_1",
+                        "id": "Activity_1",
+                        "bcSurrogateIds": false,
+                        "parent_rel": "activities",
+                        "definedProcedures": false,
+                        "bcCategoryIds": "Not in dataset"
+                    },
+                    "row": 1
+                },
+                {
+                    "value": {
+                        "parent_entity": "StudyDesign",
+                        "biomedicalConceptIds": false,
+                        "name": "Activity 2",
+                        "parent_id": "StudyDesign_1",
+                        "id": "Activity_2",
+                        "bcSurrogateIds": null,
+                        "parent_rel": "activities",
+                        "definedProcedures": false,
+                        "bcCategoryIds": "Not in dataset"
+                    },
+                    "row": 2
+                },
+                {
+                    "value": {
+                        "parent_entity": "StudyDesign",
+                        "biomedicalConceptIds": null,
+                        "name": "Activity 3",
+                        "parent_id": "StudyDesign_1",
+                        "id": "Activity_3",
+                        "bcSurrogateIds": false,
+                        "parent_rel": "activities",
+                        "definedProcedures": false,
+                        "bcCategoryIds": "Not in dataset"
+                    },
+                    "row": 3
+                },
+                {
+                    "value": {
+                        "parent_entity": "StudyDesign",
+                        "biomedicalConceptIds": null,
+                        "name": "Activity 4",
+                        "parent_id": "StudyDesign_1",
+                        "id": "Activity_4",
+                        "bcSurrogateIds": null,
+                        "parent_rel": "activities",
+                        "definedProcedures": false,
+                        "bcCategoryIds": "Not in dataset"
+                    },
+                    "row": 4
+                },
+                {
+                    "value": {
+                        "parent_entity": "StudyDesign",
+                        "biomedicalConceptIds": false,
+                        "name": "Activity 5",
+                        "parent_id": "StudyDesign_1",
+                        "id": "Activity_5",
+                        "bcSurrogateIds": false,
+                        "parent_rel": "activities",
+                        "definedProcedures": null,
+                        "bcCategoryIds": "Not in dataset"
+                    },
+                    "row": 5
+                },
+                {
+                    "value": {
+                        "parent_entity": "StudyDesign",
+                        "biomedicalConceptIds": false,
+                        "name": "Activity 6",
+                        "parent_id": "StudyDesign_1",
+                        "id": "Activity_6",
+                        "bcSurrogateIds": null,
+                        "parent_rel": "activities",
+                        "definedProcedures": null,
+                        "bcCategoryIds": "Not in dataset"
+                    },
+                    "row": 6
+                },
+                {
+                    "value": {
+                        "parent_entity": "StudyDesign",
+                        "biomedicalConceptIds": null,
+                        "name": "Activity 7",
+                        "parent_id": "StudyDesign_1",
+                        "id": "Activity_7",
+                        "bcSurrogateIds": false,
+                        "parent_rel": "activities",
+                        "definedProcedures": null,
+                        "bcCategoryIds": "Not in dataset"
+                    },
+                    "row": 7
+                },
+                {
+                    "value": {
+                        "parent_entity": "StudyDesign",
+                        "biomedicalConceptIds": null,
+                        "name": "Activity 8",
+                        "parent_id": "StudyDesign_1",
+                        "id": "Activity_8",
+                        "bcSurrogateIds": null,
+                        "parent_rel": "activities",
+                        "definedProcedures": null,
+                        "bcCategoryIds": "Not in dataset"
+                    },
+                    "row": 8
+                }
+            ]
+        }
+    ]
+}

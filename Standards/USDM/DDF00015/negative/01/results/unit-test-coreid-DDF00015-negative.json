@@ -1,0 +1,239 @@
+{
+    "StudyVersion": [
+        {
+            "executionStatus": "success",
+            "dataset": "StudyVersion.xpt",
+            "domain": "StudyVersion",
+            "variables": [
+                "$code_for_decode_pref_term",
+                "$code_for_decode_value",
+                "$codelist_code",
+                "$codelist_extensible",
+                "$pref_term_for_code",
+                "$value_for_code",
+                "id",
+                "parent_entity",
+                "parent_id",
+                "parent_rel",
+                "studyPhase.standardCode.code",
+                "studyPhase.standardCode.codeSystem",
+                "studyPhase.standardCode.codeSystemVersion",
+                "studyPhase.standardCode.decode",
+                "versionIdentifier"
+            ],
+            "message": "The study version's study phase is not specified according to the extensible Trial Phase Response (C66737) SDTM codelist - codeSystem is not \"http://www.cdisc.org\", codeSystemVersion is not a valid terminology package date, and/or the code or decode (either as preferred term or as submission value) is found in the codelist (case insensitive) but the corresponding decode or code does not match the codelist value (case sensitive).",
+            "errors": [
+                {
+                    "value": {
+                        "$value_for_code": "PHASE II TRIAL",
+                        "$pref_term_for_code": "Phase II Trial",
+                        "$code_for_decode_pref_term": "C15601",
+                        "parent_rel": "versions",
+                        "studyPhase.standardCode.code": "C15601",
+                        "versionIdentifier": "2",
+                        "studyPhase.standardCode.decode": "PHASE II Trial",
+                        "$codelist_code": "C66737",
+                        "$code_for_decode_value": "C15601",
+                        "$codelist_extensible": true,
+                        "studyPhase.standardCode.codeSystem": "http://www.cdisc.org",
+                        "studyPhase.standardCode.codeSystemVersion": "2023-12-15",
+                        "parent_entity": "Study",
+                        "parent_id": "Study_1",
+                        "id": "StudyVersion_1"
+                    },
+                    "dataset": "StudyVersion.xpt",
+                    "row": 1
+                },
+                {
+                    "value": {
+                        "$value_for_code": "PHASE II TRIAL",
+                        "$pref_term_for_code": "Phase II Trial",
+                        "$code_for_decode_pref_term": "C15601",
+                        "parent_rel": "versions",
+                        "studyPhase.standardCode.code": "c15601",
+                        "versionIdentifier": "3",
+                        "studyPhase.standardCode.decode": "PHASE II TRIAL",
+                        "$codelist_code": "C66737",
+                        "$code_for_decode_value": "C15601",
+                        "$codelist_extensible": true,
+                        "studyPhase.standardCode.codeSystem": "http://www.cdisc.org",
+                        "studyPhase.standardCode.codeSystemVersion": "2023-12-15",
+                        "parent_entity": "Study",
+                        "parent_id": "Study_1",
+                        "id": "StudyVersion_2"
+                    },
+                    "dataset": "StudyVersion.xpt",
+                    "row": 2
+                },
+                {
+                    "value": {
+                        "$value_for_code": "NOT APPLICABLE",
+                        "$pref_term_for_code": "Not Applicable",
+                        "$code_for_decode_pref_term": "C199989",
+                        "parent_rel": "versions",
+                        "studyPhase.standardCode.code": "C48660",
+                        "versionIdentifier": "4",
+                        "studyPhase.standardCode.decode": "Phase Ib Trial",
+                        "$codelist_code": "C66737",
+                        "$code_for_decode_value": "C199989",
+                        "$codelist_extensible": true,
+                        "studyPhase.standardCode.codeSystem": "http://www.cdisc.org",
+                        "studyPhase.standardCode.codeSystemVersion": "2023-12-15",
+                        "parent_entity": "Study",
+                        "parent_id": "Study_1",
+                        "id": "StudyVersion_3"
+                    },
+                    "dataset": "StudyVersion.xpt",
+                    "row": 3
+                },
+                {
+                    "value": {
+                        "$value_for_code": "NOT APPLICABLE",
+                        "$pref_term_for_code": "Not Applicable",
+                        "$code_for_decode_pref_term": null,
+                        "parent_rel": "versions",
+                        "studyPhase.standardCode.code": "C48660",
+                        "versionIdentifier": "5",
+                        "studyPhase.standardCode.decode": "N/A",
+                        "$codelist_code": "C66737",
+                        "$code_for_decode_value": null,
+                        "$codelist_extensible": true,
+                        "studyPhase.standardCode.codeSystem": "http://www.cdisc.org",
+                        "studyPhase.standardCode.codeSystemVersion": "2023-12-15",
+                        "parent_entity": "Study",
+                        "parent_id": "Study_1",
+                        "id": "StudyVersion_4"
+                    },
+                    "dataset": "StudyVersion.xpt",
+                    "row": 4
+                },
+                {
+                    "value": {
+                        "$value_for_code": "PHASE I/II/III TRIAL",
+                        "$pref_term_for_code": "Phase I/II/III Trial",
+                        "$code_for_decode_pref_term": "C198366",
+                        "parent_rel": "versions",
+                        "studyPhase.standardCode.code": "C198366",
+                        "versionIdentifier": "6",
+                        "studyPhase.standardCode.decode": "Phase I/II/III Trial",
+                        "$codelist_code": "C66737",
+                        "$code_for_decode_value": "C198366",
+                        "$codelist_extensible": true,
+                        "studyPhase.standardCode.codeSystem": "CDISC",
+                        "studyPhase.standardCode.codeSystemVersion": "2023-12-15",
+                        "parent_entity": "Study",
+                        "parent_id": "Study_1",
+                        "id": "StudyVersion_5"
+                    },
+                    "dataset": "StudyVersion.xpt",
+                    "row": 5
+                },
+                {
+                    "value": {
+                        "$value_for_code": null,
+                        "$pref_term_for_code": null,
+                        "$code_for_decode_pref_term": null,
+                        "parent_rel": "versions",
+                        "studyPhase.standardCode.code": "C198366",
+                        "versionIdentifier": "7",
+                        "studyPhase.standardCode.decode": "PHASE I/II/III TRIAL",
+                        "$codelist_code": "C66737",
+                        "$code_for_decode_value": null,
+                        "$codelist_extensible": null,
+                        "studyPhase.standardCode.codeSystem": "http://www.cdisc.org",
+                        "studyPhase.standardCode.codeSystemVersion": "2023-DEC-15",
+                        "parent_entity": "Study",
+                        "parent_id": "Study_1",
+                        "id": "StudyVersion_6"
+                    },
+                    "dataset": "StudyVersion.xpt",
+                    "row": 6
+                },
+                {
+                    "value": {
+                        "$value_for_code": "PHASE IB TRIAL",
+                        "$pref_term_for_code": "Phase Ib Trial",
+                        "$code_for_decode_pref_term": null,
+                        "parent_rel": "versions",
+                        "studyPhase.standardCode.code": "C199989",
+                        "versionIdentifier": "8",
+                        "studyPhase.standardCode.decode": "Phase 1b Trial",
+                        "$codelist_code": "C66737",
+                        "$code_for_decode_value": null,
+                        "$codelist_extensible": true,
+                        "studyPhase.standardCode.codeSystem": "http://www.cdisc.org",
+                        "studyPhase.standardCode.codeSystemVersion": "2024-03-29",
+                        "parent_entity": "Study",
+                        "parent_id": "Study_1",
+                        "id": "StudyVersion_7"
+                    },
+                    "dataset": "StudyVersion.xpt",
+                    "row": 7
+                },
+                {
+                    "value": {
+                        "$value_for_code": null,
+                        "$pref_term_for_code": null,
+                        "$code_for_decode_pref_term": "C199989",
+                        "parent_rel": "versions",
+                        "studyPhase.standardCode.code": "C199989XX",
+                        "versionIdentifier": "9",
+                        "studyPhase.standardCode.decode": "PHASE IB TRIAL",
+                        "$codelist_code": "C66737",
+                        "$code_for_decode_value": "C199989",
+                        "$codelist_extensible": true,
+                        "studyPhase.standardCode.codeSystem": "http://www.cdisc.org",
+                        "studyPhase.standardCode.codeSystemVersion": "2024-03-29",
+                        "parent_entity": "Study",
+                        "parent_id": "Study_1",
+                        "id": "StudyVersion_8"
+                    },
+                    "dataset": "StudyVersion.xpt",
+                    "row": 8
+                },
+                {
+                    "value": {
+                        "$value_for_code": null,
+                        "$pref_term_for_code": null,
+                        "$code_for_decode_pref_term": "C15600",
+                        "parent_rel": "versions",
+                        "studyPhase.standardCode.code": "C00001x",
+                        "versionIdentifier": "10",
+                        "studyPhase.standardCode.decode": "Phase I Trial",
+                        "$codelist_code": "C66737",
+                        "$code_for_decode_value": "C15600",
+                        "$codelist_extensible": true,
+                        "studyPhase.standardCode.codeSystem": "http://www.cdisc.org",
+                        "studyPhase.standardCode.codeSystemVersion": "2024-03-29",
+                        "parent_entity": "Study",
+                        "parent_id": "Study_1",
+                        "id": "StudyVersion_9"
+                    },
+                    "dataset": "StudyVersion.xpt",
+                    "row": 9
+                },
+                {
+                    "value": {
+                        "$value_for_code": null,
+                        "$pref_term_for_code": null,
+                        "$code_for_decode_pref_term": "C15600",
+                        "parent_rel": "versions",
+                        "studyPhase.standardCode.code": "C00001x",
+                        "versionIdentifier": "11",
+                        "studyPhase.standardCode.decode": "PHASE I TRIAL",
+                        "$codelist_code": "C66737",
+                        "$code_for_decode_value": "C15600",
+                        "$codelist_extensible": true,
+                        "studyPhase.standardCode.codeSystem": "http://www.cdisc.org",
+                        "studyPhase.standardCode.codeSystemVersion": "2024-03-29",
+                        "parent_entity": "Study",
+                        "parent_id": "Study_1",
+                        "id": "StudyVersion_10"
+                    },
+                    "dataset": "StudyVersion.xpt",
+                    "row": 10
+                }
+            ]
+        }
+    ]
+}

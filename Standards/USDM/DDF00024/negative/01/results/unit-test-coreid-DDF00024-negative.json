@@ -1,0 +1,53 @@
+{
+    "STUDYEPOCH": [
+        {
+            "executionStatus": "success",
+            "dataset": "StudyEpoch.xpt",
+            "domain": "STUDYEPOCH",
+            "variables": [
+                "$epoch_ids_for_study_design",
+                "id",
+                "name",
+                "nextId",
+                "parent_entity",
+                "parent_id",
+                "parent_rel",
+                "previousId"
+            ],
+            "message": "The epoch references a previous or next epoch that is not specified within the same study design.",
+            "errors": [
+                {
+                    "value": {
+                        "name": "Treatment",
+                        "parent_rel": "epochs",
+                        "$epoch_ids_for_study_design": [
+                            "StudyEpoch_2",
+                            "StudyEpoch_1"
+                        ],
+                        "parent_entity": "StudyDesign",
+                        "parent_id": "StudyDesign_1",
+                        "previousId": "StudyEpoch_1",
+                        "nextId": "StudyEpoch_3",
+                        "id": "StudyEpoch_2"
+                    },
+                    "row": 2
+                },
+                {
+                    "value": {
+                        "name": "Follow-Up",
+                        "parent_rel": "epochs",
+                        "$epoch_ids_for_study_design": [
+                            "StudyEpoch_3"
+                        ],
+                        "parent_entity": "StudyDesign",
+                        "parent_id": "StudyDesign_2",
+                        "previousId": "StudyEpoch_2",
+                        "nextId": null,
+                        "id": "StudyEpoch_3"
+                    },
+                    "row": 3
+                }
+            ]
+        }
+    ]
+}

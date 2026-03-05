@@ -1,0 +1,375 @@
+[
+  {
+    "filename": "dm.xpt",
+    "label": "Demographics",
+    "domain": "DM",
+    "variables": [
+      {
+        "name": "STUDYID",
+        "label": "Study Identifier",
+        "type": "Char",
+        "length": 50
+      },
+      {
+        "name": "DOMAIN",
+        "label": "Domain Abbreviation",
+        "type": "Char",
+        "length": 50
+      },
+      {
+        "name": "USUBJID",
+        "label": "Unique Subject Identifier",
+        "type": "Char",
+        "length": 50
+      },
+      {
+        "name": "SUBJID",
+        "label": "Subject Identifier for the Study",
+        "type": "Char",
+        "length": 50
+      },
+      {
+        "name": "RFSTDTC",
+        "label": "Subject Reference Start Date/Time",
+        "type": "Char",
+        "length": 50
+      },
+      {
+        "name": "RFENDTC",
+        "label": "Subject Reference End Date/Time",
+        "type": "Char",
+        "length": 50
+      },
+      {
+        "name": "RFXSTDTC",
+        "label": "Date/Time of First Study Treatment",
+        "type": "Char",
+        "length": 50
+      },
+      {
+        "name": "RFXENDTC",
+        "label": "Date/Time of Last Study Treatment",
+        "type": "Char",
+        "length": 50
+      },
+      {
+        "name": "RFICDTC",
+        "label": "Date/Time of Informed Consent",
+        "type": "Char",
+        "length": 50
+      },
+      {
+        "name": "RFPENDTC",
+        "label": "Date/Time of End of Participation",
+        "type": "Char",
+        "length": 50
+      },
+      {
+        "name": "SITEID",
+        "label": "Study Site Identifier",
+        "type": "Char",
+        "length": 50
+      },
+      {
+        "name": "INVNAM",
+        "label": "Investigator Name",
+        "type": "Char",
+        "length": 50
+      },
+      {
+        "name": "BRTHDTC",
+        "label": "Date/Time of Birth",
+        "type": "Char",
+        "length": 50
+      },
+      {
+        "name": "AGE",
+        "label": "Age",
+        "type": "Num",
+        "length": 8
+      },
+      {
+        "name": "AGEU",
+        "label": "Age Units",
+        "type": "Char",
+        "length": 50
+      },
+      {
+        "name": "SEX",
+        "label": "Sex",
+        "type": "Char",
+        "length": 50
+      },
+      {
+        "name": "RACE",
+        "label": "Race",
+        "type": "Char",
+        "length": 50
+      },
+      {
+        "name": "ETHNIC",
+        "label": "Ethnicity",
+        "type": "Char",
+        "length": 50
+      },
+      {
+        "name": "SPECIES",
+        "label": "Species",
+        "type": "Char",
+        "length": 50
+      },
+      {
+        "name": "ARMCD",
+        "label": "Planned Arm Code",
+        "type": "Char",
+        "length": 50
+      },
+      {
+        "name": "ARM",
+        "label": "Description of Planned Arm",
+        "type": "Char",
+        "length": 50
+      },
+      {
+        "name": "ACTARMCD",
+        "label": "Actual Arm Code",
+        "type": "Char",
+        "length": 50
+      },
+      {
+        "name": "ACTARM",
+        "label": "Description of Actual Arm",
+        "type": "Char",
+        "length": 50
+      },
+      {
+        "name": "ARMNRS",
+        "label": "Reason Arm and/or Actual Arm is Null",
+        "type": "Char",
+        "length": 50
+      },
+      {
+        "name": "ACTARMUD",
+        "label": "Description of Unplanned Actual Arm",
+        "type": "Char",
+        "length": 50
+      },
+      {
+        "name": "COUNTRY",
+        "label": "Country",
+        "type": "Char",
+        "length": 50
+      }
+    ],
+    "records": {
+      "STUDYID": [
+        "ABC123",
+        "ABC123",
+        "ABC123",
+        "ABC123",
+        "ABC123",
+        "ABC123"
+      ],
+      "DOMAIN": [
+        "DM",
+        "DM",
+        "DM",
+        "DM",
+        "DM",
+        "DM"
+      ],
+      "USUBJID": [
+        "ABC12301001",
+        "ABC12301002",
+        "ABC12301003",
+        "ABC12301004",
+        "ABC12302001",
+        "ABC12302002"
+      ],
+      "SUBJID": [
+        "1001",
+        "1002",
+        "1003",
+        "1004",
+        "2001",
+        "2002"
+      ],
+      "RFSTDTC": [
+        "38729",
+        "38732",
+        "38733",
+        "",
+        "38750",
+        "38751"
+      ],
+      "RFENDTC": [
+        "38786",
+        "38776",
+        "38795",
+        "",
+        "38807",
+        "38812"
+      ],
+      "RFXSTDTC": [
+        "38729",
+        "38732",
+        "38733",
+        "",
+        "38750",
+        "38751"
+      ],
+      "RFXENDTC": [
+        "38786",
+        "38776",
+        "38795",
+        "",
+        "38807",
+        "38812"
+      ],
+      "RFICDTC": [
+        "38720",
+        "38721",
+        "38719",
+        "38724",
+        "38732",
+        "38727"
+      ],
+      "RFPENDTC": [
+        "38808",
+        "38802",
+        "38795",
+        "38725",
+        "38819",
+        "38832"
+      ],
+      "SITEID": [
+        "1",
+        "1",
+        "1",
+        "1",
+        "2",
+        "2"
+      ],
+      "INVNAM": [
+        "JOHNSON, M",
+        "JOHNSON, M",
+        "JOHNSON, M",
+        "JOHNSON, M",
+        "GONZALEZ, E",
+        "GONZALEZ, E"
+      ],
+      "BRTHDTC": [
+        "17880",
+        "20170",
+        "13899",
+        "15159",
+        "18437",
+        "20580"
+      ],
+      "AGE": [
+        57,
+        50,
+        68,
+        null,
+        55,
+        49
+      ],
+      "AGEU": [
+        "YEARS",
+        "YEARS",
+        "YEARS",
+        "",
+        "YEARS",
+        "YEARS"
+      ],
+      "SEX": [
+        "M",
+        "M",
+        "F",
+        "M",
+        "F",
+        "F"
+      ],
+      "RACE": [
+        "WHITE",
+        "WHITE",
+        "BLACK OR AFRICAN AMERICAN",
+        "ASIAN",
+        "AMERICAN INDIAN OR ALASKA NATIVE",
+        "NATIVE HAWAIIAN OR OTHER PACIFIC ISLANDERS"
+      ],
+      "ETHNIC": [
+        "HISPANIC OR LATINO",
+        "NOT HISPANIC OR LATINO",
+        "NOT HISPANIC OR LATINO",
+        "NOT HISPANIC OR LATINO",
+        "NOT HISPANIC OR LATINO",
+        "NOT HISPANIC OR LATINO"
+      ],
+      "SPECIES": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "ARMCD": [
+        "A",
+        "P",
+        "P",
+        "",
+        "P",
+        "A"
+      ],
+      "ARM": [
+        "Drug A",
+        "Placebo",
+        "Placebo",
+        "",
+        "Placebo",
+        "Drug A"
+      ],
+      "ACTARMCD": [
+        "A",
+        "P",
+        "P",
+        "",
+        "P",
+        "A"
+      ],
+      "ACTARM": [
+        "Drug A",
+        "Placebo",
+        "Placebo",
+        "",
+        "Placebo",
+        "Drug A"
+      ],
+      "ARMNRS": [
+        "",
+        "",
+        "",
+        "SCREEN FAILURE",
+        "",
+        ""
+      ],
+      "ACTARMUD": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "COUNTRY": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    }
+  }
+]

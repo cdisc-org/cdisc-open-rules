@@ -1,0 +1,53 @@
+{
+    "ENCOUNTER": [
+        {
+            "executionStatus": "success",
+            "dataset": "Encounter.xpt",
+            "domain": "ENCOUNTER",
+            "variables": [
+                "$encounter_ids_for_study_design",
+                "id",
+                "name",
+                "nextId",
+                "parent_entity",
+                "parent_id",
+                "parent_rel",
+                "previousId"
+            ],
+            "message": "The encounter references a previous or next encounter that is not specified within the same study design.",
+            "errors": [
+                {
+                    "value": {
+                        "name": "E3",
+                        "parent_rel": "encounters",
+                        "parent_entity": "StudyDesign",
+                        "parent_id": "StudyDesign_1",
+                        "previousId": "Encounter_1",
+                        "$encounter_ids_for_study_design": [
+                            "Encounter_2",
+                            "Encounter_1"
+                        ],
+                        "nextId": "Encounter_3",
+                        "id": "Encounter_2"
+                    },
+                    "row": 2
+                },
+                {
+                    "value": {
+                        "name": "E4",
+                        "parent_rel": "encounters",
+                        "parent_entity": "StudyDesign",
+                        "parent_id": "StudyDesign_2",
+                        "previousId": "Encounter_2",
+                        "$encounter_ids_for_study_design": [
+                            "Encounter_3"
+                        ],
+                        "nextId": null,
+                        "id": "Encounter_3"
+                    },
+                    "row": 3
+                }
+            ]
+        }
+    ]
+}

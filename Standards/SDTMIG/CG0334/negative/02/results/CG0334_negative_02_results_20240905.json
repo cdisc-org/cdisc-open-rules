@@ -1,0 +1,24 @@
+{
+    "SUPPDM": [
+        {
+            "executionStatus": "success",
+            "dataset": "suppdm.xpt",
+            "domain": "SUPPDM",
+            "variables": [
+                "$dataset_name",
+                "RDOMAIN"
+            ],
+            "message": "RDOMAIN does not match characters 5 and 6 of the dataset name",
+            "errors": [
+                {
+                    "value": {
+                        "$dataset_name": "SUPPDM",
+                        "RDOMAIN": "MH"
+                    },
+                    "row": 4,
+                    "USUBJID": "CDISC009"
+                }
+            ]
+        }
+    ]
+}

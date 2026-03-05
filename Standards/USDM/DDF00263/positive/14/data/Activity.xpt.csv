@@ -1,0 +1,6 @@
+parent_entity,parent_id,parent_rel,rel_type,id,name,label,description,notes,definedProcedures,bcCategoryIds,previousId,nextId,timelineId,instanceType
+InterventionalStudyDesign,InterventionalStudyDesign_1,activities,definition,Activity_244,A244,,,FALSE,True,True,,Activity_248,,Activity
+InterventionalStudyDesign,InterventionalStudyDesign_1,activities,definition,Activity_248,A248,,,FALSE,True,False,Activity_244,Activity_252,,Activity
+InterventionalStudyDesign,InterventionalStudyDesign_1,activities,definition,Activity_252,A252,,,FALSE,True,,Activity_248,Activity_500,,Activity
+InterventionalStudyDesign,InterventionalStudyDesign_1,activities,definition,Activity_500,A500,,,FALSE,False,True,Activity_252,Activity_756,,Activity
+InterventionalStudyDesign,InterventionalStudyDesign_1,activities,definition,Activity_756,A756,,,FALSE,,True,Activity_500,,,Activity

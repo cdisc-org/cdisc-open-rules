@@ -1,0 +1,26 @@
+{
+    "DS": [
+        {
+            "executionStatus": "success",
+            "domain": "DS",
+            "variables": [
+                "DSCAT",
+                "DSDECOD",
+                "EPOCH"
+            ],
+            "message": "EPOCH should be null if DSCAT is protocol milestone",
+            "errors": [
+                {
+                    "value": {
+                        "DSCAT": "PROTOCOL MILESTONE",
+                        "DSDECOD": "RANDOMIZATION CODE ALLOCATED",
+                        "EPOCH": "FIRST TREATMENT EPOCH"
+                    },
+                    "row": 3,
+                    "USUBJID": "CDISC010",
+                    "SEQ": 3
+                }
+            ]
+        }
+    ]
+}

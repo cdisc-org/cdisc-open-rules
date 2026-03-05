@@ -1,0 +1,55 @@
+{
+  "AE": [],
+  "CM": [],
+  "DM": [],
+  "DS": [],
+  "EC": [],
+  "IE": [],
+  "LB": [],
+  "MH": [],
+  "SV": [],
+  "TA": [
+    {
+      "domain": "TA",
+      "errors": [
+        {
+          "row": 0,
+          "value": {
+            "MIDSDTC": "2012-11-23"
+          }
+        },
+        {
+          "row": 1,
+          "value": {
+            "MIDSDTC": "2012-11-28"
+          }
+        },
+        {
+          "row": 2,
+          "value": {
+            "MIDSDTC": "2012-11-30"
+          }
+        },
+        {
+          "row": 3,
+          "value": {
+            "MIDSDTC": "2012-11-30"
+          }
+        },
+        {
+          "row": 0,
+          "value": {
+            "MIDS": "Not in dataset"
+          }
+        }
+      ],
+      "message": "MIDS variable is missing when MIDSDTC variable is present in a dataset.",
+      "variables": [
+        "MIDSDTC"
+      ]
+    }
+  ],
+  "TE": [],
+  "TI": [],
+  "VS": []
+}

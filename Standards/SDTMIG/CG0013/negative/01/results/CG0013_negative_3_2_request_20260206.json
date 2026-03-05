@@ -1,0 +1,1301 @@
+{
+    "rule": {
+        "Authorities": [
+            {
+                "Organization": "CDISC",
+                "Standards": [
+                    {
+                        "Name": "SDTMIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "IG v3.4",
+                                        "Section": "2.5",
+                                        "Cited_Guidance": "Sponsors may not add any variables other than those described in the preceding three bullets. . . . Standard variables must not be renamed or modified for novel usage."
+                                    },
+                                    {
+                                        "Document": "Model v2.0",
+                                        "Section": "Model Concepts and Terms --Variables",
+                                        "Cited_Guidance": "Each observation consists of a series of named variables."
+                                    },
+                                    {
+                                        "Document": "Model v2.0",
+                                        "Section": "The General Observation Classes",
+                                        "Cited_Guidance": "Domain-specific variables, a concept introduced in SDTM v1.5, are for use in a limited number of designated domains and will be identified in the appropriate implementation guide.]"
+                                    }
+                                ],
+                                "Origin": "SDTM and SDTMIG Conformance Rules",
+                                "Version": "2.0",
+                                "Rule_Identifier": {
+                                    "Id": "CG0013",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.4"
+                    },
+                    {
+                        "Name": "SDTMIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "IG v3.2|Model v1.4",
+                                        "Section": "IG v3.2[2.5]|Model v1.4[3.2.22]",
+                                        "Cited_Guidance": "IG v3.2[2.5][Sponsors may not add any other variables. . . . Standard variables must not be renamed or modified for novel usage. Using SDTM-specified standard variable names.]|Model v1.4[3.2.22][Each observation can be described by a series of named variables.]"
+                                    }
+                                ],
+                                "Origin": "SDTM and SDTMIG Conformance Rules",
+                                "Version": "2.0",
+                                "Rule_Identifier": {
+                                    "Id": "CG0013",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.2"
+                    },
+                    {
+                        "Name": "TIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "TIG 1.0",
+                                        "Item": "Table 2 Num 2",
+                                        "Section": "2.8.5",
+                                        "Cited_Guidance": "A dataset is created using a domain specification in this guide when the scientific nature or role of the data is within the scope of a domain. Domains are extended or custom domain specifications are only used when data are different in nature and are not in scope for domains in this guide."
+                                    }
+                                ],
+                                "Origin": "TIG Conformance Rules",
+                                "Version": "1.0",
+                                "Rule_Identifier": {
+                                    "Id": "TIG0298",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Substandard": "SDTM",
+                        "Version": "1.0"
+                    }
+                ]
+            },
+            {
+                "Organization": "CDISC",
+                "Standards": [
+                    {
+                        "Name": "SDTMIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "IG v3.2",
+                                        "Section": "3.2.2",
+                                        "Cited_Guidance": "Using SDTM-specified standard variable names"
+                                    }
+                                ],
+                                "Origin": "SDTM and SDTMIG Conformance Rules",
+                                "Version": "2.0",
+                                "Rule_Identifier": {
+                                    "Id": "CG0351",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.4"
+                    },
+                    {
+                        "Name": "SDTMIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "IG v3.2",
+                                        "Section": "3.2.2",
+                                        "Cited_Guidance": "Using SDTM-specified standard variable names"
+                                    }
+                                ],
+                                "Origin": "SDTM and SDTMIG Conformance Rules",
+                                "Version": "2.0",
+                                "Rule_Identifier": {
+                                    "Id": "CG0351",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.2"
+                    }
+                ]
+            }
+        ],
+        "Check": {
+            "all": [
+                {
+                    "name": "variable_name",
+                    "operator": "is_not_contained_by",
+                    "value": "$allowed_variables"
+                }
+            ]
+        },
+        "Core": {
+            "Id": "CORE-000550",
+            "Status": "Published",
+            "Version": "1"
+        },
+        "Description": "Raise an error when a variable is not an allowed variable for an Observation Class",
+        "Executability": "Partially Executable - Possible Underreporting",
+        "Operations": [
+            {
+                "id": "$allowed_variables",
+                "operator": "get_model_column_order"
+            }
+        ],
+        "Outcome": {
+            "Message": "Variables not listed in the Model List of Allowed Variables for Observation Class should be in SUPPQUAL."
+        },
+        "Scope": {
+            "Classes": {
+                "Include": [
+                    "ALL"
+                ]
+            },
+            "Domains": {
+                "Include": [
+                    "ALL"
+                ]
+            },
+            "Use_Case": "INDH, PROD"
+        },
+        "Sensitivity": "Record",
+        "Rule_Type": "Variable Metadata Check"
+    },
+    "datasets": [
+        {
+            "filename": "ae.xpt",
+            "label": "Adverse Events",
+            "domain": "AE",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "DOMAIN",
+                    "label": "Domain Abbreviation",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "USUBJID",
+                    "label": "Unique Subject Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AESEQ",
+                    "label": "Sequence Number",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "AETERM",
+                    "label": "Reported Term for the Adverse Event",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AEMODIFY",
+                    "label": "Modified Reported Term",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AEDECOD",
+                    "label": "Dictionary-Derived Term",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AEBODSYS",
+                    "label": "Body System or Organ Class",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AESEV",
+                    "label": "Severity/Intensity",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AESER",
+                    "label": "Serious Event",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AEACN",
+                    "label": "Action Taken with Study Treatment",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AEREL",
+                    "label": "Causality",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AEOUT",
+                    "label": "Outcome of Adverse Event",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AESCONG",
+                    "label": "Congenital Anomaly or Birth Defect",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AESDISAB",
+                    "label": "Persist or Signif Disability/Incapacity",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AESDTH",
+                    "label": "Results in Death",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AESHOSP",
+                    "label": "Requires or Prolongs Hospitalization",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AESLIFE",
+                    "label": "Is Life Threatening",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "EPOCH",
+                    "label": "Epoch",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AESTDTC",
+                    "label": "Start Date/Time of Adverse Event",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AEENDTC",
+                    "label": "End Date/Time of Adverse Event",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AESTDYXX",
+                    "label": "Study Day of Start of Adverse Event",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "AEENDY",
+                    "label": "Study Day of End of Adverse Event",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "AEENRF",
+                    "label": "End Relative to Reference Period",
+                    "type": "Char",
+                    "length": 50
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "ABC123",
+                    "ABC123",
+                    "ABC123"
+                ],
+                "DOMAIN": [
+                    "AE",
+                    "AE",
+                    "AE"
+                ],
+                "USUBJID": [
+                    "123101",
+                    "123101",
+                    "123101"
+                ],
+                "AESEQ": [
+                    1,
+                    2,
+                    3
+                ],
+                "AETERM": [
+                    "POUNDING HEADACHE",
+                    "BACK PAIN FOR 6 HOURS",
+                    "PULMONARY EMBOLISM"
+                ],
+                "AEMODIFY": [
+                    "HEADACHE",
+                    "BACK PAIN",
+                    ""
+                ],
+                "AEDECOD": [
+                    "Headache",
+                    "Back pain",
+                    "Pulmonary embolism"
+                ],
+                "AEBODSYS": [
+                    "Nervous system disorders",
+                    "Musculoskeletal and connective tissue disorders",
+                    "Vascular disorders"
+                ],
+                "AESEV": [
+                    "SEVERE",
+                    "MODERATE",
+                    "MODERATE"
+                ],
+                "AESER": [
+                    "N",
+                    "N",
+                    "Y"
+                ],
+                "AEACN": [
+                    "NOT APPLICABLE",
+                    "DOSE REDUCED",
+                    "DOSE REDUCED"
+                ],
+                "AEREL": [
+                    "DEFINITELY NOT RELATED",
+                    "PROBABLY RELATED",
+                    "PROBABLY NOT RELATED"
+                ],
+                "AEOUT": [
+                    "RECOVERED/RESOLVED",
+                    "RECOVERED/RESOLVED",
+                    "RECOVERING/RESOLVING"
+                ],
+                "AESCONG": [
+                    "",
+                    "",
+                    ""
+                ],
+                "AESDISAB": [
+                    "",
+                    "",
+                    ""
+                ],
+                "AESDTH": [
+                    "",
+                    "",
+                    ""
+                ],
+                "AESHOSP": [
+                    "",
+                    "",
+                    "Y"
+                ],
+                "AESLIFE": [
+                    "",
+                    "",
+                    "Y"
+                ],
+                "EPOCH": [
+                    "SCREENING",
+                    "TREATMENT",
+                    "TREATMENT"
+                ],
+                "AESTDTC": [
+                    "2005-10-12",
+                    "2005-10-13T13:05",
+                    "2005-10-21"
+                ],
+                "AEENDTC": [
+                    "2005-10-12",
+                    "2005-10-13T19:00",
+                    ""
+                ],
+                "AESTDYXX": [
+                    -1,
+                    1,
+                    9
+                ],
+                "AEENDY": [
+                    -1,
+                    1,
+                    null
+                ],
+                "AEENRF": [
+                    "",
+                    "",
+                    "AFTER"
+                ]
+            }
+        },
+        {
+            "filename": "dm.xpt",
+            "label": "Demographics",
+            "domain": "DM",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "DOMAIN",
+                    "label": "Domain Abbreviation",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "USUBJID",
+                    "label": "Unique Subject Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "ARMCDXX",
+                    "label": "Planned Arm Code",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "ARM",
+                    "label": "Description of Planned Arm",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "ACTARMCD",
+                    "label": "Actual Arm Code",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "ACTARM",
+                    "label": "Description of Actual Arm",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "ARMNRS",
+                    "label": "Reason Arm and/or Actual Arm is Null",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "ACTARMUD",
+                    "label": "Description of Unplanned Actual Arm",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "RFSTDTC",
+                    "label": "Subject Reference Start Date/Time",
+                    "type": "Char",
+                    "length": 10
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "ABC123",
+                    "ABC123",
+                    "ABC123",
+                    "ABC123",
+                    "ABC123"
+                ],
+                "DOMAIN": [
+                    "DM",
+                    "DM",
+                    "DM",
+                    "DM",
+                    "DM"
+                ],
+                "USUBJID": [
+                    "123101",
+                    "123102",
+                    "123103",
+                    "123104",
+                    "123105"
+                ],
+                "ARMCDXX": [
+                    "A",
+                    "B",
+                    "",
+                    "",
+                    "A"
+                ],
+                "ARM": [
+                    "Drug A",
+                    "Drug B",
+                    "",
+                    "",
+                    "Drug A"
+                ],
+                "ACTARMCD": [
+                    "A",
+                    "B",
+                    "",
+                    "",
+                    ""
+                ],
+                "ACTARM": [
+                    "Drug A",
+                    "Drug B",
+                    "",
+                    "",
+                    ""
+                ],
+                "ARMNRS": [
+                    "",
+                    "",
+                    "SCREEN FAILURE",
+                    "NOT ASSIGNED",
+                    "ASSIGNED, NOT TREATED"
+                ],
+                "ACTARMUD": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "RFSTDTC": [
+                    "2005-10-13T10:15",
+                    "",
+                    "",
+                    "",
+                    ""
+                ]
+            }
+        },
+        {
+            "filename": "eg.xpt",
+            "label": "ECG Test Results",
+            "domain": "EG",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "DOMAIN",
+                    "label": "Domain Abbreviation",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "USUBJID",
+                    "label": "Unique Subject Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "EGSEQ",
+                    "label": "Sequence Number",
+                    "type": "Num",
+                    "length": 3
+                },
+                {
+                    "name": "EGTESTCD",
+                    "label": "ECG Test or Examination Short Name",
+                    "type": "Char",
+                    "length": 8
+                },
+                {
+                    "name": "EGTEST",
+                    "label": "ECG Test or\r\nExamination\r\nName",
+                    "type": "Char",
+                    "length": 40
+                },
+                {
+                    "name": "EGBEATNO",
+                    "label": "ECG Beat Number",
+                    "type": "Num",
+                    "length": 2
+                },
+                {
+                    "name": "EGORRES",
+                    "label": "Result or\r\nFinding in\r\nOriginal Units",
+                    "type": "Char",
+                    "length": 20
+                },
+                {
+                    "name": "EGORRESU",
+                    "label": "Original Units",
+                    "type": "Char",
+                    "length": 5
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "ABC123",
+                    "ABC123",
+                    "ABC123",
+                    "ABC123"
+                ],
+                "DOMAIN": [
+                    "EG",
+                    "EG",
+                    "EG",
+                    "EG"
+                ],
+                "USUBJID": [
+                    "123101",
+                    "123101",
+                    "123101",
+                    "123101"
+                ],
+                "EGSEQ": [
+                    1,
+                    2,
+                    3,
+                    4
+                ],
+                "EGTESTCD": [
+                    "PRSB",
+                    "QRSSB",
+                    "PRSB",
+                    "RRSM"
+                ],
+                "EGTEST": [
+                    "PR Interval, Single Beat",
+                    "QRS\r\nDuration,\r\nSingle Beat",
+                    "PR Interval, Single Beat",
+                    "RR Interval, Single Interval"
+                ],
+                "EGBEATNO": [
+                    1,
+                    1,
+                    2,
+                    2
+                ],
+                "EGORRES": [
+                    "176",
+                    "97",
+                    "176",
+                    "679"
+                ],
+                "EGORRESU": [
+                    "msec",
+                    "msec",
+                    "msec",
+                    "msec"
+                ]
+            }
+        },
+        {
+            "filename": "lb.xpt",
+            "label": "Laboratory Test Results",
+            "domain": "LB",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 10
+                },
+                {
+                    "name": "DOMAIN",
+                    "label": "Domain Abbreviation",
+                    "type": "Char",
+                    "length": 2
+                },
+                {
+                    "name": "USUBJID",
+                    "label": "Unique Subject Identifier",
+                    "type": "Char",
+                    "length": 14
+                },
+                {
+                    "name": "LBSEQ",
+                    "label": "Sequence Number",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "LBSPIDXX",
+                    "label": "Sponsor-Defined Identifier",
+                    "type": "Char",
+                    "length": 4
+                },
+                {
+                    "name": "LBTESTCD",
+                    "label": "Lab Test or Examination Short Name",
+                    "type": "Char",
+                    "length": 8
+                },
+                {
+                    "name": "LBTEST",
+                    "label": "Lab Test or Examination Name",
+                    "type": "Char",
+                    "length": 25
+                },
+                {
+                    "name": "LBCAT",
+                    "label": "Category for Lab Test",
+                    "type": "Char",
+                    "length": 18
+                },
+                {
+                    "name": "LBORRES",
+                    "label": "Result or Finding in Original Units",
+                    "type": "Char",
+                    "length": 6
+                },
+                {
+                    "name": "LBORRESU",
+                    "label": "Original Units",
+                    "type": "Char",
+                    "length": 8
+                },
+                {
+                    "name": "LBORNRLO",
+                    "label": "Reference Range Lower Limit in Orig Unit",
+                    "type": "Char",
+                    "length": 1
+                },
+                {
+                    "name": "LBORNRHI",
+                    "label": "Reference Range Upper Limit in Orig Unit",
+                    "type": "Char",
+                    "length": 1
+                },
+                {
+                    "name": "LBSTRESC",
+                    "label": "Character Result/Finding in Std Format",
+                    "type": "Char",
+                    "length": 6
+                },
+                {
+                    "name": "LBSTRESN",
+                    "label": "Numeric Result/Finding in Standard Units",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "LBSTRESU",
+                    "label": "Standard Units",
+                    "type": "Char",
+                    "length": 8
+                },
+                {
+                    "name": "LBSTNRLO",
+                    "label": "Reference Range Lower Limit-Std Units",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "LBSTNRHI",
+                    "label": "Reference Range Upper Limit-Std Units",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "LBNRIND",
+                    "label": "Reference Range Indicator",
+                    "type": "Char",
+                    "length": 1
+                },
+                {
+                    "name": "LBLOINC",
+                    "label": "LOINC Code",
+                    "type": "Char",
+                    "length": 7
+                },
+                {
+                    "name": "LBSPEC",
+                    "label": "Specimen Type",
+                    "type": "Char",
+                    "length": 5
+                },
+                {
+                    "name": "LBBLFL",
+                    "label": "Baseline Flag",
+                    "type": "Char",
+                    "length": 1
+                },
+                {
+                    "name": "EPOCH",
+                    "label": "Epoch",
+                    "type": "Char",
+                    "length": 9
+                },
+                {
+                    "name": "VISITNUM",
+                    "label": "Visit Number",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "VISIT",
+                    "label": "Visit Name",
+                    "type": "Char",
+                    "length": 18
+                },
+                {
+                    "name": "LBDTC",
+                    "label": "Date/Time of Specimen Collection",
+                    "type": "Char",
+                    "length": 10
+                },
+                {
+                    "name": "LBDY",
+                    "label": "Study Day of Specimen Collection",
+                    "type": "Num",
+                    "length": 8
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "ABC123",
+                    "ABC123",
+                    "ABC123",
+                    "ABC123",
+                    "ABC123",
+                    "ABC123",
+                    "ABC123",
+                    "ABC123",
+                    "ABC123"
+                ],
+                "DOMAIN": [
+                    "LB",
+                    "LB",
+                    "LB",
+                    "LB",
+                    "LB",
+                    "LB",
+                    "LB",
+                    "LB",
+                    "LB"
+                ],
+                "USUBJID": [
+                    "123101",
+                    "123101",
+                    "123101",
+                    "123101",
+                    "123101",
+                    "123101",
+                    "123101",
+                    "123101",
+                    "123101"
+                ],
+                "LBSEQ": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9
+                ],
+                "LBSPIDXX": [
+                    "46",
+                    "37",
+                    "21",
+                    "11",
+                    "43",
+                    "34",
+                    "18",
+                    "8",
+                    "39"
+                ],
+                "LBTESTCD": [
+                    "ALB",
+                    "ALB",
+                    "ALB",
+                    "ALB",
+                    "ALT",
+                    "ALT",
+                    "ALT",
+                    "ALT",
+                    "CHOL"
+                ],
+                "LBTEST": [
+                    "Albumin",
+                    "Albumin",
+                    "Albumin",
+                    "Albumin",
+                    "Alanine Aminotransferase",
+                    "Alanine Aminotransferase",
+                    "Alanine Aminotransferase",
+                    "Alanine Aminotransferase",
+                    "Cholesterol"
+                ],
+                "LBCAT": [
+                    "BIOCHEMISTRY",
+                    "BIOCHEMISTRY",
+                    "BIOCHEMISTRY",
+                    "BIOCHEMISTRY",
+                    "BIOCHEMISTRY",
+                    "BIOCHEMISTRY",
+                    "BIOCHEMISTRY",
+                    "BIOCHEMISTRY",
+                    "LIPIDS"
+                ],
+                "LBORRES": [
+                    "4.46",
+                    "4.31",
+                    "3.62",
+                    "4.17",
+                    "14.99",
+                    "38.09",
+                    "12.98",
+                    "15.6",
+                    "5.25"
+                ],
+                "LBORRESU": [
+                    "g/dL",
+                    "g/dL",
+                    "g/dL",
+                    "g/dL",
+                    "U/L",
+                    "U/L",
+                    "U/L",
+                    "U/L",
+                    "mmol/L"
+                ],
+                "LBORNRLO": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "LBORNRHI": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "LBSTRESC": [
+                    "4.46",
+                    "4.31",
+                    "3.62",
+                    "4.17",
+                    "14.99",
+                    "38.09",
+                    "12.98",
+                    "15.6",
+                    "5.25"
+                ],
+                "LBSTRESN": [
+                    4.46,
+                    4.31,
+                    3.62,
+                    4.17,
+                    14.99,
+                    38.09,
+                    12.98,
+                    15.6,
+                    5.25
+                ],
+                "LBSTRESU": [
+                    "g/dL",
+                    "g/dL",
+                    "g/dL",
+                    "g/dL",
+                    "U/L",
+                    "U/L",
+                    "U/L",
+                    "U/L",
+                    "mmol/L"
+                ],
+                "LBSTNRLO": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                "LBSTNRHI": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                "LBNRIND": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "LBLOINC": [
+                    "1751-7",
+                    "1751-7",
+                    "1751-7",
+                    "1751-7",
+                    "1742-6",
+                    "1742-6",
+                    "1742-6",
+                    "1742-6",
+                    "2093-3"
+                ],
+                "LBSPEC": [
+                    "SERUM",
+                    "SERUM",
+                    "SERUM",
+                    "SERUM",
+                    "SERUM",
+                    "SERUM",
+                    "SERUM",
+                    "SERUM",
+                    "SERUM"
+                ],
+                "LBBLFL": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "EPOCH": [
+                    "SCREENING",
+                    "TREATMENT",
+                    "TREATMENT",
+                    "FOLLOW-UP",
+                    "SCREENING",
+                    "TREATMENT",
+                    "TREATMENT",
+                    "FOLLOW-UP",
+                    "SCREENING"
+                ],
+                "VISITNUM": [
+                    100,
+                    200,
+                    2200,
+                    2900,
+                    100,
+                    200,
+                    2200,
+                    2900,
+                    100
+                ],
+                "VISIT": [
+                    "VISIT 1 (WEEK -2)",
+                    "VISIT 2 (WEEK 0)",
+                    "VISIT 22 (WEEK 20)",
+                    "END OF TRIAL",
+                    "VISIT 1 (WEEK -2)",
+                    "VISIT 2 (WEEK 0)",
+                    "VISIT 22 (WEEK 20)",
+                    "END OF TRIAL",
+                    "VISIT 1 (WEEK -2)"
+                ],
+                "LBDTC": [
+                    "38623",
+                    "38638",
+                    "38778",
+                    "38850",
+                    "38623",
+                    "38638",
+                    "38778",
+                    "38850",
+                    "38623"
+                ],
+                "LBDY": [
+                    -15,
+                    1,
+                    141,
+                    213,
+                    -15,
+                    1,
+                    141,
+                    213,
+                    -15
+                ]
+            }
+        },
+        {
+            "filename": "apeg.xpt",
+            "label": "Associated Persons ECG Results",
+            "domain": "APEG",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "DOMAIN",
+                    "label": "Domain Abbreviation",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "APID",
+                    "label": "Associated Persons Identifier ",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "EGSEQ",
+                    "label": "Sequence Number",
+                    "type": "Num",
+                    "length": 3
+                },
+                {
+                    "name": "RSUBJID",
+                    "label": "Related Subject",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "SREL",
+                    "label": "Subject, Device or Study Relationship",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "EGTESTCD",
+                    "label": "ECG Test or Examination Short Name",
+                    "type": "Char",
+                    "length": 8
+                },
+                {
+                    "name": "EGTEST",
+                    "label": "ECG Test or\r\nExamination\r\nName",
+                    "type": "Char",
+                    "length": 40
+                },
+                {
+                    "name": "EGBEATNO",
+                    "label": "ECG Beat Number",
+                    "type": "Num",
+                    "length": 2
+                },
+                {
+                    "name": "EGORRES",
+                    "label": "Result or\r\nFinding in\r\nOriginal Units",
+                    "type": "Char",
+                    "length": 20
+                },
+                {
+                    "name": "EGORRESU",
+                    "label": "Original Units",
+                    "type": "Char",
+                    "length": 5
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "ABC123",
+                    "ABC123",
+                    "ABC123",
+                    "ABC123"
+                ],
+                "DOMAIN": [
+                    "APEG",
+                    "APEG",
+                    "APEG",
+                    "APEG"
+                ],
+                "APID": [
+                    "AP-123101",
+                    "AP-123101",
+                    "AP-123101",
+                    "AP-123101"
+                ],
+                "EGSEQ": [
+                    1,
+                    2,
+                    3,
+                    4
+                ],
+                "RSUBJID": [
+                    "123101",
+                    "123101",
+                    "123101",
+                    "123101"
+                ],
+                "SREL": [
+                    "FATHER, BIOLOGICAL",
+                    "FATHER, BIOLOGICAL",
+                    "FATHER, BIOLOGICAL",
+                    "FATHER, BIOLOGICAL"
+                ],
+                "EGTESTCD": [
+                    "PRSB",
+                    "QRSSB",
+                    "PRSB",
+                    "RRSM"
+                ],
+                "EGTEST": [
+                    "PR Interval, Single Beat",
+                    "QRS\r\nDuration,\r\nSingle Beat",
+                    "PR Interval, Single Beat",
+                    "RR Interval, Single Interval"
+                ],
+                "EGBEATNO": [
+                    1,
+                    1,
+                    2,
+                    2
+                ],
+                "EGORRES": [
+                    "176",
+                    "97",
+                    "176",
+                    "679"
+                ],
+                "EGORRESU": [
+                    "msec",
+                    "msec",
+                    "msec",
+                    "msec"
+                ]
+            }
+        }
+    ],
+    "standard": {
+        "product": "sdtmig",
+        "version": "3-2"
+    },
+    "codelists": []
+}

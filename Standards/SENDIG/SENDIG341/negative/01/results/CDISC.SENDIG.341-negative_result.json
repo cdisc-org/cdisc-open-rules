@@ -1,0 +1,28 @@
+{
+  "TS": [
+    {
+      "executionStatus": "success",
+      "domain": "TS",
+      "variables": [
+        "TSPARMCD"
+      ],
+      "message": "Only one record with TSPARMCD=SNDIGVER is allowed",
+      "errors": [
+        {
+          "value": {
+            "TSPARMCD": "SNDIGVER"
+          },
+          "row": 59,
+          "seq": 59
+        },
+        {
+          "value": {
+            "TSPARMCD": "SNDIGVER"
+          },
+          "row": 60,
+          "seq": 60
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+parent_entity,parent_id,parent_rel,rel_type,id,name,description,label,defaultConditionId,epochId,timelineId,timelineExitId,instanceType,conditionAssignments
+ScheduleTimeline,ScheduleTimeline_1,instances,definition,ScheduledDecisionInstance_1,Meet requirements for WK6 or end,,,ScheduledActivityInstance_27,,,,ScheduledDecisionInstance,ConditionAssignment_1
+ScheduleTimeline,ScheduleTimeline_1,entryId,reference,ScheduledDecisionInstance_1,Meet requirements for WK6 or end,,,ScheduledActivityInstance_27,,,,ScheduledDecisionInstance,ConditionAssignment_1
+Timing,Timing_6,relativeToScheduledInstanceId,reference,ScheduledDecisionInstance_1,Meet requirements for WK6 or end,,,ScheduledActivityInstance_27,,,,ScheduledDecisionInstance,ConditionAssignment_1

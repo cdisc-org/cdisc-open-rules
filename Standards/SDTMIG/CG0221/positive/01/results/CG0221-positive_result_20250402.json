@@ -1,0 +1,28 @@
+{2 items
+"AE":[1 item
+0:{6 items
+"executionStatus":"success"
+"dataset":"ae.xpt"
+"domain":"AE"
+"variables":[]0 items
+"message":NULL
+"errors":[]0 items
+}
+]
+"DM":[1 item
+0:{6 items
+"executionStatus":"execution_error"
+"dataset":"dm.xpt"
+"domain":"DM"
+"variables":[]0 items
+"message":"rule execution error"
+"errors":[1 item
+0:{3 items
+"dataset":"dm.xpt"
+"error":"Column not found in data"
+"message":"DMSTDY, DMSTDTC"
+}
+]
+}
+]
+}

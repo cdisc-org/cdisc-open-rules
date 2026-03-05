@@ -1,0 +1,258 @@
+{
+    "rule": {
+        "Authorities": [
+            {
+                "Organization": "CDISC",
+                "Standards": [
+                    {
+                        "Name": "SDTMIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "IG v3.4",
+                                        "Item": "7",
+                                        "Section": "4.1.7",
+                                        "Cited_Guidance": "Supplemental Qualifier datasets for split domains would also be split. The nomenclature would include the additional one-to-two characters used to identify the split dataset (e.g., SUPPQS36, SUPPFACM). The value of RDOMAIN in the SUPP-- datasets would be the two-character domain code (e.g., QS, FA)."
+                                    }
+                                ],
+                                "Origin": "SDTM and SDTMIG Conformance Rules",
+                                "Version": "2.0",
+                                "Rule_Identifier": {
+                                    "Id": "CG0334",
+                                    "Version": "2"
+                                }
+                            }
+                        ],
+                        "Version": "3.4"
+                    },
+                    {
+                        "Name": "SDTMIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "IG v3.2",
+                                        "Item": "7",
+                                        "Section": "4.1.1.7",
+                                        "Cited_Guidance": "Supplemental Qualifier datasets for split domains would also be split. The nomenclature would include the additional one-to-two characters used to identify the split dataset (e.g., SUPPQS36; SUPPFACM). The value of RDOMAIN in the SUPP-- datasets would be the two-character domain code (e.g., QS; FA)."
+                                    }
+                                ],
+                                "Origin": "SDTM and SDTMIG Conformance Rules",
+                                "Version": "2.0",
+                                "Rule_Identifier": {
+                                    "Id": "CG0334",
+                                    "Version": "2"
+                                }
+                            }
+                        ],
+                        "Version": "3.2"
+                    },
+                    {
+                        "Name": "SDTMIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "IG v3.3",
+                                        "Item": "7",
+                                        "Section": "4.1.7",
+                                        "Cited_Guidance": "Supplemental Qualifier datasets for split domains would also be split. The nomenclature would include the additional one-to-two characters used to identify the split dataset (e.g., SUPPQS36; SUPPFACM). The value of RDOMAIN in the SUPP-- datasets would be the two-character domain code (e.g., QS; FA)."
+                                    }
+                                ],
+                                "Origin": "SDTM and SDTMIG Conformance Rules",
+                                "Version": "2.0",
+                                "Rule_Identifier": {
+                                    "Id": "CG0334",
+                                    "Version": "2"
+                                }
+                            }
+                        ],
+                        "Version": "3.3"
+                    }
+                ]
+            }
+        ],
+        "Check": {
+            "all": [
+                {
+                    "name": "RDOMAIN",
+                    "operator": "does_not_equal_string_part",
+                    "regex": ".{4}(..).*",
+                    "value": "$dataset_name"
+                }
+            ]
+        },
+        "Core": {
+            "Id": "CDISC.SDTMIG.CG0334",
+            "Status": "Draft",
+            "Version": "1"
+        },
+        "Description": "Trigger error when RDOMAIN does not match characters 5 and 6 of the Supplementary dataset name",
+        "Executability": "Fully Executable",
+        "Operations": [
+            {
+                "id": "$dataset_name",
+                "name": "dataset_name",
+                "operator": "extract_metadata"
+            }
+        ],
+        "Outcome": {
+            "Message": "RDOMAIN does not match characters 5 and 6 of the dataset name",
+            "Output_Variables": [
+                "$dataset_name",
+                "RDOMAIN"
+            ]
+        },
+        "Scope": {
+            "Classes": {
+                "Include": [
+                    "ALL"
+                ]
+            },
+            "Domains": {
+                "Include": [
+                    "SUPP--"
+                ]
+            }
+        },
+        "Sensitivity": "Record",
+        "Rule_Type": "Record Data"
+    },
+    "datasets": [
+        {
+            "filename": "supplbch.xpt",
+            "label": "Supplemental Qualifiers for LBCH",
+            "domain": "SUPPLBCH",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 12
+                },
+                {
+                    "name": "RDOMAIN",
+                    "label": "Related Domain Abbreviation",
+                    "type": "Char",
+                    "length": 6
+                },
+                {
+                    "name": "USUBJID",
+                    "label": "Unique Subject Identifier",
+                    "type": "Char",
+                    "length": 8
+                },
+                {
+                    "name": "IDVAR",
+                    "label": "Identifying Variable",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "IDVARVAL",
+                    "label": "Identifying Variable Value",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "QNAM",
+                    "label": "Qualifier Variable Name",
+                    "type": "Char",
+                    "length": 5
+                },
+                {
+                    "name": "QLABEL",
+                    "label": "Qualifier Variable Label",
+                    "type": "Char",
+                    "length": 5
+                },
+                {
+                    "name": "QVAL",
+                    "label": "Data Value",
+                    "type": "Char",
+                    "length": 41
+                },
+                {
+                    "name": "QORIG",
+                    "label": "Origin",
+                    "type": "Char",
+                    "length": 13
+                },
+                {
+                    "name": "QEVAL",
+                    "label": "Evaluator",
+                    "type": "Char",
+                    "length": 200
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT02"
+                ],
+                "RDOMAIN": [
+                    "LB",
+                    "LB",
+                    "LB",
+                    "LB"
+                ],
+                "USUBJID": [
+                    "CDISC008",
+                    "CDISC008",
+                    "CDISC008",
+                    "CDISC009"
+                ],
+                "IDVAR": [
+                    "LBSEQ",
+                    "LBSEQ",
+                    "LBSEQ",
+                    "LBSEQ"
+                ],
+                "IDVARVAL": [
+                    "4",
+                    "6",
+                    "1",
+                    "2"
+                ],
+                "QNAM": [
+                    "LBCLSIG",
+                    "LBCLSIG",
+                    "LBCLSIG",
+                    "LBCLSIG"
+                ],
+                "QLABEL": [
+                    "Clinically Significant",
+                    "Clinically Significant",
+                    "Clinically Significant",
+                    "Clinically Significant"
+                ],
+                "QVAL": [
+                    "Y",
+                    "N",
+                    "Y",
+                    "N"
+                ],
+                "QORIG": [
+                    "CRF",
+                    "CRF",
+                    "CRF",
+                    "CRF"
+                ],
+                "QEVAL": [
+                    "",
+                    "",
+                    "",
+                    ""
+                ]
+            }
+        }
+    ],
+    "standard": {
+        "product": "sdtmig",
+        "version": "3-3"
+    },
+    "codelists": []
+}

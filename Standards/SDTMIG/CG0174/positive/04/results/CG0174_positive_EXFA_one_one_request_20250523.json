@@ -1,0 +1,611 @@
+{
+    "rule": {
+        "Authorities": [
+            {
+                "Organization": "CDISC",
+                "Standards": [
+                    {
+                        "Name": "SDTMIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "IG v3.4",
+                                        "Section": "6.4.3",
+                                        "Cited_Guidance": "If an FA record does have a parent record, the value in FAOBJ should match the value in --TERM or --TRT, unless the parent domain is dictionary coded or subject to controlled terminology, in which case FAOBJ should match the value in --DECOD."
+                                    }
+                                ],
+                                "Origin": "SDTM and SDTMIG Conformance Rules",
+                                "Version": "2.0",
+                                "Rule_Identifier": {
+                                    "Id": "CG0174",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.4"
+                    },
+                    {
+                        "Name": "SDTMIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "IG v3.3",
+                                        "Section": "6.4.3",
+                                        "Cited_Guidance": "In general, the value in FAOBJ should match the value in --TERM or --TRT, unless the parent domain is dictionary coded or subject to controlled terminology, in which case FAOBJ should then match the value in --DECOD."
+                                    }
+                                ],
+                                "Origin": "SDTM and SDTMIG Conformance Rules",
+                                "Version": "2.0",
+                                "Rule_Identifier": {
+                                    "Id": "CG0174",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.3"
+                    },
+                    {
+                        "Name": "SDTMIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "IG v3.2",
+                                        "Section": "6.4.3",
+                                        "Cited_Guidance": "In general, the value in FAOBJ should match the value in --TERM or --TRT, unless the parent domain is dictionary coded or subject to controlled terminology, in which case FAOBJ should then match the value in --DECOD."
+                                    }
+                                ],
+                                "Origin": "SDTM and SDTMIG Conformance Rules",
+                                "Version": "2.0",
+                                "Rule_Identifier": {
+                                    "Id": "CG0174",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.2"
+                    },
+                    {
+                        "Name": "TIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "TIG 1.0",
+                                        "Section": "2.8.4",
+                                        "Cited_Guidance": "A record in FA may or may not have a parent record in an events or interventions domain. If an FA record does have a parent record, the value in FAOBJ should match the value in --TERM or --TRT, unless the parent domain is dictionary coded or subject to controlled terminology. In such cases, the value represented in FAOBJ will match the value represented in --DECOD."
+                                    }
+                                ],
+                                "Origin": "TIG Conformance Rules",
+                                "Version": "1.0",
+                                "Rule_Identifier": {
+                                    "Id": "TIG0403",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Substandard": "SDTM",
+                        "Version": "1.0"
+                    }
+                ]
+            }
+        ],
+        "Check": {
+            "all": [
+                {
+                    "name": "FAOBJ",
+                    "operator": "not_equal_to",
+                    "value": "RELREC.**TERM"
+                },
+                {
+                    "name": "FAOBJ",
+                    "operator": "not_equal_to",
+                    "value": "RELREC.**TRT"
+                },
+                {
+                    "name": "FAOBJ",
+                    "operator": "not_equal_to_case_insensitive",
+                    "value": "RELREC.**DECOD"
+                }
+            ]
+        },
+        "Core": {
+            "Id": "CDISC.SDTMIG.CG0174",
+            "Status": "Draft",
+            "Version": "1"
+        },
+        "Description": "Raise an error when a related record is present in the parent domain dataset but FAOBJ is not equal to the --TERM, --TRT or --DECOD of the parent domain.",
+        "Executability": "Fully Executable",
+        "Outcome": {
+            "Message": "Related record is present in the parent domain dataset but FAOBJ is not equal to the \"TERM\", \"TRT\" or \"DECOD\" of the parent domain.",
+            "Output_Variables": [
+                "FAOBJ",
+                "RELREC.**TERM",
+                "RELREC.**TRT",
+                "RELREC.**DECOD"
+            ]
+        },
+        "Scope": {
+            "Classes": {
+                "Include": [
+                    "FINDINGS ABOUT"
+                ]
+            },
+            "Domains": {
+                "Include": [
+                    "FA"
+                ]
+            },
+            "Use_Case": "INDH"
+        },
+        "Sensitivity": "Record",
+        "Match_Datasets": [
+            {
+                "Name": "RELREC"
+            }
+        ],
+        "Rule_Type": "Record Data"
+    },
+    "datasets": [
+        {
+            "filename": "ex.xpt",
+            "label": "Exposure",
+            "domain": "EX",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 6
+                },
+                {
+                    "name": "DOMAIN",
+                    "label": "Domain Abbreviation",
+                    "type": "Char",
+                    "length": 2
+                },
+                {
+                    "name": "USUBJID",
+                    "label": "Unique Subject Identifier",
+                    "type": "Char",
+                    "length": 20
+                },
+                {
+                    "name": "EXSEQ",
+                    "label": "Sequence Number",
+                    "type": "Num",
+                    "length": 1
+                },
+                {
+                    "name": "EXLNKID",
+                    "label": "Link ID",
+                    "type": "Char",
+                    "length": 20
+                },
+                {
+                    "name": "EXLNKGRP",
+                    "label": "Link Group ID",
+                    "type": "Char",
+                    "length": 2
+                },
+                {
+                    "name": "EXTRT",
+                    "label": "Name of Treatment",
+                    "type": "Char",
+                    "length": 10
+                },
+                {
+                    "name": "EXDOSE",
+                    "label": "Dose",
+                    "type": "Num",
+                    "length": 4
+                },
+                {
+                    "name": "EXDOSU",
+                    "label": "Dose Units",
+                    "type": "Char",
+                    "length": 5
+                },
+                {
+                    "name": "EXDOSFRM",
+                    "label": "Dose Form",
+                    "type": "Char",
+                    "length": 20
+                },
+                {
+                    "name": "EXDOSFRQ",
+                    "label": "Dosing Frequency per Interval",
+                    "type": "Char",
+                    "length": 20
+                },
+                {
+                    "name": "EXROUTE",
+                    "label": "Route of Administration",
+                    "type": "Char",
+                    "length": 20
+                },
+                {
+                    "name": "EXADJ",
+                    "label": "Reason for Dose Adjustment",
+                    "length": 100
+                },
+                {
+                    "name": "VISITNUM",
+                    "label": "Visit Number",
+                    "type": "Num",
+                    "length": 2
+                },
+                {
+                    "name": "VISIT",
+                    "label": "Visit Name",
+                    "type": "Char",
+                    "length": 2
+                },
+                {
+                    "name": "EPOCH",
+                    "label": "Epoch",
+                    "type": "Char",
+                    "length": 20
+                },
+                {
+                    "name": "EXSTDTC",
+                    "label": "Start Date/Time of Treatment",
+                    "type": "Char",
+                    "length": 20
+                },
+                {
+                    "name": "EXENDTC",
+                    "label": "End Date/Time of Treatment",
+                    "length": 20
+                },
+                {
+                    "name": "EXSTDY",
+                    "label": "Study Day of Start of Treatment",
+                    "type": "Num",
+                    "length": 2
+                },
+                {
+                    "name": "EXENDY",
+                    "label": "Study Day of End of Treatment",
+                    "type": "Num",
+                    "length": 2
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "ABC123"
+                ],
+                "DOMAIN": [
+                    "EX"
+                ],
+                "USUBJID": [
+                    "ABC123-0201"
+                ],
+                "EXSEQ": [
+                    1
+                ],
+                "EXLNKID": [
+                    "20090213T1000"
+                ],
+                "EXLNKGRP": [
+                    "V1"
+                ],
+                "EXTRT": [
+                    "DRUG Z"
+                ],
+                "EXDOSE": [
+                    9.9
+                ],
+                "EXDOSU": [
+                    "mg/kg"
+                ],
+                "EXDOSFRM": [
+                    "SOLUTION"
+                ],
+                "EXDOSFRQ": [
+                    "CONTINUOUS"
+                ],
+                "EXROUTE": [
+                    "INTRAVENOUS"
+                ],
+                "EXADJ": [
+                    null
+                ],
+                "VISITNUM": [
+                    1
+                ],
+                "VISIT": [
+                    "VISIT 1"
+                ],
+                "EPOCH": [
+                    "TREATMENT"
+                ],
+                "EXSTDTC": [
+                    "2009-02-13T10:00"
+                ],
+                "EXENDTC": [
+                    "2009-02-13T10:00"
+                ],
+                "EXSTDY": [
+                    1
+                ],
+                "EXENDY": [
+                    1
+                ]
+            }
+        },
+        {
+            "filename": "fa.xpt",
+            "label": "Findings About",
+            "domain": "FA",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "DOMAIN",
+                    "label": "Domain Abbreviation",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "USUBJID",
+                    "label": "Unique Subject Identifier",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "FASEQ",
+                    "label": "Sequence Number",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "FALNKID",
+                    "label": "Var Label",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "FATESTCD",
+                    "label": "Findings About Test Short Name",
+                    "type": "Char",
+                    "length": 8
+                },
+                {
+                    "name": "FATEST",
+                    "label": "Findings About Test Name",
+                    "type": "Char",
+                    "length": 40
+                },
+                {
+                    "name": "FAOBJ",
+                    "label": "Object of the Observation",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "FAORRES",
+                    "label": "Result or Finding in Original Units",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "FAORRESU",
+                    "label": "Original Units",
+                    "type": "Char",
+                    "length": 10
+                },
+                {
+                    "name": "FASTRESC",
+                    "label": "Character Result/Finding in Std Format",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "FASTRESU",
+                    "label": "Standard Units",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "VISITNUM",
+                    "label": "Visit Number",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "VISIT",
+                    "label": "Visit Name",
+                    "type": "Char",
+                    "length": 20
+                },
+                {
+                    "name": "EPOCH",
+                    "label": "Var Label",
+                    "type": "Char",
+                    "length": 200
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "ABC123",
+                    "ABC123"
+                ],
+                "DOMAIN": [
+                    "FA",
+                    "FA"
+                ],
+                "USUBJID": [
+                    "ABC123-0201",
+                    "ABC123-0201"
+                ],
+                "FASEQ": [
+                    "1",
+                    "1"
+                ],
+                "FALNKID": [
+                    "20090213T1000",
+                    "20090213T1000"
+                ],
+                "FATESTCD": [
+                    "DOSEALT",
+                    "DOSEALT"
+                ],
+                "FATEST": [
+                    "Dose in Alternative Unit",
+                    "Dose in Alternative Unit"
+                ],
+                "FAOBJ": [
+                    "DRUG Z",
+                    "DRUG Z"
+                ],
+                "FAORRES": [
+                    "522.5",
+                    "523"
+                ],
+                "FAORRESU": [
+                    "mg",
+                    "mg"
+                ],
+                "FASTRESC": [
+                    "522.5",
+                    "523"
+                ],
+                "FASTRESU": [
+                    "mg",
+                    "mg"
+                ],
+                "VISITNUM": [
+                    "1",
+                    "1"
+                ],
+                "VISIT": [
+                    "VISIT 1",
+                    "VISIT 1"
+                ],
+                "EPOCH": [
+                    "TREATMENT",
+                    "TREATMENT"
+                ]
+            }
+        },
+        {
+            "filename": "relrec.xpt",
+            "label": "Related Records",
+            "domain": "RELREC",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Var Label",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "RDOMAIN",
+                    "label": "Var Label",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "USUBJID",
+                    "label": "Var Label",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "IDVAR",
+                    "label": "Var Label",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "IDVARVAL",
+                    "label": "Var Label",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "RELTYPE",
+                    "label": "Var Label",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "RELID",
+                    "label": "Var Label",
+                    "type": "Char",
+                    "length": 200
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01"
+                ],
+                "RDOMAIN": [
+                    "AE",
+                    "DS",
+                    "AE",
+                    "DD",
+                    "EX",
+                    "FA"
+                ],
+                "USUBJID": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "IDVAR": [
+                    "AELNKID",
+                    "DSLNKID",
+                    "AELNKID",
+                    "DDLNKID",
+                    "EXLNKID",
+                    "FALNKID"
+                ],
+                "IDVARVAL": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "RELTYPE": [
+                    "ONE",
+                    "ONE",
+                    "ONE",
+                    "ONE",
+                    "ONE",
+                    "ONE"
+                ],
+                "RELID": [
+                    "AEDS",
+                    "AEDS",
+                    "AEDD",
+                    "AEDD",
+                    "EXFA",
+                    "EXFA"
+                ]
+            }
+        }
+    ],
+    "standard": {
+        "product": "sdtmig",
+        "version": "3-4"
+    },
+    "codelists": []
+}

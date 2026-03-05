@@ -1,0 +1,217 @@
+{
+    "STUDYEPOCH": [
+        {
+            "executionStatus": "success",
+            "dataset": "StudyEpoch.xpt",
+            "domain": "STUDYEPOCH",
+            "variables": [
+                "id",
+                "name",
+                "nextId",
+                "parent_entity",
+                "parent_id",
+                "parent_rel",
+                "previousId"
+            ],
+            "message": "The next and previous relationships are not reciprocal - the instance is the \"previous\" instance (parent_rel is \"previousId\") for an instance that is not its \"next\" instance (nextId is not the same as parent_id), or vice versa.",
+            "errors": [
+                {
+                    "value": {
+                        "parent_entity": "StudyEpoch",
+                        "previousId": "StudyEpoch_3",
+                        "name": "Treatment 3",
+                        "parent_id": "StudyEpoch_5",
+                        "nextId": null,
+                        "parent_rel": "previousId",
+                        "id": "StudyEpoch_4"
+                    },
+                    "row": 27
+                },
+                {
+                    "value": {
+                        "parent_entity": "StudyEpoch",
+                        "previousId": null,
+                        "name": "Screening",
+                        "parent_id": "StudyEpoch_5",
+                        "nextId": "StudyEpoch_2",
+                        "parent_rel": "nextId",
+                        "id": "StudyEpoch_1"
+                    },
+                    "row": 28
+                }
+            ]
+        }
+    ],
+    "ENCOUNTER": [
+        {
+            "executionStatus": "success",
+            "dataset": "Encounter.xpt",
+            "domain": "ENCOUNTER",
+            "variables": [
+                "id",
+                "name",
+                "nextId",
+                "parent_entity",
+                "parent_id",
+                "parent_rel",
+                "previousId"
+            ],
+            "message": "The next and previous relationships are not reciprocal - the instance is the \"previous\" instance (parent_rel is \"previousId\") for an instance that is not its \"next\" instance (nextId is not the same as parent_id), or vice versa.",
+            "errors": [
+                {
+                    "value": {
+                        "parent_entity": "Encounter",
+                        "previousId": "Encounter_10",
+                        "name": "E12",
+                        "parent_id": "Encounter_12",
+                        "nextId": null,
+                        "parent_rel": "previousId",
+                        "id": "Encounter_11"
+                    },
+                    "row": 33
+                },
+                {
+                    "value": {
+                        "parent_entity": "Encounter",
+                        "previousId": null,
+                        "name": "E1",
+                        "parent_id": "Encounter_12",
+                        "nextId": "Encounter_2",
+                        "parent_rel": "nextId",
+                        "id": "Encounter_1"
+                    },
+                    "row": 34
+                }
+            ]
+        }
+    ],
+    "ACTIVITY": [
+        {
+            "executionStatus": "success",
+            "dataset": "Activity.xpt",
+            "domain": "ACTIVITY",
+            "variables": [
+                "id",
+                "name",
+                "nextId",
+                "parent_entity",
+                "parent_id",
+                "parent_rel",
+                "previousId"
+            ],
+            "message": "The next and previous relationships are not reciprocal - the instance is the \"previous\" instance (parent_rel is \"previousId\") for an instance that is not its \"next\" instance (nextId is not the same as parent_id), or vice versa.",
+            "errors": [
+                {
+                    "value": {
+                        "parent_entity": "Activity",
+                        "previousId": "Activity_7",
+                        "name": "Medical history",
+                        "parent_id": "Activity_9",
+                        "nextId": null,
+                        "parent_rel": "previousId",
+                        "id": "Activity_8"
+                    },
+                    "row": 24
+                },
+                {
+                    "value": {
+                        "parent_entity": "Activity",
+                        "previousId": null,
+                        "name": "Informed consent",
+                        "parent_id": "Activity_9",
+                        "nextId": "Activity_2",
+                        "parent_rel": "nextId",
+                        "id": "Activity_1"
+                    },
+                    "row": 25
+                }
+            ]
+        }
+    ],
+    "NARRATIVECONTENT": [
+        {
+            "executionStatus": "success",
+            "dataset": "NarrativeContent.xpt",
+            "domain": "NARRATIVECONTENT",
+            "variables": [
+                "id",
+                "name",
+                "nextId",
+                "parent_entity",
+                "parent_id",
+                "parent_rel",
+                "previousId"
+            ],
+            "message": "The next and previous relationships are not reciprocal - the instance is the \"previous\" instance (parent_rel is \"previousId\") for an instance that is not its \"next\" instance (nextId is not the same as parent_id), or vice versa.",
+            "errors": [
+                {
+                    "value": {
+                        "parent_entity": "NarrativeContent",
+                        "previousId": "NarrativeContent_7",
+                        "name": "SECTION 3.1.",
+                        "parent_id": "NarrativeContent_9",
+                        "nextId": null,
+                        "parent_rel": "previousId",
+                        "id": "NarrativeContent_8"
+                    },
+                    "row": 32
+                },
+                {
+                    "value": {
+                        "parent_entity": "NarrativeContent",
+                        "previousId": null,
+                        "name": "ROOT",
+                        "parent_id": "NarrativeContent_9",
+                        "nextId": "NarrativeContent_2",
+                        "parent_rel": "nextId",
+                        "id": "NarrativeContent_1"
+                    },
+                    "row": 33
+                }
+            ]
+        }
+    ],
+    "ELIGIBILITYCRITERION": [
+        {
+            "executionStatus": "success",
+            "dataset": "EligibilityCriterion.xpt",
+            "domain": "ELIGIBILITYCRITERION",
+            "variables": [
+                "id",
+                "name",
+                "nextId",
+                "parent_entity",
+                "parent_id",
+                "parent_rel",
+                "previousId"
+            ],
+            "message": "The next and previous relationships are not reciprocal - the instance is the \"previous\" instance (parent_rel is \"previousId\") for an instance that is not its \"next\" instance (nextId is not the same as parent_id), or vice versa.",
+            "errors": [
+                {
+                    "value": {
+                        "parent_entity": "StudyDesignPopulation",
+                        "previousId": "EligibilityCriterion_14",
+                        "name": "EX07",
+                        "parent_id": "EligibilityCriterion_16",
+                        "nextId": null,
+                        "parent_rel": "previousId",
+                        "id": "EligibilityCriterion_15"
+                    },
+                    "row": 31
+                },
+                {
+                    "value": {
+                        "parent_entity": "StudyDesignPopulation",
+                        "previousId": null,
+                        "name": "IN01",
+                        "parent_id": "EligibilityCriterion_16",
+                        "nextId": "EligibilityCriterion_2",
+                        "parent_rel": "nextId",
+                        "id": "EligibilityCriterion_1"
+                    },
+                    "row": 46
+                }
+            ]
+        }
+    ]
+}

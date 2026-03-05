@@ -1,0 +1,74 @@
+{7 items
+"AG":[]0 items
+"CM":[1 item
+0:{5 items
+"domain":"CM"
+"errors":[2 items
+0:{4 items
+"row":1
+"seq":2
+"uSubjId":"ABC-0002"
+"value":{1 item
+"CMDOSTXT":"100"
+}
+}
+1:{4 items
+"row":3
+"seq":1
+"uSubjId":"ABC-0003"
+"value":{1 item
+"CMDOSTXT":"2.5"
+}
+}
+]
+"executionStatus":"success"
+"message":"CMDOSTXT value is numeric"
+"variables":[1 item
+0:"CMDOSTXT"
+]
+}
+]
+"EC":[]0 items
+"EX":[1 item
+0:{5 items
+"domain":"EX"
+"errors":[1 item
+0:{4 items
+"row":1
+"seq":1
+"uSubjId":"ABC2001"
+"value":{1 item
+"EXDOSTXT":"500"
+}
+}
+]
+"executionStatus":"success"
+"message":"EXDOSTXT value is numeric"
+"variables":[1 item
+0:"EXDOSTXT"
+]
+}
+]
+"ML":[]0 items
+"PR":[]0 items
+"SU":[1 item
+0:{5 items
+"domain":"SU"
+"errors":[1 item
+0:{4 items
+"row":1
+"seq":2
+"uSubjId":"1234005"
+"value":{1 item
+"SUDOSTXT":"3"
+}
+}
+]
+"executionStatus":"success"
+"message":"SUDOSTXT value is numeric"
+"variables":[1 item
+0:"SUDOSTXT"
+]
+}
+]
+}

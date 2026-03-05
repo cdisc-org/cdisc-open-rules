@@ -1,0 +1,155 @@
+{
+    "Administration": [
+        {
+            "executionStatus": "success",
+            "dataset": "Administration.xpt",
+            "domain": "Administration",
+            "variables": [
+                "$code_for_decode_pref_term",
+                "$code_for_decode_value",
+                "$codelist_code",
+                "$codelist_extensible",
+                "$pref_term_for_code",
+                "$value_for_code",
+                "frequency.standardCode.code",
+                "frequency.standardCode.codeSystem",
+                "frequency.standardCode.codeSystemVersion",
+                "frequency.standardCode.decode",
+                "id",
+                "name",
+                "parent_entity",
+                "parent_id",
+                "parent_rel"
+            ],
+            "message": "The administration's frequency is not specified according to the extensible Frequency (C71113) SDTM codelist - codeSystem is not \"http://www.cdisc.org\", codeSystemVersion is not a valid terminology package date, and/or the code or decode is found in the codelist (case insensitive) but the corresponding decode or code does not match the codelist value (case sensitive).",
+            "errors": [
+                {
+                    "value": {
+                        "id": "Administration_1",
+                        "frequency.standardCode.codeSystemVersion": "2023-12-15",
+                        "$pref_term_for_code": "Three Times Yearly",
+                        "$code_for_decode_value": "C17998",
+                        "$code_for_decode_pref_term": "C17998",
+                        "$value_for_code": "3 TIMES PER YEAR",
+                        "name": "PATCH_50",
+                        "parent_id": "StudyIntervention_1",
+                        "parent_rel": "administrations",
+                        "frequency.standardCode.codeSystem": "http://www.cdisc.org",
+                        "frequency.standardCode.code": "C98860",
+                        "$codelist_extensible": true,
+                        "parent_entity": "StudyIntervention",
+                        "$codelist_code": "C71113",
+                        "frequency.standardCode.decode": "Unknown"
+                    },
+                    "dataset": "Administration.xpt",
+                    "row": 1
+                },
+                {
+                    "value": {
+                        "id": "Administration_2",
+                        "frequency.standardCode.codeSystemVersion": "2023-12-15",
+                        "$pref_term_for_code": "Infrequent",
+                        "$code_for_decode_value": "C64954",
+                        "$code_for_decode_pref_term": null,
+                        "$value_for_code": "OCCASIONAL",
+                        "name": "PATCH_75",
+                        "parent_id": "StudyIntervention_1",
+                        "parent_rel": "administrations",
+                        "frequency.standardCode.codeSystem": "http://www.cdisc.org",
+                        "frequency.standardCode.code": "C64954",
+                        "$codelist_extensible": true,
+                        "parent_entity": "StudyIntervention",
+                        "$codelist_code": "C71113",
+                        "frequency.standardCode.decode": "Occasional"
+                    },
+                    "dataset": "Administration.xpt",
+                    "row": 2
+                },
+                {
+                    "value": {
+                        "id": "Administration_3",
+                        "frequency.standardCode.codeSystemVersion": "2024-09-27",
+                        "$pref_term_for_code": null,
+                        "$code_for_decode_value": null,
+                        "$code_for_decode_pref_term": "C89791",
+                        "$value_for_code": null,
+                        "name": "PATCH_100",
+                        "parent_id": "StudyIntervention_2",
+                        "parent_rel": "administrations",
+                        "frequency.standardCode.codeSystem": "http://www.cdisc.org",
+                        "frequency.standardCode.code": "C89791xx",
+                        "$codelist_extensible": true,
+                        "parent_entity": "StudyIntervention",
+                        "$codelist_code": "C71113",
+                        "frequency.standardCode.decode": "Every Thirty-six Hours"
+                    },
+                    "dataset": "Administration.xpt",
+                    "row": 3
+                },
+                {
+                    "value": {
+                        "id": "Administration_4",
+                        "frequency.standardCode.codeSystemVersion": "2024-09-27",
+                        "$pref_term_for_code": "Unknown",
+                        "$code_for_decode_value": "C17998",
+                        "$code_for_decode_pref_term": "C17998",
+                        "$value_for_code": "UNKNOWN",
+                        "name": "PATCH_125",
+                        "parent_id": "StudyIntervention_2",
+                        "parent_rel": "administrations",
+                        "frequency.standardCode.codeSystem": "FREQ",
+                        "frequency.standardCode.code": "C17998",
+                        "$codelist_extensible": true,
+                        "parent_entity": "StudyIntervention",
+                        "$codelist_code": "C71113",
+                        "frequency.standardCode.decode": "Unknown"
+                    },
+                    "dataset": "Administration.xpt",
+                    "row": 4
+                },
+                {
+                    "value": {
+                        "id": "Administration_5",
+                        "frequency.standardCode.codeSystemVersion": "27-Sep-2024",
+                        "$pref_term_for_code": null,
+                        "$code_for_decode_value": null,
+                        "$code_for_decode_pref_term": null,
+                        "$value_for_code": null,
+                        "name": "PATCH_150",
+                        "parent_id": "StudyIntervention_2",
+                        "parent_rel": "administrations",
+                        "frequency.standardCode.codeSystem": "http://www.cdisc.org",
+                        "frequency.standardCode.code": "C0022X",
+                        "$codelist_extensible": null,
+                        "parent_entity": "StudyIntervention",
+                        "$codelist_code": "C71113",
+                        "frequency.standardCode.decode": "Extension"
+                    },
+                    "dataset": "Administration.xpt",
+                    "row": 5
+                },
+                {
+                    "value": {
+                        "id": "Administration_8",
+                        "frequency.standardCode.codeSystemVersion": "2024-09-27",
+                        "$pref_term_for_code": "Every Thirty-six Hours",
+                        "$code_for_decode_value": null,
+                        "$code_for_decode_pref_term": "C89791",
+                        "$value_for_code": "Q36H",
+                        "name": "PATCH_225",
+                        "parent_id": "StudyIntervention_2",
+                        "parent_rel": "administrations",
+                        "frequency.standardCode.codeSystem": "http://www.cdisc.org",
+                        "frequency.standardCode.code": "C89791",
+                        "$codelist_extensible": true,
+                        "parent_entity": "StudyIntervention",
+                        "$codelist_code": "C71113",
+                        "frequency.standardCode.decode": "EVERY THIRTY-SIX HOURS"
+                    },
+                    "dataset": "Administration.xpt",
+                    "row": 6
+                }
+            ]
+        }
+    ]
+}

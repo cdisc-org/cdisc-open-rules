@@ -1,0 +1,297 @@
+{
+    "TS": [
+        {
+            "executionStatus": "success",
+            "dataset": "ts.xpt",
+            "domain": "TS",
+            "variables": [
+                "TSPARMCD",
+                "TSVAL",
+                "TSVALNF"
+            ],
+            "message": "TSVAL is populated with an ISO 21090 null flavor or null flavor description.",
+            "errors": [
+                {
+                    "value": {
+                        "TSPARMCD": "EXTTIND",
+                        "TSVAL": "NI",
+                        "TSVALNF": "null"
+                    },
+                    "dataset": "ts.xpt",
+                    "row": 1,
+                    "SEQ": 1
+                },
+                {
+                    "value": {
+                        "TSPARMCD": "EXTTIND",
+                        "TSVAL": "INV",
+                        "TSVALNF": "null"
+                    },
+                    "dataset": "ts.xpt",
+                    "row": 2,
+                    "SEQ": 2
+                },
+                {
+                    "value": {
+                        "TSPARMCD": "FCNTRY",
+                        "TSVAL": "Other",
+                        "TSVALNF": "null"
+                    },
+                    "dataset": "ts.xpt",
+                    "row": 3,
+                    "SEQ": 3
+                },
+                {
+                    "value": {
+                        "TSPARMCD": "FCNTRY",
+                        "TSVAL": "PINF",
+                        "TSVALNF": "null"
+                    },
+                    "dataset": "ts.xpt",
+                    "row": 4,
+                    "SEQ": 4
+                },
+                {
+                    "value": {
+                        "TSPARMCD": "FDATCHSP",
+                        "TSVAL": "NINF",
+                        "TSVALNF": "null"
+                    },
+                    "dataset": "ts.xpt",
+                    "row": 5,
+                    "SEQ": 5
+                },
+                {
+                    "value": {
+                        "TSPARMCD": "HLTSUBJI",
+                        "TSVAL": "UNC",
+                        "TSVALNF": "null"
+                    },
+                    "dataset": "ts.xpt",
+                    "row": 6,
+                    "SEQ": 6
+                },
+                {
+                    "value": {
+                        "TSPARMCD": "INDIC",
+                        "TSVAL": "DER",
+                        "TSVALNF": "null"
+                    },
+                    "dataset": "ts.xpt",
+                    "row": 7,
+                    "SEQ": 7
+                },
+                {
+                    "value": {
+                        "TSPARMCD": "INTMODEL",
+                        "TSVAL": "UNK",
+                        "TSVALNF": "null"
+                    },
+                    "dataset": "ts.xpt",
+                    "row": 8,
+                    "SEQ": 8
+                },
+                {
+                    "value": {
+                        "TSPARMCD": "INTTYPE",
+                        "TSVAL": "ASKU",
+                        "TSVALNF": "null"
+                    },
+                    "dataset": "ts.xpt",
+                    "row": 9,
+                    "SEQ": 9
+                },
+                {
+                    "value": {
+                        "TSPARMCD": "LENGTH",
+                        "TSVAL": "NAV",
+                        "TSVALNF": "null"
+                    },
+                    "dataset": "ts.xpt",
+                    "row": 10,
+                    "SEQ": 10
+                },
+                {
+                    "value": {
+                        "TSPARMCD": "NARMS",
+                        "TSVAL": "Nask",
+                        "TSVALNF": "null"
+                    },
+                    "dataset": "ts.xpt",
+                    "row": 11,
+                    "SEQ": 11
+                },
+                {
+                    "value": {
+                        "TSPARMCD": "NCOHORT",
+                        "TSVAL": "QS",
+                        "TSVALNF": "null"
+                    },
+                    "dataset": "ts.xpt",
+                    "row": 12,
+                    "SEQ": 12
+                },
+                {
+                    "value": {
+                        "TSPARMCD": "OBJPRIM",
+                        "TSVAL": "TRC",
+                        "TSVALNF": "null"
+                    },
+                    "dataset": "ts.xpt",
+                    "row": 13,
+                    "SEQ": 13
+                },
+                {
+                    "value": {
+                        "TSPARMCD": "OBJSEC",
+                        "TSVAL": "msk",
+                        "TSVALNF": "null"
+                    },
+                    "dataset": "ts.xpt",
+                    "row": 14,
+                    "SEQ": 14
+                },
+                {
+                    "value": {
+                        "TSPARMCD": "EXTTIND",
+                        "TSVAL": "No INFORMATION",
+                        "TSVALNF": "null"
+                    },
+                    "dataset": "ts.xpt",
+                    "row": 15,
+                    "SEQ": 15
+                },
+                {
+                    "value": {
+                        "TSPARMCD": "FCNTRY",
+                        "TSVAL": "Invalid",
+                        "TSVALNF": "null"
+                    },
+                    "dataset": "ts.xpt",
+                    "row": 16,
+                    "SEQ": 16
+                },
+                {
+                    "value": {
+                        "TSPARMCD": "FDATCHSP",
+                        "TSVAL": "Other",
+                        "TSVALNF": "null"
+                    },
+                    "dataset": "ts.xpt",
+                    "row": 17,
+                    "SEQ": 17
+                },
+                {
+                    "value": {
+                        "TSPARMCD": "HLTSUBJI",
+                        "TSVAL": "Positive infinity",
+                        "TSVALNF": "null"
+                    },
+                    "dataset": "ts.xpt",
+                    "row": 18,
+                    "SEQ": 18
+                },
+                {
+                    "value": {
+                        "TSPARMCD": "INDIC",
+                        "TSVAL": "Negative infinity",
+                        "TSVALNF": "null"
+                    },
+                    "dataset": "ts.xpt",
+                    "row": 19,
+                    "SEQ": 19
+                },
+                {
+                    "value": {
+                        "TSPARMCD": "INTMODEL",
+                        "TSVAL": "Unencoded",
+                        "TSVALNF": "null"
+                    },
+                    "dataset": "ts.xpt",
+                    "row": 20,
+                    "SEQ": 20
+                },
+                {
+                    "value": {
+                        "TSPARMCD": "INTTYPE",
+                        "TSVAL": "Derived",
+                        "TSVALNF": "null"
+                    },
+                    "dataset": "ts.xpt",
+                    "row": 21,
+                    "SEQ": 21
+                },
+                {
+                    "value": {
+                        "TSPARMCD": "LENGTH",
+                        "TSVAL": "Unknown",
+                        "TSVALNF": "null"
+                    },
+                    "dataset": "ts.xpt",
+                    "row": 22,
+                    "SEQ": 22
+                },
+                {
+                    "value": {
+                        "TSPARMCD": "NARMS",
+                        "TSVAL": "Asked but unknown",
+                        "TSVALNF": "null"
+                    },
+                    "dataset": "ts.xpt",
+                    "row": 23,
+                    "SEQ": 23
+                },
+                {
+                    "value": {
+                        "TSPARMCD": "NCOHORT",
+                        "TSVAL": "Temporarily unavailable",
+                        "TSVALNF": "null"
+                    },
+                    "dataset": "ts.xpt",
+                    "row": 24,
+                    "SEQ": 24
+                },
+                {
+                    "value": {
+                        "TSPARMCD": "OBJPRIM",
+                        "TSVAL": "Not asked",
+                        "TSVALNF": "null"
+                    },
+                    "dataset": "ts.xpt",
+                    "row": 25,
+                    "SEQ": 25
+                },
+                {
+                    "value": {
+                        "TSPARMCD": "OBJPRIM",
+                        "TSVAL": "SUFFICIENT QUANTITY",
+                        "TSVALNF": "null"
+                    },
+                    "dataset": "ts.xpt",
+                    "row": 26,
+                    "SEQ": 26
+                },
+                {
+                    "value": {
+                        "TSPARMCD": "OBJSEC",
+                        "TSVAL": "Trace",
+                        "TSVALNF": "null"
+                    },
+                    "dataset": "ts.xpt",
+                    "row": 27,
+                    "SEQ": 27
+                },
+                {
+                    "value": {
+                        "TSPARMCD": "OBJSEC",
+                        "TSVAL": "Masked",
+                        "TSVALNF": "null"
+                    },
+                    "dataset": "ts.xpt",
+                    "row": 28,
+                    "SEQ": 28
+                }
+            ]
+        }
+    ]
+}

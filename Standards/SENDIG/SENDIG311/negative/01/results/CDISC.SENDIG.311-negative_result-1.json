@@ -1,0 +1,33 @@
+{
+  "CO": [
+    {
+      "executionStatus": "success",
+      "domain": "CO",
+      "variables": [
+        "COSEQ",
+        "USUBJID"
+      ],
+      "message": "The value of COSEQ is not unique within USUBJID",
+      "errors": [
+        {
+          "value": {
+            "USUBJID": "ZZ-23",
+            "COSEQ": 1
+          },
+          "row": 1,
+          "USUBJID": "ZZ-23",
+          "SEQ": 1
+        },
+        {
+          "value": {
+            "USUBJID": "ZZ-23",
+            "COSEQ": 1
+          },
+          "row": 3,
+          "USUBJID": "ZZ-23",
+          "SEQ": 1
+        }
+      ]
+    }
+  ]
+}

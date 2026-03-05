@@ -1,0 +1,38 @@
+{
+    "MH": [
+        {
+            "executionStatus": "success",
+            "domain": "MH",
+            "variables": [
+                "MHCAT"
+            ],
+            "message": "MHCAT is grouping all records into one generic group. If no smaller categorization can be applied, then it is not necessary to include or populate this variable.",
+            "errors": [
+                {
+                    "value": {
+                        "MHCAT": "GENERAL"
+                    },
+                    "row": 1,
+                    "USUBJID": "CDISC010",
+                    "SEQ": 1
+                },
+                {
+                    "value": {
+                        "MHCAT": "GENERAL"
+                    },
+                    "row": 2,
+                    "USUBJID": "CDISC011",
+                    "SEQ": 1
+                },
+                {
+                    "value": {
+                        "MHCAT": "GENERAL"
+                    },
+                    "row": 3,
+                    "USUBJID": "CDISC012",
+                    "SEQ": 1
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,42 @@
+{
+    "APDM": [
+        {
+            "executionStatus": "success",
+            "domain": "APDM",
+            "variables": [
+                "POOLID",
+                "RSUBJID",
+                "USUBJID"
+            ],
+            "message": "RSUBJID must equal DM.USUBJID when RSUBJID is populated and RSUBJID does not equal POOLID",
+            "errors": [
+                {
+                    "value": {
+                        "POOLID": "PID_001",
+                        "RSUBJID": "CDISC-TEST-004",
+                        "USUBJID": "CDISC-TEST-001"
+                    },
+                    "row": 1,
+                    "USUBJID": "CDISC-TEST-001"
+                },
+                {
+                    "value": {
+                        "POOLID": "",
+                        "RSUBJID": "CDISC-TEST-001",
+                        "USUBJID": ""
+                    },
+                    "row": 2
+                }
+            ]
+        }
+    ],
+    "DM": [
+        {
+            "executionStatus": "skipped",
+            "domain": "DM",
+            "variables": [],
+            "message": null,
+            "errors": []
+        }
+    ]
+}

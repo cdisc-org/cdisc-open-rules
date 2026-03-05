@@ -1,0 +1,56 @@
+{
+    "ADDRESS": [
+        {
+            "executionStatus": "success",
+            "domain": "ADDRESS",
+            "variables": [
+                "city",
+                "country",
+                "district",
+                "id",
+                "line",
+                "parent_entity",
+                "parent_id",
+                "parent_rel",
+                "postalCode",
+                "state",
+                "text"
+            ],
+            "message": "All attributes of the address are blank.",
+            "errors": [
+                {
+                    "value": {
+                        "parent_rel": "legalAddress",
+                        "city": null,
+                        "parent_entity": "Organization",
+                        "country": null,
+                        "state": null,
+                        "postalCode": null,
+                        "line": null,
+                        "district": null,
+                        "text": null,
+                        "parent_id": "Organization_1",
+                        "id": "Address_1"
+                    },
+                    "row": 1
+                },
+                {
+                    "value": {
+                        "parent_rel": "legalAddress",
+                        "city": null,
+                        "parent_entity": "ResearchOrganization",
+                        "country": false,
+                        "state": null,
+                        "postalCode": null,
+                        "line": null,
+                        "district": null,
+                        "text": null,
+                        "parent_id": "ResearchOrganization_1",
+                        "id": "Address_2"
+                    },
+                    "row": 2
+                }
+            ]
+        }
+    ]
+}

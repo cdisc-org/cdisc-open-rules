@@ -1,0 +1,52 @@
+{
+    "Activity": [
+        {
+            "executionStatus": "success",
+            "dataset": "Activity.xpt",
+            "domain": "Activity",
+            "variables": [
+                "$timeline_ids_for_study_design",
+                "id",
+                "name",
+                "parent_entity",
+                "parent_id",
+                "parent_rel",
+                "timelineId"
+            ],
+            "message": "The activity references a timeline that is not specified within the same study design.",
+            "errors": [
+                {
+                    "value": {
+                        "parent_entity": "StudyDesign",
+                        "timelineId": "ScheduleTimeline_2",
+                        "id": "Activity_1",
+                        "parent_rel": "activities",
+                        "name": "Informed consent",
+                        "$timeline_ids_for_study_design": [
+                            "ScheduleTimeline_1"
+                        ],
+                        "parent_id": "StudyDesign_1"
+                    },
+                    "dataset": "Activity.xpt",
+                    "row": 1
+                }
+            ]
+        }
+    ],
+    "ScheduleTimeline": [
+        {
+            "executionStatus": "execution_error",
+            "dataset": "ScheduleTimeline.xpt",
+            "domain": "",
+            "variables": [],
+            "message": "rule execution error",
+            "errors": [
+                {
+                    "dataset": "ScheduleTimeline.xpt",
+                    "error": "Column not found in data",
+                    "message": "timelineId"
+                }
+            ]
+        }
+    ]
+}

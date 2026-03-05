@@ -1,0 +1,244 @@
+#Request:
+{
+  "rule": {
+    "_links": {},
+    "core_id": "CDISC.SDTMIG.CG0408",
+    "reference": [
+      {
+        "Origin": "SDTM and SDTMIG Conformance Rules",
+        "Rule Identifier": {
+          "Id": "CG0408",
+          "Version": "1"
+        },
+        "Version": "2.0"
+      }
+    ],
+    "sensitivity": "Dataset",
+    "severity": "error",
+    "description": "Trigger error when a dataset has no records",
+    "authority": {
+      "Organization": "CDISC"
+    },
+    "standards": [
+      {
+        "Name": "SDTMIG",
+        "Version": "3.4"
+      }
+    ],
+    "classes": {
+      "Include": [
+        "All"
+      ]
+    },
+    "domains": {
+      "Include": [
+        "All"
+      ]
+    },
+    "rule_type": "Dataset Metadata Check",
+    "conditions": {
+      "all": [
+        {
+          "name": "get_dataset",
+          "operator": "empty",
+          "value": {
+            "target": "dataset_name"
+          }
+        }
+      ]
+    },
+    "output_variables": [],
+    "actions": [
+      {
+        "name": "generate_dataset_error_objects",
+        "params": {
+          "message": "Dataset has no record"
+        }
+      }
+    ]
+  },
+  "datasets": [
+    {
+      "filename": "ae.xpt",
+      "label": "Adverse Events",
+      "domain": "AE",
+      "variables": [
+        {
+          "name": "STUDYID",
+          "label": "Study Identifier",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "DOMAIN",
+          "label": "Domain Abbreviation",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "USUBJID",
+          "label": "Unique Subject Identifier",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "AESEQ",
+          "label": "Sequence Number",
+          "type": "Num",
+          "length": 8
+        },
+        {
+          "name": "AETERM",
+          "label": "Reported Term for the Adverse Event",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "AEMODIFY",
+          "label": "Modified Reported Term",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "AEDECOD",
+          "label": "Dictionary-Derived Term",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "AEBODSYS",
+          "label": "Body System or Organ Class",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "AESEV",
+          "label": "Severity/Intensity",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "AESER",
+          "label": "Serious Event",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "AEACN",
+          "label": "Action Taken with Study Treatment",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "AEREL",
+          "label": "Causality",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "AEOUT",
+          "label": "Outcome of Adverse Event",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "AESCONG",
+          "label": "Congenital Anomaly or Birth Defect",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "AESDISAB",
+          "label": "Persist or Signif Disability/Incapacity",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "AESDTH",
+          "label": "Results in Death",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "AESHOSP",
+          "label": "Requires or Prolongs Hospitalization",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "AESLIFE",
+          "label": "Is Life Threatening",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "EPOCH",
+          "label": "Epoch",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "AESTDTC",
+          "label": "Start Date/Time of Adverse Event",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "AEENDTC",
+          "label": "End Date/Time of Adverse Event",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "AESTDY",
+          "label": "Study Day of Start of Adverse Event",
+          "type": "Num",
+          "length": 8
+        },
+        {
+          "name": "AEENDY",
+          "label": "Study Day of End of Adverse Event",
+          "type": "Num",
+          "length": 8
+        },
+        {
+          "name": "AEENRF",
+          "label": "End Relative to Reference Period",
+          "type": "Char",
+          "length": 50
+        }
+      ],
+      "records": {
+        "STUDYID": [],
+        "DOMAIN": [],
+        "USUBJID": [],
+        "AESEQ": [],
+        "AETERM": [],
+        "AEMODIFY": [],
+        "AEDECOD": [],
+        "AEBODSYS": [],
+        "AESEV": [],
+        "AESER": [],
+        "AEACN": [],
+        "AEREL": [],
+        "AEOUT": [],
+        "AESCONG": [],
+        "AESDISAB": [],
+        "AESDTH": [],
+        "AESHOSP": [],
+        "AESLIFE": [],
+        "EPOCH": [],
+        "AESTDTC": [],
+        "AEENDTC": [],
+        "AESTDY": [],
+        "AEENDY": [],
+        "AEENRF": []
+      }
+    }
+  ]
+}
+
+#Results:
+{
+  "AE": []
+}

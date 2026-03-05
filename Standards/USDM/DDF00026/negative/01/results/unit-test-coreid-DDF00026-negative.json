@@ -1,0 +1,30 @@
+{
+    "SCHEDULEDACTIVITYINSTANCE": [
+        {
+            "executionStatus": "success",
+            "domain": "SCHEDULEDACTIVITYINSTANCE",
+            "variables": [
+                "id",
+                "name",
+                "parent_entity",
+                "parent_id",
+                "parent_rel",
+                "timelineId"
+            ],
+            "message": "The scheduled activity instance is referencing its parent timeline as its sub-timeline.",
+            "errors": [
+                {
+                    "value": {
+                        "parent_rel": "instances",
+                        "name": "SCREEN1",
+                        "id": "ScheduledActivityInstance_9",
+                        "parent_entity": "ScheduleTimeline",
+                        "parent_id": "ScheduleTimeline_4",
+                        "timelineId": "ScheduleTimeline_4"
+                    },
+                    "row": 1
+                }
+            ]
+        }
+    ]
+}

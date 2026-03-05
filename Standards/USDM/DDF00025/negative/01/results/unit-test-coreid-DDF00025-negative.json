@@ -1,0 +1,88 @@
+{
+    "Timing": [
+        {
+            "executionStatus": "success",
+            "dataset": "Timing.xpt",
+            "domain": "Timing",
+            "variables": [
+                "id",
+                "name",
+                "parent_entity",
+                "parent_id",
+                "parent_rel",
+                "type.code",
+                "type.decode",
+                "windowLabel",
+                "windowLower",
+                "windowUpper"
+            ],
+            "message": "One or more of the window attributes (windowLabel, windowLower, windowUpper) contains a value for a Fixed Reference timing (type.code=C201358).",
+            "errors": [
+                {
+                    "value": {
+                        "name": "TIM3",
+                        "parent_rel": "timings",
+                        "id": "Timing_3",
+                        "parent_entity": "ScheduleTimeline",
+                        "windowLabel": "No upper/lower",
+                        "parent_id": "ScheduleTimeline_4",
+                        "type.code": "C201358",
+                        "type.decode": "Fixed Reference",
+                        "windowLower": "P0D",
+                        "windowUpper": "P0D"
+                    },
+                    "dataset": "Timing.xpt",
+                    "row": 1
+                },
+                {
+                    "value": {
+                        "name": "TIM17",
+                        "parent_rel": "timings",
+                        "id": "Timing_17",
+                        "parent_entity": "ScheduleTimeline",
+                        "windowLabel": "No upper/lower",
+                        "parent_id": "ScheduleTimeline_1",
+                        "type.code": "C201358",
+                        "type.decode": "Fixed Reference",
+                        "windowLower": null,
+                        "windowUpper": null
+                    },
+                    "dataset": "Timing.xpt",
+                    "row": 2
+                },
+                {
+                    "value": {
+                        "name": "TIM18",
+                        "parent_rel": "timings",
+                        "id": "Timing_18",
+                        "parent_entity": "ScheduleTimeline",
+                        "windowLabel": null,
+                        "parent_id": "ScheduleTimeline_2",
+                        "type.code": "C201358",
+                        "type.decode": "Fixed Reference",
+                        "windowLower": "0",
+                        "windowUpper": null
+                    },
+                    "dataset": "Timing.xpt",
+                    "row": 3
+                },
+                {
+                    "value": {
+                        "name": "TIM19",
+                        "parent_rel": "timings",
+                        "id": "Timing_19",
+                        "parent_entity": "ScheduleTimeline",
+                        "windowLabel": null,
+                        "parent_id": "ScheduleTimeline_3",
+                        "type.code": "C201358",
+                        "type.decode": "Fixed Reference",
+                        "windowLower": null,
+                        "windowUpper": "None"
+                    },
+                    "dataset": "Timing.xpt",
+                    "row": 4
+                }
+            ]
+        }
+    ]
+}

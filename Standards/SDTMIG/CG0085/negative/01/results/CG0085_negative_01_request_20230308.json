@@ -1,0 +1,777 @@
+{
+  "rule": {
+    "Check": {
+      "all": [
+        {
+          "name": "--PRESP",
+          "operator": "non_empty"
+        },
+        {
+          "name": "--PRESP",
+          "operator": "not_equal_to",
+          "value": "Y"
+        }
+      ]
+    },
+    "Core": {
+      "Id": "CDISC.SDTMIG.CG0085",
+      "Version": "1",
+      "Status": "Draft"
+    },
+    "Description": "Raise an error when --PRESP does not equal 'Y' or is not empty.",
+    "Outcome": {
+      "Message": "--PRESP does not equal 'Y' or is not empty.",
+      "Output_Variables": [
+        "--PRESP"
+      ]
+    },
+    "Sensitivity": "Record",
+    "Executability": "Fully Executable",
+    "Authorities": [
+      {
+        "Organization": "CDISC",
+        "Standards": [
+          {
+            "Name": "SDTMIG",
+            "Version": "3.4",
+            "References": [
+              {
+                "Origin": "SDTM and SDTMIG Conformance Rules",
+                "Version": "2.0",
+                "Citations": [
+                  {
+                    "Document": "Model v2.0",
+                    "Item": "--PRESP",
+                    "Section": "Events|Interventions",
+                    "Cited_Guidance": "Events[--PRESP][Value is \"Y\" for prespecified events, null for spontaneously reported events.] Interventions[--PRESP][Values should be \"Y\" or null.]"
+                  }
+                ],
+                "Rule_Identifier": {
+                  "Id": "CG0085",
+                  "Version": "1"
+                }
+              }
+            ]
+          },
+          {
+            "Name": "SDTMIG",
+            "Version": "3.3",
+            "References": [
+              {
+                "Origin": "SDTM and SDTMIG Conformance Rules",
+                "Version": "2.0",
+                "Citations": [
+                  {
+                    "Document": "Model v1.7",
+                    "Item": "",
+                    "Section": "Model v1.7[2.2.1 (Interventions)]|Model v1.7[2.2.2 (Events)]",
+                    "Cited_Guidance": "Model v1.7[2.2.1 (Interventions )][--PRESP; Values should be \"Y\" or null.] | Model v1.7[2.2.2 (Events)][--PRESP; Values should be \"Y\" or null.]"
+                  }
+                ],
+                "Rule_Identifier": {
+                  "Id": "CG0085",
+                  "Version": "1"
+                }
+              }
+            ]
+          },
+          {
+            "Name": "SDTMIG",
+            "Version": "3.2",
+            "References": [
+              {
+                "Origin": "SDTM and SDTMIG Conformance Rules",
+                "Version": "2.0",
+                "Citations": [
+                  {
+                    "Document": "Model v1.4",
+                    "Item": "",
+                    "Section": "Model v1.4[2.2.1 (Interventions)]|Model v1.4[2.2.2 (Events)]",
+                    "Cited_Guidance": "Model v1.4[2.2.1 (Interventions )][--PRESP; Values should be \"Y\" or null.] |Model v1.4[2.2.2 (Events)][--PRESP; Values should be \"Y\" or null.]"
+                  }
+                ],
+                "Rule_Identifier": {
+                  "Id": "CG0085",
+                  "Version": "1"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "Scope": {
+      "Classes": {
+        "Include": [
+          "EVENTS",
+          "INTERVENTIONS"
+        ]
+      },
+      "Domains": {
+        "Exclude": [
+          "DS",
+          "DV",
+          "EX"
+        ]
+      }
+    },
+    "Rule_Type": "Record Data"
+  },
+  "datasets": [
+    {
+      "filename": "ae.xpt",
+      "label": "Adverse Events",
+      "domain": "AE",
+      "variables": [
+        {
+          "name": "STUDYID",
+          "label": "Study Identifier",
+          "type": "Char",
+          "length": 12
+        },
+        {
+          "name": "DOMAIN",
+          "label": "Domain Abbreviation",
+          "type": "Char",
+          "length": 2
+        },
+        {
+          "name": "USUBJID",
+          "label": "Unique Subject Identifier",
+          "type": "Char",
+          "length": 8
+        },
+        {
+          "name": "AESEQ",
+          "label": "Sequence Number",
+          "type": "Num",
+          "length": 8
+        },
+        {
+          "name": "AELNKID",
+          "label": "Link ID",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "AETERM",
+          "label": "Reported Term for the Adverse Event",
+          "type": "Char",
+          "length": 200
+        },
+        {
+          "name": "AELLT",
+          "label": "Lowest Level Term",
+          "type": "Char",
+          "length": 1
+        },
+        {
+          "name": "AELLTCD",
+          "label": "Lowest Level Term Code",
+          "type": "Char",
+          "length": 1
+        },
+        {
+          "name": "AEDECOD",
+          "label": "Dictionary-Derived Term",
+          "type": "Char",
+          "length": 1
+        },
+        {
+          "name": "AEPTCD",
+          "label": "Preferred Term Code",
+          "type": "Char",
+          "length": 1
+        },
+        {
+          "name": "AEHLT",
+          "label": "High Level Term",
+          "type": "Char",
+          "length": 1
+        },
+        {
+          "name": "AEHLTCD",
+          "label": "High Level Term Code",
+          "type": "Char",
+          "length": 1
+        },
+        {
+          "name": "AEHLGT",
+          "label": "High Level Group Term",
+          "type": "Char",
+          "length": 1
+        },
+        {
+          "name": "AEHLGTCD",
+          "label": "High Level Group Term Code",
+          "type": "Char",
+          "length": 1
+        },
+        {
+          "name": "AEPRESP",
+          "label": "Pre-Specified Adverse\r\nEvent",
+          "type": "Char",
+          "length": 1
+        },
+        {
+          "name": "AEBODSYS",
+          "label": "Body System or Organ Class",
+          "type": "Char",
+          "length": 1
+        },
+        {
+          "name": "AEBDSYCD",
+          "label": "Body System or Organ Class Code",
+          "type": "Char",
+          "length": 1
+        },
+        {
+          "name": "AESOC",
+          "label": "Primary System Organ Class",
+          "type": "Char",
+          "length": 1
+        },
+        {
+          "name": "AESOCCD",
+          "label": "Primary System Organ Class Code",
+          "type": "Char",
+          "length": 1
+        },
+        {
+          "name": "AESEV",
+          "label": "Severity/Intensity",
+          "type": "Char",
+          "length": 8
+        },
+        {
+          "name": "AESER",
+          "label": "Serious Event",
+          "type": "Char",
+          "length": 1
+        },
+        {
+          "name": "AEACN",
+          "label": "Action Taken with Study Treatment",
+          "type": "Char",
+          "length": 16
+        },
+        {
+          "name": "AEREL",
+          "label": "Causality",
+          "type": "Char",
+          "length": 16
+        },
+        {
+          "name": "AEOUT",
+          "label": "Outcome of Adverse Event",
+          "type": "Char",
+          "length": 32
+        },
+        {
+          "name": "AESCAN",
+          "label": "Involves Cancer",
+          "type": "Char",
+          "length": 1
+        },
+        {
+          "name": "AESCONG",
+          "label": "Congenital Anomaly or Birth Defect",
+          "type": "Char",
+          "length": 1
+        },
+        {
+          "name": "AESDISAB",
+          "label": "Persist or Signif Disability/Incapacity",
+          "type": "Char",
+          "length": 1
+        },
+        {
+          "name": "AESDTH",
+          "label": "Results in Death",
+          "type": "Char",
+          "length": 1
+        },
+        {
+          "name": "AESHOSP",
+          "label": "Requires or Prolongs Hospitalization",
+          "type": "Char",
+          "length": 1
+        },
+        {
+          "name": "AESLIFE",
+          "label": "Is Life Threatening",
+          "type": "Char",
+          "length": 1
+        },
+        {
+          "name": "AESOD",
+          "label": "Occurred with Overdose",
+          "type": "Char",
+          "length": 1
+        },
+        {
+          "name": "EPOCH",
+          "label": "Epoch",
+          "type": "Char",
+          "length": 9
+        },
+        {
+          "name": "AESTDTC",
+          "label": "Start Date/Time of Adverse Event",
+          "type": "Char",
+          "length": 10
+        },
+        {
+          "name": "AEENDTC",
+          "label": "End Date/Time of Adverse Event",
+          "type": "Char",
+          "length": 10
+        },
+        {
+          "name": "AESTDY",
+          "label": "Study Day of Start of Adverse Event",
+          "type": "Num",
+          "length": 8
+        },
+        {
+          "name": "AEENDY",
+          "label": "Study Day of End of Adverse Event",
+          "type": "Num",
+          "length": 8
+        },
+        {
+          "name": "AEENRTPT",
+          "label": "End Relative to Reference Time Point",
+          "type": "Char",
+          "length": 7
+        },
+        {
+          "name": "AEENTPT",
+          "label": "End Reference Time Point",
+          "type": "Char",
+          "length": 10
+        }
+      ],
+      "records": {
+        "STUDYID": [
+          "CDISCPILOT01",
+          "CDISCPILOT01",
+          "CDISCPILOT01",
+          "CDISCPILOT01",
+          "CDISCPILOT01",
+          "CDISCPILOT01",
+          "CDISCPILOT01",
+          "CDISCPILOT01",
+          "CDISCPILOT01"
+        ],
+        "DOMAIN": [
+          "AE",
+          "AE",
+          "AE",
+          "AE",
+          "AE",
+          "AE",
+          "AE",
+          "AE",
+          "AE"
+        ],
+        "USUBJID": [
+          "CDISC001",
+          "CDISC002",
+          "CDISC003",
+          "CDISC003",
+          "CDISC003",
+          "CDISC005",
+          "CDISC005",
+          "CDISC005",
+          "CDISC005"
+        ],
+        "AESEQ": [
+          1,
+          2,
+          17,
+          18,
+          19,
+          1,
+          2,
+          3,
+          4
+        ],
+        "AELNKID": [
+          "1",
+          "2",
+          "18",
+          "19",
+          "20",
+          "1",
+          "2",
+          "4",
+          "5"
+        ],
+        "AETERM": [
+          "INJECTION SITE REACTION",
+          "SHOULDER PAIN",
+          "FEELING ABNORMAL",
+          "LIBIDO DECREASED",
+          "LISTLESS",
+          "INJECTION SITE REACTION",
+          "INJECTION SITE REACTION",
+          "INJECTION SITE REACTION",
+          "INJECTION SITE REACTION"
+        ],
+        "AELLT": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "AELLTCD": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "AEDECOD": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "AEPTCD": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "AEHLT": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "AEHLTCD": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "AEHLGT": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "AEHLGTCD": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "AEPRESP": [
+          "N",
+          "N",
+          "N",
+          "N",
+          "NOT DONE",
+          "N",
+          "N",
+          "N",
+          "UNKNOWN"
+        ],
+        "AEBODSYS": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "AEBDSYCD": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "AESOC": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "AESOCCD": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "AESEV": [
+          "MODERATE",
+          "MILD",
+          "MILD",
+          "MILD",
+          "MILD",
+          "MILD",
+          "MILD",
+          "MILD",
+          "MILD"
+        ],
+        "AESER": [
+          "N",
+          "N",
+          "N",
+          "N",
+          "N",
+          "N",
+          "N",
+          "N",
+          "N"
+        ],
+        "AEACN": [
+          "DRUG WITHDRAWN",
+          "DOSE NOT CHANGED",
+          "DOSE NOT CHANGED",
+          "DOSE NOT CHANGED",
+          "DRUG WITHDRAWN",
+          "DOSE NOT CHANGED",
+          "DOSE NOT CHANGED",
+          "DOSE NOT CHANGED",
+          "DOSE NOT CHANGED"
+        ],
+        "AEREL": [
+          "RELATED",
+          "NOT RELATED",
+          "POSSIBLY RELATED",
+          "POSSIBLY RELATED",
+          "POSSIBLY RELATED",
+          "RELATED",
+          "POSSIBLY RELATED",
+          "POSSIBLY RELATED",
+          "POSSIBLY RELATED"
+        ],
+        "AEOUT": [
+          "NOT RECOVERED/NOT RESOLVED",
+          "NOT RECOVERED/NOT RESOLVED",
+          "NOT RECOVERED/NOT RESOLVED",
+          "NOT RECOVERED/NOT RESOLVED",
+          "NOT RECOVERED/NOT RESOLVED",
+          "RECOVERED/RESOLVED",
+          "NOT RECOVERED/NOT RESOLVED",
+          "RECOVERED/RESOLVED",
+          "NOT RECOVERED/NOT RESOLVED"
+        ],
+        "AESCAN": [
+          "N",
+          "N",
+          "N",
+          "N",
+          "N",
+          "N",
+          "N",
+          "N",
+          "N"
+        ],
+        "AESCONG": [
+          "N",
+          "N",
+          "N",
+          "N",
+          "N",
+          "N",
+          "N",
+          "N",
+          "N"
+        ],
+        "AESDISAB": [
+          "N",
+          "N",
+          "N",
+          "N",
+          "N",
+          "N",
+          "N",
+          "N",
+          "N"
+        ],
+        "AESDTH": [
+          "N",
+          "N",
+          "N",
+          "N",
+          "N",
+          "N",
+          "N",
+          "N",
+          "N"
+        ],
+        "AESHOSP": [
+          "N",
+          "N",
+          "N",
+          "N",
+          "N",
+          "N",
+          "N",
+          "N",
+          "N"
+        ],
+        "AESLIFE": [
+          "N",
+          "N",
+          "N",
+          "N",
+          "N",
+          "N",
+          "N",
+          "N",
+          "N"
+        ],
+        "AESOD": [
+          "N",
+          "N",
+          "N",
+          "N",
+          "N",
+          "N",
+          "N",
+          "N",
+          "N"
+        ],
+        "EPOCH": [
+          "TREATMENT",
+          "TREATMENT",
+          "TREATMENT",
+          "TREATMENT",
+          "TREATMENT",
+          "TREATMENT",
+          "TREATMENT",
+          "TREATMENT",
+          "TREATMENT"
+        ],
+        "AESTDTC": [
+          "2012-12-02",
+          "2012-11-21",
+          "2013-10-24",
+          "2013-10-24",
+          "2013-10-24",
+          "2013-02-07",
+          "2013-03-23",
+          "2013-03-23",
+          "2013-04-12"
+        ],
+        "AEENDTC": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "2013-02-07",
+          "",
+          "2013-03-26",
+          ""
+        ],
+        "AESTDY": [
+          3,
+          7,
+          57,
+          57,
+          57,
+          4,
+          48,
+          48,
+          68
+        ],
+        "AEENDY": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          4,
+          null,
+          51,
+          null
+        ],
+        "AEENRTPT": [
+          "ONGOING",
+          "ONGOING",
+          "ONGOING",
+          "ONGOING",
+          "ONGOING",
+          "",
+          "ONGOING",
+          "",
+          "ONGOING"
+        ],
+        "AEENTPT": [
+          "2013-05-20",
+          "2013-01-14",
+          "2013-02-13",
+          "2013-02-13",
+          "2013-02-13",
+          "",
+          "2013-08-06",
+          "",
+          "2013-08-06"
+        ]
+      }
+    }
+  ]
+}

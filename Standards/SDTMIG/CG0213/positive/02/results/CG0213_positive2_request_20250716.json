@@ -1,0 +1,340 @@
+{3 items
+"datasets":[2 items
+0:{5 items
+"filename":"sv.xpt"
+"label":"Subject Visits"
+"domain":"SV"
+"variables":[10 items
+0:{4 items
+"name":"STUDYID"
+"label":"Study Identifier"
+"type":"Char"
+"length":12
+}
+1:{4 items
+"name":"DOMAIN"
+"label":"Domain Abbreviation"
+"type":"Char"
+"length":2
+}
+2:{4 items
+"name":"USUBJID"
+"label":"Unique Subject Identifier"
+"type":"Char"
+"length":8
+}
+3:{4 items
+"name":"VISITNUM"
+"label":"Visit Number"
+"type":"Num"
+"length":8
+}
+4:{4 items
+"name":"VISIT"
+"label":"Visit Name"
+"type":"Char"
+"length":200
+}
+5:{4 items
+"name":"VISITDY"
+"label":"Visit Day"
+"type":"Num"
+"length":8
+}
+6:{4 items
+"name":"SVSTDTC"
+"label":"Start Date/Time of Visit"
+"type":"Char"
+"length":10
+}
+7:{4 items
+"name":"SVENDTC"
+"label":"End Date/Time of Visit"
+"type":"Char"
+"length":10
+}
+8:{4 items
+"name":"SVSTDY"
+"label":"Study Day of Start of Visit"
+"type":"Num"
+"length":8
+}
+9:{4 items
+"name":"SVENDY"
+"label":"Study Day of End of Visit"
+"type":"Num"
+"length":8
+}
+]
+"records":{10 items
+"STUDYID":[9 items
+0:"CDISCPILOT01"
+1:"CDISCPILOT01"
+2:"CDISCPILOT01"
+3:"CDISCPILOT01"
+4:"CDISCPILOT01"
+5:"CDISCPILOT01"
+6:"CDISCPILOT01"
+7:"CDISCPILOT01"
+8:"CDISCPILOT01"
+]
+"DOMAIN":[9 items
+0:"SV"
+1:"SV"
+2:"SV"
+3:"SV"
+4:"SV"
+5:"SV"
+6:"SV"
+7:"SV"
+8:"SV"
+]
+"USUBJID":[9 items
+0:"CDISC001"
+1:"CDISC001"
+2:"CDISC001"
+3:"CDISC001"
+4:"CDISC001"
+5:"CDISC001"
+6:"CDISC001"
+7:"CDISC001"
+8:"CDISC001"
+]
+"VISITNUM":[9 items
+0:1
+1:2
+2:3
+3:4
+4:5
+5:7
+6:8
+7:10
+8:11
+]
+"VISIT":[9 items
+0:"SCREENING 1"
+1:"SCREENING 2"
+2:"BASELINE"
+3:"WEEK 2"
+4:"WEEK 4"
+5:"WEEK 6"
+6:"WEEK 8"
+7:"EARLY DISCONTINUATION"
+8:"EARLY DISCONTINUATION RETRIEVAL"
+]
+"VISITDY":[9 items
+0:-28
+1:-3
+2:1
+3:15
+4:29
+5:43
+6:57
+7:NULL
+8:NULL
+]
+"SVSTDTC":[9 items
+0:"2012-11-23"
+1:"2012-11-28"
+2:"2012-11-30"
+3:"2012-12-13"
+4:"2012-12-26"
+5:"2013-01-10"
+6:"2013-01-23"
+7:"2013-02-14"
+8:"2013-05-20"
+]
+"SVENDTC":[9 items
+0:"2012-11-23"
+1:"2012-11-28"
+2:"2012-11-30"
+3:"2012-12-13"
+4:"2012-12-26"
+5:"2013-01-10"
+6:"2013-01-23"
+7:"2013-02-14"
+8:"2013-05-20"
+]
+"SVSTDY":[9 items
+0:-7
+1:-2
+2:1
+3:14
+4:27
+5:42
+6:55
+7:77
+8:172
+]
+"SVENDY":[9 items
+0:-7
+1:-2
+2:1
+3:14
+4:27
+5:42
+6:55
+7:77
+8:172
+]
+}
+}
+1:{5 items
+"filename":"tv.xpt"
+"label":"Trial Visits"
+"domain":"TV"
+"variables":[7 items
+0:{4 items
+"name":"STUDYID"
+"label":"Study Identifier"
+"type":"Char"
+"length":12
+}
+1:{4 items
+"name":"DOMAIN"
+"label":"Domain Abbreviation"
+"type":"Char"
+"length":2
+}
+2:{4 items
+"name":"VISITNUM"
+"label":"Visit Number"
+"type":"Num"
+"length":8
+}
+3:{4 items
+"name":"VISIT"
+"label":"Visit Name"
+"type":"Char"
+"length":200
+}
+4:{4 items
+"name":"ARMCD"
+"label":"Planned Arm Code"
+"type":"Char"
+"length":8
+}
+5:{4 items
+"name":"TVSTRL"
+"label":"Visit Start Rule"
+"type":"Char"
+"length":200
+}
+6:{4 items
+"name":"TVENRL"
+"label":"Visit End Rule"
+"type":"Char"
+"length":200
+}
+]
+"records":{7 items
+"STUDYID":[12 items
+0:"CDISCPILOT01"
+1:"CDISCPILOT01"
+2:"CDISCPILOT01"
+3:"CDISCPILOT01"
+4:"CDISCPILOT01"
+5:"CDISCPILOT01"
+6:"CDISCPILOT01"
+7:"CDISCPILOT01"
+8:"CDISCPILOT01"
+9:"CDISCPILOT01"
+10:"CDISCPILOT01"
+11:"CDISCPILOT01"
+]
+"DOMAIN":[12 items
+0:"TV"
+1:"TV"
+2:"TV"
+3:"TV"
+4:"TV"
+5:"TV"
+6:"TV"
+7:"TV"
+8:"TV"
+9:"TV"
+10:"TV"
+11:"TV"
+]
+"VISITNUM":[12 items
+0:1
+1:2
+2:3
+3:4
+4:5
+5:7
+6:8
+7:9
+8:10
+9:11
+10:12
+11:13
+]
+"VISIT":[12 items
+0:"SCREENING 1"
+1:"SCREENING 2"
+2:"BASELINE"
+3:"WEEK 2"
+4:"WEEK 4"
+5:"WEEK 6"
+6:"WEEK 8"
+7:"WEEK 12"
+8:"WEEK 16"
+9:"WEEK 20"
+10:"WEEK 24"
+11:"WEEK 26"
+]
+"ARMCD":[12 items
+0:""
+1:""
+2:""
+3:""
+4:""
+5:""
+6:""
+7:""
+8:""
+9:""
+10:""
+11:""
+]
+"TVSTRL":[12 items
+0:"Informed Consent Obtained"
+1:"Day Before Initial Study Treatment"
+2:"Day of Initial Study Treatment"
+3:"2 Weeks After Start of Study Treatment"
+4:"4 Weeks After Start of Study Treatment"
+5:"6 Weeks After Start of Study Treatment"
+6:"8 Weeks After Start of Study Treatment"
+7:"12 Weeks After Start of Study Treatment"
+8:"16 Weeks After Start of Study Treatment"
+9:"20 Weeks After Start of Study Treatment"
+10:"24 Weeks After Start of Study Treatment"
+11:"26 Weeks After Start of Study Treatment"
+]
+"TVENRL":[12 items
+0:"Screening Assessments Completed"
+1:""
+2:""
+3:""
+4:""
+5:""
+6:""
+7:""
+8:""
+9:""
+10:""
+11:""
+]
+}
+}
+]
+"standard":{2 items
+"product":"sdtmig"
+"version":"3-2"
+}
+"codelists":[]0 items
+}
+
+
+

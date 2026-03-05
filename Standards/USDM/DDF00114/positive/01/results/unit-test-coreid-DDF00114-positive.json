@@ -1,0 +1,62 @@
+{
+    "Activity": [
+        {
+            "executionStatus": "skipped",
+            "dataset": "Activity.xpt",
+            "domain": "",
+            "variables": [],
+            "message": "Rule skipped - doesn't apply to entity for rule id=, dataset=Activity",
+            "errors": []
+        }
+    ],
+    "BiomedicalConcept": [
+        {
+            "executionStatus": "success",
+            "dataset": "BiomedicalConcept.xpt",
+            "domain": null,
+            "variables": [],
+            "message": null,
+            "errors": []
+        }
+    ],
+    "Condition": [
+        {
+            "executionStatus": "success",
+            "dataset": "Condition.xpt",
+            "domain": null,
+            "variables": [],
+            "message": null,
+            "errors": []
+        }
+    ],
+    "Procedure": [
+        {
+            "executionStatus": "success",
+            "dataset": "Procedure.xpt",
+            "domain": null,
+            "variables": [],
+            "message": null,
+            "errors": []
+        }
+    ],
+    "ScheduledActivityInstance": [
+        {
+            "executionStatus": "skipped",
+            "dataset": "ScheduledActivityInstance.xpt",
+            "domain": "",
+            "variables": [],
+            "message": "Rule skipped - doesn't apply to entity for rule id=, dataset=ScheduledActivityInstance",
+            "errors": []
+        }
+    ],
+    "string": [
+        {
+            "executionStatus": "success",
+            "dataset": "string.xpt",
+            "domain": null,
+            "variables": [],
+            "message": null,
+            "errors": []
+        }
+    ]
+}

@@ -1,0 +1,257 @@
+{4 items
+"rule":{9 items
+"Authorities":[1 item
+0:{2 items
+"Organization":"CDISC"
+"Standards":[4 items
+0:{3 items
+"Name":"SDTMIG"
+"References":[1 item
+0:{4 items
+"Citations":[1 item
+0:{3 items
+"Document":"IG v3.4"
+"Section":"7.4.2.1"
+"Cited_Guidance":"When the trial summary parameter is AGEMAX, then TSVAL should have a value expressed as an ISO8601 time duration (e.g., P43Y for 43 years old or P6M for 6 months old)."
+}
+]
+"Origin":"SDTM and SDTMIG Conformance Rules"
+"Version":"2.0"
+"Rule_Identifier":{2 items
+"Id":"CG0270"
+"Version":"1"
+}
+}
+]
+"Version":"3.4"
+}
+1:{3 items
+"Name":"SDTMIG"
+"References":[1 item
+0:{4 items
+"Citations":[1 item
+0:{4 items
+"Document":"IG v3.2"
+"Item":"Assumption 3"
+"Section":"7.4|Appendix C1"
+"Cited_Guidance":"Further information about the parameters is included below in Table 1. TSVAL may have controlled terminology depending on the value of TSPARMCD"
+}
+]
+"Origin":"SDTM and SDTMIG Conformance Rules"
+"Version":"2.0"
+"Rule_Identifier":{2 items
+"Id":"CG0270"
+"Version":"1"
+}
+}
+]
+"Version":"3.2"
+}
+2:{3 items
+"Name":"SDTMIG"
+"References":[1 item
+0:{4 items
+"Citations":[1 item
+0:{4 items
+"Document":"IG v3.3"
+"Item":"Assumption 3"
+"Section":"7.4"
+"Cited_Guidance":"Further information about the parameters is included Appendix C1, Trial Summary Codes. TSVAL may have controlled terminology depending on the value of TSPARMCD. Conditions for including parameters are included in Appendix C1, Trial Summary Codes."
+}
+]
+"Origin":"SDTM and SDTMIG Conformance Rules"
+"Version":"2.0"
+"Rule_Identifier":{2 items
+"Id":"CG0270"
+"Version":"1"
+}
+}
+]
+"Version":"3.3"
+}
+3:{4 items
+"Name":"TIG"
+"References":[1 item
+0:{4 items
+"Citations":[1 item
+0:{4 items
+"Document":"TIG 1.0"
+"Item":""
+"Section":"2.3"
+"Cited_Guidance":"Standards for tabulation and analysis require representation of dates and/or times, intervals of time, and durations of time in ISO 8601 format as defined by the International Organization for Standardization (ISO) (http://www.iso.org)."
+}
+]
+"Origin":"TIG Conformance Rules"
+"Version":"1.0"
+"Rule_Identifier":{2 items
+"Id":"TIG0471"
+"Version":"1"
+}
+}
+]
+"Substandard":"SDTM"
+"Version":"1.0"
+}
+]
+}
+]
+"Check":{1 item
+"all":[3 items
+0:{3 items
+"name":"TSPARMCD"
+"operator":"equal_to"
+"value":"AGEMAX"
+}
+1:{2 items
+"name":"TSVAL"
+"operator":"non_empty"
+}
+2:{3 items
+"name":"TSVAL"
+"negative":false
+"operator":"invalid_duration"
+}
+]
+}
+"Core":{3 items
+"Id":"CORE-000294"
+"Status":"Published"
+"Version":"1"
+}
+"Description":"Trigger error when TSPARMCD = 'AGEMAX' and TSVAL ^= null and TSVAL does not conform to ISO 8601"
+"Executability":"Fully Executable"
+"Outcome":{1 item
+"Message":"TSVAL is not in ISO 8601 format"
+}
+"Scope":{3 items
+"Classes":{1 item
+"Include":[1 item
+0:"TRIAL DESIGN"
+]
+}
+"Domains":{1 item
+"Include":[1 item
+0:"TS"
+]
+}
+"Use_Case":"INDH"
+}
+"Sensitivity":"Record"
+"Rule_Type":"Record Data"
+}
+"datasets":[1 item
+0:{5 items
+"filename":"ts.xpt"
+"label":"Trial Summary"
+"domain":"TS"
+"variables":[11 items
+0:{4 items
+"name":"STUDYID"
+"label":"Study Identifier"
+"type":"Char"
+"length":10
+}
+1:{4 items
+"name":"DOMAIN"
+"label":"Domain Abbreviation"
+"type":"Char"
+"length":2
+}
+2:{4 items
+"name":"TSSEQ"
+"label":"Sequence Number"
+"type":"Num"
+"length":8
+}
+3:{4 items
+"name":"TSGRPID"
+"label":"Group ID"
+"type":"Char"
+"length":5
+}
+4:{4 items
+"name":"TSPARMCD"
+"label":"Trial Summary Parameter Short Name"
+"type":"Char"
+"length":8
+}
+5:{4 items
+"name":"TSPARM"
+"label":"Trial Summary Parameter"
+"type":"Char"
+"length":40
+}
+6:{4 items
+"name":"TSVAL"
+"label":"Parameter Value"
+"type":"Char"
+"length":149
+}
+7:{4 items
+"name":"TSVALNF"
+"label":"Parameter Null Flavor"
+"type":"Char"
+"length":2
+}
+8:{4 items
+"name":"TSVALCD"
+"label":"Parameter Value Code"
+"type":"Char"
+"length":11
+}
+9:{4 items
+"name":"TSVCDREF"
+"label":"Name of the Reference Terminology"
+"type":"Char"
+"length":18
+}
+10:{4 items
+"name":"TSVCDVER"
+"label":"Version of the Reference Terminology"
+"type":"Char"
+"length":10
+}
+]
+"records":{11 items
+"STUDYID":[1 item
+0:"CDISC-TEST"
+]
+"DOMAIN":[1 item
+0:"TS"
+]
+"TSSEQ":[1 item
+0:4
+]
+"TSGRPID":[1 item
+0:""
+]
+"TSPARMCD":[1 item
+0:"AGEMAX"
+]
+"TSPARM":[1 item
+0:"Planned Maximum Age of Subjects"
+]
+"TSVAL":[1 item
+0:"6 months"
+]
+"TSVALNF":[1 item
+0:""
+]
+"TSVALCD":[1 item
+0:""
+]
+"TSVCDREF":[1 item
+0:"ISO 8601"
+]
+"TSVCDVER":[1 item
+0:""
+]
+}
+}
+]
+"standard":{2 items
+"product":"sdtmig"
+"version":"3-3"
+}
+"codelists":[]0 items
+}

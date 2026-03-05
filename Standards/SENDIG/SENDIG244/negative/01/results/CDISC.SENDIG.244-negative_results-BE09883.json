@@ -1,0 +1,41 @@
+{
+  "DM": [
+    {
+      "executionStatus": "skipped",
+      "domain": "DM",
+      "variables": [],
+      "message": null,
+      "errors": []
+    }
+  ],
+  "TA": [
+    {
+      "executionStatus": "skipped",
+      "domain": "TA",
+      "variables": [],
+      "message": null,
+      "errors": []
+    }
+  ],
+  "TX": [
+    {
+      "executionStatus": "success",
+      "domain": "TX",
+      "variables": [
+        "TXPARMCD",
+        "TXVAL"
+      ],
+      "message": "The value of TXVAL is not may only be \"C\" or \"F\" for TXPARMCD=ENTEMPU",
+      "errors": [
+        {
+          "value": {
+            "TXPARMCD": "ENVTEMPU",
+            "TXVAL": "K"
+          },
+          "row": 9,
+          "seq": 9
+        }
+      ]
+    }
+  ]
+}

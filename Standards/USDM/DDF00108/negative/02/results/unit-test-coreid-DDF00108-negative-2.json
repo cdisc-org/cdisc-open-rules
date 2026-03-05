@@ -1,0 +1,31 @@
+{
+    "SCHEDULETIMELINE": [
+        {
+            "executionStatus": "success",
+            "dataset": "ScheduleTimeline.xpt",
+            "domain": "SCHEDULETIMELINE",
+            "variables": [
+                "exits",
+                "id",
+                "name",
+                "parent_entity",
+                "parent_id",
+                "parent_rel"
+            ],
+            "message": "There is no exit defined for the timeline.",
+            "errors": [
+                {
+                    "value": {
+                        "parent_entity": "StudyDesign",
+                        "id": "ScheduleTimeline_4",
+                        "parent_id": "StudyDesign_1",
+                        "parent_rel": "scheduleTimelines",
+                        "name": "Main Timeline",
+                        "exits": "Not in dataset"
+                    },
+                    "row": 1
+                }
+            ]
+        }
+    ]
+}

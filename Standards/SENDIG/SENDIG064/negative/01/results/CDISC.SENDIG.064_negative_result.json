@@ -1,0 +1,94 @@
+{
+  "EG": [
+    {
+      "executionStatus": "success",
+      "domain": "EG",
+      "variables": [
+        "EGTEST"
+      ],
+      "message": "Value length of EGTEST is greater than 40.",
+      "errors": [
+        {
+          "value": {
+            "EGTEST": "Interpretationaaaaaaaaaaaaaaaaaaaaaaaaaadd"
+          },
+          "row": 1,
+          "uSubjId": "CDISC001",
+          "seq": 1
+        },
+        {
+          "value": {
+            "EGTEST": "Interpretationaaaaaaaaaaaaaaaaaaaaaaaaaadd"
+          },
+          "row": 2,
+          "uSubjId": "CDISC001",
+          "seq": 2
+        },
+        {
+          "value": {
+            "EGTEST": "The quick brown fox jumps over the lazy dog with more than 40 characters"
+          },
+          "row": 7,
+          "uSubjId": "CDISC001",
+          "seq": 7
+        },
+        {
+          "value": {
+            "EGTEST": "12345678901234567890123456789012345678901"
+          },
+          "row": 10,
+          "uSubjId": "CDISC001",
+          "seq": 10
+        },
+        {
+          "value": {
+            "EGTEST": "Interpretationaaaaaaaaaaaaaaaaaaaaaaaaaadd"
+          },
+          "row": 11,
+          "uSubjId": "CDISC001",
+          "seq": 11
+        },
+        {
+          "value": {
+            "EGTEST": "Interpretationaaaaaaaaaaaaaaaaaaaaaaaaaadd"
+          },
+          "row": 12,
+          "uSubjId": "CDISC003",
+          "seq": 5
+        },
+        {
+          "value": {
+            "EGTEST": "Interpretationaaaaaaaaaaaaaaaaaaaaaaaaaadd"
+          },
+          "row": 13,
+          "uSubjId": "CDISC003",
+          "seq": 6
+        },
+        {
+          "value": {
+            "EGTEST": "Interpretationaaaaaaaaaaaaaaaaaaaaaaaaaadd"
+          },
+          "row": 14,
+          "uSubjId": "CDISC003",
+          "seq": 7
+        },
+        {
+          "value": {
+            "EGTEST": "Interpretationaaaaaaaaaaaaaaaaaaaaaaaaaadd"
+          },
+          "row": 15,
+          "uSubjId": "CDISC004",
+          "seq": 7
+        },
+        {
+          "value": {
+            "EGTEST": "Interpretationaaaaaaaaaaaaaaaaaaaaaaaaaadd"
+          },
+          "row": 16,
+          "uSubjId": "CDISC004",
+          "seq": 8
+        }
+      ]
+    }
+  ]
+}

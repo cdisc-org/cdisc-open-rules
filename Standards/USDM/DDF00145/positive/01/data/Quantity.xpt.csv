@@ -1,0 +1,18 @@
+parent_entity,parent_id,parent_rel,rel_type,id,value,unit,unit.id,unit.standardCode,unit.standardCode.id,unit.standardCode.code,unit.standardCode.codeSystem,unit.standardCode.codeSystemVersion,unit.standardCode.decode,unit.standardCode.instanceType,unit.standardCodeAliases,unit.instanceType,instanceType
+SubjectEnrollment,SubjectEnrollment_1,quantity,definition,Quantity_1,15,,,,,,,,,,,,Quantity
+StudyIntervention,StudyIntervention_1,minimumResponseDuration,definition,Quantity_2,1,True,AliasCode_203,True,Code_602,C25301,http://www.cdisc.org,2024-09-27,Day,Code,False,AliasCode,Quantity
+AgentAdministration,AgentAdministration_1,dose,definition,Quantity_4,54,True,AliasCode_206,True,Code_606,C28253,http://www.cdisc.org,2024-09-27,mg,Code,,AliasCode,Quantity
+AdministrationDuration,AdministrationDuration_1,quantity,definition,Quantity_3,24,True,AliasCode_204,True,Code_604,C29844,http://www.cdisc.org,2024-09-27,Week,Code,False,AliasCode,Quantity
+AgentAdministration,AgentAdministration_2,dose,definition,Quantity_6,0,,,,,,,,,,,,Quantity
+AdministrationDuration,AdministrationDuration_2,quantity,definition,Quantity_5,24,True,AliasCode_208,True,Code_608,C29844,http://www.cdisc.org,2024-09-27,WEEKS,Code,False,AliasCode,Quantity
+StudyIntervention,StudyIntervention_2,minimumResponseDuration,definition,Quantity_7,1,True,AliasCode_211,True,Code_614,C25301,http://www.cdisc.org,2024-09-27,DAYS,Code,False,AliasCode,Quantity
+AgentAdministration,AgentAdministration_3,dose,definition,Quantity_9,54,True,AliasCode_214,True,Code_618,C28253,http://www.cdisc.org,2024-09-27,Milligram,Code,,AliasCode,Quantity
+AdministrationDuration,AdministrationDuration_3,quantity,definition,Quantity_8,24,True,AliasCode_212,True,Code_616,C29846,http://www.cdisc.org,2024-09-27,Month,Code,False,AliasCode,Quantity
+AgentAdministration,AgentAdministration_4,dose,definition,Quantity_11,27,True,AliasCode_218,True,Code_622,C176378,http://www.cdisc.org,2025-09-26,mg/mL/day,Code,,AliasCode,Quantity
+AdministrationDuration,AdministrationDuration_4,quantity,definition,Quantity_10,24,True,AliasCode_216,True,Code_620,C29846,http://www.cdisc.org,2024-09-27,MONTHS,Code,False,AliasCode,Quantity
+AgentAdministration,AgentAdministration_5,dose,definition,Quantity_13,0,,,,,,,,,,,,Quantity
+AdministrationDuration,AdministrationDuration_5,quantity,definition,Quantity_12,24,True,AliasCode_220,True,Code_628,C29848,http://www.cdisc.org,2024-09-27,Year,Code,False,AliasCode,Quantity
+AgentAdministration,AgentAdministration_6,dose,definition,Quantity_15,0,,,,,,,,,,,,Quantity
+AdministrationDuration,AdministrationDuration_6,quantity,definition,Quantity_14,24,True,AliasCode_223,True,Code_631,C29848,http://www.cdisc.org,2024-09-27,YEARS,Code,False,AliasCode,Quantity
+AgentAdministration,AgentAdministration_7,dose,definition,Quantity_16,27,True,AliasCode_224,True,Code_632,C176378,http://www.cdisc.org,2025-09-26,Gram per Liter per Day,Code,,AliasCode,Quantity
+AgentAdministration,AgentAdministration_8,dose,definition,Quantity_17,27,True,AliasCode_225,True,Code_633,C0105X,http://www.cdisc.org,2025-09-26,Extension,Code,,AliasCode,Quantity

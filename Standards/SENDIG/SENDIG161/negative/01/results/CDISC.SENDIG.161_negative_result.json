@@ -1,0 +1,36 @@
+{
+  "CL": [
+    {
+      "executionStatus": "success",
+      "domain": "CL",
+      "variables": [
+        "CLRESCAT",
+        "CLSCAT",
+        "CLTEST"
+      ],
+      "message": "CLRESCAT may not be equal to CLTEST and CLRESCAT may not be equal to CLSCAT",
+      "errors": [
+        {
+          "value": {
+            "CLSCAT": "Subcategory",
+            "CLRESCAT": "CNS",
+            "CLTEST": "CNS"
+          },
+          "row": 1,
+          "uSubjId": "CDISC001",
+          "seq": 1
+        },
+        {
+          "value": {
+            "CLSCAT": "CNS",
+            "CLRESCAT": "CNS",
+            "CLTEST": "Clinical Signs"
+          },
+          "row": 2,
+          "uSubjId": "CDISC002",
+          "seq": 1
+        }
+      ]
+    }
+  ]
+}

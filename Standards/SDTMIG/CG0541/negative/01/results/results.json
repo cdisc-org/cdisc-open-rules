@@ -1,0 +1,127 @@
+{
+  "LB": [
+    {
+      "domain": "LB",
+      "errors": [
+        {
+          "row": 0,
+          "seq": 1,
+          "uSubjId": "CDISC001",
+          "value": {
+            "LBCAT": "CHEMISTRY",
+            "LBLOBXFL": "n",
+            "LBTEST": "Albumin",
+            "LBTESTCD": "ALB"
+          }
+        },
+        {
+          "row": 1,
+          "seq": 2,
+          "uSubjId": "CDISC001",
+          "value": {
+            "LBCAT": "CHEMISTRY",
+            "LBLOBXFL": "y",
+            "LBTEST": "Alkaline Phosphatase",
+            "LBTESTCD": "ALP"
+          }
+        },
+        {
+          "row": 2,
+          "seq": 3,
+          "uSubjId": "CDISC001",
+          "value": {
+            "LBCAT": "CHEMISTRY",
+            "LBLOBXFL": "0",
+            "LBTEST": "Alanine Aminotransferase",
+            "LBTESTCD": "ALT"
+          }
+        },
+        {
+          "row": 3,
+          "seq": 4,
+          "uSubjId": "CDISC001",
+          "value": {
+            "LBCAT": "CHEMISTRY",
+            "LBLOBXFL": "1",
+            "LBTEST": "Aspartate Aminotransferase",
+            "LBTESTCD": "AST"
+          }
+        },
+        {
+          "row": 4,
+          "seq": 5,
+          "uSubjId": "CDISC001",
+          "value": {
+            "LBCAT": "HEMATOLOGY",
+            "LBLOBXFL": "!",
+            "LBTEST": "Basophils",
+            "LBTESTCD": "BASO"
+          }
+        },
+        {
+          "row": 5,
+          "seq": 6,
+          "uSubjId": "CDISC001",
+          "value": {
+            "LBCAT": "CHEMISTRY",
+            "LBLOBXFL": "  \r\n  ",
+            "LBTEST": "Bilirubin",
+            "LBTESTCD": "BILI"
+          }
+        },
+        {
+          "row": 6,
+          "seq": 7,
+          "uSubjId": "CDISC001",
+          "value": {
+            "LBCAT": "CHEMISTRY",
+            "LBLOBXFL": "        Y",
+            "LBTEST": "Urea Nitrogen",
+            "LBTESTCD": "UREAN"
+          }
+        },
+        {
+          "row": 7,
+          "seq": 8,
+          "uSubjId": "CDISC001",
+          "value": {
+            "LBCAT": "CHEMISTRY",
+            "LBLOBXFL": "N",
+            "LBTEST": "Calcium",
+            "LBTESTCD": "CA"
+          }
+        },
+        {
+          "row": 8,
+          "seq": 9,
+          "uSubjId": "CDISC001",
+          "value": {
+            "LBCAT": "CHEMISTRY",
+            "LBLOBXFL": ".",
+            "LBTEST": "Cholesterol",
+            "LBTESTCD": "CHOL"
+          }
+        },
+        {
+          "row": 9,
+          "seq": 10,
+          "uSubjId": "CDISC001",
+          "value": {
+            "LBCAT": "CHEMISTRY",
+            "LBLOBXFL": "YN",
+            "LBTEST": "Creatine Kinase",
+            "LBTESTCD": "CK"
+          }
+        }
+      ],
+      "executionStatus": "success",
+      "message": "Value of LBLOBXFL must be 'Y' or null",
+      "variables": [
+        "LBCAT",
+        "LBLOBXFL",
+        "LBTEST",
+        "LBTESTCD"
+      ]
+    }
+  ]
+}

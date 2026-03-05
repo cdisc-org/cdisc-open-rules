@@ -1,0 +1,21 @@
+{
+  "SUPPLB": [
+    {
+      "executionStatus": "success",
+      "domain": "SUPPLB",
+      "variables": [
+        "QORIG"
+      ],
+      "message": "When populated, QORIG may only have one of the values COLLECTED, DERIVED, OTHER, and NOT AVAILABLE",
+      "errors": [
+        {
+          "value": {
+            "QORIG": "ANY OTHER"
+          },
+          "row": 7,
+          "USUBJID": "CDISC-TEST-002"
+        }
+      ]
+    }
+  ]
+}

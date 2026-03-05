@@ -1,0 +1,43 @@
+{
+    "TS": [
+        {
+            "executionStatus": "success",
+            "dataset": "ts.xpt",
+            "domain": "TS",
+            "variables": [
+                "TSPARMCD",
+                "TSVAL"
+            ],
+            "message": "TSVAL does not conform to ISO 8601",
+            "errors": [
+                {
+                    "value": {
+                        "TSVAL": "04/01/2015",
+                        "TSPARMCD": "AGEMIN"
+                    },
+                    "dataset": "ts.xpt",
+                    "row": 1,
+                    "SEQ": 1
+                },
+                {
+                    "value": {
+                        "TSVAL": "100",
+                        "TSPARMCD": "AGEMIN"
+                    },
+                    "dataset": "ts.xpt",
+                    "row": 2,
+                    "SEQ": 1
+                },
+                {
+                    "value": {
+                        "TSVAL": "string",
+                        "TSPARMCD": "AGEMIN"
+                    },
+                    "dataset": "ts.xpt",
+                    "row": 3,
+                    "SEQ": 1
+                }
+            ]
+        }
+    ]
+}

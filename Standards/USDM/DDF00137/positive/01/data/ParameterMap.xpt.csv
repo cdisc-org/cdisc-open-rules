@@ -1,0 +1,10 @@
+parent_entity,parent_id,parent_rel,rel_type,id,tag,reference,instanceType
+SyntaxTemplateDictionary,SyntaxTemplateDictionary_1,parameterMaps,definition,ParameterMap_1,min_age,"<usdm:ref klass=""Range"" id=""Range_3"" attribute=""minValue""></usdm:ref>",ParameterMap
+SyntaxTemplateDictionary,SyntaxTemplateDictionary_1,parameterMaps,definition,ParameterMap_2,max_age,"<usdm:ref attribute=""maxValue"" id=""Range_3"" klass=""Range""/>",ParameterMap
+SyntaxTemplateDictionary,SyntaxTemplateDictionary_1,parameterMaps,definition,ParameterMap_3,StudyPopulation,"<usdm:ref id=""StudyDesignPopulation_1"" klass=""StudyDesignPopulation"" attribute=""description""></usdm:ref>",ParameterMap
+SyntaxTemplateDictionary,SyntaxTemplateDictionary_1,parameterMaps,definition,ParameterMap_4,id_with_space,"<usdm:ref attribute=""maxValue"" id=""Range 1"" klass=""Range""/>",ParameterMap
+SyntaxTemplateDictionary,SyntaxTemplateDictionary_2,parameterMaps,definition,ParameterMap_5,Activity1,"<usdm:ref id=""Activity_6"" attribute=""label"" klass=""Activity""></usdm:ref>",ParameterMap
+SyntaxTemplateDictionary,SyntaxTemplateDictionary_2,parameterMaps,definition,ParameterMap_6,Activity2,"<usdm:ref klass=""Activity"" attribute=""label"" id=""Activity_5""></usdm:ref>",ParameterMap
+SyntaxTemplateDictionary,SyntaxTemplateDictionary_2,parameterMaps,definition,ParameterMap_7,Activity3,"<usdm:ref attribute=""label"" klass=""Activity"" id=""Activity_9""></usdm:ref>",ParameterMap
+SyntaxTemplateDictionary,SyntaxTemplateDictionary_3,parameterMaps,definition,ParameterMap_8,fixed_number,5,ParameterMap
+SyntaxTemplateDictionary,SyntaxTemplateDictionary_3,parameterMaps,definition,ParameterMap_9,fixed_string,a piece of text,ParameterMap

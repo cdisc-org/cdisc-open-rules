@@ -1,0 +1,176 @@
+{
+    "StudyVersion": [
+        {
+            "executionStatus": "success",
+            "dataset": "StudyVersion.xpt",
+            "domain": "StudyVersion",
+            "variables": [
+                "$code_for_decode_pref_term",
+                "$code_for_decode_value",
+                "$codelist_code",
+                "$codelist_extensible",
+                "$pref_term_for_code",
+                "$value_for_code",
+                "id",
+                "parent_entity",
+                "parent_id",
+                "parent_rel",
+                "studyType.code",
+                "studyType.codeSystem",
+                "studyType.codeSystemVersion",
+                "studyType.decode",
+                "versionIdentifier"
+            ],
+            "message": "The study version's study type is not specified using the Study Type Response (C99077) SDTM codelist - codeSystem is not \"http://www.cdisc.org\", codeSystemVersion is not a valid terminology package date, the code or decode (either as preferred term or as submission value) is found in the codelist (case insensitive) but the corresponding decode or code does not match the codelist value (case sensitive), and/or neither code nor decode is found in the codelist.",
+            "errors": [
+                {
+                    "value": {
+                        "$value_for_code": "EXPANDED ACCESS",
+                        "studyType.codeSystem": "http://www.cdisc.org",
+                        "id": "StudyVersion_1",
+                        "$code_for_decode_value": null,
+                        "studyType.code": "C98722",
+                        "$codelist_code": "C99077",
+                        "$pref_term_for_code": "Expanded Access Study",
+                        "studyType.decode": "EXPANDED ACCESS STUDY",
+                        "parent_id": "Study_1",
+                        "$codelist_extensible": false,
+                        "parent_entity": "Study",
+                        "studyType.codeSystemVersion": "2023-12-15",
+                        "versionIdentifier": "2",
+                        "parent_rel": "versions",
+                        "$code_for_decode_pref_term": "C98722"
+                    },
+                    "dataset": "StudyVersion.xpt",
+                    "row": 1
+                },
+                {
+                    "value": {
+                        "$value_for_code": null,
+                        "studyType.codeSystem": "http://www.cdisc.org",
+                        "id": "StudyVersion_2",
+                        "$code_for_decode_value": "C98388",
+                        "studyType.code": "C98388xx",
+                        "$codelist_code": "C99077",
+                        "$pref_term_for_code": null,
+                        "studyType.decode": "INTERVENTIONAL",
+                        "parent_id": "Study_1",
+                        "$codelist_extensible": false,
+                        "parent_entity": "Study",
+                        "studyType.codeSystemVersion": "2023-12-15",
+                        "versionIdentifier": "3",
+                        "parent_rel": "versions",
+                        "$code_for_decode_pref_term": null
+                    },
+                    "dataset": "StudyVersion.xpt",
+                    "row": 2
+                },
+                {
+                    "value": {
+                        "$value_for_code": "OBSERVATIONAL",
+                        "studyType.codeSystem": "http://www.cdisc.org/STYPE",
+                        "id": "StudyVersion_3",
+                        "$code_for_decode_value": "C16084",
+                        "studyType.code": "C16084",
+                        "$codelist_code": "C99077",
+                        "$pref_term_for_code": "Observational Study",
+                        "studyType.decode": "OBSERVATIONAL",
+                        "parent_id": "Study_1",
+                        "$codelist_extensible": false,
+                        "parent_entity": "Study",
+                        "studyType.codeSystemVersion": "2023-12-15",
+                        "versionIdentifier": "4",
+                        "parent_rel": "versions",
+                        "$code_for_decode_pref_term": null
+                    },
+                    "dataset": "StudyVersion.xpt",
+                    "row": 3
+                },
+                {
+                    "value": {
+                        "$value_for_code": null,
+                        "studyType.codeSystem": "http://www.cdisc.org",
+                        "id": "StudyVersion_4",
+                        "$code_for_decode_value": null,
+                        "studyType.code": "C129000",
+                        "$codelist_code": "C99077",
+                        "$pref_term_for_code": null,
+                        "studyType.decode": "PATIENT REGISTRY",
+                        "parent_id": "Study_1",
+                        "$codelist_extensible": null,
+                        "parent_entity": "Study",
+                        "studyType.codeSystemVersion": "27-SEP-2024",
+                        "versionIdentifier": "5",
+                        "parent_rel": "versions",
+                        "$code_for_decode_pref_term": null
+                    },
+                    "dataset": "StudyVersion.xpt",
+                    "row": 4
+                },
+                {
+                    "value": {
+                        "$value_for_code": "EXPANDED ACCESS",
+                        "studyType.codeSystem": "http://www.cdisc.org",
+                        "id": "StudyVersion_6",
+                        "$code_for_decode_value": null,
+                        "studyType.code": "C98722",
+                        "$codelist_code": "C99077",
+                        "$pref_term_for_code": "Expanded Access Study",
+                        "studyType.decode": "Patient Registry Study",
+                        "parent_id": "Study_1",
+                        "$codelist_extensible": false,
+                        "parent_entity": "Study",
+                        "studyType.codeSystemVersion": "2023-12-15",
+                        "versionIdentifier": "7",
+                        "parent_rel": "versions",
+                        "$code_for_decode_pref_term": "C129000"
+                    },
+                    "dataset": "StudyVersion.xpt",
+                    "row": 5
+                },
+                {
+                    "value": {
+                        "$value_for_code": "INTERVENTIONAL",
+                        "studyType.codeSystem": "http://www.cdisc.org",
+                        "id": "StudyVersion_7",
+                        "$code_for_decode_value": "C98388",
+                        "studyType.code": "C98388",
+                        "$codelist_code": "C99077",
+                        "$pref_term_for_code": "Interventional Study",
+                        "studyType.decode": "Interventional",
+                        "parent_id": "Study_1",
+                        "$codelist_extensible": false,
+                        "parent_entity": "Study",
+                        "studyType.codeSystemVersion": "2023-12-15",
+                        "versionIdentifier": "8",
+                        "parent_rel": "versions",
+                        "$code_for_decode_pref_term": null
+                    },
+                    "dataset": "StudyVersion.xpt",
+                    "row": 6
+                },
+                {
+                    "value": {
+                        "$value_for_code": null,
+                        "studyType.codeSystem": "http://www.cdisc.org",
+                        "id": "StudyVersion_8",
+                        "$code_for_decode_value": null,
+                        "studyType.code": "C0007X",
+                        "$codelist_code": "C99077",
+                        "$pref_term_for_code": null,
+                        "studyType.decode": "COMPASSIONATE USE",
+                        "parent_id": "Study_1",
+                        "$codelist_extensible": false,
+                        "parent_entity": "Study",
+                        "studyType.codeSystemVersion": "2024-09-27",
+                        "versionIdentifier": "9",
+                        "parent_rel": "versions",
+                        "$code_for_decode_pref_term": null
+                    },
+                    "dataset": "StudyVersion.xpt",
+                    "row": 7
+                }
+            ]
+        }
+    ]
+}

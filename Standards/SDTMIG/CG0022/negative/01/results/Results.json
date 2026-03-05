@@ -1,0 +1,39 @@
+{
+    "AE": [
+        {
+            "executionStatus": "success",
+            "domain": "AE",
+            "variables": [],
+            "message": null,
+            "errors": []
+        }
+    ],
+    "FA": [
+        {
+            "executionStatus": "success",
+            "domain": "FA",
+            "variables": [
+                "$VARIABLE_COUNT",
+                "FALNKGRP"
+            ],
+            "message": "LNKGRP variable is not found in any of the other domains.",
+            "errors": [
+                {
+                    "value": {
+                        "FALNKGRP": "CDISC001 - 1",
+                        "$VARIABLE_COUNT": 1
+                    }
+                }
+            ]
+        }
+    ],
+    "VS": [
+        {
+            "executionStatus": "success",
+            "domain": "VS",
+            "variables": [],
+            "message": null,
+            "errors": []
+        }
+    ]
+}

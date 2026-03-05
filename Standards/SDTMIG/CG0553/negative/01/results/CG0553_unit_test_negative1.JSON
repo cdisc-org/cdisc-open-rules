@@ -1,0 +1,46 @@
+{
+  "VS": [
+    {
+      "domain": "VS",
+      "errors": [
+        {
+          "row": 18,
+          "seq": 18,
+          "uSubjId": "CDISC001",
+          "value": {
+            "VSDRVFL": "",
+            "VSLOBXFL": "Y",
+            "VSORRES": ""
+          }
+        },
+        {
+          "row": 32,
+          "seq": 32,
+          "uSubjId": "CDISC001",
+          "value": {
+            "VSDRVFL": "",
+            "VSLOBXFL": "Y",
+            "VSORRES": ""
+          }
+        },
+        {
+          "row": 53,
+          "seq": 53,
+          "uSubjId": "CDISC001",
+          "value": {
+            "VSDRVFL": "",
+            "VSLOBXFL": "Y",
+            "VSORRES": ""
+          }
+        }
+      ],
+      "executionStatus": "success",
+      "message": "VSORRES is missing even though VSLOBXFL= \"Y\" and either VSDRVFL is not present on dataset or is not equl to \"Y\"",
+      "variables": [
+        "VSDRVFL",
+        "VSLOBXFL",
+        "VSORRES"
+      ]
+    }
+  ]
+}

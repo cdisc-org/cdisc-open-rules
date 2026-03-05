@@ -1,0 +1,28 @@
+{
+  "DM": [
+    {
+      "domain": "DM",
+      "errors": [
+        {
+          "row": 2,
+          "uSubjId": "015246-099-0000-00001",
+          "value": {
+            "ACTARMCD": "THIS IS LONGER THAN 20 CHARACTERS"
+          }
+        },
+        {
+          "row": 4,
+          "uSubjId": "015246-099-0000-00003",
+          "value": {
+            "ACTARMCD": "THIS IS LONGER THAN 20 CHARACTERS"
+          }
+        }
+      ],
+      "executionStatus": "success",
+      "message": "Length of ACTARMCD is greater than 20 characters",
+      "variables": [
+        "ACTARMCD"
+      ]
+    }
+  ]
+}

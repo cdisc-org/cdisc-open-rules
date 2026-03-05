@@ -1,0 +1,646 @@
+{
+  "rule": {
+    "_links": {},
+    "core_id": "CDISC.SDTMIG.CG0634",
+    "reference": [
+      {
+        "Origin": "SDTM and SDTMIG Conformance Rules",
+        "Rule Identifier": {
+          "Id": "CG0634",
+          "Version": "1"
+        },
+        "Version": "2.0"
+      }
+    ],
+    "sensitivity": "Dataset",
+    "severity": "warning",
+    "description": "Raise an error when RPPLENDY is present.",
+    "authority": {
+      "Organization": "CDISC"
+    },
+    "standards": [
+      {
+        "Name": "SDTMIG",
+        "Version": "3.4"
+      }
+    ],
+    "classes": {
+      "Include": [
+        "All"
+      ]
+    },
+    "domains": {
+      "Include": [
+        "All"
+      ]
+    },
+    "rule_type": "Variable Presence",
+    "conditions": {
+      "all": [
+        {
+          "name": "get_dataset",
+          "operator": "exists",
+          "value": {
+            "target": "RPPLENDY"
+          }
+        }
+      ]
+    },
+    "output_variables": [],
+    "actions": [
+      {
+        "name": "generate_dataset_error_objects",
+        "params": {
+          "message": "RPPLENDY is present."
+        }
+      }
+    ]
+  },
+  "datasets": [
+    {
+      "filename": "lb.xpt",
+      "label": "Laboratory Test Results",
+      "domain": "LB",
+      "variables": [
+        {
+          "name": "STUDYID",
+          "label": "Study Identifier",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "DOMAIN",
+          "label": "Domain Abbreviation",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "USUBJID",
+          "label": "Unique Subject Identifier",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "FETUSID",
+          "label": "Fetus Identifier",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "LBSEQ",
+          "label": "Sequence Number",
+          "type": "Num",
+          "length": 8
+        },
+        {
+          "name": "LBTESTCD",
+          "label": "Lab Test or Examination Short Name",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "LBTEST",
+          "label": "Lab Test or Examination Name",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "LBCAT",
+          "label": "Category for Lab Test",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "LBORRES",
+          "label": "Result or Finding in Original Units",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "LBORRESU",
+          "label": "Original Units",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "LBRESSCL",
+          "label": "Result Scale",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "LBRESTYP",
+          "label": "Result Type",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "LBORNRLO",
+          "label": "Reference Range Lower Limit in Orig Unit",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "LBORNRHI",
+          "label": "Reference Range Upper Limit in Orig Unit",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "LBSTRESC",
+          "label": "Character Result/Finding in Std Format",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "LBIMPLBL",
+          "label": "Implantation Site Label",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "LBSTRESN",
+          "label": "Numeric Result/Finding in Standard Units",
+          "type": "Num",
+          "length": 8
+        },
+        {
+          "name": "LBSTRESU",
+          "label": "Standard Units",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "LBSTNRLO",
+          "label": "Reference Range Lower Limit-Std Units",
+          "type": "Num",
+          "length": 8
+        },
+        {
+          "name": "LBSTNRHI",
+          "label": "Reference Range Upper Limit-Std Units",
+          "type": "Num",
+          "length": 8
+        },
+        {
+          "name": "LBRESLOC",
+          "label": "Result Location of Finding",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "LBSTAT",
+          "label": "Completion Status",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "LBREASND",
+          "label": "Reason Test Not Done",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "LBLOINC",
+          "label": "LOINC Code",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "LBSPEC",
+          "label": "Specimen Type",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "LBMETHOD",
+          "label": "Method of Test or Examination",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "LBLOBXFL",
+          "label": "Last Observation Before Exposure Flag",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "LBFAST",
+          "label": "Fasting Status",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "LBDTHREL",
+          "label": "Relationship to Death",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "LBEXCLFL",
+          "label": "Exclude from Statistics",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "LBREASEX",
+          "label": "Reason for Exclusion from Statistics",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "LBUSCHFL",
+          "label": "Unscheduled Flag",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "LBRSTIND",
+          "label": "Restraint Indicator",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "LBRSTMOD",
+          "label": "Restraint Mode",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "VISITNUM",
+          "label": "Visit Number",
+          "type": "Num",
+          "length": 8
+        },
+        {
+          "name": "VISIT",
+          "label": "Visit Name",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "RPHASE",
+          "label": "Repro Phase",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "RPPLDY",
+          "label": "Planned Repro Phase Day of Observation",
+          "type": "Num",
+          "length": 8
+        },
+        {
+          "name": "RPPLSTDY",
+          "label": "Planned Repro Phase Day of Obs Start",
+          "type": "Num",
+          "length": 8
+        },
+        {
+          "name": "RPPLENDY",
+          "label": "Planned Repro Phase Day of Obs End",
+          "type": "Num",
+          "length": 8
+        },
+        {
+          "name": "LBDTC",
+          "label": "Date/Time of Specimen Collection",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "LBNOMDY",
+          "label": "Nominal Study Day for Tabulations",
+          "type": "Num",
+          "length": 8
+        },
+        {
+          "name": "LBNOMLBL",
+          "label": "Label for Nominal Study Day",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "LBRPDY",
+          "label": "Actual Repro Phase Day of Observation",
+          "type": "Num",
+          "length": 8
+        },
+        {
+          "name": "LBRPSTDY",
+          "label": "Actual Repro Phase Day of Obs Start",
+          "type": "Num",
+          "length": 8
+        },
+        {
+          "name": "LBRPENDY",
+          "label": "Actual Repro Phase Day of Obs End",
+          "type": "Num",
+          "length": 8
+        },
+        {
+          "name": "LBDETECT",
+          "label": "Time in Days to Detection",
+          "type": "Num",
+          "length": 8
+        },
+        {
+          "name": "LBPTFL",
+          "label": "Point in Time Flag",
+          "type": "Char",
+          "length": 50
+        }
+      ],
+      "records": {
+        "STUDYID": [
+          "ABC123",
+          "ABC123",
+          "ABC123",
+          "ABC123"
+        ],
+        "DOMAIN": [
+          "LB",
+          "LB",
+          "LB",
+          "LB"
+        ],
+        "USUBJID": [
+          "ABC12301001",
+          "ABC12301001",
+          "ABC12301001",
+          "ABC12301001"
+        ],
+        "FETUSID": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "LBSEQ": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "LBTESTCD": [
+          "CRP",
+          "WBC",
+          "PH",
+          "CHOL"
+        ],
+        "LBTEST": [
+          "C Reactive Protein",
+          "Leukocytes",
+          "pH",
+          "Cholesterol"
+        ],
+        "LBCAT": [
+          "CHEMISTRY",
+          "HEMATOLOGY",
+          "URINALYSIS",
+          "CHEMISTRY"
+        ],
+        "LBORRES": [
+          "2.5",
+          "5.9",
+          "7.5",
+          "229"
+        ],
+        "LBORRESU": [
+          "mg/L",
+          "10^9/L",
+          "",
+          "mg/dL"
+        ],
+        "LBRESSCL": [
+          "QUANTITATIVE",
+          "QUANTITATIVE",
+          "QUANTITATIVE",
+          "QUANTITATIVE"
+        ],
+        "LBRESTYP": [
+          "MASS CONCENTRATION",
+          "NUMBER CONCENTRATION",
+          "LOG SUBSTANCE CONCENTRATION",
+          "MASS CONCENTRATION"
+        ],
+        "LBORNRLO": [
+          "0.5",
+          "4",
+          "5",
+          "0"
+        ],
+        "LBORNRHI": [
+          "10",
+          "11",
+          "9",
+          "<200"
+        ],
+        "LBSTRESC": [
+          "2.5",
+          "5.9",
+          "7.5",
+          "229"
+        ],
+        "LBIMPLBL": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "LBSTRESN": [
+          2.5,
+          5.9,
+          null,
+          229
+        ],
+        "LBSTRESU": [
+          "mg/L",
+          "10^9/L",
+          "",
+          "mg/dL"
+        ],
+        "LBSTNRLO": [
+          0.5,
+          4,
+          5,
+          0
+        ],
+        "LBSTNRHI": [
+          10,
+          11,
+          9,
+          199
+        ],
+        "LBRESLOC": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "LBSTAT": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "LBREASND": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "LBLOINC": [
+          "30522-7",
+          "6690-2",
+          "5803-2",
+          "2093-3"
+        ],
+        "LBSPEC": [
+          "SERUM",
+          "BLOOD",
+          "URINE",
+          "SERUM"
+        ],
+        "LBMETHOD": [
+          "",
+          "AUTOMATED COUNT",
+          "TEST STRIP",
+          ""
+        ],
+        "LBLOBXFL": [
+          "Y",
+          "Y",
+          "Y",
+          ""
+        ],
+        "LBFAST": [
+          "Y",
+          "Y",
+          "Y",
+          ""
+        ],
+        "LBDTHREL": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "LBEXCLFL": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "LBREASEX": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "LBUSCHFL": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "LBRSTIND": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "LBRSTMOD": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "VISITNUM": [
+          1,
+          1,
+          1,
+          2
+        ],
+        "VISIT": [
+          "Week 1",
+          "Week 1",
+          "Week 1",
+          "Week 2"
+        ],
+        "RPHASE": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "RPPLDY": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "RPPLSTDY": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "RPPLENDY": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "LBDTC": [
+          "1999-06-19",
+          "1999-06-19",
+          "1999-06-19",
+          "1999-07-21"
+        ],
+        "LBNOMDY": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "LBNOMLBL": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "LBRPDY": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "LBRPSTDY": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "LBRPENDY": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "LBDETECT": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "LBPTFL": [
+          "Y",
+          "Y",
+          "Y",
+          "Y"
+        ]
+      }
+    }
+  ]
+}

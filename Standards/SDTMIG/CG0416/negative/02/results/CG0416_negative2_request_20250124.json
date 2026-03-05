@@ -1,0 +1,259 @@
+{
+    "rule": {
+        "Authorities": [
+            {
+                "Organization": "CDISC",
+                "Standards": [
+                    {
+                        "Name": "SDTMIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "Model v2.0",
+                                        "Item": "QLABEL",
+                                        "Section": "Supplemental Qualifiers",
+                                        "Cited_Guidance": "This is the long name or label associated with QNAM. The value in QLABEL cannot be longer than 40 characters. This will often be the column label in the sponsor's original dataset."
+                                    }
+                                ],
+                                "Origin": "SDTM and SDTMIG Conformance Rules",
+                                "Version": "2.0",
+                                "Rule_Identifier": {
+                                    "Id": "CG0416",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.4"
+                    },
+                    {
+                        "Name": "SDTMIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "Model v1.7",
+                                        "Section": "4.1.2",
+                                        "Cited_Guidance": "This is the long name or label associated with QNAM. The value in QLABEL cannot be longer than 40 characters. This will often be the column label in the sponsor's original dataset."
+                                    }
+                                ],
+                                "Origin": "SDTM and SDTMIG Conformance Rules",
+                                "Version": "2.0",
+                                "Rule_Identifier": {
+                                    "Id": "CG0416",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.3"
+                    },
+                    {
+                        "Name": "SDTMIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "Model v1.4",
+                                        "Section": "4.1.2",
+                                        "Cited_Guidance": "This is the long name or label associated with QNAM. The value in QLABEL cannot be longer than 40 characters. This will often be the column label in the sponsor's original dataset."
+                                    }
+                                ],
+                                "Origin": "SDTM and SDTMIG Conformance Rules",
+                                "Version": "2.0",
+                                "Rule_Identifier": {
+                                    "Id": "CG0416",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.2"
+                    },
+                    {
+                        "Name": "TIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "SDTM v2.1",
+                                        "Item": "QLABEL",
+                                        "Section": "Section 6.2 Supplemental Qualifiers Data set",
+                                        "Cited_Guidance": "This is the long name or label associated with QNAM. The value in QLABEL cannot be longer than 40 characters. This will often be the column label in the sponsor's original dataset."
+                                    }
+                                ],
+                                "Origin": "TIG Conformance Rules",
+                                "Version": "1.0",
+                                "Rule_Identifier": {
+                                    "Id": "TIG0571",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Substandard": "SDTM",
+                        "Version": "1.0"
+                    }
+                ]
+            }
+        ],
+        "Check": {
+            "all": [
+                {
+                    "name": "QLABEL",
+                    "operator": "longer_than",
+                    "value": 40
+                }
+            ]
+        },
+        "Core": {
+            "Id": "CORE-000222",
+            "Status": "Published",
+            "Version": "1"
+        },
+        "Description": "Raise an error when QLABEL > 40 chars.",
+        "Executability": "Fully Executable",
+        "Outcome": {
+            "Message": "QLABEL > 40 chars.",
+            "Output_Variables": [
+                "IDVAR",
+                "IDVARVAL",
+                "QLABEL"
+            ]
+        },
+        "Scope": {
+            "Classes": {
+                "Include": [
+                    "RELATIONSHIP"
+                ]
+            },
+            "Domains": {
+                "Include": [
+                    "SUPP--"
+                ]
+            },
+            "Use_Case": "INDH, PROD"
+        },
+        "Sensitivity": "Record",
+        "Rule_Type": "Record Data"
+    },
+    "datasets": [
+        {
+            "filename": "suppdm.xpt",
+            "label": "Supplemental Qualifiers for DM",
+            "domain": "SUPPDM",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 12
+                },
+                {
+                    "name": "RDOMAIN",
+                    "label": "Related Domain Abbreviation",
+                    "type": "Char",
+                    "length": 6
+                },
+                {
+                    "name": "USUBJID",
+                    "label": "Unique Subject Identifier",
+                    "type": "Char",
+                    "length": 8
+                },
+                {
+                    "name": "IDVAR",
+                    "label": "Identifying Variable",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "IDVARVAL",
+                    "label": "Identifying Variable Value",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "QNAM",
+                    "label": "Qualifier Variable Name",
+                    "type": "Char",
+                    "length": 5
+                },
+                {
+                    "name": "QLABEL",
+                    "label": "Qualifier Variable Label",
+                    "type": "Char",
+                    "length": 5
+                },
+                {
+                    "name": "QVAL",
+                    "label": "Data Value",
+                    "type": "Char",
+                    "length": 41
+                },
+                {
+                    "name": "QORIG",
+                    "label": "Origin",
+                    "type": "Char",
+                    "length": 13
+                },
+                {
+                    "name": "QEVAL",
+                    "label": "Evaluator",
+                    "type": "Char",
+                    "length": 200
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01"
+                ],
+                "RDOMAIN": [
+                    "DM",
+                    "DM",
+                    "DM"
+                ],
+                "USUBJID": [
+                    "CDISC008",
+                    "CDISC008",
+                    "CDISC008"
+                ],
+                "IDVAR": [
+                    "",
+                    "",
+                    ""
+                ],
+                "IDVARVAL": [
+                    "",
+                    "",
+                    ""
+                ],
+                "QNAM": [
+                    "RACE1",
+                    "RACE2",
+                    "RACE3"
+                ],
+                "QLABEL": [
+                    "Race 1Race 1Race 1Race 1Race 1Race 1vRace 1Race 1Race 1Race 1Race 1Race 1vvvRace 1Race 1Race 1vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv",
+                    "Race 22222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222",
+                    "Race 3333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333"
+                ],
+                "QVAL": [
+                    "ASIAN",
+                    "BLACK OR AFRICAN AMERICAN",
+                    "WHITE"
+                ],
+                "QORIG": [
+                    "CRF",
+                    "CRF",
+                    "CRF"
+                ],
+                "QEVAL": [
+                    "",
+                    "",
+                    ""
+                ]
+            }
+        }
+    ],
+    "codelists": []
+}

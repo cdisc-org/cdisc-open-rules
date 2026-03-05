@@ -1,0 +1,38 @@
+{
+    "Timing": [
+        {
+            "executionStatus": "success",
+            "dataset": "Timing.xpt",
+            "domain": "Timing",
+            "variables": [
+                "id",
+                "name",
+                "parent_entity",
+                "parent_id",
+                "parent_rel",
+                "relativeFromScheduledInstanceId",
+                "relativeToScheduledInstanceId",
+                "type.code",
+                "type.decode"
+            ],
+            "message": "The Timing type is not \"Fixed Reference\" (type.code is not C201358) but it does not point to two different scheduled instances - relativeFromScheduledInstanceId and/or relativeToScheduledInstanceId is missing, or they both contain the same value.",
+            "errors": [
+                {
+                    "value": {
+                        "name": "TIM4",
+                        "parent_rel": "timings",
+                        "id": "Timing_4",
+                        "parent_entity": "ScheduleTimeline",
+                        "parent_id": "ScheduleTimeline_4",
+                        "type.code": "C201356",
+                        "type.decode": "After",
+                        "relativeFromScheduledInstanceId": "ScheduledActivityInstance_12",
+                        "relativeToScheduledInstanceId": "Not in dataset"
+                    },
+                    "dataset": "Timing.xpt",
+                    "row": 2
+                }
+            ]
+        }
+    ]
+}
