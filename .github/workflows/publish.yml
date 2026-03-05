@@ -24,11 +24,6 @@ jobs:
             README.md
             .gitignore
 
-      - name: Debug changed files
-        run: |
-          echo "Added files:"
-          echo "${{ steps.changed-files.outputs.added_files }}"
-
       - name: Extract new rule directories
         id: newdirs
         run: |
