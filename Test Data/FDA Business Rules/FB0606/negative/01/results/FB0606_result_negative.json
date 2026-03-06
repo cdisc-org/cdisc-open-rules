@@ -1,0 +1,25 @@
+{
+  "DM": [
+    {
+      "executionStatus": "success",
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "variables": [
+        "DTHDTC",
+        "DTHFL"
+      ],
+      "message": "DTHFL is not \"Y\", when DTHDTC is populated",
+      "errors": [
+        {
+          "value": {
+            "DTHDTC": "2018-12-11",
+            "DTHFL": ""
+          },
+          "dataset": "dm.xpt",
+          "row": 3,
+          "USUBJID": "CDISC003"
+        }
+      ]
+    }
+  ]
+}

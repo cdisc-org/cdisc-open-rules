@@ -1,0 +1,27 @@
+{
+    "TS": [
+        {
+            "executionStatus": "success",
+            "dataset": "ts.xpt",
+            "domain": "TS",
+            "variables": [
+                "$STYPE_INTERVENTIONAL",
+                "TSPARMCD",
+                "TSVAL"
+            ],
+            "message": "The set  ('INTMODEL’, 'INTTYPE','PCLASS') is not in the list of TSPARAMCD with TSVAL populated.",
+            "errors": [
+                {
+                    "value": {
+                        "$STYPE_INTERVENTIONAL": 1,
+                        "TSVAL": "NonEmpty",
+                        "TSPARMCD": "INTMODEL"
+                    },
+                    "dataset": "ts.xpt",
+                    "row": 1,
+                    "SEQ": 1
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,24 @@
+{
+  "study": [
+    {
+      "executionStatus": "issue_reported",
+      "dataset": "STUDY",
+      "domain": "N/A",
+      "variables": [
+        "PC",
+        "define_dataset_has_no_data"
+      ],
+      "message": "Missing PC dataset.",
+      "errors": [
+        {
+          "value": {
+            "define_dataset_has_no_data": false,
+            "PC": "Not in dataset"
+          },
+          "dataset": "STUDY",
+          "row": ""
+        }
+      ]
+    }
+  ]
+}

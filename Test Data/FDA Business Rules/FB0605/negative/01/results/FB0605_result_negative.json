@@ -1,0 +1,35 @@
+{2 items
+"DS":[1 item
+0:{6 items
+"executionStatus":"skipped"
+"dataset":NULL
+"domain":"DS"
+"variables":[]0 items
+"message":NULL
+"errors":[]0 items
+}
+]
+"DM":[1 item
+0:{6 items
+"executionStatus":"success"
+"dataset":"dm.xpt"
+"domain":"DM"
+"variables":[2 items
+0:"DSDECOD"
+1:"DTHFL"
+]
+"message":"DTHFL is not 'Y' when DS.DSDECOD is "DEATH""
+"errors":[1 item
+0:{4 items
+"value":{2 items
+"DSDECOD":"DEATH"
+"DTHFL":""
+}
+"dataset":"dm.xpt"
+"row":2
+"USUBJID":"CDISC002"
+}
+]
+}
+]
+}

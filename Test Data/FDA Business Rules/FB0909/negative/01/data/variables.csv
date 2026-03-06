@@ -1,0 +1,72 @@
+dataset,variable,label,type,length
+ae.xpt,STUDYID,Study Identifier,Char,10
+ae.xpt,DOMAIN,Domain Abbreviation,Char,2
+ae.xpt,USUBJID,Unique Subject Identifier,Char,14
+ae.xpt,AESEQ,Sequence Number,Num,8
+ae.xpt,AESPID,Sponsor-Defined Identifier,Char,4
+ae.xpt,AETERM,Reported Term for the Adverse Event,Char,38
+ae.xpt,AELLT,Lowest Level Term,Char,38
+ae.xpt,AELLTCD,Lowest Level Term Code,Num,8
+ae.xpt,AEDECOD,Dictionary-Derived Term,Char,38
+ae.xpt,AEPTCD,Preferred Term Code,Num,8
+ae.xpt,AEHLT,High Level Term,Char,65
+ae.xpt,AEHLTCD,High Level Term Code,Num,8
+ae.xpt,AEHLGT,High Level Group Term,Char,55
+ae.xpt,AEHLGTCD,High Level Group Term Code,Num,8
+ae.xpt,AEBODSYS,Body System or Organ Class,Char,52
+ae.xpt,AEBDSYCD,Body System or Organ Class Code,Num,8
+ae.xpt,AESOC,Primary System Organ Class,Char,52
+ae.xpt,AESOCCD,Primary System Organ Class Code,Num,8
+ae.xpt,AESEV,Severity/Intensity,Char,8
+ae.xpt,AESER,Serious Event,Char,1
+ae.xpt,AEACN,Action Taken with Study Treatment,Char,1
+ae.xpt,AEREL,Causality,Char,1
+ae.xpt,AEOUT,Outcome of Adverse Event,Char,26
+ae.xpt,AESCAN,Involves Cancer,Char,50
+ae.xpt,AESCONG,Congenital Anomaly or Birth Defect,Char,50
+ae.xpt,AESDISAB,Persist or Signif Disability/Incapacity,Char,50
+ae.xpt,AESDTH,Results in Death,Char,50
+ae.xpt,AESHOSP,Requires or Prolongs Hospitalization,Char,1
+ae.xpt,AESLIFE,Is Life Threatening,Char,50
+ae.xpt,AESOD,Occurred with Overdose,Char,50
+ae.xpt,AESMIE,Other Medically Important Serious Event,Char,50
+ae.xpt,AESTDTC,Start Date/Time of Adverse Event,Char,10
+ae.xpt,AEENDTC,End Date/Time of Adverse Event,Char,1
+ae.xpt,AESTDY,Study Day of Start of Adverse Event,Num,8
+cm.xpt,STUDYID,Study Identifier,Char,12
+cm.xpt,DOMAIN,Domain Abbreviation,Char,2
+cm.xpt,USUBJID,Unique Subject Identifier,Char,8
+cm.xpt,CMSEQ,Sequence Number,Num,8
+cm.xpt,CMTRT,"Reported Name of Drug, Med, or Therapy",Char,200
+cm.xpt,CMINDC,Indication,Char,200
+cm.xpt,CMDOSE,Dose per Administration,Num,8
+cm.xpt,CMDOSU,Dose Units,Char,6
+cm.xpt,CMDOSFRQ,Dosing Frequency per Interval,Char,3
+cm.xpt,CMROUTE,Route of Administration,Char,24
+cm.xpt,EPOCH,Epoch,Char,9
+cm.xpt,CMSTDTC,Start Date/Time of Medication,Char,10
+cm.xpt,CMENDTC,End Date/Time of Medication,Char,10
+cm.xpt,CMSTDY,Study Day of Start of Medication,Num,8
+cm.xpt,CMENDY,Study Day of End of Medication,Num,8
+cm.xpt,CMENRTPT,End Relative to Reference Time Point,Char,7
+cm.xpt,CMENTPT,End Reference Time Point,Char,10
+mh.xpt,STUDYID,Study Identifier,Char,12
+mh.xpt,DOMAIN,Domain Abbreviation,Char,2
+mh.xpt,USUBJID,Unique Subject Identifier,Char,8
+mh.xpt,MHSEQ,Sequence Number,Num,8
+mh.xpt,MHTERM,Reported Term for the Medical History,Char,19
+mh.xpt,MHLLT,Lowest Level Term,Char,38
+mh.xpt,MHLLTCD,Lowest Level Term Code,Num,8
+mh.xpt,MHDECOD,Dictionary-Derived Term,Char,38
+mh.xpt,MHPTCD,Preferred Term Code,Num,8
+mh.xpt,MHHLT,High Level Term,Char,65
+mh.xpt,MHHLTCD,High Level Term Code,Num,8
+mh.xpt,MHHLGT,High Level Group Term,Char,55
+mh.xpt,MHHLGTCD,High Level Group Term Code,Num,8
+mh.xpt,MHBODSYS,Body System or Organ Class,Char,52
+mh.xpt,MHBDSYCD,Body System or Organ Class Code,Num,8
+mh.xpt,MHSOC,Primary System Organ Class,Char,52
+mh.xpt,MHSOCCD,Primary System Organ Class Code,Num,8
+mh.xpt,MHEVDTYP,Medical History Event Date Type,Char,13
+mh.xpt,MHSTDTC,Start Date/Time of Medical History Event,Char,10
+mh.xpt,MHSTDY,Study Day of Start of Observation,Num,8

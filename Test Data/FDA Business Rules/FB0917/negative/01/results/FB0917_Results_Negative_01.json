@@ -1,0 +1,144 @@
+{
+    "TU": [
+        {
+            "executionStatus": "success",
+            "dataset": "tu.xpt",
+            "domain": "TU",
+            "variables": [
+                "TUEVAL",
+                "TUEVALID"
+            ],
+            "message": "TUEVALID and TUEVAL do not have a one-to-one relationship",
+            "errors": [
+                {
+                    "value": {
+                        "TUEVAL": "INDEPENDENT ASSESSOR",
+                        "TUEVALID": "RADIOLOGIST 1"
+                    },
+                    "dataset": "tu.xpt",
+                    "row": 1,
+                    "USUBJID": "55555",
+                    "SEQ": 1
+                },
+                {
+                    "value": {
+                        "TUEVAL": "INDEPENDENT ASSESSOR",
+                        "TUEVALID": "RADIOLOGIST 2"
+                    },
+                    "dataset": "tu.xpt",
+                    "row": 2,
+                    "USUBJID": "55555",
+                    "SEQ": 2
+                },
+                {
+                    "value": {
+                        "TUEVAL": "INDEPENDENT ASSESSOR",
+                        "TUEVALID": "RADIOLOGIST 1"
+                    },
+                    "dataset": "tu.xpt",
+                    "row": 3,
+                    "USUBJID": "55555",
+                    "SEQ": 3
+                }
+            ]
+        }
+    ],
+    "RS": [
+        {
+            "executionStatus": "success",
+            "dataset": "rs.xpt",
+            "domain": "RS",
+            "variables": [
+                "RSEVAL",
+                "RSEVALID"
+            ],
+            "message": "RSEVALID and RSEVAL do not have a one-to-one relationship",
+            "errors": [
+                {
+                    "value": {
+                        "RSEVAL": "INDEPENDENT ASSESSOR",
+                        "RSEVALID": "RADIOLOGIST 1"
+                    },
+                    "dataset": "rs.xpt",
+                    "row": 1,
+                    "USUBJID": "55555",
+                    "SEQ": 1
+                },
+                {
+                    "value": {
+                        "RSEVAL": "INDEPENDENT ASSESSOR",
+                        "RSEVALID": "RADIOLOGIST 1"
+                    },
+                    "dataset": "rs.xpt",
+                    "row": 2,
+                    "USUBJID": "55555",
+                    "SEQ": 2
+                },
+                {
+                    "value": {
+                        "RSEVAL": "INDEPENDENT ASSESSOR",
+                        "RSEVALID": "RADIOLOGIST 2"
+                    },
+                    "dataset": "rs.xpt",
+                    "row": 3,
+                    "USUBJID": "55555",
+                    "SEQ": 3
+                }
+            ]
+        }
+    ],
+    "MK": [
+        {
+            "executionStatus": "success",
+            "dataset": "mk.xpt",
+            "domain": "MK",
+            "variables": [
+                "MKEVAL",
+                "MKEVALID"
+            ],
+            "message": "MKEVALID and MKEVAL do not have a one-to-one relationship",
+            "errors": [
+                {
+                    "value": {
+                        "MKEVALID": "READER 1",
+                        "MKEVAL": "INDEPENDENT ASSESSOR"
+                    },
+                    "dataset": "mk.xpt",
+                    "row": 1,
+                    "USUBJID": "XYZ-002",
+                    "SEQ": 1
+                },
+                {
+                    "value": {
+                        "MKEVALID": "READER 1",
+                        "MKEVAL": "INDEPENDENT ASSESSOR"
+                    },
+                    "dataset": "mk.xpt",
+                    "row": 2,
+                    "USUBJID": "XYZ-002",
+                    "SEQ": 2
+                },
+                {
+                    "value": {
+                        "MKEVALID": "READER 3",
+                        "MKEVAL": "INDEPENDENT ASSESSOR"
+                    },
+                    "dataset": "mk.xpt",
+                    "row": 3,
+                    "USUBJID": "XYZ-002",
+                    "SEQ": 3
+                },
+                {
+                    "value": {
+                        "MKEVALID": "READER 2",
+                        "MKEVAL": "INDEPENDENT ASSESSOR"
+                    },
+                    "dataset": "mk.xpt",
+                    "row": 4,
+                    "USUBJID": "XYZ-002",
+                    "SEQ": 4
+                }
+            ]
+        }
+    ]
+}

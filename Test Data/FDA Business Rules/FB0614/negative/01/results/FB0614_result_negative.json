@@ -1,0 +1,51 @@
+{
+  "SS": [
+    {
+      "executionStatus": "success",
+      "dataset": "ss.xpt",
+      "domain": "SS",
+      "variables": [
+        "$ds_dsdecod",
+        "SSSTRESC"
+      ],
+      "message": "DSDECOD is not \"DEATH\", When SS.SSSTRESC = \"DEAD\".",
+      "errors": [
+        {
+          "value": {
+            "$ds_dsdecod": [
+              "",
+              "INFORMED CONSENT OBTAINED",
+              "COMPLETED",
+              "RANDOMIZED"
+            ],
+            "SSSTRESC": "DEAD"
+          },
+          "dataset": "ss.xpt",
+          "row": 4,
+          "USUBJID": "CDISC002",
+          "SEQ": 2
+        },
+        {
+          "value": {
+            "$ds_dsdecod": null,
+            "SSSTRESC": "DEAD"
+          },
+          "dataset": "ss.xpt",
+          "row": 6,
+          "USUBJID": "CDISC003",
+          "SEQ": 2
+        }
+      ]
+    }
+  ],
+  "DS": [
+    {
+      "executionStatus": "skipped",
+      "dataset": "ds.xpt",
+      "domain": "DS",
+      "variables": [],
+      "message": "Rule skipped - doesn't apply to domain for rule id=CORE-000251, dataset=DS",
+      "errors": []
+    }
+  ]
+}

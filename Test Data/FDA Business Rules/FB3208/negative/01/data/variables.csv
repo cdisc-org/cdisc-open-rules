@@ -1,0 +1,15 @@
+dataset,variable,label,type,length
+lb.xpt,STUDYID,Study Identifier,Char,12
+lb.xpt,DOMAIN,Domain Abbreviation,Char,2
+lb.xpt,USUBJID,Unique Subject Identifier,Char,8
+lb.xpt,LBSEQ,Sequence Number,Num,8
+lb.xpt,LBTESTCD,Lab Test or Examination Short Name,Char,8
+lb.xpt,LBTEST,Lab Test or Examination Name,Char,50
+lb.xpt,LBCAT,Category for Lab Test,Char,50
+lb.xpt,LBORRES,Result or Finding in Original Units,Char,25
+lb.xpt,LBORRESU,Original Units,Char,25
+lb.xpt,LBSPEC,Specimen Type,Char,25
+lb.xpt,LBDTC,Date/Time of Specimen Collection,Char,19
+lb.xpt,LBENDTC,End Date/Time of Specimen Collection,Char,19
+lb.xpt,LBDY,Study Day of Specimen Collection,Num,8
+lb.xpt,LBENDY,Study Day of End of Observation,Num,8

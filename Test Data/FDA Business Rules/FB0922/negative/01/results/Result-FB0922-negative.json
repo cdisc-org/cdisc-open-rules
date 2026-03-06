@@ -1,0 +1,120 @@
+{2 items
+"FT":[1 item
+0:{6 items
+"executionStatus":"success"
+"dataset":"ft.xpt"
+"domain":"FT"
+"variables":[2 items
+0:"FTTPT"
+1:"FTTPTNUM"
+]
+"message":"FTTPT and FTTPTNUM do not have a one-to-one relationship"
+"errors":[3 items
+0:{5 items
+"value":{2 items
+"FTTPTNUM":30
+"FTTPT":"30 MIN POST"
+}
+"dataset":"ft.xpt"
+"row":1
+"USUBJID":"CDISC001"
+"SEQ":120
+}
+1:{5 items
+"value":{2 items
+"FTTPTNUM":1
+"FTTPT":"30 MIN POST"
+}
+"dataset":"ft.xpt"
+"row":2
+"USUBJID":"CDISC001"
+"SEQ":121
+}
+2:{5 items
+"value":{2 items
+"FTTPTNUM":1
+"FTTPT":"60 MIN POST"
+}
+"dataset":"ft.xpt"
+"row":3
+"USUBJID":"CDISC007"
+"SEQ":134
+}
+]
+}
+]
+"VS":[1 item
+0:{6 items
+"executionStatus":"success"
+"dataset":"vs.xpt"
+"domain":"VS"
+"variables":[2 items
+0:"VSTPT"
+1:"VSTPTNUM"
+]
+"message":"VSTPT and VSTPTNUM do not have a one-to-one relationship"
+"errors":[6 items
+0:{5 items
+"value":{2 items
+"VSTPTNUM":"null"
+"VSTPT":"10MIN POSTDOSE"
+}
+"dataset":"vs.xpt"
+"row":1
+"USUBJID":"CDISC001"
+"SEQ":1
+}
+1:{5 items
+"value":{2 items
+"VSTPTNUM":"null"
+"VSTPT":""
+}
+"dataset":"vs.xpt"
+"row":2
+"USUBJID":"CDISC001"
+"SEQ":2
+}
+2:{5 items
+"value":{2 items
+"VSTPTNUM":"null"
+"VSTPT":"PREDOSE"
+}
+"dataset":"vs.xpt"
+"row":3
+"USUBJID":"CDISC001"
+"SEQ":3
+}
+3:{5 items
+"value":{2 items
+"VSTPTNUM":-1
+"VSTPT":"PREDOSE"
+}
+"dataset":"vs.xpt"
+"row":4
+"USUBJID":"CDISC001"
+"SEQ":4
+}
+4:{5 items
+"value":{2 items
+"VSTPTNUM":5
+"VSTPT":"10MIN POSTDOSE"
+}
+"dataset":"vs.xpt"
+"row":5
+"USUBJID":"CDISC001"
+"SEQ":6
+}
+5:{5 items
+"value":{2 items
+"VSTPTNUM":5
+"VSTPT":"5MIN POSTDOSE"
+}
+"dataset":"vs.xpt"
+"row":6
+"USUBJID":"CDISC001"
+"SEQ":7
+}
+]
+}
+]
+}
