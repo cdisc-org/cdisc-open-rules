@@ -1,0 +1,24 @@
+{
+  "study": [
+    {
+      "executionStatus": "issue_reported",
+      "dataset": "STUDY",
+      "domain": "N/A",
+      "variables": [
+        "MI",
+        "define_dataset_has_no_data"
+      ],
+      "message": "Missing MI dataset.",
+      "errors": [
+        {
+          "value": {
+            "define_dataset_has_no_data": false,
+            "MI": "Not in dataset"
+          },
+          "dataset": "STUDY",
+          "row": ""
+        }
+      ]
+    }
+  ]
+}

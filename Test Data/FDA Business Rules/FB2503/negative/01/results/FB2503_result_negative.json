@@ -1,0 +1,71 @@
+{2 items
+"DM":[1 item
+0:{6 items
+"executionStatus":"success"
+"dataset":"dm.xpt"
+"domain":"DM"
+"variables":[2 items
+0:"$usubjids_in_ex"
+1:"ACTARMCD"
+]
+"message":"Subject is assigned to an arm code but has no record in EX"
+"errors":[3 items
+0:{3 items
+"value":{2 items
+"ACTARMCD":"RANDOM"
+"$usubjids_in_ex":[4 items
+0:"ZZZ100"
+1:"ABC345"
+2:"ABC123"
+3:"ABC678"
+]
+}
+"row":1
+"USUBJID":"015246-076-0003-00003"
+}
+1:{3 items
+"value":{2 items
+"ACTARMCD":"RANDOM"
+"$usubjids_in_ex":[4 items
+0:"ZZZ100"
+1:"ABC345"
+2:"ABC123"
+3:"ABC678"
+]
+}
+"row":2
+"USUBJID":"015246-300-0004-00002"
+}
+2:{3 items
+"value":{2 items
+"ACTARMCD":"RANDOM"
+"$usubjids_in_ex":[4 items
+0:"ZZZ100"
+1:"ABC345"
+2:"ABC123"
+3:"ABC678"
+]
+}
+"row":3
+"USUBJID":"015246-999-0004-9999"
+}
+]
+}
+]
+"EX":[1 item
+0:{6 items
+"executionStatus":"execution_error"
+"dataset":"ex.xpt"
+"domain":"EX"
+"variables":[]0 items
+"message":"rule execution error"
+"errors":[1 item
+0:{3 items
+"dataset":"ex.xpt"
+"error":"Column not found in data"
+"message":"ARMCD"
+}
+]
+}
+]
+}

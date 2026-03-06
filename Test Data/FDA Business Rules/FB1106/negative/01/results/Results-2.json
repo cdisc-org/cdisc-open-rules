@@ -1,0 +1,107 @@
+{
+    "TS": [
+        {
+            "executionStatus": "success",
+            "dataset": "ts.xpt",
+            "domain": "TS",
+            "variables": [
+                "$crmdur_count",
+                "TSPARMCD",
+                "TSVAL"
+            ],
+            "message": "No occurrence of TSPARMCD=’CRMDUR’ is included in TS or TSVAL is null.",
+            "errors": [
+                {
+                    "value": {
+                        "$crmdur_count": 0,
+                        "TSPARMCD": "AGE",
+                        "TSVAL": "46"
+                    },
+                    "dataset": "ts.xpt",
+                    "row": 1,
+                    "SEQ": 1
+                },
+                {
+                    "value": {
+                        "$crmdur_count": 0,
+                        "TSPARMCD": "AGETXT",
+                        "TSVAL": "null"
+                    },
+                    "dataset": "ts.xpt",
+                    "row": 2,
+                    "SEQ": 1
+                },
+                {
+                    "value": {
+                        "$crmdur_count": 0,
+                        "TSPARMCD": "DCUTDESC",
+                        "TSVAL": "Database Lock"
+                    },
+                    "dataset": "ts.xpt",
+                    "row": 3,
+                    "SEQ": 1
+                },
+                {
+                    "value": {
+                        "$crmdur_count": 0,
+                        "TSPARMCD": "DCUTDTC",
+                        "TSVAL": "44532"
+                    },
+                    "dataset": "ts.xpt",
+                    "row": 4,
+                    "SEQ": 1
+                },
+                {
+                    "value": {
+                        "$crmdur_count": 0,
+                        "TSPARMCD": "DOSE",
+                        "TSVAL": "25"
+                    },
+                    "dataset": "ts.xpt",
+                    "row": 5,
+                    "SEQ": 1
+                },
+                {
+                    "value": {
+                        "$crmdur_count": 0,
+                        "TSPARMCD": "DOSE",
+                        "TSVAL": "50"
+                    },
+                    "dataset": "ts.xpt",
+                    "row": 6,
+                    "SEQ": 2
+                },
+                {
+                    "value": {
+                        "$crmdur_count": 0,
+                        "TSPARMCD": "DOSE",
+                        "TSVAL": "10"
+                    },
+                    "dataset": "ts.xpt",
+                    "row": 7,
+                    "SEQ": 3
+                },
+                {
+                    "value": {
+                        "$crmdur_count": 0,
+                        "TSPARMCD": "DOSE",
+                        "TSVAL": "20"
+                    },
+                    "dataset": "ts.xpt",
+                    "row": 8,
+                    "SEQ": 4
+                },
+                {
+                    "value": {
+                        "$crmdur_count": 0,
+                        "TSPARMCD": "DOSFRM",
+                        "TSVAL": "CAPSULE"
+                    },
+                    "dataset": "ts.xpt",
+                    "row": 9,
+                    "SEQ": 1
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,108 @@
+{
+  "BE": [
+    {
+      "executionStatus": "success",
+      "dataset": "be.xpt",
+      "domain": "BE",
+      "variables": [
+        "BEDTC",
+        "BESTDTC"
+      ],
+      "message": "BESTDTC is greater than BEDTC",
+      "errors": [
+        {
+          "value": {
+            "BEDTC": "2007-01-11",
+            "BESTDTC": "2007-01-12T10:30"
+          },
+          "dataset": "be.xpt",
+          "row": 6,
+          "USUBJID": "CDISC002",
+          "SEQ": 1
+        },
+        {
+          "value": {
+            "BEDTC": "2007-01-11",
+            "BESTDTC": "2007-01-11T10:35"
+          },
+          "dataset": "be.xpt",
+          "row": 7,
+          "USUBJID": "CDISC002",
+          "SEQ": 2
+        }
+      ]
+    }
+  ],
+  "DS": [
+    {
+      "executionStatus": "success",
+      "dataset": "ds.xpt",
+      "domain": "DS",
+      "variables": [
+        "DSDTC",
+        "DSSTDTC"
+      ],
+      "message": "DSSTDTC is greater than DSDTC",
+      "errors": [
+        {
+          "value": {
+            "DSSTDTC": "2003-11-15",
+            "DSDTC": "2003-11-14"
+          },
+          "dataset": "ds.xpt",
+          "row": 5,
+          "USUBJID": "CDISC001",
+          "SEQ": 5
+        }
+      ]
+    }
+  ],
+  "MH": [
+    {
+      "executionStatus": "success",
+      "dataset": "mh.xpt",
+      "domain": "MH",
+      "variables": [
+        "MHDTC",
+        "MHSTDTC"
+      ],
+      "message": "MHSTDTC is greater than MHDTC",
+      "errors": [
+        {
+          "value": {
+            "MHDTC": "2013-08-06",
+            "MHSTDTC": "2014"
+          },
+          "dataset": "mh.xpt",
+          "row": 2,
+          "USUBJID": "CDISC001",
+          "SEQ": 2
+        }
+      ]
+    }
+  ],
+  "ML": [
+    {
+      "executionStatus": "success",
+      "dataset": "ml.xpt",
+      "domain": "ML",
+      "variables": [
+        "MLDTC",
+        "MLSTDTC"
+      ],
+      "message": "MLSTDTC is greater than MLDTC",
+      "errors": [
+        {
+          "value": {
+            "MLSTDTC": "2015-12-27",
+            "MLDTC": "2015-12"
+          },
+          "dataset": "ml.xpt",
+          "row": 3,
+          "USUBJID": "CDISC001",
+          "SEQ": 3
+        }
+      ]
+    }
+  ]
+}

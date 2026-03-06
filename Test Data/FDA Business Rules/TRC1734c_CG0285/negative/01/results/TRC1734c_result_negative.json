@@ -1,0 +1,52 @@
+{
+  "TS": [
+    {
+      "executionStatus": "success",
+      "dataset": "ts.xpt",
+      "domain": "TS",
+      "variables": [
+        "TSPARMCD",
+        "TSVAL"
+      ],
+      "message": "Invalid date for TSVAL for TSPARMCD = SSTDTC (Study Start Date)",
+      "errors": [
+        {
+          "value": {
+            "TSPARMCD": "SSTDTC",
+            "TSVAL": "200"
+          },
+          "dataset": "ts.xpt",
+          "row": 13,
+          "SEQ": 13
+        },
+        {
+          "value": {
+            "TSPARMCD": "SSTDTC",
+            "TSVAL": "2003-20"
+          },
+          "dataset": "ts.xpt",
+          "row": 14,
+          "SEQ": 14
+        },
+        {
+          "value": {
+            "TSPARMCD": "SSTDTC",
+            "TSVAL": "2003-11-31"
+          },
+          "dataset": "ts.xpt",
+          "row": 15,
+          "SEQ": 15
+        },
+        {
+          "value": {
+            "TSPARMCD": "SSTDTC",
+            "TSVAL": "2003-02-31"
+          },
+          "dataset": "ts.xpt",
+          "row": 16,
+          "SEQ": 16
+        }
+      ]
+    }
+  ]
+}

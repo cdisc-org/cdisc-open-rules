@@ -1,0 +1,70 @@
+dataset,variable,label,type,length
+dm.xpt,STUDYID,Study Identifier,Char,12
+dm.xpt,DOMAIN,Domain Abbreviation,Char,2
+dm.xpt,USUBJID,Unique Subject Identifier,Char,8
+dm.xpt,SUBJID,Subject Identifier for the Study,Char,4
+dm.xpt,RFSTDTC,Subject Reference Start Date/Time,Char,10
+dm.xpt,RFENDTC,Subject Reference End Date/Time,Char,10
+dm.xpt,RFXSTDTC,Date/Time of First Study Treatment,Char,10
+dm.xpt,RFXENDTC,Date/Time of Last Study Treatment,Char,10
+dm.xpt,RFICDTC,Date/Time of Informed Consent,Char,10
+dm.xpt,RFPENDTC,Date/Time of End of Participation,Char,10
+dm.xpt,DTHDTC,Date/Time of Death,Char,10
+dm.xpt,DTHFL,Subject Death Flag,Char,1
+dm.xpt,SITEID,Study Site Identifier,Char,3
+dm.xpt,BRTHDTC,Date/Time of Birth,Char,10
+dm.xpt,AGE,Age,Num,8
+dm.xpt,AGEU,Age Units,Char,5
+dm.xpt,SEX,Sex,Char,1
+dm.xpt,RACE,Race,Char,41
+dm.xpt,ETHNIC,Ethnicity,Char,22
+dm.xpt,ARMCD,Planned Arm Code,Char,8
+dm.xpt,ARM,Description of Planned Arm,Char,28
+dm.xpt,ACTARMCD,Actual Arm Code,Char,8
+dm.xpt,ACTARM,Description of Actual Arm,Char,28
+dm.xpt,ARMNRS,Reason Arm and/or Actual Arm is Null,Char,14
+dm.xpt,ACTARMUD,Description of Unplanned Actual Arm,Char,200
+dm.xpt,COUNTRY,Country,Char,3
+ae.xpt,STUDYID,Study Identifier,Char,12
+ae.xpt,DOMAIN,Domain Abbreviation,Char,2
+ae.xpt,USUBJID,Unique Subject Identifier,Char,8
+ae.xpt,AETERM,Reported Term for the Adverse Event,Char,40
+ae.xpt,AESER,Serious Event,Char,1
+ae.xpt,AEOUT,Outcome of Adverse Event,Char,40
+ae.xpt,AESTDTC,Start Date/Time of Adverse Event,Char,19
+ae.xpt,AESTDY,Study Day of Start of Observation,Num,8
+ae.xpt,AEENDTC,End Date/Time of Adverse Event,Char,19
+ae.xpt,AEENDY,Study Day of End of Observation,Num,8
+cm.xpt,STUDYID,Study Identifier,Char,12
+cm.xpt,DOMAIN,Domain Abbreviation,Char,2
+cm.xpt,USUBJID,Unique Subject Identifier,Char,8
+cm.xpt,DSSEQ,Sequence Number,Num,8
+cm.xpt,CMTRT,"Reported Name of Drug, Med, or Therapy",Char,200
+cm.xpt,CMDECOD,Standardized Medication Name,Char,200
+cm.xpt,CMCAT,Category for Medication,Char,50
+cm.xpt,CMSTDTC,Start Date/Time of Medication,Char,19
+cm.xpt,CMSTDY,Study Day of Start of Medication,Num,8
+cm.xpt,CMENDTC,End Date/Time of Medication,Char,19
+cm.xpt,CMENDY,Study Day of End of Medication,Num,8
+se.xpt,STUDYID,Study Identifier,Char,12
+se.xpt,DOMAIN,Domain Abbreviation,Char,2
+se.xpt,USUBJID,Unique Subject Identifier,Char,8
+se.xpt,SESEQ,Sequence Number,Num,8
+se.xpt,ETCD,Element Code,Char,8
+se.xpt,ELEMENT,Description of Element,Char,25
+se.xpt,TAETORD,Planned Order of Element within Arm,Num,8
+se.xpt,EPOCH,Epoch,Char,25
+se.xpt,SESTDTC,Start Date/Time of Element,Char,19
+se.xpt,SEENDTC,End Date/Time of Element,Char,19
+se.xpt,SESTDY,Study Day of Start of Element,Num,8
+se.xpt,SEENDY,Study Day of End of Element,Num,8
+sv.xpt,STUDYID,Study Identifier,Char,12
+sv.xpt,DOMAIN,Domain Abbreviation,Char,2
+sv.xpt,USUBJID,Unique Subject Identifier,Char,8
+sv.xpt,VISITNUM,Visit Number,Num,8
+sv.xpt,VISIT,Visit Name,Char,10
+sv.xpt,VISITDY,Planned Study Day of Visit,Num,8
+sv.xpt,EPOCH,Subject Reference Start Date/Time,Char,25
+sv.xpt,SVSTDTC,Start Date/Time of Observation,Char,19
+sv.xpt,SVENDTC,End Date/Time of Observation,Char,19
+sv.xpt,SVENDY,Study Day of End of Observation,Num,8

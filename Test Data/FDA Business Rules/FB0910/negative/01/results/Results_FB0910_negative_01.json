@@ -1,0 +1,76 @@
+{
+    "AE": [
+        {
+            "executionStatus": "success",
+            "dataset": "ae.xpt",
+            "domain": "AE",
+            "variables": [
+                "AEBDSYCD",
+                "AEBODSYS"
+            ],
+            "message": "AEBDSYCD and AEBODSYS do not have a one-to-one relationship",
+            "errors": [
+                {
+                    "value": {
+                        "AEBDSYCD": 10029205,
+                        "AEBODSYS": "Nervous system disorders"
+                    },
+                    "dataset": "ae.xpt",
+                    "row": 2,
+                    "USUBJID": "CDISC-TEST-046",
+                    "SEQ": 735
+                },
+                {
+                    "value": {
+                        "AEBDSYCD": 10029206,
+                        "AEBODSYS": "Nervous system disorders"
+                    },
+                    "dataset": "ae.xpt",
+                    "row": 3,
+                    "USUBJID": "CDISC-TEST-049",
+                    "SEQ": 782
+                },
+                {
+                    "value": {
+                        "AEBDSYCD": null,
+                        "AEBODSYS": "Nervous system disorders"
+                    },
+                    "dataset": "ae.xpt",
+                    "row": 4,
+                    "USUBJID": "CDISC-TEST-049",
+                    "SEQ": 783
+                },
+                {
+                    "value": {
+                        "AEBDSYCD": 10029205,
+                        "AEBODSYS": "Nervous system disorders"
+                    },
+                    "dataset": "ae.xpt",
+                    "row": 5,
+                    "USUBJID": "CDISC-TEST-052",
+                    "SEQ": 839
+                },
+                {
+                    "value": {
+                        "AEBDSYCD": 10047065,
+                        "AEBODSYS": "Vascular disorders"
+                    },
+                    "dataset": "ae.xpt",
+                    "row": 6,
+                    "USUBJID": "CDISC-TEST-052",
+                    "SEQ": 840
+                },
+                {
+                    "value": {
+                        "AEBDSYCD": 10047065,
+                        "AEBODSYS": ""
+                    },
+                    "dataset": "ae.xpt",
+                    "row": 7,
+                    "USUBJID": "CDISC-TEST-052",
+                    "SEQ": 843
+                }
+            ]
+        }
+    ]
+}

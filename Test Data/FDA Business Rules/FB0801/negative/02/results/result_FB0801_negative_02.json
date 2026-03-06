@@ -1,0 +1,93 @@
+{
+  "DM": [
+    {
+      "executionStatus": "skipped",
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "variables": [],
+      "message": "Rule skipped - doesn't apply to domain for rule id=FDA.SDTMIG.FB0801, dataset=DM",
+      "errors": []
+    }
+  ],
+  "EX": [
+    {
+      "executionStatus": "success",
+      "dataset": "ex.xpt",
+      "domain": "EX",
+      "variables": [
+        "EXSTDTC",
+        "RFXENDTC",
+        "RFXSTDTC"
+      ],
+      "message": "EXSTDTC does not fall on or between RFXSTDTC and RFENDTC.",
+      "errors": [
+        {
+          "value": {
+            "RFXENDTC": "2013-01-23",
+            "EXSTDTC": "2012-11-28",
+            "RFXSTDTC": "2012-11-29"
+          },
+          "dataset": "ex.xpt",
+          "row": 1,
+          "USUBJID": "CDISC001",
+          "SEQ": 1
+        },
+        {
+          "value": {
+            "RFXENDTC": "2013-01-23",
+            "EXSTDTC": "2012-11-28T23",
+            "RFXSTDTC": "2012-11-29"
+          },
+          "dataset": "ex.xpt",
+          "row": 58,
+          "USUBJID": "CDISC999",
+          "SEQ": 54
+        },
+        {
+          "value": {
+            "RFXENDTC": "2013-01-23",
+            "EXSTDTC": "2012-01-24",
+            "RFXSTDTC": "2012-11-29"
+          },
+          "dataset": "ex.xpt",
+          "row": 60,
+          "USUBJID": "CDISC999",
+          "SEQ": 55
+        },
+        {
+          "value": {
+            "RFXENDTC": "2013-01-23T13:13:13",
+            "EXSTDTC": "2012-11-28",
+            "RFXSTDTC": "2012-11-29T12:12:12"
+          },
+          "dataset": "ex.xpt",
+          "row": 61,
+          "USUBJID": "CDISC101",
+          "SEQ": 1
+        },
+        {
+          "value": {
+            "RFXENDTC": "2013-01-23T13:13:13",
+            "EXSTDTC": "2012-11-29T11:11:11",
+            "RFXSTDTC": "2012-11-29T12:12:12"
+          },
+          "dataset": "ex.xpt",
+          "row": 62,
+          "USUBJID": "CDISC101",
+          "SEQ": 2
+        },
+        {
+          "value": {
+            "RFXENDTC": "2013-01-23T13:13:13",
+            "EXSTDTC": "2013-01-23T14:14:14",
+            "RFXSTDTC": "2012-11-29T12:12:12"
+          },
+          "dataset": "ex.xpt",
+          "row": 65,
+          "USUBJID": "CDISC101",
+          "SEQ": 55
+        }
+      ]
+    }
+  ]
+}
