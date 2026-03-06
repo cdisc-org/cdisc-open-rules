@@ -1,0 +1,33 @@
+{2 items
+"DM":[1 item
+0:{6 items
+"executionStatus":"success"
+"dataset":"dm.xpt"
+"domain":"DM"
+"variables":[1 item
+0:"DTHFL"
+]
+"message":"DTHFL is not 'Y' when AE.AEOUT is 'FATAL'."
+"errors":[1 item
+0:{4 items
+"value":{1 item
+"DTHFL":""
+}
+"dataset":"dm.xpt"
+"row":1
+"USUBJID":"CDISC001"
+}
+]
+}
+]
+"AE":[1 item
+0:{6 items
+"executionStatus":"skipped"
+"dataset":NULL
+"domain":"AE"
+"variables":[]0 items
+"message":NULL
+"errors":[]0 items
+}
+]
+}
