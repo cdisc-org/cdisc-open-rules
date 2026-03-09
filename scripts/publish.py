@@ -4,7 +4,7 @@ import re
 import shutil
 import yaml
 
-CORE_PATTERN = re.compile(r"^CORE-\d{6}$")
+CORE_PATTERN = re.compile(r"^CORE-(\d{6})$")
 
 def extract_numeric_ids(coreids):
     numbers = []
