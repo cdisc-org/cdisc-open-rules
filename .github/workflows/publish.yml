@@ -42,18 +42,16 @@ jobs:
           echo "NEW_DIRS=$NEW_DIRS"
           echo "NEW_DIRS=$NEW_DIRS" >> $GITHUB_OUTPUT
 
-      - name: Find existing CORE IDs
-        id: coreids
+      - name: Stop if nothing to publish
+        if: steps.newdirs.outputs.NEW_DIRS == ''
         run: |
-          COREIDS=$(ls -d CORE-* 2>/dev/null | sed 's/CORE-//' | sort -n | xargs)
-
-          echo "COREIDS=$COREIDS"
-          echo "COREIDS=$COREIDS" >> $GITHUB_OUTPUT
+          echo "No new rules found"
+          exit 0
 
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          python-version: "3.11"
 
       - name: Install dependencies
         run: |
@@ -73,7 +71,8 @@ jobs:
           git add .
           git commit -m "Auto-publish new rules" || exit 0
 
-      - name: Push changes
-        if: ${{ !env.ACT }}
+          git diff --cached --quiet || git commit -m "Auto-publish rules"
+
+      - name: Push
         run: |
           git push

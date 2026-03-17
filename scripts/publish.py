@@ -1,99 +1,153 @@
-import argparse
-import os
+import csv
 import re
-import shutil
+from pathlib import Path
 import yaml
+import argparse
 
 CORE_PATTERN = re.compile(r"^CORE-(\d{6})$")
 
-def extract_numeric_ids(coreids):
-    numbers = []
-    for cid in coreids:
-        match = CORE_PATTERN.match(cid)
-        if match:
-            numbers.append(int(match.group(1)))
-    return numbers
+
+def parse_rule(rule_path: Path):
+    with open(rule_path, encoding="utf-8") as f:
+        data = yaml.safe_load(f)
+
+    standards = []
+
+    for auth in data.get("Authorities", []):
+        for std in auth.get("Standards", []):
+            name = std.get("Name")
+            rule_id = None
+            rule_ver = None
+
+            refs = std.get("References", [])
+            if refs:
+                rid_info = refs[0].get("Rule Identifier")
+                if rid_info:
+                    rule_id = rid_info.get("Id")
+                    rule_ver = rid_info.get("Version")
+
+            std_version = str(std.get("Version"))
+
+            standards.append(
+                {
+                    "name": name,
+                    "version": std_version,
+                    "rule_id": rule_id,
+                    "rule_version": rule_ver,
+                }
+            )
+
+    return standards
 
 
-def max_next_id(existing_coreids):
-    nums = extract_numeric_ids(existing_coreids)
-    max_id = max(nums) if nums else 0
-    return f"CORE-{str(max_id + 1).zfill(6)}"
+def get_next_core_id(mappings_dir: Path, algorithm="max"):
+    existing_ids = []
 
+    for file in mappings_dir.glob("*_mappings.csv"):
+        with open(file, newline="", encoding="utf-8") as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                core = row.get("CORE-ID", "").strip()
+                match = CORE_PATTERN.match(core)
+                if match:
+                    existing_ids.append(int(match.group(1)))
 
-def min_next_id(existing_coreids):
-    nums = sorted(extract_numeric_ids(existing_coreids))
-    expected = 1
-    for num in nums:
-        if num != expected:
-            return f"CORE-{str(expected).zfill(6)}"
-        expected += 1
-    return f"CORE-{str(expected).zfill(6)}"
+    existing_ids.sort()
 
-
-def generate_core_id(existing_coreids, algorithm):
     if algorithm == "min":
-        return min_next_id(existing_coreids)
-    return max_next_id(existing_coreids)
-
-
-def publish_rule_yaml(yaml_path, existing_coreids, algorithm):
-    with open(yaml_path, "r") as f:
-        content = yaml.safe_load(f)
-
-    if content is None:
-        content = {}
-
-    if "Core" not in content or content["Core"] is None:
-        content["Core"] = {}
-
-    core = content["Core"]
-
-    if not CORE_PATTERN.match(str(core.get("Id", ""))):
-        new_id = generate_core_id(existing_coreids, algorithm)
-        core["Id"] = new_id
+        next_id = 1
+        for eid in existing_ids:
+            if eid != next_id:
+                break
+            next_id += 1
     else:
-        new_id = core["Id"]
+        next_id = max(existing_ids, default=0) + 1
 
-    core["Status"] = "Published"
+    return f"CORE-{next_id:06d}"
 
-    with open(yaml_path, "w") as f:
-        yaml.safe_dump(content, f, sort_keys=False)
 
-    return new_id
+def _get_field_names(grouped_standard):
+    all_versions = set(grouped_standard.keys()) - {'rule_id', 'name'}
+    version_columns = sorted(all_versions)
+    fieldnames = ["Rule ID"] + version_columns + ["Status", "CORE-ID"]
+    return fieldnames
+
+
+def update_csv(mapping_file: Path, grouped_standard: dict, core_id: str) -> str:
+    rows = []
+    fieldnames = []
+    if mapping_file.exists():
+        with open(mapping_file, newline="", encoding="utf-8") as f:
+            reader = csv.DictReader(f)
+            fieldnames = reader.fieldnames or []
+            for row in reader:
+                rows.append(row)
+    if not fieldnames:
+        fieldnames = _get_field_names(grouped_standard)
+    row = next((x for x in rows if x.get('Rule ID') == grouped_standard['rule_id']), {})
+    if not row:
+        rows.append(row)
+    row.update({col: grouped_standard.get(col) for col in set(fieldnames) - {"Status", "CORE-ID"}})
+    row["Rule ID"] = grouped_standard['rule_id']
+    row["CORE-ID"] = row.get("CORE-ID") or core_id
+    row["Status"] = "PUBLISHED"
+
+    with open(mapping_file, "w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=fieldnames)
+        writer.writeheader()
+        writer.writerows(rows)
+    return row.get("CORE-ID")
 
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--new-dirs", required=True)
-    parser.add_argument("--existing", required=True)
-    parser.add_argument("--algorithm", choices=["min", "max"], default="min")
+    parser.add_argument("--new-dirs", required=True, help="Папки правил через пробел")
+    parser.add_argument(
+        "--algorithm", choices=["min", "max"], default="max", help="Алгоритм CORE-ID"
+    )
     args = parser.parse_args()
 
-    new_dirs = [d.strip() for d in args.new_dirs.split() if d.strip()]
-    existing_coreids = [d.strip() for d in args.existing.split() if d.strip()]
+    mappings_dir = Path("mappings")
 
-    for directory in new_dirs:
-        if not os.path.isdir(directory):
+    for rule_dir in args.new_dirs.split():
+        rule_path = Path(rule_dir) / "rule.yaml"
+        if not rule_path.exists():
             continue
+        standards = parse_rule(rule_path)
 
-        yaml_path = os.path.join(directory, "rule.yaml")
-        if not os.path.exists(yaml_path):
-            continue
+        core_id = get_next_core_id(mappings_dir, args.algorithm)
 
-        new_core_id = publish_rule_yaml(
-            yaml_path,
-            existing_coreids,
-            args.algorithm,
-        )
+        result = {}
+        for item in standards:
+            key = (item['name'], item['rule_id'])
+            if key not in result:
+                result[key] = {
+                    'name': item['name'],
+                    'rule_id': item['rule_id']
+                }
 
-        if directory != new_core_id:
-            shutil.move(directory, new_core_id)
+            result[key][item['version']] = item['version']
 
-        if new_core_id not in existing_coreids:
-            existing_coreids.append(new_core_id)
+        actual_core_id = core_id
+        for (std, rule_id), versions in result.items():
+            mapping_file = mappings_dir / f"{std}_mappings.csv"
+            actual_core_id = update_csv(mapping_file, versions, core_id)
 
-        print(f"Published {directory} -> {new_core_id}")
+        update_rule_yaml(actual_core_id, rule_path)
+
+        new_path = Path(actual_core_id)
+        Path(rule_dir).rename(new_path)
+
+
+def update_rule_yaml(actual_core_id: str, rule_path: Path):
+    with open(rule_path, encoding="utf-8") as f:
+        doc = yaml.safe_load(f)
+    if "Core" not in doc:
+        doc["Core"] = {}
+    doc["Core"]["Id"] = actual_core_id
+    doc["Core"]["Status"] = "Published"
+    with open(rule_path, "w", encoding="utf-8") as f:
+        yaml.safe_dump(doc, f, sort_keys=False)
 
 
 if __name__ == "__main__":
