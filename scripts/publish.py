@@ -209,10 +209,6 @@ def update_csv(
         c for c in fieldnames if c not in ("Rule ID", "Status", "CORE-ID")
     ]
 
-    # new_ver_cols = []
-    # if not existing_ver_cols:
-    #     new_ver_cols = sorted(versions - set(existing_ver_cols))
-    # all_ver_cols = existing_ver_cols + new_ver_cols
     new_ver_cols = sorted(versions - set(existing_ver_cols))
     all_ver_cols = existing_ver_cols + new_ver_cols
     fieldnames = ["Rule ID"] + all_ver_cols + ["Status", "CORE-ID"]
