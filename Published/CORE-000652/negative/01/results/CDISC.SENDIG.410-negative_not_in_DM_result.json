@@ -1,0 +1,51 @@
+{
+  "GV": [
+    {
+      "executionStatus": "success",
+      "dataset": "gv.xpt",
+      "domain": "GV",
+      "variables": [
+        "USUBJID"
+      ],
+      "message": "No record for USUBJID is found in DM or EC",
+      "errors": [
+        {
+          "value": {
+            "USUBJID": "STDY02-99"
+          },
+          "row": 5,
+          "USUBJID": "STDY02-99",
+          "SEQ": 1
+        },
+        {
+          "value": {
+            "USUBJID": "STDY02-99"
+          },
+          "row": 6,
+          "USUBJID": "STDY02-99",
+          "SEQ": 2
+        }
+      ]
+    }
+  ],
+  "DM": [
+    {
+      "executionStatus": "skipped",
+      "dataset": null,
+      "domain": "DM",
+      "variables": [],
+      "message": null,
+      "errors": []
+    }
+  ],
+  "EX": [
+    {
+      "executionStatus": "skipped",
+      "dataset": null,
+      "domain": "EX",
+      "variables": [],
+      "message": null,
+      "errors": []
+    }
+  ]
+}

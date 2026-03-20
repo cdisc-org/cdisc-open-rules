@@ -1,0 +1,108 @@
+{
+  "SJ": [
+    {
+      "executionStatus": "skipped",
+      "dataset": null,
+      "domain": "SJ",
+      "variables": [],
+      "message": null,
+      "errors": []
+    }
+  ],
+  "EX": [
+    {
+      "executionStatus": "success",
+      "dataset": "ex.xpt",
+      "domain": "EX",
+      "variables": [
+        "EXRPDY",
+        "EXRPENDY",
+        "EXRPSTDY",
+        "RPHASE",
+        "RPPLDY",
+        "RPPLENDY",
+        "RPPLSTDY"
+      ],
+      "message": "RPHASE must be populated when one of the timing variables is populated",
+      "errors": [
+        {
+          "value": {
+            "RPHASE": "",
+            "RPPLSTDY": 3,
+            "EXRPENDY": "Not in dataset",
+            "RPPLDY": "Not in dataset",
+            "RPPLENDY": "Not in dataset",
+            "EXRPDY": "Not in dataset",
+            "EXRPSTDY": "Not in dataset"
+          },
+          "row": 3,
+          "USUBJID": "EFD111-0001 "
+        }
+      ]
+    }
+  ],
+  "LB": [
+    {
+      "executionStatus": "success",
+      "dataset": "lb.xpt",
+      "domain": "LB",
+      "variables": [
+        "LBRPDY",
+        "LBRPENDY",
+        "LBRPSTDY",
+        "RPHASE",
+        "RPPLDY",
+        "RPPLENDY",
+        "RPPLSTDY"
+      ],
+      "message": "RPHASE must be populated when one of the timing variables is populated",
+      "errors": [
+        {
+          "value": {
+            "RPHASE": "",
+            "RPPLDY": 3,
+            "LBRPSTDY": "Not in dataset",
+            "LBRPDY": "Not in dataset",
+            "RPPLSTDY": "Not in dataset",
+            "RPPLENDY": "Not in dataset",
+            "LBRPENDY": "Not in dataset"
+          },
+          "row": 3,
+          "USUBJID": "EFD111-0001 "
+        }
+      ]
+    }
+  ],
+  "DS": [
+    {
+      "executionStatus": "success",
+      "dataset": "ds.xpt",
+      "domain": "DS",
+      "variables": [
+        "DSRPDY",
+        "DSRPENDY",
+        "DSRPSTDY",
+        "RPHASE",
+        "RPPLDY",
+        "RPPLENDY",
+        "RPPLSTDY"
+      ],
+      "message": "RPHASE must be populated when one of the timing variables is populated",
+      "errors": [
+        {
+          "value": {
+            "RPPLDY": 3,
+            "RPHASE": "",
+            "DSRPDY": "Not in dataset",
+            "DSRPSTDY": "Not in dataset",
+            "DSRPENDY": "Not in dataset",
+            "RPPLSTDY": "Not in dataset",
+            "RPPLENDY": "Not in dataset"
+          },
+          "row": 3,
+          "USUBJID": "EFD111-0001 "
+        }
+      ]
+    }
+  ]
+}

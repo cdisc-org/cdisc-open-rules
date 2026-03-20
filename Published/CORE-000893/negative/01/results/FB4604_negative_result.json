@@ -1,0 +1,36 @@
+{
+  "TA": [
+    {
+      "executionStatus": "skipped",
+      "dataset": "ta.xpt",
+      "domain": "TA",
+      "variables": [],
+      "message": "Rule skipped - doesn't apply to domain for rule id=None, dataset=TA",
+      "errors": []
+    }
+  ],
+  "TX": [
+    {
+      "executionStatus": "success",
+      "dataset": "tx.xpt",
+      "domain": "TX",
+      "variables": [
+        "$txparmcd"
+      ],
+      "message": "Each Trial Set should include a TXPARMCD = \"GRPLBL\" record",
+      "errors": [
+        {
+          "value": {
+            "$txparmcd": [
+              "TCNTRL",
+              "GRPLBLxxx",
+              "ARMCD",
+              "SPGRPCD"
+            ]
+          },
+          "dataset": "tx.xpt"
+        }
+      ]
+    }
+  ]
+}

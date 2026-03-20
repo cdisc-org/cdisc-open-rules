@@ -1,0 +1,16 @@
+dataset,variable,label,type,length
+ic.xpt,STUDYID,Study Identifier,Char,10
+ic.xpt,DOMAIN,Domain Abbreviation,Char,2
+ic.xpt,USUBJID,Unique Subject Identifier ,Char,20
+ic.xpt,FETUSID,Unique Fetus Identifier ,Char,20
+ic.xpt,ICSEQ,Sequence Number,Num,8
+ic.xpt,ICTESTCD,Test Short Name,Char,8
+ic.xpt,ICTEST,Implantation Exam Name ,Char,40
+ic.xpt,ICORRES,Result or Finding as Collected,Char,20
+ic.xpt,ICSTRESC,Standardized Result in Character Format,Char,20
+ic.xpt,ICIMPLBL,Implementation Site Label ,Char,11
+ic.xpt,ICSTRESCAT,Result Category,Char,20
+ic.xpt,ICRESLOC,Result Location of Finding,Char,20
+ic.xpt,ICSTAT,Completion Status,Char,10
+ic.xpt,ICREASND,Reason not Done,Char,20
+ic.xpt,ICSPEC,Specimen Material Type,Char,20

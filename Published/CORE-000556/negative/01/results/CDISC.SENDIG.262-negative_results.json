@@ -1,0 +1,29 @@
+{
+  "POOLDEF": [
+    {
+      "executionStatus": "success",
+      "dataset": "pooldef.xpt",
+      "domain": "POOLDEF",
+      "variables": [
+        "POOLID"
+      ],
+      "message": "A duplicate combination of USUBJID and POOLID was found",
+      "errors": [
+        {
+          "value": {
+            "POOLID": "POOL3"
+          },
+          "row": 8,
+          "USUBJID": "SUBJ7"
+        },
+        {
+          "value": {
+            "POOLID": "POOL3"
+          },
+          "row": 9,
+          "USUBJID": "SUBJ7"
+        }
+      ]
+    }
+  ]
+}

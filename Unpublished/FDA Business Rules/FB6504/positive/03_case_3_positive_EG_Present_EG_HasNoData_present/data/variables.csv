@@ -1,0 +1,24 @@
+dataset,variable,label,type,length
+vs.xpt,STUDYID,Study Identifier,Char,12
+vs.xpt,DOMAIN,Domain Abbreviation,Char,2
+vs.xpt,USUBJID,Unique Subject Identifier,Char,8
+vs.xpt,POOLID,Pool Identfier,Char,8
+vs.xpt,VSSEQ,Sequence Number,Num,8
+vs.xpt,VSTESTCD,Vital Signs Test Short Name,Char,6
+vs.xpt,VSTEST,Vital Signs Test Name,Char,24
+vs.xpt,VSPOS,Vital Signs Position of Subject,Char,8
+vs.xpt,VSORRES,Result or Finding in Original Units,Char,8
+vs.xpt,VSORRESU,Original Units,Char,9
+vs.xpt,VSSTRESC,Character Result/Finding in Std Format,Char,200
+vs.xpt,VSSTRESN,Numeric Result/Finding in Standard Units,Num,8
+vs.xpt,VSSTRESU,Standard Units,Char,9
+vs.xpt,VSSTAT,Completion Status,Char,8
+vs.xpt,VSLOC,Location of Vital Signs Measurement,Char,11
+ae.xpt,STUDYID,Study Identifier,Char,12
+ae.xpt,DOMAIN,Domain Abbreviation,Char,2
+ae.xpt,USUBJID,Unique Subject Identifier,Char,8
+ex.xpt,STUDYID,Study Identifier,Char,12
+ex.xpt,DOMAIN,Domain Abbreviation,Char,2
+ex.xpt,USUBJID,Unique Subject Identifier,Char,8
+ex.xpt,EXSEQ,Sequence Number,Num,8
+ex.xpt,EGTRT,Name of Actual Treatment,Char,80

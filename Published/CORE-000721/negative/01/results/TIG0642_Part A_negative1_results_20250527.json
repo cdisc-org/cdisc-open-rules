@@ -1,0 +1,140 @@
+{
+    "AE": [
+        {
+            "executionStatus": "success",
+            "dataset": "ae.xpt",
+            "domain": "AE",
+            "variables": [
+                "AESEQ",
+                "DOMAIN",
+                "STUDYID"
+            ],
+            "message": "An appropriate identifier is not present; USUBJID, APID, SPDEVID, SPTOBID, POOLID, SPTOBID, STOCONID should be present.",
+            "errors": [
+                {
+                    "value": {
+                        "STUDYID": "CDISCPILOT01",
+                        "DOMAIN": "AE",
+                        "AESEQ": 1
+                    },
+                    "dataset": "ae.xpt"
+                }
+            ]
+        }
+    ],
+    "CM": [
+        {
+            "executionStatus": "success",
+            "dataset": "cm.xpt",
+            "domain": "CM",
+            "variables": [
+                "CMSEQ",
+                "DOMAIN",
+                "STUDYID"
+            ],
+            "message": "An appropriate identifier is not present; USUBJID, APID, SPDEVID, SPTOBID, POOLID, SPTOBID, STOCONID should be present.",
+            "errors": [
+                {
+                    "value": {
+                        "STUDYID": "CDISCPILOT01",
+                        "CMSEQ": 1,
+                        "DOMAIN": "CM"
+                    },
+                    "dataset": "cm.xpt"
+                }
+            ]
+        }
+    ],
+    "EM": [
+        {
+            "executionStatus": "success",
+            "dataset": "em.xpt",
+            "domain": "EM",
+            "variables": [
+                "DOMAIN",
+                "EMSEQ",
+                "STUDYID"
+            ],
+            "message": "An appropriate identifier is not present; USUBJID, APID, SPDEVID, SPTOBID, POOLID, SPTOBID, STOCONID should be present.",
+            "errors": [
+                {
+                    "value": {
+                        "STUDYID": "TOB07",
+                        "DOMAIN": "EM",
+                        "EMSEQ": 1
+                    },
+                    "dataset": "em.xpt"
+                }
+            ]
+        }
+    ],
+    "DU": [
+        {
+            "executionStatus": "success",
+            "dataset": "du.xpt",
+            "domain": "DU",
+            "variables": [
+                "DOMAIN",
+                "DUSEQ",
+                "STUDYID"
+            ],
+            "message": "An appropriate identifier is not present; USUBJID, APID, SPDEVID, SPTOBID, POOLID, SPTOBID, STOCONID should be present.",
+            "errors": [
+                {
+                    "value": {
+                        "STUDYID": "TOB07",
+                        "DUSEQ": 1,
+                        "DOMAIN": "DU"
+                    },
+                    "dataset": "du.xpt"
+                }
+            ]
+        }
+    ],
+    "TO": [
+        {
+            "executionStatus": "success",
+            "dataset": "to.xpt",
+            "domain": "TO",
+            "variables": [
+                "DOMAIN",
+                "STUDYID",
+                "TOSEQ"
+            ],
+            "message": "An appropriate identifier is not present; USUBJID, APID, SPDEVID, SPTOBID, POOLID, SPTOBID, STOCONID should be present.",
+            "errors": [
+                {
+                    "value": {
+                        "STUDYID": "CDISCPILOT01",
+                        "TOSEQ": 1,
+                        "DOMAIN": "TO"
+                    },
+                    "dataset": "to.xpt"
+                }
+            ]
+        }
+    ],
+    "ES": [
+        {
+            "executionStatus": "success",
+            "dataset": "es.xpt",
+            "domain": "ES",
+            "variables": [
+                "DOMAIN",
+                "ESSEQ",
+                "STUDYID"
+            ],
+            "message": "An appropriate identifier is not present; USUBJID, APID, SPDEVID, SPTOBID, POOLID, SPTOBID, STOCONID should be present.",
+            "errors": [
+                {
+                    "value": {
+                        "STUDYID": "TOB07",
+                        "DOMAIN": "ES",
+                        "ESSEQ": 1
+                    },
+                    "dataset": "es.xpt"
+                }
+            ]
+        }
+    ]
+}

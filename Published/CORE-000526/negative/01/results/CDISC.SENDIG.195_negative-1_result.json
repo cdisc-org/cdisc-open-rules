@@ -1,0 +1,52 @@
+{
+  "PC": [
+    {
+      "executionStatus": "skipped",
+      "domain": "PC",
+      "variables": [],
+      "message": null,
+      "errors": []
+    }
+  ],
+  "PP": [
+    {
+      "executionStatus": "success",
+      "domain": "PP",
+      "variables": [
+        "POOLID",
+        "PPCAT",
+        "PPSPEC",
+        "PPTESTCD",
+        "PPTPTREF",
+        "USUBJID"
+      ],
+      "message": "The combination of POOLID or USUBJID, PPTESTCD, PPCAT, PPSPEC, and PPTPTREF is not unique",
+      "errors": [
+        {
+          "value": {
+            "USUBJID": "123101",
+            "PPSPEC": "PLASMA",
+            "PPTPTREF": "Day 1 dose",
+            "POOLID": "",
+            "PPTESTCD": "AUCINT",
+            "PPCAT": "XYZ-123"
+          },
+          "row": 1,
+          "USUBJID": "123101"
+        },
+        {
+          "value": {
+            "USUBJID": "123101",
+            "PPSPEC": "PLASMA",
+            "PPTPTREF": "Day 1 dose",
+            "POOLID": "",
+            "PPTESTCD": "AUCINT",
+            "PPCAT": "XYZ-123"
+          },
+          "row": 2,
+          "USUBJID": "123101"
+        }
+      ]
+    }
+  ]
+}

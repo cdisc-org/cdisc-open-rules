@@ -1,0 +1,21 @@
+{
+    "TX": [
+        {
+            "executionStatus": "skipped",
+            "dataset": "tx.xpt",
+            "domain": "TX",
+            "variables": [],
+            "message": "rule evaluation skipped - operation domain not found",
+            "errors": [
+                {
+                    "executionStatus": "skipped",
+                    "dataset": "tx.xpt",
+                    "domain": null,
+                    "variables": [],
+                    "message": "Operation distinct requires Domain TO but Domain not found in dataset",
+                    "errors": []
+                }
+            ]
+        }
+    ]
+}

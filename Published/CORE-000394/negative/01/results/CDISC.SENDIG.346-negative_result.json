@@ -1,0 +1,28 @@
+{
+  "TS": [
+    {
+      "executionStatus": "success",
+      "domain": "TS",
+      "variables": [
+        "TSPARMCD"
+      ],
+      "message": "Only one record with TSPARMCD=STDIR is allowed",
+      "errors": [
+        {
+          "value": {
+            "TSPARMCD": "STDIR"
+          },
+          "row": 59,
+          "SEQ": 59
+        },
+        {
+          "value": {
+            "TSPARMCD": "STDIR"
+          },
+          "row": 60,
+          "SEQ": 60
+        }
+      ]
+    }
+  ]
+}

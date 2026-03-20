@@ -1,0 +1,31 @@
+{
+  "DM": [
+    {
+      "executionStatus": "skipped",
+      "dataset": null,
+      "domain": "DM",
+      "variables": [],
+      "message": null,
+      "errors": []
+    }
+  ],
+  "DS": [
+    {
+      "executionStatus": "success",
+      "dataset": "ds.xpt",
+      "domain": "DS",
+      "variables": [
+        "DSHLGTCD"
+      ],
+      "message": "DSHLGTCD must not be present in SEND dataset",
+      "errors": [
+        {
+          "value": {
+            "DSHLGTCD": null
+          },
+          "dataset": "ds.xpt"
+        }
+      ]
+    }
+  ]
+}

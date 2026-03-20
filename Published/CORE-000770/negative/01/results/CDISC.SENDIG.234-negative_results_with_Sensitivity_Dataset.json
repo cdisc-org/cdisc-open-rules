@@ -1,0 +1,49 @@
+{
+  "DM": [
+    {
+      "executionStatus": "skipped",
+      "dataset": null,
+      "domain": "DM",
+      "variables": [],
+      "message": null,
+      "errors": []
+    }
+  ],
+  "TA": [
+    {
+      "executionStatus": "skipped",
+      "dataset": null,
+      "domain": "TA",
+      "variables": [],
+      "message": null,
+      "errors": []
+    }
+  ],
+  "TX": [
+    {
+      "executionStatus": "success",
+      "dataset": "tx.xpt",
+      "domain": "TX",
+      "variables": [
+        "$txgroupsbysetcd",
+        "SETCD",
+        "TXPARMCD"
+      ],
+      "message": "Each Trial Set must contain a record with TXPARMCD=SPGRPCD",
+      "errors": [
+        {
+          "value": {
+            "TXPARMCD": "ARMCD",
+            "SETCD": "SET2",
+            "$txgroupsbysetcd": [
+              "ARMCD",
+              "XXSPGRPCD",
+              "GRPLBL"
+            ]
+          },
+          "dataset": "tx.xpt"
+        }
+      ]
+    }
+  ]
+}

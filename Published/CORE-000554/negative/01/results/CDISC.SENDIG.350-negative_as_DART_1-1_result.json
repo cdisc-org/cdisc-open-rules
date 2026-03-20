@@ -1,0 +1,25 @@
+{
+  "SJ": [
+    {
+      "executionStatus": "success",
+      "dataset": "sj.xpt",
+      "domain": "SJ",
+      "variables": [
+        "RSTAGE",
+        "RSTGCD"
+      ],
+      "message": "RSTAGE may not be populated when RSTGCD = UNPLAN",
+      "errors": [
+        {
+          "value": {
+            "RSTAGE": "Gestation28D ",
+            "RSTGCD": "UNPLAN"
+          },
+          "dataset": "sj.xpt",
+          "row": 5,
+          "USUBJID": "EFD111-0050"
+        }
+      ]
+    }
+  ]
+}

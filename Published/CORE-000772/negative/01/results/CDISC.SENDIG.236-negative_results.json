@@ -1,0 +1,45 @@
+{
+  "DM": [
+    {
+      "executionStatus": "skipped",
+      "dataset": null,
+      "domain": "DM",
+      "variables": [],
+      "message": null,
+      "errors": []
+    }
+  ],
+  "TA": [
+    {
+      "executionStatus": "skipped",
+      "dataset": null,
+      "domain": "TA",
+      "variables": [],
+      "message": null,
+      "errors": []
+    }
+  ],
+  "TX": [
+    {
+      "executionStatus": "success",
+      "dataset": "tx.xpt",
+      "domain": "TX",
+      "variables": [
+        "TXPARMCD",
+        "TXVAL"
+      ],
+      "message": "The value of TXVAL for TXPARMCD=ARMCD cannot be found in the TA dataset",
+      "errors": [
+        {
+          "value": {
+            "TXPARMCD": "ARMCD",
+            "TXVAL": "ZAN_MEDIUM"
+          },
+          "dataset": "tx.xpt",
+          "row": 4,
+          "SEQ": 4
+        }
+      ]
+    }
+  ]
+}

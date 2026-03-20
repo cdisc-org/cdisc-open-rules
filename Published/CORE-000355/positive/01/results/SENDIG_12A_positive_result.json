@@ -1,0 +1,43 @@
+{
+  "AE": [
+    {
+      "executionStatus": "execution_error",
+      "domain": "AE",
+      "variables": [],
+      "message": "rule execution error",
+      "errors": [
+        {
+          "error": "An unknown exception has occurred",
+          "message": "'NoneType' object has no attribute 'lower'"
+        }
+      ]
+    }
+  ],
+  "EX": [
+    {
+      "executionStatus": "success",
+      "domain": "EX",
+      "variables": [],
+      "message": null,
+      "errors": []
+    }
+  ],
+  "LB": [
+    {
+      "executionStatus": "success",
+      "domain": "LB",
+      "variables": [],
+      "message": null,
+      "errors": []
+    }
+  ],
+  "TA": [
+    {
+      "executionStatus": "success",
+      "domain": "TA",
+      "variables": [],
+      "message": null,
+      "errors": []
+    }
+  ]
+}

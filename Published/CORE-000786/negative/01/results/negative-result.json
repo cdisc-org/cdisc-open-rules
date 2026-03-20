@@ -1,0 +1,23 @@
+{
+    "TI": [
+        {
+            "executionStatus": "success",
+            "dataset": "ti.xpt",
+            "domain": "TI",
+            "variables": [
+                "IECAT",
+                "IESCAT"
+            ],
+            "message": "IESCAT exists in a dataset, but IECAT does not exist.",
+            "errors": [
+                {
+                    "value": {
+                        "IESCAT": "INCLUSION SUB",
+                        "IECAT": "Not in dataset"
+                    },
+                    "dataset": "ti.xpt"
+                }
+            ]
+        }
+    ]
+}

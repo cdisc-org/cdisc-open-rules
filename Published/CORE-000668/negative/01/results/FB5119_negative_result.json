@@ -1,0 +1,48 @@
+{
+  "DM": [
+    {
+      "executionStatus": "success",
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "variables": [
+        "DMPRTYID"
+      ],
+      "message": "DMPRTYID (Identification of Accountable Party) must not be in SEND dataset",
+      "errors": [
+        {
+          "value": {
+            "DMPRTYID": ""
+          }
+        }
+      ]
+    }
+  ],
+  "TX": [
+    {
+      "executionStatus": "success",
+      "dataset": "tx.xpt",
+      "domain": "TX",
+      "variables": [],
+      "message": null,
+      "errors": []
+    }
+  ],
+  "VS": [
+    {
+      "executionStatus": "success",
+      "dataset": "vs.xpt",
+      "domain": "VS",
+      "variables": [
+        "VSPRTYID"
+      ],
+      "message": "VSPRTYID (Identification of Accountable Party) must not be in SEND dataset",
+      "errors": [
+        {
+          "value": {
+            "VSPRTYID": ""
+          }
+        }
+      ]
+    }
+  ]
+}

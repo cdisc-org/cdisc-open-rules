@@ -1,0 +1,638 @@
+{
+    "rule": {
+        "Authorities": [
+            {
+                "Organization": "CDISC",
+                "Standards": [
+                    {
+                        "Name": "TIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "SDTM v2.1",
+                                        "Item": "--SEQ",
+                                        "Section": "3.1.4 Identifiers for All Classes",
+                                        "Cited_Guidance": "A number used to uniquely identify records for a subject within a domain. The Trial Summary domain does not contain subject data, and TSSEQ is a sequence number to ensure uniqueness within the dataset."
+                                    }
+                                ],
+                                "Origin": "TIG Conformance Rules",
+                                "Version": "1.0",
+                                "Rule_Identifier": {
+                                    "Id": "TIG0310",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Substandard": "SDTM",
+                        "Version": "1.0"
+                    }
+                ]
+            }
+        ],
+        "Check": {
+            "any": [
+                {
+                    "all": [
+                        {
+                            "name": "SPDEVID",
+                            "operator": "non_empty"
+                        },
+                        {
+                            "name": "--SEQ",
+                            "operator": "exists"
+                        },
+                        {
+                            "name": "--SEQ",
+                            "operator": "is_not_unique_set",
+                            "value": [
+                                "DOMAIN",
+                                "SPDEVID"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "all": [
+                        {
+                            "name": "USUBJID",
+                            "operator": "non_empty"
+                        },
+                        {
+                            "name": "--SEQ",
+                            "operator": "exists"
+                        },
+                        {
+                            "name": "--SEQ",
+                            "operator": "is_not_unique_set",
+                            "value": [
+                                "DOMAIN",
+                                "USUBJID"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "all": [
+                        {
+                            "name": "POOLID",
+                            "operator": "non_empty"
+                        },
+                        {
+                            "name": "--SEQ",
+                            "operator": "exists"
+                        },
+                        {
+                            "name": "--SEQ",
+                            "operator": "is_not_unique_set",
+                            "value": [
+                                "DOMAIN",
+                                "POOLID"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "Core": {
+            "Id": "CORE-000751",
+            "Status": "Published",
+            "Version": "1"
+        },
+        "Description": "Part B - Raise an error when --SEQ is not a unique number per one of the following identifier variables, per domain; USUBJID, POOLID or SPDEVID.",
+        "Executability": "Fully Executable",
+        "Outcome": {
+            "Message": "--SEQ is not a unique number per one of the following identifier variables, per domain; USUBJID, POOLID or SPDEVID.",
+            "Output_Variables": [
+                "SPDEVID",
+                "USUBJID",
+                "POOLID"
+            ]
+        },
+        "Scope": {
+            "Classes": {
+                "Include": [
+                    "ALL"
+                ]
+            },
+            "Domains": {
+                "Include": [
+                    "DU",
+                    "DI",
+                    "DO"
+                ]
+            },
+            "Use_Case": "INDH"
+        },
+        "Sensitivity": "Record",
+        "Rule_Type": "Record Data"
+    },
+    "datasets": [
+        {
+            "filename": "du.xpt",
+            "label": "Device-in-Use",
+            "domain": "DU",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "DOMAIN",
+                    "label": "Domain Abbreviation",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "USUBJID",
+                    "label": "Unique Subject Identifier",
+                    "type": "Char",
+                    "length": 20
+                },
+                {
+                    "name": "SPDEVID",
+                    "label": "Applicant Device Identifier",
+                    "type": "Char",
+                    "length": 8
+                },
+                {
+                    "name": "DUSEQ",
+                    "label": "Sequence Number",
+                    "type": "Num",
+                    "length": 50
+                },
+                {
+                    "name": "DUTESTCD",
+                    "label": "Device-In-Use Test Short Name",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "DUTEST",
+                    "label": "Device-In-Use Test Name",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "DUORRES",
+                    "label": "Result or Finding in Original Units",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "DUORRESU",
+                    "label": "Original Units",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "DUSTRESC",
+                    "label": "Result or Finding in Standard Format",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "DUSTRESN",
+                    "label": "Numeric Result/Finding in Standard Units",
+                    "type": "Num",
+                    "length": 50
+                },
+                {
+                    "name": "DUSTRESU",
+                    "label": "Standard Units",
+                    "type": "Char",
+                    "length": 50
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "TOB07",
+                    "TOB07",
+                    "TOB07",
+                    "TOB07",
+                    "TOB07",
+                    "TOB07",
+                    "TOB07",
+                    "TOB07",
+                    "TOB07",
+                    "TOB07",
+                    "TOB07",
+                    "TOB07",
+                    "TOB07",
+                    "TOB07",
+                    "TOB07",
+                    "TOB07",
+                    "TOB07",
+                    "TOB07"
+                ],
+                "DOMAIN": [
+                    "DU",
+                    "DU",
+                    "DU",
+                    "DU",
+                    "DU",
+                    "DU",
+                    "DU",
+                    "DU",
+                    "DU",
+                    "DU",
+                    "DU",
+                    "DU",
+                    "DU",
+                    "DU",
+                    "DU",
+                    "DU",
+                    "DU",
+                    "DU"
+                ],
+                "USUBJID": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "SPDEVID": [
+                    "PUFFMASTER2K",
+                    "PUFFMASTER2K",
+                    "PUFFMASTER2K",
+                    "PUFFMASTER2K",
+                    "PUFFMASTER2K",
+                    "PUFFMASTER2K",
+                    "PUFFMASTER2K",
+                    "PUFFMASTER2K",
+                    "PUFFMASTER2K",
+                    "PUFFMASTER3K",
+                    "PUFFMASTER3K",
+                    "PUFFMASTER3K",
+                    "PUFFMASTER3K",
+                    "PUFFMASTER3K",
+                    "PUFFMASTER3K",
+                    "PUFFMASTER3K",
+                    "PUFFMASTER3K",
+                    "PUFFMASTER3K"
+                ],
+                "DUSEQ": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9
+                ],
+                "DUTESTCD": [
+                    "PUFFPROF",
+                    "PUFFDUR",
+                    "PUFFINT",
+                    "PUFFBLCK",
+                    "PUFFNUM",
+                    "PUFFVOL",
+                    "PUFFRNG",
+                    "PUFFPAUS",
+                    "PUFFPINT",
+                    "PUFFPROF",
+                    "PUFFDUR",
+                    "PUFFINT",
+                    "PUFFBLCK",
+                    "PUFFNUM",
+                    "PUFFVOL",
+                    "PUFFRNG",
+                    "PUFFPAUS",
+                    "PUFFPINT"
+                ],
+                "DUTEST": [
+                    "Puff Profile",
+                    "Puff Duration",
+                    "Puff Interval",
+                    "Puff Block",
+                    "Number of Puffs",
+                    "Puff Volume",
+                    "Puff Range",
+                    "Puff Pause",
+                    "Puff Pause Interval",
+                    "Puff Profile",
+                    "Puff Duration",
+                    "Puff Interval",
+                    "Puff Block",
+                    "Number of Puffs",
+                    "Puff Volume",
+                    "Puff Range",
+                    "Puff Pause",
+                    "Puff Pause Interval"
+                ],
+                "DUORRES": [
+                    "SQUARE",
+                    "1.25",
+                    "3",
+                    "25",
+                    "200",
+                    "10",
+                    "100-200",
+                    "60",
+                    "10",
+                    "SQUARE",
+                    "2.25",
+                    "3",
+                    "30",
+                    "100",
+                    "20",
+                    "50-150",
+                    "30",
+                    "10"
+                ],
+                "DUORRESU": [
+                    "",
+                    "sec",
+                    "PUFF/min",
+                    "%",
+                    "PUFF",
+                    "mL",
+                    "",
+                    "s",
+                    "PUFF",
+                    "",
+                    "sec",
+                    "PUFF/min",
+                    "%",
+                    "PUFF",
+                    "mL",
+                    "",
+                    "s",
+                    "PUFF"
+                ],
+                "DUSTRESC": [
+                    "SQUARE",
+                    "1.25",
+                    "3",
+                    "25",
+                    "200",
+                    "10",
+                    "100-200",
+                    "60",
+                    "10",
+                    "SQUARE",
+                    "2.25",
+                    "3",
+                    "30",
+                    "100",
+                    "20",
+                    "50-150",
+                    "30",
+                    "10"
+                ],
+                "DUSTRESN": [
+                    null,
+                    1.25,
+                    3,
+                    25,
+                    200,
+                    10,
+                    null,
+                    60,
+                    10,
+                    null,
+                    2.25,
+                    3,
+                    30,
+                    100,
+                    20,
+                    null,
+                    30,
+                    null
+                ],
+                "DUSTRESU": [
+                    "",
+                    "sec",
+                    "PUFF/min",
+                    "%",
+                    "PUFF",
+                    "mL",
+                    "",
+                    "s",
+                    "PUFF",
+                    "",
+                    "sec",
+                    "PUFF/min",
+                    "%",
+                    "PUFF",
+                    "mL",
+                    "",
+                    "s",
+                    ""
+                ]
+            }
+        },
+        {
+            "filename": "di.xpt",
+            "label": "Device Identifiers",
+            "domain": "DI",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "DOMAIN",
+                    "label": "Domain Abbreviation",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "SPDEVID",
+                    "label": "Applicant Device Identifier",
+                    "type": "Char",
+                    "length": 20
+                },
+                {
+                    "name": "DISEQ",
+                    "label": "Sequence Number",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "DIPARMCD",
+                    "label": "Device Identifier Element Short Name",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "DIPARM",
+                    "label": "Device Identifier Element Name",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "DIVAL",
+                    "label": "Device Identifier Element Value",
+                    "type": "Char",
+                    "length": 50
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "TOB07",
+                    "TOB07",
+                    "TOB07"
+                ],
+                "DOMAIN": [
+                    "DI",
+                    "DI",
+                    "DI"
+                ],
+                "SPDEVID": [
+                    "PUFFMASTER3K",
+                    "PUFFMASTER3K",
+                    "PUFFMASTER3K"
+                ],
+                "DISEQ": [
+                    1,
+                    2,
+                    3
+                ],
+                "DIPARMCD": [
+                    "DEVTYPE",
+                    "MANUF",
+                    "TRADENAM"
+                ],
+                "DIPARM": [
+                    "Device Type",
+                    "Manufacturer",
+                    "Trade Name"
+                ],
+                "DIVAL": [
+                    "Smoking Machine",
+                    "Acme",
+                    "PuffMaster 3000"
+                ]
+            }
+        },
+        {
+            "filename": "do.xpt",
+            "label": "Device Properties",
+            "domain": "DO",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "DOMAIN",
+                    "label": "Domain Abbreviation",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "SPDEVID",
+                    "label": "Applicant Device Identifier",
+                    "type": "Char",
+                    "length": 20
+                },
+                {
+                    "name": "DOSEQ",
+                    "label": "Sequence Number",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "DOTESTCD",
+                    "label": "Device Property Short Name",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "DOTEST",
+                    "label": "Device Property Test Name",
+                    "type": "Char",
+                    "length": 50
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "TOB07",
+                    "TOB07",
+                    "TOB07",
+                    "TOB07",
+                    "TOB07",
+                    "TOB07"
+                ],
+                "DOMAIN": [
+                    "DO",
+                    "DO",
+                    "DO",
+                    "DO",
+                    "DO",
+                    "DO"
+                ],
+                "SPDEVID": [
+                    "PUFFMASTER2K",
+                    "PUFFMASTER2K",
+                    "PUFFMASTER2K",
+                    "PUFFMASTER3K",
+                    "PUFFMASTER3K",
+                    "PUFFMASTER3K"
+                ],
+                "DOSEQ": [
+                    1,
+                    2,
+                    3,
+                    1,
+                    2,
+                    3
+                ],
+                "DOTESTCD": [
+                    "TEST1",
+                    "TEST2",
+                    "TEST3",
+                    "TEST4",
+                    "TEST5",
+                    "TEST6"
+                ],
+                "DOTEST": [
+                    "Test1",
+                    "Test2",
+                    "Test3",
+                    "Test4",
+                    "Test5",
+                    "Test6"
+                ]
+            }
+        }
+    ],
+    "standard": {
+        "product": "tig",
+        "version": "1-0",
+        "substandard": "sdtm"
+    },
+    "codelists": []
+}

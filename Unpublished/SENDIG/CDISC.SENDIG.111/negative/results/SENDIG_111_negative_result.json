@@ -1,0 +1,23 @@
+{
+  "DM": [
+    {
+      "executionStatus": "success",
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "variables": [
+        "define_variable_is_collected",
+        "variable_name"
+      ],
+      "message": "BRTHDTC is not described as being 'Collected' in the define.xml",
+      "errors": [
+        {
+          "value": {
+            "define_variable_is_collected": false,
+            "variable_name": "BRTHDTC"
+          },
+          "dataset": "dm.xpt"
+        }
+      ]
+    }
+  ]
+}

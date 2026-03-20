@@ -1,0 +1,50 @@
+{
+  "LB": [
+    {
+      "executionStatus": "success",
+      "dataset": "lb.xpt",
+      "domain": "LB",
+      "variables": [
+        "LBORRES",
+        "VISITDY"
+      ],
+      "message": "VISITDY must be populated for scheduled records",
+      "errors": [
+        {
+          "value": {
+            "VISITDY": null,
+            "LBORRES": "3.9"
+          },
+          "row": 1,
+          "USUBJID": "CDISC001",
+          "SEQ": 1
+        },
+        {
+          "value": {
+            "VISITDY": null,
+            "LBORRES": "93"
+          },
+          "row": 3,
+          "USUBJID": "CDISC002",
+          "SEQ": 2
+        }
+      ]
+    }
+  ],
+  "PP": [
+    {
+      "executionStatus": "execution_error",
+      "dataset": "pp.xpt",
+      "domain": "PP",
+      "variables": [],
+      "message": "rule execution error",
+      "errors": [
+        {
+          "dataset": "pp.xpt",
+          "error": "Column not found in data",
+          "message": "PPORRES"
+        }
+      ]
+    }
+  ]
+}

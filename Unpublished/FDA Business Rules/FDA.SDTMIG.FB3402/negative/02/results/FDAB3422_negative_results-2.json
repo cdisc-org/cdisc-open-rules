@@ -1,0 +1,117 @@
+{
+  "DM": [
+    {
+      "executionStatus": "skipped",
+      "dataset": null,
+      "domain": "DM",
+      "variables": [],
+      "message": null,
+      "errors": []
+    }
+  ],
+  "EX": [
+    {
+      "executionStatus": "success",
+      "dataset": "ex.xpt",
+      "domain": "EX",
+      "variables": [
+        "$max_dsstdtc",
+        "EXSTDTC"
+      ],
+      "message": "Exposure Date/Time EXSTDTC is after Latest Disposition Event Date/Time (DSSTDTC)",
+      "errors": [
+        {
+          "value": {
+            "EXSTDTC": "2013-01-10",
+            "$max_dsstdtc": "2013-01-09T12:55:59"
+          },
+          "row": 43,
+          "USUBJID": "CDISC001",
+          "SEQ": 43
+        },
+        {
+          "value": {
+            "EXSTDTC": "2013-01-11",
+            "$max_dsstdtc": "2013-01-09T12:55:59"
+          },
+          "row": 44,
+          "USUBJID": "CDISC001",
+          "SEQ": 44
+        },
+        {
+          "value": {
+            "EXSTDTC": "2013-01-12",
+            "$max_dsstdtc": "2013-01-09T12:55:59"
+          },
+          "row": 45,
+          "USUBJID": "CDISC001",
+          "SEQ": 45
+        },
+        {
+          "value": {
+            "EXSTDTC": "2013-01-13",
+            "$max_dsstdtc": "2013-01-09T12:55:59"
+          },
+          "row": 46,
+          "USUBJID": "CDISC001",
+          "SEQ": 46
+        },
+        {
+          "value": {
+            "EXSTDTC": "2013-12-19",
+            "$max_dsstdtc": "2013-12-18T12:13:14"
+          },
+          "row": 52,
+          "USUBJID": "CDISC002",
+          "SEQ": 6
+        },
+        {
+          "value": {
+            "EXSTDTC": "2013-12-20",
+            "$max_dsstdtc": "2013-12-18T12:13:14"
+          },
+          "row": 53,
+          "USUBJID": "CDISC002",
+          "SEQ": 7
+        },
+        {
+          "value": {
+            "EXSTDTC": "2013-12-21",
+            "$max_dsstdtc": "2013-12-18T12:13:14"
+          },
+          "row": 54,
+          "USUBJID": "CDISC002",
+          "SEQ": 8
+        },
+        {
+          "value": {
+            "EXSTDTC": "2013-12-22",
+            "$max_dsstdtc": "2013-12-18T12:13:14"
+          },
+          "row": 55,
+          "USUBJID": "CDISC002",
+          "SEQ": 9
+        },
+        {
+          "value": {
+            "EXSTDTC": "2013-12-23",
+            "$max_dsstdtc": "2013-12-18T12:13:14"
+          },
+          "row": 56,
+          "USUBJID": "CDISC002",
+          "SEQ": 10
+        }
+      ]
+    }
+  ],
+  "DS": [
+    {
+      "executionStatus": "skipped",
+      "dataset": null,
+      "domain": "DS",
+      "variables": [],
+      "message": null,
+      "errors": []
+    }
+  ]
+}

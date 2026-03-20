@@ -1,0 +1,48 @@
+{
+  "DM": [
+    {
+      "executionStatus": "success",
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "variables": [
+        "DMLLT"
+      ],
+      "message": "DMLLT (Lower Level Term) must not be present in SEND dataset",
+      "errors": [
+        {
+          "value": {
+            "DMLLT": ""
+          }
+        }
+      ]
+    }
+  ],
+  "TX": [
+    {
+      "executionStatus": "success",
+      "dataset": "tx.xpt",
+      "domain": "TX",
+      "variables": [],
+      "message": null,
+      "errors": []
+    }
+  ],
+  "VS": [
+    {
+      "executionStatus": "success",
+      "dataset": "vs.xpt",
+      "domain": "VS",
+      "variables": [
+        "VSLLT"
+      ],
+      "message": "VSLLT (Lower Level Term) must not be present in SEND dataset",
+      "errors": [
+        {
+          "value": {
+            "VSLLT": ""
+          }
+        }
+      ]
+    }
+  ]
+}

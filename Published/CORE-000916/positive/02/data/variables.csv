@@ -1,0 +1,129 @@
+dataset,variable,label,type,length
+dm.xpt,STUDYID,Study Identifier,Char,50
+dm.xpt,DOMAIN,Domain Abbreviation,Char,50
+dm.xpt,USUBJID,Unique Subject Identifier,Char,50
+dm.xpt,SUBJID,Subject Identifier for the Study,Char,50
+dm.xpt,RFSTDTC,Subject Reference Start Date/Time,Char,50
+dm.xpt,RFENDTC,Subject Reference End Date/Time,Char,50
+dm.xpt,RFXSTDTC,Date/Time of First Study Treatment,Char,50
+dm.xpt,RFXENDTC,Date/Time of Last Study Treatment,Char,50
+dm.xpt,RFCSTDTC,Date/Time of First Challenge Agent Admin,Char,50
+dm.xpt,RFCENDTC,Date/Time of Last Challenge Agent Admin,Char,50
+dm.xpt,RFICDTC,Date/Time of Informed Consent,Char,50
+dm.xpt,RFPENDTC,Date/Time of End of Participation,Char,50
+dm.xpt,DTHDTC,Date/Time of Death,Char,50
+dm.xpt,DTHFL,Subject Death Flag,Char,50
+dm.xpt,SITEID,Study Site Identifier,Char,50
+dm.xpt,INVID,Investigator Identifier,Char,50
+dm.xpt,INVNAM,Investigator Name,Char,50
+dm.xpt,BRTHDTC,Date/Time of Birth,Char,50
+dm.xpt,AGE,Age,Num,8
+dm.xpt,AGEU,Age Units,Char,50
+dm.xpt,SEX,Sex,Char,50
+dm.xpt,RACE,Race,Char,50
+dm.xpt,ETHNIC,Ethnicity,Char,50
+dm.xpt,ARMCD,Planned Arm Code,Char,50
+dm.xpt,ARM,Description of Planned Arm,Char,50
+dm.xpt,ACTARMCD,Actual Arm Code,Char,50
+dm.xpt,ACTARM,Description of Actual Arm,Char,50
+dm.xpt,ARMNRS,Reason Arm and/or Actual Arm is Null,Char,50
+dm.xpt,ACTARMUD,Description of Unplanned Actual Arm,Char,50
+dm.xpt,COUNTRY,Country,Char,50
+dm.xpt,DMDTC,Date/Time of Collection,Char,50
+dm.xpt,DMDY,Study Day of Collection,Num,8
+suppdm.xpt,STUDYID,Study Identifier,Char,50
+suppdm.xpt,RDOMAIN,Related Domain Abbreviation,Char,2
+suppdm.xpt,USUBJID,Unique Subject Identifier,Char,50
+suppdm.xpt,IDVARVAL,Identifying Variable Value,Char,10
+suppdm.xpt,QNAM,Qualifier Variable Name,Char,10
+suppdm.xpt,QLABEL,Qualifier Variable Label,Char,10
+suppdm.xpt,QVAL,Qualifier Variable Value,Char,10
+suppdm.xpt,QORIG,Origin,Char,10
+suppdm.xpt,QEVAL,Evaluator,Char,10
+supplb.xpt,STUDYID,Study Identifier,Char,50
+supplb.xpt,RDOMAIN,Related Domain Abbreviation,Char,50
+supplb.xpt,USUBJID,Unique Subject Identifier,Char,50
+supplb.xpt,QNAM,Qualifier Variable Name,Char,50
+supplb.xpt,QLABEL,Qualifier Variable Label,Char,50
+supplb.xpt,QVAL,Data Value,Char,50
+supplb.xpt,QORIG,Origin,Char,50
+supplb.xpt,QEVAL,Evaluator,Char,50
+relrec.xpt,STUDYID,Study Identifier,Char,50
+relrec.xpt,RDOMAIN,Related Domain Abbreviation,Char,50
+relrec.xpt,USUBJID,Unique Subject Identifier,Char,50
+relrec.xpt,IDVARVAL,Identifying Variable Value,Char,50
+relrec.xpt,RELTYPE,Relationship Type,Char,50
+relrec.xpt,RELID,Relationship Identifier,Char,50
+co.xpt,STUDYID,Study Identifier,Char,50
+co.xpt,DOMAIN,Domain Abbreviation,Char,50
+co.xpt,RDOMAIN,Related Domain Abbreviation,Char,50
+co.xpt,USUBJID,Unique Subject Identifier,Char,50
+co.xpt,COSEQ,Sequence Number,Num,8
+co.xpt,COREF,Comment Reference,Char,50
+co.xpt,COVAL,Comment,Char,50
+co.xpt,COEVAL,Evaluator,Char,50
+co.xpt,COEVALID,Evaluator Identifier,Char,50
+co.xpt,CODTC,Date/Time of Comment,Char,50
+co.xpt,CODY,Study Day of Comment,Num,8
+lb.xpt,STUDYID,Study Identifier,Char,50
+lb.xpt,DOMAIN,Domain Abbreviation,Char,50
+lb.xpt,USUBJID,Unique Subject Identifier,Char,50
+lb.xpt,LBSEQ,Sequence Number,Num,8
+lb.xpt,LBGRPID,Group ID,Char,50
+lb.xpt,LBREFID,Specimen ID,Char,50
+lb.xpt,LBSPID,Sponsor-Defined Identifier,Char,50
+lb.xpt,LBTESTCD,Lab Test or Examination Short Name,Char,50
+lb.xpt,LBTEST,Lab Test or Examination Name,Char,50
+lb.xpt,LBTSTCND,Test Condition,Char,50
+lb.xpt,LBBDAGNT,Binding Agent,Char,50
+lb.xpt,LBTSTOPO,Test Operational Objective,Char,50
+lb.xpt,LBCAT,Category for Lab Test,Char,50
+lb.xpt,LBSCAT,Subcategory for Lab Test,Char,50
+lb.xpt,LBORRES,Result or Finding in Original Units,Char,50
+lb.xpt,LBORRESU,Original Units,Char,50
+lb.xpt,LBRESSCL,Result Scale,Char,50
+lb.xpt,LBRESTYP,Result Type,Char,50
+lb.xpt,LBCOLSRT,Collected Summary Result Type,Char,50
+lb.xpt,LBORNRLO,Reference Range Lower Limit in Orig Unit,Char,50
+lb.xpt,LBORNRHI,Reference Range Upper Limit in Orig Unit,Char,50
+lb.xpt,LBLLOD,Lower Limit of Detection,Char,50
+lb.xpt,LBSTRESC,Character Result/Finding in Std Format,Char,50
+lb.xpt,LBSTRESN,Numeric Result/Finding in Standard Units,Num,8
+lb.xpt,LBSTRESU,Standard Units,Char,50
+lb.xpt,LBSTNRLO,Reference Range Lower Limit-Std Units,Num,8
+lb.xpt,LBSTNRHI,Reference Range Upper Limit-Std Units,Num,8
+lb.xpt,LBSTNRC,Reference Range for Char Rslt-Std Units,Char,50
+lb.xpt,LBNRIND,Reference Range Indicator,Char,50
+lb.xpt,LBSTAT,Completion Status,Char,50
+lb.xpt,LBREASND,Reason Test Not Done,Char,50
+lb.xpt,LBNAM,Vendor Name,Char,50
+lb.xpt,LBLOINC,LOINC Code,Char,50
+lb.xpt,LBSPEC,Specimen Type,Char,50
+lb.xpt,LBSPCCND,Specimen Condition,Char,50
+lb.xpt,LBSPCUFL,Specimen Usability for the Test,Char,50
+lb.xpt,LBMETHOD,Method of Test or Examination,Char,50
+lb.xpt,LBANMETH,Analysis Method,Char,50
+lb.xpt,LBTMTHSN,Test Method Sensitivity,Char,50
+lb.xpt,LBLOBXFL,Last Observation Before Exposure Flag,Char,50
+lb.xpt,LBBLFL,Baseline Flag,Char,50
+lb.xpt,LBFAST,Fasting Status,Char,50
+lb.xpt,LBDRVFL,Derived Flag,Char,50
+lb.xpt,LBTOX,Toxicity,Char,50
+lb.xpt,LBTOXGR,Standard Toxicity Grade,Char,50
+lb.xpt,LBCLSIG,"Clinically Significant, Collected",Char,50
+lb.xpt,VISITNUM,Visit Number,Num,8
+lb.xpt,VISIT,Visit Name,Char,50
+lb.xpt,VISITDY,Planned Study Day of Visit,Num,8
+lb.xpt,TAETORD,Planned Order of Element within Arm,Num,8
+lb.xpt,EPOCH,Epoch,Char,50
+lb.xpt,LBDTC,Date/Time of Specimen Collection,Char,50
+lb.xpt,LBENDTC,End Date/Time of Specimen Collection,Char,50
+lb.xpt,LBDY,Study Day of Specimen Collection,Num,8
+lb.xpt,LBENDY,Study Day of End of Observation,Num,8
+lb.xpt,LBTPT,Planned Time Point Name,Char,50
+lb.xpt,LBTPTNUM,Planned Time Point Number,Num,8
+lb.xpt,LBELTM,Planned Elapsed Time from Time Point Ref,Char,50
+lb.xpt,LBTPTREF,Time Point Reference,Char,50
+lb.xpt,LBRFTDTC,Date/Time of Reference Time Point,Char,50
+lb.xpt,LBPTFL,Point in Time Flag,Char,50
+lb.xpt,LBPDUR,Planned Duration,Char,50

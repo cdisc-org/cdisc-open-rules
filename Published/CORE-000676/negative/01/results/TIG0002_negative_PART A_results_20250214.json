@@ -1,0 +1,197 @@
+{
+    "PD": [
+        {
+            "executionStatus": "success",
+            "dataset": "pd.xpt",
+            "domain": "PD",
+            "variables": [
+                "$to_sptobid",
+                "SPTOBID"
+            ],
+            "message": "SPTOBID value in the dataset does not correspond to a SPTOBID value in TO.",
+            "errors": [
+                {
+                    "value": {
+                        "SPTOBID": "CIG01b",
+                        "$to_sptobid": [
+                            "VAPE-Z27",
+                            "VAPE-Z28",
+                            "CIG01a",
+                            "VAPE-Z01"
+                        ]
+                    },
+                    "row": 1,
+                    "SEQ": 1
+                },
+                {
+                    "value": {
+                        "SPTOBID": "CIG01c",
+                        "$to_sptobid": [
+                            "VAPE-Z27",
+                            "VAPE-Z28",
+                            "CIG01a",
+                            "VAPE-Z01"
+                        ]
+                    },
+                    "row": 2,
+                    "SEQ": 2
+                },
+                {
+                    "value": {
+                        "SPTOBID": "VAPE-Z23",
+                        "$to_sptobid": [
+                            "VAPE-Z27",
+                            "VAPE-Z28",
+                            "CIG01a",
+                            "VAPE-Z01"
+                        ]
+                    },
+                    "row": 4,
+                    "SEQ": 1
+                },
+                {
+                    "value": {
+                        "SPTOBID": "VAPE-Z23",
+                        "$to_sptobid": [
+                            "VAPE-Z27",
+                            "VAPE-Z28",
+                            "CIG01a",
+                            "VAPE-Z01"
+                        ]
+                    },
+                    "row": 5,
+                    "SEQ": 2
+                },
+                {
+                    "value": {
+                        "SPTOBID": "VAPE-Z23",
+                        "$to_sptobid": [
+                            "VAPE-Z27",
+                            "VAPE-Z28",
+                            "CIG01a",
+                            "VAPE-Z01"
+                        ]
+                    },
+                    "row": 6,
+                    "SEQ": 3
+                },
+                {
+                    "value": {
+                        "SPTOBID": "VAPE-Z23",
+                        "$to_sptobid": [
+                            "VAPE-Z27",
+                            "VAPE-Z28",
+                            "CIG01a",
+                            "VAPE-Z01"
+                        ]
+                    },
+                    "row": 7,
+                    "SEQ": 4
+                },
+                {
+                    "value": {
+                        "SPTOBID": "VAPE-Z23",
+                        "$to_sptobid": [
+                            "VAPE-Z27",
+                            "VAPE-Z28",
+                            "CIG01a",
+                            "VAPE-Z01"
+                        ]
+                    },
+                    "row": 8,
+                    "SEQ": 5
+                },
+                {
+                    "value": {
+                        "SPTOBID": "VAPE-Z23",
+                        "$to_sptobid": [
+                            "VAPE-Z27",
+                            "VAPE-Z28",
+                            "CIG01a",
+                            "VAPE-Z01"
+                        ]
+                    },
+                    "row": 9,
+                    "SEQ": 6
+                },
+                {
+                    "value": {
+                        "SPTOBID": "VAPE-Z23",
+                        "$to_sptobid": [
+                            "VAPE-Z27",
+                            "VAPE-Z28",
+                            "CIG01a",
+                            "VAPE-Z01"
+                        ]
+                    },
+                    "row": 10,
+                    "SEQ": 7
+                },
+                {
+                    "value": {
+                        "SPTOBID": "VAPE-Z23",
+                        "$to_sptobid": [
+                            "VAPE-Z27",
+                            "VAPE-Z28",
+                            "CIG01a",
+                            "VAPE-Z01"
+                        ]
+                    },
+                    "row": 11,
+                    "SEQ": 8
+                },
+                {
+                    "value": {
+                        "SPTOBID": "VAPE-Z23",
+                        "$to_sptobid": [
+                            "VAPE-Z27",
+                            "VAPE-Z28",
+                            "CIG01a",
+                            "VAPE-Z01"
+                        ]
+                    },
+                    "row": 12,
+                    "SEQ": 9
+                }
+            ]
+        }
+    ],
+    "TO": [
+        {
+            "executionStatus": "success",
+            "dataset": "to.xpt",
+            "domain": "TO",
+            "variables": [],
+            "message": null,
+            "errors": []
+        }
+    ],
+    "EM": [
+        {
+            "executionStatus": "success",
+            "dataset": "em.xpt",
+            "domain": "EM",
+            "variables": [
+                "$to_sptobid",
+                "SPTOBID"
+            ],
+            "message": "SPTOBID value in the dataset does not correspond to a SPTOBID value in TO.",
+            "errors": [
+                {
+                    "value": {
+                        "SPTOBID": "APE-Z01",
+                        "$to_sptobid": [
+                            "VAPE-Z27",
+                            "VAPE-Z28",
+                            "CIG01a",
+                            "VAPE-Z01"
+                        ]
+                    },
+                    "row": 1,
+                    "USUBJID": "1059",
+                    "SEQ": 1
+                }
+            ]
+        }
+    ]
+}

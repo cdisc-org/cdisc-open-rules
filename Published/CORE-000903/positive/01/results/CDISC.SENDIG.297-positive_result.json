@@ -1,0 +1,42 @@
+{
+  "DM": [
+    {
+      "executionStatus": "success",
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "variables": [],
+      "message": null,
+      "errors": []
+    }
+  ],
+  "TX": [
+    {
+      "executionStatus": "skipped",
+      "dataset": "tx.xpt",
+      "domain": "TX",
+      "variables": [],
+      "message": "Rule skipped - doesn't apply to domain for rule id=CDISC.SENDIG.297, dataset=TX",
+      "errors": []
+    }
+  ],
+  "CO": [
+    {
+      "executionStatus": "success",
+      "dataset": "co.xpt",
+      "domain": "CO",
+      "variables": [],
+      "message": null,
+      "errors": []
+    }
+  ],
+  "SE": [
+    {
+      "executionStatus": "success",
+      "dataset": "se.xpt",
+      "domain": "SE",
+      "variables": [],
+      "message": null,
+      "errors": []
+    }
+  ]
+}

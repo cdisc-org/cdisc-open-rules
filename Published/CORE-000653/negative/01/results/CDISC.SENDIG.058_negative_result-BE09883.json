@@ -1,0 +1,51 @@
+{
+  "DS": [
+    {
+      "executionStatus": "success",
+      "domain": "DS",
+      "variables": [
+        "DSDTC",
+        "DSENDTC"
+      ],
+      "message": "DSENDTC must be greater than or equal to DSDTC",
+      "errors": [
+        {
+          "value": {
+            "DSDTC": "2018-09-21",
+            "DSENDTC": "2018-09-04"
+          },
+          "row": 1,
+          "uSubjId": "015246-300-0004-00002",
+          "seq": 5
+        },
+        {
+          "value": {
+            "DSDTC": "2018-05-09",
+            "DSENDTC": "2018-05-08"
+          },
+          "row": 2,
+          "uSubjId": "015246-300-0004-00002",
+          "seq": 3
+        },
+        {
+          "value": {
+            "DSDTC": "2018-05-08T09:13",
+            "DSENDTC": "2018-05-08T08:00"
+          },
+          "row": 5,
+          "uSubjId": "015246-300-0004-00002",
+          "seq": 3
+        },
+        {
+          "value": {
+            "DSDTC": "2018-09-21",
+            "DSENDTC": "2018-09-04"
+          },
+          "row": 6,
+          "uSubjId": "015246-300-0004-00002",
+          "seq": 5
+        }
+      ]
+    }
+  ]
+}

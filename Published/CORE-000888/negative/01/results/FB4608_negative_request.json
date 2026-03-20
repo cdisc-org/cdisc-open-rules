@@ -1,0 +1,522 @@
+{{
+  "rule": {
+    "Authorities": [
+      {
+        "Organization": "FDA",
+        "Standards": [
+          {
+            "Name": "SENDIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Document": "FDA",
+                    "Section": "FDAB046",
+                    "Cited_Guidance": "All nonclinical studies should include Trial Sets (tx.xpt) dataset."
+                  }
+                ],
+                "Origin": "FDA Business Rules",
+                "Version": "1.5",
+                "Rule_Identifier": {
+                  "Id": "FB4608",
+                  "Version": "1"
+                }
+              }
+            ],
+            "Version": "3.0"
+          },
+          {
+            "Name": "SENDIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Document": "FDA",
+                    "Section": "FDAB046",
+                    "Cited_Guidance": "All nonclinical studies should include Trial Sets (tx.xpt) dataset."
+                  }
+                ],
+                "Origin": "FDA Business Rules",
+                "Version": "1.5",
+                "Rule_Identifier": {
+                  "Id": "FB4608",
+                  "Version": "1"
+                }
+              }
+            ],
+            "Version": "3.1"
+          },
+          {
+            "Name": "SENDIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Document": "FDA",
+                    "Section": "FDAB046",
+                    "Cited_Guidance": "All nonclinical studies should include Trial Sets (tx.xpt) dataset."
+                  }
+                ],
+                "Origin": "FDA Business Rules",
+                "Version": "1.5",
+                "Rule_Identifier": {
+                  "Id": "FB4608",
+                  "Version": "1"
+                }
+              }
+            ],
+            "Version": "3.1.1"
+          },
+          {
+            "Name": "SENDIG-GENETOX",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Document": "FDA",
+                    "Section": "FDAB046",
+                    "Cited_Guidance": "All nonclinical studies should include Trial Sets (tx.xpt) dataset."
+                  }
+                ],
+                "Origin": "FDA Business Rules",
+                "Version": "1.5",
+                "Rule_Identifier": {
+                  "Id": "FB4608",
+                  "Version": "1"
+                }
+              }
+            ],
+            "Version": "1.0"
+          },
+          {
+            "Name": "SENDIG-DART",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Document": "FDA",
+                    "Section": "FDAB046",
+                    "Cited_Guidance": "All nonclinical studies should include Trial Sets (tx.xpt) dataset."
+                  }
+                ],
+                "Origin": "FDA Business Rules",
+                "Version": "1.5",
+                "Rule_Identifier": {
+                  "Id": "FB4608",
+                  "Version": "1"
+                }
+              }
+            ],
+            "Version": "1.1"
+          },
+          {
+            "Name": "SENDIG-DART",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Document": "FDA",
+                    "Section": "FDAB046",
+                    "Cited_Guidance": "All nonclinical studies should include Trial Sets (tx.xpt) dataset."
+                  }
+                ],
+                "Origin": "FDA Business Rules",
+                "Version": "1.5",
+                "Rule_Identifier": {
+                  "Id": "FB4608",
+                  "Version": "1"
+                }
+              }
+            ],
+            "Version": "1.2"
+          },
+          {
+            "Name": "SENDIG-AR",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Document": "FDA",
+                    "Section": "FDAB046",
+                    "Cited_Guidance": "All nonclinical studies should include Trial Sets (tx.xpt) dataset."
+                  }
+                ],
+                "Origin": "FDA Business Rules",
+                "Version": "1.5",
+                "Rule_Identifier": {
+                  "Id": "FB4608",
+                  "Version": "1"
+                }
+              }
+            ],
+            "Version": "1.0"
+          }
+        ]
+      }
+    ],
+    "Check": {
+      "all": [
+        {
+          "name": "$txparmcd",
+          "operator": "does_not_contain",
+          "value": "PLANFSUB"
+        }
+      ]
+    },
+    "Core": {
+      "Id": "CORE-000888",
+      "Status": "Published",
+      "Version": "1"
+    },
+    "Description": "Each Trial Set should include a TXPARMCD = \"PLANFSUB\" record",
+    "Executability": "Fully Executable",
+    "Grouping_Variables": [
+      "SETCD"
+    ],
+    "Operations": [
+      {
+        "domain": "TX",
+        "group": [
+          "SETCD"
+        ],
+        "id": "$txparmcd",
+        "name": "TXPARMCD",
+        "operator": "distinct"
+      }
+    ],
+    "Outcome": {
+      "Message": "Each Trial Set should include a TXPARMCD = \"PLANFSUB\" record.",
+      "Output_Variables": [
+        "SETCD",
+        "$txparmcd"
+      ]
+    },
+    "Scope": {
+      "Classes": {
+        "Include": [
+          "TRIAL DESIGN"
+        ]
+      },
+      "Domains": {
+        "Include": [
+          "TX"
+        ]
+      }
+    },
+    "Sensitivity": "Group",
+    "Rule_Type": "Record Data"
+  },
+  "datasets": [
+    {
+      "filename": "ta.xpt",
+      "label": "Trial Arms",
+      "domain": "TA",
+      "variables": [
+        {
+          "name": "STUDYID",
+          "label": "Study Identifier",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "DOMAIN",
+          "label": "Domain Abbreviation",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "ARMCD",
+          "label": "Planned Arm Code",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "ARM",
+          "label": "Description of Planned Arm",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "TAETORD",
+          "label": "Planned Order of Element within Arm",
+          "type": "Num",
+          "length": 50
+        },
+        {
+          "name": "ETCD",
+          "label": "Element Code",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "ELEMENT",
+          "label": "Description of Element",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "TABRANCH",
+          "label": "Branch",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "TATRANS",
+          "label": "Transition Rule",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "EPOCH",
+          "label": "Epoch",
+          "type": "Char",
+          "length": 50
+        }
+      ],
+      "records": {
+        "STUDYID": [
+          "CDISCPILOT01",
+          "CDISCPILOT01",
+          "CDISCPILOT01",
+          "CDISCPILOT01",
+          "CDISCPILOT01",
+          "CDISCPILOT01",
+          "CDISCPILOT01",
+          "CDISCPILOT01"
+        ],
+        "DOMAIN": [
+          "TA",
+          "TA",
+          "TA",
+          "TA",
+          "TA",
+          "TA",
+          "TA",
+          "TA"
+        ],
+        "ARMCD": [
+          "PLACEBO",
+          "PLACEBO",
+          "ZAN_LOW",
+          "ZAN_LOW",
+          "ZAN_HIGH",
+          "ZAN_HIGH",
+          "ZAN_HIGH",
+          "ZAN_HIGH"
+        ],
+        "ARM": [
+          "Placebo",
+          "Placebo",
+          "Zanomaline Low Dose 54 mg",
+          "Zanomaline Low Dose 54 mg",
+          "Zanomaline High Dose 81 mg",
+          "Zanomaline High Dose 81 mg",
+          "Zanomaline High Dose 81 mg",
+          "Zanomaline High Dose 81 mg"
+        ],
+        "TAETORD": [
+          1,
+          2,
+          1,
+          2,
+          1,
+          2,
+          3,
+          4
+        ],
+        "ETCD": [
+          "SCREEN",
+          "PLACEBO",
+          "SCREEN",
+          "LOW",
+          "SCREEN",
+          "TITRATE",
+          "HIGH",
+          "TITRATE"
+        ],
+        "ELEMENT": [
+          "Screening",
+          "Placebo",
+          "Screening",
+          "Zanomaline 54 mg",
+          "Screening",
+          "Zanomaline 54 mg Titration",
+          "Zanomaline 81 mg",
+          "Zanomaline 54 mg Titration"
+        ],
+        "TABRANCH": [
+          "Randomized to Placebo",
+          "",
+          "Randomized to Zanomaline Low Dose",
+          "",
+          "Randomized to Zanomaline High Dose",
+          "",
+          "",
+          ""
+        ],
+        "TATRANS": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "EPOCH": [
+          "SCREENING",
+          "TREATMENT",
+          "SCREENING",
+          "TREATMENT",
+          "SCREENING",
+          "TREATMENT",
+          "TREATMENT",
+          "TREATMENT"
+        ]
+      }
+    },
+    {
+      "filename": "tx.xpt",
+      "label": "Trial Sets",
+      "domain": "TX",
+      "variables": [
+        {
+          "name": "STUDYID",
+          "label": "Study Identifier",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "DOMAIN",
+          "label": "Domain Abbreviation",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "SETCD",
+          "label": "Set Code",
+          "type": "Char",
+          "length": 8
+        },
+        {
+          "name": "SET",
+          "label": "Set Description",
+          "type": "Char",
+          "length": 40
+        },
+        {
+          "name": "TXSEQ",
+          "label": "Sequence Number",
+          "type": "Num",
+          "length": 8
+        },
+        {
+          "name": "TXPARMCD",
+          "label": "Trial Set Parameter Short Name ",
+          "type": "Char",
+          "length": 8
+        },
+        {
+          "name": "TXPARM",
+          "label": "Trial Set Parameter ",
+          "type": "Char",
+          "length": 40
+        },
+        {
+          "name": "TXVAL",
+          "label": "Trial Set Parameter Value ",
+          "type": "Char",
+          "length": 100
+        }
+      ],
+      "records": {
+        "STUDYID": [
+          "CDISCPILOT01",
+          "CDISCPILOT01",
+          "CDISCPILOT01",
+          "CDISCPILOT01",
+          "CDISCPILOT01",
+          "CDISCPILOT01",
+          "CDISCPILOT01",
+          "CDISCPILOT01"
+        ],
+        "DOMAIN": [
+          "TX",
+          "TX",
+          "TX",
+          "TX",
+          "TX",
+          "TX",
+          "TX",
+          "TX"
+        ],
+        "SETCD": [
+          "SET1",
+          "SET1",
+          "SET1",
+          "SET1",
+          "SET2",
+          "SET2",
+          "SET2",
+          "SET3"
+        ],
+        "SET": [
+          "Control Group, Vehicle Control once daily",
+          "Control Group, Vehicle Control once daily",
+          "Control Group, Vehicle Control once daily",
+          "Control Group, Vehicle Control once daily",
+          "Low-Dose Group, 100 mg/kg Drug a once daily",
+          "Low-Dose Group, 100 mg/kg Drug a once daily",
+          "Low-Dose Group, 100 mg/kg Drug a once daily",
+          "Another Low-Dose Group, 100 mg/kg Drug a once daily"
+        ],
+        "TXSEQ": [
+          1,
+          2,
+          3,
+          4,
+          1,
+          2,
+          3,
+          1
+        ],
+        "TXPARMCD": [
+          "ARMCD",
+          "SPGRPCD",
+          "TCNTRL",
+          "PLANFSUB",
+          "ARMCD",
+          "SPGRPCD",
+          "PLANFSUBxxx",
+          "PLANF"
+        ],
+        "TXPARM": [
+          "Arm Code",
+          "Sponsor-defined Group Code",
+          "Control Type",
+          "Planned Number of Female Subjects ",
+          "Arm Code",
+          "Sponsor-defined Group Code",
+          "Planned Number of Female Subjects ",
+          "Planned Number of Female Subjects "
+        ],
+        "TXVAL": [
+          "ZAN_LOW",
+          "GRP1",
+          "Vehicle Control",
+          "11",
+          "ZAN_HIGH",
+          "GRP2",
+          "22",
+          "33"
+        ]
+      }
+    }
+  ],
+  "standard": {
+    "product": "sendig",
+    "version": "3-1"
+  },
+  "codelists": []
+}

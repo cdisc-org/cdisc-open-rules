@@ -1,0 +1,218 @@
+{
+    "AG": [
+        {
+            "executionStatus": "success",
+            "dataset": "ag.xpt",
+            "domain": "AG",
+            "variables": [],
+            "message": null,
+            "errors": []
+        }
+    ],
+    "CM": [
+        {
+            "executionStatus": "success",
+            "dataset": "cm.xpt",
+            "domain": "CM",
+            "variables": [
+                "CMCAT",
+                "CMSCAT"
+            ],
+            "message": "CMSCAT exists in a dataset, but CMCAT does not exist.",
+            "errors": [
+                {
+                    "value": {
+                        "CMSCAT": "PRIOR DMARDS",
+                        "CMCAT": "Not in dataset"
+                    },
+                    "dataset": "cm.xpt"
+                }
+            ]
+        }
+    ],
+    "EC": [
+        {
+            "executionStatus": "success",
+            "dataset": "ec.xpt",
+            "domain": "EC",
+            "variables": [],
+            "message": null,
+            "errors": []
+        }
+    ],
+    "EX": [
+        {
+            "executionStatus": "success",
+            "dataset": "ex.xpt",
+            "domain": "EX",
+            "variables": [
+                "EXCAT",
+                "EXSCAT"
+            ],
+            "message": "EXSCAT exists in a dataset, but EXCAT does not exist.",
+            "errors": [
+                {
+                    "value": {
+                        "EXSCAT": "HIGHLIGHTED DOSE",
+                        "EXCAT": "Not in dataset"
+                    },
+                    "dataset": "ex.xpt"
+                }
+            ]
+        }
+    ],
+    "ML": [
+        {
+            "executionStatus": "success",
+            "dataset": "ml.xpt",
+            "domain": "ML",
+            "variables": [],
+            "message": null,
+            "errors": []
+        }
+    ],
+    "PR": [
+        {
+            "executionStatus": "success",
+            "dataset": "pr.xpt",
+            "domain": "PR",
+            "variables": [],
+            "message": null,
+            "errors": []
+        }
+    ],
+    "SU": [
+        {
+            "executionStatus": "success",
+            "dataset": "su.xpt",
+            "domain": "SU",
+            "variables": [],
+            "message": null,
+            "errors": []
+        }
+    ],
+    "AE": [
+        {
+            "executionStatus": "success",
+            "dataset": "ae.xpt",
+            "domain": "AE",
+            "variables": [],
+            "message": null,
+            "errors": []
+        }
+    ],
+    "BE": [
+        {
+            "executionStatus": "success",
+            "dataset": "be.xpt",
+            "domain": "BE",
+            "variables": [
+                "BECAT",
+                "BESCAT"
+            ],
+            "message": "BESCAT exists in a dataset, but BECAT does not exist.",
+            "errors": [
+                {
+                    "value": {
+                        "BESCAT": "COLLECTION",
+                        "BECAT": "Not in dataset"
+                    },
+                    "dataset": "be.xpt"
+                }
+            ]
+        }
+    ],
+    "CE": [
+        {
+            "executionStatus": "success",
+            "dataset": "ce.xpt",
+            "domain": "CE",
+            "variables": [],
+            "message": null,
+            "errors": []
+        }
+    ],
+    "DS": [
+        {
+            "executionStatus": "success",
+            "dataset": "ds.xpt",
+            "domain": "DS",
+            "variables": [],
+            "message": null,
+            "errors": []
+        }
+    ],
+    "MH": [
+        {
+            "executionStatus": "success",
+            "dataset": "mh.xpt",
+            "domain": "MH",
+            "variables": [
+                "MHCAT",
+                "MHSCAT"
+            ],
+            "message": "MHSCAT exists in a dataset, but MHCAT does not exist.",
+            "errors": [
+                {
+                    "value": {
+                        "MHSCAT": "RESPIRATORY",
+                        "MHCAT": "Not in dataset"
+                    },
+                    "dataset": "mh.xpt"
+                }
+            ]
+        }
+    ],
+    "DA": [
+        {
+            "executionStatus": "success",
+            "dataset": "da.xpt",
+            "domain": "DA",
+            "variables": [],
+            "message": null,
+            "errors": []
+        }
+    ],
+    "EG": [
+        {
+            "executionStatus": "success",
+            "dataset": "eg.xpt",
+            "domain": "EG",
+            "variables": [
+                "EGCAT",
+                "EGSCAT"
+            ],
+            "message": "EGSCAT exists in a dataset, but EGCAT does not exist.",
+            "errors": [
+                {
+                    "value": {
+                        "EGSCAT": "INTERVAL",
+                        "EGCAT": "Not in dataset"
+                    },
+                    "dataset": "eg.xpt"
+                }
+            ]
+        }
+    ],
+    "FA": [
+        {
+            "executionStatus": "success",
+            "dataset": "fa.xpt",
+            "domain": "FA",
+            "variables": [
+                "FACAT",
+                "FASCAT"
+            ],
+            "message": "FASCAT exists in a dataset, but FACAT does not exist.",
+            "errors": [
+                {
+                    "value": {
+                        "FASCAT": "GERD",
+                        "FACAT": "Not in dataset"
+                    },
+                    "dataset": "fa.xpt"
+                }
+            ]
+        }
+    ]
+}

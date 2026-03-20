@@ -1,0 +1,19 @@
+dataset,variable,label,type,length
+tx.xpt,STUDYID,Study Identifier,Char,123
+tx.xpt,DOMAIN,Domain Abbreviation,Char,TX
+tx.xpt,SETCD,Set Code,Char,A1
+tx.xpt,SET,Set Description,Char,ST+S9_C0
+tx.xpt,TXSEQ,Sequence Number,Num,1
+tx.xpt,TXPARMCD,Trial Set Parameter Short Name,Char,MTACTIND
+tx.xpt,TXPARM,Trial Set Parameter,Char,Metabolic Activating Agent Name
+tx.xpt,TXVAL,Trial Set Parameter Value,Char,0
+to.xpt,STUDYID,Study Identifier,Char,200
+to.xpt,DOMAIN,Domain Abbreviation,Char,200
+to.xpt,SPTOBID,Applicant-Defined Tobacco Product ID,Char,40
+to.xpt,TOSEQ,Sequence Number,Num,10
+to.xpt,TOPARMCD,Tobacco Product ID Element Short Name,Char,40
+to.xpt,TOPARM,Tobacco Product ID Element Name,Char,8
+to.xpt,TOCAT,Category of Tobacco Product ID Element,Char,40
+to.xpt,TOSCAT,Subcategory of Tobacco Prod ID Element,Char,50
+to.xpt,TOVAL,Tobacco Product ID Element Value,Char,50
+to.xpt,TOVALU,Tobacco Product ID Element Value Unit,Char,50
