@@ -1,0 +1,50 @@
+{
+  "TA": [
+    {
+      "executionStatus": "skipped",
+      "dataset": "ta.xpt",
+      "domain": "TA",
+      "variables": [],
+      "message": "Rule skipped - doesn't apply to domain for rule id=CORE-000888, dataset=TA",
+      "errors": []
+    }
+  ],
+  "TX": [
+    {
+      "executionStatus": "success",
+      "dataset": "tx.xpt",
+      "domain": "TX",
+      "variables": [
+        "$txparmcd",
+        "SETCD"
+      ],
+      "message": "Each Trial Set should include a TXPARMCD = \"PLANFSUB\" record.",
+      "errors": [
+        {
+          "value": {
+            "$txparmcd": [
+              "SPGRPCD",
+              "ARMCD",
+              "PLANFSUBxxx"
+            ],
+            "SETCD": "SET2"
+          },
+          "dataset": "tx.xpt",
+          "row": 5,
+          "SEQ": 1
+        },
+        {
+          "value": {
+            "$txparmcd": [
+              "PLANF"
+            ],
+            "SETCD": "SET3"
+          },
+          "dataset": "tx.xpt",
+          "row": 8,
+          "SEQ": 1
+        }
+      ]
+    }
+  ]
+}

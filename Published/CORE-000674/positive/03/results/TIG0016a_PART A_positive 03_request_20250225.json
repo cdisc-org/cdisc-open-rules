@@ -1,0 +1,242 @@
+{
+    "rule": {
+        "Authorities": [
+            {
+                "Organization": "CDISC",
+                "Standards": [
+                    {
+                        "Name": "TIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "TIG 1.0",
+                                        "Item": "Specification Table: IQVALTRG | IQVALMIN | IQVALMAX",
+                                        "Section": "2.8.8.6",
+                                        "Cited_Guidance": "No specific guidance; this is a simple mathematical definition"
+                                    }
+                                ],
+                                "Origin": "TIG Conformance Rules",
+                                "Version": "1.0",
+                                "Rule_Identifier": {
+                                    "Id": "TIG0016a",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Substandard": "SDTM",
+                        "Version": "1.0"
+                    }
+                ]
+            }
+        ],
+        "Check": {
+            "all": [
+                {
+                    "name": "--VALTRG",
+                    "operator": "matches_regex",
+                    "value": "^-?([1-9]\\d*|0)(\\.\\d+)?$"
+                },
+                {
+                    "name": "--VALMIN",
+                    "operator": "matches_regex",
+                    "value": "^.+$"
+                },
+                {
+                    "name": "--VALTRG",
+                    "operator": "less_than",
+                    "value": "--VALMIN"
+                }
+            ]
+        },
+        "Core": {
+            "Status": "Draft",
+            "Version": "1"
+        },
+        "Description": "Part A - Raise an error when --VALTRG is a number and is less than the specified --VALMIN value.",
+        "Executability": "Fully Executable",
+        "Outcome": {
+            "Message": "--VALTRG is not equal to or greater than the --VALMIN value.",
+            "Output_Variables": [
+                "IGDCMPID",
+                "SPTOBID",
+                "--VALTRG",
+                "--VALMIN"
+            ]
+        },
+        "Scope": {
+            "Classes": {
+                "Include": [
+                    "SPECIAL PURPOSE"
+                ]
+            },
+            "Domains": {
+                "Include": [
+                    "IQ"
+                ]
+            },
+            "Use_Case": "PROD"
+        },
+        "Sensitivity": "Record",
+        "Rule_Type": "Record Data"
+    },
+    "datasets": [
+        {
+            "filename": "iq.xpt",
+            "label": "Ingredient Quantities by Component",
+            "domain": "IQ",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "DOMAIN",
+                    "label": "Domain Abbreviation",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "SPTOBID",
+                    "label": "Applicant-Defined Tobacco Product ID",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "IGDCMPID",
+                    "label": "Ingredient or Component Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "IQCAT",
+                    "label": "Category of Ingredient or Component",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "IQPARENT",
+                    "label": "Parent of Ingredient or Component",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "IQLEVEL",
+                    "label": "Ingredient Level in Hierarchy",
+                    "type": "Num",
+                    "length": 50
+                },
+                {
+                    "name": "IQFUNCT",
+                    "label": "Ingredient Function",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "IQVALMIN",
+                    "label": "Ingredient Minimum Value",
+                    "type": "Num",
+                    "length": 50
+                },
+                {
+                    "name": "IQVALMAX",
+                    "label": "Ingredient Maximum Value",
+                    "type": "Num",
+                    "length": 50
+                },
+                {
+                    "name": "IQVALU",
+                    "label": "Ingredient Value Unit",
+                    "type": "Char",
+                    "length": 50
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "TOB07",
+                    "TOB07",
+                    "TOB07",
+                    "TOB07",
+                    "TOB07"
+                ],
+                "DOMAIN": [
+                    "IQ",
+                    "IQ",
+                    "IQ",
+                    "IQ",
+                    "IQ"
+                ],
+                "SPTOBID": [
+                    "CIG01A",
+                    "CIG01A",
+                    "CIG01A",
+                    "CIG01A",
+                    "CIG01A"
+                ],
+                "IGDCMPID": [
+                    "Tobacco Filler",
+                    "Bright Tobacco",
+                    "Oriental Tobacco",
+                    "Cationic Starch",
+                    "Seam Adhesive"
+                ],
+                "IQCAT": [
+                    "TOBACCO INGREDIENT",
+                    "TOBACCO INGREDIENT",
+                    "TOBACCO INGREDIENT",
+                    "NON-TOBACCO INGREDIENT",
+                    "NON-TOBACCO INGREDIENT"
+                ],
+                "IQPARENT": [
+                    "",
+                    "Tobacco Filler",
+                    "Tobacco Filler",
+                    "FSC Paper B",
+                    "FSC Paper B"
+                ],
+                "IQLEVEL": [
+                    1,
+                    2,
+                    2,
+                    2,
+                    2
+                ],
+                "IQFUNCT": [
+                    "",
+                    "",
+                    "",
+                    "Binder",
+                    "Adhesive"
+                ],
+                "IQVALMIN": [
+                    661.3,
+                    295,
+                    null,
+                    0.45,
+                    -1.75
+                ],
+                "IQVALMAX": [
+                    683.7,
+                    305,
+                    null,
+                    0.55,
+                    -0.25
+                ],
+                "IQVALU": [
+                    "mg/cigarette",
+                    "mg/cigarette",
+                    "mg/cigarette",
+                    "mg/cigarette",
+                    "mg/cigarette"
+                ]
+            }
+        }
+    ],
+    "standard": {
+        "product": "tig",
+        "version": "1-0"
+    },
+    "codelists": []
+}

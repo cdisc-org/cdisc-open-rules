@@ -1,0 +1,40 @@
+{
+  "VS": [
+    {
+      "executionStatus": "success",
+      "domain": "VS",
+      "variables": [
+        "define_variable_label",
+        "define_variable_name",
+        "variable_label"
+      ],
+      "message": "The label of the variable is incorrect",
+      "errors": [
+        {
+          "value": {
+            "define_variable_name": "USUBJID",
+            "define_variable_label": "Unique Subject Identifier",
+            "variable_label": "Distinct Subject Identifier"
+          },
+          "row": 3
+        },
+        {
+          "value": {
+            "define_variable_name": "VSTESTCD",
+            "define_variable_label": "Vital Signs Test Short Name",
+            "variable_label": "Blabla"
+          },
+          "row": 5
+        },
+        {
+          "value": {
+            "define_variable_name": "VSORRESU",
+            "define_variable_label": "Original Units",
+            "variable_label": "Original Units as Collected"
+          },
+          "row": 9
+        }
+      ]
+    }
+  ]
+}

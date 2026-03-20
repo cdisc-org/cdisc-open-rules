@@ -1,0 +1,43 @@
+dataset,variable,label,type,length
+sj.xpt,STUDYID ,Study Identifier,Char,10
+sj.xpt,DOMAIN ,Domain Abbreviation,Char,2
+sj.xpt,USUBJID,Unique Subject Identifier ,Char,20
+sj.xpt,SJSEQ ,Sequence Number,Num,8
+sj.xpt,RSTGCD,Repro Stage Code,Char,5
+sj.xpt,RSTAGE,Description of Repro Stage ,Char,40
+sj.xpt,SJSTDTC,Start date/time of Repro Stage,Char,20
+sj.xpt,SJENDTC,End date/time of Repro Stage,Char,2
+sj.xpt,RPHASE,Repro Phase,Char,11
+sj.xpt,SJUPDES,Description of Unplanned Repro Stage ,Char,20
+ex.xpt,STUDYID ,Study Identifier,Char,10
+ex.xpt,DOMAIN ,Domain Abbreviation,Char,2
+ex.xpt,USUBJID,Unique Subject Identifier ,Char,20
+ex.xpt,EXSEQ ,Sequence Number,Num,8
+ex.xpt,EXTRT,Name of Actual Treatment ,Char,20
+ex.xpt,EXDOSE,Dose per Administration ,Num,8
+ex.xpt,EXDOSU,Dose Units ,Char,20
+ex.xpt,EXDOSFRM,Dose Form ,Char,20
+ex.xpt,EXDOSFRQ,Dosing Frequency Per Interval ,Char,20
+ex.xpt,EXROUTE,Route of Administration ,Char,20
+ex.xpt,EXLOT,Lot Number ,Char,20
+ex.xpt,RPHASE,Reproductive Phase ,Char,20
+ex.xpt,RPPLSTDY,Planned Repro Phase Day of Obs Start ,Num,8
+ex.xpt,EXSTDTC,Start Date/Time of Treatment ,Char,20
+lb.xpt,STUDYID ,Study Identifier,Char,10
+lb.xpt,DOMAIN ,Domain Abbreviation,Char,2
+lb.xpt,USUBJID,Unique Subject Identifier ,Char,20
+lb.xpt,LBSEQ ,Sequence Number,Num,8
+lb.xpt,LBTESTCD,Lab Test or Examination Short Name ,Char,8
+lb.xpt,LBTEST,Lab Test or Examination Name ,Char,40
+lb.xpt,LBORRES,Result or Findings as Collected ,Char,20
+lb.xpt,RPHASE,Reproductive Phase ,Char,20
+lb.xpt,RPPLDY,"
+Planned Repro Phase Day ",Num,8
+ds.xpt,STUDYID ,Study Identifier,Char,10
+ds.xpt,DOMAIN ,Domain Abbreviation,Char,2
+ds.xpt,USUBJID,Unique Subject Identifier ,Char,20
+ds.xpt,DSSEQ ,Sequence Number,Num,8
+ds.xpt,DSTERM,Reported Term for the Disposition Event ,Char,100
+ds.xpt,RPHASE,Reproductive Phase ,Char,20
+ds.xpt,RPPLDY,"
+Planned Repro Phase Day ",Num,8

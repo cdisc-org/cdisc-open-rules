@@ -1,0 +1,79 @@
+{
+    "VS": [
+        {
+            "executionStatus": "success",
+            "dataset": "vs.xpt",
+            "domain": "VS",
+            "variables": [
+                "VSTESTCD"
+            ],
+            "message": "VSTESTCD > 8 chars or contains more than only letters, numbers, underscores, or starts with a number.",
+            "errors": [
+                {
+                    "value": {
+                        "VSTESTCD": "DIABPPULSE"
+                    },
+                    "row": 4,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 4
+                },
+                {
+                    "value": {
+                        "VSTESTCD": "DIABPPULSE"
+                    },
+                    "row": 5,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 5
+                },
+                {
+                    "value": {
+                        "VSTESTCD": "DIABPPULSE"
+                    },
+                    "row": 6,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 6
+                },
+                {
+                    "value": {
+                        "VSTESTCD": "DIABPPULSE"
+                    },
+                    "row": 7,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 7
+                },
+                {
+                    "value": {
+                        "VSTESTCD": "DIABPPULSE"
+                    },
+                    "row": 8,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 8
+                },
+                {
+                    "value": {
+                        "VSTESTCD": "DIABPPULSE"
+                    },
+                    "row": 9,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 9
+                },
+                {
+                    "value": {
+                        "VSTESTCD": "1PULSE"
+                    },
+                    "row": 12,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 22
+                },
+                {
+                    "value": {
+                        "VSTESTCD": "PULSE&&&&&&&"
+                    },
+                    "row": 16,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 26
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,33 @@
+{
+  "CO": [
+    {
+      "executionStatus": "success",
+      "dataset": "co.xpt",
+      "domain": "CO",
+      "variables": [
+        "COVAL"
+      ],
+      "message": "Correct order of population in COVAL variables must be COVAL, COVAL1, COVAL2 ...",
+      "errors": [
+        {
+          "value": {
+            "COVAL": "null"
+          },
+          "dataset": "co.xpt",
+          "row": 2,
+          "USUBJID": "XX-11",
+          "SEQ": 6
+        },
+        {
+          "value": {
+            "COVAL": "COVAL1 value YY-12"
+          },
+          "dataset": "co.xpt",
+          "row": 3,
+          "USUBJID": "YY-12",
+          "SEQ": 6
+        }
+      ]
+    }
+  ]
+}

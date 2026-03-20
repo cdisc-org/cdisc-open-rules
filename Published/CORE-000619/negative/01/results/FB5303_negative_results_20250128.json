@@ -1,0 +1,48 @@
+{
+    "TX": [
+        {
+            "executionStatus": "success",
+            "dataset": "tx.xpt",
+            "domain": "TX",
+            "variables": [
+                "TXPARMCD",
+                "TXVAL"
+            ],
+            "message": "The value of TXVAL for TXPARMCD=AGETXT must be in number-number format",
+            "errors": [
+                {
+                    "value": {
+                        "TXPARMCD": "AGETXT",
+                        "TXVAL": "a-40"
+                    },
+                    "row": 1,
+                    "SEQ": 1
+                },
+                {
+                    "value": {
+                        "TXPARMCD": "AGETXT",
+                        "TXVAL": "11-a"
+                    },
+                    "row": 2,
+                    "SEQ": 2
+                },
+                {
+                    "value": {
+                        "TXPARMCD": "AGETXT",
+                        "TXVAL": "20"
+                    },
+                    "row": 3,
+                    "SEQ": 3
+                },
+                {
+                    "value": {
+                        "TXPARMCD": "AGETXT",
+                        "TXVAL": "young"
+                    },
+                    "row": 4,
+                    "SEQ": 4
+                }
+            ]
+        }
+    ]
+}

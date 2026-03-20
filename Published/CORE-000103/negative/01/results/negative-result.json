@@ -1,0 +1,246 @@
+{
+    "AG": [
+        {
+            "executionStatus": "success",
+            "dataset": "ag.xpt",
+            "domain": "AG",
+            "variables": [
+                "AGCAT",
+                "AGSCAT"
+            ],
+            "message": "AGCAT should not be null when AGSCAT is populated",
+            "errors": [
+                {
+                    "value": {
+                        "AGCAT": null,
+                        "AGSCAT": "DFAJF"
+                    },
+                    "dataset": "ag.xpt",
+                    "row": 1,
+                    "USUBJID": "XYZ-001-001",
+                    "SEQ": 1
+                }
+            ]
+        }
+    ],
+    "CM": [
+        {
+            "executionStatus": "success",
+            "dataset": "cm.xpt",
+            "domain": "CM",
+            "variables": [
+                "CMCAT",
+                "CMSCAT"
+            ],
+            "message": "CMCAT should not be null when CMSCAT is populated",
+            "errors": [
+                {
+                    "value": {
+                        "CMSCAT": "PRIOR DMARDS",
+                        "CMCAT": null
+                    },
+                    "dataset": "cm.xpt",
+                    "row": 1,
+                    "USUBJID": "ABC-0002",
+                    "SEQ": 1
+                }
+            ]
+        }
+    ],
+    "EC": [
+        {
+            "executionStatus": "success",
+            "dataset": "ec.xpt",
+            "domain": "EC",
+            "variables": [],
+            "message": null,
+            "errors": []
+        }
+    ],
+    "EX": [
+        {
+            "executionStatus": "success",
+            "dataset": "ex.xpt",
+            "domain": "EX",
+            "variables": [],
+            "message": null,
+            "errors": []
+        }
+    ],
+    "ML": [
+        {
+            "executionStatus": "success",
+            "dataset": "ml.xpt",
+            "domain": "ML",
+            "variables": [],
+            "message": null,
+            "errors": []
+        }
+    ],
+    "PR": [
+        {
+            "executionStatus": "success",
+            "dataset": "pr.xpt",
+            "domain": "PR",
+            "variables": [],
+            "message": null,
+            "errors": []
+        }
+    ],
+    "SU": [
+        {
+            "executionStatus": "success",
+            "dataset": "su.xpt",
+            "domain": "SU",
+            "variables": [
+                "SUCAT",
+                "SUSCAT"
+            ],
+            "message": "SUCAT should not be null when SUSCAT is populated",
+            "errors": [
+                {
+                    "value": {
+                        "SUCAT": null,
+                        "SUSCAT": "TOBACCO"
+                    },
+                    "dataset": "su.xpt",
+                    "row": 1,
+                    "USUBJID": "1234005",
+                    "SEQ": 1
+                },
+                {
+                    "value": {
+                        "SUCAT": null,
+                        "SUSCAT": "CAFFEINE"
+                    },
+                    "dataset": "su.xpt",
+                    "row": 2,
+                    "USUBJID": "1234005",
+                    "SEQ": 2
+                }
+            ]
+        }
+    ],
+    "AE": [
+        {
+            "executionStatus": "success",
+            "dataset": "ae.xpt",
+            "domain": "AE",
+            "variables": [
+                "AECAT",
+                "AESCAT"
+            ],
+            "message": "AECAT should not be null when AESCAT is populated",
+            "errors": [
+                {
+                    "value": {
+                        "AESCAT": "NEUROLOGIC",
+                        "AECAT": null
+                    },
+                    "dataset": "ae.xpt",
+                    "row": 2,
+                    "USUBJID": "1234005",
+                    "SEQ": 2
+                }
+            ]
+        }
+    ],
+    "BE": [
+        {
+            "executionStatus": "success",
+            "dataset": "be.xpt",
+            "domain": "BE",
+            "variables": [],
+            "message": null,
+            "errors": []
+        }
+    ],
+    "CE": [
+        {
+            "executionStatus": "success",
+            "dataset": "ce.xpt",
+            "domain": "CE",
+            "variables": [],
+            "message": null,
+            "errors": []
+        }
+    ],
+    "DS": [
+        {
+            "executionStatus": "success",
+            "dataset": "ds.xpt",
+            "domain": "DS",
+            "variables": [],
+            "message": null,
+            "errors": []
+        }
+    ],
+    "MH": [
+        {
+            "executionStatus": "success",
+            "dataset": "mh.xpt",
+            "domain": "MH",
+            "variables": [],
+            "message": null,
+            "errors": []
+        }
+    ],
+    "DA": [
+        {
+            "executionStatus": "success",
+            "dataset": "da.xpt",
+            "domain": "DA",
+            "variables": [],
+            "message": null,
+            "errors": []
+        }
+    ],
+    "EG": [
+        {
+            "executionStatus": "success",
+            "dataset": "eg.xpt",
+            "domain": "EG",
+            "variables": [
+                "EGCAT",
+                "EGSCAT"
+            ],
+            "message": "EGCAT should not be null when EGSCAT is populated",
+            "errors": [
+                {
+                    "value": {
+                        "EGSCAT": "INTERVAL",
+                        "EGCAT": null
+                    },
+                    "dataset": "eg.xpt",
+                    "row": 2,
+                    "USUBJID": "123101",
+                    "SEQ": 2
+                }
+            ]
+        }
+    ],
+    "FA": [
+        {
+            "executionStatus": "success",
+            "dataset": "fa.xpt",
+            "domain": "FA",
+            "variables": [
+                "FACAT",
+                "FASCAT"
+            ],
+            "message": "FACAT should not be null when FASCAT is populated",
+            "errors": [
+                {
+                    "value": {
+                        "FASCAT": "GERD",
+                        "FACAT": null
+                    },
+                    "dataset": "fa.xpt",
+                    "row": 2,
+                    "USUBJID": "123101",
+                    "SEQ": 2
+                }
+            ]
+        }
+    ]
+}

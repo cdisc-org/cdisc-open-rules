@@ -1,0 +1,48 @@
+{
+  "DM": [
+    {
+      "executionStatus": "success",
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "variables": [
+        "DMSDTH"
+      ],
+      "message": "DMSDTH (Results in Death) must not be in SEND dataset",
+      "errors": [
+        {
+          "value": {
+            "DMSDTH": ""
+          }
+        }
+      ]
+    }
+  ],
+  "TX": [
+    {
+      "executionStatus": "success",
+      "dataset": "tx.xpt",
+      "domain": "TX",
+      "variables": [],
+      "message": null,
+      "errors": []
+    }
+  ],
+  "VS": [
+    {
+      "executionStatus": "success",
+      "dataset": "vs.xpt",
+      "domain": "VS",
+      "variables": [
+        "VSSDTH"
+      ],
+      "message": "VSSDTH (Results in Death) must not be in SEND dataset",
+      "errors": [
+        {
+          "value": {
+            "VSSDTH": ""
+          }
+        }
+      ]
+    }
+  ]
+}

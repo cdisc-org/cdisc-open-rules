@@ -1,0 +1,54 @@
+{
+  "Ae": [
+    {
+      "executionStatus": "success",
+      "domain": "Ae",
+      "variables": [
+        "DOMAIN"
+      ],
+      "message": "First character of DOMAIN value must be in the range A-Z",
+      "errors": [
+        {
+          "value": {
+            "DOMAIN": "ae"
+          },
+          "row": 2,
+          "USUBJID": "123101"
+        },
+        {
+          "value": {
+            "DOMAIN": "aE"
+          },
+          "row": 3,
+          "USUBJID": "123101"
+        }
+      ]
+    }
+  ],
+  "DM": [
+    {
+      "executionStatus": "success",
+      "domain": "DM",
+      "variables": [
+        "DOMAIN"
+      ],
+      "message": "First character of DOMAIN value must be in the range A-Z",
+      "errors": [
+        {
+          "value": {
+            "DOMAIN": "dM"
+          },
+          "row": 3,
+          "USUBJID": "123103"
+        },
+        {
+          "value": {
+            "DOMAIN": "dm"
+          },
+          "row": 5,
+          "USUBJID": "123105"
+        }
+      ]
+    }
+  ]
+}

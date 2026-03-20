@@ -1,0 +1,1368 @@
+{
+    "rule": {
+        "Authorities": [
+            {
+                "Organization": "CDISC",
+                "Standards": [
+                    {
+                        "Name": "SDTMIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "Model v2.0",
+                                        "Section": "Identifiers",
+                                        "Cited_Guidance": "STUDYID, DOMAIN, and --SEQ are required in all domains based on one of the 3 general observation classes. Each general class domain must also include at least one of the following subject identifiers USUBJID, SPDEVID, or POOLID."
+                                    },
+                                    {
+                                        "Document": "Model v2.0",
+                                        "Section": "Associated Persons Data",
+                                        "Cited_Guidance": "The Associated Persons Identifier (APID) will be required in all AP datasets, and will identify records as AP data.'"
+                                    }
+                                ],
+                                "Origin": "SDTM and SDTMIG Conformance Rules",
+                                "Version": "2.0",
+                                "Rule_Identifier": {
+                                    "Id": "CG0554",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.4"
+                    },
+                    {
+                        "Name": "SDTMIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "Model v1.7",
+                                        "Section": "2.2.4",
+                                        "Cited_Guidance": "STUDYID, DOMAIN, and --SEQ are required in all domains based on one of the 3 general observation classes. Each general class domain must also include at least one of the following subject identifiers: USUBJID, APID, SPDEVID, or POOLID."
+                                    }
+                                ],
+                                "Origin": "SDTM and SDTMIG Conformance Rules",
+                                "Version": "2.0",
+                                "Rule_Identifier": {
+                                    "Id": "CG0554",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Version": "3.3"
+                    },
+                    {
+                        "Name": "TIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "SDTM v2.1",
+                                        "Section": "Section 3.1.4 Identifiers For All Classes",
+                                        "Cited_Guidance": "STUDYID, DOMAIN, and --SEQ are required in all domains based on one of the 3 general observation classes. Each general class domain must also include at least one of the following subject identifiers - SUBJID, SPDEVID, or POOLID."
+                                    },
+                                    {
+                                        "Document": "SDTM v2.1",
+                                        "Section": "Section 4.0  Associated Persons Data",
+                                        "Cited_Guidance": "The Associated Persons Identifier (APID) will be required in all AP datasets, and will identify records as AP data."
+                                    }
+                                ],
+                                "Origin": "TIG Conformance Rules",
+                                "Version": "1.0",
+                                "Rule_Identifier": {
+                                    "Id": "TIG0642",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Substandard": "SDTM",
+                        "Version": "1.0"
+                    }
+                ]
+            }
+        ],
+        "Check": {
+            "any": [
+                {
+                    "all": [
+                        {
+                            "name": "DOMAIN",
+                            "operator": "prefix_matches_regex",
+                            "prefix": 2,
+                            "value": "(AP|ap)"
+                        },
+                        {
+                            "name": "APID",
+                            "operator": "not_exists"
+                        }
+                    ]
+                },
+                {
+                    "all": [
+                        {
+                            "name": "DOMAIN",
+                            "operator": "not_prefix_matches_regex",
+                            "prefix": 2,
+                            "value": "(AP|ap)"
+                        },
+                        {
+                            "name": "STUDYID",
+                            "operator": "exists"
+                        },
+                        {
+                            "name": "--SEQ",
+                            "operator": "exists"
+                        },
+                        {
+                            "name": "USUBJID",
+                            "operator": "not_exists"
+                        },
+                        {
+                            "name": "SPDEVID",
+                            "operator": "not_exists"
+                        },
+                        {
+                            "name": "POOLID",
+                            "operator": "not_exists"
+                        },
+                        {
+                            "name": "SPTOBID",
+                            "operator": "not_exists"
+                        },
+                        {
+                            "name": "STOCONID",
+                            "operator": "not_exists"
+                        }
+                    ]
+                }
+            ]
+        },
+        "Core": {
+            "Id": "CORE-000107",
+            "Status": "Published",
+            "Version": "1"
+        },
+        "Description": "APID is required in all Associated Persons Data. In addition to STUDYID, DOMAIN, and --SEQ being required for all domains based on one of the 3 general observation classes, one of USUBJID, APID, SPDEVID, or POOLID must also be present.",
+        "Executability": "Fully Executable",
+        "Outcome": {
+            "Message": "An appropriate identifier is not present; USUBJID, APID, SPDEVID, SPTOBID, POOLID, SPTOBID, STOCONID should be present."
+        },
+        "Scope": {
+            "Classes": {
+                "Include": [
+                    "ALL"
+                ]
+            },
+            "Domains": {
+                "Include": [
+                    "ALL"
+                ]
+            },
+            "Use_Case": "INDH, PROD"
+        },
+        "Sensitivity": "Dataset",
+        "Rule_Type": "Record Data"
+    },
+    "datasets": [
+        {
+            "filename": "ae.xpt",
+            "label": "Adverse Events",
+            "domain": "AE",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "DOMAIN",
+                    "label": "Domain Abbreviation",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AESEQ",
+                    "label": "Sequence Number",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "AETERM",
+                    "label": "Reported Term for the Adverse Event",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AEMODIFY",
+                    "label": "Modified Reported Term",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AEDECOD",
+                    "label": "Dictionary-Derived Term",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AEBODSYS",
+                    "label": "Body System or Organ Class",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AESEV",
+                    "label": "Severity/Intensity",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AESER",
+                    "label": "Serious Event",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AEACN",
+                    "label": "Action Taken with Study Treatment",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AEREL",
+                    "label": "Causality",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AEOUT",
+                    "label": "Outcome of Adverse Event",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AESCONG",
+                    "label": "Congenital Anomaly or Birth Defect",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AESDISAB",
+                    "label": "Persist or Signif Disability/Incapacity",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AESDTH",
+                    "label": "Results in Death",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AESHOSP",
+                    "label": "Requires or Prolongs Hospitalization",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AESLIFE",
+                    "label": "Is Life Threatening",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "EPOCH",
+                    "label": "Epoch",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AESTDTC",
+                    "label": "Start Date/Time of Adverse Event",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AEENDTC",
+                    "label": "End Date/Time of Adverse Event",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AESTDY",
+                    "label": "Study Day of Start of Adverse Event",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "AEENDY",
+                    "label": "Study Day of End of Adverse Event",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "AEENRF",
+                    "label": "End Relative to Reference Period",
+                    "type": "Char",
+                    "length": 50
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "CDISCPILOT01",
+                    "CDISCPILOT01"
+                ],
+                "DOMAIN": [
+                    "AE",
+                    "AE"
+                ],
+                "AESEQ": [
+                    1,
+                    2
+                ],
+                "AETERM": [
+                    "POUNDING HEADACHE",
+                    "POUNDING HEADACHE"
+                ],
+                "AEMODIFY": [
+                    "HEADACHE",
+                    "HEADACHE"
+                ],
+                "AEDECOD": [
+                    "Headache",
+                    "Headache"
+                ],
+                "AEBODSYS": [
+                    "Nervous system disorders",
+                    "Nervous system disorders"
+                ],
+                "AESEV": [
+                    "SEVERE",
+                    "SEVERE"
+                ],
+                "AESER": [
+                    "N",
+                    "N"
+                ],
+                "AEACN": [
+                    "NOT APPLICABLE",
+                    "NOT APPLICABLE"
+                ],
+                "AEREL": [
+                    "DEFINITELY NOT RELATED",
+                    "DEFINITELY NOT RELATED"
+                ],
+                "AEOUT": [
+                    "RECOVERED/RESOLVED",
+                    "RECOVERED/RESOLVED"
+                ],
+                "AESCONG": [
+                    "",
+                    ""
+                ],
+                "AESDISAB": [
+                    "",
+                    ""
+                ],
+                "AESDTH": [
+                    "",
+                    ""
+                ],
+                "AESHOSP": [
+                    "CDISCPILOT01",
+                    "CDISCPILOT01"
+                ],
+                "AESLIFE": [
+                    "",
+                    ""
+                ],
+                "EPOCH": [
+                    "SCREENING",
+                    "SCREENING"
+                ],
+                "AESTDTC": [
+                    "2022-03-19",
+                    "2022-03-20"
+                ],
+                "AEENDTC": [
+                    "2022-03-19",
+                    "2022-03-20"
+                ],
+                "AESTDY": [
+                    -2,
+                    0
+                ],
+                "AEENDY": [
+                    -2,
+                    0
+                ],
+                "AEENRF": [
+                    "",
+                    ""
+                ]
+            }
+        },
+        {
+            "filename": "cm.xpt",
+            "label": "Concomitant/Prior Medications",
+            "domain": "CM",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 12
+                },
+                {
+                    "name": "DOMAIN",
+                    "label": "Domain Abbreviation",
+                    "type": "Char",
+                    "length": 2
+                },
+                {
+                    "name": "CMSEQ",
+                    "label": "Sequence Number",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "CMTRT",
+                    "label": "Reported Name of Drug, Med, or Therapy",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "CMINDC",
+                    "label": "Indication",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "CMDOSE",
+                    "label": "Dose per Administration",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "CMDOSU",
+                    "label": "Dose Units",
+                    "type": "Char",
+                    "length": 6
+                },
+                {
+                    "name": "CMDOSFRQ",
+                    "label": "Dosing Frequency per Interval",
+                    "type": "Char",
+                    "length": 3
+                },
+                {
+                    "name": "CMROUTE",
+                    "label": "Route of Administration",
+                    "type": "Char",
+                    "length": 24
+                },
+                {
+                    "name": "EPOCH",
+                    "label": "Epoch",
+                    "type": "Char",
+                    "length": 9
+                },
+                {
+                    "name": "CMSTDTC",
+                    "label": "Start Date/Time of Medication",
+                    "type": "Char",
+                    "length": 10
+                },
+                {
+                    "name": "CMENDTC",
+                    "label": "End Date/Time of Medication",
+                    "type": "Char",
+                    "length": 10
+                },
+                {
+                    "name": "CMSTDY",
+                    "label": "Study Day of Start of Medication",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "CMENDY",
+                    "label": "Study Day of End of Medication",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "CMSTRF",
+                    "label": "Start Relative to Reference Period",
+                    "type": "Char",
+                    "length": 7
+                },
+                {
+                    "name": "CMENRF",
+                    "label": "End Relative to Reference Period",
+                    "type": "Char",
+                    "length": 5
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01"
+                ],
+                "DOMAIN": [
+                    "CM",
+                    "CM",
+                    "CM",
+                    "CM",
+                    "CM",
+                    "CM",
+                    "CM",
+                    "CM",
+                    "CM",
+                    "CM"
+                ],
+                "CMSEQ": [
+                    1,
+                    2,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    1,
+                    1
+                ],
+                "CMTRT": [
+                    "VITAMIN C",
+                    "VITAMIN E",
+                    "METAMUCIL",
+                    "ADVIL",
+                    "DOCUSATE SODIUM",
+                    "BENADRYL",
+                    "PREDNISONE",
+                    "TEMOVATE",
+                    "MOTRIN",
+                    "PRINIVIL"
+                ],
+                "CMINDC": [
+                    "PROPHYLAXIS OR NON-THERAPEUTIC USE",
+                    "PROPHYLAXIS OR NON-THERAPEUTIC USE",
+                    "PROPHYLAXIS OR NON-THERAPEUTIC USE",
+                    "PROPHYLAXIS OR NON-THERAPEUTIC USE",
+                    "PROPHYLAXIS OR NON-THERAPEUTIC USE",
+                    "PROPHYLAXIS OR NON-THERAPEUTIC USE",
+                    "PROPHYLAXIS OR NON-THERAPEUTIC USE",
+                    "PROPHYLAXIS OR NON-THERAPEUTIC USE",
+                    "PROPHYLAXIS OR NON-THERAPEUTIC USE",
+                    "PROPHYLAXIS OR NON-THERAPEUTIC USE"
+                ],
+                "CMDOSE": [
+                    500,
+                    400,
+                    3,
+                    200,
+                    100,
+                    75,
+                    20,
+                    1,
+                    400,
+                    10
+                ],
+                "CMDOSU": [
+                    "mg",
+                    "mg",
+                    "mg",
+                    "mg",
+                    "mg",
+                    "mg",
+                    "mg",
+                    "TABLET",
+                    "mg",
+                    "mg"
+                ],
+                "CMDOSFRQ": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "CMROUTE": [
+                    "ORAL",
+                    "ORAL",
+                    "ORAL",
+                    "ORAL",
+                    "ORAL",
+                    "ORAL",
+                    "ORAL",
+                    "TOPICAL",
+                    "ORAL",
+                    "ORAL"
+                ],
+                "EPOCH": [
+                    "SCREENING",
+                    "SCREENING",
+                    "SCREENING",
+                    "SCREENING",
+                    "SCREENING",
+                    "SCREENING",
+                    "SCREENING",
+                    "SCREENING",
+                    "SCREENING",
+                    "SCREENING"
+                ],
+                "CMSTDTC": [
+                    "1983",
+                    "1983",
+                    "2009",
+                    "2011",
+                    "2012-11",
+                    "2013-02-18",
+                    "2013-02-18",
+                    "2014-05-13",
+                    "1998-10",
+                    "2011-07-15"
+                ],
+                "CMENDTC": [
+                    "",
+                    "",
+                    "",
+                    "2013",
+                    "2013-01-05",
+                    "2013-05-10",
+                    "2013-05-10",
+                    "2014-05-20",
+                    "2013-06-05",
+                    "2013-06-05"
+                ],
+                "CMSTDY": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    45,
+                    45,
+                    3,
+                    null,
+                    -799
+                ],
+                "CMENDY": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    1,
+                    126,
+                    null,
+                    11,
+                    181,
+                    -107
+                ],
+                "CMSTRF": [
+                    "",
+                    "ONGOING",
+                    "",
+                    "ONGOING",
+                    "",
+                    "",
+                    "BEFORE",
+                    "BEFORE",
+                    "",
+                    ""
+                ],
+                "CMENRF": [
+                    "AFTER",
+                    "AFTER",
+                    "",
+                    "AFTER",
+                    "",
+                    "AFTER",
+                    "",
+                    "",
+                    "",
+                    ""
+                ]
+            }
+        },
+        {
+            "filename": "em.xpt",
+            "label": "Tobacco Product Events and Malfunctions",
+            "domain": "EM",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 12
+                },
+                {
+                    "name": "DOMAIN",
+                    "label": "Domain Abbreviation",
+                    "type": "Char",
+                    "length": 2
+                },
+                {
+                    "name": "EMSEQ",
+                    "label": "Device Events Sequence Number",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "EMTERM",
+                    "label": "Reported Term for Device Event",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "EMDECOD",
+                    "label": "Device Events Dictionary-Derived Term",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "EMACNDEV",
+                    "label": "Action Taken with Device",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "EMPATT",
+                    "label": "Pattern of Device Event",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "EMSTDTC",
+                    "label": "Start Date/Time of Device Event",
+                    "type": "Char",
+                    "length": 200
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "TOB07",
+                    "TOB07",
+                    "TOB07"
+                ],
+                "DOMAIN": [
+                    "EM",
+                    "EM",
+                    "EM"
+                ],
+                "EMSEQ": [
+                    1,
+                    1,
+                    1
+                ],
+                "EMTERM": [
+                    "Broken Heater",
+                    "Won't charge",
+                    "Battery Malfunction"
+                ],
+                "EMDECOD": [
+                    "Mechanical Problem",
+                    "Charging Problem",
+                    "Battery Problem"
+                ],
+                "EMACNDEV": [
+                    "DEVICE REPLACED",
+                    "BATTERY REPLACED",
+                    "BATTERY REPLACED"
+                ],
+                "EMPATT": [
+                    "SINGLE",
+                    "SINGLE",
+                    "INTERMITTENT"
+                ],
+                "EMSTDTC": [
+                    "2009-12-28",
+                    "2009-12-29",
+                    "2009-12-30"
+                ]
+            }
+        },
+        {
+            "filename": "du.xpt",
+            "label": "Device-in-Use",
+            "domain": "DU",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "DOMAIN",
+                    "label": "Domain Abbreviation",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "DUSEQ",
+                    "label": "Sequence Number",
+                    "type": "Num",
+                    "length": 50
+                },
+                {
+                    "name": "DUTESTCD",
+                    "label": "Device-In-Use Test Short Name",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "DUTEST",
+                    "label": "Device-In-Use Test Name",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "DUORRES",
+                    "label": "Result or Finding in Original Units",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "DUORRESU",
+                    "label": "Original Units",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "DUSTRESC",
+                    "label": "Result or Finding in Standard Format",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "DUSTRESN",
+                    "label": "Numeric Result/Finding in Standard Units",
+                    "type": "Num",
+                    "length": 50
+                },
+                {
+                    "name": "DUSTRESU",
+                    "label": "Standard Units",
+                    "type": "Char",
+                    "length": 50
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "TOB07",
+                    "TOB07",
+                    "TOB07",
+                    "TOB07",
+                    "TOB07",
+                    "TOB07",
+                    "TOB07",
+                    "TOB07",
+                    "TOB07",
+                    "TOB07",
+                    "TOB07",
+                    "TOB07",
+                    "TOB07",
+                    "TOB07",
+                    "TOB07",
+                    "TOB07",
+                    "TOB07",
+                    "TOB07"
+                ],
+                "DOMAIN": [
+                    "DU",
+                    "DU",
+                    "DU",
+                    "DU",
+                    "DU",
+                    "DU",
+                    "DU",
+                    "DU",
+                    "DU",
+                    "DU",
+                    "DU",
+                    "DU",
+                    "DU",
+                    "DU",
+                    "DU",
+                    "DU",
+                    "DU",
+                    "DU"
+                ],
+                "DUSEQ": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9
+                ],
+                "DUTESTCD": [
+                    "PUFFPROF",
+                    "PUFFDUR",
+                    "PUFFINT",
+                    "PUFFBLCK",
+                    "PUFFNUM",
+                    "PUFFVOL",
+                    "PUFFRNG",
+                    "PUFFPAUS",
+                    "PUFFPINT",
+                    "PUFFPROF",
+                    "PUFFDUR",
+                    "PUFFINT",
+                    "PUFFBLCK",
+                    "PUFFNUM",
+                    "PUFFVOL",
+                    "PUFFRNG",
+                    "PUFFPAUS",
+                    "PUFFPINT"
+                ],
+                "DUTEST": [
+                    "Puff Profile",
+                    "Puff Duration",
+                    "Puff Interval",
+                    "Puff Block",
+                    "Number of Puffs",
+                    "Puff Volume",
+                    "Puff Range",
+                    "Puff Pause",
+                    "Puff Pause Interval",
+                    "Puff Profile",
+                    "Puff Duration",
+                    "Puff Interval",
+                    "Puff Block",
+                    "Number of Puffs",
+                    "Puff Volume",
+                    "Puff Range",
+                    "Puff Pause",
+                    "Puff Pause Interval"
+                ],
+                "DUORRES": [
+                    "SQUARE",
+                    "1.25",
+                    "3",
+                    "25",
+                    "200",
+                    "10",
+                    "100-200",
+                    "60",
+                    "10",
+                    "SQUARE",
+                    "2.25",
+                    "3",
+                    "30",
+                    "100",
+                    "20",
+                    "50-150",
+                    "30",
+                    "10"
+                ],
+                "DUORRESU": [
+                    "",
+                    "sec",
+                    "PUFF/min",
+                    "%",
+                    "PUFF",
+                    "mL",
+                    "",
+                    "s",
+                    "PUFF",
+                    "",
+                    "sec",
+                    "PUFF/min",
+                    "%",
+                    "PUFF",
+                    "mL",
+                    "",
+                    "s",
+                    "PUFF"
+                ],
+                "DUSTRESC": [
+                    "SQUARE",
+                    "1.25",
+                    "3",
+                    "25",
+                    "200",
+                    "10",
+                    "100-200",
+                    "60",
+                    "10",
+                    "SQUARE",
+                    "2.25",
+                    "3",
+                    "30",
+                    "100",
+                    "20",
+                    "50-150",
+                    "30",
+                    "10"
+                ],
+                "DUSTRESN": [
+                    null,
+                    1.25,
+                    3,
+                    25,
+                    200,
+                    10,
+                    null,
+                    60,
+                    10,
+                    null,
+                    2.25,
+                    3,
+                    30,
+                    100,
+                    20,
+                    null,
+                    30,
+                    null
+                ],
+                "DUSTRESU": [
+                    "",
+                    "sec",
+                    "PUFF/min",
+                    "%",
+                    "PUFF",
+                    "mL",
+                    "",
+                    "s",
+                    "PUFF",
+                    "",
+                    "sec",
+                    "PUFF/min",
+                    "%",
+                    "PUFF",
+                    "mL",
+                    "",
+                    "s",
+                    ""
+                ]
+            }
+        },
+        {
+            "filename": "to.xpt",
+            "label": "Tobacco Product Identifiers and Descriptors",
+            "domain": "TO",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "DOMAIN",
+                    "label": "Domain Abbreviation",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "TOSEQ",
+                    "label": "Sequence Number",
+                    "type": "Num",
+                    "length": 10
+                },
+                {
+                    "name": "TOPARMCD",
+                    "label": "Tobacco Product ID Element Short Name",
+                    "type": "Char",
+                    "length": 40
+                },
+                {
+                    "name": "TOPARM",
+                    "label": "Tobacco Product ID Element Name",
+                    "type": "Char",
+                    "length": 8
+                },
+                {
+                    "name": "TOCAT",
+                    "label": "Category of Tobacco Product ID Element",
+                    "type": "Char",
+                    "length": 40
+                },
+                {
+                    "name": "TOSCAT",
+                    "label": "Subcategory of Tobacco Prod ID Element",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "TOVAL",
+                    "label": "Tobacco Product ID Element Value",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "TOVALU",
+                    "label": "Tobacco Product ID Element Value Unit",
+                    "type": "Char",
+                    "length": 50
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01"
+                ],
+                "DOMAIN": [
+                    "TO",
+                    "TO",
+                    "TO",
+                    "TO",
+                    "TO",
+                    "TO",
+                    "TO",
+                    "TO",
+                    "TO",
+                    "TO"
+                ],
+                "TOSEQ": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10
+                ],
+                "TOPARMCD": [
+                    "TBPRDCAT",
+                    "TBPRSCAT",
+                    "MANUF",
+                    "TRADENAM",
+                    "PACKTYP",
+                    "PRDQUAN",
+                    "LENGTH",
+                    "CIRCUMF",
+                    "VENTLTOT",
+                    "CHARFLAV"
+                ],
+                "TOPARM": [
+                    "Tobacco Product Category",
+                    "Tobacco Product Subcategory",
+                    "Manufacturer",
+                    "Trade Name",
+                    "Package Type",
+                    "Product Quantity",
+                    "Length",
+                    "Circumference",
+                    "Total Ventilation",
+                    "Characterizing Flavor"
+                ],
+                "TOCAT": [
+                    "NEW PRODUCT",
+                    "NEW PRODUCT",
+                    "NEW PRODUCT",
+                    "NEW PRODUCT",
+                    "NEW PRODUCT",
+                    "NEW PRODUCT",
+                    "NEW PRODUCT",
+                    "NEW PRODUCT",
+                    "NEW PRODUCT",
+                    "NEW PRODUCT"
+                ],
+                "TOSCAT": [
+                    "PRODUCT IDENTIFIER",
+                    "PRODUCT IDENTIFIER",
+                    "PRODUCT IDENTIFIER",
+                    "PRODUCT IDENTIFIER",
+                    "PRODUCT DESCRIPTOR",
+                    "PRODUCT DESCRIPTOR",
+                    "PRODUCT DESCRIPTOR",
+                    "PRODUCT DESCRIPTOR",
+                    "PRODUCT DESCRIPTOR",
+                    "PRODUCT DESCRIPTOR"
+                ],
+                "TOVAL": [
+                    "Cigarettes",
+                    "Filtered",
+                    "Joes Cigs USA",
+                    "Treetop Menthol King Size",
+                    "HARD PACK",
+                    "20",
+                    "86",
+                    "26",
+                    "10",
+                    "MENTHOL"
+                ],
+                "TOVALU": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "CIGARETTE",
+                    "mm",
+                    "mm",
+                    "%",
+                    ""
+                ]
+            }
+        },
+        {
+            "filename": "es.xpt",
+            "label": "Environmental Storage Conditions",
+            "domain": "ES",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "DOMAIN",
+                    "label": "Domain Abbreviation",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "ESSEQ",
+                    "label": "Sequence Number",
+                    "type": "Num",
+                    "length": 50
+                },
+                {
+                    "name": "ESPARMCD",
+                    "label": "Storage Conditions Element Short Name",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "ESPARM",
+                    "label": "Tobacco Product ID Element Name",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "ESVAL",
+                    "label": "Tobacco Product ID Element Value",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "ESVALU",
+                    "label": "Tobacco Product ID Element Value Unit",
+                    "type": "Char",
+                    "length": 50
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "TOB07",
+                    "TOB07",
+                    "TOB07",
+                    "TOB07",
+                    "TOB07",
+                    "TOB07",
+                    "TOB07",
+                    "TOB07"
+                ],
+                "DOMAIN": [
+                    "ES",
+                    "ES",
+                    "ES",
+                    "ES",
+                    "ES",
+                    "ES",
+                    "ES",
+                    "ES"
+                ],
+                "ESSEQ": [
+                    1,
+                    2,
+                    1,
+                    2,
+                    1,
+                    2,
+                    1,
+                    2
+                ],
+                "ESPARMCD": [
+                    "HUMID",
+                    "TEMP",
+                    "HUMID",
+                    "TEMP",
+                    "HUMID",
+                    "TEMP",
+                    "HUMID",
+                    "TEMP"
+                ],
+                "ESPARM": [
+                    "Humidity",
+                    "Temperature",
+                    "Humidity",
+                    "Temperature",
+                    "Humidity",
+                    "Temperature",
+                    "Humidity",
+                    "Temperature"
+                ],
+                "ESVAL": [
+                    "37",
+                    "24",
+                    "60",
+                    "27",
+                    "95",
+                    "31",
+                    "90",
+                    "28"
+                ],
+                "ESVALU": [
+                    "%",
+                    "C",
+                    "%",
+                    "C",
+                    "%",
+                    "C",
+                    "%",
+                    "C"
+                ]
+            }
+        }
+    ],
+    "standard": {
+        "product": "tig",
+        "version": "1-0",
+        "substandard": "sdtm"
+    },
+    "codelists": []
+}

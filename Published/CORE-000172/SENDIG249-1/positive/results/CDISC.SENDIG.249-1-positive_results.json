@@ -1,0 +1,31 @@
+{
+  "AE": [
+    {
+      "executionStatus": "success",
+      "domain": "AE",
+      "variables": [
+        "STUDYID"
+      ],
+      "message": "STUDYID is not equal to DM.STUDYID",
+      "errors": [
+        {
+          "value": {
+            "STUDYID": "ABC123_invalid"
+          },
+          "row": 2,
+          "USUBJID": "CDISC-TEST-002",
+          "SEQ": 2
+        }
+      ]
+    }
+  ],
+  "DM": [
+    {
+      "executionStatus": "success",
+      "domain": "DM",
+      "variables": [],
+      "message": null,
+      "errors": []
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+    "CO": [
+        {
+            "executionStatus": "skipped",
+            "dataset": "co.xpt",
+            "domain": "CO",
+            "variables": [],
+            "message": "Rule skipped - doesn't apply to domain for rule id=CORE-000916, dataset=CO",
+            "errors": []
+        }
+    ],
+    "RELREC": [
+        {
+            "executionStatus": "success",
+            "dataset": "relrec.xpt",
+            "domain": "RELREC",
+            "variables": [
+                "IDVAR"
+            ],
+            "message": "Value for IDVAR in RELREC does not represent a variable present in the dataset referenced in RDOMAIN.",
+            "errors": [
+                {
+                    "value": {
+                        "IDVAR": "COSEK"
+                    },
+                    "dataset": "relrec.xpt",
+                    "row": 2,
+                    "USUBJID": "S002"
+                },
+                {
+                    "value": {
+                        "IDVAR": "LBSEK"
+                    },
+                    "dataset": "relrec.xpt",
+                    "row": 1,
+                    "USUBJID": "S001"
+                }
+            ]
+        }
+    ],
+    "SUPPLB": [
+        {
+            "executionStatus": "skipped",
+            "dataset": "supplb.xpt",
+            "domain": "LB",
+            "variables": [],
+            "message": "Rule skipped - doesn't apply to domain for rule id=CORE-000916, dataset=SUPPLB",
+            "errors": []
+        }
+    ],
+    "LB": [
+        {
+            "executionStatus": "skipped",
+            "dataset": "lb.xpt",
+            "domain": "LB",
+            "variables": [],
+            "message": "Rule skipped - doesn't apply to domain for rule id=CORE-000916, dataset=LB",
+            "errors": []
+        }
+    ]
+}

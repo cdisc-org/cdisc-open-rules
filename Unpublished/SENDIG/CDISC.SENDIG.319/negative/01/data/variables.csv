@@ -1,0 +1,34 @@
+dataset,variable,label,type,length
+lb.xpt,STUDYID,Study Identifier,Char,12
+lb.xpt,DOMAIN,Domain Abbreviation,Char,2
+lb.xpt,USUBJID,Unique Subject Identifier,Char,8
+lb.xpt,LBSEQ,Sequence Number,Num,8
+lb.xpt,LBTESTCD,Lab Test or Examination Short Name,Char,7
+lb.xpt,LBTEST,Lab Test or Examination Name,Char,39
+lb.xpt,LBCAT,Category for Lab Test,Char,10
+lb.xpt,LBORRES,Result or Finding in Original Units,Char,6
+lb.xpt,LBORRESU,Original Units,Char,7
+lb.xpt,LBORNRLO,Reference Range Lower Limit in Orig Unit,Char,200
+lb.xpt,LBORNRHI,Reference Range Upper Limit in Orig Unit,Char,200
+lb.xpt,LBSTRESC,Character Result/Finding in Std Format,Char,8
+lb.xpt,LBSTRESN,Numeric Result/Finding in Standard Units,Num,8
+lb.xpt,LBSTRESU,Standard Units,Char,7
+lb.xpt,LBSTNRLO,Reference Range Lower Limit-Std Units,Num,8
+lb.xpt,LBSTNRHI,Reference Range Upper Limit-Std Units,Num,8
+lb.xpt,LBNRIND,Reference Range Indicator,Char,8
+lb.xpt,LBSTAT,Completion Status,Char,8
+lb.xpt,LBREASND,Reason Not Done,Char,50
+lb.xpt,LBLOBXFL,Last Observation Before Exposure Flag,Char,1
+lb.xpt,VISITNUM,Visit Number,Num,8
+lb.xpt,VISIT,Visit Name,Char,200
+lb.xpt,EPOCH,Epoch,Char,9
+lb.xpt,LBDTC,Date/Time of Specimen Collection,Char,19
+lb.xpt,LBDY,Study Day of Specimen Collection,Num,8
+lb.xpt,LBNOMDY,Nominal Study Day for Tabulations ,Num,8
+pp.xpt,STUDYID,Study Identifier,Char,12
+pp.xpt,DOMAIN,Domain Abbreviation,Char,2
+pp.xpt,USUBJID,Unique Subject Identifier,Char,8
+pp.xpt,PPSEQ,Sequence Number,Num,8
+pp.xpt,PPTESTCD,Parameter Short Name ,Char,7
+pp.xpt,PPTEST,Parameter Name ,Char,39
+pp.xpt,PPSPEC,Specimen Material Type ,Char,200

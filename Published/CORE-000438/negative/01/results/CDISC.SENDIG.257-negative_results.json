@@ -1,0 +1,21 @@
+{
+  "SUPPLB": [
+    {
+      "executionStatus": "success",
+      "domain": "SUPPLB",
+      "variables": [
+        "QVAL"
+      ],
+      "message": "The record does not have a value for QVAL",
+      "errors": [
+        {
+          "value": {
+            "QVAL": ""
+          },
+          "row": 5,
+          "USUBJID": "CDISC-TEST-001"
+        }
+      ]
+    }
+  ]
+}

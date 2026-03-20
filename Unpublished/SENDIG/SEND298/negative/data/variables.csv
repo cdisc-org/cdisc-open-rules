@@ -1,0 +1,20 @@
+dataset,variable,label,type,length
+ts.xpt,STUDYID,Study Identifier,Char,10
+ts.xpt,DOMAIN,Domain Abbreviation,Char,2
+ts.xpt,TSSEQ,Sequence Number,Num,8
+ts.xpt,TSGRPID,Group ID,Char,5
+ts.xpt,TSPARMCD,Trial Summary Parameter Short Name,Char,8
+ts.xpt,TSPARM,Trial Summary Parameter,Char,40
+ts.xpt,VSTESTCD,Vital Signs Test Code,Char,8
+ts.xpt,TSVAL,Parameter Value,Char,149
+ts.xpt,TSVALNF,Parameter Null Flavor,Char,2
+ts.xpt,TSVALCD,Parameter Value Code,Char,11
+ts.xpt,TSVCDREF,Name of the Reference Terminology,Char,18
+ts.xpt,TSVCDVER,Version of the Reference Terminology,Char,10
+te.xpt,STUDYID,Study Identifier,Char,10
+te.xpt,DOMAIN,Domain Abbreviation,Char,2
+te.xpt,ETCD,Element Code,Char,8
+te.xpt,ELEMENT,Description of Element,Char,100
+te.xpt,TESTRL,Rule for Start of Element,Char,80
+te.xpt,TEENRL,Rule for End of Element,Char,80
+te.xpt,TEDUR,Planned Duration of Element,Char,80

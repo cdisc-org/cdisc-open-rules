@@ -1,0 +1,57 @@
+dataset,variable,label,type,length
+ts.xpt,STUDYID,Study Identifier,Char,12
+ts.xpt,DOMAIN,Domain Abbreviation,Char,2
+ts.xpt,TSSEQ,Sequence Number,Num,8
+ts.xpt,TSGRPID,Group ID,Char,50
+ts.xpt,TSPARMCD,Trial Summary Parameter Short Name,Char,50
+ts.xpt,TSPARM,Trial Summary Parameter,Char,50
+ts.xpt,TSVAL,Parameter Value,Char,50
+ts.xpt,TSVALNF,Parameter Value Null Flavor,Char,50
+ts.xpt,TSVALCD,Parameter Value Code,Char,50
+ts.xpt,TSVCDREF,Name of the Reference Terminology,Char,50
+ts.xpt,TSVCDVER,Version of the Reference Terminology,Char,50
+dm.xpt,STUDYID,Study Identifier,Char,12
+dm.xpt,DOMAIN,Domain Abbreviation,Char,2
+dm.xpt,USUBJID,Unique Subject Identifier,Char,20
+dm.xpt,SUBJID,Subject Identifier for the Study,Char,12
+dm.xpt,RFSTDTC,Subject Reference Start Date/Time,Char,19
+dm.xpt,RFENDTC,Subject Reference End Date/Time,Char,19
+dm.xpt,RFXSTDTC,Date/Time of First Study Treatment,Char,19
+dm.xpt,RFXENDTC,Date/Time of Last Study Treatment,Char,19
+dm.xpt,RFICDTC,Date/Time of Informed Consent,Char,19
+dm.xpt,RFPENDTC,Date/Time of End of Participation,Char,19
+dm.xpt,DTHDTC,Date/Time of Death,Char,19
+dm.xpt,DTHFL,Subject Death Flag,Char,1
+dm.xpt,SITEID,Study Site Identifier,Char,3
+dm.xpt,BRTHDTC,Date/Time of Birth,Char,19
+dm.xpt,AGE,Age,Num,8
+dm.xpt,AGETXT,Age Text,Char,5
+dm.xpt,AGEU,Age Units,Char,5
+dm.xpt,SEX,Sex,Char,1
+dm.xpt,RACE,Race,Char,41
+dm.xpt,ETHNIC,Ethnicity,Char,22
+dm.xpt,ARMCD,Planned Arm Code,Char,8
+dm.xpt,ARM,Description of Planned Arm,Char,28
+dm.xpt,ACTARMCD,Actual Arm Code,Char,8
+dm.xpt,ACTARM,Description of Actual Arm,Char,28
+dm.xpt,ARMNRS,Reason Arm and/or Actual Arm is Null,Char,50
+dm.xpt,ACTARMUD,Description of Unplanned Actual Arm,Char,200
+dm.xpt,COUNTRY,Country,Char,3
+ex.xpt,STUDYID,Study Identifier,Char,12
+ex.xpt,DOMAIN,Domain Abbreviation,Char,2
+ex.xpt,USUBJID,Unique Subject Identifier,Char,20
+ex.xpt,EXSEQ,Sequence Number,Num,8
+ex.xpt,EXLNKID,Link ID,Char,50
+ex.xpt,EXTRT,Name of Treatment,Char,50
+ex.xpt,EXDOSE,Dose,Num,8
+ex.xpt,EXDOSTXT,Dose Description,Char,50
+ex.xpt,EXDOSU,Dose Units,Char,50
+ex.xpt,EXDOSFRM,Dose Form,Char,50
+ex.xpt,EXDOSFRQ,Dosing Frequency per Interval,Char,50
+ex.xpt,EXROUTE,Route of Administration,Char,50
+ex.xpt,EXVAMT,Dose,Num,8
+ex.xpt,EXVAMTU,Dose Units,Char,50
+ex.xpt,EXSTDTC,Start Date/Time of Treatment,Char,19
+ex.xpt,EXENDTC,End Date/Time of Treatment,Char,19
+ex.xpt,EXSTDY,Study Day of Start of Treatment,Num,8
+ex.xpt,EXENDY,Study Day of End of Treatment,Num,8

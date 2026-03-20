@@ -1,0 +1,272 @@
+{
+  "EX": [
+    {
+      "executionStatus": "success",
+      "dataset": "ex.xpt",
+      "domain": "EX",
+      "variables": [
+        "EXRPDY",
+        "EXRPENDY",
+        "EXRPSTDY",
+        "RPPLDY",
+        "RPPLENDY",
+        "RPPLSTDY"
+      ],
+      "message": "Repro Phase Day timing variable value must be an integer",
+      "errors": [
+        {
+          "value": {
+            "EXRPSTDY": 1,
+            "RPPLDY": 1.01,
+            "RPPLSTDY": 1,
+            "RPPLENDY": 1,
+            "EXRPDY": 1,
+            "EXRPENDY": 1
+          },
+          "row": 1,
+          "USUBJID": "EFD111-0001 "
+        },
+        {
+          "value": {
+            "EXRPSTDY": 2,
+            "RPPLDY": 2,
+            "RPPLSTDY": 2.6,
+            "RPPLENDY": 2,
+            "EXRPDY": 2,
+            "EXRPENDY": 2
+          },
+          "row": 2,
+          "USUBJID": "EFD111-0001 "
+        },
+        {
+          "value": {
+            "EXRPSTDY": 3,
+            "RPPLDY": 3,
+            "RPPLSTDY": 3,
+            "RPPLENDY": 1.1,
+            "EXRPDY": 3,
+            "EXRPENDY": 3
+          },
+          "row": 3,
+          "USUBJID": "EFD111-0001 "
+        },
+        {
+          "value": {
+            "EXRPSTDY": 4,
+            "RPPLDY": 4,
+            "RPPLSTDY": 4,
+            "RPPLENDY": 4,
+            "EXRPDY": -2.2,
+            "EXRPENDY": 4
+          },
+          "row": 4,
+          "USUBJID": "EFD111-0001 "
+        },
+        {
+          "value": {
+            "EXRPSTDY": 2.3,
+            "RPPLDY": -5,
+            "RPPLSTDY": 5,
+            "RPPLENDY": 5,
+            "EXRPDY": 5,
+            "EXRPENDY": 5
+          },
+          "row": 5,
+          "USUBJID": "EFD111-0001 "
+        },
+        {
+          "value": {
+            "EXRPSTDY": 6,
+            "RPPLDY": 0,
+            "RPPLSTDY": 6,
+            "RPPLENDY": 6,
+            "EXRPDY": 6,
+            "EXRPENDY": -4.1
+          },
+          "row": 6,
+          "USUBJID": "EFD111-0001 "
+        }
+      ]
+    }
+  ],
+  "LB": [
+    {
+      "executionStatus": "success",
+      "dataset": "lb.xpt",
+      "domain": "LB",
+      "variables": [
+        "LBRPDY",
+        "LBRPENDY",
+        "LBRPSTDY",
+        "RPPLDY",
+        "RPPLENDY",
+        "RPPLSTDY"
+      ],
+      "message": "Repro Phase Day timing variable value must be an integer",
+      "errors": [
+        {
+          "value": {
+            "LBRPSTDY": 1,
+            "LBRPDY": 1,
+            "RPPLDY": 1.01,
+            "RPPLSTDY": 1,
+            "RPPLENDY": 1,
+            "LBRPENDY": 1
+          },
+          "row": 1,
+          "USUBJID": "EFD111-0001 "
+        },
+        {
+          "value": {
+            "LBRPSTDY": 2,
+            "LBRPDY": 2,
+            "RPPLDY": 2,
+            "RPPLSTDY": 2.6,
+            "RPPLENDY": 2,
+            "LBRPENDY": 2
+          },
+          "row": 2,
+          "USUBJID": "EFD111-0001 "
+        },
+        {
+          "value": {
+            "LBRPSTDY": 3,
+            "LBRPDY": 3,
+            "RPPLDY": 3,
+            "RPPLSTDY": 3,
+            "RPPLENDY": 1.1,
+            "LBRPENDY": 3
+          },
+          "row": 3,
+          "USUBJID": "EFD111-0001 "
+        },
+        {
+          "value": {
+            "LBRPSTDY": 4,
+            "LBRPDY": -2.2,
+            "RPPLDY": 4,
+            "RPPLSTDY": 4,
+            "RPPLENDY": 4,
+            "LBRPENDY": 4
+          },
+          "row": 4,
+          "USUBJID": "EFD111-0001 "
+        },
+        {
+          "value": {
+            "LBRPSTDY": 2.3,
+            "LBRPDY": 5,
+            "RPPLDY": -5,
+            "RPPLSTDY": 5,
+            "RPPLENDY": 5,
+            "LBRPENDY": 5
+          },
+          "row": 5,
+          "USUBJID": "EFD111-0001 "
+        },
+        {
+          "value": {
+            "LBRPSTDY": 5,
+            "LBRPDY": 5,
+            "RPPLDY": -5,
+            "RPPLSTDY": 5,
+            "RPPLENDY": 5,
+            "LBRPENDY": 5.7
+          },
+          "row": 6,
+          "USUBJID": "EFD111-0001 "
+        }
+      ]
+    }
+  ],
+  "DS": [
+    {
+      "executionStatus": "success",
+      "dataset": "ds.xpt",
+      "domain": "DS",
+      "variables": [
+        "DSRPDY",
+        "DSRPENDY",
+        "DSRPSTDY",
+        "RPPLDY",
+        "RPPLENDY",
+        "RPPLSTDY"
+      ],
+      "message": "Repro Phase Day timing variable value must be an integer",
+      "errors": [
+        {
+          "value": {
+            "DSRPDY": 1,
+            "DSRPSTDY": 1,
+            "DSRPENDY": 1,
+            "RPPLDY": 1.01,
+            "RPPLSTDY": 1,
+            "RPPLENDY": 1
+          },
+          "row": 1,
+          "USUBJID": "EFD111-0001 "
+        },
+        {
+          "value": {
+            "DSRPDY": 2,
+            "DSRPSTDY": 2,
+            "DSRPENDY": 2,
+            "RPPLDY": 2,
+            "RPPLSTDY": 2.6,
+            "RPPLENDY": 2
+          },
+          "row": 2,
+          "USUBJID": "EFD111-0001 "
+        },
+        {
+          "value": {
+            "DSRPDY": 3,
+            "DSRPSTDY": 3,
+            "DSRPENDY": 3,
+            "RPPLDY": 3,
+            "RPPLSTDY": 3,
+            "RPPLENDY": 1.1
+          },
+          "row": 3,
+          "USUBJID": "EFD111-0001 "
+        },
+        {
+          "value": {
+            "DSRPDY": -2.2,
+            "DSRPSTDY": 4,
+            "DSRPENDY": 4,
+            "RPPLDY": 4,
+            "RPPLSTDY": 4,
+            "RPPLENDY": 4
+          },
+          "row": 4,
+          "USUBJID": "EFD111-0001 "
+        },
+        {
+          "value": {
+            "DSRPDY": 5,
+            "DSRPSTDY": 2.3,
+            "DSRPENDY": 5,
+            "RPPLDY": -5,
+            "RPPLSTDY": 5,
+            "RPPLENDY": 5
+          },
+          "row": 5,
+          "USUBJID": "EFD111-0001 "
+        },
+        {
+          "value": {
+            "DSRPDY": 6,
+            "DSRPSTDY": 6,
+            "DSRPENDY": 6.1,
+            "RPPLDY": -6,
+            "RPPLSTDY": 6,
+            "RPPLENDY": 6
+          },
+          "row": 6,
+          "USUBJID": "EFD111-0001 "
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+    "AE": [
+        {
+            "executionStatus": "skipped",
+            "dataset": "ae.xpt",
+            "domain": "AE",
+            "variables": [],
+            "message": "Rule skipped - doesn't apply to use case for rule id=None, dataset=AE",
+            "errors": []
+        }
+    ],
+    "PD": [
+        {
+            "executionStatus": "success",
+            "dataset": "pd.xpt",
+            "domain": "PD",
+            "variables": [],
+            "message": null,
+            "errors": []
+        }
+    ],
+    "ES": [
+        {
+            "executionStatus": "skipped",
+            "dataset": "es.xpt",
+            "domain": "ES",
+            "variables": [],
+            "message": "Rule skipped - doesn't apply to domain for rule id=None, dataset=ES",
+            "errors": []
+        }
+    ],
+    "TO": [
+        {
+            "executionStatus": "success",
+            "dataset": "to.xpt",
+            "domain": "TO",
+            "variables": [],
+            "message": null,
+            "errors": []
+        }
+    ]
+}

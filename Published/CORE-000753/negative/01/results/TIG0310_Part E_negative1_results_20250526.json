@@ -1,0 +1,79 @@
+{
+    "ES": [
+        {
+            "executionStatus": "success",
+            "dataset": "es.xpt",
+            "domain": "ES",
+            "variables": [
+                "STOCONID"
+            ],
+            "message": "ESSEQ is not a unique number per STOCONID per domain.",
+            "errors": [
+                {
+                    "value": {
+                        "STOCONID": "Condition 1"
+                    },
+                    "dataset": "es.xpt",
+                    "row": 1,
+                    "SEQ": 1
+                },
+                {
+                    "value": {
+                        "STOCONID": "Condition 1"
+                    },
+                    "dataset": "es.xpt",
+                    "row": 2,
+                    "SEQ": 1
+                },
+                {
+                    "value": {
+                        "STOCONID": "Condition 2"
+                    },
+                    "dataset": "es.xpt",
+                    "row": 3,
+                    "SEQ": 1
+                },
+                {
+                    "value": {
+                        "STOCONID": "Condition 2"
+                    },
+                    "dataset": "es.xpt",
+                    "row": 4,
+                    "SEQ": 1
+                },
+                {
+                    "value": {
+                        "STOCONID": "Condition 4"
+                    },
+                    "dataset": "es.xpt",
+                    "row": 5,
+                    "SEQ": 1
+                },
+                {
+                    "value": {
+                        "STOCONID": "Condition 4"
+                    },
+                    "dataset": "es.xpt",
+                    "row": 6,
+                    "SEQ": 2
+                },
+                {
+                    "value": {
+                        "STOCONID": "Condition 4"
+                    },
+                    "dataset": "es.xpt",
+                    "row": 7,
+                    "SEQ": 1
+                },
+                {
+                    "value": {
+                        "STOCONID": "Condition 4"
+                    },
+                    "dataset": "es.xpt",
+                    "row": 8,
+                    "SEQ": 2
+                }
+            ]
+        }
+    ]
+}

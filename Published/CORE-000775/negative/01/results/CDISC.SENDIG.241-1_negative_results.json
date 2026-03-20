@@ -1,0 +1,77 @@
+{
+  "DM": [
+    {
+      "executionStatus": "skipped",
+      "dataset": null,
+      "domain": "DM",
+      "variables": [],
+      "message": null,
+      "errors": []
+    }
+  ],
+  "TA": [
+    {
+      "executionStatus": "skipped",
+      "dataset": null,
+      "domain": "TA",
+      "variables": [],
+      "message": null,
+      "errors": []
+    }
+  ],
+  "TX": [
+    {
+      "executionStatus": "success",
+      "dataset": "tx.xpt",
+      "domain": "TX",
+      "variables": [
+        "$num_trtdos_see_protocol",
+        "$num_trtdosu_see_protocol",
+        "STUDYID"
+      ],
+      "message": "Within a single set, when TXPARMCD='TRTDOS' with the value for TXVAL='SEE PROTOCOL', then for the record with TXPARMCD=TRTDOSU in the same set, the value for TXVAL must also be 'SEE PROTOCOL'",
+      "errors": [
+        {
+          "value": {
+            "STUDYID": "CDISCPILOT01",
+            "$num_trtdosu_see_protocol": 0,
+            "$num_trtdos_see_protocol": 1
+          },
+          "dataset": "tx.xpt",
+          "row": 2,
+          "SEQ": 6
+        },
+        {
+          "value": {
+            "STUDYID": "CDISCPILOT01",
+            "$num_trtdosu_see_protocol": 0,
+            "$num_trtdos_see_protocol": 1
+          },
+          "dataset": "tx.xpt",
+          "row": 3,
+          "SEQ": 6
+        },
+        {
+          "value": {
+            "STUDYID": "CDISCPILOT01",
+            "$num_trtdosu_see_protocol": 0,
+            "$num_trtdos_see_protocol": 1
+          },
+          "dataset": "tx.xpt",
+          "row": 13,
+          "SEQ": 6
+        },
+        {
+          "value": {
+            "STUDYID": "CDISCPILOT01",
+            "$num_trtdosu_see_protocol": 0,
+            "$num_trtdos_see_protocol": 1
+          },
+          "dataset": "tx.xpt",
+          "row": 14,
+          "SEQ": 6
+        }
+      ]
+    }
+  ]
+}

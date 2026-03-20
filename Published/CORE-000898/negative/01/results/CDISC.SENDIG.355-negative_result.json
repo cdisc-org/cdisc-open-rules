@@ -1,0 +1,41 @@
+{
+  "SJ": [
+    {
+      "executionStatus": "skipped",
+      "dataset": "sj.xpt",
+      "domain": "SJ",
+      "variables": [],
+      "message": "Rule skipped - doesn't apply to domain for rule id=CDISC.SENDIG.355, dataset=SJ",
+      "errors": []
+    }
+  ],
+  "IC ": [
+    {
+      "executionStatus": "success",
+      "dataset": "ic.xpt",
+      "domain": "IC ",
+      "variables": [
+        "ICIMPLBL"
+      ],
+      "message": "The value of ICIMPLBL is not unique within FETUSID and USUBJID",
+      "errors": [
+        {
+          "value": {
+            "ICIMPLBL": "9"
+          },
+          "dataset": "ic.xpt",
+          "row": 9,
+          "USUBJID": "TST01-014 "
+        },
+        {
+          "value": {
+            "ICIMPLBL": "9"
+          },
+          "dataset": "ic.xpt",
+          "row": 10,
+          "USUBJID": "TST01-014 "
+        }
+      ]
+    }
+  ]
+}

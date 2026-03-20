@@ -1,0 +1,24 @@
+dataset,variable,label,type,length
+dm.xpt,STUDYID,Study Identifier,Char,12
+dm.xpt,DOMAIN,Domain Abbreviation,Char,2
+dm.xpt,USUBJID,Unique Subject Identifier,Char,20
+dm.xpt,SUBJID,Subject Identifier for the Study,Char,12
+dm.xpt,RFSTDTC,Subject Reference Start Date/Time,Char,10
+dm.xpt,RFENDTC,Subject Reference End Date/Time,Char,10
+dm.xpt,RFXSTDTC,Date/Time of First Study Treatment,Char,10
+dm.xpt,RFXENDTC,Date/Time of Last Study Treatment,Char,10
+dm.xpt,ARMCD,Planned Arm Code,Char,8
+dm.xpt,ARM,Description of Planned Arm,Char,28
+dm.xpt,SETCD,Set Code,Char,8
+tx.xpt,STUDYID,Study Identifier,Char,12
+tx.xpt,DOMAIN,Domain Abbreviation,Char,2
+tx.xpt,SETCD,Set Code,Char,8
+tx.xpt,SET,Set Description,Char,100
+tx.xpt,TXSEQ,Sequence Number,Num,2
+tx.xpt,TXPARMCD,Trial Set Parameter Short Name,Char,8
+tx.xpt,TXPARM,Trial Set Parameter Name,Char,40
+tx.xpt,TXVAL,Trial Set Parameter Value,Char,10
+ts.xpt,STUDYID,Study Identifier,Char,12
+ts.xpt,DOMAIN,Domain Abbreviation,Char,2
+ts.xpt,TSSEQ,Subject Identifier for the Study,Num,2
+ts.xpt,TSPARMCD,Set Code,Char,8

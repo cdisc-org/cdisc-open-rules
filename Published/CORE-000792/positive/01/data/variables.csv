@@ -1,0 +1,126 @@
+dataset,variable,label,type,length
+dm.xpt,STUDYID,Study Identifier,Char,12
+dm.xpt,DOMAIN,Domain Abbreviation,Char,2
+dm.xpt,USUBJID,Unique Subject Identifier,Char,8
+dm.xpt,SUBJID,Subject Identifier for the Study,Char,4
+dm.xpt,RFSTDTC,Subject Reference Start Date/Time,Char,10
+dm.xpt,RFENDTC,Subject Reference End Date/Time,Char,10
+dm.xpt,RFXSTDTC,Date/Time of First Study Treatment,Char,10
+dm.xpt,RFXENDTC,Date/Time of Last Study Treatment,Char,10
+dm.xpt,RFICDTC,Date/Time of Informed Consent,Char,10
+dm.xpt,RFPENDTC,Date/Time of End of Participation,Char,10
+dm.xpt,DTHDTC,Date/Time of Death,Char,10
+dm.xpt,DTHFL,Subject Death Flag,Char,1
+dm.xpt,SITEID,Study Site Identifier,Char,3
+dm.xpt,BRTHDTC,Date/Time of Birth,Char,10
+dm.xpt,AGE,Age,Num,8
+dm.xpt,AGEU,Age Units,Char,5
+dm.xpt,SEX,Sex,Char,1
+dm.xpt,RACE,Race,Char,41
+dm.xpt,ETHNIC,Ethnicity,Char,22
+dm.xpt,ARMCD,Planned Arm Code,Char,8
+dm.xpt,ARM,Description of Planned Arm,Char,28
+dm.xpt,ACTARMCD,Actual Arm Code,Char,8
+dm.xpt,ACTARM,Description of Actual Arm,Char,28
+dm.xpt,ARMNRS,Reason Arm and/or Actual Arm is Null,Char,14
+dm.xpt,ACTARMUD,Description of Unplanned Actual Arm,Char,200
+dm.xpt,COUNTRY,Country,Char,3
+ce.xpt,STUDYID,Study Identifier,Char,50
+ce.xpt,DOMAIN,Domain Abbreviation,Char,50
+ce.xpt,USUBJID,Unique Subject Identifier,Char,50
+ce.xpt,CESEQ,Sequence Number,Num,8
+ce.xpt,CETERM,Reported Term for the Clinical Event,Char,50
+ce.xpt,CEDECOD,Toxicity,Char,50
+cm.xpt,STUDYID,Study Identifier,Char,50
+cm.xpt,DOMAIN,Domain Abbreviation,Char,50
+cm.xpt,USUBJID,Unique Subject Identifier,Char,50
+cm.xpt,CMSEQ,Sequence Number,Num,8
+cm.xpt,CMGRPID,Group ID,Char,50
+cm.xpt,CMSPID,Sponsor-Defined Identifier,Char,50
+cm.xpt,CMTRT,"Reported Name of Drug, Med, or Therapy",Char,50
+cm.xpt,CMMODIFY,Modified Reported Name,Char,50
+cm.xpt,CMDECOD,Standardized Medication Name,Char,50
+cm.xpt,CMCAT,Category for Medication,Char,50
+cm.xpt,CMSCAT,Subcategory for Medication,Char,50
+cm.xpt,CMPRESP,CM Pre-specified,Char,50
+cm.xpt,CMOCCUR,CM Occurrence,Char,50
+cm.xpt,CMSTAT,Completion Status,Char,50
+cm.xpt,CMREASND,Reason Medication Not Collected,Char,50
+cm.xpt,CMINDC,Indication,Char,50
+cm.xpt,CMCLAS,Medication Class,Char,50
+cm.xpt,CMCLASCD,Medication Class Code,Char,50
+cm.xpt,CMDOSE,Dose per Administration,Num,8
+cm.xpt,CMDOSTXT,Dose Description,Char,50
+cm.xpt,CMDOSU,Dose Units,Char,50
+cm.xpt,CMDOSFRM,Dose Form,Char,50
+cm.xpt,CMDOSFRQ,Dosing Frequency per Interval,Char,50
+cm.xpt,CMDOSTOT,Total Daily Dose,Num,8
+cm.xpt,CMDOSRGM,Intended Dose Regimen,Char,50
+cm.xpt,CMROUTE,Route of Administration,Char,50
+cm.xpt,CMADJ,Reason for Dose Adjustment,Char,50
+cm.xpt,CMRSDISC,Reason the Intervention Was Discontinued,Char,50
+cm.xpt,TAETORD,Planned Order of Element within Arm,Num,8
+cm.xpt,EPOCH,Epoch,Char,50
+cm.xpt,CMSTDTC,Start Date/Time of Medication,Char,50
+cm.xpt,CMENDTC,End Date/Time of Medication,Char,50
+cm.xpt,CMSTDY,Study Day of Start of Medication,Num,8
+cm.xpt,CMENDY,Study Day of End of Medication,Num,8
+cm.xpt,CMDUR,Duration,Char,50
+cm.xpt,CMSTRF,Start Relative to Reference Period,Char,50
+cm.xpt,CMENRF,End Relative to Reference Period,Char,50
+cm.xpt,CMSTRTPT,Start Relative to Reference Time Point,Char,50
+cm.xpt,CMSTTPT,Start Reference Time Point,Char,50
+cm.xpt,CMENRTPT,End Relative to Reference Time Point,Char,50
+cm.xpt,CMENTPT,End Reference Time Point,Char,50
+su.xpt,STUDYID,Study Identifier,Char,50
+su.xpt,DOMAIN,Domain Abbreviation,Char,50
+su.xpt,USUBJID,Unique Subject Identifier,Char,50
+su.xpt,SUSEQ,Sequence Number,Num,8
+su.xpt,SUGRPID,Group ID,Char,50
+su.xpt,SUSPID,Sponsor-Defined Identifier,Char,50
+su.xpt,SUTRT,Reported Name of Substance,Char,50
+su.xpt,SUMODIFY,Modified Substance Name,Char,50
+su.xpt,SUDECOD,Standardized Substance Name,Char,50
+su.xpt,SUCAT,Category for Substance Use,Char,50
+su.xpt,SUSCAT,Subcategory for Substance Use,Char,50
+su.xpt,SUPRESP,SU Pre-Specified,Char,50
+su.xpt,SUOCCUR,SU Occurrence,Char,50
+su.xpt,SUSTAT,Completion Status,Char,50
+su.xpt,SUREASND,Reason Substance Use Not Collected,Char,50
+su.xpt,SUCLAS,Substance Use Class,Char,50
+su.xpt,SUCLASCD,Substance Use Class Code,Char,50
+su.xpt,SUDOSE,Substance Use Consumption,Num,8
+su.xpt,SUDOSTXT,Substance Use Consumption Text,Char,50
+su.xpt,SUDOSU,Consumption Units,Char,50
+su.xpt,SUDOSFRM,Dose Form,Char,50
+su.xpt,SUDOSFRQ,Use Frequency Per Interval,Char,50
+su.xpt,SUDOSTOT,Total Daily Consumption,Num,8
+su.xpt,SUROUTE,Route of Administration,Char,50
+su.xpt,TAETORD,Planned Order of Element within Arm,Num,8
+su.xpt,EPOCH,Epoch,Char,50
+su.xpt,SUSTDTC,Start Date/Time of Substance Use,Char,50
+su.xpt,SUENDTC,End Date/Time of Substance Use,Char,50
+su.xpt,SUSTDY,Study Day of Start of Substance Use,Num,8
+su.xpt,SUENDY,Study Day of End of Substance Use,Num,8
+su.xpt,SUDUR,Duration of Substance Use,Char,50
+su.xpt,SUSTRF,Start Relative to Reference Period,Char,50
+su.xpt,SUENRF,End Relative to Reference Period,Char,50
+su.xpt,SUSTRTPT,Start Relative to Reference Time Point,Char,50
+su.xpt,SUSTTPT,Start Reference Time Point,Char,50
+su.xpt,SUENRTPT,End Relative to Reference Time Point,Char,50
+su.xpt,SUENTPT,End Reference Time Point,Char,50
+su.xpt,OEEVALID,Evaluator Identifier,Char,50
+su.xpt,OEACPTFL,Accepted Record Flag,Char,50
+su.xpt,OEREPNUM,Repetition Number,Num,8
+su.xpt,VISITNUM,Visit Number,Num,8
+su.xpt,VISIT,Visit Name,Char,50
+su.xpt,VISITDY,Planned Study Day of Visit,Num,8
+su.xpt,TAETORD2,Planned Order of Element within Arm,Num,8
+su.xpt,EPOCH3,Epoch,Char,50
+su.xpt,OEDTC,Date/Time of Collection,Char,50
+su.xpt,OEDY,Study Day of Visit/Collection/Exam,Num,8
+su.xpt,OETPT,Planned Time Point Name,Char,50
+su.xpt,OETPTNUM,Planned Time Point Number,Num,8
+su.xpt,OEELTM,Planned Elapsed Time from Time Point Ref,Char,50
+su.xpt,OETPTREF,Time Point Reference,Char,50
+su.xpt,OERFTDTC,Date/Time of Reference Time Point,Char,50

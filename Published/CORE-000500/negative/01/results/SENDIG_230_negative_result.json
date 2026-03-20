@@ -1,0 +1,46 @@
+{
+  "DM": [
+    {
+      "executionStatus": "skipped",
+      "domain": "DM",
+      "variables": [],
+      "message": null,
+      "errors": []
+    }
+  ],
+  "TX": [
+    {
+      "executionStatus": "success",
+      "domain": "TX",
+      "variables": [
+        "TXPARMCD"
+      ],
+      "message": "The combination of the values of SETCD and TXPARMCD is not unique",
+      "errors": [
+        {
+          "value": {
+            "TXPARMCD": "ARMCD"
+          },
+          "row": 1,
+          "SEQ": 1
+        },
+        {
+          "value": {
+            "TXPARMCD": "ARMCD"
+          },
+          "row": 3,
+          "SEQ": 3
+        }
+      ]
+    }
+  ],
+  "TS": [
+    {
+      "executionStatus": "skipped",
+      "domain": "TS",
+      "variables": [],
+      "message": null,
+      "errors": []
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{2 items
+"EC":[1 item
+0:{5 items
+"executionStatus":"success"
+"domain":"EC"
+"variables":[2 items
+0:"ECENDY"
+1:"ECSTDY"
+]
+"message":"Negative value of Study Day variable"
+"errors":[3 items
+0:{4 items
+"value":{2 items
+"ECENDY":0
+"ECSTDY":-1
+}
+"row":1
+"USUBJID":"CDISC002"
+"SEQ":1
+}
+1:{4 items
+"value":{2 items
+"ECENDY":-2
+"ECSTDY":2
+}
+"row":2
+"USUBJID":"CDISC002"
+"SEQ":2
+}
+2:{4 items
+"value":{2 items
+"ECENDY":-3
+"ECSTDY":-3
+}
+"row":3
+"USUBJID":"CDISC002"
+"SEQ":3
+}
+]
+}
+]
+"EX":[1 item
+0:{5 items
+"executionStatus":"success"
+"domain":"EX"
+"variables":[2 items
+0:"EXENDY"
+1:"EXSTDY"
+]
+"message":"Negative value of Study Day variable"
+"errors":[4 items
+0:{4 items
+"value":{2 items
+"EXSTDY":2
+"EXENDY":-2
+}
+"row":1
+"USUBJID":"CDISC001"
+"SEQ":2
+}
+1:{4 items
+"value":{2 items
+"EXSTDY":0
+"EXENDY":-3
+}
+"row":2
+"USUBJID":"CDISC001"
+"SEQ":3
+}
+2:{4 items
+"value":{2 items
+"EXSTDY":-4
+"EXENDY":-4
+}
+"row":3
+"USUBJID":"CDISC001"
+"SEQ":3
+}
+3:{4 items
+"value":{2 items
+"EXSTDY":-1
+"EXENDY":1
+}
+"row":4
+"USUBJID":"CDISC001"
+"SEQ":1
+}
+]
+}
+]
+}

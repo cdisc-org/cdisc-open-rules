@@ -1,0 +1,31 @@
+{
+  "DS": [
+    {
+      "executionStatus": "success",
+      "dataset": "ds.xpt",
+      "domain": "DS",
+      "variables": [
+        "DSDY"
+      ],
+      "message": "DSDY is not a non-zero integer",
+      "errors": [
+        {
+          "value": {
+            "DSDY": 0
+          },
+          "row": 3,
+          "USUBJID": "015246-300-0004-00002",
+          "SEQ": 3
+        },
+        {
+          "value": {
+            "DSDY": 3.2
+          },
+          "row": 4,
+          "USUBJID": "015246-300-0004-00002",
+          "SEQ": 3
+        }
+      ]
+    }
+  ]
+}

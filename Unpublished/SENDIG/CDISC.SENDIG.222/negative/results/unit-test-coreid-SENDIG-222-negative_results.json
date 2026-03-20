@@ -1,0 +1,29 @@
+{
+  "TE": [
+    {
+      "executionStatus": "skipped",
+      "domain": "TE",
+      "variables": [],
+      "message": null,
+      "errors": []
+    }
+  ],
+  "TA": [
+    {
+      "executionStatus": "success",
+      "domain": "TA",
+      "variables": [
+        "ETCD"
+      ],
+      "message": "TA.ETCD is not present in TE.ETCD",
+      "errors": [
+        {
+          "value": {
+            "ETCD": "INVALID"
+          },
+          "row": 5
+        }
+      ]
+    }
+  ]
+}

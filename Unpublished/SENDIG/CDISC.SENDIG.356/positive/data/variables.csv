@@ -1,0 +1,45 @@
+dataset,variable,label,type,length
+ic.xpt,STUDYID,Study Identifier,Char,10
+ic.xpt,DOMAIN,Domain Abbreviation,Char,2
+ic.xpt,USUBJID,Unique Subject Identifier ,Char,20
+ic.xpt,FETUSID,Unique Fetus Identifier ,Char,20
+ic.xpt,ICSEQ,Sequence Number,Num,8
+ic.xpt,ICTESTCD,Test Short Name,Char,8
+ic.xpt,ICTEST,Implantation Exam Name ,Char,40
+ic.xpt,ICORRES,Result or Finding as Collected,Char,20
+ic.xpt,ICSTRESC,Standardized Result in Character Format,Char,20
+ic.xpt,ICIMPLBL,Implementation Site Label ,Char,11
+ic.xpt,ICSTRESCAT,Result Category,Char,20
+ic.xpt,ICRESLOC,Result Location of Finding,Char,20
+ic.xpt,ICSTAT,Completion Status,Char,10
+ic.xpt,ICREASND,Reason not Done,Char,20
+ic.xpt,ICSPEC,Specimen Material Type,Char,20
+fm.xpt,STUDYID,Study Identifier,Char,10
+fm.xpt,DOMAIN,Domain Abbreviation,Char,2
+fm.xpt,USUBJID,Unique Subject Identifier ,Char,20
+fm.xpt,FETUSID,Unique Fetus Identifier ,Char,20
+fm.xpt,FMSEQ ,Sequence Number,Num,8
+fm.xpt,FMTESTCD,Test Short Name,Char,8
+fm.xpt,FMTEST ,Implantation Exam Name ,Char,40
+fm.xpt,FMORRES ,Result or Finding as Collected,Char,20
+fm.xpt,FMORRESU,Unit of the Original Result ,Char,20
+fm.xpt,FMSTRESC,Standardized Result in Character Format,Char,20
+fm.xpt,FMSTRESN,Standardized Results in Numeric Format ,Num,8
+fm.xpt,FMSTRESU,Unit of the Standardized Result,Char,20
+fm.xpt,FMLOC,Result Location of Finding,Char,20
+fm.xpt,RPHASE,Repro Phase,Char,10
+fx.xpt,STUDYID,Study Identifier,Char,10
+fx.xpt,DOMAIN,Domain Abbreviation,Char,2
+fx.xpt,USUBJID,Unique Subject Identifier ,Char,20
+fx.xpt,FETUSID,Unique Fetus Identifier ,Char,20
+fx.xpt,FXSEQ,Sequence Number,Num,8
+fx.xpt,FXTESTCD,Test Short Name,Char,8
+fx.xpt,FXTEST,"
+ Fetal Exam Name",Char,40
+fx.xpt,FXORRES,Result or Finding as Collected,Char,20
+fx.xpt,FXSTRESC,Unit of the Original Result ,Char,20
+fx.xpt,FXRESCAT,Result Category,Char,20
+fx.xpt,FXRESLOC,Result Location of Finding,Char,20
+fx.xpt,FXANTREG,Anatomical Region,Char,20
+fx.xpt,FXLOC,Location User for the Measurement,Char,20
+fx.xpt,FXMETHOD,Method of Test or Examination,Char,10

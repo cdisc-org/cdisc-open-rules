@@ -1,0 +1,319 @@
+{
+    "AE": [
+        {
+            "executionStatus": "success",
+            "dataset": "ae.xpt",
+            "domain": "AE",
+            "variables": [
+                "AESEQ",
+                "POOLID",
+                "USUBJID"
+            ],
+            "message": "AESEQ is not a unique number per one of the following identifier variables, per domain; USUBJID or POOLID.",
+            "errors": [
+                {
+                    "value": {
+                        "POOLID": "CDISC001",
+                        "AESEQ": 2,
+                        "USUBJID": "Not in dataset"
+                    },
+                    "dataset": "ae.xpt",
+                    "row": 1,
+                    "SEQ": 2
+                },
+                {
+                    "value": {
+                        "POOLID": "CDISC001",
+                        "AESEQ": 2,
+                        "USUBJID": "Not in dataset"
+                    },
+                    "dataset": "ae.xpt",
+                    "row": 2,
+                    "SEQ": 2
+                }
+            ]
+        }
+    ],
+    "CM": [
+        {
+            "executionStatus": "success",
+            "dataset": "cm.xpt",
+            "domain": "CM",
+            "variables": [
+                "CMSEQ",
+                "POOLID",
+                "USUBJID"
+            ],
+            "message": "CMSEQ is not a unique number per one of the following identifier variables, per domain; USUBJID or POOLID.",
+            "errors": [
+                {
+                    "value": {
+                        "CMSEQ": 1,
+                        "USUBJID": "CDISC001",
+                        "POOLID": "Not in dataset"
+                    },
+                    "dataset": "cm.xpt",
+                    "row": 1,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 1
+                },
+                {
+                    "value": {
+                        "CMSEQ": 2,
+                        "USUBJID": "CDISC001",
+                        "POOLID": "Not in dataset"
+                    },
+                    "dataset": "cm.xpt",
+                    "row": 2,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 2
+                },
+                {
+                    "value": {
+                        "CMSEQ": 1,
+                        "USUBJID": "CDISC001",
+                        "POOLID": "Not in dataset"
+                    },
+                    "dataset": "cm.xpt",
+                    "row": 3,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 1
+                },
+                {
+                    "value": {
+                        "CMSEQ": 2,
+                        "USUBJID": "CDISC001",
+                        "POOLID": "Not in dataset"
+                    },
+                    "dataset": "cm.xpt",
+                    "row": 4,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 2
+                },
+                {
+                    "value": {
+                        "CMSEQ": 1,
+                        "USUBJID": "CDISC001",
+                        "POOLID": "Not in dataset"
+                    },
+                    "dataset": "cm.xpt",
+                    "row": 9,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 1
+                },
+                {
+                    "value": {
+                        "CMSEQ": 1,
+                        "USUBJID": "CDISC001",
+                        "POOLID": "Not in dataset"
+                    },
+                    "dataset": "cm.xpt",
+                    "row": 10,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 1
+                }
+            ]
+        }
+    ],
+    "DM": [
+        {
+            "executionStatus": "success",
+            "dataset": "dm.xpt",
+            "domain": "DM",
+            "variables": [],
+            "message": null,
+            "errors": []
+        }
+    ],
+    "LB": [
+        {
+            "executionStatus": "success",
+            "dataset": "lbae.xpt, lbds.xpt",
+            "domain": "LB",
+            "variables": [
+                "LBSEQ",
+                "POOLID",
+                "USUBJID"
+            ],
+            "message": "LBSEQ is not a unique number per one of the following identifier variables, per domain; USUBJID or POOLID.",
+            "errors": [
+                {
+                    "value": {
+                        "LBSEQ": 4,
+                        "USUBJID": "CDISC001",
+                        "POOLID": "Not in dataset"
+                    },
+                    "dataset": "lbae.xpt",
+                    "row": 1,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 4
+                },
+                {
+                    "value": {
+                        "LBSEQ": 1,
+                        "USUBJID": "CDISC002",
+                        "POOLID": "Not in dataset"
+                    },
+                    "dataset": "lbae.xpt",
+                    "row": 8,
+                    "USUBJID": "CDISC002",
+                    "SEQ": 1
+                },
+                {
+                    "value": {
+                        "LBSEQ": 2,
+                        "USUBJID": "CDISC002",
+                        "POOLID": "Not in dataset"
+                    },
+                    "dataset": "lbae.xpt",
+                    "row": 9,
+                    "USUBJID": "CDISC002",
+                    "SEQ": 2
+                },
+                {
+                    "value": {
+                        "LBSEQ": 3,
+                        "USUBJID": "CDISC002",
+                        "POOLID": "Not in dataset"
+                    },
+                    "dataset": "lbae.xpt",
+                    "row": 10,
+                    "USUBJID": "CDISC002",
+                    "SEQ": 3
+                },
+                {
+                    "value": {
+                        "LBSEQ": 4,
+                        "USUBJID": "CDISC002",
+                        "POOLID": "Not in dataset"
+                    },
+                    "dataset": "lbae.xpt",
+                    "row": 11,
+                    "USUBJID": "CDISC002",
+                    "SEQ": 4
+                },
+                {
+                    "value": {
+                        "LBSEQ": 5,
+                        "USUBJID": "CDISC002",
+                        "POOLID": "Not in dataset"
+                    },
+                    "dataset": "lbae.xpt",
+                    "row": 12,
+                    "USUBJID": "CDISC002",
+                    "SEQ": 5
+                },
+                {
+                    "value": {
+                        "LBSEQ": 6,
+                        "USUBJID": "CDISC002",
+                        "POOLID": "Not in dataset"
+                    },
+                    "dataset": "lbae.xpt",
+                    "row": 13,
+                    "USUBJID": "CDISC002",
+                    "SEQ": 6
+                },
+                {
+                    "value": {
+                        "LBSEQ": 7,
+                        "USUBJID": "CDISC002",
+                        "POOLID": "Not in dataset"
+                    },
+                    "dataset": "lbae.xpt",
+                    "row": 14,
+                    "USUBJID": "CDISC002",
+                    "SEQ": 7
+                },
+                {
+                    "value": {
+                        "LBSEQ": 4,
+                        "USUBJID": "CDISC001",
+                        "POOLID": "Not in dataset"
+                    },
+                    "dataset": "lbds.xpt",
+                    "row": 1,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 4
+                },
+                {
+                    "value": {
+                        "LBSEQ": 1,
+                        "USUBJID": "CDISC002",
+                        "POOLID": "Not in dataset"
+                    },
+                    "dataset": "lbds.xpt",
+                    "row": 8,
+                    "USUBJID": "CDISC002",
+                    "SEQ": 1
+                },
+                {
+                    "value": {
+                        "LBSEQ": 2,
+                        "USUBJID": "CDISC002",
+                        "POOLID": "Not in dataset"
+                    },
+                    "dataset": "lbds.xpt",
+                    "row": 9,
+                    "USUBJID": "CDISC002",
+                    "SEQ": 2
+                },
+                {
+                    "value": {
+                        "LBSEQ": 3,
+                        "USUBJID": "CDISC002",
+                        "POOLID": "Not in dataset"
+                    },
+                    "dataset": "lbds.xpt",
+                    "row": 10,
+                    "USUBJID": "CDISC002",
+                    "SEQ": 3
+                },
+                {
+                    "value": {
+                        "LBSEQ": 4,
+                        "USUBJID": "CDISC002",
+                        "POOLID": "Not in dataset"
+                    },
+                    "dataset": "lbds.xpt",
+                    "row": 11,
+                    "USUBJID": "CDISC002",
+                    "SEQ": 4
+                },
+                {
+                    "value": {
+                        "LBSEQ": 5,
+                        "USUBJID": "CDISC002",
+                        "POOLID": "Not in dataset"
+                    },
+                    "dataset": "lbds.xpt",
+                    "row": 12,
+                    "USUBJID": "CDISC002",
+                    "SEQ": 5
+                },
+                {
+                    "value": {
+                        "LBSEQ": 6,
+                        "USUBJID": "CDISC002",
+                        "POOLID": "Not in dataset"
+                    },
+                    "dataset": "lbds.xpt",
+                    "row": 13,
+                    "USUBJID": "CDISC002",
+                    "SEQ": 6
+                },
+                {
+                    "value": {
+                        "LBSEQ": 7,
+                        "USUBJID": "CDISC002",
+                        "POOLID": "Not in dataset"
+                    },
+                    "dataset": "lbds.xpt",
+                    "row": 14,
+                    "USUBJID": "CDISC002",
+                    "SEQ": 7
+                }
+            ]
+        }
+    ]
+}

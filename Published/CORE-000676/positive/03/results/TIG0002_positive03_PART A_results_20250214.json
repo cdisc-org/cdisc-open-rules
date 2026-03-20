@@ -1,0 +1,40 @@
+{
+    "PD": [
+        {
+            "executionStatus": "skipped",
+            "dataset": "pd.xpt",
+            "domain": "PD",
+            "variables": [],
+            "message": "rule evaluation skipped - operation domain not found",
+            "errors": [
+                {
+                    "executionStatus": "skipped",
+                    "dataset": "pd.xpt",
+                    "domain": null,
+                    "variables": [],
+                    "message": "Operation distinct requires Domain TO but Domain not found in dataset",
+                    "errors": []
+                }
+            ]
+        }
+    ],
+    "EM": [
+        {
+            "executionStatus": "skipped",
+            "dataset": "em.xpt",
+            "domain": "EM",
+            "variables": [],
+            "message": "rule evaluation skipped - operation domain not found",
+            "errors": [
+                {
+                    "executionStatus": "skipped",
+                    "dataset": "em.xpt",
+                    "domain": null,
+                    "variables": [],
+                    "message": "Operation distinct requires Domain TO but Domain not found in dataset",
+                    "errors": []
+                }
+            ]
+        }
+    ]
+}

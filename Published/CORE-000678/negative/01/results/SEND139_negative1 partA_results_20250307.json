@@ -1,0 +1,21 @@
+{
+    "VS": [
+        {
+            "executionStatus": "success",
+            "dataset": "vs.xpt",
+            "domain": "VS",
+            "variables": [
+                "$poolid_exists"
+            ],
+            "message": "POOLID variable exists in the dataset but POOLDEF dataset does not exist.",
+            "errors": [
+                {
+                    "value": {
+                        "$poolid_exists": true
+                    },
+                    "dataset": "vs.xpt"
+                }
+            ]
+        }
+    ]
+}

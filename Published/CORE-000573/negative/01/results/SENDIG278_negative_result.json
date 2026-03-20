@@ -1,0 +1,23 @@
+{
+  "VS": [
+    {
+      "executionStatus": "success",
+      "domain": "VS",
+      "variables": [
+        "$record_count",
+        "dataset_label",
+        "dataset_name"
+      ],
+      "message": "Dataset may not be empty, it must contain records",
+      "errors": [
+        {
+          "value": {
+            "dataset_name": "VS",
+            "dataset_label": "Vital Signs",
+            "$record_count": 0
+          }
+        }
+      ]
+    }
+  ]
+}

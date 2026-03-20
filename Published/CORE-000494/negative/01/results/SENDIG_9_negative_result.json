@@ -1,0 +1,28 @@
+{
+  "VS": [
+    {
+      "executionStatus": "success",
+      "domain": "VS",
+      "variables": [
+        "define_variable_label",
+        "define_variable_name",
+        "define_variable_role",
+        "library_variable_name",
+        "library_variable_role"
+      ],
+      "message": "The Role of the variable in the define.xml does not correspond to the Role given by the Implementation Guide",
+      "errors": [
+        {
+          "value": {
+            "library_variable_role": "Identifier",
+            "define_variable_name": "DOMAIN",
+            "library_variable_name": "DOMAIN",
+            "define_variable_role": "WRONG: Domain Identifier",
+            "define_variable_label": "Domain Abbreviation"
+          },
+          "row": 2
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "IC": [
+    {
+      "executionStatus": "success",
+      "dataset": "ic.xpt",
+      "domain": "IC",
+      "variables": [
+        "$record_count_USUBJID",
+        "ICIMPLBL",
+        "ICSTAT"
+      ],
+      "message": "ICIMPLBL must be 'ALL' when there is only one record for the subject and ICSTAT is 'NOT DONE'",
+      "errors": [
+        {
+          "value": {
+            "ICIMPLBL": "ALLTOGETHER",
+            "ICSTAT": "NOT DONE",
+            "$record_count_USUBJID": 1
+          },
+          "dataset": "ic.xpt",
+          "row": 1,
+          "USUBJID": "TST01-001",
+          "SEQ": 1
+        }
+      ]
+    }
+  ]
+}

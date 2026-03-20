@@ -1,0 +1,754 @@
+{
+    "rule": {
+        "Authorities": [
+            {
+                "Organization": "CDISC",
+                "Standards": [
+                    {
+                        "Name": "TIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "SDTM v2.1",
+                                        "Section": "Section 3.1.4 Identifiers For All Classes",
+                                        "Cited_Guidance": "STUDYID, DOMAIN, and --SEQ are required in all domains based on one of the 3 general observation classes. Each general class domain must also include at least one of the following subject identifiers - SUBJID, SPDEVID, or POOLID."
+                                    },
+                                    {
+                                        "Document": "SDTM v2.1",
+                                        "Section": "Section 4.0  Associated Persons Data",
+                                        "Cited_Guidance": "The Associated Persons Identifier (APID) will be required in all AP datasets, and will identify records as AP data."
+                                    }
+                                ],
+                                "Origin": "TIG Conformance Rules",
+                                "Version": "1.0",
+                                "Rule_Identifier": {
+                                    "Id": "TIG0642",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Substandard": "SDTM",
+                        "Version": "1.0"
+                    }
+                ]
+            }
+        ],
+        "Check": {
+            "all": [
+                {
+                    "name": "DOMAIN",
+                    "operator": "exists"
+                },
+                {
+                    "name": "STUDYID",
+                    "operator": "exists"
+                },
+                {
+                    "name": "SPTOBID",
+                    "operator": "not_exists"
+                }
+            ]
+        },
+        "Core": {
+            "Id": "",
+            "Status": "Draft",
+            "Version": "1"
+        },
+        "Description": "Raise an error when STUDYID and DOMAIN exist but SPTOBID does not exist.",
+        "Executability": "Fully Executable",
+        "Outcome": {
+            "Message": "An appropriate identifier is not present; SPTOBID."
+        },
+        "Scope": {
+            "Classes": {
+                "Include": [
+                    "SPECIAL PURPOSE"
+                ]
+            },
+            "Domains": {
+                "Include": [
+                    "IN",
+                    "IQ",
+                    "IT"
+                ]
+            },
+            "Use_Case": "PROD"
+        },
+        "Sensitivity": "Dataset",
+        "Rule_Type": "Record Data"
+    },
+    "datasets": [
+        {
+            "filename": "ae.xpt",
+            "label": "Adverse Events",
+            "domain": "AE",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "DOMAIN",
+                    "label": "Domain Abbreviation",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "POOLID",
+                    "label": "Pool Identifier",
+                    "type": "Char",
+                    "length": 20
+                },
+                {
+                    "name": "AESEQ",
+                    "label": "Sequence Number",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "AETERM",
+                    "label": "Reported Term for the Adverse Event",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AEMODIFY",
+                    "label": "Modified Reported Term",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AEDECOD",
+                    "label": "Dictionary-Derived Term",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AEBODSYS",
+                    "label": "Body System or Organ Class",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AESEV",
+                    "label": "Severity/Intensity",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AESER",
+                    "label": "Serious Event",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AEACN",
+                    "label": "Action Taken with Study Treatment",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AEREL",
+                    "label": "Causality",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AEOUT",
+                    "label": "Outcome of Adverse Event",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AESCONG",
+                    "label": "Congenital Anomaly or Birth Defect",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AESDISAB",
+                    "label": "Persist or Signif Disability/Incapacity",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AESDTH",
+                    "label": "Results in Death",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AESHOSP",
+                    "label": "Requires or Prolongs Hospitalization",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AESLIFE",
+                    "label": "Is Life Threatening",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "EPOCH",
+                    "label": "Epoch",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AESTDTC",
+                    "label": "Start Date/Time of Adverse Event",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AEENDTC",
+                    "label": "End Date/Time of Adverse Event",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AESTDY",
+                    "label": "Study Day of Start of Adverse Event",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "AEENDY",
+                    "label": "Study Day of End of Adverse Event",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "AEENRF",
+                    "label": "End Relative to Reference Period",
+                    "type": "Char",
+                    "length": 50
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "CDISCPILOT01",
+                    "CDISCPILOT01"
+                ],
+                "DOMAIN": [
+                    "AE",
+                    "AE"
+                ],
+                "POOLID": [
+                    "CDISC001",
+                    "CDISC001"
+                ],
+                "AESEQ": [
+                    1,
+                    2
+                ],
+                "AETERM": [
+                    "POUNDING HEADACHE",
+                    "POUNDING HEADACHE"
+                ],
+                "AEMODIFY": [
+                    "HEADACHE",
+                    "HEADACHE"
+                ],
+                "AEDECOD": [
+                    "Headache",
+                    "Headache"
+                ],
+                "AEBODSYS": [
+                    "Nervous system disorders",
+                    "Nervous system disorders"
+                ],
+                "AESEV": [
+                    "SEVERE",
+                    "SEVERE"
+                ],
+                "AESER": [
+                    "N",
+                    "N"
+                ],
+                "AEACN": [
+                    "NOT APPLICABLE",
+                    "NOT APPLICABLE"
+                ],
+                "AEREL": [
+                    "DEFINITELY NOT RELATED",
+                    "DEFINITELY NOT RELATED"
+                ],
+                "AEOUT": [
+                    "RECOVERED/RESOLVED",
+                    "RECOVERED/RESOLVED"
+                ],
+                "AESCONG": [
+                    "",
+                    ""
+                ],
+                "AESDISAB": [
+                    "",
+                    ""
+                ],
+                "AESDTH": [
+                    "",
+                    ""
+                ],
+                "AESHOSP": [
+                    "CDISCPILOT01",
+                    "CDISCPILOT01"
+                ],
+                "AESLIFE": [
+                    "",
+                    ""
+                ],
+                "EPOCH": [
+                    "SCREENING",
+                    "SCREENING"
+                ],
+                "AESTDTC": [
+                    "2022-03-19",
+                    "2022-03-20"
+                ],
+                "AEENDTC": [
+                    "2022-03-19",
+                    "2022-03-20"
+                ],
+                "AESTDY": [
+                    -2,
+                    0
+                ],
+                "AEENDY": [
+                    -2,
+                    0
+                ],
+                "AEENRF": [
+                    "",
+                    ""
+                ]
+            }
+        },
+        {
+            "filename": "in.xpt",
+            "label": "Non-Tobacco Ingredients",
+            "domain": "IN",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "DOMAIN",
+                    "label": "Domain Abbreviation",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "SPTOBID",
+                    "label": "Applicant-Defined Tobacco Product ID",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "IGDCMPID",
+                    "label": "Ingredient or Component Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "INMANUF",
+                    "label": "Manufacturer Name",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "INMANUIN",
+                    "label": "Manufacturer Unique Identifying Item Num",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "TPMF",
+                    "label": "Tobacco Product Master File Number",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "IUPACNAM",
+                    "label": "Preferred IUPAC Name",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "CASNO",
+                    "label": "CAS Registry Number",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "UNII",
+                    "label": "Unique Ingredient Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "INIGDPLX",
+                    "label": "Ingredient Complexity",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "INCIGIND",
+                    "label": "Applicant-Customized Ingredient Indic",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "INGRADE",
+                    "label": "Ingredient Grade",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "INPURITY",
+                    "label": "Ingredient Purity",
+                    "type": "Char",
+                    "length": 50
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "TOB07",
+                    "TOB07",
+                    "TOB08",
+                    "TOB07",
+                    "TOB07",
+                    "TOB07",
+                    "TOB07",
+                    "TOB07",
+                    "TOB08"
+                ],
+                "DOMAIN": [
+                    "IN",
+                    "IN",
+                    "IN",
+                    "IN",
+                    "IN",
+                    "IN",
+                    "IN",
+                    "IN",
+                    "IN"
+                ],
+                "SPTOBID": [
+                    "CIG01a",
+                    "CIG01a",
+                    "CIG01a",
+                    "CIG01a",
+                    "CIG01a",
+                    "CIG01a",
+                    "CIG01a",
+                    "CIG01a",
+                    "CIG01a"
+                ],
+                "IGDCMPID": [
+                    "Cocoa Extract",
+                    "Butyric Acid",
+                    "Methylcellulose",
+                    "Cellulose Filter A",
+                    "Cellulose Acetate",
+                    "Cellulose Acetate",
+                    "1,3-Butanediol",
+                    "FSC Paper B",
+                    "FSC Paper A"
+                ],
+                "INMANUF": [
+                    "Flavor House A",
+                    "",
+                    "",
+                    "MFR A",
+                    "",
+                    "",
+                    "",
+                    "MFR B",
+                    "MFR B"
+                ],
+                "INMANUIN": [
+                    "FLVR1234",
+                    "",
+                    "",
+                    "FIL789",
+                    "",
+                    "",
+                    "",
+                    "FSC123",
+                    "FSC124"
+                ],
+                "TPMF": [
+                    "MF5555555",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "MF5678910",
+                    "MF5678911"
+                ],
+                "IUPACNAM": [
+                    "",
+                    "butanoic acid",
+                    "butanoic acid",
+                    "",
+                    "cellulose acetate",
+                    "cellulose acetate",
+                    "1,3-diacetyloxypropan-2-yl acetate",
+                    "",
+                    ""
+                ],
+                "CASNO": [
+                    "",
+                    "107-92-6",
+                    "107-92-7",
+                    "-",
+                    "9004-35-7",
+                    "9004-35-8",
+                    "102-76-1",
+                    "",
+                    ""
+                ],
+                "UNII": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "INIGDPLX": [
+                    "COMPLEX INGREDIENT",
+                    "SINGLE INGREDIENT",
+                    "SINGLE INGREDIENT",
+                    "COMPLEX INGREDIENT",
+                    "SINGLE INGREDIENT",
+                    "SINGLE INGREDIENT",
+                    "SINGLE INGREDIENT",
+                    "COMPLEX INGREDIENT",
+                    "COMPLEX INGREDIENT"
+                ],
+                "INCIGIND": [
+                    "N",
+                    "",
+                    "",
+                    "N",
+                    "",
+                    "",
+                    "",
+                    "N",
+                    "N"
+                ],
+                "INGRADE": [
+                    "FOOD",
+                    "USP",
+                    "USP",
+                    "USP",
+                    "",
+                    "",
+                    "USP",
+                    "",
+                    ""
+                ],
+                "INPURITY": [
+                    "",
+                    "≥99%",
+                    "≥99%",
+                    "",
+                    "0.99",
+                    "1.99",
+                    "",
+                    "",
+                    ""
+                ]
+            }
+        },
+        {
+            "filename": "iq.xpt",
+            "label": "Ingredient Quantities by Component",
+            "domain": "IQ",
+            "variables": [
+                {
+                    "name": "DOMAIN",
+                    "label": "Domain Abbreviation",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "IGDCMPID",
+                    "label": "Ingredient or Component Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "IQCAT",
+                    "label": "Category of Ingredient or Component",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "IQPARENT",
+                    "label": "Parent of Ingredient or Component",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "IQLEVEL",
+                    "label": "Ingredient Level in Hierarchy",
+                    "type": "Num",
+                    "length": 50
+                },
+                {
+                    "name": "IQFUNCT",
+                    "label": "Ingredient Function",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "IQVALTRG",
+                    "label": "Ingredient Target Value",
+                    "type": "Num",
+                    "length": 50
+                },
+                {
+                    "name": "IQVALMIN",
+                    "label": "Ingredient Minimum Value",
+                    "type": "Num",
+                    "length": 50
+                },
+                {
+                    "name": "IQVALMAX",
+                    "label": "Ingredient Maximum Value",
+                    "type": "Num",
+                    "length": 50
+                },
+                {
+                    "name": "IQVALU",
+                    "label": "Ingredient Value Unit",
+                    "type": "Char",
+                    "length": 50
+                }
+            ],
+            "records": {
+                "DOMAIN": [
+                    "IQ",
+                    "IQ",
+                    "IQ",
+                    "IQ",
+                    "IQ",
+                    "IQ",
+                    "IQ",
+                    "IQ"
+                ],
+                "IGDCMPID": [
+                    "Methylcellulose",
+                    "1,3-Butanediol",
+                    "Cocoa Extract",
+                    "Butyric Acid",
+                    "Cellulose Filter A",
+                    "Cellulose Acetate",
+                    "Triacetin",
+                    "FSC Paper B"
+                ],
+                "IQCAT": [
+                    "NON-TOBACCO INGREDIENT",
+                    "NON-TOBACCO INGREDIENT",
+                    "NON-TOBACCO INGREDIENT",
+                    "NON-TOBACCO INGREDIENT",
+                    "NON-TOBACCO INGREDIENT",
+                    "NON-TOBACCO INGREDIENT",
+                    "TOBACCO INGREDIENT",
+                    "NON-TOBACCO INGREDIENT"
+                ],
+                "IQPARENT": [
+                    "Reconstituted Tobacco",
+                    "Reconstituted Tobacco",
+                    "Tobacco Filler",
+                    "Tobacco Filler",
+                    "",
+                    "Cellulose Filter A",
+                    "Cellulose Filter A",
+                    ""
+                ],
+                "IQLEVEL": [
+                    3,
+                    3,
+                    2,
+                    2,
+                    1,
+                    2,
+                    2,
+                    1
+                ],
+                "IQFUNCT": [
+                    "Binder",
+                    "Humectant",
+                    "Flavor",
+                    "Flavor",
+                    "Filter",
+                    "Filtration",
+                    "Plasticizer",
+                    "Cigarette Paper (Wrapper)"
+                ],
+                "IQVALTRG": [
+                    20,
+                    24,
+                    7,
+                    0.5,
+                    164,
+                    155,
+                    9,
+                    50
+                ],
+                "IQVALMIN": [
+                    19,
+                    23,
+                    6.75,
+                    0.55,
+                    163,
+                    154,
+                    8,
+                    49
+                ],
+                "IQVALMAX": [
+                    21,
+                    25,
+                    7.25,
+                    0.45,
+                    165,
+                    156,
+                    10,
+                    51
+                ],
+                "IQVALU": [
+                    "mg/cigarette",
+                    "mg/cigarette",
+                    "mg/cigarette",
+                    "mg/cigarette",
+                    "mg/cigarette",
+                    "mg/cigarette",
+                    "mg/cigarette",
+                    "mg/cigarette"
+                ]
+            }
+        }
+    ],
+    "standard": {
+        "product": "tig",
+        "version": "1-0",
+        "substandard": "sdtm"
+    },
+    "codelists": []
+}

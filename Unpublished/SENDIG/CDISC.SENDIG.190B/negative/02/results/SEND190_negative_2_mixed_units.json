@@ -1,0 +1,78 @@
+{
+  "OM": [
+    {
+      "executionStatus": "issue reported",
+      "dataset": "om.xpt",
+      "domain": "OM",
+      "variables": [
+        "OMTESTCD",
+        "OMSTRESC",
+        "OMSTRESN",
+        "OMSTRESU",
+        "$owbr_percent",
+        "$owbr_ratio_null_unit",
+        "$owbw_percent",
+        "$owbw_ratio_null_unit",
+        "$owht_percent",
+        "$owht_ratio_null_unit"
+      ],
+      "message": "The organ weight standardized measurement unit must be consistent for the given OMTESTCD'.",
+      "errors": [
+        {
+          "value": {
+            "OMSTRESC": "20",
+            "OMSTRESU": "%",
+            "$owbw_ratio_null_unit": 0,
+            "$owbr_ratio_null_unit": 0,
+            "$owbw_percent": 0,
+            "$owht_ratio_null_unit": 2,
+            "$owbr_percent": 0,
+            "OMSTRESN": 20,
+            "OMTESTCD": "OWHT",
+            "$owht_percent": 1
+          },
+          "dataset": "om.xpt",
+          "row": 3,
+          "USUBJID": "CDISC-TEST-001",
+          "SEQ": 3
+        },
+        {
+          "value": {
+            "OMSTRESC": "0.2",
+            "OMSTRESU": null,
+            "$owbw_ratio_null_unit": 0,
+            "$owbr_ratio_null_unit": 0,
+            "$owbw_percent": 0,
+            "$owht_ratio_null_unit": 2,
+            "$owbr_percent": 0,
+            "OMSTRESN": 0.2,
+            "OMTESTCD": "OWHT",
+            "$owht_percent": 1
+          },
+          "dataset": "om.xpt",
+          "row": 4,
+          "USUBJID": "CDISC-TEST-002",
+          "SEQ": 1
+        },
+        {
+          "value": {
+            "OMSTRESC": "0.2",
+            "OMSTRESU": null,
+            "$owbw_ratio_null_unit": 0,
+            "$owbr_ratio_null_unit": 0,
+            "$owbw_percent": 0,
+            "$owht_ratio_null_unit": 2,
+            "$owbr_percent": 0,
+            "OMSTRESN": 0.2,
+            "OMTESTCD": "OWHT",
+            "$owht_percent": 1
+          },
+          "dataset": "om.xpt",
+          "row": 5,
+          "USUBJID": "CDISC-TEST-002",
+          "SEQ": 2
+        }
+      ]
+    }
+  ]
+}

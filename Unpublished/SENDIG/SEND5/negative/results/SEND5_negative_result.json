@@ -1,0 +1,36 @@
+{
+  "VS": [
+    {
+      "executionStatus": "success",
+      "dataset": "vs.xpt",
+      "domain": "VS",
+      "variables": [
+        "define_variable_name"
+      ],
+      "message": "The variable in the define.xml is not from the SENDIG",
+      "errors": [
+        {
+          "value": {
+            "define_variable_name": "VSNONSEN"
+          },
+          "dataset": "vs.xpt",
+          "row": 12
+        },
+        {
+          "value": {
+            "define_variable_name": "VSLOBXFL"
+          },
+          "dataset": "vs.xpt",
+          "row": 20
+        },
+        {
+          "value": {
+            "define_variable_name": "VSREPNUM"
+          },
+          "dataset": "vs.xpt",
+          "row": 21
+        }
+      ]
+    }
+  ]
+}

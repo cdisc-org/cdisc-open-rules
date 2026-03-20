@@ -1,0 +1,2729 @@
+{
+    "rule": {
+        "Authorities": [
+            {
+                "Organization": "CDISC",
+                "Standards": [
+                    {
+                        "Name": "TIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "SDTM v2.1",
+                                        "Item": "--SEQ",
+                                        "Section": "3.1.4 Identifiers for All Classes",
+                                        "Cited_Guidance": "A number used to uniquely identify records for a subject within a domain. The Trial Summary domain does not contain subject data, and TSSEQ is a sequence number to ensure uniqueness within the dataset."
+                                    }
+                                ],
+                                "Origin": "TIG Conformance Rules",
+                                "Version": "1.0",
+                                "Rule_Identifier": {
+                                    "Id": "TIG0310",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Substandard": "SDTM",
+                        "Version": "1.0"
+                    }
+                ]
+            }
+        ],
+        "Check": {
+            "any": [
+                {
+                    "all": [
+                        {
+                            "name": "USUBJID",
+                            "operator": "non_empty"
+                        },
+                        {
+                            "name": "--SEQ",
+                            "operator": "is_not_unique_set",
+                            "value": [
+                                "DOMAIN",
+                                "USUBJID"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "all": [
+                        {
+                            "name": "POOLID",
+                            "operator": "non_empty"
+                        },
+                        {
+                            "name": "--SEQ",
+                            "operator": "is_not_unique_set",
+                            "value": [
+                                "DOMAIN",
+                                "POOLID"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "Core": {
+            "Id": "",
+            "Status": "Draft",
+            "Version": "1"
+        },
+        "Description": "Part A - Excluding TS.TSSEQ, raise an error when --SEQ is not a unique number per USUBJID per domain, or not a unique number per POOLID per domain, including when the domain is split into multiple files.",
+        "Executability": "Fully Executable",
+        "Outcome": {
+            "Message": "--SEQ is not a unique number per one of the following identifier variables, per domain; USUBJID or POOLID."
+        },
+        "Scope": {
+            "Classes": {
+                "Include": [
+                    "ALL"
+                ]
+            },
+            "Domains": {
+                "Exclude": [
+                    "TS",
+                    "EM",
+                    "DU",
+                    "DO",
+                    "DI"
+                ]
+            },
+            "Use_Case": "INDH"
+        },
+        "Sensitivity": "Record",
+        "Rule_Type": "Record Data"
+    },
+    "datasets": [
+        {
+            "filename": "ae.xpt",
+            "label": "Adverse Events",
+            "domain": "AE",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "DOMAIN",
+                    "label": "Domain Abbreviation",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "POOLID",
+                    "label": "Pool Identifier",
+                    "type": "Char",
+                    "length": 20
+                },
+                {
+                    "name": "AESEQ",
+                    "label": "Sequence Number",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "AETERM",
+                    "label": "Reported Term for the Adverse Event",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AEMODIFY",
+                    "label": "Modified Reported Term",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AEDECOD",
+                    "label": "Dictionary-Derived Term",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AEBODSYS",
+                    "label": "Body System or Organ Class",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AESEV",
+                    "label": "Severity/Intensity",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AESER",
+                    "label": "Serious Event",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AEACN",
+                    "label": "Action Taken with Study Treatment",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AEREL",
+                    "label": "Causality",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AEOUT",
+                    "label": "Outcome of Adverse Event",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AESCONG",
+                    "label": "Congenital Anomaly or Birth Defect",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AESDISAB",
+                    "label": "Persist or Signif Disability/Incapacity",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AESDTH",
+                    "label": "Results in Death",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AESHOSP",
+                    "label": "Requires or Prolongs Hospitalization",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AESLIFE",
+                    "label": "Is Life Threatening",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "EPOCH",
+                    "label": "Epoch",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AESTDTC",
+                    "label": "Start Date/Time of Adverse Event",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AEENDTC",
+                    "label": "End Date/Time of Adverse Event",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AESTDY",
+                    "label": "Study Day of Start of Adverse Event",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "AEENDY",
+                    "label": "Study Day of End of Adverse Event",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "AEENRF",
+                    "label": "End Relative to Reference Period",
+                    "type": "Char",
+                    "length": 50
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "CDISCPILOT01",
+                    "CDISCPILOT01"
+                ],
+                "DOMAIN": [
+                    "AE",
+                    "AE"
+                ],
+                "POOLID": [
+                    "CDISC001",
+                    "CDISC001"
+                ],
+                "AESEQ": [
+                    1,
+                    2
+                ],
+                "AETERM": [
+                    "POUNDING HEADACHE",
+                    "POUNDING HEADACHE"
+                ],
+                "AEMODIFY": [
+                    "HEADACHE",
+                    "HEADACHE"
+                ],
+                "AEDECOD": [
+                    "Headache",
+                    "Headache"
+                ],
+                "AEBODSYS": [
+                    "Nervous system disorders",
+                    "Nervous system disorders"
+                ],
+                "AESEV": [
+                    "SEVERE",
+                    "SEVERE"
+                ],
+                "AESER": [
+                    "N",
+                    "N"
+                ],
+                "AEACN": [
+                    "NOT APPLICABLE",
+                    "NOT APPLICABLE"
+                ],
+                "AEREL": [
+                    "DEFINITELY NOT RELATED",
+                    "DEFINITELY NOT RELATED"
+                ],
+                "AEOUT": [
+                    "RECOVERED/RESOLVED",
+                    "RECOVERED/RESOLVED"
+                ],
+                "AESCONG": [
+                    "",
+                    ""
+                ],
+                "AESDISAB": [
+                    "",
+                    ""
+                ],
+                "AESDTH": [
+                    "",
+                    ""
+                ],
+                "AESHOSP": [
+                    "CDISCPILOT01",
+                    "CDISCPILOT01"
+                ],
+                "AESLIFE": [
+                    "",
+                    ""
+                ],
+                "EPOCH": [
+                    "SCREENING",
+                    "SCREENING"
+                ],
+                "AESTDTC": [
+                    "2022-03-19",
+                    "2022-03-20"
+                ],
+                "AEENDTC": [
+                    "2022-03-19",
+                    "2022-03-20"
+                ],
+                "AESTDY": [
+                    -2,
+                    0
+                ],
+                "AEENDY": [
+                    -2,
+                    0
+                ],
+                "AEENRF": [
+                    "",
+                    ""
+                ]
+            }
+        },
+        {
+            "filename": "cm.xpt",
+            "label": "Concomitant/Prior Medications",
+            "domain": "CM",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 12
+                },
+                {
+                    "name": "DOMAIN",
+                    "label": "Domain Abbreviation",
+                    "type": "Char",
+                    "length": 2
+                },
+                {
+                    "name": "USUBJID",
+                    "label": "Unique Subject Identifier",
+                    "type": "Char",
+                    "length": 8
+                },
+                {
+                    "name": "CMSEQ",
+                    "label": "Sequence Number",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "CMTRT",
+                    "label": "Reported Name of Drug, Med, or Therapy",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "CMINDC",
+                    "label": "Indication",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "CMDOSE",
+                    "label": "Dose per Administration",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "CMDOSU",
+                    "label": "Dose Units",
+                    "type": "Char",
+                    "length": 6
+                },
+                {
+                    "name": "CMDOSFRQ",
+                    "label": "Dosing Frequency per Interval",
+                    "type": "Char",
+                    "length": 3
+                },
+                {
+                    "name": "CMROUTE",
+                    "label": "Route of Administration",
+                    "type": "Char",
+                    "length": 24
+                },
+                {
+                    "name": "EPOCH",
+                    "label": "Epoch",
+                    "type": "Char",
+                    "length": 9
+                },
+                {
+                    "name": "CMSTDTC",
+                    "label": "Start Date/Time of Medication",
+                    "type": "Char",
+                    "length": 10
+                },
+                {
+                    "name": "CMENDTC",
+                    "label": "End Date/Time of Medication",
+                    "type": "Char",
+                    "length": 10
+                },
+                {
+                    "name": "CMSTDY",
+                    "label": "Study Day of Start of Medication",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "CMENDY",
+                    "label": "Study Day of End of Medication",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "CMSTRF",
+                    "label": "Start Relative to Reference Period",
+                    "type": "Char",
+                    "length": 7
+                },
+                {
+                    "name": "CMENRF",
+                    "label": "End Relative to Reference Period",
+                    "type": "Char",
+                    "length": 5
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01"
+                ],
+                "DOMAIN": [
+                    "CM",
+                    "CM",
+                    "CM",
+                    "CM",
+                    "CM",
+                    "CM",
+                    "CM",
+                    "CM",
+                    "CM",
+                    "CM"
+                ],
+                "USUBJID": [
+                    "CDISC001",
+                    "CDISC002",
+                    "CDISC003",
+                    "CDISC004",
+                    "CDISC005",
+                    "CDISC006",
+                    "CDISC007",
+                    "CDISC008",
+                    "CDISC009",
+                    "CDISC010"
+                ],
+                "CMSEQ": [
+                    1,
+                    2,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    1,
+                    1
+                ],
+                "CMTRT": [
+                    "VITAMIN C",
+                    "VITAMIN E",
+                    "METAMUCIL",
+                    "ADVIL",
+                    "DOCUSATE SODIUM",
+                    "BENADRYL",
+                    "PREDNISONE",
+                    "TEMOVATE",
+                    "MOTRIN",
+                    "PRINIVIL"
+                ],
+                "CMINDC": [
+                    "PROPHYLAXIS OR NON-THERAPEUTIC USE",
+                    "PROPHYLAXIS OR NON-THERAPEUTIC USE",
+                    "PROPHYLAXIS OR NON-THERAPEUTIC USE",
+                    "PROPHYLAXIS OR NON-THERAPEUTIC USE",
+                    "PROPHYLAXIS OR NON-THERAPEUTIC USE",
+                    "PROPHYLAXIS OR NON-THERAPEUTIC USE",
+                    "PROPHYLAXIS OR NON-THERAPEUTIC USE",
+                    "PROPHYLAXIS OR NON-THERAPEUTIC USE",
+                    "PROPHYLAXIS OR NON-THERAPEUTIC USE",
+                    "PROPHYLAXIS OR NON-THERAPEUTIC USE"
+                ],
+                "CMDOSE": [
+                    500,
+                    400,
+                    3,
+                    200,
+                    100,
+                    75,
+                    20,
+                    1,
+                    400,
+                    10
+                ],
+                "CMDOSU": [
+                    "mg",
+                    "mg",
+                    "mg",
+                    "mg",
+                    "mg",
+                    "mg",
+                    "mg",
+                    "TABLET",
+                    "mg",
+                    "mg"
+                ],
+                "CMDOSFRQ": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "CMROUTE": [
+                    "ORAL",
+                    "ORAL",
+                    "ORAL",
+                    "ORAL",
+                    "ORAL",
+                    "ORAL",
+                    "ORAL",
+                    "TOPICAL",
+                    "ORAL",
+                    "ORAL"
+                ],
+                "EPOCH": [
+                    "SCREENING",
+                    "SCREENING",
+                    "SCREENING",
+                    "SCREENING",
+                    "SCREENING",
+                    "SCREENING",
+                    "SCREENING",
+                    "SCREENING",
+                    "SCREENING",
+                    "SCREENING"
+                ],
+                "CMSTDTC": [
+                    "1983",
+                    "1983",
+                    "2009",
+                    "2011",
+                    "2012-11",
+                    "2013-02-18",
+                    "2013-02-18",
+                    "2014-05-13",
+                    "1998-10",
+                    "2011-07-15"
+                ],
+                "CMENDTC": [
+                    "",
+                    "",
+                    "",
+                    "2013",
+                    "2013-01-05",
+                    "2013-05-10",
+                    "2013-05-10",
+                    "2014-05-20",
+                    "2013-06-05",
+                    "2013-06-05"
+                ],
+                "CMSTDY": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    45,
+                    45,
+                    3,
+                    null,
+                    -799
+                ],
+                "CMENDY": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    1,
+                    126,
+                    null,
+                    11,
+                    181,
+                    -107
+                ],
+                "CMSTRF": [
+                    "",
+                    "ONGOING",
+                    "",
+                    "ONGOING",
+                    "",
+                    "",
+                    "BEFORE",
+                    "BEFORE",
+                    "",
+                    ""
+                ],
+                "CMENRF": [
+                    "AFTER",
+                    "AFTER",
+                    "",
+                    "AFTER",
+                    "",
+                    "AFTER",
+                    "",
+                    "",
+                    "",
+                    ""
+                ]
+            }
+        },
+        {
+            "filename": "dm.xpt",
+            "label": "Demographics",
+            "domain": "DM",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "DOMAIN",
+                    "label": "Domain Abbreviation",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "USUBJID",
+                    "label": "Unique Subject Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "SUBJID",
+                    "label": "Subject Identifier for the Study",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "RFSTDTC",
+                    "label": "Subject Reference Start Date/Time",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "RFENDTC",
+                    "label": "Subject Reference End Date/Time",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "RFXSTDTC",
+                    "label": "Date/Time of First Study Treatment",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "RFXENDTC",
+                    "label": "Date/Time of Last Study Treatment",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "RFICDTC",
+                    "label": "Date/Time of Informed Consent",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "RFPENDTC",
+                    "label": "Date/Time of End of Participation",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "DTHDTC",
+                    "label": "Date/Time of Death",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "DTHFL",
+                    "label": "Subject Death Flag",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "SITEID",
+                    "label": "Study Site Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "BRTHDTC",
+                    "label": "Date/Time of Birth",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "AGE",
+                    "label": "Age",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "AGEU",
+                    "label": "Age Units",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "SEX",
+                    "label": "Sex",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "RACE",
+                    "label": "Race",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "ETHNIC",
+                    "label": "Ethnicity",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "ARMCD",
+                    "label": "Planned Arm Code",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "ARM",
+                    "label": "Description of Planned Arm",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "ACTARMCD",
+                    "label": "Actual Arm Code",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "ACTARM",
+                    "label": "Description of Actual Arm",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "ARMNRS",
+                    "label": "Reason Arm and/or Actual Arm is Null",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "ACTARMUD",
+                    "label": "Description of Unplanned Actual Arm",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "COUNTRY",
+                    "label": "Country",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "DMDTC",
+                    "label": "Date/Time of Collection",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "DMDY",
+                    "label": "Study Day of Collection",
+                    "type": "Num",
+                    "length": 8
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01"
+                ],
+                "DOMAIN": [
+                    "DM",
+                    "DM",
+                    "DM",
+                    "DM",
+                    "DM",
+                    "DM",
+                    "DM",
+                    "DM",
+                    "DM",
+                    "DM"
+                ],
+                "USUBJID": [
+                    "CDISC001",
+                    "CDISC002",
+                    "CDISC003",
+                    "CDISC004",
+                    "CDISC005",
+                    "CDISC006",
+                    "CDISC007",
+                    "CDISC008",
+                    "CDISC009",
+                    "CDISC010"
+                ],
+                "SUBJID": [
+                    "1115",
+                    "1211",
+                    "1302",
+                    "1345",
+                    "1383",
+                    "1429",
+                    "1444",
+                    "1445",
+                    "1087",
+                    "1236"
+                ],
+                "RFSTDTC": [
+                    "",
+                    "2012-11-15",
+                    "",
+                    "2013-10-08",
+                    "",
+                    "2013-10",
+                    "2013-01-05",
+                    "2014-05-11",
+                    "",
+                    "2013-09-21"
+                ],
+                "RFENDTC": [
+                    "2013-01-23",
+                    "2013-01-14",
+                    "2013-11-05",
+                    "2014-03-18",
+                    "2013-08-06",
+                    "2013-04-30",
+                    "2013-02-13",
+                    "2014-11-01",
+                    "2013-04-28",
+                    "2013-09-26"
+                ],
+                "RFXSTDTC": [
+                    "2012-11-30",
+                    "2012-11-15",
+                    "2013-08-29",
+                    "2013-10-08",
+                    "2013-02-04",
+                    "2013-03-19",
+                    "2013-01-05",
+                    "2014-05-11",
+                    "2012-10-22",
+                    "2013-09-21"
+                ],
+                "RFXENDTC": [
+                    "2013-01-23",
+                    "2013-01-12",
+                    "2013-11-05",
+                    "2014-03-18",
+                    "2013-08-06",
+                    "2013-04-30",
+                    "2013-02-12",
+                    "2014-11-01",
+                    "2013-04-28",
+                    "2013-09-21"
+                ],
+                "RFICDTC": [
+                    "2012-11-23",
+                    "2012-10-30",
+                    "2013-08-20",
+                    "2013-10-01",
+                    "2013-01-22",
+                    "2013-02-25",
+                    "2012-12-31",
+                    "2014-05-01",
+                    "2012-10-06",
+                    "2013-09-08"
+                ],
+                "RFPENDTC": [
+                    "2013-05-20",
+                    "2013-01-14",
+                    "2014-02-13",
+                    "2014-03-18",
+                    "2013-08-06",
+                    "2013-04-30",
+                    "2013-06-20",
+                    "2014-11-01",
+                    "2013-04-28",
+                    "2013-09-26"
+                ],
+                "DTHDTC": [
+                    "",
+                    "2013-01-14",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "2014-11-01",
+                    "",
+                    ""
+                ],
+                "DTHFL": [
+                    "",
+                    "Y",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "Y",
+                    "",
+                    ""
+                ],
+                "SITEID": [
+                    "701",
+                    "701",
+                    "701",
+                    "701",
+                    "701",
+                    "701",
+                    "701",
+                    "704",
+                    "708",
+                    "708"
+                ],
+                "BRTHDTC": [
+                    "1928",
+                    "1936",
+                    "1951",
+                    "1950",
+                    "1941",
+                    "1929",
+                    "1949",
+                    "1939",
+                    "1938",
+                    "1927"
+                ],
+                "AGE": [
+                    84,
+                    76,
+                    61,
+                    63,
+                    72,
+                    84,
+                    63,
+                    75,
+                    74,
+                    86
+                ],
+                "AGEU": [
+                    "YEARS",
+                    "YEARS",
+                    "YEARS",
+                    "YEARS",
+                    "YEARS",
+                    "YEARS",
+                    "YEARS",
+                    "YEARS",
+                    "YEARS",
+                    "YEARS"
+                ],
+                "SEX": [
+                    "M",
+                    "F",
+                    "M",
+                    "F",
+                    "F",
+                    "F",
+                    "M",
+                    "M",
+                    "F",
+                    "F"
+                ],
+                "RACE": [
+                    "WHITE",
+                    "WHITE",
+                    "WHITE",
+                    "WHITE",
+                    "WHITE",
+                    "WHITE",
+                    "WHITE",
+                    "MULTIPLE",
+                    "WHITE",
+                    "WHITE"
+                ],
+                "ETHNIC": [
+                    "NOT HISPANIC OR LATINO",
+                    "NOT HISPANIC OR LATINO",
+                    "NOT HISPANIC OR LATINO",
+                    "NOT HISPANIC OR LATINO",
+                    "NOT HISPANIC OR LATINO",
+                    "NOT HISPANIC OR LATINO",
+                    "HISPANIC OR LATINO",
+                    "NOT HISPANIC OR LATINO",
+                    "NOT HISPANIC OR LATINO",
+                    "NOT HISPANIC OR LATINO"
+                ],
+                "ARMCD": [
+                    "ZAN_LOW",
+                    "ZAN_LOW",
+                    "ZAN_HIGH",
+                    "",
+                    "ZAN_HIGH",
+                    "",
+                    "ZAN_HIGH",
+                    "PLACEBO",
+                    "PLACEBO",
+                    "ZAN_HIGH"
+                ],
+                "ARM": [
+                    "Zanomaline Low Dose (54 mg)",
+                    "Zanomaline Low Dose (54 mg)",
+                    "Zanomaline High Dose (81 mg)",
+                    "",
+                    "Zanomaline High Dose (81 mg)",
+                    "",
+                    "Zanomaline High Dose (81 mg)",
+                    "Placebo",
+                    "Placebo",
+                    "Zanomaline High Dose (81 mg)"
+                ],
+                "ACTARMCD": [
+                    "ZAN_LOW",
+                    "ZAN_LOW",
+                    "ZAN_HIGH",
+                    "",
+                    "",
+                    "",
+                    "ZAN_HIGH",
+                    "PLACEBO",
+                    "PLACEBO",
+                    "ZAN_HIGH"
+                ],
+                "ACTARM": [
+                    "Zanomaline Low Dose (54 mg)",
+                    "Zanomaline Low Dose (54 mg)",
+                    "Zanomaline High Dose (81 mg)",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "Placebo",
+                    "Placebo",
+                    "Zanomaline High Dose (81 mg)"
+                ],
+                "ARMNRS": [
+                    "",
+                    "",
+                    "",
+                    "SCREEN FAILURE",
+                    "NOT TREATED",
+                    "NOT ASSIGNED",
+                    "UNPLANNED",
+                    "",
+                    "",
+                    ""
+                ],
+                "ACTARMUD": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "COUNTRY": [
+                    "USA",
+                    "USA",
+                    "USA",
+                    "USA",
+                    "USA",
+                    "USA",
+                    "USA",
+                    "USA",
+                    "USA",
+                    "USA"
+                ],
+                "DMDTC": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "DMDY": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ]
+            }
+        },
+        {
+            "filename": "lbae.xpt",
+            "label": "Labs AE",
+            "domain": "LB",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 12
+                },
+                {
+                    "name": "DOMAIN",
+                    "label": "Domain Abbreviation",
+                    "type": "Char",
+                    "length": 2
+                },
+                {
+                    "name": "USUBJID",
+                    "label": "Unique Subject Identifier",
+                    "type": "Char",
+                    "length": 8
+                },
+                {
+                    "name": "LBSEQ",
+                    "label": "Sequence Number",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "LBTESTCD",
+                    "label": "Status Short Name",
+                    "type": "Char",
+                    "length": 8
+                },
+                {
+                    "name": "LBTEST",
+                    "label": "Status Name",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "LBORRES",
+                    "label": "Result or Finding\r\nOriginal Result",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "LBSTRESC",
+                    "label": "Character\r\nResult/Finding in\r\nStd Format",
+                    "type": "Char",
+                    "length": 50
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01"
+                ],
+                "DOMAIN": [
+                    "LB",
+                    "LB",
+                    "LB",
+                    "LB",
+                    "LB",
+                    "LB",
+                    "LB",
+                    "LB",
+                    "LB",
+                    "LB",
+                    "LB",
+                    "LB",
+                    "LB",
+                    "LB"
+                ],
+                "USUBJID": [
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC002",
+                    "CDISC002",
+                    "CDISC002",
+                    "CDISC002",
+                    "CDISC002",
+                    "CDISC002",
+                    "CDISC002"
+                ],
+                "LBSEQ": [
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14
+                ],
+                "LBTESTCD": [
+                    "SURVSTAT",
+                    "SURVSTAT",
+                    "SURVSTAT",
+                    "SURVSTAT",
+                    "SURVSTAT",
+                    "SURVSTAT",
+                    "SURVSTAT",
+                    "SURVSTAT",
+                    "SURVSTAT",
+                    "SURVSTAT",
+                    "SURVSTAT",
+                    "SURVSTAT",
+                    "SURVSTAT",
+                    "SURVSTAT"
+                ],
+                "LBTEST": [
+                    "Survival Status",
+                    "Survival Status",
+                    "Survival Status",
+                    "Survival Status",
+                    "Survival Status",
+                    "Survival Status",
+                    "Survival Status",
+                    "Survival Status",
+                    "Survival Status",
+                    "Survival Status",
+                    "Survival Status",
+                    "Survival Status",
+                    "Survival Status",
+                    "Survival Status"
+                ],
+                "LBORRES": [
+                    "ALIVE",
+                    "DEAD",
+                    "ALIVE",
+                    "DEAD",
+                    "ALIVE",
+                    "DEAD",
+                    "ALIVE",
+                    "DEAD",
+                    "ALIVE",
+                    "DEAD",
+                    "ALIVE",
+                    "DEAD",
+                    "ALIVE",
+                    "DEAD"
+                ],
+                "LBSTRESC": [
+                    "ALIVE",
+                    "DEAD",
+                    "ALIVE",
+                    "DEAD",
+                    "ALIVE",
+                    "DEAD",
+                    "ALIVE",
+                    "DEAD",
+                    "ALIVE",
+                    "DEAD",
+                    "ALIVE",
+                    "DEAD",
+                    "ALIVE",
+                    "DEAD"
+                ]
+            }
+        },
+        {
+            "filename": "lbds.xpt",
+            "label": "Labs DS",
+            "domain": "LB",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 12
+                },
+                {
+                    "name": "DOMAIN",
+                    "label": "Domain Abbreviation",
+                    "type": "Char",
+                    "length": 2
+                },
+                {
+                    "name": "USUBJID",
+                    "label": "Unique Subject Identifier",
+                    "type": "Char",
+                    "length": 8
+                },
+                {
+                    "name": "LBSEQ",
+                    "label": "Sequence Number",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "LBTESTCD",
+                    "label": "Status Short Name",
+                    "type": "Char",
+                    "length": 8
+                },
+                {
+                    "name": "LBTEST",
+                    "label": "Status Name",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "LBORRES",
+                    "label": "Result or Finding\r\nOriginal Result",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "LBSTRESC",
+                    "label": "Character\r\nResult/Finding in\r\nStd Format",
+                    "type": "Char",
+                    "length": 50
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01"
+                ],
+                "DOMAIN": [
+                    "LB",
+                    "LB",
+                    "LB",
+                    "LB",
+                    "LB",
+                    "LB",
+                    "LB",
+                    "LB",
+                    "LB",
+                    "LB",
+                    "LB",
+                    "LB",
+                    "LB",
+                    "LB"
+                ],
+                "USUBJID": [
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC002",
+                    "CDISC002",
+                    "CDISC002",
+                    "CDISC002",
+                    "CDISC002",
+                    "CDISC002",
+                    "CDISC002"
+                ],
+                "LBSEQ": [
+                    11,
+                    12,
+                    13,
+                    14,
+                    15,
+                    16,
+                    17,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7
+                ],
+                "LBTESTCD": [
+                    "SURVSTAT",
+                    "SURVSTAT",
+                    "SURVSTAT",
+                    "SURVSTAT",
+                    "SURVSTAT",
+                    "SURVSTAT",
+                    "SURVSTAT",
+                    "SURVSTAT",
+                    "SURVSTAT",
+                    "SURVSTAT",
+                    "SURVSTAT",
+                    "SURVSTAT",
+                    "SURVSTAT",
+                    "SURVSTAT"
+                ],
+                "LBTEST": [
+                    "Survival Status",
+                    "Survival Status",
+                    "Survival Status",
+                    "Survival Status",
+                    "Survival Status",
+                    "Survival Status",
+                    "Survival Status",
+                    "Survival Status",
+                    "Survival Status",
+                    "Survival Status",
+                    "Survival Status",
+                    "Survival Status",
+                    "Survival Status",
+                    "Survival Status"
+                ],
+                "LBORRES": [
+                    "ALIVE",
+                    "DEAD",
+                    "ALIVE",
+                    "DEAD",
+                    "ALIVE",
+                    "DEAD",
+                    "ALIVE",
+                    "DEAD",
+                    "ALIVE",
+                    "DEAD",
+                    "ALIVE",
+                    "DEAD",
+                    "ALIVE",
+                    "DEAD"
+                ],
+                "LBSTRESC": [
+                    "ALIVE",
+                    "DEAD",
+                    "ALIVE",
+                    "DEAD",
+                    "ALIVE",
+                    "DEAD",
+                    "ALIVE",
+                    "DEAD",
+                    "ALIVE",
+                    "DEAD",
+                    "ALIVE",
+                    "DEAD",
+                    "ALIVE",
+                    "DEAD"
+                ]
+            }
+        },
+        {
+            "filename": "ts.xpt",
+            "label": "Trial Summary",
+            "domain": "TS",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 10
+                },
+                {
+                    "name": "DOMAIN",
+                    "label": "Domain Abbreviation",
+                    "type": "Char",
+                    "length": 2
+                },
+                {
+                    "name": "TSSEQ",
+                    "label": "Sequence Number",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "TSGRPID",
+                    "label": "Group ID",
+                    "type": "Char",
+                    "length": 5
+                },
+                {
+                    "name": "TSPARMCD",
+                    "label": "Trial Summary Parameter Short Name",
+                    "type": "Char",
+                    "length": 8
+                },
+                {
+                    "name": "TSPARM",
+                    "label": "Trial Summary Parameter",
+                    "type": "Char",
+                    "length": 40
+                },
+                {
+                    "name": "TSVAL",
+                    "label": "Parameter Value",
+                    "type": "Char",
+                    "length": 149
+                },
+                {
+                    "name": "TSVALNF",
+                    "label": "Parameter Null Flavor",
+                    "type": "Char",
+                    "length": 2
+                },
+                {
+                    "name": "TSVALCD",
+                    "label": "Parameter Value Code",
+                    "type": "Char",
+                    "length": 11
+                },
+                {
+                    "name": "TSVCDREF",
+                    "label": "Name of the Reference Terminology",
+                    "type": "Char",
+                    "length": 18
+                },
+                {
+                    "name": "TSVCDVER",
+                    "label": "Version of the Reference Terminology",
+                    "type": "Char",
+                    "length": 10
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "CDISC-TEST",
+                    "CDISC-TEST",
+                    "CDISC-TEST",
+                    "CDISC-TEST",
+                    "CDISC-TEST",
+                    "CDISC-TEST",
+                    "CDISC-TEST",
+                    "CDISC-TEST",
+                    "CDISC-TEST",
+                    "CDISC-TEST",
+                    "CDISC-TEST",
+                    "CDISC-TEST",
+                    "CDISC-TEST",
+                    "CDISC-TEST",
+                    "CDISC-TEST",
+                    "CDISC-TEST",
+                    "CDISC-TEST",
+                    "CDISC-TEST",
+                    "CDISC-TEST",
+                    "CDISC-TEST",
+                    "CDISC-TEST",
+                    "CDISC-TEST",
+                    "CDISC-TEST",
+                    "CDISC-TEST",
+                    "CDISC-TEST",
+                    "CDISC-TEST",
+                    "CDISC-TEST",
+                    "CDISC-TEST",
+                    "CDISC-TEST",
+                    "CDISC-TEST",
+                    "CDISC-TEST",
+                    "CDISC-TEST",
+                    "CDISC-TEST",
+                    "CDISC-TEST",
+                    "CDISC-TEST",
+                    "CDISC-TEST",
+                    "CDISC-TEST",
+                    "CDISC-TEST",
+                    "CDISC-TEST",
+                    "CDISC-TEST",
+                    "CDISC-TEST",
+                    "CDISC-TEST",
+                    "CDISC-TEST",
+                    "CDISC-TEST",
+                    "CDISC-TEST",
+                    "CDISC-TEST",
+                    "CDISC-TEST",
+                    "CDISC-TEST",
+                    "CDISC-TEST",
+                    "CDISC-TEST",
+                    "CDISC-TEST",
+                    "CDISC-TEST",
+                    "CDISC-TEST",
+                    "CDISC-TEST",
+                    "CDISC-TEST",
+                    "CDISC-TEST",
+                    "CDISC-TEST",
+                    "CDISC-TEST"
+                ],
+                "DOMAIN": [
+                    "TS",
+                    "TS",
+                    "TS",
+                    "TS",
+                    "TS",
+                    "TS",
+                    "TS",
+                    "TS",
+                    "TS",
+                    "TS",
+                    "TS",
+                    "TS",
+                    "TS",
+                    "TS",
+                    "TS",
+                    "TS",
+                    "TS",
+                    "TS",
+                    "TS",
+                    "TS",
+                    "TS",
+                    "TS",
+                    "TS",
+                    "TS",
+                    "TS",
+                    "TS",
+                    "TS",
+                    "TS",
+                    "TS",
+                    "TS",
+                    "TS",
+                    "TS",
+                    "TS",
+                    "TS",
+                    "TS",
+                    "TS",
+                    "TS",
+                    "TS",
+                    "TS",
+                    "TS",
+                    "TS",
+                    "TS",
+                    "TS",
+                    "TS",
+                    "TS",
+                    "TS",
+                    "TS",
+                    "TS",
+                    "TS",
+                    "TS",
+                    "TS",
+                    "TS",
+                    "TS",
+                    "TS",
+                    "TS",
+                    "TS",
+                    "TS",
+                    "TS"
+                ],
+                "TSSEQ": [
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1
+                ],
+                "TSGRPID": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "DCUT1",
+                    "DCUT1",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "TSPARMCD": [
+                    "A12345678",
+                    "12345678A",
+                    "A B C D E F G",
+                    "AGEMAX",
+                    "AGEMIN",
+                    "COMPTRT",
+                    "CTAUG",
+                    "CTAUG",
+                    "DCUTDESC",
+                    "DCUTDTC",
+                    "EXTTIND",
+                    "FCNTRY",
+                    "FCNTRY",
+                    "FCNTRY",
+                    "FDATCHSP",
+                    "HLTSUBJI",
+                    "INDIC",
+                    "INTMODEL",
+                    "INTTYPE",
+                    "LENGTH",
+                    "NARMS",
+                    "NCOHORT",
+                    "OBJPRIM",
+                    "OBJSEC",
+                    "OUTMSPRI",
+                    "OUTMSPRI",
+                    "PCLAS",
+                    "PDPSTIND",
+                    "PDSTIND",
+                    "PIPIND",
+                    "PLANSUB",
+                    "RANDOM",
+                    "RANDQT",
+                    "RDIND",
+                    "REGID",
+                    "REGID",
+                    "RLPSCRIT",
+                    "SDTIGVER",
+                    "SDTMVER",
+                    "SENDTC",
+                    "SEXPOP",
+                    "SPONSOR",
+                    "SSTDTC",
+                    "STOPRULE",
+                    "STYPE",
+                    "TBLIND",
+                    "TCNTRL",
+                    "TDIGRP",
+                    "THERAREA",
+                    "TINDTP",
+                    "TITLE",
+                    "TPHASE",
+                    "TRT",
+                    "TTYPE",
+                    "TTYPE",
+                    "TTYPE",
+                    "TTYPE",
+                    "TTYPE"
+                ],
+                "TSPARM": [
+                    "Actual Number of Subjects",
+                    "Adaptive Design",
+                    "Added on to Existing Treatments",
+                    "Planned Maximum Age of Subjects",
+                    "Planned Minimum Age of Subjects",
+                    "Comparative Treatment Name",
+                    "CDISC Therapeutic Area User Guide",
+                    "CDISC Therapeutic Area User Guide",
+                    "Data Cutoff Description",
+                    "Data Cutoff Date",
+                    "Extension Trial Indicator",
+                    "Planned Country of Investigational Sites",
+                    "Planned Country of Investigational Sites",
+                    "Planned Country of Investigational Sites",
+                    "FDA Technical Specification",
+                    "Healthy Subject Indicator",
+                    "Trial Disease/Condition Indication",
+                    "Intervention Model",
+                    "Intervention Type",
+                    "Trial Length",
+                    "Planned Number of Arms",
+                    "Number of Groups/Cohorts",
+                    "Trial Primary Objective",
+                    "Trial Secondary Objective",
+                    "Primary Outcome Measure",
+                    "Primary Outcome Measure",
+                    "Pharmacologic Class",
+                    "Pediatric Postmarket Study Indicator",
+                    "Pediatric Study Indicator",
+                    "Pediatric Investigation Plan Indicator",
+                    "Planned Number of Subjects",
+                    "Trial is Randomized",
+                    "Randomization Quotient",
+                    "Rare Disease Indicator",
+                    "Registry Identifier",
+                    "Registry Identifier",
+                    "Relapse Criteria",
+                    "SDTM IG Version",
+                    "SDTM Version",
+                    "Study End Date",
+                    "Sex of Participants",
+                    "Clinical Study Sponsor",
+                    "Study Start Date",
+                    "Study Stop Rules",
+                    "Study Type",
+                    "Trial Blinding Schema",
+                    "Control Type",
+                    "Diagnosis Group",
+                    "Therapeutic Area",
+                    "Trial Intent Type",
+                    "Trial Title",
+                    "Trial Phase Classification",
+                    "Investigational Therapy or Treatment",
+                    "Trial Type",
+                    "Trial Type",
+                    "Trial Type",
+                    "Trial Type",
+                    "Trial Type"
+                ],
+                "TSVAL": [
+                    "100",
+                    "N",
+                    "N",
+                    "P64Y",
+                    "P18Y",
+                    "METFORMIN",
+                    "Diabetes Therapeutic Area User Guide v1.0",
+                    "Diabetes Therapeutic Area User Guide v1.0 - Supplement for ADaM",
+                    "DATABASE LOCK",
+                    "2019-11-01",
+                    "",
+                    "France",
+                    "Japan",
+                    "United States",
+                    "v4.3 (March 2019)",
+                    "N",
+                    "Diabetes mellitus type 2 (disorder)",
+                    "PARALLEL",
+                    "DRUG",
+                    "P26W",
+                    "2",
+                    "",
+                    "Time to first occurrence of MACE+, a composite endpoint consisting of: CV death, nonfatal MI, nonfatal stroke, or hospitalization for unstable angina",
+                    "Time from randomisation to all cause death",
+                    "Mean Change from Baseline in HBa1C (%). Time frame: after 26 weeks.",
+                    "Proportion of Subject with HBa1C < 7% (Count). Time frame: after 26 weeks.",
+                    "Insulin",
+                    "",
+                    "",
+                    "",
+                    "100",
+                    "Y",
+                    "0.5",
+                    "N",
+                    "2019-123456-42",
+                    "NCT12345678",
+                    "",
+                    "3.2",
+                    "1.4",
+                    "2019-10-15",
+                    "BOTH",
+                    "cdisc360.org",
+                    "2019-01-01",
+                    "NONE",
+                    "INTERVENTIONAL",
+                    "SINGLE BLIND",
+                    "ACTIVE",
+                    "Diabetes mellitus (disorder)",
+                    "DIABETES MELLITUS",
+                    "TREATMENT",
+                    "A trial comparing cardiovascular safety of human insulin versus metformin in subjects with type 2 diabetes at high risk of cardiovascular events",
+                    "PHASE III TRIAL",
+                    "INSULIN HUMAN",
+                    "EFFICACY",
+                    "MULTICENTRE",
+                    "MULTINATIONAL",
+                    "SAFETY",
+                    "TREAT-TO-TARGET"
+                ],
+                "TSVALNF": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "NA",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "NA",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "NA",
+                    "NA",
+                    "NA",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "NA",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "TSVALCD": [
+                    "",
+                    "C49487",
+                    "C49487",
+                    "",
+                    "",
+                    "9100L32L2N",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "FRA",
+                    "JPN",
+                    "USA",
+                    "",
+                    "C49487",
+                    "44054006",
+                    "C82639",
+                    "C1909",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "N0000175944",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "C49488",
+                    "",
+                    "C49487",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "C49636",
+                    "000000000",
+                    "",
+                    "",
+                    "C98388",
+                    "C28233",
+                    "C49649",
+                    "73211009",
+                    "",
+                    "C49656",
+                    "",
+                    "C15602",
+                    "1Y17CTI5SR",
+                    "C49666",
+                    "",
+                    "",
+                    "C49667",
+                    ""
+                ],
+                "TSVCDREF": [
+                    "",
+                    "CDISC",
+                    "CDISC",
+                    "ISO 8601",
+                    "ISO 8601",
+                    "UNII",
+                    "",
+                    "",
+                    "",
+                    "ISO 8601",
+                    "CDISC",
+                    "ISO 3166",
+                    "ISO 3166",
+                    "ISO 3166",
+                    "",
+                    "CDISC",
+                    "SNOMED",
+                    "CDISC",
+                    "CDISC",
+                    "ISO 8601",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "NDF-RT",
+                    "CDISC",
+                    "CDISC",
+                    "CDISC",
+                    "",
+                    "CDISC",
+                    "",
+                    "CDISC",
+                    "EUDRAC",
+                    "CLINICALTRIALS.GOV",
+                    "",
+                    "",
+                    "",
+                    "ISO 8601",
+                    "CDISC",
+                    "DUNS",
+                    "ISO 8601",
+                    "",
+                    "CDISC",
+                    "CDISC",
+                    "CDISC",
+                    "SNOMED",
+                    "",
+                    "CDISC",
+                    "",
+                    "CDISC",
+                    "UNII",
+                    "CDISC",
+                    "CDISC",
+                    "CDISC",
+                    "CDISC",
+                    "CDISC"
+                ],
+                "TSVCDVER": [
+                    "",
+                    "2018-12-21",
+                    "2018-12-21",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "2018-12-21",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "2018-12-21",
+                    "",
+                    "2018-12-21",
+                    "2018-12-21",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "2018-12-21",
+                    "2018-12-21",
+                    "2018-12-21",
+                    "",
+                    "2018-12-21",
+                    "",
+                    "2018-12-21",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "2018-12-21",
+                    "",
+                    "",
+                    "",
+                    "2018-12-21",
+                    "2018-12-21",
+                    "2018-12-21",
+                    "",
+                    "",
+                    "2018-12-21",
+                    "",
+                    "2018-12-21",
+                    "",
+                    "2018-12-21",
+                    "2018-12-21",
+                    "2018-12-21",
+                    "2018-12-21",
+                    "2018-12-21"
+                ]
+            }
+        },
+        {
+            "filename": "em.xpt",
+            "label": "Tobacco Product Events and Malfunctions",
+            "domain": "EM",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 12
+                },
+                {
+                    "name": "DOMAIN",
+                    "label": "Domain Abbreviation",
+                    "type": "Char",
+                    "length": 2
+                },
+                {
+                    "name": "USUBJID",
+                    "label": "Unique Subject Identifier",
+                    "type": "Char",
+                    "length": 8
+                },
+                {
+                    "name": "SPTOBID",
+                    "label": "Applicant-Defined Tobacco Product ID",
+                    "type": "Char",
+                    "length": 40
+                },
+                {
+                    "name": "EMSEQ",
+                    "label": "Device Events Sequence Number",
+                    "type": "Num",
+                    "length": 8
+                },
+                {
+                    "name": "EMTERM",
+                    "label": "Reported Term for Device Event",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "EMDECOD",
+                    "label": "Device Events Dictionary-Derived Term",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "EMACNDEV",
+                    "label": "Action Taken with Device",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "EMPATT",
+                    "label": "Pattern of Device Event",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "EMSTDTC",
+                    "label": "Start Date/Time of Device Event",
+                    "type": "Char",
+                    "length": 200
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "TOB07",
+                    "TOB07",
+                    "TOB07"
+                ],
+                "DOMAIN": [
+                    "EM",
+                    "EM",
+                    "EM"
+                ],
+                "USUBJID": [
+                    "CDISC001",
+                    "CDISC001",
+                    "CDISC001"
+                ],
+                "SPTOBID": [
+                    "VAPE-Z01",
+                    "VAPE-Z01",
+                    "VAPE-Z01"
+                ],
+                "EMSEQ": [
+                    1,
+                    1,
+                    1
+                ],
+                "EMTERM": [
+                    "Broken Heater",
+                    "Won't charge",
+                    "Battery Malfunction"
+                ],
+                "EMDECOD": [
+                    "Mechanical Problem",
+                    "Charging Problem",
+                    "Battery Problem"
+                ],
+                "EMACNDEV": [
+                    "DEVICE REPLACED",
+                    "BATTERY REPLACED",
+                    "BATTERY REPLACED"
+                ],
+                "EMPATT": [
+                    "SINGLE",
+                    "SINGLE",
+                    "INTERMITTENT"
+                ],
+                "EMSTDTC": [
+                    "2009-12-28",
+                    "2009-12-29",
+                    "2009-12-30"
+                ]
+            }
+        },
+        {
+            "filename": "du.xpt",
+            "label": "Device-in-Use",
+            "domain": "DU",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "DOMAIN",
+                    "label": "Domain Abbreviation",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "USUBJID",
+                    "label": "Unique Subject Identifier",
+                    "type": "Char",
+                    "length": 20
+                },
+                {
+                    "name": "SPDEVID",
+                    "label": "Applicant Device Identifier",
+                    "type": "Char",
+                    "length": 8
+                },
+                {
+                    "name": "DUSEQ",
+                    "label": "Sequence Number",
+                    "type": "Num",
+                    "length": 50
+                },
+                {
+                    "name": "DUTESTCD",
+                    "label": "Device-In-Use Test Short Name",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "DUTEST",
+                    "label": "Device-In-Use Test Name",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "DUORRES",
+                    "label": "Result or Finding in Original Units",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "DUORRESU",
+                    "label": "Original Units",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "DUSTRESC",
+                    "label": "Result or Finding in Standard Format",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "DUSTRESN",
+                    "label": "Numeric Result/Finding in Standard Units",
+                    "type": "Num",
+                    "length": 50
+                },
+                {
+                    "name": "DUSTRESU",
+                    "label": "Standard Units",
+                    "type": "Char",
+                    "length": 50
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "TOB07",
+                    "TOB07",
+                    "TOB07",
+                    "TOB07",
+                    "TOB07",
+                    "TOB07",
+                    "TOB07",
+                    "TOB07",
+                    "TOB07",
+                    "TOB07",
+                    "TOB07",
+                    "TOB07",
+                    "TOB07",
+                    "TOB07",
+                    "TOB07",
+                    "TOB07",
+                    "TOB07",
+                    "TOB07"
+                ],
+                "DOMAIN": [
+                    "DU",
+                    "DU",
+                    "DU",
+                    "DU",
+                    "DU",
+                    "DU",
+                    "DU",
+                    "DU",
+                    "DU",
+                    "DU",
+                    "DU",
+                    "DU",
+                    "DU",
+                    "DU",
+                    "DU",
+                    "DU",
+                    "DU",
+                    "DU"
+                ],
+                "USUBJID": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "SPDEVID": [
+                    "PUFFMASTER2K",
+                    "PUFFMASTER2K",
+                    "PUFFMASTER2K",
+                    "PUFFMASTER2K",
+                    "PUFFMASTER2K",
+                    "PUFFMASTER2K",
+                    "PUFFMASTER2K",
+                    "PUFFMASTER2K",
+                    "PUFFMASTER2K",
+                    "PUFFMASTER2K",
+                    "PUFFMASTER2K",
+                    "PUFFMASTER2K",
+                    "PUFFMASTER2K",
+                    "PUFFMASTER2K",
+                    "PUFFMASTER2K",
+                    "PUFFMASTER2K",
+                    "PUFFMASTER2K",
+                    "PUFFMASTER2K"
+                ],
+                "DUSEQ": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9
+                ],
+                "DUTESTCD": [
+                    "PUFFPROF",
+                    "PUFFDUR",
+                    "PUFFINT",
+                    "PUFFBLCK",
+                    "PUFFNUM",
+                    "PUFFVOL",
+                    "PUFFRNG",
+                    "PUFFPAUS",
+                    "PUFFPINT",
+                    "PUFFPROF",
+                    "PUFFDUR",
+                    "PUFFINT",
+                    "PUFFBLCK",
+                    "PUFFNUM",
+                    "PUFFVOL",
+                    "PUFFRNG",
+                    "PUFFPAUS",
+                    "PUFFPINT"
+                ],
+                "DUTEST": [
+                    "Puff Profile",
+                    "Puff Duration",
+                    "Puff Interval",
+                    "Puff Block",
+                    "Number of Puffs",
+                    "Puff Volume",
+                    "Puff Range",
+                    "Puff Pause",
+                    "Puff Pause Interval",
+                    "Puff Profile",
+                    "Puff Duration",
+                    "Puff Interval",
+                    "Puff Block",
+                    "Number of Puffs",
+                    "Puff Volume",
+                    "Puff Range",
+                    "Puff Pause",
+                    "Puff Pause Interval"
+                ],
+                "DUORRES": [
+                    "SQUARE",
+                    "1.25",
+                    "3",
+                    "25",
+                    "200",
+                    "10",
+                    "100-200",
+                    "60",
+                    "10",
+                    "SQUARE",
+                    "2.25",
+                    "3",
+                    "30",
+                    "100",
+                    "20",
+                    "50-150",
+                    "30",
+                    "10"
+                ],
+                "DUORRESU": [
+                    "",
+                    "sec",
+                    "PUFF/min",
+                    "%",
+                    "PUFF",
+                    "mL",
+                    "",
+                    "s",
+                    "PUFF",
+                    "",
+                    "sec",
+                    "PUFF/min",
+                    "%",
+                    "PUFF",
+                    "mL",
+                    "",
+                    "s",
+                    "PUFF"
+                ],
+                "DUSTRESC": [
+                    "SQUARE",
+                    "1.25",
+                    "3",
+                    "25",
+                    "200",
+                    "10",
+                    "100-200",
+                    "60",
+                    "10",
+                    "SQUARE",
+                    "2.25",
+                    "3",
+                    "30",
+                    "100",
+                    "20",
+                    "50-150",
+                    "30",
+                    "10"
+                ],
+                "DUSTRESN": [
+                    null,
+                    1.25,
+                    3,
+                    25,
+                    200,
+                    10,
+                    null,
+                    60,
+                    10,
+                    null,
+                    2.25,
+                    3,
+                    30,
+                    100,
+                    20,
+                    null,
+                    30,
+                    null
+                ],
+                "DUSTRESU": [
+                    "",
+                    "sec",
+                    "PUFF/min",
+                    "%",
+                    "PUFF",
+                    "mL",
+                    "",
+                    "s",
+                    "PUFF",
+                    "",
+                    "sec",
+                    "PUFF/min",
+                    "%",
+                    "PUFF",
+                    "mL",
+                    "",
+                    "s",
+                    ""
+                ]
+            }
+        }
+    ],
+    "standard": {
+        "product": "tig",
+        "version": "1-0",
+        "substandard": "sdtm"
+    },
+    "codelists": []
+}

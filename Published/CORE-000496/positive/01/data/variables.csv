@@ -1,0 +1,15 @@
+dataset,variable,label,type,length
+fw.xpt,STUDYID,Study Identifier,Char,10
+fw.xpt,DOMAIN,Domain Abbreviation,Char,2
+fw.xpt,USUBJID,Unique Subject Identifier,Char,14
+fw.xpt,POOLID,Pool Identifier,Char,14
+fw.xpt,FWSEQ,Sequence Number,Num,8
+fw.xpt,FWTESTCD,Food/Water Consumtion Short Name,Char,8
+fw.xpt,FWTEST,Food/Water Consumtion Name,Char,25
+fw.xpt,FWORRES,Result or Findings as Collected,Char,6
+fw.xpt,FWORRESU,Unit of the Original Result ,Char,6
+fw.xpt,FWSTRESC,Standardized Result in Character Format,Char,6
+fw.xpt,FWSTRESN,Standardized Result in Numeric Format,Num,6
+fw.xpt,FWSTRESU,Unit of the Standardized Result,Char,6
+fw.xpt,FWDTC,Start Date/Time of Observation,Char,20
+fw.xpt,FWENDTC,End Date/Time of Observation,Char,20

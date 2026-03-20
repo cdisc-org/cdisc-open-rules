@@ -1,0 +1,405 @@
+{
+    "rule": {
+        "Authorities": [
+            {
+                "Organization": "CDISC",
+                "Standards": [
+                    {
+                        "Name": "TIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "SDTM v2.1",
+                                        "Item": "--SEQ",
+                                        "Section": "3.1.4 Identifiers for All Classes",
+                                        "Cited_Guidance": "A number used to uniquely identify records for a subject within a domain. The Trial Summary domain does not contain subject data, and TSSEQ is a sequence number to ensure uniqueness within the dataset."
+                                    }
+                                ],
+                                "Origin": "TIG Conformance Rules",
+                                "Version": "1.0",
+                                "Rule_Identifier": {
+                                    "Id": "TIG0310",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Substandard": "SDTM",
+                        "Version": "1.0"
+                    }
+                ]
+            }
+        ],
+        "Check": {
+            "all": [
+                {
+                    "name": "SPTOBID",
+                    "operator": "non_empty"
+                },
+                {
+                    "name": "--SEQ",
+                    "operator": "is_not_unique_set",
+                    "value": [
+                        "DOMAIN",
+                        "SPTOBID"
+                    ]
+                }
+            ]
+        },
+        "Core": {
+            "Id": null,
+            "Status": "Draft",
+            "Version": "1"
+        },
+        "Description": "Part D - Raise an error when --SEQ is not a unique number per one of the following identifier variables, per domain; SPTOBID.",
+        "Executability": "Fully Executable",
+        "Outcome": {
+            "Message": "--SEQ is not a unique number per SPTOBID per domain.",
+            "Output_Variables": [
+                "SPTOBID"
+            ]
+        },
+        "Scope": {
+            "Classes": {
+                "Include": [
+                    "ALL"
+                ]
+            },
+            "Domains": {
+                "Exclude": [
+                    "ES"
+                ]
+            },
+            "Use_Case": "PROD"
+        },
+        "Sensitivity": "Record",
+        "Rule_Type": "Record Data"
+    },
+    "datasets": [
+        {
+            "filename": "pd.xpt",
+            "label": "Product Design Parameters",
+            "domain": "PD",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "DOMAIN",
+                    "label": "Domain Abbreviation",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "SPTOBID",
+                    "label": "Applicant-Defined Tobacco Product ID",
+                    "type": "Char",
+                    "length": 40
+                },
+                {
+                    "name": "IGDCMPID",
+                    "label": "Ingredient or Component Identifier",
+                    "type": "Char",
+                    "length": 40
+                },
+                {
+                    "name": "PDSEQ",
+                    "label": "Sequence Number",
+                    "type": "Num",
+                    "length": 10
+                },
+                {
+                    "name": "PDPARMCD",
+                    "label": "Design Parameter Element Short Name",
+                    "type": "Char",
+                    "length": 8
+                },
+                {
+                    "name": "PDPARM",
+                    "label": "Design Parameter Element Name",
+                    "type": "Char",
+                    "length": 40
+                },
+                {
+                    "name": "PDVALTRG",
+                    "label": "Design Parameter Element Target Value",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "PDVALMIN",
+                    "label": "Design Parameter Element Minimum Value",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "PDVALMAX",
+                    "label": "Design Parameter Element Maximum Value",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "PDVALU",
+                    "label": "Design Parameter Element Value Unit",
+                    "type": "Char",
+                    "length": 50
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01"
+                ],
+                "DOMAIN": [
+                    "PD",
+                    "PD",
+                    "PD"
+                ],
+                "SPTOBID": [
+                    "CIG01a",
+                    "CIG01a",
+                    "CIG01a"
+                ],
+                "IGDCMPID": [
+                    "",
+                    "",
+                    ""
+                ],
+                "PDSEQ": [
+                    1,
+                    1,
+                    1
+                ],
+                "PDPARMCD": [
+                    "LENGTH",
+                    "CIRCUMF",
+                    "TBFLMASS"
+                ],
+                "PDPARM": [
+                    "Length",
+                    "Circumference",
+                    "Tobacco Filter Mass"
+                ],
+                "PDVALTRG": [
+                    "84",
+                    "24.8",
+                    "783"
+                ],
+                "PDVALMIN": [
+                    "83.5",
+                    "24.6",
+                    "753"
+                ],
+                "PDVALMAX": [
+                    "84.5",
+                    "25",
+                    "814"
+                ],
+                "PDVALU": [
+                    "mm",
+                    "mm",
+                    "mg"
+                ]
+            }
+        },
+        {
+            "filename": "to.xpt",
+            "label": "Tobacco Product Identifiers and Descriptors",
+            "domain": "TO",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "DOMAIN",
+                    "label": "Domain Abbreviation",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "SPTOBID",
+                    "label": "Applicant-Defined Tobacco Product ID",
+                    "type": "Char",
+                    "length": 40
+                },
+                {
+                    "name": "TOSEQ",
+                    "label": "Sequence Number",
+                    "type": "Num",
+                    "length": 10
+                },
+                {
+                    "name": "TOPARMCD",
+                    "label": "Tobacco Product ID Element Short Name",
+                    "type": "Char",
+                    "length": 40
+                },
+                {
+                    "name": "TOPARM",
+                    "label": "Tobacco Product ID Element Name",
+                    "type": "Char",
+                    "length": 8
+                },
+                {
+                    "name": "TOCAT",
+                    "label": "Category of Tobacco Product ID Element",
+                    "type": "Char",
+                    "length": 40
+                },
+                {
+                    "name": "TOSCAT",
+                    "label": "Subcategory of Tobacco Prod ID Element",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "TOVAL",
+                    "label": "Tobacco Product ID Element Value",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "TOVALU",
+                    "label": "Tobacco Product ID Element Value Unit",
+                    "type": "Char",
+                    "length": 50
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01",
+                    "CDISCPILOT01"
+                ],
+                "DOMAIN": [
+                    "TO",
+                    "TO",
+                    "TO",
+                    "TO",
+                    "TO",
+                    "TO",
+                    "TO",
+                    "TO",
+                    "TO",
+                    "TO"
+                ],
+                "SPTOBID": [
+                    "CIG01a",
+                    "CIG01a",
+                    "CIG01a",
+                    "CIG01a",
+                    "CIG01a",
+                    "CIG02a",
+                    "CIG02a",
+                    "CIG02a",
+                    "CIG02a",
+                    "CIG02a"
+                ],
+                "TOSEQ": [
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    6,
+                    6,
+                    6,
+                    6,
+                    6
+                ],
+                "TOPARMCD": [
+                    "TBPRDCAT",
+                    "TBPRSCAT",
+                    "MANUF",
+                    "TRADENAM",
+                    "PACKTYP",
+                    "PRDQUAN",
+                    "LENGTH",
+                    "CIRCUMF",
+                    "VENTLTOT",
+                    "CHARFLAV"
+                ],
+                "TOPARM": [
+                    "Tobacco Product Category",
+                    "Tobacco Product Subcategory",
+                    "Manufacturer",
+                    "Trade Name",
+                    "Package Type",
+                    "Product Quantity",
+                    "Length",
+                    "Circumference",
+                    "Total Ventilation",
+                    "Characterizing Flavor"
+                ],
+                "TOCAT": [
+                    "NEW PRODUCT",
+                    "NEW PRODUCT",
+                    "NEW PRODUCT",
+                    "NEW PRODUCT",
+                    "NEW PRODUCT",
+                    "NEW PRODUCT",
+                    "NEW PRODUCT",
+                    "NEW PRODUCT",
+                    "NEW PRODUCT",
+                    "NEW PRODUCT"
+                ],
+                "TOSCAT": [
+                    "PRODUCT IDENTIFIER",
+                    "PRODUCT IDENTIFIER",
+                    "PRODUCT IDENTIFIER",
+                    "PRODUCT IDENTIFIER",
+                    "PRODUCT DESCRIPTOR",
+                    "PRODUCT DESCRIPTOR",
+                    "PRODUCT DESCRIPTOR",
+                    "PRODUCT DESCRIPTOR",
+                    "PRODUCT DESCRIPTOR",
+                    "PRODUCT DESCRIPTOR"
+                ],
+                "TOVAL": [
+                    "Cigarettes",
+                    "Filtered",
+                    "Joes Cigs USA",
+                    "Treetop Menthol King Size",
+                    "HARD PACK",
+                    "20",
+                    "86",
+                    "26",
+                    "10",
+                    "MENTHOL"
+                ],
+                "TOVALU": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "CIGARETTE",
+                    "mm",
+                    "mm",
+                    "%",
+                    ""
+                ]
+            }
+        }
+    ],
+    "standard": {
+        "product": "tig",
+        "version": "1-0",
+        "substandard": "sdtm"
+    },
+    "codelists": []
+}

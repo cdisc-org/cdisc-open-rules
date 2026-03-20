@@ -1,0 +1,32 @@
+{
+  "DM": [
+    {
+      "executionStatus": "success",
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "variables": [
+        "AGE",
+        "AGETXT"
+      ],
+      "message": "Either AGE or AGETXT must be populated, not both",
+      "errors": [
+        {
+          "value": {
+            "AGE": null,
+            "AGETXT": ""
+          },
+          "row": 2,
+          "USUBJID": "002"
+        },
+        {
+          "value": {
+            "AGE": 45,
+            "AGETXT": "40-50"
+          },
+          "row": 4,
+          "USUBJID": "004"
+        }
+      ]
+    }
+  ]
+}
