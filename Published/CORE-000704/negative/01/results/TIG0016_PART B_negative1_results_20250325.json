@@ -1,0 +1,117 @@
+{
+    "PD": [
+        {
+            "executionStatus": "success",
+            "dataset": "pd.xpt",
+            "domain": "PD",
+            "variables": [
+                "PDPARMCD",
+                "PDVALMAX",
+                "PDVALTRG",
+                "SPTOBID"
+            ],
+            "message": "PDVALTRG is not equal to or less than the PDVALMAX value.",
+            "errors": [
+                {
+                    "value": {
+                        "SPTOBID": "VAPE-Z27",
+                        "PDPARMCD": "PUFCNT",
+                        "PDVALTRG": "311",
+                        "PDVALMAX": "310"
+                    },
+                    "dataset": "pd.xpt",
+                    "row": 1,
+                    "SEQ": 2
+                },
+                {
+                    "value": {
+                        "SPTOBID": "VAPE-Z27",
+                        "PDPARMCD": "CRTVOL",
+                        "PDVALTRG": "3",
+                        "PDVALMAX": "2.9"
+                    },
+                    "dataset": "pd.xpt",
+                    "row": 2,
+                    "SEQ": 3
+                },
+                {
+                    "value": {
+                        "SPTOBID": "VAPE-Z27",
+                        "PDPARMCD": "HTELNUM",
+                        "PDVALTRG": "-1.1",
+                        "PDVALMAX": "-2.1"
+                    },
+                    "dataset": "pd.xpt",
+                    "row": 3,
+                    "SEQ": 4
+                },
+                {
+                    "value": {
+                        "SPTOBID": "VAPE-Z27",
+                        "PDPARMCD": "HTELGTH",
+                        "PDVALTRG": "3.4",
+                        "PDVALMAX": "3.3"
+                    },
+                    "dataset": "pd.xpt",
+                    "row": 4,
+                    "SEQ": 5
+                },
+                {
+                    "value": {
+                        "SPTOBID": "VAPE-Z27",
+                        "PDPARMCD": "BTVLTORG",
+                        "PDVALTRG": "4.5",
+                        "PDVALMAX": "4"
+                    },
+                    "dataset": "pd.xpt",
+                    "row": 6,
+                    "SEQ": 10
+                },
+                {
+                    "value": {
+                        "SPTOBID": "VAPE-Z27",
+                        "PDPARMCD": "BTCRTORG",
+                        "PDVALTRG": "1601",
+                        "PDVALMAX": "1600.99"
+                    },
+                    "dataset": "pd.xpt",
+                    "row": 7,
+                    "SEQ": 11
+                },
+                {
+                    "value": {
+                        "SPTOBID": "VAPE-Z27",
+                        "PDPARMCD": "PDUVOR",
+                        "PDVALTRG": "4.3",
+                        "PDVALMAX": "4.2"
+                    },
+                    "dataset": "pd.xpt",
+                    "row": 8,
+                    "SEQ": 21
+                },
+                {
+                    "value": {
+                        "SPTOBID": "VAPE-Z27",
+                        "PDPARMCD": "PDUTCTOF",
+                        "PDVALTRG": "70",
+                        "PDVALMAX": "69"
+                    },
+                    "dataset": "pd.xpt",
+                    "row": 10,
+                    "SEQ": 23
+                },
+                {
+                    "value": {
+                        "SPTOBID": "VAPE-Z27",
+                        "PDPARMCD": "AIRFLRT",
+                        "PDVALTRG": "800",
+                        "PDVALMAX": "740"
+                    },
+                    "dataset": "pd.xpt",
+                    "row": 11,
+                    "SEQ": 24
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,22 @@
+{
+  "BG": [
+    {
+      "executionStatus": "success",
+      "domain": "BG",
+      "variables": [
+        "BGTESTCD"
+      ],
+      "message": "BGDTC is empty for BGTESTCD=BWGAINA",
+      "errors": [
+        {
+          "value": {
+            "BGTESTCD": "BWGAINA"
+          },
+          "row": 2,
+          "USUBJID": "SUBJ1",
+          "SEQ": 2
+        }
+      ]
+    }
+  ]
+}

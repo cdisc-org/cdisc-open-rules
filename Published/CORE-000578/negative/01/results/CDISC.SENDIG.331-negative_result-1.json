@@ -1,0 +1,56 @@
+{
+  "PC": [
+    {
+      "executionStatus": "success",
+      "domain": "PC",
+      "variables": [
+        "PCLLOQ",
+        "PCSTRESC",
+        "PCSTRESU"
+      ],
+      "message": "PCSTRESC has value 'BLQ' (Below level of quantitation), so both PCLLOQ and PCSTRESU must be populated",
+      "errors": [
+        {
+          "value": {
+            "PCLLOQ": null,
+            "PCSTRESC": "BLQ",
+            "PCSTRESU": "ng/mL "
+          },
+          "row": 3,
+          "USUBJID": "123-001",
+          "SEQ": 3
+        },
+        {
+          "value": {
+            "PCLLOQ": 2,
+            "PCSTRESC": "BLQ",
+            "PCSTRESU": ""
+          },
+          "row": 4,
+          "USUBJID": "123-001",
+          "SEQ": 4
+        },
+        {
+          "value": {
+            "PCLLOQ": null,
+            "PCSTRESC": "BLQ",
+            "PCSTRESU": ""
+          },
+          "row": 11,
+          "USUBJID": "123-001",
+          "SEQ": 11
+        },
+        {
+          "value": {
+            "PCLLOQ": null,
+            "PCSTRESC": "BLQ",
+            "PCSTRESU": "ng/mL "
+          },
+          "row": 14,
+          "USUBJID": "123-001",
+          "SEQ": 14
+        }
+      ]
+    }
+  ]
+}

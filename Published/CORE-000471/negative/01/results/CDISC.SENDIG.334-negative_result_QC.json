@@ -1,0 +1,92 @@
+{
+  "EG": [
+    {
+      "executionStatus": "success",
+      "domain": "EG",
+      "variables": [
+        "EGCAT",
+        "EGEVAL",
+        "EGORRESU"
+      ],
+      "message": "EGEVAL must be null for results that are collected or derived",
+      "errors": [
+        {
+          "value": {
+            "EGCAT": "Measurement",
+            "EGEVAL": "Investigator",
+            "EGORRESU": "beats/min"
+          },
+          "row": 1,
+          "USUBJID": "123101",
+          "SEQ": 1
+        },
+        {
+          "value": {
+            "EGCAT": "MEASUREMENT",
+            "EGEVAL": "Investigator",
+            "EGORRESU": "sec"
+          },
+          "row": 2,
+          "USUBJID": "123101",
+          "SEQ": 2
+        },
+        {
+          "value": {
+            "EGCAT": "",
+            "EGEVAL": "Investigator",
+            "EGORRESU": "beats/min"
+          },
+          "row": 5,
+          "USUBJID": "123101",
+          "SEQ": 2
+        },
+        {
+          "value": {
+            "EGCAT": "",
+            "EGEVAL": "Investigator",
+            "EGORRESU": "sec"
+          },
+          "row": 6,
+          "USUBJID": "123102",
+          "SEQ": 2
+        }
+      ]
+    }
+  ],
+  "FA": [
+    {
+      "executionStatus": "skipped",
+      "domain": "FA",
+      "variables": [],
+      "message": null,
+      "errors": []
+    }
+  ],
+  "MI": [
+    {
+      "executionStatus": "skipped",
+      "domain": "MI",
+      "variables": [],
+      "message": null,
+      "errors": []
+    }
+  ],
+  "LB": [
+    {
+      "executionStatus": "skipped",
+      "domain": "LB",
+      "variables": [],
+      "message": null,
+      "errors": []
+    }
+  ],
+  "VS": [
+    {
+      "executionStatus": "skipped",
+      "domain": "VS",
+      "variables": [],
+      "message": null,
+      "errors": []
+    }
+  ]
+}

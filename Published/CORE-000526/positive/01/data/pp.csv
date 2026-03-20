@@ -1,0 +1,8 @@
+STUDYID,DOMAIN,USUBJID,POOLID,PPGRPID,PPTESTCD,PPTEST,PPCAT,PPORRES,PPORRESU,PPSTRESC,PPSTRESN,PPSTRESU,PPSPEC,PPTPTREF
+1234,PP,123101,,,AUCINT,AUC from T1 to T2,XYZ-123,,,,,,PLASMA,Day 1 dose
+1234,PP,123101,,,AUCLST,AUC to last non-zero concentration,XYZ-123,,,,,,PLASMA,Day 1 dose
+,PP,123101,,,AUCLST,AUC to last non-zero concentration,XYZ-123,,,,,,PLASMA,Day 2 dose
+1234,PP,123101,,,TLST,Time of last non-zero concentration,XYZ-123,,,,,,PLASMA,Day 1 dose
+1234,PP,,A,,AUCINT,AUC from T1 to T2,XYZ-123,,,,,,PLASMA,Day 1 dose
+1234,PP,,A,,AUCLST,AUC to last non-zero concentration,XYZ-123,,,,,,PLASMA,Day 1 dose
+,PP,,A,,TLST,Time of last non-zero concentration,XYZ-123,,,,,,PLASMA,Day 1 dose

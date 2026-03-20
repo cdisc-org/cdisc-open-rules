@@ -1,0 +1,131 @@
+{
+  "DM": [
+    {
+      "executionStatus": "skipped",
+      "domain": "DM",
+      "variables": [],
+      "message": null,
+      "errors": []
+    }
+  ],
+  "DS": [
+    {
+      "executionStatus": "skipped",
+      "domain": "DS",
+      "variables": [],
+      "message": null,
+      "errors": []
+    }
+  ],
+  "MA": [
+    {
+      "executionStatus": "success",
+      "domain": "MA",
+      "variables": [
+        "$dsstdtc",
+        "MADTC"
+      ],
+      "message": "MADTC may not be later than DS.DSSTDTC (date/time of death)",
+      "errors": [
+        {
+          "value": {
+            "$dsstdtc": "2018-03-06",
+            "MADTC": "2018-03-08"
+          },
+          "row": 1,
+          "USUBJID": "015246-076-0003-00003"
+        },
+        {
+          "value": {
+            "$dsstdtc": "2018-04-17T09:00",
+            "MADTC": "2018-04-18T09:00"
+          },
+          "row": 4,
+          "USUBJID": "015246-300-0004-00002"
+        },
+        {
+          "value": {
+            "$dsstdtc": "2018-04-17T08:00:00",
+            "MADTC": "2018-04-17T08:00:01"
+          },
+          "row": 6,
+          "USUBJID": "015246-222-0002-00004"
+        }
+      ]
+    }
+  ],
+  "MI": [
+    {
+      "executionStatus": "success",
+      "domain": "MI",
+      "variables": [
+        "$dsstdtc",
+        "MIDTC"
+      ],
+      "message": "MIDTC may not be later than DS.DSSTDTC (date/time of death)",
+      "errors": [
+        {
+          "value": {
+            "$dsstdtc": "2018-03-06",
+            "MIDTC": "2018-03-08"
+          },
+          "row": 1,
+          "USUBJID": "015246-076-0003-00003"
+        },
+        {
+          "value": {
+            "$dsstdtc": "2018-04-17T09:00",
+            "MIDTC": "2018-04-18T09:00"
+          },
+          "row": 4,
+          "USUBJID": "015246-300-0004-00002"
+        },
+        {
+          "value": {
+            "$dsstdtc": "2018-04-17T08:00:00",
+            "MIDTC": "2019-04-17T08:00:00"
+          },
+          "row": 6,
+          "USUBJID": "015246-222-0002-00004"
+        }
+      ]
+    }
+  ],
+  "TF": [
+    {
+      "executionStatus": "success",
+      "domain": "TF",
+      "variables": [
+        "$dsstdtc",
+        "TFDTC"
+      ],
+      "message": "TFDTC may not be later than DS.DSSTDTC (date/time of death)",
+      "errors": [
+        {
+          "value": {
+            "$dsstdtc": "2018-03-06",
+            "TFDTC": "2018-03-07"
+          },
+          "row": 1,
+          "USUBJID": "015246-076-0003-00003"
+        },
+        {
+          "value": {
+            "$dsstdtc": "2018-04-17T09:00",
+            "TFDTC": "2018-04-17T09:01"
+          },
+          "row": 3,
+          "USUBJID": "015246-300-0004-00002"
+        },
+        {
+          "value": {
+            "$dsstdtc": "2018-04-17T08:00:00",
+            "TFDTC": "2018-04-17T08:00:01"
+          },
+          "row": 5,
+          "USUBJID": "015246-222-0002-00004"
+        }
+      ]
+    }
+  ]
+}

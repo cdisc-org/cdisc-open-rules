@@ -1,0 +1,24 @@
+{
+  "GV": [
+    {
+      "executionStatus": "success",
+      "dataset": "gv.xpt",
+      "domain": "GV",
+      "variables": [
+        "GVCAT",
+        "USUBJID"
+      ],
+      "message": "When GVCAT = 'IN VIVO MICRONUCLEUS' then USUBJID must be populated, not POOLID",
+      "errors": [
+        {
+          "value": {
+            "GVCAT": "IN VIVO MICRONUCLEUS",
+            "USUBJID": ""
+          },
+          "row": 5,
+          "SEQ": 1
+        }
+      ]
+    }
+  ]
+}

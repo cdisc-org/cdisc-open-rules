@@ -1,0 +1,62 @@
+{
+  "MA": [
+    {
+      "executionStatus": "skipped",
+      "dataset": null,
+      "domain": "MA",
+      "variables": [],
+      "message": null,
+      "errors": []
+    }
+  ],
+  "MI": [
+    {
+      "executionStatus": "success",
+      "dataset": "mi.xpt",
+      "domain": "MI",
+      "variables": [
+        "MIRESCAT",
+        "MISTRESC"
+      ],
+      "message": "The value in MISTRESC using the NEOPLASM CT does not match the value in MIRESCAT",
+      "errors": [
+        {
+          "value": {
+            "MISTRESC": "ADENOMA, TUBULOSTROMAL, BENIGN",
+            "MIRESCAT": "METASTATIC"
+          },
+          "row": 6,
+          "USUBJID": "CDISC-TEST-002",
+          "SEQ": 2
+        },
+        {
+          "value": {
+            "MISTRESC": "ADENOMA, TUBULOSTROMAL, BENIGN",
+            "MIRESCAT": "UNDETERMINED"
+          },
+          "row": 7,
+          "USUBJID": "CDISC-TEST-003",
+          "SEQ": 1
+        },
+        {
+          "value": {
+            "MISTRESC": "STROMAL SARCOMA, ENDOMETRIAL, MALIGNANT",
+            "MIRESCAT": "NON-NEOPLASTIC"
+          },
+          "row": 8,
+          "USUBJID": "CDISC-TEST-003",
+          "SEQ": 2
+        },
+        {
+          "value": {
+            "MISTRESC": "ADENOMA, TUBULOSTROMAL, BENIGN",
+            "MIRESCAT": "NON-NEOPLASTIC"
+          },
+          "row": 9,
+          "USUBJID": "CDISC-TEST-003",
+          "SEQ": 3
+        }
+      ]
+    }
+  ]
+}

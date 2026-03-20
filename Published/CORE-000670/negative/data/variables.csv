@@ -1,0 +1,18 @@
+dataset,variable,label,type,length
+dd.xpt,STUDYID,Study Identifier,Char,12
+dd.xpt,DOMAIN,Domain Abbreviation,Char,2
+dd.xpt,USUBJID,Unique Subject Identifier,Char,8
+dd.xpt,DDSEQ,Sequence Number,Num,8
+dd.xpt,DDTESTCD,Test Short Name,Char,6
+dd.xpt,DDTEST,Test Name,Char,24
+dd.xpt,DDORRES,Result or Findings as Collected,Char,24
+dd.xpt,DDSTRESC,,Standardized Result in Character Format,
+ds.xpt,STUDYID,Study Identifier,Char,12
+ds.xpt,DOMAIN,Domain Abbreviation,Char,2
+ds.xpt,USUBJID,Unique Subject Identifier,Char,20
+ds.xpt,DSSEQ,Sequence Number,Num,8
+ds.xpt,DSTERM,Reported Term for the Disposition Event,Char,200
+ds.xpt,DSDECOD,Standardized Disposition Term,Char,50
+ds.xpt,DSCAT,Category for Disposition Event,Char,50
+ds.xpt,DSSTDTC,Start Date/Time of Disposition Event,Char,50
+ds.xpt,DSUSCHFL,Unscheduled Flag,Char,1

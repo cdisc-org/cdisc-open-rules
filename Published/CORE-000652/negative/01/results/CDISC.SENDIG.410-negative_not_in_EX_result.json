@@ -1,0 +1,408 @@
+{
+  "datasets": [
+    {
+      "filename": "gv.xpt",
+      "label": "Genetic Toxicology In Vivo Test Results ",
+      "domain": "GV",
+      "variables": [
+        {
+          "name": "STUDYID",
+          "label": "Study Identifier",
+          "type": "Char",
+          "length": 10
+        },
+        {
+          "name": "DOMAIN",
+          "label": "Domain Abbreviation",
+          "type": "Char",
+          "length": 2
+        },
+        {
+          "name": "USUBJID",
+          "label": "Unique Subject Identifier",
+          "type": "Char",
+          "length": 14
+        },
+        {
+          "name": "GVSEQ",
+          "label": "Sequence Number",
+          "type": "Num",
+          "length": 8
+        },
+        {
+          "name": "GVREFID",
+          "label": "Specimen Identifier",
+          "type": "Char",
+          "length": 4
+        },
+        {
+          "name": "GVTESTCD",
+          "label": "Lab Test or Examination Short Name",
+          "type": "Char",
+          "length": 8
+        },
+        {
+          "name": "GVTEST",
+          "label": "Lab Test or Examination Name",
+          "type": "Char",
+          "length": 25
+        },
+        {
+          "name": "GVCAT",
+          "label": "Category for Genetox In-Vivo Test",
+          "type": "Char",
+          "length": 18
+        },
+        {
+          "name": "GVSCAT",
+          "label": "Subcategory for Genetox In-Vivo Test",
+          "type": "Char",
+          "length": 18
+        },
+        {
+          "name": "GVORRES",
+          "label": "Result or Finding in Original Units",
+          "type": "Char",
+          "length": 6
+        },
+        {
+          "name": "GVORRESU",
+          "label": "Unit of the Original Result",
+          "type": "Char",
+          "length": 6
+        },
+        {
+          "name": "GVSPEC",
+          "label": "Specimen Material Type",
+          "type": "Char",
+          "length": 20
+        },
+        {
+          "name": "GVDTC",
+          "label": "Date/Time of Specimen Collection",
+          "type": "Char",
+          "length": 20
+        }
+      ],
+      "records": {
+        "STUDYID": [
+          "STDY02",
+          "STDY02",
+          "STDY02",
+          "STDY02",
+          "STDY02",
+          "STDY02",
+          "STDY02"
+        ],
+        "DOMAIN": [
+          "GV",
+          "GV",
+          "GV",
+          "GV",
+          "GV",
+          "GV",
+          "GV"
+        ],
+        "USUBJID": [
+          "STDY02-01",
+          "STDY02-01",
+          "STDY02-01",
+          "STDY02-01",
+          "STDY02-99",
+          "STDY02-99",
+          "STDY02-101"
+        ],
+        "GVSEQ": [
+          1,
+          2,
+          3,
+          4,
+          1,
+          2,
+          4
+        ],
+        "GVREFID": [
+          "12345",
+          "12345",
+          "12345",
+          "12345",
+          "12345",
+          "12345",
+          "12345"
+        ],
+        "GVTESTCD": [
+          "PCE",
+          "PCE",
+          "PCE",
+          "PCERBC ",
+          "PCE",
+          "PCE",
+          "PCERBC "
+        ],
+        "GVTEST": [
+          "Polychromatic Erythrocytes ",
+          "Polychromatic Erythrocytes ",
+          "Polychromatic Erythrocytes ",
+          "Polychromatic Erythrocytes/Erythrocytes ",
+          "Polychromatic Erythrocytes ",
+          "Polychromatic Erythrocytes ",
+          "Polychromatic Erythrocytes/Erythrocytes "
+        ],
+        "GVCAT": [
+          "IN VIVO MICRONUCLEUS",
+          "IN VIVO COMET",
+          "IN VIVO MICRONUCLEUS",
+          "IN VIVO MICRONUCLEUS",
+          "IN VIVO MICRONUCLEUS",
+          "IN VIVO MICRONUCLEUS",
+          "IN VIVO MICRONUCLEUS"
+        ],
+        "GVSCAT": [
+          "CYTOTOXICITY ",
+          "CYTOTOXICITY ",
+          "CYTOTOXICITY ",
+          "CYTOTOXICITY ",
+          "CYTOTOXICITY ",
+          "CYTOTOXICITY ",
+          "CYTOTOXICITY "
+        ],
+        "GVORRES": [
+          "200",
+          "200",
+          "200",
+          "200",
+          "200",
+          "200",
+          "200"
+        ],
+        "GVORRESU": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "GVSPEC": [
+          "BONE MARROW",
+          "BONE MARROW",
+          "BONE FLUID",
+          "BONE MARROW",
+          "BONE MARROW",
+          "BONE MARROW",
+          "BONE MARROW"
+        ],
+        "GVDTC": [
+          "2021-02-22T13:03 ",
+          "2021-02-22T13:04 ",
+          "2021-02-22T13:03 ",
+          "2021-02-22T13:03 ",
+          "2021-02-22T13:03 ",
+          "2021-02-23T13:03 ",
+          "2021-02-22T13:03 "
+        ]
+      }
+    },
+    {
+      "filename": "dm.xpt",
+      "label": "Demographics",
+      "domain": "DM",
+      "variables": [
+        {
+          "name": "STUDYID",
+          "label": "Study Identifier",
+          "type": "Char",
+          "length": 10
+        },
+        {
+          "name": "DOMAIN",
+          "label": "Domain Abbreviation",
+          "type": "Char",
+          "length": 2
+        },
+        {
+          "name": "USUBJID",
+          "label": "Unique Subject Identifier",
+          "type": "Char",
+          "length": 14
+        },
+        {
+          "name": "SETCD",
+          "label": "Set Code",
+          "type": "CHAR",
+          "length": 20
+        }
+      ],
+      "records": {
+        "STUDYID": [
+          "STDY02",
+          "STDY02",
+          "STDY02"
+        ],
+        "DOMAIN": [
+          "DM",
+          "DM",
+          "DM"
+        ],
+        "USUBJID": [
+          "STDY02-01",
+          "STDY02-99",
+          "STDY02-999"
+        ],
+        "SETCD": [
+          null,
+          null,
+          "UNTRT"
+        ]
+      }
+    },
+    {
+      "filename": "ex.xpt",
+      "label": "Exposure",
+      "domain": "EX",
+      "variables": [
+        {
+          "name": "STUDYID",
+          "label": "Study Identifier",
+          "type": "Char",
+          "length": 10
+        },
+        {
+          "name": "DOMAIN",
+          "label": "Domain Abbreviation",
+          "type": "Char",
+          "length": 2
+        },
+        {
+          "name": "USUBJID",
+          "label": "Unique Subject Identifier",
+          "type": "Char",
+          "length": 14
+        },
+        {
+          "name": "EXSEQ",
+          "label": "Sequence Number",
+          "type": "Num",
+          "length": 8
+        },
+        {
+          "name": "ECTRT",
+          "label": "Name of Actual Treatment",
+          "type": "Char",
+          "length": 14
+        }
+      ],
+      "records": {
+        "STUDYID": [
+          "STDY02",
+          "STDY02",
+          "STDY02"
+        ],
+        "DOMAIN": [
+          "EX",
+          "EX",
+          "EX"
+        ],
+        "USUBJID": [
+          "STDY02-01",
+          "STDY02-99",
+          "STDY02-99"
+        ],
+        "EXSEQ": [
+          1,
+          1,
+          2
+        ],
+        "ECTRT": [
+          "treatment 1",
+          "treatment 2",
+          "treatment 2"
+        ]
+      }
+    },
+    {
+      "filename": "tx.xpt",
+      "domain": "TX",
+      "variables": [
+        {
+          "name": "STUDYID",
+          "label": "Study Identifier",
+          "type": "Char",
+          "length": 10
+        },
+        {
+          "name": "DOMAIN",
+          "label": "Domain Abbreviation",
+          "type": "Char",
+          "length": 2
+        },
+        {
+          "name": "SETCD",
+          "label": "Set Code",
+          "type": "Char",
+          "length": 20
+        },
+        {
+          "name": "TXSEQ",
+          "label": "Sequence Number",
+          "type": "Num",
+          "length": 8
+        },
+        {
+          "name": "TXPARMCD",
+          "label": "Trial Set Parameter Short Name",
+          "type": "Char",
+          "length": 20
+        },
+        {
+          "name": "TXPARM",
+          "label": "Trial Set ParameterName",
+          "type": "Char",
+          "length": 20
+        },
+        {
+          "name": "TXVAL",
+          "label": "Trial Set Parameter Value",
+          "type": "Char",
+          "length": 20
+        }
+      ],
+      "records": {
+        "STUDYID": [
+          "STDY02",
+          "STDY02"
+        ],
+        "DOMAIN": [
+          "TX",
+          "TX"
+        ],
+        "SETCD": [
+          "UNTRT",
+          "VEHICLE"
+        ],
+        "TXSEQ": [
+          1,
+          2
+        ],
+        "TXPARMCD": [
+          "TCNTRL",
+          "TCNTRL"
+        ],
+        "TXPARM": [
+          "Control Type",
+          "Control Type"
+        ],
+        "TXVAL": [
+          "Untreated Control",
+          "Vehicle Control"
+        ]
+      }
+    }
+  ],
+  "standard": {
+    "product": "sendig",
+    "version": "3-1-1"
+  },
+  "codelists": []
+}

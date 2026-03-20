@@ -1,0 +1,50 @@
+{
+  "DM": [
+    {
+      "executionStatus": "skipped",
+      "dataset": null,
+      "domain": "DM",
+      "variables": [],
+      "message": null,
+      "errors": []
+    }
+  ],
+  "TX": [
+    {
+      "executionStatus": "skipped",
+      "dataset": null,
+      "domain": "TX",
+      "variables": [],
+      "message": null,
+      "errors": []
+    }
+  ],
+  "VS": [
+    {
+      "executionStatus": "skipped",
+      "dataset": null,
+      "domain": "VS",
+      "variables": [],
+      "message": null,
+      "errors": []
+    }
+  ],
+  "CM": [
+    {
+      "executionStatus": "success",
+      "dataset": "cm.xpt",
+      "domain": "CM",
+      "variables": [
+        "CMENRF"
+      ],
+      "message": "CMENRF must not be in SEND dataset",
+      "errors": [
+        {
+          "value": {
+            "CMENRF": ""
+          }
+        }
+      ]
+    }
+  ]
+}

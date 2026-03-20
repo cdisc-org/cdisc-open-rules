@@ -1,0 +1,27 @@
+dataset,variable,label,type,length
+pc.xpt,STUDYID,Study Identifier,Char,50
+pc.xpt,DOMAIN,Domain Abbreviation,Char,50
+pc.xpt,USUBJID,Unique Subject Identifier,Char,50
+pc.xpt,PCSEQ,Sequence Number,Num,8
+pc.xpt,PCTESTCD,Vital Signs Test Short Name,Char,50
+pc.xpt,PCTEST,Vital Signs Test Name,Char,50
+pc.xpt,PCORRES,Result or Finding in Original Units,Char,50
+pc.xpt,PCORRESU,Original Units,Char,50
+pc.xpt,PCSTRESC,Character Result/Finding in Std Format,Char,10
+pc.xpt,PCSTRESN,Numeric Result/Finding in Std Format,Num,8
+pc.xpt,PCSTRESU,Standard Units,Char,50
+pp.xpt,STUDYID,Study Identifier,Char,50
+pp.xpt,DOMAIN,Domain Abbreviation,Char,50
+pp.xpt,USUBJID,Unique Subject Identifier,Char,50
+pp.xpt,POOLID,Pool Identifier ,Char,50
+pp.xpt,PPGRPID,Group Identifier,Char,50
+pp.xpt,PPTESTCD,Parameter Short Name ,Char,8
+pp.xpt,PPTEST,Parameter Name,Char,40
+pp.xpt,PPCAT,Parameter Category,Char,50
+pp.xpt,PPORRES,Result or Findings as Collected ,Char,50
+pp.xpt,PPORRESU,Unit of the Original Result,Char,10
+pp.xpt,PPSTRESC,Standardized Result in Character Format ,Char,50
+pp.xpt,PPSTRESN,Standardized Result in Numeric Format ,Num,8
+pp.xpt,PPSTRESU,Unit of the Standardized Result ,Char,10
+pp.xpt,PPSPEC,Specimen Material Type ,Char,10
+pp.xpt,PPTPTREF,Time Point Reference,Char,20

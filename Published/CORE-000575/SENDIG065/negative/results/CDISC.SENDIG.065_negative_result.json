@@ -1,0 +1,73 @@
+{
+  "VS": [
+    {
+      "executionStatus": "success",
+      "dataset": "vs.xpt",
+      "domain": "VS",
+      "variables": [
+        "$dataset_variables",
+        "$timing_variables"
+      ],
+      "message": "No timing variable is provided",
+      "errors": [
+        {
+          "value": {
+            "$dataset_variables": [
+              "STUDYID",
+              "DOMAIN",
+              "USUBJID",
+              "VSSEQ",
+              "VSTESTCD",
+              "VSTEST",
+              "VSPOS",
+              "VSORRES",
+              "VSORRESU",
+              "VSSTRESC",
+              "VSSTRESN",
+              "VSSTRESU",
+              "VSSTAT",
+              "VSLOC",
+              "VSLOBXFL",
+              "VSREPNUM"
+            ],
+            "$timing_variables": [
+              "VISITNUM",
+              "VISIT",
+              "VISITDY",
+              "TAETORD",
+              "EPOCH",
+              "VSDTC",
+              "VSSTDTC",
+              "VSENDTC",
+              "VSDY",
+              "VSSTDY",
+              "VSENDY",
+              "VSNOMDY",
+              "VSNOMLBL",
+              "VSDUR",
+              "VSTPT",
+              "VSTPTNUM",
+              "VSELTM",
+              "VSTPTREF",
+              "VSRFTDTC",
+              "VSSTRF",
+              "VSENRF",
+              "VSEVLINT",
+              "VSEVINTX",
+              "VSSTRTPT",
+              "VSSTTPT",
+              "VSENRTPT",
+              "VSENTPT",
+              "MIDS",
+              "RELMIDS",
+              "MIDSDTC",
+              "VSSTINT",
+              "VSENINT",
+              "VSDETECT"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

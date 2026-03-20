@@ -1,0 +1,53 @@
+{
+  "TS": [
+    {
+      "executionStatus": "success",
+      "dataset": "ts.xpt",
+      "domain": "TS",
+      "variables": [
+        "variable_name"
+      ],
+      "message": "The variable is not an allowed variable for the domain",
+      "errors": [
+        {
+          "value": {
+            "variable_name": "VSTESTCD"
+          },
+          "dataset": "ts.xpt",
+          "row": 7
+        },
+        {
+          "value": {
+            "variable_name": "TSVALCD"
+          },
+          "dataset": "ts.xpt",
+          "row": 10
+        },
+        {
+          "value": {
+            "variable_name": "TSVCDREF"
+          },
+          "dataset": "ts.xpt",
+          "row": 11
+        },
+        {
+          "value": {
+            "variable_name": "TSVCDVER"
+          },
+          "dataset": "ts.xpt",
+          "row": 12
+        }
+      ]
+    }
+  ],
+  "TE": [
+    {
+      "executionStatus": "success",
+      "dataset": "te.xpt",
+      "domain": "TE",
+      "variables": [],
+      "message": null,
+      "errors": []
+    }
+  ]
+}

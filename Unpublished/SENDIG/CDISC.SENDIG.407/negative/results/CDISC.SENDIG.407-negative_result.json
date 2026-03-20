@@ -1,0 +1,37 @@
+{
+  "GV": [
+    {
+      "executionStatus": "success",
+      "dataset": "gv.xpt",
+      "domain": "GV",
+      "variables": [
+        "GVDTC",
+        "GVSPEC",
+        "GVTESTCD"
+      ],
+      "message": "The combination of USUBJID, GVTESTCD, GVSPEC and GVDTC is not unique",
+      "errors": [
+        {
+          "value": {
+            "GVDTC": "2021-02-22T13:03 ",
+            "GVTESTCD": "PCE",
+            "GVSPEC": "BONE MARROW"
+          },
+          "row": 1,
+          "USUBJID": "STDY02-01",
+          "SEQ": 1
+        },
+        {
+          "value": {
+            "GVDTC": "2021-02-22T13:03 ",
+            "GVTESTCD": "PCE",
+            "GVSPEC": "BONE MARROW"
+          },
+          "row": 6,
+          "USUBJID": "STDY02-01",
+          "SEQ": 1
+        }
+      ]
+    }
+  ]
+}

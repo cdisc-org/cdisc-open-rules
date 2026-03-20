@@ -1,0 +1,291 @@
+{
+    "rule": {
+        "Authorities": [
+            {
+                "Organization": "CDISC",
+                "Standards": [
+                    {
+                        "Name": "TIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "TIG 1.0",
+                                        "Item": "assumption 2",
+                                        "Section": "2.8.8.1",
+                                        "Cited_Guidance": "A minimally meaningful TO dataset must include at least the parameter for tobacco product category (TOPARMCD = TPRDCAT)"
+                                    }
+                                ],
+                                "Origin": "TIG Conformance Rules",
+                                "Version": "1.0",
+                                "Rule_Identifier": {
+                                    "Id": "TIG0003",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Substandard": "SDTM",
+                        "Version": "1.0"
+                    }
+                ]
+            }
+        ],
+        "Check": {
+            "all": [
+                {
+                    "name": "$tbprdcat_count",
+                    "operator": "equal_to",
+                    "value": 0
+                }
+            ]
+        },
+        "Core": {
+            "Status": "Draft",
+            "Version": "1"
+        },
+        "Description": "Raise an error when there is no record present in TO per SPTOBID where TOPARMCD equals TBPRDCAT.",
+        "Executability": "Fully Executable",
+        "Operations": [
+            {
+                "domain": "TO",
+                "filter": {
+                    "TOPARMCD": "TBPRDCAT"
+                },
+                "group": [
+                    "SPTOBID"
+                ],
+                "id": "$tbprdcat_count",
+                "name": "TOPARMCD",
+                "operator": "record_count"
+            }
+        ],
+        "Outcome": {
+            "Message": "TO dataset does not include a record for each SPTOBID where TOPARMCD = TBPRDCAT.",
+            "Output_Variables": [
+                "SPTOBID",
+                "$tbprdcat_count"
+            ]
+        },
+        "Scope": {
+            "Classes": {
+                "Include": [
+                    "STUDY REFERENCE"
+                ]
+            },
+            "Domains": {
+                "Include": [
+                    "TO"
+                ]
+            },
+            "Use_Case": "PROD"
+        },
+        "Sensitivity": "Record",
+        "Rule_Type": "Record Data"
+    },
+    "datasets": [
+        {
+            "filename": "to.xpt",
+            "label": "Tobacco Product Identifiers and Descriptors",
+            "domain": "TO",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "DOMAIN",
+                    "label": "Domain Abbreviation",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "SPTOBID",
+                    "label": "Applicant-Defined Tobacco Product ID",
+                    "type": "Char",
+                    "length": 40
+                },
+                {
+                    "name": "TOSEQ",
+                    "label": "Sequence Number",
+                    "type": "Num",
+                    "length": 10
+                },
+                {
+                    "name": "TOPARMCD",
+                    "label": "Tobacco Product ID Element Short Name",
+                    "type": "Char",
+                    "length": 40
+                },
+                {
+                    "name": "TOPARM",
+                    "label": "Tobacco Product ID Element Name",
+                    "type": "Char",
+                    "length": 8
+                },
+                {
+                    "name": "TOCAT",
+                    "label": "Category of Tobacco Product ID Element",
+                    "type": "Char",
+                    "length": 40
+                },
+                {
+                    "name": "TOSCAT",
+                    "label": "Subcategory of Tobacco Prod ID Element",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "TOVAL",
+                    "label": "Tobacco Product ID Element Value",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "TOVALU",
+                    "label": "Tobacco Product ID Element Value Unit",
+                    "type": "Char",
+                    "length": 50
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "TOB07",
+                    "TOB07",
+                    "TOB07",
+                    "TOB07",
+                    "TOB07",
+                    "TOB07",
+                    "TOB07",
+                    "TOB07",
+                    "TOB07",
+                    "TOB07",
+                    "TOB07"
+                ],
+                "DOMAIN": [
+                    "TO",
+                    "TO",
+                    "TO",
+                    "TO",
+                    "TO",
+                    "TO",
+                    "TO",
+                    "TO",
+                    "TO",
+                    "TO",
+                    "TO"
+                ],
+                "SPTOBID": [
+                    "CIG01a",
+                    "CIG01a",
+                    "CIG01a",
+                    "CIG01a",
+                    "CIG01a",
+                    "VAPE-Z27",
+                    "VAPE-Z27",
+                    "VAPE-Z27",
+                    "VAPE-Z01",
+                    "VAPE-Z01",
+                    "VAPE-Z01"
+                ],
+                "TOSEQ": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6
+                ],
+                "TOPARMCD": [
+                    "TBPRDCAT",
+                    "TBPRSCAT",
+                    "MANUF",
+                    "MANUF",
+                    "TRADENAM",
+                    "TBPRDCAT",
+                    "TBPRDCAT",
+                    "MANUF",
+                    "TRADENAM",
+                    "TBPRDCAT",
+                    "PRDQUAN"
+                ],
+                "TOPARM": [
+                    "Tobacco Product Category",
+                    "Tobacco Product Subcategory",
+                    "Manufacturer",
+                    "Manufacturer",
+                    "Trade Name",
+                    "Tobacco Product Category",
+                    "Tobacco Product Subcategory",
+                    "Manufacturer",
+                    "Trade Name",
+                    "Tobacco Product Category",
+                    "Product Quantity"
+                ],
+                "TOCAT": [
+                    "NEW PRODUCT",
+                    "NEW PRODUCT",
+                    "NEW PRODUCT",
+                    "NEW PRODUCT",
+                    "NEW PRODUCT",
+                    "NEW PRODUCT",
+                    "NEW PRODUCT",
+                    "NEW PRODUCT",
+                    "NEW PRODUCT",
+                    "NEW PRODUCT",
+                    "NEW PRODUCT"
+                ],
+                "TOSCAT": [
+                    "PRODUCT IDENTIFIER",
+                    "PRODUCT IDENTIFIER",
+                    "PRODUCT IDENTIFIER",
+                    "PRODUCT IDENTIFIER",
+                    "PRODUCT IDENTIFIER",
+                    "PRODUCT IDENTIFIER",
+                    "PRODUCT IDENTIFIER",
+                    "PRODUCT IDENTIFIER",
+                    "PRODUCT IDENTIFIER",
+                    "PRODUCT IDENTIFIER",
+                    "PRODUCT DESCRIPTOR"
+                ],
+                "TOVAL": [
+                    "Cigarettes",
+                    "Filtered",
+                    "Joes Cigs USA",
+                    "Joes Cigs USA",
+                    "Treetop Menthol King Size",
+                    "Electronic Nicotine Delivery Systems (ENDS) (Vapes)",
+                    "Closed E-Cigarette",
+                    "Joes Vapes USA",
+                    "Everyday Rich Tobacco",
+                    "ENDS (Vapes)",
+                    "E-CIGARET"
+                ],
+                "TOVALU": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ]
+            }
+        }
+    ],
+    "standard": {
+        "product": "tig",
+        "version": "1-0"
+    },
+    "codelists": []
+}

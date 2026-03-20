@@ -1,0 +1,571 @@
+{
+  "rule": {
+    "Authorities": [
+      {
+        "Organization": "CDISC",
+        "Standards": [
+          {
+            "Name": "SENDIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Document": "IG v3.0",
+                    "Section": "6.3.12",
+                    "Cited_Guidance": "Pharmacokinetics Parameters - Findings. One record per pharmacokinetic parameter per time-concentration profile per specimen per subject, Tabulation."
+                  }
+                ],
+                "Origin": "SEND Conformance Rules",
+                "Version": "5.0",
+                "Rule_Identifier": {
+                  "Id": "SEND195",
+                  "Version": "2"
+                }
+              }
+            ],
+            "Version": "3.0"
+          },
+          {
+            "Name": "SENDIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Document": "IG v3.0",
+                    "Section": "6.3.12",
+                    "Cited_Guidance": "Pharmacokinetics Parameters - Findings. One record per pharmacokinetic parameter per time-concentration profile per specimen per subject or pool, Tabulation."
+                  }
+                ],
+                "Origin": "SEND Conformance Rules",
+                "Version": "5.0",
+                "Rule_Identifier": {
+                  "Id": "SEND195.1",
+                  "Version": "2"
+                }
+              }
+            ],
+            "Version": "3.1"
+          },
+          {
+            "Name": "SENDIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Document": "IG v3.0",
+                    "Section": "6.3.12",
+                    "Cited_Guidance": "Pharmacokinetics Parameters - Findings. One record per pharmacokinetic parameter per time-concentration profile per specimen per subject or pool, Tabulation."
+                  }
+                ],
+                "Origin": "SEND Conformance Rules",
+                "Version": "5.0",
+                "Rule_Identifier": {
+                  "Id": "SEND195.1",
+                  "Version": "2"
+                }
+              }
+            ],
+            "Version": "3.1.1"
+          },
+          {
+            "Name": "SENDIG-DART",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Document": "IG v3.1",
+                    "Section": "6.3.12",
+                    "Cited_Guidance": "Pharmacokinetics Parameters - Findings. One record per pharmacokinetic parameter per time-concentration profile per specimen per subject or pool, Tabulation."
+                  }
+                ],
+                "Origin": "SEND Conformance Rules",
+                "Version": "5.0",
+                "Rule_Identifier": {
+                  "Id": "SEND195.1",
+                  "Version": "2"
+                }
+              }
+            ],
+            "Version": "1.1"
+          },
+          {
+            "Name": "SENDIG-DART",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Document": "IG v3.1.1",
+                    "Section": "6.3.12",
+                    "Cited_Guidance": "Pharmacokinetics Parameters - Findings. One record per pharmacokinetic parameter per time-concentration profile per specimen per subject or pool, Tabulation."
+                  }
+                ],
+                "Origin": "SEND Conformance Rules",
+                "Version": "5.0",
+                "Rule_Identifier": {
+                  "Id": "SEND195.1",
+                  "Version": "2"
+                }
+              }
+            ],
+            "Version": "1.2"
+          },
+          {
+            "Name": "SENDIG-GENETOX",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Document": "IG v3.1.1",
+                    "Section": "6.3.12",
+                    "Cited_Guidance": "Pharmacokinetics Parameters - Findings. One record per pharmacokinetic parameter per time-concentration profile per specimen per subject or pool, Tabulation."
+                  }
+                ],
+                "Origin": "SEND Conformance Rules",
+                "Version": "5.0",
+                "Rule_Identifier": {
+                  "Id": "SEND195.1",
+                  "Version": "2"
+                }
+              }
+            ],
+            "Version": "1.0"
+          }
+        ]
+      }
+    ],
+    "Check": {
+      "any": [
+        {
+          "name": "PPTESTCD",
+          "operator": "is_not_unique_set",
+          "value": [
+            "USUBJID",
+            "PPCAT",
+            "PPSPEC",
+            "PPTPTREF"
+          ]
+        },
+        {
+          "name": "PPTESTCD",
+          "operator": "is_not_unique_set",
+          "value": [
+            "POOLID",
+            "PPCAT",
+            "PPSPEC",
+            "PPTPTREF"
+          ]
+        }
+      ]
+    },
+    "Core": {
+      "Id": "CDISC.SENDIG.195",
+      "Status": "Draft",
+      "Version": "1"
+    },
+    "Description": "The combination of POOLID or USUBJID, PPTESTCD, PPCAT, PPSPEC, and PPTPTREF must be unique.",
+    "Executability": "Fully Executable",
+    "Outcome": {
+      "Message": "The combination of POOLID or USUBJID, PPTESTCD, PPCAT, PPSPEC, and PPTPTREF is not unique",
+      "Output_Variables": [
+        "USUBJID",
+        "POOLID",
+        "PPTESTCD",
+        "PPCAT",
+        "PPSPEC",
+        "PPTPTREF"
+      ]
+    },
+    "Scope": {
+      "Classes": {
+        "Include": [
+          "FINDINGS"
+        ]
+      },
+      "Domains": {
+        "Include": [
+          "PP"
+        ]
+      }
+    },
+    "Sensitivity": "Record",
+    "Rule_Type": "Record Data"
+  },
+  "datasets": [
+    {
+      "filename": "pc.xpt",
+      "label": "Pharmacokinetic Concentrations ",
+      "domain": "PC",
+      "variables": [
+        {
+          "name": "STUDYID",
+          "label": "Study Identifier",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "DOMAIN",
+          "label": "Domain Abbreviation",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "USUBJID",
+          "label": "Unique Subject Identifier",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "PCSEQ",
+          "label": "Sequence Number",
+          "type": "Num",
+          "length": 8
+        },
+        {
+          "name": "PCTESTCD",
+          "label": "Vital Signs Test Short Name",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "PCTEST",
+          "label": "Vital Signs Test Name",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "PCORRES",
+          "label": "Result or Finding in Original Units",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "PCORRESU",
+          "label": "Original Units",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "PCSTRESC",
+          "label": "Character Result/Finding in Std Format",
+          "type": "Char",
+          "length": 10
+        },
+        {
+          "name": "PCSTRESN",
+          "label": "Numeric Result/Finding in Std Format",
+          "type": "Num",
+          "length": 8
+        },
+        {
+          "name": "PCSTRESU",
+          "label": "Standard Units",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "PCSTAT",
+          "label": "Completion Status",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "PCLLOQ",
+          "label": "Lower Level of Quantification",
+          "type": "Num",
+          "length": 8
+        }
+      ],
+      "records": {
+        "STUDYID": [
+          "1234",
+          "1234",
+          "1234"
+        ],
+        "DOMAIN": [
+          "PC",
+          "PC",
+          "PC"
+        ],
+        "USUBJID": [
+          "123101",
+          "123101",
+          "123101"
+        ],
+        "PCSEQ": [
+          1,
+          2,
+          2
+        ],
+        "PCTESTCD": [
+          "DRUGX",
+          "DRUGX",
+          "DRUGX"
+        ],
+        "PCTEST": [
+          "Study Drug",
+          "Study Drug",
+          "Study Drug"
+        ],
+        "PCORRES": [
+          "9",
+          "10",
+          "11"
+        ],
+        "PCORRESU": [
+          "ug/mL",
+          "ug/mL",
+          "ug/mL"
+        ],
+        "PCSTRESC": [
+          "",
+          "10",
+          "11"
+        ],
+        "PCSTRESN": [
+          null,
+          10,
+          11
+        ],
+        "PCSTRESU": [
+          "ug/mL",
+          "ug/mL",
+          "ug/mL"
+        ],
+        "PCSTAT": [
+          "",
+          "",
+          ""
+        ],
+        "PCLLOQ": [
+          10,
+          10,
+          10
+        ]
+      }
+    },
+    {
+      "filename": "pp.xpt",
+      "label": "Pharmacokinetic Parameters",
+      "domain": "PP",
+      "variables": [
+        {
+          "name": "STUDYID",
+          "label": "Study Identifier",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "DOMAIN",
+          "label": "Domain Abbreviation",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "USUBJID",
+          "label": "Unique Subject Identifier",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "POOLID",
+          "label": "Pool Identifier ",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "PPGRPID",
+          "label": "Group Identifier",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "PPTESTCD",
+          "label": "Parameter Short Name ",
+          "type": "Char",
+          "length": 8
+        },
+        {
+          "name": "PPTEST",
+          "label": "Parameter Name",
+          "type": "Char",
+          "length": 40
+        },
+        {
+          "name": "PPCAT",
+          "label": "Parameter Category",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "PPORRES",
+          "label": "Result or Findings as Collected ",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "PPORRESU",
+          "label": "Unit of the Original Result",
+          "type": "Char",
+          "length": 10
+        },
+        {
+          "name": "PPSTRESC",
+          "label": "Standardized Result in Character Format ",
+          "type": "Char",
+          "length": 50
+        },
+        {
+          "name": "PPSTRESN",
+          "label": "Standardized Result in Numeric Format ",
+          "type": "Num",
+          "length": 8
+        },
+        {
+          "name": "PPSTRESU",
+          "label": "Unit of the Standardized Result ",
+          "type": "Char",
+          "length": 10
+        },
+        {
+          "name": "PPSPEC",
+          "label": "Specimen Material Type ",
+          "type": "Char",
+          "length": 10
+        },
+        {
+          "name": "PPTPTREF",
+          "label": "Time Point Reference",
+          "type": "Char",
+          "length": 20
+        }
+      ],
+      "records": {
+        "STUDYID": [
+          "1234",
+          "1234",
+          "1234",
+          "1234",
+          "1234",
+          "1234"
+        ],
+        "DOMAIN": [
+          "PP",
+          "PP",
+          "PP",
+          "PP",
+          "PP",
+          "PP"
+        ],
+        "USUBJID": [
+          "123101",
+          "123101",
+          "123101",
+          "",
+          "",
+          ""
+        ],
+        "POOLID": [
+          "",
+          "",
+          "",
+          "A",
+          "A",
+          "A"
+        ],
+        "PPGRPID": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "PPTESTCD": [
+          "AUCINT",
+          "AUCLST",
+          "TLST",
+          "AUCINT",
+          "AUCLST",
+          "TLST"
+        ],
+        "PPTEST": [
+          "AUC from T1 to T2",
+          "AUC to last non-zero concentration",
+          "Time of last non-zero concentration",
+          "AUC from T1 to T2",
+          "AUC to last non-zero concentration",
+          "Time of last non-zero concentration"
+        ],
+        "PPCAT": [
+          "XYZ-123",
+          "XYZ-123",
+          "XYZ-123",
+          "XYZ-123",
+          "XYZ-123",
+          "XYZ-123"
+        ],
+        "PPORRES": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "PPORRESU": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "PPSTRESC": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "PPSTRESN": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "PPSTRESU": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "PPSPEC": [
+          "PLASMA",
+          "PLASMA",
+          "PLASMA",
+          "PLASMA",
+          "PLASMA",
+          "PLASMA"
+        ],
+        "PPTPTREF": [
+          "Day 1 dose",
+          "Day 1 dose",
+          "Day 1 dose",
+          "Day 1 dose",
+          "Day 1 dose",
+          "Day 1 dose"
+        ]
+      }
+    }
+  ],
+  "standard": {
+    "product": "sendig",
+    "version": "3-1"
+  },
+  "codelists": []
+}

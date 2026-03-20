@@ -1,0 +1,146 @@
+dataset,variable,label,type,length
+cm.xpt,STUDYID,Study Identifier,Char,50
+cm.xpt,DOMAIN,Domain Abbreviation,Char,50
+cm.xpt,USUBJID,Unique Subject Identifier,Char,50
+cm.xpt,CMSEQ,Sequence Number,Num,8
+cm.xpt,CMTRT,"Reported Name of Drug, Med, or Therapy",Char,50
+cm.xpt,CMINDC,Indication,Char,50
+cm.xpt,CMDOSE,Dose per Administration,Num,8
+cm.xpt,CMDOSU,Dose Units,Char,50
+cm.xpt,CMDOSFRQ,Dosing Frequency per Interval,Char,50
+cm.xpt,CMROUTE,Route of Administration,Char,50
+cm.xpt,EPOCH,Epoch,Char,50
+cm.xpt,CMDTC,Date/Time of Collection,Char,50
+cm.xpt,CMSTDTC,Start Date/Time of Medication,Char,50
+cm.xpt,CMENDTC,End Date/Time of Medication,Char,50
+cm.xpt,CMSTDY,Study Day of Start of Medication,Num,8
+cm.xpt,CMENDY,Study Day of End of Medication,Num,8
+cm.xpt,CMSTRTPT,Start Relative to Reference Time Point,Char,50
+cm.xpt,CMSTTPT,Start Reference Time Point,Char,50
+cm.xpt,CMENRTPT,End Relative to Reference Time Point,Char,50
+cm.xpt,CMENTPT,End Reference Time Point,Char,50
+ce.xpt,STUDYID,Study Identifier,Char,50
+ce.xpt,DOMAIN,Domain Abbreviation,Char,50
+ce.xpt,USUBJID,Unique Subject Identifier,Char,50
+ce.xpt,CESEQ,Sequence Number,Num,8
+ce.xpt,CEGRPID,Group ID,Char,50
+ce.xpt,CETERM,Reported Term for the Clinical Event,Char,50
+ce.xpt,CESEV,Severity/Intensity,Char,50
+ce.xpt,EPOCH,Epoch,Char,50
+ce.xpt,CEDTC,Start Date/Time of Event Collection,Char,50
+ce.xpt,CESTDTC,Start Date/Time of Clinical Event,Char,50
+ce.xpt,CEENDTC,End Date/Time of Clinical Event,Char,50
+ce.xpt,CESTDY,Study Day of Start of Event,Num,8
+ce.xpt,CEENDY,Study Day of End of Event,Num,8
+ce.xpt,CESTRTPT,Start Relative to Reference Time Point,Char,50
+ce.xpt,CESTTPT,Start Reference Time Point,Char,50
+ce.xpt,CEENRTPT,End Relative to Reference Time Point,Char,50
+ce.xpt,CEENTPT,End Reference Time Point,Char,50
+lb.xpt,STUDYID,Study Identifier,Char,12
+lb.xpt,DOMAIN,Domain Abbreviation,Char,2
+lb.xpt,USUBJID,Unique Subject Identifier,Char,8
+lb.xpt,LBSEQ,Sequence Number,Num,8
+lb.xpt,LBTESTCD,Lab Test or Examination Short Name,Char,7
+lb.xpt,LBTEST,Lab Test or Examination Name,Char,39
+lb.xpt,LBCAT,Category for Lab Test,Char,10
+lb.xpt,LBORRES,Result or Finding in Original Units,Char,6
+lb.xpt,LBORRESU,Original Units,Char,7
+lb.xpt,LBORNRLO,Reference Range Lower Limit in Orig Unit,Char,200
+lb.xpt,LBORNRHI,Reference Range Upper Limit in Orig Unit,Char,200
+lb.xpt,LBSTRESC,Character Result/Finding in Std Format,Char,8
+lb.xpt,LBSTRESN,Numeric Result/Finding in Standard Units,Num,8
+lb.xpt,LBSTRESU,Standard Units,Char,7
+lb.xpt,LBSTNRLO,Reference Range Lower Limit-Std Units,Num,8
+lb.xpt,LBSTNRHI,Reference Range Upper Limit-Std Units,Num,8
+lb.xpt,LBNRIND,Reference Range Indicator,Char,8
+lb.xpt,LBLOBXFL,Last Observation Before Exposure Flag,Char,1
+lb.xpt,VISITNUM,Visit Number,Num,8
+lb.xpt,VISIT,Visit Name,Char,200
+lb.xpt,EPOCH,Epoch,Char,9
+lb.xpt,LBDTC,Date/Time of Specimen Collection,Char,19
+lb.xpt,LBENDTC,End Date/Time of Specimen Collection,Char,19
+lb.xpt,LBENRTPT,End Relative to Reference Time Point,Char,50
+lb.xpt,LBENTPT,End Reference Time Point,Char,50
+fa.xpt,STUDYID,Study Identifier,Char,12
+fa.xpt,DOMAIN,Domain Abbreviation,Char,2
+fa.xpt,USUBJID,Unique Subject Identifier,Char,8
+fa.xpt,FASEQ,Sequence Number,Num,8
+fa.xpt,FALNKGRP,Link Group ID,Char,200
+fa.xpt,FATESTCD,Findings About Test Short Name,Char,5
+fa.xpt,FATEST,Findings About Test Name,Char,20
+fa.xpt,FAOBJ,Object of the Observation,Char,10
+fa.xpt,FAORRES,Result or Finding in Original Units,Char,8
+fa.xpt,FASTRESC,Character Result/Finding in Std Format,Char,8
+fa.xpt,FASTNRLO,Reference Range Lower Limit-Std Units,Num,8
+fa.xpt,FASTNRHI,Reference Range Upper Limit-Std Units,Num,8
+fa.xpt,FALOC,Location of the Finding About,Char,3
+fa.xpt,VISITNUM,Visit Number,Num,8
+fa.xpt,EPOCH,Epoch,Char,9
+fa.xpt,FADTC,Date/Time of Collection,Char,10
+fa.xpt,FAENRTPT,End Relative to Reference Time Point,Char,50
+fa.xpt,FAENTPT,End Reference Time Point,Char,50
+se.xpt,STUDYID,Study Identifier,Char,12
+se.xpt,DOMAIN,Domain Abbreviation,Char,2
+se.xpt,USUBJID,Unique Subject Identifier,Char,8
+se.xpt,SESEQ,Sequence Number,Num,8
+se.xpt,ETCD,Element Code,Char,7
+se.xpt,ELEMENT,Description of Element,Char,26
+se.xpt,EPOCH,Epoch,Char,9
+se.xpt,SEDTC,Date/Time of Collection,Char,10
+se.xpt,SESTDTC,Start Date/Time of Element,Char,10
+se.xpt,SEENDTC,End Date/Time of Element,Char,10
+se.xpt,SEENRTPT,End Relative to Reference Time Point,Char,50
+se.xpt,SEENTPT,End Reference Time Point,Char,50
+se.xpt,SESTDY,Study Day of Start of Element,Num,8
+se.xpt,SEENDY,Study Day of End of Element,Num,8
+sv.xpt,STUDYID,Study Identifier,Char,12
+sv.xpt,DOMAIN,Domain Abbreviation,Char,2
+sv.xpt,USUBJID,Unique Subject Identifier,Char,8
+sv.xpt,VISITNUM,Visit Number,Num,8
+sv.xpt,VISIT,Visit Name,Char,200
+sv.xpt,SVDTC,Date/Time of Collection,Char,10
+sv.xpt,SVSTDTC,Start Date/Time of Visit,Char,10
+sv.xpt,SVENDTC,End Date/Time of Visit,Char,10
+sv.xpt,SVSTDY,Study Day of Start of Visit,Num,8
+sv.xpt,SVENDY,Study Day of End of Visit,Num,8
+sv.xpt,SVENRTPT,End Relative to Reference Time Point,Char,50
+sv.xpt,SVENTPT,End Reference Time Point,Char,50
+sv.xpt,SVUPDES,Description of Unplanned Visit,Char,200
+sm.xpt,STUDYID,Study Identifier,Char,12
+sm.xpt,DOMAIN,Domain Abbreviation,Char,2
+sm.xpt,USUBJID,Unique Subject Identifier,Char,8
+sm.xpt,SMSEQ,Sequence Number,Num,8
+sm.xpt,MIDS,Disease Milestone Instance Name,Char,200
+sm.xpt,MIDSTYPE,Disease Milestone Type,Char,200
+sm.xpt,SMDTC,Date/Time of Collection,Char,10
+sm.xpt,SMSTDTC,Start Date/Time of Milestone,Char,10
+sm.xpt,SMENDTC,End Date/Time of Milestone,Char,10
+sm.xpt,SMENRTPT,End Relative to Reference Time Point,Char,50
+sm.xpt,SMENTPT,End Reference Time Point,Char,50
+dm.xpt,STUDYID,Study Identifier,Char,50
+dm.xpt,DOMAIN,Domain Abbreviation,Char,50
+dm.xpt,USUBJID,Unique Subject Identifier,Char,50
+dm.xpt,SUBJID,Subject Identifier for the Study,Char,50
+dm.xpt,RFSTDTC,Subject Reference Start Date/Time,Char,50
+dm.xpt,RFENDTC,Subject Reference End Date/Time,Char,50
+dm.xpt,RFXSTDTC,Date/Time of First Study Treatment,Char,50
+dm.xpt,RFXENDTC,Date/Time of Last Study Treatment,Char,50
+dm.xpt,RFICDTC,Date/Time of Informed Consent,Char,50
+dm.xpt,RFPENDTC,Date/Time of End of Participation,Char,50
+dm.xpt,DTHDTC,Date/Time of Death,Char,50
+dm.xpt,DTHFL,Subject Death Flag,Char,50
+dm.xpt,SITEID,Study Site Identifier,Char,50
+dm.xpt,BRTHDTC,Date/Time of Birth,Char,50
+dm.xpt,AGE,Age,Num,8
+dm.xpt,AGEU,Age Units,Char,50
+dm.xpt,SEX,Sex,Char,50
+dm.xpt,RACE,Race,Char,50
+dm.xpt,ETHNIC,Ethnicity,Char,50
+dm.xpt,ARMCD,Planned Arm Code,Char,50
+dm.xpt,ARM,Description of Planned Arm,Char,50
+dm.xpt,ACTARMCD,Actual Arm Code,Char,50
+dm.xpt,ACTARM,Description of Actual Arm,Char,50
+dm.xpt,ARMNRS,Reason Arm and/or Actual Arm is Null,Char,50
+dm.xpt,ACTARMUD,Description of Unplanned Actual Arm,Char,50
+dm.xpt,COUNTRY,Country,Char,50
+dm.xpt,DMDTC,Date/Time of Collection,Char,10

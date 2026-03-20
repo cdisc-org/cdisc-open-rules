@@ -1,0 +1,72 @@
+{
+    "AE": [
+        {
+            "executionStatus": "success",
+            "dataset": "ae.xpt",
+            "domain": "AE",
+            "variables": [],
+            "message": null,
+            "errors": []
+        }
+    ],
+    "CM": [
+        {
+            "executionStatus": "success",
+            "dataset": "cm.xpt",
+            "domain": "CM",
+            "variables": [],
+            "message": null,
+            "errors": []
+        }
+    ],
+    "DM": [
+        {
+            "executionStatus": "success",
+            "dataset": "dm.xpt",
+            "domain": "DM",
+            "variables": [],
+            "message": null,
+            "errors": []
+        }
+    ],
+    "LB": [
+        {
+            "executionStatus": "success",
+            "dataset": "lbae.xpt",
+            "domain": "LB",
+            "variables": [],
+            "message": null,
+            "errors": []
+        }
+    ],
+    "TS": [
+        {
+            "executionStatus": "skipped",
+            "dataset": "ts.xpt",
+            "domain": "TS",
+            "variables": [],
+            "message": "Rule skipped - doesn't apply to domain for rule id=CORE-000750, dataset=TS",
+            "errors": []
+        }
+    ],
+    "EM": [
+        {
+            "executionStatus": "skipped",
+            "dataset": "em.xpt",
+            "domain": "EM",
+            "variables": [],
+            "message": "Rule skipped - doesn't apply to domain for rule id=CORE-000750, dataset=EM",
+            "errors": []
+        }
+    ],
+    "DU": [
+        {
+            "executionStatus": "skipped",
+            "dataset": "du.xpt",
+            "domain": "DU",
+            "variables": [],
+            "message": "Rule skipped - doesn't apply to domain for rule id=CORE-000750, dataset=DU",
+            "errors": []
+        }
+    ]
+}

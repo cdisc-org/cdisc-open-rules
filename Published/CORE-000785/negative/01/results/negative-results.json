@@ -1,0 +1,80 @@
+{
+    "TI": [
+        {
+            "executionStatus": "success",
+            "dataset": "ti.xpt",
+            "domain": "TI",
+            "variables": [
+                "IECAT",
+                "IESCAT"
+            ],
+            "message": "IECAT should not be null when IESCAT is populated",
+            "errors": [
+                {
+                    "value": {
+                        "IESCAT": "INCLUSION SUB",
+                        "IECAT": "null"
+                    },
+                    "dataset": "ti.xpt",
+                    "row": 1
+                },
+                {
+                    "value": {
+                        "IESCAT": "INCLUSION SUB",
+                        "IECAT": "null"
+                    },
+                    "dataset": "ti.xpt",
+                    "row": 2
+                },
+                {
+                    "value": {
+                        "IESCAT": "INCLUSION SUB",
+                        "IECAT": "null"
+                    },
+                    "dataset": "ti.xpt",
+                    "row": 3
+                },
+                {
+                    "value": {
+                        "IESCAT": "EXCLUSION SUB",
+                        "IECAT": "null"
+                    },
+                    "dataset": "ti.xpt",
+                    "row": 4
+                },
+                {
+                    "value": {
+                        "IESCAT": "EXCLUSION SUB",
+                        "IECAT": "null"
+                    },
+                    "dataset": "ti.xpt",
+                    "row": 5
+                },
+                {
+                    "value": {
+                        "IESCAT": "EXCLUSION SUB",
+                        "IECAT": "null"
+                    },
+                    "dataset": "ti.xpt",
+                    "row": 6
+                },
+                {
+                    "value": {
+                        "IESCAT": "EXCLUSION SUB",
+                        "IECAT": "null"
+                    },
+                    "dataset": "ti.xpt",
+                    "row": 7
+                },
+                {
+                    "value": {
+                        "IESCAT": "EXCLUSION SUB",
+                        "IECAT": "null"
+                    },
+                    "dataset": "ti.xpt",
+                    "row": 8
+                }
+            ]
+        }
+    ]
+}

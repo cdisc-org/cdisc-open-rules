@@ -1,0 +1,30 @@
+{
+  "DS": [
+    {
+      "executionStatus": "success",
+      "domain": "DS",
+      "variables": [
+        "DSSTDTC"
+      ],
+      "message": "The value of DSSTDTC may not be an interval",
+      "errors": [
+        {
+          "value": {
+            "DSSTDTC": "2018-03-30T13:05/2018-03-30T13:47"
+          },
+          "row": 3,
+          "USUBJID": "015246-076-0003-00003",
+          "SEQ": 3
+        },
+        {
+          "value": {
+            "DSSTDTC": "2018-04-17/2018-04-21"
+          },
+          "row": 8,
+          "USUBJID": "015246-300-0004-00002",
+          "SEQ": 1
+        }
+      ]
+    }
+  ]
+}

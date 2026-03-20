@@ -1,0 +1,77 @@
+{
+  "AE": [
+    {
+      "executionStatus": "execution_error",
+      "domain": "AE",
+      "variables": [],
+      "message": "rule execution error",
+      "errors": [
+        {
+          "error": "An unknown exception has occurred",
+          "message": "'NoneType' object has no attribute 'lower'"
+        }
+      ]
+    }
+  ],
+  "EX": [
+    {
+      "executionStatus": "success",
+      "domain": "EX",
+      "variables": [
+        "$dataset_variables",
+        "$required_variables"
+      ],
+      "message": "At least one required variable is missing from dataset",
+      "errors": [
+        {
+          "value": {
+            "$required_variables": [
+              "EXTRT",
+              "STUDYID",
+              "EXROUTE",
+              "EXDOSFRQ",
+              "EXSEQ",
+              "DOMAIN"
+            ],
+            "$dataset_variables": [
+              "STUDYID",
+              "DOMAIN",
+              "USUBJID",
+              "SPDEVID",
+              "EXSEQ",
+              "EXDOSE",
+              "EXDOSU",
+              "EXDOSFRM",
+              "EXDOSFRQ",
+              "EXROUTE",
+              "EXLOT",
+              "EPOCH",
+              "EXSTDTC",
+              "EXENDTC",
+              "EXSTDY",
+              "EXENDY"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "LB": [
+    {
+      "executionStatus": "success",
+      "domain": "LB",
+      "variables": [],
+      "message": null,
+      "errors": []
+    }
+  ],
+  "TA": [
+    {
+      "executionStatus": "success",
+      "domain": "TA",
+      "variables": [],
+      "message": null,
+      "errors": []
+    }
+  ]
+}

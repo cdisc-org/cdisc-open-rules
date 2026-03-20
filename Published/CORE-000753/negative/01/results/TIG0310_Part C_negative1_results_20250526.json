@@ -1,0 +1,42 @@
+{
+    "EM": [
+        {
+            "executionStatus": "success",
+            "dataset": "em.xpt",
+            "domain": "EM",
+            "variables": [
+                "SPTOBID"
+            ],
+            "message": "EMSEQ is not a unique number per SPTOBID per domain.",
+            "errors": [
+                {
+                    "value": {
+                        "SPTOBID": "VAPE-Z01"
+                    },
+                    "dataset": "em.xpt",
+                    "row": 1,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 1
+                },
+                {
+                    "value": {
+                        "SPTOBID": "VAPE-Z01"
+                    },
+                    "dataset": "em.xpt",
+                    "row": 2,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 1
+                },
+                {
+                    "value": {
+                        "SPTOBID": "VAPE-Z01"
+                    },
+                    "dataset": "em.xpt",
+                    "row": 3,
+                    "USUBJID": "CDISC001",
+                    "SEQ": 1
+                }
+            ]
+        }
+    ]
+}

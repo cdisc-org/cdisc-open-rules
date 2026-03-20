@@ -1,0 +1,68 @@
+{
+    "CO": [
+        {
+            "executionStatus": "skipped",
+            "dataset": "co.xpt",
+            "domain": "CO",
+            "variables": [],
+            "message": "Rule skipped - doesn't apply to domain for rule id=CORE-000712, dataset=CO",
+            "errors": []
+        }
+    ],
+    "RELREC": [
+        {
+            "executionStatus": "skipped",
+            "dataset": "relrec.xpt",
+            "domain": "",
+            "variables": [],
+            "message": "Rule skipped - doesn't apply to domain for rule id=CORE-000712, dataset=RELREC",
+            "errors": []
+        }
+    ],
+    "SUPPLB": [
+        {
+            "executionStatus": "success",
+            "dataset": "supplb.xpt",
+            "domain": "LB",
+            "variables": [],
+            "message": null,
+            "errors": []
+        }
+    ],
+    "LB": [
+        {
+            "executionStatus": "skipped",
+            "dataset": "lb.xpt",
+            "domain": "LB",
+            "variables": [],
+            "message": "Rule skipped - doesn't apply to domain for rule id=CORE-000712, dataset=LB",
+            "errors": []
+        }
+    ],
+    "DM": [
+        {
+            "executionStatus": "skipped",
+            "dataset": "dm.xpt",
+            "domain": "DM",
+            "variables": [],
+            "message": "Rule skipped - doesn't apply to domain for rule id=CORE-000712, dataset=DM",
+            "errors": []
+        }
+    ],
+    "SUPPDM": [
+        {
+            "executionStatus": "execution_error",
+            "dataset": "suppdm.xpt",
+            "domain": "DM",
+            "variables": [],
+            "message": "rule execution error",
+            "errors": [
+                {
+                    "dataset": "suppdm.xpt",
+                    "error": "Column not found in data",
+                    "message": "IDVAR"
+                }
+            ]
+        }
+    ]
+}

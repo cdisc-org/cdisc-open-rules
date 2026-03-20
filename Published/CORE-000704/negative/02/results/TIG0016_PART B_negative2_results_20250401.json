@@ -1,0 +1,51 @@
+{
+    "PD": [
+        {
+            "executionStatus": "success",
+            "dataset": "pd.xpt",
+            "domain": "PD",
+            "variables": [
+                "PDPARMCD",
+                "PDVALMAX",
+                "PDVALTRG",
+                "SPTOBID"
+            ],
+            "message": "PDVALTRG is not equal to or less than the PDVALMAX value.",
+            "errors": [
+                {
+                    "value": {
+                        "PDVALMAX": "2.9",
+                        "PDVALTRG": "3",
+                        "SPTOBID": "VAPE-Z27",
+                        "PDPARMCD": "Not in dataset"
+                    },
+                    "dataset": "pd.xpt",
+                    "row": 2,
+                    "SEQ": 3
+                },
+                {
+                    "value": {
+                        "PDVALMAX": "4",
+                        "PDVALTRG": "4.5",
+                        "SPTOBID": "VAPE-Z27",
+                        "PDPARMCD": "Not in dataset"
+                    },
+                    "dataset": "pd.xpt",
+                    "row": 6,
+                    "SEQ": 10
+                },
+                {
+                    "value": {
+                        "PDVALMAX": "69",
+                        "PDVALTRG": "70",
+                        "SPTOBID": "VAPE-Z27",
+                        "PDPARMCD": "Not in dataset"
+                    },
+                    "dataset": "pd.xpt",
+                    "row": 10,
+                    "SEQ": 23
+                }
+            ]
+        }
+    ]
+}

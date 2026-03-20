@@ -1,0 +1,28 @@
+dataset,variable,label,type,length
+lb.xpt,STUDYID,Study Identifier,Char,10
+lb.xpt,DOMAIN,Domain Abbreviation,Char,2
+lb.xpt,USUBJID,Unique Subject Identifier,Char,14
+lb.xpt,LBSEQ,Sequence Number,Num,8
+lb.xpt,LBSPID,Sponsor-Defined Identifier,Char,4
+lb.xpt,LBTESTCD,Lab Test or Examination Short Name,Char,8
+lb.xpt,LBTEST,Lab Test or Examination Name,Char,25
+lb.xpt,LBCAT,Category for Lab Test,Char,18
+lb.xpt,LBORRES,Result or Finding in Original Units,Char,6
+lb.xpt,LBORRESU,Original Units,Char,8
+lb.xpt,LBORNRLO,Reference Range Lower Limit in Orig Unit,Char,1
+lb.xpt,LBORNRHI,Reference Range Upper Limit in Orig Unit,Char,1
+lb.xpt,LBSTRESC,Character Result/Finding in Std Format,Char,6
+lb.xpt,LBSTRESN,Numeric Result/Finding in Standard Units,Num,8
+lb.xpt,LBSTRESU,Standard Units,Char,8
+lb.xpt,LBSTNRLO,Reference Range Lower Limit-Std Units,Num,8
+lb.xpt,LBSTNRHI,Reference Range Upper Limit-Std Units,Num,8
+lb.xpt,LBNRIND,Reference Range Indicator,Char,1
+lb.xpt,LBLOINC,LOINC Code,Char,7
+lb.xpt,LBSPEC,Specimen Type,Char,5
+lb.xpt,LBDRVFL,Derived Flag,Char,1
+lb.xpt,LBBLFL,Baseline Flag,Char,1
+lb.xpt,EPOCH,Epoch,Char,9
+lb.xpt,VISITNUM,Visit Number,Num,8
+lb.xpt,VISIT,Visit Name,Char,18
+lb.xpt,LBDTC,Date/Time of Specimen Collection,Char,10
+lb.xpt,LBDY,Study Day of Specimen Collection,Num,8

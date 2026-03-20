@@ -1,0 +1,50 @@
+{
+    "PD": [
+        {
+            "executionStatus": "execution_error",
+            "dataset": "pd.xpt",
+            "domain": "PD",
+            "variables": [],
+            "message": "rule execution error",
+            "errors": [
+                {
+                    "dataset": "pd.xpt",
+                    "error": "Column not found in data",
+                    "message": "SPTOBID"
+                }
+            ]
+        }
+    ],
+    "TO": [
+        {
+            "executionStatus": "execution_error",
+            "dataset": "to.xpt",
+            "domain": "TO",
+            "variables": [],
+            "message": "rule execution error",
+            "errors": [
+                {
+                    "dataset": "to.xpt",
+                    "error": "Column not found in data",
+                    "message": "SPTOBID"
+                }
+            ]
+        }
+    ],
+    "EM": [
+        {
+            "executionStatus": "execution_error",
+            "dataset": "em.xpt",
+            "domain": "EM",
+            "variables": [],
+            "message": "rule execution error",
+            "errors": [
+                {
+                    "dataset": "em.xpt",
+                    "error": "Column not found in data",
+                    "message": "SPTOBID"
+                }
+            ]
+        }
+    ]
+}

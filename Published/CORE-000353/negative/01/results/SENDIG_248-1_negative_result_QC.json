@@ -1,0 +1,95 @@
+{
+  "TS": [
+    {
+      "executionStatus": "success",
+      "domain": "TS",
+      "variables": [
+        "TSPARMCD",
+        "TSVAL"
+      ],
+      "message": "Invalid date/datetime or duration format",
+      "errors": [
+        {
+          "value": {
+            "TSPARMCD": "DOSDUR",
+            "TSVAL": "two weeks"
+          },
+          "row": 1,
+          "SEQ": 1
+        },
+        {
+          "value": {
+            "TSPARMCD": "EXPSTDTC",
+            "TSVAL": "first day of year"
+          },
+          "row": 3,
+          "SEQ": 1
+        },
+        {
+          "value": {
+            "TSPARMCD": "STSTDTC",
+            "TSVAL": "very first day of year"
+          },
+          "row": 4,
+          "SEQ": 1
+        },
+        {
+          "value": {
+            "TSPARMCD": "TRMSAC",
+            "TSVAL": "28 days 5 hours"
+          },
+          "row": 5,
+          "SEQ": 1
+        },
+        {
+          "value": {
+            "TSPARMCD": "DOSENDTC",
+            "TSVAL": "Mid february"
+          },
+          "row": 6,
+          "SEQ": 1
+        },
+        {
+          "value": {
+            "TSPARMCD": "DOSSTDTC",
+            "TSVAL": "first day of year"
+          },
+          "row": 7,
+          "SEQ": 1
+        },
+        {
+          "value": {
+            "TSPARMCD": "INTSAC",
+            "TSVAL": "14 days"
+          },
+          "row": 8,
+          "SEQ": 1
+        },
+        {
+          "value": {
+            "TSPARMCD": "SLENGTH",
+            "TSVAL": "4 weeks"
+          },
+          "row": 9,
+          "SEQ": 2
+        },
+        {
+          "value": {
+            "TSPARMCD": "RECSAC",
+            "TSVAL": "35 days"
+          },
+          "row": 10,
+          "SEQ": 3
+        },
+        {
+          "value": {
+            "TSPARMCD": "STENDTC",
+            "TSVAL": "mid february"
+          },
+          "row": 11,
+          "SEQ": 4
+        }
+      ]
+    }
+  ]
+}

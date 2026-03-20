@@ -1,0 +1,33 @@
+{
+  "OM": [
+    {
+      "executionStatus": "success",
+      "domain": "OM",
+      "variables": [
+        "DOMAIN",
+        "OMTESTCD"
+      ],
+      "message": "OMTESTCD=TERMBW may only be used in the BW domain",
+      "errors": [
+        {
+          "value": {
+            "DOMAIN": "OM",
+            "OMTESTCD": "TERMBW"
+          },
+          "row": 3,
+          "USUBJID": "CDISC-TEST-001",
+          "SEQ": 3
+        }
+      ]
+    }
+  ],
+  "BW": [
+    {
+      "executionStatus": "success",
+      "domain": "BW",
+      "variables": [],
+      "message": null,
+      "errors": []
+    }
+  ]
+}

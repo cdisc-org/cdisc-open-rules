@@ -1,0 +1,56 @@
+{
+  "SE": [
+    {
+      "executionStatus": "skipped",
+      "dataset": "se.xpt",
+      "domain": "SE",
+      "variables": [],
+      "message": "Rule skipped - doesn't apply to domain for rule id=None, dataset=SE",
+      "errors": []
+    }
+  ],
+  "DS": [
+    {
+      "executionStatus": "success",
+      "dataset": "ds.xpt",
+      "domain": "DS",
+      "variables": [
+        "$max_seendtc",
+        "DSSTDTC"
+      ],
+      "message": "Date/time of disposition event DSSTDTC is not equal to or immediately after last element date/time",
+      "errors": [
+        {
+          "value": {
+            "DSSTDTC": "2013-05-19",
+            "$max_seendtc": "2013-05-20"
+          },
+          "dataset": "ds.xpt",
+          "row": 1,
+          "USUBJID": "CDISC001",
+          "SEQ": 1
+        },
+        {
+          "value": {
+            "DSSTDTC": "2013-01-14T11:59:59",
+            "$max_seendtc": "2013-01-14T12:00:00"
+          },
+          "dataset": "ds.xpt",
+          "row": 2,
+          "USUBJID": "CDISC002",
+          "SEQ": 1
+        },
+        {
+          "value": {
+            "DSSTDTC": "2014-02-12T12:21",
+            "$max_seendtc": "2014-02-13"
+          },
+          "dataset": "ds.xpt",
+          "row": 3,
+          "USUBJID": "CDISC003",
+          "SEQ": 1
+        }
+      ]
+    }
+  ]
+}

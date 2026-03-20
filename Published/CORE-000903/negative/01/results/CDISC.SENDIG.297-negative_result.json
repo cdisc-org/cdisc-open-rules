@@ -1,0 +1,69 @@
+{
+  "DM": [
+    {
+      "executionStatus": "success",
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "variables": [
+        "variable_name"
+      ],
+      "message": "The variable is not allowed in this domain as it is not specified in the SENDIG for the specific domain",
+      "errors": [
+        {
+          "value": {
+            "variable_name": "XRACE"
+          },
+          "dataset": "dm.xpt"
+        }
+      ]
+    }
+  ],
+  "TX": [
+    {
+      "executionStatus": "skipped",
+      "dataset": "tx.xpt",
+      "domain": "TX",
+      "variables": [],
+      "message": "Rule skipped - doesn't apply to domain for rule id=CDISC.SENDIG.297, dataset=TX",
+      "errors": []
+    }
+  ],
+  "CO": [
+    {
+      "executionStatus": "success",
+      "dataset": "co.xpt",
+      "domain": "CO",
+      "variables": [
+        "variable_name"
+      ],
+      "message": "The variable is not allowed in this domain as it is not specified in the SENDIG for the specific domain",
+      "errors": [
+        {
+          "value": {
+            "variable_name": "COTEST"
+          },
+          "dataset": "co.xpt"
+        }
+      ]
+    }
+  ],
+  "SE": [
+    {
+      "executionStatus": "success",
+      "dataset": "se.xpt",
+      "domain": "SE",
+      "variables": [
+        "variable_name"
+      ],
+      "message": "The variable is not allowed in this domain as it is not specified in the SENDIG for the specific domain",
+      "errors": [
+        {
+          "value": {
+            "variable_name": "VSTESTCD"
+          },
+          "dataset": "se.xpt"
+        }
+      ]
+    }
+  ]
+}

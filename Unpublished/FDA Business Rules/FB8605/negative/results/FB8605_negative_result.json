@@ -1,0 +1,29 @@
+{
+  "DM": [
+    {
+      "executionStatus": "success",
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "variables": [
+        "AGETXT"
+      ],
+      "message": "AGE is not present in DM and AGETXT is not populated",
+      "errors": [
+        {
+          "value": {
+            "AGETXT": ""
+          },
+          "row": 1,
+          "USUBJID": "001"
+        },
+        {
+          "value": {
+            "AGETXT": ""
+          },
+          "row": 4,
+          "USUBJID": "004"
+        }
+      ]
+    }
+  ]
+}

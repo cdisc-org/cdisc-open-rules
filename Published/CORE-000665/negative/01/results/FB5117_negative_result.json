@@ -1,0 +1,48 @@
+{
+  "DM": [
+    {
+      "executionStatus": "success",
+      "dataset": "dm.xpt",
+      "domain": "DM",
+      "variables": [
+        "DMLLTCD"
+      ],
+      "message": "DMLLTCD (Lower Level Term Code) must not be in SEND dataset",
+      "errors": [
+        {
+          "value": {
+            "DMLLTCD": ""
+          }
+        }
+      ]
+    }
+  ],
+  "TX": [
+    {
+      "executionStatus": "success",
+      "dataset": "tx.xpt",
+      "domain": "TX",
+      "variables": [],
+      "message": null,
+      "errors": []
+    }
+  ],
+  "VS": [
+    {
+      "executionStatus": "success",
+      "dataset": "vs.xpt",
+      "domain": "VS",
+      "variables": [
+        "VSLLTCD"
+      ],
+      "message": "VSLLTCD (Lower Level Term Code) must not be in SEND dataset",
+      "errors": [
+        {
+          "value": {
+            "VSLLTCD": ""
+          }
+        }
+      ]
+    }
+  ]
+}

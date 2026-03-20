@@ -1,0 +1,22 @@
+{
+  "DD": [
+    {
+      "executionStatus": "success",
+      "domain": "DD",
+      "variables": [
+        "DDTEST"
+      ],
+      "message": "The value of DDTESTCD is not 'Death Diagnosis'",
+      "errors": [
+        {
+          "value": {
+            "DDTEST": "Other Diagnosis"
+          },
+          "row": 1,
+          "USUBJID": "CDISC001",
+          "SEQ": 1
+        }
+      ]
+    }
+  ]
+}

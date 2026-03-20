@@ -1,0 +1,434 @@
+{
+    "rule": {
+        "Authorities": [
+            {
+                "Organization": "CDISC",
+                "Standards": [
+                    {
+                        "Name": "TIG",
+                        "References": [
+                            {
+                                "Citations": [
+                                    {
+                                        "Document": "TIG 1.0",
+                                        "Item": "assumption 1b",
+                                        "Section": "2.8.8.1",
+                                        "Cited_Guidance": "SPTOBID is used in the Product Design (PD), Tobacco Ingredients (IT), Non-Tobacco Ingredients (IN), and Ingredient Quantities by Component (IQ) domains, as well as any domain in the general observation classes where there are records pertaining to the tobacco product it identifies/describes (e.g., PT). Every value of SPTOBID in any dataset must correspond to a product described in the TO dataset."
+                                    }
+                                ],
+                                "Origin": "TIG Conformance Rules",
+                                "Version": "1.0",
+                                "Rule_Identifier": {
+                                    "Id": "TIG0002",
+                                    "Version": "1"
+                                }
+                            }
+                        ],
+                        "Substandard": "SDTM",
+                        "Version": "1.0"
+                    }
+                ]
+            }
+        ],
+        "Check": {
+            "all": [
+                {
+                    "name": "SPTOBID",
+                    "operator": "is_not_contained_by",
+                    "value": "$to_sptobid"
+                }
+            ]
+        },
+        "Core": {
+            "Status": "Draft",
+            "Version": "1"
+        },
+        "Description": "Part A - Raise an error when the value of SPTOBID in the dataset does not correspond to a SPTOBID value present in TO.",
+        "Executability": "Fully Executable",
+        "Operations": [
+            {
+                "domain": "TO",
+                "id": "$to_sptobid",
+                "name": "SPTOBID",
+                "operator": "distinct"
+            }
+        ],
+        "Outcome": {
+            "Message": "SPTOBID value in the dataset does not correspond to a SPTOBID value in TO.",
+            "Output_Variables": [
+                "SPTOBID",
+                "$to_sptobid"
+            ]
+        },
+        "Scope": {
+            "Classes": {
+                "Include": [
+                    "ALL"
+                ]
+            },
+            "Domains": {
+                "Include": [
+                    "ALL"
+                ]
+            },
+            "Use_Case": "INDH, PROD"
+        },
+        "Sensitivity": "Record",
+        "Rule_Type": "Record Data"
+    },
+    "datasets": [
+        {
+            "filename": "pd.xpt",
+            "label": "Product Design Parameters",
+            "domain": "PD",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "DOMAIN",
+                    "label": "Domain Abbreviation",
+                    "type": "Char",
+                    "length": 200
+                },
+                {
+                    "name": "SPTOBID",
+                    "label": "Applicant-Defined Tobacco Product ID",
+                    "type": "Char",
+                    "length": 40
+                },
+                {
+                    "name": "IGDCMPID",
+                    "label": "Ingredient or Component Identifier",
+                    "type": "Char",
+                    "length": 40
+                },
+                {
+                    "name": "PDSEQ",
+                    "label": "Sequence Number",
+                    "type": "Num",
+                    "length": 10
+                },
+                {
+                    "name": "PDPARMCD",
+                    "label": "Design Parameter Element Short Name",
+                    "type": "Char",
+                    "length": 8
+                },
+                {
+                    "name": "PDPARM",
+                    "label": "Design Parameter Element Name",
+                    "type": "Char",
+                    "length": 40
+                },
+                {
+                    "name": "PDVALTRG",
+                    "label": "Design Parameter Element Target Value",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "PDVALMIN",
+                    "label": "Design Parameter Element Minimum Value",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "PDVALMAX",
+                    "label": "Design Parameter Element Maximum Value",
+                    "type": "Char",
+                    "length": 50
+                },
+                {
+                    "name": "PDVALU",
+                    "label": "Design Parameter Element Value Unit",
+                    "type": "Char",
+                    "length": 50
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "TOB07",
+                    "TOB07",
+                    "TOB07",
+                    "TOB07",
+                    "TOB07",
+                    "TOB07",
+                    "TOB07",
+                    "TOB07",
+                    "TOB07",
+                    "TOB07",
+                    "TOB07",
+                    "TOB07"
+                ],
+                "DOMAIN": [
+                    "PD",
+                    "PD",
+                    "PD",
+                    "PD",
+                    "PD",
+                    "PD",
+                    "PD",
+                    "PD",
+                    "PD",
+                    "PD",
+                    "PD",
+                    "PD"
+                ],
+                "SPTOBID": [
+                    "CIG01a",
+                    "CIG01a",
+                    "CIG01a",
+                    "VAPE-Z27",
+                    "VAPE-Z27",
+                    "VAPE-Z27",
+                    "VAPE-Z27",
+                    "VAPE-Z27",
+                    "VAPE-Z27",
+                    "VAPE-Z27",
+                    "VAPE-Z27",
+                    "VAPE-Z27"
+                ],
+                "IGDCMPID": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "PDSEQ": [
+                    1,
+                    2,
+                    3,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9
+                ],
+                "PDPARMCD": [
+                    "LENGTH",
+                    "CIRCUMF",
+                    "TBFLMASS",
+                    "DRWRST",
+                    "PUFCNT",
+                    "CRTVOL",
+                    "HTELNUM",
+                    "HTELGTH",
+                    "HTEDIAM",
+                    "HTELRST",
+                    "HTELRNG",
+                    "HTELCFG"
+                ],
+                "PDPARM": [
+                    "Length",
+                    "Circumference",
+                    "Tobacco Filter Mass",
+                    "Draw Resistance",
+                    "Puff Count",
+                    "Cartridge Volume",
+                    "Number of Heating Elements",
+                    "Heating Element Length",
+                    "Heating Element Diameter",
+                    "Heating Element Resistance",
+                    "Heating Element Range",
+                    "Heating Element Configuration"
+                ],
+                "PDVALTRG": [
+                    "84",
+                    "24.8",
+                    "783",
+                    "90",
+                    "300",
+                    "3",
+                    "1",
+                    "3",
+                    "3",
+                    "0.75",
+                    "175",
+                    "SPIRAL"
+                ],
+                "PDVALMIN": [
+                    "83.5",
+                    "24.6",
+                    "753",
+                    "80",
+                    "290",
+                    "1",
+                    "1",
+                    "2.7",
+                    "2.9",
+                    "0.25",
+                    "100",
+                    "SPIRAL"
+                ],
+                "PDVALMAX": [
+                    "84.5",
+                    "25",
+                    "814",
+                    "120",
+                    "310",
+                    "5",
+                    "1",
+                    "3.3",
+                    "3.2",
+                    "1.5",
+                    "250",
+                    "SPIRAL"
+                ],
+                "PDVALU": [
+                    "mm",
+                    "mm",
+                    "mg",
+                    "mm H2O",
+                    "",
+                    "mL",
+                    "",
+                    "mm",
+                    "mm",
+                    "ohm",
+                    "C",
+                    ""
+                ]
+            }
+        },
+        {
+            "filename": "em.xpt",
+            "label": "Tobacco Product Events and Malfunctions",
+            "domain": "EM",
+            "variables": [
+                {
+                    "name": "STUDYID",
+                    "label": "Study Identifier",
+                    "type": "Char",
+                    "length": null
+                },
+                {
+                    "name": "DOMAIN",
+                    "label": "Domain Abbreviation",
+                    "type": "Char",
+                    "length": null
+                },
+                {
+                    "name": "USUBJID",
+                    "label": "Unique Subject Identifier",
+                    "type": "Char",
+                    "length": 2029
+                },
+                {
+                    "name": "SPTOBID",
+                    "label": "Applicant-Defined Tobacco Product ID",
+                    "type": "Char",
+                    "length": null
+                },
+                {
+                    "name": "EMSEQ",
+                    "label": "Device Events Sequence Number",
+                    "type": "Num",
+                    "length": 1
+                },
+                {
+                    "name": "EMTERM",
+                    "label": "Reported Term for Device Event",
+                    "type": "Char",
+                    "length": null
+                },
+                {
+                    "name": "EMMODIFY",
+                    "label": "Modified Device Event Name",
+                    "type": "Char",
+                    "length": null
+                },
+                {
+                    "name": "EMDECOD",
+                    "label": "Device Events Dictionary-Derived Term",
+                    "type": "Char",
+                    "length": null
+                },
+                {
+                    "name": "EMACNDEV",
+                    "label": "Action Taken with Device",
+                    "type": "Char",
+                    "length": null
+                },
+                {
+                    "name": "EMPATT",
+                    "label": "Pattern of Device Event",
+                    "type": "Char",
+                    "length": null
+                },
+                {
+                    "name": "EMSTDTC",
+                    "label": "Start Date/Time of Device Event",
+                    "type": "Char",
+                    "length": 40175
+                }
+            ],
+            "records": {
+                "STUDYID": [
+                    "TOB07",
+                    "TOB07"
+                ],
+                "DOMAIN": [
+                    "EM",
+                    "EM"
+                ],
+                "USUBJID": [
+                    "1059",
+                    "3067"
+                ],
+                "SPTOBID": [
+                    "VAPE-Z01",
+                    "VAPE-Z01"
+                ],
+                "EMSEQ": [
+                    1,
+                    1
+                ],
+                "EMTERM": [
+                    "Won't charge",
+                    "Battery Malfunction"
+                ],
+                "EMMODIFY": [
+                    "Charging Problem",
+                    "Battery Problem"
+                ],
+                "EMDECOD": [
+                    "Charging Problem",
+                    "Battery Problem"
+                ],
+                "EMACNDEV": [
+                    "BATTERY REPLACED",
+                    "BATTERY REPLACED"
+                ],
+                "EMPATT": [
+                    "SINGLE",
+                    "INTERMITTENT"
+                ],
+                "EMSTDTC": [
+                    "39818",
+                    "39818"
+                ]
+            }
+        }
+    ],
+    "standard": {
+        "product": "tig",
+        "version": "1-0"
+    },
+    "codelists": []
+}

@@ -1,0 +1,21 @@
+{
+    "VS": [
+        {
+            "executionStatus": "skipped",
+            "dataset": "vs.xpt",
+            "domain": "VS",
+            "variables": [],
+            "message": "rule evaluation skipped - operation domain not found",
+            "errors": [
+                {
+                    "executionStatus": "skipped",
+                    "dataset": "vs.xpt",
+                    "domain": null,
+                    "variables": [],
+                    "message": "Operation distinct requires Domain POOLDEF but Domain not found in dataset",
+                    "errors": []
+                }
+            ]
+        }
+    ]
+}

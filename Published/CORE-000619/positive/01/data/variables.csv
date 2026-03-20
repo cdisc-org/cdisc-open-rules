@@ -1,0 +1,8 @@
+dataset,variable,label,type,length
+tx.xpt,STUDYID,Study Identifier,Char,12
+tx.xpt,DOMAIN,Domain Abbreviation,Char,2
+tx.xpt,SETCD,Set Code,Char,8
+tx.xpt,TXSEQ,Subject Identifier for the Study,Num,2
+tx.xpt,TXPARMCD,Trial Set Parameter Short Name ,Char,8
+tx.xpt,TXPARM,Trial Set Parameter ,Char,40
+tx.xpt,TXVAL,Trial Set Parameter Value,Char,100
