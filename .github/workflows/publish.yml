@@ -31,10 +31,9 @@ jobs:
 
           for file in ${{ steps.changed-files.outputs.added_files }}; do
             dir=$(dirname "$file")
-            rule_dir=$(echo "$dir" | cut -d'/' -f1-3)
-            if [[ "$rule_dir" == Rules/Unpublished/* ]] && \
-               [[ -f "$rule_dir/rule.yaml" || -f "$rule_dir/rule.yml" ]]; then
-              NEW_DIRS="$NEW_DIRS $rule_dir"
+
+            if [ -f "$dir/rule.yaml" ]; then
+              NEW_DIRS="$NEW_DIRS $dir"
             fi
           done
 
@@ -46,7 +45,7 @@ jobs:
       - name: Stop if nothing to publish
         if: steps.newdirs.outputs.NEW_DIRS == ''
         run: |
-          echo "No new rules found under Rules/Unpublished/"
+          echo "No new rules found"
           exit 0
 
       - name: Setup Python
@@ -63,6 +62,10 @@ jobs:
           python scripts/publish.py \
             --new-dirs "${{ steps.newdirs.outputs.NEW_DIRS }}" \
             --algorithm min
+
+      - name: Regenerate mappings
+        run: |
+          python scripts/generate_mappings.py .
 
       - name: Commit changes
         run: |
