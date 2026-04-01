@@ -1,0 +1,18 @@
+{
+    "IN": [
+        {
+            "executionStatus": "execution_error",
+            "dataset": "in.xpt",
+            "domain": "IN",
+            "variables": [],
+            "message": "rule execution error",
+            "errors": [
+                {
+                    "dataset": "in.xpt",
+                    "error": "Column not found in data",
+                    "message": "CASNO"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,58 @@
+{
+    "IN": [
+        {
+            "executionStatus": "success",
+            "dataset": "in.xpt",
+            "domain": "IN",
+            "variables": [
+                "CASNO",
+                "UNII"
+            ],
+            "message": "At least one of UNII and CASNO variables should be populated for each ingredient.",
+            "errors": [
+                {
+                    "value": {
+                        "UNII": "",
+                        "CASNO": ""
+                    },
+                    "row": 1
+                },
+                {
+                    "value": {
+                        "UNII": "",
+                        "CASNO": ""
+                    },
+                    "row": 2
+                },
+                {
+                    "value": {
+                        "UNII": "",
+                        "CASNO": ""
+                    },
+                    "row": 3
+                },
+                {
+                    "value": {
+                        "UNII": "",
+                        "CASNO": ""
+                    },
+                    "row": 4
+                },
+                {
+                    "value": {
+                        "UNII": "",
+                        "CASNO": ""
+                    },
+                    "row": 5
+                },
+                {
+                    "value": {
+                        "UNII": "",
+                        "CASNO": ""
+                    },
+                    "row": 6
+                }
+            ]
+        }
+    ]
+}

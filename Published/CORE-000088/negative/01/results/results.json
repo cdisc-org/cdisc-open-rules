@@ -1,0 +1,220 @@
+{
+  "DM": [
+    {
+      "domain": "DM",
+      "errors": [
+        {
+          "row": 0,
+          "uSubjId": "123101",
+          "value": {
+            "SETCD": "DRUG_A_SMOKER"
+          }
+        },
+        {
+          "row": 1,
+          "uSubjId": "123102",
+          "value": {
+            "SETCD": "DRUG_B_SMOKER"
+          }
+        },
+        {
+          "row": 5,
+          "uSubjId": "123106",
+          "value": {
+            "SETCD": "DRUG_A_NON_SMOKER"
+          }
+        },
+        {
+          "row": 6,
+          "uSubjId": "123107",
+          "value": {
+            "SETCD": "DRUG_B_NON_SMOKER"
+          }
+        }
+      ],
+      "message": "SETCD value length should be less than or equal to 8",
+      "variables": [
+        "SETCD"
+      ]
+    }
+  ],
+  "TX": [
+    {
+      "domain": "TX",
+      "errors": [
+        {
+          "row": 0,
+          "seq": 1,
+          "value": {
+            "SETCD": "DRUG_A_NON_SMOKER"
+          }
+        },
+        {
+          "row": 1,
+          "seq": 2,
+          "value": {
+            "SETCD": "DRUG_A_NON_SMOKER"
+          }
+        },
+        {
+          "row": 2,
+          "seq": 3,
+          "value": {
+            "SETCD": "DRUG_A_NON_SMOKER"
+          }
+        },
+        {
+          "row": 3,
+          "seq": 4,
+          "value": {
+            "SETCD": "DRUG_A_NON_SMOKER"
+          }
+        },
+        {
+          "row": 4,
+          "seq": 5,
+          "value": {
+            "SETCD": "DRUG_A_NON_SMOKER"
+          }
+        },
+        {
+          "row": 5,
+          "seq": 6,
+          "value": {
+            "SETCD": "DRUG_A_NON_SMOKER"
+          }
+        },
+        {
+          "row": 6,
+          "seq": 7,
+          "value": {
+            "SETCD": "DRUG_A_SMOKER"
+          }
+        },
+        {
+          "row": 7,
+          "seq": 8,
+          "value": {
+            "SETCD": "DRUG_A_SMOKER"
+          }
+        },
+        {
+          "row": 8,
+          "seq": 9,
+          "value": {
+            "SETCD": "DRUG_A_SMOKER"
+          }
+        },
+        {
+          "row": 9,
+          "seq": 10,
+          "value": {
+            "SETCD": "DRUG_A_SMOKER"
+          }
+        },
+        {
+          "row": 10,
+          "seq": 11,
+          "value": {
+            "SETCD": "DRUG_A_SMOKER"
+          }
+        },
+        {
+          "row": 11,
+          "seq": 12,
+          "value": {
+            "SETCD": "DRUG_A_SMOKER"
+          }
+        },
+        {
+          "row": 12,
+          "seq": 13,
+          "value": {
+            "SETCD": "DRUG_B_NON_SMOKER"
+          }
+        },
+        {
+          "row": 13,
+          "seq": 14,
+          "value": {
+            "SETCD": "DRUG_B_NON_SMOKER"
+          }
+        },
+        {
+          "row": 14,
+          "seq": 15,
+          "value": {
+            "SETCD": "DRUG_B_NON_SMOKER"
+          }
+        },
+        {
+          "row": 15,
+          "seq": 16,
+          "value": {
+            "SETCD": "DRUG_B_NON_SMOKER"
+          }
+        },
+        {
+          "row": 16,
+          "seq": 17,
+          "value": {
+            "SETCD": "DRUG_B_NON_SMOKER"
+          }
+        },
+        {
+          "row": 17,
+          "seq": 18,
+          "value": {
+            "SETCD": "DRUG_B_NON_SMOKER"
+          }
+        },
+        {
+          "row": 18,
+          "seq": 19,
+          "value": {
+            "SETCD": "DRUG_B_SMOKER"
+          }
+        },
+        {
+          "row": 19,
+          "seq": 20,
+          "value": {
+            "SETCD": "DRUG_B_SMOKER"
+          }
+        },
+        {
+          "row": 20,
+          "seq": 21,
+          "value": {
+            "SETCD": "DRUG_B_SMOKER"
+          }
+        },
+        {
+          "row": 21,
+          "seq": 22,
+          "value": {
+            "SETCD": "DRUG_B_SMOKER"
+          }
+        },
+        {
+          "row": 22,
+          "seq": 23,
+          "value": {
+            "SETCD": "DRUG_B_SMOKER"
+          }
+        },
+        {
+          "row": 23,
+          "seq": 24,
+          "value": {
+            "SETCD": "DRUG_B_SMOKER"
+          }
+        }
+      ],
+      "message": "SETCD value length should be less than or equal to 8",
+      "variables": [
+        "SETCD"
+      ]
+    }
+  ]
+}

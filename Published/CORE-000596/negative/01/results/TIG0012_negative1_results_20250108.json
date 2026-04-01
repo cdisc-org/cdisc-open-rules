@@ -1,0 +1,79 @@
+{
+    "IN": [
+        {
+            "executionStatus": "success",
+            "dataset": "in.xpt",
+            "domain": "IN",
+            "variables": [
+                "IGDCMPID",
+                "INGRADE",
+                "INPURITY",
+                "SPTOBID",
+                "TPMF"
+            ],
+            "message": "At least one of INGRADE or INPURITY should be populated. If neither is available due to the ingredient being proprietary and originating from a third-party supplier, populate TPMF with the Tobacco Product Master File number provided by the supplier.",
+            "errors": [
+                {
+                    "value": {
+                        "INPURITY": "",
+                        "INGRADE": "",
+                        "TPMF": "",
+                        "IGDCMPID": "Cocoa Extract",
+                        "SPTOBID": "CIG01A"
+                    },
+                    "row": 1
+                },
+                {
+                    "value": {
+                        "INPURITY": "",
+                        "INGRADE": "",
+                        "TPMF": "",
+                        "IGDCMPID": "Butyric Acid",
+                        "SPTOBID": "CIG01A"
+                    },
+                    "row": 2
+                },
+                {
+                    "value": {
+                        "INPURITY": "",
+                        "INGRADE": "",
+                        "TPMF": "",
+                        "IGDCMPID": "Cellulose Filter A",
+                        "SPTOBID": "CIG01A"
+                    },
+                    "row": 3
+                },
+                {
+                    "value": {
+                        "INPURITY": "",
+                        "INGRADE": "",
+                        "TPMF": "",
+                        "IGDCMPID": "Cellulose Acetate",
+                        "SPTOBID": "CIG01A"
+                    },
+                    "row": 4
+                },
+                {
+                    "value": {
+                        "INPURITY": "",
+                        "INGRADE": "",
+                        "TPMF": "",
+                        "IGDCMPID": "Triacetin",
+                        "SPTOBID": "CIG03A"
+                    },
+                    "row": 5
+                },
+                {
+                    "value": {
+                        "INPURITY": "",
+                        "INGRADE": "",
+                        "TPMF": "",
+                        "IGDCMPID": "FSC Paper B",
+                        "SPTOBID": "CIG04A"
+                    },
+                    "row": 6
+                }
+            ]
+        }
+    ]
+}
