@@ -1,0 +1,56 @@
+{
+    "IN": [
+        {
+            "executionStatus": "success",
+            "dataset": "in.xpt",
+            "domain": "IN",
+            "variables": [
+                "CASNO",
+                "UNII"
+            ],
+            "message": "At least one of the UNII and CASNO variables should be present and populated for each ingredient if available.",
+            "errors": [
+                {
+                    "value": {
+                        "UNII": "null",
+                        "CASNO": "Not in dataset"
+                    },
+                    "dataset": "in.xpt",
+                    "row": 1
+                },
+                {
+                    "value": {
+                        "UNII": "null",
+                        "CASNO": "Not in dataset"
+                    },
+                    "dataset": "in.xpt",
+                    "row": 2
+                },
+                {
+                    "value": {
+                        "UNII": "null",
+                        "CASNO": "Not in dataset"
+                    },
+                    "dataset": "in.xpt",
+                    "row": 3
+                },
+                {
+                    "value": {
+                        "UNII": "null",
+                        "CASNO": "Not in dataset"
+                    },
+                    "dataset": "in.xpt",
+                    "row": 5
+                },
+                {
+                    "value": {
+                        "UNII": "null",
+                        "CASNO": "Not in dataset"
+                    },
+                    "dataset": "in.xpt",
+                    "row": 6
+                }
+            ]
+        }
+    ]
+}

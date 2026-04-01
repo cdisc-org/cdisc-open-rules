@@ -1,42 +1,46 @@
 {
-  "IE": [
-    {
-      "domain": "IE",
-      "errors": [
+    "IE": [
         {
-          "row": 1,
-          "seq": 1,
-          "uSubjId": "CDISC015",
-          "value": {
-            "IECAT": "INCLUSION",
-            "IEORRES": "Y"
-          }
-        },
-        {
-          "row": 2,
-          "seq": 1,
-          "uSubjId": "CDISC016",
-          "value": {
-            "IECAT": "INCLUSION",
-            "IEORRES": "Yes"
-          }
-        },
-        {
-          "row": 3,
-          "seq": 1,
-          "uSubjId": "CDISC017",
-          "value": {
-            "IECAT": "INCLUSION",
-            "IEORRES": "Nope"
-          }
+            "executionStatus": "success",
+            "dataset": "ie.xpt",
+            "domain": "IE",
+            "variables": [
+                "IECAT",
+                "IEORRES"
+            ],
+            "message": "IEORRES is not equal to 'N' when IECAT equals 'INCLUSION'.",
+            "errors": [
+                {
+                    "value": {
+                        "IECAT": "INCLUSION",
+                        "IEORRES": "Y"
+                    },
+                    "dataset": "ie.xpt",
+                    "row": 1,
+                    "USUBJID": "CDISC015",
+                    "SEQ": 1
+                },
+                {
+                    "value": {
+                        "IECAT": "INCLUSION",
+                        "IEORRES": "Yes"
+                    },
+                    "dataset": "ie.xpt",
+                    "row": 2,
+                    "USUBJID": "CDISC016",
+                    "SEQ": 1
+                },
+                {
+                    "value": {
+                        "IECAT": "INCLUSION",
+                        "IEORRES": "Nope"
+                    },
+                    "dataset": "ie.xpt",
+                    "row": 3,
+                    "USUBJID": "CDISC017",
+                    "SEQ": 1
+                }
+            ]
         }
-      ],
-      "executionStatus": "success",
-      "message": "IECAT equals \"INCLUSION\" and IEORRES is not equal to \"N\".",
-      "variables": [
-        "IECAT",
-        "IEORRES"
-      ]
-    }
-  ]
+    ]
 }
