@@ -1,0 +1,202 @@
+name: Validate Rule Contributions
+
+on:
+  pull_request:
+    paths:
+      - 'rules/**'
+    types: [opened, synchronize, reopened, edited]
+  workflow_dispatch:
+    inputs:
+      rule_id:
+        description: 'Rule ID to validate (e.g. CORE-000001 or NEW-RULE). Leave blank to auto-detect from recent commits.'
+        required: false
+        type: string
+
+jobs:
+  validate-rules:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      issues: write
+      pull-requests: write
+
+    steps:
+      - name: Checkout PR / branch
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          fetch-depth: 0
+          ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.ref || github.ref }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install engine dependencies
+        run: |
+          python -m venv venv
+          git submodule update --init --recursive
+          ./venv/bin/pip install --upgrade pip
+          ./venv/bin/pip install -r engine/requirements.txt
+
+      # -----------------------------------------------------------------------
+      # Detect which rule changed
+      # -----------------------------------------------------------------------
+      - name: Detect changed rule
+        id: changed-rule
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ -n "${{ inputs.rule_id }}" ]; then
+            RULE_ID="${{ inputs.rule_id }}"
+            echo "Source: manual input"
+
+          elif [ "${{ github.event_name }}" = "pull_request" ]; then
+            RULE_ID=$(git diff --name-only origin/${{ github.base_ref }}...HEAD \
+              | grep -E '^rules/[^/]+/' \
+              | cut -d'/' -f2 \
+              | sort -u \
+              | head -1)
+            echo "Source: PR diff"
+
+          else
+            RULE_ID=$(git diff --name-only HEAD~1 HEAD \
+              | grep -E '^rules/[^/]+/' \
+              | cut -d'/' -f2 \
+              | sort -u \
+              | head -1)
+            echo "Source: recent commit diff"
+          fi
+
+          if [ -z "$RULE_ID" ]; then
+            echo "::error::Could not detect a changed rule. Supply rule_id when using workflow_dispatch."
+            exit 1
+          fi
+
+          if [ ! -d "rules/$RULE_ID" ]; then
+            echo "::error::Rule directory rules/$RULE_ID does not exist."
+            exit 1
+          fi
+
+          echo "rule_id=$RULE_ID" >> $GITHUB_OUTPUT
+          echo "Detected rule: $RULE_ID"
+
+      # -----------------------------------------------------------------------
+      # Run validation (all logic lives in .github/scripts/)
+      # -----------------------------------------------------------------------
+      - name: Run validation
+        id: validate
+        continue-on-error: true
+        run: |
+          chmod +x .github/scripts/run_validation.sh
+          bash .github/scripts/run_validation.sh \
+            "${{ steps.changed-rule.outputs.rule_id }}" \
+            "$(pwd)/venv/bin/python" \
+            "$(pwd)"
+
+      # -----------------------------------------------------------------------
+      # Upload results as a workflow artifact
+      # -----------------------------------------------------------------------
+      - name: Upload validation results artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: validation-results-${{ steps.changed-rule.outputs.rule_id }}
+          path: |
+            rules/${{ steps.changed-rule.outputs.rule_id }}/**/results/results.json
+            validation_report.md
+          if-no-files-found: warn
+
+      # -----------------------------------------------------------------------
+      # Commit updated results.json files back to the branch
+      # -----------------------------------------------------------------------
+      - name: Commit updated results back to branch
+        if: always() && steps.changed-rule.outputs.rule_id != ''
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          mapfile -t RESULTS_FILES < <(find "rules/${{ steps.changed-rule.outputs.rule_id }}" \
+            -path "*/results/results.json" 2>/dev/null)
+
+          if [ ${#RESULTS_FILES[@]} -eq 0 ]; then
+            echo "No results.json files found to commit."
+          else
+            git add "${RESULTS_FILES[@]}"
+            if git diff --cached --quiet; then
+              echo "No results.json changes to commit."
+            else
+              git commit -m "ci: update results.json for ${{ steps.changed-rule.outputs.rule_id }} [skip ci]"
+              git push origin HEAD
+              echo "Committed and pushed updated results.json files."
+            fi
+          fi
+
+      # -----------------------------------------------------------------------
+      # Post report as PR comment
+      # -----------------------------------------------------------------------
+      - name: Post validation report to PR
+        if: always() && github.event_name == 'pull_request' && steps.changed-rule.outputs.rule_id != ''
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const fs = require('fs');
+            const reportPath = 'validation_report.md';
+
+            let detailedContent = '_No validation report was generated._';
+            if (fs.existsSync(reportPath)) {
+              detailedContent = fs.readFileSync(reportPath, 'utf8');
+            }
+
+            const ruleId  = '${{ steps.changed-rule.outputs.rule_id }}';
+            const runUrl  = `${context.payload.repository.html_url}/actions/runs/${context.runId}`;
+
+            let body = `## Rule Validation Results — \`${ruleId}\`\n\n`;
+            body += '<details>\n<summary><strong>Click to expand full report</strong></summary>\n\n';
+            body += detailedContent;
+            body += '\n</details>';
+            body += `\n\n📦 Full results also available as a [workflow artifact](${runUrl}).`;
+            body += `\n\n---\n[View workflow run](${runUrl})`;
+
+            const { data: comments } = await github.rest.issues.listComments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+            });
+
+            const marker = `Rule Validation Results — \`${ruleId}\``;
+            const existing = comments.find(c => c.user.type === 'Bot' && c.body.includes(marker));
+
+            if (existing) {
+              await github.rest.issues.updateComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: existing.id,
+                body,
+              });
+            } else {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                body,
+              });
+            }
+
+      # -----------------------------------------------------------------------
+      # Write report to workflow summary (visible on manual runs too)
+      # -----------------------------------------------------------------------
+      - name: Write report to workflow summary
+        if: always()
+        run: |
+          [ -f validation_report.md ] && cat validation_report.md >> $GITHUB_STEP_SUMMARY || true
+
+      # -----------------------------------------------------------------------
+      # Fail the job if any engine run errored
+      # -----------------------------------------------------------------------
+      - name: Check overall status
+        if: steps.validate.outcome == 'failure'
+        run: |
+          echo "One or more engine runs failed — see the report above."
+          exit 1
