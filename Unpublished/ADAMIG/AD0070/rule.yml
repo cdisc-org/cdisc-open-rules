@@ -1,0 +1,95 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: ADaMIG
+        References:
+          - Citations:
+              - Cited Guidance: >-
+                  the secondary variable of the variable pair cannot be present
+                  in the dataset unless the primary variable is also present
+                Document: ADaM IG v1.3
+                Item: '7'
+                Section: 3.1.1
+            Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '70'
+            Version: '5.0'
+        Version: '1.3'
+      - Name: ADaMIG
+        References:
+          - Citations:
+              - Cited Guidance: >-
+                  the secondary variable of the variable pair cannot be present
+                  in the dataset unless the primary variable is also present
+                Document: ADaM IG v1.3
+                Item: '7'
+                Section: 3.1.1
+            Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '70'
+            Version: '5.0'
+        Version: '1.2'
+      - Name: ADaMIG
+        References:
+          - Citations:
+              - Cited Guidance: >-
+                  the secondary variable of the variable pair cannot be present
+                  in the dataset unless the primary variable is also present
+                Document: ADaM IG v1.3
+                Item: '7'
+                Section: 3.1.1
+            Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '70'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: ADaMIG
+        References:
+          - Citations:
+              - Cited Guidance: >-
+                  One-to-one map to TRxxAGy
+                Document: ADaM IG v1.0
+                Item: ''
+                Section: 3.1, Table 3.1.1
+            Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '70'
+            Version: '5.0'
+        Version: '1.0'
+Check:
+  all:
+    - name: variable_name #in dataset 
+      operator: starts_with
+      value: TR
+    - name: variable_name #in dataset  
+      operator: contains
+      value: AG
+    - name: variable_name #in dataset  
+      operator: ends_with
+      value: N
+    #- name: Root_variable_name #substrings up to 'N' and checks fro presence, if returns false then fails 
+    # operator: not_exists
+
+Core:
+  Id: CDSIC.ADaMIG.AD0070
+  Status: Draft
+  Version: '1'
+Description: >-
+  'A variable with a prefix of TR, containing AG with a suffix of N is present
+  and a variable with the same root without a suffix of N is not present'
+Executability: Fully Executable
+Outcome:
+  Message: A variable with a prefix of TR, containing AG with a suffix of N is
+    present and a variable with the same root without a suffix of N is not
+    present
+  Output Variables:
+    - variable_name
+    - TTR01AG1N
+    - TTR02AG1N
+    - SUBJID
+Rule Type: Variable Metadata Check
+Scope:
+  Data Structures:
+    Include:
+      - SUBJECT LEVEL ANALYSIS DATASET
+Sensitivity: Dataset
