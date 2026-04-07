@@ -1,18 +1,17 @@
 """
-diff_results.py — compares a committed results.json against a freshly generated one.
+diff_results.py — compares the PR results.json against a freshly generated one.
 
 Usage:
     python .github/scripts/diff_results.py <committed.json> <generated.json> <case_label>
 
 Exit codes:
     0  — results match
-    1  — results differ  (not a hard failure; flagged for human review)
-    2  — error loading / parsing files
+    1  — results differ (failure)
+    2  — error
 """
 
 import json
 import sys
-from pathlib import Path
 
 
 def load(path: str) -> dict:
@@ -20,84 +19,77 @@ def load(path: str) -> dict:
         return json.load(f)
 
 
-def dataset_results(data: dict) -> dict:
-    """
-    Results JSON is a dict of  dataset_name -> [result_object, ...]
-    Returns that dict, or an empty dict if the shape is unexpected.
-    """
-    if isinstance(data, dict):
-        return data
-    return {}
-
-
-def flatten_errors(data: dict) -> list:
-    """Normalised flat list of all errors across all datasets, sorted for stable comparison."""
+def extract_issues(data: dict) -> list:
     rows = []
-    for ds_name, ds_list in dataset_results(data).items():
-        for ds in ds_list:
-            for err in ds.get("errors", []):
-                rows.append(
-                    {
-                        "dataset": err.get("dataset", ds_name),
-                        "row": err.get("row"),
-                        "value": err.get("value") or {},
-                    }
-                )
-    return sorted(
-        rows,
-        key=lambda r: (
-            r["dataset"],
-            r["row"] or 0,
-            str(sorted(r["value"].items())),
-        ),
-    )
+    for issue in data.get("Issue_Details", []):
+        rows.append({
+            "core_id":       issue.get("core_id"),
+            "dataset":       issue.get("dataset"),
+            "row":           issue.get("row"),
+            "USUBJID":       issue.get("USUBJID"),
+            "SEQ":           issue.get("SEQ"),
+            "variables":     sorted(issue.get("variables") or []),
+            "values":        issue.get("values"),
+            "message":       issue.get("message"),
+            "executability": issue.get("executability"),
+        })
+    return sorted(rows, key=lambda r: (
+        r["core_id"] or "",
+        r["dataset"] or "",
+        r["row"] or 0,
+        r["USUBJID"] or "",
+    ))
 
 
-def error_counts_by_domain(data: dict) -> dict:
-    counts = {}
-    for ds_name, ds_list in dataset_results(data).items():
-        for ds in ds_list:
-            key = ds.get("domain") or ds.get("dataset") or ds_name
-            counts[key] = len(ds.get("errors", []))
-    return counts
+def extract_summary(data: dict) -> list:
+    rows = []
+    for entry in data.get("Issue_Summary", []):
+        rows.append({
+            "dataset": entry.get("dataset"),
+            "core_id": entry.get("core_id"),
+            "issues":  entry.get("issues"),
+        })
+    return sorted(rows, key=lambda r: (r["dataset"] or "", r["core_id"] or ""))
 
 
-def diff(committed: dict, generated: dict) -> list[str]:
+def diff(committed: dict, generated: dict) -> list:
     diffs = []
 
-    committed_errors = flatten_errors(committed)
-    generated_errors = flatten_errors(generated)
+    c_issues = extract_issues(committed)
+    g_issues = extract_issues(generated)
+    c_summary = extract_summary(committed)
+    g_summary = extract_summary(generated)
 
-    if len(committed_errors) != len(generated_errors):
+    if len(c_issues) != len(g_issues):
         diffs.append(
-            f"Total error count changed: "
-            f"{len(committed_errors)} committed → {len(generated_errors)} generated"
+            f"Issue count changed: {len(c_issues)} committed -> {len(g_issues)} generated"
         )
 
-    # Per-domain counts
-    c_counts = error_counts_by_domain(committed)
-    g_counts = error_counts_by_domain(generated)
-    all_domains = sorted(set(c_counts) | set(g_counts))
-    for domain in all_domains:
-        c = c_counts.get(domain, 0)
-        g = g_counts.get(domain, 0)
-        if c != g:
-            diffs.append(f"  {domain}: {c} errors committed → {g} generated")
+    if c_summary != g_summary:
+        c_map = {(r["dataset"], r["core_id"]): r["issues"] for r in c_summary}
+        g_map = {(r["dataset"], r["core_id"]): r["issues"] for r in g_summary}
+        all_keys = sorted(set(c_map) | set(g_map))
+        for key in all_keys:
+            c_val = c_map.get(key, 0)
+            g_val = g_map.get(key, 0)
+            if c_val != g_val:
+                diffs.append(
+                    f"  {key[0]} / {key[1]}: {c_val} issue(s) committed -> {g_val} generated"
+                )
 
-    # Field-level diff on normalised error list
-    for i, (c_err, g_err) in enumerate(zip(committed_errors, generated_errors)):
-        if c_err == g_err:
+    for i, (c_issue, g_issue) in enumerate(zip(c_issues, g_issues)):
+        if c_issue == g_issue:
             continue
         diffs.append(
-            f"  Error {i + 1} "
-            f"(dataset={c_err['dataset']}, row={c_err['row']}): value mismatch"
+            f"  Issue {i + 1} "
+            f"(dataset={c_issue['dataset']}, row={c_issue['row']}, "
+            f"USUBJID={c_issue['USUBJID']}): mismatch"
         )
-        all_keys = sorted(set(c_err["value"]) | set(g_err["value"]))
-        for k in all_keys:
-            cv = c_err["value"].get(k, "<absent>")
-            gv = g_err["value"].get(k, "<absent>")
+        for k in sorted(set(c_issue) | set(g_issue)):
+            cv = c_issue.get(k, "<absent>")
+            gv = g_issue.get(k, "<absent>")
             if cv != gv:
-                diffs.append(f"    Field '{k}': '{cv}' → '{gv}'")
+                diffs.append(f"    Field '{k}': '{cv}' -> '{gv}'")
 
     return diffs
 
@@ -127,7 +119,7 @@ def main():
             print(line)
         sys.exit(1)
     else:
-        print(f"MATCH — results identical for {case_label}")
+        print(f"MATCH - results identical for {case_label}")
         sys.exit(0)
 
 

@@ -3,14 +3,9 @@ name: Validate Rule Contributions
 on:
   pull_request:
     paths:
-      - 'rules/**'
-    types: [opened, synchronize, reopened, edited]
-  workflow_dispatch:
-    inputs:
-      rule_id:
-        description: 'Rule ID to validate (e.g. CORE-000001 or NEW-RULE). Leave blank to auto-detect from recent commits.'
-        required: false
-        type: string
+      - 'Unpublished/**'
+    types: [opened, synchronize, reopened]
+  workflow_dispatch: {}
 
 jobs:
   validate-rules:
@@ -47,39 +42,39 @@ jobs:
       - name: Detect changed rule
         id: changed-rule
         run: |
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ -n "${{ inputs.rule_id }}" ]; then
-            RULE_ID="${{ inputs.rule_id }}"
-            echo "Source: manual input"
-
-          elif [ "${{ github.event_name }}" = "pull_request" ]; then
-            RULE_ID=$(git diff --name-only origin/${{ github.base_ref }}...HEAD \
-              | grep -E '^rules/[^/]+/' \
-              | cut -d'/' -f2 \
-              | sort -u \
-              | head -1)
-            echo "Source: PR diff"
-
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            CHANGED=$(git diff --name-only origin/${{ github.base_ref }}...HEAD)
           else
-            RULE_ID=$(git diff --name-only HEAD~1 HEAD \
-              | grep -E '^rules/[^/]+/' \
-              | cut -d'/' -f2 \
-              | sort -u \
-              | head -1)
-            echo "Source: recent commit diff"
+            CHANGED=$(git diff --name-only HEAD~1 HEAD)
           fi
 
-          if [ -z "$RULE_ID" ]; then
-            echo "::error::Could not detect a changed rule. Supply rule_id when using workflow_dispatch."
+          # Match Unpublished/<RULE_ID>/ or Unpublished/<Subdir>/<RULE_ID>/
+          # Capture the rule directory (2nd or 3rd path segment) depending on depth
+          RULE_REL_PATH=$(echo "$CHANGED" \
+            | grep -E '^Unpublished/' \
+            | awk -F'/' '
+                NF >= 4 { print $1"/"$2"/"$3; next }
+                NF >= 3 { print $1"/"$2 }
+              ' \
+            | sort -u \
+            | head -1)
+
+          if [ -z "$RULE_REL_PATH" ]; then
+            echo "::error::Could not detect a changed rule under Unpublished/."
             exit 1
           fi
 
-          if [ ! -d "rules/$RULE_ID" ]; then
-            echo "::error::Rule directory rules/$RULE_ID does not exist."
+          if [ ! -d "$RULE_REL_PATH" ]; then
+            echo "::error::Rule directory $RULE_REL_PATH does not exist."
             exit 1
           fi
 
-          echo "rule_id=$RULE_ID" >> $GITHUB_OUTPUT
-          echo "Detected rule: $RULE_ID"
+          # Derive a short RULE_ID (last path segment) for display/artifact naming
+          RULE_ID=$(basename "$RULE_REL_PATH")
+
+          echo "rule_rel_path=$RULE_REL_PATH" >> $GITHUB_OUTPUT
+          echo "rule_id=$RULE_ID"             >> $GITHUB_OUTPUT
+          echo "Detected rule: $RULE_ID at $RULE_REL_PATH"
 
       # -----------------------------------------------------------------------
       # Run validation (all logic lives in .github/scripts/)
@@ -90,7 +85,7 @@ jobs:
         run: |
           chmod +x .github/scripts/run_validation.sh
           bash .github/scripts/run_validation.sh \
-            "${{ steps.changed-rule.outputs.rule_id }}" \
+            "${{ steps.changed-rule.outputs.rule_rel_path }}" \
             "$(pwd)/venv/bin/python" \
             "$(pwd)"
 
@@ -103,7 +98,7 @@ jobs:
         with:
           name: validation-results-${{ steps.changed-rule.outputs.rule_id }}
           path: |
-            rules/${{ steps.changed-rule.outputs.rule_id }}/**/results/results.json
+            ${{ steps.changed-rule.outputs.rule_rel_path }}/**/results/results.json
             validation_report.md
           if-no-files-found: warn
 
@@ -111,12 +106,12 @@ jobs:
       # Commit updated results.json files back to the branch
       # -----------------------------------------------------------------------
       - name: Commit updated results back to branch
-        if: always() && steps.changed-rule.outputs.rule_id != ''
+        if: always() && steps.changed-rule.outputs.rule_rel_path != ''
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          mapfile -t RESULTS_FILES < <(find "rules/${{ steps.changed-rule.outputs.rule_id }}" \
+          mapfile -t RESULTS_FILES < <(find "${{ steps.changed-rule.outputs.rule_rel_path }}" \
             -path "*/results/results.json" 2>/dev/null)
 
           if [ ${#RESULTS_FILES[@]} -eq 0 ]; then
@@ -156,7 +151,7 @@ jobs:
             body += '<details>\n<summary><strong>Click to expand full report</strong></summary>\n\n';
             body += detailedContent;
             body += '\n</details>';
-            body += `\n\n📦 Full results also available as a [workflow artifact](${runUrl}).`;
+            body += `\n\nFull results also available as a [workflow artifact](${runUrl}).`;
             body += `\n\n---\n[View workflow run](${runUrl})`;
 
             const { data: comments } = await github.rest.issues.listComments({
@@ -198,5 +193,5 @@ jobs:
       - name: Check overall status
         if: steps.validate.outcome == 'failure'
         run: |
-          echo "One or more engine runs failed — see the report above."
+          echo "engine run failed — see the report above."
           exit 1
