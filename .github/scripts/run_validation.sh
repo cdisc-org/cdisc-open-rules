@@ -153,10 +153,10 @@ for TEST_TYPE in positive negative; do
           echo ""
         } >> "$REPORT_FILE"
         PASSED_CASES=$((PASSED_CASES + 1))
-      elif [ $DIFF_EXIT -eq 1 ]; then
-        echo "  CHANGED — results differ from committed baseline (human review required)"
+      else
+        echo "  FAILED — committed results do not match engine output"
         {
-          echo "### \`$CASE_LABEL\` — ⚠️ Results differ from committed baseline (human review required)"
+          echo "### \`$CASE_LABEL\` — ❌ Results do not match engine output"
           echo ""
           echo "<details><summary>Diff details</summary>"
           echo ""
@@ -164,17 +164,6 @@ for TEST_TYPE in positive negative; do
           cat "$DIFF_LOG"
           echo '```'
           echo "</details>"
-          echo ""
-        } >> "$REPORT_FILE"
-        PASSED_CASES=$((PASSED_CASES + 1))   # diff is a warning, not a job failure
-      else
-        echo "  ERROR: diff script failed (exit $DIFF_EXIT)"
-        {
-          echo "### \`$CASE_LABEL\` — ❌ Diff script error"
-          echo ""
-          echo '```'
-          cat "$DIFF_LOG"
-          echo '```'
           echo ""
         } >> "$REPORT_FILE"
         FAILED_CASES=$((FAILED_CASES + 1))
