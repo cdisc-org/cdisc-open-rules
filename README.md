@@ -36,6 +36,8 @@ _You may need your IT support team to install some of the following software for
    Unless something goes badly wrong and you need to fully delete the entire directory, you should never need to run this command again._
 
 7) In VSCode, select "Open Folder" and select the repository folder you just cloned - it should be called `cdisc-open-rules`
+   - VSCode may show a prompt asking if you trust the authors of the files in this folder — click **Yes, I trust the authors**
+   - You should also see a prompt to install the workspace recommended extensions in the bottome right corner — click **Install All**. If you miss this prompt, don't worry — step 10 will cover it
 
 8) This should re-open a new terminal in the repository folder. If this doesn't happen, open a new terminal in VSCode and navigate to the repository folder again.
 
@@ -49,16 +51,9 @@ _You may need your IT support team to install some of the following software for
    If you start the setup script and stop it midway through, you may get some strange errors when you try to run rules in the future. If you have any doubts, rerun the setup script, and make sure it completes._
 
 10) Set up the rule authoring auto-completion and real-time schema validation:
-    - Go to the `Extensions` tab in the VSCode left sidebar
-    - Search `yaml` and install the Red Hat YAML extension (it should be the top one)
-    - Once it's installed, search 'yaml schema' using the search bar at the top of the settings:
-      - WINDOWS: File → Preferences → Settings
-      - MAC: Code → Settings → Settings
-    - Click the `Edit in settings.json` option under Yaml: Schemas
-    - Paste the following into "yaml.schemas":
-              `"https://rule-editor.cdisc.org/api/schema": "/*.yml"`
-    - Save the `settings.json`
-    - There you go! You should now see schema validation in yaml files. If you don't see this behaviour after a few seconds, try restarting VSCode
+    - When you opened the repository folder in step 7, VSCode should have shown a prompt to install the workspace recommended extensions — click **Install All** if you haven't already
+    - If you missed the prompt, go to Extensions on the left sidebar, search for `@recommended` in the Extensions search bar and install them from there
+    - That's it! Schema validation and CSV highlighting will be active automatically once the extensions are installed. If you don't see this behaviour after a few seconds, try restarting VSCode
 
 **You are now ready with the setup steps and can start with the rule authoring!**
 
@@ -141,7 +136,7 @@ Unpublished/
 
 **Create Test Data.**
 
-> **NOTE:** Two VSCode extensions are particularly useful when working with CSV test data: 'Excel Viewer' displays CSVs as a formatted table, and 'Rainbow CSV' color-codes each column to make raw CSV easier to read. To install either, open the Extensions panel (click the Extensions icon in the left sidebar, or go to View → Extensions on the top bar on Windows/Linux or Code → Extensions on Mac), search for the extension name, and click Install.
+> **NOTE:** The workspace recommended extensions installed in step 10 include 'Excel Viewer' and 'Rainbow CSV'. Excel Viewer displays CSVs as a formatted table — to use it, open any CSV file and click the table icon in the top right corner of the editor, or right-click (Windows/Linux) / two-finger click (Mac) the file and select **Open With... → Excel Viewer**. Rainbow CSV color-codes each column directly in the raw CSV view to make it easier to read.
 
 6) Each test case's `data/` folder must contain the following files:
 
