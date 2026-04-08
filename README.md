@@ -142,12 +142,13 @@ Unpublished/
 
    **`.env`**
 
-   Specifies the standard and version to validate against. `PRODUCT` and `VERSION` are required; `SUBSTANDARD`, `CT`, and `DEFINE_XML` are optional depending on the rule.
+   Specifies the standard and version to validate against. `PRODUCT` and `VERSION` are required; `SUBSTANDARD`, `USE_CASE`, `CT`, and `DEFINE_XML` are optional depending on the rule.
 
    ```
    PRODUCT=TIG
    VERSION=1-0
    SUBSTANDARD=SDTM
+   USE_CASE=PROD
    CT=sdtmct2020-12-18
    DEFINE_XML=define.xml
    ```
