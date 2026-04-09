@@ -1,0 +1,17 @@
+Entity,Instance_ID,Path,Attribute,Value
+StudyDesignPopulation,StudyDesignPopulation_1,/study/versions/0/studyDesigns/0/population,StudyDesign.id,InterventionalStudyDesign_1
+StudyDesignPopulation,StudyDesignPopulation_1,/study/versions/0/studyDesigns/0/population,StudyDesign.name,Main Design
+StudyDesignPopulation,StudyDesignPopulation_1,/study/versions/0/studyDesigns/0/population,cohorts.name,"[StudyCohort_1: COHORT1, StudyCohort_2: COHORT2]"
+StudyDesignPopulation,StudyDesignPopulation_1,/study/versions/0/studyDesigns/0/population,cohorts.plannedCompletionNumber(value/range),"[StudyCohort_1: 10, StudyCohort_2: null]"
+StudyDesignPopulation,StudyDesignPopulation_1,/study/versions/0/studyDesigns/0/population,cohorts.plannedCompletionNumber.id,"[StudyCohort_1: Quantity_10, StudyCohort_2: ]"
+StudyDesignPopulation,StudyDesignPopulation_1,/study/versions/0/studyDesigns/0/population,name,POP1
+StudyDesignPopulation,StudyDesignPopulation_1,/study/versions/0/studyDesigns/0/population,plannedCompletionNumber(value/range),10
+StudyDesignPopulation,StudyDesignPopulation_1,/study/versions/0/studyDesigns/0/population,plannedCompletionNumber.id,Quantity_101
+StudyDesignPopulation,StudyDesignPopulation_2,/study/versions/0/studyDesigns/1/population,StudyDesign.id,InterventionalStudyDesign_2
+StudyDesignPopulation,StudyDesignPopulation_2,/study/versions/0/studyDesigns/1/population,StudyDesign.name,Second Design
+StudyDesignPopulation,StudyDesignPopulation_2,/study/versions/0/studyDesigns/1/population,cohorts.name,"[StudyCohort_3: COHORT3, StudyCohort_4: COHORT4]"
+StudyDesignPopulation,StudyDesignPopulation_2,/study/versions/0/studyDesigns/1/population,cohorts.plannedCompletionNumber(value/range),"[StudyCohort_3: 20, StudyCohort_4: Missing]"
+StudyDesignPopulation,StudyDesignPopulation_2,/study/versions/0/studyDesigns/1/population,cohorts.plannedCompletionNumber.id,"[StudyCohort_3: Quantity_102, StudyCohort_4: ]"
+StudyDesignPopulation,StudyDesignPopulation_2,/study/versions/0/studyDesigns/1/population,name,POP2
+StudyDesignPopulation,StudyDesignPopulation_2,/study/versions/0/studyDesigns/1/population,plannedCompletionNumber(value/range),15
+StudyDesignPopulation,StudyDesignPopulation_2,/study/versions/0/studyDesigns/1/population,plannedCompletionNumber.id,Quantity_1012
