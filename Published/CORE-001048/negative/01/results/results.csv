@@ -1,0 +1,19 @@
+Entity,Instance_ID,Path,Attribute,Value
+InterventionalStudyDesign,InterventionalStudyDesign_1,/study/versions/0/studyDesigns/0,Epoch order by previous/next,[ StudyEpoch_1: Screening > StudyEpoch_2: Treatment 1 > StudyEpoch_4: Treatment 3 > StudyEpoch_3: Treatment 2 > StudyEpoch_5: Follow-Up ]
+InterventionalStudyDesign,InterventionalStudyDesign_1,/study/versions/0/studyDesigns/0,Epoch order by timeline refs,[ StudyEpoch_1: Screening > StudyEpoch_2: Treatment 1 > StudyEpoch_3: Treatment 2 > StudyEpoch_4: Treatment 3 > StudyEpoch_5: Follow-Up ]
+InterventionalStudyDesign,InterventionalStudyDesign_1,/study/versions/0/studyDesigns/0,ScheduleTimeline.id,ScheduleTimeline_4
+InterventionalStudyDesign,InterventionalStudyDesign_1,/study/versions/0/studyDesigns/0,ScheduleTimeline.mainTimeline,True
+InterventionalStudyDesign,InterventionalStudyDesign_1,/study/versions/0/studyDesigns/0,ScheduleTimeline.name,Main Timeline
+InterventionalStudyDesign,InterventionalStudyDesign_1,/study/versions/0/studyDesigns/0,name,Study Design 1
+InterventionalStudyDesign,InterventionalStudyDesign_2,/study/versions/0/studyDesigns/1,Epoch order by previous/next,[ StudyEpoch_6: Screening > StudyEpoch_7: Treatment 1 > StudyEpoch_8: Treatment 2 > StudyEpoch_9: Treatment 3 > StudyEpoch_10: Follow-Up ]
+InterventionalStudyDesign,InterventionalStudyDesign_2,/study/versions/0/studyDesigns/1,Epoch order by timeline refs,[ StudyEpoch_6: Screening > StudyEpoch_7: Treatment 1 > StudyEpoch_8: Treatment 2 > StudyEpoch_10: Follow-Up > StudyEpoch_8: Treatment 2 > StudyEpoch_9: Treatment 3 > StudyEpoch_10: Follow-Up ]
+InterventionalStudyDesign,InterventionalStudyDesign_2,/study/versions/0/studyDesigns/1,ScheduleTimeline.id,ScheduleTimeline_5
+InterventionalStudyDesign,InterventionalStudyDesign_2,/study/versions/0/studyDesigns/1,ScheduleTimeline.mainTimeline,True
+InterventionalStudyDesign,InterventionalStudyDesign_2,/study/versions/0/studyDesigns/1,ScheduleTimeline.name,Main Timeline
+InterventionalStudyDesign,InterventionalStudyDesign_2,/study/versions/0/studyDesigns/1,name,Study Design 2
+ObservationalStudyDesign,ObservationalStudyDesign_1,/study/versions/0/studyDesigns/2,Epoch order by previous/next,[ StudyEpoch_11: Screening > StudyEpoch_12: Treatment 1 > StudyEpoch_13: Treatment 2 > StudyEpoch_14: Treatment 3 > StudyEpoch_15: Follow-Up ]
+ObservationalStudyDesign,ObservationalStudyDesign_1,/study/versions/0/studyDesigns/2,Epoch order by timeline refs,[ StudyEpoch_11: Screening > StudyEpoch_12: Treatment 1 > StudyEpoch_13: Treatment 2 > StudyEpoch_15: Follow-Up ]
+ObservationalStudyDesign,ObservationalStudyDesign_1,/study/versions/0/studyDesigns/2,ScheduleTimeline.id,ScheduleTimeline_9
+ObservationalStudyDesign,ObservationalStudyDesign_1,/study/versions/0/studyDesigns/2,ScheduleTimeline.mainTimeline,True
+ObservationalStudyDesign,ObservationalStudyDesign_1,/study/versions/0/studyDesigns/2,ScheduleTimeline.name,Main Timeline
+ObservationalStudyDesign,ObservationalStudyDesign_1,/study/versions/0/studyDesigns/2,name,Study Design 4

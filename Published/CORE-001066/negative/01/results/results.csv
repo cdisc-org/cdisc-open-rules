@@ -1,0 +1,51 @@
+Entity,Instance_ID,Path,Attribute,Value
+Activity,Activity_33,/study/versions/0/studyDesigns/0/activities/32,Issue(s),"[""The activity is a child but its previousId does not match the id of either its Parent Activity or any of the Parent Activity's other descendants.""]"
+Activity,Activity_33,/study/versions/0/studyDesigns/0/activities/32,Parent Activity's id,Activity_37
+Activity,Activity_33,/study/versions/0/studyDesigns/0/activities/32,Parent Activity's other descendants' ids,"['Activity_34', 'Activity_35', 'Activity_36']"
+Activity,Activity_33,/study/versions/0/studyDesigns/0/activities/32,Previous Activity's childIds,[]
+Activity,Activity_33,/study/versions/0/studyDesigns/0/activities/32,StudyDesign.id,InterventionalStudyDesign_1
+Activity,Activity_33,/study/versions/0/studyDesigns/0/activities/32,StudyDesign.name,Study Design 1
+Activity,Activity_33,/study/versions/0/studyDesigns/0/activities/32,childIds,[]
+Activity,Activity_33,/study/versions/0/studyDesigns/0/activities/32,name,Supine
+Activity,Activity_33,/study/versions/0/studyDesigns/0/activities/32,nextId,Activity_34
+Activity,Activity_33,/study/versions/0/studyDesigns/0/activities/32,previousId,Activity_32
+Activity,Activity_37,/study/versions/0/studyDesigns/0/activities/36,Issue(s),"[""The activity is a child but its previousId does not match the id of either its Parent Activity or any of the Parent Activity's other descendants.""]"
+Activity,Activity_37,/study/versions/0/studyDesigns/0/activities/36,Parent Activity's id,Activity_38
+Activity,Activity_37,/study/versions/0/studyDesigns/0/activities/36,Parent Activity's other descendants' ids,null
+Activity,Activity_37,/study/versions/0/studyDesigns/0/activities/36,Previous Activity's childIds,[]
+Activity,Activity_37,/study/versions/0/studyDesigns/0/activities/36,StudyDesign.id,InterventionalStudyDesign_1
+Activity,Activity_37,/study/versions/0/studyDesigns/0/activities/36,StudyDesign.name,Study Design 1
+Activity,Activity_37,/study/versions/0/studyDesigns/0/activities/36,childIds,"['Activity_33', 'Activity_34', 'Activity_35', 'Activity_36']"
+Activity,Activity_37,/study/versions/0/studyDesigns/0/activities/36,name,Vital Signs Process
+Activity,Activity_37,/study/versions/0/studyDesigns/0/activities/36,nextId,Activity_33
+Activity,Activity_37,/study/versions/0/studyDesigns/0/activities/36,previousId,Activity_32
+Activity,Activity_38,/study/versions/0/studyDesigns/0/activities/37,Issue(s),"['The activity has children but its nextId does not match any of its childIds.', ""The activity's id does not match any of the childIds of the Previous Activity.""]"
+Activity,Activity_38,/study/versions/0/studyDesigns/0/activities/37,Parent Activity's id,null
+Activity,Activity_38,/study/versions/0/studyDesigns/0/activities/37,Parent Activity's other descendants' ids,null
+Activity,Activity_38,/study/versions/0/studyDesigns/0/activities/37,Previous Activity's childIds,"['Activity_33', 'Activity_34', 'Activity_35', 'Activity_36']"
+Activity,Activity_38,/study/versions/0/studyDesigns/0/activities/37,StudyDesign.id,InterventionalStudyDesign_1
+Activity,Activity_38,/study/versions/0/studyDesigns/0/activities/37,StudyDesign.name,Study Design 1
+Activity,Activity_38,/study/versions/0/studyDesigns/0/activities/37,childIds,['Activity_37']
+Activity,Activity_38,/study/versions/0/studyDesigns/0/activities/37,name,LAST
+Activity,Activity_38,/study/versions/0/studyDesigns/0/activities/37,nextId,null
+Activity,Activity_38,/study/versions/0/studyDesigns/0/activities/37,previousId,Activity_37
+Activity,Activity_75,/study/versions/0/studyDesigns/1/activities/36,Issue(s),['The activity has children but its nextId does not match any of its childIds.']
+Activity,Activity_75,/study/versions/0/studyDesigns/1/activities/36,Parent Activity's id,null
+Activity,Activity_75,/study/versions/0/studyDesigns/1/activities/36,Parent Activity's other descendants' ids,null
+Activity,Activity_75,/study/versions/0/studyDesigns/1/activities/36,Previous Activity's childIds,[]
+Activity,Activity_75,/study/versions/0/studyDesigns/1/activities/36,StudyDesign.id,InterventionalStudyDesign_2
+Activity,Activity_75,/study/versions/0/studyDesigns/1/activities/36,StudyDesign.name,Study Design 1
+Activity,Activity_75,/study/versions/0/studyDesigns/1/activities/36,childIds,"['Activity_71', 'Activity_72', 'Activity_73', 'Activity_74']"
+Activity,Activity_75,/study/versions/0/studyDesigns/1/activities/36,name,Vital Signs Process
+Activity,Activity_75,/study/versions/0/studyDesigns/1/activities/36,nextId,Activity_76
+Activity,Activity_75,/study/versions/0/studyDesigns/1/activities/36,previousId,Activity_70
+Activity,Activity_76,/study/versions/0/studyDesigns/1/activities/37,Issue(s),"[""The activity's id does not match any of the childIds of the Previous Activity.""]"
+Activity,Activity_76,/study/versions/0/studyDesigns/1/activities/37,Parent Activity's id,null
+Activity,Activity_76,/study/versions/0/studyDesigns/1/activities/37,Parent Activity's other descendants' ids,null
+Activity,Activity_76,/study/versions/0/studyDesigns/1/activities/37,Previous Activity's childIds,"['Activity_71', 'Activity_72', 'Activity_73', 'Activity_74']"
+Activity,Activity_76,/study/versions/0/studyDesigns/1/activities/37,StudyDesign.id,InterventionalStudyDesign_2
+Activity,Activity_76,/study/versions/0/studyDesigns/1/activities/37,StudyDesign.name,Study Design 1
+Activity,Activity_76,/study/versions/0/studyDesigns/1/activities/37,childIds,[]
+Activity,Activity_76,/study/versions/0/studyDesigns/1/activities/37,name,LAST
+Activity,Activity_76,/study/versions/0/studyDesigns/1/activities/37,nextId,null
+Activity,Activity_76,/study/versions/0/studyDesigns/1/activities/37,previousId,Activity_75
