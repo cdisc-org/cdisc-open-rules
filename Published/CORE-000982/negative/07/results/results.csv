@@ -1,9 +1,9 @@
-Entity,Instance_ID,Path,Attribute,Value
-StudyDesignPopulation,StudyDesignPopulation_1,/study/versions/0/studyDesigns/0/population,StudyDesign.id,InterventionalStudyDesign_1
-StudyDesignPopulation,StudyDesignPopulation_1,/study/versions/0/studyDesigns/0/population,StudyDesign.name,Main Design
-StudyDesignPopulation,StudyDesignPopulation_1,/study/versions/0/studyDesigns/0/population,cohorts.name,"[StudyCohort_1: COHORT1, StudyCohort_2: COHORT2]"
-StudyDesignPopulation,StudyDesignPopulation_1,/study/versions/0/studyDesigns/0/population,cohorts.plannedCompletionNumber(value/range),"[StudyCohort_1: 18 () to 100 Year(C29848), StudyCohort_2: 20 Year(C29848) to 99 ()]"
-StudyDesignPopulation,StudyDesignPopulation_1,/study/versions/0/studyDesigns/0/population,cohorts.plannedCompletionNumber.id,"[StudyCohort_1: Range_105, StudyCohort_2: Range_106]"
-StudyDesignPopulation,StudyDesignPopulation_1,/study/versions/0/studyDesigns/0/population,name,POP1
-StudyDesignPopulation,StudyDesignPopulation_1,/study/versions/0/studyDesigns/0/population,plannedCompletionNumber(value/range),null
-StudyDesignPopulation,StudyDesignPopulation_1,/study/versions/0/studyDesigns/0/population,plannedCompletionNumber.id,null
+Path,Attribute,Value
+/study/versions/0/studyDesigns/0/population,StudyDesign.id,InterventionalStudyDesign_1
+/study/versions/0/studyDesigns/0/population,StudyDesign.name,Main Design
+/study/versions/0/studyDesigns/0/population,cohorts.name,"[StudyCohort_1: COHORT1, StudyCohort_2: COHORT2]"
+/study/versions/0/studyDesigns/0/population,cohorts.plannedCompletionNumber(value/range),"[StudyCohort_1: 18 () to 100 Year(C29848), StudyCohort_2: 20 Year(C29848) to 99 ()]"
+/study/versions/0/studyDesigns/0/population,cohorts.plannedCompletionNumber.id,"[StudyCohort_1: Range_105, StudyCohort_2: Range_106]"
+/study/versions/0/studyDesigns/0/population,name,POP1
+/study/versions/0/studyDesigns/0/population,plannedCompletionNumber(value/range),null
+/study/versions/0/studyDesigns/0/population,plannedCompletionNumber.id,null

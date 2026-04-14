@@ -1,37 +1,37 @@
-Entity,Instance_ID,Path,Attribute,Value
-StudyArm,StudyArm_1,/study/versions/0/studyDesigns/0/arms/0,StudyDesign.id,InterventionalStudyDesign_1
-StudyArm,StudyArm_1,/study/versions/0/studyDesigns/0/arms/0,StudyDesign.name,Study Design 1
-StudyArm,StudyArm_1,/study/versions/0/studyDesigns/0/arms/0,StudyDesign.population.cohorts.id,null
-StudyArm,StudyArm_1,/study/versions/0/studyDesigns/0/arms/0,StudyDesign.population.id,StudyDesignPopulation_1
-StudyArm,StudyArm_1,/study/versions/0/studyDesigns/0/arms/0,name,Placebo
-StudyArm,StudyArm_1,/study/versions/0/studyDesigns/0/arms/0,populationId,StudyDesignPopulation_2
-StudyArm,StudyArm_2,/study/versions/0/studyDesigns/0/arms/1,StudyDesign.id,InterventionalStudyDesign_1
-StudyArm,StudyArm_2,/study/versions/0/studyDesigns/0/arms/1,StudyDesign.name,Study Design 1
-StudyArm,StudyArm_2,/study/versions/0/studyDesigns/0/arms/1,StudyDesign.population.cohorts.id,null
-StudyArm,StudyArm_2,/study/versions/0/studyDesigns/0/arms/1,StudyDesign.population.id,StudyDesignPopulation_1
-StudyArm,StudyArm_2,/study/versions/0/studyDesigns/0/arms/1,name,Xanomeline Low Dose
-StudyArm,StudyArm_2,/study/versions/0/studyDesigns/0/arms/1,populationId,StudyCohort_1
-StudyArm,StudyArm_3,/study/versions/0/studyDesigns/0/arms/2,StudyDesign.id,InterventionalStudyDesign_1
-StudyArm,StudyArm_3,/study/versions/0/studyDesigns/0/arms/2,StudyDesign.name,Study Design 1
-StudyArm,StudyArm_3,/study/versions/0/studyDesigns/0/arms/2,StudyDesign.population.cohorts.id,null
-StudyArm,StudyArm_3,/study/versions/0/studyDesigns/0/arms/2,StudyDesign.population.id,StudyDesignPopulation_1
-StudyArm,StudyArm_3,/study/versions/0/studyDesigns/0/arms/2,name,Xanomeline High Dose
-StudyArm,StudyArm_3,/study/versions/0/studyDesigns/0/arms/2,populationId,StudyCohort_1
-StudyArm,StudyArm_3,/study/versions/0/studyDesigns/0/arms/2,StudyDesign.id,InterventionalStudyDesign_1
-StudyArm,StudyArm_3,/study/versions/0/studyDesigns/0/arms/2,StudyDesign.name,Study Design 1
-StudyArm,StudyArm_3,/study/versions/0/studyDesigns/0/arms/2,StudyDesign.population.cohorts.id,null
-StudyArm,StudyArm_3,/study/versions/0/studyDesigns/0/arms/2,StudyDesign.population.id,StudyDesignPopulation_1
-StudyArm,StudyArm_3,/study/versions/0/studyDesigns/0/arms/2,name,Xanomeline High Dose
-StudyArm,StudyArm_3,/study/versions/0/studyDesigns/0/arms/2,populationId,StudyCohort_2
-StudyArm,StudyArm_3,/study/versions/0/studyDesigns/0/arms/2,StudyDesign.id,InterventionalStudyDesign_1
-StudyArm,StudyArm_3,/study/versions/0/studyDesigns/0/arms/2,StudyDesign.name,Study Design 1
-StudyArm,StudyArm_3,/study/versions/0/studyDesigns/0/arms/2,StudyDesign.population.cohorts.id,null
-StudyArm,StudyArm_3,/study/versions/0/studyDesigns/0/arms/2,StudyDesign.population.id,StudyDesignPopulation_1
-StudyArm,StudyArm_3,/study/versions/0/studyDesigns/0/arms/2,name,Xanomeline High Dose
-StudyArm,StudyArm_3,/study/versions/0/studyDesigns/0/arms/2,populationId,StudyCohort_xx
-StudyArm,StudyArm_4,/study/versions/0/studyDesigns/1/arms/0,StudyDesign.id,InterventionalStudyDesign_2
-StudyArm,StudyArm_4,/study/versions/0/studyDesigns/1/arms/0,StudyDesign.name,Study Design 2
-StudyArm,StudyArm_4,/study/versions/0/studyDesigns/1/arms/0,StudyDesign.population.cohorts.id,"['StudyCohort_1', 'StudyCohort_2']"
-StudyArm,StudyArm_4,/study/versions/0/studyDesigns/1/arms/0,StudyDesign.population.id,StudyDesignPopulation_2
-StudyArm,StudyArm_4,/study/versions/0/studyDesigns/1/arms/0,name,Placebo
-StudyArm,StudyArm_4,/study/versions/0/studyDesigns/1/arms/0,populationId,StudyDesignPopulation_1
+Path,Attribute,Value
+/study/versions/0/studyDesigns/0/arms/0,StudyDesign.id,InterventionalStudyDesign_1
+/study/versions/0/studyDesigns/0/arms/0,StudyDesign.name,Study Design 1
+/study/versions/0/studyDesigns/0/arms/0,StudyDesign.population.cohorts.id,null
+/study/versions/0/studyDesigns/0/arms/0,StudyDesign.population.id,StudyDesignPopulation_1
+/study/versions/0/studyDesigns/0/arms/0,name,Placebo
+/study/versions/0/studyDesigns/0/arms/0,populationId,StudyDesignPopulation_2
+/study/versions/0/studyDesigns/0/arms/1,StudyDesign.id,InterventionalStudyDesign_1
+/study/versions/0/studyDesigns/0/arms/1,StudyDesign.name,Study Design 1
+/study/versions/0/studyDesigns/0/arms/1,StudyDesign.population.cohorts.id,null
+/study/versions/0/studyDesigns/0/arms/1,StudyDesign.population.id,StudyDesignPopulation_1
+/study/versions/0/studyDesigns/0/arms/1,name,Xanomeline Low Dose
+/study/versions/0/studyDesigns/0/arms/1,populationId,StudyCohort_1
+/study/versions/0/studyDesigns/0/arms/2,StudyDesign.id,InterventionalStudyDesign_1
+/study/versions/0/studyDesigns/0/arms/2,StudyDesign.name,Study Design 1
+/study/versions/0/studyDesigns/0/arms/2,StudyDesign.population.cohorts.id,null
+/study/versions/0/studyDesigns/0/arms/2,StudyDesign.population.id,StudyDesignPopulation_1
+/study/versions/0/studyDesigns/0/arms/2,name,Xanomeline High Dose
+/study/versions/0/studyDesigns/0/arms/2,populationId,StudyCohort_1
+/study/versions/0/studyDesigns/0/arms/2,StudyDesign.id,InterventionalStudyDesign_1
+/study/versions/0/studyDesigns/0/arms/2,StudyDesign.name,Study Design 1
+/study/versions/0/studyDesigns/0/arms/2,StudyDesign.population.cohorts.id,null
+/study/versions/0/studyDesigns/0/arms/2,StudyDesign.population.id,StudyDesignPopulation_1
+/study/versions/0/studyDesigns/0/arms/2,name,Xanomeline High Dose
+/study/versions/0/studyDesigns/0/arms/2,populationId,StudyCohort_2
+/study/versions/0/studyDesigns/0/arms/2,StudyDesign.id,InterventionalStudyDesign_1
+/study/versions/0/studyDesigns/0/arms/2,StudyDesign.name,Study Design 1
+/study/versions/0/studyDesigns/0/arms/2,StudyDesign.population.cohorts.id,null
+/study/versions/0/studyDesigns/0/arms/2,StudyDesign.population.id,StudyDesignPopulation_1
+/study/versions/0/studyDesigns/0/arms/2,name,Xanomeline High Dose
+/study/versions/0/studyDesigns/0/arms/2,populationId,StudyCohort_xx
+/study/versions/0/studyDesigns/1/arms/0,StudyDesign.id,InterventionalStudyDesign_2
+/study/versions/0/studyDesigns/1/arms/0,StudyDesign.name,Study Design 2
+/study/versions/0/studyDesigns/1/arms/0,StudyDesign.population.cohorts.id,"['StudyCohort_1', 'StudyCohort_2']"
+/study/versions/0/studyDesigns/1/arms/0,StudyDesign.population.id,StudyDesignPopulation_2
+/study/versions/0/studyDesigns/1/arms/0,name,Placebo
+/study/versions/0/studyDesigns/1/arms/0,populationId,StudyDesignPopulation_1

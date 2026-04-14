@@ -1,9 +1,9 @@
-Entity,Instance_ID,Path,Attribute,Value
-StudyDesignPopulation,StudyDesignPopulation_1,/study/versions/0/studyDesigns/0/population,StudyDesign.id,InterventionalStudyDesign_1
-StudyDesignPopulation,StudyDesignPopulation_1,/study/versions/0/studyDesigns/0/population,StudyDesign.name,Main Design
-StudyDesignPopulation,StudyDesignPopulation_1,/study/versions/0/studyDesigns/0/population,cohorts.name,"[StudyCohort_1: COHORT1, StudyCohort_2: COHORT2]"
-StudyDesignPopulation,StudyDesignPopulation_1,/study/versions/0/studyDesigns/0/population,cohorts.plannedEnrollmentNumber(value/range),"[StudyCohort_1: null, StudyCohort_2: 22 Day (C25301)]"
-StudyDesignPopulation,StudyDesignPopulation_1,/study/versions/0/studyDesigns/0/population,cohorts.plannedEnrollmentNumber.id,"[StudyCohort_1: , StudyCohort_2: Quantity_103]"
-StudyDesignPopulation,StudyDesignPopulation_1,/study/versions/0/studyDesigns/0/population,name,POP1
-StudyDesignPopulation,StudyDesignPopulation_1,/study/versions/0/studyDesigns/0/population,plannedEnrollmentNumber(value/range),null
-StudyDesignPopulation,StudyDesignPopulation_1,/study/versions/0/studyDesigns/0/population,plannedEnrollmentNumber.id,null
+Path,Attribute,Value
+/study/versions/0/studyDesigns/0/population,StudyDesign.id,InterventionalStudyDesign_1
+/study/versions/0/studyDesigns/0/population,StudyDesign.name,Main Design
+/study/versions/0/studyDesigns/0/population,cohorts.name,"[StudyCohort_1: COHORT1, StudyCohort_2: COHORT2]"
+/study/versions/0/studyDesigns/0/population,cohorts.plannedEnrollmentNumber(value/range),"[StudyCohort_1: null, StudyCohort_2: 22 Day (C25301)]"
+/study/versions/0/studyDesigns/0/population,cohorts.plannedEnrollmentNumber.id,"[StudyCohort_1: , StudyCohort_2: Quantity_103]"
+/study/versions/0/studyDesigns/0/population,name,POP1
+/study/versions/0/studyDesigns/0/population,plannedEnrollmentNumber(value/range),null
+/study/versions/0/studyDesigns/0/population,plannedEnrollmentNumber.id,null

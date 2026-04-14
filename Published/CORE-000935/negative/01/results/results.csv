@@ -1,11 +1,11 @@
-Entity,Instance_ID,Path,Attribute,Value
-Code,Code_13,/study/versions/0/dateValues/0/type,error_attribute,code
-Code,Code_13,/study/versions/0/dateValues/0/type,message,71476 is not of type 'string'
-Encounter,Encounter_1,/study/versions/0/studyDesigns/0/encounters/0,error_attribute,contactModes
-Encounter,Encounter_1,/study/versions/0/studyDesigns/0/encounters/0,message,[Value of contactModes] is not of type 'array'
-GeographicScope,GeographicScope_1,/study/versions/0/dateValues/0/geographicScopes/0,error_attribute,code
-GeographicScope,GeographicScope_1,/study/versions/0/dateValues/0/geographicScopes/0,message,True is not of type 'object'
-Quantity,Quantity_4,/study/versions/0/studyInterventions/0/minimumResponseDuration,error_attribute,value
-Quantity,Quantity_4,/study/versions/0/studyInterventions/0/minimumResponseDuration,message,'1.0' is not of type 'number'
-Range,Range_1_u,/study/versions/0/studyDesigns/0/population/plannedAge,error_attribute,isApproximate
-Range,Range_1_u,/study/versions/0/studyDesigns/0/population/plannedAge,message,'false' is not of type 'boolean'
+Path,Attribute,Value
+/study/versions/0/dateValues/0/type,error_attribute,code
+/study/versions/0/dateValues/0/type,message,71476 is not of type 'string'
+/study/versions/0/studyDesigns/0/encounters/0,error_attribute,contactModes
+/study/versions/0/studyDesigns/0/encounters/0,message,[Value of contactModes] is not of type 'array'
+/study/versions/0/dateValues/0/geographicScopes/0,error_attribute,code
+/study/versions/0/dateValues/0/geographicScopes/0,message,True is not of type 'object'
+/study/versions/0/studyInterventions/0/minimumResponseDuration,error_attribute,value
+/study/versions/0/studyInterventions/0/minimumResponseDuration,message,'1.0' is not of type 'number'
+/study/versions/0/studyDesigns/0/population/plannedAge,error_attribute,isApproximate
+/study/versions/0/studyDesigns/0/population/plannedAge,message,'false' is not of type 'boolean'
