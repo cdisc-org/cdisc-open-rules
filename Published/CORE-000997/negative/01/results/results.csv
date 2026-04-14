@@ -1,9 +1,9 @@
-Entity,Instance_ID,Path,Attribute,Value
-StudyRole,StudyRole_2,/study/versions/0/roles/1,assignedPersons,[AssignedPerson_1: AP1; AssignedPerson_2: AP2]
-StudyRole,StudyRole_2,/study/versions/0/roles/1,code,Investigator (C25936)
-StudyRole,StudyRole_2,/study/versions/0/roles/1,name,ROLE_2
-StudyRole,StudyRole_2,/study/versions/0/roles/1,organizationIds,[Organization_1: LILLY; Organization_xx: Invalid organizationId]
-StudyRole,StudyRole_3,/study/versions/0/roles/2,assignedPersons,[AssignedPerson_3: AP3]
-StudyRole,StudyRole_3,/study/versions/0/roles/2,code,Local Sponsor (C215670)
-StudyRole,StudyRole_3,/study/versions/0/roles/2,name,ROLE_3
-StudyRole,StudyRole_3,/study/versions/0/roles/2,organizationIds,[Organization_3: SITE_ORG_1]
+Path,Attribute,Value
+/study/versions/0/roles/1,assignedPersons,[AssignedPerson_1: AP1; AssignedPerson_2: AP2]
+/study/versions/0/roles/1,code,Investigator (C25936)
+/study/versions/0/roles/1,name,ROLE_2
+/study/versions/0/roles/1,organizationIds,[Organization_1: LILLY; Organization_xx: Invalid organizationId]
+/study/versions/0/roles/2,assignedPersons,[AssignedPerson_3: AP3]
+/study/versions/0/roles/2,code,Local Sponsor (C215670)
+/study/versions/0/roles/2,name,ROLE_3
+/study/versions/0/roles/2,organizationIds,[Organization_3: SITE_ORG_1]

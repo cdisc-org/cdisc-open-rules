@@ -1,41 +1,41 @@
-Entity,Instance_ID,Path,Attribute,Value
-AdministrableProductIdentifier,AdministrableProductIdentifier_1,/study/versions/0/administrableProducts/0/identifiers/0,Organization.name,LILLY
-AdministrableProductIdentifier,AdministrableProductIdentifier_1,/study/versions/0/administrableProducts/0/identifiers/0,scopeId,Organization_1
-AdministrableProductIdentifier,AdministrableProductIdentifier_1,/study/versions/0/administrableProducts/0/identifiers/0,text,XAN-E-54
-AdministrableProductIdentifier,AdministrableProductIdentifier_1,/study/versions/0/administrableProducts/0/identifiers/0,type.decode,null
-AdministrableProductIdentifier,AdministrableProductIdentifier_2,/study/versions/0/administrableProducts/1/identifiers/0,Organization.name,LILLY
-AdministrableProductIdentifier,AdministrableProductIdentifier_2,/study/versions/0/administrableProducts/1/identifiers/0,scopeId,Organization_1
-AdministrableProductIdentifier,AdministrableProductIdentifier_2,/study/versions/0/administrableProducts/1/identifiers/0,text,XAN-E-54
-AdministrableProductIdentifier,AdministrableProductIdentifier_2,/study/versions/0/administrableProducts/1/identifiers/0,type.decode,null
-MedicalDeviceIdentifier,MedicalDeviceIdentifier_1,/study/versions/0/medicalDevices/0/identifiers/0,Organization.name,LILLY
-MedicalDeviceIdentifier,MedicalDeviceIdentifier_1,/study/versions/0/medicalDevices/0/identifiers/0,scopeId,Organization_1
-MedicalDeviceIdentifier,MedicalDeviceIdentifier_1,/study/versions/0/medicalDevices/0/identifiers/0,text,M12345
-MedicalDeviceIdentifier,MedicalDeviceIdentifier_1,/study/versions/0/medicalDevices/0/identifiers/0,type.decode,Model Number
-MedicalDeviceIdentifier,MedicalDeviceIdentifier_2,/study/versions/0/medicalDevices/0/identifiers/1,Organization.name,LILLY
-MedicalDeviceIdentifier,MedicalDeviceIdentifier_2,/study/versions/0/medicalDevices/0/identifiers/1,scopeId,Organization_1
-MedicalDeviceIdentifier,MedicalDeviceIdentifier_2,/study/versions/0/medicalDevices/0/identifiers/1,text,M12345
-MedicalDeviceIdentifier,MedicalDeviceIdentifier_2,/study/versions/0/medicalDevices/0/identifiers/1,type.decode,Batch Number
-MedicalDeviceIdentifier,MedicalDeviceIdentifier_3,/study/versions/0/medicalDevices/0/identifiers/2,Organization.name,FDA
-MedicalDeviceIdentifier,MedicalDeviceIdentifier_3,/study/versions/0/medicalDevices/0/identifiers/2,scopeId,Organization_4
-MedicalDeviceIdentifier,MedicalDeviceIdentifier_3,/study/versions/0/medicalDevices/0/identifiers/2,text,00123456789012
-MedicalDeviceIdentifier,MedicalDeviceIdentifier_3,/study/versions/0/medicalDevices/0/identifiers/2,type.decode,FDA Unique Device Identification
-MedicalDeviceIdentifier,MedicalDeviceIdentifier_12,/study/versions/0/medicalDevices/3/identifiers/2,Organization.name,FDA
-MedicalDeviceIdentifier,MedicalDeviceIdentifier_12,/study/versions/0/medicalDevices/3/identifiers/2,scopeId,Organization_4
-MedicalDeviceIdentifier,MedicalDeviceIdentifier_12,/study/versions/0/medicalDevices/3/identifiers/2,text,00123456789012
-MedicalDeviceIdentifier,MedicalDeviceIdentifier_12,/study/versions/0/medicalDevices/3/identifiers/2,type.decode,FDA Unique Device Identification
-ReferenceIdentifier,ReferenceIdentifier_1,/study/versions/0/referenceIdentifiers/0,Organization.name,LILLY
-ReferenceIdentifier,ReferenceIdentifier_1,/study/versions/0/referenceIdentifiers/0,scopeId,Organization_1
-ReferenceIdentifier,ReferenceIdentifier_1,/study/versions/0/referenceIdentifiers/0,text,LZZT CD Plan 1
-ReferenceIdentifier,ReferenceIdentifier_1,/study/versions/0/referenceIdentifiers/0,type.decode,Clinical Development Plan
-ReferenceIdentifier,ReferenceIdentifier_2,/study/versions/0/referenceIdentifiers/1,Organization.name,LILLY
-ReferenceIdentifier,ReferenceIdentifier_2,/study/versions/0/referenceIdentifiers/1,scopeId,Organization_1
-ReferenceIdentifier,ReferenceIdentifier_2,/study/versions/0/referenceIdentifiers/1,text,LZZT CD Plan 1
-ReferenceIdentifier,ReferenceIdentifier_2,/study/versions/0/referenceIdentifiers/1,type.decode,Pediatric Investigation Plan
-StudyIdentifier,StudyIdentifier_1,/study/versions/0/studyIdentifiers/0,Organization.name,LILLY
-StudyIdentifier,StudyIdentifier_1,/study/versions/0/studyIdentifiers/0,scopeId,Organization_1
-StudyIdentifier,StudyIdentifier_1,/study/versions/0/studyIdentifiers/0,text,H2Q-MC-LZZT
-StudyIdentifier,StudyIdentifier_1,/study/versions/0/studyIdentifiers/0,type.decode,null
-StudyIdentifier,StudyIdentifier_3,/study/versions/0/studyIdentifiers/2,Organization.name,LILLY
-StudyIdentifier,StudyIdentifier_3,/study/versions/0/studyIdentifiers/2,scopeId,Organization_1
-StudyIdentifier,StudyIdentifier_3,/study/versions/0/studyIdentifiers/2,text,H2Q-MC-LZZT
-StudyIdentifier,StudyIdentifier_3,/study/versions/0/studyIdentifiers/2,type.decode,null
+Path,Attribute,Value
+/study/versions/0/administrableProducts/0/identifiers/0,Organization.name,LILLY
+/study/versions/0/administrableProducts/0/identifiers/0,scopeId,Organization_1
+/study/versions/0/administrableProducts/0/identifiers/0,text,XAN-E-54
+/study/versions/0/administrableProducts/0/identifiers/0,type.decode,null
+/study/versions/0/administrableProducts/1/identifiers/0,Organization.name,LILLY
+/study/versions/0/administrableProducts/1/identifiers/0,scopeId,Organization_1
+/study/versions/0/administrableProducts/1/identifiers/0,text,XAN-E-54
+/study/versions/0/administrableProducts/1/identifiers/0,type.decode,null
+/study/versions/0/medicalDevices/0/identifiers/0,Organization.name,LILLY
+/study/versions/0/medicalDevices/0/identifiers/0,scopeId,Organization_1
+/study/versions/0/medicalDevices/0/identifiers/0,text,M12345
+/study/versions/0/medicalDevices/0/identifiers/0,type.decode,Model Number
+/study/versions/0/medicalDevices/0/identifiers/1,Organization.name,LILLY
+/study/versions/0/medicalDevices/0/identifiers/1,scopeId,Organization_1
+/study/versions/0/medicalDevices/0/identifiers/1,text,M12345
+/study/versions/0/medicalDevices/0/identifiers/1,type.decode,Batch Number
+/study/versions/0/medicalDevices/0/identifiers/2,Organization.name,FDA
+/study/versions/0/medicalDevices/0/identifiers/2,scopeId,Organization_4
+/study/versions/0/medicalDevices/0/identifiers/2,text,00123456789012
+/study/versions/0/medicalDevices/0/identifiers/2,type.decode,FDA Unique Device Identification
+/study/versions/0/medicalDevices/3/identifiers/2,Organization.name,FDA
+/study/versions/0/medicalDevices/3/identifiers/2,scopeId,Organization_4
+/study/versions/0/medicalDevices/3/identifiers/2,text,00123456789012
+/study/versions/0/medicalDevices/3/identifiers/2,type.decode,FDA Unique Device Identification
+/study/versions/0/referenceIdentifiers/0,Organization.name,LILLY
+/study/versions/0/referenceIdentifiers/0,scopeId,Organization_1
+/study/versions/0/referenceIdentifiers/0,text,LZZT CD Plan 1
+/study/versions/0/referenceIdentifiers/0,type.decode,Clinical Development Plan
+/study/versions/0/referenceIdentifiers/1,Organization.name,LILLY
+/study/versions/0/referenceIdentifiers/1,scopeId,Organization_1
+/study/versions/0/referenceIdentifiers/1,text,LZZT CD Plan 1
+/study/versions/0/referenceIdentifiers/1,type.decode,Pediatric Investigation Plan
+/study/versions/0/studyIdentifiers/0,Organization.name,LILLY
+/study/versions/0/studyIdentifiers/0,scopeId,Organization_1
+/study/versions/0/studyIdentifiers/0,text,H2Q-MC-LZZT
+/study/versions/0/studyIdentifiers/0,type.decode,null
+/study/versions/0/studyIdentifiers/2,Organization.name,LILLY
+/study/versions/0/studyIdentifiers/2,scopeId,Organization_1
+/study/versions/0/studyIdentifiers/2,text,H2Q-MC-LZZT
+/study/versions/0/studyIdentifiers/2,type.decode,null

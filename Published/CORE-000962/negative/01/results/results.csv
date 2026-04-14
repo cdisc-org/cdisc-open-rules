@@ -1,17 +1,17 @@
-Entity,Instance_ID,Path,Attribute,Value
-StudyDesignPopulation,StudyDesignPopulation_1,/study/versions/0/studyDesigns/0/population,StudyDesign.id,InterventionalStudyDesign_1
-StudyDesignPopulation,StudyDesignPopulation_1,/study/versions/0/studyDesigns/0/population,StudyDesign.name,Main Design
-StudyDesignPopulation,StudyDesignPopulation_1,/study/versions/0/studyDesigns/0/population,cohorts.name,"[StudyCohort_1: COHORT1, StudyCohort_2: COHORT2]"
-StudyDesignPopulation,StudyDesignPopulation_1,/study/versions/0/studyDesigns/0/population,cohorts.plannedCompletionNumber(value/range),"[StudyCohort_1: 10, StudyCohort_2: Missing]"
-StudyDesignPopulation,StudyDesignPopulation_1,/study/versions/0/studyDesigns/0/population,cohorts.plannedCompletionNumber.id,"[StudyCohort_1: Quantity_11, StudyCohort_2: ]"
-StudyDesignPopulation,StudyDesignPopulation_1,/study/versions/0/studyDesigns/0/population,name,POP1
-StudyDesignPopulation,StudyDesignPopulation_1,/study/versions/0/studyDesigns/0/population,plannedCompletionNumber(value/range),null
-StudyDesignPopulation,StudyDesignPopulation_1,/study/versions/0/studyDesigns/0/population,plannedCompletionNumber.id,null
-StudyDesignPopulation,StudyDesignPopulation_2,/study/versions/0/studyDesigns/1/population,StudyDesign.id,InterventionalStudyDesign_2
-StudyDesignPopulation,StudyDesignPopulation_2,/study/versions/0/studyDesigns/1/population,StudyDesign.name,Design 2
-StudyDesignPopulation,StudyDesignPopulation_2,/study/versions/0/studyDesigns/1/population,cohorts.name,"[StudyCohort_3: COHORT3, StudyCohort_4: COHORT4]"
-StudyDesignPopulation,StudyDesignPopulation_2,/study/versions/0/studyDesigns/1/population,cohorts.plannedCompletionNumber(value/range),"[StudyCohort_3: 10, StudyCohort_4: null]"
-StudyDesignPopulation,StudyDesignPopulation_2,/study/versions/0/studyDesigns/1/population,cohorts.plannedCompletionNumber.id,"[StudyCohort_3: Quantity_10, StudyCohort_4: ]"
-StudyDesignPopulation,StudyDesignPopulation_2,/study/versions/0/studyDesigns/1/population,name,POP2
-StudyDesignPopulation,StudyDesignPopulation_2,/study/versions/0/studyDesigns/1/population,plannedCompletionNumber(value/range),Missing
-StudyDesignPopulation,StudyDesignPopulation_2,/study/versions/0/studyDesigns/1/population,plannedCompletionNumber.id,null
+Path,Attribute,Value
+/study/versions/0/studyDesigns/0/population,StudyDesign.id,InterventionalStudyDesign_1
+/study/versions/0/studyDesigns/0/population,StudyDesign.name,Main Design
+/study/versions/0/studyDesigns/0/population,cohorts.name,"[StudyCohort_1: COHORT1, StudyCohort_2: COHORT2]"
+/study/versions/0/studyDesigns/0/population,cohorts.plannedCompletionNumber(value/range),"[StudyCohort_1: 10, StudyCohort_2: Missing]"
+/study/versions/0/studyDesigns/0/population,cohorts.plannedCompletionNumber.id,"[StudyCohort_1: Quantity_11, StudyCohort_2: ]"
+/study/versions/0/studyDesigns/0/population,name,POP1
+/study/versions/0/studyDesigns/0/population,plannedCompletionNumber(value/range),null
+/study/versions/0/studyDesigns/0/population,plannedCompletionNumber.id,null
+/study/versions/0/studyDesigns/1/population,StudyDesign.id,InterventionalStudyDesign_2
+/study/versions/0/studyDesigns/1/population,StudyDesign.name,Design 2
+/study/versions/0/studyDesigns/1/population,cohorts.name,"[StudyCohort_3: COHORT3, StudyCohort_4: COHORT4]"
+/study/versions/0/studyDesigns/1/population,cohorts.plannedCompletionNumber(value/range),"[StudyCohort_3: 10, StudyCohort_4: null]"
+/study/versions/0/studyDesigns/1/population,cohorts.plannedCompletionNumber.id,"[StudyCohort_3: Quantity_10, StudyCohort_4: ]"
+/study/versions/0/studyDesigns/1/population,name,POP2
+/study/versions/0/studyDesigns/1/population,plannedCompletionNumber(value/range),Missing
+/study/versions/0/studyDesigns/1/population,plannedCompletionNumber.id,null

@@ -1,13 +1,13 @@
-Entity,Instance_ID,Path,Attribute,Value
-ProductOrganizationRole,ProductRole_1,/study/versions/0/productOrganizationRoles/0,appliesTo name,"[AdmProd_1: AdmProd1, XX2: Invalid reference]"
-ProductOrganizationRole,ProductRole_1,/study/versions/0/productOrganizationRoles/0,appliesToIds,"[AdmProd_1, XX2]"
-ProductOrganizationRole,ProductRole_1,/study/versions/0/productOrganizationRoles/0,name,Manufacturer_1
-ProductOrganizationRole,ProductRole_2,/study/versions/0/productOrganizationRoles/1,appliesTo name,[xx2: Invalid reference]
-ProductOrganizationRole,ProductRole_2,/study/versions/0/productOrganizationRoles/1,appliesToIds,[xx2]
-ProductOrganizationRole,ProductRole_2,/study/versions/0/productOrganizationRoles/1,name,Manufacturer_2
-ProductOrganizationRole,ProductRole_3,/study/versions/0/productOrganizationRoles/2,appliesTo name,"[MedDev_1: MedDev1, rte: Invalid reference]"
-ProductOrganizationRole,ProductRole_3,/study/versions/0/productOrganizationRoles/2,appliesToIds,"[MedDev_1, rte]"
-ProductOrganizationRole,ProductRole_3,/study/versions/0/productOrganizationRoles/2,name,Supplier_1
-ProductOrganizationRole,ProductRole_4,/study/versions/0/productOrganizationRoles/3,appliesTo name,"[AdmProd_1: AdmProd1, MedDev_1: MedDev1, xx2: Invalid reference]"
-ProductOrganizationRole,ProductRole_4,/study/versions/0/productOrganizationRoles/3,appliesToIds,"[AdmProd_1, MedDev_1, xx2]"
-ProductOrganizationRole,ProductRole_4,/study/versions/0/productOrganizationRoles/3,name,Supplier_2
+Path,Attribute,Value
+/study/versions/0/productOrganizationRoles/0,appliesTo name,"[AdmProd_1: AdmProd1, XX2: Invalid reference]"
+/study/versions/0/productOrganizationRoles/0,appliesToIds,"[AdmProd_1, XX2]"
+/study/versions/0/productOrganizationRoles/0,name,Manufacturer_1
+/study/versions/0/productOrganizationRoles/1,appliesTo name,[xx2: Invalid reference]
+/study/versions/0/productOrganizationRoles/1,appliesToIds,[xx2]
+/study/versions/0/productOrganizationRoles/1,name,Manufacturer_2
+/study/versions/0/productOrganizationRoles/2,appliesTo name,"[MedDev_1: MedDev1, rte: Invalid reference]"
+/study/versions/0/productOrganizationRoles/2,appliesToIds,"[MedDev_1, rte]"
+/study/versions/0/productOrganizationRoles/2,name,Supplier_1
+/study/versions/0/productOrganizationRoles/3,appliesTo name,"[AdmProd_1: AdmProd1, MedDev_1: MedDev1, xx2: Invalid reference]"
+/study/versions/0/productOrganizationRoles/3,appliesToIds,"[AdmProd_1, MedDev_1, xx2]"
+/study/versions/0/productOrganizationRoles/3,name,Supplier_2

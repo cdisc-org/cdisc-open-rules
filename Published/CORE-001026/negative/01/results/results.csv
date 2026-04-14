@@ -1,13 +1,13 @@
-Entity,Instance_ID,Path,Attribute,Value
-StudyArm,StudyArm_1,/study/versions/0/studyDesigns/0/arms/0,Arm's StudyCell Epoch Refs,[StudyCell_1: StudyEpoch_xx (Invalid epochId); StudyCell_2: StudyEpoch_2 (Treatment 1); StudyCell_3: StudyEpoch_3 (Treatment 2); StudyCell_4: StudyEpoch_4 (Treatment 3); StudyCell_5: StudyEpoch_5 (Follow-Up)]
-StudyArm,StudyArm_1,/study/versions/0/studyDesigns/0/arms/0,Missing Epoch Refs,[StudyEpoch_1: Screening]
-StudyArm,StudyArm_1,/study/versions/0/studyDesigns/0/arms/0,StudyDesign.epochs,[StudyEpoch_1: Screening; StudyEpoch_2: Treatment 1; StudyEpoch_3: Treatment 2; StudyEpoch_4: Treatment 3; StudyEpoch_5: Follow-Up]
-StudyArm,StudyArm_1,/study/versions/0/studyDesigns/0/arms/0,StudyDesign.id,InterventionalStudyDesign_1
-StudyArm,StudyArm_1,/study/versions/0/studyDesigns/0/arms/0,StudyDesign.name,Study Design 1
-StudyArm,StudyArm_1,/study/versions/0/studyDesigns/0/arms/0,name,Placebo
-StudyArm,StudyArm_6,/study/versions/0/studyDesigns/1/arms/2,Arm's StudyCell Epoch Refs,[StudyCell_26: StudyEpoch_6 (Screening); StudyCell_27: StudyEpoch_7 (Treatment 1); StudyCell_28: StudyEpoch_8 (Treatment 2)]
-StudyArm,StudyArm_6,/study/versions/0/studyDesigns/1/arms/2,Missing Epoch Refs,[StudyEpoch_9: Treatment 3; StudyEpoch_10: Follow-Up]
-StudyArm,StudyArm_6,/study/versions/0/studyDesigns/1/arms/2,StudyDesign.epochs,[StudyEpoch_6: Screening; StudyEpoch_7: Treatment 1; StudyEpoch_8: Treatment 2; StudyEpoch_9: Treatment 3; StudyEpoch_10: Follow-Up]
-StudyArm,StudyArm_6,/study/versions/0/studyDesigns/1/arms/2,StudyDesign.id,ObservationalStudyDesign_1
-StudyArm,StudyArm_6,/study/versions/0/studyDesigns/1/arms/2,StudyDesign.name,Study Design 2
-StudyArm,StudyArm_6,/study/versions/0/studyDesigns/1/arms/2,name,Xanomeline High Dose
+Path,Attribute,Value
+/study/versions/0/studyDesigns/0/arms/0,Arm's StudyCell Epoch Refs,[StudyCell_1: StudyEpoch_xx (Invalid epochId); StudyCell_2: StudyEpoch_2 (Treatment 1); StudyCell_3: StudyEpoch_3 (Treatment 2); StudyCell_4: StudyEpoch_4 (Treatment 3); StudyCell_5: StudyEpoch_5 (Follow-Up)]
+/study/versions/0/studyDesigns/0/arms/0,Missing Epoch Refs,[StudyEpoch_1: Screening]
+/study/versions/0/studyDesigns/0/arms/0,StudyDesign.epochs,[StudyEpoch_1: Screening; StudyEpoch_2: Treatment 1; StudyEpoch_3: Treatment 2; StudyEpoch_4: Treatment 3; StudyEpoch_5: Follow-Up]
+/study/versions/0/studyDesigns/0/arms/0,StudyDesign.id,InterventionalStudyDesign_1
+/study/versions/0/studyDesigns/0/arms/0,StudyDesign.name,Study Design 1
+/study/versions/0/studyDesigns/0/arms/0,name,Placebo
+/study/versions/0/studyDesigns/1/arms/2,Arm's StudyCell Epoch Refs,[StudyCell_26: StudyEpoch_6 (Screening); StudyCell_27: StudyEpoch_7 (Treatment 1); StudyCell_28: StudyEpoch_8 (Treatment 2)]
+/study/versions/0/studyDesigns/1/arms/2,Missing Epoch Refs,[StudyEpoch_9: Treatment 3; StudyEpoch_10: Follow-Up]
+/study/versions/0/studyDesigns/1/arms/2,StudyDesign.epochs,[StudyEpoch_6: Screening; StudyEpoch_7: Treatment 1; StudyEpoch_8: Treatment 2; StudyEpoch_9: Treatment 3; StudyEpoch_10: Follow-Up]
+/study/versions/0/studyDesigns/1/arms/2,StudyDesign.id,ObservationalStudyDesign_1
+/study/versions/0/studyDesigns/1/arms/2,StudyDesign.name,Study Design 2
+/study/versions/0/studyDesigns/1/arms/2,name,Xanomeline High Dose

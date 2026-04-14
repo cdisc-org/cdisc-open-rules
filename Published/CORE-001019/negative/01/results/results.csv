@@ -1,25 +1,25 @@
-Entity,Instance_ID,Path,Attribute,Value
-EligibilityCriterion,EligibilityCriterion_1,/study/versions/0/studyDesigns/0/eligibilityCriteria/0,StudyDesign.id,InterventionalStudyDesign_1
-EligibilityCriterion,EligibilityCriterion_1,/study/versions/0/studyDesigns/0/eligibilityCriteria/0,StudyDesign.name,Study Design 1
-EligibilityCriterion,EligibilityCriterion_1,/study/versions/0/studyDesigns/0/eligibilityCriteria/0,Used in,"['StudyDesignPopulation_1[POP1]', 'StudyCohort_1[COHORT1]']"
-EligibilityCriterion,EligibilityCriterion_1,/study/versions/0/studyDesigns/0/eligibilityCriteria/0,category,Inclusion Criteria
-EligibilityCriterion,EligibilityCriterion_1,/study/versions/0/studyDesigns/0/eligibilityCriteria/0,identifier,01
-EligibilityCriterion,EligibilityCriterion_1,/study/versions/0/studyDesigns/0/eligibilityCriteria/0,name,IN01
-EligibilityCriterion,EligibilityCriterion_2,/study/versions/0/studyDesigns/0/eligibilityCriteria/1,StudyDesign.id,InterventionalStudyDesign_1
-EligibilityCriterion,EligibilityCriterion_2,/study/versions/0/studyDesigns/0/eligibilityCriteria/1,StudyDesign.name,Study Design 1
-EligibilityCriterion,EligibilityCriterion_2,/study/versions/0/studyDesigns/0/eligibilityCriteria/1,Used in,"['StudyDesignPopulation_1[POP1]', 'StudyCohort_1[COHORT1]', 'StudyCohort_2[COHORT2]']"
-EligibilityCriterion,EligibilityCriterion_2,/study/versions/0/studyDesigns/0/eligibilityCriteria/1,category,Inclusion Criteria
-EligibilityCriterion,EligibilityCriterion_2,/study/versions/0/studyDesigns/0/eligibilityCriteria/1,identifier,02
-EligibilityCriterion,EligibilityCriterion_2,/study/versions/0/studyDesigns/0/eligibilityCriteria/1,name,IN02
-EligibilityCriterion,EligibilityCriterion_61,/study/versions/0/studyDesigns/1/eligibilityCriteria/29,StudyDesign.id,ObservationalStudyDesign_1
-EligibilityCriterion,EligibilityCriterion_61,/study/versions/0/studyDesigns/1/eligibilityCriteria/29,StudyDesign.name,Study Design 2
-EligibilityCriterion,EligibilityCriterion_61,/study/versions/0/studyDesigns/1/eligibilityCriteria/29,Used in,"['StudyDesignPopulation_2[POP1]', 'StudyCohort_3[COHORT1]', 'StudyCohort_4[COHORT2]']"
-EligibilityCriterion,EligibilityCriterion_61,/study/versions/0/studyDesigns/1/eligibilityCriteria/29,category,Exclusion Criteria
-EligibilityCriterion,EligibilityCriterion_61,/study/versions/0/studyDesigns/1/eligibilityCriteria/29,identifier,30b
-EligibilityCriterion,EligibilityCriterion_61,/study/versions/0/studyDesigns/1/eligibilityCriteria/29,name,EX22
-EligibilityCriterion,EligibilityCriterion_62,/study/versions/0/studyDesigns/1/eligibilityCriteria/30,StudyDesign.id,ObservationalStudyDesign_1
-EligibilityCriterion,EligibilityCriterion_62,/study/versions/0/studyDesigns/1/eligibilityCriteria/30,StudyDesign.name,Study Design 2
-EligibilityCriterion,EligibilityCriterion_62,/study/versions/0/studyDesigns/1/eligibilityCriteria/30,Used in,"['StudyDesignPopulation_2[POP1]', 'StudyCohort_3[COHORT1]']"
-EligibilityCriterion,EligibilityCriterion_62,/study/versions/0/studyDesigns/1/eligibilityCriteria/30,category,Exclusion Criteria
-EligibilityCriterion,EligibilityCriterion_62,/study/versions/0/studyDesigns/1/eligibilityCriteria/30,identifier,31b
-EligibilityCriterion,EligibilityCriterion_62,/study/versions/0/studyDesigns/1/eligibilityCriteria/30,name,EX23
+Path,Attribute,Value
+/study/versions/0/studyDesigns/0/eligibilityCriteria/0,StudyDesign.id,InterventionalStudyDesign_1
+/study/versions/0/studyDesigns/0/eligibilityCriteria/0,StudyDesign.name,Study Design 1
+/study/versions/0/studyDesigns/0/eligibilityCriteria/0,Used in,"['StudyDesignPopulation_1[POP1]', 'StudyCohort_1[COHORT1]']"
+/study/versions/0/studyDesigns/0/eligibilityCriteria/0,category,Inclusion Criteria
+/study/versions/0/studyDesigns/0/eligibilityCriteria/0,identifier,01
+/study/versions/0/studyDesigns/0/eligibilityCriteria/0,name,IN01
+/study/versions/0/studyDesigns/0/eligibilityCriteria/1,StudyDesign.id,InterventionalStudyDesign_1
+/study/versions/0/studyDesigns/0/eligibilityCriteria/1,StudyDesign.name,Study Design 1
+/study/versions/0/studyDesigns/0/eligibilityCriteria/1,Used in,"['StudyDesignPopulation_1[POP1]', 'StudyCohort_1[COHORT1]', 'StudyCohort_2[COHORT2]']"
+/study/versions/0/studyDesigns/0/eligibilityCriteria/1,category,Inclusion Criteria
+/study/versions/0/studyDesigns/0/eligibilityCriteria/1,identifier,02
+/study/versions/0/studyDesigns/0/eligibilityCriteria/1,name,IN02
+/study/versions/0/studyDesigns/1/eligibilityCriteria/29,StudyDesign.id,ObservationalStudyDesign_1
+/study/versions/0/studyDesigns/1/eligibilityCriteria/29,StudyDesign.name,Study Design 2
+/study/versions/0/studyDesigns/1/eligibilityCriteria/29,Used in,"['StudyDesignPopulation_2[POP1]', 'StudyCohort_3[COHORT1]', 'StudyCohort_4[COHORT2]']"
+/study/versions/0/studyDesigns/1/eligibilityCriteria/29,category,Exclusion Criteria
+/study/versions/0/studyDesigns/1/eligibilityCriteria/29,identifier,30b
+/study/versions/0/studyDesigns/1/eligibilityCriteria/29,name,EX22
+/study/versions/0/studyDesigns/1/eligibilityCriteria/30,StudyDesign.id,ObservationalStudyDesign_1
+/study/versions/0/studyDesigns/1/eligibilityCriteria/30,StudyDesign.name,Study Design 2
+/study/versions/0/studyDesigns/1/eligibilityCriteria/30,Used in,"['StudyDesignPopulation_2[POP1]', 'StudyCohort_3[COHORT1]']"
+/study/versions/0/studyDesigns/1/eligibilityCriteria/30,category,Exclusion Criteria
+/study/versions/0/studyDesigns/1/eligibilityCriteria/30,identifier,31b
+/study/versions/0/studyDesigns/1/eligibilityCriteria/30,name,EX23
