@@ -1,8 +1,46 @@
 dataset,variable,label,type,length
-es.xpt,STUDYID,Study Identifier,Char,50
-es.xpt,DOMAIN,Domain Abbreviation,Char,50
-es.xpt,STOCONID,Applicant-defined Storage Conditions ID,Char,50
-es.xpt,ESPARMCD,Storage Conditions Element Short Name,Char,50
-es.xpt,ESPARM,Tobacco Product ID Element Name,Char,50
-es.xpt,ESVAL,Tobacco Product ID Element Value,Char,50
-es.xpt,ESVALU,Tobacco Product ID Element Value Unit,Char,50
+ae.xpt,STUDYID,Study Identifier,Char,50
+ae.xpt,DOMAIN,Domain Abbreviation,Char,50
+ae.xpt,POOLID,Pool Identifier,Char,20
+ae.xpt,AESEQ,Sequence Number,Num,8
+ae.xpt,AETERM,Reported Term for the Adverse Event,Char,50
+ae.xpt,AEMODIFY,Modified Reported Term,Char,50
+ae.xpt,AEDECOD,Dictionary-Derived Term,Char,50
+ae.xpt,AEBODSYS,Body System or Organ Class,Char,50
+ae.xpt,AESEV,Severity/Intensity,Char,50
+ae.xpt,AESER,Serious Event,Char,50
+ae.xpt,AEACN,Action Taken with Study Treatment,Char,50
+ae.xpt,AEREL,Causality,Char,50
+ae.xpt,AEOUT,Outcome of Adverse Event,Char,50
+ae.xpt,AESCONG,Congenital Anomaly or Birth Defect,Char,50
+ae.xpt,AESDISAB,Persist or Signif Disability/Incapacity,Char,50
+ae.xpt,AESDTH,Results in Death,Char,50
+ae.xpt,AESHOSP,Requires or Prolongs Hospitalization,Char,50
+ae.xpt,AESLIFE,Is Life Threatening,Char,50
+ae.xpt,EPOCH,Epoch,Char,50
+ae.xpt,AESTDTC,Start Date/Time of Adverse Event,Char,50
+ae.xpt,AEENDTC,End Date/Time of Adverse Event,Char,50
+ae.xpt,AESTDY,Study Day of Start of Adverse Event,Num,8
+ae.xpt,AEENDY,Study Day of End of Adverse Event,Num,8
+ae.xpt,AEENRF,End Relative to Reference Period,Char,50
+em.xpt,STUDYID,Study Identifier,Char,12
+em.xpt,DOMAIN,Domain Abbreviation,Char,2
+em.xpt,USUBJID,Unique Subject Identifier,Char,8
+em.xpt,SPTOBID,Applicant-Defined Tobacco Product ID,Char,40
+em.xpt,EMTERM,Reported Term for Device Event,Char,200
+em.xpt,EMDECOD,Device Events Dictionary-Derived Term,Char,200
+em.xpt,EMACNDEV,Action Taken with Device,Char,200
+em.xpt,EMPATT,Pattern of Device Event,Char,200
+em.xpt,EMSTDTC,Start Date/Time of Device Event,Char,200
+du.xpt,STUDYID,Study Identifier,Char,50
+du.xpt,DOMAIN,Domain Abbreviation,Char,50
+du.xpt,USUBJID,Unique Subject Identifier,Char,20
+du.xpt,SPDEVID,Applicant Device Identifier,Char,8
+du.xpt,DUSEQ,Sequence Number,Num,50
+du.xpt,DUTESTCD,Device-In-Use Test Short Name,Char,50
+du.xpt,DUTEST,Device-In-Use Test Name,Char,50
+du.xpt,DUORRES,Result or Finding in Original Units,Char,50
+du.xpt,DUORRESU,Original Units,Char,50
+du.xpt,DUSTRESC,Result or Finding in Standard Format,Char,50
+du.xpt,DUSTRESN,Numeric Result/Finding in Standard Units,Num,50
+du.xpt,DUSTRESU,Standard Units,Char,50

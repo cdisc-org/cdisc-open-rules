@@ -1,9 +1,22 @@
 dataset,variable,label,type,length
-es.xpt,STUDYID,Study Identifier,Char,50
-es.xpt,DOMAIN,Domain Abbreviation,Char,50
-es.xpt,STOCONID,Applicant-defined Storage Conditions ID,Char,50
-es.xpt,ESSEQ,Sequence Number,Num,50
-es.xpt,ESPARMCD,Storage Conditions Element Short Name,Char,50
-es.xpt,ESPARM,Tobacco Product ID Element Name,Char,50
-es.xpt,ESVAL,Tobacco Product ID Element Value,Char,50
-es.xpt,ESVALU,Tobacco Product ID Element Value Unit,Char,50
+pd.xpt,STUDYID,Study Identifier,Char,200
+pd.xpt,DOMAIN,Domain Abbreviation,Char,200
+pd.xpt,SPTOBID,Applicant-Defined Tobacco Product ID,Char,40
+pd.xpt,IGDCMPID,Ingredient or Component Identifier,Char,40
+pd.xpt,PDSEQ,Sequence Number,Num,10
+pd.xpt,PDPARMCD,Design Parameter Element Short Name,Char,8
+pd.xpt,PDPARM,Design Parameter Element Name,Char,40
+pd.xpt,PDVALTRG,Design Parameter Element Target Value,Char,50
+pd.xpt,PDVALMIN,Design Parameter Element Minimum Value,Char,50
+pd.xpt,PDVALMAX,Design Parameter Element Maximum Value,Char,50
+pd.xpt,PDVALU,Design Parameter Element Value Unit,Char,50
+to.xpt,STUDYID,Study Identifier,Char,200
+to.xpt,DOMAIN,Domain Abbreviation,Char,200
+to.xpt,SPTOBID,Applicant-Defined Tobacco Product ID,Char,40
+to.xpt,TOSEQ,Sequence Number,Num,10
+to.xpt,TOPARMCD,Tobacco Product ID Element Short Name,Char,40
+to.xpt,TOPARM,Tobacco Product ID Element Name,Char,8
+to.xpt,TOCAT,Category of Tobacco Product ID Element,Char,40
+to.xpt,TOSCAT,Subcategory of Tobacco Prod ID Element,Char,50
+to.xpt,TOVAL,Tobacco Product ID Element Value,Char,50
+to.xpt,TOVALU,Tobacco Product ID Element Value Unit,Char,50

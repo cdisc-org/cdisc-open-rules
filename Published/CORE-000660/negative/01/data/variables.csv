@@ -1,12 +1,26 @@
 dataset,variable,label,type,length
-tx.xpt,STUDYID,Study Identifier,Char,123
-tx.xpt,DOMAIN,Domain Abbreviation,Char,TX
-tx.xpt,SETCD,Set Code,Char,A1
-tx.xpt,SET,Set Description,Char,ST+S9_C0
-tx.xpt,TXSEQ,Sequence Number,Num,1
-tx.xpt,TXPARMCD,Trial Set Parameter Short Name,Char,MTACTIND
-tx.xpt,TXPARM,Trial Set Parameter,Char,Metabolic Activating Agent Name
-tx.xpt,TXVAL,Trial Set Parameter Value,Char,0
+pd.xpt,STUDYID,Study Identifier,Char,200
+pd.xpt,DOMAIN,Domain Abbreviation,Char,200
+pd.xpt,SPTOBID,Applicant-Defined Tobacco Product ID,Char,40
+pd.xpt,IGDCMPID,Ingredient or Component Identifier,Char,40
+pd.xpt,PDSEQ,Sequence Number,Num,10
+pd.xpt,PDPARMCD,Design Parameter Element Short Name,Char,8
+pd.xpt,PDPARM,Design Parameter Element Name,Char,40
+pd.xpt,PDVALTRG,Design Parameter Element Target Value,Char,50
+pd.xpt,PDVALMIN,Design Parameter Element Minimum Value,Char,50
+pd.xpt,PDVALMAX,Design Parameter Element Maximum Value,Char,50
+pd.xpt,PDVALU,Design Parameter Element Value Unit,Char,50
+em.xpt,STUDYID,Study Identifier,Char,TOB07
+em.xpt,DOMAIN,Domain Abbreviation,Char,EM
+em.xpt,USUBJID,Unique Subject Identifier,Char,2029
+em.xpt,SPTOBID,Applicant-Defined Tobacco Product ID,Char,VAPE-Z01
+em.xpt,EMSEQ,Device Events Sequence Number,Num,1
+em.xpt,EMTERM,Reported Term for Device Event,Char,Broken Heater
+em.xpt,EMMODIFY,Modified Device Event Name,Char,Mechanical Problem
+em.xpt,EMDECOD,Device Events Dictionary-Derived Term,Char,Mechanical Problem
+em.xpt,EMACNDEV,Action Taken with Device,Char,DEVICE REPLACED
+em.xpt,EMPATT,Pattern of Device Event,Char,SINGLE
+em.xpt,EMSTDTC,Start Date/Time of Device Event,Char,40175
 to.xpt,STUDYID,Study Identifier,Char,200
 to.xpt,DOMAIN,Domain Abbreviation,Char,200
 to.xpt,SPTOBID,Applicant-Defined Tobacco Product ID,Char,40

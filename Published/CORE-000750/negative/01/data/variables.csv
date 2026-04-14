@@ -1,9 +1,92 @@
 dataset,variable,label,type,length
-es.xpt,STUDYID,Study Identifier,Char,50
-es.xpt,DOMAIN,Domain Abbreviation,Char,50
-es.xpt,STOCONID,Applicant-defined Storage Conditions ID,Char,50
-es.xpt,ESSEQ,Sequence Number,Num,50
-es.xpt,ESPARMCD,Storage Conditions Element Short Name,Char,50
-es.xpt,ESPARM,Tobacco Product ID Element Name,Char,50
-es.xpt,ESVAL,Tobacco Product ID Element Value,Char,50
-es.xpt,ESVALU,Tobacco Product ID Element Value Unit,Char,50
+ae.xpt,STUDYID,Study Identifier,Char,50
+ae.xpt,DOMAIN,Domain Abbreviation,Char,50
+ae.xpt,POOLID,Pool Identifier,Char,20
+ae.xpt,AESEQ,Sequence Number,Num,8
+ae.xpt,AETERM,Reported Term for the Adverse Event,Char,50
+ae.xpt,AEMODIFY,Modified Reported Term,Char,50
+ae.xpt,AEDECOD,Dictionary-Derived Term,Char,50
+ae.xpt,AEBODSYS,Body System or Organ Class,Char,50
+ae.xpt,AESEV,Severity/Intensity,Char,50
+ae.xpt,AESER,Serious Event,Char,50
+ae.xpt,AEACN,Action Taken with Study Treatment,Char,50
+ae.xpt,AEREL,Causality,Char,50
+ae.xpt,AEOUT,Outcome of Adverse Event,Char,50
+ae.xpt,AESCONG,Congenital Anomaly or Birth Defect,Char,50
+ae.xpt,AESDISAB,Persist or Signif Disability/Incapacity,Char,50
+ae.xpt,AESDTH,Results in Death,Char,50
+ae.xpt,AESHOSP,Requires or Prolongs Hospitalization,Char,50
+ae.xpt,AESLIFE,Is Life Threatening,Char,50
+ae.xpt,EPOCH,Epoch,Char,50
+ae.xpt,AESTDTC,Start Date/Time of Adverse Event,Char,50
+ae.xpt,AEENDTC,End Date/Time of Adverse Event,Char,50
+ae.xpt,AESTDY,Study Day of Start of Adverse Event,Num,8
+ae.xpt,AEENDY,Study Day of End of Adverse Event,Num,8
+ae.xpt,AEENRF,End Relative to Reference Period,Char,50
+lbae.xpt,STUDYID,Study Identifier,Char,12
+lbae.xpt,DOMAIN,Domain Abbreviation,Char,2
+lbae.xpt,USUBJID,Unique Subject Identifier,Char,8
+lbae.xpt,LBSEQ,Sequence Number,Num,8
+lbae.xpt,LBTESTCD,Status Short Name,Char,8
+lbae.xpt,LBTEST,Status Name,Char,50
+lbae.xpt,LBORRES,"Result or Finding
+Original Result",Char,50
+lbae.xpt,LBSTRESC,"Character
+Result/Finding in
+Std Format",Char,50
+lbds.xpt,STUDYID,Study Identifier,Char,12
+lbds.xpt,DOMAIN,Domain Abbreviation,Char,2
+lbds.xpt,USUBJID,Unique Subject Identifier,Char,8
+lbds.xpt,LBSEQ,Sequence Number,Num,8
+lbds.xpt,LBTESTCD,Status Short Name,Char,8
+lbds.xpt,LBTEST,Status Name,Char,50
+lbds.xpt,LBORRES,"Result or Finding
+Original Result",Char,50
+lbds.xpt,LBSTRESC,"Character
+Result/Finding in
+Std Format",Char,50
+cm.xpt,STUDYID,Study Identifier,Char,12
+cm.xpt,DOMAIN,Domain Abbreviation,Char,2
+cm.xpt,USUBJID,Unique Subject Identifier,Char,8
+cm.xpt,CMSEQ,Sequence Number,Num,8
+cm.xpt,CMTRT,"Reported Name of Drug, Med, or Therapy",Char,200
+cm.xpt,CMINDC,Indication,Char,200
+cm.xpt,CMDOSE,Dose per Administration,Num,8
+cm.xpt,CMDOSU,Dose Units,Char,6
+cm.xpt,CMDOSFRQ,Dosing Frequency per Interval,Char,3
+cm.xpt,CMROUTE,Route of Administration,Char,24
+cm.xpt,EPOCH,Epoch,Char,9
+cm.xpt,CMSTDTC,Start Date/Time of Medication,Char,10
+cm.xpt,CMENDTC,End Date/Time of Medication,Char,10
+cm.xpt,CMSTDY,Study Day of Start of Medication,Num,8
+cm.xpt,CMENDY,Study Day of End of Medication,Num,8
+cm.xpt,CMSTRF,Start Relative to Reference Period,Char,7
+cm.xpt,CMENRF,End Relative to Reference Period,Char,5
+dm.xpt,STUDYID,Study Identifier,Char,50
+dm.xpt,DOMAIN,Domain Abbreviation,Char,50
+dm.xpt,USUBJID,Unique Subject Identifier,Char,50
+dm.xpt,SUBJID,Subject Identifier for the Study,Char,50
+dm.xpt,RFSTDTC,Subject Reference Start Date/Time,Char,50
+dm.xpt,RFENDTC,Subject Reference End Date/Time,Char,50
+dm.xpt,RFXSTDTC,Date/Time of First Study Treatment,Char,50
+dm.xpt,RFXENDTC,Date/Time of Last Study Treatment,Char,50
+dm.xpt,RFICDTC,Date/Time of Informed Consent,Char,50
+dm.xpt,RFPENDTC,Date/Time of End of Participation,Char,50
+dm.xpt,DTHDTC,Date/Time of Death,Char,50
+dm.xpt,DTHFL,Subject Death Flag,Char,50
+dm.xpt,SITEID,Study Site Identifier,Char,50
+dm.xpt,BRTHDTC,Date/Time of Birth,Char,50
+dm.xpt,AGE,Age,Num,8
+dm.xpt,AGEU,Age Units,Char,50
+dm.xpt,SEX,Sex,Char,50
+dm.xpt,RACE,Race,Char,50
+dm.xpt,ETHNIC,Ethnicity,Char,50
+dm.xpt,ARMCD,Planned Arm Code,Char,50
+dm.xpt,ARM,Description of Planned Arm,Char,50
+dm.xpt,ACTARMCD,Actual Arm Code,Char,50
+dm.xpt,ACTARM,Description of Actual Arm,Char,50
+dm.xpt,ARMNRS,Reason Arm and/or Actual Arm is Null,Char,50
+dm.xpt,ACTARMUD,Description of Unplanned Actual Arm,Char,50
+dm.xpt,COUNTRY,Country,Char,50
+dm.xpt,DMDTC,Date/Time of Collection,Char,50
+dm.xpt,DMDY,Study Day of Collection,Num,8
