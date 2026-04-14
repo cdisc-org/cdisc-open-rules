@@ -1,25 +1,25 @@
 dataset,variable,label,type,length
-in.xpt,STUDYID,Study Identifier,Char,50
-in.xpt,DOMAIN,Domain Abbreviation,Char,50
-in.xpt,IGDCMPID,Ingredient or Component Identifier,Char,50
-in.xpt,INMANUF,Manufacturer Name,Char,50
-in.xpt,INMANUIN,Manufacturer Unique Identifying Item Num,Char,50
-in.xpt,TPMF,Tobacco Product Master File Number,Char,50
-in.xpt,IUPACNAM,Preferred IUPAC Name,Char,50
-in.xpt,CASNO,CAS Registry Number,Char,50
-in.xpt,UNII,Unique Ingredient Identifier,Char,50
-in.xpt,INIGDPLX,Ingredient Complexity,Char,50
-in.xpt,INCIGIND,Applicant-Customized Ingredient Indic,Char,50
-in.xpt,INGRADE,Ingredient Grade,Char,50
-in.xpt,INPURITY,Ingredient Purity,Char,50
-iq.xpt,STUDYID,Study Identifier,Char,50
-iq.xpt,DOMAIN,Domain Abbreviation,Char,50
-iq.xpt,IGDCMPID,Ingredient or Component Identifier,Char,50
-iq.xpt,IQCAT,Category of Ingredient or Component,Char,50
-iq.xpt,IQPARENT,Parent of Ingredient or Component,Char,50
-iq.xpt,IQLEVEL,Ingredient Level in Hierarchy,Num,50
-iq.xpt,IQFUNCT,Ingredient Function,Char,50
-iq.xpt,IQVALTRG,Ingredient Target Value,Num,50
-iq.xpt,IQVALMIN,Ingredient Minimum Value,Num,50
-iq.xpt,IQVALMAX,Ingredient Maximum Value,Num,50
-iq.xpt,IQVALU,Ingredient Value Unit,Char,50
+dm.xpt,STUDYID,Study Identifier,Char,50
+dm.xpt,DOMAIN,Domain Abbreviation,Char,50
+dm.xpt,USUBJID,Unique Subject Identifier,Char,50
+dm.xpt,SUBJID,Subject Identifier for the Study,Char,50
+dm.xpt,RFSTDTC,Subject Reference Start Date/Time,Char,50
+dm.xpt,RFENDTC,Subject Reference End Date/Time,Char,50
+dm.xpt,AGETXT,Age Range,Char,50
+dm.xpt,AGEU,Age Unit,Char,50
+dm.xpt,SEX,Sex,Char,50
+dm.xpt,SPECIES,Species,Char,50
+dm.xpt,STRAIN,Strain/Substrain,Char,50
+dm.xpt,SBSTRAIN,Strain/Substrain Details,Char,50
+dm.xpt,ARMCD,Planned Arm Code,Char,50
+dm.xpt,ARM,Description of Planned Arm,Char,50
+ta.xpt,STUDYID,Study Identifier,Char,50
+ta.xpt,DOMAIN,Domain Abbreviation,Char,50
+ta.xpt,TAETORD,Planned Order of Element within Arm,Num,8
+ta.xpt,ARMCD,Planned Arm Code,Char,8
+ta.xpt,ARM,Description of Planned Arm,Char,28
+tv.xpt,STUDYID,Study Identifier,Char,50
+tv.xpt,DOMAIN,Domain Abbreviation,Char,50
+tv.xpt,VISITNUM,Visit Number,Num,8
+tv.xpt,ARMCD,Planned Arm Code,Char,8
+tv.xpt,ARM,Description of Planned Arm,Char,28
