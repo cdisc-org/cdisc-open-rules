@@ -24,24 +24,33 @@ _You may need your IT support team to install some of the following software for
 3) Install VSCode (***not*** VSCodeUser), following the instructions here: https://code.visualstudio.com/download
 4) Open VSCode and a terminal within it:
    - Top Menu → Terminal → New Terminal (check the three dots in the top menu if you don't see 'Terminal')
-5) Create a new empty directory on your machine for storing the repository and subsequent rule authoring and editing. Navigate to it in the terminal using `cd` commands. Avoid OneDrive if possible.
+5) Open VSCode and a terminal within it:
+   - Top Menu → Terminal → New Terminal (check the three dots in the top menu if you don't see 'Terminal')
+   - Configure your Git identity by running the following two commands in the terminal, replacing the placeholder values with your own:
+
+      `git config --global user.name "Your Name"`
+
+      `git config --global user.email "you@example.com"`
+
+   Use the same email address you used when creating your GitHub account in step 1. You only need to do this once per machine.
+6) Create a new empty directory on your machine for storing the repository and subsequent rule authoring and editing. Navigate to it in the terminal using `cd` commands. Avoid OneDrive if possible.
    - There is sometimes an AI 'helper' box popup in the terminal - make sure you are typing commands into the command line itself, not the box
    - If any of the folder names you are navigating through have spaces (eg 'My Folder'), you will need to wrap the path in quotes,\
      eg: `cd "C:\Users\sam\Documents\Rules Folder"`
-6) Clone this repo into that directory by running the following command (**DO NOT RUN MORE THAN ONCE**): \
+7) Clone this repo into that directory by running the following command (**DO NOT RUN MORE THAN ONCE**): \
        `git clone --recurse-submodules https://github.com/cdisc-org/cdisc-open-rules.git`
    > **NOTE:** If you encounter `The term 'git' is not recognized as the name of a cmdlet, function, script file, or operable program.`, Git's installation directory has not been added to your system PATH. See [this StackOverflow answer](https://stackoverflow.com/questions/4492979/error-git-is-not-recognized-as-an-internal-or-external-command) for instructions on manually adding Git to your PATH.
 
    _***IMPORTANT NOTE***\
    Unless something goes badly wrong and you need to fully delete the entire directory, you should never need to run this command again._
 
-7) In VSCode, select "Open Folder" and select the repository folder you just cloned - it should be called `cdisc-open-rules`
+8) In VSCode, select "Open Folder" and select the repository folder you just cloned - it should be called `cdisc-open-rules`
    - VSCode may show a prompt asking if you trust the authors of the files in this folder — click **Yes, I trust the authors**
-   - You should also see a prompt to install the workspace recommended extensions in the bottome right corner — click **Install All**. If you miss this prompt, don't worry — step 10 will cover it
+   - You should also see a prompt to install the workspace recommended extensions in the bottom right corner — click **Install All**. If you miss this prompt, don't worry — step 10 will cover it
 
-8) This should re-open a new terminal in the repository folder. If this doesn't happen, open a new terminal in VSCode and navigate to the repository folder again.
+9) This should re-open a new terminal in the repository folder. If this doesn't happen, open a new terminal in VSCode and navigate to the repository folder again.
 
-9) You will need to setup the python environment, which will take a little bit of time.
+10) You will need to setup the python environment, which will take a little bit of time.
    - Assuming you are in the cdisc-open-rules folder in the VSCode terminal, run one of the following depending on your operating system (ignore messages and warnings):
      - WINDOWS: `.\setup\windows_setup.bat`
      - MAC: `./setup/bash_setup.sh`
@@ -50,7 +59,7 @@ _You may need your IT support team to install some of the following software for
    _***IMPORTANT NOTE***\
    If you start the setup script and stop it midway through, you may get some strange errors when you try to run rules in the future. If you have any doubts, rerun the setup script, and make sure it completes._
 
-10) Set up the rule authoring auto-completion and real-time schema validation:
+11) Set up the rule authoring auto-completion and real-time schema validation:
     - When you opened the repository folder in step 7, VSCode should have shown a prompt to install the workspace recommended extensions — click **Install All** if you haven't already
     - If you missed the prompt, go to Extensions on the left sidebar, search for `@recommended` in the Extensions search bar and install them from there
     - That's it! Schema validation and CSV highlighting will be active automatically once the extensions are installed. If you don't see this behaviour after a few seconds, try restarting VSCode
@@ -109,9 +118,9 @@ Unpublished/
     │   ├── 01/
     │   │   ├── data/
     │   │   │   ├── .env
-    │   │   │   ├── tables.csv
+    │   │   │   ├── datasets.csv
     │   │   │   ├── variables.csv
-    │   │   │   └── <dataset>.csv   (one per entry in tables.csv)
+    │   │   │   └── <dataset>.csv   (one per entry in datasets.csv)
     │   │   └── results/
     │   └── 02/
     │       ├── data/
@@ -153,7 +162,7 @@ Unpublished/
    DEFINE_XML=define.xml
    ```
 
-   **`tables.csv`**
+   **`datasets.csv`**
 
    Lists every dataset file that must be present in the `data/` folder for this test case. Each row names a file and provides its human-readable label.
 
@@ -162,11 +171,11 @@ Unpublished/
    cm.xpt,Concomitant/Prior Medications
    ```
 
-   For every row in `tables.csv` you must also provide a corresponding dataset CSV file in the same `data/` folder (see below).
+   For every row in `datasets.csv` you must also provide a corresponding dataset CSV file in the same `data/` folder (see below).
 
    **`variables.csv`**
 
-   Describes all variables across all datasets for this test case. The `dataset` column corresponds to the filename listed in `tables.csv`.
+   Describes all variables across all datasets for this test case. The `dataset` column corresponds to the filename listed in `datasets.csv`.
 
    ```
    dataset,variable,label,type,length
@@ -183,7 +192,7 @@ Unpublished/
 
    | Column | Description |
    |--------|-------------|
-   | `dataset` | Filename of the dataset this variable belongs to (must match a `Filename` in `tables.csv`) |
+   | `dataset` | Filename of the dataset this variable belongs to (must match a `Filename` in `datasets.csv`) |
    | `variable` | Variable name (e.g. `USUBJID`) |
    | `label` | Variable Label |
    | `type` | Data type — `Char` or `Num` |
@@ -191,7 +200,7 @@ Unpublished/
 
    **Dataset CSV files**
 
-   For each dataset listed in `tables.csv`, provide a CSV file with a matching name (e.g. if `tables.csv` lists `cm.xpt`, include `cm.csv` in `data/`). The columns must match the variables listed for that dataset in `variables.csv`.
+   For each dataset listed in `datasets.csv`, provide a CSV file with a matching name (e.g. if `datasets.csv` lists `cm.xpt`, include `cm.csv` in `data/`). The columns must match the variables listed for that dataset in `variables.csv`.
 
    Example `cm.csv`:
 

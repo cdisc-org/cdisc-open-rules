@@ -17,7 +17,7 @@ CT=
 """
 
 VARIABLES_HEADERS = ["dataset", "variable", "label", "type", "length"]
-TABLES_HEADERS = ["Filename", "Label"]
+DATASETS_HEADERS = ["Filename", "Label"]
 
 
 def create_csv(filepath: Path, headers: list[str]):
@@ -39,7 +39,7 @@ def create_test_cases(rule_dir: Path, test_type: str, count: int):
         env_path.write_text(ENV_TEMPLATE)
 
         create_csv(data_dir / "variables.csv", VARIABLES_HEADERS)
-        create_csv(data_dir / "tables.csv", TABLES_HEADERS)
+        create_csv(data_dir / "datasets.csv", DATASETS_HEADERS)
 
 
 def main():
