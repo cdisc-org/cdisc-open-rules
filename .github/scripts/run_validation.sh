@@ -1,13 +1,10 @@
 #!/usr/bin/env bash
 # run_validation.sh — iterates all positive/ and negative/ test cases for a rule,
-# runs the CORE engine against each, diffs against any committed results.json,
-# and writes a markdown report to validation_report.md.
+# runs the CORE engine against each, converts JSON output to results.csv,
+# diffs against any committed results.csv, and writes a markdown report.
 #
 # Usage:
-#   bash .github/scripts/run_validation.sh <rule_id> <python_cmd> <repo_root>
-#
-# Environment:
-#   GITHUB_STEP_SUMMARY — set automatically by GitHub Actions
+#   bash .github/scripts/run_validation.sh <rule_rel_path> <python_cmd> <repo_root>
 #
 # Exit codes:
 #   0 — all engine runs succeeded (diff warnings do not cause failure)
@@ -15,13 +12,15 @@
 
 set -euo pipefail
 
-RULE_ID="${1:?rule_id required}"
+# FIX (Issue 1): $1 is rule_rel_path (e.g. "Unpublished/CG0001"), not a bare RULE_ID.
+RULE_REL_PATH="${1:?rule_rel_path required}"
 PYTHON_CMD="${2:?python_cmd required}"
 REPO_ROOT="${3:?repo_root required}"
 
-RULE_DIR="$REPO_ROOT/rules/$RULE_ID"
+RULE_ID=$(basename "$RULE_REL_PATH")
+RULE_DIR="$REPO_ROOT/$RULE_REL_PATH"
 ENGINE_DIR="$REPO_ROOT/engine"
-SCRIPTS_DIR="$REPO_ROOT/.github/scripts"   # diff_results.py
+SCRIPTS_DIR="$REPO_ROOT/.github/scripts"
 REPORT_FILE="$REPO_ROOT/validation_report.md"
 
 # ---------------------------------------------------------------------------
@@ -72,7 +71,6 @@ for TEST_TYPE in positive negative; do
     echo ""
     echo "--- Processing $RULE_ID / $CASE_LABEL ---"
 
-    # Validate layout
     if [ ! -d "$DATA_DIR" ]; then
       echo "::warning::Missing data/ directory for $CASE_LABEL — skipping"
       echo "### \`$CASE_LABEL\` — ⚠️ Skipped (no data/ directory)" >> "$REPORT_FILE"
@@ -82,7 +80,6 @@ for TEST_TYPE in positive negative; do
 
     mkdir -p "$RESULTS_DIR"
 
-    # Locate .env file (accept both "something.env" and ".env")
     ENV_FILE=$(find "$DATA_DIR" -maxdepth 1 \( -name "*.env" -o -name ".env" \) | head -1)
     if [ -z "$ENV_FILE" ]; then
       echo "::warning::No .env file found in $DATA_DIR for $CASE_LABEL — skipping"
@@ -92,8 +89,6 @@ for TEST_TYPE in positive negative; do
     fi
     echo "  .env: $ENV_FILE"
 
-    # Assemble engine argument list — engine reads all standard/version/CT
-    # flags directly from the .env via -dep
     ENGINE_ARGS=(
       "-lr"  "$RULE_YML"
       "-d"   "$DATA_DIR"
@@ -105,15 +100,15 @@ for TEST_TYPE in positive negative; do
 
     echo "  Command: python core.py validate ${ENGINE_ARGS[*]}"
 
-    # Backup committed results if present
+    # Backup committed results.csv if present (before engine run)
     COMMITTED_RESULTS=""
-    if [ -f "$RESULTS_DIR/results.json" ]; then
-      cp "$RESULTS_DIR/results.json" "$RESULTS_DIR/results.json.committed"
-      COMMITTED_RESULTS="$RESULTS_DIR/results.json.committed"
-      echo "  Backed up existing results.json"
+    if [ -f "$RESULTS_DIR/results.csv" ]; then
+      cp "$RESULTS_DIR/results.csv" "$RESULTS_DIR/results.csv.committed"
+      COMMITTED_RESULTS="$RESULTS_DIR/results.csv.committed"
+      echo "  Backed up existing results.csv"
     fi
 
-    # Run the engine from inside the engine/ directory
+    # Run the engine
     ENGINE_LOG="/tmp/engine_${TEST_TYPE}_${CASE_ID}.txt"
     ENGINE_EXIT=0
     (cd "$ENGINE_DIR" && $PYTHON_CMD core.py validate "${ENGINE_ARGS[@]}") \
@@ -138,12 +133,39 @@ for TEST_TYPE in positive negative; do
       continue
     fi
 
+    # Convert engine JSON output to results.csv
+    CONVERT_EXIT=0
+    $PYTHON_CMD "$SCRIPTS_DIR/convert_results.py" \
+      "$RESULTS_DIR/results.json" "$RESULTS_DIR/results.csv" \
+      2>&1 | tee -a "$ENGINE_LOG" || CONVERT_EXIT=$?
+
+    if [ $CONVERT_EXIT -ne 0 ]; then
+      echo "  ERROR: failed to convert results.json to results.csv"
+      {
+        echo "### \`$CASE_LABEL\` — ❌ Conversion error"
+        echo ""
+        echo "<details><summary>Conversion output</summary>"
+        echo ""
+        echo '```'
+        cat "$ENGINE_LOG"
+        echo '```'
+        echo "</details>"
+        echo ""
+      } >> "$REPORT_FILE"
+      FAILED_CASES=$((FAILED_CASES + 1))
+      OVERALL_SUCCESS=false
+      rm -f "$COMMITTED_RESULTS"
+      continue
+    fi
+
+    # results.json is retained alongside results.csv for debugging
+
     # Diff or report
     if [ -n "$COMMITTED_RESULTS" ]; then
       DIFF_LOG="/tmp/diff_${TEST_TYPE}_${CASE_ID}.txt"
       DIFF_EXIT=0
       $PYTHON_CMD "$SCRIPTS_DIR/diff_results.py" \
-        "$COMMITTED_RESULTS" "$RESULTS_DIR/results.json" "$CASE_LABEL" \
+        "$COMMITTED_RESULTS" "$RESULTS_DIR/results.csv" "$CASE_LABEL" \
         > "$DIFF_LOG" 2>&1 || DIFF_EXIT=$?
 
       if [ $DIFF_EXIT -eq 0 ]; then
@@ -172,16 +194,15 @@ for TEST_TYPE in positive negative; do
 
       rm -f "$COMMITTED_RESULTS"
     else
-      # No prior results — post full output for human review
-      echo "  NEW — no prior results.json; posting for human review"
+      echo "  NEW — no prior results.csv; posting for human review"
       NEW_CASES=$((NEW_CASES + 1))
       {
         echo "### \`$CASE_LABEL\` — 🆕 New results (no prior baseline — human review required)"
         echo ""
-        echo "<details><summary>View results.json</summary>"
+        echo "<details><summary>View results.csv</summary>"
         echo ""
-        echo '```json'
-        cat "$RESULTS_DIR/results.json"
+        echo '```'
+        cat "$RESULTS_DIR/results.csv"
         echo '```'
         echo "</details>"
         echo ""
