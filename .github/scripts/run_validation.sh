@@ -12,7 +12,6 @@
 
 set -euo pipefail
 
-# FIX (Issue 1): $1 is rule_rel_path (e.g. "Unpublished/CG0001"), not a bare RULE_ID.
 RULE_REL_PATH="${1:?rule_rel_path required}"
 PYTHON_CMD="${2:?python_cmd required}"
 REPO_ROOT="${3:?repo_root required}"
@@ -48,7 +47,6 @@ OVERALL_SUCCESS=true
 TOTAL_CASES=0
 PASSED_CASES=0
 FAILED_CASES=0
-NEW_CASES=0
 
 # ---------------------------------------------------------------------------
 # Iterate test types and cases
@@ -88,6 +86,18 @@ for TEST_TYPE in positive negative; do
       continue
     fi
     echo "  .env: $ENV_FILE"
+    if [ ! -f "$RESULTS_DIR/results.csv" ]; then
+      echo "  ERROR: no committed results.csv found for $CASE_LABEL"
+      {
+        echo "### \`$CASE_LABEL\` — ❌ Missing results.csv"
+        echo ""
+        echo "No \`results.csv\` was found for this test case. Run the rule locally before opening a PR and commit the generated \`results.csv\`."
+        echo ""
+      } >> "$REPORT_FILE"
+      FAILED_CASES=$((FAILED_CASES + 1))
+      OVERALL_SUCCESS=false
+      continue
+    fi
 
     ENGINE_ARGS=(
       "-lr"  "$RULE_YML"
@@ -100,13 +110,9 @@ for TEST_TYPE in positive negative; do
 
     echo "  Command: python core.py validate ${ENGINE_ARGS[*]}"
 
-    # Backup committed results.csv if present (before engine run)
-    COMMITTED_RESULTS=""
-    if [ -f "$RESULTS_DIR/results.csv" ]; then
-      cp "$RESULTS_DIR/results.csv" "$RESULTS_DIR/results.csv.committed"
-      COMMITTED_RESULTS="$RESULTS_DIR/results.csv.committed"
-      echo "  Backed up existing results.csv"
-    fi
+    # Back up committed results.csv before the engine run
+    cp "$RESULTS_DIR/results.csv" "$RESULTS_DIR/results.csv.committed"
+    COMMITTED_RESULTS="$RESULTS_DIR/results.csv.committed"
 
     # Run the engine
     ENGINE_LOG="/tmp/engine_${TEST_TYPE}_${CASE_ID}.txt"
@@ -129,14 +135,15 @@ for TEST_TYPE in positive negative; do
       } >> "$REPORT_FILE"
       FAILED_CASES=$((FAILED_CASES + 1))
       OVERALL_SUCCESS=false
-      rm -f "$COMMITTED_RESULTS"
+      mv "$COMMITTED_RESULTS" "$RESULTS_DIR/results.csv"
       continue
     fi
 
-    # Convert engine JSON output to results.csv
+    # Convert engine JSON output to a temporary CSV for comparison
+    GENERATED_CSV="/tmp/results_generated_${TEST_TYPE}_${CASE_ID}.csv"
     CONVERT_EXIT=0
     $PYTHON_CMD "$SCRIPTS_DIR/convert_results.py" \
-      "$RESULTS_DIR/results.json" "$RESULTS_DIR/results.csv" \
+      "$RESULTS_DIR/results.json" "$GENERATED_CSV" \
       2>&1 | tee -a "$ENGINE_LOG" || CONVERT_EXIT=$?
 
     if [ $CONVERT_EXIT -ne 0 ]; then
@@ -154,62 +161,40 @@ for TEST_TYPE in positive negative; do
       } >> "$REPORT_FILE"
       FAILED_CASES=$((FAILED_CASES + 1))
       OVERALL_SUCCESS=false
-      rm -f "$COMMITTED_RESULTS"
+      mv "$COMMITTED_RESULTS" "$RESULTS_DIR/results.csv"
       continue
     fi
 
-    # results.json is retained alongside results.csv for debugging
+    DIFF_LOG="/tmp/diff_${TEST_TYPE}_${CASE_ID}.txt"
+    DIFF_EXIT=0
+    $PYTHON_CMD "$SCRIPTS_DIR/diff_results.py" \
+      "$COMMITTED_RESULTS" "$GENERATED_CSV" "$CASE_LABEL" \
+      > "$DIFF_LOG" 2>&1 || DIFF_EXIT=$?
 
-    # Diff or report
-    if [ -n "$COMMITTED_RESULTS" ]; then
-      DIFF_LOG="/tmp/diff_${TEST_TYPE}_${CASE_ID}.txt"
-      DIFF_EXIT=0
-      $PYTHON_CMD "$SCRIPTS_DIR/diff_results.py" \
-        "$COMMITTED_RESULTS" "$RESULTS_DIR/results.csv" "$CASE_LABEL" \
-        > "$DIFF_LOG" 2>&1 || DIFF_EXIT=$?
-
-      if [ $DIFF_EXIT -eq 0 ]; then
-        echo "  PASSED — results match committed baseline"
-        {
-          echo "### \`$CASE_LABEL\` — ✅ Results match committed baseline"
-          echo ""
-        } >> "$REPORT_FILE"
-        PASSED_CASES=$((PASSED_CASES + 1))
-      else
-        echo "  FAILED — committed results do not match engine output"
-        {
-          echo "### \`$CASE_LABEL\` — ❌ Results do not match engine output"
-          echo ""
-          echo "<details><summary>Diff details</summary>"
-          echo ""
-          echo '```'
-          cat "$DIFF_LOG"
-          echo '```'
-          echo "</details>"
-          echo ""
-        } >> "$REPORT_FILE"
-        FAILED_CASES=$((FAILED_CASES + 1))
-        OVERALL_SUCCESS=false
-      fi
-
-      rm -f "$COMMITTED_RESULTS"
-    else
-      echo "  NEW — no prior results.csv; posting for human review"
-      NEW_CASES=$((NEW_CASES + 1))
+    if [ $DIFF_EXIT -eq 0 ]; then
+      echo "  PASSED — results match committed baseline"
       {
-        echo "### \`$CASE_LABEL\` — 🆕 New results (no prior baseline — human review required)"
+        echo "### \`$CASE_LABEL\` — ✅ Results match committed baseline"
         echo ""
-        echo "<details><summary>View results.csv</summary>"
+      } >> "$REPORT_FILE"
+      PASSED_CASES=$((PASSED_CASES + 1))
+    else
+      echo "  FAILED — committed results do not match engine output"
+      {
+        echo "### \`$CASE_LABEL\` — ❌ Results do not match engine output"
+        echo ""
+        echo "<details><summary>Diff details</summary>"
         echo ""
         echo '```'
-        cat "$RESULTS_DIR/results.csv"
+        cat "$DIFF_LOG"
         echo '```'
         echo "</details>"
         echo ""
       } >> "$REPORT_FILE"
+      FAILED_CASES=$((FAILED_CASES + 1))
+      OVERALL_SUCCESS=false
     fi
-
-    # Always attach engine log for debugging
+    mv "$COMMITTED_RESULTS" "$RESULTS_DIR/results.csv"
     if [ -s "$ENGINE_LOG" ]; then
       {
         echo "<details><summary>Engine output for \`$CASE_LABEL\`</summary>"
@@ -231,9 +216,8 @@ done     # test types
 {
   echo "---"
   echo ""
-  printf "**Summary:** %d passed/updated" "$PASSED_CASES"
-  [ $NEW_CASES -gt 0 ]    && printf " | %d new (human review required)" "$NEW_CASES"
-  [ $FAILED_CASES -gt 0 ] && printf " | %d engine errors" "$FAILED_CASES"
+  printf "**Summary:** %d passed" "$PASSED_CASES"
+  [ $FAILED_CASES -gt 0 ] && printf " | %d failed" "$FAILED_CASES"
   printf " (Total: %d test cases)\n" "$TOTAL_CASES"
   echo ""
 } >> "$REPORT_FILE"

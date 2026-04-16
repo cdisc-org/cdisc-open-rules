@@ -11,11 +11,12 @@ from pathlib import Path
 from typing import Optional, Dict, List
 
 ENGINE_DIR = Path("engine")
-
+CONVERT_SCRIPT = Path(".github/scripts/convert_results.py")
 
 # ---------------------------------------------------------------------------
 # Rule folder helpers
 # ---------------------------------------------------------------------------
+
 
 def resolve_rule_path(raw: str) -> Path:
     path = Path(raw.strip()).expanduser()
@@ -109,6 +110,7 @@ def run_engine(rule_yml: Path, data_dir: Path, output_path: Path) -> tuple[bool,
 # Runner
 # ---------------------------------------------------------------------------
 
+
 def run_rule(rule_path: Path, specific_case: Optional[str] = None):
     rule_yml  = find_rule_yml(rule_path)
     all_cases = get_test_cases(rule_path)
@@ -134,8 +136,21 @@ def run_rule(rule_path: Path, specific_case: Optional[str] = None):
             print(f"\n  Running {test_type}/{case_id}...")
             ok, output = run_engine(rule_yml, data_dir, output_path)
 
-            if ok and Path(str(output_path) + ".json").exists():
-                print(f"    Done — results written to {output_path}.json")
+            json_path = Path(str(output_path) + ".json")
+            if ok and json_path.exists():
+                print(f"    Done — results written to {json_path}")
+                csv_path = output_path.with_suffix(".csv")
+                try:
+                    proc = subprocess.run(
+                        [sys.executable, str(CONVERT_SCRIPT), str(json_path), str(csv_path)],
+                        capture_output=True, text=True
+                    )
+                    if proc.returncode == 0:
+                        print(f"    Done — CSV written to {csv_path}")
+                    else:
+                        print(f"    [WARN] CSV conversion failed: {proc.stderr.strip()}")
+                except Exception as e:
+                    print(f"    [WARN] CSV conversion error: {e}")
             else:
                 print(f"    [ERROR] Engine failed for {test_type}/{case_id}")
                 for line in output.splitlines():

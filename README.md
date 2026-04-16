@@ -228,13 +228,15 @@ Unpublished/
 **Verify Results.**
 
 8) Check your run results in the `results/` folder of each test case.
-   - There will be a `results.json` file with the engine output.
+   - There will be a `results.json` file with the engine output and a `results.csv` summarizing the issues found.
    - For positive cases, verify that no errors are reported.
    - For negative cases, verify that the errors reported match the violations you introduced in the test data. Include a summary of the expected errors in your PR description so reviewers can confirm the output is correct.
 
 9) If you are unhappy with the results of your changes, continue to edit and run the rule until you are satisfied.
 
 **Request Review via PR.**
+
+> **NOTE:** Once you are satisfied with your results, delete the `results.json` from each test case's results/ folder, but leave the results.csv in place. The CSV is used to verify your results match current engine output  results when your PR is reviewed — it should always reflect your latest local run.
 
 10) Create a PR to add your changes to the repository. To do this, run the following commands: \
        `git add .` \
@@ -247,22 +249,24 @@ Unpublished/
 12) On the PR page, make sure the information at the top is correct. It should be: \
        `base: main ← compare: <branch-name>`
 
-13) Name your PR using the format `<rule-id> <fix>` and add a brief description of your changes. If you are making a new rule, use `<conformance-rule-id> create`. Include a description of the errors expected in any negative test cases so reviewers can audit the generated `results.json`.
+13) Name your PR using the format `<rule-id> <fix>` and add a brief description of your changes. If you are making a new rule, use `<conformance-rule-id> create`. Include a description of the errors expected in any negative test cases so reviewers can audit the generated `results.csv`.
 
 14) On the PR, add reviewers (both the 'Rules Team' and 'Engineers Team' are required) by clicking the cog in the top right corner, and add yourself as an assignee
 
 15) You're done!
-    - The CI pipeline will automatically run the rule against all test cases and post a validation report as a PR comment. It will also commit the generated `results.json` files back to your branch.
+    - The CI pipeline will automatically run the rule against all test cases and post a validation report as a PR comment. It will diff the output against your committed `results.csv`, and post a validation report as a PR comment..
     - Keep an eye on the PR to make sure the automated checks pass, as well as to respond to any comments from reviewers.
     - If you need to make further changes, simply checkout your branch (`git checkout <your-branch-name>`), make your changes, and commit and push them — the PR will automatically update and re-run validation.
 
+16) GitHub will automatically validate your changes when a PR is opened. If you did not include a results.csv, the check will fail — run the rule locally and push the generated results.csv to resolve it. If a difference between your results.csv and the engine output is detected, the check will also fail — re-run the rule locally, verify the results look correct, and push the updated results.csv. If the check continues to fail after updating, flag it for the Engineers Team in the PR comments.
+
 **Approval - Merge PR**
 
-16) Once your PR is approved, merge your changes to the source code. If you created a new rule in your PR, a new CORE-id will be assigned to it.
+17) Once your PR is approved, merge your changes to the source code. If you created a new rule in your PR, a new CORE-id will be assigned to it.
 
 **Let's do another rule!**
 
-17) If you want to start editing another rule, don't forget to run the below commands on VSCode terminal again: \
+18) If you want to start editing another rule, don't forget to run the below commands on VSCode terminal again: \
        `git checkout main` \
        `git pull origin main`
 

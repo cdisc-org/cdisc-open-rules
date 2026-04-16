@@ -39,7 +39,7 @@ def convert_nonusdm(issue_details: list) -> tuple[list[str], list[tuple]]:
 
 
 def convert_usdm(issue_details: list) -> tuple[list[str], list[tuple]]:
-    header = ["Path", "Attribute", "Value"]
+    header = ["path", "attribute", "value"]
     rows = []
     for issue in issue_details:
         path       = issue.get("path") or ""
