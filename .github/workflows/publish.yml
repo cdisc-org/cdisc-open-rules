@@ -42,40 +42,52 @@ jobs:
           echo "NEW_DIRS=$NEW_DIRS"
           echo "NEW_DIRS=$NEW_DIRS" >> $GITHUB_OUTPUT
 
+          if [ -z "$NEW_DIRS" ]; then
+            echo "HAS_NEW_DIRS=false" >> $GITHUB_OUTPUT
+          else
+            echo "HAS_NEW_DIRS=true" >> $GITHUB_OUTPUT
+          fi
+
       - name: Stop if nothing to publish
-        if: steps.newdirs.outputs.NEW_DIRS == ''
-        run: |
-          echo "No new rules found"
-          exit 0
+        if: steps.newdirs.outputs.HAS_NEW_DIRS == 'false'
+        run: echo "No new rules found, skipping publish."
 
       - name: Setup Python
+        if: steps.newdirs.outputs.HAS_NEW_DIRS == 'true'
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
       - name: Install dependencies
+        if: steps.newdirs.outputs.HAS_NEW_DIRS == 'true'
         run: |
           pip install pyyaml
 
       - name: Run publish script
+        if: steps.newdirs.outputs.HAS_NEW_DIRS == 'true'
         run: |
           python scripts/publish.py \
             --new-dirs "${{ steps.newdirs.outputs.NEW_DIRS }}" \
             --algorithm min
 
       - name: Regenerate mappings
+        if: steps.newdirs.outputs.HAS_NEW_DIRS == 'true'
         run: |
           python scripts/generate_mappings.py .
 
       - name: Commit changes
+        if: steps.newdirs.outputs.HAS_NEW_DIRS == 'true'
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
           git add .
-          git commit -m "Auto-publish new rules" || exit 0
-
-          git diff --cached --quiet || git commit -m "Auto-publish rules"
+          if git diff --cached --quiet; then
+            echo "Nothing to commit"
+          else
+            git commit -m "Auto-publish new rules"
+          fi
 
       - name: Push
+        if: steps.newdirs.outputs.HAS_NEW_DIRS == 'true'
         run: |
           git push
