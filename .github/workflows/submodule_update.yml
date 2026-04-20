@@ -1,0 +1,36 @@
+name: Update engine submodule
+
+on:
+  repository_dispatch:
+    types: [engine-updated]
+  workflow_dispatch:
+
+jobs:
+  update-submodule:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: true
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Configure git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Update engine to latest main
+        run: |
+          git submodule update --remote engine
+          cd engine && git checkout main && git pull && cd ..
+
+      - name: Open PR if submodule changed
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "update engine submodule to latest main"
+          title: "update engine submodule"
+          body: |
+            Automated update of the `engine` submodule to the latest commit on `cdisc-rules-engine/main`.
+          branch: auto/update-engine-submodule
+          base: main
