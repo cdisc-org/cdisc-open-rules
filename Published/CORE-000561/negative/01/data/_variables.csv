@@ -1,14 +1,14 @@
 dataset,variable,label,type,length
-tf.xpt,STUDYID,Study Identifier,Char,50
-tf.xpt,DOMAIN,Domain Abbreviation,Char,50
-tf.xpt,USUBJID,Unique Subject Identifier,Char,50
-tf.xpt,TFSEQ,Sequence Number,Num,8
-tf.xpt,TFSPID ,Mass Identifier ,Char,8
-tf.xpt,TFTESTCD,Tumor Examination Short Name ,Char,8
-tf.xpt,TFTEST,Tumor Examination Name ,Char,40
-tf.xpt,TFORRES,Result or Findings as Collected ,Char,20
-tf.xpt,TFSTRESC ,Standardized Result in Character Format ,Char,20
-tf.xpt,TFRESCAT ,Tumor Malignancy Status ,Char,10
-tf.xpt,TFSPEC,Specimen Material Type ,Char,10
-tf.xpt,TFTDC,Date/Time ,Char,20
-tf.xpt,TFDY,Study Day ,Num,8
+tf,STUDYID,Study Identifier,Char,50
+tf,DOMAIN,Domain Abbreviation,Char,50
+tf,USUBJID,Unique Subject Identifier,Char,50
+tf,TFSEQ,Sequence Number,Num,8
+tf,TFSPID ,Mass Identifier ,Char,8
+tf,TFTESTCD,Tumor Examination Short Name ,Char,8
+tf,TFTEST,Tumor Examination Name ,Char,40
+tf,TFORRES,Result or Findings as Collected ,Char,20
+tf,TFSTRESC ,Standardized Result in Character Format ,Char,20
+tf,TFRESCAT ,Tumor Malignancy Status ,Char,10
+tf,TFSPEC,Specimen Material Type ,Char,10
+tf,TFTDC,Date/Time ,Char,20
+tf,TFDY,Study Day ,Num,8

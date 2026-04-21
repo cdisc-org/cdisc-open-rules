@@ -1,21 +1,21 @@
 dataset,variable,label,type,length
-it.xpt,STUDYID,Study Identifier,Char,50
-it.xpt,DOMAIN,Domain Abbreviation,Char,50
-it.xpt,SPTOBID,Applicant-Defined Tobacco Product ID,Char,50
-it.xpt,IGDCMPID,Ingredient or Component Identifier,Char,50
-it.xpt,TPMF,Tobacco Product Master File ID,Char,50
-it.xpt,ITSPECIF,Specification or Variety of Tobacco Ingr,Char,50
-it.xpt,ITIGDPLX,Ingredient Complexity,Char,50
-it.xpt,ITCIGIND,Applicant-Customized Ingredient Indic,Char,50
-it.xpt,ITCURMTH,Cure Method,Char,50
-pd.xpt,STUDYID,Study Identifier,Char,200
-pd.xpt,DOMAIN,Domain Abbreviation,Char,200
-pd.xpt,SPTOBID,Applicant-Defined Tobacco Product ID,Char,40
-pd.xpt,IGDCMPID,Ingredient or Component Identifier,Char,40
-pd.xpt,PDSEQ,Sequence Number,Num,10
-pd.xpt,PDPARMCD,Design Parameter Element Short Name,Char,8
-pd.xpt,PDPARM,Design Parameter Element Name,Char,40
-pd.xpt,PDVALTRG,Design Parameter Element Target Value,Char,50
-pd.xpt,PDVALMIN,Design Parameter Element Minimum Value,Char,50
-pd.xpt,PDVALMAX,Design Parameter Element Maximum Value,Char,50
-pd.xpt,PDVALU,Design Parameter Element Value Unit,Char,50
+it,STUDYID,Study Identifier,Char,50
+it,DOMAIN,Domain Abbreviation,Char,50
+it,SPTOBID,Applicant-Defined Tobacco Product ID,Char,50
+it,IGDCMPID,Ingredient or Component Identifier,Char,50
+it,TPMF,Tobacco Product Master File ID,Char,50
+it,ITSPECIF,Specification or Variety of Tobacco Ingr,Char,50
+it,ITIGDPLX,Ingredient Complexity,Char,50
+it,ITCIGIND,Applicant-Customized Ingredient Indic,Char,50
+it,ITCURMTH,Cure Method,Char,50
+pd,STUDYID,Study Identifier,Char,200
+pd,DOMAIN,Domain Abbreviation,Char,200
+pd,SPTOBID,Applicant-Defined Tobacco Product ID,Char,40
+pd,IGDCMPID,Ingredient or Component Identifier,Char,40
+pd,PDSEQ,Sequence Number,Num,10
+pd,PDPARMCD,Design Parameter Element Short Name,Char,8
+pd,PDPARM,Design Parameter Element Name,Char,40
+pd,PDVALTRG,Design Parameter Element Target Value,Char,50
+pd,PDVALMIN,Design Parameter Element Minimum Value,Char,50
+pd,PDVALMAX,Design Parameter Element Maximum Value,Char,50
+pd,PDVALU,Design Parameter Element Value Unit,Char,50

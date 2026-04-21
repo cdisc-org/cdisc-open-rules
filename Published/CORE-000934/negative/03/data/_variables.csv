@@ -1,8 +1,8 @@
 dataset,variable,label,type,length
-pp.xpt,STUDYID,Study Identifier,Char,12
-pp.xpt,DOMAIN,Domain Abbreviation,Char,2
-pp.xpt,USUBJID,Unique Subject Identifier,Char,8
-pp.xpt,PPSEQ,Sequence Number,Num,8
-pp.xpt,PPTESTCD,Parameter Short Name ,Char,7
-pp.xpt,PPTEST,Parameter Name ,Char,39
-pp.xpt,PPSPEC,Specimen Material Type ,Char,200
+pp,STUDYID,Study Identifier,Char,12
+pp,DOMAIN,Domain Abbreviation,Char,2
+pp,USUBJID,Unique Subject Identifier,Char,8
+pp,PPSEQ,Sequence Number,Num,8
+pp,PPTESTCD,Parameter Short Name ,Char,7
+pp,PPTEST,Parameter Name ,Char,39
+pp,PPSPEC,Specimen Material Type ,Char,200

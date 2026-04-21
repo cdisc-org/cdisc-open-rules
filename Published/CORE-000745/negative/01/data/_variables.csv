@@ -1,13 +1,13 @@
 dataset,variable,label,type,length
-oi.xpt,STUDYID,Study Identifier,Char,50
-oi.xpt,DOMAIN,Domain Abbreviation,Char,50
-oi.xpt,NHOID,"Non-Host Organism 
+oi,STUDYID,Study Identifier,Char,50
+oi,DOMAIN,Domain Abbreviation,Char,50
+oi,NHOID,"Non-Host Organism 
 Identifier",Char,50
-oi.xpt,OISEQ,Sequence Number,Num,8
-oi.xpt,OIPARMCD,"Non-Host Organism 
+oi,OISEQ,Sequence Number,Num,8
+oi,OIPARMCD,"Non-Host Organism 
 ID Element Short 
 Name",Char,50
-oi.xpt,OIPARM,"Non-Host Organism 
+oi,OIPARM,"Non-Host Organism 
 ID Element Name",Char,50
-oi.xpt,OIVAL,"Non-Host Organism 
+oi,OIVAL,"Non-Host Organism 
 ID Element Value",Char,50

@@ -1,20 +1,20 @@
 dataset,variable,label,type,length
-pe.xpt,STUDYID,Study Identifier,Char,50
-pe.xpt,DOMAIN,Domain Abbreviation,Char,50
-pe.xpt,USUBJID,Unique Subject Identifier,Char,50
-pe.xpt,PESEQ,Sequence Number,Num,8
-pe.xpt,PESPID,Sponsor-Defined Identifier,Char,50
-pe.xpt,PETESTCD,Body System Examined Short Name,Char,50
-pe.xpt,PETEST,Body System Examined,Char,50
-pe.xpt,PEBODSYS,Body System or Organ Class,Char,50
-pe.xpt,PEORRES,Verbatim Examination Finding,Char,50
-pe.xpt,PESTRESC,Character Result/Finding in Std Format,Char,50
-pe.xpt,PESTAT,Completion Status,Char,50
-pe.xpt,PEREASND,Reason Not Examined,Char,50
-pe.xpt,PELOC,Location of Physical Exam Finding,Char,50
-pe.xpt,PELAT,Laterality,Char,50
-pe.xpt,VISITNUM,Visit Number,Num,8
-pe.xpt,VISIT,Visit Name,Char,50
-pe.xpt,VISITDY,Planned Study Day of Visit,Num,8
-pe.xpt,PEDTC,Date/Time of Examination,Char,50
-pe.xpt,PEDY,Study Day of Examination,Num,8
+pe,STUDYID,Study Identifier,Char,50
+pe,DOMAIN,Domain Abbreviation,Char,50
+pe,USUBJID,Unique Subject Identifier,Char,50
+pe,PESEQ,Sequence Number,Num,8
+pe,PESPID,Sponsor-Defined Identifier,Char,50
+pe,PETESTCD,Body System Examined Short Name,Char,50
+pe,PETEST,Body System Examined,Char,50
+pe,PEBODSYS,Body System or Organ Class,Char,50
+pe,PEORRES,Verbatim Examination Finding,Char,50
+pe,PESTRESC,Character Result/Finding in Std Format,Char,50
+pe,PESTAT,Completion Status,Char,50
+pe,PEREASND,Reason Not Examined,Char,50
+pe,PELOC,Location of Physical Exam Finding,Char,50
+pe,PELAT,Laterality,Char,50
+pe,VISITNUM,Visit Number,Num,8
+pe,VISIT,Visit Name,Char,50
+pe,VISITDY,Planned Study Day of Visit,Num,8
+pe,PEDTC,Date/Time of Examination,Char,50
+pe,PEDY,Study Day of Examination,Num,8

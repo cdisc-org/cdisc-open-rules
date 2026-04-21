@@ -1,84 +1,84 @@
 dataset,variable,label,type,length
-dm.xpt,STUDYID,Study Identifier,Char,12
-dm.xpt,DOMAIN,Domain Abbreviation,Char,2
-dm.xpt,USUBJID,Unique Subject Identifier,Char,20
-dm.xpt,SUBJID,Subject Identifier for the Study,Char,12
-dm.xpt,RFSTDTC,Subject Reference Start Date/Time,Char,10
-dm.xpt,RFENDTC,Subject Reference End Date/Time,Char,10
-dm.xpt,RFXSTDTC,Date/Time of First Study Treatment,Char,10
-dm.xpt,RFXENDTC,Date/Time of Last Study Treatment,Char,10
-dm.xpt,RFICDTC,Date/Time of Informed Consent,Char,10
-dm.xpt,RFPENDTC,Date/Time of End of Participation,Char,10
-dm.xpt,DTHDTC,Date/Time of Death,Char,10
-dm.xpt,DTHFL,Subject Death Flag,Char,1
-dm.xpt,SITEID,Study Site Identifier,Char,3
-dm.xpt,BRTHDTC,Date/Time of Birth,Char,10
-dm.xpt,AGE,Age,Num,8
-dm.xpt,AGETXT,Age Text,Char,5
-dm.xpt,AGEU,Age Units,Char,5
-dm.xpt,SEX,Sex,Char,1
-dm.xpt,RACE,Race,Char,41
-dm.xpt,ETHNIC,Ethnicity,Char,22
-dm.xpt,ARMCD,Planned Arm Code,Char,8
-dm.xpt,ARM,Description of Planned Arm,Char,28
-dm.xpt,ACTARMCD,Actual Arm Code,Char,8
-dm.xpt,ACTARM,Description of Actual Arm,Char,28
-dm.xpt,ARMNRS,Reason Arm and/or Actual Arm is Null,Char,14
-dm.xpt,ACTARMCD,Description of Unplanned Actual Arm,Char,200
-dm.xpt,COUNTRY,Country,Char,3
-ds.xpt,STUDYID,Study Identifier,Char,12
-ds.xpt,DOMAIN,Domain Abbreviation,Char,2
-ds.xpt,USUBJID,Unique Subject Identifier,Char,20
-ds.xpt,DSSEQ,Sequence Number,Num,8
-ds.xpt,DSTERM,Reported Term for the Disposition Event,Char,200
-ds.xpt,DSDECOD,Standardized Disposition Term,Char,50
-ds.xpt,DSCAT,Category for Disposition Event,Char,50
-ds.xpt,DSSCAT,Subcategory for Disposition Event,Char,50
-ds.xpt,EPOCH,Epoch,Char,50
-ds.xpt,DSSTDTC,Start Date/Time of Disposition Event,Char,50
-ds.xpt,DSNOMDY,Nominal Study Day for Tabulations ,Num,3
-ex.xpt,STUDYID,Study Identifier,Char,12
-ex.xpt,DOMAIN,Domain Abbreviation,Char,2
-ex.xpt,USUBJID,Unique Subject Identifier,Char,8
-ex.xpt,EXSEQ,Sequence Number,Num,8
-ex.xpt,EXTRT,Name of Treatment,Char,10
-ex.xpt,EXINDC,Indication,Char,12
-ex.xpt,EXDOSE,Dose,Num,8
-ex.xpt,EXDOSU,Dose Units,Char,2
-ex.xpt,EXDOSFRM,Dose Form,Char,9
-ex.xpt,EXDOSFRQ,Dosing Frequency per Interval,Char,2
-ex.xpt,EXROUTE,Route of Administration,Char,12
-ex.xpt,EXLOT,Lot Number,Char,200
-ex.xpt,EPOCH,Epoch,Char,9
-ex.xpt,EXSTDTC,Start Date/Time of Treatment,Char,10
-ex.xpt,EXENDTC,End Date/Time of Treatment,Char,10
-ex.xpt,EXSTDY,Study Day of Start of Treatment,Num,8
-ex.xpt,EXENDY,Study Day of End of Treatment,Num,8
-lb.xpt,STUDYID,Study Identifier,Char,12
-lb.xpt,DOMAIN,Domain Abbreviation,Char,2
-lb.xpt,USUBJID,Unique Subject Identifier,Char,8
-lb.xpt,LBSEQ,Sequence Number,Num,8
-lb.xpt,LBTESTCD,Lab Test or Examination Short Name,Char,7
-lb.xpt,LBTEST,Lab Test or Examination Name,Char,39
-lb.xpt,LBCAT,Category for Lab Test,Char,10
-lb.xpt,LBORRES,Result or Finding in Original Units,Char,6
-lb.xpt,LBORRESU,Original Units,Char,7
-lb.xpt,LBORNRLO,Reference Range Lower Limit in Orig Unit,Char,200
-lb.xpt,LBORNRHI,Reference Range Upper Limit in Orig Unit,Char,200
-lb.xpt,LBSTRESC,Character Result/Finding in Std Format,Char,8
-lb.xpt,LBSTRESN,Numeric Result/Finding in Standard Units,Num,8
-lb.xpt,LBSTRESU,Standard Units,Char,7
-lb.xpt,LBSTNRLO,Reference Range Lower Limit-Std Units,Num,8
-lb.xpt,LBSTNRHI,Reference Range Upper Limit-Std Units,Num,8
-lb.xpt,LBNRIND,Reference Range Indicator,Char,8
-lb.xpt,LBSTAT,Completion Status,Char,8
-lb.xpt,LBREASND,Reason Not Done,Char,50
-lb.xpt,LBLOBXFL,Last Observation Before Exposure Flag,Char,1
-lb.xpt,VISITNUM,Visit Number,Num,8
-lb.xpt,VISIT,Visit Name,Char,200
-lb.xpt,EPOCH,Epoch,Char,9
-lb.xpt,LBDTC,Date/Time of Specimen Collection,Char,19
-lb.xpt,LBDY,Study Day of Specimen Collection,Num,8
-lb.xpt,LBTOX,Toxicity,Char,50
-lb.xpt,LBTOXGR,Standard Toxicity Grade,Char,50
-lb.xpt,LBNOMDY,Nominal Study Day for Tabulations ,Num,3
+dm,STUDYID,Study Identifier,Char,12
+dm,DOMAIN,Domain Abbreviation,Char,2
+dm,USUBJID,Unique Subject Identifier,Char,20
+dm,SUBJID,Subject Identifier for the Study,Char,12
+dm,RFSTDTC,Subject Reference Start Date/Time,Char,10
+dm,RFENDTC,Subject Reference End Date/Time,Char,10
+dm,RFXSTDTC,Date/Time of First Study Treatment,Char,10
+dm,RFXENDTC,Date/Time of Last Study Treatment,Char,10
+dm,RFICDTC,Date/Time of Informed Consent,Char,10
+dm,RFPENDTC,Date/Time of End of Participation,Char,10
+dm,DTHDTC,Date/Time of Death,Char,10
+dm,DTHFL,Subject Death Flag,Char,1
+dm,SITEID,Study Site Identifier,Char,3
+dm,BRTHDTC,Date/Time of Birth,Char,10
+dm,AGE,Age,Num,8
+dm,AGETXT,Age Text,Char,5
+dm,AGEU,Age Units,Char,5
+dm,SEX,Sex,Char,1
+dm,RACE,Race,Char,41
+dm,ETHNIC,Ethnicity,Char,22
+dm,ARMCD,Planned Arm Code,Char,8
+dm,ARM,Description of Planned Arm,Char,28
+dm,ACTARMCD,Actual Arm Code,Char,8
+dm,ACTARM,Description of Actual Arm,Char,28
+dm,ARMNRS,Reason Arm and/or Actual Arm is Null,Char,14
+dm,ACTARMCD,Description of Unplanned Actual Arm,Char,200
+dm,COUNTRY,Country,Char,3
+ds,STUDYID,Study Identifier,Char,12
+ds,DOMAIN,Domain Abbreviation,Char,2
+ds,USUBJID,Unique Subject Identifier,Char,20
+ds,DSSEQ,Sequence Number,Num,8
+ds,DSTERM,Reported Term for the Disposition Event,Char,200
+ds,DSDECOD,Standardized Disposition Term,Char,50
+ds,DSCAT,Category for Disposition Event,Char,50
+ds,DSSCAT,Subcategory for Disposition Event,Char,50
+ds,EPOCH,Epoch,Char,50
+ds,DSSTDTC,Start Date/Time of Disposition Event,Char,50
+ds,DSNOMDY,Nominal Study Day for Tabulations ,Num,3
+ex,STUDYID,Study Identifier,Char,12
+ex,DOMAIN,Domain Abbreviation,Char,2
+ex,USUBJID,Unique Subject Identifier,Char,8
+ex,EXSEQ,Sequence Number,Num,8
+ex,EXTRT,Name of Treatment,Char,10
+ex,EXINDC,Indication,Char,12
+ex,EXDOSE,Dose,Num,8
+ex,EXDOSU,Dose Units,Char,2
+ex,EXDOSFRM,Dose Form,Char,9
+ex,EXDOSFRQ,Dosing Frequency per Interval,Char,2
+ex,EXROUTE,Route of Administration,Char,12
+ex,EXLOT,Lot Number,Char,200
+ex,EPOCH,Epoch,Char,9
+ex,EXSTDTC,Start Date/Time of Treatment,Char,10
+ex,EXENDTC,End Date/Time of Treatment,Char,10
+ex,EXSTDY,Study Day of Start of Treatment,Num,8
+ex,EXENDY,Study Day of End of Treatment,Num,8
+lb,STUDYID,Study Identifier,Char,12
+lb,DOMAIN,Domain Abbreviation,Char,2
+lb,USUBJID,Unique Subject Identifier,Char,8
+lb,LBSEQ,Sequence Number,Num,8
+lb,LBTESTCD,Lab Test or Examination Short Name,Char,7
+lb,LBTEST,Lab Test or Examination Name,Char,39
+lb,LBCAT,Category for Lab Test,Char,10
+lb,LBORRES,Result or Finding in Original Units,Char,6
+lb,LBORRESU,Original Units,Char,7
+lb,LBORNRLO,Reference Range Lower Limit in Orig Unit,Char,200
+lb,LBORNRHI,Reference Range Upper Limit in Orig Unit,Char,200
+lb,LBSTRESC,Character Result/Finding in Std Format,Char,8
+lb,LBSTRESN,Numeric Result/Finding in Standard Units,Num,8
+lb,LBSTRESU,Standard Units,Char,7
+lb,LBSTNRLO,Reference Range Lower Limit-Std Units,Num,8
+lb,LBSTNRHI,Reference Range Upper Limit-Std Units,Num,8
+lb,LBNRIND,Reference Range Indicator,Char,8
+lb,LBSTAT,Completion Status,Char,8
+lb,LBREASND,Reason Not Done,Char,50
+lb,LBLOBXFL,Last Observation Before Exposure Flag,Char,1
+lb,VISITNUM,Visit Number,Num,8
+lb,VISIT,Visit Name,Char,200
+lb,EPOCH,Epoch,Char,9
+lb,LBDTC,Date/Time of Specimen Collection,Char,19
+lb,LBDY,Study Day of Specimen Collection,Num,8
+lb,LBTOX,Toxicity,Char,50
+lb,LBTOXGR,Standard Toxicity Grade,Char,50
+lb,LBNOMDY,Nominal Study Day for Tabulations ,Num,3

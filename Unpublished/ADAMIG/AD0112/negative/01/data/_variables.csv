@@ -1,45 +1,45 @@
 dataset,variable,label,type,length
 library,Product,adam,,
 library,Version,adamig-1-3,,
-adpc.xpt,USUBJID,Unique Subject Identifier,Char,50
-adpc.xpt,EXSTDTC,"Start Date/Time of
+adpc,USUBJID,Unique Subject Identifier,Char,50
+adpc,EXSTDTC,"Start Date/Time of
 Treatment",Char,50
-adpc.xpt,PCDTC,"Date/Time of
+adpc,PCDTC,"Date/Time of
 Specimen Collection",Char,50
-adpc.xpt,ADTM,Analysis Datetime,Num,8
-adpc.xpt,VISITNUM,Visit Number,Num,8
-adpc.xpt,VISIT,Visit Name,Char,50
-adpc.xpt,AVISIT,Analysis Visit,Char,50
-adpc.xpt,AVISITN,Analysis Visit (N),Num,8
-adpc.xpt,PCTPT,"Planned Time Point
+adpc,ADTM,Analysis Datetime,Num,8
+adpc,VISITNUM,Visit Number,Num,8
+adpc,VISIT,Visit Name,Char,50
+adpc,AVISIT,Analysis Visit,Char,50
+adpc,AVISITN,Analysis Visit (N),Num,8
+adpc,PCTPT,"Planned Time Point
 Name",Char,50
-adpc.xpt,PCTPTNUM,"Planned Time Point
+adpc,PCTPTNUM,"Planned Time Point
 Number",Char,50
-adpc.xpt,ATPT,Analysis Timepoint,Char,50
-adpc.xpt,ATPTN,Analysis Timepoint (N),Num,8
-adpc.xpt,PCSTRESC,"Character
+adpc,ATPT,Analysis Timepoint,Char,50
+adpc,ATPTN,Analysis Timepoint (N),Num,8
+adpc,PCSTRESC,"Character
 Result/Finding in Std
 Format",Char,50
-adpc.xpt,PCSTRESN,"Numeric
+adpc,PCSTRESN,"Numeric
 Result/Finding in
 Standard Units",Char,50
-adpc.xpt,PCSTRESU,Standard Units,Char,50
-adpc.xpt,AVAL,Analysis Value,Num,8
-adpc.xpt,ARELTM,Analysis Relative Time ,Char,50
-adpc.xpt,ANCHOR1,Anchor 1 Reference,Char,50
-adpc.xpt,ANCHOR2,Anchor 2 Reference,Char,50
-adpc.xpt,ARELTM2,Analysis Relative Time 2,Char,50
-adpc.xpt,ARELTMU,Analysis Relative Time Unit ,Char,50
-adpc.xpt,ANL01FL,Analysis Flag 01,Char,50
-adpc.xpt,ANL02FL,Analysis Flag 02,Char,50
-adsl.xpt,STUDYID,Study Identifier,Char,50
-adsl.xpt,USUBJID,Unique Subject Identifier,Char,50
-adsl.xpt,FASFL,Full Analysis Set Population Flag,Char,50
-adsl.xpt,SAFFL,Safety Population Flag,Char,50
-adsl.xpt,ITTFL,Intent-To-Treat Population Flag,Char,50
-adsl.xpt,PPROTFL,Per-Protocol Population Flag,Char,50
-adsl.xpt,COMPLFL,Completers Population Flag,Char,50
-adsl.xpt,RANDFL,Randomized Population Flag,Char,50
-adsl.xpt,ENRLFL,Enrolled Population Flag,Char,50
-adsl.xpt,ARM,Description of Planned Arm,Char,50
-adsl.xpt,ACTARM,Description of Actual Arm,Char,50
+adpc,PCSTRESU,Standard Units,Char,50
+adpc,AVAL,Analysis Value,Num,8
+adpc,ARELTM,Analysis Relative Time ,Char,50
+adpc,ANCHOR1,Anchor 1 Reference,Char,50
+adpc,ANCHOR2,Anchor 2 Reference,Char,50
+adpc,ARELTM2,Analysis Relative Time 2,Char,50
+adpc,ARELTMU,Analysis Relative Time Unit ,Char,50
+adpc,ANL01FL,Analysis Flag 01,Char,50
+adpc,ANL02FL,Analysis Flag 02,Char,50
+adsl,STUDYID,Study Identifier,Char,50
+adsl,USUBJID,Unique Subject Identifier,Char,50
+adsl,FASFL,Full Analysis Set Population Flag,Char,50
+adsl,SAFFL,Safety Population Flag,Char,50
+adsl,ITTFL,Intent-To-Treat Population Flag,Char,50
+adsl,PPROTFL,Per-Protocol Population Flag,Char,50
+adsl,COMPLFL,Completers Population Flag,Char,50
+adsl,RANDFL,Randomized Population Flag,Char,50
+adsl,ENRLFL,Enrolled Population Flag,Char,50
+adsl,ARM,Description of Planned Arm,Char,50
+adsl,ACTARM,Description of Actual Arm,Char,50

@@ -1,80 +1,80 @@
 dataset,variable,label,type,length
-ae.xpt,STUDYID,Study Identifier,Char,10
-ae.xpt,DOMAIN,Domain Abbreviation,Char,2
-ae.xpt,USUBJID,Unique Subject Identifier,Char,14
-ae.xpt,AESEQ,Sequence Number,Num,8
-ae.xpt,AESPID,Sponsor-Defined Identifier,Char,4
-ae.xpt,AETERM,Reported Term for the Adverse Event,Char,38
-ae.xpt,AELLT,Lowest Level Term,Char,38
-ae.xpt,AELLTCD,Lowest Level Term Code,Num,8
-ae.xpt,AEDECOD,Dictionary-Derived Term,Char,38
-ae.xpt,AESEV,Severity/Intensity,Char,8
-ae.xpt,AESER,Serious Event,Char,1
-ae.xpt,AEACN,Action Taken with Study Treatment,Char,1
-ae.xpt,AEREL,Causality,Char,1
-ae.xpt,AEOUT,Outcome of Adverse Event,Char,26
-ae.xpt,AESHOSP,Requires or Prolongs Hospitalization,Char,1
-ae.xpt,AESTDTC,Start Date/Time of Adverse Event,Char,10
-suppae.xpt,STUDYID,Study Identifier,Char,50
-suppae.xpt,RDOMAIN,Related Domain Abbreviation,Char,50
-suppae.xpt,USUBJID,Unique Subject Identifier,Char,50
-suppae.xpt,IDVAR,Identifying Variable,Char,50
-suppae.xpt,IDVARVAL,Identifying Variable Value,Char,50
-suppae.xpt,QNAM,Qualifier Variable Name,Char,50
-suppae.xpt,QLABEL,Qualifier Variable Label,Char,50
-suppae.xpt,QVAL,Data Value,Char,50
-suppae.xpt,QORIG,Origin,Char,50
-suppae.xpt,QEVAL,Evaluator,Char,50
-supplb.xpt,STUDYID,Study Identifier,Char,50
-supplb.xpt,RDOMAIN,Related Domain Abbreviation,Char,50
-supplb.xpt,USUBJID,Unique Subject Identifier,Char,50
-supplb.xpt,IDVAR,Identifying Variable,Char,50
-supplb.xpt,IDVARVAL,Identifying Variable Value,Char,50
-supplb.xpt,QNAM,Qualifier Variable Name,Char,50
-supplb.xpt,QLABEL,Qualifier Variable Label,Char,50
-supplb.xpt,QVAL,Data Value,Char,50
-supplb.xpt,QORIG,Origin,Char,50
-supplb.xpt,QEVAL,Evaluator,Char,50
-lb.xpt,STUDYID,Study Identifier,Char,50
-lb.xpt,DOMAIN,Domain Abbreviation,Char,50
-lb.xpt,USUBJID,Unique Subject Identifier,Char,50
-lb.xpt,LBSEQ,Sequence Number,Num,8
-lb.xpt,LBGRPID,Group ID,Char,50
-lb.xpt,LBREFID,Specimen ID,Char,50
-lb.xpt,LBSPID,Sponsor-Defined Identifier,Char,50
-lb.xpt,LBTESTCD,Lab Test or Examination Short Name,Char,50
-lb.xpt,LBTEST,Lab Test or Examination Name,Char,50
-lb.xpt,LBORRES,Result or Finding in Original Units,Char,50
-lb.xpt,LBORRESU,Original Units,Char,50
-lb.xpt,LBREASND,Reason Test Not Done,Char,50
-lb.xpt,LBNAM,Vendor Name,Char,50
-lb.xpt,LBLOINC,LOINC Code,Char,50
-lb.xpt,LBSPEC,Specimen Type,Char,50
-lb.xpt,LBSPCCND,Specimen Condition,Char,50
-lb.xpt,LBSPCUFL,Specimen Usability for the Test,Char,50
-lb.xpt,LBMETHOD,Method of Test or Examination,Char,50
-lb.xpt,LBANMETH,Analysis Method,Char,50
-lb.xpt,LBTMTHSN,Test Method Sensitivity,Char,50
-lb.xpt,LBLOBXFL,Last Observation Before Exposure Flag,Char,50
-lb.xpt,LBBLFL,Baseline Flag,Char,50
-lb.xpt,LBFAST,Fasting Status,Char,50
-lb.xpt,LBDRVFL,Derived Flag,Char,50
-lb.xpt,LBTOX,Toxicity,Char,50
-lb.xpt,LBTOXGR,Standard Toxicity Grade,Char,50
-lb.xpt,LBCLSIG,"Clinically Significant, Collected",Char,50
-lb.xpt,VISITNUM,Visit Number,Num,8
-lb.xpt,VISIT,Visit Name,Char,50
-lb.xpt,VISITDY,Planned Study Day of Visit,Num,8
-lb.xpt,TAETORD,Planned Order of Element within Arm,Num,8
-lb.xpt,EPOCH,Epoch,Char,50
-lb.xpt,LBDTC,Date/Time of Specimen Collection,Char,50
-lb.xpt,LBENDTC,End Date/Time of Specimen Collection,Char,50
-lb.xpt,LBDY,Study Day of Specimen Collection,Num,8
-lb.xpt,LBENDY,Study Day of End of Observation,Num,8
-lb.xpt,LBTPT,Planned Time Point Name,Char,50
-lb.xpt,LBTPTNUM,Planned Time Point Number,Num,8
-lb.xpt,LBELTM,Planned Elapsed Time from Time Point Ref,Char,50
-lb.xpt,LBTPTREF,Time Point Reference,Char,50
-lb.xpt,LBRFTDTC,Date/Time of Reference Time Point,Char,50
-lb.xpt,LBPTFL,Point in Time Flag,Char,50
-lb.xpt,LBPDUR,Planned Duration,Char,50
+ae,STUDYID,Study Identifier,Char,10
+ae,DOMAIN,Domain Abbreviation,Char,2
+ae,USUBJID,Unique Subject Identifier,Char,14
+ae,AESEQ,Sequence Number,Num,8
+ae,AESPID,Sponsor-Defined Identifier,Char,4
+ae,AETERM,Reported Term for the Adverse Event,Char,38
+ae,AELLT,Lowest Level Term,Char,38
+ae,AELLTCD,Lowest Level Term Code,Num,8
+ae,AEDECOD,Dictionary-Derived Term,Char,38
+ae,AESEV,Severity/Intensity,Char,8
+ae,AESER,Serious Event,Char,1
+ae,AEACN,Action Taken with Study Treatment,Char,1
+ae,AEREL,Causality,Char,1
+ae,AEOUT,Outcome of Adverse Event,Char,26
+ae,AESHOSP,Requires or Prolongs Hospitalization,Char,1
+ae,AESTDTC,Start Date/Time of Adverse Event,Char,10
+suppae,STUDYID,Study Identifier,Char,50
+suppae,RDOMAIN,Related Domain Abbreviation,Char,50
+suppae,USUBJID,Unique Subject Identifier,Char,50
+suppae,IDVAR,Identifying Variable,Char,50
+suppae,IDVARVAL,Identifying Variable Value,Char,50
+suppae,QNAM,Qualifier Variable Name,Char,50
+suppae,QLABEL,Qualifier Variable Label,Char,50
+suppae,QVAL,Data Value,Char,50
+suppae,QORIG,Origin,Char,50
+suppae,QEVAL,Evaluator,Char,50
+supplb,STUDYID,Study Identifier,Char,50
+supplb,RDOMAIN,Related Domain Abbreviation,Char,50
+supplb,USUBJID,Unique Subject Identifier,Char,50
+supplb,IDVAR,Identifying Variable,Char,50
+supplb,IDVARVAL,Identifying Variable Value,Char,50
+supplb,QNAM,Qualifier Variable Name,Char,50
+supplb,QLABEL,Qualifier Variable Label,Char,50
+supplb,QVAL,Data Value,Char,50
+supplb,QORIG,Origin,Char,50
+supplb,QEVAL,Evaluator,Char,50
+lb,STUDYID,Study Identifier,Char,50
+lb,DOMAIN,Domain Abbreviation,Char,50
+lb,USUBJID,Unique Subject Identifier,Char,50
+lb,LBSEQ,Sequence Number,Num,8
+lb,LBGRPID,Group ID,Char,50
+lb,LBREFID,Specimen ID,Char,50
+lb,LBSPID,Sponsor-Defined Identifier,Char,50
+lb,LBTESTCD,Lab Test or Examination Short Name,Char,50
+lb,LBTEST,Lab Test or Examination Name,Char,50
+lb,LBORRES,Result or Finding in Original Units,Char,50
+lb,LBORRESU,Original Units,Char,50
+lb,LBREASND,Reason Test Not Done,Char,50
+lb,LBNAM,Vendor Name,Char,50
+lb,LBLOINC,LOINC Code,Char,50
+lb,LBSPEC,Specimen Type,Char,50
+lb,LBSPCCND,Specimen Condition,Char,50
+lb,LBSPCUFL,Specimen Usability for the Test,Char,50
+lb,LBMETHOD,Method of Test or Examination,Char,50
+lb,LBANMETH,Analysis Method,Char,50
+lb,LBTMTHSN,Test Method Sensitivity,Char,50
+lb,LBLOBXFL,Last Observation Before Exposure Flag,Char,50
+lb,LBBLFL,Baseline Flag,Char,50
+lb,LBFAST,Fasting Status,Char,50
+lb,LBDRVFL,Derived Flag,Char,50
+lb,LBTOX,Toxicity,Char,50
+lb,LBTOXGR,Standard Toxicity Grade,Char,50
+lb,LBCLSIG,"Clinically Significant, Collected",Char,50
+lb,VISITNUM,Visit Number,Num,8
+lb,VISIT,Visit Name,Char,50
+lb,VISITDY,Planned Study Day of Visit,Num,8
+lb,TAETORD,Planned Order of Element within Arm,Num,8
+lb,EPOCH,Epoch,Char,50
+lb,LBDTC,Date/Time of Specimen Collection,Char,50
+lb,LBENDTC,End Date/Time of Specimen Collection,Char,50
+lb,LBDY,Study Day of Specimen Collection,Num,8
+lb,LBENDY,Study Day of End of Observation,Num,8
+lb,LBTPT,Planned Time Point Name,Char,50
+lb,LBTPTNUM,Planned Time Point Number,Num,8
+lb,LBELTM,Planned Elapsed Time from Time Point Ref,Char,50
+lb,LBTPTREF,Time Point Reference,Char,50
+lb,LBRFTDTC,Date/Time of Reference Time Point,Char,50
+lb,LBPTFL,Point in Time Flag,Char,50
+lb,LBPDUR,Planned Duration,Char,50

@@ -1,9 +1,9 @@
 dataset,variable,label,type,length
-vs.xpt,STUDYID,Study Identifier,Char,12
-vs.xpt,DOMAIN,Domain Abbreviation,Char,2
-vs.xpt,USUBJID,Unique Subject Identifier,Char,8
-vs.xpt,POOLID,Pool Identfier,Char,8
-vs.xpt,VSSEQ,Sequence Number,Num,8
-pooldef.xpt,STUDYID,Study Identifier,Char,12
-pooldef.xpt,POOLID,Pool Identfier,Char,8
-pooldef.xpt,USUBJID,Unique Subject Identifier,Char,8
+vs,STUDYID,Study Identifier,Char,12
+vs,DOMAIN,Domain Abbreviation,Char,2
+vs,USUBJID,Unique Subject Identifier,Char,8
+vs,POOLID,Pool Identfier,Char,8
+vs,VSSEQ,Sequence Number,Num,8
+pooldef,STUDYID,Study Identifier,Char,12
+pooldef,POOLID,Pool Identfier,Char,8
+pooldef,USUBJID,Unique Subject Identifier,Char,8

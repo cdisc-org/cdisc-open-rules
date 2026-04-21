@@ -1,24 +1,24 @@
 dataset,variable,label,type,length
-vs.xpt,STUDYID,Study Identifier,Char,12
-vs.xpt,DOMAIN,Domain Abbreviation,Char,2
-vs.xpt,USUBJID,Unique Subject Identifier,Char,8
-vs.xpt,VSSEQ,Sequence Number,Num,8
-vs.xpt,VSSPID,Sponsor-Defined Identifier,Char,8
-vs.xpt,VSIDENT,Invalid Identfier,Char,8
-vs.xpt,VSTESTCD,Vital Signs Test Short Name,Char,8
-vs.xpt,VSTEST,Vital Signs Test Name,Char,24
-vs.xpt,VSPOS,Vital Signs Position of Subject,Char,8
-vs.xpt,VSORRES,Result or Findings as Collected,Char,8
-vs.xpt,VSORRESU,Unit of the Original Result,Char,9
-vs.xpt,VSSTRESC,Standardized Result in Character Format,Char,200
-vs.xpt,VSSTRESN,Standardized Result in Numeric Format,Num,8
-vs.xpt,VSSTRESU,Unit of the Standardized Result,Char,9
-vs.xpt,VSSTAT,Completion Status,Char,8
-vs.xpt,VSLOC,Location of Vital Signs Measurement,Char,11
-vs.xpt,VSLOBXFL,Last Observation Before Exposure Flag,Char,1
-vs.xpt,VSREPNUM,Repetition Number,Num,8
-vs.xpt,VISITNUM,Visit Number,Num,8
-vs.xpt,VISIT,Visit Name,Char,200
-vs.xpt,EPOCH,Epoch,Char,9
-vs.xpt,VSDTC,Date/Time of Measurement,Char,10
-vs.xpt,VSDY,Study Day of Vital Signs Measurement,Num,8
+vs,STUDYID,Study Identifier,Char,12
+vs,DOMAIN,Domain Abbreviation,Char,2
+vs,USUBJID,Unique Subject Identifier,Char,8
+vs,VSSEQ,Sequence Number,Num,8
+vs,VSSPID,Sponsor-Defined Identifier,Char,8
+vs,VSIDENT,Invalid Identfier,Char,8
+vs,VSTESTCD,Vital Signs Test Short Name,Char,8
+vs,VSTEST,Vital Signs Test Name,Char,24
+vs,VSPOS,Vital Signs Position of Subject,Char,8
+vs,VSORRES,Result or Findings as Collected,Char,8
+vs,VSORRESU,Unit of the Original Result,Char,9
+vs,VSSTRESC,Standardized Result in Character Format,Char,200
+vs,VSSTRESN,Standardized Result in Numeric Format,Num,8
+vs,VSSTRESU,Unit of the Standardized Result,Char,9
+vs,VSSTAT,Completion Status,Char,8
+vs,VSLOC,Location of Vital Signs Measurement,Char,11
+vs,VSLOBXFL,Last Observation Before Exposure Flag,Char,1
+vs,VSREPNUM,Repetition Number,Num,8
+vs,VISITNUM,Visit Number,Num,8
+vs,VISIT,Visit Name,Char,200
+vs,EPOCH,Epoch,Char,9
+vs,VSDTC,Date/Time of Measurement,Char,10
+vs,VSDY,Study Day of Vital Signs Measurement,Num,8

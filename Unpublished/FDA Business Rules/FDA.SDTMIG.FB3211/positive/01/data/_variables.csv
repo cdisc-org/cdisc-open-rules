@@ -1,41 +1,41 @@
 dataset,variable,label,type,length
-be.xpt,STUDYID,Study Identifier,Char,12
-be.xpt,DOMAIN,Domain Abbreviation,Char,2
-be.xpt,USUBJID,Unique Subject Identifier,Char,8
-be.xpt,BESEQ,Sequence Number,Num,8
-be.xpt,BETRT,"Reported Name of Drug, Med, or Therapy",Char,200
-be.xpt,BEDECOD,Dictionary-Derived Term,Char,200
-be.xpt,BECAT,Category for Biospecimen Event,Char,50
-be.xpt,BELOC,Anatomical Location of Event,Char,50
-be.xpt,BEPARTY,Accountable Party,Char,200
-be.xpt,BEDTC,Date/Time of Specimen Collection,Char,19
-be.xpt,BESTDTC,Start Date/Time of Biospecimen Event,Char,19
-be.xpt,BEENDTC,End Date/Time of Biospecimen Event,Char,19
-ds.xpt,STUDYID,Study Identifier,Char,12
-ds.xpt,DOMAIN,Domain Abbreviation,Char,2
-ds.xpt,USUBJID,Unique Subject Identifier,Char,8
-ds.xpt,DSSEQ,Sequence Number,Num,8
-ds.xpt,DSTERM,Reported Term for the Disposition Event,Char,40
-ds.xpt,DSDECOD,Standardized Disposition Term,Char,40
-ds.xpt,DSCAT,Category for Disposition Event,Char,40
-ds.xpt,DSSCAT,Subcategory for Disposition Event,Char,40
-ds.xpt,EPOCH,Epoch,Char,40
-ds.xpt,DSDTC,Date/Time of Collection,Char,19
-ds.xpt,DSSTDTC,Start Date/Time of Disposition Event,Char,19
-mh.xpt,STUDYID,Study Identifier,Char,12
-mh.xpt,DOMAIN,Domain Abbreviation,Char,2
-mh.xpt,USUBJID,Unique Subject Identifier,Char,8
-mh.xpt,MHSEQ,Sequence Number,Num,8
-mh.xpt,MHTERM,Reported Term for the Medical History,Char,40
-mh.xpt,MHDTC,Date/Time of History Collection,Char,19
-mh.xpt,MHSTDTC,Start Date/Time of Medical History Event,Char,19
-ml.xpt,STUDYID,Study Identifier,Char,12
-ml.xpt,DOMAIN,Domain Abbreviation,Char,2
-ml.xpt,USUBJID,Unique Subject Identifier,Char,8
-ml.xpt,MLSEQ,Sequence Number,Num,8
-ml.xpt,MLTRT,Name of Meal,Char,200
-ml.xpt,MLCAT,Category for Meal,Char,50
-ml.xpt,MLDTC,Date/Time of Collection,Char,19
-ml.xpt,MLSTDTC,Start Date/Time of Meal,Char,19
-ml.xpt,MLENDTC,End Date/Time of Meal,Char,19
-ml.xpt,MLEVLINT,Evaluation Interval,Char,200
+be,STUDYID,Study Identifier,Char,12
+be,DOMAIN,Domain Abbreviation,Char,2
+be,USUBJID,Unique Subject Identifier,Char,8
+be,BESEQ,Sequence Number,Num,8
+be,BETRT,"Reported Name of Drug, Med, or Therapy",Char,200
+be,BEDECOD,Dictionary-Derived Term,Char,200
+be,BECAT,Category for Biospecimen Event,Char,50
+be,BELOC,Anatomical Location of Event,Char,50
+be,BEPARTY,Accountable Party,Char,200
+be,BEDTC,Date/Time of Specimen Collection,Char,19
+be,BESTDTC,Start Date/Time of Biospecimen Event,Char,19
+be,BEENDTC,End Date/Time of Biospecimen Event,Char,19
+ds,STUDYID,Study Identifier,Char,12
+ds,DOMAIN,Domain Abbreviation,Char,2
+ds,USUBJID,Unique Subject Identifier,Char,8
+ds,DSSEQ,Sequence Number,Num,8
+ds,DSTERM,Reported Term for the Disposition Event,Char,40
+ds,DSDECOD,Standardized Disposition Term,Char,40
+ds,DSCAT,Category for Disposition Event,Char,40
+ds,DSSCAT,Subcategory for Disposition Event,Char,40
+ds,EPOCH,Epoch,Char,40
+ds,DSDTC,Date/Time of Collection,Char,19
+ds,DSSTDTC,Start Date/Time of Disposition Event,Char,19
+mh,STUDYID,Study Identifier,Char,12
+mh,DOMAIN,Domain Abbreviation,Char,2
+mh,USUBJID,Unique Subject Identifier,Char,8
+mh,MHSEQ,Sequence Number,Num,8
+mh,MHTERM,Reported Term for the Medical History,Char,40
+mh,MHDTC,Date/Time of History Collection,Char,19
+mh,MHSTDTC,Start Date/Time of Medical History Event,Char,19
+ml,STUDYID,Study Identifier,Char,12
+ml,DOMAIN,Domain Abbreviation,Char,2
+ml,USUBJID,Unique Subject Identifier,Char,8
+ml,MLSEQ,Sequence Number,Num,8
+ml,MLTRT,Name of Meal,Char,200
+ml,MLCAT,Category for Meal,Char,50
+ml,MLDTC,Date/Time of Collection,Char,19
+ml,MLSTDTC,Start Date/Time of Meal,Char,19
+ml,MLENDTC,End Date/Time of Meal,Char,19
+ml,MLEVLINT,Evaluation Interval,Char,200

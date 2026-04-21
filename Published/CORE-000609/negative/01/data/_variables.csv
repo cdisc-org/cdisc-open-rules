@@ -1,30 +1,30 @@
 dataset,variable,label,type,length
-relref.xpt,STUDYID,Study Identifier,Char,50
-relref.xpt,SETCD,Trial Set Code,Char,50
-relref.xpt,REFID,Reference ID,Char,50
-relref.xpt,PARENT,Parent Reference ID,Char,8
-relref.xpt,LEVEL,Reference ID Generation Level,Num,50
-relref.xpt,LVLDESC,Reference ID Level Description,Char,50
-dm.xpt,STUDYID,Study Identifier,Char,50
-dm.xpt,DOMAIN,Domain Abbreviation,Char,50
-dm.xpt,USUBJID,Unique Subject Identifier,Char,50
-dm.xpt,SUBJID,Subject Identifier for the Study,Char,50
-dm.xpt,RFSTDTC,Subject Reference Start Date/Time,Char,50
-dm.xpt,RFENDTC,Subject Reference End Date/Time,Char,50
-dm.xpt,AGETXT,Age Range,Char,50
-dm.xpt,AGEU,Age Unit,Char,50
-dm.xpt,SEX,Sex,Char,50
-dm.xpt,SPECIES,Species,Char,50
-dm.xpt,STRAIN,Strain/Substrain,Char,50
-dm.xpt,SBSTRAIN,Strain/Substrain Details,Char,50
-dm.xpt,ARMCD,Planned Arm Code,Char,50
-dm.xpt,ARM,Description of Planned Arm,Char,50
-dm.xpt,SETCD,Set Code,Char,50
-tx.xpt,STUDYID,Study Identifier,Char,50
-tx.xpt,DOMAIN,Domain Abbreviation,Char,50
-tx.xpt,SETCD,Set Code,Char,50
-tx.xpt,SET,Set Description,Char,50
-tx.xpt,TXSEQ,Sequence Number,Num,50
-tx.xpt,TXPARMCD,Trial Set Parameter Short Name,Char,50
-tx.xpt,TXPARM,Trial Set Parameter,Char,50
-tx.xpt,TXVAL,Trial Set Parameter Value,Char,50
+relref,STUDYID,Study Identifier,Char,50
+relref,SETCD,Trial Set Code,Char,50
+relref,REFID,Reference ID,Char,50
+relref,PARENT,Parent Reference ID,Char,8
+relref,LEVEL,Reference ID Generation Level,Num,50
+relref,LVLDESC,Reference ID Level Description,Char,50
+dm,STUDYID,Study Identifier,Char,50
+dm,DOMAIN,Domain Abbreviation,Char,50
+dm,USUBJID,Unique Subject Identifier,Char,50
+dm,SUBJID,Subject Identifier for the Study,Char,50
+dm,RFSTDTC,Subject Reference Start Date/Time,Char,50
+dm,RFENDTC,Subject Reference End Date/Time,Char,50
+dm,AGETXT,Age Range,Char,50
+dm,AGEU,Age Unit,Char,50
+dm,SEX,Sex,Char,50
+dm,SPECIES,Species,Char,50
+dm,STRAIN,Strain/Substrain,Char,50
+dm,SBSTRAIN,Strain/Substrain Details,Char,50
+dm,ARMCD,Planned Arm Code,Char,50
+dm,ARM,Description of Planned Arm,Char,50
+dm,SETCD,Set Code,Char,50
+tx,STUDYID,Study Identifier,Char,50
+tx,DOMAIN,Domain Abbreviation,Char,50
+tx,SETCD,Set Code,Char,50
+tx,SET,Set Description,Char,50
+tx,TXSEQ,Sequence Number,Num,50
+tx,TXPARMCD,Trial Set Parameter Short Name,Char,50
+tx,TXPARM,Trial Set Parameter,Char,50
+tx,TXVAL,Trial Set Parameter Value,Char,50

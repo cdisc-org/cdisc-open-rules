@@ -1,67 +1,67 @@
 dataset,variable,label,type,length
-ae.xpt,STUDYID,Study Identifier,Char,50
-ae.xpt,DOMAIN,Domain Abbreviation,Char,50
-ae.xpt,USUBJID,Unique Subject Identifier,Char,50
-ae.xpt,AESEQ,Sequence Number,Num,8
-ae.xpt,AETERM,Reported Term for the Adverse Event,Char,50
-ae.xpt,AETOX,Toxicity,Char,50
-ae.xpt,AETOXGR,Standard Toxicity Grade,Char,50
-ae.xpt,EPOCH,Epoch,Char,50
-mh.xpt,STUDYID,Study Identifier,Char,50
-mh.xpt,DOMAIN,Domain Abbreviation,Char,50
-mh.xpt,USUBJID,Unique Subject Identifier,Char,50
-mh.xpt,MHSEQ,Sequence Number,Num,8
-mh.xpt,MHTERM,Reported Term for the Medical History,Char,50
-mh.xpt,MHTOX,Toxicity,Char,50
-mh.xpt,MHTOXGR,Standard Toxicity Grade,Char,50
-mh.xpt,EPOCH,Epoch,Char,50
-ce.xpt,STUDYID,Study Identifier,Char,50
-ce.xpt,DOMAIN,Domain Abbreviation,Char,50
-ce.xpt,USUBJID,Unique Subject Identifier,Char,50
-ce.xpt,CESEQ,Sequence Number,Num,8
-ce.xpt,CETERM,Reported Term for the Clinical Event,Char,50
-ce.xpt,CETOX,Toxicity,Char,50
-ce.xpt,CETOXGR,Standard Toxicity Grade,Char,50
-ce.xpt,EPOCH,Epoch,Char,50
-eg.xpt,STUDYID,Study Identifier,Char,50
-eg.xpt,DOMAIN,Domain Abbreviation,Char,50
-eg.xpt,USUBJID,Unique Subject Identifier,Char,50
-eg.xpt,EGSEQ,Sequence Number,Num,8
-eg.xpt,EGTESTCD,ECG Test or Examination Short Name,Char,50
-eg.xpt,EGTEST,ECG Test or Examination Name,Char,50
-eg.xpt,EGORRES,Result or Finding in Original Units,Char,50
-eg.xpt,EGORRESU,Original Units,Char,50
-eg.xpt,EGTOX,Toxicity,Char,50
-eg.xpt,EGTOXGR,Standard Toxicity Grade,Char,50
-lb.xpt,STUDYID,Study Identifier,Char,50
-lb.xpt,DOMAIN,Domain Abbreviation,Char,50
-lb.xpt,USUBJID,Unique Subject Identifier,Char,50
-lb.xpt,LBSEQ,Sequence Number,Num,8
-lb.xpt,LBTESTCD,Lab Test or Examination Short Name,Char,50
-lb.xpt,LBTEST,Lab Test or Examination Name,Char,50
-lb.xpt,LBORRES,Result or Finding in Original Units,Char,50
-lb.xpt,LBORRESU,Original Units,Char,50
-lb.xpt,LBTOX,Toxicity,Char,50
-lb.xpt,LBTOXGR,Standard Toxicity Grade,Char,50
-lb.xpt,EPOCH,Epoch,Char,50
-pc.xpt,STUDYID,Study Identifier,Char,50
-pc.xpt,DOMAIN,Domain Abbreviation,Char,50
-pc.xpt,USUBJID,Unique Subject Identifier,Char,50
-pc.xpt,PCSEQ,Sequence Number,Num,8
-pc.xpt,PCTESTCD,Pharmacokinetic Test Short Name,Char,50
-pc.xpt,PCTEST,Pharmacokinetic Test Name,Char,50
-pc.xpt,PCORRES,Result or Finding in Original Units,Char,50
-pc.xpt,PCORRESU,Original Units,Char,50
-pc.xpt,PCTOX,Toxicity,Char,50
-pc.xpt,PCTOXGR,Standard Toxicity Grade,Char,50
-pc.xpt,EPOCH,Epoch,Char,50
-pp.xpt,STUDYID,Study Identifier,Char,50
-pp.xpt,DOMAIN,Domain Abbreviation,Char,50
-pp.xpt,USUBJID,Unique Subject Identifier,Char,50
-pp.xpt,PPSEQ,Sequence Number,Num,8
-pp.xpt,PPTESTCD,Parameter Short Name,Char,50
-pp.xpt,PPTEST,Parameter Name,Char,50
-pp.xpt,PPORRES,Result or Finding in Original Units,Char,50
-pp.xpt,PPORRESU,Original Units,Char,50
-pp.xpt,PPTOX,Toxicity,Char,50
-pp.xpt,PPTOXGR,Standard Toxicity Grade,Char,50
+ae,STUDYID,Study Identifier,Char,50
+ae,DOMAIN,Domain Abbreviation,Char,50
+ae,USUBJID,Unique Subject Identifier,Char,50
+ae,AESEQ,Sequence Number,Num,8
+ae,AETERM,Reported Term for the Adverse Event,Char,50
+ae,AETOX,Toxicity,Char,50
+ae,AETOXGR,Standard Toxicity Grade,Char,50
+ae,EPOCH,Epoch,Char,50
+mh,STUDYID,Study Identifier,Char,50
+mh,DOMAIN,Domain Abbreviation,Char,50
+mh,USUBJID,Unique Subject Identifier,Char,50
+mh,MHSEQ,Sequence Number,Num,8
+mh,MHTERM,Reported Term for the Medical History,Char,50
+mh,MHTOX,Toxicity,Char,50
+mh,MHTOXGR,Standard Toxicity Grade,Char,50
+mh,EPOCH,Epoch,Char,50
+ce,STUDYID,Study Identifier,Char,50
+ce,DOMAIN,Domain Abbreviation,Char,50
+ce,USUBJID,Unique Subject Identifier,Char,50
+ce,CESEQ,Sequence Number,Num,8
+ce,CETERM,Reported Term for the Clinical Event,Char,50
+ce,CETOX,Toxicity,Char,50
+ce,CETOXGR,Standard Toxicity Grade,Char,50
+ce,EPOCH,Epoch,Char,50
+eg,STUDYID,Study Identifier,Char,50
+eg,DOMAIN,Domain Abbreviation,Char,50
+eg,USUBJID,Unique Subject Identifier,Char,50
+eg,EGSEQ,Sequence Number,Num,8
+eg,EGTESTCD,ECG Test or Examination Short Name,Char,50
+eg,EGTEST,ECG Test or Examination Name,Char,50
+eg,EGORRES,Result or Finding in Original Units,Char,50
+eg,EGORRESU,Original Units,Char,50
+eg,EGTOX,Toxicity,Char,50
+eg,EGTOXGR,Standard Toxicity Grade,Char,50
+lb,STUDYID,Study Identifier,Char,50
+lb,DOMAIN,Domain Abbreviation,Char,50
+lb,USUBJID,Unique Subject Identifier,Char,50
+lb,LBSEQ,Sequence Number,Num,8
+lb,LBTESTCD,Lab Test or Examination Short Name,Char,50
+lb,LBTEST,Lab Test or Examination Name,Char,50
+lb,LBORRES,Result or Finding in Original Units,Char,50
+lb,LBORRESU,Original Units,Char,50
+lb,LBTOX,Toxicity,Char,50
+lb,LBTOXGR,Standard Toxicity Grade,Char,50
+lb,EPOCH,Epoch,Char,50
+pc,STUDYID,Study Identifier,Char,50
+pc,DOMAIN,Domain Abbreviation,Char,50
+pc,USUBJID,Unique Subject Identifier,Char,50
+pc,PCSEQ,Sequence Number,Num,8
+pc,PCTESTCD,Pharmacokinetic Test Short Name,Char,50
+pc,PCTEST,Pharmacokinetic Test Name,Char,50
+pc,PCORRES,Result or Finding in Original Units,Char,50
+pc,PCORRESU,Original Units,Char,50
+pc,PCTOX,Toxicity,Char,50
+pc,PCTOXGR,Standard Toxicity Grade,Char,50
+pc,EPOCH,Epoch,Char,50
+pp,STUDYID,Study Identifier,Char,50
+pp,DOMAIN,Domain Abbreviation,Char,50
+pp,USUBJID,Unique Subject Identifier,Char,50
+pp,PPSEQ,Sequence Number,Num,8
+pp,PPTESTCD,Parameter Short Name,Char,50
+pp,PPTEST,Parameter Name,Char,50
+pp,PPORRES,Result or Finding in Original Units,Char,50
+pp,PPORRESU,Original Units,Char,50
+pp,PPTOX,Toxicity,Char,50
+pp,PPTOXGR,Standard Toxicity Grade,Char,50

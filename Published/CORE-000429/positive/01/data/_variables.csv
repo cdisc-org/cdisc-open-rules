@@ -1,44 +1,44 @@
 dataset,variable,label,type,length
-pc.xpt,STUDYID,Study Identifier,Char,50
-pc.xpt,DOMAIN,Domain Abbreviation,Char,50
-pc.xpt,USUBJID,Unique Subject Identifier,Char,50
-pc.xpt,POOLDID,Pool Identfier,Char,
-pc.xpt,PCSEQ,Sequence Number,Num,8
-pc.xpt,PCGRPID,Group Identifier,Char,50
-pc.xpt,PCREFID,Sample Identifier,Char,50
-pc.xpt,PCSPID,Sponsor-Defined Identifier,Char,50
-pc.xpt,PCTESTCD,Test Short Name,Char,8
-pc.xpt,PCTEST,Test Name,Char,40
-pc.xpt,PCCAT,Test Category,Char,50
-pc.xpt,PCSCAT,Test Subcategory,Char,50
-pc.xpt,PCORRES,Result or Findings as Collected,Char,20
-pc.xpt,PCORRESU,Unit of the Original Result,Char,50
-pc.xpt,PCSTRESC,Standardized Result in Character Format ,Char,20
-pc.xpt,PCSTRESN,Standardized Result in Numeric Format ,Num,8
-pc.xpt,PCSTRESU,Unit of the Standardized Result ,Char,20
-pc.xpt,PCSTAT,Completion Status,Char,8
-pc.xpt,PCREASND,Reason Not Done,Char,50
-pc.xpt,PCNAM,Laboratory Name,Char,50
-pc.xpt,PCSPEC,Specimen Material Type,Char,50
-pc.xpt,PCSPCCND ,Specimen Condition,Char,50
-pc.xpt,PCSPCUFL ,Specimen Usability for the Test,Char,50
-pc.xpt,PCMETHOD,Method of Test or Examination,Char,50
-pc.xpt,PCBLFL,Baseline Flag,Char,1
-pc.xpt,PCFAST,Fasting Status,Char,1
-pc.xpt,PCDRVFL ,Derived Flag,Char,1
-pc.xpt,PCLLOQ,Lower Level of Quantitation,Num,8
-pc.xpt,PCEXCLFL,Exclusion Flag,Char,1
-pc.xpt,PCREASEX ,Reason for Exclusion,Char,50
-pc.xpt,VISITDY,Planned Study Day of Collection,Num,8
-pc.xpt,PCDTC,Date/Time of Specimen Collection ,Char,20
-pc.xpt,PCENDTC,End Date/Time of Specimen Collection ,Char,20
-pc.xpt,PCDY,Study Day of Specimen Collection ,Num,8
-pc.xpt,PCENDY,Study Day of End of Specimen Collection ,Num,8
-pc.xpt,PCNOMDY,Nominal Study Day for Tabulations ,Num,8
-pc.xpt,PCNOMLBL ,Label for Nominal Study Day,Char,20
-pc.xpt,PCTPT,Planned Time Point Name ,Char,20
-pc.xpt,PCTPTNUM,Planned Time Point Number ,Num,8
-pc.xpt,PCELTM,Planned Elapsed Time from Time Point Ref ,Char,20
-pc.xpt,PCTPTREF,Time Point Reference ,Char,20
-pc.xpt,PCRFTDTC ,Date/Time of Reference Point ,Char,20
-pc.xpt,PCEVLINT ,Evaluation Interval ,Char,20
+pc,STUDYID,Study Identifier,Char,50
+pc,DOMAIN,Domain Abbreviation,Char,50
+pc,USUBJID,Unique Subject Identifier,Char,50
+pc,POOLDID,Pool Identfier,Char,
+pc,PCSEQ,Sequence Number,Num,8
+pc,PCGRPID,Group Identifier,Char,50
+pc,PCREFID,Sample Identifier,Char,50
+pc,PCSPID,Sponsor-Defined Identifier,Char,50
+pc,PCTESTCD,Test Short Name,Char,8
+pc,PCTEST,Test Name,Char,40
+pc,PCCAT,Test Category,Char,50
+pc,PCSCAT,Test Subcategory,Char,50
+pc,PCORRES,Result or Findings as Collected,Char,20
+pc,PCORRESU,Unit of the Original Result,Char,50
+pc,PCSTRESC,Standardized Result in Character Format ,Char,20
+pc,PCSTRESN,Standardized Result in Numeric Format ,Num,8
+pc,PCSTRESU,Unit of the Standardized Result ,Char,20
+pc,PCSTAT,Completion Status,Char,8
+pc,PCREASND,Reason Not Done,Char,50
+pc,PCNAM,Laboratory Name,Char,50
+pc,PCSPEC,Specimen Material Type,Char,50
+pc,PCSPCCND ,Specimen Condition,Char,50
+pc,PCSPCUFL ,Specimen Usability for the Test,Char,50
+pc,PCMETHOD,Method of Test or Examination,Char,50
+pc,PCBLFL,Baseline Flag,Char,1
+pc,PCFAST,Fasting Status,Char,1
+pc,PCDRVFL ,Derived Flag,Char,1
+pc,PCLLOQ,Lower Level of Quantitation,Num,8
+pc,PCEXCLFL,Exclusion Flag,Char,1
+pc,PCREASEX ,Reason for Exclusion,Char,50
+pc,VISITDY,Planned Study Day of Collection,Num,8
+pc,PCDTC,Date/Time of Specimen Collection ,Char,20
+pc,PCENDTC,End Date/Time of Specimen Collection ,Char,20
+pc,PCDY,Study Day of Specimen Collection ,Num,8
+pc,PCENDY,Study Day of End of Specimen Collection ,Num,8
+pc,PCNOMDY,Nominal Study Day for Tabulations ,Num,8
+pc,PCNOMLBL ,Label for Nominal Study Day,Char,20
+pc,PCTPT,Planned Time Point Name ,Char,20
+pc,PCTPTNUM,Planned Time Point Number ,Num,8
+pc,PCELTM,Planned Elapsed Time from Time Point Ref ,Char,20
+pc,PCTPTREF,Time Point Reference ,Char,20
+pc,PCRFTDTC ,Date/Time of Reference Point ,Char,20
+pc,PCEVLINT ,Evaluation Interval ,Char,20

@@ -1,55 +1,55 @@
 dataset,variable,label,type,length
-su.xpt,STUDYID,Study Identifier,Char,50
-su.xpt,DOMAIN,Domain Abbreviation,Char,50
-su.xpt,SUSEQ,Sequence Number,Num,8
-su.xpt,SUTRT,Reported Name of Substance,Char,50
-su.xpt,SUPRESP,SU Pre-Specified,Char,50
-su.xpt,SUOCCUR,SU Occurrence,Char,50
-apsu.xpt,STUDYID,Study Identifier,Char,50
-apsu.xpt,DOMAIN,Domain Abbreviation,Char,50
-apsu.xpt,SUSEQ,Sequence Number,Num,8
-apsu.xpt,RSUBJID,Related Subject or Pool Identifier,Char,50
-apsu.xpt,SREL,"Subject, Device, or Study Relationship",Char,50
-apsu.xpt,SUTRT,Reported Name of Substance,Char,50
-apsu.xpt,SUPRESP,SU Pre-Specified,Char,50
-apsu.xpt,SUOCCUR,SU Occurrence,Char,50
-mh.xpt,STUDYID,Study Identifier,Char,50
-mh.xpt,DOMAIN,Domain Abbreviation,Char,50
-mh.xpt,MHSEQ,Sequence Number,Num,8
-mh.xpt,MHTERM,Reported Term for the Medical History,Char,50
-mh.xpt,MHCAT,Category for Medical History,Char,50
-mh.xpt,MHPRESP,Medical History Event Pre-Specified,Char,50
-mh.xpt,MHOCCUR,Medical History Occurrence,Char,50
-mh.xpt,MHDTC,Date/Time of History Collection,Char,50
-mh.xpt,MHSTDTC,Start Date/Time of Medical History Event,Char,50
-lb.xpt,STUDYID,Study Identifier,Char,50
-lb.xpt,DOMAIN,Domain Abbreviation,Char,50
-lb.xpt,LBSEQ,Sequence Number,Num,8
-lb.xpt,LBTESTCD,Lab Test or Examination Short Name,Char,50
-lb.xpt,LBTEST,Lab Test or Examination Name,Char,50
-lb.xpt,LBCAT,Category for Lab Test,Char,50
-lb.xpt,LBORRES,Result or Finding in Original Units,Char,50
-lb.xpt,LBORRESU,Original Units,Char,50
-lb.xpt,LBSTRESC,Character Result/Finding in Std Format,Char,50
-lb.xpt,LBSTRESN,Numeric Result/Finding in Standard Units,Num,8
-lb.xpt,LBSTRESU,Standard Units,Char,50
-lb.xpt,LBSPEC,Specimen Type,Char,50
-lb.xpt,VISITNUM,Visit Number,Num,8
-lb.xpt,VISIT,Visit Name,Char,50
-lb.xpt,LBDTC,Date/Time of Specimen Collection,Char,50
-re.xpt,STUDYID,Study Identifier,Char,50
-re.xpt,DOMAIN,Domain Abbreviation,Char,50
-re.xpt,RESEQ,Sequence Number,Num,8
-re.xpt,RETESTCD,Short Name of Respiratory Test,Char,50
-re.xpt,RETEST,Name of Respiratory Test,Char,50
-re.xpt,REORRES,Result or Finding in Original Units,Char,50
-re.xpt,REORRESU,Original Units,Char,50
-re.xpt,REORREF,Reference Result in Original Units,Char,50
-re.xpt,RESTRESC,Character Result/Finding in Std Format,Char,50
-re.xpt,RESTRESN,Numeric Result/Finding in Standard Units,Num,8
-re.xpt,RESTRESU,Standard Units,Char,50
-re.xpt,RESTREFC,Character Reference Result,Char,50
-re.xpt,RESTREFN,Numeric Reference Result in Std Units,Num,8
-re.xpt,VISITNUM,Visit Number,Num,8
-re.xpt,VISIT,Visit Name,Char,50
-re.xpt,REDTC,Date/Time of Collection,Char,50
+su,STUDYID,Study Identifier,Char,50
+su,DOMAIN,Domain Abbreviation,Char,50
+su,SUSEQ,Sequence Number,Num,8
+su,SUTRT,Reported Name of Substance,Char,50
+su,SUPRESP,SU Pre-Specified,Char,50
+su,SUOCCUR,SU Occurrence,Char,50
+apsu,STUDYID,Study Identifier,Char,50
+apsu,DOMAIN,Domain Abbreviation,Char,50
+apsu,SUSEQ,Sequence Number,Num,8
+apsu,RSUBJID,Related Subject or Pool Identifier,Char,50
+apsu,SREL,"Subject, Device, or Study Relationship",Char,50
+apsu,SUTRT,Reported Name of Substance,Char,50
+apsu,SUPRESP,SU Pre-Specified,Char,50
+apsu,SUOCCUR,SU Occurrence,Char,50
+mh,STUDYID,Study Identifier,Char,50
+mh,DOMAIN,Domain Abbreviation,Char,50
+mh,MHSEQ,Sequence Number,Num,8
+mh,MHTERM,Reported Term for the Medical History,Char,50
+mh,MHCAT,Category for Medical History,Char,50
+mh,MHPRESP,Medical History Event Pre-Specified,Char,50
+mh,MHOCCUR,Medical History Occurrence,Char,50
+mh,MHDTC,Date/Time of History Collection,Char,50
+mh,MHSTDTC,Start Date/Time of Medical History Event,Char,50
+lb,STUDYID,Study Identifier,Char,50
+lb,DOMAIN,Domain Abbreviation,Char,50
+lb,LBSEQ,Sequence Number,Num,8
+lb,LBTESTCD,Lab Test or Examination Short Name,Char,50
+lb,LBTEST,Lab Test or Examination Name,Char,50
+lb,LBCAT,Category for Lab Test,Char,50
+lb,LBORRES,Result or Finding in Original Units,Char,50
+lb,LBORRESU,Original Units,Char,50
+lb,LBSTRESC,Character Result/Finding in Std Format,Char,50
+lb,LBSTRESN,Numeric Result/Finding in Standard Units,Num,8
+lb,LBSTRESU,Standard Units,Char,50
+lb,LBSPEC,Specimen Type,Char,50
+lb,VISITNUM,Visit Number,Num,8
+lb,VISIT,Visit Name,Char,50
+lb,LBDTC,Date/Time of Specimen Collection,Char,50
+re,STUDYID,Study Identifier,Char,50
+re,DOMAIN,Domain Abbreviation,Char,50
+re,RESEQ,Sequence Number,Num,8
+re,RETESTCD,Short Name of Respiratory Test,Char,50
+re,RETEST,Name of Respiratory Test,Char,50
+re,REORRES,Result or Finding in Original Units,Char,50
+re,REORRESU,Original Units,Char,50
+re,REORREF,Reference Result in Original Units,Char,50
+re,RESTRESC,Character Result/Finding in Std Format,Char,50
+re,RESTRESN,Numeric Result/Finding in Standard Units,Num,8
+re,RESTRESU,Standard Units,Char,50
+re,RESTREFC,Character Reference Result,Char,50
+re,RESTREFN,Numeric Reference Result in Std Units,Num,8
+re,VISITNUM,Visit Number,Num,8
+re,VISIT,Visit Name,Char,50
+re,REDTC,Date/Time of Collection,Char,50

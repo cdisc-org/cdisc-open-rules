@@ -1,22 +1,22 @@
 dataset,variable,label,type,length
-eg.xpt,STUDYID,Study Identifier,Char,50
-eg.xpt,DOMAIN,Domain Abbreviation,Char,50
-eg.xpt,USUBJID,Unique Subject Identifier,Char,50
-eg.xpt,EGSEQ,Sequence Number,Num,8
-eg.xpt,EGBEATNO,ECG Beat Number,Num,8
-eg.xpt,EGTESTCD,ECG Test or Examination Short Name,Char,50
-eg.xpt,EGTEST,ECG Test or Examination Name,Char,50
-eg.xpt,EGCAT,Category for ECG,Char,50
-eg.xpt,EGPOS,ECG Position of Subject,Char,50
-eg.xpt,EGORRES,Result or Finding in Original Units,Char,50
-eg.xpt,EGORRESU,Original Units,Char,50
-eg.xpt,EGSTRESC,Character Result/Finding in Std Format,Char,50
-eg.xpt,EGSTRESN,Numeric Result/Finding in Standard Units,Num,8
-eg.xpt,EGSTRESU,Standard Units,Char,50
-eg.xpt,EGMETHOD,Method of Test or Examination,Char,50
-eg.xpt,EGLEAD,Lead Location Used for Measurement,Char,50
-eg.xpt,EGLOBXFL,Last Observation Before Exposure Flag,Char,50
-eg.xpt,VISITNUM,Visit Number,Num,8
-eg.xpt,VISIT,Visit Name,Char,50
-eg.xpt,VISITDY,Planned Study Day of Visit,Num,8
-eg.xpt,EGDTC,Date/Time of ECG,Char,50
+eg,STUDYID,Study Identifier,Char,50
+eg,DOMAIN,Domain Abbreviation,Char,50
+eg,USUBJID,Unique Subject Identifier,Char,50
+eg,EGSEQ,Sequence Number,Num,8
+eg,EGBEATNO,ECG Beat Number,Num,8
+eg,EGTESTCD,ECG Test or Examination Short Name,Char,50
+eg,EGTEST,ECG Test or Examination Name,Char,50
+eg,EGCAT,Category for ECG,Char,50
+eg,EGPOS,ECG Position of Subject,Char,50
+eg,EGORRES,Result or Finding in Original Units,Char,50
+eg,EGORRESU,Original Units,Char,50
+eg,EGSTRESC,Character Result/Finding in Std Format,Char,50
+eg,EGSTRESN,Numeric Result/Finding in Standard Units,Num,8
+eg,EGSTRESU,Standard Units,Char,50
+eg,EGMETHOD,Method of Test or Examination,Char,50
+eg,EGLEAD,Lead Location Used for Measurement,Char,50
+eg,EGLOBXFL,Last Observation Before Exposure Flag,Char,50
+eg,VISITNUM,Visit Number,Num,8
+eg,VISIT,Visit Name,Char,50
+eg,VISITDY,Planned Study Day of Visit,Num,8
+eg,EGDTC,Date/Time of ECG,Char,50

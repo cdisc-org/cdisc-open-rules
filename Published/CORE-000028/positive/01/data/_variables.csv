@@ -1,20 +1,20 @@
 dataset,variable,label,type,length
-ml.xpt,STUDYID,Study Identifier,Char,50
-ml.xpt,DOMAIN,Domain Abbreviation,Char,50
-ml.xpt,USUBJID,Unique Subject Identifier,Char,50
-ml.xpt,MLSEQ,Sequence Number,Num,8
-ml.xpt,MLTPT,Planned Time Point Name,Char,50
-ml.xpt,MLTPTNUM,Planned Time Point Number,Num,8
-ml.xpt,MLELTM,Planned Elapsed Time from Time Point Ref,Char,50
-ml.xpt,MLTPTREF,Time Point Reference,Char,50
-ml.xpt,MLRFTDTC,Date/Time of Reference Time Point,Char,50
-pc.xpt,STUDYID,Study Identifier,Char,50
-pc.xpt,DOMAIN,Domain Abbreviation,Char,50
-pc.xpt,USUBJID,Unique Subject Identifier,Char,50
-pc.xpt,PCSEQ,Sequence Number,Num,8
-pc.xpt,PCDTC,Date/Time of Specimen Collection,Char,50
-pc.xpt,PCTPT,Planned Time Point Name,Char,50
-pc.xpt,PCTPTNUM,Planned Time Point Number,Num,8
-pc.xpt,PCELTM,Planned Elapsed Time from Time Point Ref,Char,50
-pc.xpt,PCTPTREF,Time Point Reference,Char,50
-pc.xpt,PCRFTDTC,Date/Time of Reference Point,Char,50
+ml,STUDYID,Study Identifier,Char,50
+ml,DOMAIN,Domain Abbreviation,Char,50
+ml,USUBJID,Unique Subject Identifier,Char,50
+ml,MLSEQ,Sequence Number,Num,8
+ml,MLTPT,Planned Time Point Name,Char,50
+ml,MLTPTNUM,Planned Time Point Number,Num,8
+ml,MLELTM,Planned Elapsed Time from Time Point Ref,Char,50
+ml,MLTPTREF,Time Point Reference,Char,50
+ml,MLRFTDTC,Date/Time of Reference Time Point,Char,50
+pc,STUDYID,Study Identifier,Char,50
+pc,DOMAIN,Domain Abbreviation,Char,50
+pc,USUBJID,Unique Subject Identifier,Char,50
+pc,PCSEQ,Sequence Number,Num,8
+pc,PCDTC,Date/Time of Specimen Collection,Char,50
+pc,PCTPT,Planned Time Point Name,Char,50
+pc,PCTPTNUM,Planned Time Point Number,Num,8
+pc,PCELTM,Planned Elapsed Time from Time Point Ref,Char,50
+pc,PCTPTREF,Time Point Reference,Char,50
+pc,PCRFTDTC,Date/Time of Reference Point,Char,50

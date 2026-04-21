@@ -1,29 +1,29 @@
 dataset,variable,label,type,length
-tu.xpt,STUDYID,Study Identifier,Char,50
-tu.xpt,DOMAIN,Domain Abbreviation,Char,50
-tu.xpt,USUBJID,Unique Subject Identifier,Char,50
-tu.xpt,TUSEQ,Sequence Number,Num,8
-tu.xpt,TUTESTCD,Assessment Short Name	,Char,50
-tu.xpt,TUTEST,Assessment Name	,Char,50
-tu.xpt,TUORRES,Result or Finding in Original Units	,Char,50
-tu.xpt,TUEVAL,Evaluator,Char,50
-tu.xpt,TUEVALID,Evaluator Identifier	,Char,50
-rs.xpt,STUDYID,Study Identifier,Char,50
-rs.xpt,DOMAIN,Domain Abbreviation,Char,50
-rs.xpt,USUBJID,Unique Subject Identifier,Char,50
-rs.xpt,RSSEQ,Sequence Number,Num,8
-rs.xpt,RSTESTCD,Assessment Short Name	,Char,50
-rs.xpt,RSTEST,Assessment Name	,Char,50
-rs.xpt,RSCAT,Category for Assessment	,Char,50
-rs.xpt,RSORRES,Result or Finding in Original Units	,Char,50
-rs.xpt,RSEVAL,Evaluator,Char,50
-rs.xpt,RSEVALID,Evaluator Identifier	,Char,50
-mk.xpt,STUDYID,Study Identifier,Char,50
-mk.xpt,DOMAIN,Domain Abbreviation,Char,50
-mk.xpt,USUBJID,Unique Subject Identifier,Char,50
-mk.xpt,MKSEQ,Sequence Number,Num,8
-mk.xpt,MKTESTCD,Short Name of Musculoskeletal Test,Char,50
-mk.xpt,MKTEST,Name of Musculoskeletal Test,Char,50
-mk.xpt,MKORRES,Result or Finding in Original Units,Char,50
-mk.xpt,MKEVAL,Evaluator,Char,50
-mk.xpt,MKEVALID,Evaluator Identifier	,Char,50
+tu,STUDYID,Study Identifier,Char,50
+tu,DOMAIN,Domain Abbreviation,Char,50
+tu,USUBJID,Unique Subject Identifier,Char,50
+tu,TUSEQ,Sequence Number,Num,8
+tu,TUTESTCD,Assessment Short Name	,Char,50
+tu,TUTEST,Assessment Name	,Char,50
+tu,TUORRES,Result or Finding in Original Units	,Char,50
+tu,TUEVAL,Evaluator,Char,50
+tu,TUEVALID,Evaluator Identifier	,Char,50
+rs,STUDYID,Study Identifier,Char,50
+rs,DOMAIN,Domain Abbreviation,Char,50
+rs,USUBJID,Unique Subject Identifier,Char,50
+rs,RSSEQ,Sequence Number,Num,8
+rs,RSTESTCD,Assessment Short Name	,Char,50
+rs,RSTEST,Assessment Name	,Char,50
+rs,RSCAT,Category for Assessment	,Char,50
+rs,RSORRES,Result or Finding in Original Units	,Char,50
+rs,RSEVAL,Evaluator,Char,50
+rs,RSEVALID,Evaluator Identifier	,Char,50
+mk,STUDYID,Study Identifier,Char,50
+mk,DOMAIN,Domain Abbreviation,Char,50
+mk,USUBJID,Unique Subject Identifier,Char,50
+mk,MKSEQ,Sequence Number,Num,8
+mk,MKTESTCD,Short Name of Musculoskeletal Test,Char,50
+mk,MKTEST,Name of Musculoskeletal Test,Char,50
+mk,MKORRES,Result or Finding in Original Units,Char,50
+mk,MKEVAL,Evaluator,Char,50
+mk,MKEVALID,Evaluator Identifier	,Char,50

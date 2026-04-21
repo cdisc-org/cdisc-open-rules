@@ -1,39 +1,39 @@
 dataset,variable,label,type,length
-cm.xpt,STUDYID,Study Identifier,Char,50
-cm.xpt,DOMAIN,Domain Abbreviation,Char,50
-cm.xpt,USUBJID,Unique Subject Identifier,Char,50
-cm.xpt,CMSEQ,Sequence Number,Num,8
-cm.xpt,CMTRT,"Reported Name of Drug, Med, or Therapy",Char,50
-cm.xpt,EPOCH,Epoch,Char,50
-cm.xpt,CMSTDTC,Start Date/Time of Medication,Char,50
-cm.xpt,CMSTRF,Start Relative to Reference Period,Char,20
-cm.xpt,CMSTRTPT,Start relative to Reference Time Point,Char,50
-cm.xpt,CMENDTC,End Date/Time of Medication,Char,50
-cm.xpt,CMENRF,End Relative to Reference Period,Char,20
-cm.xpt,CMENRTPT,End relative to Reference Time Point,Char,50
-dm.xpt,STUDYID,Study Identifier,Char,12
-dm.xpt,DOMAIN,Domain Abbreviation,Char,2
-dm.xpt,USUBJID,Unique Subject Identifier,Char,8
-dm.xpt,SUBJID,Subject Identifier for the Study,Char,4
-dm.xpt,RFSTDTC,Subject Reference Start Date/Time,Char,10
-dm.xpt,RFENDTC,Subject Reference End Date/Time,Char,10
-dm.xpt,RFXSTDTC,Date/Time of First Study Treatment,Char,10
-dm.xpt,RFXENDTC,Date/Time of Last Study Treatment,Char,10
-dm.xpt,RFICDTC,Date/Time of Informed Consent,Char,10
-dm.xpt,RFPENDTC,Date/Time of End of Participation,Char,10
-dm.xpt,DTHDTC,Date/Time of Death,Char,10
-dm.xpt,DTHFL,Subject Death Flag,Char,1
-dm.xpt,SITEID,Study Site Identifier,Char,3
-dm.xpt,BRTHDTC,Date/Time of Birth,Char,10
-dm.xpt,AGE,Age,Num,8
-dm.xpt,AGEU,Age Units,Char,5
-dm.xpt,SEX,Sex,Char,1
-dm.xpt,RACE,Race,Char,41
-dm.xpt,ETHNIC,Ethnicity,Char,22
-dm.xpt,ARMCD,Planned Arm Code,Char,8
-dm.xpt,ARM,Description of Planned Arm,Char,28
-dm.xpt,ACTARMCD,Actual Arm Code,Char,8
-dm.xpt,ACTARM,Description of Actual Arm,Char,28
-dm.xpt,ARMNRS,Reason Arm and/or Actual Arm is Null,Char,14
-dm.xpt,ACTARMUD,Description of Unplanned Actual Arm,Char,200
-dm.xpt,COUNTRY,Country,Char,3
+cm,STUDYID,Study Identifier,Char,50
+cm,DOMAIN,Domain Abbreviation,Char,50
+cm,USUBJID,Unique Subject Identifier,Char,50
+cm,CMSEQ,Sequence Number,Num,8
+cm,CMTRT,"Reported Name of Drug, Med, or Therapy",Char,50
+cm,EPOCH,Epoch,Char,50
+cm,CMSTDTC,Start Date/Time of Medication,Char,50
+cm,CMSTRF,Start Relative to Reference Period,Char,20
+cm,CMSTRTPT,Start relative to Reference Time Point,Char,50
+cm,CMENDTC,End Date/Time of Medication,Char,50
+cm,CMENRF,End Relative to Reference Period,Char,20
+cm,CMENRTPT,End relative to Reference Time Point,Char,50
+dm,STUDYID,Study Identifier,Char,12
+dm,DOMAIN,Domain Abbreviation,Char,2
+dm,USUBJID,Unique Subject Identifier,Char,8
+dm,SUBJID,Subject Identifier for the Study,Char,4
+dm,RFSTDTC,Subject Reference Start Date/Time,Char,10
+dm,RFENDTC,Subject Reference End Date/Time,Char,10
+dm,RFXSTDTC,Date/Time of First Study Treatment,Char,10
+dm,RFXENDTC,Date/Time of Last Study Treatment,Char,10
+dm,RFICDTC,Date/Time of Informed Consent,Char,10
+dm,RFPENDTC,Date/Time of End of Participation,Char,10
+dm,DTHDTC,Date/Time of Death,Char,10
+dm,DTHFL,Subject Death Flag,Char,1
+dm,SITEID,Study Site Identifier,Char,3
+dm,BRTHDTC,Date/Time of Birth,Char,10
+dm,AGE,Age,Num,8
+dm,AGEU,Age Units,Char,5
+dm,SEX,Sex,Char,1
+dm,RACE,Race,Char,41
+dm,ETHNIC,Ethnicity,Char,22
+dm,ARMCD,Planned Arm Code,Char,8
+dm,ARM,Description of Planned Arm,Char,28
+dm,ACTARMCD,Actual Arm Code,Char,8
+dm,ACTARM,Description of Actual Arm,Char,28
+dm,ARMNRS,Reason Arm and/or Actual Arm is Null,Char,14
+dm,ACTARMUD,Description of Unplanned Actual Arm,Char,200
+dm,COUNTRY,Country,Char,3

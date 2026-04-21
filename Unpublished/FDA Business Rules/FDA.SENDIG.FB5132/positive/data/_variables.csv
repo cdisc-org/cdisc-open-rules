@@ -1,41 +1,41 @@
 dataset,variable,label,type,length
-dm.xpt,STUDYID,Study Identifier,Char,12
-dm.xpt,DOMAIN,Domain Abbreviation,Char,2
-dm.xpt,USUBJID,Unique Subject Identifier,Char,20
-dm.xpt,SUBJID,Subject Identifier for the Study,Char,12
-dm.xpt,RFSTDTC,Subject Reference Start Date/Time,Char,10
-dm.xpt,RFENDTC,Subject Reference End Date/Time,Char,10
-dm.xpt,RFXSTDTC,Date/Time of First Study Treatment,Char,10
-dm.xpt,RFXENDTC,Date/Time of Last Study Treatment,Char,10
-dm.xpt,ARMCD,Planned Arm Code,Char,8
-dm.xpt,ARM,Description of Planned Arm,Char,28
-dm.xpt,SETCD,Set Code,Char,8
-tx.xpt,STUDYID,Study Identifier,Char,12
-tx.xpt,DOMAIN,Domain Abbreviation,Char,2
-tx.xpt,SETCD,Set Code,Char,8
-tx.xpt,TXSEQ,Subject Identifier for the Study,Num,2
-vs.xpt,Study Identifier,Char,12,CDISCPILOT01
-vs.xpt,Domain Abbreviation,Char,2,VS
-vs.xpt,Unique Subject Identifier,Char,8,CDISC001
-vs.xpt,Sequence Number,Num,8,1
-vs.xpt,Vital Signs Test Short Name,Char,8,DIABP_1
-vs.xpt,Vital Signs Test Name,Char,24,Diastolic Blood Pressure
-vs.xpt,Vital Signs Position of Subject,Char,8,STANDING
-vs.xpt,Result or Finding in Original Units,Char,8,71
-vs.xpt,Original Units,Char,9,mmHg
-vs.xpt,Character Result/Finding in Std Format,Char,200,71
-vs.xpt,Numeric Result/Finding in Standard Units,Num,8,71
-vs.xpt,Standard Units,Char,9,mmHg
-vs.xpt,Completion Status,Char,8,
-vs.xpt,Location of Vital Signs Measurement,Char,11,
-vs.xpt,Last Observation Before Exposure Flag,Char,1,
-vs.xpt,Repetition Number,Num,8,
-vs.xpt,Visit Number,Num,8,1
-vs.xpt,Visit Name,Char,200,SCREENING 1
-vs.xpt,Epoch,Char,9,SCREENING
-vs.xpt,Date/Time of Measurements,Char,10,2012-11-23
-vs.xpt,Study Day of Vital Signs,Num,8,-7
-ts.xpt,STUDYID,Study Identifier,Char,12
-ts.xpt,DOMAIN,Domain Abbreviation,Char,2
-ts.xpt,TSSEQ,Subject Identifier for the Study,Num,2
-ts.xpt,TSPARMCD,Set Code,Char,8
+dm,STUDYID,Study Identifier,Char,12
+dm,DOMAIN,Domain Abbreviation,Char,2
+dm,USUBJID,Unique Subject Identifier,Char,20
+dm,SUBJID,Subject Identifier for the Study,Char,12
+dm,RFSTDTC,Subject Reference Start Date/Time,Char,10
+dm,RFENDTC,Subject Reference End Date/Time,Char,10
+dm,RFXSTDTC,Date/Time of First Study Treatment,Char,10
+dm,RFXENDTC,Date/Time of Last Study Treatment,Char,10
+dm,ARMCD,Planned Arm Code,Char,8
+dm,ARM,Description of Planned Arm,Char,28
+dm,SETCD,Set Code,Char,8
+tx,STUDYID,Study Identifier,Char,12
+tx,DOMAIN,Domain Abbreviation,Char,2
+tx,SETCD,Set Code,Char,8
+tx,TXSEQ,Subject Identifier for the Study,Num,2
+vs,Study Identifier,Char,12,CDISCPILOT01
+vs,Domain Abbreviation,Char,2,VS
+vs,Unique Subject Identifier,Char,8,CDISC001
+vs,Sequence Number,Num,8,1
+vs,Vital Signs Test Short Name,Char,8,DIABP_1
+vs,Vital Signs Test Name,Char,24,Diastolic Blood Pressure
+vs,Vital Signs Position of Subject,Char,8,STANDING
+vs,Result or Finding in Original Units,Char,8,71
+vs,Original Units,Char,9,mmHg
+vs,Character Result/Finding in Std Format,Char,200,71
+vs,Numeric Result/Finding in Standard Units,Num,8,71
+vs,Standard Units,Char,9,mmHg
+vs,Completion Status,Char,8,
+vs,Location of Vital Signs Measurement,Char,11,
+vs,Last Observation Before Exposure Flag,Char,1,
+vs,Repetition Number,Num,8,
+vs,Visit Number,Num,8,1
+vs,Visit Name,Char,200,SCREENING 1
+vs,Epoch,Char,9,SCREENING
+vs,Date/Time of Measurements,Char,10,2012-11-23
+vs,Study Day of Vital Signs,Num,8,-7
+ts,STUDYID,Study Identifier,Char,12
+ts,DOMAIN,Domain Abbreviation,Char,2
+ts,TSSEQ,Subject Identifier for the Study,Num,2
+ts,TSPARMCD,Set Code,Char,8

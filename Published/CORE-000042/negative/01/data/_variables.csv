@@ -1,107 +1,107 @@
 dataset,variable,label,type,length
-suppae.xpt,STUDYID,Study Identifier,Char,10
-suppae.xpt,RDOMAIN,Related Domain Abbreviation,Char,2
-suppae.xpt,USUBJID,Unique Subject Identifier,Char,14
-suppae.xpt,IDVAR,Identifying Variable,Char,6
-suppae.xpt,IDVARVAL,Identifying Variable Value,Char,4
-suppae.xpt,QNAM,Qualifier Variable Name,Char,7
-suppae.xpt,QLABEL,Qualifier Variable Label,Char,18
-suppae.xpt,QVAL,Data Value,Char,19
-suppae.xpt,QORIG,Origin,Char,8
-suppae.xpt,QEVAL,Evaluator,Char,22
-vs.xpt,STUDYID,Study Identifier,Char,10
-vs.xpt,DOMAIN,Domain Abbreviation,Char,2
-vs.xpt,USUBJID,Unique Subject Identifier,Char,14
-vs.xpt,VSSEQ,Sequence Number,Num,8
-vs.xpt,VSSPID,Sponsor-Defined Identifier,Char,4
-vs.xpt,VSTESTCD,Vital Signs Test Short Name,Char,6
-vs.xpt,VSTEST,Vital Signs Test Name,Char,24
-vs.xpt,VSCAT,Category for Vital Signs,Char,16
-vs.xpt,VSORRES,Result or Finding in Original Units,Char,4
-vs.xpt,VSORRESU,Original Units,Char,9
-vs.xpt,VSSTRESC,Character Result/Finding in Std Format,Char,4
-vs.xpt,VSSTRESN,Numeric Result/Finding in Standard Units,Num,8
-vs.xpt,VSSTRESU,Standard Units,Char,9
-vs.xpt,VSBLFL,Baseline Flag,Char,1
-vs.xpt,EPOCH,Epoch,Char,9
-vs.xpt,VISITNUM,Visit Number,Num,8
-vs.xpt,VISIT,Visit Name,Char,18
-vs.xpt,VISITDY,Planned Study Day of Visit,Num,8
-vs.xpt,VSDTC,Date/Time of Measurements,Char,10
-vs.xpt,VSDY,Study Day of Vital Signs,Num,8
-dm.xpt,STUDYID,Study Identifier,Char,10
-dm.xpt,DOMAIN,Domain Abbreviation,Char,2
-dm.xpt,USUBJID,Unique Subject Identifier,Char,14
-dm.xpt,SUBJID,Subject Identifier for the Study,Char,3
-dm.xpt,RFSTDTC,Subject Reference Start Date/Time,Char,10
-dm.xpt,RFENDTC,Subject Reference End Date/Time,Char,10
-dm.xpt,RFXSTDTC,Date/Time of First Study Treatment,Char,10
-dm.xpt,RFXENDTC,Date/Time of Last Study Treatment,Char,10
-dm.xpt,RFICDTC,Date/Time of Informed Consent,Char,10
-dm.xpt,RFPENDTC,Date/Time of End of Participation,Char,10
-dm.xpt,DTHDTC,Date/Time of Death,Char,1
-dm.xpt,DTHFL,Subject Death Flag,Char,1
-dm.xpt,SITEID,Study Site Identifier,Char,3
-dm.xpt,AGE,Age,Num,8
-dm.xpt,AGEU,Age Units,Char,5
-dm.xpt,SEX,Sex,Char,1
-dm.xpt,RACE,Race,Char,1
-dm.xpt,ARMCD,Planned Arm Code,Char,1
-dm.xpt,ARM,Description of Planned Arm,Char,13
-dm.xpt,ACTARMCD,Actual Arm Code,Char,1
-dm.xpt,ACTARM,Description of Actual Arm,Char,13
-dm.xpt,COUNTRY,Country,Char,3
-ae.xpt,STUDYID,Study Identifier,Char,10
-ae.xpt,DOMAIN,Domain Abbreviation,Char,2
-ae.xpt,USUBJID,Unique Subject Identifier,Char,14
-ae.xpt,AESEQ,Sequence Number,Num,8
-ae.xpt,AESPID,Sponsor-Defined Identifier,Char,4
-ae.xpt,AETERM,Reported Term for the Adverse Event,Char,38
-ae.xpt,AELLT,Lowest Level Term,Char,38
-ae.xpt,AELLTCD,Lowest Level Term Code,Num,8
-ae.xpt,AEDECOD,Dictionary-Derived Term,Char,38
-ae.xpt,AEPTCD,Preferred Term Code,Num,8
-ae.xpt,AEHLT,High Level Term,Char,65
-ae.xpt,AEHLTCD,High Level Term Code,Num,8
-ae.xpt,AEHLGT,High Level Group Term,Char,55
-ae.xpt,AEHLGTCD,High Level Group Term Code,Num,8
-ae.xpt,AEBODSYS,Body System or Organ Class,Char,52
-ae.xpt,AEBDSYCD,Body System or Organ Class Code,Num,8
-ae.xpt,AESOC,Primary System Organ Class,Char,52
-ae.xpt,AESOCCD,Primary System Organ Class Code,Num,8
-ae.xpt,AESEV,Severity/Intensity,Char,8
-ae.xpt,AESER,Serious Event,Char,1
-ae.xpt,AEACN,Action Taken with Study Treatment,Char,1
-ae.xpt,AEREL,Causality,Char,1
-ae.xpt,AEOUT,Outcome of Adverse Event,Char,26
-ae.xpt,AESHOSP,Requires or Prolongs Hospitalization,Char,1
-ae.xpt,AESTDTC,Start Date/Time of Adverse Event,Char,10
-ae.xpt,AEENDTC,End Date/Time of Adverse Event,Char,1
-ae.xpt,AESTDY,Study Day of Start of Adverse Event,Num,8
-sj.xpt,STUDYID,Study Identifier,Char,50
-sj.xpt,DOMAIN,Domain Abbreviation,Char,50
-sj.xpt,USUBJID,Unique Subject Identifier,Char,50
-sj.xpt,SJSEQ,Sequence Number,Num,8
-sj.xpt,RSTGCD,Repro Stage Code,Char,50
-sj.xpt,RSTAGE,Description of Repro Stage,Char,50
-sj.xpt,SJSTDTC,Start Date/Time of Repro Stage,Char,50
-sj.xpt,SJENDTC,End Date/Time of Repro Stage,Char,50
-sj.xpt,RPHASE,Repro Phase,Char,50
-sj.xpt,SJUPDES,Description of Unplanned Repro Stage,Char,50
-tt.xpt,STUDYID,Study Identifier,Char,50
-tt.xpt,DOMAIN,Domain Abbreviation,Char,50
-tt.xpt,RSTGCD,Repro Stage Code,Char,50
-tt.xpt,RSTAGE,Description of Repro Stage,Char,50
-tt.xpt,TTSTRL,Rule for Start of Repro Stage,Char,50
-tt.xpt,TTENRL,Rule for End of Repro Stage,Char,50
-tt.xpt,TTDUR,Planned Duration of Repro Stage,Char,50
-tp.xpt,STUDYID,Study Identifier,Char,50
-tp.xpt,DOMAIN,Domain Abbreviation,Char,50
-tp.xpt,RPATHCD,Planned Repro Path Code,Char,50
-tp.xpt,RPATH,Description of Planned Repro Path,Char,50
-tp.xpt,TPSTGORD,Order of Repro Stage within Repro Path,Num,8
-tp.xpt,RSTGCD,Repro Stage Code,Char,50
-tp.xpt,RSTAGE,Description of Repro Stage,Char,50
-tp.xpt,TPBRANCH,Branch,Char,50
-tp.xpt,RPHASE,Repro Phase,Char,50
-tp.xpt,RPRFDY,Repro Phase Start Reference Day,Num,8
+suppae,STUDYID,Study Identifier,Char,10
+suppae,RDOMAIN,Related Domain Abbreviation,Char,2
+suppae,USUBJID,Unique Subject Identifier,Char,14
+suppae,IDVAR,Identifying Variable,Char,6
+suppae,IDVARVAL,Identifying Variable Value,Char,4
+suppae,QNAM,Qualifier Variable Name,Char,7
+suppae,QLABEL,Qualifier Variable Label,Char,18
+suppae,QVAL,Data Value,Char,19
+suppae,QORIG,Origin,Char,8
+suppae,QEVAL,Evaluator,Char,22
+vs,STUDYID,Study Identifier,Char,10
+vs,DOMAIN,Domain Abbreviation,Char,2
+vs,USUBJID,Unique Subject Identifier,Char,14
+vs,VSSEQ,Sequence Number,Num,8
+vs,VSSPID,Sponsor-Defined Identifier,Char,4
+vs,VSTESTCD,Vital Signs Test Short Name,Char,6
+vs,VSTEST,Vital Signs Test Name,Char,24
+vs,VSCAT,Category for Vital Signs,Char,16
+vs,VSORRES,Result or Finding in Original Units,Char,4
+vs,VSORRESU,Original Units,Char,9
+vs,VSSTRESC,Character Result/Finding in Std Format,Char,4
+vs,VSSTRESN,Numeric Result/Finding in Standard Units,Num,8
+vs,VSSTRESU,Standard Units,Char,9
+vs,VSBLFL,Baseline Flag,Char,1
+vs,EPOCH,Epoch,Char,9
+vs,VISITNUM,Visit Number,Num,8
+vs,VISIT,Visit Name,Char,18
+vs,VISITDY,Planned Study Day of Visit,Num,8
+vs,VSDTC,Date/Time of Measurements,Char,10
+vs,VSDY,Study Day of Vital Signs,Num,8
+dm,STUDYID,Study Identifier,Char,10
+dm,DOMAIN,Domain Abbreviation,Char,2
+dm,USUBJID,Unique Subject Identifier,Char,14
+dm,SUBJID,Subject Identifier for the Study,Char,3
+dm,RFSTDTC,Subject Reference Start Date/Time,Char,10
+dm,RFENDTC,Subject Reference End Date/Time,Char,10
+dm,RFXSTDTC,Date/Time of First Study Treatment,Char,10
+dm,RFXENDTC,Date/Time of Last Study Treatment,Char,10
+dm,RFICDTC,Date/Time of Informed Consent,Char,10
+dm,RFPENDTC,Date/Time of End of Participation,Char,10
+dm,DTHDTC,Date/Time of Death,Char,1
+dm,DTHFL,Subject Death Flag,Char,1
+dm,SITEID,Study Site Identifier,Char,3
+dm,AGE,Age,Num,8
+dm,AGEU,Age Units,Char,5
+dm,SEX,Sex,Char,1
+dm,RACE,Race,Char,1
+dm,ARMCD,Planned Arm Code,Char,1
+dm,ARM,Description of Planned Arm,Char,13
+dm,ACTARMCD,Actual Arm Code,Char,1
+dm,ACTARM,Description of Actual Arm,Char,13
+dm,COUNTRY,Country,Char,3
+ae,STUDYID,Study Identifier,Char,10
+ae,DOMAIN,Domain Abbreviation,Char,2
+ae,USUBJID,Unique Subject Identifier,Char,14
+ae,AESEQ,Sequence Number,Num,8
+ae,AESPID,Sponsor-Defined Identifier,Char,4
+ae,AETERM,Reported Term for the Adverse Event,Char,38
+ae,AELLT,Lowest Level Term,Char,38
+ae,AELLTCD,Lowest Level Term Code,Num,8
+ae,AEDECOD,Dictionary-Derived Term,Char,38
+ae,AEPTCD,Preferred Term Code,Num,8
+ae,AEHLT,High Level Term,Char,65
+ae,AEHLTCD,High Level Term Code,Num,8
+ae,AEHLGT,High Level Group Term,Char,55
+ae,AEHLGTCD,High Level Group Term Code,Num,8
+ae,AEBODSYS,Body System or Organ Class,Char,52
+ae,AEBDSYCD,Body System or Organ Class Code,Num,8
+ae,AESOC,Primary System Organ Class,Char,52
+ae,AESOCCD,Primary System Organ Class Code,Num,8
+ae,AESEV,Severity/Intensity,Char,8
+ae,AESER,Serious Event,Char,1
+ae,AEACN,Action Taken with Study Treatment,Char,1
+ae,AEREL,Causality,Char,1
+ae,AEOUT,Outcome of Adverse Event,Char,26
+ae,AESHOSP,Requires or Prolongs Hospitalization,Char,1
+ae,AESTDTC,Start Date/Time of Adverse Event,Char,10
+ae,AEENDTC,End Date/Time of Adverse Event,Char,1
+ae,AESTDY,Study Day of Start of Adverse Event,Num,8
+sj,STUDYID,Study Identifier,Char,50
+sj,DOMAIN,Domain Abbreviation,Char,50
+sj,USUBJID,Unique Subject Identifier,Char,50
+sj,SJSEQ,Sequence Number,Num,8
+sj,RSTGCD,Repro Stage Code,Char,50
+sj,RSTAGE,Description of Repro Stage,Char,50
+sj,SJSTDTC,Start Date/Time of Repro Stage,Char,50
+sj,SJENDTC,End Date/Time of Repro Stage,Char,50
+sj,RPHASE,Repro Phase,Char,50
+sj,SJUPDES,Description of Unplanned Repro Stage,Char,50
+tt,STUDYID,Study Identifier,Char,50
+tt,DOMAIN,Domain Abbreviation,Char,50
+tt,RSTGCD,Repro Stage Code,Char,50
+tt,RSTAGE,Description of Repro Stage,Char,50
+tt,TTSTRL,Rule for Start of Repro Stage,Char,50
+tt,TTENRL,Rule for End of Repro Stage,Char,50
+tt,TTDUR,Planned Duration of Repro Stage,Char,50
+tp,STUDYID,Study Identifier,Char,50
+tp,DOMAIN,Domain Abbreviation,Char,50
+tp,RPATHCD,Planned Repro Path Code,Char,50
+tp,RPATH,Description of Planned Repro Path,Char,50
+tp,TPSTGORD,Order of Repro Stage within Repro Path,Num,8
+tp,RSTGCD,Repro Stage Code,Char,50
+tp,RSTAGE,Description of Repro Stage,Char,50
+tp,TPBRANCH,Branch,Char,50
+tp,RPHASE,Repro Phase,Char,50
+tp,RPRFDY,Repro Phase Start Reference Day,Num,8

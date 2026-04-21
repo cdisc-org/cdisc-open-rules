@@ -1,28 +1,28 @@
 dataset,variable,label,type,length
-adsl.xpt,STUDYID,Study Identifier,Char,12
-adsl.xpt,USUBJID,Unique Subject Identifier,Char,8
-adsl.xpt,SITEID,Study Site Identifier,Char,50
-adsl.xpt,AGE,Age,Num,8
-adsl.xpt,AGEU,Age Units,Char,50
-adsl.xpt,SEX,Sex,Char,50
-adsl.xpt,RACE,Race,Char,50
-adsl.xpt,SAFFL,Safety Population Flag,Char,50
-adsl.xpt,ARM,Description of Planned Arm,Char,50
-adsl.xpt,ACTARM,Description of Actual Arm,Char,50
-adsl.xpt,TRTxxP,Planned Treatment for Period xx,Char,50
-adsl.xpt,TRTxxPN,Planned Treatment for Period xx (N),Num,8
-advs.xpt,STUDYID,Study Identifier,Char,12
-advs.xpt,USUBJID,Unique Subject Identifier,Char,8
-advs.xpt,TRTP,Planned Treatment,Char,50
-advs.xpt,TRTPN,Planned Treatment (N),Num,8
-advs.xpt,TRTA,Actual Treatment,Char,50
-advs.xpt,TRTAN,Actual Treatment (N),Num,8
-advs.xpt,PARAM,Parameter,Char,50
-advs.xpt,PARAMCD,Parameter Code,Char,50
-advs.xpt,PARAMN,Parameter (N),Num,8
-advs.xpt,PARCAT1,Parameter Category 1,Char,50
-advs.xpt,PARCAT1N,Parameter Category 1 (N),Num,8
-advs.xpt,AVAL,Analysis Value,Num,8
-advs.xpt,AVALC,Analysis Value (C),Char,50
-advs.xpt,ABLFL,Baseline Record Flag,Char,50
-advs.xpt,ABLFN,Baseline Record Flag (N),Num,8
+adsl,STUDYID,Study Identifier,Char,12
+adsl,USUBJID,Unique Subject Identifier,Char,8
+adsl,SITEID,Study Site Identifier,Char,50
+adsl,AGE,Age,Num,8
+adsl,AGEU,Age Units,Char,50
+adsl,SEX,Sex,Char,50
+adsl,RACE,Race,Char,50
+adsl,SAFFL,Safety Population Flag,Char,50
+adsl,ARM,Description of Planned Arm,Char,50
+adsl,ACTARM,Description of Actual Arm,Char,50
+adsl,TRTxxP,Planned Treatment for Period xx,Char,50
+adsl,TRTxxPN,Planned Treatment for Period xx (N),Num,8
+advs,STUDYID,Study Identifier,Char,12
+advs,USUBJID,Unique Subject Identifier,Char,8
+advs,TRTP,Planned Treatment,Char,50
+advs,TRTPN,Planned Treatment (N),Num,8
+advs,TRTA,Actual Treatment,Char,50
+advs,TRTAN,Actual Treatment (N),Num,8
+advs,PARAM,Parameter,Char,50
+advs,PARAMCD,Parameter Code,Char,50
+advs,PARAMN,Parameter (N),Num,8
+advs,PARCAT1,Parameter Category 1,Char,50
+advs,PARCAT1N,Parameter Category 1 (N),Num,8
+advs,AVAL,Analysis Value,Num,8
+advs,AVALC,Analysis Value (C),Char,50
+advs,ABLFL,Baseline Record Flag,Char,50
+advs,ABLFN,Baseline Record Flag (N),Num,8

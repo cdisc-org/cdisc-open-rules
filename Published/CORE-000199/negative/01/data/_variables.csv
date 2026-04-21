@@ -1,19 +1,19 @@
 dataset,variable,label,type,length
-oe.xpt,STUDYID,Study Identifier,Char,12
-oe.xpt,DOMAIN,Domain Abbreviation,Char,2
-oe.xpt,USUBJID,Unique Subject Identifier,Char,8
-oe.xpt,FOCID,Focus of Study-Specific Interest,Char,2
-oe.xpt,OESEQ,Sequence Number,Num,8
-oe.xpt,OETESTCD,Short Name of Ophthalmic Test or Exam,Char,8
-oe.xpt,OETEST,Name of Ophthalmic Test or Exam,Char,42
-oe.xpt,OEORRES,Result or Finding in Original Units,Char,200
-oe.xpt,OESTRESC,Character Result/Finding in Std Format,Char,200
-oe.xpt,OELOC,Location Used for the Measurement,Char,21
-oe.xpt,OELAT,Laterality,Char,5
-oe.xpt,OEMETHOD,Method of Test or Examination,Char,9
-oe.xpt,OELOBXFL,Last Observation Before Exposure Flag,Char,1
-oe.xpt,VISITNUM,Visit Number,Num,8
-oe.xpt,VISIT,Visit Name,Char,200
-oe.xpt,EPOCH,Epoch,Char,9
-oe.xpt,OEDTC,Date/Time of Collection,Char,200
-oe.xpt,OEDY,Study Day of Visit/Collection/Exam,Num,8
+oe,STUDYID,Study Identifier,Char,12
+oe,DOMAIN,Domain Abbreviation,Char,2
+oe,USUBJID,Unique Subject Identifier,Char,8
+oe,FOCID,Focus of Study-Specific Interest,Char,2
+oe,OESEQ,Sequence Number,Num,8
+oe,OETESTCD,Short Name of Ophthalmic Test or Exam,Char,8
+oe,OETEST,Name of Ophthalmic Test or Exam,Char,42
+oe,OEORRES,Result or Finding in Original Units,Char,200
+oe,OESTRESC,Character Result/Finding in Std Format,Char,200
+oe,OELOC,Location Used for the Measurement,Char,21
+oe,OELAT,Laterality,Char,5
+oe,OEMETHOD,Method of Test or Examination,Char,9
+oe,OELOBXFL,Last Observation Before Exposure Flag,Char,1
+oe,VISITNUM,Visit Number,Num,8
+oe,VISIT,Visit Name,Char,200
+oe,EPOCH,Epoch,Char,9
+oe,OEDTC,Date/Time of Collection,Char,200
+oe,OEDY,Study Day of Visit/Collection/Exam,Num,8

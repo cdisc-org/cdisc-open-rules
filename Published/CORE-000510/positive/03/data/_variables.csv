@@ -1,51 +1,51 @@
 dataset,variable,label,type,length
-qscg.xpt,STUDYID,Study Identifier,Char,12
-qscg.xpt,DOMAIN,Domain Abbreviation,Char,4
-qscg.xpt,USUBJID,Unique Subject Identifier,Char,8
-qscg.xpt,QSSEQ,Sequence Number,Num,8
-qscg.xpt,QSTESTCD,Question Short Name,Char,7
-qscg.xpt,QSTEST,Question Name,Char,40
-qscg.xpt,QSCAT,Category of Question,Char,5
-qscg.xpt,QSORRES,Finding in Original Units,Char,23
-qscg.xpt,QSSTRESC,Character Result/Finding in Std Format,Char,20
-qscg.xpt,QSSTRESN,Numeric Finding in Standard Units,Num,8
-qscg.xpt,QSLOBXFL,Last Observation Before Exposure Flag,Char,1
-qscg.xpt,VISITNUM,Visit Number,Num,8
-qscg.xpt,VISIT,Visit Name,Char,200
-qscg.xpt,QSDTC,Date/Time of Finding,Char,10
-qscg.xpt,QSDY,Study Day of Finding,Num,8
-qspg.xpt,STUDYID,Study Identifier,Char,12
-qspg.xpt,DOMAIN,Domain Abbreviation,Char,4
-qspg.xpt,USUBJID,Unique Subject Identifier,Char,8
-qspg.xpt,QSSEQ,Sequence Number,Num,8
-qspg.xpt,QSTESTCD,Question Short Name,Char,7
-qspg.xpt,QSTEST,Question Name,Char,40
-qspg.xpt,QSCAT,Category of Question,Char,5
-qspg.xpt,QSORRES,Finding in Original Units,Char,23
-qspg.xpt,QSSTRESC,Character Result/Finding in Std Format,Char,20
-qspg.xpt,QSSTRESN,Numeric Finding in Standard Units,Num,8
-qspg.xpt,QSLOBXFL,Last Observation Before Exposure Flag,Char,1
-qspg.xpt,VISITNUM,Visit Number,Num,8
-qspg.xpt,VISIT,Visit Name,Char,200
-qspg.xpt,QSDTC,Date/Time of Finding,Char,10
-qspg.xpt,QSDY,Study Day of Finding,Num,8
-ae.xpt,STUDYID,Study Identifier,Char,12
-ae.xpt,DOMAIN,Domain Abbreviation,Char,2
-ae.xpt,USUBJID,Unique Subject Identifier,Char,8
-ae.xpt,AESEQ,Sequence Number,Num,8
-ae.xpt,AELNKID,Link ID,Char,50
-ae.xpt,AETERM,Reported Term for the Adverse Event,Char,200
-ae.xpt,AESEV,Severity/Intensity,Char,8
-ae.xpt,AESER,Serious Event,Char,1
-ae.xpt,AEACN,Action Taken with Study Treatment,Char,16
-ae.xpt,AEREL,Causality,Char,16
-ae.xpt,AEOUT,Outcome of Adverse Event,Char,32
-ae.xpt,AESCAN,Involves Cancer,Char,1
-ae.xpt,AESLIFE,Is Life Threatening,Char,1
-ae.xpt,EPOCH,Epoch,Char,9
-ae.xpt,AESTDTC,Start Date/Time of Adverse Event,Char,10
-ae.xpt,AEENDTC,End Date/Time of Adverse Event,Char,10
-ae.xpt,AESTDY,Study Day of Start of Adverse Event,Num,8
-ae.xpt,AEENDY,Study Day of End of Adverse Event,Num,8
-ae.xpt,AEENRTPT,End Relative to Reference Time Point,Char,7
-ae.xpt,AEENTPT,End Reference Time Point,Char,10
+qscg,STUDYID,Study Identifier,Char,12
+qscg,DOMAIN,Domain Abbreviation,Char,4
+qscg,USUBJID,Unique Subject Identifier,Char,8
+qscg,QSSEQ,Sequence Number,Num,8
+qscg,QSTESTCD,Question Short Name,Char,7
+qscg,QSTEST,Question Name,Char,40
+qscg,QSCAT,Category of Question,Char,5
+qscg,QSORRES,Finding in Original Units,Char,23
+qscg,QSSTRESC,Character Result/Finding in Std Format,Char,20
+qscg,QSSTRESN,Numeric Finding in Standard Units,Num,8
+qscg,QSLOBXFL,Last Observation Before Exposure Flag,Char,1
+qscg,VISITNUM,Visit Number,Num,8
+qscg,VISIT,Visit Name,Char,200
+qscg,QSDTC,Date/Time of Finding,Char,10
+qscg,QSDY,Study Day of Finding,Num,8
+qspg,STUDYID,Study Identifier,Char,12
+qspg,DOMAIN,Domain Abbreviation,Char,4
+qspg,USUBJID,Unique Subject Identifier,Char,8
+qspg,QSSEQ,Sequence Number,Num,8
+qspg,QSTESTCD,Question Short Name,Char,7
+qspg,QSTEST,Question Name,Char,40
+qspg,QSCAT,Category of Question,Char,5
+qspg,QSORRES,Finding in Original Units,Char,23
+qspg,QSSTRESC,Character Result/Finding in Std Format,Char,20
+qspg,QSSTRESN,Numeric Finding in Standard Units,Num,8
+qspg,QSLOBXFL,Last Observation Before Exposure Flag,Char,1
+qspg,VISITNUM,Visit Number,Num,8
+qspg,VISIT,Visit Name,Char,200
+qspg,QSDTC,Date/Time of Finding,Char,10
+qspg,QSDY,Study Day of Finding,Num,8
+ae,STUDYID,Study Identifier,Char,12
+ae,DOMAIN,Domain Abbreviation,Char,2
+ae,USUBJID,Unique Subject Identifier,Char,8
+ae,AESEQ,Sequence Number,Num,8
+ae,AELNKID,Link ID,Char,50
+ae,AETERM,Reported Term for the Adverse Event,Char,200
+ae,AESEV,Severity/Intensity,Char,8
+ae,AESER,Serious Event,Char,1
+ae,AEACN,Action Taken with Study Treatment,Char,16
+ae,AEREL,Causality,Char,16
+ae,AEOUT,Outcome of Adverse Event,Char,32
+ae,AESCAN,Involves Cancer,Char,1
+ae,AESLIFE,Is Life Threatening,Char,1
+ae,EPOCH,Epoch,Char,9
+ae,AESTDTC,Start Date/Time of Adverse Event,Char,10
+ae,AEENDTC,End Date/Time of Adverse Event,Char,10
+ae,AESTDY,Study Day of Start of Adverse Event,Num,8
+ae,AEENDY,Study Day of End of Adverse Event,Num,8
+ae,AEENRTPT,End Relative to Reference Time Point,Char,7
+ae,AEENTPT,End Reference Time Point,Char,10

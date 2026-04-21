@@ -1,10 +1,10 @@
 dataset,variable,label,type,length
-cv.xpt,STUDYID,Study Identifier,Char,12
-cv.xpt,DOMAIN,Domain Abbreviation,Char,2
-cv.xpt,USUBJID,Unique Subject Identifier,Char,8
-cv.xpt,POOLID,Pool Identfier,Char,8
-cv.xpt,CVSEQ,Sequence Number,Num,8
-cv.xpt,CVTESTCD,Test Short Name,Char,6
-ae.xpt,STUDYID,Study Identifier,Char,12
-ae.xpt,DOMAIN,Domain Abbreviation,Char,2
-ae.xpt,USUBJID,Unique Subject Identifier,Char,8
+cv,STUDYID,Study Identifier,Char,12
+cv,DOMAIN,Domain Abbreviation,Char,2
+cv,USUBJID,Unique Subject Identifier,Char,8
+cv,POOLID,Pool Identfier,Char,8
+cv,CVSEQ,Sequence Number,Num,8
+cv,CVTESTCD,Test Short Name,Char,6
+ae,STUDYID,Study Identifier,Char,12
+ae,DOMAIN,Domain Abbreviation,Char,2
+ae,USUBJID,Unique Subject Identifier,Char,8

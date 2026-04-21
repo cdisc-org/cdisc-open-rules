@@ -1,9 +1,9 @@
 dataset,variable,label,type,length
-se.xpt,STUDYID,Study Identifier,Char,12
-se.xpt,DOMAIN,Domain Abbreviation,Char,2
-se.xpt,USUBJID,Unique Subject Identifier,Char,8
-se.xpt,SESEQ,Sequence Number,Num,8
-se.xpt,ETCD,Element Code,Char,7
-se.xpt,ELEMENT,Description of Element,Char,26
-se.xpt,SESTDTC,Start Date/Time of Element,Char,10
-se.xpt,SEENDTC,End Date/Time of Element,Char,10
+se,STUDYID,Study Identifier,Char,12
+se,DOMAIN,Domain Abbreviation,Char,2
+se,USUBJID,Unique Subject Identifier,Char,8
+se,SESEQ,Sequence Number,Num,8
+se,ETCD,Element Code,Char,7
+se,ELEMENT,Description of Element,Char,26
+se,SESTDTC,Start Date/Time of Element,Char,10
+se,SEENDTC,End Date/Time of Element,Char,10

@@ -1,25 +1,25 @@
 dataset,variable,label,type,length
-ae.xpt,STUDYID,Study Identifier,Char,50
-ae.xpt,DOMAIN,Domain Abbreviation,Char,50
-ae.xpt,USUBJID,Unique Subject Identifier,Char,50
-ae.xpt,AESEQ,Sequence Number,Num,8
-ae.xpt,AETERM,Reported Term for the Adverse Event,Char,50
-ae.xpt,AEMODIFY,Modified Reported Term,Char,50
-ae.xpt,AEDECOD,Dictionary-Derived Term,Char,50
-ae.xpt,AEBODSYS,Body System or Organ Class,Char,50
-ae.xpt,AESEV,Severity/Intensity,Char,50
-ae.xpt,AESER,Serious Event,Char,50
-ae.xpt,AEACN,Action Taken with Study Treatment,Char,50
-ae.xpt,AEREL,Causality,Char,50
-ae.xpt,AEOUT,Outcome of Adverse Event,Char,50
-ae.xpt,AESCONG,Congenital Anomaly or Birth Defect,Char,50
-ae.xpt,AESDISAB,Persist or Signif Disability/Incapacity,Char,50
-ae.xpt,AESDTH,Results in Death,Char,50
-ae.xpt,AESHOSP,Requires or Prolongs Hospitalization,Char,50
-ae.xpt,AESLIFE,Is Life Threatening,Char,50
-ae.xpt,EPOCH,Epoch,Char,50
-ae.xpt,AESTDTC,Start Date/Time of Adverse Event,Char,50
-ae.xpt,AEENDTC,End Date/Time of Adverse Event,Char,50
-ae.xpt,AESTDY,Study Day of Start of Adverse Event,Num,8
-ae.xpt,AEENDY,Study Day of End of Adverse Event,Num,8
-ae.xpt,AEENRF,End Relative to Reference Period,Char,50
+ae,STUDYID,Study Identifier,Char,50
+ae,DOMAIN,Domain Abbreviation,Char,50
+ae,USUBJID,Unique Subject Identifier,Char,50
+ae,AESEQ,Sequence Number,Num,8
+ae,AETERM,Reported Term for the Adverse Event,Char,50
+ae,AEMODIFY,Modified Reported Term,Char,50
+ae,AEDECOD,Dictionary-Derived Term,Char,50
+ae,AEBODSYS,Body System or Organ Class,Char,50
+ae,AESEV,Severity/Intensity,Char,50
+ae,AESER,Serious Event,Char,50
+ae,AEACN,Action Taken with Study Treatment,Char,50
+ae,AEREL,Causality,Char,50
+ae,AEOUT,Outcome of Adverse Event,Char,50
+ae,AESCONG,Congenital Anomaly or Birth Defect,Char,50
+ae,AESDISAB,Persist or Signif Disability/Incapacity,Char,50
+ae,AESDTH,Results in Death,Char,50
+ae,AESHOSP,Requires or Prolongs Hospitalization,Char,50
+ae,AESLIFE,Is Life Threatening,Char,50
+ae,EPOCH,Epoch,Char,50
+ae,AESTDTC,Start Date/Time of Adverse Event,Char,50
+ae,AEENDTC,End Date/Time of Adverse Event,Char,50
+ae,AESTDY,Study Day of Start of Adverse Event,Num,8
+ae,AEENDY,Study Day of End of Adverse Event,Num,8
+ae,AEENRF,End Relative to Reference Period,Char,50

@@ -1,9 +1,9 @@
 dataset,variable,label,type,length
-tx.xpt,STUDYID,Study Identifier,Char,50
-tx.xpt,DOMAIN,Domain Abbreviation,Char,50
-tx.xpt,SETCD,Set Code,Char,8
-tx.xpt,SET,Set Description,Char,40
-tx.xpt,TXSEQ,Sequence Number,Num,8
-tx.xpt,TXPARMCD,Trial Set Parameter Short Name,Char,8
-tx.xpt,TXPARM,Trial Set Parameter,Num,40
-tx.xpt,TXVAL,Trial Set Parameter Value,Char,50
+tx,STUDYID,Study Identifier,Char,50
+tx,DOMAIN,Domain Abbreviation,Char,50
+tx,SETCD,Set Code,Char,8
+tx,SET,Set Description,Char,40
+tx,TXSEQ,Sequence Number,Num,8
+tx,TXPARMCD,Trial Set Parameter Short Name,Char,8
+tx,TXPARM,Trial Set Parameter,Num,40
+tx,TXVAL,Trial Set Parameter Value,Char,50

@@ -1,39 +1,39 @@
 dataset,variable,label,type,length
-ec.xpt,STUDYID,Study Identifier,Char,12
-ec.xpt,DOMAIN,Domain Abbreviation,Char,2
-ec.xpt,USUBJID,Unique Subject Identifier,Char,8
-ec.xpt,SPDEVID,Sponsor Device Identifier,Char,200
-ec.xpt,ECSEQ,Sequence Number,Num,8
-ec.xpt,ECTRT,Name of Treatment,Char,10
-ec.xpt,ECPRESP,Pre-Specified,Char,1
-ec.xpt,ECOCCUR,Occurrence,Char,1
-ec.xpt,ECDOSE,Dose,Num,8
-ec.xpt,ECDOSU,Dose Units,Char,2
-ec.xpt,ECDOSFRM,Dose Form,Char,9
-ec.xpt,ECDOSFRQ,Dosing Frequency per Interval,Char,2
-ec.xpt,ECROUTE,Route of Administration,Char,12
-ec.xpt,ECLOT,Lot Number,Char,200
-ec.xpt,ECPSTRG,Pharmaceutical Strength,Num,8
-ec.xpt,ECPSTRGU,Pharmaceutical Strength Units,Char,3
-ec.xpt,EPOCH,Epoch,Char,9
-ec.xpt,ECSTDTC,Start Date/Time of Treatment,Char,10
-ec.xpt,ECENDTC,End Date/Time of Treatment,Char,10
-ec.xpt,ECSTDY,Study Day of Start of Treatment,Num,8
-ec.xpt,ECENDY,Study Day of End of Treatment,Num,8
-ex.xpt,STUDYID,Study Identifier,Char,50
-ex.xpt,DOMAIN,Domain Abbreviation,Char,50
-ex.xpt,USUBJID,Unique Subject Identifier,Char,50
-ex.xpt,SPDEVID,Sponsor Device Identifier,Char,200
-ex.xpt,EXSEQ,Sequence Number,Num,8
-ex.xpt,EXTRT,Name of Treatment,Char,50
-ex.xpt,EXDOSE,Dose,Num,8
-ex.xpt,EXDOSU,Dose Units,Char,50
-ex.xpt,EXDOSFRM,Dose Form,Char,50
-ex.xpt,EXDOSFRQ,Dosing Frequency per Interval,Char,50
-ex.xpt,EXROUTE,Route of Administration,Char,50
-ex.xpt,EXLOT,Lot Number,Char,50
-ex.xpt,EPOCH,Epoch,Char,50
-ex.xpt,EXSTDTC,Start Date/Time of Treatment,Char,50
-ex.xpt,EXENDTC,End Date/Time of Treatment,Char,50
-ex.xpt,EXSTDY,Study Day of Start of Treatment,Num,8
-ex.xpt,EXENDY,Study Day of End of Treatment,Num,8
+ec,STUDYID,Study Identifier,Char,12
+ec,DOMAIN,Domain Abbreviation,Char,2
+ec,USUBJID,Unique Subject Identifier,Char,8
+ec,SPDEVID,Sponsor Device Identifier,Char,200
+ec,ECSEQ,Sequence Number,Num,8
+ec,ECTRT,Name of Treatment,Char,10
+ec,ECPRESP,Pre-Specified,Char,1
+ec,ECOCCUR,Occurrence,Char,1
+ec,ECDOSE,Dose,Num,8
+ec,ECDOSU,Dose Units,Char,2
+ec,ECDOSFRM,Dose Form,Char,9
+ec,ECDOSFRQ,Dosing Frequency per Interval,Char,2
+ec,ECROUTE,Route of Administration,Char,12
+ec,ECLOT,Lot Number,Char,200
+ec,ECPSTRG,Pharmaceutical Strength,Num,8
+ec,ECPSTRGU,Pharmaceutical Strength Units,Char,3
+ec,EPOCH,Epoch,Char,9
+ec,ECSTDTC,Start Date/Time of Treatment,Char,10
+ec,ECENDTC,End Date/Time of Treatment,Char,10
+ec,ECSTDY,Study Day of Start of Treatment,Num,8
+ec,ECENDY,Study Day of End of Treatment,Num,8
+ex,STUDYID,Study Identifier,Char,50
+ex,DOMAIN,Domain Abbreviation,Char,50
+ex,USUBJID,Unique Subject Identifier,Char,50
+ex,SPDEVID,Sponsor Device Identifier,Char,200
+ex,EXSEQ,Sequence Number,Num,8
+ex,EXTRT,Name of Treatment,Char,50
+ex,EXDOSE,Dose,Num,8
+ex,EXDOSU,Dose Units,Char,50
+ex,EXDOSFRM,Dose Form,Char,50
+ex,EXDOSFRQ,Dosing Frequency per Interval,Char,50
+ex,EXROUTE,Route of Administration,Char,50
+ex,EXLOT,Lot Number,Char,50
+ex,EPOCH,Epoch,Char,50
+ex,EXSTDTC,Start Date/Time of Treatment,Char,50
+ex,EXENDTC,End Date/Time of Treatment,Char,50
+ex,EXSTDY,Study Day of Start of Treatment,Num,8
+ex,EXENDY,Study Day of End of Treatment,Num,8

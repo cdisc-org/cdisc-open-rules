@@ -1,32 +1,32 @@
 dataset,variable,label,type,length
-se.xpt,STUDYID,"Study
+se,STUDYID,"Study
 Identifier",Char,12
-se.xpt,DOMAIN,"Domain
+se,DOMAIN,"Domain
 Abbreviation",Char,2
-se.xpt,USUBJID,"Unique
+se,USUBJID,"Unique
 Subject
 Identifier",Char,20
-se.xpt,SESEQ,"Sequence
+se,SESEQ,"Sequence
 Number",Num,8
-se.xpt,ETCD,"Element
+se,ETCD,"Element
 Code",Char,7
-se.xpt,ELEMENT,"Description
+se,ELEMENT,"Description
 of Element",Char,26
-se.xpt,TAETORD,"Planned
+se,TAETORD,"Planned
 Order of
 Element
 within Arm",Num,8
-se.xpt,EPOCH,Epoch,Char,20
-se.xpt,SESTDTC,"Start
+se,EPOCH,Epoch,Char,20
+se,SESTDTC,"Start
 Date/Time
 of Element",Char,10
-se.xpt,SEENDTC,"End
+se,SEENDTC,"End
 Date/Time
 of Element",Char,10
-se.xpt,SESTDY,"Study Day of
+se,SESTDY,"Study Day of
 Start of
 Observation",Num,8
-se.xpt,SEENDY,"Study Day of
+se,SEENDY,"Study Day of
 End of
 Observation",Num,8
-se.xpt,SEUPDES,Description of Unplanned Element,Char,50
+se,SEUPDES,Description of Unplanned Element,Char,50

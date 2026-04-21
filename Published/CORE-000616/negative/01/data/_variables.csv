@@ -1,41 +1,41 @@
 dataset,variable,label,type,length
-lb.xpt,STUDYID,Study Identifier,Char,12
-lb.xpt,DOMAIN,Domain Abbreviation,Char,2
-lb.xpt,USUBJID,Unique Subject Identifier,Char,8
-lb.xpt,LBSEQ,Sequence Number,Num,8
-lb.xpt,LBTESTCD,Lab Test or Examination Short Name,Char,7
-lb.xpt,LBTEST,Lab Test or Examination Name,Char,39
-lb.xpt,LBCAT,Category for Lab Test,Char,10
-lb.xpt,LBORRES,Result or Finding in Original Units,Char,6
-lb.xpt,LBORRESU,Original Units,Char,7
-lb.xpt,LBORNRLO,Reference Range Lower Limit in Orig Unit,Char,200
-lb.xpt,LBORNRHI,Reference Range Upper Limit in Orig Unit,Char,200
-lb.xpt,LBSTRESC,Character Result/Finding in Std Format,Char,8
-lb.xpt,LBSTRESN,Numeric Result/Finding in Standard Units,Num,8
-lb.xpt,LBSTRESU,Standard Units,Char,7
-lb.xpt,LBSTNRLO,Reference Range Lower Limit-Std Units,Num,8
-lb.xpt,LBSTNRHI,Reference Range Upper Limit-Std Units,Num,8
-lb.xpt,LBNRIND,Reference Range Indicator,Char,8
-lb.xpt,LBSTAT,Completion Status,Char,8
-lb.xpt,LBREASND,Reason Not Done,Char,50
-lb.xpt,LBLOBXFL,Last Observation Before Exposure Flag,Char,1
-lb.xpt,VISITNUM,Visit Number,Num,8
-lb.xpt,VISIT,Visit Name,Char,200
-lb.xpt,EPOCH,Epoch,Char,9
-lb.xpt,LBDTC,Date/Time of Specimen Collection,Char,19
-lb.xpt,LBDY,Study Day of Specimen Collection,Num,8
-lb.xpt,LBTOX,Toxicity,Char,50
-lb.xpt,LBTOXGR,Standard Toxicity Grade,Char,50
-lb.xpt,LBTPT,Planned Time Point Name ,Char,50
-lb.xpt,LBTPTNUM,Planned Time Point Number,Num,8
-lb.xpt,LBSTINT,Planned Start of Assessment Interval ,Char,20
-lb.xpt,LBENINT,Planned End of Assessment Interval ,Char,20
-lb.xpt,LBTPTREF,Time Point Reference,Char,100
-pp.xpt,STUDYID,Study Identifier,Char,12
-pp.xpt,DOMAIN,Domain Abbreviation,Char,2
-pp.xpt,USUBJID,Unique Subject Identifier,Char,8
-pp.xpt,PPSEQ,Sequence Number,Num,8
-pp.xpt,PPTESTCD,Parameter Short Name ,Char,7
-pp.xpt,PPTEST,Parameter Name ,Char,39
-pp.xpt,PPSPEC,Specimen Material Type ,Char,200
-pp.xpt,PPTPTREF,Time Point Reference,Char,20
+lb,STUDYID,Study Identifier,Char,12
+lb,DOMAIN,Domain Abbreviation,Char,2
+lb,USUBJID,Unique Subject Identifier,Char,8
+lb,LBSEQ,Sequence Number,Num,8
+lb,LBTESTCD,Lab Test or Examination Short Name,Char,7
+lb,LBTEST,Lab Test or Examination Name,Char,39
+lb,LBCAT,Category for Lab Test,Char,10
+lb,LBORRES,Result or Finding in Original Units,Char,6
+lb,LBORRESU,Original Units,Char,7
+lb,LBORNRLO,Reference Range Lower Limit in Orig Unit,Char,200
+lb,LBORNRHI,Reference Range Upper Limit in Orig Unit,Char,200
+lb,LBSTRESC,Character Result/Finding in Std Format,Char,8
+lb,LBSTRESN,Numeric Result/Finding in Standard Units,Num,8
+lb,LBSTRESU,Standard Units,Char,7
+lb,LBSTNRLO,Reference Range Lower Limit-Std Units,Num,8
+lb,LBSTNRHI,Reference Range Upper Limit-Std Units,Num,8
+lb,LBNRIND,Reference Range Indicator,Char,8
+lb,LBSTAT,Completion Status,Char,8
+lb,LBREASND,Reason Not Done,Char,50
+lb,LBLOBXFL,Last Observation Before Exposure Flag,Char,1
+lb,VISITNUM,Visit Number,Num,8
+lb,VISIT,Visit Name,Char,200
+lb,EPOCH,Epoch,Char,9
+lb,LBDTC,Date/Time of Specimen Collection,Char,19
+lb,LBDY,Study Day of Specimen Collection,Num,8
+lb,LBTOX,Toxicity,Char,50
+lb,LBTOXGR,Standard Toxicity Grade,Char,50
+lb,LBTPT,Planned Time Point Name ,Char,50
+lb,LBTPTNUM,Planned Time Point Number,Num,8
+lb,LBSTINT,Planned Start of Assessment Interval ,Char,20
+lb,LBENINT,Planned End of Assessment Interval ,Char,20
+lb,LBTPTREF,Time Point Reference,Char,100
+pp,STUDYID,Study Identifier,Char,12
+pp,DOMAIN,Domain Abbreviation,Char,2
+pp,USUBJID,Unique Subject Identifier,Char,8
+pp,PPSEQ,Sequence Number,Num,8
+pp,PPTESTCD,Parameter Short Name ,Char,7
+pp,PPTEST,Parameter Name ,Char,39
+pp,PPSPEC,Specimen Material Type ,Char,200
+pp,PPTPTREF,Time Point Reference,Char,20

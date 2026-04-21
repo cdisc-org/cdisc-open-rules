@@ -1,17 +1,17 @@
 dataset,variable,label,type,length
-ta.xpt,STUDYID,Study Identifier,Char,12
-ta.xpt,DOMAIN,Domain Abbreviation,Char,2
-ta.xpt,ARMCD,Planned Arm Code,Char,8
-ta.xpt,ARM,Description of Planned Arm,Char,28
-ta.xpt,TAETORD,Planned Order of Element within Arm,Num,8
-ta.xpt,ETCD,Element Code,Char,7
-ta.xpt,ELEMENT,Description of Element,Char,26
-ta.xpt,TABRANCH,Branch,Char,200
-ta.xpt,TATRANS,Transition Rule,Char,200
-ta.xpt,EPOCH,Epoch,Char,9
-te.xpt,STUDYID,Study Identifier,Char,12
-te.xpt,DOMAIN,Domain Abbreviation,Char,2
-te.xpt,ETCD,Element Code,Char,7
-te.xpt,ELEMENT,Description of Element,Char,26
-te.xpt,TESTRL,Rule for Start of Element,Char,200
-te.xpt,TEENRL,Rule for End of Element,Char,200
+ta,STUDYID,Study Identifier,Char,12
+ta,DOMAIN,Domain Abbreviation,Char,2
+ta,ARMCD,Planned Arm Code,Char,8
+ta,ARM,Description of Planned Arm,Char,28
+ta,TAETORD,Planned Order of Element within Arm,Num,8
+ta,ETCD,Element Code,Char,7
+ta,ELEMENT,Description of Element,Char,26
+ta,TABRANCH,Branch,Char,200
+ta,TATRANS,Transition Rule,Char,200
+ta,EPOCH,Epoch,Char,9
+te,STUDYID,Study Identifier,Char,12
+te,DOMAIN,Domain Abbreviation,Char,2
+te,ETCD,Element Code,Char,7
+te,ELEMENT,Description of Element,Char,26
+te,TESTRL,Rule for Start of Element,Char,200
+te,TEENRL,Rule for End of Element,Char,200

@@ -1,106 +1,106 @@
 dataset,variable,label,type,length
-ag.xpt,STUDYID,Study Identifier,Char,50
-ag.xpt,DOMAIN,Domain Abbreviation,Char,50
-ag.xpt,USUBJID,Unique Subject Identifier,Char,50
-ag.xpt,AGSEQ,Sequence Number,Num,8
-ag.xpt,AGTRT,Reported Agent Name,Char,50
-ag.xpt,AGCAT,Category for Agent,Char,50
-ag.xpt,AGSCAT,Subcategory for Agent,Char,50
-ag.xpt,AGPRESP,AG Pre-Specified,Char,50
-ag.xpt,AGOCCUR,AG Occurrence,Char,50
-ag.xpt,AGDOSE,Dose per Administration,Num,50
-ag.xpt,AGDOSTXT,Dose Description,Char,50
-ag.xpt,AGDOSU,Dose Units,Char,50
-ag.xpt,AGROUTE,Route of Administration,Char,50
-ag.xpt,VISIT,Visit Name,Char,50
-ag.xpt,AGENDTC,End Date/Time of Agent,Char,50
-cm.xpt,STUDYID,Study Identifier,Char,50
-cm.xpt,DOMAIN,Domain Abbreviation,Char,50
-cm.xpt,USUBJID,Unique Subject Identifier,Char,50
-cm.xpt,CMSEQ,Sequence Number,Num,8
-cm.xpt,CMTRT,"Reported Name of Drug, Med, or Therapy",Char,50
-cm.xpt,CMSCAT,Subcategory for Medication,Char,50
-ex.xpt,STUDYID,Study Identifier,Char,50
-ex.xpt,DOMAIN,Domain Abbreviation,Char,50
-ex.xpt,USUBJID,Unique Subject Identifier,Char,50
-ex.xpt,EXSEQ,Sequence Number,Num,8
-ex.xpt,EXLNKID,Link ID,Char,50
-ex.xpt,EXTRT,Name of Treatment,Char,50
-ex.xpt,EXSCAT,Subcategory of Treatment,Char,50
-ml.xpt,STUDYID,Study Identifier,Char,50
-ml.xpt,DOMAIN,Domain Abbreviation,Char,50
-ml.xpt,USUBJID,Unique Subject Identifier,Char,50
-ml.xpt,MLSEQ,Sequence Number,Num,8
-ml.xpt,MLTRT,Name of Meal,Char,50
-ml.xpt,MLCAT,Category for Meal,Char,50
-ml.xpt,MLSCAT,Subcategory for Meal,Char,50
-pr.xpt,STUDYID,Study Identifier,Char,50
-pr.xpt,DOMAIN,Domain Abbreviation,Char,50
-pr.xpt,USUBJID,Unique Subject Identifier,Char,50
-pr.xpt,PRSEQ,Sequence Number,Num,8
-pr.xpt,PRTRT,Reported Name of Procedure,Char,50
-pr.xpt,PRCAT,Category,Char,50
-pr.xpt,PRSCAT,Subcategory ,Char,50
-su.xpt,STUDYID,Study Identifier,Char,50
-su.xpt,DOMAIN,Domain Abbreviation,Char,50
-su.xpt,USUBJID,Unique Subject Identifier,Char,50
-su.xpt,SUSEQ,Sequence Number,Num,8
-su.xpt,SUTRT,Reported Name of Substance,Char,50
-su.xpt,SUCAT,Category for Substance Use,Char,50
-ae.xpt,STUDYID,Study Identifier,Char,50
-ae.xpt,DOMAIN,Domain Abbreviation,Char,50
-ae.xpt,USUBJID,Unique Subject Identifier,Char,50
-ae.xpt,AESEQ,Sequence Number,Num,8
-ae.xpt,AETERM,Reported Term for the Adverse Event,Char,50
-ae.xpt,AECAT,Category for Adverse Event,Char,50
-ae.xpt,AESCAT,Subcategory for Adverse Event,Char,50
-be.xpt,STUDYID,Study Identifier,Char,50
-be.xpt,DOMAIN,Domain Abbreviation,Char,50
-be.xpt,USUBJID,Unique Subject Identifier,Char,50
-be.xpt,BESEQ,Sequence Number,Num,8
-be.xpt,BETERM,Reported Term for the Biospecimen Event,Char,50
-be.xpt,BESCAT,Subcategory for Biospecimen Event,Char,50
-ce.xpt,STUDYID,Study Identifier,Char,50
-ce.xpt,DOMAIN,Domain Abbreviation,Char,50
-ce.xpt,USUBJID,Unique Subject Identifier,Char,50
-ce.xpt,CESEQ,Sequence Number,Num,8
-ce.xpt,CETERM,Reported Term for the Clinical Event,Char,50
-ce.xpt,CECAT,Category for the Clinical Event,Char,50
-ce.xpt,CESCAT,Subcategory for the Clinical Event,Char,50
-ds.xpt,STUDYID,Study Identifier,Char,50
-ds.xpt,DOMAIN,Domain Abbreviation,Char,50
-ds.xpt,USUBJID,Unique Subject Identifier,Char,50
-ds.xpt,DSSEQ,Sequence Number,Num,8
-ds.xpt,DSTERM,Reported Term for the Disposition Event,Char,50
-ds.xpt,DSCAT,Category for Disposition Event,Char,50
-ds.xpt,DSSCAT,Subcategory for Disposition Event,Char,50
-mh.xpt,STUDYID,Study Identifier,Char,50
-mh.xpt,DOMAIN,Domain Abbreviation,Char,50
-mh.xpt,USUBJID,Unique Subject Identifier,Char,50
-mh.xpt,MHSEQ,Sequence Number,Num,8
-mh.xpt,MHTERM,Reported Term for the Medical History,Char,50
-mh.xpt,MHSCAT,"Subcategory for
+ag,STUDYID,Study Identifier,Char,50
+ag,DOMAIN,Domain Abbreviation,Char,50
+ag,USUBJID,Unique Subject Identifier,Char,50
+ag,AGSEQ,Sequence Number,Num,8
+ag,AGTRT,Reported Agent Name,Char,50
+ag,AGCAT,Category for Agent,Char,50
+ag,AGSCAT,Subcategory for Agent,Char,50
+ag,AGPRESP,AG Pre-Specified,Char,50
+ag,AGOCCUR,AG Occurrence,Char,50
+ag,AGDOSE,Dose per Administration,Num,50
+ag,AGDOSTXT,Dose Description,Char,50
+ag,AGDOSU,Dose Units,Char,50
+ag,AGROUTE,Route of Administration,Char,50
+ag,VISIT,Visit Name,Char,50
+ag,AGENDTC,End Date/Time of Agent,Char,50
+cm,STUDYID,Study Identifier,Char,50
+cm,DOMAIN,Domain Abbreviation,Char,50
+cm,USUBJID,Unique Subject Identifier,Char,50
+cm,CMSEQ,Sequence Number,Num,8
+cm,CMTRT,"Reported Name of Drug, Med, or Therapy",Char,50
+cm,CMSCAT,Subcategory for Medication,Char,50
+ex,STUDYID,Study Identifier,Char,50
+ex,DOMAIN,Domain Abbreviation,Char,50
+ex,USUBJID,Unique Subject Identifier,Char,50
+ex,EXSEQ,Sequence Number,Num,8
+ex,EXLNKID,Link ID,Char,50
+ex,EXTRT,Name of Treatment,Char,50
+ex,EXSCAT,Subcategory of Treatment,Char,50
+ml,STUDYID,Study Identifier,Char,50
+ml,DOMAIN,Domain Abbreviation,Char,50
+ml,USUBJID,Unique Subject Identifier,Char,50
+ml,MLSEQ,Sequence Number,Num,8
+ml,MLTRT,Name of Meal,Char,50
+ml,MLCAT,Category for Meal,Char,50
+ml,MLSCAT,Subcategory for Meal,Char,50
+pr,STUDYID,Study Identifier,Char,50
+pr,DOMAIN,Domain Abbreviation,Char,50
+pr,USUBJID,Unique Subject Identifier,Char,50
+pr,PRSEQ,Sequence Number,Num,8
+pr,PRTRT,Reported Name of Procedure,Char,50
+pr,PRCAT,Category,Char,50
+pr,PRSCAT,Subcategory ,Char,50
+su,STUDYID,Study Identifier,Char,50
+su,DOMAIN,Domain Abbreviation,Char,50
+su,USUBJID,Unique Subject Identifier,Char,50
+su,SUSEQ,Sequence Number,Num,8
+su,SUTRT,Reported Name of Substance,Char,50
+su,SUCAT,Category for Substance Use,Char,50
+ae,STUDYID,Study Identifier,Char,50
+ae,DOMAIN,Domain Abbreviation,Char,50
+ae,USUBJID,Unique Subject Identifier,Char,50
+ae,AESEQ,Sequence Number,Num,8
+ae,AETERM,Reported Term for the Adverse Event,Char,50
+ae,AECAT,Category for Adverse Event,Char,50
+ae,AESCAT,Subcategory for Adverse Event,Char,50
+be,STUDYID,Study Identifier,Char,50
+be,DOMAIN,Domain Abbreviation,Char,50
+be,USUBJID,Unique Subject Identifier,Char,50
+be,BESEQ,Sequence Number,Num,8
+be,BETERM,Reported Term for the Biospecimen Event,Char,50
+be,BESCAT,Subcategory for Biospecimen Event,Char,50
+ce,STUDYID,Study Identifier,Char,50
+ce,DOMAIN,Domain Abbreviation,Char,50
+ce,USUBJID,Unique Subject Identifier,Char,50
+ce,CESEQ,Sequence Number,Num,8
+ce,CETERM,Reported Term for the Clinical Event,Char,50
+ce,CECAT,Category for the Clinical Event,Char,50
+ce,CESCAT,Subcategory for the Clinical Event,Char,50
+ds,STUDYID,Study Identifier,Char,50
+ds,DOMAIN,Domain Abbreviation,Char,50
+ds,USUBJID,Unique Subject Identifier,Char,50
+ds,DSSEQ,Sequence Number,Num,8
+ds,DSTERM,Reported Term for the Disposition Event,Char,50
+ds,DSCAT,Category for Disposition Event,Char,50
+ds,DSSCAT,Subcategory for Disposition Event,Char,50
+mh,STUDYID,Study Identifier,Char,50
+mh,DOMAIN,Domain Abbreviation,Char,50
+mh,USUBJID,Unique Subject Identifier,Char,50
+mh,MHSEQ,Sequence Number,Num,8
+mh,MHTERM,Reported Term for the Medical History,Char,50
+mh,MHSCAT,"Subcategory for
 Medical History",Char,50
-da.xpt,STUDYID,Study Identifier,Char,50
-da.xpt,DOMAIN,Domain Abbreviation,Char,50
-da.xpt,USUBJID,Unique Subject Identifier,Char,50
-da.xpt,DASEQ,Sequence Number,Num,8
-da.xpt,DATESTCD,Short Name of Accountability Assessment,Char,8
-da.xpt,DATEST,Name of Accountability Assessment,Char,40
-da.xpt,DACAT,Category,Char,50
-da.xpt,DASCAT,Subcategory,Char,50
-eg.xpt,STUDYID,Study Identifier,Char,50
-eg.xpt,DOMAIN,Domain Abbreviation,Char,50
-eg.xpt,USUBJID,Unique Subject Identifier,Char,50
-eg.xpt,EGSEQ,Sequence Number,Num,8
-eg.xpt,EGTESTCD,ECG Test or Examination Short Name,Char,8
-eg.xpt,EGTEST,ECG Test or Examination Name,Char,40
-eg.xpt,EGSCAT,Subcategory for ECG,Char,50
-fa.xpt,STUDYID,Study Identifier,Char,50
-fa.xpt,DOMAIN,Domain Abbreviation,Char,50
-fa.xpt,USUBJID,Unique Subject Identifier,Char,50
-fa.xpt,FASEQ,Sequence Number,Num,8
-fa.xpt,FATESTCD,Findings About Test Short Name,Char,8
-fa.xpt,FATEST,Findings About Test Name,Char,40
-fa.xpt,FAOBJ,Object of the Observation,Char,50
-fa.xpt,FASCAT,Subcategory for Findings About,Char,50
+da,STUDYID,Study Identifier,Char,50
+da,DOMAIN,Domain Abbreviation,Char,50
+da,USUBJID,Unique Subject Identifier,Char,50
+da,DASEQ,Sequence Number,Num,8
+da,DATESTCD,Short Name of Accountability Assessment,Char,8
+da,DATEST,Name of Accountability Assessment,Char,40
+da,DACAT,Category,Char,50
+da,DASCAT,Subcategory,Char,50
+eg,STUDYID,Study Identifier,Char,50
+eg,DOMAIN,Domain Abbreviation,Char,50
+eg,USUBJID,Unique Subject Identifier,Char,50
+eg,EGSEQ,Sequence Number,Num,8
+eg,EGTESTCD,ECG Test or Examination Short Name,Char,8
+eg,EGTEST,ECG Test or Examination Name,Char,40
+eg,EGSCAT,Subcategory for ECG,Char,50
+fa,STUDYID,Study Identifier,Char,50
+fa,DOMAIN,Domain Abbreviation,Char,50
+fa,USUBJID,Unique Subject Identifier,Char,50
+fa,FASEQ,Sequence Number,Num,8
+fa,FATESTCD,Findings About Test Short Name,Char,8
+fa,FATEST,Findings About Test Name,Char,40
+fa,FAOBJ,Object of the Observation,Char,50
+fa,FASCAT,Subcategory for Findings About,Char,50

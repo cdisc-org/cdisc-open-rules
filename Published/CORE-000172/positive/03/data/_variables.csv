@@ -1,48 +1,48 @@
 dataset,variable,label,type,length
-ec.xpt,STUDYID,Study Identifier,Char,50
-ec.xpt,DOMAIN,Domain Abbreviation,Char,50
-ec.xpt,USUBJID,Unique Subject Identifier,Char,50
-ec.xpt,SPDEVID,Sponsor Device Identifier,Char,200
-ec.xpt,ECSEQ,Sequence Number,Num,8
-ec.xpt,ECTRT,Name of Treatment,Char,50
-ec.xpt,ECPRESP,Pre-Specified,Char,50
-ec.xpt,ECOCCUR,Occurrence,Char,50
-ec.xpt,ECDOSE,Dose,Num,8
-ec.xpt,ECDOSU,Dose Units,Char,50
-ec.xpt,ECDOSFRM,Dose Form,Char,50
-ec.xpt,ECDOSFRQ,Dosing Frequency per Interval,Char,50
-ec.xpt,ECROUTE,Route of Administration,Char,50
-ec.xpt,ECLOT,Lot Number,Char,50
-ec.xpt,ECPSTRG,Pharmaceutical Strength,Num,8
-ec.xpt,ECPSTRGU,Pharmaceutical Strength Units,Char,50
-ec.xpt,EPOCH,Epoch,Char,50
-ec.xpt,ECSTDTC,Start Date/Time of Treatment,Char,50
-ec.xpt,ECENDTC,End Date/Time of Treatment,Char,50
-ec.xpt,ECSTDY,Study Day of Start of Treatment,Num,8
-ec.xpt,ECENDY,Study Day of End of Treatment,Num,8
-dm.xpt,STUDYID,Study Identifier,Char,50
-dm.xpt,DOMAIN,Domain Abbreviation,Char,50
-dm.xpt,USUBJID,Unique Subject Identifier,Char,50
-dm.xpt,SUBJID,Subject Identifier for the Study,Char,50
-dm.xpt,RFSTDTC,Subject Reference Start Date/Time,Char,50
-dm.xpt,RFENDTC,Subject Reference End Date/Time,Char,50
-dm.xpt,RFXSTDTC,Date/Time of First Study Treatment,Char,50
-dm.xpt,RFXENDTC,Date/Time of Last Study Treatment,Char,50
-dm.xpt,RFICDTC,Date/Time of Informed Consent,Char,50
-dm.xpt,RFPENDTC,Date/Time of End of Participation,Char,50
-dm.xpt,DTHDTC,Date/Time of Death,Char,50
-dm.xpt,DTHFL,Subject Death Flag,Char,50
-dm.xpt,SITEID,Study Site Identifier,Char,50
-dm.xpt,BRTHDTC,Date/Time of Birth,Char,50
-dm.xpt,AGE,Age,Num,8
-dm.xpt,AGEU,Age Units,Char,50
-dm.xpt,SEX,Sex,Char,50
-dm.xpt,RACE,Race,Char,50
-dm.xpt,ETHNIC,Ethnicity,Char,50
-dm.xpt,ARMCD,Planned Arm Code,Char,50
-dm.xpt,ARM,Description of Planned Arm,Char,50
-dm.xpt,ACTARMCD,Actual Arm Code,Char,50
-dm.xpt,ACTARM,Description of Actual Arm,Char,50
-dm.xpt,ARMNRS,Reason Arm and/or Actual Arm is Null,Char,50
-dm.xpt,ACTARMUD,Description of Unplanned Actual Arm,Char,50
-dm.xpt,COUNTRY,Country,Char,50
+ec,STUDYID,Study Identifier,Char,50
+ec,DOMAIN,Domain Abbreviation,Char,50
+ec,USUBJID,Unique Subject Identifier,Char,50
+ec,SPDEVID,Sponsor Device Identifier,Char,200
+ec,ECSEQ,Sequence Number,Num,8
+ec,ECTRT,Name of Treatment,Char,50
+ec,ECPRESP,Pre-Specified,Char,50
+ec,ECOCCUR,Occurrence,Char,50
+ec,ECDOSE,Dose,Num,8
+ec,ECDOSU,Dose Units,Char,50
+ec,ECDOSFRM,Dose Form,Char,50
+ec,ECDOSFRQ,Dosing Frequency per Interval,Char,50
+ec,ECROUTE,Route of Administration,Char,50
+ec,ECLOT,Lot Number,Char,50
+ec,ECPSTRG,Pharmaceutical Strength,Num,8
+ec,ECPSTRGU,Pharmaceutical Strength Units,Char,50
+ec,EPOCH,Epoch,Char,50
+ec,ECSTDTC,Start Date/Time of Treatment,Char,50
+ec,ECENDTC,End Date/Time of Treatment,Char,50
+ec,ECSTDY,Study Day of Start of Treatment,Num,8
+ec,ECENDY,Study Day of End of Treatment,Num,8
+dm,STUDYID,Study Identifier,Char,50
+dm,DOMAIN,Domain Abbreviation,Char,50
+dm,USUBJID,Unique Subject Identifier,Char,50
+dm,SUBJID,Subject Identifier for the Study,Char,50
+dm,RFSTDTC,Subject Reference Start Date/Time,Char,50
+dm,RFENDTC,Subject Reference End Date/Time,Char,50
+dm,RFXSTDTC,Date/Time of First Study Treatment,Char,50
+dm,RFXENDTC,Date/Time of Last Study Treatment,Char,50
+dm,RFICDTC,Date/Time of Informed Consent,Char,50
+dm,RFPENDTC,Date/Time of End of Participation,Char,50
+dm,DTHDTC,Date/Time of Death,Char,50
+dm,DTHFL,Subject Death Flag,Char,50
+dm,SITEID,Study Site Identifier,Char,50
+dm,BRTHDTC,Date/Time of Birth,Char,50
+dm,AGE,Age,Num,8
+dm,AGEU,Age Units,Char,50
+dm,SEX,Sex,Char,50
+dm,RACE,Race,Char,50
+dm,ETHNIC,Ethnicity,Char,50
+dm,ARMCD,Planned Arm Code,Char,50
+dm,ARM,Description of Planned Arm,Char,50
+dm,ACTARMCD,Actual Arm Code,Char,50
+dm,ACTARM,Description of Actual Arm,Char,50
+dm,ARMNRS,Reason Arm and/or Actual Arm is Null,Char,50
+dm,ACTARMUD,Description of Unplanned Actual Arm,Char,50
+dm,COUNTRY,Country,Char,50

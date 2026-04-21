@@ -1,17 +1,17 @@
 dataset,variable,label,type,length
-tx.xpt,STUDYID,Study Identifier,Char,8325064
-tx.xpt,DOMAIN,Domain Abbreviation,Char,TX
-tx.xpt,SETCD,Set Code,Char,SetR
-tx.xpt,SET,Set Description,Char,R-TA100-C2
-tx.xpt,TXSEQ,Sequence Number,Num,67
-tx.xpt,TXPARMCD,Trial Set Parameter Short Name,Char,SPECIES
-tx.xpt,TXPARM,Trial Set Parameter,Char,Species
-tx.xpt,TXVAL,Trial Set Parameter Value,Char,SALMONELLA TYPHIMURIUM
-ts.xpt,STUDYID,Study Identifier,Char,200
-ts.xpt,DOMAIN,Domain Abbreviation,Char,200
-ts.xpt,TSSEQ,Sequence Number,Num,40
-ts.xpt,TSGRPID,Group Identifier,Char,10
-ts.xpt,TSPARMCD,Trial Summary Parameter Short Name,Char,40
-ts.xpt,TSPARM,Trial Summary Parameter,Char,8
-ts.xpt,TSVAL,Parameter Value,Char,40
-ts.xpt,TSVALNF,Parameter Null Flavor,Char,50
+tx,STUDYID,Study Identifier,Char,8325064
+tx,DOMAIN,Domain Abbreviation,Char,TX
+tx,SETCD,Set Code,Char,SetR
+tx,SET,Set Description,Char,R-TA100-C2
+tx,TXSEQ,Sequence Number,Num,67
+tx,TXPARMCD,Trial Set Parameter Short Name,Char,SPECIES
+tx,TXPARM,Trial Set Parameter,Char,Species
+tx,TXVAL,Trial Set Parameter Value,Char,SALMONELLA TYPHIMURIUM
+ts,STUDYID,Study Identifier,Char,200
+ts,DOMAIN,Domain Abbreviation,Char,200
+ts,TSSEQ,Sequence Number,Num,40
+ts,TSGRPID,Group Identifier,Char,10
+ts,TSPARMCD,Trial Summary Parameter Short Name,Char,40
+ts,TSPARM,Trial Summary Parameter,Char,8
+ts,TSVAL,Parameter Value,Char,40
+ts,TSVALNF,Parameter Null Flavor,Char,50

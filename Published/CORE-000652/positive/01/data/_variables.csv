@@ -1,22 +1,22 @@
 dataset,variable,label,type,length
-gv.xpt,STUDYID,Study Identifier,Char,10
-gv.xpt,DOMAIN,Domain Abbreviation,Char,2
-gv.xpt,USUBJID,Unique Subject Identifier,Char,14
-gv.xpt,GVSEQ,Sequence Number,Num,8
-gv.xpt,GVREFID,Specimen Identifier,Char,4
-gv.xpt,GVTESTCD,Lab Test or Examination Short Name,Char,8
-gv.xpt,GVTEST,Lab Test or Examination Name,Char,25
-gv.xpt,GVCAT,Category for Genetox In-Vivo Test,Char,18
-gv.xpt,GVSCAT,Subcategory for Genetox In-Vivo Test,Char,18
-gv.xpt,GVORRES,Result or Finding in Original Units,Char,6
-gv.xpt,GVORRESU,Unit of the Original Result,Char,6
-gv.xpt,GVSPEC,Specimen Material Type,Char,20
-gv.xpt,GVDTC,Date/Time of Specimen Collection,Char,20
-dm.xpt,STUDYID,Study Identifier,Char,10
-dm.xpt,DOMAIN,Domain Abbreviation,Char,2
-dm.xpt,USUBJID,Unique Subject Identifier,Char,14
-ex.xpt,STUDYID,Study Identifier,Char,10
-ex.xpt,DOMAIN,Domain Abbreviation,Char,2
-ex.xpt,USUBJID,Unique Subject Identifier,Char,14
-ex.xpt,ECSEQ,Sequence Number,Num,8
-ex.xpt,ECTRT,Name of Actual Treatment,Char,14
+gv,STUDYID,Study Identifier,Char,10
+gv,DOMAIN,Domain Abbreviation,Char,2
+gv,USUBJID,Unique Subject Identifier,Char,14
+gv,GVSEQ,Sequence Number,Num,8
+gv,GVREFID,Specimen Identifier,Char,4
+gv,GVTESTCD,Lab Test or Examination Short Name,Char,8
+gv,GVTEST,Lab Test or Examination Name,Char,25
+gv,GVCAT,Category for Genetox In-Vivo Test,Char,18
+gv,GVSCAT,Subcategory for Genetox In-Vivo Test,Char,18
+gv,GVORRES,Result or Finding in Original Units,Char,6
+gv,GVORRESU,Unit of the Original Result,Char,6
+gv,GVSPEC,Specimen Material Type,Char,20
+gv,GVDTC,Date/Time of Specimen Collection,Char,20
+dm,STUDYID,Study Identifier,Char,10
+dm,DOMAIN,Domain Abbreviation,Char,2
+dm,USUBJID,Unique Subject Identifier,Char,14
+ex,STUDYID,Study Identifier,Char,10
+ex,DOMAIN,Domain Abbreviation,Char,2
+ex,USUBJID,Unique Subject Identifier,Char,14
+ex,ECSEQ,Sequence Number,Num,8
+ex,ECTRT,Name of Actual Treatment,Char,14

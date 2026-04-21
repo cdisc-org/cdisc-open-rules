@@ -1,48 +1,48 @@
 dataset,variable,label,type,length
-ex.xpt,STUDYID ,Study Identifier,Char,10
-ex.xpt,DOMAIN ,Domain Abbreviation,Char,2
-ex.xpt,USUBJID,Unique Subject Identifier ,Char,20
-ex.xpt,EXSEQ ,Sequence Number,Num,8
-ex.xpt,EXTRT,Name of Actual Treatment ,Char,20
-ex.xpt,EXDOSE,Dose per Administration ,Num,8
-ex.xpt,EXDOSU,Dose Units ,Char,20
-ex.xpt,EXDOSFRM,Dose Form ,Char,20
-ex.xpt,EXDOSFRQ,Dosing Frequency Per Interval ,Char,20
-ex.xpt,EXROUTE,Route of Administration ,Char,20
-ex.xpt,EXLOT,Lot Number ,Char,20
-ex.xpt,RPHASE,Reproductive Phase ,Char,20
-ex.xpt,RPPLDY,Planned Repro Phase Day,Num,8
-ex.xpt,RPPLSTDY,Planned Repro Phase Day of Obs Start ,Num,8
-ex.xpt,RPPLENDY,Planned Repro Phase Day of Obs End ,Num,8
-ex.xpt,EXRPDY,Actual Repro Phase Day of Observation ,Num,8
-ex.xpt,EXRPSTDY,Actual Repro Phase Day of Obs Start,Num,8
-ex.xpt,EXRPENDY,Actual Repro Phase Day of Obs End,Num,8
-ex.xpt,EXSTDTC,Start Date/Time of Treatment ,Char,20
-lb.xpt,STUDYID ,Study Identifier,Char,10
-lb.xpt,DOMAIN ,Domain Abbreviation,Char,2
-lb.xpt,USUBJID,Unique Subject Identifier ,Char,20
-lb.xpt,LBSEQ ,Sequence Number,Num,8
-lb.xpt,LBTESTCD,Lab Test or Examination Short Name ,Char,8
-lb.xpt,LBTEST,Lab Test or Examination Name ,Char,40
-lb.xpt,LBORRES,Result or Findings as Collected ,Char,20
-lb.xpt,RPHASE,Reproductive Phase ,Char,20
-lb.xpt,RPPLDY,Planned Repro Phase Day,Num,8
-lb.xpt,RPPLSTDY,Planned Repro Phase Day of Obs Start ,Num,8
-lb.xpt,RPPLENDY,Planned Repro Phase Day of Obs End ,Num,8
-lb.xpt,LBRPDY,Actual Repro Phase Day of Observation ,Num,8
-lb.xpt,LBRPSTDY,Actual Repro Phase Day of Obs Start,Num,8
-lb.xpt,LBRPENDY,Actual Repro Phase Day of Obs End,Num,8
-lb.xpt,LBSTDTC,Start Date/Time of Treatment ,Char,20
-ds.xpt,STUDYID ,Study Identifier,Char,10
-ds.xpt,DOMAIN ,Domain Abbreviation,Char,2
-ds.xpt,USUBJID,Unique Subject Identifier ,Char,20
-ds.xpt,DSSEQ ,Sequence Number,Num,8
-ds.xpt,DSTERM,Reported Term for the Disposition Event ,Char,100
-ds.xpt,RPHASE,Reproductive Phase ,Char,20
-ds.xpt,RPPLDY,Planned Repro Phase Day,Num,8
-ds.xpt,RPPLSTDY,Planned Repro Phase Day of Obs Start ,Num,8
-ds.xpt,RPPLENDY,Planned Repro Phase Day of Obs End ,Num,8
-ds.xpt,DSRPDY,Actual Repro Phase Day of Observation ,Num,8
-ds.xpt,DSRPSTDY,Actual Repro Phase Day of Obs Start,Num,8
-ds.xpt,DSRPENDY,Actual Repro Phase Day of Obs End,Num,8
-ds.xpt,DSSTDTC,Start Date/Time of Treatment ,Char,20
+ex,STUDYID ,Study Identifier,Char,10
+ex,DOMAIN ,Domain Abbreviation,Char,2
+ex,USUBJID,Unique Subject Identifier ,Char,20
+ex,EXSEQ ,Sequence Number,Num,8
+ex,EXTRT,Name of Actual Treatment ,Char,20
+ex,EXDOSE,Dose per Administration ,Num,8
+ex,EXDOSU,Dose Units ,Char,20
+ex,EXDOSFRM,Dose Form ,Char,20
+ex,EXDOSFRQ,Dosing Frequency Per Interval ,Char,20
+ex,EXROUTE,Route of Administration ,Char,20
+ex,EXLOT,Lot Number ,Char,20
+ex,RPHASE,Reproductive Phase ,Char,20
+ex,RPPLDY,Planned Repro Phase Day,Num,8
+ex,RPPLSTDY,Planned Repro Phase Day of Obs Start ,Num,8
+ex,RPPLENDY,Planned Repro Phase Day of Obs End ,Num,8
+ex,EXRPDY,Actual Repro Phase Day of Observation ,Num,8
+ex,EXRPSTDY,Actual Repro Phase Day of Obs Start,Num,8
+ex,EXRPENDY,Actual Repro Phase Day of Obs End,Num,8
+ex,EXSTDTC,Start Date/Time of Treatment ,Char,20
+lb,STUDYID ,Study Identifier,Char,10
+lb,DOMAIN ,Domain Abbreviation,Char,2
+lb,USUBJID,Unique Subject Identifier ,Char,20
+lb,LBSEQ ,Sequence Number,Num,8
+lb,LBTESTCD,Lab Test or Examination Short Name ,Char,8
+lb,LBTEST,Lab Test or Examination Name ,Char,40
+lb,LBORRES,Result or Findings as Collected ,Char,20
+lb,RPHASE,Reproductive Phase ,Char,20
+lb,RPPLDY,Planned Repro Phase Day,Num,8
+lb,RPPLSTDY,Planned Repro Phase Day of Obs Start ,Num,8
+lb,RPPLENDY,Planned Repro Phase Day of Obs End ,Num,8
+lb,LBRPDY,Actual Repro Phase Day of Observation ,Num,8
+lb,LBRPSTDY,Actual Repro Phase Day of Obs Start,Num,8
+lb,LBRPENDY,Actual Repro Phase Day of Obs End,Num,8
+lb,LBSTDTC,Start Date/Time of Treatment ,Char,20
+ds,STUDYID ,Study Identifier,Char,10
+ds,DOMAIN ,Domain Abbreviation,Char,2
+ds,USUBJID,Unique Subject Identifier ,Char,20
+ds,DSSEQ ,Sequence Number,Num,8
+ds,DSTERM,Reported Term for the Disposition Event ,Char,100
+ds,RPHASE,Reproductive Phase ,Char,20
+ds,RPPLDY,Planned Repro Phase Day,Num,8
+ds,RPPLSTDY,Planned Repro Phase Day of Obs Start ,Num,8
+ds,RPPLENDY,Planned Repro Phase Day of Obs End ,Num,8
+ds,DSRPDY,Actual Repro Phase Day of Observation ,Num,8
+ds,DSRPSTDY,Actual Repro Phase Day of Obs Start,Num,8
+ds,DSRPENDY,Actual Repro Phase Day of Obs End,Num,8
+ds,DSSTDTC,Start Date/Time of Treatment ,Char,20

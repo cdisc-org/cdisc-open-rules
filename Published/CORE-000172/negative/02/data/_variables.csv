@@ -1,49 +1,49 @@
 dataset,variable,label,type,length
-ft.xpt,STUDYID,Study Identifier,Char,50
-ft.xpt,DOMAIN,Domain Abbreviation,Char,50
-ft.xpt,USUBJID,Unique Subject Identifier,Char,50
-ft.xpt,FTSEQ,Sequence Number,Num,8
-ft.xpt,FTTESTCD,Short Name of Test,Char,50
-ft.xpt,FTTEST,Name of Test,Char,50
-ft.xpt,FTCAT,Category,Char,50
-ft.xpt,FTSCAT,Subcategory,Char,50
-ft.xpt,FTORRES,Result or Finding in Original Units,Char,50
-ft.xpt,FTSTRESC,Result or Finding in Standard Format,Char,50
-ft.xpt,FTSTRESN,Numeric Result/Finding in Standard Units,Num,8
-ft.xpt,FTLOBXFL,Last Observation Before Exposure Flag,Char,50
-ft.xpt,FTREPNUM,Repetition Number,Num,8
-ft.xpt,VISITNUM,Visit Number,Num,8
-ft.xpt,VISIT,Visit Name,Char,50
-ft.xpt,EPOCH,Epoch,Char,50
-ft.xpt,FTDTC,Date/Time of Test,Char,50
-ft.xpt,FTDY,Study Day of Test,Num,8
-ft.xpt,FTTPT,Planned Time Point Name,Char,50
-ft.xpt,FTTPTNUM,Planned Time Point Number,Num,8
-ft.xpt,FTELTM,Planned Elapsed Time from Time Point Ref,Char,50
-ft.xpt,FTTPTREF,Time Point Reference,Char,50
-dm.xpt,STUDYID,Study Identifier,Char,50
-dm.xpt,DOMAIN,Domain Abbreviation,Char,50
-dm.xpt,USUBJID,Unique Subject Identifier,Char,50
-dm.xpt,SUBJID,Subject Identifier for the Study,Char,50
-dm.xpt,RFSTDTC,Subject Reference Start Date/Time,Char,50
-dm.xpt,RFENDTC,Subject Reference End Date/Time,Char,50
-dm.xpt,RFXSTDTC,Date/Time of First Study Treatment,Char,50
-dm.xpt,RFXENDTC,Date/Time of Last Study Treatment,Char,50
-dm.xpt,RFICDTC,Date/Time of Informed Consent,Char,50
-dm.xpt,RFPENDTC,Date/Time of End of Participation,Char,50
-dm.xpt,DTHDTC,Date/Time of Death,Char,50
-dm.xpt,DTHFL,Subject Death Flag,Char,50
-dm.xpt,SITEID,Study Site Identifier,Char,50
-dm.xpt,BRTHDTC,Date/Time of Birth,Char,50
-dm.xpt,AGE,Age,Num,8
-dm.xpt,AGEU,Age Units,Char,50
-dm.xpt,SEX,Sex,Char,50
-dm.xpt,RACE,Race,Char,50
-dm.xpt,ETHNIC,Ethnicity,Char,50
-dm.xpt,ARMCD,Planned Arm Code,Char,50
-dm.xpt,ARM,Description of Planned Arm,Char,50
-dm.xpt,ACTARMCD,Actual Arm Code,Char,50
-dm.xpt,ACTARM,Description of Actual Arm,Char,50
-dm.xpt,ARMNRS,Reason Arm and/or Actual Arm is Null,Char,50
-dm.xpt,ACTARMUD,Description of Unplanned Actual Arm,Char,50
-dm.xpt,COUNTRY,Country,Char,50
+ft,STUDYID,Study Identifier,Char,50
+ft,DOMAIN,Domain Abbreviation,Char,50
+ft,USUBJID,Unique Subject Identifier,Char,50
+ft,FTSEQ,Sequence Number,Num,8
+ft,FTTESTCD,Short Name of Test,Char,50
+ft,FTTEST,Name of Test,Char,50
+ft,FTCAT,Category,Char,50
+ft,FTSCAT,Subcategory,Char,50
+ft,FTORRES,Result or Finding in Original Units,Char,50
+ft,FTSTRESC,Result or Finding in Standard Format,Char,50
+ft,FTSTRESN,Numeric Result/Finding in Standard Units,Num,8
+ft,FTLOBXFL,Last Observation Before Exposure Flag,Char,50
+ft,FTREPNUM,Repetition Number,Num,8
+ft,VISITNUM,Visit Number,Num,8
+ft,VISIT,Visit Name,Char,50
+ft,EPOCH,Epoch,Char,50
+ft,FTDTC,Date/Time of Test,Char,50
+ft,FTDY,Study Day of Test,Num,8
+ft,FTTPT,Planned Time Point Name,Char,50
+ft,FTTPTNUM,Planned Time Point Number,Num,8
+ft,FTELTM,Planned Elapsed Time from Time Point Ref,Char,50
+ft,FTTPTREF,Time Point Reference,Char,50
+dm,STUDYID,Study Identifier,Char,50
+dm,DOMAIN,Domain Abbreviation,Char,50
+dm,USUBJID,Unique Subject Identifier,Char,50
+dm,SUBJID,Subject Identifier for the Study,Char,50
+dm,RFSTDTC,Subject Reference Start Date/Time,Char,50
+dm,RFENDTC,Subject Reference End Date/Time,Char,50
+dm,RFXSTDTC,Date/Time of First Study Treatment,Char,50
+dm,RFXENDTC,Date/Time of Last Study Treatment,Char,50
+dm,RFICDTC,Date/Time of Informed Consent,Char,50
+dm,RFPENDTC,Date/Time of End of Participation,Char,50
+dm,DTHDTC,Date/Time of Death,Char,50
+dm,DTHFL,Subject Death Flag,Char,50
+dm,SITEID,Study Site Identifier,Char,50
+dm,BRTHDTC,Date/Time of Birth,Char,50
+dm,AGE,Age,Num,8
+dm,AGEU,Age Units,Char,50
+dm,SEX,Sex,Char,50
+dm,RACE,Race,Char,50
+dm,ETHNIC,Ethnicity,Char,50
+dm,ARMCD,Planned Arm Code,Char,50
+dm,ARM,Description of Planned Arm,Char,50
+dm,ACTARMCD,Actual Arm Code,Char,50
+dm,ACTARM,Description of Actual Arm,Char,50
+dm,ARMNRS,Reason Arm and/or Actual Arm is Null,Char,50
+dm,ACTARMUD,Description of Unplanned Actual Arm,Char,50
+dm,COUNTRY,Country,Char,50

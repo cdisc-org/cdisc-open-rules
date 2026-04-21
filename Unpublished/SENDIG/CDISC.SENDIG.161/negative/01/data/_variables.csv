@@ -1,22 +1,22 @@
 dataset,variable,label,type,length
-cl.xpt,STUDYID,Study Identifier,Char,12
-cl.xpt,DOMAIN,Domain Abbreviation,Char,2
-cl.xpt,USUBJID,Unique Subject Identifier,Char,8
-cl.xpt,POOLID,,,
-cl.xpt,CLSEQ,Sequence Number,Num,8
-cl.xpt,CLTESTCD,Test Short Name,Char,6
-cl.xpt,CLTEST,Test Name,Char,24
-cl.xpt,CLBODSYS,Body System or Organ Class,,
-cl.xpt,CLORRES,Result or Finding in Original Units,Char,8
-cl.xpt,CLCAT,Category,Char,20
-cl.xpt,CLSCAT,Subcategory,Char,20
-cl.xpt,CLSTRESC,Character Result/Finding in Std Format,Char,20
-cl.xpt,CLRESCAT,Result Category,Char,8
-cl.xpt,CLSTAT,Completion Status,Char,8
-cl.xpt,CLLOC,Location of a Finding,Char,11
-cl.xpt,VISITNUM,Visit Number,Num,8
-cl.xpt,VISIT,Visit Name,Char,200
-cl.xpt,CLDTC,Date/Time of Measurements,Char,10
-cl.xpt,CLDY,Study Day of Observation,Num,8
-cl.xpt,CLTPT,Planned Time Point Name,Char,200
-cl.xpt,CLTPTNUM,Planned Time Point Number,Num,8
+cl,STUDYID,Study Identifier,Char,12
+cl,DOMAIN,Domain Abbreviation,Char,2
+cl,USUBJID,Unique Subject Identifier,Char,8
+cl,POOLID,,,
+cl,CLSEQ,Sequence Number,Num,8
+cl,CLTESTCD,Test Short Name,Char,6
+cl,CLTEST,Test Name,Char,24
+cl,CLBODSYS,Body System or Organ Class,,
+cl,CLORRES,Result or Finding in Original Units,Char,8
+cl,CLCAT,Category,Char,20
+cl,CLSCAT,Subcategory,Char,20
+cl,CLSTRESC,Character Result/Finding in Std Format,Char,20
+cl,CLRESCAT,Result Category,Char,8
+cl,CLSTAT,Completion Status,Char,8
+cl,CLLOC,Location of a Finding,Char,11
+cl,VISITNUM,Visit Number,Num,8
+cl,VISIT,Visit Name,Char,200
+cl,CLDTC,Date/Time of Measurements,Char,10
+cl,CLDY,Study Day of Observation,Num,8
+cl,CLTPT,Planned Time Point Name,Char,200
+cl,CLTPTNUM,Planned Time Point Number,Num,8

@@ -1,35 +1,35 @@
 dataset,variable,label,type,length
-ae.xpt,STUDYID,Study Identifier,Char,10
-ae.xpt,DOMAIN,Domain Abbreviation,Char,2
-ae.xpt,USUBJID,Unique Subject Identifier,Char,14
-ae.xpt,AESEQ,Sequence Number,Num,8
-ae.xpt,AESPID,Sponsor-Defined Identifier,Char,4
-ae.xpt,AETERM,Reported Term for the Adverse Event,Char,38
-ae.xpt,AELLT,Lowest Level Term,Char,38
-ae.xpt,AELLTCD,Lowest Level Term Code,Num,8
-ae.xpt,AEDECOD,Dictionary-Derived Term,Char,38
-ae.xpt,AEPTCD,Preferred Term Code,Num,8
-ae.xpt,AEHLT,High Level Term,Char,65
-ae.xpt,AEHLTCD,High Level Term Code,Num,8
-ae.xpt,AEHLGT,High Level Group Term,Char,55
-ae.xpt,AEHLGTCD,High Level Group Term Code,Num,8
-ae.xpt,AEBODSYS,Body System or Organ Class,Char,52
-ae.xpt,AEBDSYCD,Body System or Organ Class Code,Num,8
-ae.xpt,AESOC,Primary System Organ Class,Char,52
-ae.xpt,AESOCCD,Primary System Organ Class Code,Num,8
-ae.xpt,AESEV,Severity/Intensity,Char,8
-ae.xpt,AESER,Serious Event,Char,1
-ae.xpt,AEACN,Action Taken with Study Treatment,Char,1
-ae.xpt,AEREL,Causality,Char,1
-ae.xpt,AEOUT,Outcome of Adverse Event,Char,26
-ae.xpt,AESCAN,Involves Cancer,Char,50
-ae.xpt,AESCONG,Congenital Anomaly or Birth Defect,Char,50
-ae.xpt,AESDISAB,Persist or Signif Disability/Incapacity,Char,50
-ae.xpt,AESDTH,Results in Death,Char,50
-ae.xpt,AESHOSP,Requires or Prolongs Hospitalization,Char,1
-ae.xpt,AESLIFE,Is Life Threatening,Char,50
-ae.xpt,AESOD,Occurred with Overdose,Char,50
-ae.xpt,AESMIE,Other Medically Important Serious Event,Char,50
-ae.xpt,AESTDTC,Start Date/Time of Adverse Event,Char,10
-ae.xpt,AEENDTC,End Date/Time of Adverse Event,Char,1
-ae.xpt,AESTDY,Study Day of Start of Adverse Event,Num,8
+ae,STUDYID,Study Identifier,Char,10
+ae,DOMAIN,Domain Abbreviation,Char,2
+ae,USUBJID,Unique Subject Identifier,Char,14
+ae,AESEQ,Sequence Number,Num,8
+ae,AESPID,Sponsor-Defined Identifier,Char,4
+ae,AETERM,Reported Term for the Adverse Event,Char,38
+ae,AELLT,Lowest Level Term,Char,38
+ae,AELLTCD,Lowest Level Term Code,Num,8
+ae,AEDECOD,Dictionary-Derived Term,Char,38
+ae,AEPTCD,Preferred Term Code,Num,8
+ae,AEHLT,High Level Term,Char,65
+ae,AEHLTCD,High Level Term Code,Num,8
+ae,AEHLGT,High Level Group Term,Char,55
+ae,AEHLGTCD,High Level Group Term Code,Num,8
+ae,AEBODSYS,Body System or Organ Class,Char,52
+ae,AEBDSYCD,Body System or Organ Class Code,Num,8
+ae,AESOC,Primary System Organ Class,Char,52
+ae,AESOCCD,Primary System Organ Class Code,Num,8
+ae,AESEV,Severity/Intensity,Char,8
+ae,AESER,Serious Event,Char,1
+ae,AEACN,Action Taken with Study Treatment,Char,1
+ae,AEREL,Causality,Char,1
+ae,AEOUT,Outcome of Adverse Event,Char,26
+ae,AESCAN,Involves Cancer,Char,50
+ae,AESCONG,Congenital Anomaly or Birth Defect,Char,50
+ae,AESDISAB,Persist or Signif Disability/Incapacity,Char,50
+ae,AESDTH,Results in Death,Char,50
+ae,AESHOSP,Requires or Prolongs Hospitalization,Char,1
+ae,AESLIFE,Is Life Threatening,Char,50
+ae,AESOD,Occurred with Overdose,Char,50
+ae,AESMIE,Other Medically Important Serious Event,Char,50
+ae,AESTDTC,Start Date/Time of Adverse Event,Char,10
+ae,AEENDTC,End Date/Time of Adverse Event,Char,1
+ae,AESTDY,Study Day of Start of Adverse Event,Num,8

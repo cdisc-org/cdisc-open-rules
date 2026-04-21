@@ -1,38 +1,38 @@
 dataset,variable,label,type,length
-qscg.xpt,STUDYID,Study Identifier,Char,12
-qscg.xpt,DOMAIN,Domain Abbreviation,Char,4
-qscg.xpt,USUBJID,Unique Subject Identifier,Char,8
-qscg.xpt,QSSEQ,Sequence Number,Num,8
-qscg.xpt,QSTESTCD,Question Short Name,Char,7
-qscg.xpt,QSTEST,Question Name,Char,40
-qscg.xpt,QSCAT,Category of Question,Char,5
-qscg.xpt,QSORRES,Finding in Original Units,Char,23
-qscg.xpt,QSSTRESC,Character Result/Finding in Std Format,Char,20
-qscg.xpt,QSSTRESN,Numeric Finding in Standard Units,Num,8
-qscg.xpt,QSLOBXFL,Last Observation Before Exposure Flag,Char,1
-qscg.xpt,VISITNUM,Visit Number,Num,8
-qscg.xpt,VISIT,Visit Name,Char,200
-qscg.xpt,QSDTC,Date/Time of Finding,Char,10
-qscg.xpt,QSDY,Study Day of Finding,Num,8
-qspg.xpt,STUDYID,Study Identifier,Char,12
-qspg.xpt,DOMAIN,Domain Abbreviation,Char,4
-qspg.xpt,USUBJID,Unique Subject Identifier,Char,8
-qspg.xpt,QSSEQ,Sequence Number,Num,8
-qspg.xpt,QSTESTCD,Question Short Name,Char,7
-qspg.xpt,QSTEST,Question Name,Char,40
-qspg.xpt,QSCAT,Category of Question,Char,5
-qspg.xpt,QSORRES,Finding in Original Units,Char,23
-qspg.xpt,QSSTRESC,Character Result/Finding in Std Format,Char,20
-qspg.xpt,QSSTRESN,Numeric Finding in Standard Units,Num,8
-qspg.xpt,QSLOBXFL,Last Observation Before Exposure Flag,Char,1
-qspg.xpt,VISITNUM,Visit Number,Num,8
-qspg.xpt,VISIT,Visit Name,Char,200
-qspg.xpt,QSDTC,Date/Time of Finding,Char,10
-qspg.xpt,QSDY,Study Day of Finding,Num,8
-relrec.xpt,STUDYID,Study Identifier,Char,10
-relrec.xpt,RDOMAIN,Related Domain Abbreviation,Char,2
-relrec.xpt,USUBJID,Unique Subject Identifier,Char,14
-relrec.xpt,IDVAR,Identifying Variable,Char,6
-relrec.xpt,IDVARVAL,Identifying Variable Value,Char,4
-relrec.xpt,RELTYPE,Relationship Type,Char,11
-relrec.xpt,RELID,Relationship Identifier,Char,10
+qscg,STUDYID,Study Identifier,Char,12
+qscg,DOMAIN,Domain Abbreviation,Char,4
+qscg,USUBJID,Unique Subject Identifier,Char,8
+qscg,QSSEQ,Sequence Number,Num,8
+qscg,QSTESTCD,Question Short Name,Char,7
+qscg,QSTEST,Question Name,Char,40
+qscg,QSCAT,Category of Question,Char,5
+qscg,QSORRES,Finding in Original Units,Char,23
+qscg,QSSTRESC,Character Result/Finding in Std Format,Char,20
+qscg,QSSTRESN,Numeric Finding in Standard Units,Num,8
+qscg,QSLOBXFL,Last Observation Before Exposure Flag,Char,1
+qscg,VISITNUM,Visit Number,Num,8
+qscg,VISIT,Visit Name,Char,200
+qscg,QSDTC,Date/Time of Finding,Char,10
+qscg,QSDY,Study Day of Finding,Num,8
+qspg,STUDYID,Study Identifier,Char,12
+qspg,DOMAIN,Domain Abbreviation,Char,4
+qspg,USUBJID,Unique Subject Identifier,Char,8
+qspg,QSSEQ,Sequence Number,Num,8
+qspg,QSTESTCD,Question Short Name,Char,7
+qspg,QSTEST,Question Name,Char,40
+qspg,QSCAT,Category of Question,Char,5
+qspg,QSORRES,Finding in Original Units,Char,23
+qspg,QSSTRESC,Character Result/Finding in Std Format,Char,20
+qspg,QSSTRESN,Numeric Finding in Standard Units,Num,8
+qspg,QSLOBXFL,Last Observation Before Exposure Flag,Char,1
+qspg,VISITNUM,Visit Number,Num,8
+qspg,VISIT,Visit Name,Char,200
+qspg,QSDTC,Date/Time of Finding,Char,10
+qspg,QSDY,Study Day of Finding,Num,8
+relrec,STUDYID,Study Identifier,Char,10
+relrec,RDOMAIN,Related Domain Abbreviation,Char,2
+relrec,USUBJID,Unique Subject Identifier,Char,14
+relrec,IDVAR,Identifying Variable,Char,6
+relrec,IDVARVAL,Identifying Variable Value,Char,4
+relrec,RELTYPE,Relationship Type,Char,11
+relrec,RELID,Relationship Identifier,Char,10

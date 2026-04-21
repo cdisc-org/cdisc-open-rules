@@ -1,30 +1,30 @@
 dataset,variable,label,type,length
-ds.xpt,STUDYID,Study Identifier,Char,10
-ds.xpt,DOMAIN,Domain Abbreviation,Char,2
-ds.xpt,USUBJID,Unique Subject Identifier,Char,14
-ds.xpt,DSSEQ,Sequence Number,Num,8
-ds.xpt,DSTERM,Reported Term for the Disposition Event,Char,27
-ds.xpt,DSDECOD,Standardized Disposition Term,Char,27
-ds.xpt,DSCAT,Category for Disposition Event,Char,18
-ds.xpt,EPOCH,Epoch,Char,9
-ds.xpt,VISITNUM,Visit Number,Num,8
-ds.xpt,VISIT,Visit Name,Char,18
-ds.xpt,VISITDY,Planned Study Day of Visit,Num,8
-ds.xpt,DSSTDTC,Start Date/Time of Disposition Event,Char,10
-ds.xpt,DSDY,Study Day of Visit/Collection/Exam,Num,8
-ss.xpt,STUDYID,Study Identifier,Char,50
-ss.xpt,DOMAIN,Domain Abbreviation,Char,50
-ss.xpt,USUBJID,Unique Subject Identifier,Char,50
-ss.xpt,SSGRPID,Group ID,Char,50
-ss.xpt,SSSPID,Sponsor-Defined Identifier,Char,50
-ss.xpt,SSTESTCD,Status Short Name,Char,50
-ss.xpt,SSTEST,Status Name,Char,50
-ss.xpt,SSCAT,Category for Assessment,Char,50
-ss.xpt,SSORRES,Result or Finding Original Result,Char,50
-ss.xpt,SSSTRESC,Character Result/Finding in Std Format,Char,50
-ss.xpt,VISITNUM,Visit Number,Num,8
-ss.xpt,VISIT,Visit Name,Char,50
-ss.xpt,VISITDY,Planned Study Day of Visit,Num,8
-ss.xpt,EPOCH,Epoch,Char,50
-ss.xpt,SSDTC,Date/Time of Assessment,Char,50
-ss.xpt,SSDY,Study Day of Assessment,Num,8
+ds,STUDYID,Study Identifier,Char,10
+ds,DOMAIN,Domain Abbreviation,Char,2
+ds,USUBJID,Unique Subject Identifier,Char,14
+ds,DSSEQ,Sequence Number,Num,8
+ds,DSTERM,Reported Term for the Disposition Event,Char,27
+ds,DSDECOD,Standardized Disposition Term,Char,27
+ds,DSCAT,Category for Disposition Event,Char,18
+ds,EPOCH,Epoch,Char,9
+ds,VISITNUM,Visit Number,Num,8
+ds,VISIT,Visit Name,Char,18
+ds,VISITDY,Planned Study Day of Visit,Num,8
+ds,DSSTDTC,Start Date/Time of Disposition Event,Char,10
+ds,DSDY,Study Day of Visit/Collection/Exam,Num,8
+ss,STUDYID,Study Identifier,Char,50
+ss,DOMAIN,Domain Abbreviation,Char,50
+ss,USUBJID,Unique Subject Identifier,Char,50
+ss,SSGRPID,Group ID,Char,50
+ss,SSSPID,Sponsor-Defined Identifier,Char,50
+ss,SSTESTCD,Status Short Name,Char,50
+ss,SSTEST,Status Name,Char,50
+ss,SSCAT,Category for Assessment,Char,50
+ss,SSORRES,Result or Finding Original Result,Char,50
+ss,SSSTRESC,Character Result/Finding in Std Format,Char,50
+ss,VISITNUM,Visit Number,Num,8
+ss,VISIT,Visit Name,Char,50
+ss,VISITDY,Planned Study Day of Visit,Num,8
+ss,EPOCH,Epoch,Char,50
+ss,SSDTC,Date/Time of Assessment,Char,50
+ss,SSDY,Study Day of Assessment,Num,8

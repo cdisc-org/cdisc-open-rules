@@ -1,23 +1,23 @@
 dataset,variable,label,type,length
-sv.xpt,STUDYID,Study Identifier,Char,12
-sv.xpt,DOMAIN,Domain Abbreviation,Char,2
-sv.xpt,USUBJID,Unique Subject Identifier,Char,15
-sv.xpt,SUBJID,Subject Identifier for the Study,Char,7
-sv.xpt,VISITNUM,Visit Number,Num,8
-sv.xpt,VISIT,Visit Name,Char,17
-sv.xpt,VISITDY,Planned Study Day of Visit,Num,8
-sv.xpt,EPOCH,Epoch,Char,20
-sv.xpt,SVSTDTC,Start Date/Time of Visit,Char,12
-sv.xpt,SVENDTC,End Date/Time of Visit,Char,12
-sv.xpt,SVSTDY,Study Day of Start of Visit,Num,8
-sv.xpt,SVENDY,Study Day of End of Visit,Num,8
-sv.xpt,SVUPDES,Description of Unplanned Visit,Char,30
-tv.xpt,STUDYID,Study Identifier,Char,12
-tv.xpt,DOMAIN,Domain Abbreviation,Char,2
-tv.xpt,VISITNUM,Visit Number,Num,8
-tv.xpt,VISIT,Visit Name,Char,9
-tv.xpt,VISITDY,Planned Study Day of Visit,Num,8
-tv.xpt,ARMCD,Planned Arm Code,Char,1
-tv.xpt,ARM,Description of Arm,Char,1
-tv.xpt,TVSTRL,Visit Start Rule,Num,52
-tv.xpt,TVENRL,Visit End Rule,Num,1
+sv,STUDYID,Study Identifier,Char,12
+sv,DOMAIN,Domain Abbreviation,Char,2
+sv,USUBJID,Unique Subject Identifier,Char,15
+sv,SUBJID,Subject Identifier for the Study,Char,7
+sv,VISITNUM,Visit Number,Num,8
+sv,VISIT,Visit Name,Char,17
+sv,VISITDY,Planned Study Day of Visit,Num,8
+sv,EPOCH,Epoch,Char,20
+sv,SVSTDTC,Start Date/Time of Visit,Char,12
+sv,SVENDTC,End Date/Time of Visit,Char,12
+sv,SVSTDY,Study Day of Start of Visit,Num,8
+sv,SVENDY,Study Day of End of Visit,Num,8
+sv,SVUPDES,Description of Unplanned Visit,Char,30
+tv,STUDYID,Study Identifier,Char,12
+tv,DOMAIN,Domain Abbreviation,Char,2
+tv,VISITNUM,Visit Number,Num,8
+tv,VISIT,Visit Name,Char,9
+tv,VISITDY,Planned Study Day of Visit,Num,8
+tv,ARMCD,Planned Arm Code,Char,1
+tv,ARM,Description of Arm,Char,1
+tv,TVSTRL,Visit Start Rule,Num,52
+tv,TVENRL,Visit End Rule,Num,1

@@ -1,84 +1,84 @@
 dataset,variable,label,type,length
-sv.xpt,STUDYID,Study Identifier,Char,12
-sv.xpt,DOMAIN,Domain Abbreviation,Char,2
-sv.xpt,USUBJID,Unique Subject Identifier,Char,15
-sv.xpt,SUBJID,Subject Identifier for the Study,Char,7
-sv.xpt,VISITNUM,Visit Number,Num,8
-sv.xpt,VISIT,Visit Name,Char,17
-sv.xpt,VISITDY,Planned Study Day of Visit,Num,8
-sv.xpt,EPOCH,Epoch,Char,20
-sv.xpt,SVSTDTC,Start Date/Time of Visit,Char,10
-sv.xpt,SVENDTC,End Date/Time of Visit,Num,8
-sv.xpt,SVSTDY,Study Day of Start of Visit,Num,8
-sv.xpt,SVENDY,Study Day of End of Visit,Num,8
-sv.xpt,SVUPDES,Description of Unplanned Visit,Char,30
-lb.xpt,STUDYID,Study Identifier,Char,50
-lb.xpt,DOMAIN,Domain Abbreviation,Char,50
-lb.xpt,USUBJID,Unique Subject Identifier,Char,50
-lb.xpt,LBSEQ,Sequence Number,Num,8
-lb.xpt,LBGRPID,Group ID,Char,50
-lb.xpt,LBREFID,Specimen ID,Char,50
-lb.xpt,LBSPID,Sponsor-Defined Identifier,Char,50
-lb.xpt,LBTESTCD,Lab Test or Examination Short Name,Char,50
-lb.xpt,LBTEST,Lab Test or Examination Name,Char,50
-lb.xpt,LBTSTCND,Test Condition,Char,50
-lb.xpt,LBBDAGNT,Binding Agent,Char,50
-lb.xpt,LBTSTOPO,Test Operational Objective,Char,50
-lb.xpt,LBCAT,Category for Lab Test,Char,50
-lb.xpt,LBSCAT,Subcategory for Lab Test,Char,50
-lb.xpt,LBORRES,Result or Finding in Original Units,Char,50
-lb.xpt,LBORRESU,Original Units,Char,50
-lb.xpt,LBRESSCL,Result Scale,Char,50
-lb.xpt,LBRESTYP,Result Type,Char,50
-lb.xpt,LBCOLSRT,Collected Summary Result Type,Char,50
-lb.xpt,LBORNRLO,Reference Range Lower Limit in Orig Unit,Char,50
-lb.xpt,LBORNRHI,Reference Range Upper Limit in Orig Unit,Char,50
-lb.xpt,LBLLOD,Lower Limit of Detection,Char,50
-lb.xpt,LBSTRESC,Character Result/Finding in Std Format,Char,50
-lb.xpt,LBSTRESN,Numeric Result/Finding in Standard Units,Num,8
-lb.xpt,LBSTRESU,Standard Units,Char,50
-lb.xpt,LBSTNRLO,Reference Range Lower Limit-Std Units,Num,8
-lb.xpt,LBSTNRHI,Reference Range Upper Limit-Std Units,Num,8
-lb.xpt,LBSTNRC,Reference Range for Char Rslt-Std Units,Char,50
-lb.xpt,LBNRIND,Reference Range Indicator,Char,50
-lb.xpt,LBSTAT,Completion Status,Char,50
-lb.xpt,LBREASND,Reason Test Not Done,Char,50
-lb.xpt,LBNAM,Vendor Name,Char,50
-lb.xpt,LBLOINC,LOINC Code,Char,50
-lb.xpt,LBSPEC,Specimen Type,Char,50
-lb.xpt,LBSPCCND,Specimen Condition,Char,50
-lb.xpt,LBSPCUFL,Specimen Usability for the Test,Char,50
-lb.xpt,LBMETHOD,Method of Test or Examination,Char,50
-lb.xpt,LBANMETH,Analysis Method,Char,50
-lb.xpt,LBTMTHSN,Test Method Sensitivity,Char,50
-lb.xpt,LBLOBXFL,Last Observation Before Exposure Flag,Char,50
-lb.xpt,LBBLFL,Baseline Flag,Char,50
-lb.xpt,LBFAST,Fasting Status,Char,50
-lb.xpt,LBDRVFL,Derived Flag,Char,50
-lb.xpt,LBTOX,Toxicity,Char,50
-lb.xpt,LBTOXGR,Standard Toxicity Grade,Char,50
-lb.xpt,LBCLSIG,"Clinically Significant, Collected",Char,50
-lb.xpt,VISITNUM,Visit Number,Num,8
-lb.xpt,VISIT,Visit Name,Char,50
-lb.xpt,VISITDY,Planned Study Day of Visit,Num,8
-lb.xpt,TAETORD,Planned Order of Element within Arm,Num,8
-lb.xpt,EPOCH,Epoch,Char,50
-lb.xpt,LBDTC,Date/Time of Specimen Collection,Char,50
-lb.xpt,LBENDTC,End Date/Time of Specimen Collection,Char,50
-lb.xpt,LBDY,Study Day of Specimen Collection,Num,8
-lb.xpt,LBENDY,Study Day of End of Observation,Num,8
-lb.xpt,LBTPT,Planned Time Point Name,Char,50
-lb.xpt,LBTPTNUM,Planned Time Point Number,Num,8
-lb.xpt,LBELTM,Planned Elapsed Time from Time Point Ref,Char,50
-lb.xpt,LBTPTREF,Time Point Reference,Char,50
-lb.xpt,LBRFTDTC,Date/Time of Reference Time Point,Char,50
-lb.xpt,LBPTFL,Point in Time Flag,Char,50
-lb.xpt,LBPDUR,Planned Duration,Char,50
-xd.xpt,STUDYID,Study Identifier,Char,12
-xd.xpt,DOMAIN,Domain Abbreviation,Char,2
-xd.xpt,USUBJID,Unique Subject Identifier,Char,50
-xd.xpt,XDSEQ,Sequence Number,Num,8
-xd.xpt,XDTESTCD,Lab Test or Examination Short Name,Char,50
-xd.xpt,XDTEST,Lab Test or Examination Name,Char,50
-xd.xpt,XDORRES,Result or Finding in Original Units,Char,50
-xd.xpt,XDORRESU,Original Units,Char,50
+sv,STUDYID,Study Identifier,Char,12
+sv,DOMAIN,Domain Abbreviation,Char,2
+sv,USUBJID,Unique Subject Identifier,Char,15
+sv,SUBJID,Subject Identifier for the Study,Char,7
+sv,VISITNUM,Visit Number,Num,8
+sv,VISIT,Visit Name,Char,17
+sv,VISITDY,Planned Study Day of Visit,Num,8
+sv,EPOCH,Epoch,Char,20
+sv,SVSTDTC,Start Date/Time of Visit,Char,10
+sv,SVENDTC,End Date/Time of Visit,Num,8
+sv,SVSTDY,Study Day of Start of Visit,Num,8
+sv,SVENDY,Study Day of End of Visit,Num,8
+sv,SVUPDES,Description of Unplanned Visit,Char,30
+lb,STUDYID,Study Identifier,Char,50
+lb,DOMAIN,Domain Abbreviation,Char,50
+lb,USUBJID,Unique Subject Identifier,Char,50
+lb,LBSEQ,Sequence Number,Num,8
+lb,LBGRPID,Group ID,Char,50
+lb,LBREFID,Specimen ID,Char,50
+lb,LBSPID,Sponsor-Defined Identifier,Char,50
+lb,LBTESTCD,Lab Test or Examination Short Name,Char,50
+lb,LBTEST,Lab Test or Examination Name,Char,50
+lb,LBTSTCND,Test Condition,Char,50
+lb,LBBDAGNT,Binding Agent,Char,50
+lb,LBTSTOPO,Test Operational Objective,Char,50
+lb,LBCAT,Category for Lab Test,Char,50
+lb,LBSCAT,Subcategory for Lab Test,Char,50
+lb,LBORRES,Result or Finding in Original Units,Char,50
+lb,LBORRESU,Original Units,Char,50
+lb,LBRESSCL,Result Scale,Char,50
+lb,LBRESTYP,Result Type,Char,50
+lb,LBCOLSRT,Collected Summary Result Type,Char,50
+lb,LBORNRLO,Reference Range Lower Limit in Orig Unit,Char,50
+lb,LBORNRHI,Reference Range Upper Limit in Orig Unit,Char,50
+lb,LBLLOD,Lower Limit of Detection,Char,50
+lb,LBSTRESC,Character Result/Finding in Std Format,Char,50
+lb,LBSTRESN,Numeric Result/Finding in Standard Units,Num,8
+lb,LBSTRESU,Standard Units,Char,50
+lb,LBSTNRLO,Reference Range Lower Limit-Std Units,Num,8
+lb,LBSTNRHI,Reference Range Upper Limit-Std Units,Num,8
+lb,LBSTNRC,Reference Range for Char Rslt-Std Units,Char,50
+lb,LBNRIND,Reference Range Indicator,Char,50
+lb,LBSTAT,Completion Status,Char,50
+lb,LBREASND,Reason Test Not Done,Char,50
+lb,LBNAM,Vendor Name,Char,50
+lb,LBLOINC,LOINC Code,Char,50
+lb,LBSPEC,Specimen Type,Char,50
+lb,LBSPCCND,Specimen Condition,Char,50
+lb,LBSPCUFL,Specimen Usability for the Test,Char,50
+lb,LBMETHOD,Method of Test or Examination,Char,50
+lb,LBANMETH,Analysis Method,Char,50
+lb,LBTMTHSN,Test Method Sensitivity,Char,50
+lb,LBLOBXFL,Last Observation Before Exposure Flag,Char,50
+lb,LBBLFL,Baseline Flag,Char,50
+lb,LBFAST,Fasting Status,Char,50
+lb,LBDRVFL,Derived Flag,Char,50
+lb,LBTOX,Toxicity,Char,50
+lb,LBTOXGR,Standard Toxicity Grade,Char,50
+lb,LBCLSIG,"Clinically Significant, Collected",Char,50
+lb,VISITNUM,Visit Number,Num,8
+lb,VISIT,Visit Name,Char,50
+lb,VISITDY,Planned Study Day of Visit,Num,8
+lb,TAETORD,Planned Order of Element within Arm,Num,8
+lb,EPOCH,Epoch,Char,50
+lb,LBDTC,Date/Time of Specimen Collection,Char,50
+lb,LBENDTC,End Date/Time of Specimen Collection,Char,50
+lb,LBDY,Study Day of Specimen Collection,Num,8
+lb,LBENDY,Study Day of End of Observation,Num,8
+lb,LBTPT,Planned Time Point Name,Char,50
+lb,LBTPTNUM,Planned Time Point Number,Num,8
+lb,LBELTM,Planned Elapsed Time from Time Point Ref,Char,50
+lb,LBTPTREF,Time Point Reference,Char,50
+lb,LBRFTDTC,Date/Time of Reference Time Point,Char,50
+lb,LBPTFL,Point in Time Flag,Char,50
+lb,LBPDUR,Planned Duration,Char,50
+xd,STUDYID,Study Identifier,Char,12
+xd,DOMAIN,Domain Abbreviation,Char,2
+xd,USUBJID,Unique Subject Identifier,Char,50
+xd,XDSEQ,Sequence Number,Num,8
+xd,XDTESTCD,Lab Test or Examination Short Name,Char,50
+xd,XDTEST,Lab Test or Examination Name,Char,50
+xd,XDORRES,Result or Finding in Original Units,Char,50
+xd,XDORRESU,Original Units,Char,50

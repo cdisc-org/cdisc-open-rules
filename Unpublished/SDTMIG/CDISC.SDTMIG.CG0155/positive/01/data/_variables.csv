@@ -1,35 +1,35 @@
 dataset,variable,label,type,length
-apec.xpt,STUDYID,Study Identifier,Char,50
-apec.xpt,DOMAIN,Domain Abbreviation,Char,50
-apec.xpt,USUBJID,Unique Subject Identifier,Char,50
-apec.xpt,ECSEQ,Sequence Number,Num,8
-apec.xpt,ECLNKID,Link ID,Char,50
-apec.xpt,ECTRT,Name of Treatment,Char,50
-apec.xpt,ECPRESP,Pre-Specified,Char,50
-apec.xpt,ECOCCUR,Occurrence,Char,50
-apec.xpt,ECREASOC,Reason for Occur Value,Char,50
-apec.xpt,ECDOSE,Dose,Num,8
-apec.xpt,ECDOSTXT,Dose Description,Char,50
-apec.xpt,ECDOSU,Dose Units,Char,50
-apec.xpt,ECDOSFRM,Dose Form,Char,50
-apec.xpt,EcROUTE,Route of Administration,Char,50
-apec.xpt,ECSTDTC,Start Date/Time of Treatment,Char,50
-apec.xpt,ECENDTC,End Date/Time of Treatment,Char,50
-apec.xpt,ECSTDY,Study Day of Start of Treatment,Num,8
-apec.xpt,ECENDY,Study Day of End of Treatment,Num,8
-apex.xpt,STUDYID,Study Identifier,Char,50
-apex.xpt,DOMAIN,Domain Abbreviation,Char,50
-apex.xpt,USUBJID,Unique Subject Identifier,Char,50
-apex.xpt,EXSEQ,Sequence Number,Num,8
-apex.xpt,EXLNKID,Link ID,Char,50
-apex.xpt,EXTRT,Name of Treatment,Char,50
-apex.xpt,EXDOSE,Dose,Num,8
-apex.xpt,EXDOSTXT,Dose Description,Char,50
-apex.xpt,EXDOSU,Dose Units,Char,50
-apex.xpt,EXDOSFRM,Dose Form,Char,50
-apex.xpt,EXDOSFRQ,Dosing Frequency per Interval,Char,50
-apex.xpt,EXROUTE,Route of Administration,Char,50
-apex.xpt,EXSTDTC,Start Date/Time of Treatment,Char,50
-apex.xpt,EXENDTC,End Date/Time of Treatment,Char,50
-apex.xpt,EXSTDY,Study Day of Start of Treatment,Num,8
-apex.xpt,EXENDY,Study Day of End of Treatment,Num,8
+apec,STUDYID,Study Identifier,Char,50
+apec,DOMAIN,Domain Abbreviation,Char,50
+apec,USUBJID,Unique Subject Identifier,Char,50
+apec,ECSEQ,Sequence Number,Num,8
+apec,ECLNKID,Link ID,Char,50
+apec,ECTRT,Name of Treatment,Char,50
+apec,ECPRESP,Pre-Specified,Char,50
+apec,ECOCCUR,Occurrence,Char,50
+apec,ECREASOC,Reason for Occur Value,Char,50
+apec,ECDOSE,Dose,Num,8
+apec,ECDOSTXT,Dose Description,Char,50
+apec,ECDOSU,Dose Units,Char,50
+apec,ECDOSFRM,Dose Form,Char,50
+apec,EcROUTE,Route of Administration,Char,50
+apec,ECSTDTC,Start Date/Time of Treatment,Char,50
+apec,ECENDTC,End Date/Time of Treatment,Char,50
+apec,ECSTDY,Study Day of Start of Treatment,Num,8
+apec,ECENDY,Study Day of End of Treatment,Num,8
+apex,STUDYID,Study Identifier,Char,50
+apex,DOMAIN,Domain Abbreviation,Char,50
+apex,USUBJID,Unique Subject Identifier,Char,50
+apex,EXSEQ,Sequence Number,Num,8
+apex,EXLNKID,Link ID,Char,50
+apex,EXTRT,Name of Treatment,Char,50
+apex,EXDOSE,Dose,Num,8
+apex,EXDOSTXT,Dose Description,Char,50
+apex,EXDOSU,Dose Units,Char,50
+apex,EXDOSFRM,Dose Form,Char,50
+apex,EXDOSFRQ,Dosing Frequency per Interval,Char,50
+apex,EXROUTE,Route of Administration,Char,50
+apex,EXSTDTC,Start Date/Time of Treatment,Char,50
+apex,EXENDTC,End Date/Time of Treatment,Char,50
+apex,EXSTDY,Study Day of Start of Treatment,Num,8
+apex,EXENDY,Study Day of End of Treatment,Num,8

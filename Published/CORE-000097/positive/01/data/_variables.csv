@@ -1,25 +1,25 @@
 dataset,variable,label,type,length
-se.xpt,STUDYID,Study Identifier,Char,50
-se.xpt,DOMAIN,Domain Abbreviation,Char,50
-se.xpt,USUBJID,Unique Subject Identifier,Char,50
-se.xpt,SESEQ,Sequence Number,Num,8
-se.xpt,ETCD,Element Code,Char,50
-se.xpt,ELEMENT,Description of Element,Char,50
-se.xpt,TAETORD,Planned Order of Element within Arm,Num,8
-se.xpt,EPOCH,Epoch,Char,50
-se.xpt,SESTDTC,Start Date/Time of Element,Char,50
-se.xpt,SEENDTC,End Date/Time of Element,Char,50
-se.xpt,SESTDY,Study Day of Start of Element,Num,8
-se.xpt,SEENDY,Study Day of End of Element,Num,8
-se.xpt,SEUPDES,Description of Unplanned Element,Char,50
-sv.xpt,STUDYID,Study Identifier,Char,50
-sv.xpt,DOMAIN,Domain Abbreviation,Char,50
-sv.xpt,USUBJID,Unique Subject Identifier,Char,50
-sv.xpt,VISITNUM,Visit Number,Num,8
-sv.xpt,VISIT,Visit Name,Char,50
-sv.xpt,EPOCH,Epoch,Char,50
-sv.xpt,SVSTDTC,Start Date/Time of Observation,Char,50
-sv.xpt,SVENDTC,End Date/Time of Observation,Char,50
-sv.xpt,SVSTDY,Study Day of Start of Observation,Num,8
-sv.xpt,SVENDY,Study Day of End of Observation,Num,8
-sv.xpt,SVUPDES,Description of Unplanned Visit,Char,50
+se,STUDYID,Study Identifier,Char,50
+se,DOMAIN,Domain Abbreviation,Char,50
+se,USUBJID,Unique Subject Identifier,Char,50
+se,SESEQ,Sequence Number,Num,8
+se,ETCD,Element Code,Char,50
+se,ELEMENT,Description of Element,Char,50
+se,TAETORD,Planned Order of Element within Arm,Num,8
+se,EPOCH,Epoch,Char,50
+se,SESTDTC,Start Date/Time of Element,Char,50
+se,SEENDTC,End Date/Time of Element,Char,50
+se,SESTDY,Study Day of Start of Element,Num,8
+se,SEENDY,Study Day of End of Element,Num,8
+se,SEUPDES,Description of Unplanned Element,Char,50
+sv,STUDYID,Study Identifier,Char,50
+sv,DOMAIN,Domain Abbreviation,Char,50
+sv,USUBJID,Unique Subject Identifier,Char,50
+sv,VISITNUM,Visit Number,Num,8
+sv,VISIT,Visit Name,Char,50
+sv,EPOCH,Epoch,Char,50
+sv,SVSTDTC,Start Date/Time of Observation,Char,50
+sv,SVENDTC,End Date/Time of Observation,Char,50
+sv,SVSTDY,Study Day of Start of Observation,Num,8
+sv,SVENDY,Study Day of End of Observation,Num,8
+sv,SVUPDES,Description of Unplanned Visit,Char,50

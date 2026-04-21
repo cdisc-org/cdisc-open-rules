@@ -1,23 +1,23 @@
 dataset,variable,label,type,length
-pr.xpt,STUDYID,Study Identifier,Char,50
-pr.xpt,DOMAIN,Domain Abbreviation,Char,50
-pr.xpt,USUBJID,Unique Subject Identifier,Char,50
-pr.xpt,PRSEQ,Sequence Number,Num,8
-pr.xpt,PRSPID,Sponsor-Defined Identifier,Char,50
-pr.xpt,PRTRT,Reported Name of Procedure,Char,50
-pr.xpt,PRDECOD,Standardized Procedure Name,Char,50
-pr.xpt,PRCAT,Category,Char,50
-pr.xpt,PRPRESP,Pre-specified,Char,50
-pr.xpt,PROCCUR,Occurrence,Char,50
-pr.xpt,PRINDC,Indication,Char,50
-pr.xpt,VISITNUM,Visit Number,Num,8
-pr.xpt,VISIT,Visit Name,Char,50
-pr.xpt,VISITDY,Planned Study Day of Visit,Num,8
-pr.xpt,EPOCH,Epoch,Char,50
-pr.xpt,PRSTDTC,Start Date/Time of Procedure,Char,50
-pr.xpt,PRENDTC,End Date/Time of Procedure,Char,50
-pr.xpt,PRSTDY,Study Day of Start of Procedure,Num,8
-pr.xpt,PRENDY,Study Day of End of Procedure,Num,8
-pr.xpt,PRSTTPT,Start Reference Time Point,Char,50
-pr.xpt,PRENRTPT,End Relative to Reference Time Point,Char,50
-pr.xpt,PRENTPT,End Reference Time Point,Char,50
+pr,STUDYID,Study Identifier,Char,50
+pr,DOMAIN,Domain Abbreviation,Char,50
+pr,USUBJID,Unique Subject Identifier,Char,50
+pr,PRSEQ,Sequence Number,Num,8
+pr,PRSPID,Sponsor-Defined Identifier,Char,50
+pr,PRTRT,Reported Name of Procedure,Char,50
+pr,PRDECOD,Standardized Procedure Name,Char,50
+pr,PRCAT,Category,Char,50
+pr,PRPRESP,Pre-specified,Char,50
+pr,PROCCUR,Occurrence,Char,50
+pr,PRINDC,Indication,Char,50
+pr,VISITNUM,Visit Number,Num,8
+pr,VISIT,Visit Name,Char,50
+pr,VISITDY,Planned Study Day of Visit,Num,8
+pr,EPOCH,Epoch,Char,50
+pr,PRSTDTC,Start Date/Time of Procedure,Char,50
+pr,PRENDTC,End Date/Time of Procedure,Char,50
+pr,PRSTDY,Study Day of Start of Procedure,Num,8
+pr,PRENDY,Study Day of End of Procedure,Num,8
+pr,PRSTTPT,Start Reference Time Point,Char,50
+pr,PRENRTPT,End Relative to Reference Time Point,Char,50
+pr,PRENTPT,End Reference Time Point,Char,50

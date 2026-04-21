@@ -1,23 +1,23 @@
 dataset,variable,label,type,length
-gt.xpt,STUDYID,Study Identifier,Char,50
-gt.xpt,DOMAIN,Domain Abbreviation,Char,50
-gt.xpt,GTSEQ,Sequence Number,Num,50
-gt.xpt,GTREFID,Reference ID,Char,8
-gt.xpt,GTREFID,Lab Test or Examination Short Name,Char,50
-gt.xpt,GTTEST,Lab Test or Examination Name,Char,50
-gt.xpt,GTORRES,Result or Findings as Collected,Char,50
-gt.xpt,GTORRESU,Unit of the Original Result,Char,50
-gt.xpt,GTCOLSRT,Collected Summary Result Type,Char,8
-gt.xpt,GTSTRESC,Standardized Result in Character Format,Char,50
-gt.xpt,GTSTRESN,Standardized Result in Numeric Format,Num,50
-gt.xpt,GTSTRESU,Unit of the Standardized Result,Char,50
-gt.xpt,GTSTAT,Completion Status,Char,50
-gt.xpt,GTREASND,Reason Not Done,Char,50
-gt.xpt,GTMETHOD,Method of Test or Examination,Char,50
-gt.xpt,GTDTC,Date/Time of Collection,Char,8
-relref.xpt,STUDYID,Study Identifier,Char,50
-relref.xpt,SETCD,Trial Set Code,Char,50
-relref.xpt,REFID,Reference ID,Char,50
-relref.xpt,PARENT,Parent Reference ID,Char,8
-relref.xpt,LEVEL,Reference ID Generation Level,Num,50
-relref.xpt,LVLDESC,Reference ID Level Description,Char,50
+gt,STUDYID,Study Identifier,Char,50
+gt,DOMAIN,Domain Abbreviation,Char,50
+gt,GTSEQ,Sequence Number,Num,50
+gt,GTREFID,Reference ID,Char,8
+gt,GTREFID,Lab Test or Examination Short Name,Char,50
+gt,GTTEST,Lab Test or Examination Name,Char,50
+gt,GTORRES,Result or Findings as Collected,Char,50
+gt,GTORRESU,Unit of the Original Result,Char,50
+gt,GTCOLSRT,Collected Summary Result Type,Char,8
+gt,GTSTRESC,Standardized Result in Character Format,Char,50
+gt,GTSTRESN,Standardized Result in Numeric Format,Num,50
+gt,GTSTRESU,Unit of the Standardized Result,Char,50
+gt,GTSTAT,Completion Status,Char,50
+gt,GTREASND,Reason Not Done,Char,50
+gt,GTMETHOD,Method of Test or Examination,Char,50
+gt,GTDTC,Date/Time of Collection,Char,8
+relref,STUDYID,Study Identifier,Char,50
+relref,SETCD,Trial Set Code,Char,50
+relref,REFID,Reference ID,Char,50
+relref,PARENT,Parent Reference ID,Char,8
+relref,LEVEL,Reference ID Generation Level,Num,50
+relref,LVLDESC,Reference ID Level Description,Char,50

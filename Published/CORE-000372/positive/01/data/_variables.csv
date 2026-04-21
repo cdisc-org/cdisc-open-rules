@@ -1,12 +1,12 @@
 dataset,variable,label,type,length
-ts.xpt,STUDYID,Study Identifier,Char,50
-ts.xpt,DOMAIN,Domain Abbreviation,Char,50
-ts.xpt,TSSEQ,Sequence Number,Num,8
-ts.xpt,TSGRPID,Group ID,Char,50
-ts.xpt,TSPARMCD,Trial Summary Parameter Short Name,Char,50
-ts.xpt,TSPARM,Trial Summary Parameter,Char,50
-ts.xpt,TSVAL,Parameter Value,Char,50
-ts.xpt,TSVALNF,Parameter Value Null Flavor,Char,50
-ts.xpt,TSVALCD,Parameter Value Code,Char,50
-ts.xpt,TSVCDREF,Name of the Reference Terminology,Char,50
-ts.xpt,TSVCDVER,Version of the Reference Terminology,Char,50
+ts,STUDYID,Study Identifier,Char,50
+ts,DOMAIN,Domain Abbreviation,Char,50
+ts,TSSEQ,Sequence Number,Num,8
+ts,TSGRPID,Group ID,Char,50
+ts,TSPARMCD,Trial Summary Parameter Short Name,Char,50
+ts,TSPARM,Trial Summary Parameter,Char,50
+ts,TSVAL,Parameter Value,Char,50
+ts,TSVALNF,Parameter Value Null Flavor,Char,50
+ts,TSVALCD,Parameter Value Code,Char,50
+ts,TSVCDREF,Name of the Reference Terminology,Char,50
+ts,TSVCDVER,Version of the Reference Terminology,Char,50

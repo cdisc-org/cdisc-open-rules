@@ -1,39 +1,39 @@
 dataset,variable,label,type,length
-datasets,Filename,ma.xpt,mi.xpt,
+datasets,Filename,ma.csv,mi.csv,
 datasets,Label,Macroscopic Findings,Microscopic Findings,
-ma.xpt,STUDYID,Study Identifier,Char,10
-ma.xpt,DOMAIN,Domain Abbreviation,Char,2
-ma.xpt,USUBJID,Unique Subject Identifier,Char,14
-ma.xpt,FOCID,Focus Identifier,Char,20
-ma.xpt,MASEQ,Sequence Number,Num,8
-ma.xpt,MASPID,Sponsor-Defined Identifier,Char,4
-ma.xpt,MATESTCD,Macroscopic Examination Short Name,Char,8
-ma.xpt,MATEST,Macroscopic Examination Name,Char,25
-ma.xpt,MAORRES,Result or Finding in Original Units,Char,6
-ma.xpt,MASTRESC,Character Result/Finding in Std Format,Char,6
-ma.xpt,MASPEC,Specimen Material Type,Char,5
-ma.xpt,MASPCUFL,Specimen Usability for the Test,,
-ma.xpt,MABLFL,Baseline Flag,Char,1
-ma.xpt,MADTHREL,Relationship to Death,Char,1
-ma.xpt,VISITNUM,Visit Number,Num,8
-ma.xpt,VISIT,Visit Name,Char,18
-ma.xpt,MADTC,Date/Time of Specimen Collection,Char,10
-ma.xpt,MADY,Study Day of Specimen Collection,Num,8
-mi.xpt,STUDYID,Study Identifier,Char,10
-mi.xpt,DOMAIN,Domain Abbreviation,Char,2
-mi.xpt,USUBJID,Unique Subject Identifier,Char,14
-mi.xpt,FOCID,Focus Identifier,Char,20
-mi.xpt,MISEQ,Sequence Number,Num,8
-mi.xpt,MISPID,Sponsor-Defined Identifier,Char,4
-mi.xpt,MITESTCD,Microscopic Examination Short Name,Char,8
-mi.xpt,MITEST,Microscopic Examination Name,Char,25
-mi.xpt,MIORRES,Result or Findings as Collected,Char,6
-mi.xpt,MISTRESC,Standardized Result in Character Format,Char,6
-mi.xpt,MISPEC,Specimen Material Type,Char,5
-mi.xpt,MISPCUFL,Specimen Usability for the Test,,
-mi.xpt,MIBLFL,Baseline Flag,Char,1
-mi.xpt,MIDTHREL,Relationship to Death,Char,1
-mi.xpt,VISITNUM,Visit Number,Num,8
-mi.xpt,VISIT,Visit Name,Char,18
-mi.xpt,MIDTC,Date/Time,Char,10
-mi.xpt,MIDY,Study Day ,Num,8
+ma,STUDYID,Study Identifier,Char,10
+ma,DOMAIN,Domain Abbreviation,Char,2
+ma,USUBJID,Unique Subject Identifier,Char,14
+ma,FOCID,Focus Identifier,Char,20
+ma,MASEQ,Sequence Number,Num,8
+ma,MASPID,Sponsor-Defined Identifier,Char,4
+ma,MATESTCD,Macroscopic Examination Short Name,Char,8
+ma,MATEST,Macroscopic Examination Name,Char,25
+ma,MAORRES,Result or Finding in Original Units,Char,6
+ma,MASTRESC,Character Result/Finding in Std Format,Char,6
+ma,MASPEC,Specimen Material Type,Char,5
+ma,MASPCUFL,Specimen Usability for the Test,,
+ma,MABLFL,Baseline Flag,Char,1
+ma,MADTHREL,Relationship to Death,Char,1
+ma,VISITNUM,Visit Number,Num,8
+ma,VISIT,Visit Name,Char,18
+ma,MADTC,Date/Time of Specimen Collection,Char,10
+ma,MADY,Study Day of Specimen Collection,Num,8
+mi,STUDYID,Study Identifier,Char,10
+mi,DOMAIN,Domain Abbreviation,Char,2
+mi,USUBJID,Unique Subject Identifier,Char,14
+mi,FOCID,Focus Identifier,Char,20
+mi,MISEQ,Sequence Number,Num,8
+mi,MISPID,Sponsor-Defined Identifier,Char,4
+mi,MITESTCD,Microscopic Examination Short Name,Char,8
+mi,MITEST,Microscopic Examination Name,Char,25
+mi,MIORRES,Result or Findings as Collected,Char,6
+mi,MISTRESC,Standardized Result in Character Format,Char,6
+mi,MISPEC,Specimen Material Type,Char,5
+mi,MISPCUFL,Specimen Usability for the Test,,
+mi,MIBLFL,Baseline Flag,Char,1
+mi,MIDTHREL,Relationship to Death,Char,1
+mi,VISITNUM,Visit Number,Num,8
+mi,VISIT,Visit Name,Char,18
+mi,MIDTC,Date/Time,Char,10
+mi,MIDY,Study Day ,Num,8

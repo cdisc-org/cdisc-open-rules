@@ -1,13 +1,13 @@
 dataset,variable,label,type,length
-om.xpt,STUDYID,Study Identifier,Char,10
-om.xpt,DOMAIN,Domain Abbreviation,Char,2
-om.xpt,USUBJID,Unique Subject Identifier,Char,14
-om.xpt,OMSEQ,Sequence Number,Num,8
-om.xpt,OMTESTCD,Test Short Name ,Char,8
-om.xpt,OMTEST,Test Name ,Char,25
-om.xpt,OMORRES,Result or Findings as Collected,Char,6
-om.xpt,OMORRESU,Unit of the Original Result ,Char,6
-om.xpt,OMSTRESC,Standardized Result in Character Format,Char,6
-om.xpt,OMSTRESN,Standardized Result in Numeric Format,Num,6
-om.xpt,OMSTRESU,Unit of the Standardized Result,Char,6
-om.xpt,OMSTAT,Completion Status,Char,8
+om,STUDYID,Study Identifier,Char,10
+om,DOMAIN,Domain Abbreviation,Char,2
+om,USUBJID,Unique Subject Identifier,Char,14
+om,OMSEQ,Sequence Number,Num,8
+om,OMTESTCD,Test Short Name ,Char,8
+om,OMTEST,Test Name ,Char,25
+om,OMORRES,Result or Findings as Collected,Char,6
+om,OMORRESU,Unit of the Original Result ,Char,6
+om,OMSTRESC,Standardized Result in Character Format,Char,6
+om,OMSTRESN,Standardized Result in Numeric Format,Num,6
+om,OMSTRESU,Unit of the Standardized Result,Char,6
+om,OMSTAT,Completion Status,Char,8

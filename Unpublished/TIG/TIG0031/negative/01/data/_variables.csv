@@ -1,7 +1,7 @@
 dataset,variable,label,type,length
-relref.xpt,STUDYID,Study Identifier,Char,50
-relref.xpt,SETCD,Trial Set Code,Char,50
-relref.xpt,REFID,Reference ID,Char,50
-relref.xpt,PARENT,Parent Reference ID,Char,8
-relref.xpt,LEVEL,Reference ID Generation Level,Num,50
-relref.xpt,LVLDESC,Reference ID Level Description,Char,50
+relref,STUDYID,Study Identifier,Char,50
+relref,SETCD,Trial Set Code,Char,50
+relref,REFID,Reference ID,Char,50
+relref,PARENT,Parent Reference ID,Char,8
+relref,LEVEL,Reference ID Generation Level,Num,50
+relref,LVLDESC,Reference ID Level Description,Char,50

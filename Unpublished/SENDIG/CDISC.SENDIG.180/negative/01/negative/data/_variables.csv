@@ -1,19 +1,19 @@
 dataset,variable,label,type,length
-mi.xpt,STUDYID,Study Identifier,Char,10
-mi.xpt,DOMAIN,Domain Abbreviation,Char,2
-mi.xpt,USUBJID,Unique Subject Identifier,Char,14
-mi.xpt,FOCID,Focus Identifier,Char,20
-mi.xpt,MISEQ,Sequence Number,Num,8
-mi.xpt,MISPID,Sponsor-Defined Identifier,Char,4
-mi.xpt,MITESTCD,Microscopic Examination Short Name,Char,8
-mi.xpt,MITEST,Microscopic Examination Name,Char,25
-mi.xpt,MIORRES,Result or Findings as Collected,Char,6
-mi.xpt,MISTRESC,Standardized Result in Character Format,Char,6
-mi.xpt,MISPEC,Specimen Material Type,Char,5
-mi.xpt,MISPCUFL,Specimen Usability for the Test,Char,1
-mi.xpt,MIBLFL,Baseline Flag,Char,1
-mi.xpt,MIDTHREL,Relationship to Death,Char,1
-mi.xpt,VISITNUM,Visit Number,Num,8
-mi.xpt,VISIT,Visit Name,Char,18
-mi.xpt,MIDTC,Date/Time,Char,10
-mi.xpt,MIDY,Study Day ,Num,8
+mi,STUDYID,Study Identifier,Char,10
+mi,DOMAIN,Domain Abbreviation,Char,2
+mi,USUBJID,Unique Subject Identifier,Char,14
+mi,FOCID,Focus Identifier,Char,20
+mi,MISEQ,Sequence Number,Num,8
+mi,MISPID,Sponsor-Defined Identifier,Char,4
+mi,MITESTCD,Microscopic Examination Short Name,Char,8
+mi,MITEST,Microscopic Examination Name,Char,25
+mi,MIORRES,Result or Findings as Collected,Char,6
+mi,MISTRESC,Standardized Result in Character Format,Char,6
+mi,MISPEC,Specimen Material Type,Char,5
+mi,MISPCUFL,Specimen Usability for the Test,Char,1
+mi,MIBLFL,Baseline Flag,Char,1
+mi,MIDTHREL,Relationship to Death,Char,1
+mi,VISITNUM,Visit Number,Num,8
+mi,VISIT,Visit Name,Char,18
+mi,MIDTC,Date/Time,Char,10
+mi,MIDY,Study Day ,Num,8

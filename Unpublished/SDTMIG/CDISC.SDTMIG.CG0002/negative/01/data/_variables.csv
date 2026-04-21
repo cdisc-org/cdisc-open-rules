@@ -1,45 +1,45 @@
 dataset,variable,label,type,length
-ae.xpt,STUDYID,Study Identifier,Char,50
-ae.xpt,DOMAIN,Domain Abbreviation,Char,50
-ae.xpt,USUBJID,Unique Subject Identifier,Char,50
-ae.xpt,AESEQ,Sequence Number,Num,8
-ae.xpt,AETERM,Reported Term for the Adverse Event,Char,50
-ae.xpt,AEDUR,Duration,Char,50
-lb.xpt,STUDYID,Study Identifier,Char,10
-lb.xpt,DOMAIN,Domain Abbreviation,Char,2
-lb.xpt,USUBJID,Unique Subject Identifier,Char,14
-lb.xpt,LBSEQ,Sequence Number,Num,8
-lb.xpt,LBSPID,Sponsor-Defined Identifier,Char,4
-lb.xpt,LBTESTCD,Lab Test or Examination Short Name,Char,8
-lb.xpt,LBTEST,Lab Test or Examination Name,Char,25
-lb.xpt,LBCAT,Category for Lab Test,Char,18
-lb.xpt,LBORRES,Result or Finding in Original Units,Char,6
-lb.xpt,LBORRESU,Original Units,Char,8
-lb.xpt,LBORNRLO,Reference Range Lower Limit in Orig Unit,Char,1
-lb.xpt,LBORNRHI,Reference Range Upper Limit in Orig Unit,Char,1
-lb.xpt,LBSTRESC,Character Result/Finding in Std Format,Char,6
-lb.xpt,LBSTRESN,Numeric Result/Finding in Standard Units,Num,8
-lb.xpt,LBSTRESU,Standard Units,Char,8
-lb.xpt,LBSTNRLO,Reference Range Lower Limit-Std Units,Num,8
-lb.xpt,LBSTNRHI,Reference Range Upper Limit-Std Units,Num,8
-lb.xpt,LBNRIND,Reference Range Indicator,Char,1
-lb.xpt,LBLOINC,LOINC Code,Char,7
-lb.xpt,LBSPEC,Specimen Type,Char,5
-lb.xpt,LBBLFL,Baseline Flag,Char,1
-lb.xpt,EPOCH,Epoch,Char,9
-lb.xpt,VISITNUM,Visit Number,Num,8
-lb.xpt,VISIT,Visit Name,Char,18
-lb.xpt,LBDTC,Date/Time of Specimen Collection,Char,10
-lb.xpt,LBDY,Study Day of Specimen Collection,Num,8
-cm.xpt,STUDYID,Study Identifier,Char,50
-cm.xpt,DOMAIN,Domain Abbreviation,Char,50
-cm.xpt,USUBJID,Unique Subject Identifier,Char,50
-cm.xpt,CMSEQ,Sequence Number,Num,8
-cm.xpt,CMTERM,Reported Term for the Adverse Event,Char,50
-cm.xpt,CMDUR,Duration,Char,50
-mh.xpt,STUDYID,Study Identifier,Char,50
-mh.xpt,DOMAIN,Domain Abbreviation,Char,50
-mh.xpt,USUBJID,Unique Subject Identifier,Char,50
-mh.xpt,MHSEQ,Sequence Number,Num,8
-mh.xpt,MHTERM,Reported Term for the Adverse Event,Char,50
-mh.xpt,MHDUR,Duration,Char,50
+ae,STUDYID,Study Identifier,Char,50
+ae,DOMAIN,Domain Abbreviation,Char,50
+ae,USUBJID,Unique Subject Identifier,Char,50
+ae,AESEQ,Sequence Number,Num,8
+ae,AETERM,Reported Term for the Adverse Event,Char,50
+ae,AEDUR,Duration,Char,50
+lb,STUDYID,Study Identifier,Char,10
+lb,DOMAIN,Domain Abbreviation,Char,2
+lb,USUBJID,Unique Subject Identifier,Char,14
+lb,LBSEQ,Sequence Number,Num,8
+lb,LBSPID,Sponsor-Defined Identifier,Char,4
+lb,LBTESTCD,Lab Test or Examination Short Name,Char,8
+lb,LBTEST,Lab Test or Examination Name,Char,25
+lb,LBCAT,Category for Lab Test,Char,18
+lb,LBORRES,Result or Finding in Original Units,Char,6
+lb,LBORRESU,Original Units,Char,8
+lb,LBORNRLO,Reference Range Lower Limit in Orig Unit,Char,1
+lb,LBORNRHI,Reference Range Upper Limit in Orig Unit,Char,1
+lb,LBSTRESC,Character Result/Finding in Std Format,Char,6
+lb,LBSTRESN,Numeric Result/Finding in Standard Units,Num,8
+lb,LBSTRESU,Standard Units,Char,8
+lb,LBSTNRLO,Reference Range Lower Limit-Std Units,Num,8
+lb,LBSTNRHI,Reference Range Upper Limit-Std Units,Num,8
+lb,LBNRIND,Reference Range Indicator,Char,1
+lb,LBLOINC,LOINC Code,Char,7
+lb,LBSPEC,Specimen Type,Char,5
+lb,LBBLFL,Baseline Flag,Char,1
+lb,EPOCH,Epoch,Char,9
+lb,VISITNUM,Visit Number,Num,8
+lb,VISIT,Visit Name,Char,18
+lb,LBDTC,Date/Time of Specimen Collection,Char,10
+lb,LBDY,Study Day of Specimen Collection,Num,8
+cm,STUDYID,Study Identifier,Char,50
+cm,DOMAIN,Domain Abbreviation,Char,50
+cm,USUBJID,Unique Subject Identifier,Char,50
+cm,CMSEQ,Sequence Number,Num,8
+cm,CMTERM,Reported Term for the Adverse Event,Char,50
+cm,CMDUR,Duration,Char,50
+mh,STUDYID,Study Identifier,Char,50
+mh,DOMAIN,Domain Abbreviation,Char,50
+mh,USUBJID,Unique Subject Identifier,Char,50
+mh,MHSEQ,Sequence Number,Num,8
+mh,MHTERM,Reported Term for the Adverse Event,Char,50
+mh,MHDUR,Duration,Char,50

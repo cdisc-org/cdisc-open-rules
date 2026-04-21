@@ -1,19 +1,19 @@
 dataset,variable,label,type,length
-dm.xpt,STUDYID,Study Identifier,Char,50
-dm.xpt,DOMAIN,Domain Abbreviation,Char,50
-dm.xpt,USUBJID,Unique Subject Identifier,Char,50
-dm.xpt,ARMCD,Planned Arm Code,Char,50
-dm.xpt,ARM,Description of Planned Arm,Char,50
-dm.xpt,ACTARMCD,Actual Arm Code,Char,50
-dm.xpt,ACTARM,Description of Actual Arm,Char,50
-dm.xpt,ARMNRS,Reason Arm and/or Actual Arm is Null,Char,50
-dm.xpt,ACTARMUD,Description of Unplanned Actual Arm,Char,50
-dm.xpt,SETCD,Set Code,Char,50
-tx.xpt,STUDYID,Study Identifier,Char,50
-tx.xpt,DOMAIN,Domain Abbreviation,Char,50
-tx.xpt,SETCD,Set Code,Char,50
-tx.xpt,SET,Set Description,Char,50
-tx.xpt,TXSEQ,Sequence Number,Char,50
-tx.xpt,TXPARMCD,Trial Set Parameter Short Name,Char,50
-tx.xpt,TXPARM,Trial Set Parameter,Char,50
-tx.xpt,TXVAL,Trial Set Parameter Value,Char,50
+dm,STUDYID,Study Identifier,Char,50
+dm,DOMAIN,Domain Abbreviation,Char,50
+dm,USUBJID,Unique Subject Identifier,Char,50
+dm,ARMCD,Planned Arm Code,Char,50
+dm,ARM,Description of Planned Arm,Char,50
+dm,ACTARMCD,Actual Arm Code,Char,50
+dm,ACTARM,Description of Actual Arm,Char,50
+dm,ARMNRS,Reason Arm and/or Actual Arm is Null,Char,50
+dm,ACTARMUD,Description of Unplanned Actual Arm,Char,50
+dm,SETCD,Set Code,Char,50
+tx,STUDYID,Study Identifier,Char,50
+tx,DOMAIN,Domain Abbreviation,Char,50
+tx,SETCD,Set Code,Char,50
+tx,SET,Set Description,Char,50
+tx,TXSEQ,Sequence Number,Char,50
+tx,TXPARMCD,Trial Set Parameter Short Name,Char,50
+tx,TXPARM,Trial Set Parameter,Char,50
+tx,TXVAL,Trial Set Parameter Value,Char,50

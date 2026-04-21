@@ -1,11 +1,11 @@
 dataset,variable,label,type,length
-em.xpt,STUDYID,Study Identifier,Char,12
-em.xpt,DOMAIN,Domain Abbreviation,Char,2
-em.xpt,USUBJID,Unique Subject Identifier,Char,8
-em.xpt,SPTOBID,Applicant-Defined Tobacco Product ID,Char,40
-em.xpt,EMSEQ,Device Events Sequence Number,Num,8
-em.xpt,EMTERM,Reported Term for Device Event,Char,200
-em.xpt,EMDECOD,Device Events Dictionary-Derived Term,Char,200
-em.xpt,EMACNDEV,Action Taken with Device,Char,200
-em.xpt,EMPATT,Pattern of Device Event,Char,200
-em.xpt,EMSTDTC,Start Date/Time of Device Event,Char,200
+em,STUDYID,Study Identifier,Char,12
+em,DOMAIN,Domain Abbreviation,Char,2
+em,USUBJID,Unique Subject Identifier,Char,8
+em,SPTOBID,Applicant-Defined Tobacco Product ID,Char,40
+em,EMSEQ,Device Events Sequence Number,Num,8
+em,EMTERM,Reported Term for Device Event,Char,200
+em,EMDECOD,Device Events Dictionary-Derived Term,Char,200
+em,EMACNDEV,Action Taken with Device,Char,200
+em,EMPATT,Pattern of Device Event,Char,200
+em,EMSTDTC,Start Date/Time of Device Event,Char,200

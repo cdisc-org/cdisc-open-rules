@@ -1,15 +1,15 @@
 dataset,variable,label,type,length
-Activity.xpt,parent_entity,Parent Entity Name,String,[1]
-Activity.xpt,parent_id,Parent Entity Id,String,[1]
-Activity.xpt,parent_rel,Name of Relationship from Parent Entity,String,[1]
-Activity.xpt,rel_type,Type of Relationship,String,[1]
-Activity.xpt,id,(Activity Id),String,[1]
-Activity.xpt,name,Study Activity Name,String,[1]
-Activity.xpt,label,Study Activity Label,String,[0..1]
-Activity.xpt,description,Study Activity Description,String,[0..1]
-Activity.xpt,notes,Activity Notes [Any Exist],Boolean,CommentAnnotation[0..*]
-Activity.xpt,bcSurrogateIds,(Activity Bc Surrogates) [Identifiers] [Any Exist],Boolean,string[0..*] (BiomedicalConceptSurrogate.id)
-Activity.xpt,bcCategoryIds,(Activity Bc Categories) [Identifiers] [Any Exist],Boolean,string[0..*] (BiomedicalConceptCategory.id)
-Activity.xpt,previousId,(Activity Previous) [Identifier],String,[0..1] (Activity.id)
-Activity.xpt,nextId,(Activity Next) [Identifier],String,[0..1] (Activity.id)
-Activity.xpt,instanceType,(Activity Instance Type),String,[1]
+Activity,parent_entity,Parent Entity Name,String,[1]
+Activity,parent_id,Parent Entity Id,String,[1]
+Activity,parent_rel,Name of Relationship from Parent Entity,String,[1]
+Activity,rel_type,Type of Relationship,String,[1]
+Activity,id,(Activity Id),String,[1]
+Activity,name,Study Activity Name,String,[1]
+Activity,label,Study Activity Label,String,[0..1]
+Activity,description,Study Activity Description,String,[0..1]
+Activity,notes,Activity Notes [Any Exist],Boolean,CommentAnnotation[0..*]
+Activity,bcSurrogateIds,(Activity Bc Surrogates) [Identifiers] [Any Exist],Boolean,string[0..*] (BiomedicalConceptSurrogate.id)
+Activity,bcCategoryIds,(Activity Bc Categories) [Identifiers] [Any Exist],Boolean,string[0..*] (BiomedicalConceptCategory.id)
+Activity,previousId,(Activity Previous) [Identifier],String,[0..1] (Activity.id)
+Activity,nextId,(Activity Next) [Identifier],String,[0..1] (Activity.id)
+Activity,instanceType,(Activity Instance Type),String,[1]

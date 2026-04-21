@@ -1,10 +1,10 @@
 dataset,variable,label,type,length
-td.xpt,STUDYID,Study Identifier,Char,50
-td.xpt,DOMAIN,Domain Abbreviation,Char,50
-td.xpt,TDORDER,Sequence of Planned Assessment Schedule,Num,8
-td.xpt,TDANCVAR,Anchor Variable Name,Char,50
-td.xpt,TDSTOFF,Offset from the Anchor,Char,50
-td.xpt,TDTGTPAI,Planned Assessment Interval,Char,50
-td.xpt,TDMINPAI,Planned Assessment Interval Minimum,Char,50
-td.xpt,TDMAXPAI,Planned Assessment Interval Maximum,Char,50
-td.xpt,TDNUMRPT,Maximum Number of Actual Assessments,Num,8
+td,STUDYID,Study Identifier,Char,50
+td,DOMAIN,Domain Abbreviation,Char,50
+td,TDORDER,Sequence of Planned Assessment Schedule,Num,8
+td,TDANCVAR,Anchor Variable Name,Char,50
+td,TDSTOFF,Offset from the Anchor,Char,50
+td,TDTGTPAI,Planned Assessment Interval,Char,50
+td,TDMINPAI,Planned Assessment Interval Minimum,Char,50
+td,TDMAXPAI,Planned Assessment Interval Maximum,Char,50
+td,TDNUMRPT,Maximum Number of Actual Assessments,Num,8

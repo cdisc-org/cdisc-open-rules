@@ -1,36 +1,36 @@
 dataset,variable,label,type,length
-dm.xpt,STUDYID,Study Identifier,Char,10
-dm.xpt,DOMAIN,Domain Abbreviation,Char,2
-dm.xpt,USUBJID,Unique Subject Identifier,Char,14
-dm.xpt,SUBJID,Subject Identifier for the Study,Char,3
-dm.xpt,RFSTDTC,Subject Reference Start Date/Time,Char,10
-dm.xpt,RFENDTC,Subject Reference End Date/Time,Char,10
-dm.xpt,RFXSTDTC,Date/Time of First Study Treatment,Char,10
-dm.xpt,RFXENDTC,Date/Time of Last Study Treatment,Char,10
-dm.xpt,RFICDTC,Date/Time of Informed Consent,Char,10
-dm.xpt,RFPENDTC,Date/Time of End of Participation,Char,10
-dm.xpt,DTHDTC,Date/Time of Death,Char,1
-dm.xpt,DTHFL,Subject Death Flag,Char,1
-dm.xpt,SITEID,Study Site Identifier,Char,3
-dm.xpt,AGE,Age,Num,8
-dm.xpt,AGEU,Age Units,Char,5
-dm.xpt,SEX,Sex,Char,1
-dm.xpt,RACE,Race,Char,1
-dm.xpt,ARMCD,Planned Arm Code,Char,1
-dm.xpt,ARM,Description of Planned Arm,Char,13
-dm.xpt,ACTARMCD,Actual Arm Code,Char,1
-dm.xpt,ACTARM,Description of Actual Arm,Char,13
-dm.xpt,COUNTRY,Country,Char,3
-ds.xpt,STUDYID,Study Identifier,Char,10
-ds.xpt,DOMAIN,Domain Abbreviation,Char,2
-ds.xpt,USUBJID,Unique Subject Identifier,Char,14
-ds.xpt,DSSEQ,Sequence Number,Num,8
-ds.xpt,DSTERM,Reported Term for the Disposition Event,Char,27
-ds.xpt,DSDECOD,Standardized Disposition Term,Char,27
-ds.xpt,DSCAT,Category for Disposition Event,Char,18
-ds.xpt,EPOCH,Epoch,Char,9
-ds.xpt,VISITNUM,Visit Number,Num,8
-ds.xpt,VISIT,Visit Name,Char,18
-ds.xpt,VISITDY,Planned Study Day of Visit,Num,8
-ds.xpt,DSSTDTC,Start Date/Time of Disposition Event,Char,10
-ds.xpt,DSDY,Study Day of Visit/Collection/Exam,Num,8
+dm,STUDYID,Study Identifier,Char,10
+dm,DOMAIN,Domain Abbreviation,Char,2
+dm,USUBJID,Unique Subject Identifier,Char,14
+dm,SUBJID,Subject Identifier for the Study,Char,3
+dm,RFSTDTC,Subject Reference Start Date/Time,Char,10
+dm,RFENDTC,Subject Reference End Date/Time,Char,10
+dm,RFXSTDTC,Date/Time of First Study Treatment,Char,10
+dm,RFXENDTC,Date/Time of Last Study Treatment,Char,10
+dm,RFICDTC,Date/Time of Informed Consent,Char,10
+dm,RFPENDTC,Date/Time of End of Participation,Char,10
+dm,DTHDTC,Date/Time of Death,Char,1
+dm,DTHFL,Subject Death Flag,Char,1
+dm,SITEID,Study Site Identifier,Char,3
+dm,AGE,Age,Num,8
+dm,AGEU,Age Units,Char,5
+dm,SEX,Sex,Char,1
+dm,RACE,Race,Char,1
+dm,ARMCD,Planned Arm Code,Char,1
+dm,ARM,Description of Planned Arm,Char,13
+dm,ACTARMCD,Actual Arm Code,Char,1
+dm,ACTARM,Description of Actual Arm,Char,13
+dm,COUNTRY,Country,Char,3
+ds,STUDYID,Study Identifier,Char,10
+ds,DOMAIN,Domain Abbreviation,Char,2
+ds,USUBJID,Unique Subject Identifier,Char,14
+ds,DSSEQ,Sequence Number,Num,8
+ds,DSTERM,Reported Term for the Disposition Event,Char,27
+ds,DSDECOD,Standardized Disposition Term,Char,27
+ds,DSCAT,Category for Disposition Event,Char,18
+ds,EPOCH,Epoch,Char,9
+ds,VISITNUM,Visit Number,Num,8
+ds,VISIT,Visit Name,Char,18
+ds,VISITDY,Planned Study Day of Visit,Num,8
+ds,DSSTDTC,Start Date/Time of Disposition Event,Char,10
+ds,DSDY,Study Day of Visit/Collection/Exam,Num,8
