@@ -1,0 +1,4 @@
+Dataset,Record,Variable,Value
+AE.csv,,,
+EX.csv,,$required_variables,"['EXTRT', 'STUDYID', 'EXROUTE', 'EXDOSFRQ', 'EXSEQ', 'DOMAIN']"
+EX.csv,,$dataset_variables,"['STUDYID', 'DOMAIN', 'USUBJID', 'SPDEVID', 'EXSEQ', 'EXDOSE', 'EXDOSU', 'EXDOSFRM', 'EXDOSFRQ', 'EXROUTE', 'EXLOT', 'EPOCH', 'EXSTDTC', 'EXENDTC', 'EXSTDY', 'EXENDY']"

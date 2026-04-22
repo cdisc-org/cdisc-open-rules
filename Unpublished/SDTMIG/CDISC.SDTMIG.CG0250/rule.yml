@@ -1,0 +1,71 @@
+# Variable: EPOCH
+# Condition: 
+# Rule: Each value of EPOCH is not associated with more than one conceptual trial period
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        Version: '3.4'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0250
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: 'EPOCH may be used as a timing variable in other datasets,
+                  such as EX and DS, and values of EPOCH must be different for different
+                  epochs. '
+                Document: IG v3.4
+                Item: Assumption 12
+                Section: 7.2.1
+      - Name: SDTMIG
+        Version: '3.2'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0250
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: '... values of EPOCH must be different for different
+                  epochs.'
+                Document: IG v3.2
+                Item: Assumption 11
+                Section: '7.2'
+      - Name: SDTMIG
+        Version: '3.3'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0250
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: '... values of EPOCH must be different for different
+                  epochs.'
+                Document: IG v3.3
+                Item: Assumption 12
+                Section: 7.2.1
+Check:
+  all:
+    - name:
+      operator:
+Core:
+  Id: CDISC.SDTMIG.CG0250
+  Status: Draft
+  Version: '1'
+Description: Trigger error when at least one EPOCH is associated with more than one
+  conceptual trial period
+Executability: Fully Executable
+Outcome:
+  Message: At least one EPOCH is associated with more than one conceptual trial period
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - TRIAL DESIGN
+  Domains:
+    Include:
+      - TA
+Sensitivity: Study

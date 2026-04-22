@@ -1,0 +1,87 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'If a transition start rule is defined then an end rule is
+                  expected and vice versa.'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00078'
+              Version: '1'
+            Version: '1.0'
+        Version: '3.0'
+Check:
+  all:
+    - name: instanceType
+      operator: is_contained_by
+      value:
+        - 'Encounter'
+        - 'StudyElement'
+    - name: rel_type
+      operator: equal_to
+      value: 'definition'
+    - any:
+        - all:
+            - name: transitionStartRule
+              operator: exists
+            - name: transitionStartRule
+              operator: non_empty
+            - name: transitionStartRule
+              operator: equal_to
+              value: true
+            - any:
+                - name: transitionEndRule
+                  operator: not_exists
+                - name: transitionEndRule
+                  operator: empty
+                - name: transitionEndRule
+                  operator: equal_to
+                  value: false
+        - all:
+            - name: transitionEndRule
+              operator: exists
+            - name: transitionEndRule
+              operator: non_empty
+            - name: transitionEndRule
+              operator: equal_to
+              value: true
+            - any:
+                - name: transitionStartRule
+                  operator: not_exists
+                - name: transitionStartRule
+                  operator: empty
+                - name: transitionStartRule
+                  operator: equal_to
+                  value: false
+Core:
+  Id: 'CORE-000850'
+  Status: Published
+  Version: '1'
+Description: 'If a transition start rule is defined then an end rule is expected
+  and vice versa.'
+Executability: Partially Executable - Possible Overreporting
+Outcome:
+  Message: 'A transition start rule is defined but an end rule is missing, or vice
+    versa.'
+  Output Variables:
+    - parent_entity
+    - parent_id
+    - parent_rel
+    - id
+    - name
+    - transitionStartRule
+    - transitionStartRule.id
+    - transitionStartRule.name
+    - transitionEndRule
+    - transitionEndRule.id
+    - transitionEndRule.name
+Rule Type: Record Data
+Scope:
+  Entities:
+    Include:
+      - 'Encounter'
+      - 'StudyElement'
+Sensitivity: Record

@@ -1,0 +1,93 @@
+Authorities:
+  - Organization: 'CDISC'
+    Standards:
+      - Name: 'SDTMIG'
+        References:
+          - Citations:
+              - Cited Guidance: 'Following SDTM-specified controlled terminology and format
+                  guidelines for variables, when provided'
+                Document: 'SDTMIG'
+                Section: '3.2.2'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: 'CG0011C2'
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: 'SDTMIG'
+        References:
+          - Citations:
+              - Cited Guidance: 'Following SDTM-specified controlled terminology and format
+                  guidelines for variables, when provided'
+                Document: 'SDTMIG'
+                Section: '3.2.2'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: 'CG0011C2'
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: 'SDTMIG'
+        References:
+          - Citations:
+              - Cited Guidance: 'Following SDTM-specifieda controlled terminology and format
+                  guidelines for variables, when provided'
+                Document: 'SDTMIG'
+                Section: '3.2.2'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: 'CG0011C2'
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+# CG0011C2: if the variable is under controlled terminology (according CDISC-Library)
+# then a CodeList must be referenced in the define.xml
+Check:
+  # TODO: HOW do I iterate over all variables present in the dataset
+  # for which there is Controlled Terminology defined in the CDISC Library
+  all:
+    #- name: LBTESTCD
+    #  operator: not_equal_to
+    #  value: NONSENSE
+    # Ticket 1317: Library variable has codelist - look there
+    # Alternative over library properties?
+    #- name: define_variable_name
+    #  operator: not_equal_to
+    #  value: 'STUDYID'
+    #- name: variable_name
+    #  operator: equal_to
+    #  value: library_variable_name
+    #- name: library_variable_ccode
+    #  operator: non_empty
+    # Testfile define.xml: YAML_Rules/CG0011/define_negative_no_CodeListRef_LBTESTCD.xml
+    #- name: library_variable_ccode
+    #  operator: equal_to
+    #  value: true
+    - name: library_variable_ccode
+      operator: non_empty
+    - name: define_variable_has_codelist
+      operator: equal_to
+      value: false
+
+Core:
+  Status: Draft
+  Version: '1'
+Description: 'Variables that are under CT must have an associated codelist
+  defined in the define.xml'
+Executability: Fully Executable
+Outcome:
+  Message: 'The variable is under controlled terminology, but no codelist has been
+    defined for it in the define.xml'
+  Output Variables:
+    - library_variable_ccode
+# Rule Type: Define Item Metadata Check against Library Metadata
+# Rule Type: Define Item Metadata Check against Library Metadata 
+Rule Type: Variable Metadata Check against Define XML and Library Metadata
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record

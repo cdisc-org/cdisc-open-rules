@@ -1,0 +1,69 @@
+Authorities:
+  - Organization: 'CDISC'
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: 'When using COVAL1-COVALn, the variable label should match the
+                  corresponding variable name (e.g., Comment1, Comment2).'
+                Document: IG v3.1
+                Section: 6.3.11.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: 'SEND313'
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+Check:
+  all:
+    # The first two checks select COVALn variables, excluding "COVAL" itself
+    - name: variable_name
+      operator: starts_with
+      value: COVAL
+    - name: variable_name
+      operator: longer_than
+      value: 5
+    # check whether 6th and 7th character represent a digit
+    - any:
+        # 6th character
+        - name: variable_name
+          operator: matches_regex
+          value: ^.{5}\d{1}
+        # 6th and 7th character
+        - name: variable_name
+          operator: matches_regex
+          value: ^.{5}\d{2}
+    - name: variable_name
+      operator: suffix_not_equal_to
+      suffix: 1
+      value: '1' # this need to be replaced by the last 1 or 2 charaters of the label
+    # Proposal Els
+    #- name: variable_label
+    #  operator: does_not_equal_string_part
+    #  regex: (\d+)$
+    #  value: variable_name
+Core:
+  Id: SEND313
+  Status: Draft
+  Version: '1'
+Description: 'Variable Label for COVALn must end with n (as a number from COVALn)'
+Executability: Fully Executable
+Operations:
+  # we need something here to retrieve the last character of the label
+  # but it looks as we cannot use "operator" in the same way as in "Check"
+  - id: $last_character
+    name: variable_label
+    operator: matches_regex
+    value: ".$"
+
+Outcome:
+  Message: 'Variable Label must end with the number n in the variable name'
+Rule Type: Variable Metadata Check
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - CO
+Sensitivity: Dataset

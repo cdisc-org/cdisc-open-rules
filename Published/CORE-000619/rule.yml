@@ -1,0 +1,107 @@
+Authorities:
+  - Organization: 'FDA'
+    Standards:
+      - Name: 'SENDIG'
+        References:
+          - Citations:
+              - Cited Guidance: 'If an age range is supplied, it should be in number-number
+                  format.'
+                Document: 'FDA'
+                Section: 'FDAB053'
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: 'FB5303'
+              Version: '1'
+            Version: '1.5'
+        Version: '3.1'
+      - Name: 'SENDIG'
+        References:
+          - Citations:
+              - Cited Guidance: 'If an age range is supplied, it should be in number-number
+                  format.'
+                Document: 'FDA'
+                Section: 'FDAB053'
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: 'FB5303'
+              Version: '1'
+            Version: '1.5'
+        Version: '3.1.1'
+      - Name: 'SENDIG-DART'
+        References:
+          - Citations:
+              - Cited Guidance: 'If an age range is supplied, it should be in number-number
+                  format.'
+                Document: 'FDA'
+                Section: 'FDAB053'
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: 'FB5303'
+              Version: '1'
+            Version: '1.5'
+        Version: '1.1'
+      - Name: 'SENDIG-DART'
+        References:
+          - Citations:
+              - Cited Guidance: 'If an age range is supplied, it should be in number-number
+                  format.'
+                Document: 'FDA'
+                Section: 'FDAB053'
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: 'FB5303'
+              Version: '1'
+            Version: '1.5'
+        Version: '1.2'
+      - Name: 'SENDIG-AR'
+        References:
+          - Citations:
+              - Cited Guidance: 'If an age range is supplied, it should be in number-number
+                  format.'
+                Document: 'FDA'
+                Section: 'FDAB053'
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: 'FB5303'
+              Version: '1'
+            Version: '1.5'
+        Version: '1.0'
+      - Name: 'SENDIG-GENETOX'
+        References:
+          - Citations:
+              - Cited Guidance: 'If an age range is supplied, it should be in number-number
+                  format.'
+                Document: 'FDA'
+                Section: 'FDAB053'
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: 'FB5303'
+              Version: '1'
+            Version: '1.5'
+        Version: '1.0'
+Check:
+  all:
+    - name: TXPARMCD
+      operator: equal_to
+      value: 'AGETXT'
+    - name: TXVAL
+      operator: not_matches_regex
+      value: ^[0-9]+-[0-9]+$
+Core:
+  Id: CORE-000619
+  Status: Published
+  Version: '1'
+Description: Value for Age Range (TXVAL when TXPARMCD = 'AGETXT') should be
+  populated with a number-number format when age range is supplied.
+Executability: Fully Executable
+Outcome:
+  Message: TXVAL value when TXPARMCD = AGETXT is not in number - number format.
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - TRIAL DESIGN
+  Domains:
+    Include:
+      - TX
+Sensitivity: Record

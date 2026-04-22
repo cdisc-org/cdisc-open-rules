@@ -1,0 +1,57 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: 'ADaMIG'
+        References:
+          - Citations:
+              - Cited Guidance: <-  Numeric version of RACE eg. Codes used as per the
+                  specification. 1=American Indian OR Alaska Native, 2=Asian,
+                  3=Black/African American, 4=Native Hawaiian OR Other Pacific
+                  Islander, 5=White. If races need to be categorized
+                  differently, then use variables ARACE and ARACEN.
+                Document: ADPPKIG v1.0
+                Item: 'Table 3.2'
+                Section: '3.2'
+            Criteria:
+              Logical Expression:
+                Condition: ''
+                Rule: ''
+              Plain Language Expression: ''
+              Type: Failure
+            Origin: ADaM Conformance Rules
+            Release Notes: ''
+            Rule Identifier:
+              Id: '866'
+              Version: '1'
+            Validator Rule Message: ''
+            Version: '5.0'
+        Version: '1.3'
+
+Check:
+  all:
+    - name: RACEN
+      operator: non_empty
+    - name: RACE
+      operator: empty
+Core:
+  Id: CDISC.ADaMIG.AD0866
+  Status: Draft
+  Version: '1'
+Description: ''
+Executability: Fully Executable
+Outcome:
+  Message: 'RACEN is populated, but RACE is not populated'
+  Output Variables:
+    - RACE
+    - RACEN
+    - USUBJID
+
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+      - BASIC DATA STRUCTURE
+  Subclasses:
+    Include:
+      - POPULATION PHARMACOKINETIC ANALYSIS
+Sensitivity: Record

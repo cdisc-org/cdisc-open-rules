@@ -1,0 +1,48 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'A product organization role is expected to apply to at least
+                  one medical device or administrable product.'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00211'
+              Version: '1'
+            Version: '1.0'
+        Version: '4.0'
+Check: |-
+  (study.versions)@$sv.
+    $sv.productOrganizationRoles@$pr.
+        [($a:=$sv.administrableProducts.id;
+          $d:=$sv.medicalDevices.id;
+                 $pr.{
+                    "instanceType": instanceType,
+                    "id": id,
+                    "path": _path,
+                    "name": name,
+                    "appliesToIds": appliesToIds ? "[" & $join(appliesToIds,", ")&"]",
+                    "check": $not(appliesToIds and $map(appliesToIds,function($v){($v in $a) or ($v in $d)}))
+                }
+        )][check=true]
+Core:
+  Id: 'CORE-001021'
+  Status: Published
+  Version: '1'
+Description: 'A product organization role is expected to apply to at least one
+  medical device or administrable product.'
+Executability: Partially Executable - Possible Overreporting
+Outcome:
+  Message: 'The product organization role does not apply to at least one medical
+    device or administrable product.'
+  Output Variables:
+    - name
+    - appliesToIds
+Rule Type: JSONata
+Scope:
+  Entities:
+    Include:
+      - 'ProductOrganizationRole'
+Sensitivity: Record

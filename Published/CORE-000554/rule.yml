@@ -1,0 +1,52 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: If RSTGCD has the value of UNPLAN, then RSTAGE should be null.
+                Document: IG-DART v1.1
+                Section: '4.1.1'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND350
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: If RSTGCD has the value of UNPLAN, then RSTAGE should be null.
+                Document: IG-DART v1.2
+                Section: '4.1.1'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND350
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+
+Check:
+  all:
+    - name: RSTGCD
+      operator: equal_to
+      value: UNPLAN
+    - name: RSTAGE
+      operator: non_empty
+Core:
+  Id: CORE-000554
+  Status: Published
+  Version: '1'
+Description: Raise an error when RSTGCD is 'UNPLAN' and RPHASE is populated
+Executability: Fully Executable
+Outcome:
+  Message: RSTAGE may not be populated when RSTGCD = UNPLAN
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - SJ
+Sensitivity: Record

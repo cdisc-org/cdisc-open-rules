@@ -1,0 +1,150 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: QORIG is used to indicate the origin of the data. Possible
+                  values are COLLECTED, DERIVED, OTHER, and NOT AVAILABLE.
+                Document: SENDIG v3.0
+                Item: QORIG CDISC Notes
+                Section: "8.5"
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: "SEND255"
+              Version: "1"
+            Version: "5.0"
+        Version: "3.0"
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: QORIG is used to indicate the origin of the data. Possible
+                  values are COLLECTED, DERIVED, OTHER, and NOT AVAILABLE.
+                Document: SENDIG v3.1
+                Item: QORIG CDISC Notes
+                Section: "8.3"
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: "SEND255"
+              Version: "1"
+            Version: "5.0"
+        Version: "3.1"
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: QORIG is used to indicate the origin of the data. Possible
+                  values are COLLECTED, DERIVED, OTHER, and NOT AVAILABLE.
+                Document: SENDIG v3.1.1
+                Item: QORIG CDISC Notes
+                Section: "8.3"
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: "SEND255"
+              Version: "1"
+            Version: "5.0"
+        Version: "3.1.1"
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: QORIG is used to indicate the origin of the data. Possible
+                  values are COLLECTED, DERIVED, OTHER, and NOT AVAILABLE.
+                Document: SENDIG v3.1
+                Item: QORIG CDISC Notes
+                Section: "8.3"
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: "SEND255"
+              Version: "1"
+            Version: "5.0"
+        Version: "1.1"
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: QORIG is used to indicate the origin of the data. Possible
+                  values are COLLECTED, DERIVED, OTHER, and NOT AVAILABLE.
+                Document: SENDIG v3.1.1
+                Item: QORIG CDISC Notes
+                Section: "8.3"
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: "SEND255"
+              Version: "1"
+            Version: "5.0"
+        Version: "1.2"
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: QORIG is used to indicate the origin of the data. Possible
+                  values are COLLECTED, DERIVED, OTHER, and NOT AVAILABLE.
+                Document: SENDIG v3.1.1
+                Item: QORIG CDISC Notes
+                Section: "8.3"
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: "SEND255"
+              Version: "1"
+            Version: "5.0"
+        Version: "1.0"
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: QORIG is used to indicate the origin of the data. Possible
+                  values are COLLECTED, DERIVED, OTHER, and NOT AVAILABLE.
+                Document: TIG v1.0
+                Item: QORIG CDISC Notes
+                Section: 2.8.9.27
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0173
+              Version: "1"
+            Version: "1.0"
+        Substandard: SEND
+        Version: "1.0"
+Check:
+  all:
+    - name: QORIG
+      operator: exists
+    - name: QORIG
+      operator: non_empty
+    - name: QORIG
+      operator: not_equal_to
+      value: COLLECTED
+    - name: QORIG
+      operator: not_equal_to
+      value: DERIVED
+    - name: QORIG
+      operator: not_equal_to
+      value: OTHER
+    - name: QORIG
+      operator: not_equal_to
+      value: NOT AVAILABLE
+    # Simplification 2024-05-21
+    # NO: this is NOT how is_not_contained_by works, it requires a reference to a separate operation
+    # see e.g. CG0118
+    # - name: QORIG
+    #  operator: is_not_contained_by
+    #  value:
+    #    - COLLECTED
+    #    - DERIVED
+    #    - OTHER
+    #    - NOT AVAILABLE
+Core:
+  Id: CORE-000503
+  Status: Published
+  Version: "1"
+Description: QORIG is used to indicate the origin of the data. Possible values
+  are COLLECTED, DERIVED, OTHER, and NOT AVAILABLE.
+Executability: Fully Executable
+Outcome:
+  Message: When populated, the possible values for QORIG are limited to COLLECTED,
+    DERIVED, OTHER, and NOT AVAILABLE.
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - SUPP--
+  Use Case: NONCLIN
+Sensitivity: Record

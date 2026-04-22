@@ -1,0 +1,4 @@
+parent_entity,parent_id,parent_rel,rel_type,id,name,description,label,defaultConditionId,epochId,timelineId,timelineExitId,instanceType,conditionAssignments
+ScheduleTimeline,ScheduleTimeline_1,instances,definition,ScheduledDecisionInstance_1,SWITCH1,,,ScheduledDecisionInstance_1,StudyEpoch_1,,,ScheduledDecisionInstance,True
+ScheduledDecisionInstance,ScheduledDecisionInstance_1,defaultConditionId,reference,ScheduledDecisionInstance_1,SWITCH1,,,ScheduledDecisionInstance_1,StudyEpoch_1,,,ScheduledDecisionInstance,True
+Timing,Timing_2,relativeFromScheduledInstanceId,reference,ScheduledDecisionInstance_1,SWITCH1,,,ScheduledDecisionInstance_1,StudyEpoch_1,,,ScheduledDecisionInstance,True

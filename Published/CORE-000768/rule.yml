@@ -1,0 +1,122 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Every Trial Set should have only one ARMCD.
+                Document: IG v3.0
+                Item: Specification
+                Section: 7.4.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND235
+              Version: '1'
+            Version: '5.0'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Every Trial Set should have only one ARMCD.
+                Document: IG v3.1
+                Item: Specification
+                Section: 7.4.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND235
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Every Trial Set should have only one ARMCD.
+                Document: IG v3.1.1
+                Item: Specification
+                Section: 7.4.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND235
+              Version: '1'
+            Version: '5.0'
+        Version: 3.1.1
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: Every Trial Set should have only one ARMCD.
+                Document: IG v3.1.1
+                Item: Specification
+                Section: 7.4.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND235
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: Every Trial Set should have only one ARMCD.
+                Document: IG v3.1
+                Item: Specification
+                Section: 7.4.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND235
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: Every Trial Set should have only one ARMCD.
+                Document: IG v3.1.1
+                Item: Specification
+                Section: 7.4.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND235
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+Check:
+  all:
+    # There may be only 1 record for TXPARMCD=ARMCD per group of SETCD values
+    # REMARK: 2025-03-13: works, but currently only the first violation is reported, the following ones are not
+    - name: $armcd_count
+      operator: not_equal_to
+      value: 1
+Core:
+  Id: CORE-000768
+  Status: Published
+  Version: '1'
+Description: Every Trial Set should have only one ARMCD.
+Executability: Fully Executable
+Operations:
+  - domain: TX
+    # only keep the records with TXPARMCD=ARMCD
+    filter:
+      TXPARMCD: ARMCD
+    # group the records by value of TXSETCD
+    group:
+      - SETCD
+    # within the filtered and grouped records, count the number of TXVAL records
+    id: $armcd_count
+    name: TXVAL
+    operator: record_count
+Outcome:
+  Message: There may be only 1 record for TXPARMCD=ARMCD per group of SETCD values
+  Output Variables:
+    - SETCD
+    - $armcd_count
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - TRIAL DESIGN
+  Domains:
+    Include:
+      - TX
+# When Sensitivity is set to Dataset, only the first set that violates the rule is reported
+# When Sensitivity is set to Record, a violation is reported for EACH record in the group that violates the rule
+Sensitivity: Record

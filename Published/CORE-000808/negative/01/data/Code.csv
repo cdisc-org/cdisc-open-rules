@@ -1,0 +1,589 @@
+parent_entity,parent_id,parent_rel,rel_type,id,code,codeSystem,codeSystemVersion,decode,instanceType
+StudyVersion,StudyVersion_1,studyType,definition,Code_1,C98388,http://www.cdisc.org,2023-12-15,Interventional Study,Code
+StudyVersion,StudyVersion_1,businessTherapeuticAreas,definition,Code_4,PHARMA,SPONSOR,12,Eli Lilly,Code
+AliasCode,AliasCode_1,standardCode,definition,Code_2,C15601,http://www.cdisc.org,2023-12-15,Phase II Trial,Code
+GovernanceDate,GovernanceDate_1,type,definition,Code_9,C132352,http://www.cdisc.org,2023-12-15,Sponsor Approval Date,Code
+GeographicScope,GeographicScope_1,type,definition,Code_10,C68846,http://www.cdisc.org,2023-12-15,Global,Code
+StudyAmendmentReason,StudyAmendmentReason_1,code,definition,Code_72,C99904x3,http://www.cdisc.org,2023-12-15,IRB/IEC Feedback,Code
+StudyAmendmentReason,StudyAmendmentReason_2,code,definition,Code_73,C17649,http://www.cdisc.org,2023-12-15,Other,Code
+SubjectEnrollment,SubjectEnrollment_1,type,definition,Code_75,C41129,http://www.cdisc.org,2023-12-15,Region,Code
+AliasCode,AliasCode_3,standardCode,definition,Code_74,150,ISO 3166 1 alpha3,2020-08,Europe,Code
+Organization,Organization_1,organizationType,definition,Code_76,C70793,http://www.cdisc.org,2023-12-15,Clinical Study Sponsor,Code
+Address,Address_1,country,definition,Code_77,USA,ISO 3166 1 alpha3,2020-08,United States of America,Code
+Organization,Organization_2,organizationType,definition,Code_78,C93453,http://www.cdisc.org,2023-12-15,Study Registry,Code
+Address,Address_2,country,definition,Code_79,USA,ISO 3166 1 alpha3,2021-08,United States of America,Code
+StudyDesign,StudyDesign_1,trialIntentTypes,definition,Code_137,C49656,http://www.cdisc.org,2023-12-15,Treatment Study,Code
+StudyDesign,StudyDesign_1,trialTypes,definition,Code_138,C49666,http://www.cdisc.org,2023-12-15,Efficacy Study,Code
+StudyDesign,StudyDesign_1,trialTypes,definition,Code_139,C49667,http://www.cdisc.org,2023-12-15,Safety Study,Code
+StudyDesign,StudyDesign_1,trialTypes,definition,Code_140,C49663,http://www.cdisc.org,2023-12-15,Pharmacokinetic Study,Code
+StudyDesign,StudyDesign_1,therapeuticAreas,definition,Code_134,MILD_MOD_ALZ,SPONSOR,12,Mild to Moderate Alzheimer's Disease,Code
+StudyDesign,StudyDesign_1,therapeuticAreas,definition,Code_135,26929004,SNOMED,"January 31, 2018",Alzheimer's disease,Code
+StudyDesign,StudyDesign_1,characteristics,definition,Code_143,C99907x1,http://www.cdisc.org,2023-12-15,EXTENSION,Code
+StudyDesign,StudyDesign_1,characteristics,definition,Code_144,C98704,http://www.cdisc.org,2023-12-15,ADAPTIVE,Code
+StudyDesign,StudyDesign_1,interventionModel,definition,Code_141,C82639,http://www.cdisc.org,2023-12-15,Parallel Study,Code
+Encounter,Encounter_1,type,definition,Code_83,C25716,http://www.cdisc.org,2023-12-15,Visit,Code
+Encounter,Encounter_1,environmentalSetting,definition,Code_84,C51282,http://www.cdisc.org,2023-12-15,Clinic,Code
+Encounter,Encounter_1,contactModes,definition,Code_85,C175574,http://www.cdisc.org,2023-12-15,In Person,Code
+Encounter,Encounter_2,type,definition,Code_86,C25716,http://www.cdisc.org,2023-12-15,Visit,Code
+Encounter,Encounter_2,environmentalSetting,definition,Code_87,C51282,http://www.cdisc.org,2023-12-15,Clinic,Code
+Encounter,Encounter_2,contactModes,definition,Code_88,C175574,http://www.cdisc.org,2023-12-15,In Person,Code
+Encounter,Encounter_3,type,definition,Code_89,C25716,http://www.cdisc.org,2023-12-15,Visit,Code
+Encounter,Encounter_3,environmentalSetting,definition,Code_90,C51282,http://www.cdisc.org,2023-12-15,Clinic,Code
+Encounter,Encounter_3,contactModes,definition,Code_91,C175574,http://www.cdisc.org,2023-12-15,In Person,Code
+Encounter,Encounter_4,type,definition,Code_92,C25716,http://www.cdisc.org,2023-12-15,Visit,Code
+Encounter,Encounter_4,environmentalSetting,definition,Code_93,C51282,http://www.cdisc.org,2023-12-15,Clinic,Code
+Encounter,Encounter_4,contactModes,definition,Code_94,C175574,http://www.cdisc.org,2023-12-15,In Person,Code
+Encounter,Encounter_5,type,definition,Code_95,C25716,http://www.cdisc.org,2023-12-15,Visit,Code
+Encounter,Encounter_5,environmentalSetting,definition,Code_96,C51282,http://www.cdisc.org,2023-12-15,Clinic,Code
+Encounter,Encounter_5,contactModes,definition,Code_97,C175574,http://www.cdisc.org,2023-12-15,In Person,Code
+Encounter,Encounter_6,type,definition,Code_98,C25716,http://www.cdisc.org,2023-12-15,Visit,Code
+Encounter,Encounter_6,environmentalSetting,definition,Code_99,C51282,http://www.cdisc.org,2023-12-15,Clinic,Code
+Encounter,Encounter_6,contactModes,definition,Code_100,C175574,http://www.cdisc.org,2023-12-15,In Person,Code
+Encounter,Encounter_7,type,definition,Code_101,C25716,http://www.cdisc.org,2023-12-15,Visit,Code
+Encounter,Encounter_7,environmentalSetting,definition,Code_102,C51282,http://www.cdisc.org,2023-12-15,Clinic,Code
+Encounter,Encounter_7,contactModes,definition,Code_103,C175574,http://www.cdisc.org,2023-12-15,In Person,Code
+Encounter,Encounter_7,contactModes,definition,Code_104,C171537,http://www.cdisc.org,2023-12-15,Telephone Call,Code
+Encounter,Encounter_8,type,definition,Code_105,C25716,http://www.cdisc.org,2023-12-15,Visit,Code
+Encounter,Encounter_8,environmentalSetting,definition,Code_106,C51282,http://www.cdisc.org,2023-12-15,Clinic,Code
+Encounter,Encounter_8,contactModes,definition,Code_107,C175574,http://www.cdisc.org,2023-12-15,In Person,Code
+Encounter,Encounter_8,contactModes,definition,Code_108,C171537,http://www.cdisc.org,2023-12-15,Telephone Call,Code
+Encounter,Encounter_9,type,definition,Code_109,C25716,http://www.cdisc.org,2023-12-15,Visit,Code
+Encounter,Encounter_9,environmentalSetting,definition,Code_110,C51282,http://www.cdisc.org,2024-09-26,Clinic,Code
+Encounter,Encounter_9,contactModes,definition,Code_111,C175574,http://www.cdisc.org,2023-12-15,In Person,Code
+Encounter,Encounter_9,contactModes,definition,Code_112,C171537,http://www.cdisc.org,2023-12-15,Telephone Call,Code
+Encounter,Encounter_10,type,definition,Code_113,C25716,http://www.cdisc.org,2023-12-15,Visit,Code
+Encounter,Encounter_10,environmentalSetting,definition,Code_114,C51282,http://www.cdisc.org,2023-12-15,Clinic,Code
+Encounter,Encounter_10,contactModes,definition,Code_115,C175574,http://www.cdisc.org,2023-12-15,In Person,Code
+Encounter,Encounter_10,contactModes,definition,Code_116,C171537,http://www.cdisc.org,2023-12-15,Telephone Call,Code
+Encounter,Encounter_11,type,definition,Code_117,C25716,http://www.cdisc.org,2023-12-15,Visit,Code
+Encounter,Encounter_11,environmentalSetting,definition,Code_118,C51282,http://www.cdisc.org,2023-12-15,Clinic,Code
+Encounter,Encounter_11,contactModes,definition,Code_119,C175574,http://www.cdisc.org,2023-12-15,In Person,Code
+Encounter,Encounter_12,type,definition,Code_120,C25716,http://www.cdisc.org,2023-12-15,Visit,Code
+Encounter,Encounter_12,environmentalSetting,definition,Code_121,C51282,http://www.cdisc.org,2023-12-15,Clinic,Code
+Encounter,Encounter_12,contactModes,definition,Code_122,C175574,http://www.cdisc.org,2023-12-15,In Person,Code
+Procedure,Procedure_1,code,definition,Code_80,383371000119108,SNOMED,"January 31, 2019",CT of head without contrast,Code
+Procedure,Procedure_2,code,definition,Code_81,123,SPONSOR,12,Subject Supine,Code
+Procedure,Procedure_3,code,definition,Code_82,124,SPONSOR,15,Subject Standing,Code
+ResponseCode,ResponseCode_151,code,definition,Code_429,C20197,http://www.cdisc.org,2023-12-15,Male,Code
+ResponseCode,ResponseCode_152,code,definition,Code_430,C16576,http://www.cdisc.org,2023-12-15,Female,Code
+AliasCode,AliasCode_139,standardCode,definition,Code_431,C28421,http://www.cdisc.org,2023-12-15,Sex,Code
+AliasCode,AliasCode_140,standardCode,definition,Code_432,C28421,http://www.cdisc.org,2023-12-15,Sex,Code
+AliasCode,AliasCode_141,standardCode,definition,Code_433,C17049,http://www.cdisc.org,2023-12-15,Race,Code
+AliasCode,AliasCode_142,standardCode,definition,Code_434,C17049,http://www.cdisc.org,2023-12-15,Race,Code
+AliasCode,AliasCode_143,standardCode,definition,Code_435,C174446,http://www.cdisc.org,2023-12-15,TEMP,Code
+AliasCode,AliasCode_144,standardCode,definition,Code_436,C77140,http://www.cdisc.org,2023-12-15,Clinical Test Result,Code
+ResponseCode,ResponseCode_153,code,definition,Code_437,C42559,http://www.cdisc.org,2023-12-15,Degree Celsius,Code
+ResponseCode,ResponseCode_154,code,definition,Code_438,C44277,http://www.cdisc.org,2023-12-15,Degree Fahrenheit,Code
+ResponseCode,ResponseCode_155,code,definition,Code_439,C42537,http://www.cdisc.org,2023-12-15,Kelvin,Code
+AliasCode,AliasCode_145,standardCode,definition,Code_440,C44276,http://www.cdisc.org,2023-12-15,Unit of Temperature,Code
+ResponseCode,ResponseCode_156,code,definition,Code_441,C12674,http://www.cdisc.org,2023-12-15,Axilla,Code
+ResponseCode,ResponseCode_157,code,definition,Code_442,C12394,http://www.cdisc.org,2023-12-15,Ear,Code
+ResponseCode,ResponseCode_158,code,definition,Code_443,C89803,http://www.cdisc.org,2023-12-15,Forehead,Code
+ResponseCode,ResponseCode_159,code,definition,Code_444,C12421,http://www.cdisc.org,2023-12-15,Oral Cavity,Code
+ResponseCode,ResponseCode_160,code,definition,Code_445,C12390,http://www.cdisc.org,2023-12-15,Rectum,Code
+AliasCode,AliasCode_146,standardCode,definition,Code_446,C13717,http://www.cdisc.org,2023-12-15,Anatomic Site,Code
+AliasCode,AliasCode_147,standardCode,definition,Code_447,C174446,http://www.cdisc.org,2023-12-15,TEMP,Code
+AliasCode,AliasCode_148,standardCode,definition,Code_448,C25208,http://www.cdisc.org,2023-12-15,WEIGHT,Code
+AliasCode,AliasCode_149,standardCode,definition,Code_449,C77140,http://www.cdisc.org,2023-12-15,Clinical Test Result,Code
+ResponseCode,ResponseCode_161,code,definition,Code_450,C48531,http://www.cdisc.org,2023-12-15,Pound,Code
+ResponseCode,ResponseCode_162,code,definition,Code_451,C48155,http://www.cdisc.org,2023-12-15,Gram,Code
+ResponseCode,ResponseCode_163,code,definition,Code_452,C28252,http://www.cdisc.org,2023-12-15,Kilogram,Code
+AliasCode,AliasCode_150,standardCode,definition,Code_453,C48208,http://www.cdisc.org,2023-12-15,Unit of Weight,Code
+AliasCode,AliasCode_151,standardCode,definition,Code_454,C25208,http://www.cdisc.org,2023-12-15,WEIGHT,Code
+AliasCode,AliasCode_152,standardCode,definition,Code_455,C25347,http://www.cdisc.org,2023-12-15,HEIGHT,Code
+AliasCode,AliasCode_153,standardCode,definition,Code_456,C77140,http://www.cdisc.org,2023-12-15,Clinical Test Result,Code
+ResponseCode,ResponseCode_164,code,definition,Code_457,C49668,http://www.cdisc.org,2023-12-15,Centimeter,Code
+ResponseCode,ResponseCode_165,code,definition,Code_458,C48500,http://www.cdisc.org,2023-12-15,Inch,Code
+ResponseCode,ResponseCode_166,code,definition,Code_459,C41139,http://www.cdisc.org,2023-12-15,Meter,Code
+AliasCode,AliasCode_154,standardCode,definition,Code_460,C168688,http://www.cdisc.org,2023-12-15,Unit of Height,Code
+AliasCode,AliasCode_155,standardCode,definition,Code_461,C25347,http://www.cdisc.org,2023-12-15,HEIGHT,Code
+AliasCode,AliasCode_156,standardCode,definition,Code_462,C64433,http://www.cdisc.org,2023-12-15,ALT,Code
+AliasCode,AliasCode_157,standardCode,definition,Code_463,C36292,http://www.cdisc.org,2023-12-15,Laboratory Test Result,Code
+ResponseCode,ResponseCode_167,code,definition,Code_464,C67456,http://www.cdisc.org,2023-12-15,Unit per Liter,Code
+ResponseCode,ResponseCode_168,code,definition,Code_465,C67397,http://www.cdisc.org,2023-12-15,Microkatal per Liter,Code
+ResponseCode,ResponseCode_169,code,definition,Code_466,C67376,http://www.cdisc.org,2023-12-15,International Unit per Liter,Code
+ResponseCode,ResponseCode_170,code,definition,Code_467,C70510,http://www.cdisc.org,2023-12-15,Nanokatal per Liter,Code
+AliasCode,AliasCode_158,standardCode,definition,Code_468,C67365,http://www.cdisc.org,2023-12-15,Unit of Catalytic Activity Concentration,Code
+AliasCode,AliasCode_159,standardCode,definition,Code_469,C70713,http://www.cdisc.org,2023-12-15,Biospecimen Type,Code
+ResponseCode,ResponseCode_171,code,definition,Code_470,C49487,http://www.cdisc.org,2023-12-15,No,Code
+ResponseCode,ResponseCode_172,code,definition,Code_471,C49488,http://www.cdisc.org,2023-12-15,Yes,Code
+AliasCode,AliasCode_160,standardCode,definition,Code_472,C83309,http://www.cdisc.org,2023-12-15,Laboratory Test Fasting Status,Code
+AliasCode,AliasCode_161,standardCode,definition,Code_473,C64433,http://www.cdisc.org,2023-12-15,ALT,Code
+AliasCode,AliasCode_162,standardCode,definition,Code_474,C64431,http://www.cdisc.org,2023-12-15,ALB,Code
+AliasCode,AliasCode_163,standardCode,definition,Code_475,C36292,http://www.cdisc.org,2023-12-15,Laboratory Test Result,Code
+AliasCode,AliasCode_164,standardCode,definition,Code_476,C70713,http://www.cdisc.org,2023-12-15,Biospecimen Type,Code
+ResponseCode,ResponseCode_173,code,definition,Code_477,C49487,http://www.cdisc.org,2023-12-15,No,Code
+ResponseCode,ResponseCode_174,code,definition,Code_478,C49488,http://www.cdisc.org,2023-12-15,Yes,Code
+AliasCode,AliasCode_165,standardCode,definition,Code_479,C83309,http://www.cdisc.org,2023-12-15,Laboratory Test Fasting Status,Code
+AliasCode,AliasCode_166,standardCode,definition,Code_480,C64431,http://www.cdisc.org,2023-12-15,ALB,Code
+AliasCode,AliasCode_167,standardCode,definition,Code_481,C64432,http://www.cdisc.org,2023-12-15,ALP,Code
+AliasCode,AliasCode_168,standardCode,definition,Code_482,C36292,http://www.cdisc.org,2023-12-15,Laboratory Test Result,Code
+ResponseCode,ResponseCode_175,code,definition,Code_483,C67456,http://www.cdisc.org,2023-12-15,Unit per Liter,Code
+ResponseCode,ResponseCode_176,code,definition,Code_484,C67397,http://www.cdisc.org,2023-12-15,Microkatal per Liter,Code
+ResponseCode,ResponseCode_177,code,definition,Code_485,C67376,http://www.cdisc.org,2023-12-15,International Unit per Liter,Code
+AliasCode,AliasCode_169,standardCode,definition,Code_486,C67365,http://www.cdisc.org,2023-12-15,Unit of Catalytic Activity Concentration,Code
+AliasCode,AliasCode_170,standardCode,definition,Code_487,C70713,http://www.cdisc.org,2023-12-15,Biospecimen Type,Code
+ResponseCode,ResponseCode_178,code,definition,Code_488,C49487,http://www.cdisc.org,2023-12-15,No,Code
+ResponseCode,ResponseCode_179,code,definition,Code_489,C49488,http://www.cdisc.org,2023-12-15,Yes,Code
+AliasCode,AliasCode_171,standardCode,definition,Code_490,C83309,http://www.cdisc.org,2023-12-15,Laboratory Test Fasting Status,Code
+AliasCode,AliasCode_172,standardCode,definition,Code_491,C64432,http://www.cdisc.org,2023-12-15,ALP,Code
+AliasCode,AliasCode_173,standardCode,definition,Code_492,C64467,http://www.cdisc.org,2023-12-15,AST,Code
+AliasCode,AliasCode_174,standardCode,definition,Code_493,C36292,http://www.cdisc.org,2023-12-15,Laboratory Test Result,Code
+ResponseCode,ResponseCode_180,code,definition,Code_494,C67456,http://www.cdisc.org,2023-12-15,Unit per Liter,Code
+ResponseCode,ResponseCode_181,code,definition,Code_495,C67397,http://www.cdisc.org,2023-12-15,Microkatal per Liter,Code
+ResponseCode,ResponseCode_182,code,definition,Code_496,C67376,http://www.cdisc.org,2023-12-15,International Unit per Liter,Code
+AliasCode,AliasCode_175,standardCode,definition,Code_497,C67365,http://www.cdisc.org,2023-12-15,Unit of Catalytic Activity Concentration,Code
+AliasCode,AliasCode_176,standardCode,definition,Code_498,C70713,http://www.cdisc.org,2023-12-15,Biospecimen Type,Code
+ResponseCode,ResponseCode_183,code,definition,Code_499,C49487,http://www.cdisc.org,2023-12-15,No,Code
+ResponseCode,ResponseCode_184,code,definition,Code_500,C49488,http://www.cdisc.org,2023-12-15,Yes,Code
+AliasCode,AliasCode_177,standardCode,definition,Code_501,C83309,http://www.cdisc.org,2023-12-15,Laboratory Test Fasting Status,Code
+AliasCode,AliasCode_178,standardCode,definition,Code_502,C64467,http://www.cdisc.org,2023-12-15,AST,Code
+AliasCode,AliasCode_179,standardCode,definition,Code_503,C64547,http://www.cdisc.org,2023-12-15,CREAT,Code
+AliasCode,AliasCode_180,standardCode,definition,Code_504,C36292,http://www.cdisc.org,2023-12-15,Laboratory Test Result,Code
+ResponseCode,ResponseCode_185,code,definition,Code_505,C67015,http://www.cdisc.org,2023-12-15,Milligram per Deciliter,Code
+ResponseCode,ResponseCode_186,code,definition,Code_506,C64572,http://www.cdisc.org,2023-12-15,Microgram per Milliliter,Code
+ResponseCode,ResponseCode_187,code,definition,Code_507,C64387,http://www.cdisc.org,2023-12-15,Millimole per Liter,Code
+ResponseCode,ResponseCode_188,code,definition,Code_508,C48508,http://www.cdisc.org,2023-12-15,Micromole per Liter,Code
+AliasCode,AliasCode_181,standardCode,definition,Code_509,C48207,http://www.cdisc.org,2023-12-15,Unit of Concentration,Code
+AliasCode,AliasCode_182,standardCode,definition,Code_510,C70713,http://www.cdisc.org,2023-12-15,Biospecimen Type,Code
+ResponseCode,ResponseCode_189,code,definition,Code_511,C49487,http://www.cdisc.org,2023-12-15,No,Code
+ResponseCode,ResponseCode_190,code,definition,Code_512,C49488,http://www.cdisc.org,2023-12-15,Yes,Code
+AliasCode,AliasCode_183,standardCode,definition,Code_513,C83309,http://www.cdisc.org,2023-12-15,Laboratory Test Fasting Status,Code
+AliasCode,AliasCode_184,standardCode,definition,Code_514,C64547,http://www.cdisc.org,2023-12-15,CREAT,Code
+AliasCode,AliasCode_185,standardCode,definition,Code_515,C64853,http://www.cdisc.org,2023-12-15,K,Code
+AliasCode,AliasCode_186,standardCode,definition,Code_516,C36292,http://www.cdisc.org,2023-12-15,Laboratory Test Result,Code
+ResponseCode,ResponseCode_191,code,definition,Code_517,C67474,http://www.cdisc.org,2023-12-15,Milliequivalent per Liter,Code
+ResponseCode,ResponseCode_192,code,definition,Code_518,C67473,http://www.cdisc.org,2023-12-15,Milliequivalent per Deciliter,Code
+ResponseCode,ResponseCode_193,code,definition,Code_519,C64387,http://www.cdisc.org,2023-12-15,Millimole per Liter,Code
+AliasCode,AliasCode_187,standardCode,definition,Code_520,C64567,http://www.cdisc.org,2023-12-15,Molarity Unit,Code
+AliasCode,AliasCode_188,standardCode,definition,Code_521,C70713,http://www.cdisc.org,2023-12-15,Biospecimen Type,Code
+ResponseCode,ResponseCode_194,code,definition,Code_522,C49487,http://www.cdisc.org,2023-12-15,No,Code
+ResponseCode,ResponseCode_195,code,definition,Code_523,C49488,http://www.cdisc.org,2023-12-15,Yes,Code
+AliasCode,AliasCode_189,standardCode,definition,Code_524,C83309,http://www.cdisc.org,2023-12-15,Laboratory Test Fasting Status,Code
+AliasCode,AliasCode_190,standardCode,definition,Code_525,C64853,http://www.cdisc.org,2023-12-15,K,Code
+AliasCode,AliasCode_191,standardCode,definition,Code_526,C64809,http://www.cdisc.org,2023-12-15,SODIUM,Code
+AliasCode,AliasCode_192,standardCode,definition,Code_527,C36292,http://www.cdisc.org,2023-12-15,Laboratory Test Result,Code
+ResponseCode,ResponseCode_196,code,definition,Code_528,C67474,http://www.cdisc.org,2023-12-15,Milliequivalent per Liter,Code
+ResponseCode,ResponseCode_197,code,definition,Code_529,C67473,http://www.cdisc.org,2023-12-15,Milliequivalent per Deciliter,Code
+ResponseCode,ResponseCode_198,code,definition,Code_530,C64387,http://www.cdisc.org,2023-12-15,Millimole per Liter,Code
+AliasCode,AliasCode_193,standardCode,definition,Code_531,C64567,http://www.cdisc.org,2023-12-15,Molarity Unit,Code
+AliasCode,AliasCode_194,standardCode,definition,Code_532,C70713,http://www.cdisc.org,2023-12-15,Biospecimen Type,Code
+ResponseCode,ResponseCode_199,code,definition,Code_533,C49487,http://www.cdisc.org,2023-12-15,No,Code
+ResponseCode,ResponseCode_200,code,definition,Code_534,C49488,http://www.cdisc.org,2023-12-15,Yes,Code
+AliasCode,AliasCode_195,standardCode,definition,Code_535,C83309,http://www.cdisc.org,2023-12-15,Laboratory Test Fasting Status,Code
+AliasCode,AliasCode_196,standardCode,definition,Code_536,C64809,http://www.cdisc.org,2023-12-15,SODIUM,Code
+AliasCode,AliasCode_197,standardCode,definition,Code_537,C64849,http://www.cdisc.org,2023-12-15,HBA1C,Code
+AliasCode,AliasCode_198,standardCode,definition,Code_538,C36292,http://www.cdisc.org,2023-12-15,Laboratory Test Result,Code
+ResponseCode,ResponseCode_201,code,definition,Code_539,C64783,http://www.cdisc.org,2023-12-15,Gram per Deciliter,Code
+AliasCode,AliasCode_199,standardCode,definition,Code_540,No Concept Code,http://www.cdisc.org,2023-12-15,LBORRESU,Code
+AliasCode,AliasCode_200,standardCode,definition,Code_541,C70713,http://www.cdisc.org,2023-12-15,Biospecimen Type,Code
+ResponseCode,ResponseCode_202,code,definition,Code_542,C49487,http://www.cdisc.org,2023-12-15,No,Code
+ResponseCode,ResponseCode_203,code,definition,Code_543,C49488,http://www.cdisc.org,2023-12-15,Yes,Code
+AliasCode,AliasCode_201,standardCode,definition,Code_544,C83309,http://www.cdisc.org,2023-12-15,Laboratory Test Fasting Status,Code
+AliasCode,AliasCode_202,standardCode,definition,Code_545,C64849,http://www.cdisc.org,2023-12-15,HBA1C,Code
+AliasCode,AliasCode_5,standardCode,definition,Code_145,C78541,http://www.cdisc.org,2023-12-15,Adverse Event Verbatim Description,Code
+AliasCode,AliasCode_6,standardCode,definition,Code_146,C83344,http://www.cdisc.org,2023-12-15,Adverse Event Dictionary Derived Term,Code
+ResponseCode,ResponseCode_1,code,definition,Code_147,C49487,http://www.cdisc.org,2023-12-15,No,Code
+ResponseCode,ResponseCode_2,code,definition,Code_148,C49488,http://www.cdisc.org,2023-12-15,Yes,Code
+AliasCode,AliasCode_7,standardCode,definition,Code_149,C87840,http://www.cdisc.org,2023-12-15,Adverse Event Pre-specified,Code
+AliasCode,AliasCode_8,standardCode,definition,Code_150,C83205,http://www.cdisc.org,2023-12-15,Adverse Event Location,Code
+AliasCode,AliasCode_9,standardCode,definition,Code_151,C53253,http://www.cdisc.org,2023-12-15,Severity of Adverse Event,Code
+ResponseCode,ResponseCode_3,code,definition,Code_152,C49487,http://www.cdisc.org,2023-12-15,No,Code
+ResponseCode,ResponseCode_4,code,definition,Code_153,C49488,http://www.cdisc.org,2023-12-15,Yes,Code
+AliasCode,AliasCode_10,standardCode,definition,Code_154,C53252,http://www.cdisc.org,2023-12-15,Seriousness of Adverse Event,Code
+AliasCode,AliasCode_11,standardCode,definition,Code_155,C83013,http://www.cdisc.org,2023-12-15,Adverse Event Action Taken with Study Treatment,Code
+AliasCode,AliasCode_12,standardCode,definition,Code_156,C83109,http://www.cdisc.org,2023-12-15,Other Actions taken in Response to Adverse Event,Code
+AliasCode,AliasCode_13,standardCode,definition,Code_157,C41358,http://www.cdisc.org,2023-12-15,Adverse Event Attribution to Product or Procedure,Code
+AliasCode,AliasCode_14,standardCode,definition,Code_158,C83210,http://www.cdisc.org,2023-12-15,Adverse Event Relationship to Non Study Treatment,Code
+AliasCode,AliasCode_15,standardCode,definition,Code_159,C83208,http://www.cdisc.org,2023-12-15,Adverse Event Pattern,Code
+AliasCode,AliasCode_16,standardCode,definition,Code_160,C49489,http://www.cdisc.org,2023-12-15,Adverse Event Outcome,Code
+ResponseCode,ResponseCode_5,code,definition,Code_161,C49487,http://www.cdisc.org,2023-12-15,No,Code
+ResponseCode,ResponseCode_6,code,definition,Code_162,C49488,http://www.cdisc.org,2023-12-15,Yes,Code
+AliasCode,AliasCode_17,standardCode,definition,Code_163,C83211,http://www.cdisc.org,2023-12-15,Adverse Event Involves Cancer,Code
+ResponseCode,ResponseCode_7,code,definition,Code_164,C49487,http://www.cdisc.org,2023-12-15,No,Code
+ResponseCode,ResponseCode_8,code,definition,Code_165,C49488,http://www.cdisc.org,2023-12-15,Yes,Code
+AliasCode,AliasCode_18,standardCode,definition,Code_166,C83117,http://www.cdisc.org,2023-12-15,Adverse Event Seriousness Due to Congenital Anomaly,Code
+ResponseCode,ResponseCode_9,code,definition,Code_167,C49487,http://www.cdisc.org,2023-12-15,No,Code
+ResponseCode,ResponseCode_10,code,definition,Code_168,C49488,http://www.cdisc.org,2023-12-15,Yes,Code
+AliasCode,AliasCode_19,standardCode,definition,Code_169,C113380,http://www.cdisc.org,2023-12-15,Disabling Adverse Event,Code
+ResponseCode,ResponseCode_11,code,definition,Code_170,C49487,http://www.cdisc.org,2023-12-15,No,Code
+ResponseCode,ResponseCode_12,code,definition,Code_171,C49488,http://www.cdisc.org,2023-12-15,Yes,Code
+AliasCode,AliasCode_20,standardCode,definition,Code_172,C48275,http://www.cdisc.org,2023-12-15,Death Related to Adverse Event,Code
+ResponseCode,ResponseCode_13,code,definition,Code_173,C49487,http://www.cdisc.org,2023-12-15,No,Code
+ResponseCode,ResponseCode_14,code,definition,Code_174,C49488,http://www.cdisc.org,2023-12-15,Yes,Code
+AliasCode,AliasCode_21,standardCode,definition,Code_175,C83052,http://www.cdisc.org,2023-12-15,Adverse Event associated with Hospitalization,Code
+ResponseCode,ResponseCode_15,code,definition,Code_176,C49487,http://www.cdisc.org,2023-12-15,No,Code
+ResponseCode,ResponseCode_16,code,definition,Code_177,C49488,http://www.cdisc.org,2023-12-15,Yes,Code
+AliasCode,AliasCode_22,standardCode,definition,Code_178,C84266,http://www.cdisc.org,2023-12-15,Life Threatening Adverse Event,Code
+ResponseCode,ResponseCode_17,code,definition,Code_179,C49487,http://www.cdisc.org,2023-12-15,No,Code
+ResponseCode,ResponseCode_18,code,definition,Code_180,C49488,http://www.cdisc.org,2023-12-15,Yes,Code
+AliasCode,AliasCode_23,standardCode,definition,Code_181,C83214,http://www.cdisc.org,2023-12-15,Adverse Event Occurred with Overdose,Code
+ResponseCode,ResponseCode_19,code,definition,Code_182,C49487,http://www.cdisc.org,2023-12-15,No,Code
+ResponseCode,ResponseCode_20,code,definition,Code_183,C49488,http://www.cdisc.org,2023-12-15,Yes,Code
+AliasCode,AliasCode_24,standardCode,definition,Code_184,C83053,http://www.cdisc.org,2023-12-15,Adverse Event Associated with Serious Medical Event,Code
+ResponseCode,ResponseCode_21,code,definition,Code_185,C49487,http://www.cdisc.org,2023-12-15,No,Code
+ResponseCode,ResponseCode_22,code,definition,Code_186,C49488,http://www.cdisc.org,2023-12-15,Yes,Code
+AliasCode,AliasCode_25,standardCode,definition,Code_187,C83199,http://www.cdisc.org,2023-12-15,Adverse Event Concomitant Treatment,Code
+AliasCode,AliasCode_26,standardCode,definition,Code_188,C83215,http://www.cdisc.org,2023-12-15,Adverse Event Start Date Time,Code
+AliasCode,AliasCode_27,standardCode,definition,Code_189,C83201,http://www.cdisc.org,2023-12-15,Adverse Event End Date Time,Code
+AliasCode,AliasCode_28,standardCode,definition,Code_190,C179175,http://www.cdisc.org,2023-12-15,Solicited Adverse Event,Code
+AliasCode,AliasCode_29,standardCode,definition,Code_191,C25298,http://www.cdisc.org,2023-12-15,SYSBP,Code
+AliasCode,AliasCode_30,standardCode,definition,Code_192,C77140,http://www.cdisc.org,2023-12-15,Clinical Test Result,Code
+AliasCode,AliasCode_31,standardCode,definition,Code_193,C49669,http://www.cdisc.org,2023-12-15,Unit of Pressure,Code
+ResponseCode,ResponseCode_23,code,definition,Code_194,C62122,http://www.cdisc.org,2023-12-15,Sitting,Code
+ResponseCode,ResponseCode_24,code,definition,Code_195,C62166,http://www.cdisc.org,2023-12-15,Standing,Code
+ResponseCode,ResponseCode_25,code,definition,Code_196,C62167,http://www.cdisc.org,2023-12-15,Supine Position,Code
+AliasCode,AliasCode_32,standardCode,definition,Code_197,C62164,http://www.cdisc.org,2023-12-15,Body Position,Code
+ResponseCode,ResponseCode_26,code,definition,Code_198,C12681,http://www.cdisc.org,2023-12-15,Brachial Artery,Code
+ResponseCode,ResponseCode_27,code,definition,Code_199,C12687,http://www.cdisc.org,2023-12-15,Common Carotid Artery,Code
+ResponseCode,ResponseCode_28,code,definition,Code_200,C32478,http://www.cdisc.org,2023-12-15,Dorsalis Pedis Artery,Code
+ResponseCode,ResponseCode_29,code,definition,Code_201,C12715,http://www.cdisc.org,2023-12-15,Femoral Artery,Code
+ResponseCode,ResponseCode_30,code,definition,Code_202,C12838,http://www.cdisc.org,2023-12-15,Radial Artery,Code
+AliasCode,AliasCode_33,standardCode,definition,Code_203,C13717,http://www.cdisc.org,2023-12-15,Anatomic Site,Code
+ResponseCode,ResponseCode_31,code,definition,Code_204,C25229,http://www.cdisc.org,2023-12-15,Left,Code
+ResponseCode,ResponseCode_32,code,definition,Code_205,C25228,http://www.cdisc.org,2023-12-15,Right,Code
+AliasCode,AliasCode_34,standardCode,definition,Code_206,C25185,http://www.cdisc.org,2023-12-15,Laterality,Code
+AliasCode,AliasCode_35,standardCode,definition,Code_207,C25298,http://www.cdisc.org,2023-12-15,SYSBP,Code
+AliasCode,AliasCode_36,standardCode,definition,Code_208,C25299,http://www.cdisc.org,2023-12-15,DIABP,Code
+AliasCode,AliasCode_37,standardCode,definition,Code_209,C77140,http://www.cdisc.org,2023-12-15,Clinical Test Result,Code
+AliasCode,AliasCode_38,standardCode,definition,Code_210,C49669,http://www.cdisc.org,2023-12-15,Unit of Pressure,Code
+ResponseCode,ResponseCode_33,code,definition,Code_211,C62122,http://www.cdisc.org,2023-12-15,Sitting,Code
+ResponseCode,ResponseCode_34,code,definition,Code_212,C62166,http://www.cdisc.org,2023-12-15,Standing,Code
+ResponseCode,ResponseCode_35,code,definition,Code_213,C62167,http://www.cdisc.org,2023-12-15,Supine Position,Code
+AliasCode,AliasCode_39,standardCode,definition,Code_214,C62164,http://www.cdisc.org,2023-12-15,Body Position,Code
+ResponseCode,ResponseCode_36,code,definition,Code_215,C12681,http://www.cdisc.org,2023-12-15,Brachial Artery,Code
+ResponseCode,ResponseCode_37,code,definition,Code_216,C12687,http://www.cdisc.org,2023-12-15,Common Carotid Artery,Code
+ResponseCode,ResponseCode_38,code,definition,Code_217,C32478,http://www.cdisc.org,2023-12-15,Dorsalis Pedis Artery,Code
+ResponseCode,ResponseCode_39,code,definition,Code_218,C12715,http://www.cdisc.org,2023-12-15,Femoral Artery,Code
+ResponseCode,ResponseCode_40,code,definition,Code_219,C12838,http://www.cdisc.org,2023-12-15,Radial Artery,Code
+AliasCode,AliasCode_40,standardCode,definition,Code_220,C13717,http://www.cdisc.org,2023-12-15,Anatomic Site,Code
+ResponseCode,ResponseCode_41,code,definition,Code_221,C25229,http://www.cdisc.org,2023-12-15,Left,Code
+ResponseCode,ResponseCode_42,code,definition,Code_222,C25228,http://www.cdisc.org,2023-12-15,Right,Code
+AliasCode,AliasCode_41,standardCode,definition,Code_223,C25185,http://www.cdisc.org,2023-12-15,Laterality,Code
+AliasCode,AliasCode_42,standardCode,definition,Code_224,C25299,http://www.cdisc.org,2023-12-15,DIABP,Code
+AliasCode,AliasCode_43,standardCode,definition,Code_225,C174446,http://www.cdisc.org,2023-12-15,TEMP,Code
+AliasCode,AliasCode_44,standardCode,definition,Code_226,C77140,http://www.cdisc.org,2023-12-15,Clinical Test Result,Code
+ResponseCode,ResponseCode_43,code,definition,Code_227,C42559,http://www.cdisc.org,2023-12-15,Degree Celsius,Code
+ResponseCode,ResponseCode_44,code,definition,Code_228,C44277,http://www.cdisc.org,2023-12-15,Degree Fahrenheit,Code
+ResponseCode,ResponseCode_45,code,definition,Code_229,C42537,http://www.cdisc.org,2023-12-15,Kelvin,Code
+AliasCode,AliasCode_45,standardCode,definition,Code_230,C44276,http://www.cdisc.org,2023-12-15,Unit of Temperature,Code
+ResponseCode,ResponseCode_46,code,definition,Code_231,C12674,http://www.cdisc.org,2023-12-15,Axilla,Code
+ResponseCode,ResponseCode_47,code,definition,Code_232,C12394,http://www.cdisc.org,2023-12-15,Ear,Code
+ResponseCode,ResponseCode_48,code,definition,Code_233,C89803,http://www.cdisc.org,2023-12-15,Forehead,Code
+ResponseCode,ResponseCode_49,code,definition,Code_234,C12421,http://www.cdisc.org,2023-12-15,Oral Cavity,Code
+ResponseCode,ResponseCode_50,code,definition,Code_235,C12390,http://www.cdisc.org,2023-12-15,Rectum,Code
+AliasCode,AliasCode_46,standardCode,definition,Code_236,C13717,http://www.cdisc.org,2023-12-15,Anatomic Site,Code
+AliasCode,AliasCode_47,standardCode,definition,Code_237,C174446,http://www.cdisc.org,2023-12-15,TEMP,Code
+AliasCode,AliasCode_48,standardCode,definition,Code_238,C25208,http://www.cdisc.org,2023-12-15,WEIGHT,Code
+AliasCode,AliasCode_49,standardCode,definition,Code_239,C77140,http://www.cdisc.org,2023-12-15,Clinical Test Result,Code
+ResponseCode,ResponseCode_51,code,definition,Code_240,C48531,http://www.cdisc.org,2023-12-15,Pound,Code
+ResponseCode,ResponseCode_52,code,definition,Code_241,C48155,http://www.cdisc.org,2023-12-15,Gram,Code
+ResponseCode,ResponseCode_53,code,definition,Code_242,C28252,http://www.cdisc.org,2023-12-15,Kilogram,Code
+AliasCode,AliasCode_50,standardCode,definition,Code_243,C48208,http://www.cdisc.org,2023-12-15,Unit of Weight,Code
+AliasCode,AliasCode_51,standardCode,definition,Code_244,C25208,http://www.cdisc.org,2023-12-15,WEIGHT,Code
+AliasCode,AliasCode_52,standardCode,definition,Code_245,C25347,http://www.cdisc.org,2023-12-15,HEIGHT,Code
+AliasCode,AliasCode_53,standardCode,definition,Code_246,C77140,http://www.cdisc.org,2023-12-15,Clinical Test Result,Code
+ResponseCode,ResponseCode_54,code,definition,Code_247,C49668,http://www.cdisc.org,2023-12-15,Centimeter,Code
+ResponseCode,ResponseCode_55,code,definition,Code_248,C48500,http://www.cdisc.org,2023-12-15,Inch,Code
+ResponseCode,ResponseCode_56,code,definition,Code_249,C41139,http://www.cdisc.org,2023-12-15,Meter,Code
+AliasCode,AliasCode_54,standardCode,definition,Code_250,C168688,http://www.cdisc.org,2023-12-15,Unit of Height,Code
+AliasCode,AliasCode_55,standardCode,definition,Code_251,C25347,http://www.cdisc.org,2023-12-15,HEIGHT,Code
+AliasCode,AliasCode_56,standardCode,definition,Code_252,C64433,http://www.cdisc.org,2023-12-15,ALT,Code
+AliasCode,AliasCode_57,standardCode,definition,Code_253,C36292,http://www.cdisc.org,2023-12-15,Laboratory Test Result,Code
+ResponseCode,ResponseCode_57,code,definition,Code_254,C67456,http://www.cdisc.org,2023-12-15,Unit per Liter,Code
+ResponseCode,ResponseCode_58,code,definition,Code_255,C67397,http://www.cdisc.org,2023-12-15,Microkatal per Liter,Code
+ResponseCode,ResponseCode_59,code,definition,Code_256,C67376,http://www.cdisc.org,2023-12-15,International Unit per Liter,Code
+ResponseCode,ResponseCode_60,code,definition,Code_257,C70510,http://www.cdisc.org,2023-12-15,Nanokatal per Liter,Code
+AliasCode,AliasCode_58,standardCode,definition,Code_258,C67365,http://www.cdisc.org,2023-12-15,Unit of Catalytic Activity Concentration,Code
+AliasCode,AliasCode_59,standardCode,definition,Code_259,C70713,http://www.cdisc.org,2023-12-15,Biospecimen Type,Code
+ResponseCode,ResponseCode_61,code,definition,Code_260,C49487,http://www.cdisc.org,2023-12-15,No,Code
+ResponseCode,ResponseCode_62,code,definition,Code_261,C49488,http://www.cdisc.org,2023-12-15,Yes,Code
+AliasCode,AliasCode_60,standardCode,definition,Code_262,C83309,http://www.cdisc.org,2023-12-15,Laboratory Test Fasting Status,Code
+AliasCode,AliasCode_61,standardCode,definition,Code_263,C64433,http://www.cdisc.org,2023-12-15,ALT,Code
+AliasCode,AliasCode_62,standardCode,definition,Code_264,C64431,http://www.cdisc.org,2023-12-15,ALB,Code
+AliasCode,AliasCode_63,standardCode,definition,Code_265,C36292,http://www.cdisc.org,2023-12-15,Laboratory Test Result,Code
+AliasCode,AliasCode_64,standardCode,definition,Code_266,C70713,http://www.cdisc.org,2023-12-15,Biospecimen Type,Code
+ResponseCode,ResponseCode_63,code,definition,Code_267,C49487,http://www.cdisc.org,2023-12-15,No,Code
+ResponseCode,ResponseCode_64,code,definition,Code_268,C49488,http://www.cdisc.org,2023-12-15,Yes,Code
+AliasCode,AliasCode_65,standardCode,definition,Code_269,C83309,http://www.cdisc.org,2023-12-15,Laboratory Test Fasting Status,Code
+AliasCode,AliasCode_66,standardCode,definition,Code_270,C64431,http://www.cdisc.org,2023-12-15,ALB,Code
+AliasCode,AliasCode_67,standardCode,definition,Code_271,C64432,http://www.cdisc.org,2023-12-15,ALP,Code
+AliasCode,AliasCode_68,standardCode,definition,Code_272,C36292,http://www.cdisc.org,2023-12-15,Laboratory Test Result,Code
+ResponseCode,ResponseCode_65,code,definition,Code_273,C67456,http://www.cdisc.org,2023-12-15,Unit per Liter,Code
+ResponseCode,ResponseCode_66,code,definition,Code_274,C67397,http://www.cdisc.org,2023-12-15,Microkatal per Liter,Code
+ResponseCode,ResponseCode_67,code,definition,Code_275,C67376,http://www.cdisc.org,2023-12-15,International Unit per Liter,Code
+AliasCode,AliasCode_69,standardCode,definition,Code_276,C67365,http://www.cdisc.org,2023-12-15,Unit of Catalytic Activity Concentration,Code
+AliasCode,AliasCode_70,standardCode,definition,Code_277,C70713,http://www.cdisc.org,2023-12-15,Biospecimen Type,Code
+ResponseCode,ResponseCode_68,code,definition,Code_278,C49487,http://www.cdisc.org,2023-12-15,No,Code
+ResponseCode,ResponseCode_69,code,definition,Code_279,C49488,http://www.cdisc.org,2023-12-15,Yes,Code
+AliasCode,AliasCode_71,standardCode,definition,Code_280,C83309,http://www.cdisc.org,2023-12-15,Laboratory Test Fasting Status,Code
+AliasCode,AliasCode_72,standardCode,definition,Code_281,C64432,http://www.cdisc.org,2023-12-15,ALP,Code
+AliasCode,AliasCode_73,standardCode,definition,Code_282,C64467,http://www.cdisc.org,2023-12-15,AST,Code
+AliasCode,AliasCode_74,standardCode,definition,Code_283,C36292,http://www.cdisc.org,2023-12-15,Laboratory Test Result,Code
+ResponseCode,ResponseCode_70,code,definition,Code_284,C67456,http://www.cdisc.org,2023-12-15,Unit per Liter,Code
+ResponseCode,ResponseCode_71,code,definition,Code_285,C67397,http://www.cdisc.org,2023-12-15,Microkatal per Liter,Code
+ResponseCode,ResponseCode_72,code,definition,Code_286,C67376,http://www.cdisc.org,2023-12-15,International Unit per Liter,Code
+AliasCode,AliasCode_75,standardCode,definition,Code_287,C67365,http://www.cdisc.org,2023-12-15,Unit of Catalytic Activity Concentration,Code
+AliasCode,AliasCode_76,standardCode,definition,Code_288,C70713,http://www.cdisc.org,2023-12-15,Biospecimen Type,Code
+ResponseCode,ResponseCode_73,code,definition,Code_289,C49487,http://www.cdisc.org,2023-12-15,No,Code
+ResponseCode,ResponseCode_74,code,definition,Code_290,C49488,http://www.cdisc.org,2023-12-15,Yes,Code
+AliasCode,AliasCode_77,standardCode,definition,Code_291,C83309,http://www.cdisc.org,2023-12-15,Laboratory Test Fasting Status,Code
+AliasCode,AliasCode_78,standardCode,definition,Code_292,C64467,http://www.cdisc.org,2023-12-15,AST,Code
+AliasCode,AliasCode_79,standardCode,definition,Code_293,C64547,http://www.cdisc.org,2023-12-15,CREAT,Code
+AliasCode,AliasCode_80,standardCode,definition,Code_294,C36292,http://www.cdisc.org,2023-12-15,Laboratory Test Result,Code
+ResponseCode,ResponseCode_75,code,definition,Code_295,C67015,http://www.cdisc.org,2023-12-15,Milligram per Deciliter,Code
+ResponseCode,ResponseCode_76,code,definition,Code_296,C64572,http://www.cdisc.org,2023-12-15,Microgram per Milliliter,Code
+ResponseCode,ResponseCode_77,code,definition,Code_297,C64387,http://www.cdisc.org,2023-12-15,Millimole per Liter,Code
+ResponseCode,ResponseCode_78,code,definition,Code_298,C48508,http://www.cdisc.org,2023-12-15,Micromole per Liter,Code
+AliasCode,AliasCode_81,standardCode,definition,Code_299,C48207,http://www.cdisc.org,2023-12-15,Unit of Concentration,Code
+AliasCode,AliasCode_82,standardCode,definition,Code_300,C70713,http://www.cdisc.org,2023-12-15,Biospecimen Type,Code
+ResponseCode,ResponseCode_79,code,definition,Code_301,C49487,http://www.cdisc.org,2023-12-15,No,Code
+ResponseCode,ResponseCode_80,code,definition,Code_302,C49488,http://www.cdisc.org,2023-12-15,Yes,Code
+AliasCode,AliasCode_83,standardCode,definition,Code_303,C83309,http://www.cdisc.org,2023-12-15,Laboratory Test Fasting Status,Code
+AliasCode,AliasCode_84,standardCode,definition,Code_304,C64547,http://www.cdisc.org,2023-12-15,CREAT,Code
+AliasCode,AliasCode_85,standardCode,definition,Code_305,C64853,http://www.cdisc.org,2023-12-15,K,Code
+AliasCode,AliasCode_86,standardCode,definition,Code_306,C36292,http://www.cdisc.org,2023-12-15,Laboratory Test Result,Code
+ResponseCode,ResponseCode_81,code,definition,Code_307,C67474,http://www.cdisc.org,2023-12-15,Milliequivalent per Liter,Code
+ResponseCode,ResponseCode_82,code,definition,Code_308,C67473,http://www.cdisc.org,2023-12-15,Milliequivalent per Deciliter,Code
+ResponseCode,ResponseCode_83,code,definition,Code_309,C64387,http://www.cdisc.org,2023-12-15,Millimole per Liter,Code
+AliasCode,AliasCode_87,standardCode,definition,Code_310,C64567,http://www.cdisc.org,2023-12-15,Molarity Unit,Code
+AliasCode,AliasCode_88,standardCode,definition,Code_311,C70713,http://www.cdisc.org,2023-12-15,Biospecimen Type,Code
+ResponseCode,ResponseCode_84,code,definition,Code_312,C49487,http://www.cdisc.org,2023-12-15,No,Code
+ResponseCode,ResponseCode_85,code,definition,Code_313,C49488,http://www.cdisc.org,2023-12-15,Yes,Code
+AliasCode,AliasCode_89,standardCode,definition,Code_314,C83309,http://www.cdisc.org,2023-12-15,Laboratory Test Fasting Status,Code
+AliasCode,AliasCode_90,standardCode,definition,Code_315,C64853,http://www.cdisc.org,2023-12-15,K,Code
+AliasCode,AliasCode_91,standardCode,definition,Code_316,C64809,http://www.cdisc.org,2023-12-15,SODIUM,Code
+AliasCode,AliasCode_92,standardCode,definition,Code_317,C36292,http://www.cdisc.org,2023-12-15,Laboratory Test Result,Code
+ResponseCode,ResponseCode_86,code,definition,Code_318,C67474,http://www.cdisc.org,2023-12-15,Milliequivalent per Liter,Code
+ResponseCode,ResponseCode_87,code,definition,Code_319,C67473,http://www.cdisc.org,2023-12-15,Milliequivalent per Deciliter,Code
+ResponseCode,ResponseCode_88,code,definition,Code_320,C64387,http://www.cdisc.org,2023-12-15,Millimole per Liter,Code
+AliasCode,AliasCode_93,standardCode,definition,Code_321,C64567,http://www.cdisc.org,2023-12-15,Molarity Unit,Code
+AliasCode,AliasCode_94,standardCode,definition,Code_322,C70713,http://www.cdisc.org,2023-12-15,Biospecimen Type,Code
+ResponseCode,ResponseCode_89,code,definition,Code_323,C49487,http://www.cdisc.org,2023-12-15,No,Code
+ResponseCode,ResponseCode_90,code,definition,Code_324,C49488,http://www.cdisc.org,2023-12-15,Yes,Code
+AliasCode,AliasCode_95,standardCode,definition,Code_325,C83309,http://www.cdisc.org,2023-12-15,Laboratory Test Fasting Status,Code
+AliasCode,AliasCode_96,standardCode,definition,Code_326,C64809,http://www.cdisc.org,2023-12-15,SODIUM,Code
+AliasCode,AliasCode_97,standardCode,definition,Code_327,C25298,http://www.cdisc.org,2023-12-15,SYSBP,Code
+AliasCode,AliasCode_98,standardCode,definition,Code_328,C77140,http://www.cdisc.org,2023-12-15,Clinical Test Result,Code
+AliasCode,AliasCode_99,standardCode,definition,Code_329,C49669,http://www.cdisc.org,2023-12-15,Unit of Pressure,Code
+ResponseCode,ResponseCode_91,code,definition,Code_330,C62122,http://www.cdisc.org,2023-12-15,Sitting,Code
+ResponseCode,ResponseCode_92,code,definition,Code_331,C62166,http://www.cdisc.org,2023-12-15,Standing,Code
+ResponseCode,ResponseCode_93,code,definition,Code_332,C62167,http://www.cdisc.org,2023-12-15,Supine Position,Code
+AliasCode,AliasCode_100,standardCode,definition,Code_333,C62164,http://www.cdisc.org,2023-12-15,Body Position,Code
+ResponseCode,ResponseCode_94,code,definition,Code_334,C12681,http://www.cdisc.org,2023-12-15,Brachial Artery,Code
+ResponseCode,ResponseCode_95,code,definition,Code_335,C12687,http://www.cdisc.org,2023-12-15,Common Carotid Artery,Code
+ResponseCode,ResponseCode_96,code,definition,Code_336,C32478,http://www.cdisc.org,2023-12-15,Dorsalis Pedis Artery,Code
+ResponseCode,ResponseCode_97,code,definition,Code_337,C12715,http://www.cdisc.org,2023-12-15,Femoral Artery,Code
+ResponseCode,ResponseCode_98,code,definition,Code_338,C12838,http://www.cdisc.org,2023-12-15,Radial Artery,Code
+AliasCode,AliasCode_101,standardCode,definition,Code_339,C13717,http://www.cdisc.org,2023-12-15,Anatomic Site,Code
+ResponseCode,ResponseCode_99,code,definition,Code_340,C25229,http://www.cdisc.org,2023-12-15,Left,Code
+ResponseCode,ResponseCode_100,code,definition,Code_341,C25228,http://www.cdisc.org,2023-12-15,Right,Code
+AliasCode,AliasCode_102,standardCode,definition,Code_342,C25185,http://www.cdisc.org,2023-12-15,Laterality,Code
+AliasCode,AliasCode_103,standardCode,definition,Code_343,C25298,http://www.cdisc.org,2023-12-15,SYSBP,Code
+AliasCode,AliasCode_104,standardCode,definition,Code_344,C25299,http://www.cdisc.org,2023-12-15,DIABP,Code
+AliasCode,AliasCode_105,standardCode,definition,Code_345,C77140,http://www.cdisc.org,2023-12-15,Clinical Test Result,Code
+AliasCode,AliasCode_106,standardCode,definition,Code_346,C49669,http://www.cdisc.org,2023-12-15,Unit of Pressure,Code
+ResponseCode,ResponseCode_101,code,definition,Code_347,C62122,http://www.cdisc.org,2023-12-15,Sitting,Code
+ResponseCode,ResponseCode_102,code,definition,Code_348,C62166,http://www.cdisc.org,2023-12-15,Standing,Code
+ResponseCode,ResponseCode_103,code,definition,Code_349,C62167,http://www.cdisc.org,2023-12-15,Supine Position,Code
+AliasCode,AliasCode_107,standardCode,definition,Code_350,C62164,http://www.cdisc.org,2023-12-15,Body Position,Code
+ResponseCode,ResponseCode_104,code,definition,Code_351,C12681,http://www.cdisc.org,2023-12-15,Brachial Artery,Code
+ResponseCode,ResponseCode_105,code,definition,Code_352,C12687,http://www.cdisc.org,2023-12-15,Common Carotid Artery,Code
+ResponseCode,ResponseCode_106,code,definition,Code_353,C32478,http://www.cdisc.org,2023-12-15,Dorsalis Pedis Artery,Code
+ResponseCode,ResponseCode_107,code,definition,Code_354,C12715,http://www.cdisc.org,2023-12-15,Femoral Artery,Code
+ResponseCode,ResponseCode_108,code,definition,Code_355,C12838,http://www.cdisc.org,2023-12-15,Radial Artery,Code
+AliasCode,AliasCode_108,standardCode,definition,Code_356,C13717,http://www.cdisc.org,2023-12-15,Anatomic Site,Code
+ResponseCode,ResponseCode_109,code,definition,Code_357,C25229,http://www.cdisc.org,2023-12-15,Left,Code
+ResponseCode,ResponseCode_110,code,definition,Code_358,C25228,http://www.cdisc.org,2023-12-15,Right,Code
+AliasCode,AliasCode_109,standardCode,definition,Code_359,C25185,http://www.cdisc.org,2023-12-15,Laterality,Code
+AliasCode,AliasCode_110,standardCode,definition,Code_360,C25299,http://www.cdisc.org,2023-12-15,DIABP,Code
+AliasCode,AliasCode_111,standardCode,definition,Code_361,C49677,http://www.cdisc.org,2023-12-15,HR,Code
+AliasCode,AliasCode_112,standardCode,definition,Code_362,C77140,http://www.cdisc.org,2023-12-15,Clinical Test Result,Code
+AliasCode,AliasCode_113,standardCode,definition,Code_363,C73688,http://www.cdisc.org,2023-12-15,Count per Minute,Code
+ResponseCode,ResponseCode_111,code,definition,Code_364,C62122,http://www.cdisc.org,2023-12-15,Sitting,Code
+ResponseCode,ResponseCode_112,code,definition,Code_365,C62166,http://www.cdisc.org,2023-12-15,Standing,Code
+ResponseCode,ResponseCode_113,code,definition,Code_366,C62167,http://www.cdisc.org,2023-12-15,Supine Position,Code
+AliasCode,AliasCode_114,standardCode,definition,Code_367,C62164,http://www.cdisc.org,2023-12-15,Body Position,Code
+ResponseCode,ResponseCode_114,code,definition,Code_368,C12681,http://www.cdisc.org,2023-12-15,Brachial Artery,Code
+ResponseCode,ResponseCode_115,code,definition,Code_369,C12687,http://www.cdisc.org,2023-12-15,Common Carotid Artery,Code
+ResponseCode,ResponseCode_116,code,definition,Code_370,C32478,http://www.cdisc.org,2023-12-15,Dorsalis Pedis Artery,Code
+ResponseCode,ResponseCode_117,code,definition,Code_371,C12715,http://www.cdisc.org,2023-12-15,Femoral Artery,Code
+ResponseCode,ResponseCode_118,code,definition,Code_372,C12838,http://www.cdisc.org,2023-12-15,Radial Artery,Code
+AliasCode,AliasCode_115,standardCode,definition,Code_373,C13717,http://www.cdisc.org,2023-12-15,Anatomic Site,Code
+ResponseCode,ResponseCode_119,code,definition,Code_374,C25229,http://www.cdisc.org,2023-12-15,Left,Code
+ResponseCode,ResponseCode_120,code,definition,Code_375,C25228,http://www.cdisc.org,2023-12-15,Right,Code
+AliasCode,AliasCode_116,standardCode,definition,Code_376,C25185,http://www.cdisc.org,2023-12-15,Laterality,Code
+AliasCode,AliasCode_117,standardCode,definition,Code_377,C49677,http://www.cdisc.org,2023-12-15,HR,Code
+AliasCode,AliasCode_118,standardCode,definition,Code_378,C25298,http://www.cdisc.org,2023-12-15,SYSBP,Code
+AliasCode,AliasCode_119,standardCode,definition,Code_379,C77140,http://www.cdisc.org,2023-12-15,Clinical Test Result,Code
+AliasCode,AliasCode_120,standardCode,definition,Code_380,C49669,http://www.cdisc.org,2023-12-15,Unit of Pressure,Code
+ResponseCode,ResponseCode_121,code,definition,Code_381,C62122,http://www.cdisc.org,2023-12-15,Sitting,Code
+ResponseCode,ResponseCode_122,code,definition,Code_382,C62166,http://www.cdisc.org,2023-12-15,Standing,Code
+ResponseCode,ResponseCode_123,code,definition,Code_383,C62167,http://www.cdisc.org,2023-12-15,Supine Position,Code
+AliasCode,AliasCode_121,standardCode,definition,Code_384,C62164,http://www.cdisc.org,2023-12-15,Body Position,Code
+ResponseCode,ResponseCode_124,code,definition,Code_385,C12681,http://www.cdisc.org,2023-12-15,Brachial Artery,Code
+ResponseCode,ResponseCode_125,code,definition,Code_386,C12687,http://www.cdisc.org,2023-12-15,Common Carotid Artery,Code
+ResponseCode,ResponseCode_126,code,definition,Code_387,C32478,http://www.cdisc.org,2023-12-15,Dorsalis Pedis Artery,Code
+ResponseCode,ResponseCode_127,code,definition,Code_388,C12715,http://www.cdisc.org,2023-12-15,Femoral Artery,Code
+ResponseCode,ResponseCode_128,code,definition,Code_389,C12838,http://www.cdisc.org,2023-12-15,Radial Artery,Code
+AliasCode,AliasCode_122,standardCode,definition,Code_390,C13717,http://www.cdisc.org,2023-12-15,Anatomic Site,Code
+ResponseCode,ResponseCode_129,code,definition,Code_391,C25229,http://www.cdisc.org,2023-12-15,Left,Code
+ResponseCode,ResponseCode_130,code,definition,Code_392,C25228,http://www.cdisc.org,2023-12-15,Right,Code
+AliasCode,AliasCode_123,standardCode,definition,Code_393,C25185,http://www.cdisc.org,2023-12-15,Laterality,Code
+AliasCode,AliasCode_124,standardCode,definition,Code_394,C25298,http://www.cdisc.org,2023-12-15,SYSBP,Code
+AliasCode,AliasCode_125,standardCode,definition,Code_395,C25299,http://www.cdisc.org,2023-12-15,DIABP,Code
+AliasCode,AliasCode_126,standardCode,definition,Code_396,C77140,http://www.cdisc.org,2023-12-15,Clinical Test Result,Code
+AliasCode,AliasCode_127,standardCode,definition,Code_397,C49669,http://www.cdisc.org,2023-12-15,Unit of Pressure,Code
+ResponseCode,ResponseCode_131,code,definition,Code_398,C62122,http://www.cdisc.org,2023-12-15,Sitting,Code
+ResponseCode,ResponseCode_132,code,definition,Code_399,C62166,http://www.cdisc.org,2023-12-15,Standing,Code
+ResponseCode,ResponseCode_133,code,definition,Code_400,C62167,http://www.cdisc.org,2023-12-15,Supine Position,Code
+AliasCode,AliasCode_128,standardCode,definition,Code_401,C62164,http://www.cdisc.org,2023-12-15,Body Position,Code
+ResponseCode,ResponseCode_134,code,definition,Code_402,C12681,http://www.cdisc.org,2023-12-15,Brachial Artery,Code
+ResponseCode,ResponseCode_135,code,definition,Code_403,C12687,http://www.cdisc.org,2023-12-15,Common Carotid Artery,Code
+ResponseCode,ResponseCode_136,code,definition,Code_404,C32478,http://www.cdisc.org,2023-12-15,Dorsalis Pedis Artery,Code
+ResponseCode,ResponseCode_137,code,definition,Code_405,C12715,http://www.cdisc.org,2023-12-15,Femoral Artery,Code
+ResponseCode,ResponseCode_138,code,definition,Code_406,C12838,http://www.cdisc.org,2023-12-15,Radial Artery,Code
+AliasCode,AliasCode_129,standardCode,definition,Code_407,C13717,http://www.cdisc.org,2023-12-15,Anatomic Site,Code
+ResponseCode,ResponseCode_139,code,definition,Code_408,C25229,http://www.cdisc.org,2023-12-15,Left,Code
+ResponseCode,ResponseCode_140,code,definition,Code_409,C25228,http://www.cdisc.org,2023-12-15,Right,Code
+AliasCode,AliasCode_130,standardCode,definition,Code_410,C25185,http://www.cdisc.org,2023-12-15,Laterality,Code
+AliasCode,AliasCode_131,standardCode,definition,Code_411,C25299,http://www.cdisc.org,2023-12-15,DIABP,Code
+AliasCode,AliasCode_132,standardCode,definition,Code_412,C49677,http://www.cdisc.org,2023-12-15,HR,Code
+AliasCode,AliasCode_133,standardCode,definition,Code_413,C77140,http://www.cdisc.org,2023-12-15,Clinical Test Result,Code
+AliasCode,AliasCode_134,standardCode,definition,Code_414,C73688,http://www.cdisc.org,2023-12-15,Count per Minute,Code
+ResponseCode,ResponseCode_141,code,definition,Code_415,C62122,http://www.cdisc.org,2023-12-15,Sitting,Code
+ResponseCode,ResponseCode_142,code,definition,Code_416,C62166,http://www.cdisc.org,2023-12-15,Standing,Code
+ResponseCode,ResponseCode_143,code,definition,Code_417,C62167,http://www.cdisc.org,2023-12-15,Supine Position,Code
+AliasCode,AliasCode_135,standardCode,definition,Code_418,C62164,http://www.cdisc.org,2023-12-15,Body Position,Code
+ResponseCode,ResponseCode_144,code,definition,Code_419,C12681,http://www.cdisc.org,2023-12-15,Brachial Artery,Code
+ResponseCode,ResponseCode_145,code,definition,Code_420,C12687,http://www.cdisc.org,2023-12-15,Common Carotid Artery,Code
+ResponseCode,ResponseCode_146,code,definition,Code_421,C32478,http://www.cdisc.org,2023-12-15,Dorsalis Pedis Artery,Code
+ResponseCode,ResponseCode_147,code,definition,Code_422,C12715,http://www.cdisc.org,2023-12-15,Femoral Artery,Code
+ResponseCode,ResponseCode_148,code,definition,Code_423,C12838,http://www.cdisc.org,2023-12-15,Radial Artery,Code
+AliasCode,AliasCode_136,standardCode,definition,Code_424,C13717,http://www.cdisc.org,2023-12-15,Anatomic Site,Code
+ResponseCode,ResponseCode_149,code,definition,Code_425,C25229,http://www.cdisc.org,2023-12-15,Left,Code
+ResponseCode,ResponseCode_150,code,definition,Code_426,C25228,http://www.cdisc.org,2023-12-15,Right,Code
+AliasCode,AliasCode_137,standardCode,definition,Code_427,C25185,http://www.cdisc.org,2023-12-15,Laterality,Code
+AliasCode,AliasCode_138,standardCode,definition,Code_428,C49677,http://www.cdisc.org,2023-12-15,HR,Code
+StudyArm,StudyArm_1,type,definition,Code_123,C174268,http://www.cdisc.org,2023-12-15,Placebo Comparator Arm,Code
+StudyArm,StudyArm_1,dataOriginType,definition,Code_124,C188866,http://www.cdisc.org,2023-12-15,Data Generated Within Study,Code
+StudyArm,StudyArm_2,type,definition,Code_125,C174267,http://www.cdisc.org,2023-12-15,Active Comparator Arm,Code
+StudyArm,StudyArm_2,dataOriginType,definition,Code_126,C188866,http://www.cdisc.org,2023-12-15,Data Generated Within Study,Code
+StudyArm,StudyArm_3,type,definition,Code_127,C174267,http://www.cdisc.org,2023-12-15,Active Comparator Arm,Code
+StudyArm,StudyArm_3,dataOriginType,definition,Code_128,C188866,http://www.cdisc.org,2023-12-15,Data Generated Within Study,Code
+AliasCode,AliasCode_4,standardCode,definition,Code_136,C15228,http://www.cdisc.org,2023-12-15,Double Blind Study,Code
+StudyEpoch,StudyEpoch_1,type,definition,Code_129,C202487,http://www.cdisc.org,2023-12-15,Screening Epoch,Code
+StudyEpoch,StudyEpoch_2,type,definition,Code_130,C101526,http://www.cdisc.org,2023-12-15,Treatment Epoch,Code
+StudyEpoch,StudyEpoch_3,type,definition,Code_131,C101526,http://www.cdisc.org,2023-12-15,Treatment Epoch,Code
+StudyEpoch,StudyEpoch_4,type,definition,Code_132,C101526,http://www.cdisc.org,2023-12-15,Treatment Epoch,Code
+StudyEpoch,StudyEpoch_5,type,definition,Code_133,C202578,http://www.cdisc.org,2023-12-15,Follow-Up Epoch,Code
+Indication,Indication_2,codes,definition,Code_547,26929004,SNOMED,"January 31, 2018",Alzheimer's disease,Code
+Masking,Masking_1,role,definition,Code_142,C70793,http://www.cdisc.org,2023-12-15,Sponsor,Code
+Objective,Objective_1,level,definition,Code_551,C85826,http://www.cdisc.org,2023-12-15,Primary Objective,Code
+Endpoint,Endpoint_1,level,definition,Code_550,C94496,http://www.cdisc.org,2023-12-15,Primary Endpoint,Code
+Endpoint,Endpoint_2,level,definition,Code_552,C94496,http://www.cdisc.org,2023-12-15,Primary Endpoint,Code
+Objective,Objective_2,level,definition,Code_554,C85826,http://www.cdisc.org,2023-12-15,Primary Objective,Code
+Endpoint,Endpoint_3,level,definition,Code_553,C94496,http://www.cdisc.org,2023-12-15,Primary Endpoint,Code
+Endpoint,Endpoint_4,level,definition,Code_555,C94496,http://www.cdisc.org,2023-12-15,Primary Endpoint,Code
+Endpoint,Endpoint_5,level,definition,Code_556,C94496,http://www.cdisc.org,2023-12-15,Primary Endpoint,Code
+Objective,Objective_3,level,definition,Code_558,C85827,http://www.cdisc.org,2023-12-16,Secondary Objective,Code
+Endpoint,Endpoint_6,level,definition,Code_557,C139173,http://www.cdisc.org,2023-12-15,Secondary Endpoint,Code
+Endpoint,Endpoint_7,level,definition,Code_559,C139173,http://www.cdisc.org,2023-12-15,Secondary Endpoint,Code
+Endpoint,Endpoint_8,level,definition,Code_560,C139173,http://www.cdisc.org,2023-12-15,Secondary Endpoint,Code
+Objective,Objective_4,level,definition,Code_562,C85827,http://www.cdisc.org,2023-12-15,Secondary Objective,Code
+Endpoint,Endpoint_9,level,definition,Code_561,C139173,http://www.cdisc.org,2023-12-15,Secondary Endpoint,Code
+Objective,Objective_5,level,definition,Code_564,C85827,http://www.cdisc.org,2023-12-15,Secondary Objective,Code
+Endpoint,Endpoint_10,level,definition,Code_563,C139173,http://www.cdisc.org,2023-12-15,Secondary Endpoint,Code
+Objective,Objective_6,level,definition,Code_566,C85827,http://www.cdisc.org,2023-12-15,Secondary Objective,Code
+Endpoint,Endpoint_11,level,definition,Code_565,C139173,http://www.cdisc.org,2023-12-15,Secondary Endpoint,Code
+StudyDesignPopulation,StudyDesignPopulation_1,plannedSex,definition,Code_549,C49636,http://www.cdisc.org,2023-12-15,Both,Code
+EligibilityCriterion,EligibilityCriterion_1,category,definition,Code_567,C25532,http://www.cdisc.org,2023-12-15,Inclusion Criteria,Code
+EligibilityCriterion,EligibilityCriterion_2,category,definition,Code_568,C25532,http://www.cdisc.org,2023-12-15,Inclusion Criteria,Code
+EligibilityCriterion,EligibilityCriterion_3,category,definition,Code_569,C25532,http://www.cdisc.org,2023-12-15,Inclusion Criteria,Code
+EligibilityCriterion,EligibilityCriterion_4,category,definition,Code_570,C25532,http://www.cdisc.org,2023-12-15,Inclusion Criteria,Code
+EligibilityCriterion,EligibilityCriterion_5,category,definition,Code_571,C25532,http://www.cdisc.org,2023-12-15,Inclusion Criteria,Code
+EligibilityCriterion,EligibilityCriterion_6,category,definition,Code_572,C25532,http://www.cdisc.org,2023-12-15,Inclusion Criteria,Code
+EligibilityCriterion,EligibilityCriterion_7,category,definition,Code_573,C25532,http://www.cdisc.org,2023-12-15,Inclusion Criteria,Code
+EligibilityCriterion,EligibilityCriterion_8,category,definition,Code_574,C25532,http://www.cdisc.org,2023-12-15,Inclusion Criteria,Code
+EligibilityCriterion,EligibilityCriterion_9,category,definition,Code_575,C25370,http://www.cdisc.org,2023-12-15,Exclusion Criteria,Code
+EligibilityCriterion,EligibilityCriterion_10,category,definition,Code_576,C25370,http://www.cdisc.org,2023-12-15,Exclusion Criteria,Code
+EligibilityCriterion,EligibilityCriterion_11,category,definition,Code_577,C25370,http://www.cdisc.org,2023-12-15,Exclusion Criteria,Code
+EligibilityCriterion,EligibilityCriterion_12,category,definition,Code_578,C25370,http://www.cdisc.org,2023-12-15,Exclusion Criteria,Code
+EligibilityCriterion,EligibilityCriterion_13,category,definition,Code_579,C25370,http://www.cdisc.org,2023-12-15,Exclusion Criteria,Code
+EligibilityCriterion,EligibilityCriterion_14,category,definition,Code_580,C25370,http://www.cdisc.org,2023-12-15,Exclusion Criteria,Code
+EligibilityCriterion,EligibilityCriterion_15,category,definition,Code_581,C25370,http://www.cdisc.org,2023-12-15,Exclusion Criteria,Code
+EligibilityCriterion,EligibilityCriterion_16,category,definition,Code_582,C25370,http://www.cdisc.org,2023-12-15,Exclusion Criteria,Code
+EligibilityCriterion,EligibilityCriterion_17,category,definition,Code_583,C25370,http://www.cdisc.org,2023-12-15,Exclusion Criteria,Code
+EligibilityCriterion,EligibilityCriterion_18,category,definition,Code_584,C25370,http://www.cdisc.org,2023-12-15,Exclusion Criteria,Code
+EligibilityCriterion,EligibilityCriterion_19,category,definition,Code_585,C25370,http://www.cdisc.org,2023-12-15,Exclusion Criteria,Code
+EligibilityCriterion,EligibilityCriterion_20,category,definition,Code_586,C25370,http://www.cdisc.org,2023-12-15,Exclusion Criteria,Code
+EligibilityCriterion,EligibilityCriterion_21,category,definition,Code_587,C25370,http://www.cdisc.org,2023-12-15,Exclusion Criteria,Code
+EligibilityCriterion,EligibilityCriterion_22,category,definition,Code_588,C25370,http://www.cdisc.org,2023-12-15,Exclusion Criteria,Code
+EligibilityCriterion,EligibilityCriterion_23,category,definition,Code_589,C25370,http://www.cdisc.org,2023-12-15,Exclusion Criteria,Code
+EligibilityCriterion,EligibilityCriterion_24,category,definition,Code_590,C25370,http://www.cdisc.org,2023-12-15,Exclusion Criteria,Code
+EligibilityCriterion,EligibilityCriterion_25,category,definition,Code_591,C25370,http://www.cdisc.org,2023-12-15,Exclusion Criteria,Code
+EligibilityCriterion,EligibilityCriterion_26,category,definition,Code_592,C25370,http://www.cdisc.org,2023-12-15,Exclusion Criteria,Code
+EligibilityCriterion,EligibilityCriterion_27,category,definition,Code_593,C25370,http://www.cdisc.org,2023-12-15,Exclusion Criteria,Code
+EligibilityCriterion,EligibilityCriterion_28,category,definition,Code_594,C25370,http://www.cdisc.org,2023-12-15,Exclusion Criteria,Code
+EligibilityCriterion,EligibilityCriterion_29,category,definition,Code_595,C25370,http://www.cdisc.org,2023-12-15,Exclusion Criteria,Code
+EligibilityCriterion,EligibilityCriterion_30,category,definition,Code_596,C25370,http://www.cdisc.org,2023-12-15,Exclusion Criteria,Code
+EligibilityCriterion,EligibilityCriterion_31,category,definition,Code_597,C25370,http://www.cdisc.org,2023-12-15,Exclusion Criteria,Code
+Range,Range_3,unit,definition,Code_548,C29848,http://www.cdisc.org,2023-12-15,Year,Code
+Timing,Timing_1,type,definition,Code_14,C201357,http://www.cdisc.org,2024-09-27,Before,Code
+Timing,Timing_1,relativeToFrom,definition,Code_15,C201355,http://www.cdisc.org,2024-09-27,Start to Start,Code
+Timing,Timing_2,type,definition,Code_16,C201357,http://www.cdisc.org,2024-09-27,Before,Code
+Timing,Timing_2,relativeToFrom,definition,Code_17,C201355,http://www.cdisc.org,2024-09-27,Start to Start,Code
+Timing,Timing_3,type,definition,Code_19,C201358,http://www.cdisc.org,2024-09-27,Fixed Reference,Code
+Timing,Timing_3,relativeToFrom,definition,Code_20,C201355,http://www.cdisc.org,2024-09-27,Start to Start,Code
+Timing,Timing_4,type,definition,Code_21,C201356,http://www.cdisc.org,2024-09-27,After,Code
+Timing,Timing_4,relativeToFrom,definition,Code_22,C201355,http://www.cdisc.org,2024-09-27,Start to Start,Code
+Timing,Timing_5,type,definition,Code_24,C201356,http://www.cdisc.org,2024-09-27,After,Code
+Timing,Timing_5,relativeToFrom,definition,Code_25,C201355,http://www.cdisc.org,2024-09-27,Start to Start,Code
+Timing,Timing_6,type,definition,Code_27,C201356,http://www.cdisc.org,2024-09-27,After,Code
+Timing,Timing_6,relativeToFrom,definition,Code_28,C201355,http://www.cdisc.org,2024-09-27,Start to Start,Code
+Timing,Timing_7,type,definition,Code_30,C201356,http://www.cdisc.org,2024-09-27,After,Code
+Timing,Timing_7,relativeToFrom,definition,Code_31,C201355,http://www.cdisc.org,2024-09-27,Start to Start,Code
+Timing,Timing_9,type,definition,Code_35,C201356,http://www.cdisc.org,2024-09-27,After,Code
+Timing,Timing_9,relativeToFrom,definition,Code_36,C201355,http://www.cdisc.org,2024-09-27,Start to Start,Code
+Timing,Timing_11,type,definition,Code_40,C201356,http://www.cdisc.org,2024-09-27,After,Code
+Timing,Timing_11,relativeToFrom,definition,Code_41,C201355,http://www.cdisc.org,2024-09-27,Start to Start,Code
+Timing,Timing_13,type,definition,Code_45,C201356,http://www.cdisc.org,2024-09-27,After,Code
+Timing,Timing_13,relativeToFrom,definition,Code_46,C201355,http://www.cdisc.org,2024-09-27,Start to Start,Code
+Timing,Timing_15,type,definition,Code_50,C201356,http://www.cdisc.org,2024-09-27,After,Code
+Timing,Timing_15,relativeToFrom,definition,Code_51,C201355,http://www.cdisc.org,2024-09-27,Start to Start,Code
+Timing,Timing_16,type,definition,Code_53,C201356,http://www.cdisc.org,2024-09-27,After,Code
+Timing,Timing_16,relativeToFrom,definition,Code_54,C201355,http://www.cdisc.org,2024-09-27,Start to Start,Code
+Timing,Timing_8,type,definition,Code_33,C201356,http://www.cdisc.org,2024-09-27,After,Code
+Timing,Timing_8,relativeToFrom,definition,Code_34,C201355,http://www.cdisc.org,2024-09-27,Start to Start,Code
+Timing,Timing_10,type,definition,Code_38,C201356,http://www.cdisc.org,2024-09-27,After,Code
+Timing,Timing_10,relativeToFrom,definition,Code_39,C201355,http://www.cdisc.org,2024-09-27,Start to Start,Code
+Timing,Timing_12,type,definition,Code_43,C201356,http://www.cdisc.org,2024-09-27,After,Code
+Timing,Timing_12,relativeToFrom,definition,Code_44,C201355,http://www.cdisc.org,2024-09-27,Start to Start,Code
+Timing,Timing_14,type,definition,Code_48,C201356,http://www.cdisc.org,2024-09-27,After,Code
+Timing,Timing_14,relativeToFrom,definition,Code_49,C201355,http://www.cdisc.org,2024-09-27,Start to Start,Code
+Timing,Timing_17,type,definition,Code_56,C201358,http://www.cdisc.org,2024-09-27,Fixed Reference,Code
+Timing,Timing_17,relativeToFrom,definition,Code_57,C201355,http://www.cdisc.org,2024-09-27,Start to Start,Code
+Timing,Timing_18,type,definition,Code_58,C201358,http://www.cdisc.org,2024-09-27,Fixed Reference,Code
+Timing,Timing_18,relativeToFrom,definition,Code_59,C201355,http://www.cdisc.org,2024-09-27,Start to Start,Code
+Timing,Timing_19,type,definition,Code_60,C201358,http://www.cdisc.org,2024-09-27,Fixed Reference,Code
+Timing,Timing_19,relativeToFrom,definition,Code_61,C201355,http://www.cdisc.org,2024-09-27,Start to Start,Code
+Timing,Timing_20,type,definition,Code_62,C201356,http://www.cdisc.org,2024-09-27,After,Code
+Timing,Timing_20,relativeToFrom,definition,Code_63,C201355,http://www.cdisc.org,2024-09-27,Start to Start,Code
+Timing,Timing_21,type,definition,Code_64,C201356,http://www.cdisc.org,2024-09-27,After,Code
+Timing,Timing_21,relativeToFrom,definition,Code_65,C201353,http://www.cdisc.org,2024-09-27,End to Start,Code
+Timing,Timing_22,type,definition,Code_66,C201356,http://www.cdisc.org,2024-09-27,After,Code
+Timing,Timing_22,relativeToFrom,definition,Code_67,C201355,http://www.cdisc.org,2024-09-27,Start to Start,Code
+Timing,Timing_23,type,definition,Code_68,C201356,http://www.cdisc.org,2024-09-27,After,Code
+Timing,Timing_23,relativeToFrom,definition,Code_69,C201353,http://www.cdisc.org,2024-09-27,End to Start,Code
+Timing,Timing_24,type,definition,Code_70,C201356,http://www.cdisc.org,2024-09-27,After,Code
+Timing,Timing_24,relativeToFrom,definition,Code_71,C201355,http://www.cdisc.org,2024-09-27,Start to Start,Code
+ResearchOrganization,ResearchOrganization_1,organizationType,definition,Code_598,C70793,http://www.cdisc.org,2023-12-15,Clinical Study Sponsor,Code
+Address,Address_3,country,definition,Code_599,GBR,ISO 3166 1 alpha3,2021-08,United Kingdom of Great Britain and Northern Ireland,Code
+StudyTitle,StudyTitle_1,type,definition,Code_3,C94108,http://www.cdisc.org,2023-12-15,Study Acronym,Code
+StudyTitle,StudyTitle_2,type,definition,Code_5,C99905x1,http://www.cdisc.org,2023-12-15,Brief Study Title,Code
+StudyTitle,StudyTitle_3,type,definition,Code_6,C99905x2,http://www.cdisc.org,2023-12-15,Official Study Title,Code
+StudyTitle,StudyTitle_4,type,definition,Code_7,C99905x3,http://www.cdisc.org,2023-12-15,Public Study Title,Code
+StudyProtocolDocumentVersion,StudyProtocolDocumentVersion_1,protocolStatus,definition,Code_8,C25508,http://www.cdisc.org,2023-12-15,Final,Code
+GovernanceDate,GovernanceDate_2,type,definition,Code_11,C99903x1,http://www.cdisc.org,2023-12-15,Protocol Effective Date,Code
+GeographicScope,GeographicScope_2,type,definition,Code_13,C41129,http://www.cdisc.org,2023-12-15,Region,Code
+AliasCode,AliasCode_2,standardCode,definition,Code_12,150,ISO 3166 1 alpha3,2022-08,Europe,Code

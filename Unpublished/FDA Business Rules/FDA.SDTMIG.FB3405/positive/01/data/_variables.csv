@@ -1,0 +1,81 @@
+dataset,variable,label,type,length
+dm,STUDYID,Study Identifier,Char,12
+dm,DOMAIN,Domain Abbreviation,Char,2
+dm,USUBJID,Unique Subject Identifier,Char,50
+dm,SUBJID,Subject Identifier for the Study,Char,4
+dm,RFSTDTC,Subject Reference Start Date/Time,Char,10
+dm,RFENDTC,Subject Reference End Date/Time,Char,10
+dm,RFXSTDTC,Date/Time of First Study Treatment,Char,10
+dm,RFXENDTC,Date/Time of Last Study Treatment,Char,10
+dm,RFICDTC,Date/Time of Informed Consent,Char,10
+dm,RFPENDTC,Date/Time of End of Participation,Char,10
+dm,DTHDTC,Date/Time of Death,Char,10
+dm,DTHFL,Subject Death Flag,Char,1
+dm,SITEID,Study Site Identifier,Char,3
+dm,BRTHDTC,Date/Time of Birth,Char,10
+dm,AGE,Age,Num,8
+dm,AGEU,Age Units,Char,5
+dm,SEX,Sex,Char,1
+dm,RACE,Race,Char,41
+dm,ETHNIC,Ethnicity,Char,22
+dm,ARMCD,Planned Arm Code,Char,8
+dm,ARM,Description of Planned Arm,Char,28
+dm,ACTARMCD,Actual Arm Code,Char,8
+dm,ACTARM,Description of Actual Arm,Char,28
+dm,ARMNRS,Reason Arm and/or Actual Arm is Null,Char,14
+dm,ACTARMUD,Description of Unplanned Actual Arm,Char,200
+dm,COUNTRY,Country,Char,3
+sm,STUDYID,Study Identifier,Char,12
+sm,DOMAIN,Domain Abbreviation,Char,2
+sm,USUBJID,Unique Subject Identifier,Char,50
+sm,SMSEQ,Sequence Number,Num,8
+sm,MIDS,Disease Milestone Instance Name,Char,200
+sm,MIDSTYPE,Disease Milestone Type,Char,200
+sm,SMSTDTC,Start Date/Time of Milestone,Char,19
+sm,SMENDTC,End Date/Time of Milestone,Char,19
+sm,SMSTDY,Study Day of Start of Milestone,Num,8
+sm,SMENDY,Study Day of End of Milestone,Num,8
+se,STUDYID,Study Identifier,Char,12
+se,DOMAIN,Domain Abbreviation,Char,2
+se,USUBJID,Unique Subject Identifier,Char,8
+se,SESEQ,Sequence Number,Num,8
+se,ETCD,Element Code,Char,8
+se,ELEMENT,Description of Element,Char,25
+se,TAETORD,Planned Order of Element within Arm,Num,8
+se,EPOCH,Epoch,Char,25
+se,SESTDTC,Start Date/Time of Element,Char,19
+se,SEENDTC,End Date/Time of Element,Char,19
+se,SESTDY,Study Day of Start of Element,Num,8
+se,SEENDY,Study Day of End of Element,Num,8
+sv,STUDYID,Study Identifier,Char,12
+sv,DOMAIN,Domain Abbreviation,Char,2
+sv,USUBJID,Unique Subject Identifier,Char,8
+sv,VISITNUM,Visit Number,Num,8
+sv,VISIT,Visit Name,Char,10
+sv,VISITDY,Planned Study Day of Visit,Num,8
+sv,EPOCH,Subject Reference Start Date/Time,Char,25
+sv,SVSTDTC,Start Date/Time of Observation,Char,19
+sv,SVSTDY,Study Day of Start of Observation,Num,8
+sv,SVENDTC,End Date/Time of Observation,Char,19
+sv,SVENDY,Study Day of End of Observation,Num,8
+ae,STUDYID,Study Identifier,Char,12
+ae,DOMAIN,Domain Abbreviation,Char,2
+ae,USUBJID,Unique Subject Identifier,Char,8
+ae,AETERM,Reported Term for the Adverse Event,Char,40
+ae,AESER,Serious Event,Char,1
+ae,AEOUT,Outcome of Adverse Event,Char,40
+ae,AESTDTC,Start Date/Time of Adverse Event,Char,19
+ae,AESTDY,Study Day of Start of Observation,Num,8
+ae,AEENDTC,End Date/Time of Adverse Event,Char,19
+ae,AEENDY,Study Day of End of Observation,Num,8
+cm,STUDYID,Study Identifier,Char,12
+cm,DOMAIN,Domain Abbreviation,Char,2
+cm,USUBJID,Unique Subject Identifier,Char,8
+cm,CMSEQ,Sequence Number,Num,8
+cm,CMTRT,"Reported Name of Drug, Med, or Therapy",Char,200
+cm,CMDECOD,Standardized Medication Name,Char,200
+cm,CMCAT,Category for Medication,Char,50
+cm,CMSTDTC,Start Date/Time of Medication,Char,19
+cm,CMSTDY,Study Day of Start of Medication,Num,8
+cm,CMENDTC,End Date/Time of Medication,Char,19
+cm,CMENDY,Study Day of End of Medication,Num,8

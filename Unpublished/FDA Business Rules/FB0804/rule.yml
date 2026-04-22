@@ -1,0 +1,144 @@
+Authorities:
+  - Organization: 'FDA'
+    Standards:
+      - Name: 'SENDIG'
+        References:
+          - Citations:
+              - Cited Guidance: 'All treatment exposure date/time should be between first and
+                  last study treatment date/time.'
+                Document: 'FDA'
+                Section: 'FDAB008'
+            Origin: 'FDA Business Rules'
+            Rule Identifier:
+              Id: 'FB0804'
+              Version: '1'
+            Version: '1.5'
+        Version: '3.0'
+      - Name: 'SENDIG'
+        References:
+          - Citations:
+              - Cited Guidance: 'All treatment exposure date/time should be between first and
+                  last study treatment date/time.'
+                Document: 'FDA'
+                Section: 'FDAB008'
+            Origin: 'FDA Business Rules'
+            Rule Identifier:
+              Id: 'FB0804'
+              Version: '1'
+            Version: '1.5'
+        Version: '3.1'
+      - Name: 'SENDIG'
+        References:
+          - Citations:
+              - Cited Guidance: 'All treatment exposure date/time should be between first and
+                  last study treatment date/time.'
+                Document: 'FDA'
+                Section: 'FDAB008'
+            Origin: 'FDA Business Rules'
+            Rule Identifier:
+              Id: 'FB0804'
+              Version: '1'
+            Version: '1.5'
+        Version: '3.1.1'
+      - Name: 'SENDIG-GENETOX'
+        References:
+          - Citations:
+              - Cited Guidance: 'All treatment exposure date/time should be between first and
+                  last study treatment date/time.'
+                Document: 'FDA'
+                Section: 'FDAB008'
+            Origin: 'FDA Business Rules'
+            Rule Identifier:
+              Id: 'FB0804'
+              Version: '1'
+            Version: '1.5'
+        Version: '1.0'
+      - Name: 'SENDIG-DART'
+        References:
+          - Citations:
+              - Cited Guidance: 'All treatment exposure date/time should be between first and
+                  last study treatment date/time.'
+                Document: 'FDA'
+                Section: 'FDAB008'
+            Origin: 'FDA Business Rules'
+            Rule Identifier:
+              Id: 'FB0804'
+              Version: '1'
+            Version: '1.5'
+        Version: '1.1'
+      - Name: 'SENDIG-DART'
+        References:
+          - Citations:
+              - Cited Guidance: 'All treatment exposure date/time should be between first and
+                  last study treatment date/time.'
+                Document: 'FDA'
+                Section: 'FDAB008'
+            Origin: 'FDA Business Rules'
+            Rule Identifier:
+              Id: 'FB0804'
+              Version: '1'
+            Version: '1.5'
+        Version: '1.2'
+      - Name: 'SENDIG-AR'
+        References:
+          - Citations:
+              - Cited Guidance: 'All treatment exposure date/time should be between first and
+                  last study treatment date/time.'
+                Document: 'FDA'
+                Section: 'FDAB008'
+            Origin: 'FDA Business Rules'
+            Rule Identifier:
+              Id: 'FB0804'
+              Version: '1'
+            Version: '1.5'
+        Version: '1.0'
+# rule failure criteria: TSPARMCD.EXPSTDTC => EXENDTC or EXENDTC => TSPARMCD.EXPENDTC
+Check:
+  any:
+    #- name: EXSTDTC
+    #  operator: not_equal_to
+    #  value: 'test'
+    # TSPARMCD.EXPSTDTC => EXENDTC
+    #- name: $ts_expstdtc_value
+    #  operator: date_greater_than_or_equal_to
+    #  value: EXENDTC
+    # EXENDTC => TSPARMCD.EXPENDTC
+    - name: --ENDTC
+      operator: date_greater_than_or_equal_to
+      value: $ts_expendtc_value
+      #value: '2001-01-01'
+Core:
+  Status: Draft
+  Version: '1'
+Description: ''
+Executability: Fully Executable
+Operations:
+  - domain: TS
+    filter:
+      TSPARMCD: EXPENDTC
+    id: $ts_expendtc_value
+    name: TSVAL
+    operator: distinct
+    value_is_reference: false
+  - domain: TS
+    filter:
+      TSPARMCD: EXPSTDTC
+    id: $ts_expstdtc_value
+    name: TSVAL
+    operator: distinct
+Outcome:
+  Message: 'Treatment exposure end date/time (EXENDTC) falls outside the date/time
+    experimental start (EXPSTDTC) and end date (EXPENDTC) in the TS dataset.'
+  Output Variables:
+    - EXENDTC
+    - $ts_expstdtc_value
+    - $ts_expendtc_value
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - INTERVENTIONS
+  Domains:
+    Include:
+      - EX
+Sensitivity: Record

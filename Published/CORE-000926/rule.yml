@@ -1,0 +1,44 @@
+Authorities:
+  - Organization: 'CDISC'
+    Standards:
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: In Vivo Micronucleus is represented at the subject level, not
+                  the slide level.
+                Document: SENDIG-GENETOX
+                Section: 5.1.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND409
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+# In Vivo Micronucleus is represented at the subject level, not the slide level.
+# i.e. when GVCAT = 'IN VIVO MICRONUCLEUS' then USUBJID must be populated, not POOLID
+# REMARK: but USUBJID = "required" anyway
+Check:
+  all:
+    - name: 'GVCAT'
+      operator: equal_to
+      value: 'IN VIVO MICRONUCLEUS'
+    - name: 'USUBJID'
+      operator: empty
+Core:
+  Id: CORE-000926
+  Status: Published
+  Version: '1'
+Description: In Vivo Micronucleus is represented at the subject level, not the slide level.
+Executability: Fully Executable
+Outcome:
+  Message: When GVCAT = 'IN VIVO MICRONUCLEUS' then USUBJID must be populated, not
+    POOLID
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - GV
+Sensitivity: Record

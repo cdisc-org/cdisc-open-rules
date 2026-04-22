@@ -1,0 +1,42 @@
+Authorities:
+  - Organization: 'CDISC'
+    Standards:
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: Comet is represented at the subject level, not the gel level.
+                Document: SENDIG-GENETOX
+                Section: 5.1.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND408
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+# Comet is represented at the subject level, not the gel level.
+# i.e. when GVCAT = 'IN VIVO COMET' then USUBJID must be populated, not POOLID
+# REMARK: but USUBJID = "required" anyway
+Check:
+  all:
+    - name: 'GVCAT'
+      operator: equal_to
+      value: 'IN VIVO COMET'
+    - name: 'USUBJID'
+      operator: empty
+Core:
+  Id: CDISC.SENDIG.408
+  Status: Draft
+  Version: '1'
+Description: Comet is represented at the subject level, not the gel level.
+Executability: Fully Executable
+Outcome:
+  Message: When GVCAT = 'IN VIVO COMET' then USUBJID must be populated, not POOLID
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - GV
+Sensitivity: Record

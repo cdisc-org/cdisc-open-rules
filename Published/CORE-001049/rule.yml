@@ -1,0 +1,107 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'Referenced items in a parameter map must be available elsewhere
+                  in the data model.'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00124'
+              Version: '1'
+            Version: '1.0'
+        Version: '3.0'
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'Referenced items in a parameter map must be available elsewhere
+                  in the data model.'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00124'
+              Version: '1'
+            Version: '1.0'
+        Version: '4.0'
+Check: |-
+  (
+    $lkp:=**[id and instanceType].$each(function($v,$k){{$join([instanceType,id,$k],"|"):$v}})~>$merge;
+    $.study.**.dictionaries.parameterMaps.
+        {
+          "instanceType": instanceType,
+          "id": id,
+          "path": _path,
+          "SyntaxTemplateDictionary.id": %.id,
+          "SyntaxTemplateDictionary.name": %.name,
+          "tag": tag,
+          "reference": reference
+        }
+    ~>  $map(function($v)
+          {
+            (
+              $ref := $match($v.reference,
+                        /<usdm:ref((?=[^>]* klass=\"([a-zA-Z]+)\")(?=[^>]* id=\"(\w+)\")(?=[^>]* attribute=\"([a-zA-Z]+)\")[^>]*)(\/>|><\/usdm:ref>)/
+                      )
+                      {
+                        "value": $v.reference,
+                        "usdm_ref": $contains($v.reference,/usdm:ref/) ? 
+                                    {
+                                      "klass": groups[1],
+                                      "id": groups[2],
+                                      "attribute": groups[3]
+                                    }
+                      };
+              $v ~> |$|{"reference": $ref}|
+            )
+          }
+        )
+    ~>  $map(function($v)
+          {
+            (
+              $ref_val := "usdm_ref" in $keys($v.reference)
+                          ? (
+                              $k := $join(
+                                      [
+                                        $v.reference.usdm_ref.klass,
+                                        $v.reference.usdm_ref.id,
+                                        $v.reference.usdm_ref.attribute
+                                      ],"|"
+                                    );
+                              $k in $keys($lkp)
+                              ? $lookup($lkp,$k)
+                              : "!!NOT FOUND!!"
+                            )
+                          : $v.value;
+              $v ~> |$|{"reference": $v.reference.value, "Referenced Value": $ref_val}|
+            )
+          }
+        )
+    ~>  $filter(function($v)
+          {
+            $v.`Referenced Value` = "!!NOT FOUND!!"
+          }
+        )
+  )
+Core:
+  Id: 'CORE-001049'
+  Status: Published
+  Version: '1'
+Description: 'Referenced items in a parameter map must be available elsewhere in
+  the data model.'
+Executability: Fully Executable
+Outcome:
+  Message: 'The item referenced in the parameter map is not available elsewhere in
+    the model.'
+  Output Variables:
+    - SyntaxTemplateDictionary.id
+    - SyntaxTemplateDictionary.name
+    - tag
+    - reference
+Rule Type: JSONata
+Scope:
+  Entities:
+    Include:
+      - 'ParameterMap'
+Sensitivity: Record

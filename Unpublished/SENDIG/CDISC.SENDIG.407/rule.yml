@@ -1,0 +1,45 @@
+Authorities:
+  - Organization: 'CDISC'
+    Standards:
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: One record per test per observation time per subject
+                Document: SENDIG-GENETOX
+                Section: 5.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND407
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+Check:
+  all:
+    # TODO: also raise an error when GVSPEC/GVDTC (both "expected") absent
+    - name: GVSPEC
+      operator: non_empty
+    - name: GVDTC
+      operator: non_empty
+    - name: GVTESTCD
+      operator: is_not_unique_set
+      value:
+        - USUBJID
+        - GVSPEC
+        - GVDTC
+Core:
+  Id: CDISC.SENDIG.407
+  Status: Draft
+  Version: '1'
+Description: ''
+Executability: Fully Executable
+Outcome:
+  Message: The combination of USUBJID, GVTESTCD, GVSPEC and GVDTC is not unique
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - GV
+Sensitivity: Record

@@ -1,0 +1,14 @@
+dataset,variable,label,type,length
+ds,STUDYID,Study Identifier,Char,12
+ds,DOMAIN,Domain Abbreviation,Char,2
+ds,USUBJID,Unique Subject Identifier,Char,20
+ds,DSSEQ,Sequence Number,Num,8
+ds,DSTERM,Reported Term for the Disposition Event,Char,200
+ds,DSDECOD,Standardized Disposition Term,Char,50
+ds,DSCAT,Category for Disposition Event,Char,50
+ds,DSSCAT,Subcategory for Disposition Event,Char,50
+ds,EPOCH,Epoch,Char,50
+ds,DSDTC,Date/Time of Collection,Char,50
+ds,DSSTDTC,Start Date/Time of Disposition Event,Char,50
+ds,DSENDTC,End Date/Time of Disposition Event,Char,50
+ds,DSBODSYS,Body System or Organ Class,,10

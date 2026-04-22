@@ -1,0 +1,189 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      # ATTENTION: ONLY APPLICABLE to SENDIG v.3.0! For SENDIG 3.1, only "%" and "RATIO" is allowed.
+      # This is part B of the rule: i.e. that within OMTESTCD, OMSTRESU=% and OMSTRESU=null may not be mixed
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Organ measurement ratios within a single study should either be
+                  pure ratios with no units specified or percentages with unit
+                  shown as "%". It is strongly recommended that pure ratios and
+                  percentages should not be mixed.
+                Document: IG v3.0
+                Item: Assumption 3
+                Section: 6.3.9.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND190
+              Version: '1'
+            Version: '5.0'
+        Version: '3.0'
+
+Check:
+  any:
+    # Part A: of the rule: only "%" and null are allowed
+    - all:
+        - name: OMTESTCD
+          operator: equal_to
+          value: OWHT
+        - name: OMSTRESU
+          operator: not_equal_to
+          value: ''
+        - name: OMSTRESU
+          operator: not_equal_to
+          value: '%'
+    - all:
+        - name: OMTESTCD
+          operator: equal_to
+          value: OWBR
+        - name: OMSTRESU
+          operator: not_equal_to
+          value: ''
+        - name: OMSTRESU
+          operator: not_equal_to
+          value: '%'
+    - all:
+        - name: OMTESTCD
+          operator: equal_to
+          value: OWBW
+        - name: OMSTRESU
+          operator: not_equal_to
+          value: ''
+        - name: OMSTRESU
+          operator: not_equal_to
+          value: '%'
+    # Part B of the rule: i.e. that within OMTESTCD, OMSTRESU=% and OMSTRESU=null may not be mixed
+    # 2026-03-03: we exclude OMSTAT='NOT DONE'
+    # "RATIO" is not considered here
+    # OMTESTCD=OWBR: Organ to Brain Weight Ratio
+    # Raise a violation when the number of OMSTRESU='%'' rcords > 0
+    # AND the number of OMSTRESU=null rcords > 0
+    - all:
+        - name: OMTESTCD
+          operator: equal_to
+          value: OWBR
+        - name: OMSTAT # exclude "NOT DONE" records
+          operator: not_equal_to
+          value: 'NOT DONE'
+        - name: $owbr_percent
+          operator: greater_than
+          value: 0
+        - name: $owbr_ratio_null_unit
+          operator: greater_than
+          value: 0
+    # OMTESTCD=OWBW: Organ to BodyWeight Ratio
+    # Raise a violation when the number of OMSTRESU='%'' rcords > 0
+    # AND the number of OMSTRESU=null rcords > 0
+    # 2026-03-03: we exclude OMSTAT='NOT DONE'
+    - all:
+        - name: OMTESTCD
+          operator: equal_to
+          value: OWBW
+        - name: OMSTAT # exclude "NOT DONE" records
+          operator: not_equal_to
+          value: 'NOT DONE'
+        - name: $owbw_percent
+          operator: greater_than
+          value: 0
+        - name: $owbw_ratio_null_unit
+          operator: greater_than
+          value: 0
+    # OMTESTCD=OWHT: Organ to Heart Weight Ratio
+    # Raise a violation when the number of OMSTRESU='%'' rcords > 0
+    # AND the number of OMSTRESU='RATIO'' rcords > 0
+    - all:
+        - name: OMTESTCD
+          operator: equal_to
+          value: OWHT
+        - name: OMSTAT # exclude "NOT DONE" records
+          operator: not_equal_to
+          value: 'NOT DONE'
+        - name: $owht_percent
+          operator: greater_than
+          value: 0
+        - name: $owht_ratio_null_unit
+          operator: greater_than
+          value: 0
+Core:
+  Id: CDISC.SENDIG.190B
+  Status: Draft
+  Version: '1'
+Description: Trigger error when, for the given test, the value of OMSTRESU is
+  inconsistent  in the dataset when OMTESTCD is either OWBR, OWBW or OWHT
+Executability: Fully Executable
+Operations:
+  # OWBR:  Organ to Brain Weight Ratio
+  - filter:
+      OMSTRESU: '%'
+      OMTESTCD: 'OWBR'
+    id: $owbr_percent
+    name: OMTESTCD # 2026-02-10
+    operator: record_count
+  - filter:
+      OMSTAT: '' # OMSTAT must be empty
+      OMSTRESU: ''
+      OMTESTCD: 'OWBR'
+      # OMSTRESU: empty # 2026-02-10
+    id: $owbr_ratio_null_unit
+    name: OMTESTCD # 2026-02-10
+    operator: record_count
+  # OWBW: Organ to BodyWeight Ratio
+  - filter:
+      OMSTRESU: '%'
+      OMTESTCD: 'OWBW'
+    id: $owbw_percent
+    name: OMTESTCD # 2026-02-10
+    operator: record_count
+  - filter:
+      OMSTAT: '' # OMSTAT must be empty
+      OMSTRESU: ''
+      OMTESTCD: 'OWBW'
+      # OMSTRESU: empty # 2026-02-10
+    id: $owbw_ratio_null_unit
+    name: OMTESTCD # 2026-02-10
+    operator: record_count
+  # OWHT: Organ to Heart Weight Ratio
+  - filter:
+      OMSTRESU: '%'
+      OMTESTCD: 'OWHT'
+    id: $owht_percent
+    name: OMTESTCD # 2026-02-10
+    operator: record_count
+  - filter:
+      OMSTAT: '' # OMSTAT must be empty
+      OMSTRESU: ''
+      OMTESTCD: 'OWHT'
+      # OMSTRESU: empty # 2026-02-10
+    id: $owht_ratio_null_unit
+    name: OMTESTCD # 2026-02-10
+    operator: record_count
+  # NOT USED FOR THE MOMENT
+  # - domain: OM
+  #  id: $om_stresu_distinct
+  #  name: OMSTRESU
+  #  operator: distinct
+
+Outcome:
+  Message: The organ weight standardized measurement unit must be consistent for
+    the given OMTESTCD'.
+  Output Variables:
+    - OMTESTCD
+    - OMSTRESC
+    - OMSTRESN
+    - OMSTRESU
+    - $owbr_percent
+    - $owbr_ratio_null_unit
+    - $owbw_percent
+    - $owbw_ratio_null_unit
+    - $owht_percent
+    - $owht_ratio_null_unit
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - OM
+Sensitivity: Record

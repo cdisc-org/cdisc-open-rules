@@ -1,0 +1,76 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'Each combination of arm and epoch must occur no more than once
+                  within a study design.'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00069'
+              Version: '1'
+            Version: '1.0'
+        Version: '3.0'
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'Each combination of arm and epoch must occur no more than once
+                  within a study design.'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00069'
+              Version: '1'
+            Version: '1.0'
+        Version: '4.0'
+Check: |-
+  $.study.versions.studyDesigns@$sd.
+    $filter($sd.studyCells,function($v,$i,$a)
+      {
+        $count($a[armId=$v.armId and epochId=$v.epochId])>1
+      }
+    )@$d.
+      ($sd.arms[id=$d.armId])@$sa.
+        ($sd.epochs[id=$d.epochId])@$se.
+          {
+            "instanceType": $d.instanceType,
+            "id": $d.id,
+            "path": $d._path,
+            "StudyDesign.id": $sd.id,
+            "StudyDesign.name": $sd.name,
+            "armId": $d.armId,
+            "StudyArm.name": $sa.name,
+            "epochId": $d.epochId,
+            "StudyEpoch.name": $se.name
+          } ~>
+          $sort(function($l,$r)
+              {
+                $join([$l.`StudyDesign.id`,$l.armId,$l.epochId],"/") >
+                $join([$r.`StudyDesign.id`,$r.armId,$r.epochId],"/")
+              }
+          )
+Core:
+  Id: 'CORE-000948'
+  Status: Published
+  Version: '1'
+Description: 'Each combination of arm and epoch must occur no more than once
+  within a study design.'
+Executability: Fully Executable
+Outcome:
+  Message: 'The combination of arm and epoch occurs more than once within the
+    study design.'
+  Output Variables:
+    - StudyDesign.id
+    - StudyDesign.name
+    - armId
+    - StudyArm.name
+    - epochId
+    - StudyEpoch.name
+Rule Type: JSONata
+Scope:
+  Entities:
+    Include:
+      - 'StudyCell'
+Sensitivity: Record

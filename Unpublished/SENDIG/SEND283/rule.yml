@@ -1,0 +1,132 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      # NOT applicable to SENDIG-3.0
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: There are, by definition, no time gaps between Elements;
+                  therefore, the value of SEENDTC for one Element will always be
+                  immediately before or the same as the value of SESTDTC for the
+                  next Element. Each Element continues until the time at which
+                  the next Element begins, and a subject must be in only one
+                  element at a time.
+                Document: IG v3.1
+                Item: Specification
+                Section: 5.3.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND283
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: There are, by definition, no time gaps between Elements;
+                  therefore, the value of SEENDTC for one Element will always be
+                  immediately before or the same as the value of SESTDTC for the
+                  next Element. Each Element continues until the time at which
+                  the next Element begins, and a subject must be in only one
+                  element at a time.
+                Document: IG v3.1.1
+                Item: Specification
+                Section: 5.3.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND283
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1.1'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: There are, by definition, no time gaps between Elements;
+                  therefore, the value of SEENDTC for one Element will always be
+                  immediately before or the same as the value of SESTDTC for the
+                  next Element. Each Element continues until the time at which
+                  the next Element begins, and a subject must be in only one
+                  element at a time.
+                Document: IG v3.1.1
+                Item: Specification
+                Section: 5.3.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND283
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: There are, by definition, no time gaps between Elements;
+                  therefore, the value of SEENDTC for one Element will always be
+                  immediately before or the same as the value of SESTDTC for the
+                  next Element. Each Element continues until the time at which
+                  the next Element begins, and a subject must be in only one
+                  element at a time.
+                Document: IG v3.1
+                Item: Specification
+                Section: 5.3.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND283
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: There are, by definition, no time gaps between Elements;
+                  therefore, the value of SEENDTC for one Element will always be
+                  immediately before or the same as the value of SESTDTC for the
+                  next Element. Each Element continues until the time at which
+                  the next Element begins, and a subject must be in only one
+                  element at a time.
+                Document: IG v3.1.1
+                Item: Specification
+                Section: 5.3.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND283
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+Check:
+  all:
+    # 2025-05-06: IMPORTANT: The implementation CURRENTLY ONLY checks that DSSTDTC is LATER
+    # than the highest date value of SEENDTC for the subject. 
+    # As such, the rule is currently "partially executable".
+    - name: 'DSSTDTC'
+      operator: 'date_less_than'
+      value: '$max_seendtc'
+    # TODO in FUTURE: part that states that DSSTDTC may not be larger than max(SEENDTC) + small fraction
+Core:
+  Status: Draft
+  Version: '1'
+Description: 'The value of SEENDTC for the last Element must immediately precede
+  or be the same as the date/time of disposition (DSSTDTC) for the subject.'
+Executability: Partially Executable - Possible Underreporting
+Operations:
+  - domain: SE
+    group:
+      - USUBJID
+    id: $max_seendtc
+    name: SEENDTC
+    operator: max_date
+Outcome:
+  # TODO? Should we reverse this?
+  Message: 'Date/time of disposition event DSSTDTC is not equal to or immediately
+    after last element date/time'
+  Output Variables:
+    - DSSTDTC
+    - $max_seendtc
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - EVENTS
+  Domains:
+    Include:
+      - DS
+Sensitivity: Record

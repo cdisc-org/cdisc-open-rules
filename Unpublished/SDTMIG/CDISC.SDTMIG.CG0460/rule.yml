@@ -1,0 +1,70 @@
+# Variable: --HLT
+# Condition: 
+# Rule: --HLT on path to MedDRA primary system organ class
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        Version: '3.4'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0460
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: The high-level term from the primary hierarchy assigned
+                  to the event from MedDRA.
+                Document: Model v2.0
+                Item: --HLT
+                Section: Events
+      - Name: SDTMIG
+        Version: '3.2'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0460
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: MedDRA High Level Term from the primary path.
+                Document: Model v1.4
+                Section: 2.2.2
+      - Name: SDTMIG
+        Version: '3.3'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0460
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: MedDRA High Level Term from the primary path.
+                Document: Model v1.7
+                Section: 2.2.2
+Check:
+  all:
+    - name:
+      operator:
+    - name:
+      operator:
+Core:
+  Id: CDISC.SDTMIG.CG0460
+  Status: Draft
+  Version: '1'
+Description: Trigger error when --HLT is not on the path to MedDRA primary system
+  organ class
+Executability: Fully Executable
+Outcome:
+  Message: --HLT is not on the path to MedDRA primary system organ class
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - EVENTS
+  Domains:
+    Include:
+      - AE
+      - MH
+      - CE
+Sensitivity: Record

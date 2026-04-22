@@ -1,0 +1,37 @@
+dataset,variable,label,type,length
+cm,STUDYID,Study Identifier,Char,50
+cm,DOMAIN,Domain Abbreviation,Char,50
+cm,USUBJID,Unique Subject Identifier,Char,50
+cm,CMSEQ,Sequence Number,Num,8
+cm,CMTRT,"Reported Name of Drug, Med, or Therapy",Char,50
+cm,CMINDC,Indication,Char,50
+cm,CMDOSE,Dose per Administration,Num,8
+cm,CMDOSU,Dose Units,Char,50
+cm,CMDOSTOT,Total Daily Dose,Num,8
+cm,CMDOSFRQ,Dosing Frequency per Interval,Char,50
+cm,CMROUTE,Route of Administration,Char,50
+cm,EPOCH,Epoch,Char,50
+cm,CMSTDTC,Start Date/Time of Medication,Char,50
+cm,CMENDTC,End Date/Time of Medication,Char,50
+cm,CMSTDY,Study Day of Start of Medication,Num,8
+cm,CMENDY,Study Day of End of Medication,Num,8
+cm,CMENRTPT,End Relative to Reference Time Point,Char,50
+cm,CMENTPT,End Reference Time Point,Char,50
+ex,STUDYID,Study Identifier,Char,50
+ex,DOMAIN,Domain Abbreviation,Char,50
+ex,USUBJID,Unique Subject Identifier,Char,50
+ex,SPDEVID,Sponsor Device Identifier,Char,200
+ex,EXSEQ,Sequence Number,Num,8
+ex,EXTRT,Name of Treatment,Char,50
+ex,EXDOSE,Dose,Num,8
+ex,EXDOSU,Dose Units,Char,50
+ex,EXDOSTOT,Total Daily Dose,Num,8
+ex,EXDOSFRM,Dose Form,Char,50
+ex,EXDOSFRQ,Dosing Frequency per Interval,Char,50
+ex,EXROUTE,Route of Administration,Char,50
+ex,EXLOT,Lot Number,Char,50
+ex,EPOCH,Epoch,Char,50
+ex,EXSTDTC,Start Date/Time of Treatment,Char,50
+ex,EXENDTC,End Date/Time of Treatment,Char,50
+ex,EXSTDY,Study Day of Start of Treatment,Num,8
+ex,EXENDY,Study Day of End of Treatment,Num,8

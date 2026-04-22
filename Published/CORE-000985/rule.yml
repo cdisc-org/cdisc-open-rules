@@ -1,0 +1,81 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'There must be a one-to-one relationship between referenced
+                  section number and title within any study definition document
+                  affected by a study amendment.'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00196'
+              Version: '1'
+            Version: '1.0'
+        Version: '4.0'
+Check: |-
+  study@$s.
+    $s.versions@$sv.
+      $sv.amendments@$a.
+        $a.changes@$sc.
+          $sc.changedSections.
+            (
+              $this:=$;
+              $t4n:=$distinct($a.changes.changedSections[sectionNumber = $this.sectionNumber and appliesToId = $this.appliesToId].sectionTitle)~>$sort;
+              $n4t:=$distinct($a.changes.changedSections[sectionTitle = $this.sectionTitle and appliesToId = $this.appliesToId].sectionNumber)~>$sort;
+              {
+                "instanceType": instanceType,
+                "id": id,
+                "path": _path,
+                "StudyAmendment.id": $a.id,
+                "StudyAmendment.name": $a.name,
+                "StudyChange.id": $sc.id,
+                "StudyChange.name": $sc.name,
+                "appliesToId": appliesToId &": "&
+                  (
+                    appliesToId in $s.documentedBy.id
+                    ? $s.documentedBy[id=$this.appliesToId].name
+                    : "Invalid appliesToId"
+                  ),
+                "sectionNumber": sectionNumber,
+                "n4t": "["&$join($n4t,"; ")&"]",
+                "sectionTitle": sectionTitle,
+                "t4n": "["&$join($t4n,"; ")&"]",
+                "check": ($count($t4n)!=1 or $count($n4t)!=1)
+              }
+            )[check=true] ~>
+            $sort(function($l,$r)
+              {
+                  $l.`StudyAmendment.id` >= $r.`StudyAmendment.id` and
+                  $l.appliesToId >= $r.appliesToId and
+                  $l.n4t >= $r.n4t and
+                  $l.t4n > $r.t4n
+              }
+            )
+Core:
+  Id: 'CORE-000985'
+  Status: Published
+  Version: '1'
+Description: 'There must be a one-to-one relationship between referenced section
+  number and title within any study definition document affected by a study
+  amendment.'
+Executability: Fully Executable
+Outcome:
+  Message: 'There is not a one-to-one relationship between the referenced section
+    number and title within the study definition document affected by the study
+    amendment.'
+  Output Variables:
+    - StudyAmendment.id
+    - StudyAmendment.name
+    - StudyChange.id
+    - StudyChange.name
+    - appliesToId
+    - sectionNumber
+    - sectionTitle
+Rule Type: JSONata
+Scope:
+  Entities:
+    Include:
+      - DocumentContentReference
+Sensitivity: Record

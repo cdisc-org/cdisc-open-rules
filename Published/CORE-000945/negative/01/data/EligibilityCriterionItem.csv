@@ -1,0 +1,1863 @@
+parent_entity,parent_id,parent_rel,rel_type,id,name,label,description,text,notes,dictionaryId,instanceType
+StudyVersion,StudyVersion_1,eligibilityCriterionItems,definition,EligibilityCriterionItem_1,IN01,Age greater than 50,,<p>Males and postmenopausal females at least <usdm:tag>min_age</usdm:tag> years of age.</p>,,SyntaxTemplateDictionary_1,EligibilityCriterionItem
+StudyVersion,StudyVersion_1,eligibilityCriterionItems,definition,EligibilityCriterionItem_2,IN02,Diagnosis of Alzheimer's,,"<p><usdm:tag nam=""StudyPopulation""/> as defined by National Institute of Neurological and Communicative Disorders and Stroke (NINCDS) and the Alzheimer's Disease and Related Disorders Association (ADRDA) guidelines (Attachment LZZT.7).</p>",,SyntaxTemplateDictionary_1,EligibilityCriterionItem
+StudyVersion,StudyVersion_1,eligibilityCriterionItems,definition,EligibilityCriterionItem_3,IN03,MMSE Score,,"<p><udsm:tag name=""Activity1""/> score of 10 to 23.</p>",,SyntaxTemplateDictionary_2,EligibilityCriterionItem
+StudyVersion,StudyVersion_1,eligibilityCriterionItems,definition,EligibilityCriterionItem_4,IN04,Hachinski Ischemic Score,,"<p><usdm:tag name=""Activity2"">  score of ≤4 (Attachment LZZT.8).</p>",,SyntaxTemplateDictionary_2,EligibilityCriterionItem
+StudyVersion,StudyVersion_1,eligibilityCriterionItems,definition,EligibilityCriterionItem_5,IN05,CNS imaging comptaible with Alzheimer's,,"<p>CNS imaging (CT scan or MRI of brain) compatible with AD within past 1 year.</p>
+<p>The following findings are incompatible with AD:</p>
+<ol type=""a"">
+  <li>
+    <p>Large vessel strokes</p>
+    <ol>
+      <li>
+        <p>Any definite area of encephalomalacia consistent with ischemic necrosis in any cerebral artery territory.</p>
+      </li>
+      <li>
+        <p>Large, confluent areas of encephalomalacia in parieto-occipital or frontal regions consistent with watershed
+          infarcts.</p>
+        <p>The above are exclusionary. Exceptions are made for small areas of cortical asymmetry which may represent a
+          small cortical stroke or a focal area of atrophy provided there is no abnormal signal intensity in the
+          immediately underlying parenchyma. Only one such questionable area allowed per scan, and size is restricted to
+          <1cm in frontal/parietal/temporal cortices and ≤2 cm in occipital cortex.</p>
+      </li>
+    </ol>
+  </li>
+  <li>
+    <p>Small vessel ischemia</p>
+    <ol>
+      <li>
+        <p>Lacunar infarct is defined as an area of abnormal intensity seen on CT scan or on both T1 and T2 weighted MRI
+          images in the basal ganglia, thalamus or deep white matter which is ≤1 cm in maximal diameter. A maximum of
+          one
+          lacune is allowed per scan.</p>
+      </li>
+      <li>
+        <p>Leukoariosis or leukoencephalopathy is regarded as an abnormality seen on T2 but not T1 weighted MRIs, or on
+          CT. This is accepted if mild or moderate in extent, meaning involvement of less than 25% of cortical white
+          matter.
+      </li>
+    </ol>
+  </li>
+  <li>
+    <p>Miscellaneous</p>
+    <ol>
+      <li>
+        <p>Benign small extra-axial tumors (ie, meningiomas) are accepted if they do not contact or indent the brain
+          parenchyma.</p>
+      </li>
+      <li>
+        <p>Small extra-axial arachnoid cysts are accepted if they do not indent or deform the brain parenchyma.</p>
+      </li>
+    </ol>
+  </li>
+</ol>",,,EligibilityCriterionItem
+StudyVersion,StudyVersion_1,eligibilityCriterionItems,definition,EligibilityCriterionItem_12,EX04,Serious neurolocal conditions criteria,,"<p>Diagnosis of serious neurological conditions, including </p>
+<ol type=""a"">
+<li><p>Stroke or vascular dementia documented by clinical history and/or radiographic findings interpretable by the investigator as indicative of these disorders</p></li>
+<li><p>Seizure disorder other than simple childhood febrile seizures</p></li>
+<li><p>Severe head trauma resulting in protracted loss of consciousness within the last 5 years, or multiple episodes of head trauma</p></li>
+<li><p>Parkinson's disease</p></li>
+<li><p>Multiple sclerosis</p></li>
+<li><p>Amyotrophic lateral sclerosis</p></li>
+<li><p>Myasthenia gravis.</p></li>
+</ol>",,,EligibilityCriterionItem
+StudyVersion,StudyVersion_1,eligibilityCriterionItems,definition,EligibilityCriterionItem_18,EX10,Gastrointensinal criteria,,"<p>A history within the last 5 years of a serious gastrointestinal disorder, including 
+<ol type=""a"">
+<li><p>Chronic peptic/duodenal/gastric/esophageal ulcer that are untreated or refractory to treatment</p></li>
+<li><p>Symptomatic diverticular disease</p></li>
+<li><p>Inflammatory bowel disease</p></li>
+<li><p>Pancreatitis</p></li>
+<li><p>Hepatitis</p></li>
+<li><p>Cirrhosis of the liver.</p></li>
+</ol>",,,EligibilityCriterionItem
+StudyVersion,StudyVersion_1,eligibilityCriterionItems,definition,EligibilityCriterionItem_31,EX23,Medications Criteria,,"<p>Treatment with the following medications within the specified washout periods prior to enrollment and during the study:</p>
+<ol type=""a"">
+  <li>
+    <p>Anticonvulsants including but not limited to </p>
+    <table class=""table"">
+      <tr>
+        <td>Depakote&#174; (valproic acid) </td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Dilantin&#174; (phenytoin)</td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Felbatol&#174;
+          (felbamate)</td>
+        <td>1 month</td>
+      </tr>
+      <tr>
+        <td>Klonopin&#174; (clonazepam)</td>
+        <td>2
+          weeks</td>
+      </tr>
+      <tr>
+        <td>Lamictal&#174; (lamotrigine)</td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Mysoline&#174; (primidone)</td>
+        <td>1 month</td>
+      </tr>
+      <tr>
+        <td>Neurontin&#174;
+          (gabapentin)</td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Phenobarbitol</td>
+        <td>1 month</td>
+      </tr>
+      <tr>
+        <td>Tegretol&#174; (carbamazepine)</td>
+        <td>2 weeks</td>
+      </tr>
+    </table>
+  </li>
+  <li>
+    <p>Alpha receptor blockers including but not limited to </p>
+    <table class=""table"">
+      <tr>
+        <td>Aldomet&#174; (methyldopa) </td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Cardura&#174;
+          (doxazosin) </td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Catapres&#174; (clonidine)
+        </td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Hytrin&#174; (terazosin) </td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Minipress&#174; (prazosin)</td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Tenex&#174; (guanfacine)</td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Wytensin&#174;
+          (guanabenz) </td>
+        <td>2 weeks</td>
+      </tr>
+    </table>
+    <p><b>The use of low doses
+        (2 mg daily) of either Hytrin</b>&#174; <b>or Cardura</b>&#174; <b>for relief of
+        urinary retention for patients with prostatic hypertrophy will be considered
+        on a case-by-case basis provided blood pressure is stable and the medication
+        has not had demonstrable effect on dementia symptoms in the opinion of the treating
+        physician. Contact CRO medical monitor.</b></p>
+  </li>
+  <li>
+    <p>Calcium channel blockers
+      that are CNS active including but not limited to </p>
+    <table class=""table"">
+      <tr>
+        <td>Calan&#174; , Isoptin&#174; , Verelan&#174; (verapamil) </td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Cardizem&#174; (diltiazem) </td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Nimotop&#174;
+          (nimodipine) </td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Adalat&#174; , Procardia XL&#174;
+          (nifedipine) </td>
+        <td>2 weeks</td>
+      </tr>
+    </table>
+    <p><b>Cardene</b>&#174; <b>(nicardipine),
+        Norvasc</b>&#174; <b>, (amlodipine), and DynaCirc</b>&#174; <b>(isradipine) will
+        be allowed during the study. If a patient is taking an excluded calcium channel
+        blocker and is changed to an equivalent dose of an allowed calcium channel blocker,
+        enrollment may proceed in as little as 24 hours though 1 week is preferred when
+        possible.</b></p>
+  </li>
+  <li>
+    <p>Beta blockers including but not limited to </p>
+    <table class=""table"">
+      <tr>
+        <td>Betapace&#174; (sotalol) </td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Inderal&#174; (propranolol) </td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Lopressor&#174;
+          , Toprol XL&#174; (metoprolol) </td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Corgard&#174; (nadolol) </td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Sectral&#174; (acebutolol)</td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Tenormin&#174; (atenolol) </td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Visken&#174; (pindolol)</td>
+        <td>2 weeks</td>
+      </tr>
+    </table>
+    <p><b>Beta
+        blocker eye drops for glaucoma will be considered on a case-by-case basis. Call
+        medical monitor.</b></p>
+  </li>
+  <li>
+    <p>Beta sympathomimetics (unless inhaled) including
+      but not limited to </p>
+    <table class=""table"">
+      <tr>
+        <td>Alupent&#174; tablets
+          (metaproterenol) </td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Brethine&#174; tablets
+          (terbutaline) </td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Dopamine </td>
+        <td>2 weeks
+
+      <tr>
+        <td>Proventil Repetabs&#174; , Ventolin&#174; tablets (albuterol tablets)
+        </td>
+        <td>2 weeks</td>
+      </tr>
+    </table>
+  </li>
+  <li>Parasympathomimetics (cholinergics)
+    (unless opthalmic) including but not limited to <table class=""table"">
+      <tr>
+        <td>Antilirium&#174; (physostigmine) </td>
+        <td>1 month</td>
+      </tr>
+      <tr>
+        <td>Aricept&#174; (donepezil) </td>
+        <td>1 month</td>
+      </tr>
+      <tr>
+        <td>Cognex&#174; (tacrine) </td>
+        <td>1
+          month</td>
+      </tr>
+      <tr>
+        <td>Mestinon&#174; (pyridostigmine) </td>
+        <td>1 week</td>
+      </tr>
+      <tr>
+        <td>Reglan&#174; (metoclopramide)</td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Urecholine&#174;
+          , Duvoid (bethanechol) </td>
+        <td>2 weeks</td>
+      </tr>
+    </table>
+    <p><b>Cholinergic eye drops for treatment of glaucoma will be allowed during the study on a case-by-case basis.
+        Please contact the CRO medical monitor.</b></p>
+  </li>
+  <li>
+    <p>Muscle relaxants-centrally active including but not limited to </p>
+    <table class=""table"">
+      <tr>
+        <td>Equanil&#174; (meprobamate) </td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Flexeril&#174; (cyclobenzaprine)</td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Lioresal&#174; (baclofen) </td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Norflex&#174; (orphenadrine) </td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Parafon Forte&#174; (chlorzoxazone)</td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Robaxin&#174; (methocarbamol) </td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Skelaxin&#174; (metaxalone)
+        </td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Soma&#174; (carisoprodol) </td>
+        <td>2 weeks</td>
+      </tr>
+    </table>
+  </li>
+  <li>
+    <p>Monamine oxidase inhibitors (MAOI) including but not limited to</p>
+    <table class=""table"">
+      <tr>
+        <td>Eldepryl&#174; (selegiline)</td>
+        <td>1 month</td>
+      </tr>
+      <tr>
+        <td>Nardil&#174; (phenelzine) </td>
+        <td>1 month</td>
+      </tr>
+      <tr>
+        <td>Parnate&#174; (tranylcypromine) </td>
+        <td>1 month</td>
+      </tr>
+    </table>
+  </li>
+  <li>
+    <p>Parasympatholytics including but not limited to </p>
+    <table class=""table"">
+      <tr>
+        <td>Antivert&#174; , Bonine&#174; , Dramamine II&#174; (meclizine)</td>
+        <td>3 days </td>
+      </tr>
+      <tr>
+        <td>Artane&#174; (trihexyphenidyl)</td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Bellergal-S&#174; (alkaloids of belladonna and ergotamine) </td>
+        <td>2 weeks </td>
+      </tr>
+      <tr>
+        <td>Bentyl&#174; (dicyclomine) </td>
+        <td>3 days </td>
+      </tr>
+      <tr>
+        <td>Cogentin&#174; (benztropine) </td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Cystospaz&#174;, Levsin&#174; , Levsinex&#174; (hyoscyamine)</td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Ditropan&#174;
+          (oxybutynin) </td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Donnatal&#174; , Hyosophen&#174;
+          (atropine, scopolamine, hyoscyamine and phenobarbitol) </td>
+        <td>1 month </td>
+      </tr>
+      <tr>
+        <td>Dramamine&#174; (dimenhydrinate)</td>
+         <td>3 days</td>
+      </tr>
+      <tr>
+        <td>Lomotil&#174;, Lonox&#174; (atropine, diphenoxylate) </td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Pro-Banthine&#174;
+          (propantheline) </td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Robinul&#174; (glycopyrrolate)</td>
+        <td>3 days </td>
+      </tr>
+      <tr>
+        <td>Tigan&#174; (trimethobenzamide) </td>
+        <td>3 days </td>
+      </tr>
+      <tr>
+        <td>Transderm-Scop&#174; (scopolamine) </td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Urispas&#174; (flavoxate) 2 weeks</td>
+      </tr>
+    </table>
+  </li>
+  <li>
+    <p>Antidepressants including but not limited to </p>
+    <table class=""table"">
+      <tr>
+        <td>Anafranil&#174; (clomipramine)</td>
+        <td> 1 month</td>
+      </tr>
+      <tr>
+        <td>Asendin&#174;
+          (amoxapine)</td>
+        <td> 1 month</td>
+      </tr>
+      <tr>
+        <td>Desyrel&#174; (trazodone)</td>
+        <td>
+          1 month</td>
+      </tr>
+      <tr>
+        <td>Effexor&#174; (venlafaxine) </td>
+        <td> 1 month</td>
+      </tr>
+      <tr>
+        <td>Elavil&#174; (amitriptyline)</td>
+        <td> 1 month</td>
+      </tr>
+      <tr>
+        <td>Ludiomil&#174;
+          (maprotiline)</td>
+        <td> 1 month</td>
+      </tr>
+      <tr>
+        <td>Norpramin&#174; (desipramine)</td>
+        <td>
+          1 month</td>
+      </tr>
+      <tr>
+        <td>Pamelor&#174; , Aventyl&#174; (nortriptyline)</td>
+        <td> 1
+          month</td>
+      </tr>
+      <tr>
+        <td>Paxil&#174; (paroxetine)</td>
+        <td> 1 month</td>
+      </tr>
+      <tr>
+        <td>Prozac&#174;
+          (fluoxetine</td>
+        <td> 1 month</td>
+      </tr>
+      <tr>
+        <td>Remeron&#174; (mirtazapine)</td>
+        <td>
+          1 month</td>
+      </tr>
+      <tr>
+        <td>Serzone&#174; (nefazodone) </td>
+        <td> 1 month</td>
+      </tr>
+      <tr>
+        <td>Sinequan&#174;
+          (doxepin)</td>
+        <td> 1 month</td>
+      </tr>
+      <tr>
+        <td>Tofranil&#174; (imipramine)</td>
+        <td>
+          1 month</td>
+      </tr>
+      <tr>
+        <td>Vivactil&#174; (protriptyline)</td>
+        <td> 1 month</td>
+      </tr>
+      <tr>
+        <td>Wellbutrin&#174; (bupropion)</td>
+        <td> 1 month</td>
+      </tr>
+      <tr>
+        <td>Zoloft&#174;
+          (sertraline)</td>
+        <td> 1 month</td>
+      </tr>
+    </table>
+  </li>
+  <li>
+    <p>Systemic corticosteroids including but not limited to </p>
+    <table class=""table"">
+      <tr>
+        <td>Cortisone</td>
+        <td>2
+          weeks</td>
+        <td>
+      </tr>
+      <tr>
+        <td>Decadron&#174; (dexamethasone)</td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Depo-Medrol&#174; (methylprednisolone)</td>
+        <td>1 month</td>
+        <td>
+      </tr>
+      <tr>
+        <td>Prednisone</td>
+        <td>2 weeks</td>
+        <td>
+      </tr>
+    </table>
+  </li>
+  <li>
+    <p>Xanthine derivatives
+      including but not limited to </p>
+    <table class=""table"">
+      <tr>
+        <td>Aminophylline</td>
+        <td>2 weeks</td>
+        <td>
+      </tr>
+      <tr>
+        <td>Fioricet&#174; , Esgic&#174; , Phrenilin Forte&#174; (caffeine, butalbital)</td>
+        <td>3 days</td>
+        <td>
+      </tr>
+      <tr>
+        <td>Theo-Dur&#174; (theophylline)</td>
+        <td>2 weeks</td>
+        <td>
+      </tr>
+      <tr>
+        <td>Wigraine&#174; , Cafergot&#174; (caffeine, ergotamine)</td>
+        <td>3 days</td>
+        <td>
+      </tr>
+    </table>
+  </li>
+  <li>
+    <p>Histamine (H2 ) antagonists including but not limited to </p>
+    <table class=""table"">
+      <tr>
+        <td>Axid&#174; (nizatidine)</td>
+        <td>1 week</td>
+      </tr>
+      <tr>
+        <td>Pepcid&#174; (famotidine)</td>
+        <td>1 week</td>
+      </tr>
+      <tr>
+        <td>Tagamet&#174; (cimetidine)</td>
+        <td>1 week</td>
+      </tr>
+      <tr>
+        <td>Zantac&#174; (ranitidine)</td>
+        <td>1 week</td>
+      </tr>
+    </table>
+    <p><b>If an H 2 antagonist is needed by the patient, Axid</b>&#174; <b>will be</b> <b>allowed on a case-by-case
+        basis. Please consult CRO</b> <b>medical monitor.</b></p>
+  </li>
+  <li>
+    <p>Narcotic Analgesics including but not limited to </p>
+    <table class=""table"">
+      <tr>
+        <td>Darvocet-N
+          100&#174; , (propoxyphene)</td>
+        <td>1 week </td>
+      </tr>
+      <tr>
+        <td>Demerol&#174; (meperidine)</td>
+        <td>1
+          week </td>
+      </tr>
+      <tr>
+        <td>Dilaudid&#174; (hydromorphone)</td>
+        <td>1 week </td>
+      </tr>
+      <tr>
+        <td>Duragesic&#174; (fentanyl)</td>
+        <td>1 week </td>
+      </tr>
+      <tr>
+        <td>MS
+          Contin&#174; , Roxanol&#174; , Oramorph&#174; (morphine) </td>
+        <td>1 week </td>
+      </tr>
+      <tr>
+        <td>Percocet&#174; , Roxicet&#174; (oxycodone with acetaminophen)</td>
+        <td>3
+          days </td>
+      </tr>
+      <tr>
+        <td>Percodan&#174; , Roxiprin</td>
+        <td>1 week</td>
+      </tr>
+      <tr>
+        <td>Stadol&#174; (butorphanol)</td>
+        <td>1 week </td>
+      </tr>
+      <tr>
+        <td>Talacen&#174;
+          (pentazocine)</td>
+        <td>1 week </td>
+      </tr>
+      <tr>
+        <td>Tylenol #2&#174; , #3&#174;
+          , #4&#174; (codeine and acetaminophen) </td>
+        <td>3 days </td>
+      </tr>
+      <tr>
+        <td>Tylox&#174;
+          , Roxilox&#174; (oxycodone)</td>
+        <td>3 days </td>
+      </tr>
+      <tr>
+        <td>Vicodin&#174;, Lorcet&#174; (hydrocodone)</td>
+        <td>1 week</td>
+      </tr>
+    </table>
+    <p><b>Percocet
+        (oxycodone with acetaminophen) and Tylenol</b>&#174; <b>with codeine #2, #3, #4
+        (acetaminophen + codeine) ARE allowed in the month prior to enrollment, but
+        are not permitted in the 3 days prior to enrollment.</b></p>
+  </li>
+  <li>
+    <p>Neuroleptics
+      (antipsychotics) including but not limited to </p>
+    <table class=""table"">
+      <tr>
+        <td>Clozaril&#174;
+          (clozapine)</td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Haldol&#174; (haloperidol)</td>
+        <td>2
+          weeks</td>
+      </tr>
+      <tr>
+        <td>Loxitane&#174; (loxapine)</td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Mellaril&#174; (thioridazine)</td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Moban&#174;
+          (molindone)</td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Navane&#174; (thiothixene)</td>
+        <td>2
+          weeks</td>
+      </tr>
+      <tr>
+        <td>Orap&#174; (pimozide)</td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Prolixin&#174; (fluphenazine)</td>
+        <td>1 month</td>
+      </tr>
+      <tr>
+        <td>Risperdal&#174;
+          (risperidone)</td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Stelazine&#174; (trifluoperazine)</td>
+        <td>2
+          weeks</td>
+      </tr>
+      <tr>
+        <td>Thorazine&#174; (chlorpromazine)</td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Trilafon&#174; (perphenazine)</td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Serentil&#174;
+          (mesoridazine)</td>
+        <td>2 weeks</td>
+      </tr>
+    </table>
+    <p><b>The use of neuroleptics
+        on a daily basis must be discontinued 2 to 4 weeks prior to enrollment. The
+        use of neuroleptics on an as-needed basis is allowable during the screening
+        period, but the last dose must be at least 7 days prior to enrollment.</b></p>
+  </li>
+  <li>
+    <p>Antianxiety agents including but not limited to </p>
+    <table class=""table"">
+      <tr>
+        <td>Atarax&#174; (hydroxyzine)</td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>BuSpar&#174;
+          (buspirone)</td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Librium&#174; (chlordiazepoxide)</td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Serax&#174; (oxazepam)</td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Tranxene&#174; (clorazepate)</td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Valium&#174; (diazepam)</td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Vistaril&#174; (hydroxyzine pamoate)</td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Xanax&#174; (alprazolam)</td>
+        <td>2 weeks</td>
+      </tr>
+    </table>
+    <p><b>Ativan</b>&#174; <b>(lorazepam) should be discontinued on a daily
+        basis 2 weeks</b></p>
+    <p><b>prior to enrollment. It may be used on an as-needed
+        basis during the screening period, but is not permitted in the 24 hours prior
+        to enrollment.</b></p>
+  </li>
+  <li>
+    <p>Hypnotics/Sedatives including but not limited
+      to
+    <table class=""table"">
+      <tr>
+        <td>Ambien&#174; (zolpidem)</td>
+        <td> 3 days
+        </td>
+      </tr>
+      <tr>
+        <td>Dalmane&#174; (flurazepam)</td>
+         <td>3 days</td>
+      </tr>
+      <tr>
+        <td>Doral&#174; (quazepam)</td>
+         <td>3 days</td>
+      </tr>
+      <tr>
+        <td>Halcion&#174; (triazolam)</td>
+         <td>3 days</td>
+      </tr>
+      <tr>
+        <td>Nembutal&#174; </td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>ProSom&#174; (estazolam)</td>
+        <td>3 days</td>
+      </tr>
+      <tr>
+        <td>Restoril&#174;
+          (temazepam)</td>
+         <td>3 days</td>
+      </tr>
+      <tr>
+        <td>Seconal&#174;</td>
+        <td>2 weeks</td>
+      </tr>
+    </table>
+    <p><b>Chloral Hydrate is allowed on an as-needed basis during</b>
+      <b>screening, but is not permitted in the 24 hours prior to</b> <b>enrollment.</b>
+    </p>
+  </li>
+  <li>
+    <p>Histamine (H1 ) antagonists including but not limited to </p>
+    <table class=""table"">
+      <tr>
+        <td>Actifed&#174; , Actifed Plus&#174; (triprolidine) Benadryl&#174;
+          , Unisom&#174; , Tylenol P.M.&#174; </td>
+        <td>3 days </td>
+      </tr>
+      <tr>
+        <td>(diphenhydramine)</td>
+        <td>3
+          days</td>
+      </tr>
+      <tr>
+        <td>Compazine&#174; (prochlorperazine)</td>
+        <td>3 days</td>
+      </tr>
+      <tr>
+        <td>Contac&#174; , Coricidin D&#174; , Sinutab&#174; , Novahistine&#174; , Alka
+          Seltzer Plus&#174; , Naldecon&#174; , Sudafed Plus&#174; , Tylenol Cold&#174; , Tylenol
+          Cold and Flu&#174; (chlorpheniramine)</td>
+        <td>3 days</td>
+      <tr>
+        <td>Dimetapp&#174;
+          (brompheniramine)</td>
+        <td>3 days</td>
+      <tr>
+        <td>Drixoral&#174; (dexbrompheniramine)</td>
+        <td>3
+          days</td>
+      <tr>
+        <td>Hismanal&#174; (astemizole)</td>
+        <td>1 week</td>
+      <tr>
+        <td>Phenergan&#174;
+          (promethazine)</td>
+        <td>3 days</td>
+      <tr>
+        <td>Seldane&#174; (terfenadine)</td>
+        <td>1
+          week</td>
+      <tr>
+        <td>Tavist&#174; (clemastine fumarate)</td>
+        <td>3 days</td>
+      <tr>
+        <td>Zyrtec&#174; (cetrizine) </td>
+        <td>1 week</td>
+    </table>
+    <p><b>Allegra</b>&#174;
+      <b>(fexofenadine hydrochloride) or Claritin</b>&#174; <b>(loratadine) may be taken
+        on as-needed basis during screening but must be discontinued within 24 hours
+        of enrollment.</b>
+    </p>
+  </li>
+  <li>
+    <p>Stimulants including but not limited to </p>
+    <table class=""table"">
+      <tr>
+        <td>Cylert&#174; (pemoline) </td>
+        <td>1 month</td>
+      </tr>
+      <tr>
+        <td>Ritalin&#174; (methylphenidate)</td>
+        <td>1 month</td>
+      </tr>
+    </table>
+  </li>
+  <li>
+    <p>Antiarrhythmics including but not limited to the following
+    <table class=""table"">
+      <tr>
+        <td>Adenocard&#174; (adenosine) </td>
+      </tr>
+      <tr>
+        <td>Cordarone&#174;
+          (amiodarone) </td>
+      </tr>
+      <tr>
+        <td>Ethmozine&#174; (moricizine) </td>
+      </tr>
+      <tr>
+        <td>Mexitil&#174; (mexiletine) </td>
+      </tr>
+      <tr>
+        <td>Norpace&#174; (disopyramide)
+        </td>
+      </tr>
+      <tr>
+        <td>Procan&#174; (procainamide) </td>
+      </tr>
+      <tr>
+        <td>Quinaglute&#174;
+          (quinidine) </td>
+      </tr>
+      <tr>
+        <td>Rythmol&#174; (propafenone) </td>
+      </tr>
+      <tr>
+        <td>Tambocor&#174;
+          (flecainide) </td>
+      </tr>
+      <tr>
+        <td>Tonocard&#174; (tocainide)</td>
+      </tr>
+    </table>
+    <p><b>Requirement of these drugs for control of cardiac arrhythmia indicates that
+        the patient should be excluded from the study. If discontinuation of an antiarrhythmic
+        is considered, please discuss case with CRO medical monitor.</b></p>
+  <li>
+    <p>Miscellaneous
+      drugs including but not limited to </p>
+    <table class=""table"">
+      <tr>
+        <td>Coenzyme
+          Q</td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Eskalith&#174; , Lithobid&#174; (lithium)</td>
+        <td>2
+          weeks </td>
+      </tr>
+      <tr>
+        <td>Ginkgo biloba</td>
+        <td>1 week</td>
+      </tr>
+      <tr>
+        <td>Lecithin
+        </td>
+        <td>1 week</td>
+      </tr>
+      <tr>
+        <td>Lecithin </td>
+        <td>1 week </td>
+      </tr>
+      <tr>
+        <td>Lupron</td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Tamoxifen</td>
+        <td>1 month</td>
+      </tr>
+    </table>
+  </li>
+  <li>
+    <p>Estrogen supplements are permitted during the study, but dosage must be stable for at least 3 months prior to
+      enrollment.</p>
+  </li>
+</ol>",,,EligibilityCriterionItem
+EligibilityCriterion,EligibilityCriterion_1,criterionItemId,reference,EligibilityCriterionItem_1,IN01,Age greater than 50,,<p>Males and postmenopausal females at least <usdm:tag>min_age</usdm:tag> years of age.</p>,,SyntaxTemplateDictionary_1,EligibilityCriterionItem
+EligibilityCriterion,EligibilityCriterion_2,criterionItemId,reference,EligibilityCriterionItem_2,IN02,Diagnosis of Alzheimer's,,"<p><usdm:tag nam=""StudyPopulation""/> as defined by National Institute of Neurological and Communicative Disorders and Stroke (NINCDS) and the Alzheimer's Disease and Related Disorders Association (ADRDA) guidelines (Attachment LZZT.7).</p>",,SyntaxTemplateDictionary_1,EligibilityCriterionItem
+EligibilityCriterion,EligibilityCriterion_3,criterionItemId,reference,EligibilityCriterionItem_3,IN03,MMSE Score,,"<p><udsm:tag name=""Activity1""/> score of 10 to 23.</p>",,SyntaxTemplateDictionary_2,EligibilityCriterionItem
+EligibilityCriterion,EligibilityCriterion_4,criterionItemId,reference,EligibilityCriterionItem_4,IN04,Hachinski Ischemic Score,,"<p><usdm:tag name=""Activity2"">  score of ≤4 (Attachment LZZT.8).</p>",,SyntaxTemplateDictionary_2,EligibilityCriterionItem
+EligibilityCriterion,EligibilityCriterion_5,criterionItemId,reference,EligibilityCriterionItem_5,IN05,CNS imaging comptaible with Alzheimer's,,"<p>CNS imaging (CT scan or MRI of brain) compatible with AD within past 1 year.</p>
+<p>The following findings are incompatible with AD:</p>
+<ol type=""a"">
+  <li>
+    <p>Large vessel strokes</p>
+    <ol>
+      <li>
+        <p>Any definite area of encephalomalacia consistent with ischemic necrosis in any cerebral artery territory.</p>
+      </li>
+      <li>
+        <p>Large, confluent areas of encephalomalacia in parieto-occipital or frontal regions consistent with watershed
+          infarcts.</p>
+        <p>The above are exclusionary. Exceptions are made for small areas of cortical asymmetry which may represent a
+          small cortical stroke or a focal area of atrophy provided there is no abnormal signal intensity in the
+          immediately underlying parenchyma. Only one such questionable area allowed per scan, and size is restricted to
+          <1cm in frontal/parietal/temporal cortices and ≤2 cm in occipital cortex.</p>
+      </li>
+    </ol>
+  </li>
+  <li>
+    <p>Small vessel ischemia</p>
+    <ol>
+      <li>
+        <p>Lacunar infarct is defined as an area of abnormal intensity seen on CT scan or on both T1 and T2 weighted MRI
+          images in the basal ganglia, thalamus or deep white matter which is ≤1 cm in maximal diameter. A maximum of
+          one
+          lacune is allowed per scan.</p>
+      </li>
+      <li>
+        <p>Leukoariosis or leukoencephalopathy is regarded as an abnormality seen on T2 but not T1 weighted MRIs, or on
+          CT. This is accepted if mild or moderate in extent, meaning involvement of less than 25% of cortical white
+          matter.
+      </li>
+    </ol>
+  </li>
+  <li>
+    <p>Miscellaneous</p>
+    <ol>
+      <li>
+        <p>Benign small extra-axial tumors (ie, meningiomas) are accepted if they do not contact or indent the brain
+          parenchyma.</p>
+      </li>
+      <li>
+        <p>Small extra-axial arachnoid cysts are accepted if they do not indent or deform the brain parenchyma.</p>
+      </li>
+    </ol>
+  </li>
+</ol>",,,EligibilityCriterionItem
+EligibilityCriterion,EligibilityCriterion_12,criterionItemId,reference,EligibilityCriterionItem_12,EX04,Serious neurolocal conditions criteria,,"<p>Diagnosis of serious neurological conditions, including </p>
+<ol type=""a"">
+<li><p>Stroke or vascular dementia documented by clinical history and/or radiographic findings interpretable by the investigator as indicative of these disorders</p></li>
+<li><p>Seizure disorder other than simple childhood febrile seizures</p></li>
+<li><p>Severe head trauma resulting in protracted loss of consciousness within the last 5 years, or multiple episodes of head trauma</p></li>
+<li><p>Parkinson's disease</p></li>
+<li><p>Multiple sclerosis</p></li>
+<li><p>Amyotrophic lateral sclerosis</p></li>
+<li><p>Myasthenia gravis.</p></li>
+</ol>",,,EligibilityCriterionItem
+EligibilityCriterion,EligibilityCriterion_18,criterionItemId,reference,EligibilityCriterionItem_18,EX10,Gastrointensinal criteria,,"<p>A history within the last 5 years of a serious gastrointestinal disorder, including 
+<ol type=""a"">
+<li><p>Chronic peptic/duodenal/gastric/esophageal ulcer that are untreated or refractory to treatment</p></li>
+<li><p>Symptomatic diverticular disease</p></li>
+<li><p>Inflammatory bowel disease</p></li>
+<li><p>Pancreatitis</p></li>
+<li><p>Hepatitis</p></li>
+<li><p>Cirrhosis of the liver.</p></li>
+</ol>",,,EligibilityCriterionItem
+EligibilityCriterion,EligibilityCriterion_31,criterionItemId,reference,EligibilityCriterionItem_31,EX23,Medications Criteria,,"<p>Treatment with the following medications within the specified washout periods prior to enrollment and during the study:</p>
+<ol type=""a"">
+  <li>
+    <p>Anticonvulsants including but not limited to </p>
+    <table class=""table"">
+      <tr>
+        <td>Depakote&#174; (valproic acid) </td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Dilantin&#174; (phenytoin)</td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Felbatol&#174;
+          (felbamate)</td>
+        <td>1 month</td>
+      </tr>
+      <tr>
+        <td>Klonopin&#174; (clonazepam)</td>
+        <td>2
+          weeks</td>
+      </tr>
+      <tr>
+        <td>Lamictal&#174; (lamotrigine)</td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Mysoline&#174; (primidone)</td>
+        <td>1 month</td>
+      </tr>
+      <tr>
+        <td>Neurontin&#174;
+          (gabapentin)</td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Phenobarbitol</td>
+        <td>1 month</td>
+      </tr>
+      <tr>
+        <td>Tegretol&#174; (carbamazepine)</td>
+        <td>2 weeks</td>
+      </tr>
+    </table>
+  </li>
+  <li>
+    <p>Alpha receptor blockers including but not limited to </p>
+    <table class=""table"">
+      <tr>
+        <td>Aldomet&#174; (methyldopa) </td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Cardura&#174;
+          (doxazosin) </td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Catapres&#174; (clonidine)
+        </td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Hytrin&#174; (terazosin) </td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Minipress&#174; (prazosin)</td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Tenex&#174; (guanfacine)</td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Wytensin&#174;
+          (guanabenz) </td>
+        <td>2 weeks</td>
+      </tr>
+    </table>
+    <p><b>The use of low doses
+        (2 mg daily) of either Hytrin</b>&#174; <b>or Cardura</b>&#174; <b>for relief of
+        urinary retention for patients with prostatic hypertrophy will be considered
+        on a case-by-case basis provided blood pressure is stable and the medication
+        has not had demonstrable effect on dementia symptoms in the opinion of the treating
+        physician. Contact CRO medical monitor.</b></p>
+  </li>
+  <li>
+    <p>Calcium channel blockers
+      that are CNS active including but not limited to </p>
+    <table class=""table"">
+      <tr>
+        <td>Calan&#174; , Isoptin&#174; , Verelan&#174; (verapamil) </td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Cardizem&#174; (diltiazem) </td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Nimotop&#174;
+          (nimodipine) </td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Adalat&#174; , Procardia XL&#174;
+          (nifedipine) </td>
+        <td>2 weeks</td>
+      </tr>
+    </table>
+    <p><b>Cardene</b>&#174; <b>(nicardipine),
+        Norvasc</b>&#174; <b>, (amlodipine), and DynaCirc</b>&#174; <b>(isradipine) will
+        be allowed during the study. If a patient is taking an excluded calcium channel
+        blocker and is changed to an equivalent dose of an allowed calcium channel blocker,
+        enrollment may proceed in as little as 24 hours though 1 week is preferred when
+        possible.</b></p>
+  </li>
+  <li>
+    <p>Beta blockers including but not limited to </p>
+    <table class=""table"">
+      <tr>
+        <td>Betapace&#174; (sotalol) </td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Inderal&#174; (propranolol) </td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Lopressor&#174;
+          , Toprol XL&#174; (metoprolol) </td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Corgard&#174; (nadolol) </td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Sectral&#174; (acebutolol)</td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Tenormin&#174; (atenolol) </td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Visken&#174; (pindolol)</td>
+        <td>2 weeks</td>
+      </tr>
+    </table>
+    <p><b>Beta
+        blocker eye drops for glaucoma will be considered on a case-by-case basis. Call
+        medical monitor.</b></p>
+  </li>
+  <li>
+    <p>Beta sympathomimetics (unless inhaled) including
+      but not limited to </p>
+    <table class=""table"">
+      <tr>
+        <td>Alupent&#174; tablets
+          (metaproterenol) </td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Brethine&#174; tablets
+          (terbutaline) </td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Dopamine </td>
+        <td>2 weeks
+
+      <tr>
+        <td>Proventil Repetabs&#174; , Ventolin&#174; tablets (albuterol tablets)
+        </td>
+        <td>2 weeks</td>
+      </tr>
+    </table>
+  </li>
+  <li>Parasympathomimetics (cholinergics)
+    (unless opthalmic) including but not limited to <table class=""table"">
+      <tr>
+        <td>Antilirium&#174; (physostigmine) </td>
+        <td>1 month</td>
+      </tr>
+      <tr>
+        <td>Aricept&#174; (donepezil) </td>
+        <td>1 month</td>
+      </tr>
+      <tr>
+        <td>Cognex&#174; (tacrine) </td>
+        <td>1
+          month</td>
+      </tr>
+      <tr>
+        <td>Mestinon&#174; (pyridostigmine) </td>
+        <td>1 week</td>
+      </tr>
+      <tr>
+        <td>Reglan&#174; (metoclopramide)</td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Urecholine&#174;
+          , Duvoid (bethanechol) </td>
+        <td>2 weeks</td>
+      </tr>
+    </table>
+    <p><b>Cholinergic eye drops for treatment of glaucoma will be allowed during the study on a case-by-case basis.
+        Please contact the CRO medical monitor.</b></p>
+  </li>
+  <li>
+    <p>Muscle relaxants-centrally active including but not limited to </p>
+    <table class=""table"">
+      <tr>
+        <td>Equanil&#174; (meprobamate) </td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Flexeril&#174; (cyclobenzaprine)</td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Lioresal&#174; (baclofen) </td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Norflex&#174; (orphenadrine) </td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Parafon Forte&#174; (chlorzoxazone)</td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Robaxin&#174; (methocarbamol) </td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Skelaxin&#174; (metaxalone)
+        </td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Soma&#174; (carisoprodol) </td>
+        <td>2 weeks</td>
+      </tr>
+    </table>
+  </li>
+  <li>
+    <p>Monamine oxidase inhibitors (MAOI) including but not limited to</p>
+    <table class=""table"">
+      <tr>
+        <td>Eldepryl&#174; (selegiline)</td>
+        <td>1 month</td>
+      </tr>
+      <tr>
+        <td>Nardil&#174; (phenelzine) </td>
+        <td>1 month</td>
+      </tr>
+      <tr>
+        <td>Parnate&#174; (tranylcypromine) </td>
+        <td>1 month</td>
+      </tr>
+    </table>
+  </li>
+  <li>
+    <p>Parasympatholytics including but not limited to </p>
+    <table class=""table"">
+      <tr>
+        <td>Antivert&#174; , Bonine&#174; , Dramamine II&#174; (meclizine)</td>
+        <td>3 days </td>
+      </tr>
+      <tr>
+        <td>Artane&#174; (trihexyphenidyl)</td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Bellergal-S&#174; (alkaloids of belladonna and ergotamine) </td>
+        <td>2 weeks </td>
+      </tr>
+      <tr>
+        <td>Bentyl&#174; (dicyclomine) </td>
+        <td>3 days </td>
+      </tr>
+      <tr>
+        <td>Cogentin&#174; (benztropine) </td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Cystospaz&#174;, Levsin&#174; , Levsinex&#174; (hyoscyamine)</td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Ditropan&#174;
+          (oxybutynin) </td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Donnatal&#174; , Hyosophen&#174;
+          (atropine, scopolamine, hyoscyamine and phenobarbitol) </td>
+        <td>1 month </td>
+      </tr>
+      <tr>
+        <td>Dramamine&#174; (dimenhydrinate)</td>
+         <td>3 days</td>
+      </tr>
+      <tr>
+        <td>Lomotil&#174;, Lonox&#174; (atropine, diphenoxylate) </td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Pro-Banthine&#174;
+          (propantheline) </td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Robinul&#174; (glycopyrrolate)</td>
+        <td>3 days </td>
+      </tr>
+      <tr>
+        <td>Tigan&#174; (trimethobenzamide) </td>
+        <td>3 days </td>
+      </tr>
+      <tr>
+        <td>Transderm-Scop&#174; (scopolamine) </td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Urispas&#174; (flavoxate) 2 weeks</td>
+      </tr>
+    </table>
+  </li>
+  <li>
+    <p>Antidepressants including but not limited to </p>
+    <table class=""table"">
+      <tr>
+        <td>Anafranil&#174; (clomipramine)</td>
+        <td> 1 month</td>
+      </tr>
+      <tr>
+        <td>Asendin&#174;
+          (amoxapine)</td>
+        <td> 1 month</td>
+      </tr>
+      <tr>
+        <td>Desyrel&#174; (trazodone)</td>
+        <td>
+          1 month</td>
+      </tr>
+      <tr>
+        <td>Effexor&#174; (venlafaxine) </td>
+        <td> 1 month</td>
+      </tr>
+      <tr>
+        <td>Elavil&#174; (amitriptyline)</td>
+        <td> 1 month</td>
+      </tr>
+      <tr>
+        <td>Ludiomil&#174;
+          (maprotiline)</td>
+        <td> 1 month</td>
+      </tr>
+      <tr>
+        <td>Norpramin&#174; (desipramine)</td>
+        <td>
+          1 month</td>
+      </tr>
+      <tr>
+        <td>Pamelor&#174; , Aventyl&#174; (nortriptyline)</td>
+        <td> 1
+          month</td>
+      </tr>
+      <tr>
+        <td>Paxil&#174; (paroxetine)</td>
+        <td> 1 month</td>
+      </tr>
+      <tr>
+        <td>Prozac&#174;
+          (fluoxetine</td>
+        <td> 1 month</td>
+      </tr>
+      <tr>
+        <td>Remeron&#174; (mirtazapine)</td>
+        <td>
+          1 month</td>
+      </tr>
+      <tr>
+        <td>Serzone&#174; (nefazodone) </td>
+        <td> 1 month</td>
+      </tr>
+      <tr>
+        <td>Sinequan&#174;
+          (doxepin)</td>
+        <td> 1 month</td>
+      </tr>
+      <tr>
+        <td>Tofranil&#174; (imipramine)</td>
+        <td>
+          1 month</td>
+      </tr>
+      <tr>
+        <td>Vivactil&#174; (protriptyline)</td>
+        <td> 1 month</td>
+      </tr>
+      <tr>
+        <td>Wellbutrin&#174; (bupropion)</td>
+        <td> 1 month</td>
+      </tr>
+      <tr>
+        <td>Zoloft&#174;
+          (sertraline)</td>
+        <td> 1 month</td>
+      </tr>
+    </table>
+  </li>
+  <li>
+    <p>Systemic corticosteroids including but not limited to </p>
+    <table class=""table"">
+      <tr>
+        <td>Cortisone</td>
+        <td>2
+          weeks</td>
+        <td>
+      </tr>
+      <tr>
+        <td>Decadron&#174; (dexamethasone)</td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Depo-Medrol&#174; (methylprednisolone)</td>
+        <td>1 month</td>
+        <td>
+      </tr>
+      <tr>
+        <td>Prednisone</td>
+        <td>2 weeks</td>
+        <td>
+      </tr>
+    </table>
+  </li>
+  <li>
+    <p>Xanthine derivatives
+      including but not limited to </p>
+    <table class=""table"">
+      <tr>
+        <td>Aminophylline</td>
+        <td>2 weeks</td>
+        <td>
+      </tr>
+      <tr>
+        <td>Fioricet&#174; , Esgic&#174; , Phrenilin Forte&#174; (caffeine, butalbital)</td>
+        <td>3 days</td>
+        <td>
+      </tr>
+      <tr>
+        <td>Theo-Dur&#174; (theophylline)</td>
+        <td>2 weeks</td>
+        <td>
+      </tr>
+      <tr>
+        <td>Wigraine&#174; , Cafergot&#174; (caffeine, ergotamine)</td>
+        <td>3 days</td>
+        <td>
+      </tr>
+    </table>
+  </li>
+  <li>
+    <p>Histamine (H2 ) antagonists including but not limited to </p>
+    <table class=""table"">
+      <tr>
+        <td>Axid&#174; (nizatidine)</td>
+        <td>1 week</td>
+      </tr>
+      <tr>
+        <td>Pepcid&#174; (famotidine)</td>
+        <td>1 week</td>
+      </tr>
+      <tr>
+        <td>Tagamet&#174; (cimetidine)</td>
+        <td>1 week</td>
+      </tr>
+      <tr>
+        <td>Zantac&#174; (ranitidine)</td>
+        <td>1 week</td>
+      </tr>
+    </table>
+    <p><b>If an H 2 antagonist is needed by the patient, Axid</b>&#174; <b>will be</b> <b>allowed on a case-by-case
+        basis. Please consult CRO</b> <b>medical monitor.</b></p>
+  </li>
+  <li>
+    <p>Narcotic Analgesics including but not limited to </p>
+    <table class=""table"">
+      <tr>
+        <td>Darvocet-N
+          100&#174; , (propoxyphene)</td>
+        <td>1 week </td>
+      </tr>
+      <tr>
+        <td>Demerol&#174; (meperidine)</td>
+        <td>1
+          week </td>
+      </tr>
+      <tr>
+        <td>Dilaudid&#174; (hydromorphone)</td>
+        <td>1 week </td>
+      </tr>
+      <tr>
+        <td>Duragesic&#174; (fentanyl)</td>
+        <td>1 week </td>
+      </tr>
+      <tr>
+        <td>MS
+          Contin&#174; , Roxanol&#174; , Oramorph&#174; (morphine) </td>
+        <td>1 week </td>
+      </tr>
+      <tr>
+        <td>Percocet&#174; , Roxicet&#174; (oxycodone with acetaminophen)</td>
+        <td>3
+          days </td>
+      </tr>
+      <tr>
+        <td>Percodan&#174; , Roxiprin</td>
+        <td>1 week</td>
+      </tr>
+      <tr>
+        <td>Stadol&#174; (butorphanol)</td>
+        <td>1 week </td>
+      </tr>
+      <tr>
+        <td>Talacen&#174;
+          (pentazocine)</td>
+        <td>1 week </td>
+      </tr>
+      <tr>
+        <td>Tylenol #2&#174; , #3&#174;
+          , #4&#174; (codeine and acetaminophen) </td>
+        <td>3 days </td>
+      </tr>
+      <tr>
+        <td>Tylox&#174;
+          , Roxilox&#174; (oxycodone)</td>
+        <td>3 days </td>
+      </tr>
+      <tr>
+        <td>Vicodin&#174;, Lorcet&#174; (hydrocodone)</td>
+        <td>1 week</td>
+      </tr>
+    </table>
+    <p><b>Percocet
+        (oxycodone with acetaminophen) and Tylenol</b>&#174; <b>with codeine #2, #3, #4
+        (acetaminophen + codeine) ARE allowed in the month prior to enrollment, but
+        are not permitted in the 3 days prior to enrollment.</b></p>
+  </li>
+  <li>
+    <p>Neuroleptics
+      (antipsychotics) including but not limited to </p>
+    <table class=""table"">
+      <tr>
+        <td>Clozaril&#174;
+          (clozapine)</td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Haldol&#174; (haloperidol)</td>
+        <td>2
+          weeks</td>
+      </tr>
+      <tr>
+        <td>Loxitane&#174; (loxapine)</td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Mellaril&#174; (thioridazine)</td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Moban&#174;
+          (molindone)</td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Navane&#174; (thiothixene)</td>
+        <td>2
+          weeks</td>
+      </tr>
+      <tr>
+        <td>Orap&#174; (pimozide)</td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Prolixin&#174; (fluphenazine)</td>
+        <td>1 month</td>
+      </tr>
+      <tr>
+        <td>Risperdal&#174;
+          (risperidone)</td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Stelazine&#174; (trifluoperazine)</td>
+        <td>2
+          weeks</td>
+      </tr>
+      <tr>
+        <td>Thorazine&#174; (chlorpromazine)</td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Trilafon&#174; (perphenazine)</td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Serentil&#174;
+          (mesoridazine)</td>
+        <td>2 weeks</td>
+      </tr>
+    </table>
+    <p><b>The use of neuroleptics
+        on a daily basis must be discontinued 2 to 4 weeks prior to enrollment. The
+        use of neuroleptics on an as-needed basis is allowable during the screening
+        period, but the last dose must be at least 7 days prior to enrollment.</b></p>
+  </li>
+  <li>
+    <p>Antianxiety agents including but not limited to </p>
+    <table class=""table"">
+      <tr>
+        <td>Atarax&#174; (hydroxyzine)</td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>BuSpar&#174;
+          (buspirone)</td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Librium&#174; (chlordiazepoxide)</td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Serax&#174; (oxazepam)</td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Tranxene&#174; (clorazepate)</td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Valium&#174; (diazepam)</td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Vistaril&#174; (hydroxyzine pamoate)</td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Xanax&#174; (alprazolam)</td>
+        <td>2 weeks</td>
+      </tr>
+    </table>
+    <p><b>Ativan</b>&#174; <b>(lorazepam) should be discontinued on a daily
+        basis 2 weeks</b></p>
+    <p><b>prior to enrollment. It may be used on an as-needed
+        basis during the screening period, but is not permitted in the 24 hours prior
+        to enrollment.</b></p>
+  </li>
+  <li>
+    <p>Hypnotics/Sedatives including but not limited
+      to
+    <table class=""table"">
+      <tr>
+        <td>Ambien&#174; (zolpidem)</td>
+        <td> 3 days
+        </td>
+      </tr>
+      <tr>
+        <td>Dalmane&#174; (flurazepam)</td>
+         <td>3 days</td>
+      </tr>
+      <tr>
+        <td>Doral&#174; (quazepam)</td>
+         <td>3 days</td>
+      </tr>
+      <tr>
+        <td>Halcion&#174; (triazolam)</td>
+         <td>3 days</td>
+      </tr>
+      <tr>
+        <td>Nembutal&#174; </td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>ProSom&#174; (estazolam)</td>
+        <td>3 days</td>
+      </tr>
+      <tr>
+        <td>Restoril&#174;
+          (temazepam)</td>
+         <td>3 days</td>
+      </tr>
+      <tr>
+        <td>Seconal&#174;</td>
+        <td>2 weeks</td>
+      </tr>
+    </table>
+    <p><b>Chloral Hydrate is allowed on an as-needed basis during</b>
+      <b>screening, but is not permitted in the 24 hours prior to</b> <b>enrollment.</b>
+    </p>
+  </li>
+  <li>
+    <p>Histamine (H1 ) antagonists including but not limited to </p>
+    <table class=""table"">
+      <tr>
+        <td>Actifed&#174; , Actifed Plus&#174; (triprolidine) Benadryl&#174;
+          , Unisom&#174; , Tylenol P.M.&#174; </td>
+        <td>3 days </td>
+      </tr>
+      <tr>
+        <td>(diphenhydramine)</td>
+        <td>3
+          days</td>
+      </tr>
+      <tr>
+        <td>Compazine&#174; (prochlorperazine)</td>
+        <td>3 days</td>
+      </tr>
+      <tr>
+        <td>Contac&#174; , Coricidin D&#174; , Sinutab&#174; , Novahistine&#174; , Alka
+          Seltzer Plus&#174; , Naldecon&#174; , Sudafed Plus&#174; , Tylenol Cold&#174; , Tylenol
+          Cold and Flu&#174; (chlorpheniramine)</td>
+        <td>3 days</td>
+      <tr>
+        <td>Dimetapp&#174;
+          (brompheniramine)</td>
+        <td>3 days</td>
+      <tr>
+        <td>Drixoral&#174; (dexbrompheniramine)</td>
+        <td>3
+          days</td>
+      <tr>
+        <td>Hismanal&#174; (astemizole)</td>
+        <td>1 week</td>
+      <tr>
+        <td>Phenergan&#174;
+          (promethazine)</td>
+        <td>3 days</td>
+      <tr>
+        <td>Seldane&#174; (terfenadine)</td>
+        <td>1
+          week</td>
+      <tr>
+        <td>Tavist&#174; (clemastine fumarate)</td>
+        <td>3 days</td>
+      <tr>
+        <td>Zyrtec&#174; (cetrizine) </td>
+        <td>1 week</td>
+    </table>
+    <p><b>Allegra</b>&#174;
+      <b>(fexofenadine hydrochloride) or Claritin</b>&#174; <b>(loratadine) may be taken
+        on as-needed basis during screening but must be discontinued within 24 hours
+        of enrollment.</b>
+    </p>
+  </li>
+  <li>
+    <p>Stimulants including but not limited to </p>
+    <table class=""table"">
+      <tr>
+        <td>Cylert&#174; (pemoline) </td>
+        <td>1 month</td>
+      </tr>
+      <tr>
+        <td>Ritalin&#174; (methylphenidate)</td>
+        <td>1 month</td>
+      </tr>
+    </table>
+  </li>
+  <li>
+    <p>Antiarrhythmics including but not limited to the following
+    <table class=""table"">
+      <tr>
+        <td>Adenocard&#174; (adenosine) </td>
+      </tr>
+      <tr>
+        <td>Cordarone&#174;
+          (amiodarone) </td>
+      </tr>
+      <tr>
+        <td>Ethmozine&#174; (moricizine) </td>
+      </tr>
+      <tr>
+        <td>Mexitil&#174; (mexiletine) </td>
+      </tr>
+      <tr>
+        <td>Norpace&#174; (disopyramide)
+        </td>
+      </tr>
+      <tr>
+        <td>Procan&#174; (procainamide) </td>
+      </tr>
+      <tr>
+        <td>Quinaglute&#174;
+          (quinidine) </td>
+      </tr>
+      <tr>
+        <td>Rythmol&#174; (propafenone) </td>
+      </tr>
+      <tr>
+        <td>Tambocor&#174;
+          (flecainide) </td>
+      </tr>
+      <tr>
+        <td>Tonocard&#174; (tocainide)</td>
+      </tr>
+    </table>
+    <p><b>Requirement of these drugs for control of cardiac arrhythmia indicates that
+        the patient should be excluded from the study. If discontinuation of an antiarrhythmic
+        is considered, please discuss case with CRO medical monitor.</b></p>
+  <li>
+    <p>Miscellaneous
+      drugs including but not limited to </p>
+    <table class=""table"">
+      <tr>
+        <td>Coenzyme
+          Q</td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Eskalith&#174; , Lithobid&#174; (lithium)</td>
+        <td>2
+          weeks </td>
+      </tr>
+      <tr>
+        <td>Ginkgo biloba</td>
+        <td>1 week</td>
+      </tr>
+      <tr>
+        <td>Lecithin
+        </td>
+        <td>1 week</td>
+      </tr>
+      <tr>
+        <td>Lecithin </td>
+        <td>1 week </td>
+      </tr>
+      <tr>
+        <td>Lupron</td>
+        <td>2 weeks</td>
+      </tr>
+      <tr>
+        <td>Tamoxifen</td>
+        <td>1 month</td>
+      </tr>
+    </table>
+  </li>
+  <li>
+    <p>Estrogen supplements are permitted during the study, but dosage must be stable for at least 3 months prior to
+      enrollment.</p>
+  </li>
+</ol>",,,EligibilityCriterionItem

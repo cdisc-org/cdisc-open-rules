@@ -1,0 +1,74 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'A scheduled activity instance must only reference a timeline
+                  exit that is defined within the same schedule timeline as the
+                  scheduled activity instance.'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00102'
+              Version: '1'
+            Version: '1.0'
+        Version: '3.0'
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'A scheduled activity instance must only reference a timeline
+                  exit that is defined within the same schedule timeline as the
+                  scheduled activity instance.'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00102'
+              Version: '1'
+            Version: '1.0'
+        Version: '4.0'
+Check:
+  all:
+    - name: instanceType
+      operator: equal_to
+      value: 'ScheduledActivityInstance'
+    - name: rel_type
+      operator: equal_to
+      value: 'definition'
+    - name: timelineExitId
+      operator: non_empty
+    - name: parent_id.ScheduleTimelineExit
+      operator: not_equal_to
+      value: parent_id
+Core:
+  Id: 'CORE-000819'
+  Status: Published
+  Version: '1'
+Description: 'A scheduled activity instance must only reference a timeline exit
+  that is defined within the same schedule timeline as the scheduled activity
+  instance.'
+Executability: Fully Executable
+Match Datasets:
+  - Keys:
+      - Left: timelineExitId
+        Right: id
+      - rel_type
+    Name: ScheduleTimelineExit
+Outcome:
+  Message: 'The scheduled activity instance references a timeline exit that is not
+    defined within the same schedule timeline as the scheduled activity
+    instance.'
+  Output Variables:
+    - parent_entity
+    - parent_id
+    - parent_rel
+    - id
+    - name
+    - timelineExitId
+    - parent_id.ScheduleTimelineExit
+Rule Type: Record Data
+Scope:
+  Entities:
+    Include:
+      - 'ScheduledActivityInstance'
+Sensitivity: Record

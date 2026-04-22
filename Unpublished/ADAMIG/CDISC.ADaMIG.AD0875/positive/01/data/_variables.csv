@@ -1,0 +1,101 @@
+dataset,variable,label,type,length
+adtte,USUBJID,Unique Subject Identifier,Char,50
+adtte,PARAM,Parameter,Char,50
+adtte,PARAMCD,Parameter Code,Char,50
+adtte,AVAL,Analysis Value,Num,8
+adtte,CNSR,Censor,Num,
+adtte,EVNTDESC,Event or Censoring Description,Char,50
+adtte,SRCDOM,Source Data,Char,50
+adtte,SRCVAR,Source Variable,Char,50
+adtte,SRCSEQ,Source Sequence Number,Num,8
+adppk,PROJID,Project Identifier,Char,50
+adppk,PROJIDN,Project Identifier (N),Num,50
+adppk,STUDYID,Study Identifier,Char,50
+adppk,STUDYIDN,Study Identifier (N),Num,8
+adppk,PART,Part of the Study,Num,8
+adppk,USUBJID,Unique Subject Identifier,Char,50
+adppk,USUBJIDN,Unique Subject,Num,8
+adppk,SUBJID,Subject Identifier for the Study,Char,50
+adppk,SUBJTYP,Subjet Type ,Num,8
+adppk,SUBJTYPC,Subject Type (C),Char,50
+adppk,SITEID,Study Site Identifier,Char,50
+adppk,SITEIDN,Study Site Identifier (N),Num,8
+adppk,RECSEQ,Record Sequence,Num,8
+adppk,AVISIT,Analysis Visit,Char,50
+adppk,AVISITN,Analysis Visit (N),Num,8
+adppk,VISIT,Visit Name,Char,50
+adppk,VISITNUM,Visit Number,Num,8
+adppk,AFRLT,Actual Rel Time from First Dose,Num,8
+adppk,ATPTREF,Analysis Time Point Reference,Char,50
+adppk,APRLT,Actual Rel Time from Previous Dose,Num,8
+adppk,NFRLT,Nominal Rel Time from First Dose,Num,8
+adppk,NPRLT,Nominal Rel Time from Previous Dose,Num,8
+adppk,ATPT,Analysis Timepoint,Char,50
+adppk,ATPTN,Analysis Timepoint (N),Num,8
+adppk,ADT,Analysis Datetime,Num,8
+adppk,UDTC,Date and Time of the Event,Char,50
+adppk,ADY,Analysis Day,Num,8
+adppk,ATM,Analysis Time,Num,8
+adppk,OCC,Occasion,Num,8
+adppk,DVID,Dependent Variable Name,Char,50
+adppk,DVIDN,Dependent Variable Name (N),Num,8
+adppk,CMT,Compartment,Num,8
+adppk,AVAL,Analysis Value,Num,8
+adppk,DV,Dependent Variable Result,Num,8
+adppk,PCSTRESC,Result or Finding in Standard Format,Char,50
+adppk,EVID,Event ID,Num,8
+adppk,MDV,Missing Dependent Variable Result,Num,8
+adppk,AULOQ,Analysis Upper Limit of Quantitation,Num,8
+adppk,ALLOQ,Analysis Lower Limit of Quantitation,Num,8
+adppk,BLQFL,Below Lower Limit of Quant Flag,Char,50
+adppk,BLQFN,Below Lower Limit of Quant Flag,Num,8
+adppk,ALQFL,Above the Upper Limit of Quant Flag,Char,50
+adppk,ALQFN,Above the Upper Limit of Quant Flag (N),Num,8
+adppk,DOSEA,Actual Treatment Dose,Num,8
+adppk,DOSEP,Planned Treatment Dose,Num,8
+adppk,AMT,Actual Amount of Dose Received (unit),Num,8
+adppk,DOSETDD,Total Daily Amt of Dose Received (unit),Num,8
+adppk,FORM,Drug Formulation,Char,50
+adppk,FORMN,Drug Formulation (N),Num,8
+adppk,ROUTE,Route of Administration,Char,50
+adppk,ROUTEN,Route of Administration (N),Num,8
+adppk,TRTP,Planned Treatment,Char,50
+adppk,TRTPN,Planned Treatment (N),Num,8
+adppk,TRTA,Actual Treatment,Char,50
+adppk,TRTAN,Actual Treatment (N),Num,8
+adppk,APHASE,Phase,Char,50
+adppk,APHASEN,Phase (N),Num,8
+adppk,APERIOD,Period,Char,50
+adppk,APERIODC,Period (C),Char,50
+adppk,ARM,Description of Planned Arm,Char,50
+adppk,ARMN,Description of Planned Arm (N),Num,8
+adppk,ACTARM,Description of Actual Arm,Char,50
+adppk,ACTARMN,Description of Actual Arm (N),Num,8
+adppk,COHORTC,Cohort Subject Enrolled into (C),Char,50
+adppk,COHORT,Cohort Subject Enrolled Into,Num,8
+adppk,WT,Body Weight (unit),Num,8
+adppk,WTBL,Weight at Baseline,Num,8
+adppk,HTBL,Baseline Body Height (unit),Num,8
+adppk,BMIBL,Baseline Body Mass Index (unit),Num,8
+adppk,BSABL,Body Surface Area at Baseline (unit),Num,8
+adppk,AGE,Age,Num,8
+adppk,SEX,Sex,Char,50
+adppk,SEXN,Sex (N),Num,8
+adppk,RACE,Race ,Char,50
+adppk,RACEN,Race (N),Num,8
+adppk,ETHNIC,Ethnicity,Char,50
+adppk,ETHNICN,Ethnicity (N),Num,8
+adppk,REGION,Geographic Region,Char,50
+adppk,REGIONN,Geographic Region (N),Num,8
+adppk,COUNTRYL,Country Full Name,Char,50
+adppk,COUNTRY,Country,Char,50
+adppk,COUNTRYN,Country (N),Num,8
+adppk,CREATBL,Baseline Creatinine Serum (unit),Num,8
+adppk,UCREATBL,Baseline Creatinine Clearance (unit),Num,8
+adppk,CRCLBL,CRCL at Baseline,Num,8
+adppk,EGFRBL,Baseline eGFR (unit),Num,8
+adppk,TBILBL,Baseline Total Bilirubin (unit),Num,8
+adppk,ASTBL,Baseline Aspartate transaminase(unit),Num,8
+adppk,ALT,Baseline Alanine transaminase(unit),Num,8
+adppk,ITTFL,Intent to Treat Population Flag,Char,50
+adppk,ITTFN,Intent to Treat Population Flag (N),Char,50

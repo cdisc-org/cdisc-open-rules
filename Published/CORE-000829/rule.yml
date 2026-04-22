@@ -1,0 +1,76 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'Within an encounter there must be no duplicate contact modes.'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00054'
+              Version: '1'
+            Version: '1.0'
+        Version: '3.0'
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'Within an encounter there must be no duplicate contact modes.'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00054'
+              Version: '1'
+            Version: '1.0'
+        Version: '4.0'
+Check:
+  all:
+    - name: instanceType
+      operator: equal_to
+      value: 'Code'
+    - name: parent_entity
+      operator: equal_to
+      value: 'Encounter'
+    - name: parent_rel
+      operator: equal_to
+      value: 'contactModes'
+      value_is_literal: true
+    - name: code
+      operator: is_not_unique_set
+      value:
+        - parent_entity
+        - parent_rel
+        - parent_id
+        - codeSystem
+        - codeSystemVersion
+Core:
+  Id: "CORE-000829"
+  Status: Published
+  Version: '1'
+Description: 'Within an encounter there must be no duplicate contact modes.'
+Executability: Fully Executable
+Match Datasets:
+  - Keys:
+      - Left: parent_id
+        Right: id
+      - rel_type
+    Name: Encounter
+Outcome:
+  Message: 'The contact modes of the encounter are not unique - the same code is
+    used more than once with the same codeSystem and codeSystemVersion.'
+  Output Variables:
+    - name
+    - parent_entity
+    - parent_id
+    - parent_rel
+    - id
+    - code
+    - codeSystem
+    - codeSystemVersion
+    - decode
+Rule Type: Record Data
+Scope:
+  Entities:
+    Include:
+      - Code
+Sensitivity: Record

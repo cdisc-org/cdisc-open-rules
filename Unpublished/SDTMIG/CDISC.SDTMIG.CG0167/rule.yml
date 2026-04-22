@@ -1,0 +1,84 @@
+# Variable: GEN
+# Condition: 
+# Rule: Comments are unsolicited, free-text and voluntary
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        Version: '3.4'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0167
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: The Comments special-purpose domain provides a solution
+                  for submitting free-text comments related to data in one or more
+                  SDTM domains (as described in Section 8.5, Relating Comments to
+                  a Parent Domain) or collected on a separate CRF page dedicated to
+                  comments. Comments are generally not responses to specific questions;
+                  instead, comments usually consist of voluntary, free-text or unsolicited
+                  observations.
+                Document: IG v3.4
+                Item: Assumption 1
+                Section: '5.1'
+      - Name: SDTMIG
+        Version: '3.2'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0167
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: 'The Comments special-purpose domain provides a solution
+                  for submitting free-text comments related to data in one or more
+                  SDTM domains (as described in Section 8: 8.5, Relating Comments
+                  To A Parent Domain) or collected on a separate CRF page dedicated
+                  to comments. Comments are generally not responses to specific questions;
+                  instead, comments usually consist of voluntary, free-text or unsolicited
+                  observations.'
+                Document: IG v3.2
+                Item: Specification
+                Section: '5'
+      - Name: SDTMIG
+        Version: '3.3'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0167
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: 'The Comments special-purpose domain provides a solution
+                  for submitting free-text comments related to data in one or more
+                  SDTM domains (as described in Section 8: 8.5, Relating Comments
+                  To A Parent Domain) or collected on a separate CRF page dedicated
+                  to comments. Comments are generally not responses to specific questions;
+                  instead, comments usually consist of voluntary, free-text or unsolicited
+                  observations.'
+                Document: IG v3.3
+                Item: Specification
+                Section: '5.1'
+Check:
+  all:
+    - name:
+      operator:
+Core:
+  Id: CDISC.SDTMIG.CG0167
+  Status: Draft
+  Version: '1'
+Description: Trigger error when comments are not unsolicited, free-text and voluntary
+Executability: Fully Executable
+Outcome:
+  Message: Comments are not unsolicited, free-text and voluntary
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - CO
+Sensitivity: Record

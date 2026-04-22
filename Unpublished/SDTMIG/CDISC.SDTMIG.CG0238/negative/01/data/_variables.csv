@@ -1,0 +1,25 @@
+dataset,variable,label,type,length
+sc,STUDYID,Study Identifier,Char,50
+sc,DOMAIN,Domain Abbreviation,Char,50
+sc,USUBJID,Unique Subject Identifier,Char,50
+sc,SCSEQ,Sequence Number,Num,8
+sc,SCGRPID,Group ID,Char,50
+sc,SCSPID,Sponsor-Defined Identifier,Char,50
+sc,SCTESTCD,Subject Characteristic Short Name,Char,50
+sc,SCTEST,Subject Characteristic,Char,50
+sc,SCCAT,Category for Subject Characteristic,Char,50
+sc,SCSCAT,Subcategory for Subject Characteristic,Char,50
+sc,SCORRES,Result or Finding in Original Units,Char,50
+sc,SCORRESU,Original Units,Char,50
+sc,SCSTRESC,Character Result/Finding in Std Format,Char,50
+sc,SCSTRESN,Numeric Result/Finding in Standard Units,Num,8
+sc,SCSTRESU,Standard Units,Char,50
+sc,SCSTAT,Completion Status,Char,50
+sc,SCREASND,Reason Not Performed,Char,50
+sc,VISITNUM,Visit Number,Num,8
+sc,VISIT,Visit Name,Char,50
+sc,VISITDY,Planned Study Day of Visit,Num,8
+sc,TAETORD,Planned Order of Element within Arm,Num,8
+sc,EPOCH,Epoch,Char,50
+sc,SCDTC,Date/Time of Collection,Char,50
+sc,SCDY,Study Day of Examination,Num,8

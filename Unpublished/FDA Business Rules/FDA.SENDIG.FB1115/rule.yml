@@ -1,0 +1,118 @@
+Authorities:
+  - Organization: FDA
+    Standards:
+      # ONLY applicable to SENDIG, NOT to SDTMIG
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: 'The set of parameters without conditions listed in the TCG,
+                  Appendix C, is not included in the list of TSPARAMCD with
+                  TSVAL populated.'
+                Document: FDA
+                Section: FDAB011
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1115
+              Version: '1'
+            Version: '1.5'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: 'The set of parameters without conditions listed in the TCG,
+                  Appendix C, is not included in the list of TSPARAMCD with
+                  TSVAL populated.'
+                Document: FDA
+                Section: FDAB011
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1115
+              Version: '1'
+            Version: '1.5'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: 'The set of parameters without conditions listed in the TCG,
+                  Appendix C, is not included in the list of TSPARAMCD with
+                  TSVAL populated.'
+                Document: FDA
+                Section: FDAB011
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1115
+              Version: '1'
+            Version: '1.5'
+        Version: '3.1.1'
+# List of parameters for which there must be a record, i.e. TSPARMCD:
+# 'AGEU','DOSDUR','DOSENDTC','DOSSTDTC','EXPENDTC','EXPSTDTC','GLPFL','GLPTYP','PCLASS','PPTCNAM','PPTEGID','PPTEGSYM','PPTMDA','ROUTE','SDESIGN','SEXPOP','SNDCTVER','SNDIGVER','SPECIES','SPLANSUB','SPLRNAM','SPREFID','SSPONSOR','SSTYP','STCAT','STDIR','STITLE','STRAIN','STRPSTAT','STSTDTC','TFCNTRY','TRMSAC','TRT','TRTCAS','TRTUNII','TRTV','TSTFLOC','TSTFNAM'
+# Starting from the code for FB1102 (which is for SDTM, but here the list is for SEND)
+Check:
+  all:
+    - name: TSPARMCD
+      operator: not_contains_all
+      value:
+        - AGEU
+        #- 'DOSDUR'
+        #- 'DOSENDTC'
+        #- 'DOSSTDTC'
+        #- 'EXPENDTC'
+        #- 'EXPSTDTC'
+        #- 'GLPFL'
+        #- 'GLPTYP'
+        #- 'PCLASS'
+        #- 'PPTCNAM'
+        #- 'PPTEGID'
+        #- 'PPTEGSYM'
+        #- 'PPTEGSYM'
+        #- 'PPTMDA'
+        #- 'ROUTE'
+        #- 'SDESIGN'
+        #- 'SEXPOP'
+        #- 'SNDCTVER'
+        #- 'SPECIES'
+        #- 'SPLANSUB'
+        #- 'SPLRNAM'
+        #- 'SPREFID'
+        #- 'SSPONSOR'
+        #- 'SSTYP'
+        #- 'STCAT'
+        #- 'STDIR'
+        #- 'STITLE'
+        #- 'STRAIN'
+        #- 'STRPSTAT'
+        #- 'STSTDTC'
+        #- 'TFCNTRY'
+        #- 'TRMSAC'
+        #- 'TRT'
+        #- 'TRTCAS'
+        #- 'TRTUNII'
+        #- 'TRTV'
+        #- 'TSTFLOC'
+        #- 'TSTFNAM'
+
+    - name: 'TSVAL'
+      operator: non_empty
+
+Core:
+  Id: FDA.SENDIG.FB1115
+  Status: Draft
+  Version: '1'
+Description: 'Check whether all values in the list are populated for TSPARMCD
+  and TSVAL is populated'
+Executability: Fully Executable
+Outcome:
+  Message: 'The set of parameters without conditions listed in the TCG, Appendix
+    C, is not included in the list of TSPARAMCD with TSVAL populated.'
+  Output Variables:
+    - TSVAL
+    - TSPARMCD
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - TRIAL DESIGN
+  Domains:
+    Include:
+      - TS
+Sensitivity: Record

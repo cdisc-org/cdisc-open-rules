@@ -1,0 +1,137 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: ADaMIG-MD
+        References:
+          - Citations:
+              - Cited Guidance: The MDBDS supports analysis needs by adding SPDEVID as a
+                  required key variable and USUBJID as a conditionally required
+                  variable. See the BDS class for further details."
+                Document: ADaMIG-MD v1.0
+                Item: ''
+                Section: '3.1'
+            Criteria:
+              Logical Expression:
+                Condition: Event indicator value is a positive integer greater or equal to zero
+                Rule: The value of CNSR must be a positive integer or 0.
+              Plain Language Expression: CNSR value must be whole numbers greater then/equal to zero
+              Type: Failure
+            Origin: ADaM Conformance Rules
+            Release Notes: ''
+            Rule Identifier:
+              Id: '169'
+              Version: '2'
+            Validator Rule Message: CNSR value is not an integer >= 0
+            Version: '5.0'
+      - Name: ADaMIG
+        References:
+          - Citations:
+              - Cited Guidance: It is strongly recommended to use 0 as an event indicator and
+                  positive integers as censoring indicators
+                Document: ADaMIG
+                Item: Table 3.2.5.3
+                Section: 3.2.5
+            Criteria:
+              Logical Expression:
+                Condition: Event indicator value is a positive integer greater or equal to zero
+                Rule: The value of CNSR must be a positive integer or 0.
+              Plain Language Expression: CNSR value must be whole numbers greater then/equal to zero
+              Type: Failure
+            Origin: ADaM Conformance Rules
+            Release Notes: ''
+            Rule Identifier:
+              Id: '169'
+              Version: '1'
+            Validator Rule Message: CNSR value is not an integer >= 0
+            Version: '5.0'
+        Version: '1.0'
+      - Name: ADaMIG
+        References:
+          - Citations:
+              - Cited Guidance: It is strongly recommended to use 0 as an event indicator and
+                  positive integers as censoring indicators
+                Document: ADaMIG
+                Item: Table 3.3.6.1
+                Section: 3.3.6
+            Criteria:
+              Logical Expression:
+                Condition: Event indicator value is a positive integer greater or equal to zero
+                Rule: The value of CNSR must be a positive integer or 0.
+              Plain Language Expression: CNSR value must be whole numbers greater then/equal to zero
+              Type: Failure
+            Origin: ADaM Conformance Rules
+            Release Notes: ''
+            Rule Identifier:
+              Id: '169'
+              Version: '1'
+            Validator Rule Message: CNSR value is not an integer >= 0
+            Version: '5.0'
+        Version: '1.1'
+      - Name: ADaMIG
+        References:
+          - Citations:
+              - Cited Guidance: It is strongly recommended to use 0 as an event indicator and
+                  positive integers as censoring indicators
+                Document: ADaMIG
+                Item: Table 3.3.6.1
+                Section: 3.3.6
+            Criteria:
+              Logical Expression:
+                Condition: Event indicator value is a positive integer greater or equal to zero
+                Rule: The value of CNSR must be a positive integer or 0.
+              Plain Language Expression: CNSR value must be whole numbers greater then/equal to zero
+              Type: Failure
+            Origin: ADaM Conformance Rules
+            Release Notes: ''
+            Rule Identifier:
+              Id: '169'
+              Version: '1'
+            Validator Rule Message: CNSR value is not an integer >= 0
+            Version: '5.0'
+        Version: '1.2'
+      - Name: ADaMIG
+        References:
+          - Citations:
+              - Cited Guidance: It is strongly recommended to use 0 as an event indicator and
+                  positive integers as censoring indicators
+                Document: ADaMIG
+                Item: Table 3.3.6.1
+                Section: 3.3.6
+            Criteria:
+              Logical Expression:
+                Condition: Event indicator value is a positive integer greater or equal to zero
+                Rule: The value of CNSR must be a positive integer or 0.
+              Plain Language Expression: CNSR value must be whole numbers greater then/equal to zero
+              Type: Failure
+            Origin: ADaM Conformance Rules
+            Release Notes: ''
+            Rule Identifier:
+              Id: '169'
+              Version: '2'
+            Validator Rule Message: CNSR value is not an integer >= 0
+            Version: '5.0'
+        Version: '1.3'
+
+Check:
+  all:
+    - name: CNSR
+      operator: matches_regex
+      #value: ^(-\d+|\d*\.\d+|0+)$  #Sams pattern catches 0?
+      value: ^(-\d+|\d*\.\d+)$ # i) removed |0+) 1.0 entered in unit testing -> parsed/reported as 1 ?
+Core:
+  Id: CDISC.ADaMIG.AD0169
+  Status: Draft
+  Version: '1'
+Description: ''
+Executability: Fully Executable
+Outcome:
+  Message: CNSR value is not an integer >= 0
+  Output Variables:
+    - SUBJID
+    - CNSR
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+      - BASIC DATA STRUCTURE
+Sensitivity: Record

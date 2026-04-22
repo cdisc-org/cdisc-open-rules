@@ -1,0 +1,27 @@
+dataset,variable,label,type,length
+iq,STUDYID,Study Identifier,Char,50
+iq,DOMAIN,Domain Abbreviation,Char,50
+iq,SPTOBID,Applicant-Defined Tobacco Product ID,Char,50
+iq,IGDCMPID,Ingredient or Component Identifier,Char,50
+iq,IQCAT,Category of Ingredient or Component,Char,50
+iq,IQPARENT,Parent of Ingredient or Component,Char,50
+iq,IQLEVEL,Ingredient Level in Hierarchy,Num,50
+iq,IQFUNCT,Ingredient Function,Char,50
+iq,IQVALTRG,Ingredient Target Value,Num,50
+iq,IQVALMIN,Ingredient Minimum Value,Num,50
+iq,IQVALMAX,Ingredient Maximum Value,Num,50
+iq,IQVALU,Ingredient Value Unit,Char,50
+in,STUDYID,Study Identifier,Char,50
+in,DOMAIN,Domain Abbreviation,Char,50
+in,SPTOBID,Applicant-Defined Tobacco Product ID,Char,50
+in,IGDCMPID,Ingredient or Component Identifier,Char,50
+in,INMANUF,Manufacturer Name,Char,50
+in,INMANUIN,Manufacturer Unique Identifying Item Num,Char,50
+in,TPMF,Tobacco Product Master File Number,Char,50
+in,IUPACNAM,Preferred IUPAC Name,Char,50
+in,CASNO,CAS Registry Number,Char,50
+in,UNII,Unique Ingredient Identifier,Char,50
+in,INIGDPLX,Ingredient Complexity,Char,50
+in,INCIGIND,Applicant-Customized Ingredient Indic,Char,50
+in,INGRADE,Ingredient Grade,Char,50
+in,INPURITY,Ingredient Purity,Char,50

@@ -1,0 +1,17 @@
+parent_entity,parent_id,parent_rel,rel_type,id,name,description,label,instanceType,definedProcedures,biomedicalConceptIds,nextId,timelineId,previousId,bcSurrogateIds,bcCategoryIds
+StudyDesign,StudyDesign_1,activities,definition,Activity_13,Vital signs tests,,Vital Signs,Activity,False,False,Activity_14,ScheduleTimeline_3,Activity_12,True,False
+Activity,Activity_12,nextId,reference,Activity_13,Vital signs tests,,Vital Signs,Activity,False,False,Activity_14,ScheduleTimeline_3,Activity_12,True,False
+Activity,Activity_14,previousId,reference,Activity_13,Vital signs tests,,Vital Signs,Activity,False,False,Activity_14,ScheduleTimeline_3,Activity_12,True,False
+ScheduledActivityInstance,ScheduledActivityInstance_9,activityIds,reference,Activity_13,Vital signs tests,,Vital Signs,Activity,False,False,Activity_14,ScheduleTimeline_3,Activity_12,True,False
+ScheduledActivityInstance,ScheduledActivityInstance_10,activityIds,reference,Activity_13,Vital signs tests,,Vital Signs,Activity,False,False,Activity_14,ScheduleTimeline_3,Activity_12,True,False
+ScheduledActivityInstance,ScheduledActivityInstance_11,activityIds,reference,Activity_13,Vital signs tests,,Vital Signs,Activity,False,False,Activity_14,ScheduleTimeline_3,Activity_12,True,False
+ScheduledActivityInstance,ScheduledActivityInstance_12,activityIds,reference,Activity_13,Vital signs tests,,Vital Signs,Activity,False,False,Activity_14,ScheduleTimeline_3,Activity_12,True,False
+ScheduledActivityInstance,ScheduledActivityInstance_13,activityIds,reference,Activity_13,Vital signs tests,,Vital Signs,Activity,False,False,Activity_14,ScheduleTimeline_3,Activity_12,True,False
+ScheduledActivityInstance,ScheduledActivityInstance_14,activityIds,reference,Activity_13,Vital signs tests,,Vital Signs,Activity,False,False,Activity_14,ScheduleTimeline_3,Activity_12,True,False
+ScheduledActivityInstance,ScheduledActivityInstance_15,activityIds,reference,Activity_13,Vital signs tests,,Vital Signs,Activity,False,False,Activity_14,ScheduleTimeline_3,Activity_12,True,False
+ScheduledActivityInstance,ScheduledActivityInstance_17,activityIds,reference,Activity_13,Vital signs tests,,Vital Signs,Activity,False,False,Activity_14,ScheduleTimeline_3,Activity_12,True,False
+ScheduledActivityInstance,ScheduledActivityInstance_19,activityIds,reference,Activity_13,Vital signs tests,,Vital Signs,Activity,False,False,Activity_14,ScheduleTimeline_3,Activity_12,True,False
+ScheduledActivityInstance,ScheduledActivityInstance_21,activityIds,reference,Activity_13,Vital signs tests,,Vital Signs,Activity,False,False,Activity_14,ScheduleTimeline_3,Activity_12,True,False
+ScheduledActivityInstance,ScheduledActivityInstance_23,activityIds,reference,Activity_13,Vital signs tests,,Vital Signs,Activity,False,False,Activity_14,ScheduleTimeline_3,Activity_12,True,False
+ScheduledActivityInstance,ScheduledActivityInstance_24,activityIds,reference,Activity_13,Vital signs tests,,Vital Signs,Activity,False,False,Activity_14,ScheduleTimeline_3,Activity_12,True,False
+ScheduledActivityInstance,ScheduledActivityInstance_2,activityIds,reference,Activity_13,Vital signs tests,,Vital Signs,Activity,False,False,Activity_14,ScheduleTimeline_3,Activity_12,True,False

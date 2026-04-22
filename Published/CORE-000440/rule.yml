@@ -1,0 +1,129 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Whenever MISTAT is “NOT DONE”; MIREASND should provide the
+                  reason for not completing the evaluation as scheduled in the
+                  study plan
+                Document: IG v3.0
+                Section: 6.3.8.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: 'SEND280'
+              Version: '1'
+            Version: '5.0'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Whenever MISTAT is “NOT DONE”; MIREASND should provide the
+                  reason for not completing the evaluation as scheduled in the
+                  study plan
+                Document: IG v3.1
+                Section: 6.3.8.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: 'SEND280'
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Whenever MISTAT is “NOT DONE”; MIREASND should provide the
+                  reason for not completing the evaluation as scheduled in the
+                  study plan
+                Document: IG v3.1.1
+                Section: 6.3.8.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: 'SEND280'
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: Whenever MISTAT is “NOT DONE”; MIREASND should provide the
+                  reason for not completing the evaluation as scheduled in the
+                  study plan
+                Document: IG v3.1
+                Section: 6.3.8.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: 'SEND280'
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: Whenever MISTAT is “NOT DONE”; MIREASND should provide the
+                  reason for not completing the evaluation as scheduled in the
+                  study plan
+                Document: IG v3.1.1
+                Section: 6.3.8.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: 'SEND280'
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: Whenever MISTAT is “NOT DONE”; MIREASND should provide the
+                  reason for not completing the evaluation as scheduled in the
+                  study plan
+                Document: IG v3.1.1
+                Section: 6.3.8.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: 'SEND280'
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: Whenever MISTAT is “NOT DONE”; MIREASND should provide the
+                  reason for not completing the evaluation as described in the
+                  study plan.
+                Document: TIG v1.0
+                Item: Assumption 4.h.ii
+                Section: 2.8.9.16
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0196
+              Version: '1'
+            Version: '1.0'
+        Substandard: SEND
+        Version: '1.0'
+Check:
+  all:
+    - name: --STAT
+      operator: equal_to
+      value: NOT DONE
+    - name: --REASND
+      operator: empty
+Core:
+  Id: CORE-000440
+  Status: Published
+  Version: '1'
+Description: Trigger error when --STAT="NOT DONE" and --REASND is not populated
+Executability: Fully Executable
+Outcome:
+  Message: When --STAT is "NOT DONE", --REASND must be populated.
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - LB
+      - MI
+  Use Case: NONCLIN
+Sensitivity: Record

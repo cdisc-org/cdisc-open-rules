@@ -1,0 +1,72 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'A procedure must only reference a study intervention that is
+                  defined within the same study design as the activity within
+                  which the procedure is defined.'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00048'
+              Version: '1'
+            Version: '1.0'
+        Version: '3.0'
+Check:
+  all:
+    - name: instanceType
+      operator: equal_to
+      value: 'Procedure'
+    - name: rel_type
+      operator: equal_to
+      value: 'definition'
+    - name: rel_type.StudyIntervention
+      operator: equal_to
+      value: 'definition'
+    - name: rel_type.Activity
+      operator: equal_to
+      value: 'definition'
+    - name: parent_id.StudyIntervention
+      operator: not_equal_to
+      value: parent_id.Activity
+Core:
+  Id: 'CORE-000798'
+  Status: Published
+  Version: '1'
+Description: 'A procedure must only reference a study intervention that is
+  defined within the same study design as the activity within which the
+  procedure is defined.'
+Executability: Fully Executable
+Match Datasets:
+  - Join Type: left
+    Keys:
+      - Left: studyInterventionId
+        Right: id
+    Name: StudyIntervention
+  - Join Type: left
+    Keys:
+      - Left: parent_id
+        Right: id
+    Name: Activity
+Outcome:
+  Message: 'The procedure references a study intervention that is not defined
+    within the same study design as the activity within which the procedure is
+    defined: the parent_id of the study intervention
+    (parent_id.StudyIntervention) is not the same as the parent_id of the
+    activity (parent_id.Activity).'
+  Output Variables:
+    - parent_entity
+    - parent_id
+    - parent_rel
+    - id
+    - name
+    - parent_id.StudyIntervention
+    - parent_id.Activity
+Rule Type: Record Data
+Scope:
+  Entities:
+    Include:
+      - Procedure
+Sensitivity: Record

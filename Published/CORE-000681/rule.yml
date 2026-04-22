@@ -1,0 +1,86 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'At least one attribute must be specified for an address.'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00045'
+              Version: '1'
+            Version: '1.0'
+        Version: '3.0'
+Check:
+  all:
+    - name: instanceType
+      operator: equal_to
+      value: 'Address'
+    - name: rel_type
+      operator: equal_to
+      value: 'definition'
+    - any:
+        - name: text
+          operator: not_exists
+        - name: text
+          operator: empty
+    - any:
+        - name: line
+          operator: not_exists
+        - name: line
+          operator: empty
+    - any:
+        - name: district
+          operator: not_exists
+        - name: district
+          operator: empty
+    - any:
+        - name: city
+          operator: not_exists
+        - name: city
+          operator: empty
+    - any:
+        - name: postalCode
+          operator: not_exists
+        - name: postalCode
+          operator: empty
+    - any:
+        - name: state
+          operator: not_exists
+        - name: state
+          operator: empty
+    - any:
+        - name: country
+          operator: not_exists
+        - name: country
+          operator: empty
+        - name: country
+          operator: equal_to
+          value: false
+Core:
+  Id: 'CORE-000681'
+  Status: Published
+  Version: '1'
+Description: 'At least one attribute must be specified for an address.'
+Executability: Fully Executable
+Outcome:
+  Message: 'All attributes of the address are blank.'
+  Output Variables:
+    - parent_entity
+    - parent_id
+    - parent_rel
+    - id
+    - text
+    - line
+    - district
+    - city
+    - postalCode
+    - state
+    - country
+Rule Type: Record Data
+Scope:
+  Entities:
+    Include:
+      - Address
+Sensitivity: Record

@@ -1,0 +1,46 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: The Define-XML document contains an explanation of
+                  EXDOSE values with respect for intended or actual dose levels.
+                Document: IG v3.1
+                Item: Assumption 4
+                Section: 6.1.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND137
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+Check:
+  all:
+    - name: variable_name
+      operator: equal_to
+      value: EXDOSE
+    - name: define_variable_has_comment
+      operator: equal_to
+      value: false
+Core:
+  Id: CDISC.SENDIG.137
+  Status: Draft
+  Version: '1'
+Description: Raise a message when the define.xml does not contain an explanation of
+  EXDOSE values with respect for intended or actual dose levels, using a reference
+  to a def:CommentDef
+Executability: Partially Executable - Possible Underreporting
+Outcome:
+  Message: The define.xml does not contain an explanation of EXDOSE values with respect
+    for intended or actual dose levels
+# Rule Type: Value Check against Define XML Variable
+Rule Type: Variable Metadata Check against Define XML
+Scope:
+  Classes:
+    Include:
+      - INTERVENTIONS
+  Domains:
+    Include:
+      - EX
+Sensitivity: Dataset

@@ -1,0 +1,88 @@
+# Variable: SREL
+# Condition: RDEVID ^= null
+# Rule: Describes relationship of associated person to device identified in RDEVID
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        Version: '3.4'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0161
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: If RSUBJID is populated, describes the relationship
+                  of the associated person(s) identified in APID to the subject or
+                  pool identified in RSUBJID. If RDEVID is populated, describes the
+                  relationship of the associated person(s) identified in APID to the
+                  device identified in RDEVID. If RSUBJID and RDEVID are null, SREL
+                  describes the relationship of the associated person(s) identified
+                  in APID to the study identified in STUDYID.
+                Document: AP Guide v1.0
+                Item: Specification
+                Section: 2.1.1
+      - Name: SDTMIG
+        Version: '3.2'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0161
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: If RSUBJID is populated, describes the relationship
+                  of the associated person(s) identified in APID to the subject or
+                  pool identified in RSUBJID. If RDEVID is populated, describes the
+                  relationship of the associated person(s) identified in APID to the
+                  device identified in RDEVID.  If RSUBJID and RDEVID are null, SREL
+                  describes the relationship of the associated person(s) identified
+                  in APID to the study identified in STUDYID
+                Document: AP Guide v1.0
+                Item: Specification
+                Section: 2.1.1
+      - Name: SDTMIG
+        Version: '3.3'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0161
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: If RSUBJID is populated, describes the relationship
+                  of the associated person(s) identified in APID to the subject or
+                  pool identified in RSUBJID. If RDEVID is populated, describes the
+                  relationship of the associated person(s) identified in APID to the
+                  device identified in RDEVID.  If RSUBJID and RDEVID are null, SREL
+                  describes the relationship of the associated person(s) identified
+                  in APID to the study identified in STUDYID
+                Document: AP Guide v1.0
+                Item: Specification
+                Section: 2.1.1
+Check:
+  all:
+    - name: RDEVID
+      operator: non_empty
+    - name: SREL
+      operator:
+Core:
+  Id: CDISC.SDTMIG.CG0161
+  Status: Draft
+  Version: '1'
+Description: Trigger error when RDEVID ^= null and SREL does not describe relationship
+  of associated person to device identified in RDEVID
+Executability: Fully Executable
+Outcome:
+  Message: SREL does not describe relationship of associated person to device identified
+    in RDEVID when RDEVID ^= null
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - ASSOCIATED PERSONS
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record

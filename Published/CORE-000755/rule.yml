@@ -1,0 +1,54 @@
+# Variable: GEN
+# Condition: 
+# Rule: STUDYID, DOMAIN, and --SEQ exist and at least one of USUBJID, APID, SPDEVID, or POOLID
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: STUDYID, DOMAIN, and --SEQ are required in all domains based on
+                  one of the 3 general observation classes. Each general class
+                  domain must also include at least one of the following subject
+                  identifiers - SUBJID, SPDEVID, or POOLID.
+                Document: SDTM v2.1
+                Section: Section 3.1.4 Identifiers For All Classes
+              - Cited Guidance: The Associated Persons Identifier (APID) will be required in all
+                  AP datasets, and will identify records as AP data.
+                Document: SDTM v2.1
+                Section: Section 4.0  Associated Persons Data
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0642
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: DOMAIN
+      operator: exists
+    - name: STUDYID
+      operator: exists
+    - name: SPTOBID
+      operator: not_exists
+Core:
+  Id: "CORE-000755"
+  Status: Published
+  Version: '1'
+Description: Raise an error when STUDYID and DOMAIN exist but SPTOBID does not exist.
+Executability: Fully Executable
+Outcome:
+  Message: An appropriate identifier is not present; SPTOBID.
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - IN
+      - IQ
+      - IT
+  Use Case: PROD
+Sensitivity: Dataset

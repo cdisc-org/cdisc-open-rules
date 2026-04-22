@@ -118,9 +118,9 @@ Unpublished/
     │   ├── 01/
     │   │   ├── data/
     │   │   │   ├── .env
-    │   │   │   ├── datasets.csv
-    │   │   │   ├── variables.csv
-    │   │   │   └── <dataset>.csv   (one per entry in datasets.csv)
+    │   │   │   ├── _datasets.csv
+    │   │   │   ├── _variables.csv
+    │   │   │   └── <dataset>.csv   (one per entry in _datasets.csv)
     │   │   └── results/
     │   └── 02/
     │       ├── data/
@@ -162,37 +162,37 @@ Unpublished/
    DEFINE_XML=define.xml
    ```
 
-   **`datasets.csv`**
+   **`_datasets.csv`**
 
    Lists every dataset file that must be present in the `data/` folder for this test case. Each row names a file and provides its human-readable label.
 
    ```
    Filename,Label
-   cm.xpt,Concomitant/Prior Medications
+   cm,Concomitant/Prior Medications
    ```
 
-   For every row in `datasets.csv` you must also provide a corresponding dataset CSV file in the same `data/` folder (see below).
+   For every row in `_datasets.csv` you must also provide a corresponding dataset CSV file in the same `data/` folder (see below).
 
-   **`variables.csv`**
+   **`_variables.csv`**
 
-   Describes all variables across all datasets for this test case. The `dataset` column corresponds to the filename listed in `datasets.csv`.
+   Describes all variables across all datasets for this test case. The `dataset` column corresponds to the filename listed in `_datasets.csv`.
 
    ```
    dataset,variable,label,type,length
-   cm.xpt,STUDYID,Study Identifier,Char,50
-   cm.xpt,DOMAIN,Domain Abbreviation,Char,50
-   cm.xpt,USUBJID,Unique Subject Identifier,Char,50
-   cm.xpt,CMTRT,"Reported Name of Drug, Med, or Therapy",Char,50
-   dm.xpt,STUDYID,Study Identifier,Char,50
-   dm.xpt,DOMAIN,Domain Abbreviation,Char,50
-   dm.xpt,USUBJID,Unique Subject Identifier,Char,50
-   dm.xpt,AGE,Age,Num,8
+   cm,STUDYID,Study Identifier,Char,50
+   cm,DOMAIN,Domain Abbreviation,Char,50
+   cm,USUBJID,Unique Subject Identifier,Char,50
+   cm,CMTRT,"Reported Name of Drug, Med, or Therapy",Char,50
+   dm,STUDYID,Study Identifier,Char,50
+   dm,DOMAIN,Domain Abbreviation,Char,50
+   dm,USUBJID,Unique Subject Identifier,Char,50
+   dm,AGE,Age,Num,8
    ...
    ```
 
    | Column | Description |
    |--------|-------------|
-   | `dataset` | Filename of the dataset this variable belongs to (must match a `Filename` in `datasets.csv`) |
+   | `dataset` | Filename of the dataset this variable belongs to (must match a `Filename` in `_datasets.csv`) |
    | `variable` | Variable name (e.g. `USUBJID`) |
    | `label` | Variable Label |
    | `type` | Data type — `Char` or `Num` |
@@ -200,7 +200,7 @@ Unpublished/
 
    **Dataset CSV files**
 
-   For each dataset listed in `datasets.csv`, provide a CSV file with a matching name (e.g. if `datasets.csv` lists `cm.xpt`, include `cm.csv` in `data/`). The columns must match the variables listed for that dataset in `variables.csv`.
+   For each dataset listed in `_datasets.csv`, provide a CSV file with a matching name (e.g. if `_datasets.csv` lists `cm`, include `cm.csv` in `data/`). The columns must match the variables listed for that dataset in `_variables.csv`.
 
    Example `cm.csv`:
 
@@ -209,7 +209,7 @@ Unpublished/
    STUDY01,CM,STUDY01-001,1,ASPIRIN,HEADACHE,500,mg,...
    ```
 
-   - Column headers must exactly match the `variable` values in `variables.csv` for that dataset.
+   - Column headers must exactly match the `variable` values in `_variables.csv` for that dataset.
    - For **positive** cases, ensure the data satisfies all rule conditions so no errors are raised.
    - For **negative** cases, include data that deliberately triggers the rule. When raising your PR, describe the errors you expect to see in the PR description or as a comment so reviewers can verify the generated `results.json` against your intent. There is no automated validation check for CSV test data; human review of the results is required.
 

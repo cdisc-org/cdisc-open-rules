@@ -1,0 +1,104 @@
+dataset,variable,label,type,length
+lb,STUDYID,Study Identifier,Char,12
+lb,DOMAIN,Domain Abbreviation,Char,2
+lb,USUBJID,Unique Subject Identifier,Char,8
+lb,LBSEQ,Sequence Number,Num,8
+lb,LBTESTCD,Lab Test or Examination Short Name,Char,7
+lb,LBTEST,Lab Test or Examination Name,Char,39
+lb,LBCAT,Category for Lab Test,Char,10
+lb,LBORRES,Result or Finding in Original Units,Char,6
+lb,LBORRESU,Original Units,Char,7
+lb,LBORNRLO,Reference Range Lower Limit in Orig Unit,Char,200
+lb,LBORNRHI,Reference Range Upper Limit in Orig Unit,Char,200
+lb,LBSTRESC,Character Result/Finding in Std Format,Char,8
+lb,LBSTRESN,Numeric Result/Finding in Standard Units,Num,8
+lb,LBSTRESU,Standard Units,Char,7
+lb,LBSTNRLO,Reference Range Lower Limit-Std Units,Num,8
+lb,LBSTNRHI,Reference Range Upper Limit-Std Units,Num,8
+lb,LBNRIND,Reference Range Indicator,Char,8
+lb,LBLOBXFL,Last Observation Before Exposure Flag,Char,1
+lb,VISITNUM,Visit Number,Num,8
+lb,VISIT,Visit Name,Char,200
+lb,EPOCH,Epoch,Char,9
+lb,LBDTC,Date/Time of Specimen Collection,Char,19
+lb,LBDY,Study Day of Specimen Collection,Num,8
+lb,LBTOX,Toxicity,Char,50
+lb,LBTOXGR,Standard Toxicity Grade,Char,50
+ds,STUDYID,Study Identifier,Char,12
+ds,DOMAIN,Domain Abbreviation,Char,2
+ds,USUBJID,Unique Subject Identifier,Char,20
+ds,DSSEQ,Sequence Number,Num,8
+ds,DSTERM,Reported Term for the Disposition Event,Char,200
+ds,DSDECOD,Standardized Disposition Term,Char,50
+ss1,STUDYID,Study Identifier,Char,12
+ss1,DOMAIN,Domain Abbreviation,Char,2
+ss1,USUBJID,Unique Subject Identifier,Char,20
+ss1,SSSEQ,Sequence Number,Num,8
+ss1,SSTESTCD,Status Short Name,Char,8
+ss1,SSTEST,Status Name,Char,50
+ss1,SSORRES,"Result or Finding
+Original Result",Char,50
+ss1,SSSTRESC,"Character
+Result/Finding in
+Std Format",Char,50
+ss2,STUDYID,Study Identifier,Char,12
+ss2,DOMAIN,Domain Abbreviation,Char,2
+ss2,USUBJID,Unique Subject Identifier,Char,20
+ss2,SSSEQ,Sequence Number,Num,8
+ss2,SSTESTCD,Status Short Name,Char,8
+ss2,SSTEST,Status Name,Char,50
+ss2,SSORRES,"Result or Finding
+Original Result",Char,50
+ss2,SSSTRESC,"Character
+Result/Finding in
+Std Format",Char,50
+ae,STUDYID,Study Identifier,Char,12
+ae,DOMAIN,Domain Abbreviation,Char,2
+ae,POOLID,Pool Identifier,Char,20
+ae,AESEQ,Sequence Number,Num,8
+ae,AETERM,Reported Term for the Adverse Event,Char,200
+ae,AEDECOD,Standardized Disposition Term,Char,50
+lbae,STUDYID,Study Identifier,Char,12
+lbae,DOMAIN,Domain Abbreviation,Char,2
+lbae,POOLID,Pool Identifier,Char,20
+lbae,LBSEQ,Sequence Number,Num,8
+lbae,LBTESTCD,Status Short Name,Char,8
+lbae,LBTEST,Status Name,Char,50
+lbae,LBORRES,"Result or Finding
+Original Result",Char,50
+lbae,LBSTRESC,"Character
+Result/Finding in
+Std Format",Char,50
+lbds,STUDYID,Study Identifier,Char,12
+lbds,DOMAIN,Domain Abbreviation,Char,2
+lbds,POOLID,Pool Identifier,Char,20
+lbds,LBSEQ,Sequence Number,Num,8
+lbds,LBTESTCD,Status Short Name,Char,8
+lbds,LBTEST,Status Name,Char,50
+lbds,LBORRES,"Result or Finding
+Original Result",Char,50
+lbds,LBSTRESC,"Character
+Result/Finding in
+Std Format",Char,50
+suppec,STUDYID,Study Identifier,Char,12
+suppec,RDOMAIN,Related Domain Abbreviation,Char,6
+suppec,USUBJID,Unique Subject Identifier,Char,8
+suppec,IDVAR,Identifying Variable,Char,200
+suppec,IDVARVAL,Identifying Variable Value,Char,200
+suppec,QNAM,Qualifier Variable Name,Char,8
+suppec,QLABEL,Qualifier Variable Label,Char,40
+suppec,QVAL,Data Value,Char,200
+suppec,QORIG,Origin,Char,13
+suppec,QEVAL,Evaluator,Char,200
+sv,STUDYID,Study Identifier,Char,12
+sv,DOMAIN,Domain Abbreviation,Char,2
+sv,USUBJID,Unique Subject Identifier,Char,8
+sv,VISITNUM,Visit Number,Num,8
+sv,VISIT,Visit Name,Char,200
+sv,SVPRESP,Pre-specified,Char,2
+sv,VISITDY,Visit Day,Num,8
+sv,SVSTDTC,Start Date/Time of Visit,Char,10
+sv,SVENDTC,End Date/Time of Visit,Char,10
+sv,SVSTDY,Study Day of Start of Visit,Num,8
+sv,SVENDY,Study Day of End of Visit,Num,8
+sv,SVUPDES,Description of Unplanned Visit,Char,200

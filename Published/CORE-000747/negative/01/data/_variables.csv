@@ -1,0 +1,25 @@
+dataset,variable,label,type,length
+dm,STUDYID,Study Identifier,Char,12
+dm,DOMAIN,Domain Abbreviation,Char,2
+dm,USUBJID,Unique Subject Identifier,Char,20
+dm,RFICDTC,Date/Time of Informed Consent,Char,10
+dm,RFPENDTC,Date/Time of End of Participation,Char,10
+dm,DTHDTC,Date/Time of Death,Char,10
+dm,DTHFL,Subject Death Flag,Char,1
+dm,SITEID,Study Site Identifier,Char,3
+dm,BRTHDTC,Date/Time of Birth,Char,10
+dm,AGE,Age,Num,8
+dm,AGEU,Age Units,Char,5
+dm,SEX,Sex,Char,1
+dm,RACE,Race,Char,41
+dm,ETHNIC,Ethnicity,Char,22
+suppdm,STUDYID,Study Identifier,Char,50
+suppdm,RDOMAIN,Related Domain Abbreviation,Char,50
+suppdm,USUBJID,Unique Subject Identifier,Char,50
+suppdm,IDVAR,Identifying Variable,Char,50
+suppdm,IDVARVAL,Identifying Variable Value,Char,50
+suppdm,QNAM,Qualifier Variable Name,Char,50
+suppdm,QLABEL,Qualifier Variable Label,Char,50
+suppdm,QVAL,Data Value,Char,50
+suppdm,QORIG,Origin,Char,50
+suppdm,QEVAL,Evaluator,Char,50

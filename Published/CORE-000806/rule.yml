@@ -1,0 +1,85 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'Within subject enrollment, the quantity must be a number or a
+                  percentage (i.e. the unit must be empty or %).'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00017'
+              Version: '1'
+            Version: '1.0'
+        Version: '3.0'
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'Within subject enrollment, the quantity must be a number or a
+                  percentage (i.e. the unit must be empty or %).'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00017'
+              Version: '1'
+            Version: '1.0'
+        Version: '4.0'
+Check:
+  all:
+    - name: instanceType
+      operator: equal_to
+      value: 'Quantity'
+    - name: rel_type
+      operator: equal_to
+      value: 'definition'
+    - name: parent_entity
+      operator: equal_to
+      value: 'SubjectEnrollment'
+    - name: parent_rel
+      operator: equal_to
+      value: 'quantity'
+    - not:
+        any:
+          - name: unit
+            operator: equal_to
+            value: false
+          - name: unit
+            operator: not_exists
+          - name: unit
+            operator: empty
+          - all:
+              - name: unit.standardCode.codeSystem
+                operator: equal_to
+                value: 'http://www.cdisc.org'
+              - name: unit.standardCode.code
+                operator: equal_to
+                value: 'C25613'
+              - name: unit.standardCode.decode
+                operator: equal_to
+                value: '%'
+Core:
+  Id: 'CORE-000806'
+  Status: Published
+  Version: '1'
+Description: 'Within subject enrollment, the quantity must be a number or a
+  percentage (i.e. the unit must be empty or %).'
+Executability: Fully Executable
+Outcome:
+  Message: 'The unit for a subject enrollement quantity is not empty or coded as %
+    (codeSystem = http://www.cdisc.org, code = C25613 and decode = %).'
+  Output Variables:
+    - parent_entity
+    - parent_id
+    - parent_rel
+    - id
+    - value
+    - unit.standardCode.codeSystem
+    - unit.standardCode.code
+    - unit.standardCode.decode
+Rule Type: Record Data
+Scope:
+  Entities:
+    Include:
+      - Quantity
+Sensitivity: Record

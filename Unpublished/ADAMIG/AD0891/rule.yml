@@ -1,0 +1,127 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: ADaMIG
+        References:
+          - Citations:
+              - Cited Guidance: <-  There must be a one-to-one mapping between COHORT and
+                  COHORTN.  When COHORT and COHORTN are present, then on a given
+                  record, either both must be populated or both must be null.
+                Document: ADNCAIG v1.0
+                Item: 'Table 4.2.1'
+                Section: '4.2'
+            Criteria:
+              Logical Expression:
+                Condition: ''
+                Rule: ''
+              Plain Language Expression: ''
+              Type: Failure
+            Origin: ADaM Conformance Rules
+            Release Notes: ''
+            Rule Identifier:
+              Id: '891'
+              Version: '1'
+            Validator Rule Message: ''
+            Version: '5.0'
+        Version: '1.3'
+      - Name: ADaMIG
+        References:
+          - Citations:
+              - Cited Guidance: <-  There must be a one-to-one mapping between COHORT and
+                  COHORTN.  When COHORT and COHORTN are present, then on a given
+                  record, either both must be populated or both must be null.
+                Document: ADNCAIG v1.0
+                Item: 'Table 4.2.1'
+                Section: '4.2'
+            Criteria:
+              Logical Expression:
+                Condition: ''
+                Rule: ''
+              Plain Language Expression: ''
+              Type: Failure
+            Origin: ADaM Conformance Rules
+            Release Notes: ''
+            Rule Identifier:
+              Id: '891'
+              Version: '1'
+            Validator Rule Message: ''
+            Version: '5.0'
+        Version: '1.2'
+      - Name: ADaMIG
+        References:
+          - Citations:
+              - Cited Guidance: <-  There must be a one-to-one mapping between COHORT and
+                  COHORTN.  When COHORT and COHORTN are present, then on a given
+                  record, either both must be populated or both must be null.
+                Document: ADNCAIG v1.0
+                Item: 'Table 4.2.1'
+                Section: '4.2'
+            Criteria:
+              Logical Expression:
+                Condition: ''
+                Rule: ''
+              Plain Language Expression: ''
+              Type: Failure
+            Origin: ADaM Conformance Rules
+            Release Notes: ''
+            Rule Identifier:
+              Id: '891'
+              Version: '1'
+            Validator Rule Message: ''
+            Version: '5.0'
+        Version: '1.1'
+      - Name: ADaMIG
+        References:
+          - Citations:
+              - Cited Guidance: <-  There must be a one-to-one mapping between COHORT and
+                  COHORTN.  When COHORT and COHORTN are present, then on a given
+                  record, either both must be populated or both must be null.
+                Document: ADNCAIG v1.0
+                Item: 'Table 4.2.1'
+                Section: '4.2'
+            Criteria:
+              Logical Expression:
+                Condition: ''
+                Rule: ''
+              Plain Language Expression: ''
+              Type: Failure
+            Origin: ADaM Conformance Rules
+            Release Notes: ''
+            Rule Identifier:
+              Id: '891'
+              Version: '1'
+            Validator Rule Message: ''
+            Version: '5.0'
+        Version: '1.0'
+
+Check:
+  all:
+    - name: COHORTN
+      operator: non_empty
+    - name: COHORT
+      operator: non_empty
+    - name: COHORTN
+      operator: is_inconsistent_across_dataset
+      value: COHORT
+Core:
+  Id: CDISC.ADaMIG.AD0891
+  Status: Draft
+  Version: '1'
+Description: ''
+Executability: Fully Executable
+Outcome:
+  Message: COHORTN is not unique for a given value of COHORT
+  Output Variables:
+    - USUBJID
+    - USUBJIDN
+    - COHORT
+    - COHORTN
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+      - BASIC DATA STRUCTURE
+    #Subclasses:
+    #Include:
+    # - NON-COMPARTMENTAL ANALYSIS
+Sensitivity: Record

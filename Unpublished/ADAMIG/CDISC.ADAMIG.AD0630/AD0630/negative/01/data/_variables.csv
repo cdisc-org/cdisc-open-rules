@@ -1,0 +1,44 @@
+dataset,variable,label,type,length
+adsl,STUDYID,Study Identifier,Char,12
+adsl,USUBJID,Unique Subject Identifier,Char,8
+adsl,SUBJID,Subject Identifier for the Study,Char,50
+adsl,SITEID,Study Site Identifier,Char,50
+advs,STUDYID,Study Identifier,Char,12
+advs,USUBJID,Unique Subject Identifier,Char,8
+adae,STUDYID,Study Identifier,Char,50
+adae,USUBJID,Unique Subject Identifier,Char,50
+adae,SUBJID,Subject Identifier for the Study,Char,50
+adae,SITEID,Study Site Identifier,Char,50
+adae,AESEQ,Sequence Number,Num,8
+adae,AETERM,Reported Term,Char,50
+adae,AEDECOD,Dictionary-Derived Term,Char,50
+adae,AEBODSYS,Body System or Organ Class,Char,52
+adae,AEBDSYCD,Body System or Organ Class Code,Num,8
+adae,AELLT,Lowest Level Term,Char,50
+adae,AELLTCD,Lowest Level Term Code,Num,8
+adae,AEPTCD,Preferred Term Code,Num,8
+adae,AEHLT,High Level Term,Char,50
+adae,AEHLTCD,High Level Term Code,Num,8
+adae,AEHLGT,High Level Group Term,Char,50
+adae,AESOC,Primary System Organ Class,Char,52
+adae,AESOCCD,Primary System Organ Class Code,Num,8
+adae,TRTEMFL,Treatment Emergent Analysis Flag,Char,50
+adae,AESER,Serious Event,Char,50
+admh,STUDYID,Study Identifier,Char,50
+admh,USUBJID,Unique Subject Identifier,Char,50
+admh,SUBJID,Subject Identifier for the Study,Char,50
+admh,SITEID,Study Site Identifier,Char,50
+admh,MHSEQ,Sequence Number,Num,8
+admh,MHTERM,Reported Term,Char,50
+admh,MHDECOD,Dictionary-Derived Term,Char,50
+admh,MHBODSYS,Body System or Organ Class,Char,50
+admh,MHBDSYCD,Body System or Organ Class Code,Num,8
+admh,MHLLT,Lowest Level Term,Char,50
+admh,MHLLTCD,Lowest Level Term Code,Num,8
+admh,MHPTCD,Preferred Term Code,Num,8
+admh,MHHLT,High Level Term,Char,50
+admh,MHHLTCD,High Level Term Code,Num,8
+admh,MHHLGT,High Level Group Term,Char,50
+admh,MHHLGTCD,High Level Group Term Code,Num,8
+admh,MHSOC,Primary System Organ Class,Char,50
+admh,MHSOCCD,Primary System Organ Class Code,Num,8

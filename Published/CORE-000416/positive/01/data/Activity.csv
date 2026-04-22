@@ -1,0 +1,256 @@
+parent_entity,parent_id,parent_rel,rel_type,id,name,description,label,instanceType,definedProcedures,biomedicalConceptIds,nextId,timelineId,previousId,bcSurrogateIds,bcCategoryIds
+StudyDesign,StudyDesign_1,activities,definition,Activity_1,Informed consent,,Informed consent,Activity,False,False,Activity_2,,,False,False
+StudyDesign,StudyDesign_1,activities,definition,Activity_2,Inclusion/exclusion criteria,,Inclusion and exclusion criteria,Activity,False,False,Activity_3,,Activity_1,False,False
+StudyDesign,StudyDesign_1,activities,definition,Activity_3,Patient number assigned,,Patient number assigned,Activity,False,False,Activity_4,,Activity_2,False,False
+StudyDesign,StudyDesign_1,activities,definition,Activity_4,Demographics,,Demographics,Activity,False,True,Activity_5,,Activity_3,True,False
+StudyDesign,StudyDesign_1,activities,definition,Activity_5,Hachinski,,Hachinski Ischemic Scale,Activity,False,False,Activity_6,,Activity_4,False,False
+StudyDesign,StudyDesign_1,activities,definition,Activity_6,MMSE,,MMSE,Activity,False,False,Activity_7,,Activity_5,False,False
+StudyDesign,StudyDesign_1,activities,definition,Activity_7,Physical examination,,Physical examination,Activity,False,False,Activity_8,,Activity_6,False,False
+StudyDesign,StudyDesign_1,activities,definition,Activity_8,Medical history,,Medical history,Activity,False,False,Activity_9,,Activity_7,False,False
+StudyDesign,StudyDesign_1,activities,definition,Activity_9,Habits,,Habits,Activity,False,False,Activity_10,,Activity_8,False,False
+StudyDesign,StudyDesign_1,activities,definition,Activity_10,Chest X-ray,,Chest X-ray,Activity,False,False,Activity_11,,Activity_9,False,False
+StudyDesign,StudyDesign_1,activities,definition,Activity_11,Apo E genotyping,,Apo E genotyping,Activity,False,False,Activity_12,,Activity_10,False,False
+StudyDesign,StudyDesign_1,activities,definition,Activity_12,Patient randomised,,Patient randomised,Activity,False,False,Activity_13,,Activity_11,False,False
+StudyDesign,StudyDesign_1,activities,definition,Activity_13,Vital signs / Temperature,,Vital Signs and Temperature,Activity,False,True,Activity_14,ScheduleTimeline_3,Activity_12,False,False
+StudyDesign,StudyDesign_1,activities,definition,Activity_14,Ambulatory ECG placed,,Ambulatory ECG placed,Activity,False,False,Activity_15,,Activity_13,False,False
+StudyDesign,StudyDesign_1,activities,definition,Activity_15,Ambulatory ECG removed,,Ambulatory ECG removed,Activity,False,False,Activity_16,,Activity_14,False,False
+StudyDesign,StudyDesign_1,activities,definition,Activity_16,ECG,,ECG,Activity,False,False,Activity_17,,Activity_15,False,False
+StudyDesign,StudyDesign_1,activities,definition,Activity_17,Placebo TTS test,,Placebo TTS test,Activity,False,False,Activity_18,,Activity_16,False,False
+StudyDesign,StudyDesign_1,activities,definition,Activity_18,CT scan,,CT scan,Activity,True,False,Activity_19,,Activity_17,False,False
+StudyDesign,StudyDesign_1,activities,definition,Activity_19,Concomitant medications,,Concomitant medications,Activity,False,False,Activity_20,,Activity_18,False,False
+StudyDesign,StudyDesign_1,activities,definition,Activity_20,Hematology,,Hematology,Activity,False,False,Activity_21,,Activity_19,False,False
+StudyDesign,StudyDesign_1,activities,definition,Activity_21,Chemistry,,Chemistry,Activity,False,True,Activity_22,,Activity_20,False,False
+StudyDesign,StudyDesign_1,activities,definition,Activity_22,Uninalysis,,Uninalysis,Activity,False,False,Activity_23,,Activity_21,False,False
+StudyDesign,StudyDesign_1,activities,definition,Activity_23,Plasma Specimen (Xanomeline),,Plasma Specimen (Xanomeline),Activity,False,False,Activity_24,,Activity_22,False,False
+StudyDesign,StudyDesign_1,activities,definition,Activity_24,Hemoglobin A1C,,Hemoglobin A1C,Activity,False,True,Activity_25,,Activity_23,False,False
+StudyDesign,StudyDesign_1,activities,definition,Activity_25,Study drug,,"Study drug record , Medications dispensed, Medications returned",Activity,False,False,Activity_26,,Activity_24,False,False
+StudyDesign,StudyDesign_1,activities,definition,Activity_26,TTS Acceptability Survey,,TTS Acceptability Survey,Activity,False,False,Activity_27,,Activity_25,False,False
+StudyDesign,StudyDesign_1,activities,definition,Activity_27,ADAS-Cog,,ADAS-Cog,Activity,False,False,Activity_28,,Activity_26,False,False
+StudyDesign,StudyDesign_1,activities,definition,Activity_28,CIBIC+,,CIBIC+,Activity,False,False,Activity_29,,Activity_27,False,False
+StudyDesign,StudyDesign_1,activities,definition,Activity_29,DAD,,DAD,Activity,False,False,Activity_30,,Activity_28,False,False
+StudyDesign,StudyDesign_1,activities,definition,Activity_30,NPI-X,,NPI-X,Activity,False,False,Activity_31,,Activity_29,False,False
+StudyDesign,StudyDesign_1,activities,definition,Activity_31,Adverse events,,Adverse events,Activity,False,True,Activity_32,,Activity_30,False,False
+StudyDesign,StudyDesign_1,activities,definition,Activity_32,Check adverse events,,Check adverse events,Activity,False,False,Activity_33,ScheduleTimeline_1,Activity_31,False,False
+StudyDesign,StudyDesign_1,activities,definition,Activity_33,Supine,,Subject supine,Activity,True,False,Activity_34,,Activity_32,False,False
+StudyDesign,StudyDesign_1,activities,definition,Activity_34,Vital Signs Supine,,Vital signs while supine,Activity,False,True,Activity_35,,Activity_33,False,False
+StudyDesign,StudyDesign_1,activities,definition,Activity_35,Stand,,Subject Standing,Activity,True,False,Activity_36,,Activity_34,False,False
+StudyDesign,StudyDesign_1,activities,definition,Activity_36,Vital Signs Standing,,Vital signs while standing,Activity,False,True,,,Activity_35,False,False
+Activity,Activity_1,nextId,reference,Activity_2,Inclusion/exclusion criteria,,Inclusion and exclusion criteria,Activity,False,False,Activity_3,,Activity_1,False,False
+Activity,Activity_2,previousId,reference,Activity_1,Informed consent,,Informed consent,Activity,False,False,Activity_2,,,False,False
+Activity,Activity_2,nextId,reference,Activity_3,Patient number assigned,,Patient number assigned,Activity,False,False,Activity_4,,Activity_2,False,False
+Activity,Activity_3,previousId,reference,Activity_2,Inclusion/exclusion criteria,,Inclusion and exclusion criteria,Activity,False,False,Activity_3,,Activity_1,False,False
+Activity,Activity_3,nextId,reference,Activity_4,Demographics,,Demographics,Activity,False,True,Activity_5,,Activity_3,True,False
+Activity,Activity_4,previousId,reference,Activity_3,Patient number assigned,,Patient number assigned,Activity,False,False,Activity_4,,Activity_2,False,False
+Activity,Activity_4,nextId,reference,Activity_5,Hachinski,,Hachinski Ischemic Scale,Activity,False,False,Activity_6,,Activity_4,False,False
+Activity,Activity_5,previousId,reference,Activity_4,Demographics,,Demographics,Activity,False,True,Activity_5,,Activity_3,True,False
+Activity,Activity_5,nextId,reference,Activity_6,MMSE,,MMSE,Activity,False,False,Activity_7,,Activity_5,False,False
+Activity,Activity_6,previousId,reference,Activity_5,Hachinski,,Hachinski Ischemic Scale,Activity,False,False,Activity_6,,Activity_4,False,False
+Activity,Activity_6,nextId,reference,Activity_7,Physical examination,,Physical examination,Activity,False,False,Activity_8,,Activity_6,False,False
+Activity,Activity_7,previousId,reference,Activity_6,MMSE,,MMSE,Activity,False,False,Activity_7,,Activity_5,False,False
+Activity,Activity_7,nextId,reference,Activity_8,Medical history,,Medical history,Activity,False,False,Activity_9,,Activity_7,False,False
+Activity,Activity_8,previousId,reference,Activity_7,Physical examination,,Physical examination,Activity,False,False,Activity_8,,Activity_6,False,False
+Activity,Activity_8,nextId,reference,Activity_9,Habits,,Habits,Activity,False,False,Activity_10,,Activity_8,False,False
+Activity,Activity_9,previousId,reference,Activity_8,Medical history,,Medical history,Activity,False,False,Activity_9,,Activity_7,False,False
+Activity,Activity_9,nextId,reference,Activity_10,Chest X-ray,,Chest X-ray,Activity,False,False,Activity_11,,Activity_9,False,False
+Activity,Activity_10,previousId,reference,Activity_9,Habits,,Habits,Activity,False,False,Activity_10,,Activity_8,False,False
+Activity,Activity_10,nextId,reference,Activity_11,Apo E genotyping,,Apo E genotyping,Activity,False,False,Activity_12,,Activity_10,False,False
+Activity,Activity_11,previousId,reference,Activity_10,Chest X-ray,,Chest X-ray,Activity,False,False,Activity_11,,Activity_9,False,False
+Activity,Activity_11,nextId,reference,Activity_12,Patient randomised,,Patient randomised,Activity,False,False,Activity_13,,Activity_11,False,False
+Activity,Activity_12,previousId,reference,Activity_11,Apo E genotyping,,Apo E genotyping,Activity,False,False,Activity_12,,Activity_10,False,False
+Activity,Activity_12,nextId,reference,Activity_13,Vital signs / Temperature,,Vital Signs and Temperature,Activity,False,True,Activity_14,ScheduleTimeline_3,Activity_12,False,False
+Activity,Activity_13,previousId,reference,Activity_12,Patient randomised,,Patient randomised,Activity,False,False,Activity_13,,Activity_11,False,False
+Activity,Activity_13,nextId,reference,Activity_14,Ambulatory ECG placed,,Ambulatory ECG placed,Activity,False,False,Activity_15,,Activity_13,False,False
+Activity,Activity_14,previousId,reference,Activity_13,Vital signs / Temperature,,Vital Signs and Temperature,Activity,False,True,Activity_14,ScheduleTimeline_3,Activity_12,False,False
+Activity,Activity_14,nextId,reference,Activity_15,Ambulatory ECG removed,,Ambulatory ECG removed,Activity,False,False,Activity_16,,Activity_14,False,False
+Activity,Activity_15,previousId,reference,Activity_14,Ambulatory ECG placed,,Ambulatory ECG placed,Activity,False,False,Activity_15,,Activity_13,False,False
+Activity,Activity_15,nextId,reference,Activity_16,ECG,,ECG,Activity,False,False,Activity_17,,Activity_15,False,False
+Activity,Activity_16,previousId,reference,Activity_15,Ambulatory ECG removed,,Ambulatory ECG removed,Activity,False,False,Activity_16,,Activity_14,False,False
+Activity,Activity_16,nextId,reference,Activity_17,Placebo TTS test,,Placebo TTS test,Activity,False,False,Activity_18,,Activity_16,False,False
+Activity,Activity_17,previousId,reference,Activity_16,ECG,,ECG,Activity,False,False,Activity_17,,Activity_15,False,False
+Activity,Activity_17,nextId,reference,Activity_18,CT scan,,CT scan,Activity,True,False,Activity_19,,Activity_17,False,False
+Activity,Activity_18,previousId,reference,Activity_17,Placebo TTS test,,Placebo TTS test,Activity,False,False,Activity_18,,Activity_16,False,False
+Activity,Activity_18,nextId,reference,Activity_19,Concomitant medications,,Concomitant medications,Activity,False,False,Activity_20,,Activity_18,False,False
+Activity,Activity_19,previousId,reference,Activity_18,CT scan,,CT scan,Activity,True,False,Activity_19,,Activity_17,False,False
+Activity,Activity_19,nextId,reference,Activity_20,Hematology,,Hematology,Activity,False,False,Activity_21,,Activity_19,False,False
+Activity,Activity_20,previousId,reference,Activity_19,Concomitant medications,,Concomitant medications,Activity,False,False,Activity_20,,Activity_18,False,False
+Activity,Activity_20,nextId,reference,Activity_21,Chemistry,,Chemistry,Activity,False,True,Activity_22,,Activity_20,False,False
+Activity,Activity_21,previousId,reference,Activity_20,Hematology,,Hematology,Activity,False,False,Activity_21,,Activity_19,False,False
+Activity,Activity_21,nextId,reference,Activity_22,Uninalysis,,Uninalysis,Activity,False,False,Activity_23,,Activity_21,False,False
+Activity,Activity_22,previousId,reference,Activity_21,Chemistry,,Chemistry,Activity,False,True,Activity_22,,Activity_20,False,False
+Activity,Activity_22,nextId,reference,Activity_23,Plasma Specimen (Xanomeline),,Plasma Specimen (Xanomeline),Activity,False,False,Activity_24,,Activity_22,False,False
+Activity,Activity_23,previousId,reference,Activity_22,Uninalysis,,Uninalysis,Activity,False,False,Activity_23,,Activity_21,False,False
+Activity,Activity_23,nextId,reference,Activity_24,Hemoglobin A1C,,Hemoglobin A1C,Activity,False,True,Activity_25,,Activity_23,False,False
+Activity,Activity_24,previousId,reference,Activity_23,Plasma Specimen (Xanomeline),,Plasma Specimen (Xanomeline),Activity,False,False,Activity_24,,Activity_22,False,False
+Activity,Activity_24,nextId,reference,Activity_25,Study drug,,"Study drug record , Medications dispensed, Medications returned",Activity,False,False,Activity_26,,Activity_24,False,False
+Activity,Activity_25,previousId,reference,Activity_24,Hemoglobin A1C,,Hemoglobin A1C,Activity,False,True,Activity_25,,Activity_23,False,False
+Activity,Activity_25,nextId,reference,Activity_26,TTS Acceptability Survey,,TTS Acceptability Survey,Activity,False,False,Activity_27,,Activity_25,False,False
+Activity,Activity_26,previousId,reference,Activity_25,Study drug,,"Study drug record , Medications dispensed, Medications returned",Activity,False,False,Activity_26,,Activity_24,False,False
+Activity,Activity_26,nextId,reference,Activity_27,ADAS-Cog,,ADAS-Cog,Activity,False,False,Activity_28,,Activity_26,False,False
+Activity,Activity_27,previousId,reference,Activity_26,TTS Acceptability Survey,,TTS Acceptability Survey,Activity,False,False,Activity_27,,Activity_25,False,False
+Activity,Activity_27,nextId,reference,Activity_28,CIBIC+,,CIBIC+,Activity,False,False,Activity_29,,Activity_27,False,False
+Activity,Activity_28,previousId,reference,Activity_27,ADAS-Cog,,ADAS-Cog,Activity,False,False,Activity_28,,Activity_26,False,False
+Activity,Activity_28,nextId,reference,Activity_29,DAD,,DAD,Activity,False,False,Activity_30,,Activity_28,False,False
+Activity,Activity_29,previousId,reference,Activity_28,CIBIC+,,CIBIC+,Activity,False,False,Activity_29,,Activity_27,False,False
+Activity,Activity_29,nextId,reference,Activity_30,NPI-X,,NPI-X,Activity,False,False,Activity_31,,Activity_29,False,False
+Activity,Activity_30,previousId,reference,Activity_29,DAD,,DAD,Activity,False,False,Activity_30,,Activity_28,False,False
+Activity,Activity_30,nextId,reference,Activity_31,Adverse events,,Adverse events,Activity,False,True,Activity_32,,Activity_30,False,False
+Activity,Activity_31,previousId,reference,Activity_30,NPI-X,,NPI-X,Activity,False,False,Activity_31,,Activity_29,False,False
+Activity,Activity_31,nextId,reference,Activity_32,Check adverse events,,Check adverse events,Activity,False,False,Activity_33,ScheduleTimeline_1,Activity_31,False,False
+Activity,Activity_32,previousId,reference,Activity_31,Adverse events,,Adverse events,Activity,False,True,Activity_32,,Activity_30,False,False
+Activity,Activity_32,nextId,reference,Activity_33,Supine,,Subject supine,Activity,True,False,Activity_34,,Activity_32,False,False
+Activity,Activity_33,previousId,reference,Activity_32,Check adverse events,,Check adverse events,Activity,False,False,Activity_33,ScheduleTimeline_1,Activity_31,False,False
+Activity,Activity_33,nextId,reference,Activity_34,Vital Signs Supine,,Vital signs while supine,Activity,False,True,Activity_35,,Activity_33,False,False
+Activity,Activity_34,previousId,reference,Activity_33,Supine,,Subject supine,Activity,True,False,Activity_34,,Activity_32,False,False
+Activity,Activity_34,nextId,reference,Activity_35,Stand,,Subject Standing,Activity,True,False,Activity_36,,Activity_34,False,False
+Activity,Activity_35,previousId,reference,Activity_34,Vital Signs Supine,,Vital signs while supine,Activity,False,True,Activity_35,,Activity_33,False,False
+Activity,Activity_35,nextId,reference,Activity_36,Vital Signs Standing,,Vital signs while standing,Activity,False,True,,,Activity_35,False,False
+Activity,Activity_36,previousId,reference,Activity_35,Stand,,Subject Standing,Activity,True,False,Activity_36,,Activity_34,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_9,activityIds,reference,Activity_1,Informed consent,,Informed consent,Activity,False,False,Activity_2,,,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_9,activityIds,reference,Activity_2,Inclusion/exclusion criteria,,Inclusion and exclusion criteria,Activity,False,False,Activity_3,,Activity_1,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_9,activityIds,reference,Activity_3,Patient number assigned,,Patient number assigned,Activity,False,False,Activity_4,,Activity_2,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_9,activityIds,reference,Activity_4,Demographics,,Demographics,Activity,False,True,Activity_5,,Activity_3,True,False
+ScheduledActivityInstance,ScheduledActivityInstance_9,activityIds,reference,Activity_5,Hachinski,,Hachinski Ischemic Scale,Activity,False,False,Activity_6,,Activity_4,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_9,activityIds,reference,Activity_6,MMSE,,MMSE,Activity,False,False,Activity_7,,Activity_5,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_9,activityIds,reference,Activity_7,Physical examination,,Physical examination,Activity,False,False,Activity_8,,Activity_6,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_9,activityIds,reference,Activity_8,Medical history,,Medical history,Activity,False,False,Activity_9,,Activity_7,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_9,activityIds,reference,Activity_9,Habits,,Habits,Activity,False,False,Activity_10,,Activity_8,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_9,activityIds,reference,Activity_10,Chest X-ray,,Chest X-ray,Activity,False,False,Activity_11,,Activity_9,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_9,activityIds,reference,Activity_13,Vital signs / Temperature,,Vital Signs and Temperature,Activity,False,True,Activity_14,ScheduleTimeline_3,Activity_12,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_9,activityIds,reference,Activity_16,ECG,,ECG,Activity,False,False,Activity_17,,Activity_15,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_9,activityIds,reference,Activity_17,Placebo TTS test,,Placebo TTS test,Activity,False,False,Activity_18,,Activity_16,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_9,activityIds,reference,Activity_18,CT scan,,CT scan,Activity,True,False,Activity_19,,Activity_17,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_9,activityIds,reference,Activity_19,Concomitant medications,,Concomitant medications,Activity,False,False,Activity_20,,Activity_18,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_9,activityIds,reference,Activity_20,Hematology,,Hematology,Activity,False,False,Activity_21,,Activity_19,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_9,activityIds,reference,Activity_21,Chemistry,,Chemistry,Activity,False,True,Activity_22,,Activity_20,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_9,activityIds,reference,Activity_22,Uninalysis,,Uninalysis,Activity,False,False,Activity_23,,Activity_21,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_9,activityIds,reference,Activity_24,Hemoglobin A1C,,Hemoglobin A1C,Activity,False,True,Activity_25,,Activity_23,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_9,activityIds,reference,Activity_27,ADAS-Cog,,ADAS-Cog,Activity,False,False,Activity_28,,Activity_26,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_9,activityIds,reference,Activity_28,CIBIC+,,CIBIC+,Activity,False,False,Activity_29,,Activity_27,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_9,activityIds,reference,Activity_29,DAD,,DAD,Activity,False,False,Activity_30,,Activity_28,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_9,activityIds,reference,Activity_30,NPI-X,,NPI-X,Activity,False,False,Activity_31,,Activity_29,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_10,activityIds,reference,Activity_13,Vital signs / Temperature,,Vital Signs and Temperature,Activity,False,True,Activity_14,ScheduleTimeline_3,Activity_12,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_10,activityIds,reference,Activity_14,Ambulatory ECG placed,,Ambulatory ECG placed,Activity,False,False,Activity_15,,Activity_13,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_11,activityIds,reference,Activity_12,Patient randomised,,Patient randomised,Activity,False,False,Activity_13,,Activity_11,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_11,activityIds,reference,Activity_13,Vital signs / Temperature,,Vital Signs and Temperature,Activity,False,True,Activity_14,ScheduleTimeline_3,Activity_12,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_11,activityIds,reference,Activity_15,Ambulatory ECG removed,,Ambulatory ECG removed,Activity,False,False,Activity_16,,Activity_14,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_11,activityIds,reference,Activity_19,Concomitant medications,,Concomitant medications,Activity,False,False,Activity_20,,Activity_18,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_11,activityIds,reference,Activity_23,Plasma Specimen (Xanomeline),,Plasma Specimen (Xanomeline),Activity,False,False,Activity_24,,Activity_22,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_11,activityIds,reference,Activity_25,Study drug,,"Study drug record , Medications dispensed, Medications returned",Activity,False,False,Activity_26,,Activity_24,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_11,activityIds,reference,Activity_27,ADAS-Cog,,ADAS-Cog,Activity,False,False,Activity_28,,Activity_26,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_11,activityIds,reference,Activity_28,CIBIC+,,CIBIC+,Activity,False,False,Activity_29,,Activity_27,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_11,activityIds,reference,Activity_29,DAD,,DAD,Activity,False,False,Activity_30,,Activity_28,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_11,activityIds,reference,Activity_30,NPI-X,,NPI-X,Activity,False,False,Activity_31,,Activity_29,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_12,activityIds,reference,Activity_11,Apo E genotyping,,Apo E genotyping,Activity,False,False,Activity_12,,Activity_10,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_12,activityIds,reference,Activity_13,Vital signs / Temperature,,Vital Signs and Temperature,Activity,False,True,Activity_14,ScheduleTimeline_3,Activity_12,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_12,activityIds,reference,Activity_16,ECG,,ECG,Activity,False,False,Activity_17,,Activity_15,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_12,activityIds,reference,Activity_19,Concomitant medications,,Concomitant medications,Activity,False,False,Activity_20,,Activity_18,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_12,activityIds,reference,Activity_20,Hematology,,Hematology,Activity,False,False,Activity_21,,Activity_19,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_12,activityIds,reference,Activity_21,Chemistry,,Chemistry,Activity,False,True,Activity_22,,Activity_20,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_12,activityIds,reference,Activity_22,Uninalysis,,Uninalysis,Activity,False,False,Activity_23,,Activity_21,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_12,activityIds,reference,Activity_23,Plasma Specimen (Xanomeline),,Plasma Specimen (Xanomeline),Activity,False,False,Activity_24,,Activity_22,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_12,activityIds,reference,Activity_25,Study drug,,"Study drug record , Medications dispensed, Medications returned",Activity,False,False,Activity_26,,Activity_24,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_12,activityIds,reference,Activity_30,NPI-X,,NPI-X,Activity,False,False,Activity_31,,Activity_29,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_13,activityIds,reference,Activity_13,Vital signs / Temperature,,Vital Signs and Temperature,Activity,False,True,Activity_14,ScheduleTimeline_3,Activity_12,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_13,activityIds,reference,Activity_16,ECG,,ECG,Activity,False,False,Activity_17,,Activity_15,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_13,activityIds,reference,Activity_19,Concomitant medications,,Concomitant medications,Activity,False,False,Activity_20,,Activity_18,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_13,activityIds,reference,Activity_20,Hematology,,Hematology,Activity,False,False,Activity_21,,Activity_19,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_13,activityIds,reference,Activity_21,Chemistry,,Chemistry,Activity,False,True,Activity_22,,Activity_20,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_13,activityIds,reference,Activity_23,Plasma Specimen (Xanomeline),,Plasma Specimen (Xanomeline),Activity,False,False,Activity_24,,Activity_22,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_13,activityIds,reference,Activity_25,Study drug,,"Study drug record , Medications dispensed, Medications returned",Activity,False,False,Activity_26,,Activity_24,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_13,activityIds,reference,Activity_30,NPI-X,,NPI-X,Activity,False,False,Activity_31,,Activity_29,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_14,activityIds,reference,Activity_13,Vital signs / Temperature,,Vital Signs and Temperature,Activity,False,True,Activity_14,ScheduleTimeline_3,Activity_12,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_14,activityIds,reference,Activity_16,ECG,,ECG,Activity,False,False,Activity_17,,Activity_15,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_14,activityIds,reference,Activity_19,Concomitant medications,,Concomitant medications,Activity,False,False,Activity_20,,Activity_18,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_14,activityIds,reference,Activity_20,Hematology,,Hematology,Activity,False,False,Activity_21,,Activity_19,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_14,activityIds,reference,Activity_21,Chemistry,,Chemistry,Activity,False,True,Activity_22,,Activity_20,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_14,activityIds,reference,Activity_23,Plasma Specimen (Xanomeline),,Plasma Specimen (Xanomeline),Activity,False,False,Activity_24,,Activity_22,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_14,activityIds,reference,Activity_25,Study drug,,"Study drug record , Medications dispensed, Medications returned",Activity,False,False,Activity_26,,Activity_24,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_14,activityIds,reference,Activity_30,NPI-X,,NPI-X,Activity,False,False,Activity_31,,Activity_29,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_15,activityIds,reference,Activity_13,Vital signs / Temperature,,Vital Signs and Temperature,Activity,False,True,Activity_14,ScheduleTimeline_3,Activity_12,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_15,activityIds,reference,Activity_16,ECG,,ECG,Activity,False,False,Activity_17,,Activity_15,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_15,activityIds,reference,Activity_19,Concomitant medications,,Concomitant medications,Activity,False,False,Activity_20,,Activity_18,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_15,activityIds,reference,Activity_20,Hematology,,Hematology,Activity,False,False,Activity_21,,Activity_19,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_15,activityIds,reference,Activity_21,Chemistry,,Chemistry,Activity,False,True,Activity_22,,Activity_20,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_15,activityIds,reference,Activity_25,Study drug,,"Study drug record , Medications dispensed, Medications returned",Activity,False,False,Activity_26,,Activity_24,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_15,activityIds,reference,Activity_27,ADAS-Cog,,ADAS-Cog,Activity,False,False,Activity_28,,Activity_26,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_15,activityIds,reference,Activity_28,CIBIC+,,CIBIC+,Activity,False,False,Activity_29,,Activity_27,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_15,activityIds,reference,Activity_29,DAD,,DAD,Activity,False,False,Activity_30,,Activity_28,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_15,activityIds,reference,Activity_30,NPI-X,,NPI-X,Activity,False,False,Activity_31,,Activity_29,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_16,activityIds,reference,Activity_30,NPI-X,,NPI-X,Activity,False,False,Activity_31,,Activity_29,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_17,activityIds,reference,Activity_13,Vital signs / Temperature,,Vital Signs and Temperature,Activity,False,True,Activity_14,ScheduleTimeline_3,Activity_12,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_17,activityIds,reference,Activity_16,ECG,,ECG,Activity,False,False,Activity_17,,Activity_15,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_17,activityIds,reference,Activity_19,Concomitant medications,,Concomitant medications,Activity,False,False,Activity_20,,Activity_18,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_17,activityIds,reference,Activity_20,Hematology,,Hematology,Activity,False,False,Activity_21,,Activity_19,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_17,activityIds,reference,Activity_21,Chemistry,,Chemistry,Activity,False,True,Activity_22,,Activity_20,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_17,activityIds,reference,Activity_22,Uninalysis,,Uninalysis,Activity,False,False,Activity_23,,Activity_21,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_17,activityIds,reference,Activity_23,Plasma Specimen (Xanomeline),,Plasma Specimen (Xanomeline),Activity,False,False,Activity_24,,Activity_22,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_17,activityIds,reference,Activity_25,Study drug,,"Study drug record , Medications dispensed, Medications returned",Activity,False,False,Activity_26,,Activity_24,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_17,activityIds,reference,Activity_30,NPI-X,,NPI-X,Activity,False,False,Activity_31,,Activity_29,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_18,activityIds,reference,Activity_30,NPI-X,,NPI-X,Activity,False,False,Activity_31,,Activity_29,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_19,activityIds,reference,Activity_13,Vital signs / Temperature,,Vital Signs and Temperature,Activity,False,True,Activity_14,ScheduleTimeline_3,Activity_12,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_19,activityIds,reference,Activity_16,ECG,,ECG,Activity,False,False,Activity_17,,Activity_15,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_19,activityIds,reference,Activity_19,Concomitant medications,,Concomitant medications,Activity,False,False,Activity_20,,Activity_18,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_19,activityIds,reference,Activity_20,Hematology,,Hematology,Activity,False,False,Activity_21,,Activity_19,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_19,activityIds,reference,Activity_21,Chemistry,,Chemistry,Activity,False,True,Activity_22,,Activity_20,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_19,activityIds,reference,Activity_25,Study drug,,"Study drug record , Medications dispensed, Medications returned",Activity,False,False,Activity_26,,Activity_24,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_19,activityIds,reference,Activity_27,ADAS-Cog,,ADAS-Cog,Activity,False,False,Activity_28,,Activity_26,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_19,activityIds,reference,Activity_28,CIBIC+,,CIBIC+,Activity,False,False,Activity_29,,Activity_27,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_19,activityIds,reference,Activity_29,DAD,,DAD,Activity,False,False,Activity_30,,Activity_28,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_19,activityIds,reference,Activity_30,NPI-X,,NPI-X,Activity,False,False,Activity_31,,Activity_29,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_20,activityIds,reference,Activity_30,NPI-X,,NPI-X,Activity,False,False,Activity_31,,Activity_29,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_21,activityIds,reference,Activity_13,Vital signs / Temperature,,Vital Signs and Temperature,Activity,False,True,Activity_14,ScheduleTimeline_3,Activity_12,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_21,activityIds,reference,Activity_16,ECG,,ECG,Activity,False,False,Activity_17,,Activity_15,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_21,activityIds,reference,Activity_19,Concomitant medications,,Concomitant medications,Activity,False,False,Activity_20,,Activity_18,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_21,activityIds,reference,Activity_20,Hematology,,Hematology,Activity,False,False,Activity_21,,Activity_19,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_21,activityIds,reference,Activity_21,Chemistry,,Chemistry,Activity,False,True,Activity_22,,Activity_20,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_21,activityIds,reference,Activity_23,Plasma Specimen (Xanomeline),,Plasma Specimen (Xanomeline),Activity,False,False,Activity_24,,Activity_22,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_21,activityIds,reference,Activity_25,Study drug,,"Study drug record , Medications dispensed, Medications returned",Activity,False,False,Activity_26,,Activity_24,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_21,activityIds,reference,Activity_30,NPI-X,,NPI-X,Activity,False,False,Activity_31,,Activity_29,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_22,activityIds,reference,Activity_30,NPI-X,,NPI-X,Activity,False,False,Activity_31,,Activity_29,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_23,activityIds,reference,Activity_13,Vital signs / Temperature,,Vital Signs and Temperature,Activity,False,True,Activity_14,ScheduleTimeline_3,Activity_12,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_23,activityIds,reference,Activity_16,ECG,,ECG,Activity,False,False,Activity_17,,Activity_15,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_23,activityIds,reference,Activity_19,Concomitant medications,,Concomitant medications,Activity,False,False,Activity_20,,Activity_18,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_23,activityIds,reference,Activity_20,Hematology,,Hematology,Activity,False,False,Activity_21,,Activity_19,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_23,activityIds,reference,Activity_21,Chemistry,,Chemistry,Activity,False,True,Activity_22,,Activity_20,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_23,activityIds,reference,Activity_22,Uninalysis,,Uninalysis,Activity,False,False,Activity_23,,Activity_21,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_23,activityIds,reference,Activity_25,Study drug,,"Study drug record , Medications dispensed, Medications returned",Activity,False,False,Activity_26,,Activity_24,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_23,activityIds,reference,Activity_27,ADAS-Cog,,ADAS-Cog,Activity,False,False,Activity_28,,Activity_26,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_23,activityIds,reference,Activity_28,CIBIC+,,CIBIC+,Activity,False,False,Activity_29,,Activity_27,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_23,activityIds,reference,Activity_29,DAD,,DAD,Activity,False,False,Activity_30,,Activity_28,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_23,activityIds,reference,Activity_30,NPI-X,,NPI-X,Activity,False,False,Activity_31,,Activity_29,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_24,activityIds,reference,Activity_7,Physical examination,,Physical examination,Activity,False,False,Activity_8,,Activity_6,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_24,activityIds,reference,Activity_13,Vital signs / Temperature,,Vital Signs and Temperature,Activity,False,True,Activity_14,ScheduleTimeline_3,Activity_12,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_24,activityIds,reference,Activity_16,ECG,,ECG,Activity,False,False,Activity_17,,Activity_15,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_24,activityIds,reference,Activity_19,Concomitant medications,,Concomitant medications,Activity,False,False,Activity_20,,Activity_18,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_24,activityIds,reference,Activity_20,Hematology,,Hematology,Activity,False,False,Activity_21,,Activity_19,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_24,activityIds,reference,Activity_21,Chemistry,,Chemistry,Activity,False,True,Activity_22,,Activity_20,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_24,activityIds,reference,Activity_25,Study drug,,"Study drug record , Medications dispensed, Medications returned",Activity,False,False,Activity_26,,Activity_24,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_24,activityIds,reference,Activity_26,TTS Acceptability Survey,,TTS Acceptability Survey,Activity,False,False,Activity_27,,Activity_25,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_24,activityIds,reference,Activity_30,NPI-X,,NPI-X,Activity,False,False,Activity_31,,Activity_29,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_1,activityIds,reference,Activity_31,Adverse events,,Adverse events,Activity,False,True,Activity_32,,Activity_30,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_2,activityIds,reference,Activity_7,Physical examination,,Physical examination,Activity,False,False,Activity_8,,Activity_6,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_2,activityIds,reference,Activity_13,Vital signs / Temperature,,Vital Signs and Temperature,Activity,False,True,Activity_14,ScheduleTimeline_3,Activity_12,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_2,activityIds,reference,Activity_16,ECG,,ECG,Activity,False,False,Activity_17,,Activity_15,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_2,activityIds,reference,Activity_19,Concomitant medications,,Concomitant medications,Activity,False,False,Activity_20,,Activity_18,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_2,activityIds,reference,Activity_20,Hematology,,Hematology,Activity,False,False,Activity_21,,Activity_19,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_2,activityIds,reference,Activity_21,Chemistry,,Chemistry,Activity,False,True,Activity_22,,Activity_20,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_2,activityIds,reference,Activity_22,Uninalysis,,Uninalysis,Activity,False,False,Activity_23,,Activity_21,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_2,activityIds,reference,Activity_23,Plasma Specimen (Xanomeline),,Plasma Specimen (Xanomeline),Activity,False,False,Activity_24,,Activity_22,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_2,activityIds,reference,Activity_25,Study drug,,"Study drug record , Medications dispensed, Medications returned",Activity,False,False,Activity_26,,Activity_24,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_2,activityIds,reference,Activity_26,TTS Acceptability Survey,,TTS Acceptability Survey,Activity,False,False,Activity_27,,Activity_25,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_2,activityIds,reference,Activity_27,ADAS-Cog,,ADAS-Cog,Activity,False,False,Activity_28,,Activity_26,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_2,activityIds,reference,Activity_28,CIBIC+,,CIBIC+,Activity,False,False,Activity_29,,Activity_27,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_2,activityIds,reference,Activity_29,DAD,,DAD,Activity,False,False,Activity_30,,Activity_28,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_2,activityIds,reference,Activity_30,NPI-X,,NPI-X,Activity,False,False,Activity_31,,Activity_29,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_2,activityIds,reference,Activity_32,Check adverse events,,Check adverse events,Activity,False,False,Activity_33,ScheduleTimeline_1,Activity_31,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_3,activityIds,reference,Activity_33,Supine,,Subject supine,Activity,True,False,Activity_34,,Activity_32,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_4,activityIds,reference,Activity_34,Vital Signs Supine,,Vital signs while supine,Activity,False,True,Activity_35,,Activity_33,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_5,activityIds,reference,Activity_35,Stand,,Subject Standing,Activity,True,False,Activity_36,,Activity_34,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_6,activityIds,reference,Activity_36,Vital Signs Standing,,Vital signs while standing,Activity,False,True,,,Activity_35,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_7,activityIds,reference,Activity_35,Stand,,Subject Standing,Activity,True,False,Activity_36,,Activity_34,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_8,activityIds,reference,Activity_36,Vital Signs Standing,,Vital signs while standing,Activity,False,True,,,Activity_35,False,False
+Condition,Condition_1,appliesToIds,reference,Activity_24,Hemoglobin A1C,,Hemoglobin A1C,Activity,False,True,Activity_25,,Activity_23,False,False
+Condition,Condition_2,appliesToIds,reference,Activity_27,ADAS-Cog,,ADAS-Cog,Activity,False,False,Activity_28,,Activity_26,False,False
+Condition,Condition_2,appliesToIds,reference,Activity_28,CIBIC+,,CIBIC+,Activity,False,False,Activity_29,,Activity_27,False,False
+Condition,Condition_2,appliesToIds,reference,Activity_29,DAD,,DAD,Activity,False,False,Activity_30,,Activity_28,False,False
+Condition,Condition_2,appliesToIds,reference,Activity_30,NPI-X,,NPI-X,Activity,False,False,Activity_31,,Activity_29,False,False

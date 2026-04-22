@@ -1,0 +1,85 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: ADaMIG
+        References:
+          - Citations:
+              - Cited Guidance: Unit used for AWLO and AWHI
+                Document: ADaMIG v1.0
+                Item: Table 3.2.5.2
+                Section: 3.2.5
+            Criteria:
+              Logical Expression:
+                Condition: AWU is present and both AWLO and AWHI are not present
+                Rule: AWU is present and both AWLO and AWHI are present
+              Plain Language Expression: When AWU is present, AWLO and AWH must also be present
+              Type: Failure
+            Origin: ADaM Conformance Rules
+            Release Notes: ''
+            Rule Identifier:
+              Id: '160'
+              Version: ''
+            Validator Rule Message: AWU is present but AWLO and AWHI are not present
+            Version: '5.0'
+        Version: '1.0'
+      - Name: ADaMIG
+        References:
+          - Citations:
+              - Cited Guidance: Unit used for AWLO and AWHI
+                Document: ADaMIG v1.1
+                Item: Table 3.3.5.2
+                Section: 3.3.5
+            Criteria:
+              Logical Expression:
+                Condition: AWU is present and both AWLO and AWHI are not present
+                Rule: AWU is present and both AWLO and AWHI are present
+              Plain Language Expression: When AWU is present, AWLO and AWH must also be present
+              Type: Failure
+            Origin: ADaM Conformance Rules
+            Related Rules:
+              - Id: '896'
+                Relationship: Related
+            Release Notes: ''
+            Rule Identifier:
+              Id: '160'
+              Version: '1.0'
+            Validator Rule Message: AWU is present but AWLO and AWHI are not present
+            Version: '5.0'
+        Version: '1.1'
+
+#check logic that both need to absent for tule to fire?
+
+Check:
+  all:
+    - name: AWU
+      operator: exists
+    - any:
+        - all:
+            - name: AWLO
+              operator: not_exists
+            - name: AWHI
+              operator: not_exists
+        - name: AWLO
+          operator: not_exists
+        - name: AWHI
+          operator: not_exists
+
+Core:
+  Id: CDISC.ADaMIG.AD0160
+  Status: Draft
+  Version: '1'
+Description: ''
+Executability: Fully Executable
+Outcome:
+  Message: AWU is present but AWLO and AWHI are not present
+  Output Variables:
+    - USUBJID
+    - AWU
+    - AWLO
+    - AWHI
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+      - BASIC DATA STRUCTURE
+Sensitivity: Record

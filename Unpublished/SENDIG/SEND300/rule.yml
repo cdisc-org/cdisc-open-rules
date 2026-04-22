@@ -1,0 +1,51 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      # Remark: does not apply to SENDIG-3.0
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: 'In the event that no records are present in a dataset, the
+                  empty dataset should not be submitted and should not be
+                  described in the data definition file.'
+                Document: IG v3.1
+                Item: Specification
+                Section: '3.2.1'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND300
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+Check:
+  all:
+    - name: $records_in_dataset
+      operator: equal_to
+      value: 0
+    # check whether the dataset is described in the define.xml
+    - name: define_dataset_name
+      operator: not_equal_to
+      value: 'test'
+Core:
+  Status: Draft
+  Version: '1'
+Description: 'Empty datasets may not be described in the define.xml'
+Executability: Fully Executable
+Operations:
+  - id: $records_in_dataset
+    operator: record_count
+Outcome:
+  Message: 'Empty dataset may not be described in the define.xml'
+  Output Variables:
+    - dataset_name
+    - define_dataset_name
+Rule Type: Dataset Contents Check against Define XML
+# Rule Type: Dataset Metadata Check
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Dataset

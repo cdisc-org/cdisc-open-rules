@@ -1,0 +1,132 @@
+dataset,variable,label,type,length
+dm,STUDYID,Study Identifier,Char,50
+dm,DOMAIN,Domain Abbreviation,Char,50
+dm,USUBJID,Unique Subject Identifier,Char,50
+dm,SUBJID,Subject Identifier for the Study,Char,50
+dm,RFSTDTC,Subject Reference Start Date/Time,Char,50
+dm,RFENDTC,Subject Reference End Date/Time,Char,50
+dm,RFXSTDTC,Date/Time of First Study Treatment,Char,50
+dm,RFXENDTC,Date/Time of Last Study Treatment,Char,50
+dm,RFCSTDTC,Date/Time of First Challenge Agent Admin,Char,50
+dm,RFCENDTC,Date/Time of Last Challenge Agent Admin,Char,50
+dm,RFICDTC,Date/Time of Informed Consent,Char,50
+dm,RFPENDTC,Date/Time of End of Participation,Char,50
+dm,DTHDTC,Date/Time of Death,Char,50
+dm,DTHFL,Subject Death Flag,Char,50
+dm,SITEID,Study Site Identifier,Char,50
+dm,INVID,Investigator Identifier,Char,50
+dm,INVNAM,Investigator Name,Char,50
+dm,BRTHDTC,Date/Time of Birth,Char,50
+dm,AGE,Age,Num,8
+dm,AGEU,Age Units,Char,50
+dm,SEX,Sex,Char,50
+dm,RACE,Race,Char,50
+dm,ETHNIC,Ethnicity,Char,50
+dm,ARMCD,Planned Arm Code,Char,50
+dm,ARM,Description of Planned Arm,Char,50
+dm,ACTARMCD,Actual Arm Code,Char,50
+dm,ACTARM,Description of Actual Arm,Char,50
+dm,ARMNRS,Reason Arm and/or Actual Arm is Null,Char,50
+dm,ACTARMUD,Description of Unplanned Actual Arm,Char,50
+dm,COUNTRY,Country,Char,50
+dm,DMDTC,Date/Time of Collection,Char,50
+dm,DMDY,Study Day of Collection,Num,8
+suppdm,STUDYID,Study Identifier,Char,50
+suppdm,USUBJID,Unique Subject Identifier,Char,50
+suppdm,IDVAR,"Identifying
+Variable",Char,10
+suppdm,IDVARVAL,Identifying Variable Value,Char,10
+suppdm,QNAM,Qualifier Variable Name,Char,10
+suppdm,QLABEL,Qualifier Variable Label,Char,10
+suppdm,QVAL,Qualifier Variable Value,Char,10
+suppdm,QORIG,Origin,Char,10
+suppdm,QEVAL,Evaluator,Char,10
+supplb,STUDYID,Study Identifier,Char,50
+supplb,USUBJID,Unique Subject Identifier,Char,50
+supplb,IDVAR,Identifying Variable,Char,50
+supplb,IDVARVAL,Identifying Variable Value,Char,50
+supplb,QNAM,Qualifier Variable Name,Char,50
+supplb,QLABEL,Qualifier Variable Label,Char,50
+supplb,QVAL,Data Value,Char,50
+supplb,QORIG,Origin,Char,50
+supplb,QEVAL,Evaluator,Char,50
+relrec,STUDYID,Study Identifier,Char,50
+relrec,USUBJID,Unique Subject Identifier,Char,50
+relrec,IDVAR,Identifying Variable,Char,50
+relrec,IDVARVAL,Identifying Variable Value,Char,50
+relrec,RELTYPE,Relationship Type,Char,50
+relrec,RELID,Relationship Identifier,Char,50
+co,STUDYID,Study Identifier,Char,50
+co,DOMAIN,Domain Abbreviation,Char,50
+co,USUBJID,Unique Subject Identifier,Char,50
+co,COSEQ,Sequence Number,Num,8
+co,IDVAR,Identifying Variable,Char,50
+co,IDVARVAL,Identifying Variable Value,Char,50
+co,COREF,Comment Reference,Char,50
+co,COVAL,Comment,Char,50
+co,COEVAL,Evaluator,Char,50
+co,COEVALID,Evaluator Identifier,Char,50
+co,CODTC,Date/Time of Comment,Char,50
+co,CODY,Study Day of Comment,Num,8
+lb,STUDYID,Study Identifier,Char,50
+lb,DOMAIN,Domain Abbreviation,Char,50
+lb,USUBJID,Unique Subject Identifier,Char,50
+lb,LBSEQ,Sequence Number,Num,8
+lb,LBGRPID,Group ID,Char,50
+lb,LBREFID,Specimen ID,Char,50
+lb,LBSPID,Sponsor-Defined Identifier,Char,50
+lb,LBTESTCD,Lab Test or Examination Short Name,Char,50
+lb,LBTEST,Lab Test or Examination Name,Char,50
+lb,LBTSTCND,Test Condition,Char,50
+lb,LBBDAGNT,Binding Agent,Char,50
+lb,LBTSTOPO,Test Operational Objective,Char,50
+lb,LBCAT,Category for Lab Test,Char,50
+lb,LBSCAT,Subcategory for Lab Test,Char,50
+lb,LBORRES,Result or Finding in Original Units,Char,50
+lb,LBORRESU,Original Units,Char,50
+lb,LBRESSCL,Result Scale,Char,50
+lb,LBRESTYP,Result Type,Char,50
+lb,LBCOLSRT,Collected Summary Result Type,Char,50
+lb,LBORNRLO,Reference Range Lower Limit in Orig Unit,Char,50
+lb,LBORNRHI,Reference Range Upper Limit in Orig Unit,Char,50
+lb,LBLLOD,Lower Limit of Detection,Char,50
+lb,LBSTRESC,Character Result/Finding in Std Format,Char,50
+lb,LBSTRESN,Numeric Result/Finding in Standard Units,Num,8
+lb,LBSTRESU,Standard Units,Char,50
+lb,LBSTNRLO,Reference Range Lower Limit-Std Units,Num,8
+lb,LBSTNRHI,Reference Range Upper Limit-Std Units,Num,8
+lb,LBSTNRC,Reference Range for Char Rslt-Std Units,Char,50
+lb,LBNRIND,Reference Range Indicator,Char,50
+lb,LBSTAT,Completion Status,Char,50
+lb,LBREASND,Reason Test Not Done,Char,50
+lb,LBNAM,Vendor Name,Char,50
+lb,LBLOINC,LOINC Code,Char,50
+lb,LBSPEC,Specimen Type,Char,50
+lb,LBSPCCND,Specimen Condition,Char,50
+lb,LBSPCUFL,Specimen Usability for the Test,Char,50
+lb,LBMETHOD,Method of Test or Examination,Char,50
+lb,LBANMETH,Analysis Method,Char,50
+lb,LBTMTHSN,Test Method Sensitivity,Char,50
+lb,LBLOBXFL,Last Observation Before Exposure Flag,Char,50
+lb,LBBLFL,Baseline Flag,Char,50
+lb,LBFAST,Fasting Status,Char,50
+lb,LBDRVFL,Derived Flag,Char,50
+lb,LBTOX,Toxicity,Char,50
+lb,LBTOXGR,Standard Toxicity Grade,Char,50
+lb,LBCLSIG,"Clinically Significant, Collected",Char,50
+lb,VISITNUM,Visit Number,Num,8
+lb,VISIT,Visit Name,Char,50
+lb,VISITDY,Planned Study Day of Visit,Num,8
+lb,TAETORD,Planned Order of Element within Arm,Num,8
+lb,EPOCH,Epoch,Char,50
+lb,LBDTC,Date/Time of Specimen Collection,Char,50
+lb,LBENDTC,End Date/Time of Specimen Collection,Char,50
+lb,LBDY,Study Day of Specimen Collection,Num,8
+lb,LBENDY,Study Day of End of Observation,Num,8
+lb,LBTPT,Planned Time Point Name,Char,50
+lb,LBTPTNUM,Planned Time Point Number,Num,8
+lb,LBELTM,Planned Elapsed Time from Time Point Ref,Char,50
+lb,LBTPTREF,Time Point Reference,Char,50
+lb,LBRFTDTC,Date/Time of Reference Time Point,Char,50
+lb,LBPTFL,Point in Time Flag,Char,50
+lb,LBPDUR,Planned Duration,Char,50

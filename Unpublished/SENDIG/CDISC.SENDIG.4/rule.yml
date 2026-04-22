@@ -1,0 +1,125 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: 'The define.xml specification includes seven distinct attributes
+                  to describe variable-level metadata: ...'
+                Document: IG v3.0
+                Section: 3.2.2
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND4
+              Version: '1'
+            Version: '5.0'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: 'The define.xml specification includes seven distinct attributes
+                  to describe variable-level metadata: ...'
+                Document: IG v3.1
+                Section: 3.2.2
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND4
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: 'The define.xml specification includes seven distinct attributes
+                  to describe variable-level metadata: ...'
+                Document: IG v3.1.1
+                Section: 3.2.2
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND4
+              Version: '1'
+            Version: '5.0'
+        Version: 3.1.1
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: 'The define.xml specification includes seven distinct attributes
+                  to describe variable-level metadata: ...'
+                Document: IG v3.1
+                Section: 3.2.2
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND4
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: 'The define.xml specification includes seven distinct attributes
+                  to describe variable-level metadata: ...'
+                Document: IG v3.1.1
+                Section: 3.2.2
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND4
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: 'The define.xml specification includes seven distinct attributes
+                  to describe variable-level metadata: ...'
+                Document: IG v3.1.1
+                Section: 3.2.2
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND4
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+Check:
+  all:
+    #- name: variable_data_type
+    #  operator: equal_to
+    #  value: 'Char'
+    #- name: define_variable_data_type
+    #  operator: is_contained_by
+    #  value: 
+    #    - 'integer'
+    #    - 'float'
+    # Looks as define_variable_type can only have the values "Char" and "Num"
+    # See e.g. https://github.com/cdisc-org/cdisc-rules-engine/blob/6da66eda3e5c53020f7c41b4b148fea894bcee24/cdisc_rules_engine/services/define_xml/base_define_xml_reader.py#L201
+    # I think this is wrong, as the define.xml has much more granular data types
+    # It would then also allow whether a -DTC variable has been declared as one of "date", "datetime", "partialdate" ...
+    #
+    # First part: check whether variable name is defined in the define.xml
+    - name: variable_name
+      operator: equal_to
+      value: define_variable_name
+    # Second part: check whether the data types match
+    - name: variable_data_type
+      operator: not_equal_to
+      value: define_variable_data_type
+Core:
+  Id: CDISC.SENDIG.4
+  Status: Draft
+  Version: '1'
+Description: Raise an error when the data type in the define.xml does not
+  correspond to the data type in the dataset
+Executability: Fully Executable
+Outcome:
+  Message: Variable datatype in the define.xml does not correspond to the data
+    type in the dataset
+  Output Variables:
+    - variable_name
+Rule Type: Variable Metadata Check against Define XML
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record

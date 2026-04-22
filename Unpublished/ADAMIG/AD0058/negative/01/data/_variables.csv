@@ -1,0 +1,25 @@
+dataset,variable,label,type,length
+adsl,STUDYID,Study Identifier,Char,50
+adsl,USUBJID,Unique Subject Identifier,Char,50
+adsl,FASFL,Full Analysis Set Population Flag,Char,50
+adsl,SAFFL,Safety Population Flag,Char,50
+adsl,ITTFL,Intent-To-Treat Population Flag,Char,50
+adsl,PPROTFL,Per-Protocol Population Flag,Char,50
+adsl,COMPLFL,Completers Population Flag,Char,50
+adsl,RANDFL,Randomized Population Flag,Char,50
+adsl,ENRLFL,Enrolled Population Flag,Char,50
+adsl,AGE,Age,Num,8
+adsl,AGEU,Age Units,Char,50
+adsl,SEX,Sex,Char,50
+advs,SUBJID,Subject Identifier for the Study,Char,50
+advs,AVISIT,Analysis Visit,Char,50
+advs,ADY,Analysis Relative Day,Num,8
+advs,PARAM,Parameter,Char,50
+advs,BASE,Baseline Value,Num,8
+advs,CHG,Change from Baseline,Num,8
+advs,AVAL,Analysis Value,Num,8
+advs,DTYPE,Derivation Type,Char,50
+advs,ANL01FL,Analysis Flag zz,Char,50
+advs,CRIT1,Analysis Criterion y,Char,50
+advs,CRIT1FL,Criterion y Evaluation Result Flag,Char,50
+advs,ADT,Analysis Date,Char,20

@@ -1,0 +1,16 @@
+dataset,variable,label,type,length
+MedicalDeviceIdentifier,parent_entity,Parent Entity Name,String,[1]
+MedicalDeviceIdentifier,parent_id,Parent Entity Id,String,[1]
+MedicalDeviceIdentifier,parent_rel,Name of Relationship from Parent Entity,String,[1]
+MedicalDeviceIdentifier,rel_type,Type of Relationship,String,[1]
+MedicalDeviceIdentifier,id,(Medical Device Identifier Id),String,[1]
+MedicalDeviceIdentifier,text,Medical Device Identifier Text,String,[1]
+MedicalDeviceIdentifier,scopeId,(Medical Device Identifier Scope) [Identifier],String,[1] (Organization.id)
+MedicalDeviceIdentifier,type,Medical Device Identifier Type [Exists],Boolean,Code[1]
+MedicalDeviceIdentifier,type.id,Medical Device Identifier Type / (Code Id),String,Code[1]>id[1]
+MedicalDeviceIdentifier,type.code,Medical Device Identifier Type / Code Value,String,Code[1]>code[1]
+MedicalDeviceIdentifier,type.codeSystem,Medical Device Identifier Type / Code System Name,String,Code[1]>codeSystem[1]
+MedicalDeviceIdentifier,type.codeSystemVersion,Medical Device Identifier Type / Code System Version,String,Code[1]>codeSystemVersion[1]
+MedicalDeviceIdentifier,type.decode,Medical Device Identifier Type / Decode,String,Code[1]>decode[1]
+MedicalDeviceIdentifier,type.instanceType,Medical Device Identifier Type / (Code Instance Type),String,Code[1]>instanceType[1]
+MedicalDeviceIdentifier,instanceType,(Medical Device Identifier Instance Type),String,[1]

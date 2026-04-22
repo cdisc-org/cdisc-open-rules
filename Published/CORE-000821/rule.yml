@@ -1,0 +1,56 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'The target for a condition must not be equal to its parent.'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00044'
+              Version: '1'
+            Version: '1.0'
+        Version: '3.0'
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'The target for a condition must not be equal to its parent.'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00044'
+              Version: '1'
+            Version: '1.0'
+        Version: '4.0'
+Check:
+  all:
+    - name: instanceType
+      operator: equal_to
+      value: 'ConditionAssignment'
+    - name: 'rel_type'
+      operator: equal_to
+      value: 'definition'
+    - name: conditionTargetId
+      operator: equal_to
+      value: parent_id
+Core:
+  Id: 'CORE-000821'
+  Status: Published
+  Version: '1'
+Description: 'The target for a condition must not be equal to its parent.'
+Executability: Fully Executable
+Outcome:
+  Message: "The condition assignment's target is the same as its parent."
+  Output Variables:
+    - parent_entity
+    - parent_id
+    - parent_rel
+    - id
+    - conditionTargetId
+Rule Type: Record Data
+Scope:
+  Entities:
+    Include:
+      - ConditionAssignment
+Sensitivity: Record

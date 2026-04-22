@@ -1,0 +1,166 @@
+Authorities:
+  - Organization: FDA
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: A variable's length across a study should be no longer than the
+                  maximum length of the actual data (except for SUPPQUAL).
+                Document: FDA
+                Section: FDAB018
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1801
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: A variable's length across a study should be no longer than the
+                  maximum length of the actual data (except for SUPPQUAL).
+                Document: FDA
+                Section: FDAB018
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1801
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: A variable's length across a study should be no longer than the
+                  maximum length of the actual data (except for SUPPQUAL).
+                Document: FDA
+                Section: FDAB018
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1801
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: A variable's length across a study should be no longer than the
+                  maximum length of the actual data (except for SUPPQUAL).
+                Document: FDA
+                Section: FDAB018
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1801
+              Version: '1'
+            Version: '1.5'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: A variable's length across a study should be no longer than the
+                  maximum length of the actual data (except for SUPPQUAL).
+                Document: FDA
+                Section: FDAB018
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1801
+              Version: '1'
+            Version: '1.5'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: A variable's length across a study should be no longer than the
+                  maximum length of the actual data (except for SUPPQUAL).
+                Document: FDA
+                Section: FDAB018
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1801
+              Version: '1'
+            Version: '1.5'
+        Version: '3.1.1'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: A variable's length across a study should be no longer than the
+                  maximum length of the actual data (except for SUPPQUAL).
+                Document: FDA
+                Section: FDAB018
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1801
+              Version: '1'
+            Version: '1.5'
+        Version: '1.0'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: A variable's length across a study should be no longer than the
+                  maximum length of the actual data (except for SUPPQUAL).
+                Document: FDA
+                Section: FDAB018
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1801
+              Version: '1'
+            Version: '1.5'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: A variable's length across a study should be no longer than the
+                  maximum length of the actual data (except for SUPPQUAL).
+                Document: FDA
+                Section: FDAB018
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1801
+              Version: '1'
+            Version: '1.5'
+        Version: '1.2'
+      - Name: SENDIG-AR
+        References:
+          - Citations:
+              - Cited Guidance: A variable's length across a study should be no longer than the
+                  maximum length of the actual data (except for SUPPQUAL).
+                Document: FDA
+                Section: FDAB018
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB1801
+              Version: '1'
+            Version: '1.5'
+        Version: '1.0'
+Check:
+  all:
+    - name: variable_size
+      operator: less_than_or_equal_to
+      value: 10
+Core:
+  Id: FDA.SDTMIG.FB1801
+  Status: Draft
+  Version: '1'
+Description: The length of each variable cannot be different between datasets
+  and should not be longer than the maximum length of the data contained by the
+  variable
+Executability: Partially Executable
+# Operations:
+#- id: $size
+#  name: variable_size
+#  operator: extract_metadata
+Outcome:
+  Message: The length of the variable is longer than the data within the variable
+  Output Variables:
+    - variable_size
+    - variable_value_length
+    - variable_name
+    #  - $size
+Rule Type: Variable Metadata Check
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record

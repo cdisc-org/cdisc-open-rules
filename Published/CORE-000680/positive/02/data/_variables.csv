@@ -1,0 +1,10 @@
+dataset,variable,label,type,length
+Range,parent_entity,Parent Entity Name,String,[1]
+Range,parent_id,Parent Entity Id,String,[1]
+Range,parent_rel,Name of Relationship from Parent Entity,String,[1]
+Range,rel_type,Type of Relationship,String,[1]
+Range,id,(Range Id),String,[1]
+Range,minValue,Minimum Value,Float,[1]
+Range,maxValue,Maximum Value,Float,[1]
+Range,isApproximate,Value Range is Approximate Indicator,Boolean,[1]
+Range,instanceType,Instance Type,String,[1]

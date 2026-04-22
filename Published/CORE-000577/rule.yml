@@ -1,0 +1,52 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: One record per actual Repro Stage per subject
+                Document: IG-DART v1.1
+                Section: '4.1'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND349
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: One record per actual Repro Stage per subject
+                Document: IG-DART v1.2
+                Section: '4.1'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND349
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+
+Check:
+  all:
+    - name: RSTGCD
+      operator: is_not_unique_set
+      value:
+        - USUBJID
+Core:
+  Id: CORE-000577
+  Status: Published
+  Version: '1'
+Description: Raise an error when RSTGCD is not unique within USUBJID
+Executability: Fully Executable
+Outcome:
+  Message: The value of RSTGCD is not unique within USUBJID
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      # P.S. "SJ" is not recognized as "SPECIAL PURPOSE", Github ticket 586
+      - ALL
+  Domains:
+    Include:
+      - SJ
+Sensitivity: Record

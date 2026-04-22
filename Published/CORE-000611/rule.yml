@@ -1,0 +1,53 @@
+# Variable: REFID
+# Condition: REFID value exists in RELREF domain
+# Rule: REFID value exists in GT domain
+Authorities:
+  - Organization: 'CDISC'
+    Standards:
+      - Name: 'TIG'
+        References:
+          - Citations:
+              - Cited Guidance: Each REFID that exists in the RELREF dataset must exist in the
+                  GT dataset.
+                Document: 'TIG 1.0'
+                Item: 'assumption 3'
+                Section: '2.8.9.23'
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: 'TIG0036'
+              Version: '1'
+            Version: '1.0'
+        Substandard: SEND
+        Version: '1.0'
+Check:
+  all:
+    - name: REFID
+      operator: is_not_contained_by
+      value: $gt_refid
+Core:
+  Status: Published
+  Version: '1'
+  Id: CORE-000611
+Description: Raise an error when a REFID value in the RELREF dataset does not
+  exist in the GT dataset.
+Executability: Fully Executable
+Operations:
+  - domain: GT
+    id: $gt_refid
+    name: GTREFID
+    operator: distinct
+Outcome:
+  Message: REFID value in RELREF does not exist in GT.
+  Output Variables:
+    - REFID
+    - $gt_refid
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - RELATIONSHIP
+  Domains:
+    Include:
+      - RELREF
+  Use Case: NONCLIN
+Sensitivity: Record

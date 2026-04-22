@@ -1,0 +1,20 @@
+parent_entity,parent_id,parent_rel,rel_type,id,name,description,label,defaultConditionId,epochId,timelineId,timelineExitId,instanceType,activityIds,encounterId
+ScheduleTimeline,ScheduleTimeline_4,entryId,reference,ScheduledActivityInstance_9,SCREEN1,-,Screen One,ScheduledActivityInstance_10,StudyEpoch_1,,,ScheduledActivityInstance,True,Encounter_1
+ScheduleTimeline,ScheduleTimeline_4,instances,definition,ScheduledActivityInstance_9,SCREEN1,-,Screen One,ScheduledActivityInstance_10,StudyEpoch_1,,,ScheduledActivityInstance,True,Encounter_1
+Timing,Timing_1,relativeFromScheduledInstanceId,reference,ScheduledActivityInstance_9,SCREEN1,-,Screen One,ScheduledActivityInstance_10,StudyEpoch_1,,,ScheduledActivityInstance,True,Encounter_1
+ScheduleTimeline,ScheduleTimeline_3,instances,definition,ScheduledActivityInstance_5,VS_1MIN,,1 minute standing,ScheduledActivityInstance_6,,,,ScheduledActivityInstance,True,
+ScheduleTimeline,ScheduleTimeline_3,instances,definition,ScheduledActivityInstance_6,VS_STAND1,,Vital signs after 1 min standing,ScheduledActivityInstance_7,,,,ScheduledActivityInstance,True,
+ScheduleTimeline,ScheduleTimeline_3,instances,definition,ScheduledActivityInstance_7,VS_2MIN,,2 minute standing,ScheduledActivityInstance_8,,,,ScheduledActivityInstance,True,
+ScheduleTimeline,ScheduleTimeline_3,instances,definition,ScheduledActivityInstance_8,VS_STAND3,,Vital signs after 3 min standing,,,,ScheduleTimelineExit_3,ScheduledActivityInstance,True,
+Timing,Timing_21,relativeFromScheduledInstanceId,reference,ScheduledActivityInstance_5,VS_1MIN,,1 minute standing,ScheduledActivityInstance_6,,,,ScheduledActivityInstance,True,
+Timing,Timing_22,relativeFromScheduledInstanceId,reference,ScheduledActivityInstance_6,VS_STAND1,,Vital signs after 1 min standing,ScheduledActivityInstance_7,,,,ScheduledActivityInstance,True,
+Timing,Timing_22,relativeToScheduledInstanceId,reference,ScheduledActivityInstance_5,VS_1MIN,,1 minute standing,ScheduledActivityInstance_6,,,,ScheduledActivityInstance,True,
+Timing,Timing_23,relativeFromScheduledInstanceId,reference,ScheduledActivityInstance_7,VS_2MIN,,2 minute standing,ScheduledActivityInstance_8,,,,ScheduledActivityInstance,True,
+Timing,Timing_23,relativeToScheduledInstanceId,reference,ScheduledActivityInstance_6,VS_STAND1,,Vital signs after 1 min standing,ScheduledActivityInstance_7,,,,ScheduledActivityInstance,True,
+Timing,Timing_24,relativeFromScheduledInstanceId,reference,ScheduledActivityInstance_8,VS_STAND3,,Vital signs after 3 min standing,,,,ScheduleTimelineExit_3,ScheduledActivityInstance,True,
+Timing,Timing_24,relativeToScheduledInstanceId,reference,ScheduledActivityInstance_7,VS_2MIN,,2 minute standing,ScheduledActivityInstance_8,,,,ScheduledActivityInstance,True,
+ScheduledActivityInstance,ScheduledActivityInstance_4,defaultConditionId,reference,ScheduledActivityInstance_5,VS_1MIN,,1 minute standing,ScheduledActivityInstance_6,,,,ScheduledActivityInstance,True,
+ScheduledActivityInstance,ScheduledActivityInstance_5,defaultConditionId,reference,ScheduledActivityInstance_6,VS_STAND1,,Vital signs after 1 min standing,ScheduledActivityInstance_7,,,,ScheduledActivityInstance,True,
+ScheduledActivityInstance,ScheduledActivityInstance_6,defaultConditionId,reference,ScheduledActivityInstance_7,VS_2MIN,,2 minute standing,ScheduledActivityInstance_8,,,,ScheduledActivityInstance,True,
+ScheduledActivityInstance,ScheduledActivityInstance_7,defaultConditionId,reference,ScheduledActivityInstance_8,VS_STAND3,,Vital signs after 3 min standing,,,,ScheduleTimelineExit_3,ScheduledActivityInstance,True,
+Condition,Condition_2,contextIds,reference,ScheduledActivityInstance_9,SCREEN1,-,Screen One,ScheduledActivityInstance_10,StudyEpoch_1,,,ScheduledActivityInstance,True,Encounter_1

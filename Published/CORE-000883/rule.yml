@@ -1,0 +1,117 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      # PART 1 for DM, as in TS, AGE, AGETXT and AGEU are parameters
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: AGEU - Units associated with either AGE or AGETXT.
+                Document: IG v3.0
+                Item: Specification
+                Section: 5.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND104.1
+              Version: '1'
+            Version: '5.0'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: AGEU - Units associated with either AGE or AGETXT.
+                Document: IG v3.1
+                Item: Specification
+                Section: 5.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND104.1
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: AGEU - Units associated with either AGE or AGETXT.
+                Document: IG v3.1.1
+                Item: Specification
+                Section: 5.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND104.1
+              Version: '1'
+            Version: '5.0'
+        Version: 3.1.1
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: AGEU - Units associated with either AGE or AGETXT.
+                Document: IG v3.1
+                Section: 3.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND104.1
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: AGEU - Units associated with either AGE or AGETXT.
+                Document: IG v3.1.1
+                Section: 3.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND104.1
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: AGEU - Units associated with either AGE or AGETXT.
+                Document: IG v3.1.1
+                Section: 3.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND104.1
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+Check:
+  any:
+    # For DM: AGE, AGETXT and AGEU are variables
+    - all:
+        #- name: DOMAIN
+        #  operator: equal_to
+        #  value: DM
+        - name: AGEU
+          operator: empty
+        - any:
+            - name: AGETXT
+              operator: non_empty
+            - name: AGE
+              operator: non_empty
+Core:
+  Id: CORE-000883
+  Status: Published
+  Version: '1'
+Description: AGEU is the unit associated with AGE or AGETXT.  If either of those
+  variables is populated, AGEU should be populated. This applies to both DM (as
+  variables) as to TS (as parameters)
+Executability: Fully Executable
+Outcome:
+  Message: AGE or AGETXT is populated, but AGEU is not populated
+  Output Variables:
+    - USUBJID
+    - AGETXT
+    - AGE
+    - AGEU
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - DM
+Sensitivity: Record

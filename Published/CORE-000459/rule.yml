@@ -1,0 +1,121 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: The units associated with the environmental temperature; only
+                  "C" or "F" is acceptable.
+                Document: IG v3.0
+                Item: Specification
+                Section: 7.4.2
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND244.1
+              Version: '1'
+            Version: '5.0'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: The units associated with the environmental temperature; only
+                  "C" or "F" is acceptable.
+                Document: IG v3.1
+                Item: Specification
+                Section: 7.4.2
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND244.1
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: The units associated with the environmental temperature; only
+                  "C" or "F" is acceptable.
+                Document: IG v3.1.1
+                Item: Specification
+                Section: 7.4.2
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND244.1
+              Version: '1'
+            Version: '5.0'
+        Version: 3.1.1
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: The units associated with the environmental temperature; only
+                  "C" or "F" is acceptable.
+                Document: IG v3.1
+                Item: Specification
+                Section: 7.4.2
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND244.1
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: The units associated with the environmental temperature; only
+                  "C" or "F" is acceptable.
+                Document: IG v3.1.1
+                Item: Specification
+                Section: 7.4.2
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND244.1
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: The units associated with the environmental temperature; only
+                  "C" or "F" is acceptable.
+                Document: IG v3.1.1
+                Item: Specification
+                Section: 7.4.2
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND244.1
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+Check:
+  all:
+    - name: TXPARMCD
+      operator: equal_to
+      value: ENVTEMPU
+    # addition Jozef 2024-03-16
+    # pre-condition is that TXVAL is not null
+    - name: TXVAL
+      operator: non_empty
+    # end of addition
+    - name: TXVAL
+      operator: not_equal_to
+      value: C
+    - name: TXVAL
+      operator: not_equal_to
+      value: F
+Core:
+  Id: CORE-000459
+  Status: Published
+  Version: '1'
+Description: The units associated with the environmental temperature; only "C"
+  or "F" is acceptable.
+Executability: Fully Executable
+Outcome:
+  Message: The value of TXVAL may only be "C" or "F" for TXPARMCD=ENTEMPU
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - TRIAL DESIGN
+  Domains:
+    Include:
+      - TX
+Sensitivity: Record

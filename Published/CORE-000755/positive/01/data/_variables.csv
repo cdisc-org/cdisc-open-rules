@@ -1,0 +1,49 @@
+dataset,variable,label,type,length
+ae,STUDYID,Study Identifier,Char,50
+ae,DOMAIN,Domain Abbreviation,Char,50
+ae,POOLID,Pool Identifier,Char,20
+ae,AESEQ,Sequence Number,Num,8
+ae,AETERM,Reported Term for the Adverse Event,Char,50
+ae,AEMODIFY,Modified Reported Term,Char,50
+ae,AEDECOD,Dictionary-Derived Term,Char,50
+ae,AEBODSYS,Body System or Organ Class,Char,50
+ae,AESEV,Severity/Intensity,Char,50
+ae,AESER,Serious Event,Char,50
+ae,AEACN,Action Taken with Study Treatment,Char,50
+ae,AEREL,Causality,Char,50
+ae,AEOUT,Outcome of Adverse Event,Char,50
+ae,AESCONG,Congenital Anomaly or Birth Defect,Char,50
+ae,AESDISAB,Persist or Signif Disability/Incapacity,Char,50
+ae,AESDTH,Results in Death,Char,50
+ae,AESHOSP,Requires or Prolongs Hospitalization,Char,50
+ae,AESLIFE,Is Life Threatening,Char,50
+ae,EPOCH,Epoch,Char,50
+ae,AESTDTC,Start Date/Time of Adverse Event,Char,50
+ae,AEENDTC,End Date/Time of Adverse Event,Char,50
+ae,AESTDY,Study Day of Start of Adverse Event,Num,8
+ae,AEENDY,Study Day of End of Adverse Event,Num,8
+ae,AEENRF,End Relative to Reference Period,Char,50
+in,STUDYID,Study Identifier,Char,50
+in,DOMAIN,Domain Abbreviation,Char,50
+in,SPTOBID,Applicant-Defined Tobacco Product ID,Char,50
+in,IGDCMPID,Ingredient or Component Identifier,Char,50
+in,INMANUF,Manufacturer Name,Char,50
+in,INMANUIN,Manufacturer Unique Identifying Item Num,Char,50
+in,TPMF,Tobacco Product Master File Number,Char,50
+in,IUPACNAM,Preferred IUPAC Name,Char,50
+in,CASNO,CAS Registry Number,Char,50
+in,UNII,Unique Ingredient Identifier,Char,50
+in,INIGDPLX,Ingredient Complexity,Char,50
+in,INCIGIND,Applicant-Customized Ingredient Indic,Char,50
+in,INGRADE,Ingredient Grade,Char,50
+in,INPURITY,Ingredient Purity,Char,50
+iq,DOMAIN,Domain Abbreviation,Char,50
+iq,IGDCMPID,Ingredient or Component Identifier,Char,50
+iq,IQCAT,Category of Ingredient or Component,Char,50
+iq,IQPARENT,Parent of Ingredient or Component,Char,50
+iq,IQLEVEL,Ingredient Level in Hierarchy,Num,50
+iq,IQFUNCT,Ingredient Function,Char,50
+iq,IQVALTRG,Ingredient Target Value,Num,50
+iq,IQVALMIN,Ingredient Minimum Value,Num,50
+iq,IQVALMAX,Ingredient Maximum Value,Num,50
+iq,IQVALU,Ingredient Value Unit,Char,50

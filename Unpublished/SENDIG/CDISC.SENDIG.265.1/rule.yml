@@ -1,0 +1,92 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: When preparing datasets based on the SENDIG domain models,
+                  sponsors must not add any variables other than specified
+                  Identifier variables (from the SDTM model 1.5).
+                Document: IG v3.1
+                Item: Specification
+                Section: 2.1 | 2.3
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND265.1
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: When preparing datasets based on the SENDIG domain models,
+                  sponsors must not add any variables other than specified
+                  Identifier variables (from the SDTM model 1.5).
+                Document: IG v3.1.1
+                Item: Specification
+                Section: 2.1 | 2.3
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND265.1
+              Version: '1'
+            Version: '5.0'
+        Version: 3.1.1
+
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: When preparing datasets based on the SENDIG domain models,
+                  sponsors must not add any variables other than specified
+                  Identifier variables (from the SDTM model 1.5).
+                Document: IG v3.1
+                Item: Specification
+                Section: 2.1 | 2.3
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND265.1
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+
+# REMARK: this will ONLY validate the define.xml dataset definitions
+# for which a dataset is actually being provided
+Check:
+  all:
+    - name: define_variable_role
+      operator: equal_to
+      value: 'Identifier'
+    #- name: define_variable_role
+    #  operator: equal_to
+    #  value: 'Identifier'
+    - name: define_variable_name
+      operator: is_not_contained_by
+      value: $model_variables
+Core:
+  Id: CDISC.SENDIG.265.1
+  Status: Draft
+  Version: '1'
+Description: Raise an error when variable role is 'Identifier', but the variable
+  is not found in the SDTM model correspond to the role in the IG
+Executability: Fully Executable
+Operations:
+  - id: $model_variables
+    operator: get_column_order_from_library
+Outcome:
+  Message: The Identfier variable in the define.xml is not found in the SDTM model
+  #Output Variables:
+  #  - $model_variables
+  #- define_variable_label
+  #- define_variable_name
+  #- define_variable_role
+  #- library_variable_name
+  #- library_variable_role
+  # IMPORTANT TO PROVIDE THE RIGHT TYPE OF RULE CHECK HERE!
+Rule Type: Define Item Metadata Check against Library Metadata
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Dataset

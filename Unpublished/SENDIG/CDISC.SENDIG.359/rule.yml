@@ -1,0 +1,81 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: All Study Day values are integers.
+                Document: IG v3.1
+                Section: 4.4.4
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND359
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: All Study Day values are integers.
+                Document: IG v3.1.1
+                Section: 4.4.4
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND359
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+Check:
+  any:
+    # REMARK that the rule does not say anything about a value being 0
+    # nor about negative integers
+    - name: RPPLDY
+      operator: not_matches_regex
+      value: ^[+-]?[0-9]+$
+    - name: RPPLSTDY
+      operator: not_matches_regex
+      value: ^[+-]?[0-9]+$
+    - name: RPPLENDY
+      operator: not_matches_regex
+      value: ^[+-]?[0-9]+$
+    - name: --RPDY
+      operator: not_matches_regex
+      value: ^[+-]?[0-9]+$
+    #- name: --RPSTDY
+    #  operator: not_matches_regex
+    #  value: ^[+-]?[0-9]+$
+    #- name: --RPENDY
+    #  operator: not_matches_regex
+    #  value: ^[+-]?[0-9]+$
+Core:
+  Id: CDISC.SENDIG.359
+  Status: Draft
+  Version: '1'
+Description: 'When populated, values for all Repro Phase Day timing variables are integers'
+Executability: Fully Executable
+Outcome:
+  Message: 'Repro Phase Day timing variable value must be an integer'
+  Output Variables:
+    - RPPLDY
+    - RPPLSTDY
+    - RPPLENDY
+    - --RPDY
+    - --RPSTDY
+    - --RPENDY
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - EX
+      - BW
+      - FW
+      - LB
+      - PC
+      - PP
+      - DS
+      - DD
+      - MA
+Sensitivity: Record

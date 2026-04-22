@@ -1,0 +1,73 @@
+# Variable: TIVERS
+# Condition: Greater than one version of the IE criteria
+# Rule: TIVERS present in dataset
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        Version: '3.4'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0254
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: The number of this version of the Inclusion/Exclusion
+                  criteria. May be omitted if there is only one version.
+                Document: IG v3.4
+                Item: Specification
+                Section: 7.4.1
+      - Name: SDTMIG
+        Version: '3.2'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0254
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: The number of this version of the Inclusion/Exclusion
+                  criteria. May be omitted if there is only one version.
+                Document: IG v3.2
+                Item: Specification
+                Section: '7.4'
+      - Name: SDTMIG
+        Version: '3.3'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0254
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: The number of this version of the Inclusion/Exclusion
+                  criteria. May be omitted if there is only one version.
+                Document: IG v3.3
+                Item: Specification
+                Section: 7.4.1
+Check:
+  all:
+    - name:
+      operator:
+    - name: TIVERS
+      operator: exists
+Core:
+  Id: CDISC.SDTMIG.CG0254
+  Status: Draft
+  Version: '1'
+Description: Trigger error when TIVERS is not present in the data and there is more
+  than one version of the IE criteria
+Executability: Fully Executable
+Outcome:
+  Message: TIVERS is not present in the data when there is more than one version of
+    the IE criteria
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - TRIAL DESIGN
+  Domains:
+    Include:
+      - TI
+Sensitivity: Study

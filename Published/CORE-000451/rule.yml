@@ -1,0 +1,236 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: 'SETCD: Short name of the Trial Set. SET: Long description of a
+                  specific Trial Set, as defined by the sponsor.'
+                Document: IG v3.1
+                Item: Specification
+                Section: 7.4.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: 'SEND237'
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: 'SETCD: Short name of a specific Trial Set. SET: Long
+                  description of a specific Trial Set, as defined by the
+                  sponsor.'
+                Document: IG v3.0
+                Item: Specification
+                Section: 7.4.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: 'SEND237'
+              Version: '1'
+            Version: '5.0'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: 'SETCD: Short name of the Trial Set. SET: Long description of a
+                  specific Trial Set, as defined by the sponsor.'
+                Document: IG v3.1.1
+                Item: Specification
+                Section: 7.4.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: 'SEND237'
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: 'SETCD: Short name of the Trial Set. SET: Long description of a
+                  specific Trial Set, as defined by the sponsor.'
+                Document: IG v3.1
+                Item: Specification
+                Section: 7.4.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: 'SEND237'
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: 'SETCD: Short name of the Trial Set. SET: Long description of a
+                  specific Trial Set, as defined by the sponsor.'
+                Document: IG v3.1.1
+                Item: Specification
+                Section: 7.4.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: 'SEND237'
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: 'SETCD: Short name of the Trial Set. SET: Long description of a
+                  specific Trial Set, as defined by the sponsor.'
+                Document: IG v3.1.1
+                Item: Specification
+                Section: 7.4.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: 'SEND237'
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: 'SETCD: Short name of the Trial Set. SET: Long description of a
+                  specific Trial Set, as defined by the sponsor.'
+                Document: TIG v1.0
+                Item: SETCD CDISC Notes | SET CDISC Notes
+                Section: 2.8.9.31
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0163
+              Version: '1'
+            Version: '1.0'
+        Substandard: SEND
+        Version: '1.0'
+  - Organization: FDA
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: All paired variables should have a one-to-one relationship.
+                  Examples include short name and name of test; parameter name
+                  and parameter code or number; variable name and variable
+                  label, etc.
+                Document: FDA
+                Section: FDAB009
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0921
+              Version: '1'
+            Version: '1.5'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: All paired variables should have a one-to-one relationship.
+                  Examples include short name and name of test; parameter name
+                  and parameter code or number; variable name and variable
+                  label, etc.
+                Document: FDA
+                Section: FDAB009
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0921
+              Version: '1'
+            Version: '1.5'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: All paired variables should have a one-to-one relationship.
+                  Examples include short name and name of test; parameter name
+                  and parameter code or number; variable name and variable
+                  label, etc.
+                Document: FDA
+                Section: FDAB009
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0921
+              Version: '1'
+            Version: '1.5'
+        Version: '3.1.1'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: All paired variables should have a one-to-one relationship.
+                  Examples include short name and name of test; parameter name
+                  and parameter code or number; variable name and variable
+                  label, etc.
+                Document: FDA
+                Section: FDAB009
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0921
+              Version: '1'
+            Version: '1.5'
+        Version: '1.0'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: All paired variables should have a one-to-one relationship.
+                  Examples include short name and name of test; parameter name
+                  and parameter code or number; variable name and variable
+                  label, etc.
+                Document: FDA
+                Section: FDAB009
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0921
+              Version: '1'
+            Version: '1.5'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: All paired variables should have a one-to-one relationship.
+                  Examples include short name and name of test; parameter name
+                  and parameter code or number; variable name and variable
+                  label, etc.
+                Document: FDA
+                Section: FDAB009
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0921
+              Version: '1'
+            Version: '1.5'
+        Version: '1.2'
+      - Name: SENDIG-AR
+        References:
+          - Citations:
+              - Cited Guidance: All paired variables should have a one-to-one relationship.
+                  Examples include short name and name of test; parameter name
+                  and parameter code or number; variable name and variable
+                  label, etc.
+                Document: FDA
+                Section: FDAB009
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0921
+              Version: '1'
+            Version: '1.5'
+        Version: '1.0'
+Check:
+  all:
+    - name: SETCD
+      operator: is_not_unique_relationship
+      value: SET
+Core:
+  Id: CORE-000451
+  Status: Published
+  Version: '1'
+Description: SET and SETCD should have a one-to-one relationship.
+Executability: Fully Executable
+Outcome:
+  Message: SET and SETCD do not have a one-to-one relationship.
+  Output Variables:
+    - SET
+    - SETCD
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - TRIAL DESIGN
+  Domains:
+    Include:
+      - TX
+  Use Case: NONCLIN
+Sensitivity: Record

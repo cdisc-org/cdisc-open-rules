@@ -1,0 +1,71 @@
+Authorities:
+  - Organization: 'FDA'
+    Standards:
+      - Name: 'SDTMIG'
+        References:
+          - Citations:
+              - Cited Guidance: 'All trial design data should be submitted as specified in the
+                  FDA Study Data Technical Conformance Guide (TCG).'
+                Document: 'FDA'
+                Section: 'FDAB011'
+            Origin: 'FDA Business Rules'
+            Rule Identifier:
+              Id: 'FB1101'
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+      - Name: 'SDTMIG'
+        References:
+          - Citations:
+              - Cited Guidance: 'All trial design data should be submitted as specified in the
+                  FDA Study Data Technical Conformance Guide (TCG).'
+                Document: 'FDA'
+                Section: 'FDAB011'
+            Origin: 'FDA Business Rules'
+            Rule Identifier:
+              Id: 'FB1101'
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: 'SDTMIG'
+        References:
+          - Citations:
+              - Cited Guidance: 'All trial design data should be submitted as specified in the
+                  FDA Study Data Technical Conformance Guide (TCG).'
+                Document: 'FDA'
+                Section: 'FDAB011'
+            Origin: 'FDA Business Rules'
+            Rule Identifier:
+              Id: 'FB1101'
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+Check:
+  any:
+    - name: TA
+      operator: not_exists
+    - name: TE
+      operator: not_exists
+    - name: TS
+      operator: not_exists
+    - name: TV
+      operator: not_exists
+Core:
+  Id: FDA.SDTMIG.FB1101
+  Status: Draft
+  Version: '1'
+Description: All trial design datasets as listed in the corresponding IG should
+  be present in the submission.
+Executability: Fully Executable
+Outcome:
+  Message: Not all trial design datasets as listed in the corresponding IG have
+    been submitted.
+Rule Type: Domain Presence Check
+Scope:
+  Classes:
+    Include:
+      - TRIAL DESIGN
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Dataset

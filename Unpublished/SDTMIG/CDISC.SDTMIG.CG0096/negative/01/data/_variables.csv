@@ -1,0 +1,41 @@
+dataset,variable,label,type,length
+cm,STUDYID,Study Identifier,Char,50
+cm,DOMAIN,Domain Abbreviation,Char,50
+cm,USUBJID,Unique Subject Identifier,Char,50
+cm,CMSEQ,Sequence Number,Num,8
+cm,CMSPID,Sponsor-Defined Identifier,Char,50
+cm,CMTRT,"Reported Name of Drug, Med, or Therapy",Char,50
+cm,CMDECOD,Standardized Medication Name,Char,50
+cm,CMCAT,Category for Medication,Char,50
+cm,CMINDC,Indication,Char,50
+cm,CMCLAS,Medication Class,Char,50
+cm,CMCLASCD,Medication Class Code,Char,50
+cm,CMDOSE,Dose per Administration,Num,8
+cm,CMDOSU,Dose Units,Char,50
+cm,CMDOSFRM,Dose Form,Char,50
+cm,CMDOSFRQ,Dosing Frequency per Interval,Char,50
+cm,CMROUTE,Route of Administration,Char,50
+cm,EPOCH,Epoch,Char,50
+cm,CMSTDTC,Start Date/Time of Medication,Char,50
+cm,CMENDTC,End Date/Time of Medication,Char,50
+cm,CMSTDY,Study Day of Start of Medication,Num,8
+cm,CMENDY,Study Day of End of Medication,Num,8
+cm,CMATC1,WHODrug ATC 1,Char,50
+cm,CMATC2,WHODrug ATC 2,Char,50
+cm,CMATC3,WHODrug ATC 3,Char,50
+cm,CMATC4,WHODrug ATC ,Char,50
+WHODD.csv,Drug_Record_Number,1,1,1
+WHODD.csv,Sequence_Number_1,1,1,1
+WHODD.csv,Sequence_Number_2,1,2,3
+WHODD.csv,Check_Digit,6,4,2
+WHODD.csv,Designation,N,T,T
+WHODD.csv,Year_of_Reference,,20,67
+WHODD.csv,Reference_Code,1,KEN,15
+WHODD.csv,Company_Code,,,
+WHODD.csv,Number_of_Ingredients,1,1,1
+WHODD.csv,Salt_Ester_Code,,,
+WHODD.csv,Year_QTR,854,41,44
+WHODD.csv,DrugName,METHYLDOPA,ALDOMET [METHYLDOPA],PRESINOL
+WHO_INA.csv,ATC_CODE,A,A01,A01A
+WHO_INA.csv,LEVEL,1,2,3
+WHO_INA.csv,TEXT,ALIMENTARY TRACT AND METABOLISM,STOMATOLOGICAL PREPARATIONS,STOMATOLOGICAL PREPARATIONS

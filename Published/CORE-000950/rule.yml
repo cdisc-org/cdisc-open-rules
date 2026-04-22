@@ -1,0 +1,72 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'A scheduled activity/decision instance must only reference an
+                  epoch that is defined within the same study design as the
+                  scheduled activity/decision instance.'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00105'
+              Version: '1'
+            Version: '1.0'
+        Version: '3.0'
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'A scheduled activity/decision instance must only reference an
+                  epoch that is defined within the same study design as the
+                  scheduled activity/decision instance.'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00105'
+              Version: '1'
+            Version: '1.0'
+        Version: '4.0'
+Check: |-
+  (
+    $lkp:=$merge($.**.studyDesigns.epochs.{id:%.id});
+    ($.**.studyDesigns)@$s.
+      [
+        $s.scheduleTimelines.instances[epochId and $not(epochId in $s.epochs.id)].
+          {
+            "instanceType": instanceType,
+            "id": id,
+            "path": _path,
+            "StudyDesign.id": $s.id,
+            "StudyDesign.name": $s.name,
+            "name": name,
+            "epochId": epochId,
+            "Referenced epoch's parent StudyDesign.id":
+              epochId in $keys($lkp) ? $lookup($lkp,epochId) : "[Invalid epochId]"
+          }
+      ]
+  )
+Core:
+  Id: 'CORE-000950'
+  Status: Published
+  Version: '1'
+Description: 'A scheduled activity/decision instance must only reference an
+  epoch that is defined within the same study design as the scheduled
+  activity/decision instance.'
+Executability: Fully Executable
+Outcome:
+  Message: 'The scheduled activity/decision instance references an epoch that is
+    not defined within the same study design.'
+  Output Variables:
+    - StudyDesign.id
+    - StudyDesign.name
+    - name
+    - epochId
+    - "Referenced epoch's parent StudyDesign.id"
+Rule Type: JSONata
+Scope:
+  Entities:
+    Include:
+      - 'ScheduledActivityInstance'
+      - 'ScheduledDecisionInstance'
+Sensitivity: Record

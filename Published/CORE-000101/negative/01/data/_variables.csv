@@ -1,0 +1,63 @@
+dataset,variable,label,type,length
+dd,STUDYID,Study Identifier,Char,50
+dd,DOMAIN,Domain Abbreviation,Char,50
+dd,USUBJID,Unique Subject Identifier,Char,50
+dd,DDSEQ,Sequence Number,Num,8
+dd,DDTESTCD,Death Detail Assessment Short Name,Char,50
+dd,DDTEST,Death Detail Assessment Name,Char,50
+dd,DDORRES,Result or Finding as Collected,Char,50
+dd,DDSTRESC,Character Result/Finding in Std Format,Char,50
+dd,DDRESCAT,Result Category,Char,50
+mb,STUDYID,Study Identifier,Char,50
+mb,DOMAIN,Domain Abbreviation,Char,50
+mb,USUBJID,Unique Subject Identifier,Char,50
+mb,MBSEQ,Sequence Number,Num,8
+mb,MBREFID,Reference ID,Char,50
+mb,MBTESTCD,Microbiology Test or Finding Short Name,Char,50
+mb,MBTEST,Microbiology Test or Finding Name,Char,50
+mb,MBORRES,Result or Finding in Original Units,Char,50
+mb,MBSTRESC,Result or Finding in Standard Format,Char,50
+mb,MBRESCAT,Result Category,Char,50
+mi,STUDYID,Study Identifier,Char,50
+mi,DOMAIN,Domain Abbreviation,Char,50
+mi,USUBJID,Unique Subject Identifier,Char,50
+mi,MISEQ,Sequence Number,Num,8
+mi,MITESTCD,Microscopic Examination Short Name,Char,50
+mi,MITEST,Microscopic Examination Name,Char,50
+mi,MIORRES,Result or Finding in Original Units,Char,50
+mi,MIORRESU,Original Units,Char,50
+mi,MISTRESC,Character Result/Finding in Std Format,Char,50
+mi,MISTRESU,Standard Units,Char,50
+mi,MIRESCAT,Result Category,Char,50
+mi,MISTAT,Completion Status,Char,50
+ms,STUDYID,Study Identifier,Char,50
+ms,DOMAIN,Domain Abbreviation,Char,50
+ms,USUBJID,Unique Subject Identifier,Char,50
+ms,MSSEQ,Sequence Number,Num,8
+ms,MSTESTCD,Short Name of Assessment,Char,50
+ms,MSTEST,Name of Assessment,Char,50
+ms,MSORRES,Result or Finding in Original Units,Char,50
+ms,MSORRESU,Original Units,Char,50
+ms,MSSTRESC,Result or Finding in Standard Format,Char,50
+ms,MSSTRESU,Standard Units,Char,50
+ms,MSRESCAT,Result Category,Char,50
+oe,STUDYID,Study Identifier,Char,50
+oe,DOMAIN,Domain Abbreviation,Char,50
+oe,USUBJID,Unique Subject Identifier,Char,50
+oe,OESEQ,Sequence Number,Num,8
+oe,OETESTCD,Short Name of Ophthalmic Test or Exam,Char,50
+oe,OETEST,Name of Ophthalmic Test or Exam,Char,50
+oe,OEORRES,Result or Finding in Original Units,Char,50
+oe,OESTRESC,Character Result/Finding in Std Format,Char,50
+oe,OERESCAT,Result Category,Char,50
+ur,STUDYID,Study Identifier,Char,50
+ur,DOMAIN,Domain Abbreviation,Char,50
+ur,USUBJID,Unique Subject Identifier,Char,50
+ur,URSEQ,Sequence Number,Num,8
+ur,URTESTCD,Short Name of Urinary Test,Char,50
+ur,URTEST,Name of Urinary Test,Char,50
+ur,URORRES,Result or Finding in Original Units,Char,50
+ur,URORRESU,Original Units,Char,50
+ur,URSTRESC,Character Result/Finding in Std Format,Char,50
+ur,URSTRESU,Standard Units,Char,50
+ur,URRESCAT,Result Category,Char,50

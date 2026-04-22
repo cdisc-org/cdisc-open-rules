@@ -1,0 +1,66 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'If a section number is to be displayed then a number must be
+                  specified.'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00164'
+              Version: '1'
+            Version: '1.0'
+        Version: '4.0'
+Check: |-
+  ($.**.documentedBy)@$db.
+    $db.versions@$sv.
+    $sv.contents@$nc.
+    $nc.
+      [
+        (
+          $NoSectNo:=function(){$type($nc.sectionNumber)="null" or sectionNumber="" or $exists(sectionNumber)=false} ;
+          $ChkX:=function()
+            {
+              ($NoSectNo()=true and displaySectionNumber=true)
+            };
+            {
+              "instanceType": $nc.instanceType,
+              "id": $nc.id,
+              "path": $nc._path,
+              "StudyDefinitionDocument.id": $db.id,
+              "StudyDefinitionDocument.name": $db.name,
+              "StudyDefinitionDocumentVersion.id": $sv.id,
+              "StudyDefinitionDocumentVersion.version": $sv.version,
+              "name": $nc.name,
+              "displaySectionNumber": $nc.displaySectionNumber,
+              "sectionNumber": $nc.sectionNumber,
+              "check": $ChkX()
+            }
+        )
+      ]
+      [check=true]
+Core:
+  Id: 'CORE-000964'
+  Status: Published
+  Version: '1'
+Description: 'If a section number is to be displayed then a number must be specified.'
+Executability: Fully Executable
+Outcome:
+  Message: 'A section number is indicated to be displayed
+    (displaySectionNumber=true) but not specified.'
+  Output Variables:
+    - StudyDefinitionDocument.id
+    - StudyDefinitionDocument.name
+    - StudyDefinitionDocumentVersion.id
+    - StudyDefinitionDocumentVersion.version
+    - name
+    - displaySectionNumber
+    - sectionNumber
+Rule Type: JSONata
+Scope:
+  Entities:
+    Include:
+      - 'NarrativeContent'
+Sensitivity: Record

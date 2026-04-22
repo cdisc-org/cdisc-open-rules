@@ -1,0 +1,104 @@
+# Variable: PPSTRESU
+# Condition: Parameter is non-normalized.
+# Rule: Terminology is for non-normalized parameter
+# Notes by author, Marcelina Hungria:
+# - The rule as written by the Conformance Rules team is fully executable
+# - Added PPSTAT to the output to help the user visualize a potential over-reporting for tests not done. Reported a SDS Jira ticket to consider adding normative text in the SDTM IG 4.0 so that the conformance rule be adjusted. 
+# - A potential rule enhancement, cross-checking against the e-protocol , can be implemented in the future 
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: There are separate codelists used for PPORRESU/PPSTRESU where
+                  the choice depends on whether the value of the pharmacokinetic
+                  parameter is normalized. Codelist PKUNIT is used for
+                  non-normalized parameters. Codelists PKUDMG and PKUDUG are
+                  used when parameters are normalized by dose amount in
+                  milligrams or micrograms respectively. Codelists PKUWG and
+                  PKUWKG are used when parameters are normalized by weight in
+                  grams or kilograms respectively. Multiple subset codelists
+                  were created for the unique unit expressions of the same
+                  concept across codelists, this approach allows study-context
+                  appropriate use of unit values for PK analysis subtypes
+                Document: IG v3.4
+                Item: Assumption 3
+                Section: 6.3.5.9.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0559
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: There are separate codelists used for PPORRESU/PPSTRESU where
+                  the choice depends on whether the value of the pharmacokinetic
+                  parameter is normalized. Codelist PKUNIT is used for
+                  non-normalized parameters. Codelists PKUDMG and PKUDUG are
+                  used when parameters are normalized by dose amount in
+                  milligrams or micrograms respectively. Codelists PKUWG and
+                  PKUWKG are used when parameters are normalized by weight in
+                  grams or kilograms respectively. Multiple subset codelists
+                  were created for the unique unit expressions of the same
+                  concept across codelists, this approach allows study-context
+                  appropriate use of unit values for PK analysis subtypes.
+                Document: IG v3.3
+                Item: Assumption 3
+                Section: 6.3.11.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0559
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+Check:
+  all:
+    - name: PPTEST
+      operator: contains_case_insensitive
+      value: "norm by dose"
+    - name: PPSTRESU
+      operator: is_not_contained_by
+      value: pkudmg_terms
+    - name: PPSTRESU
+      operator: is_not_contained_by
+      value: pkudug_terms
+Core:
+  Id: CDISC.SDTMIG.CG0559
+  Status: Draft
+  Version: '1'
+Description: Trigger error when parameter is normalized by dose and value in
+  PPSTRESU is not for a parameter normalized by dose.
+Executability: Fully Executable
+Operations:
+  - codelists:
+      - PKUDMG
+    id: pkudmg_terms
+    level: term
+    operator: codelist_terms
+    returntype: value
+  - codelists:
+      - PKUDUG
+    id: pkudug_terms
+    level: term
+    operator: codelist_terms
+    returntype: value
+Outcome:
+  Message: Parameter is normalized by dose, and the value in PPSTRESU is not in
+    codelist PKUDMG nor in codelist PKUDUG.
+  Output Variables:
+    - PPTESTCD
+    - PPTEST
+    - PPSTRESU
+    - PPSTAT
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - PP
+Sensitivity: Record

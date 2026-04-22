@@ -1,0 +1,13 @@
+dataset,variable,label,type,length
+ie,STUDYID,Study Identifier,Char,50
+ie,DOMAIN,Domain Abbreviation,Char,50
+ie,USUBJID,Unique Subject Identifier,Char,50
+ie,IESEQ,Sequence Number,Num,8
+ie,IETESTCD,Inclusion/Exclusion Criterion Short Name,Char,50
+ie,IETEST,Inclusion/Exclusion Criterion,Char,50
+ie,IECAT,Inclusion/Exclusion Category,Char,50
+ie,IEORRES,I/E Criterion Original Result,Char,50
+ie,IESTRESC,I/E Criterion Result in Std Format,Char,50
+ie,EPOCH,Epoch,Char,50
+ie,IEDTC,Date/Time of Collection,Char,50
+ie,IEDY,Study Day of Collection,Num,8

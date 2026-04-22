@@ -1,0 +1,116 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: In the event that no records are present in a dataset, the empty
+                  dataset should not be submitted and should not be described in
+                  the data definition file.
+                Document: SENDIG v3.0
+                Section: '3.2.1'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND278
+              Version: '1'
+            Version: '5.0'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: In the event that no records are present in a dataset, the empty
+                  dataset should not be submitted and should not be described in
+                  the data definition file.
+                Document: SENDIG v3.1
+                Section: '3.2.1'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND278
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: In the event that no records are present in a dataset, the empty
+                  dataset should not be submitted and should not be described in
+                  the data definition file.
+                Document: SENDIG v3.1.1
+                Section: '3.2.1'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND278
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: In the event that no records are present in a dataset, the empty
+                  dataset should not be submitted and should not be described in
+                  the data definition file.
+                Document: SENDIG v3.1
+                Section: '3.2.1'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND278
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: In the event that no records are present in a dataset, the empty
+                  dataset should not be submitted and should not be described in
+                  the data definition file.
+                Document: SENDIG v3.1.1
+                Section: '3.2.1'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND278
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: In the event that no records are present in a dataset, the empty
+                  dataset should not be submitted and should not be described in
+                  the data definition file.
+                Document: SENDIG v3.1.1
+                Section: '3.2.1'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND278
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+Check:
+  all:
+    - name: $record_count
+      operator: equal_to
+      value: 0
+Core:
+  Id: CORE-000573
+  Status: Published
+  Version: '1'
+Description: Trigger error when a dataset has no records
+Executability: Fully Executable
+Operations:
+  - id: $record_count
+    operator: record_count
+Outcome:
+  Message: Dataset may not be empty, it must contain records
+  Output Variables:
+    - dataset_name
+    - dataset_label
+    - $record_count
+Rule Type: Dataset Metadata Check
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Dataset

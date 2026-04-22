@@ -1,0 +1,119 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: One record per subject. The disposition dataset provides a
+                  record of the final disposition of subjects as they reach
+                  their final disposition, and this can be recorded at any stage
+                  throughout the study. At study completion, one record must
+                  exist for each subject used in the study.
+                Document: IG v3.0
+                Item: Assumption 1.a
+                Section: 6.2.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND140
+              Version: '1'
+            Version: '5.0'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: One record per subject. The disposition dataset provides a
+                  record of the final disposition of subjects as they reach
+                  their final disposition, and this can be recorded at any stage
+                  throughout the study. At study completion, one record must
+                  exist for each subject used in the study.
+                Document: IG v3.1
+                Item: Assumption 1.a
+                Section: 6.2.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND140
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: One record per subject. The disposition dataset provides a
+                  record of the final disposition of subjects as they reach
+                  their final disposition, and this can be recorded at any stage
+                  throughout the study. At study completion, one record must
+                  exist for each subject used in the study.
+                Document: IG v3.1.1
+                Item: Assumption 1.a
+                Section: 6.2.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND140
+              Version: '1'
+            Version: '5.0'
+        Version: 3.1.1
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: One record per subject. The disposition dataset provides a
+                  record of the final disposition of subjects as they reach
+                  their final disposition, and this can be recorded at any stage
+                  throughout the study. At study completion, one record must
+                  exist for each subject used in the study.
+                Document: IG v3.1
+                Item: Assumption 1.a
+                Section: 6.2.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND140
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+Check:
+  # Rule: DS has one record per USUBJID in DM
+  any:
+    # DS.USUBJID must be in DM.USUBJID - is already covered by rule SEND97
+    #- all:
+    #    - name: USUBJID
+    #      operator: non_empty
+    #    - name: USUBJID
+    #      operator: is_not_contained_by
+    #      value: $dm_usubjid
+    # DM.USUBJID must be in DS.USUBJID
+    - all:
+        - name: USUBJID
+          operator: non_empty
+        - name: USUBJID
+          operator: is_not_contained_by
+          value: $ds_usubjid
+    # TODO: how do we express that for each record in DM, there must exactly be one record in DS?
+
+Core:
+  Id: CDISC.SENDIG.140
+  Status: Draft
+  Version: '1'
+Description: Trigger error when USUBJID is not present in DM in DM.USUBJID
+Executability: Fully Executable
+Operations:
+  #- domain: DM
+  #  id: $dm_usubjid
+  #  name: USUBJID
+  #  operator: distinct
+  - domain: DS
+    id: $ds_usubjid
+    name: USUBJID
+    operator: distinct
+Outcome:
+  Message: There is no record in DS or there is more than 1 record in DS for a
+    record in DM
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+      - EVENTS
+  Domains:
+    Include:
+      # - DS
+      - DM
+Sensitivity: Record

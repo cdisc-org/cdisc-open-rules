@@ -1,0 +1,33 @@
+dataset,variable,label,type,length
+tr,STUDYID,Study Identifier,Char,50
+tr,DOMAIN,Domain Abbreviation,Char,50
+tr,USUBJID,Unique Subject Identifier,Char,50
+tr,TRSEQ,Sequence Number,Num,8
+tr,TRGRPID,Group ID,Char,50
+tr,TRREFID,Reference ID,Char,50
+tr,TRSPID,Sponsor-Defined Identifier,Char,50
+tr,TRLNKID,Link ID,Char,50
+tr,TRLNKGRP,Link Group,Char,50
+tr,TRTESTCD,Tumor/Lesion Assessment Short Name,Char,50
+tr,TRTEST,Tumor/Lesion Assessment Test Name,Char,50
+tr,TRORRES,Result or Finding in Original Units,Char,50
+tr,TRORRESU,Original Units,Char,50
+tr,TRSTRESC,Character Result/Finding in Std Format,Char,50
+tr,TRSTRESN,Numeric Result/Finding in Standard Units,Num,8
+tr,TRSTRESU,Standard Units,Char,50
+tr,TRSTAT,Completion Status,Char,50
+tr,TRREASND,Reason Not Done,Char,50
+tr,TRNAM,Laboratory/Vendor Name,Char,50
+tr,TRMETHOD,Method Used to Identify the Tumor/Lesion,Char,50
+tr,TRLOBXFL,Last Observation Before Exposure Flag,Char,50
+tr,TRBLFL,Baseline Flag,Char,50
+tr,TREVAL,Evaluator,Char,50
+tr,TREVALID,Evaluator Identifier,Char,50
+tr,TRACPTFL,Accepted Record Flag,Char,50
+tr,VISITNUM,Visit Number,Num,8
+tr,VISIT,Visit Name,Char,50
+tr,VISITDY,Planned Study Day of Visit,Num,8
+tr,TAETORD,Planned Order of Element within Arm,Num,8
+tr,EPOCH,Epoch,Char,50
+tr,TRDTC,Date/Time of Tumor/Lesion Measurement,Char,50
+tr,TRDY,Study Day of Tumor/Lesion Measurement,Num,8

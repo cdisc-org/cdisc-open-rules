@@ -1,0 +1,34 @@
+dataset,variable,label,type,length
+dmx,STUDYID,Study Identifier,Char,50
+dmx,DOMAIN,Domain Abbreviation,Char,50
+dmx,USUBJID,Unique Subject Identifier,Char,50
+dmx,ARMCD,Planned Arm Code,Char,50
+dmx,ARM,Description of Planned Arm,Char,50
+dmx,ACTARMCD,Actual Arm Code,Char,50
+dmx,ACTARM,Description of Actual Arm,Char,50
+dmx,ARMNRS,Reason Arm and/or Actual Arm is Null,Char,50
+dmx,ACTARMUD,Description of Unplanned Actual Arm,Char,50
+ae1,STUDYID,Study Identifier,Char,50
+ae1,DOMAIN,Domain Abbreviation,Char,50
+ae1,USUBJID,Unique Subject Identifier,Char,50
+ae1,AESEQ,Sequence Number,Num,8
+ae1,AETERM,Reported Term for the Adverse Event,Char,50
+ae1,AEMODIFY,Modified Reported Term,Char,50
+ae1,AEDECOD,Dictionary-Derived Term,Char,50
+ae1,AEBODSYS,Body System or Organ Class,Char,50
+ae1,AESEV,Severity/Intensity,Char,50
+ae1,AESER,Serious Event,Char,50
+ae1,AEACN,Action Taken with Study Treatment,Char,50
+ae1,AEREL,Causality,Char,50
+ae1,AEOUT,Outcome of Adverse Event,Char,50
+ae1,AESCONG,Congenital Anomaly or Birth Defect,Char,50
+ae1,AESDISAB,Persist or Signif Disability/Incapacity,Char,50
+ae1,AESDTH,Results in Death,Char,50
+ae1,AESHOSP,Requires or Prolongs Hospitalization,Char,50
+ae1,AESLIFE,Is Life Threatening,Char,50
+ae1,EPOCH,Epoch,Char,50
+ae1,AESTDTC,Start Date/Time of Adverse Event,Char,50
+ae1,AEENDTC,End Date/Time of Adverse Event,Char,50
+ae1,AESTDY,Study Day of Start of Adverse Event,Num,8
+ae1,AEENDY,Study Day of End of Adverse Event,Num,8
+ae1,AEENRF,End Relative to Reference Period,Char,50
