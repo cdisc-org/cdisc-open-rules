@@ -18,7 +18,8 @@ REPO_ROOT="${3:?repo_root required}"
 
 RULE_ID=$(basename "$RULE_REL_PATH")
 RULE_DIR="$REPO_ROOT/$RULE_REL_PATH"
-ENGINE_DIR="$REPO_ROOT/engine"
+# Allow caller to override engine location (e.g. when called from rules-engine repo)
+ENGINE_DIR="${ENGINE_DIR_OVERRIDE:-$REPO_ROOT/engine}"
 SCRIPTS_DIR="$REPO_ROOT/.github/scripts"
 REPORT_FILE="$REPO_ROOT/validation_report.md"
 
