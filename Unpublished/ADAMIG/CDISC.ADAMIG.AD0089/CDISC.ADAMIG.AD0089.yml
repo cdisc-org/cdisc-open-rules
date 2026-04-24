@@ -1,0 +1,89 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: ADaMIG
+        Version: '1.3'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '89'
+              Version: '1'
+            Version: '4.0'
+            Citations:
+              - Document: ADaM IG v1.3
+                Section: '3.2'
+                Item: Table 3.2.1
+                Cited Guidance: USUBJID has Core=Req.
+              - Document: ADaM IG v1.3
+                Section: '3.3'
+                Item: Table 3.3.1.1
+                Cited Guidance: USUBJID has Core=Req.
+      - Name: ADaMIG
+        Version: '1.2'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '89'
+              Version: '1'
+            Version: '4.0'
+            Citations:
+              - Document: ADaM IG v1.2
+                Section: '3.2'
+                Item: Table 3.2.1
+                Cited Guidance: USUBJID has Core=Req.
+              - Document: ADaM IG v1.2
+                Section: '3.3'
+                Item: Table 3.3.1.1
+                Cited Guidance: USUBJID has Core=Req.
+      - Name: ADaMIG
+        Version: '1.1'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '89'
+              Version: '1'
+            Version: '4.0'
+            Citations:
+              - Document: ADaM IG v1.1
+                Section: '3.2'
+                Item: Table 3.2.1
+                Cited Guidance: USUBJID has Core=Req.
+              - Document: ADaM IG v1.1
+                Section: '3.3'
+                Item: Table 3.3.1.1
+                Cited Guidance: USUBJID has Core=Req.
+      - Name: ADaMIG
+        Version: '1.0'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '89'
+              Version: '1'
+            Version: '4.0'
+            Citations:
+              - Document: ADaM IG v1.0
+                Section: '3.1'
+                Item: Table 3.1.1
+                Cited Guidance: USUBJID has Core=Req.
+              - Document: ADaM IG v1.0
+                Section: '3.2'
+                Item: Table 3.2.1.1
+                Cited Guidance: USUBJID has Core=Req.
+Check:
+  all:
+    - name: USUBJID
+      operator: not_exists
+Core:
+  Id: CDISC.ADAMIG.AD0089
+  Status: Draft
+  Version: '1'
+Description: Raise an error when USUBJID is not present
+Executability: Fully Executable
+Outcome:
+  Message: USUBJID is not present
+Rule Type: Variable Metadata Check
+Scope:
+  Data Structures:
+    Include:
+      - ALL
+Sensitivity: Dataset

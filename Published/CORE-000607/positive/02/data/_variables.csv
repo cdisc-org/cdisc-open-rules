@@ -1,0 +1,25 @@
+dataset,variable,label,type,length
+pt,STUDYID,Study Identifier,Char,50
+pt,DOMAIN,Domain Abbreviation,Char,50
+pt,SPTOBID,Applicant-Defined Tobacco Product ID,Char,50
+pt,STOCONID,Applicant-defined Storage Conditions ID,Char,50
+pt,PTSEQ,Sequence Number,Num,50
+pt,PTREFID,Reference ID,Char,50
+pt,PTTESTCD,Test or Examination Short Name.,Char,50
+pt,PTTEST,Test or Examination Name,Char,50
+pt,PTCAT,Category of Test,Char,50
+pt,PTSCAT,Subcategory of Test,Char,50
+pt,PTORRES,Result or Finding in Original Units,Char,50
+pt,PTORRESU,Original Units,Char,50
+pt,PTLLOD,Lower Limit of Detection,Char,50
+pt,PTSTRESC,Character Result/Finding in Std Format,Char,50
+pt,PTSTRESN,Numeric Result/Finding in Standard Units,Num,50
+pt,PTSTRESU,Standard Units,Char,50
+pt,PTXFN,External File Path,Char,50
+pt,PTNAM,Vendor Name,Char,50
+pt,PTDRVFL,Derived Flag,Char,50
+pt,PTLLOQ,Lower Limit of Quantitation,Num,50
+pt,PTREPNUM,Repetition Number,Num,50
+pt,PTDTC,Date/Time of Sample Testing,Char,50
+pt,PTTPT,Planned Time Point Name,Char,50
+pt,PTTPTNUM,Planned Time Point Number,Num,50

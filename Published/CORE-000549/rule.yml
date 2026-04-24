@@ -1,0 +1,57 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      # REMARK: TODO: Add SENDIG-DART 1.2
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: The value of RSTGCD for an unplanned Stage is 'UNPLAN' and
+                  SJUPDES should be populated with a description of the
+                  unplanned Stage.
+                Document: IG-DART v1.1
+                Section: '4.1.1'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND352
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: The value of RSTGCD for an unplanned Stage is 'UNPLAN' and
+                  SJUPDES should be populated with a description of the
+                  unplanned Stage.
+                Document: IG-DART v1.2
+                Section: '4.1.1'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND352
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+
+Check:
+  all:
+    - name: RSTGCD
+      operator: not_equal_to
+      value: UNPLAN
+    - name: SJUPDES
+      operator: non_empty
+Core:
+  Id: CORE-000549
+  Status: Published
+  Version: '1'
+Description: Raise an error when RSTGCD is not 'UNPLAN' and SJUPDES is populated
+Executability: Fully Executable
+Outcome:
+  Message: SJUPDES may only be populated when RSTGCD = UNPLAN
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - SJ
+Sensitivity: Record

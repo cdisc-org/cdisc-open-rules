@@ -1,0 +1,18 @@
+dataset,variable,label,type,length
+lb,STUDYID,Study Identifier,Char,50
+lb,DOMAIN,Domain Abbreviation,Char,50
+lb,USUBJID,Unique Subject Identifier,Char,50
+lb,LBSEQ,Sequence Number,Num,8
+lb,LBTESTCD,Lab Test or Examination Short Name,Char,50
+lb,LBTEST,Lab Test or Examination Name,Char,50
+lb,LBORRES,Result or Finding in Original Units,Char,50
+lb,LBORRESU,Original Units,Char,50
+lb,LBSTRESC,Character Result/Finding in Std Format,Char,50
+lb,LBSTRESN,Numeric Result/Finding in Standard Units,Num,8
+lb,LBSTRESU,Standard Units,Char,50
+lb,LBORNRLO,"Reference Range
+Lower Limit in Orig
+Unit",Char,50
+lb,LBORNRHI,"Reference Range
+Upper Limit in Orig
+Unit",Char,50

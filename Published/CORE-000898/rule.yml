@@ -1,0 +1,54 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      # REMARK: Only applicable to SENDIG-DART 1.1 and 1.2
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: One record per implantation site per fetus per subject.
+                Document: IG-DART v1.1
+                Section: '5.1.1'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND355
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: One record per implantation site per fetus per subject.
+                Document: IG-DART v1.2
+                Section: '5.1.1'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND355
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+
+Check:
+  all:
+    - name: ICIMPLBL
+      operator: is_not_unique_set
+      value:
+        - FETUSID
+        - USUBJID
+Core:
+  Id: CORE-000898
+  Status: Published
+  Version: '1'
+Description: Raise an error when the combination of USUBJID, ICIMPLBL and
+  FETUSID in not unique
+Executability: Fully Executable
+Outcome:
+  Message: The value of ICIMPLBL is not unique within FETUSID and USUBJID
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - IC
+Sensitivity: Record

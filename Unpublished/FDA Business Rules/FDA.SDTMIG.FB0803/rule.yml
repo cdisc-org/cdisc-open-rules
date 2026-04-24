@@ -1,0 +1,131 @@
+Authorities:
+  - Organization: 'FDA'
+    Standards:
+      # Alsot applicable to SENDIG-3.0
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: All treatment exposure date/time should be between first and
+                  last study treatment date/time.
+                Document: FDA
+                Section: FDAB008
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0803
+              Version: '1'
+            Version: '1.5'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: All treatment exposure date/time should be between first and
+                  last study treatment date/time.
+                Document: FDA
+                Section: FDAB008
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0803
+              Version: '1'
+            Version: '1.5'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: All treatment exposure date/time should be between first and
+                  last study treatment date/time.
+                Document: FDA
+                Section: FDAB008
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0803
+              Version: '1'
+            Version: '1.5'
+        Version: '3.1.1'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: All treatment exposure date/time should be between first and
+                  last study treatment date/time.
+                Document: FDA
+                Section: FDAB008
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0803
+              Version: '1'
+            Version: '1.5'
+        Version: '1.0'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: All treatment exposure date/time should be between first and
+                  last study treatment date/time.
+                Document: FDA
+                Section: FDAB008
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0803
+              Version: '1'
+            Version: '1.5'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: All treatment exposure date/time should be between first and
+                  last study treatment date/time.
+                Document: FDA
+                Section: FDAB008
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0803
+              Version: '1'
+            Version: '1.5'
+        Version: '1.2'
+      - Name: SENDIG-AR
+        References:
+          - Citations:
+              - Cited Guidance: All treatment exposure date/time should be between first and
+                  last study treatment date/time.
+                Document: FDA
+                Section: FDAB008
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0803
+              Version: '1'
+            Version: '1.5'
+        Version: '1.0'
+# rule failure criteria: TSPARMCD.EXPSTDTC => EXSTDTC OR EXSTDTC => TSPARMCD.EXPENDTC
+Check:
+  all:
+    - name: $ts_expstdtc_value
+      operator: date_greater_than_or_equal_to
+      value: --EXSTDTC
+Core:
+  Id: FDA.SDTMIG.FB0803
+  Status: Draft
+  Version: '1'
+Description: Treatment exposure start date/time (EXSTDTC) should fall on or
+  between the date/time experimental start (EXPSTDTC) and end date (EXPENDTC) in
+  the TS dataset.
+Executability: Fully Executable
+Operations:
+  - domain: TS
+    filter:
+      TSPARMCD: EXPSTDTC
+    id: $ts_expstdtc_value
+    name: TSVAL
+    operator: distinct
+Outcome:
+  Message: EXSTDTC does not fall on or between EXPENDTC and EXPENDTC in TS dataset.
+  Output Variables:
+    - $ts_expstdtc_value
+    - --EXSTDTC
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - INTERVENTIONS
+  Domains:
+    Include:
+      - EX
+      - EC
+Sensitivity: Record

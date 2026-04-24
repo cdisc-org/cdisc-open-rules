@@ -1,0 +1,9 @@
+parent_entity,parent_id,parent_rel,rel_type,id,name,description,label,instanceType,definedProcedures,biomedicalConceptIds,nextId,timelineId,previousId,bcSurrogateIds,bcCategoryIds
+StudyDesign,StudyDesign_1,activities,definition,Activity_18,CT scan,,CT scan,Activity,True,False,Activity_19,,Activity_17,False,False
+StudyDesign,StudyDesign_1,activities,definition,Activity_33,Drug Admin,,,Activity,True,False,Activity_34,,Activity_32,False,False
+Activity,Activity_17,nextId,reference,Activity_18,CT scan,,CT scan,Activity,True,False,Activity_19,,Activity_17,False,False
+Activity,Activity_19,previousId,reference,Activity_18,CT scan,,CT scan,Activity,True,False,Activity_19,,Activity_17,False,False
+Activity,Activity_32,nextId,reference,Activity_33,Drug Admin,,,Activity,True,False,Activity_34,,Activity_32,False,False
+Activity,Activity_34,previousId,reference,Activity_33,Drug Admin,,,Activity,True,False,Activity_34,,Activity_32,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_9,activityIds,reference,Activity_18,CT scan,,CT scan,Activity,True,False,Activity_19,,Activity_17,False,False
+ScheduledActivityInstance,ScheduledActivityInstance_3,activityIds,reference,Activity_33,Drug Admin,,,Activity,True,False,Activity_34,,Activity_32,False,False

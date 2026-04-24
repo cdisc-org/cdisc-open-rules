@@ -1,0 +1,202 @@
+# Variable: DOMAIN
+# Condition: Custom domain present in study
+# Rule: DOMAIN not in reserved or modeled standard
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: "'A custom domain may only be created if the data are different
+                  in nature and do not fit into an existing published domain.'"
+                Document: IG v3.4
+                Item: NA
+                Section: '2.6'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0312
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: The following standard domains, listed in alphabetical order by
+                  Domain Code, with their respective domain codes have been
+                  defined or referenced by the CDISC SDS Team in this document.
+                  Note that other domain models may be posted separately for
+                  comment after this publication. See list in 2.5
+                Document: IG v3.2
+                Section: '2.5'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0312
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: A custom domain may only be created if the data are different in
+                  nature and do not fit into an existing published domain.
+                Document: IG v3.3
+                Section: '2.6'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0312
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+Check:
+  any:
+    - all:
+        - name: define_dataset_class
+          operator: equal_to
+          value: TRIAL DESIGN
+        - name: define_dataset_name
+          operator: is_contained_by
+          value:
+            - TA
+            - TD
+            - TE
+            - TI
+            - TM
+            - TS
+            - TV
+    - all:
+        - name: define_dataset_class
+          operator: equal_to
+          value: SPECIAL PURPOSE
+        - name: define_dataset_name
+          operator: is_contained_by
+          value:
+            - CO
+            - DM
+            - SE
+            - SM
+            - SV
+    - all:
+        - name: define_dataset_class
+          operator: equal_to
+          value: INTERVENTIONS
+        - name: define_dataset_name
+          operator: is_contained_by
+          value:
+            - AG
+            - CM
+            - EC
+            - EX
+            - ML
+            - PR
+            - SU
+    - all:
+        - name: define_dataset_class
+          operator: equal_to
+          value: EVENTS
+        - name: define_dataset_name
+          operator: is_contained_by
+          value:
+            - AE
+            - BE
+            - CE
+            - DS
+            - DV
+            - HO
+            - MH
+    - all:
+        - name: define_dataset_class
+          operator: equal_to
+          value: FINDINGS
+        - name: define_dataset_name
+          operator: is_contained_by
+          value:
+            - BS
+            - CP
+            - CV
+            - DA
+            - DD
+            - EG
+            - FT
+            - GF
+            - IE
+            - IS
+            - LB
+            - MB
+            - MI
+            - MK
+            - MS
+            - NV
+            - OE
+            - PC
+            - PE
+            - PP
+            - QS
+            - RE
+            - RP
+            - RS
+            - SC
+            - SS
+            - TR
+            - TU
+            - UR
+            - VS
+    - all:
+        - name: define_dataset_class
+          operator: equal_to
+          value: FINDINGS ABOUT
+        - name: define_dataset_name
+          operator: is_contained_by
+          value:
+            - FA
+            - SR
+    - all:
+        - all:
+            - name: define_dataset_class
+              operator: equal_to
+              value: RELATIONSHIP
+        - any:
+            - name: define_dataset_name
+              operator: is_not_contained_by
+              value:
+                - RELREC
+                - RELSPEC
+                - RELSUB
+                - SUPPQUAL
+            - name: define_dataset_name
+              operator: starts_with
+              value: SUPP
+    - all:
+        - name: define_dataset_class
+          operator: equal_to
+          value: STUDY REFERENCE
+        - name: define_dataset_name
+          operator: is_not_contained_by
+          value:
+            - OI
+Core:
+  Id: CDISC.SDTMIG.CG0312
+  Status: Draft
+  Version: '1'
+Description: Raise an error when custom domains use the reserved or modelled standard names
+Executability: Fully Executable
+Operations:
+  - ct_attribute: Term CCODE
+    ct_packages:
+      - sdtmct-2020-03-27
+    ct_version: TSVCDVER
+    id: $TERM_CCODES
+    name: DOMAIN
+    operator: get_codelist_attributes
+Outcome:
+  Message: Custom domains use the reserved or modelled standard names.
+  Output Variables:
+    - $TERM_CCODES
+Rule Type: Define Item Group Metadata Check
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Dataset

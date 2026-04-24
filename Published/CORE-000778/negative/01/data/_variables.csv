@@ -1,0 +1,46 @@
+dataset,variable,label,type,length
+apdm,STUDYID,Study Identifier,Char,12
+apdm,DOMAIN,Domain Abbreviation,Char,2
+apdm,USUBJID,Unique Subject Identifier,Char,20
+apdm,SUBJID,Subject Identifier for the Study,Char,12
+apdm,RFSTDTC,Subject Reference Start Date/Time,Char,10
+apdm,RFENDTC,Subject Reference End Date/Time,Char,10
+apdm,RFXSTDTC,Date/Time of First Study Treatment,Char,10
+apdm,RFXENDTC,Date/Time of Last Study Treatment,Char,10
+apdm,RFICDTC,Date/Time of Informed Consent,Char,10
+apdm,RFPENDTC,Date/Time of End of Participation,Char,10
+apdm,DTHDTC,Date/Time of Death,Char,10
+apdm,DTHFL,Subject Death Flag,Char,1
+apdm,SITEID,Study Site Identifier,Char,3
+apdm,BRTHDTC,Date/Time of Birth,Char,10
+apdm,AGE,Age,Num,8
+apdm,AGETXT,Age Text,Char,5
+apdm,AGEU,Age Units,Char,5
+apdm,SEX,Sex,Char,1
+apdm,RACE,Race,Char,41
+apdm,ETHNIC,Ethnicity,Char,22
+apdm,ARMCD,Planned Arm Code,Char,8
+apdm,ARM,Description of Planned Arm,Char,28
+apdm,ACTARMCD,Actual Arm Code,Char,8
+apdm,ACTARM,Description of Actual Arm,Char,28
+apdm,ARMNRS,Reason Arm and/or Actual Arm is Null,Char,14
+apdm,ACTARMUD,Description of Unplanned Actual Arm,Char,200
+apdm,COUNTRY,Country,Char,3
+apdrug1ex,STUDYID,Study Identifier,Char,50
+apdrug1ex,DOMAIN,Domain Abbreviation,Char,50
+apdrug1ex,USUBJID,Unique Subject Identifier,Char,50
+apdrug1ex,EXSEQ,Sequence Number,Num,8
+apdrug1ex,EXLNKID,Link ID,Char,50
+apdrug1ex,EXTRT,Name of Treatment,Char,50
+apdrug1ex,EXDOSE,Dose,Num,8
+apdrug1ex,EXDOSTXT,Dose Description,Char,50
+apdrug1ex,EXDOSU,Dose Units,Char,50
+apdrug1ex,EXDOSFRM,Dose Form,Char,50
+apdrug1ex,EXDOSFRQ,Dosing Frequency per Interval,Char,50
+apdrug1ex,EXROUTE,Route of Administration,Char,50
+apdrug1ex,EXVAMT,Dose,Num,8
+apdrug1ex,EXVAMTU,Dose Units,Char,50
+apdrug1ex,EXSTDTC,Start Date/Time of Treatment,Char,50
+apdrug1ex,EXENDTC,End Date/Time of Treatment,Char,50
+apdrug1ex,EXSTDY,Study Day of Start of Treatment,Num,8
+apdrug1ex,EXENDY,Study Day of End of Treatment,Num,8

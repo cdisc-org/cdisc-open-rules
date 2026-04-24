@@ -1,0 +1,39 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: The value in DDTEST should always be 'Death Diagnosis'.
+                Document: IG v3.0
+                Section: 6.3.4
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND165
+              Version: "1"
+            Version: "5.0"
+        Version: "3.0"
+Check:
+  all:
+    - name: DDTEST
+      operator: not_equal_to
+      value: Death Diagnosis
+Core:
+  Id: CORE-000392
+  Status: Published
+  Version: "1"
+Description: DDTESTCD should always be Death Diagnosis.
+Executability: Fully Executable
+Outcome:
+  Message: The value of DDTESTCD is not 'Death Diagnosis'
+  Output Variables:
+    - DDTEST
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - DD
+Sensitivity: Record

@@ -1,0 +1,58 @@
+Authorities:
+  - Organization: 'CDISC'
+    Standards:
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: Only animals on the study are included, negative and/or positive
+                  controls from another study are not included in the
+                  domain.  Study data are not typically directly compared
+                  against the positive control data.
+                Document: SENDIG-GENETOX
+                Section: 5.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND410
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+Check:
+  any:
+    - all:
+        - name: USUBJID
+          operator: is_not_contained_by
+          value: $dm_usubjid
+    - all:
+        - name: USUBJID
+          operator: is_not_contained_by
+          value: $ex_usubjid
+        # TODO?: no record in EX is expected when the subject is an "Untreated Control",
+        # i.e. DM.SETCD has a value from TX.TXVAL='Untreated Control' for TXPARMCD=TCNTRL
+        # After discussion with SEND team: we will NOT implement the second part "except when the subject is an  untreated control", as this may cause false positives.
+Core:
+  Id: CORE-000652
+  Status: Published
+  Version: '1'
+Description: 'Only animals on the study are included, negative and/or positive
+  controls from another study are not included in the domain'
+Executability: Partially Executable - Possible Overreporting
+Operations:
+  - domain: DM
+    id: $dm_usubjid
+    name: USUBJID
+    operator: distinct
+  - domain: EX
+    id: $ex_usubjid
+    name: USUBJID
+    operator: distinct
+Outcome:
+  Message: 'No record for USUBJID is found in DM or EC'
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - GV
+Sensitivity: Record

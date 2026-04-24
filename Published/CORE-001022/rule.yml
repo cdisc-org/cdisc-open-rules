@@ -1,0 +1,54 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'If ''appliesTo'' is specified for a product organization role,
+                  then the product organization role must only apply to medical
+                  devices or administrable products.'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00212'
+              Version: '1'
+            Version: '1.0'
+        Version: '4.0'
+Check: |-
+  (study.versions)@$sv.
+    $sv.productOrganizationRoles@$pr.
+        [($a:=$sv.administrableProducts.id;
+          $d:=$sv.medicalDevices.id;
+          $medDev:=function($i){$sv.medicalDevices[id=$i].(id? id &": "&name)};
+          $admProd:=function($i){$sv.administrableProducts[id=$i].(id? id &": "&name)};
+                 $pr.{
+                    "instanceType": instanceType,
+                    "id": id,
+                    "path": _path,
+                    "name": name,
+                    "appliesToIds": appliesToIds ? "[" & $join(appliesToIds,", ")&"]",
+                    "appliesTo name": "["&$join($map(appliesToIds,function($b){$medDev($b)?$medDev($b):($admProd($b)?$admProd($b):$b & ": Invalid reference")}),", ")&"]",
+                    "check": false in $map(appliesToIds,function($v){($v in $a) or ($v in $d)})
+                }
+        )][check=true]
+Core:
+  Id: 'CORE-001022'
+  Status: Published
+  Version: '1'
+Description: 'If ''appliesTo'' is specified for a product organization role,
+  then the product organization role must only apply to medical devices or
+  administrable products.'
+Executability: Fully Executable
+Outcome:
+  Message: 'At least one of the ''appliesTo'' specifications does not apply to
+    medical devices or administrable products.'
+  Output Variables:
+    - name
+    - appliesToIds
+    - appliesTo name
+Rule Type: JSONata
+Scope:
+  Entities:
+    Include:
+      - 'ProductOrganizationRole'
+Sensitivity: Record

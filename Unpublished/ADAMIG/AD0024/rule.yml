@@ -1,0 +1,89 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: ADaMIG
+        Version: '1.3'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '24'
+              Version: '1'
+            Version: '4.0'
+            Citations:
+              - Document: ADaM IG v1.3
+                Section: '3.2'
+                Item: Table 3.2.3
+                Cited Guidance: >-
+                  ADaM IG v1.3, Section 3.2, Table 3.2.3: Population Indicator(s)
+                  have a Codelist / Controlled Term value of "Y, N".
+      - Name: ADaMIG
+        Version: '1.2'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '24'
+              Version: '1'
+            Version: '4.0'
+            Citations:
+              - Document: ADaM IG v1.2
+                Section: '3.2'
+                Item: Table 3.2.3
+                Cited Guidance: >-
+                  ADaM IG v1.2, Section 3.2, Table 3.2.3: Population Indicator(s)
+                  have a Codelist / Controlled Term value of "Y, N".
+      - Name: ADaMIG
+        Version: '1.1'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '24'
+              Version: '1'
+            Version: '4.0'
+            Citations:
+              - Document: ADaM IG v1.1
+                Section: '3.2'
+                Item: Table 3.2.3
+                Cited Guidance: >-
+                  ADaM IG v1.1, Section 3.2, Table 3.2.3: Population Indicator(s)
+                  have a Codelist / Controlled Term value of "Y, N".
+      - Name: ADaMIG
+        Version: '1.0'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '24'
+              Version: '1'
+            Version: '4.0'
+            Citations:
+              - Document: ADaM IG v1.0
+                Section: '3.1'
+                Item: Table 3.1.1
+                Cited Guidance: >-
+                  ADaM IG v1.0, Section 3.1, Table 3.1.1: Population Indicator(s)
+                  have a Codelist / Controlled Term value of "Y, N".
+Check:
+  all:
+    - name: RANDFL
+      operator: exists
+    - name: RANDFL
+      operator: is_not_contained_by
+      value:
+        - Y
+        - N
+Core:
+  Id: CDISC.ADAMIG.AD0024
+  Status: Draft
+  Version: '1'
+Description: >-
+  Raise an error when RANDFL is present and has a value that is not Y or N
+Executability: Fully Executable
+Outcome:
+  Message: The values of RANDFL are not following the "Y, N" codelist
+  Output Variables:
+    - RANDFL
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+      - SUBJECT LEVEL ANALYSIS DATASET
+Sensitivity: Record

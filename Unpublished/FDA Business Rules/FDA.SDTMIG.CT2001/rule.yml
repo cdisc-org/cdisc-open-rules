@@ -1,0 +1,47 @@
+Authorities:
+  - Organization: FDA
+    Standards:
+      - Name: SDTMIG
+        Version: '3.2 '
+        References:
+          - Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FDAB017
+              Version: '1'
+            Version: '1.5'
+Check:
+  all:
+    - name: SSSTRESC
+      operator: does_not_use_valid_codelist_terms
+      value: DEAD
+      value_is_literal: true
+    - name: $ds_dsdecod
+      operator: does_not_contain
+      value: DEATH
+      value_is_literal: true
+Core:
+  Id: FDA.SDTMIG.CT2001
+  Status: Draft
+  Version: '1'
+Description: Variable must be populated with terms from its CDISC controlled terminology
+  codelist. New terms cannot be added into non-extensible codelists.
+Operations:
+  - operator: distinct
+    domain: DS
+    name: DSDECOD
+    id: $ds_dsdecod
+    group:
+      - USUBJID
+Outcome:
+  Message: Variable value not found in non-extensible codelist.
+  Output Variables:
+    - 
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record

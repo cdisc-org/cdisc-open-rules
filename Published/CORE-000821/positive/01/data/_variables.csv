@@ -1,0 +1,9 @@
+dataset,variable,label,type,length
+ConditionAssignment,parent_entity,Parent Entity Name,String,[1]
+ConditionAssignment,parent_id,Parent Entity Id,String,[1]
+ConditionAssignment,parent_rel,Name of Relationship from Parent Entity,String,[1]
+ConditionAssignment,rel_type,Type of Relationship,String,[1]
+ConditionAssignment,id,(Condition Assignment Id),string,[1]
+ConditionAssignment,condition,Logical Condition,String,[1]
+ConditionAssignment,instanceType,Instance Type,String,[1]
+ConditionAssignment,conditionTargetId,(Condition Assignment Condition Target) [Identifier],String,ScheduledInstance[1].id[1]

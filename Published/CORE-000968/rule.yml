@@ -1,0 +1,65 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'Within a study definition document version, if a date of a
+                  specific type exists with a global geographic scope then no
+                  other dates are expected with the same type.'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00182'
+              Version: '1'
+            Version: '1.0'
+        Version: '4.0'
+Check: |-
+  study@$s.
+    $s.documentedBy@$sdd.
+      $sdd.versions@$sddv.
+        ($sddv.dateValues["C68846" in geographicScopes.type.code])@$gdv.
+          (
+            $sddv.dateValues[type.code in $gdv.type.code]
+              {
+                type.code:$count($)>1
+                          ? $.{
+                                "instanceType": instanceType,
+                                "id": id,
+                                "path": _path,
+                                "StudyDefinitionDocument.id": $sdd.id,
+                                "StudyDefinitionDocument.name": $sdd.name,
+                                "StudyDefinitionDocumentVersion.id": $sddv.id,
+                                "StudyDefinitionDocumentVersion.version": $sddv.version,
+                                "type": type.decode&" ("&type.code&")",
+                                "dateValue": dateValue,
+                                "geographicScopes.type": "["&$join(geographicScopes.(id & ": " & type.decode & " (" & type.code & ")"),"; ")&"]"
+                              }
+              }
+            ).* ~> $distinct
+Core:
+  Id: 'CORE-000968'
+  Status: Published
+  Version: '1'
+Description: 'Within a study definition document version, if a date of a
+  specific type exists with a global geographic scope then no other dates are
+  expected with the same type.'
+Executability: Partially Executable - Possible Overreporting
+Outcome:
+  Message: "There is more than one date of this type for the study definition
+    document version, but at least one of the dates has a global geographic
+    scope."
+  Output Variables:
+    - StudyDefinitionDocument.id
+    - StudyDefinitionDocument.name
+    - StudyDefinitionDocumentVersion.id
+    - StudyDefinitionDocumentVersion.version
+    - type
+    - dateValue
+    - geographicScopes.type
+Rule Type: JSONata
+Scope:
+  Entities:
+    Include:
+      - 'GovernanceDate'
+Sensitivity: Record

@@ -1,0 +1,13 @@
+dataset,variable,label,type,length
+tf,STUDYID,Study Identifier,Char,50
+tf,DOMAIN,Domain Abbreviation,Char,50
+tf,USUBJID,Unique Subject Identifier,Char,50
+tf,TFDETECT,Time in Days to Detection of Tumor,Num,8
+pm,STUDYID,Study Identifier,Char,50
+pm,DOMAIN,Domain Abbreviation,Char,50
+pm,USUBJID,Unique Subject Identifier,Char,50
+pm,PMDTC,Date/Time ,Char,20
+ex,STUDYID,Study Identifier,Char,50
+ex,DOMAIN,Domain Abbreviation,Char,50
+ex,USUBJID,Unique Subject Identifier,Char,50
+ex,EXSTDTC,Date/Time ,Char,20

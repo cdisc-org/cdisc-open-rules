@@ -1,0 +1,43 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: 'VSTPTNUM: Numerical version of VSTPT to aid in sorting;
+                  required if time points are included within the domain.'
+                Document: IG v3.0
+                Section: 6.3.15
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND207
+              Version: '1'
+            Version: '5.0'
+        Version: '3.0'
+
+Check:
+  all:
+    - name: VSTPT
+      operator: non_empty
+    - name: VSTPTNUM
+      operator: empty
+Core:
+  Id: CORE-000442
+  Status: Published
+  Version: '1'
+Description: When VSTPT is populated, VSTPTNUM must be populated
+Executability: Fully Executable
+Outcome:
+  Message: VSTPTNUM is not populated although VSTPT is populated
+  Output Variables:
+    - VSTPT
+    - VSTPTNUM
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - VS
+Sensitivity: Record

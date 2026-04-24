@@ -1,0 +1,373 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      # SEND66 added here as code for SEND67 also covers SEND66
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: The SENDIG requires dates and times of day to be stored
+                  according to the international standard ISO 8601
+                  (http://www.iso.org).
+                Document: SENDIG v3.0
+                Item: Text
+                Section: 4.4|4.4.3|4.4.6
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND66
+              Version: '1'
+            Version: '5.0'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: The SENDIG requires dates and times of day to be stored
+                  according to the international standard ISO 8601
+                  (http://www.iso.org).
+                Document: SENDIG v3.1
+                Item: Text
+                Section: 4.4|4.4.3|4.4.6
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND66
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: The SENDIG requires dates and times of day to be stored
+                  according to the international standard ISO 8601
+                  (http://www.iso.org).
+                Document: SENDIG v3.1.1
+                Item: Text
+                Section: 4.4|4.4.3|4.4.6
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND66
+              Version: '1'
+            Version: '5.0'
+        Version: 3.1.1
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: The SENDIG requires dates and times of day to be stored
+                  according to the international standard ISO 8601
+                  (http://www.iso.org).
+                Document: SENDIG v3.1
+                Item: Text
+                Section: 4.4|4.4.3|4.4.6
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND66
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: The SENDIG requires dates and times of day to be stored
+                  according to the international standard ISO 8601
+                  (http://www.iso.org).
+                Document: SENDIG v3.1.1
+                Item: Text
+                Section: 4.4|4.4.3|4.4.6
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND66
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: The SENDIG requires dates and times of day to be stored
+                  according to the international standard ISO 8601
+                  (http://www.iso.org).
+                Document: SENDIG v3.1.1
+                Item: Text
+                Section: 4.4|4.4.3|4.4.6
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND66
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: The SDTM and SENDIG require use of the ISO 8601 Extended format,
+                  which requires hyphen delimiters for date components and colon
+                  delimiters for time components. The ISO 8601 basic format,
+                  which does not require delimiters, should not be used in SDTM
+                  datasets.
+                Document: SENDIG v3.0
+                Item: Text
+                Section: '4.4.1'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND67
+              Version: '1'
+            Version: '5.0'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: The ISO 8601 basic format, which does not require delimiters,
+                  should not be used.
+                Document: SENDIG v3.1
+                Item: Text
+                Section: '4.4.1'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND67
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: The ISO 8601 basic format, which does not require delimiters,
+                  should not be used.
+                Document: SENDIG v3.1.1
+                Item: Text
+                Section: '4.4.1'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND67
+              Version: '1'
+            Version: '5.0'
+        Version: 3.1.1
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: The ISO 8601 basic format, which does not require delimiters,
+                  should not be used.
+                Document: SENDIG v3.1
+                Section: '4.4.1'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND67
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: The ISO 8601 basic format, which does not require delimiters,
+                  should not be used.
+                Document: SENDIG v3.1.1
+                Item: Text
+                Section: '4.4.1'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND67
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: The ISO 8601 basic format, which does not require delimiters,
+                  should not be used.
+                Document: SENDIG v3.1.1
+                Item: Text
+                Section: '4.4.1'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND67
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+      # SEND68 added here as code for SEND66 and SEND67 also covers SEND68
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: When a date is stored with a time in the same variable (as a
+                  date/time), the date is written in front of the time and the
+                  time is preceded with "T" using the notation
+                  YYYY-MM-DDThh:mm:ss (e.g., 2001-12-26T00:00:01).
+                Document: SENDIG v3.0
+                Item: Text
+                Section: 4.4.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND68
+              Version: '1'
+            Version: '5.0'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: When a date is stored with a time in the same variable (as a
+                  date/time), the date is written in front of the time and the
+                  time is preceded with "T" using the notation
+                  YYYY-MM-DDThh:mm:ss (e.g., 2001-12-26T00:00:01).
+                Document: SENDIG v3.1
+                Item: Text
+                Section: 4.4.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND68
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: When a date is stored with a time in the same variable (as a
+                  date/time), the date is written in front of the time and the
+                  time is preceded with "T" using the notation
+                  YYYY-MM-DDThh:mm:ss (e.g., 2001-12-26T00:00:01).
+                Document: SENDIG v3.1.1
+                Item: Text
+                Section: 4.4.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND68
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1.1'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: When a date is stored with a time in the same variable (as a
+                  date/time), the date is written in front of the time and the
+                  time is preceded with "T" using the notation
+                  YYYY-MM-DDThh:mm:ss (e.g., 2001-12-26T00:00:01).
+                Document: SENDIG v3.1.1
+                Item: Text
+                Section: 4.4.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND68
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: When a date is stored with a time in the same variable (as a
+                  date/time), the date is written in front of the time and the
+                  time is preceded with "T" using the notation
+                  YYYY-MM-DDThh:mm:ss (e.g., 2001-12-26T00:00:01).
+                Document: SENDIG v3.1
+                Item: Text
+                Section: 4.4.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND68
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: When a date is stored with a time in the same variable (as a
+                  date/time), the date is written in front of the time and the
+                  time is preceded with "T" using the notation
+                  YYYY-MM-DDThh:mm:ss (e.g., 2001-12-26T00:00:01).
+                Document: SENDIG v3.1.1
+                Item: Text
+                Section: 4.4.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND68
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: Standards for tabulation and analysis require representation of
+                  dates and/or times, intervals of time, and durations of time
+                  in ISO 8601 format as defined by the International
+                  Organization for Standardization (ISO) (http://www.iso.org).
+                  The appropriate date and/or time ISO format must be used when
+                  specified.
+                Document: TIG v1.0
+                Item: Text
+                Section: '2.3'
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0267
+              Version: '1'
+            Version: '1.0'
+        Substandard: SEND
+        Version: '1.0'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: Standards for tabulation and analysis require representation of
+                  dates and/or times, intervals of time, and durations of time
+                  in ISO 8601 format as defined by the International
+                  Organization for Standardization (ISO) (http://www.iso.org).
+                  The appropriate date and/or time ISO format must be used when
+                  specified.
+                Document: TIG v1.0
+                Item: Text
+                Section: 2.3 Controlled Terminology and Formats
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0268
+              Version: '1'
+            Version: '1.0'
+        Substandard: SEND
+        Version: '1.0'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: Standards for tabulation and analysis require representation of
+                  dates and/or times, intervals of time, and durations of time
+                  in ISO 8601 format as defined by the International
+                  Organization for Standardization (ISO) (http://www.iso.org).
+                  The appropriate date and/or time ISO format must be used when
+                  specified.
+                Document: TIG v1.0
+                Item: Text
+                Section: 2.3 Controlled Terminology and Formats
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0269
+              Version: '1'
+            Version: '1.0'
+        Substandard: SEND
+        Version: '1.0'
+Check:
+  any:
+    - name: RFSTDTC
+      operator: invalid_date
+    - name: RFENDTC
+      operator: invalid_date
+    - name: BRTHDTC
+      operator: invalid_date
+    - name: --STDTC
+      operator: invalid_date
+    - name: --ENDTC
+      operator: invalid_date
+    - name: --DTC
+      operator: invalid_date
+    - name: --RFTDTC
+      operator: invalid_date
+Core:
+  Id: CORE-000547
+  Status: Published
+  Version: '1'
+Description: Values of variables RFSTDTC,  RFENDTC, BRTHDTC, --STDTC, --ENDTC,
+  --DTC, --RFTDTC must be correct ISO-8601 dates / datetimes
+Executability: Fully Executable
+Outcome:
+  Message: Variable value is not in correct ISO 8601 date or datetime format
+  # Output Variables:
+  #  - --DY
+  #  - --STDY
+  #  - --ENDY
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+  Use Case: NONCLIN
+Sensitivity: Record

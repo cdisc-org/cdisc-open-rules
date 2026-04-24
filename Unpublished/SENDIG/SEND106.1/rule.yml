@@ -1,0 +1,148 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      # Implementation of SEND106.1 like for SEND106, but for 3.1, 3.1.1, DART and Genetox
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: If this variable is excluded in the DM domain, the information
+                  must be present at a higher level (either Trial Sets or Trial
+                  Summary).
+                Document: IG v3.1
+                Section: 5.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND106.1
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: If this variable is excluded in the DM domain, the information
+                  must be present at a higher level (either Trial Sets or Trial
+                  Summary).
+                Document: IG v3.1.1
+                Section: 5.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND106.1
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: If this variable is excluded in the DM domain, the information
+                  must be present at a higher level (either Trial Sets or Trial
+                  Summary).
+                Document: IG v3.1
+                Section: 5.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND106.1
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: If this variable is excluded in the DM domain, the information
+                  must be present at a higher level (either Trial Sets or Trial
+                  Summary).
+                Document: IG v3.1.1
+                Section: 5.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND106.1
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: If this variable is excluded in the DM domain, the information
+                  must be present at a higher level (either Trial Sets or Trial
+                  Summary).
+                Document: IG v3.1.1
+                Section: 5.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND106.1
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+Check:
+  # 2025-02-25: NOT TESTED AT ALL YET - first need to resolve issues for SEND106
+  all:
+    # STRAIN is missing from DM or from a DM record
+    - any:
+        - name: STRAIN
+          operator: not_exists
+        - name: STRAIN
+          operator: empty
+    # Either TSPARMCD=STRAIN is missing from TS
+    # or TSVAL is null when TSPARMCD=STRAIN
+    # or TXVAL is null when TXPARMCD=STRAIN
+    - all:
+        - any:
+            - name: $distinct_tsparmcd
+              operator: does_not_contain
+              value: STRAIN
+              value_is_literal: true
+            - all:
+                - name: TSPARMCD
+                  operator: equal_to
+                  value: STRAIN
+                  value_is_literal: true
+                - name: TSVAL
+                  operator: empty
+        - any:
+            - name: $distinct_txparmcd
+              operator: does_not_contain
+              value: STRAIN
+              value_is_literal: true
+            - all:
+                - name: TXPARMCD
+                  operator: equal_to
+                  value: STRAIN
+                  value_is_literal: true
+                - name: TXVAL
+                  operator: empty
+Core:
+  Id: SEND106.1
+  Status: Draft
+  Version: '1'
+Description: When "STRAIN" is absent in DM, and also absent as a parameter in TS
+  and TX, report an error
+Executability: Fully Executable
+# 2025-02-25: Jozef: what is this doing?
+Match Datasets:
+  - Keys:
+      - STUDYID
+    Name: TS
+Operations:
+  # gets the distinct values of TSPARMCD
+  - domain: TS
+    id: $distinct_tsparmcd
+    name: TSPARMCD
+    operator: distinct
+  # gets the distinct values of TXPARMCD
+Outcome:
+  Message: Missing STRAIN Trial Summary and Trial Sets Parameter when STRAIN is
+    not present in DM
+  Output Variables:
+    - TSPARMCD
+    - TSVAL
+    - TXPARMCD
+    - TXVAL
+    - STRAIN
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - DM
+Sensitivity: Record

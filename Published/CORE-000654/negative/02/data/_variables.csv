@@ -1,0 +1,65 @@
+dataset,variable,label,type,length
+lb,STUDYID,Study Identifier,Char,12
+lb,DOMAIN,Domain Abbreviation,Char,2
+lb,USUBJID,Unique Subject Identifier,Char,8
+lb,LBSEQ,Sequence Number,Num,8
+lb,LBTESTCD,Lab Test or Examination Short Name,Char,3
+lb,LBTEST,Lab Test or Examination Name,Char,20
+lb,LBCAT,Category for Lab Test,Char,9
+lb,LBSCAT,"Subcategory for Lab
+Test",Char,4
+lb,LBORRES,Result or Finding in Original Units,Char,3
+lb,LBORRESU,Original Units,Char,4
+lb,LBSTRESC,Character Result/Finding in Std Format,Char,2
+lb,LBSTRESN,Numeric Result/Finding in Standard Units,Num,8
+lb,LBSTRESU,Standard Units,Char,3
+lb,LBSTAT,Completion Status,Char,8
+lb,LBREASND,Reason Not Done,Char,13
+lb,LBDTC,Date/Time of Specimen Collection,Char,16
+lb,LBDY,Study Day of Specimen Collection,Num,8
+lb,LBNOMDY,"Nominal Study Day
+for Tabulations",Num,8
+lb,LBNOMLBL,"Label for Nominal
+Study Day",Char,5
+lb,LBTPT,Planned Time Point Name ,Char,7
+lb,LBELTM,Planned Elapsed Time from Time Point Ref,Char,4
+lb,LBTPTREF,Time Point Reference,Char,10
+lb,LBRFTDTC,Date/Time of Reference Time Point,Char,16
+pc,STUDYID,Study Identifier,Char,12
+pc,DOMAIN,Domain Abbreviation,Char,2
+pc,USUBJID,Unique Subject Identifier,Char,8
+pc,"PC
+SEQ",Sequence Number,Num,8
+pc,"PC
+TESTCD",Test Short Name,Char,6
+pc,"PC
+TEST",Test Name,Char,15
+pc,"PC
+CAT",Test Category,Char,7
+pc,PCSCAT,Test Subcategory,Char,7
+pc,"PC
+ORRES",Result or Finding as Collected,Char,3
+pc,"PC
+ORRESU",Unit of the Original Result,Char,5
+pc,"PC
+STRESC",Standardized Result in Character Format,Char,3
+pc,"PC
+STRESN",Standardized Result in Numeric Format,Num,8
+pc,"PC
+STRESU",Unit of the Standardized Results,Char,5
+pc,"PC
+STAT",Completion Status,Char,8
+pc,"PC
+REASND",Reason Not Done,Char,18
+pc,"PC
+SPEC",Specimen Material Type,Char,6
+pc,PCDTC,Date/Time of Specimen Collection,Char,16
+pc,PCDY,Study Day of Specimen Collection,Num,8
+pc,PCNOMDY,"Nominal Study Day
+for Tabulations",Num,8
+pc,PCNOMLBL,"Label for Nominal
+Study Day",Char,6
+pc,PCTPT,Planned Time Point Name ,Char,7
+pc,PCELTM,Planned Elapsed Time from Time Point Ref,Char,4
+pc,PCTPTREF,Time Point Reference,Char,10
+pc,PCRFTDTC,Date/Time of Reference Time Point,Char,16

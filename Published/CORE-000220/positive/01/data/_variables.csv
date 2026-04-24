@@ -1,0 +1,4 @@
+STUDYID,DOMAIN,USUBJID,VSSEQ,VSTESTCD,VSTEST,VSPOS,VSORRES,VSORRESU,VSSTRESC,VSSTRESN,VSSTRESU,VSSTAT,VSLOC,VSLOBXFL,VSREPNUM,VISITNUM,VISIT,EPOCH,VSDTC,VSDY
+Study Identifier,Domain Abbreviation,Unique Subject Identifier,Sequence Number,Vital Signs Test Short Name,Vital Signs Test Name,Vital Signs Position of Subject,Result or Finding in Original Units,Original Units,Character Result/Finding in Std Format,Numeric Result/Finding in Standard Units,Standard Units,Completion Status,Location of Vital Signs Measurement,Last Observation Before Exposure Flag,Repetition Number,Visit Number,Visit Name,Epoch,Date/Time of Measurements,Study Day of Vital Signs
+Char,Char,Char,Num,Char,Char,Char,Char,Char,Char,Num,Char,Char,Char,Char,Num,Num,Char,Char,Char,Num
+12,2,8,8,12,24,8,8,9,200,8,9,8,11,1,8,8,200,9,10,8

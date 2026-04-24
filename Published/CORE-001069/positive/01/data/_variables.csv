@@ -1,0 +1,9 @@
+dataset,variable,label,type,length
+NarrativeContentItem,parent_entity,Parent Entity Name,String,[1]
+NarrativeContentItem,parent_id,Parent Entity Id,String,[1]
+NarrativeContentItem,parent_rel,Name of Relationship from Parent Entity,String,[1]
+NarrativeContentItem,rel_type,Type of Relationship,String,[1]
+NarrativeContentItem,id,(Narrative Content Item Id),String,[1]
+NarrativeContentItem,name,Narrative Content Item Name,String,[1]
+NarrativeContentItem,text,Narrative Content Item Text,String,[1]
+NarrativeContentItem,instanceType,(Narrative Content Item Instance Type),String,[1]

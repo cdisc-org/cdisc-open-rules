@@ -1,0 +1,15 @@
+dataset,variable,label,type,length
+in,STUDYID,Study Identifier,Char,50
+in,DOMAIN,Domain Abbreviation,Char,50
+in,SPTOBID,Applicant-Defined Tobacco Product ID,Char,50
+in,IGDCMPID,Ingredient or Component Identifier,Char,50
+in,INMANUF,Manufacturer Name,Char,50
+in,INMANUIN,Manufacturer Unique Identifying Item Num,Char,50
+in,TPMF,Tobacco Product Master File Number,Char,50
+in,IUPACNAM,Preferred IUPAC Name,Char,50
+in,CASNO,CAS Registry Number,Char,50
+in,UNII,Unique Ingredient Identifier,Char,50
+in,INIGDPLX,Ingredient Complexity,Char,50
+in,INCIGIND,Applicant-Customized Ingredient Indic,Char,50
+in,INGRADE,Ingredient Grade,Char,50
+in,INPURITY,Ingredient Purity,Char,50

@@ -1,0 +1,78 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      # Does not apply to SENDIG-3.0 and SENDIG-3.1
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Results beyond limits of quantitation should be represented with
+                  the term "BLQ" for results below the limit and "ALQ" for
+                  results above the limit.
+                Document: IG v3.1.1
+                Section: 6.3.11.
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: 'SEND324'
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1.1'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: Results beyond limits of quantitation should be represented with
+                  the term "BLQ" for results below the limit and "ALQ" for
+                  results above the limit.
+                Document: IG v3.1.1
+                Section: 6.3.11.
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: 'SEND324'
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: Results beyond limits of quantitation should be represented with
+                  the term "BLQ" for results below the limit and "ALQ" for
+                  results above the limit.
+                Document: IG v3.1.1
+                Section: 6.3.11.
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: 'SEND324'
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+Check:
+  all:
+    - name: PCORRES
+      operator: not_matches_regex
+      value: '[+-]?([0-9]*[.])?[0-9]+$'
+    # report an error when either PCORRES is not a number, and PCSTRESC is neither "BLQ" or "ALQ"
+    - name: PCSTRESC
+      operator: not_equal_to
+      value: 'BLQ'
+    - name: PCSTRESC
+      operator: not_equal_to
+      value: 'ALQ'
+Core:
+  Id: CORE-000444
+  Status: Published
+  Version: '1'
+Description: When Result is outside the Limit of Quantification, i.e. it is not
+  a number (e.g. <200), then PCSTRESC = "BLQ" or PCSTRESC = "ALQ"
+Executability: Fully Executable
+Outcome:
+  Message: The value in PCORRES is not a number (so represents a value outside the
+    Limit of Quantification), in which case PCSTRESC must be either "BLQ" or
+    "ALQ"
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - PC
+Sensitivity: Record

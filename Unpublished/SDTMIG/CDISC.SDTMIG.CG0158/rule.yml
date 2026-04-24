@@ -1,0 +1,73 @@
+# Variable: RSUBJID
+# Condition: Relationship described is to a pool
+# Rule: RSUBJID in POOLDEF.POOLID
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        Version: '3.4'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0158
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: RSUBJID will be populated with the USUBJID of the
+                  related subject or the POOLID of the related pool.
+                Document: AP Guide v1.0
+                Item: Specification
+                Section: 2.1.1
+      - Name: SDTMIG
+        Version: '3.2'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0158
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: RSUBJID will be populated with the USUBJID of the
+                  related subject or the POOLID of the related pool.
+                Document: AP Guide v1.0
+                Item: Specification
+                Section: 2.1.1
+      - Name: SDTMIG
+        Version: '3.3'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0158
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: RSUBJID will be populated with the USUBJID of the
+                  related subject or the POOLID of the related pool.
+                Document: AP Guide v1.0
+                Item: Specification
+                Section: 2.1.1
+Check:
+  all:
+    - name:
+      operator:
+    - name: RSUBJID
+      operator: is_not_contained_by
+      value: POOLDEF.POOLID
+Core:
+  Id: CDISC.SDTMIG.CG0158
+  Status: Draft
+  Version: '1'
+Description: Trigger error if relationship described is to a pool and RSUBJID is not
+  in POOLDEF.POOLID
+Executability: Fully Executable
+Outcome:
+  Message: RSUBJID is not in POOLDEF.POOLID
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - ASSOCIATE PERSONS
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record

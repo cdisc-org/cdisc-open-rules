@@ -1,0 +1,6 @@
+parent_entity,parent_id,parent_rel,rel_type,id,value,unit,unit.id,unit.standardCode,unit.standardCode.id,unit.standardCode.code,unit.standardCode.codeSystem,unit.standardCode.codeSystemVersion,unit.standardCode.decode,unit.standardCode.instanceType,unit.standardCodeAliases,unit.instanceType,instanceType
+StudyIntervention,StudyIntervention_1,minimumResponseDuration,definition,Quantity_2,1,True,AliasCode_203,True,Code_602,C25301,http://www.cdisc.org,2024-09-27,Week,Code,False,AliasCode,Quantity
+AgentAdministration,AgentAdministration_1,dose,definition,Quantity_4,54,True,AliasCode_206,True,Code_606,C28253,http://www.cdisc.org,2024-09-27,MG,Code,,AliasCode,Quantity
+AdministrationDuration,AdministrationDuration_1,quantity,definition,Quantity_3,24,True,AliasCode_204,True,Code_604,C29844xx,http://www.cdisc.org,2024-09-27,Week,Code,False,AliasCode,Quantity
+AdministrationDuration,AdministrationDuration_2,quantity,definition,Quantity_5,24,True,AliasCode_208,True,Code_608,C29844,http://www.cdisc.org/UNIT,2024-09-27,WEEKS,Code,False,AliasCode,Quantity
+StudyIntervention,StudyIntervention_2,minimumResponseDuration,definition,Quantity_7,1,True,AliasCode_211,True,Code_614,C25301,http://www.cdisc.org,2025-SEP-26,DAYS,Code,False,AliasCode,Quantity

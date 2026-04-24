@@ -1,0 +1,9 @@
+dataset,variable,label,type,length
+pd,STUDYID,Study Identifier,Char,200
+pd,DOMAIN,Domain Abbreviation,Char,200
+pd,SPTOBID,Applicant-Defined Tobacco Product ID,Char,40
+pd,PDSEQ,Sequence Number,Num,10
+pd,PDPARM,Design Parameter Element Name,Char,40
+pd,PDVALTRG,Design Parameter Element Target Value,Char,50
+pd,PDVALMIN,Design Parameter Element Minimum Value,Char,50
+pd,PDVALU,Design Parameter Element Value Unit,Char,50

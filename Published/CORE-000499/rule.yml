@@ -1,0 +1,114 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: om.xpt, Organ Measurements - Findings. One record per test per
+                  specimen per subject, Tabulation.
+                Document: SENDIG v3.0
+                Section: 6.3.9
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND188
+              Version: "1"
+            Version: "5.0"
+        Version: "3.0"
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: om.xpt, Organ Measurements - Findings. One record per test per
+                  specimen per subject, Tabulation.
+                Document: SENDIG v3.1
+                Section: 6.3.9
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND188
+              Version: "1"
+            Version: "5.0"
+        Version: "3.1"
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: om.xpt, Organ Measurements - Findings. One record per test per
+                  specimen per subject, Tabulation.
+                Document: SENDIG v3.1.1
+                Section: 6.3.9
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND188
+              Version: "1"
+            Version: "5.0"
+        Version: 3.1.1
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: om.xpt, Organ Measurements - Findings. One record per test per
+                  specimen per subject, Tabulation.
+                Document: SENDIG v3.1
+                Section: 6.3.9
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND188
+              Version: "1"
+            Version: "5.0"
+        Version: "1.1"
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: om.xpt, Organ Measurements - Findings. One record per test per
+                  specimen per subject, Tabulation.
+                Document: SENDIG v3.1.1
+                Section: 6.3.9
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND188
+              Version: "1"
+            Version: "5.0"
+        Version: "1.2"
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: om.xpt, Organ Measurements - Findings. One record per test per
+                  specimen per subject, Tabulation.
+                Document: SENDIG v3.1.1
+                Section: 6.3.9
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND188
+              Version: "1"
+            Version: "5.0"
+        Version: "1.0"
+# IMPORTANT REMARK: after discussion with the SEND team, it was decided to NOT include other variables
+# like OMLAT, OMDIR, OMDTC, as these relate to very unusual situations.
+Check:
+  all:
+    - name: OMSPEC
+      operator: non_empty
+    - name: OMSPEC
+      operator: is_not_unique_set
+      value:
+        - USUBJID
+        - OMTESTCD
+Core:
+  Id: CORE-000499
+  Status: Published
+  Version: "1"
+Description: Raise an error when there is more than one record present per
+  subject for any particular Organ Measurement test in the OM Domain
+Executability: Fully Executable
+Outcome:
+  Message: The Organ Measurement test is not unique for this subject.
+  Output Variables:
+    - USUBJID
+    - OMTESTCD
+    - OMSPEC
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - OM
+Sensitivity: Record

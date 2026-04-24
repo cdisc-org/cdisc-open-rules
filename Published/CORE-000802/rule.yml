@@ -1,0 +1,72 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'If the duration of an administration will vary, a quantity is
+                  not expected for the administration duration and vice versa.'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00003'
+              Version: '1'
+            Version: '1.0'
+        Version: '3.0'
+Check:
+  all:
+    - name: instanceType
+      operator: equal_to
+      value: 'AdministrationDuration'
+    - name: rel_type
+      operator: equal_to
+      value: 'definition'
+    - any:
+        - all:
+            - name: durationWillVary
+              operator: equal_to
+              value: true
+            - not:
+                any:
+                  - name: quantity
+                    operator: not_exists
+                  - name: quantity
+                    operator: equal_to
+                    value: false
+        - all:
+            - name: durationWillVary
+              operator: equal_to
+              value: false
+            - any:
+                - name: quantity
+                  operator: not_exists
+                - name: quantity
+                  operator: equal_to
+                  value: false
+Core:
+  Id: 'CORE-000802'
+  Status: Published
+  Version: '1'
+Description: 'If the duration of an administration will vary, a quantity is not
+  expected for the administration duration and vice versa.'
+Executability: Partially Executable - Possible Overreporting
+Outcome:
+  Message: 'A duration quantity has been specified when the duration will vary, or
+    a duration quantity has not been specified when the duration will not vary.'
+  Output Variables:
+    - parent_entity
+    - parent_id
+    - parent_rel
+    - id
+    - description
+    - durationWillVary
+    - quantity
+    - quantity.id
+    - quantity.value
+    - quantity.unit.standardCode.decode
+Rule Type: Record Data
+Scope:
+  Entities:
+    Include:
+      - AdministrationDuration
+Sensitivity: Record

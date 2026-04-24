@@ -1,0 +1,161 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Occasionally data that are intended to be numeric are collected
+                  with characters attached that cause the character-to numeric
+                  conversion to fail. For example, numeric cell counts in the
+                  source data may be specified with a greater than (>) or less
+                  than (<) sign attached (e.g., >10,000 or <1). These values
+                  should have a null result in the --STRESN column since only
+                  numeric values can be represented in the --STRESN field.
+                Document: IG v3.0
+                Section: 4.5.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND91
+              Version: '1'
+            Version: '5.0'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Occasionally data that are intended to be numeric are collected
+                  with characters attached that cause the character-to numeric
+                  conversion to fail. For example, numeric cell counts in the
+                  source data may be specified with a greater than (>) or less
+                  than (<) sign attached (e.g., >10,000 or <1). These values
+                  should have a null result in the --STRESN column since only
+                  numeric values can be represented in the --STRESN field.
+                Document: IG v3.1
+                Section: 4.5.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND91
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Occasionally data that are intended to be numeric are collected
+                  with characters attached that cause the character-to numeric
+                  conversion to fail. For example, numeric cell counts in the
+                  source data may be specified with a greater than (>) or less
+                  than (<) sign attached (e.g., >10,000 or <1). These values
+                  should have a null result in the --STRESN column since only
+                  numeric values can be represented in the --STRESN field.
+                Document: IG v3.1.1
+                Section: 4.5.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND91
+              Version: '1'
+            Version: '5.0'
+        Version: 3.1.1
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: Occasionally data that are intended to be numeric are collected
+                  with characters attached that cause the character-to numeric
+                  conversion to fail. For example, numeric cell counts in the
+                  source data may be specified with a greater than (>) or less
+                  than (<) sign attached (e.g., >10,000 or <1). These values
+                  should have a null result in the --STRESN column since only
+                  numeric values can be represented in the --STRESN field.
+                Document: IG v3.1
+                Section: 4.5.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND91
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: Occasionally data that are intended to be numeric are collected
+                  with characters attached that cause the character-to numeric
+                  conversion to fail. For example, numeric cell counts in the
+                  source data may be specified with a greater than (>) or less
+                  than (<) sign attached (e.g., >10,000 or <1). These values
+                  should have a null result in the --STRESN column since only
+                  numeric values can be represented in the --STRESN field.
+                Document: IG v3.1.1
+                Section: 4.5.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND91
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: Occasionally data that are intended to be numeric are collected
+                  with characters attached that cause the character-to numeric
+                  conversion to fail. For example, numeric cell counts in the
+                  source data may be specified with a greater than (>) or less
+                  than (<) sign attached (e.g., >10,000 or <1). These values
+                  should have a null result in the --STRESN column since only
+                  numeric values can be represented in the --STRESN field.
+                Document: IG v3.1.1
+                Section: 4.5.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND91
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: Occasionally data that are intended to be numeric are collected
+                  with characters attached that cause the character-to numeric
+                  conversion to fail. For example, numeric cell counts in the
+                  source data may be specified with a greater than (>) or less
+                  than (<) sign attached (e.g., >10,000 or <1). These values
+                  should have a null result in the --STRESN column since only
+                  numeric values can be represented in the --STRESN field.
+                Document: TIG v1.0
+                Item: Text
+                Section: 2.8.7.1
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0281
+              Version: '1'
+            Version: '1.0'
+        Substandard: SEND
+        Version: '1.0'
+Check:
+  all:
+    - name: --ORRES
+      operator: not_matches_regex
+      value: ^(?:[+-]?(\d+(\.\d+)?|\.\d+)|[a-zA-Z]+|[^\d\s\w]+)$
+    - name: --STRESN
+      operator: non_empty
+Core:
+  Id: CORE-000756
+  Status: Published
+  Version: '1'
+Description: When --ORRES is representing numeric data with special characters
+  like '<' and '>', , --STRESN may not be populated.
+Executability: Partially Executable # See JIRA
+Outcome:
+  Message: --STRESN may not be populated as --ORRES does not represent a pure
+    numeric value.
+  Output Variables:
+    - --ORRES
+    - --STRESN
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - ALL
+  Use Case: NONCLIN
+Sensitivity: Record

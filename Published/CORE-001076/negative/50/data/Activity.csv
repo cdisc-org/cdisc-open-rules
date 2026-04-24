@@ -1,0 +1,9 @@
+parent_entity,parent_id,parent_rel,rel_type,id,name,label,description,notes,biomedicalConceptIds,bcSurrogateIds,bcCategoryIds,previousId,nextId,instanceType
+InterventionalStudyDesign,InterventionalStudyDesign_1,activities,definition,Activity_856,A856,,,FALSE,False,False,False,,Activity_860,Activity
+InterventionalStudyDesign,InterventionalStudyDesign_1,activities,definition,Activity_860,A860,,,FALSE,False,False,,Activity_856,Activity_872,Activity
+InterventionalStudyDesign,InterventionalStudyDesign_1,activities,definition,Activity_872,A872,,,FALSE,False,,False,Activity_860,Activity_876,Activity
+InterventionalStudyDesign,InterventionalStudyDesign_1,activities,definition,Activity_876,A876,,,FALSE,False,,,Activity_872,Activity_920,Activity
+InterventionalStudyDesign,InterventionalStudyDesign_1,activities,definition,Activity_920,A920,,,FALSE,,False,False,Activity_876,Activity_924,Activity
+InterventionalStudyDesign,InterventionalStudyDesign_1,activities,definition,Activity_924,A924,,,FALSE,,False,,Activity_920,Activity_936,Activity
+InterventionalStudyDesign,InterventionalStudyDesign_1,activities,definition,Activity_936,A936,,,FALSE,,,False,Activity_924,Activity_940,Activity
+InterventionalStudyDesign,InterventionalStudyDesign_1,activities,definition,Activity_940,A940,,,FALSE,,,,Activity_936,,Activity

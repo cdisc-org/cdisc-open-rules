@@ -39,8 +39,8 @@ def create_test_cases(rule_dir: Path, test_type: str, count: int):
         env_path = data_dir / ".env"
         env_path.write_text(ENV_TEMPLATE)
 
-        create_csv(data_dir / "variables.csv", VARIABLES_HEADERS)
-        create_csv(data_dir / "datasets.csv", DATASETS_HEADERS)
+        create_csv(data_dir / "_variables.csv", VARIABLES_HEADERS)
+        create_csv(data_dir / "_datasets.csv", DATASETS_HEADERS)
 
 
 def main():

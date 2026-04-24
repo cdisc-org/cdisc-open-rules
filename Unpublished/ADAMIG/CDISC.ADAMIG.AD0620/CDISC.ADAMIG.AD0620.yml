@@ -1,0 +1,80 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: ADaMIG
+        References:
+          - Citations:
+              - Cited Guidance: --TERM has Core=Req for SubClass=ADVERSE EVENT.
+                Document: OCCDS IG v1.1
+                Item: Table 3.2.3.1
+                Section: 3.2.3
+            Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '620'
+              Version: '1'
+            Version: '5.0'
+        Version: '1.3'
+      - Name: ADaMIG
+        References:
+          - Citations:
+              - Cited Guidance: --TERM has Core=Req for SubClass=ADVERSE EVENT.
+                Document: OCCDS IG v1.1
+                Item: Table 3.2.3.1
+                Section: 3.2.3
+            Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '620'
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+      - Name: ADaMIG
+        References:
+          - Citations:
+              - Cited Guidance: --TERM has Core=Req for SubClass=ADVERSE EVENT.
+                Document: OCCDS IG v1.1
+                Item: Table 3.2.3.1
+                Section: 3.2.3
+            Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '620'
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: ADaMIG
+        References:
+          - Citations:
+              - Cited Guidance: --TERM has Core=Req for SubClass=ADVERSE EVENT.
+                Document: OCCDS IG v1.1
+                Item: Table 3.2.3.1
+                Section: 3.2.3
+            Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '620'
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+Check:
+  all:
+    - name: AETERM
+      operator: not_exists
+Core:
+  Id: CDISC.ADAMIG.AD0620
+  Status: Draft
+  Version: '1'
+Description: Variable AETERM should be present in analysis dataset for Adverse
+  Event analysis
+Executability: Fully Executable
+Outcome:
+  Message: Variable AETERM is not present in dataset ADAE #Can we output actual dataset name in message, eg ADAE3M? 
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+      - OCCURRENCE DATA STRUCTURE
+  Domains:
+    Include:
+      - ADAE
+  Subclasses:
+    Include:
+      - ADVERSE EVENT
+Sensitivity: Dataset

@@ -1,0 +1,71 @@
+# Variable: TABRANCH
+# Condition: Trial design branches
+# Rule: TABRANCH ^= null
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        Version: '3.4'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0251
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: TABRANCH describes the outcome of a branch decision
+                  point in the trial design for subjects in the Arm.
+                Document: IG v3.4
+                Item: Assumption 3
+                Section: 7.2.1
+      - Name: SDTMIG
+        Version: '3.2'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0251
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: TABRANCH describes the outcome of a branch decision
+                  point in the trial design for subjects in the Arm
+                Document: IG v3.2
+                Item: Assumption 3
+                Section: '7.2'
+      - Name: SDTMIG
+        Version: '3.3'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0251
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: TABRANCH describes the outcome of a branch decision
+                  point in the trial design for subjects in the Arm
+                Document: IG v3.3
+                Item: Assumption 3
+                Section: 7.2.1
+Check:
+  all:
+    - name:
+      operator:
+    - name: TABRANCH
+      operator: empty
+Core:
+  Id: CDISC.SDTMIG.CG0251
+  Status: Draft
+  Version: '1'
+Description: Trigger error when trial design branches and TABRANCH is null
+Executability: Fully Executable
+Outcome:
+  Message: TABRANCH is null when trial design branches
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - TRIAL DESIGN
+  Domains:
+    Include:
+      - TA
+Sensitivity: Record

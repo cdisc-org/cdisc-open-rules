@@ -1,0 +1,23 @@
+dataset,variable,label,type,length
+pr,STUDYID,Study Identifier,Char,50
+pr,DOMAIN,Domain Abbreviation,Char,50
+pr,USUBJID,Unique Subject Identifier,Char,50
+pr,PRSEQ,Sequence Number,Num,8
+pr,PRSPID,Sponsor-Defined Identifier,Char,50
+pr,PRTRT,Reported Name of Procedure,Char,50
+pr,PRDECOD,Standardized Procedure Name,Char,50
+pr,PRCAT,Category,Char,50
+pr,PRPRESP,Pre-specified,Char,50
+pr,PROCCUR,Occurrence,Char,50
+pr,PRINDC,Indication,Char,50
+pr,VISITNUM,Visit Number,Num,8
+pr,VISIT,Visit Name,Char,50
+pr,VISITDY,Planned Study Day of Visit,Num,8
+pr,EPOCH,Epoch,Char,50
+pr,PRSTDTC,Start Date/Time of Procedure,Char,50
+pr,PRENDTC,End Date/Time of Procedure,Char,50
+pr,PRSTDY,Study Day of Start of Procedure,Num,8
+pr,PRENDY,Study Day of End of Procedure,Num,8
+pr,PRSTRTPT,Start Relative to Reference Time Point,Char,50
+pr,PRENRTPT,End Relative to Reference Time Point,Char,50
+pr,PRENTPT,End Reference Time Point,Char,50

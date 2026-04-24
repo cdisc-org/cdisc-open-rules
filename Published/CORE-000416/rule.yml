@@ -1,0 +1,82 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'To ensure consistent ordering, when both previous and next
+                  attributes are available within an entity the previous id
+                  value must match the next id value of the referred instance.'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00023'
+              Version: '1'
+            Version: '1.0'
+        Version: '3.0'
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'To ensure consistent ordering, when both previous and next
+                  attributes are available within an entity the previous id
+                  value must match the next id value of the referred instance.'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00023'
+              Version: '1'
+            Version: '1.0'
+        Version: '4.0'
+Check:
+  all:
+    - name: previousId
+      operator: exists
+    - name: nextId
+      operator: exists
+    - name: rel_type
+      operator: equal_to
+      value: 'reference'
+    - any:
+        - all:
+            - name: parent_rel
+              operator: equal_to
+              value: 'previousId'
+              value_is_literal: true
+            - name: nextId
+              operator: not_equal_to
+              value: parent_id
+        - all:
+            - name: parent_rel
+              operator: equal_to
+              value: 'nextId'
+              value_is_literal: true
+            - name: previousId
+              operator: not_equal_to
+              value: parent_id
+Core:
+  Id: 'CORE-000416'
+  Status: Published
+  Version: '1'
+Description: 'To ensure consistent ordering, when both previous and next
+  attributes are available within an entity the previous id value must match the
+  next id value of the referred instance.'
+Executability: Fully Executable
+Outcome:
+  Message: 'The next and previous relationships are not reciprocal - the instance
+    is the "previous" instance (parent_rel is "previousId") for an instance that
+    is not its "next" instance (nextId is not the same as parent_id), or vice
+    versa.'
+  Output Variables:
+    - parent_entity
+    - parent_id
+    - parent_rel
+    - id
+    - name
+    - previousId
+    - nextId
+Rule Type: Record Data
+Scope:
+  Entities:
+    Include:
+      - ALL
+Sensitivity: Record

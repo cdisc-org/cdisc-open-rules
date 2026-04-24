@@ -1,0 +1,59 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'If duration will vary (attribute durationWillVary is True) then
+                  a reason (attribute reasonDurationWillVary) must be given and
+                  vice versa.'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00004'
+              Version: '1'
+            Version: '1.0'
+        Version: '3.0'
+Check:
+  all:
+    - name: instanceType
+      operator: equal_to
+      value: 'AdministrationDuration'
+    - any:
+        - name: durationWillVary
+          operator: not_equal_to
+          value: false
+        - name: reasonDurationWillVary
+          operator: non_empty
+    - not:
+        all:
+          - name: durationWillVary
+            operator: equal_to
+            value: true
+          - name: reasonDurationWillVary
+            operator: non_empty
+Core:
+  Id: 'CORE-000400'
+  Status: Published
+  Version: '1'
+Description: 'If duration will vary (attribute durationWillVary is True) then a
+  reason (attribute reasonDurationWillVary) must be given and vice versa.'
+Executability: Fully Executable
+Outcome:
+  Message: The administration duration will vary (durationWillVary is not 'false'
+    or reasonDurationWillVary is populated), but it is not fully defined
+    (durationWillVary is not 'true' or reasonDurationWillVary is missing).
+  Output Variables:
+    - parent_entity
+    - parent_id
+    - parent_rel
+    - id
+    - description
+    - durationWillVary
+    - reasonDurationWillVary
+Rule Type: Record Data
+Scope:
+  Entities:
+    Include:
+      - AdministrationDuration
+Sensitivity: Record

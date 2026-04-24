@@ -1,0 +1,55 @@
+dataset,variable,label,type,length
+dm,STUDYID,Study Identifier,Char,12
+dm,DOMAIN,Domain Abbreviation,Char,2
+dm,USUBJID,Unique Subject Identifier,Char,20
+dm,SUBJID,Subject Identifier for the Study,Char,12
+dm,RFSTDTC,Subject Reference Start Date/Time,Char,10
+dm,RFENDTC,Subject Reference End Date/Time,Char,10
+dm,RFXSTDTC,Date/Time of First Study Treatment,Char,10
+dm,RFXENDTC,Date/Time of Last Study Treatment,Char,10
+dm,RFICDTC,Date/Time of Informed Consent,Char,10
+dm,RFPENDTC,Date/Time of End of Participation,Char,10
+dm,DTHDTC,Date/Time of Death,Char,10
+dm,DTHFL,Subject Death Flag,Char,1
+dm,SITEID,Study Site Identifier,Char,3
+dm,BRTHDTC,Date/Time of Birth,Char,10
+dm,AGE,Age,Num,8
+dm,AGETXT,Age Text,Char,5
+dm,AGEU,Age Units,Char,5
+dm,SEX,Sex,Char,1
+dm,RACE,Race,Char,41
+dm,ETHNIC,Ethnicity,Char,22
+dm,ARMCD,Planned Arm Code,Char,8
+dm,ARM,Description of Planned Arm,Char,28
+dm,ACTARMCD,Actual Arm Code,Char,8
+dm,ACTARM,Description of Actual Arm,Char,28
+dm,ARMNRS,Reason Arm and/or Actual Arm is Null,Char,14
+dm,ACTARMCD,Description of Unplanned Actual Arm,Char,200
+dm,COUNTRY,Country,Char,3
+ds,STUDYID,Study Identifier,Char,12
+ds,DOMAIN,Domain Abbreviation,Char,2
+ds,USUBJID,Unique Subject Identifier,Char,20
+ds,DSSEQ,Sequence Number,Num,8
+ds,DSTERM,Reported Term for the Disposition Event,Char,200
+ds,DSDECOD,Standardized Disposition Term,Char,50
+ds,DSCAT,Category for Disposition Event,Char,50
+ds,DSSCAT,Subcategory for Disposition Event,Char,50
+ds,EPOCH,Epoch,Char,50
+ds,DSSTDTC,Start Date/Time of Disposition Event,Char,50
+ex,STUDYID,Study Identifier,Char,12
+ex,DOMAIN,Domain Abbreviation,Char,2
+ex,USUBJID,Unique Subject Identifier,Char,8
+ex,EXSEQ,Sequence Number,Num,8
+ex,EXTRT,Name of Treatment,Char,10
+ex,EXINDC,Indication,Char,12
+ex,EXDOSE,Dose,Num,8
+ex,EXDOSU,Dose Units,Char,2
+ex,EXDOSFRM,Dose Form,Char,9
+ex,EXDOSFRQ,Dosing Frequency per Interval,Char,2
+ex,EXROUTE,Route of Administration,Char,12
+ex,EXLOT,Lot Number,Char,200
+ex,EPOCH,Epoch,Char,9
+ex,EXSTDTC,Start Date/Time of Treatment,Char,10
+ex,EXENDTC,End Date/Time of Treatment,Char,10
+ex,EXSTDY,Study Day of Start of Treatment,Num,8
+ex,EXENDY,Study Day of End of Treatment,Num,8

@@ -1,0 +1,113 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: First date/time of exposure to any protocol-specified treatment
+                  or therapy, equal to the earliest value of EXSTDTC.
+                Document: IG v3.1
+                Item: Specification
+                Section: 5.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND305
+              Version: '2'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: First date/time of exposure to any protocol-specified treatment
+                  or therapy, equal to the earliest value of EXSTDTC.
+                Document: IG v3.1.1
+                Item: Specification
+                Section: 5.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND305
+              Version: '2'
+            Version: '5.0'
+        Version: 3.1.1
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: First date/time of exposure to any protocol-specified treatment
+                  or therapy, equal to the earliest value of EXSTDTC.
+                Document: IG v3.1
+                Item: Specification
+                Section: 5.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND305
+              Version: '2'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: First date/time of exposure to any protocol-specified treatment
+                  or therapy, equal to the earliest value of EXSTDTC.
+                Document: IG v3.1.1
+                Item: Specification
+                Section: 5.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND305
+              Version: '2'
+            Version: '5.0'
+        Version: '1.2'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: First date/time of exposure to any protocol-specified treatment
+                  or therapy, equal to the earliest value of EXSTDTC.
+                Document: IG v3.1.1
+                Item: Specification
+                Section: 5.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND305
+              Version: '2'
+            Version: '5.0'
+        Version: '1.0'
+Check:
+  all:
+    - name: USUBJID
+      operator: is_contained_by
+      value: $ex_usubjid
+    - name: RFXSTDTC
+      operator: not_equal_to
+      value: $min_ex_exstdtc
+Core:
+  Id: CORE-000455
+  Status: Published
+  Version: '1'
+Description: Raise an error when EX records are present for subject but RFXSTDTC
+  does not equal the earliest value of EX.EXSTDTC
+Executability: Fully Executable
+Operations:
+  - domain: EX
+    id: $ex_usubjid
+    name: USUBJID
+    operator: distinct
+  - domain: EX
+    group:
+      - USUBJID
+    id: $min_ex_exstdtc
+    name: EXSTDTC
+    operator: min_date
+Outcome:
+  Message: RFXSTDTC does not equal the earliest value of EX.EXSTDTC
+  Output Variables:
+    - RFXSTDTC
+    - $min_ex_exstdtc
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - DM
+Sensitivity: Record

@@ -1,0 +1,93 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: ADaMIG
+        Version: '1.3'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '30'
+              Version: '1'
+            Version: '4.0'
+            Citations:
+              - Document: ADaM IG v1.3
+                Section: '3.2'
+                Item: Table 3.2.3
+                Cited Guidance: >-
+                  The values of subject-level population flags cannot be blank. If
+                  a flag is used, the corresponding numeric version (*FN, where 0=No
+                  and 1=Yes) of the population flag can also be included.
+      - Name: ADaMIG
+        Version: '1.2'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '30'
+              Version: '1'
+            Version: '4.0'
+            Citations:
+              - Document: ADaM IG v1.2
+                Section: '3.2'
+                Item: Table 3.2.3
+                Cited Guidance: >-
+                  The values of subject-level population flags cannot be blank. If
+                  a flag is used, the corresponding numeric version (*FN, where 0=No
+                  and 1=Yes) of the population flag can also be included.
+      - Name: ADaMIG
+        Version: '1.1'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '30'
+              Version: '1'
+            Version: '4.0'
+            Citations:
+              - Document: ADaM IG v1.1
+                Section: '3.2'
+                Item: Table 3.2.3
+                Cited Guidance: >-
+                  The values of subject-level population flags cannot be blank. If
+                  a flag is used, the corresponding numeric version (*FN, where 0=No
+                  and 1=Yes) of the population flag can also be included.
+      - Name: ADaMIG
+        Version: '1.0'
+        References:
+          - Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '30'
+              Version: '1'
+            Version: '4.0'
+            Citations:
+              - Document: ADaM IG v1.0
+                Section: '3.1'
+                Item: Table 3.1.1
+                Cited Guidance: >-
+                  The values of subject-level population flags cannot be blank. If
+                  a flag is used, the corresponding numeric version (*FN) can also
+                  be included.
+Check:
+  all:
+    - name: SAFFN
+      operator: exists
+    - name: SAFFN
+      operator: is_not_contained_by
+      value:
+        - 1
+        - 0
+Core:
+  Id: CDISC.ADAMIG.AD0030
+  Status: Draft
+  Version: '1'
+Description: >-
+  Raise an error when SAFFN is present and has a value that is not 1 or 0
+Executability: Fully Executable
+Outcome:
+  Message: Some values of SAFFN are not equal to 1 or 0
+  Output Variables:
+    - SAFFN
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+      - SUBJECT LEVEL ANALYSIS DATASET
+Sensitivity: Record

@@ -1,0 +1,59 @@
+# Variable: RACE
+# Condition: Subject does not specify race
+# Rule: RACE = 'UNKNOWN'
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        Version: '3.4'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0526
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: 'If a subject refuses to provide or does not know
+                  their race information, the value of RACE could be “UNKNOWN”. '
+                Document: IG v3.4
+                Item: Assumption 6
+                Section: '5.2'
+      - Name: SDTMIG
+        Version: '3.3'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0526
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: If a subject refuses to provide race information;
+                  the value of RACE could be 'UNKNOWN'.
+                Document: IG v3.3
+                Item: Assumption 6
+                Section: '5.2'
+Check:
+  all:
+    - name:
+      operator:
+    - name: RACE
+      operator: not_equal_to
+      value: UNKNOWN
+Core:
+  Id: CDISC.SDTMIG.CG0526
+  Status: Draft
+  Version: '1'
+Description: Trigger error when subject does not specify race and RACE is not equal
+  to "UNKNOWN"
+Executability: Fully Executable
+Outcome:
+  Message: RACE is not equal to "UNKNOWN" when subject did not specify race
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - DM
+Sensitivity: Record

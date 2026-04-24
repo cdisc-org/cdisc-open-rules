@@ -1,0 +1,55 @@
+Authorities:
+  - Organization: FDA
+    Standards:
+      # Applicable to SENDIG version 3.0, not to SENDIG 3.1 and 3.1.1
+      # Very similar to FB4701, but without DSNOMDY, only with VISITDY
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: 'Required timing variables for identification of the day on
+                  which group summaries (group means and incidences) are
+                  calculated should be populated for nonclinical data.'
+                Document: FDA
+                Section: FDAB047
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB4703
+              Version: '1'
+            Version: '1.5'
+        Version: '3.0'
+
+Check:
+  all:
+    # - name: DSTERM
+    # "DSTERM" changed in "DSDECOD" - see comment Keith Moseley 
+    # https://jira.cdisc.org/browse/CORERULES-9244
+    - name: DSDECOD
+      operator: is_contained_by
+      value:
+        - "INTERIM SACRIFICE"
+        - "RECOVERY SACRIFICE"
+        - "REMOVED FROM STUDY ALIVE"
+        - "TERMINAL SACRIFICE"
+    - name: VISITDY
+      operator: 'empty'
+Core:
+  Id: CORE-000882
+  Status: Published
+  Version: '1'
+Description: VISITDY should be populated in the DS dataset for disposition
+  records where DSTERM has been mapped to one of 'INTERIM SACRIFICE', 'RECOVERY
+  SACRIFICE', 'REMOVED FROM STUDY ALIVE', or 'TERMINAL SACRIFICE', as these are
+  required timing variables for identification of the day on which group
+  summaries (Group Means and Incidences) are calculated for post mortem data.
+Executability: Fully Executable
+Outcome:
+  Message: Missing VISITDY value for scheduled disposition record.
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - EVENTS
+  Domains:
+    Include:
+      - DS
+Sensitivity: Record

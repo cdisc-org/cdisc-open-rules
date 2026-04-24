@@ -1,0 +1,39 @@
+dataset,variable,label,type,length
+mb,STUDYID,Study Identifier,Char,50
+mb,DOMAIN,Domain Abbreviation,Char,50
+mb,USUBJID,Unique Subject Identifier,Char,50
+mb,MBSEQ,Sequence Number,Num,8
+mb,MBREFID,Reference ID,Char,50
+mb,MBLNKID,Link ID,Char,50
+mb,MBTESTCD,Microbiology Test or Finding Short Name,Char,50
+mb,MBTEST,Microbiology Test or Finding Name,Char,50
+mb,MBORRES,Result or Finding in Original Units,Char,50
+mb,MBSTRESC,Result or Finding in Standard Format,Char,50
+mb,MBNAM,Laboratory/Vendor Name,Char,50
+mb,MBSPEC,Specimen Material Type,Char,50
+mb,MBLOC,Specimen Collection Location,Char,50
+mb,MBMETHOD,Method of Test or Examination,Char,50
+mb,VISITNUM,Visit Number,Num,8
+mb,VISIT,Visit Name,Char,50
+mb,MBDTC,Date/Time of Collection,Char,50
+ms,STUDYID,Study Identifier,Char,50
+ms,DOMAIN,Domain Abbreviation,Char,50
+ms,USUBJID,Unique Subject Identifier,Char,50
+ms,NHOID,Non-host Organism ID,Char,50
+ms,MSSEQ,Sequence Number,Num,8
+ms,MSGRPID,Group ID,Char,50
+ms,MSREFID,Reference ID,Char,50
+ms,MSLNKGRP,Link Group ID,Char,50
+ms,MSTESTCD,Short Name of Assessment,Char,50
+ms,MSTEST,Name of Assessment,Char,50
+ms,MSAGENT,Agent Name,Char,50
+ms,MSCONC,Agent Concentration,Num,8
+ms,MSCONCU,Agent Concentration Units,Char,50
+ms,MSORRES,Result or Finding in Original Units,Char,50
+ms,MSORRESU,Original Units,Char,50
+ms,MSSTRESC,Result or Finding in Standard Format,Char,50
+ms,MSSTRESN,Numeric Result/Finding in Standard Units,Num,8
+ms,MSSTRESU,Standard Units,Char,50
+ms,MSNAM,Laboratory/Vendor Name,Char,50
+ms,MSMETHOD,Method of Test or Examination,Char,50
+ms,MSDTC,Date/Time of Collection,Char,50

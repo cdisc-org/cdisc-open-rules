@@ -1,0 +1,9 @@
+dataset,variable,label,type,length
+StudyCell,parent_entity,Parent Entity Name,String,[1]
+StudyCell,parent_id,Parent Entity Id,String,[1]
+StudyCell,parent_rel,Name of Relationship from Parent Entity,String,[1]
+StudyCell,rel_type,Type of Relationship,String,[1]
+StudyCell,id,(Study Cell Id),String,[1]
+StudyCell,instanceType,Instance Type,String,[1]
+StudyCell,armId,(Study Cell Arm) [Identifier],String,StudyArm[1].id[1]
+StudyCell,epochId,(Study Cell Epoch) [Identifier],String,StudyEpoch[1].id[1]

@@ -1,0 +1,91 @@
+Authorities:
+  # Only applicable to SENDIG-3.1.1, SENDIG-GENETOX-1.0 and SENDIG-DART-1.2
+  - Organization: 'CDISC'
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: 'When a predose sample is collected as part of the profile
+                  analysis, then PCELTM must be populated as "PT0H" because
+                  negative elapsed time would lead to an incorrect area under
+                  the curve.'
+                Document: IG v3.1.1
+                Section: 6.3.11.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: 'SEND327'
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1.1'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: 'When a predose sample is collected as part of the profile
+                  analysis, then PCELTM must be populated as "PT0H" because
+                  negative elapsed time would lead to an incorrect area under
+                  the curve.'
+                Document: IG v3.1.1
+                Section: 6.3.11.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: 'SEND327'
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: 'When a predose sample is collected as part of the profile
+                  analysis, then PCELTM must be populated as "PT0H" because
+                  negative elapsed time would lead to an incorrect area under
+                  the curve.'
+                Document: IG v3.1.1
+                Section: 6.3.11.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: 'SEND327'
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+Check:
+  all:
+    - name: PCTESTCD
+      operator: is_contained_by
+      value: $pp_ppcat
+    - name: PCELTM
+      operator: non_empty
+    # value of PCELTM may not start with a dash (minus-character)
+    - name: PCELTM
+      operator: starts_with
+      value: '-'
+    # Alternative test for first character being "-"
+    # - name: PCELTM
+    #  operator: prefix_equal_to
+    #  prefix: 1
+    #  value: '-'
+Core:
+  Status: Draft
+  Version: '1'
+Description: 'Duration in PCELTM may not be negative when record used in
+  concentration profile in PP'
+Executability: Fully Executable
+Operations:
+  - domain: PP
+    # TODO: ensure that we do NEED OR NOT NEED to use "group", as "distinct" is already on the subject level?
+    group:
+      - USUBJID
+    id: $pp_ppcat
+    name: PPCAT
+    operator: distinct
+Outcome:
+  Message: 'A negative value for PCELTM is not allowed as the record is used in a
+    concentration profile in PP'
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - PC
+Sensitivity: Record

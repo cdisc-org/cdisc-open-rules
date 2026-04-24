@@ -1,0 +1,19 @@
+dataset,variable,label,type,length
+ds,STUDYID,Study Identifier,Char,12
+ds,DOMAIN,Domain Abbreviation,Char,2
+ds,USUBJID,Unique Subject Identifier,Char,8
+ds,DSSEQ,Sequence Number,Num,8
+ds,DSTERM,Reported Term for the Adverse Event,Char,200
+ds,DSDECOD,Standardized Disposition Term,Char,40
+ds,DSCAT,Category for Disposition Event,Char,50
+ds,EPOCH,Epoch,Char,50
+ds,DSSTDTC,Start Date/Time of Disposition Event,Char,19
+ae,STUDYID,Study Identifier,Char,12
+ae,DOMAIN,Domain Abbreviation,Char,2
+ae,USUBJID,Unique Subject Identifier,Char,8
+ae,AETERM,Reported Term for the Adverse Event,Char,40
+ae,AESER,Serious Event,Char,1
+ae,AEOUT,Outcome of Adverse Event,Char,40
+ae,AESDTH,Results in Death ,Char,1
+ae,AESTDTC,Start Date/Time of Adverse Event,Char,19
+ae,AEENDTC,End Date/Time of Adverse Event,Char,19

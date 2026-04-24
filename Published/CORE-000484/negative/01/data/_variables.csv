@@ -1,0 +1,8 @@
+dataset,variable,label,type,length
+relrec,STUDYID,Study Identifier,Char,12
+relrec,RDOMAIN,Related Domain Abbreviation,Char,6
+relrec,USUBJID,Unique Subject Identifier,Char,8
+relrec,IDVAR,Identifying Variable,Char,200
+relrec,IDVARVAL,Identifying Variable Value,Char,200
+relrec,RELTYPE,Relationship Type,Char,4
+relrec,RELID,Relationship Identifier,Char,200

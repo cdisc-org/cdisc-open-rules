@@ -1,0 +1,59 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: FETUSID should be populated for implantations that have
+                  individual fetal examinations or measurements that will be
+                  captured in other domains. The USUBJID / FETUSID combination
+                  must be consistent across domains within a study.
+                Document: DART-IG v1.1
+                Section: '5.1.2'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND362
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: FETUSID should be populated for implantations that have
+                  individual fetal examinations or measurements that will be
+                  captured in other domains. The USUBJID / FETUSID combination
+                  must be consistent across domains within a study.
+                Document: DART-IG v1.2
+                Section: '5.1.2'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND362
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+Check:
+  all:
+    - any:
+        - name: USUBJID
+          operator: non_empty
+        #- name: FETUSID
+        #  operator: empty
+Core:
+  Status: Draft
+  Version: '1'
+Description: 'Report an issue when a USUBJID-FETUSID in FM (Fetus Measurements)
+  is not found in IC (Implantation Classification)'
+# Also see Christy's mail 2025-10-13 - issues the question of the difference between SEND262 and SEND263
+Executability: Fully Executable
+Outcome:
+  Message: 'The combination of USUBJID and FETUSID in FM (Fetus Measurements) was
+    not found in IC (Implantation Classification)'
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - FM
+Sensitivity: Record

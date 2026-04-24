@@ -1,0 +1,43 @@
+# Variable: MBTESTCD
+# Condition: Test for non-targeted identification of an organism
+# Rule: MBTESTCD = 'MCORGIDN'
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        Version: '3.4'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0616
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: For non-targeted identification of organisms (i.e.,
+                  tests that have the ability to identify a range of organisms without
+                  specifically targeting any), the value for MBTESTCD/MBTEST should
+                  be "MCORGIDN"/"Microbial Organism Identification", and the result
+                  should be the name of the organism or group of organisms found to
+                  be present.
+                Document: IG v3.4
+                Item: Assumption 1
+                Section: 6.3.5.7.1
+Check:
+  all: []
+Core:
+  Id: CDISC.SDTMIG.CG0616
+  Status: Draft
+  Version: '1'
+Description: ''
+Executability: Fully Executable
+Outcome:
+  Message: ''
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - MB
+Sensitivity: Record

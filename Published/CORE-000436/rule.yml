@@ -1,0 +1,149 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: All Study Day values are integers. Thus, to calculate Study Day
+                  --DY = (date portion of --DTC) minus (date portion of RFSTDTC)
+                  + 1 if --DTC is on or after RFSTDTC.
+                Document: SENDIG v3.0
+                Section: 4.4.4
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND74
+              Version: '2'
+            Version: '5.0'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: All Study Day values are integers. Thus, to calculate Study Day
+                  --DY = (date portion of --DTC) minus (date portion of RFSTDTC)
+                  + 1 if --DTC is on or after RFSTDTC.
+                Document: SENDIG v3.1
+                Section: 4.4.4
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND74
+              Version: '2'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: All Study Day values are integers. Thus, to calculate Study Day
+                  --DY = (date portion of --DTC) minus (date portion of RFSTDTC)
+                  + 1 if --DTC is on or after RFSTDTC.
+                Document: SENDIG v3.1.1
+                Section: 4.4.4
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND74
+              Version: '2'
+            Version: '5.0'
+        Version: 3.1.1
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: All Study Day values are integers. Thus, to calculate Study Day
+                  --DY = (date portion of --DTC) minus (date portion of RFSTDTC)
+                  + 1 if --DTC is on or after RFSTDTC.
+                Document: SENDIG v3.1
+                Section: 4.4.4
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND74
+              Version: '2'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: All Study Day values are integers. Thus, to calculate Study Day
+                  --DY = (date portion of --DTC) minus (date portion of RFSTDTC)
+                  + 1 if --DTC is on or after RFSTDTC.
+                Document: SENDIG v3.1.1
+                Section: 4.4.4
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND74
+              Version: '2'
+            Version: '5.0'
+        Version: '1.2'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: All Study Day values are integers. Thus, to calculate Study Day
+                  --DY = (date portion of --DTC) minus (date portion of RFSTDTC)
+                  + 1 if --DTC is on or after RFSTDTC.
+                Document: SENDIG v3.1.1
+                Section: 4.4.4
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND74
+              Version: '2'
+            Version: '5.0'
+        Version: '1.0'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: "All Study Day values are integers. Thus, to calculate Study
+                  Day: --DY = (date portion of --DTC) - (date portion of
+                  RFSTDTC) if --DTC precedes RFSTDTC"
+                Document: TIG v1.0
+                Item: Text
+                Section: 2.8.7.6
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0275
+              Version: '1'
+            Version: '1.0'
+        Substandard: SEND
+        Version: '1.0'
+Check:
+  all:
+    - name: --DY
+      operator: non_empty
+    - name: --DTC
+      operator: is_complete_date
+    - name: RFSTDTC
+      operator: is_complete_date
+    - name: --DY # checking failure criteria
+      operator: not_equal_to
+      value: $val_dy # this is created in the operations statement that follows
+Core:
+  Id: CORE-000436
+  Status: Published
+  Version: '1'
+Description: Raise an error when --DY is not calculated as per the study day
+  algorithm as a non-zero integer value when the date portion of --DTC is
+  complete and the date portion of DM.RFSTDTC is a complete date AND --DY is not
+  empty
+Executability: Fully Executable
+Match Datasets:
+  - Keys:
+      - USUBJID
+    Name: DM
+Operations:
+  - id: $val_dy # ex in devops 2538 used -- but that threw an error
+    name: --DTC
+    operator: dy # does dy op take into acct +1?
+Outcome:
+  Message: --DY is not calculated correctly even though the date portion of --DTC
+    is complete, the date portion of DM.RFSTDTC is a complete date, and --DY is
+    not empty.
+  Output Variables:
+    - --DY
+    - --DTC
+    - RFSTDTC
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+  Use Case: NONCLIN
+Sensitivity: Record

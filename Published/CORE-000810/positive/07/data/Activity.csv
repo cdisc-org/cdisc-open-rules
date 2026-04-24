@@ -1,0 +1,6 @@
+parent_entity,parent_id,parent_rel,rel_type,id,name,description,label,instanceType,definedProcedures,bcCategoryIds,previousId,nextId,timelineId
+StudyDesign,StudyDesign_1,activities,definition,Activity_1,Activity 1,,,Activity,True,True,,Activity_2,
+StudyDesign,StudyDesign_1,activities,definition,Activity_2,Activity 2,,,Activity,True,False,Activity_1,Activity_3,
+StudyDesign,StudyDesign_1,activities,definition,Activity_3,Activity 3,,,Activity,True,,Activity_2,Activity_4,
+StudyDesign,StudyDesign_1,activities,definition,Activity_4,Activity 4,,,Activity,False,True,Activity_3,Activity_5,
+StudyDesign,StudyDesign_1,activities,definition,Activity_5,Activity 5,,,Activity,,True,Activity_4,,

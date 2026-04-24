@@ -1,0 +1,121 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Values of --TESTCD and QNAM values must be limited to 8
+                  characters, and cannot start with a number, nor can they
+                  contain characters other than letters, numbers, or
+                  underscores.
+                Document: IG v3.0
+                Section: 4.2.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND22
+              Version: '1'
+            Version: '5.0'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Values of --TESTCD and QNAM values must be limited to 8
+                  characters, and cannot start with a number, nor can they
+                  contain characters other than letters, numbers, or
+                  underscores.
+                Document: IG v3.1
+                Section: 4.2.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND22
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Values of --TESTCD and QNAM values must be limited to 8
+                  characters, and cannot start with a number, nor can they
+                  contain characters other than letters, numbers, or
+                  underscores.
+                Document: IG v3.1.1
+                Section: 4.2.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND22
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: Values of --TESTCD and QNAM values must be limited to 8
+                  characters, and cannot start with a number, nor can they
+                  contain characters other than letters, numbers, or
+                  underscores.
+                Document: IG v3.1
+                Section: 4.2.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND22
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: Values of --TESTCD and QNAM values must be limited to 8
+                  characters, and cannot start with a number, nor can they
+                  contain characters other than letters, numbers, or
+                  underscores.
+                Document: IG v3.1.1
+                Section: 4.2.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND22
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: Values of --TESTCD and QNAM values must be limited to 8
+                  characters, and cannot start with a number, nor can they
+                  contain characters other than letters, numbers, or
+                  underscores.
+                Document: IG v3.1.1
+                Section: 4.2.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND22
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+Check:
+  all:
+    - name: QNAM
+      operator: not_matches_regex
+      value: ^[A-Z0-9_]*$
+Core:
+  Id: CORE-000491
+  Status: Published
+  Version: '1'
+Description: Raise an error when QNAM contains anything else than a letter,
+  number or underscore
+Executability: Fully Executable
+Outcome:
+  Message: QNAM value cannot contain characters other than letters, numbers or
+    underscores
+  Output Variables:
+    - IDVAR
+    - IDVARVAL
+    - QNAM
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - RELATIONSHIP
+  Domains:
+    Include:
+      - SUPP--
+Sensitivity: Record

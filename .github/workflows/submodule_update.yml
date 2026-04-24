@@ -27,7 +27,7 @@ jobs:
       - name: Open PR if submodule changed
         uses: peter-evans/create-pull-request@v6
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GH_PAT }}
           commit-message: "update engine submodule to latest main"
           title: "update engine submodule"
           body: |

@@ -1,0 +1,33 @@
+dataset,variable,label,type,length
+pd,STUDYID,Study Identifier,Char,200
+pd,DOMAIN,Domain Abbreviation,Char,200
+pd,SPTOBID,Applicant-Defined Tobacco Product ID,Char,40
+pd,IGDCMPID,Ingredient or Component Identifier,Char,40
+pd,PDSEQ,Sequence Number,Num,10
+pd,PDPARMCD,Design Parameter Element Short Name,Char,8
+pd,PDPARM,Design Parameter Element Name,Char,40
+pd,PDVALTRG,Design Parameter Element Target Value,Char,50
+pd,PDVALMIN,Design Parameter Element Minimum Value,Char,50
+pd,PDVALMAX,Design Parameter Element Maximum Value,Char,50
+pd,PDVALU,Design Parameter Element Value Unit,Char,50
+em,STUDYID,Study Identifier,Char,TOB07
+em,DOMAIN,Domain Abbreviation,Char,EM
+em,USUBJID,Unique Subject Identifier,Char,2029
+em,SPTOBID,Applicant-Defined Tobacco Product ID,Char,VAPE-Z01
+em,EMSEQ,Device Events Sequence Number,Num,1
+em,EMTERM,Reported Term for Device Event,Char,Broken Heater
+em,EMMODIFY,Modified Device Event Name,Char,Mechanical Problem
+em,EMDECOD,Device Events Dictionary-Derived Term,Char,Mechanical Problem
+em,EMACNDEV,Action Taken with Device,Char,DEVICE REPLACED
+em,EMPATT,Pattern of Device Event,Char,SINGLE
+em,EMSTDTC,Start Date/Time of Device Event,Char,40175
+to,STUDYID,Study Identifier,Char,200
+to,DOMAIN,Domain Abbreviation,Char,200
+to,SPTOBID,Applicant-Defined Tobacco Product ID,Char,40
+to,TOSEQ,Sequence Number,Num,10
+to,TOPARMCD,Tobacco Product ID Element Short Name,Char,40
+to,TOPARM,Tobacco Product ID Element Name,Char,8
+to,TOCAT,Category of Tobacco Product ID Element,Char,40
+to,TOSCAT,Subcategory of Tobacco Prod ID Element,Char,50
+to,TOVAL,Tobacco Product ID Element Value,Char,50
+to,TOVALU,Tobacco Product ID Element Value Unit,Char,50

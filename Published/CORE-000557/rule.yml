@@ -1,0 +1,160 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: RELTYPE; Identifies the hierarchical level of the records in the
+                  relationship. Values should be either ONE or MANY, only when
+                  --SPID is used. However, values are only necessary when
+                  identifying a relationship between datasets.
+                Document: SENDIG v3.0
+                Item: RELTYPE CDISC Notes
+                Section: 8.3.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: 'SEND253'
+              Version: '1'
+            Version: '5.0'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Domain-to-domain relationships (USUBJID, POOLID, and IDVARVAL
+                  are null; RELTYPE is populated)
+                Document: SENDIG v3.1
+                Item: Assumption 4
+                Section: 8.2.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: 'SEND253.1'
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Domain-to-domain relationships (USUBJID, POOLID, and IDVARVAL
+                  are null; RELTYPE is populated)
+                Document: SENDIG v3.1.1
+                Item: Assumption 4
+                Section: 8.2.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: 'SEND253.1'
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: Domain-to-domain relationships (USUBJID, POOLID, and IDVARVAL
+                  are null; RELTYPE is populated)
+                Document: SENDIG v3.1
+                Item: Assumption 4
+                Section: 8.2.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: 'SEND253.1'
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: Domain-to-domain relationships (USUBJID, POOLID, and IDVARVAL
+                  are null; RELTYPE is populated)
+                Document: SENDIG v3.1.1
+                Item: Assumption 4
+                Section: 8.2.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: 'SEND253.1'
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: Domain-to-domain relationships (USUBJID, POOLID, and IDVARVAL
+                  are null; RELTYPE is populated)
+                Document: SENDIG v3.1.1
+                Item: Assumption 4
+                Section: 8.2.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: 'SEND253.1'
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: The variable RELTYPE will identify the type of relationship
+                  between the datasets (e.g., a one-to-one or parent-child
+                  relationship). The allowable values for RELYPE are ONE and
+                  MANY per CDISC Controlled Terminology.
+                Document: TIG v1.0
+                Item: Text
+                Section: 2.8.5.2
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0171
+              Version: '1'
+            Version: '1.0'
+        Substandard: SEND
+        Version: '1.0'
+# We must take into account that POOLID is "permissible" and may be absent
+# USUBJID is "expected" and the column must then always be present
+Check:
+  any:
+    # Case that the POOLID column is not present
+    - all:
+        - name: USUBJID
+          operator: empty
+        - name: POOLID
+          operator: not_exists
+        - name: IDVARVAL
+          operator: empty
+        - name: RELTYPE
+          operator: not_equal_to
+          value: ONE
+        - name: RELTYPE
+          operator: not_equal_to
+          value: MANY
+    # Case that the POOLID column is present
+    - all:
+        - name: USUBJID
+          operator: empty
+        - name: POOLID
+          operator: exists
+        - name: POOLID
+          operator: empty
+        - name: IDVARVAL
+          operator: empty
+        - name: RELTYPE
+          operator: not_equal_to
+          value: ONE
+        - name: RELTYPE
+          operator: not_equal_to
+          value: MANY
+Core:
+  Id: CORE-000557
+  Status: Published
+  Version: '1'
+Description: When USUBJID, POOLID, and IDVARVAL are empty, RELTYPE can only be
+  "ONE" or "MANY"
+Executability: Fully Executable
+Outcome:
+  Message: For RELTYPE, only "ONE" and "MANY" are allowed when USUBJID, POOLID,
+    and IDVARVAL are null
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - RELATIONSHIP
+  Domains:
+    Include:
+      - RELREC
+  Use Case: NONCLIN
+Sensitivity: Record

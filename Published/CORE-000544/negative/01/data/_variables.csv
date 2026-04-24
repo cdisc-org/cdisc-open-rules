@@ -1,0 +1,57 @@
+dataset,variable,label,type,length
+ds,STUDYID,Study Identifier,Char,12
+ds,DOMAIN,Domain Abbreviation,Char,2
+ds,USUBJID,Unique Subject Identifier,Char,20
+ds,DSSEQ,Sequence Number,Num,8
+ds,DSTERM,Reported Term for the Disposition Event,Char,200
+ds,DSDECOD,Standardized Disposition Term,Char,50
+ss1,STUDYID,Study Identifier,Char,12
+ss1,DOMAIN,Domain Abbreviation,Char,2
+ss1,USUBJID,Unique Subject Identifier,Char,20
+ss1,SSSEQ,Sequence Number,Num,8
+ss1,SSTESTCD,Status Short Name,Char,8
+ss1,SSTEST,Status Name,Char,50
+ss1,SSORRES,"Result or Finding
+Original Result",Char,50
+ss1,SSSTRESC,"Character
+Result/Finding in
+Std Format",Char,50
+ss2,STUDYID,Study Identifier,Char,12
+ss2,DOMAIN,Domain Abbreviation,Char,2
+ss2,USUBJID,Unique Subject Identifier,Char,20
+ss2,SSSEQ,Sequence Number,Num,8
+ss2,SSTESTCD,Status Short Name,Char,8
+ss2,SSTEST,Status Name,Char,50
+ss2,SSORRES,"Result or Finding
+Original Result",Char,50
+ss2,SSSTRESC,"Character
+Result/Finding in
+Std Format",Char,50
+ae,STUDYID,Study Identifier,Char,12
+ae,DOMAIN,Domain Abbreviation,Char,2
+ae,POOLID,Pool Identifier,Char,20
+ae,AESEQ,Sequence Number,Num,8
+ae,AETERM,Reported Term for the Adverse Event,Char,200
+ae,AEDECOD,Standardized Disposition Term,Char,50
+lbae,STUDYID,Study Identifier,Char,12
+lbae,DOMAIN,Domain Abbreviation,Char,2
+lbae,POOLID,Pool Identifier,Char,20
+lbae,LBSEQ,Sequence Number,Num,8
+lbae,LBTESTCD,Status Short Name,Char,8
+lbae,LBTEST,Status Name,Char,50
+lbae,LBORRES,"Result or Finding
+Original Result",Char,50
+lbae,LBSTRESC,"Character
+Result/Finding in
+Std Format",Char,50
+lbds,STUDYID,Study Identifier,Char,12
+lbds,DOMAIN,Domain Abbreviation,Char,2
+lbds,POOLID,Pool Identifier,Char,20
+lbds,LBSEQ,Sequence Number,Num,8
+lbds,LBTESTCD,Status Short Name,Char,8
+lbds,LBTEST,Status Name,Char,50
+lbds,LBORRES,"Result or Finding
+Original Result",Char,50
+lbds,LBSTRESC,"Character
+Result/Finding in
+Std Format",Char,50

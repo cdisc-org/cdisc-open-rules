@@ -1,0 +1,68 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      # REMARK: Only applicable to SENDIG-DART 1.1 and 1.2
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: When the PYTESTCD is "PREGSTAT", PYSTRESC should be populated
+                  with a value in the PYFINDRS controlled terminology list.
+                Document: IG-DART v1.1
+                Section: '5.1.2'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND362
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: When the PYTESTCD is "PREGSTAT", PYSTRESC should be populated
+                  with a value in the PYFINDRS controlled terminology list.
+                Document: IG-DART v1.2
+                Section: '5.1.2'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND362
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+
+Check:
+  all:
+    - name: PYTESTCD
+      operator: equal_to
+      value: PREGSTAT
+    # TODO: retrieve values from CDISC Library for codelist PYFINDRS
+    - name: PYSTRESC
+      operator: is_not_contained_by
+      value:
+        - ABORTED
+        - EARLY DELIVERY
+        - NOT PREGNANT
+        - PREGNANT
+        - RESORBED OR DEAD LITTER
+        - UNDETERMINED
+Core:
+  Id: CDISC.SENDIG.362
+  Status: Draft
+  Version: '1'
+Description: Raise an error when the value of PYTESTCD = PREGSTAT and the value
+  of PYSTRESC is not one of the codelist PYFINDRS
+Executability: Fully Executable
+Outcome:
+  Message: The value of PYSTRESC is not one from the codelist PYFINDRS for
+    PYTESTCD 'PREGSTAT'
+  Output Variables:
+    - PYTESTCD
+    - PYSTRESC
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - PY
+Sensitivity: Record

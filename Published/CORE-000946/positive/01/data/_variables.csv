@@ -1,0 +1,25 @@
+dataset,variable,label,type,length
+sj,STUDYID ,Study Identifier,Char,10
+sj,DOMAIN ,Domain Abbreviation,Char,2
+sj,USUBJID,Unique Subject Identifier ,Char,20
+sj,SJSEQ ,Sequence Number,Num,8
+sj,RSTGCD,Repro Stage Code,Char,5
+sj,RSTAGE,Description of Repro Stage ,Char,40
+sj,SJSTDTC,Start date/time of Repro Stage,Char,20
+sj,SJENDTC,End date/time of Repro Stage,Char,2
+sj,RPHASE,Repro Phase,Char,11
+sj,SJUPDES,Description of Unplanned Repro Stage ,Char,20
+ex,STUDYID ,Study Identifier,Char,10
+ex,DOMAIN ,Domain Abbreviation,Char,2
+ex,USUBJID,Unique Subject Identifier ,Char,20
+ex,EXSEQ ,Sequence Number,Num,8
+ex,EXTRT,Name of Actual Treatment ,Char,20
+ex,EXDOSE,Dose per Administration ,Num,8
+ex,EXDOSU,Dose Units ,Char,20
+ex,EXDOSFRM,Dose Form ,Char,20
+ex,EXDOSFRQ,Dosing Frequency Per Interval ,Char,20
+ex,EXROUTE,Route of Administration ,Char,20
+ex,EXLOT,Lot Number ,Char,20
+ex,RPHASE,Reproductive Phase ,Char,20
+ex,RPPLSTDY,Planned Repro Phase Day of Obs Start ,Num,8
+ex,EXSTDTC,Start Date/Time of Treatment ,Char,20

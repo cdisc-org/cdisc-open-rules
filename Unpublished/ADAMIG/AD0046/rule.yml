@@ -1,0 +1,98 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: ADAMIG
+        References:
+          - Citations:
+              - Cited Guidance: >-
+                  Variables whose names end in DY are relative day variables. In
+                  ADaM as in the SDTM, there is no day 0. If there is a need to
+                  create a relative day variable that includes day 0, then its
+                  name must not end in DY.
+                Document: ADAM IG v1.3
+                Item: '8'
+                Section: 3.1.2
+            Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '46'
+            Version: '5.0'
+        Version: '1.3'
+      - Name: ADAMIG
+        References:
+          - Citations:
+              - Cited Guidance: >-
+                  Item 8: Variables whose names end in DY are relative day
+                  variables. In ADaM as in the SDTM, there is no day 0. If there
+                  is a need to create a relative day variable that includes day
+                  0, then its name must not end in DY.
+                Document: ADAM IG v1.2
+                Item: '8'
+                Section: 3.1.2
+            Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '46'
+            Version: '5.0'
+        Version: '1.2'
+
+      - Name: ADAMIG
+        References:
+          - Citations:
+              - Cited Guidance: >-
+                  Variables whose names end in DY are relative day variables. In
+                  ADaM as in the SDTM, there is no day 0. If there is a need to
+                  create a relative day variable that includes day 0, then its
+                  name must not end in DY.
+                Document: ADAM IG v1.1
+                Item: '8'
+                Section: 3.1.2
+            Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '46'
+            Version: '5.0'
+        Version: '1.1'
+
+      - Name: ADAMIG
+        References:
+          - Citations:
+              - Cited Guidance: >-
+                  Variables whose names end in DY are relative day variables. In
+                  ADaM as in the SDTM, there is no day 0. If there is a need to
+                  create a relative day variable that includes day 0, then its
+                  name must not end in DY. ADaM relative day variables need not
+                  be anchored by SDTM RFSTDTC. When SDTM.RFSTDTC is not the
+                  anchor date then the anchor date used must be stored in an
+                  ADaM dataset.
+                Document: ADAM IG v1.0
+                Item: '8 (General Timing Variable Conventions)'
+                Section: '3'
+            Origin: ADaM Conformance Rules
+            Rule Identifier:
+              Id: '46'
+            Version: '5.0'
+        Version: '1.0'
+
+Check:
+  all:
+    - name: variable_name
+      operator: ends_with
+      value: 'DY'
+  # - name: variable_name
+  #   operator: equal_to
+  #   value: 0
+
+Core:
+  Id: CDISC.ADAMIG.AD0046
+  Status: Draft
+  Version: '1'
+Description: Raise an error when a variable ends with DY and has value equl to 0
+Outcome:
+  Message: Value of 0 is not permitted with variable ending with suffix DY
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record

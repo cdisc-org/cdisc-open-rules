@@ -1,0 +1,59 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'Cardinalities must be as defined in the USDM schema based on
+                  the API specification (i.e., required properties have at least
+                  one value and single-value properties are not lists).'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00126'
+              Version: '1'
+            Version: '1.0'
+        Version: '3.0'
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'Cardinalities must be as defined in the USDM schema based on
+                  the API specification (i.e., required properties have at least
+                  one value and single-value properties are not lists).'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00126'
+              Version: '1'
+            Version: '1.0'
+        Version: '4.0'
+Check:
+  all:
+    - name: validator
+      operator: is_contained_by
+      value:
+        - 'minLength'
+        - 'minItems'
+        - 'maxItems'
+Core:
+  Id: 'CORE-000938'
+  Status: Published
+  Version: '1'
+Description: 'Cardinalities must be as defined in the USDM schema based on the
+  API specification (i.e., required properties have at least one value and
+  single-value properties are not lists).'
+Executability: Fully Executable
+Outcome:
+  Message: 'The cardinality of the attribute is not as defined in the USDM schema
+    - the attribute is required but does not have a value (the value is too
+    short), or the attribute is a list and has either too few entries (the list
+    is too short) or too many entries (the list is too long).'
+  Output Variables:
+    - error_attribute
+    - message
+Rule Type: JSON Schema Check
+Scope:
+  Entities:
+    Include:
+      - 'ALL'
+Sensitivity: Record

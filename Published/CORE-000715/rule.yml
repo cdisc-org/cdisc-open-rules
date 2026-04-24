@@ -1,0 +1,126 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Used to indicate when a test is not done or result is missing.
+                  Should be null if a result exists in BWORRES.
+                Document: SENDIG v3.0
+                Item: BWSTAT CDISC Notes
+                Section: 6.3.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND144
+              Version: '1'
+            Version: '5.0'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Used to indicate when a test is not done or result is missing.
+                  Should be null if a result exists in BWORRES.
+                Document: SENDIG v3.1
+                Item: BWSTAT CDISC Notes
+                Section: 6.3.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND144
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Used to indicate when a test is not done or result is missing.
+                  Should be null if a result exists in BWORRES.
+                Document: SENDIG v3.1.1
+                Item: BWSTAT CDISC Notes
+                Section: 6.3.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND144
+              Version: '1'
+            Version: '5.0'
+        Version: 3.1.1
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: Used to indicate when a test is not done or result is missing.
+                  Should be null if a result exists in BWORRES.
+                Document: SENDIG v3.1
+                Item: BWSTAT CDISC Notes
+                Section: 6.3.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND144
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: Used to indicate when a test is not done or result is missing.
+                  Should be null if a result exists in BWORRES.
+                Document: SENDIG v3.1.1
+                Item: BWSTAT CDISC Notes
+                Section: 6.3.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND144
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: Used to indicate when a test is not done or result is missing.
+                  Should be null if a result exists in BWORRES.
+                Document: SENDIG v3.1.1
+                Item: BWSTAT CDISC Notes
+                Section: 6.3.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND144
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: Used to indicate when a test is not done or result is missing.
+                  Should be null if a result exists in BWORRES.
+                Document: TIG v1.0
+                Item: BWSTAT CDISC Notes
+                Section: 2.8.9.9
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0080
+              Version: '1'
+            Version: '1.0'
+        Substandard: SEND
+        Version: '1.0'
+Check:
+  all:
+    - name: --ORRES
+      operator: empty
+    - name: --STAT
+      operator: empty
+Core:
+  Id: CORE-000715
+  Status: Published
+  Version: '1'
+Description: Trigger error when --ORRES is not populated and --STAT is not populated
+Executability: Fully Executable
+Outcome:
+  Message: If --ORRES is not populated, --STAT must be populated
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Exclude:
+      - SC
+  Use Case: NONCLIN
+Sensitivity: Record

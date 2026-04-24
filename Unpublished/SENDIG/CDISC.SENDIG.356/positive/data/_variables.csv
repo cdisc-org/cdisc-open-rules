@@ -1,0 +1,45 @@
+dataset,variable,label,type,length
+ic,STUDYID,Study Identifier,Char,10
+ic,DOMAIN,Domain Abbreviation,Char,2
+ic,USUBJID,Unique Subject Identifier ,Char,20
+ic,FETUSID,Unique Fetus Identifier ,Char,20
+ic,ICSEQ,Sequence Number,Num,8
+ic,ICTESTCD,Test Short Name,Char,8
+ic,ICTEST,Implantation Exam Name ,Char,40
+ic,ICORRES,Result or Finding as Collected,Char,20
+ic,ICSTRESC,Standardized Result in Character Format,Char,20
+ic,ICIMPLBL,Implementation Site Label ,Char,11
+ic,ICSTRESCAT,Result Category,Char,20
+ic,ICRESLOC,Result Location of Finding,Char,20
+ic,ICSTAT,Completion Status,Char,10
+ic,ICREASND,Reason not Done,Char,20
+ic,ICSPEC,Specimen Material Type,Char,20
+fm,STUDYID,Study Identifier,Char,10
+fm,DOMAIN,Domain Abbreviation,Char,2
+fm,USUBJID,Unique Subject Identifier ,Char,20
+fm,FETUSID,Unique Fetus Identifier ,Char,20
+fm,FMSEQ ,Sequence Number,Num,8
+fm,FMTESTCD,Test Short Name,Char,8
+fm,FMTEST ,Implantation Exam Name ,Char,40
+fm,FMORRES ,Result or Finding as Collected,Char,20
+fm,FMORRESU,Unit of the Original Result ,Char,20
+fm,FMSTRESC,Standardized Result in Character Format,Char,20
+fm,FMSTRESN,Standardized Results in Numeric Format ,Num,8
+fm,FMSTRESU,Unit of the Standardized Result,Char,20
+fm,FMLOC,Result Location of Finding,Char,20
+fm,RPHASE,Repro Phase,Char,10
+fx,STUDYID,Study Identifier,Char,10
+fx,DOMAIN,Domain Abbreviation,Char,2
+fx,USUBJID,Unique Subject Identifier ,Char,20
+fx,FETUSID,Unique Fetus Identifier ,Char,20
+fx,FXSEQ,Sequence Number,Num,8
+fx,FXTESTCD,Test Short Name,Char,8
+fx,FXTEST,"
+ Fetal Exam Name",Char,40
+fx,FXORRES,Result or Finding as Collected,Char,20
+fx,FXSTRESC,Unit of the Original Result ,Char,20
+fx,FXRESCAT,Result Category,Char,20
+fx,FXRESLOC,Result Location of Finding,Char,20
+fx,FXANTREG,Anatomical Region,Char,20
+fx,FXLOC,Location User for the Measurement,Char,20
+fx,FXMETHOD,Method of Test or Examination,Char,10

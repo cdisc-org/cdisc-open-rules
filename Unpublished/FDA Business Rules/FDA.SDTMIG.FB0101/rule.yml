@@ -1,0 +1,74 @@
+Authorities:
+  - Organization: FDA
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: A treatment-emergent flag should be submitted.
+                Document: FDA
+                Section: FDAB001
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0101
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: A treatment-emergent flag should be submitted.
+                Document: FDA
+                Section: FDAB001
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0101
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: A treatment-emergent flag should be submitted.
+                Document: FDA
+                Section: FDAB001
+            Origin: FDA Business Rules
+            Rule Identifier:
+              Id: FB0101
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+Check:
+  all:
+    # Because the data we're checking involves a pivoted join, there are multiple rows per
+    # (USUBJID, AESEQ) combination: one per value of QNAM. We want to raise only one error per
+    # (USUBJID, AESEQ) combination, so choose the row with the minimum value of QNAM.
+    - name: AETERM
+      operator: non_empty
+    - name: QNAM
+      operator: is_not_contained_by
+      value: AETRTEM
+Core:
+  Id: FDA.SDTMIG.FB0101
+  Status: Draft
+  Version: '1'
+Description: Treatment-emergent flag should be present in SUPPAE for each Adverse Event.
+Executability: Fully Executable
+Match Datasets:
+  - Keys:
+      - USUBJID
+    Name: SUPPAE
+Outcome:
+  Message: Missing treatment-emergent flag (AETRTEM) for Adverse Event.
+  Output Variables:
+    - AETERM
+    - AESTDTC
+    - QNAM
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - EVENTS
+  Domains:
+    Include:
+      - AE
+Sensitivity: Record

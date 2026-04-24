@@ -1,0 +1,52 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: A number used to uniquely identify records for a subject within
+                  a domain. The Trial Summary domain does not contain subject
+                  data, and TSSEQ is a sequence number to ensure uniqueness
+                  within the dataset.
+                Document: SDTM v2.1
+                Item: --SEQ
+                Section: '3.1.4 Identifiers for All Classes'
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0310
+              Version: '1'
+            Version: '1.0'
+        Substandard: SDTM
+        Version: '1.0'
+Check:
+  all:
+    - name: SPTOBID
+      operator: non_empty
+    - name: --SEQ
+      operator: exists
+    - name: --SEQ
+      operator: is_not_unique_set
+      value:
+        - DOMAIN
+        - SPTOBID
+Core:
+  Id: CORE-000753
+  Status: Published
+  Version: '1'
+Description: Part D - Raise an error when --SEQ is not a unique number per one
+  of the following identifier variables, per domain; SPTOBID.
+Executability: Fully Executable
+Outcome:
+  Message: --SEQ is not a unique number per SPTOBID per domain.
+  Output Variables:
+    - SPTOBID
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Exclude:
+      - ES
+  Use Case: PROD
+Sensitivity: Record

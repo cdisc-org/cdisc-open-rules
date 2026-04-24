@@ -1,0 +1,71 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'An activity with children must not refer to a timeline,
+                  procedure, biomedical concept, biomedical concept category or
+                  biomedical concept surrogate.'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00160'
+              Version: '1'
+            Version: '1.0'
+        Version: '4.0'
+Check: |-
+  ($.**.studyDesigns)@$sd.
+    $sd.activities@$p.
+    $p.
+      [
+        (
+          $ActivityDetails:=(biomedicalConceptIds or bcCategoryIds or definedProcedures
+            or timelineId or bcSurrogateIds);
+          $ChkX:=(childIds and $ActivityDetails =true);
+            {
+              "instanceType": $p.instanceType,
+              "id": $p.id,
+              "path": $p._path,
+              "StudyDesign.id": $sd.id,
+              "StudyDesign.name": $sd.name,
+              "name": $p.name,
+              "childIds": $p.childIds,
+              "biomedicalConceptIds": $p.biomedicalConceptIds,
+              "bcCategoryIds": $p.bcCategoryIds,
+              "bcSurrogateIds": $p.bcSurrogateIds,
+              "timelineId": $p.timelineId,
+              "definedProcedures.id": $p.definedProcedures.id,
+              "check": $ChkX
+            }
+          )
+        ]
+        [check=true]
+Core:
+  Id: 'CORE-000954'
+  Status: Published
+  Version: '1'
+Description: 'An activity with children must not refer to a timeline, procedure,
+  biomedical concept, biomedical concept category or biomedical concept
+  surrogate.'
+Executability: Fully Executable
+Outcome:
+  Message: 'The activity has children but also refers to a timeline, procedure,
+    biomedical concept, biomedical concept category, or biomedical concept
+    surrogate as well.'
+  Output Variables:
+    - StudyDesign.id
+    - StudyDesign.name
+    - name
+    - childIds
+    - biomedicalConceptIds
+    - bcCategoryIds
+    - bcSurrogateIds
+    - timelineId
+    - definedProcedures.id
+Rule Type: JSONata
+Scope:
+  Entities:
+    Include:
+      - 'Activity'
+Sensitivity: Record

@@ -1,0 +1,149 @@
+Authorities:
+  - Organization: 'CDISC'
+    Standards:
+      - Name: 'SENDIG'
+        References:
+          - Citations:
+              - Cited Guidance: 'In case of immediate postdose sampling, there should not be 2
+                  PT0H records for the same profile; instead, the immediate
+                  postdose sample should be separated from predose samples with
+                  a different PCELTM value so that each is uniquely
+                  identifiable.'
+                Document: 'IG v3.1.1'
+                Section: '6.3.11.1'
+            Origin: 'SEND Conformance Rules'
+            Rule Identifier:
+              Id: 'SEND328-2'
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: 'SENDIG-GENETOX'
+        References:
+          - Citations:
+              - Cited Guidance: 'In case of immediate postdose sampling, there should not be 2
+                  PT0H records for the same profile; instead, the immediate
+                  postdose sample should be separated from predose samples with
+                  a different PCELTM value so that each is uniquely
+                  identifiable.'
+                Document: 'IG v3.1.1'
+                Section: '6.3.11.1'
+            Origin: 'SEND Conformance Rules'
+            Rule Identifier:
+              Id: 'SEND328-2'
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+      - Name: 'SENDIG-DART'
+        References:
+          - Citations:
+              - Cited Guidance: 'In case of immediate postdose sampling, there should not be 2
+                  PT0H records for the same profile; instead, the immediate
+                  postdose sample should be separated from predose samples with
+                  a different PCELTM value so that each is uniquely
+                  identifiable.'
+                Document: 'IG v3.1.1'
+                Section: '6.3.11.1'
+            Origin: 'SEND Conformance Rules'
+            Rule Identifier:
+              Id: 'SEND328-2'
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+Check:
+  # Part 2, USUBJID is present and populated, and PCSCAT is absent
+  all:
+    - name: USUBJID
+      operator: exists
+    - name: USUBJID
+      operator: non_empty
+    - name: PCSCAT
+      operator: not_exists
+    # 2025-07-09: JUST TRYING: only check rows with PCELTM='PT0H'
+    - name: PCELTM
+      operator: equal_to
+      value: 'PT0H'
+    # 2025-07-09: PPCAT must correspond to PCTESTCD
+    # 2025-07-09: Somehow, this doesn't work as it always leads to "success" (i.e. no violation)
+    # and when commented out, causes a false positive for e.g. PCTESTCD='NOT FOR PROFILE'
+    #- name: PCTESTCD
+    #  operator: is_contained_by
+    #  value: $pp_cat
+    # reference of measurement in PC must be equal to reference of profile in PP
+    # P.S. This must be for the GIVEN SUBJECT!
+    - name: PCTPTREF
+      operator: is_contained_by
+      value: $pp_tptref
+    # reference time (time point) must be equal to reference time of profile in PP
+    - name: PCRFTDTC
+      operator: is_contained_by
+      value: $pp_rftdtc
+    # Report a violation when the number of records for PCELTM=PT0H is not 1
+    - name: $pc_group_no_pcscat
+      operator: not_equal_to
+      value: 1
+Core:
+  Id: SEND328-2
+  Status: Draft
+  Version: '1'
+Description: ''
+Executability: Fully Executable
+Operations:
+  - domain: PC
+    # we will count the number of records for which PCELTM = PT0H within each group
+    filter:
+      PCELTM: PT0H
+    # The group consists of USUBJID, PCTESTCD, PCCAT, and PCTPTREF - PCSCAT is absent
+    group:
+      - USUBJID
+      - PCTESTCD
+      - PCCAT
+      - PCSPEC # added 2025-07-09
+      - PCTPTREF
+    id: $pc_group_no_pcscat
+    operator: record_count
+  # 2025-07-09: PPCAT and PCTESTCD must correspond
+  - domain: PP
+    # we only want it for the current subject
+    group:
+      - USUBJID
+    id: $pp_cat
+    name: PPCAT
+    operator: distinct
+  # Value of PCTPTREF must be present in PPTPTREF (for the same USUBJID, so we need "group")
+  - domain: PP
+    # we only want it for the current subject
+    group:
+      - USUBJID
+    id: $pp_tptref
+    name: PPTPTREF
+    operator: distinct
+  - domain: PP
+    # we only want it for the current subject
+    group:
+      - USUBJID
+    id: $pp_rftdtc
+    name: PPRFTDTC
+    operator: distinct
+Outcome:
+  Message: 'specimen concentrations to calculate a time concentration profile may
+    only have one record with PCELTM=PT0H'
+  Output Variables:
+    - USUBJID
+    - PCTESTCD
+    - PCCAT
+    - PCSCAT
+    - PCSPEC
+    - PCTPTREF
+    - $pp_cat
+    - $pp_tptref
+    - $pp_rftdtc
+    - $pc_group_no_pcscat
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - PC
+Sensitivity: Record

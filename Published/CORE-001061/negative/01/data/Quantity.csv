@@ -1,0 +1,7 @@
+parent_entity,parent_id,parent_rel,rel_type,id,value,unit,unit.id,unit.standardCode,unit.standardCode.id,unit.standardCode.code,unit.standardCode.codeSystem,unit.standardCode.codeSystemVersion,unit.standardCode.decode,unit.standardCode.instanceType,unit.standardCodeAliases,unit.instanceType,instanceType
+Range,Range_5,minValue,definition,Quantity_12,50,True,AliasCode_550,True,Code_550,C25529,http://www.cdisc.org,2024-09-27,DAYS,Code,False,AliasCode,Quantity
+Range,Range_5,maxValue,definition,Quantity_14,100,True,AliasCode_552,True,Code_552,C25301,http://www.cdisc.org,2024-09-27,Days,Code,False,AliasCode,Quantity
+Range,Range_6,minValue,definition,Quantity_13,50,True,AliasCode_551,True,Code_551,C29844xx,http://www.cdisc.org,2023-12-15,WEEKS,Code,False,AliasCode,Quantity
+Range,Range_6,maxValue,definition,Quantity_15,100,True,AliasCode_553,True,Code_553,C29846,Age Unit Codelist,2023-12-15,MONTHS,Code,False,AliasCode,Quantity
+Range,Range_7,minValue,definition,Quantity_17,50,True,AliasCode_700,True,Code_900,C29848,http://www.cdisc.org,XXXX-XX-XX,Year,Code,False,AliasCode,Quantity
+Range,Range_7,maxValue,definition,Quantity_18,100,True,AliasCode_701,True,Code_901,C0051X,http://www.cdisc.org,2023-12-15,EXTENSION,Code,False,AliasCode,Quantity

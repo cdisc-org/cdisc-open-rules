@@ -1,0 +1,56 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: NICRULE.MEDDRA
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: NICRULE.MEDDRA
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+      - Name: SDTMIG
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: NICRULE.MEDDRA
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+Check:
+  all:
+    - name: $valid_code_term_pairs
+      operator: not_equal_to
+      value: true
+Core:
+  Id: ''
+  Status: Draft
+  Version: '1'
+Description: MEDDRA CODE TERM PAIRS are wrong for SOCCD
+Operations:
+  - id: $valid_code_term_pairs
+    name: --SOCCD
+    operator: valid_meddra_code_term_pairs
+Outcome:
+  Message: Invalid whodrug code hierarcy
+  Output Variables:
+    - USUBJID
+    - --SOC
+    - --SOCCD
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record

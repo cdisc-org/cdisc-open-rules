@@ -1,0 +1,143 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Values of --TESTCD and QNAM values must be limited to 8
+                  characters, and cannot start with a number, nor can they
+                  contain characters other than letters, numbers, or
+                  underscores.
+                Document: IG v3.0
+                Section: 4.2.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND17
+              Version: '1'
+            Version: '5.0'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Values of --TESTCD and QNAM values must be limited to 8
+                  characters, and cannot start with a number, nor can they
+                  contain characters other than letters, numbers, or
+                  underscores.
+                Document: IG v3.1
+                Section: 4.2.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND17
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Values of --TESTCD and QNAM values must be limited to 8
+                  characters, and cannot start with a number, nor can they
+                  contain characters other than letters, numbers, or
+                  underscores.
+                Document: IG v3.1
+                Section: 4.2.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND17
+              Version: '1'
+            Version: '5.0'
+        Version: 3.1.1
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: Values of --TESTCD and QNAM values must be limited to 8
+                  characters, and cannot start with a number, nor can they
+                  contain characters other than letters, numbers, or
+                  underscores.
+                Document: IG v3.1
+                Section: 4.2.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND17
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: Values of --TESTCD and QNAM values must be limited to 8
+                  characters, and cannot start with a number, nor can they
+                  contain characters other than letters, numbers, or
+                  underscores.
+                Document: IG v3.1
+                Section: 4.2.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND17
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: Values of --TESTCD and QNAM values must be limited to 8
+                  characters, and cannot start with a number, nor can they
+                  contain characters other than letters, numbers, or
+                  underscores.
+                Document: IG v3.1
+                Section: 4.2.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND17
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: Values of --TESTCD and QNAM values must be limited to 8
+                  characters, and cannot start with a number, nor can they
+                  contain characters other than letters, numbers, or
+                  underscores.
+                Document: TIG v1.0
+                Item: LBTESTCD CDISC Notes (and in all CDISC Notes for --TESTCD in all TIG
+                  Domains)
+                Section: 2.8.9.14 (and all other domains with --TESTCD)
+              - Cited Guidance: Values of --TESTCD and QNAM values must be limited to 8
+                  characters, and cannot start with a number, nor can they
+                  contain characters other than letters, numbers, or
+                  underscores.
+                Document: TIG v1.0
+                Item: QNAM CDISC Notes
+                Section: 2.8.9.27
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0099
+              Version: '1'
+            Version: '1.0'
+        Substandard: SEND
+        Version: '1.0'
+Check:
+  any:
+    - name: --TESTCD
+      operator: longer_than
+      value: 8
+Core:
+  Id: CORE-000274
+  Status: Published
+  Version: '1'
+Description: Raise an error when --TESTCD > 8 chars
+Executability: Fully Executable
+Outcome:
+  Message: --TESTCD > 8 chars
+  Output Variables:
+    - --TESTCD
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - ALL
+  Use Case: NONCLIN
+Sensitivity: Record

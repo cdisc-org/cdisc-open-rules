@@ -1,0 +1,11 @@
+Dataset,Record,Variable,Value
+ae.csv,,$dataset_variables,"['STUDYID', 'DOMAIN', 'USUBJID', 'AESEQ', 'AELNKID', 'AETERM', 'AELLT', 'AELLTCD', 'AEDECOD', 'AEPTCD', 'AEHLT', 'AEHLTCD', 'AEHLGT', 'AEHLGTCD', 'AEBDSYCD', 'AESOC', 'AESOCCD', 'AESEV', 'AEACN', 'AEREL', 'AEOUT', 'AESCAN', 'AESCONG', 'AESDISAB', 'AESDTH', 'AESHOSP', 'AESLIFE', 'AESOD', 'EPOCH', 'AESTDTC', 'AEENDTC', 'AESTDY', 'AEENDY', 'AEENRTPT', 'AEENTPT']"
+ae.csv,,$expected_variables,"['AELLT', 'AELLTCD', 'AEPTCD', 'AEHLT', 'AEHLTCD', 'AEHLGT', 'AEHLGTCD', 'AEBODSYS', 'AEBDSYCD', 'AESOC', 'AESOCCD', 'AESER', 'AEACN', 'AEREL', 'AESTDTC', 'AEENDTC']"
+ex.csv,,$dataset_variables,"['STUDYID', 'DOMAIN', 'USUBJID', 'SPDEVID', 'EXSEQ', 'EXTRT', 'EXDOSU', 'EXDOSFRM', 'EXDOSFRQ', 'EXROUTE', 'EXLOT', 'EPOCH', 'EXSTDTC', 'EXENDTC', 'EXSTDY', 'EXENDY']"
+ex.csv,,$expected_variables,"['EXDOSE', 'EXDOSU', 'EXDOSFRM', 'EXSTDTC', 'EXENDTC']"
+lb.csv,,$dataset_variables,"['STUDYID', 'DOMAIN', 'USUBJID', 'LBSEQ', 'LBTESTCD', 'LBTEST', 'LBORRES', 'LBORRESU', 'LBORNRLO', 'LBORNRHI', 'LBSTRESC', 'LBSTRESN', 'LBSTRESU', 'LBSTNRLO', 'LBSTNRHI', 'LBNRIND', 'LBLOBXFL', 'VISITNUM', 'VISIT', 'EPOCH', 'LBDTC', 'LBDY', 'LBDTC2', 'LBDY3']"
+lb.csv,,$expected_variables,"['LBCAT', 'LBORRES', 'LBORRESU', 'LBORNRLO', 'LBORNRHI', 'LBSTRESC', 'LBSTRESN', 'LBSTRESU', 'LBSTNRLO', 'LBSTNRHI', 'LBSTREFC', 'LBNRIND', 'LBLOBXFL', 'VISITNUM', 'LBDTC']"
+suppae.csv,,$dataset_variables,"['STUDYID', 'RDOMAIN', 'USUBJID', 'IDVARVAL', 'QNAM', 'QLABEL', 'QVAL', 'QORIG', 'QEVAL']"
+suppae.csv,,$expected_variables,"['IDVAR', 'IDVARVAL', 'QEVAL']"
+ta.csv,,$dataset_variables,"['STUDYID', 'DOMAIN', 'ARMCD', 'ARM', 'TAETORD', 'ETCD', 'ELEMENT', 'TABRANCH', 'EPOCH']"
+ta.csv,,$expected_variables,"['TABRANCH', 'TATRANS']"

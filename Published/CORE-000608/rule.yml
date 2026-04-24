@@ -1,0 +1,106 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: One record per test per observation time or evaluation interval
+                  per subject
+                Document: SENDIG v3.1
+                Section: 6.3.18.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND338
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: One record per test per observation time or evaluation interval
+                  per subject
+                Document: SENDIG v3.1.1
+                Section: 6.3.18.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND338
+              Version: '1'
+            Version: '5.0'
+        Version: 3.1.1
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: One record per test per observation time or evaluation interval
+                  per subject
+                Document: SENDIG v3.1
+                Section: 6.3.18.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND338
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: One record per test per observation time or evaluation interval
+                  per subject
+                Document: SENDIG v3.1.1
+                Section: 6.3.18.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND338
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: One record per test per observation time or evaluation interval
+                  per subject
+                Document: SENDIG v3.1.1
+                Section: 6.3.18.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND338
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+Check:
+  all:
+    - name: RETESTCD
+      operator: is_not_unique_set
+      value:
+        - USUBJID
+        - REDTC
+    - name: RETESTCD
+      operator: is_not_unique_set
+      value:
+        - USUBJID
+        - REDTC
+        - RESTINT
+Core:
+  Id: CORE-000608
+  Status: Published
+  Version: '1'
+Description: Raise an error when there is more than one record present for any
+  particular respiratory test for a subject and measurement date/time or
+  evaluation interval.
+Executability: Fully Executable
+Outcome:
+  Message: The respiratory test is not unique for this subject and measurement
+    datetime and/or evaluation interval.
+  Output Variables:
+    - USUBJID
+    - RETESTCD
+    - REDTC
+    - RESTINT
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Include:
+      - RE
+Sensitivity: Record

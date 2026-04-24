@@ -1,0 +1,11 @@
+dataset,variable,label,type,length
+to,STUDYID,Study Identifier,Char,200
+to,DOMAIN,Domain Abbreviation,Char,200
+to,SPTOBID,Applicant-Defined Tobacco Product ID,Char,40
+to,TOSEQ,Sequence Number,Num,10
+to,TOPARMCD,Tobacco Product ID Element Short Name,Char,40
+to,TOPARM,Tobacco Product ID Element Name,Char,8
+to,TOCAT,Category of Tobacco Product ID Element,Char,40
+to,TOSCAT,Subcategory of Tobacco Prod ID Element,Char,50
+to,TOVAL,Tobacco Product ID Element Value,Char,50
+to,TOVALU,Tobacco Product ID Element Value Unit,Char,50

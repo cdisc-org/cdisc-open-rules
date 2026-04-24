@@ -1,0 +1,81 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'If timing type is not "Fixed Reference" then it must point to
+                  two scheduled instances (e.g. the
+                  relativeFromScheduledInstance and relativeToScheduledInstance
+                  attributes must not be missing and must not be equal to each
+                  other).'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00031'
+              Version: '1'
+            Version: '1.0'
+        Version: '3.0'
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'If timing type is not "Fixed Reference" then it must point to
+                  two scheduled instances (e.g. the
+                  relativeFromScheduledInstance and relativeToScheduledInstance
+                  attributes must not be missing and must not be equal to each
+                  other).'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00031'
+              Version: '1'
+            Version: '1.0'
+        Version: '4.0'
+Check:
+  all:
+    - name: rel_type
+      operator: equal_to
+      value: 'definition'
+    - name: type.code
+      operator: not_equal_to
+      value: C201358
+    - any:
+        - name: relativeFromScheduledInstanceId
+          operator: empty
+        - name: relativeToScheduledInstanceId
+          operator: not_exists
+        - name: relativeToScheduledInstanceId
+          operator: empty
+        - name: relativeFromScheduledInstanceId
+          operator: equal_to
+          value: relativeToScheduledInstanceId
+Core:
+  Id: 'CORE-000423'
+  Status: Published
+  Version: '1'
+Description: 'If timing type is not "Fixed Reference" then it must point to two
+  scheduled instances (e.g. the relativeFromScheduledInstance and
+  relativeToScheduledInstance attributes must not be missing and must not be
+  equal to each other).'
+Executability: Fully Executable
+Outcome:
+  Message: 'The Timing type is not "Fixed Reference" (type.code is not C201358)
+    but it does not point to two different scheduled instances -
+    relativeFromScheduledInstanceId and/or relativeToScheduledInstanceId is
+    missing, or they both contain the same value.'
+  Output Variables:
+    - parent_entity
+    - parent_id
+    - parent_rel
+    - id
+    - name
+    - type.code
+    - type.decode
+    - relativeFromScheduledInstanceId
+    - relativeToScheduledInstanceId
+Rule Type: Record Data
+Scope:
+  Entities:
+    Include:
+      - 'Timing'
+Sensitivity: Record

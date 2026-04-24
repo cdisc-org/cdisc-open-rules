@@ -1,0 +1,53 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'The expanded text for all abbreviations defined for a study
+                  version are expected to be unique.'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00171'
+              Version: '1'
+            Version: '1.0'
+        Version: '4.0'
+Check: |-
+  study.versions@$sv.
+    (
+      $filter($sv.abbreviations,function($v,$i,$a)
+        {$count($a[$lowercase($.expandedText)=$lowercase($v.expandedText)])>1}
+      )
+      ~> $sort(function($l,$r){$lowercase($l.expandedText)>$lowercase($r.expandedText)})
+    ).
+    {
+      "instanceType": instanceType,
+      "id": id,
+      "path": _path,
+      "StudyVersion.id": $sv.id,
+      "StudyVersion.versionIdentifier": $sv.versionIdentifier,
+      "abbreviatedText": abbreviatedText,
+      "expandedText": expandedText
+    }
+Core:
+  Id: 'CORE-001067'
+  Status: Published
+  Version: '1'
+Description: 'The expanded text for all abbreviations defined for a study
+  version are expected to be unique.'
+Executability: Partially Executable - Possible Overreporting
+Outcome:
+  Message: "The abbreviation's expanded text is not unique within the study
+    version (case insensitive)."
+  Output Variables:
+    - StudyVersion.id
+    - StudyVersion.versionIdentifier
+    - abbreviatedText
+    - expandedText
+Rule Type: JSONata
+Scope:
+  Entities:
+    Include:
+      - 'Abbreviation'
+Sensitivity: Record

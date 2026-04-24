@@ -1,0 +1,8 @@
+dataset,variable,label,type,length
+Quantity,parent_entity,Parent Entity Name,String,[1]
+Quantity,parent_id,Parent Entity Id,String,[1]
+Quantity,parent_rel,Name of Relationship from Parent Entity,String,[1]
+Quantity,rel_type,Type of Relationship,String,[1]
+Quantity,id,(Quantity Id),String,[1]
+Quantity,value,Quantity Value,Float,[1]
+Quantity,instanceType,Instance Type,String,[1]

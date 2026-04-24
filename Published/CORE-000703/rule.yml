@@ -1,0 +1,50 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'A study cell must refer to at least one element.'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00067'
+              Version: '1'
+            Version: '1.0'
+        Version: '3.0'
+Check:
+  all:
+    - name: instanceType
+      operator: equal_to
+      value: 'StudyCell'
+    - name: rel_type
+      operator: equal_to
+      value: 'definition'
+    - any:
+        - name: elementIds
+          operator: not_exists
+        - name: elementIds
+          operator: empty
+        - name: elementIds
+          operator: equal_to
+          value: false
+Core:
+  Id: 'CORE-000703'
+  Status: Published
+  Version: '1'
+Description: 'A study cell must refer to at least one element.'
+Executability: Fully Executable
+Outcome:
+  Message: 'The study cell does not refer to any elements.'
+  Output Variables:
+    - parent_entity
+    - parent_id
+    - parent_rel
+    - id
+    - elementIds
+Rule Type: Record Data
+Scope:
+  Entities:
+    Include:
+      - 'StudyCell'
+Sensitivity: Record

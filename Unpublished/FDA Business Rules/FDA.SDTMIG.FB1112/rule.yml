@@ -1,0 +1,84 @@
+Authorities:
+  - Organization: 'FDA'
+    Standards:
+      - Name: 'SDTMIG'
+        References:
+          - Citations:
+              - Cited Guidance: 'TCG, Appendix B'
+                Document: 'FDA'
+                Section: 'FDAB011'
+            Origin: 'FDA Business Rules'
+            Rule Identifier:
+              Id: 'FB1112'
+              Version: '1'
+            Version: '1.5'
+        Version: '3.2'
+      - Name: 'SDTMIG'
+        References:
+          - Citations:
+              - Cited Guidance: 'TCG, Appendix B'
+                Document: 'FDA'
+                Section: 'FDAB011'
+            Origin: 'FDA Business Rules'
+            Rule Identifier:
+              Id: 'FB1112'
+              Version: '1'
+            Version: '1.5'
+        Version: '3.3'
+      - Name: 'SDTMIG'
+        References:
+          - Citations:
+              - Cited Guidance: 'TCG, Appendix B'
+                Document: 'FDA'
+                Section: 'FDAB011'
+            Origin: 'FDA Business Rules'
+            Rule Identifier:
+              Id: 'FB1112'
+              Version: '1'
+            Version: '1.5'
+        Version: '3.4'
+Check:
+  all:
+    - name: $PCLASS_COUNT
+      operator: greater_than
+      value: 1
+    - name: $INTTYPE_EXISTS
+      operator: equal_to
+      value: 1
+    - all:
+        - name: TSPARMCD
+          operator: equal_to
+          value: PCLASS
+        - name: TSVAL
+          operator: non_empty
+Core:
+  Id: FDA.SDTMIG.FB1112
+  Status: Draft
+  Version: '1'
+Description: 'The count of occurrences of TSPARAMCD = PCLASS is in the list of
+  TSPARAMCD with TSVAL populated is gt 1.'
+Executability: Partially Executable
+Operations:
+  - filter:
+      TSPARMCD: PCLASS
+    id: $PCLASS_COUNT
+    operator: record_count
+  - filter:
+      TSPARMCD: INTTYPE
+    id: $INTTYPE_EXISTS
+    operator: record_count
+Outcome:
+  Message: 'The count of occurrences of TSPARAMCD = PCLASS is in the list of
+    TSPARAMCD with TSVAL populated is gt 1.'
+  Output Variables:
+    - TSPARMCD
+    - TSVAL
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - TRIAL DESIGN
+  Domains:
+    Include:
+      - TS
+Sensitivity: Record

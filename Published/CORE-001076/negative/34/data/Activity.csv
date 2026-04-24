@@ -1,0 +1,17 @@
+parent_entity,parent_id,parent_rel,rel_type,id,name,label,description,notes,definedProcedures,biomedicalConceptIds,bcSurrogateIds,bcCategoryIds,previousId,nextId,instanceType
+InterventionalStudyDesign,InterventionalStudyDesign_1,activities,definition,Activity_344,A344,,,FALSE,False,False,False,False,,Activity_348,Activity
+InterventionalStudyDesign,InterventionalStudyDesign_1,activities,definition,Activity_348,A348,,,FALSE,False,False,False,,Activity_344,Activity_360,Activity
+InterventionalStudyDesign,InterventionalStudyDesign_1,activities,definition,Activity_360,A360,,,FALSE,False,False,,False,Activity_348,Activity_364,Activity
+InterventionalStudyDesign,InterventionalStudyDesign_1,activities,definition,Activity_364,A364,,,FALSE,False,False,,,Activity_360,Activity_408,Activity
+InterventionalStudyDesign,InterventionalStudyDesign_1,activities,definition,Activity_408,A408,,,FALSE,False,,False,False,Activity_364,Activity_412,Activity
+InterventionalStudyDesign,InterventionalStudyDesign_1,activities,definition,Activity_412,A412,,,FALSE,False,,False,,Activity_408,Activity_424,Activity
+InterventionalStudyDesign,InterventionalStudyDesign_1,activities,definition,Activity_424,A424,,,FALSE,False,,,False,Activity_412,Activity_428,Activity
+InterventionalStudyDesign,InterventionalStudyDesign_1,activities,definition,Activity_428,A428,,,FALSE,False,,,,Activity_424,Activity_600,Activity
+InterventionalStudyDesign,InterventionalStudyDesign_1,activities,definition,Activity_600,A600,,,FALSE,,False,False,False,Activity_428,Activity_604,Activity
+InterventionalStudyDesign,InterventionalStudyDesign_1,activities,definition,Activity_604,A604,,,FALSE,,False,False,,Activity_600,Activity_616,Activity
+InterventionalStudyDesign,InterventionalStudyDesign_1,activities,definition,Activity_616,A616,,,FALSE,,False,,False,Activity_604,Activity_620,Activity
+InterventionalStudyDesign,InterventionalStudyDesign_1,activities,definition,Activity_620,A620,,,FALSE,,False,,,Activity_616,Activity_664,Activity
+InterventionalStudyDesign,InterventionalStudyDesign_1,activities,definition,Activity_664,A664,,,FALSE,,,False,False,Activity_620,Activity_668,Activity
+InterventionalStudyDesign,InterventionalStudyDesign_1,activities,definition,Activity_668,A668,,,FALSE,,,False,,Activity_664,Activity_680,Activity
+InterventionalStudyDesign,InterventionalStudyDesign_1,activities,definition,Activity_680,A680,,,FALSE,,,,False,Activity_668,Activity_684,Activity
+InterventionalStudyDesign,InterventionalStudyDesign_1,activities,definition,Activity_684,A684,,,FALSE,,,,,Activity_680,,Activity

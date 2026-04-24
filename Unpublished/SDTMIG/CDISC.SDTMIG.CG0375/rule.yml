@@ -1,0 +1,85 @@
+# Variable: TDANCVAR
+# Condition: 
+# Rule: TDANCVAR = date variable name in ADSL
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        Version: '3.4'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0375
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: 'A reference to the date variable name that provides
+                  the start point from which the planned disease assessment schedule
+                  is measured. This must be referenced from the ADaM ADSL dataset
+                  e.g. ANCH1DT. Note: TDANCVAR is to contain the name of a reference
+                  date variable name.'
+                Document: IG v3.4
+                Item: Specification
+                Section: 7.3.2
+      - Name: SDTMIG
+        Version: '3.2'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0375
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: 'IG v3.2[7.3][A reference to the date variable name
+                  that provides the start point from which the planned disease assessment
+                  schedule is measured. This must be referenced from the ADaM ADSL
+                  dataset e.g. ANCH1DT. Note: TDANCVAR is to contain the name of a
+                  reference date variable name.]|Model v1.4[3.5.1][A reference to
+                  the date variable name that provides the start point from which
+                  the planned disease assessment schedule is measured. This must be
+                  referenced from the ADaM ADSL dataset e.g. ANCH1DT. Note: TDANCVAR
+                  is to contain the name of a reference date variable name.]'
+                Document: IG v3.2|Model v1.4
+                Section: IG v3.2[7.3]|Model v1.4[3.5.1]
+      - Name: SDTMIG
+        Version: '3.3'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0375
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: 'IG v3.3[7.3.2][A reference to the date variable name
+                  that provides the start point from which the planned disease assessment
+                  schedule is measured. This must be referenced from the ADaM ADSL
+                  dataset (e.g., ANCH1DT). Note: TDANCVAR is to contain the name of
+                  a reference date variable name.]|Model v1.7[3.4.1][A reference to
+                  the date variable name that provides the start point from which
+                  the planned disease assessment schedule is measured. This must be
+                  referenced from the ADaM ADSL dataset (e.g., ANCH1DT). Note: TDANCVAR
+                  is to contain the name of a reference date variable name.]'
+                Document: IG v3.3|Model v1.7
+                Section: IG v3.3[7.3.2]|Model v1.7[3.4.1]
+Check:
+  all:
+    - name: TDANCVAR
+      operator: is_not_contained_by
+      value: '[date variable name in ADSL]'
+Core:
+  Id: CDISC.SDTMIG.CG0375
+  Status: Draft
+  Version: '1'
+Description: Trigger error when TDANCVAR is not a date variable name in ADSL
+Executability: Fully Executable
+Outcome:
+  Message: TDANCVAR is not valid
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - TRIAL DESIGN
+  Domains:
+    Include:
+      - TD
+Sensitivity: Record

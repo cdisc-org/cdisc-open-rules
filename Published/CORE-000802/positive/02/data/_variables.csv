@@ -1,0 +1,10 @@
+dataset,variable,label,type,length
+AdministrationDuration,parent_entity,Parent Entity Name,String,[1]
+AdministrationDuration,parent_id,Parent Entity Id,String,[1]
+AdministrationDuration,parent_rel,Name of Relationship from Parent Entity,String,[1]
+AdministrationDuration,rel_type,Type of Relationship,String,[1]
+AdministrationDuration,id,(Administration Duration Id),String,[1]
+AdministrationDuration,description,Administration Duration Description,String,[0..1]
+AdministrationDuration,durationWillVary,Administration Duration Will Vary Indicator,Boolean,[1]
+AdministrationDuration,reasonDurationWillVary,Administration Duration Reason Duration Will Vary,String,[1]
+AdministrationDuration,instanceType,Instance Type,String,[1]

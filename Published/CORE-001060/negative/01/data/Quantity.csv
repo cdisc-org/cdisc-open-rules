@@ -1,0 +1,7 @@
+parent_entity,parent_id,parent_rel,rel_type,id,value,unit,unit.id,unit.standardCode,unit.standardCode.id,unit.standardCode.code,unit.standardCode.codeSystem,unit.standardCode.codeSystemVersion,unit.standardCode.decode,unit.standardCode.instanceType,unit.standardCodeAliases,unit.instanceType,instanceType
+Range,Range_4,minValue,definition,Quantity_27,50,True,AliasCode_275,True,Code_1109,C44278,http://www.cdisc.org,2023-12-15,%,Code,False,AliasCode,Quantity
+Range,Range_4,maxValue,definition,Quantity_28,100,True,AliasCode_276,True,Code_1110,C198376,http://www.cdisc.org,2023-12-15,10^4 IU/ml,Code,False,AliasCode,Quantity
+StudyIntervention,StudyIntervention_1,minimumResponseDuration,definition,Quantity_4,1,True,AliasCode_246,True,Code_613,C25301xx,http://www.cdisc.org,2024-03-29,DAYS,Code,False,AliasCode,Quantity
+Duration,Duration_1,quantity,definition,Quantity_2,24,True,AliasCode_242,True,Code_606,C44278,UNIT,2024-03-29,U,Code,False,AliasCode,Quantity
+StudyIntervention,StudyIntervention_2,minimumResponseDuration,definition,Quantity_15,1,True,AliasCode_260,True,Code_848,C0051X,http://www.cdisc.org,XXXX-XX-XX,Extension,Code,False,AliasCode,Quantity
+StudyIntervention,StudyIntervention_2,minimumResponseDuration,definition,Quantity_31,1,True,AliasCode_279,True,Code_1113,C25301,http://www.cdisc.org,2025-09-26,Days,Code,False,AliasCode,Quantity

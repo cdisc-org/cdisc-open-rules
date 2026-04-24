@@ -1,0 +1,55 @@
+dataset,variable,label,type,length
+sm,STUDYID,Study Identifier,Char,12
+sm,DOMAIN,Domain Abbreviation,Char,2
+sm,USUBJID,Unique Subject Identifier,Char,50
+sm,SMSEQ,Sequence Number,Num,8
+sm,MIDS,Disease Milestone Instance Name,Char,200
+sm,MIDSTYPE,Disease Milestone Type,Char,200
+sm,SMSTDTC,Start Date/Time of Milestone,Char,19
+sm,SMENDTC,End Date/Time of Milestone,Char,19
+sm,SMSTDY,Study Day of Start of Milestone,Num,8
+sm,SMENDY,Study Day of End of Milestone,Num,8
+se,STUDYID,Study Identifier,Char,12
+se,DOMAIN,Domain Abbreviation,Char,2
+se,USUBJID,Unique Subject Identifier,Char,8
+se,SESEQ,Sequence Number,Num,8
+se,ETCD,Element Code,Char,8
+se,ELEMENT,Description of Element,Char,25
+se,TAETORD,Planned Order of Element within Arm,Num,8
+se,EPOCH,Epoch,Char,25
+se,SESTDTC,Start Date/Time of Element,Char,19
+se,SEENDTC,End Date/Time of Element,Char,19
+se,SESTDY,Study Day of Start of Element,Num,8
+se,SEENDY,Study Day of End of Element,Num,8
+sv,STUDYID,Study Identifier,Char,12
+sv,DOMAIN,Domain Abbreviation,Char,2
+sv,USUBJID,Unique Subject Identifier,Char,8
+sv,VISITNUM,Visit Number,Num,8
+sv,VISIT,Visit Name,Char,10
+sv,VISITDY,Planned Study Day of Visit,Num,8
+sv,EPOCH,Subject Reference Start Date/Time,Char,25
+sv,SVSTDTC,Start Date/Time of Observation,Char,19
+sv,SVSTDY,Study Day of Start of Observation,Num,8
+sv,SVENDTC,End Date/Time of Observation,Char,19
+sv,SVENDY,Study Day of End of Observation,Num,8
+ae,STUDYID,Study Identifier,Char,12
+ae,DOMAIN,Domain Abbreviation,Char,2
+ae,USUBJID,Unique Subject Identifier,Char,8
+ae,AETERM,Reported Term for the Adverse Event,Char,40
+ae,AESER,Serious Event,Char,1
+ae,AEOUT,Outcome of Adverse Event,Char,40
+ae,AESTDTC,Start Date/Time of Adverse Event,Char,19
+ae,AESTDY,Study Day of Start of Observation,Num,8
+ae,AEENDTC,End Date/Time of Adverse Event,Char,19
+ae,AEENDY,Study Day of End of Observation,Num,8
+cm,STUDYID,Study Identifier,Char,12
+cm,DOMAIN,Domain Abbreviation,Char,2
+cm,USUBJID,Unique Subject Identifier,Char,8
+cm,CMSEQ,Sequence Number,Num,8
+cm,CMTRT,"Reported Name of Drug, Med, or Therapy",Char,200
+cm,CMDECOD,Standardized Medication Name,Char,200
+cm,CMCAT,Category for Medication,Char,50
+cm,CMSTDTC,Start Date/Time of Medication,Char,19
+cm,CMSTDY,Study Day of Start of Medication,Num,8
+cm,CMENDTC,End Date/Time of Medication,Char,19
+cm,CMENDY,Study Day of End of Medication,Num,8

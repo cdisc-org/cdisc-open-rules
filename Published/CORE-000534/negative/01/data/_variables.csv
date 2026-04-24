@@ -1,0 +1,11 @@
+dataset,variable,label,type,length
+ta,STUDYID,Study Identifier,Char,10
+ta,DOMAIN,Domain Abbreviation,Char,2
+ta,ARMCD,Planned Arm Code,Char,1
+ta,ARM,Description of Planned Arm,Char,13
+ta,TAETORD,Planned Order of Element within Arm,Num,8
+ta,ETCD,Element Code,Char,4
+ta,ELEMENT,Description of Element,Char,13
+ta,TABRANCH,Branch,Char,1
+ta,TATRANS,Transition Rule,Char,1
+ta,EPOCH,Epoch,Char,9

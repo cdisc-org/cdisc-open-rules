@@ -1,0 +1,71 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'A study cell must only reference an arm that is defined within
+                  the same study design as the study cell.'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00071'
+              Version: '1'
+            Version: '1.0'
+        Version: '3.0'
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'A study cell must only reference an arm that is defined within
+                  the same study design as the study cell.'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00071'
+              Version: '1'
+            Version: '1.0'
+        Version: '4.0'
+Check:
+  all:
+    - name: instanceType
+      operator: equal_to
+      value: 'StudyCell'
+    - name: parent_entity
+      operator: equal_to
+      value: 'StudyDesign'
+    - name: rel_type
+      operator: equal_to
+      value: 'definition'
+    - name: parent_id
+      operator: not_equal_to
+      value: parent_id.StudyArm
+Core:
+  Id: 'CORE-000835'
+  Status: Published
+  Version: '1'
+Description: 'A study cell must only reference an arm that is defined within the
+  same study design as the study cell.'
+Executability: Fully Executable
+Match Datasets:
+  - Keys:
+      - Left: armId
+        Right: id
+      - parent_entity
+      - rel_type
+    Name: StudyArm
+Outcome:
+  Message: 'The study cell references an arm that is not defined within the same
+    study design as the study cell.'
+  Output Variables:
+    - parent_entity
+    - parent_id
+    - parent_rel
+    - id
+    - armId
+    - parent_id.StudyArm
+Rule Type: Record Data
+Scope:
+  Entities:
+    Include:
+      - 'StudyCell'
+Sensitivity: Record

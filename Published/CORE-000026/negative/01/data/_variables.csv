@@ -1,0 +1,17 @@
+dataset,variable,label,type,length
+lb,STUDYID,Study Identifier,Char,50
+lb,DOMAIN,Domain Abbreviation,Char,50
+lb,LBSEQ,Sequence Number,Num,8
+lb,LBTESTCD,Lab Test or Examination Short Name,Char,50
+lb,LBTEST,Lab Test or Examination Name,Char,50
+lb,LBCAT,Category for Lab Test,Char,50
+lb,LBORRES,Result or Finding in Original Units,Char,50
+lb,LBORRESU,Original Units,Char,50
+lb,LBSTRESC,Character Result/Finding in Std Format,Char,50
+lb,LBSTRESN,Numeric Result/Finding in Standard Units,Num,8
+lb,LBSTRESU,Standard Units,Char,50
+lb,LBSPEC,Specimen Type,Char,50
+lb,VISITNUM,Visit Number,Num,8
+lb,VISIT,Visit Name,Char,50
+lb,LBDTC,Date/Time of Specimen Collection,Char,50
+lb,LBTPT,Planned Time Point Name,Char,50

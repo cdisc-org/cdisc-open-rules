@@ -1,0 +1,17 @@
+parent_entity,parent_id,parent_rel,rel_type,id,code,codeSystem,codeSystemVersion,decode,instanceType
+AliasCode,AliasCode_1,standardCodeAliases,definition,Code_32,SYSBP,ExternalBCDictionary1,1.5.4,Sys BP,Code
+AliasCode,AliasCode_1,standardCodeAliases,definition,Code_33,DIABP,ExternalBCDictionary1,"January 31, 2018",Diastolic Blood Pressure,Code
+Encounter,Encounter_1,contactModes,definition,Code_35,C175574,http://www.cdisc.org,2023-12-15,IN PERSON,Code
+StudyDesign,StudyDesign_1,trialIntentTypes,definition,Code_40,C49656,http://www.cdisc.org,2022-12-16,TREATMENT,Code
+Indication,Indication_1,codes,definition,Code_37,E11.1,ICD-10-CM,2,Type 2 diabetes mellitus without complications,Code
+StudyDesign,StudyDesign_1,therapeuticAreas,definition,Code_38,E11.1,ICD-10-CM,2,Type 2 DB,Code
+StudyIntervention,StudyIntervention_1,codes,definition,Code_46,123456,SNOMED,"January 31, 2021",Administration of X,Code
+StudyIntervention,StudyIntervention_1,codes,definition,Code_47,123457,SNOMED,"January 31, 2021",Administration of X,Code
+StudyDesign,StudyDesign_1,trialTypes,definition,Code_138,C49666,http://www.cdisc.org,2023-12-15,Same decode different codes,Code
+StudyDesign,StudyDesign_1,trialTypes,definition,Code_139,C49667,http://www.cdisc.org,2023-12-15,Same decode different codes,Code
+StudyDesign,StudyDesign_1,characteristics,definition,Code_143,C99907x1,http://www.cdisc.org,2023-12-15,Same code different decodes,Code
+StudyDesign,StudyDesign_1,characteristics,definition,Code_144,C99907x1,http://www.cdisc.org,2023-12-15,Same code but different decodes,Code
+StudyDesign,StudyDesign_1,characteristics,definition,Code_145,X01,CS1,v1,My X01 decode,Code
+StudyDesign,StudyDesign_1,characteristics,definition,Code_146,X02,CS1,v1,My X01 decode,Code
+StudyDesign,StudyDesign_1,characteristics,definition,Code_147,X01,CS1,v1,My X02 decode,Code
+StudyDesign,StudyDesign_1,characteristics,definition,Code_148,X02,CS1,v1,My X02 decode,Code

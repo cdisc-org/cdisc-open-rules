@@ -1,0 +1,78 @@
+# Variable: TATRANS
+# Condition: Trial Design allows for a Subject to transition to an Element other than the next Element in sequence
+# Rule: TATRANS ^= null
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: If the trial design allows a subject to transition to an Element
+                  other than the next Element in sequence, then the conditions
+                  for transitioning to those other Elements, and the alternative
+                  Element sequences, are specified in this rule (e.g.,
+                  Responders go to washout).
+                Document: IG v3.4
+                Item: Specification
+                Section: 7.2.1
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0252
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: If the trial design allows a subject to transition to an Element
+                  other than the next Element in sequence, then the conditions
+                  for transitioning to those other Elements, and the alternative
+                  Element sequences, are specified in this rule (e.g.,
+                  Responders go to washout).
+                Document: IG v3.2
+                Item: Specification
+                Section: '7.2'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0252
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: If the trial design allows a subject to transition to an Element
+                  other than the next Element in sequence, then the conditions
+                  for transitioning to those other Elements, and the alternative
+                  Element sequences, are specified in this rule (e.g.,
+                  Responders go to washout).
+                Document: IG v3.3
+                Item: Specification
+                Section: 7.2.1
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0252
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+Check:
+  all:
+Core:
+  Id: CDISC.SDTMIG.CG0252
+  Status: Draft
+  Version: '1'
+Description: Trigger error when trial Design allows for a Subject to transition
+  to an Element other than the next Element in sequence, and TATRANS is null
+Executability: Not Executable
+Outcome:
+  Message: TATRANS is null when trial Design allows for a Subject to transition to
+    an Element other than the next Element in sequence
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - TRIAL DESIGN
+  Domains:
+    Include:
+      - TA
+Sensitivity: Record

@@ -1,0 +1,58 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'If a strength numerator quantity is specified, it must have a
+                  unit.'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00238'
+              Version: '1'
+            Version: '1.0'
+        Version: '4.0'
+Check: |-
+  (study.versions)@$sv.
+    $sv.administrableProducts@$ap.
+    $ap.ingredients@$in.
+    $in.substance@$su.
+    $su.strengths@$st.
+    $st.[(
+            {
+                "instanceType": instanceType,
+                "id": id,
+                "path": _path,
+                "AdministrableProduct.id": $ap.id,
+                "AdministrableProduct.name": $ap.name,
+                "Ingredient.id": $in.id,
+                "Substance.id": $su.id,
+                "Substance.name": $su.name,
+                "name": name,
+                "numerator.value": numerator.value,
+                "check": numerator.value and ($not(numerator.unit) or $exists(numerator.unit)=false)
+            }
+        )][check=true]
+Core:
+  Id: 'CORE-001007'
+  Status: Published
+  Version: '1'
+Description: 'If a strength numerator quantity is specified, it must have a unit.'
+Executability: Fully Executable
+Outcome:
+  Message: 'The strength numerator quantity is specified but it has no unit.'
+  Output Variables:
+    - AdministrableProduct.id
+    - AdministrableProduct.name
+    - Ingredient.id
+    - Substance.id
+    - Substance.name
+    - name
+    - numerator.value
+Rule Type: JSONata
+Scope:
+  Entities:
+    Include:
+      - 'Strength'
+Sensitivity: Record

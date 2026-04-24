@@ -1,0 +1,92 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: 'Referenced items in the narrative content must be available
+                  elsewhere in the data model.'
+                Document: 'USDM_CORE_Rules.xlsx'
+            Origin: 'USDM Conformance Rules'
+            Rule Identifier:
+              Id: 'DDF00131'
+              Version: '1'
+            Version: '1.0'
+        Version: '3.0'
+Check: |-
+  (
+    $lkp:=**[id and instanceType].$each(function($v,$k){{$join([instanceType,id,$k],"|"):$v}})~>$merge;
+    ($.study.documentedBy)@$spd.
+      ($spd.versions)@$spdv.
+        ($spdv.contents[$type(text)="string" and $contains(text,/usdm:ref/)])@$nc.
+          $match( $nc.text,
+                  /<usdm:ref([^>]*)(\/>|><\/usdm:ref>)/
+          )@$ref.
+          (
+            $g0_or_null := function($m){$m ? $m.groups[0] : ""};
+            {
+              "instanceType": $nc.instanceType,
+              "id": $nc.id,
+              "path": $nc._path,
+              "StudyProtocolDocument.id": $spd.id,
+              "StudyProtocolDocument.name": $spd.name,
+              "StudyProtocolDocumentVersion.id": $spdv.id,
+              "StudyProtocolDocumentVersion.protocolVersion": $spdv.protocolVersion,                            
+              "name": $nc.name,
+              "sectionNumber": $nc.sectionNumber,
+              "sectionTitle": $nc.sectionTitle,
+              "text": $nc.text,
+              "usdm_ref": {
+                            "match": $ref.match,
+                            "klass": $match($ref.groups[0],/klass=\"([a-zA-Z]+)\"/) ~> $g0_or_null(),
+                            "id": $match($ref.groups[0],/id=\"(\w+)\"/) ~> $g0_or_null(),
+                            "attribute": $match($ref.groups[0],/attribute=\"([a-zA-Z]+)\"/) ~> $g0_or_null()
+                          }
+            }
+          )
+          ~>  $map(function($v)
+                {
+                  (
+                    $ref_val := "usdm_ref" in $keys($v)
+                                ? (
+                                    $k := $join([$v.usdm_ref.klass,$v.usdm_ref.id,$v.usdm_ref.attribute],"|");
+                                    $k in $keys($lkp)
+                                    ? $lookup($lkp,$k)
+                                    : "!!NOT FOUND!!"
+                                  )
+                                : $v.text;
+                    $v ~> |$|{"Invalid Reference": $v.usdm_ref.match, "Referenced Value": $ref_val},['usdm_ref']|
+                  )
+                }
+              )
+          ~>  $filter(function($v)
+                {
+                  $v.`Referenced Value` = "!!NOT FOUND!!"
+                }
+              )
+  )
+Core:
+  Id: 'CORE-001050'
+  Status: Published
+  Version: '1'
+Description: 'Referenced items in the narrative content must be available
+  elsewhere in the data model.'
+Executability: Fully Executable
+Outcome:
+  Message: 'The item referenced in the narrative content text is not available
+    elsewhere in the model.'
+  Output Variables:
+    - StudyProtocolDocument.id
+    - StudyProtocolDocument.name
+    - StudyProtocolDocumentVersion.id
+    - StudyProtocolDocumentVersion.protocolVersion
+    - name
+    - sectionNumber
+    - sectionTitle
+    - 'Invalid Reference'
+Rule Type: JSONata
+Scope:
+  Entities:
+    Include:
+      - 'NarrativeContent'
+Sensitivity: Record

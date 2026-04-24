@@ -1,0 +1,69 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: ADaMIG
+        References:
+          - Citations:
+              - Cited Guidance: 'Codelist/Controlled Terms: Y {Y, NULL}'
+                Document: ADaMIG
+                Item: Table 3.2.6.1
+                Section: 3.2.6
+            Criteria:
+              Logical Expression:
+                Condition: if ABLFL is populated must equal Y
+                Rule: ABLFL is equal to Y or null
+              Plain Language Expression: ABLFL is equal to Y or missing
+              Type: Failure
+            Origin: ADaM Conformance Rules
+            Release Notes: ''
+            Rule Identifier:
+              Id: '176'
+              Version: ''
+            Validator Rule Message: ABLFL must equal to Y or missing
+            Version: '5.0'
+        Version: '1.0'
+      - Name: ADaMIG
+        References:
+          - Citations:
+              - Cited Guidance: 'Codelist/Controlled Terms: Y {Y, NULL}'
+                Document: ADaMIG
+                Item: Table 3.3.8.1
+                Section: 3.3.8
+            Criteria:
+              Logical Expression:
+                Condition: if ABLFL is populated. must equal Y
+                Rule: ABLFL is equal to Y or null
+              Plain Language Expression: ABLFL is equal to Y or missing
+              Type: Failure
+            Origin: ADaM Conformance Rules
+            Release Notes: ''
+            Rule Identifier:
+              Id: '176'
+              Version: ''
+            Validator Rule Message: ABLFL must equal to Y or missing
+            Version: '5.0'
+        Version: '1.1'
+Check:
+  all:
+    - name: ABLFL
+      operator: non_empty
+    - name: ABLFL
+      operator: not_equal_to
+      value: Y
+Core:
+  Id: CDISC.ADaMIG.AD0176
+  Status: Draft
+  Version: '1'
+Description: ''
+Executability: Fully Executable
+Outcome:
+  Message: ABLFL is not equal to Y or missing
+  Output Variables:
+    - SUBJID
+    - ABLFL
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+      - BASIC DATA STRUCTURE
+Sensitivity: Record

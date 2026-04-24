@@ -1,0 +1,28 @@
+dataset,variable,label,type,length
+pc,STUDYID,Study Identifier,Char,50
+pc,DOMAIN,Domain Abbreviation,Char,50
+pc,USUBJID,Unique Subject Identifier,Char,50
+pc,PCSEQ,Sequence Number,Num,8
+pc,PCTESTCD,Vital Signs Test Short Name,Char,50
+pc,PCTEST,Vital Signs Test Name,Char,50
+pc,PCORRES,Result or Finding in Original Units,Char,50
+pc,PCORRESU,Original Units,Char,50
+pc,PCSTRESC,Character Result/Finding in Std Format,Char,10
+pc,PCSTRESN,Numeric Result/Finding in Std Format,Num,8
+pc,PCSTRESU,Standard Units,Char,50
+pc,PCSTAT,Completion Status,Char,50
+pc,PCLLOQ,Lower Level of Quantification,Num,8
+tf,STUDYID,Study Identifier,Char,50
+tf,DOMAIN,Domain Abbreviation,Char,50
+tf,USUBJID,Unique Subject Identifier,Char,50
+tf,TFSEQ,Sequence Number,Num,8
+tf,TFSPID ,Mass Identifier ,Char,8
+tf,TFTESTCD,Tumor Examination Short Name ,Char,8
+tf,TFTEST,Tumor Examination Name ,Char,40
+tf,TFORRES,Result or Findings as Collected ,Char,20
+tf,TFSTRESC ,Standardized Result in Character Format ,Char,20
+tf,TFRESCAT ,Tumor Malignancy Status ,Char,10
+tf,TFSPEC,Specimen Material Type ,Char,10
+tf,TFDTHREL,Relationship to Death,Char,1
+tf,TFTDC,Date/Time ,Char,20
+tf,TFDY,Study Day ,Num,8

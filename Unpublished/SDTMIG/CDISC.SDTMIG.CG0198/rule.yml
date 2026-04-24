@@ -1,0 +1,75 @@
+# Variable: GEN
+# Condition: 
+# Rule: Relationships represented in RELREC are collected relationships
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        Version: '3.4'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0198
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: Relationships represented in RELREC are collected
+                  relationships, either by explicit references or check boxes on the
+                  CRF, or by design of the CRF, such as vital signs captured during
+                  an exercise stress test.
+                Document: IG v3.4
+                Section: '8.2'
+      - Name: SDTMIG
+        Version: '3.2'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0198
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: Relationships represented in RELREC are collected
+                  relationships, either by explicit references or check boxes on the
+                  CRF, or by design of the CRF, such as vital signs captured during
+                  an exercise stress test.
+                Document: IG v3.2
+                Section: '8.2'
+      - Name: SDTMIG
+        Version: '3.3'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0198
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: Relationships represented in RELREC are collected
+                  relationships, either by explicit references or check boxes on the
+                  CRF, or by design of the CRF, such as vital signs captured during
+                  an exercise stress test.
+                Document: IG v3.3
+                Section: '8.2'
+Check:
+  all:
+    - name:
+      operator:
+    - name:
+      operator:
+Core:
+  Id: CDISC.SDTMIG.CG0198
+  Status: Draft
+  Version: '1'
+Description: Trigger error when relationship represented in RELREC is not a collected
+  relationship
+Executability: Fully Executable
+Outcome:
+  Message: Relationship represented in RELREC is not a collected relationship
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - RELREC
+Sensitivity: Record

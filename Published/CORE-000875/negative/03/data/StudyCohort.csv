@@ -1,0 +1,5 @@
+parent_entity,parent_id,parent_rel,rel_type,id,name,description,label,includesHealthySubjects,plannedSex,plannedSex.id,plannedSex.code,plannedSex.codeSystem,plannedSex.codeSystemVersion,plannedSex.decode,criteria,instanceType,characteristics
+StudyDesignPopulation,StudyDesignPopulation_1,cohorts,definition,StudyCohort_1,COHORT1,Patients with Probable Mild to Moderate Alzheimer's Disease,,False,False,,,,,,True,StudyCohort,True
+StudyDesignPopulation,StudyDesignPopulation_1,cohorts,definition,StudyCohort_2,COHORT2,Patients with Probable Severe Alzheimer's Disease,,False,False,,,,,,True,StudyCohort,False
+StudyDesignPopulation,StudyDesignPopulation_2,cohorts,definition,StudyCohort_3,COHORT3,Patients with Probable Mild to Moderate Alzheimer's Disease,,False,,,,,,,True,StudyCohort,True
+StudyDesignPopulation,StudyDesignPopulation_2,cohorts,definition,StudyCohort_4,COHORT4,Patients with Probable Severe Alzheimer's Disease,,False,,,,,,,True,StudyCohort,False

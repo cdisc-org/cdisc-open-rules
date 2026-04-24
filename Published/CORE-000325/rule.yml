@@ -1,0 +1,117 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: ARMCD is limited to 20 characters, but does not have special
+                  character restrictions.
+                Document: SENDIG v3.0
+                Section: 4.2.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND27.1
+              Version: '1'
+            Version: '5.0'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: ARMCD is limited to 20 characters, but does not have special
+                  character restrictions.
+                Document: SENDIG v3.1
+                Section: 4.2.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND27.1
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: ARMCD is limited to 20 characters, but does not have special
+                  character restrictions.
+                Document: SENDIG v3.1.1
+                Section: 4.2.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND27.1
+              Version: '1'
+            Version: '5.0'
+        Version: 3.1.1
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: ARMCD is limited to 20 characters, but does not have special
+                  character restrictions.
+                Document: IG v3.1
+                Section: 4.2.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND27.1
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: ARMCD is limited to 20 characters, but does not have special
+                  character restrictions.
+                Document: IG v3.1.1
+                Section: 4.2.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND27.1
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: ARMCD is limited to 20 characters, but does not have special
+                  character restrictions.
+                Document: IG v3.1.1
+                Section: 4.2.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND27.1
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+Check:
+  any:
+    - name: ARMCD
+      operator: longer_than
+      value: 20
+    - all:
+        - name: TXPARMCD
+          operator: equal_to
+          value: ARMCD
+        - name: TXVAL
+          operator: longer_than
+          value: 20
+Core:
+  Id: CORE-000325
+  Status: Published
+  Version: '1'
+Description: Verify ARMCD value length is <= 20
+Executability: Fully Executable
+Outcome:
+  Message: ARMCD value length is greater than 20
+  Output Variables:
+    - ARMCD
+    - TXPARMCD
+    - TXVAL
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+      - TRIAL DESIGN
+  Domains:
+    Include:
+      - DM
+      - TA
+      - TX
+Sensitivity: Record

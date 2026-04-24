@@ -1,0 +1,114 @@
+# Document Start
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: This section describes the overall process for creating a custom
+                  domain, which must be based on one of the three SDTM general
+                  observation classes.
+                Document: IG v3.4
+                Section: '2.6'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0321
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: This section describes the overall process for creating a custom
+                  domain, which must be based on one of the three SDTM general
+                  observation classes.
+                Document: IG v3.2
+                Section: '2.6'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0321
+              Version: '1'
+            Version: '2.0'
+        Version: '3.2'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: This section describes the overall process for creating a custom
+                  domain, which must be based on one of the three SDTM general
+                  observation classes.
+                Document: IG v3.3
+                Section: '2.6'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0321
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+# Variable: GEN
+# Condition: Custom domain present in study
+# Rule: Custom domain is based on one of the observation classes
+# This check is against the CDISC Library standard SDTM domains
+#  Plus, the presence of a subject identifier plus topic variables for one of the 3 General Observation classes as defined in the corresponding SDTM model.
+#  Q: is there any operation to check if an identifier variable is defined in the IG underlying model
+#     or to get the list of variables (or subsets, i.e, model_variables, model_identifiers, ...) from the IG underlying model - library metadata?
+Check:
+  all:
+    - name: $custom_domain
+      operator: equal_to
+      value: true
+    - not:
+        any:
+          - name: --TESTCD
+            operator: exists
+          - name: --TRT
+            operator: exists
+          - name: --TERM
+            operator: exists
+    - not:
+        any:
+          - name: USUBJID
+            operator: exists
+          - name: POOLID
+            operator: exists
+          - name: SPDEVID
+            operator: exists
+          - name: SPTOBID
+            operator: exists
+
+# pending to add the rest of check conditions
+Core:
+  Id: CDISC.SDTMIG.CG0321
+  Status: Draft
+  Version: '1'
+Description: Trigger error when a custom domain is present and is not based on
+  one of the observation classes
+Executability: Fully Executable
+Operations:
+  - id: $custom_domain
+    operator: domain_is_custom
+  - id: $dataset_variables
+    operator: get_column_order_from_dataset
+  # - id: $model_filtered_variables`
+  #   key_name: "role"
+  #   key_value: "Identifier"
+  #   operation: get_model_filtered_variables`
+Outcome:
+  Message: Custom domain is not based on one of the observation classes
+  Output Variables:
+    - dataset_name
+    - $dataset_variables
+    - $custom_domain
+    # - define_dataset_name
+    # - define_dataset_is_non_standard
+    # - define_dataset_class
+Rule Type: Dataset Metadata Check
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Dataset
+
+# Document End

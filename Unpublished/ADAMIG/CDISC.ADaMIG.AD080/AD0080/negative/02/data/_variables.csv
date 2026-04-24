@@ -1,0 +1,18 @@
+dataset,variable,label,type,length
+adsl,STUDYID,Study Identifier,Char,50
+adsl,USUBJID,Unique Subject Identifier,Char,50
+adsl,SUBJID,Subject Identifier,Char,50
+adsl,FASFL,Full Analysis Set Population Flag,Char,50
+adsl,SAFFL,Safety Population Flag,Char,50
+adsl,ITTFL,Intent-To-Treat Population Flag,Char,50
+adsl,PPROTFL,Per-Protocol Population Flag,Char,50
+adsl,COMPLFL,Completers Population Flag,Char,50
+adsl,RANDFL,Randomized Population Flag,Char,50
+adsl,ENRLFL,Enrolled Population Flag,Char,50
+adsl,ENRLFN,Enrolled Population Flag (N),Num,50
+adsl,AGE,Age,Num,8
+adsl,AGEU,Age Units,Char,50
+adsl,SEX,Sex,Char,50
+adsl,TRT02A,Actual Treatment for Period 02,Char,50
+adsl,TRT03A,Actual Treatment for Period 03,Char,50
+adsl,TRT04A,Actual Treatment for Period 04,Char,50

@@ -1,0 +1,78 @@
+# Variable: GEN
+# Condition: Variable Core Status = Permissible and data is planned to be collected
+# Rule: Variable present in dataset
+# Logically, this check tests:
+# if a library variable exists in the define, 
+# it should exist in the datasets
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: If a study includes a data item that would be represented in a
+                  Permissible variable, then that variable must be included in
+                  the SDTM dataset, even if null. Indicate no data were
+                  available for that variable in the Define-XML document."
+                Document: IG v3.4
+                Section: '2.5'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0651
+              Version: '1'
+            Version: '2.0'
+        Version: '3.4'
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: If a study includes a data item that would be represented in a
+                  Permissible variable, then that variable must be included in
+                  the SDTM dataset, even if null. Indicate no data were
+                  available for that variable in the Define-XML document.
+                Document: IG v3.3
+                Section: '2.5'
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0651
+              Version: '1'
+            Version: '2.0'
+        Version: '3.3'
+Check:
+  all:
+    - name: define_variable_name
+      operator: is_contained_by
+      value:
+        - $permissible_variables
+    - name: define_variable_is_collected
+      operator: equal_to
+      value: true
+    - name: define_variable_name
+      operator: is_not_contained_by
+      value: $get_column_order_from_dataset
+Core:
+  Id: CDISC.SDTMIG.CG0651
+  Status: Draft
+  Version: '1'
+Description: Raise an error when variable Core Status = Permissible and data is
+  planned to be collected, but variable is not present
+Executability: Partially Executable - Possible Underreporting
+Operations:
+  - id: $permissible_variables
+    operator: permissible_variables
+  - id: $get_column_order_from_dataset
+    operator: get_column_order_from_dataset
+Outcome:
+  Message: Variable is missing, where variable core status is permissible and data
+    is planned to be collected.
+  Output Variables:
+    - define_variable_name
+    - $get_column_order_from_dataset
+Rule Type: Variable Metadata Check against Define XML and Library Metadata
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Record

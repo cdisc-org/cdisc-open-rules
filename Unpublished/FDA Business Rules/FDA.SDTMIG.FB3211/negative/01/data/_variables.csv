@@ -1,0 +1,29 @@
+dataset,variable,label,type,length
+ds,STUDYID,Study Identifier,Char,12
+ds,DOMAIN,Domain Abbreviation,Char,2
+ds,USUBJID,Unique Subject Identifier,Char,8
+ds,DSSEQ,Sequence Number,Num,8
+ds,DSTERM,Reported Term for the Disposition Event,Char,40
+ds,DSDECOD,Standardized Disposition Term,Char,40
+ds,DSCAT,Category for Disposition Event,Char,40
+ds,DSSCAT,Subcategory for Disposition Event,Char,40
+ds,EPOCH,Epoch,Char,40
+ds,DSDTC,Date/Time of Collection,Char,19
+ds,DSSTDTC,Start Date/Time of Disposition Event,Char,19
+mh,STUDYID,Study Identifier,Char,12
+mh,DOMAIN,Domain Abbreviation,Char,2
+mh,USUBJID,Unique Subject Identifier,Char,8
+mh,MHSEQ,Sequence Number,Num,8
+mh,MHTERM,Reported Term for the Medical History,Char,40
+mh,MHDTC,Date/Time of History Collection,Char,19
+mh,MHSTDTC,Start Date/Time of Medical History Event,Char,19
+ml,STUDYID,Study Identifier,Char,12
+ml,DOMAIN,Domain Abbreviation,Char,2
+ml,USUBJID,Unique Subject Identifier,Char,8
+ml,MLSEQ,Sequence Number,Num,8
+ml,MLTRT,Name of Meal,Char,200
+ml,MLCAT,Category for Meal,Char,50
+ml,MLDTC,Date/Time of Collection,Char,19
+ml,MLSTDTC,Start Date/Time of Meal,Char,19
+ml,MLENDTC,End Date/Time of Meal,Char,19
+ml,MLEVLINT,Evaluation Interval,Char,200

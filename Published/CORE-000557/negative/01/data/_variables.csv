@@ -1,0 +1,20 @@
+dataset,variable,label,type,length
+ts,STUDYID,Study Identifier,Char,12
+ts,DOMAIN,Domain Abbreviation,Char,2
+ts,TSSEQ,Sequence Number,Num,8
+ts,TSGRPID,Group ID,Char,200
+ts,TSPARMCD,Trial Summary Parameter Short Name,Char,8
+ts,TSPARM,Trial Summary Parameter,Char,40
+ts,TSVAL,Parameter Value,Char,200
+ts,TSVALNF,Parameter Null Flavor,Char,4
+ts,TSVALCD,Parameter Value Code,Char,200
+ts,TSVCDREF,Name of the Reference Terminology,Char,200
+ts,TSVCDVER,Version of the Reference Terminology,Char,200
+relrec,STUDYID,Study Identifier,Char,12
+relrec,RDOMAIN,Related Domain Abbreviation,Char,2
+relrec,USUBJID,Unique Subject Identifier,Char,8
+relrec,POOLID,Pool Identifier,Char,20
+relrec,IDVAR,Identifying Variable,Char,8
+relrec,IDVARVAL,Identifying Variable Value,Char,40
+relrec,RELTYPE,Relationship Type,Char,4
+relrec,RELID,Relationship Identifier,Char,8

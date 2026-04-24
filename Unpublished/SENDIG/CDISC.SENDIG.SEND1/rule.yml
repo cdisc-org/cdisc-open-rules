@@ -1,0 +1,39 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: SDTM datasets are normally named to be consistent with the
+                  domain code.
+                Document: SENDIG v3.1
+                Section: 4.1.4
+            Origin: SENDIG Conformance Rules
+            Rule Identifier:
+              Id: 'SEND1'
+              Version: '1'
+            Version: '5'
+        Version: '3.1'
+Check:
+  all:
+    - name: dataset_name
+      operator: equal_to_case_insensitive
+      value: DOMAIN
+Core:
+  Id: CDISC.SENDIG.SEND1
+  Status: Draft
+  Version: '1'
+Description: Raise an error when the filename is not equal to the value of DOMAIN.
+Outcome:
+  Message: The filename is not equal to the 2-character domain code.
+  Output Variables:
+    - DOMAIN
+Rule Type: Dataset Metadata Check
+Scope:
+  Classes:
+    Include:
+      - ALL
+  Domains:
+    Include:
+      - ALL
+Sensitivity: Dataset

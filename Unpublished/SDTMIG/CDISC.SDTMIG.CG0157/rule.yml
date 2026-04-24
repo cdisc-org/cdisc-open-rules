@@ -1,0 +1,79 @@
+# Variable: RSUBJID
+# Condition: Relationship described is to a study subject
+# Rule: RSUBJID in DM.USUBJID
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        Version: '3.4'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0157
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: Relationship described is to a study subject.RSUBJID
+                  is not in DM.USUBJID.
+                Document: APGuidev1.0
+                Item: RSUBJID
+                Section: 2.1.1
+      - Name: SDTMIG
+        Version: '3.2'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0157
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: RSUBJID will be populated with the USUBJID of the
+                  related subject or the POOLID of the related pool.
+                Document: AP Guide v1.0
+                Item: Specification
+                Section: 2.1.1
+      - Name: SDTMIG
+        Version: '3.3'
+        References:
+          - Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0157
+              Version: '1'
+            Version: '2.0'
+            Citations:
+              - Cited Guidance: RSUBJID will be populated with the USUBJID of the
+                  related subject or the POOLID of the related pool.
+                Document: AP Guide v1.0
+                Item: Specification
+                Section: 2.1.1
+Check:
+  all:
+    - name: RSUBJID
+      operator: is_not_contained_by
+      value: $dm_rsubjid
+Core:
+  Id: CDISC.SDTMIG.CG0157
+  Status: Draft
+  Version: '1'
+Description: Raise an error when RSUBJID in not in DM.USUBJID
+Executability: Fully Executable
+Operations:
+  - domain: DM
+    id: $dm_rsubjid
+    name: RSUBJID
+    operator: distinct
+Outcome:
+  Message: RSUBJID is not in DM.USUBJID.
+  Output Variables:
+    - APDM.RSUBJID
+    - DM.USUBJID
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - AP
+      - DM
+Sensitivity: Record

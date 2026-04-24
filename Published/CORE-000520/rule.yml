@@ -1,0 +1,119 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Used to indicate when a test is not done or result is missing.
+                  Should be null if a result exists in BWORRES.
+                Document: IG v3.0
+                Section: 6.3.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND146
+              Version: '1'
+            Version: '5.0'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Used to indicate when a test is not done or result is missing.
+                  Should be null if a result exists in BWORRES.
+                Document: IG v3.1
+                Section: 6.3.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND146
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Used to indicate when a test is not done or result is missing.
+                  Should be null if a result exists in BWORRES.
+                Document: IG v3.1.1
+                Section: 6.3.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND146
+              Version: '1'
+            Version: '5.0'
+        Version: 3.1.1
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: Used to indicate when a test is not done or result is missing.
+                  Should be null if a result exists in BWORRES.
+                Document: IG v3.1
+                Section: 6.3.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND146
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: Used to indicate when a test is not done or result is missing.
+                  Should be null if a result exists in BWORRES.
+                Document: IG v3.1.1
+                Section: 6.3.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND146
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: Used to indicate when a test is not done or result is missing.
+                  Should be null if a result exists in BWORRES.
+                Document: IG v3.1.1
+                Section: 6.3.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND146
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: Describes why BWSTAT is NOT DONE.
+                Document: TIG v1.0
+                Item: BWREASND CDISC Notes
+                Section: 2.8.9.9
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0082
+              Version: '1'
+            Version: '1.0'
+        Substandard: SEND
+        Version: '1.0'
+Check:
+  all:
+    - name: --STAT
+      operator: empty
+    - name: --REASND
+      operator: non_empty
+Core:
+  Id: CORE-000520
+  Status: Published
+  Version: '1'
+Description: Trigger error when --STAT is not populated and --REASND is populated
+Executability: Fully Executable
+Outcome:
+  Message: When --STAT is not populated, --REASND may not be populated.
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - FINDINGS
+  Domains:
+    Exclude:
+      - SC
+  Use Case: NONCLIN
+Sensitivity: Record

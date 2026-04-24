@@ -1,0 +1,23 @@
+dataset,variable,label,type,length
+om,STUDYID,Study Identifier,Char,10
+om,DOMAIN,Domain Abbreviation,Char,2
+om,USUBJID,Unique Subject Identifier,Char,14
+om,OMSEQ,Sequence Number,Num,8
+om,OMTESTCD,Test Short Name ,Char,8
+om,OMTEST,Test Name ,Char,25
+om,OMORRES,Result or Findings as Collected,Char,6
+om,OMORRESU,Unit of the Original Result ,Char,6
+om,OMSTRESC,Standardized Result in Character Format,Char,6
+om,OMSTRESN,Standardized Result in Numeric Format,Num,6
+om,OMSTRESU,Unit of the Standardized Result,Char,6
+bw,STUDYID,Study Identifier,Char,10
+bw,DOMAIN,Domain Abbreviation,Char,2
+bw,USUBJID,Unique Subject Identifier,Char,14
+bw,BWSEQ,Sequence Number,Num,8
+bw,BWTESTCD,Test Short Name ,Char,8
+bw,BWTEST,Test Name ,Char,25
+bw,BWORRES,Result or Findings as Collected,Char,6
+bw,BWORRESU,Unit of the Original Result ,Char,6
+bw,BWSTRESC,Standardized Result in Character Format,Char,6
+bw,BWSTRESN,Standardized Result in Numeric Format,Num,6
+bw,BWSTRESU,Unit of the Standardized Result,Char,6

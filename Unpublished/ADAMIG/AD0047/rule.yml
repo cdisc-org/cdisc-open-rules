@@ -1,0 +1,76 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: ADaMIG
+        Version: '1.3'
+        References:
+          - Origin: ADaM Conformance Rules
+            Version: '4.0'
+            Rule Identifier:
+              Id: '47'
+              Version: '1'
+            Citations:
+              - Cited Guidance: SITEID has Core=Req.
+                Document: ADaM IG v1.3
+                Section: '3.2'
+                Item: Table 3.2.1
+      - Name: ADaMIG
+        Version: '1.2'
+        References:
+          - Origin: ADaM Conformance Rules
+            Version: '4.0'
+            Rule Identifier:
+              Id: '47'
+              Version: '1'
+            Citations:
+              - Cited Guidance: SITEID has Core=Req.
+                Document: ADaM IG v1.2
+                Section: '3.2'
+                Item: Table 3.2.1
+      - Name: ADaMIG
+        Version: '1.1'
+        References:
+          - Origin: ADaM Conformance Rules
+            Version: '4.0'
+            Rule Identifier:
+              Id: '47'
+              Version: '1'
+            Citations:
+              - Cited Guidance: SITEID has Core=Req.
+                Document: ADaM IG v1.1
+                Section: '3.2'
+                Item: Table 3.2.1
+      - Name: ADaMIG
+        Version: '1.0'
+        References:
+          - Origin: ADaM Conformance Rules
+            Version: '4.0'
+            Rule Identifier:
+              Id: '47'
+              Version: '1'
+            Citations:
+              - Cited Guidance: SITEID has Core=Req.
+                Document: ADaM IG v1.0
+                Section: '3.1'
+                Item: Table 3.1.1
+Check:
+  all:
+    - name: SITEID
+      operator: not_exists
+Core:
+  Id: CDISC.ADAMIG.AD0047
+  Status: Draft
+  Version: '1'
+Description: Variable SITEID should be present in dataset ADSL
+Executability: Fully Executable
+Outcome:
+  Message: Variable SITEID is not present within dataset ADSL
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+      - SUBJECT LEVEL ANALYSIS DATASET
+  Datasets:
+    Include:
+      - ADSL
+Sensitivity: Dataset

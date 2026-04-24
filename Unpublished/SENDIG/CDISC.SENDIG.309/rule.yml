@@ -1,0 +1,75 @@
+Authorities:
+  - Organization: CDISC
+    # REMARK: not applicable to SENDIG-3.0
+    # 2023-10-22: CURRENT IMPLEMENTATION IS NOT CORRECT!
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Trial Sets (TX) can have multiple species and/or strains if they
+                  are different by set. DM records with different values for
+                  SPECIES cannot have the same SETCD value.
+                Document: IG v3.1
+                Section: 5.1.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND309
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Trial Sets (TX) can have multiple species and/or strains if they
+                  are different by set. DM records with different values for
+                  SPECIES cannot have the same SETCD value.
+                Document: IG v3.1.1
+                Section: 5.1.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND309
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: Trial Sets (TX) can have multiple species and/or strains if they
+                  are different by set. DM records with different values for
+                  SPECIES cannot have the same SETCD value.
+                Document: IG v3.1
+                Section: 5.1.1.1
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND309
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+Check:
+  all:
+    #- name: SETCD
+    #  operator: is_not_unique_set
+    #  value: SPECIES
+    - name: SPECIES
+      operator: is_not_unique_set
+      value: SETCD
+Core:
+  Id: CDISC.SENDIG.309
+  Status: Draft
+  Version: '1'
+Description: DM records with different values for SPECIES may not have the same SETCD value.
+Executability: Fully Executable
+Outcome:
+  Message: The same SETCD is assigned to different SPECIES
+  Output Variables:
+    - SPECIES
+    - SETCD
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - SPECIAL PURPOSE
+  Domains:
+    Include:
+      - DM
+Sensitivity: Record

@@ -1,0 +1,122 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: All records in the SUPP-- datasets must have a value for QVAL.
+                Document: IG v3.0
+                Item: Specification
+                Section: '8.5'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND257
+              Version: '1'
+            Version: '5.0'
+        Version: '3.0'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: All records in the SUPP-- datasets must have a value for QVAL.
+                Document: IG v3.1
+                Item: Specification
+                Section: '8.3'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND257
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1'
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: All records in the SUPP-- datasets must have a value for QVAL.
+                Document: IG v3.1.1
+                Item: Specification
+                Section: '8.3'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND257
+              Version: '1'
+            Version: '5.0'
+        Version: '3.1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: All records in the SUPP-- datasets must have a value for QVAL.
+                Document: IG v3.1
+                Item: Specification
+                Section: '8.3'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND257
+              Version: '1'
+            Version: '5.0'
+        Version: '1.1'
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: All records in the SUPP-- datasets must have a value for QVAL.
+                Document: IG v3.1.1
+                Item: Specification
+                Section: '8.3'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND257
+              Version: '1'
+            Version: '5.0'
+        Version: '1.2'
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: All records in the SUPP-- datasets must have a value for QVAL.
+                Document: IG v3.1.1
+                Item: Specification
+                Section: '8.3'
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: SEND257
+              Version: '1'
+            Version: '5.0'
+        Version: '1.0'
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: Result of, response to, or value associated with QNAM. A value
+                  for this column is required; no records can be in SUPP-- with
+                  a null value for QVAL.
+                Document: TIG v1.0
+                Item: QVAL CDISC Notes
+                Section: 2.8.9.27 SEND Supplemental Qualifiers (SUPP--)
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0175
+              Version: '1'
+            Version: '1.0'
+        Substandard: SEND
+        Version: '1.0'
+Check:
+  all:
+    - name: QVAL
+      operator: empty
+Core:
+  Id: CORE-000438
+  Status: Published
+  Version: '1'
+Description: All records in the SUPP-- datasets must have a value for QVAL.
+Executability: Fully Executable
+Outcome:
+  Message: The record does not have a value for QVAL
+  Output Variables:
+    - QNAM
+    - QLABEL
+Rule Type: Record Data
+Scope:
+  Classes:
+    Include:
+      - RELATIONSHIP
+  Domains:
+    Include:
+      - SUPP--
+  Use Case: NONCLIN
+Sensitivity: Record

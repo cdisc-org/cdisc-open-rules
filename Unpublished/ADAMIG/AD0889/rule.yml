@@ -1,0 +1,50 @@
+Authorities:
+  - Organization: CDISC
+    Standards:
+      - Name: 'ADaMIG'
+        References:
+          - Citations:
+              - Cited Guidance: <-Core Value is required.
+                Document: ADaM v1.3
+                Item: 'TABLE 3.2'
+                Section: '3.2'
+            Criteria:
+              Logical Expression:
+                Condition: ''
+                Rule: ''
+              Plain Language Expression: ''
+              Type: Failure
+            Origin: ADaM Conformance Rules
+            Release Notes: ''
+            Rule Identifier:
+              Id: '889'
+              Version: '1'
+            Validator Rule Message: ''
+            Version: '5.0'
+        Version: '1.3'
+
+Check:
+  all:
+    - name: MDV
+      operator: not_exists
+Core:
+  Id: CDISC.ADaMIG.AD0889
+  Status: Draft
+  Version: '1'
+Description: ''
+Executability: Fully Executable
+Outcome:
+  Message: MDV is not present
+  Output Variables:
+    - USUBJID
+    - SUBJID
+
+Rule Type: Record Data
+Scope:
+  Data Structures:
+    Include:
+      - BASIC DATA STRUCTURE
+  Subclasses:
+    Include:
+      - POPULATION PHARMACOKINETIC ANALYSIS
+Sensitivity: Dataset

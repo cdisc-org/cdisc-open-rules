@@ -1,0 +1,64 @@
+dataset,variable,label,type,length
+apsu,STUDYID,Study Identifier,Char,50
+apsu,DOMAIN,Domain Abbreviation,Char,50
+apsu,APID,Associated Persons Identifier,Char,50
+apsu,SUSEQ,Sequence Number,Num,8
+apsu,RSUBJID,Related Subject or Pool Identifier,Char,50
+apsu,SREL,"Subject, Device, or Study Relationship",Char,50
+apsu,SUTRT,Reported Name of Substance,Char,50
+apsu,SUPRESP,SU Pre-Specified,Char,50
+apsu,SUOCCUR,SU Occurrence,Char,50
+mh,STUDYID,Study Identifier,Char,50
+mh,DOMAIN,Domain Abbreviation,Char,50
+mh,USUBJID,Unique Subject Identifier,Char,50
+mh,MHSEQ,Sequence Number,Num,8
+mh,MHTERM,Reported Term for the Medical History,Char,50
+mh,MHCAT,Category for Medical History,Char,50
+mh,MHPRESP,Medical History Event Pre-Specified,Char,50
+mh,MHOCCUR,Medical History Occurrence,Char,50
+mh,MHDTC,Date/Time of History Collection,Char,50
+mh,MHSTDTC,Start Date/Time of Medical History Event,Char,50
+lb,STUDYID,Study Identifier,Char,50
+lb,DOMAIN,Domain Abbreviation,Char,50
+lb,POOLID,Pool Identifier,Char,50
+lb,LBSEQ,Sequence Number,Num,8
+lb,LBTESTCD,Lab Test or Examination Short Name,Char,50
+lb,LBTEST,Lab Test or Examination Name,Char,50
+lb,LBCAT,Category for Lab Test,Char,50
+lb,LBORRES,Result or Finding in Original Units,Char,50
+lb,LBORRESU,Original Units,Char,50
+lb,LBSTRESC,Character Result/Finding in Std Format,Char,50
+lb,LBSTRESN,Numeric Result/Finding in Standard Units,Num,8
+lb,LBSTRESU,Standard Units,Char,50
+lb,LBSPEC,Specimen Type,Char,50
+lb,VISITNUM,Visit Number,Num,8
+lb,VISIT,Visit Name,Char,50
+lb,LBDTC,Date/Time of Specimen Collection,Char,50
+re,STUDYID,Study Identifier,Char,50
+re,DOMAIN,Domain Abbreviation,Char,50
+re,USUBJID,Unique Subject Identifier,Char,50
+re,SPDEVID,Sponsor Device Identifier,Char,50
+re,RESEQ,Sequence Number,Num,8
+re,RETESTCD,Short Name of Respiratory Test,Char,50
+re,RETEST,Name of Respiratory Test,Char,50
+re,REORRES,Result or Finding in Original Units,Char,50
+re,REORRESU,Original Units,Char,50
+re,REORREF,Reference Result in Original Units,Char,50
+re,RESTRESC,Character Result/Finding in Std Format,Char,50
+re,RESTRESN,Numeric Result/Finding in Standard Units,Num,8
+re,RESTRESU,Standard Units,Char,50
+re,RESTREFC,Character Reference Result,Char,50
+re,RESTREFN,Numeric Reference Result in Std Units,Num,8
+re,VISITNUM,Visit Number,Num,8
+re,VISIT,Visit Name,Char,50
+re,REDTC,Date/Time of Collection,Char,50
+pooldef,STUDYID,Study Identifier,Char,50
+pooldef,POOLID,Pool Identifier,Char,50
+pooldef,USUBJID,Unique Subject Identifier,Char,50
+di,STUDYID,Study Identifier,Char,50
+di,DOMAIN,Domain Abbreviation,Char,50
+di,SPDEVID,Sponsor Device Identifier,Char,50
+di,DISEQ,Sequence Number,Num,8
+di,DIPARMCD,Device Identifier Element Short Name,Char,50
+di,DIPARM,Device Identifier Element Name,Char,50
+di,DIVAL,Device Identifier Element Value,Char,50

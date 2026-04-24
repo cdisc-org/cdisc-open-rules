@@ -1,0 +1,6 @@
+parent_entity,parent_id,parent_rel,rel_type,id,name,description,label,defaultConditionId,epochId,timelineId,timelineExitId,instanceType,conditionAssignments
+ScheduleTimeline,ScheduleTimeline_2,instances,definition,ScheduledDecisionInstance_1,Meet requirements for WK28 or end,,,,,,ScheduleTimelineExit_2,ScheduledDecisionInstance,ConditionAssignment_1
+ScheduleTimeline,ScheduleTimeline_3,instances,definition,ScheduledDecisionInstance_2,Meet requirements to progress to next question,,,,,,,ScheduledDecisionInstance,ConditionAssignment_2
+ScheduleTimeline,ScheduleTimeline_3,instances,definition,ScheduledDecisionInstance_3,Meet requirements to loop,,,,,,,ScheduledDecisionInstance,ConditionAssignment_3
+ScheduleTimeline,ScheduleTimeline_2,entryId,reference,ScheduledDecisionInstance_1,Meet requirements for WK28 or end,,,,,,ScheduleTimelineExit_2,ScheduledDecisionInstance,ConditionAssignment_1
+ScheduleTimeline,ScheduleTimeline_3,entryId,reference,ScheduledDecisionInstance_2,Meet requirements to progress to next question,,,,,,,ScheduledDecisionInstance,ConditionAssignment_2

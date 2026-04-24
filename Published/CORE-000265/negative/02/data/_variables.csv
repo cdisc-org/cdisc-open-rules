@@ -1,0 +1,13 @@
+dataset,variable,label,type,length
+mh,STUDYID,Study Identifier,Char,12
+mh,DOMAIN,Domain Abbreviation,Char,2
+mh,USUBJID,Unique Subject Identifier,Char,8
+mh,MHSEQ,Sequence Number,Num,8
+mh,MHTERM,Reported Term for the Medical History,Char,19
+mh,MHEVDTYP,Medical History Event Date Type,Char,13
+mh,MHSTDTC,Start Date/Time of Medical History Event,Char,10
+mh,MHSTDY,Study Day of Start of Observation,Num,8
+mh,MHENDTC,End Date/Time of Medical History Event,Char,50
+mh,MHENDY,Study Day of End of Observation,Num,8
+mh,MHENRTPT,End Relative to Reference Time Point,Char,50
+mh,MHENTPT,End Reference Time Point,Char,50

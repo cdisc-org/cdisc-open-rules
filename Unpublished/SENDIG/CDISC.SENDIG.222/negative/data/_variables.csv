@@ -1,0 +1,15 @@
+dataset,variable,label,type,length
+te,STUDYID,Study Identifier,Char,12
+te,DOMAIN,Domain Abbreviation,Char,2
+te,ETCD,Element Code,Char,7
+te,ELEMENT,Description of Element,Char,26
+te,TESTRL,Rule for Start of Element,Char,200
+te,TEENRL,Rule for End of Element,Char,200
+te,TEDUR,Planned Duration of Element,Char,50
+ta,STUDYID,Study Identifier,Char,12
+ta,DOMAIN,Domain Abbreviation,Char,2
+ta,ARMCD,Planned Arm Code,Char,7
+ta,ARM,Description of Planned Arm,Char,26
+ta,TAETORD,Order of Element within Arm,Char,200
+ta,ETCD,Element Code,Char,200
+ta,ELEMENT,Description of Element,Char,50
