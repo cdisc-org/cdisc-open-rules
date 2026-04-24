@@ -61,7 +61,7 @@ jobs:
       - name: Install dependencies
         if: steps.newdirs.outputs.HAS_NEW_DIRS == 'true'
         run: |
-          pip install pyyaml
+          pip install ruamel.yaml
 
       - name: Run publish script
         if: steps.newdirs.outputs.HAS_NEW_DIRS == 'true'

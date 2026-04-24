@@ -34,13 +34,17 @@ import csv
 import re
 import sys
 from collections import defaultdict
+from io import StringIO
 from pathlib import Path
 
-try:
-    import yaml
-except ImportError:
-    print("PyYAML is required. Install with: pip install pyyaml")
-    sys.exit(1)
+
+def get_yaml():
+    try:
+        from ruamel.yaml import YAML
+        return YAML
+    except ImportError:
+        print("ruamel.yaml is required. Install with: pip install ruamel.yaml")
+        sys.exit(1)
 
 
 # ---------------------------------------------------------------------------
@@ -92,10 +96,10 @@ def extract_by_standard(data: dict) -> dict[str, dict[str, set[str]]]:
                 if not isinstance(ref, dict):
                     continue
                 rule_id_block = (
-                    ref.get("Rule Identifier")
-                    or ref.get("Rule_Identifier")
-                    or ref.get("rule_identifier")
-                    or {}
+                        ref.get("Rule Identifier")
+                        or ref.get("Rule_Identifier")
+                        or ref.get("rule_identifier")
+                        or {}
                 )
                 if isinstance(rule_id_block, dict):
                     rid = str(rule_id_block.get("Id") or "").strip()
@@ -166,36 +170,30 @@ def _repair_unclosed_quotes(raw: str) -> tuple[str, bool]:
 # ---------------------------------------------------------------------------
 
 def build_standard_rows(rule_files: list[Path]) -> dict[str, list[dict]]:
-    """
-    Parse every rule.yml and accumulate rows keyed by standard name.
-
-    Returns:
-        { standard_name: [ {rule_id, versions, status, core_id}, ... ] }
-
-    rule_id is the key — if the same rule_id appears in multiple files for
-    the same standard, versions are merged and the last-seen status/core_id
-    wins (should not happen in a well-formed repo).
-    """
-    # standard -> rule_id -> row dict
     accumulator: dict[str, dict[str, dict]] = defaultdict(dict)
-
+    yaml = get_yaml()()
+    yaml.preserve_quotes = True
+    yaml.default_flow_style = False
     for rule_file in rule_files:
-        raw = rule_file.read_text(encoding="utf-8")
         try:
-            data = yaml.safe_load(raw)
-        except yaml.YAMLError:
+            with rule_file.open("r", encoding="utf-8") as f:
+                data = yaml.load(f)
+
+        except Exception as e:
+            print(f"  [WARN] Failed to parse {rule_file}: {e}. Attempting to repair unclosed quotes...")
+            raw = rule_file.read_text(encoding="utf-8")
             raw, repaired = _repair_unclosed_quotes(raw)
             if repaired:
                 print(f"  [FIX]  Repaired unclosed quote(s) in {rule_file.relative_to(rule_file.parents[3])}")
-                rule_file.write_text(raw, encoding="utf-8")
-            try:
-                data = yaml.safe_load(raw)
-            except Exception as exc:
-                print(f"  [WARN] Could not parse {rule_file}: {exc}")
-                continue
-        except Exception as exc:
-            print(f"  [WARN] Could not parse {rule_file}: {exc}")
-            continue
+                data = yaml.load(StringIO(raw))
+                with rule_file.open("w", encoding="utf-8") as f:
+                    yaml.dump(data, f)
+            else:
+                try:
+                    data = yaml.load(StringIO(raw))
+                except Exception as exc:
+                    print(f"  [WARN] Could not parse {rule_file}: {exc}")
+                    continue
         if not isinstance(data, dict):
             continue
 
@@ -215,14 +213,11 @@ def build_standard_rows(rule_files: list[Path]) -> dict[str, list[dict]]:
                 accumulator[std_name][rid]["versions"].update(versions)
 
     def _rule_id_sort_key(r: dict) -> tuple:
-        # Split rule_id into (prefix, number, remainder) so that e.g.
-        # CG0001 < CG0010 < CG0100, and pure numeric IDs like 1 < 2 < 10.
         m = re.match(r'^([A-Za-z]*)(\d+)(.*)', r["rule_id"])
         if m:
             return (m.group(1).upper(), int(m.group(2)), m.group(3))
         return (r["rule_id"].upper(), 0, "")
 
-    # Convert to sorted lists
     return {
         std: sorted(rows.values(), key=_rule_id_sort_key)
         for std, rows in accumulator.items()
