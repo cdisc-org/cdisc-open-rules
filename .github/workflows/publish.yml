@@ -6,23 +6,30 @@ on:
     branches:
       - main
 
+concurrency:
+  group: publish
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
 jobs:
   publish:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Get changed files
         id: changed-files
-        uses: tj-actions/changed-files@v44
+        uses: tj-actions/changed-files@v46
         with:
           files_ignore: |
             .github/**
-            scripts/**
             README.md
             .gitignore
+            Published/**
 
       - name: Extract new rule directories
         id: newdirs
@@ -66,14 +73,14 @@ jobs:
       - name: Run publish script
         if: steps.newdirs.outputs.HAS_NEW_DIRS == 'true'
         run: |
-          python scripts/publish.py \
+          python .github/scripts/publish.py \
             --new-dirs "${{ steps.newdirs.outputs.NEW_DIRS }}" \
             --algorithm min
 
       - name: Regenerate mappings
         if: steps.newdirs.outputs.HAS_NEW_DIRS == 'true'
         run: |
-          python scripts/generate_mappings.py .
+          python .github/scripts/generate_mappings.py .
 
       - name: Commit changes
         if: steps.newdirs.outputs.HAS_NEW_DIRS == 'true'
