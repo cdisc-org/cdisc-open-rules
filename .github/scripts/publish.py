@@ -1,11 +1,20 @@
 import csv
 import re
+import sys
 from pathlib import Path
-import yaml
 import argparse
 
 CORE_PATTERN = re.compile(r"^CORE-(\d{6})$")
 PUBLISHED_DIR = Path("Published")
+
+
+def get_yaml():
+    try:
+        from ruamel.yaml import YAML
+        return YAML
+    except ImportError:
+        print("ruamel.yaml is required. Install with: pip install ruamel.yaml")
+        sys.exit(1)
 
 
 def get_next_core_id(mappings_dir: Path, algorithm="max"):
@@ -35,14 +44,15 @@ def get_next_core_id(mappings_dir: Path, algorithm="max"):
 
 
 def update_rule_yaml(core_id: str, rule_path: Path):
+    yaml = get_yaml()()
     with open(rule_path, encoding="utf-8") as f:
-        doc = yaml.safe_load(f)
+        doc = yaml.load(f)
     if "Core" not in doc:
         doc["Core"] = {}
     doc["Core"]["Id"] = core_id
     doc["Core"]["Status"] = "Published"
     with open(rule_path, "w", encoding="utf-8") as f:
-        yaml.safe_dump(doc, f, sort_keys=False)
+        yaml.dump(doc, f)
 
 
 def main():
