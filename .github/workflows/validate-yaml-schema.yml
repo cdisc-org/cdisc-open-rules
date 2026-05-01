@@ -1,0 +1,194 @@
+name: Validate YAML against Schema
+
+on:
+  pull_request:
+    paths:
+#      - 'Published/**/rule.yml'
+      - 'Unpublished/**/rule.yml'
+    types: [opened, synchronize, reopened]
+  workflow_dispatch:
+    inputs:
+      paths_override:
+        description: >
+          Space-separated list of rule YAML files to validate
+          (e.g. "Published/CORE-000001/rule.yml"). Leave blank to validate
+          all changed rule files detected from the last commit.
+        required: false
+        default: ''
+
+# Only one run per PR branch at a time; cancel superseded runs.
+concurrency:
+  group: schema-validate-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate-schema:
+    name: Validate rule YAML against JSON Schema
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+
+    env:
+      # draft/2020-12 schema — switch to rule-merged if you need $defs inlined
+      SCHEMA_URL: >-
+        https://raw.githubusercontent.com/cdisc-org/cdisc-rules-engine/refs/heads/main/resources/schema/rule/CORE-base.json
+
+    steps:
+      # -----------------------------------------------------------------------
+      # 1. Checkout
+      # -----------------------------------------------------------------------
+      - name: Checkout repository
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      # -----------------------------------------------------------------------
+      # 2. Set up Python
+      # -----------------------------------------------------------------------
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+
+      # -----------------------------------------------------------------------
+      # 3. Install validation dependencies
+      #    jsonschema 4.x ships full draft/2020-12 support out of the box.
+      # -----------------------------------------------------------------------
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install "jsonschema[format-nongpl]>=4.18" "PyYAML>=6.0"
+
+      # -----------------------------------------------------------------------
+      # 4. Detect changed rule YAML files
+      # -----------------------------------------------------------------------
+      - name: Detect changed rule files
+        id: changed
+        run: |
+          if [ -n "${{ github.event.inputs.paths_override }}" ]; then
+            # Manual override
+            FILES="${{ github.event.inputs.paths_override }}"
+          elif [ "${{ github.event_name }}" = "pull_request" ]; then
+            FILES=$(git diff --name-only \
+              "origin/${{ github.base_ref }}...HEAD" \
+              -- 'Published/**/rule.yml' 'Unpublished/**/rule.yml' \
+              | tr '\n' ' ')
+          else
+            # workflow_dispatch without override — validate all rule files
+            FILES=$(find Published Unpublished -name "rule.yml" | tr '\n' ' ')
+          fi
+
+          echo "files=$FILES" >> "$GITHUB_OUTPUT"
+          echo "Detected rule files: $FILES"
+
+          if [ -z "$FILES" ]; then
+            echo "no_files=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "no_files=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      # -----------------------------------------------------------------------
+      # 5. Run schema validation
+      # -----------------------------------------------------------------------
+      - name: Validate YAML against schema
+        id: validate
+        if: steps.changed.outputs.no_files == 'false'
+        continue-on-error: true
+        run: |
+          python .github/scripts/validate_yaml_schema.py \
+            "${{ env.SCHEMA_URL }}" \
+            ${{ steps.changed.outputs.files }}
+
+      - name: No rule files changed
+        if: steps.changed.outputs.no_files == 'true'
+        run: |
+          echo "No rule YAML files were changed — nothing to validate."
+          echo "## Schema Validation" >> "$GITHUB_STEP_SUMMARY"
+          echo "No \`rule.yml\` files were changed in this PR." >> "$GITHUB_STEP_SUMMARY"
+
+      # -----------------------------------------------------------------------
+      # 6. Upload report artifact
+      # -----------------------------------------------------------------------
+      - name: Upload schema validation report
+        if: always() && steps.changed.outputs.no_files == 'false'
+        uses: actions/upload-artifact@v7
+        with:
+          name: schema-validation-report
+          path: schema_validation_report.md
+          if-no-files-found: warn
+
+      # -----------------------------------------------------------------------
+      # 7. Post report as PR comment
+      # -----------------------------------------------------------------------
+      - name: Post report to PR
+        if: >
+          always() &&
+          github.event_name == 'pull_request' &&
+          steps.changed.outputs.no_files == 'false'
+        uses: actions/github-script@v9
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const fs = require('fs');
+            const reportPath = 'schema_validation_report.md';
+            const runUrl = `${context.payload.repository.html_url}/actions/runs/${context.runId}`;
+
+            let body = '## Schema Validation Results\n\n';
+
+            if (fs.existsSync(reportPath)) {
+              const content = fs.readFileSync(reportPath, 'utf8');
+              body += '<details>\n<summary><strong>Click to expand</strong></summary>\n\n';
+              body += content;
+              body += '\n</details>\n';
+            } else {
+              body += '_No schema validation report was generated._\n';
+            }
+
+            body += `\n[View workflow run](${runUrl})`;
+
+            const marker = 'Schema Validation Results';
+            const { data: comments } = await github.rest.issues.listComments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+            });
+
+            const existing = comments.find(
+              c => c.user.type === 'Bot' && c.body.includes(marker)
+            );
+
+            if (existing) {
+              await github.rest.issues.updateComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: existing.id,
+                body,
+              });
+            } else {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                body,
+              });
+            }
+
+      # -----------------------------------------------------------------------
+      # 8. Write report to workflow summary
+      # -----------------------------------------------------------------------
+      - name: Write report to workflow summary
+        if: always() && steps.changed.outputs.no_files == 'false'
+        run: |
+          [ -f schema_validation_report.md ] \
+            && cat schema_validation_report.md >> "$GITHUB_STEP_SUMMARY" \
+            || true
+
+      # -----------------------------------------------------------------------
+      # 9. Fail the job if validation found errors
+      # -----------------------------------------------------------------------
+      - name: Check validation outcome
+        if: steps.validate.outcome == 'failure'
+        run: |
+          echo "::error::Schema validation failed — see the report above."
+          exit 1
