@@ -127,6 +127,20 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
+            console.log('issue number:', context.issue.number);
+            console.log('event name:', context.eventName);
+            console.log('repo:', context.repo.owner, context.repo.repo);
+            ry {
+              const { data: comments } = await github.rest.issues.listComments({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+              });
+              console.log('found comments:', comments.length);
+            } catch(err) {
+              console.error('listComments failed:', err.message);
+            }
+
             const fs = require('fs');
             const reportPath = 'schema_validation_report.md';
             const runUrl = `${context.payload.repository.html_url}/actions/runs/${context.runId}`;
