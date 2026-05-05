@@ -32,7 +32,7 @@ jobs:
     env:
       # draft/2020-12 schema — switch to rule-merged if you need $defs inlined
       SCHEMA_URL: >-
-          https://raw.githubusercontent.com/cdisc-org/cdisc-rules-engine/refs/heads/main/resources/schema/rule/rule-merged.json
+          https://raw.githubusercontent.com/cdisc-org/cdisc-rules-engine/refs/heads/main/resources/schema/rule-merged.json
 
     steps:
       # -----------------------------------------------------------------------
