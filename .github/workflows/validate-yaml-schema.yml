@@ -130,7 +130,7 @@ jobs:
             console.log('issue number:', context.issue.number);
             console.log('event name:', context.eventName);
             console.log('repo:', context.repo.owner, context.repo.repo);
-            ry {
+            try {
               const { data: comments } = await github.rest.issues.listComments({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
