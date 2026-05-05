@@ -28,7 +28,6 @@ jobs:
     permissions:
       contents: read
       pull-requests: write
-      issues: write
 
     env:
       SCHEMA_URL: >-
@@ -122,7 +121,10 @@ jobs:
       # 7. Post report as PR comment
       # -----------------------------------------------------------------------
       - name: Post report to PR
-        if: always() && github.event_name == 'pull_request' && steps.changed.outputs.no_files == 'false'
+        if: >
+                  always() &&
+                  github.event_name == 'pull_request' &&
+                  steps.changed.outputs.no_files == 'false'
         uses: actions/github-script@v9
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
