@@ -30,9 +30,8 @@ jobs:
       pull-requests: write
 
     env:
-      # draft/2020-12 schema — switch to rule-merged if you need $defs inlined
       SCHEMA_URL: >-
-        https://raw.githubusercontent.com/cdisc-org/cdisc-rules-engine/refs/heads/main/resources/schema/rule/CORE-base.json
+        https://raw.githubusercontent.com/cdisc-org/cdisc-rules-engine/refs/heads/main/resources/schema/rule-merged/CORE-base.json
 
     steps:
       # -----------------------------------------------------------------------
