@@ -1,0 +1,48 @@
+name: Rule-related Feature Request
+description: A request for a new feature or enhancement related to a specific rule
+projects:
+  - cdisc-org/19
+body:
+  - type: dropdown
+    id: request_type
+    attributes:
+      label: Request Type
+      options:
+        - Bug with Existing Rule
+        - New Rule Issue
+    validations:
+      required: true
+  - type: dropdown
+    id: standard
+    attributes:
+      label: Standard
+      options:
+        - SDTMIG
+        - SENDIG
+        - ADaM
+        - TIG
+        - USDM
+        - FDA Business Rules
+    validations:
+      required: true
+  - type: input
+    id: rule_id
+    attributes:
+      label: Rule ID
+      description: "For bugs: provide the CORE ID (e.g. CORE-000123). For new rules: provide the standard rule ID (e.g. CG0001)."
+      placeholder: CORE-000123 or CG0001
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Describe the bug or new rule request in detail.
+    validations:
+      required: true
+  - type: textarea
+    id: test_data
+    attributes:
+      label: Test Data
+      description: "If reporting a bug, attach your test data files here (CSV, Excel, etc.). You can drag and drop multiple files directly into this field."
+      placeholder: Drag and drop files here, or describe the test data inline.
