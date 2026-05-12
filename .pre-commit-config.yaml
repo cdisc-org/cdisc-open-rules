@@ -1,0 +1,11 @@
+repos:
+  - repo: local
+    hooks:
+      - id: sort-yaml-rules
+        name: Sort and format rule YAML files
+        language: python
+        entry: python scripts/sort_yaml.py --check
+        types: [yaml]
+        files: ".*/rule\\.yml$"
+        additional_dependencies: [pyyaml]
+        pass_filenames: true
