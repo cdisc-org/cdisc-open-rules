@@ -1,0 +1,28 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Sort & Format rule.yml",
+      "type": "shell",
+      "command": "${workspaceFolder}/venv/bin/python",
+      "args": ["${workspaceFolder}/scripts/sort_yaml.py", "${file}"],
+      "presentation": {
+        "reveal": "silent",
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Sort & Format ALL rule.yml files",
+      "type": "shell",
+      "command": "${workspaceFolder}/venv/bin/python",
+      "args": ["${workspaceFolder}/scripts/sort_yaml.py"],
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    }
+  ]
+}
+

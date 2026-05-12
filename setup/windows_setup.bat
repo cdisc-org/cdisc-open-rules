@@ -178,5 +178,17 @@ if !errorlevel! neq 0 (
 )
 
 echo.
+echo Installing pre-commit...
+python -m pip install pre-commit --index-url https://pypi.org/simple/ --quiet 2>nul || python -m pip install pre-commit --quiet 2>nul
+where pre-commit >nul 2>&1
+if !errorlevel! equ 0 (
+    pre-commit install
+    echo Pre-commit hook installed.
+) else (
+    echo Warning: pre-commit not found on PATH; skipping hook setup.
+    echo You can install it manually with: pip install pre-commit ^&^& pre-commit install
+)
+
+echo.
 echo Setup completed successfully!
 pause

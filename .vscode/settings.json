@@ -1,5 +1,14 @@
 {
   "yaml.schemas": {
     "https://raw.githubusercontent.com/cdisc-org/cdisc-rules-engine/refs/heads/main/resources/schema/rule-merged/CORE-base.json": "rule.yml"
+  },
+  "emeraldwalk.runonsave": {
+    "commands": [
+      {
+        "match": "rule\\.yml$",
+        "isAsync": false,
+        "cmd": "${workspaceFolder}/venv/bin/python ${workspaceFolder}/scripts/sort_yaml.py ${file}"
+      }
+    ]
   }
 }
