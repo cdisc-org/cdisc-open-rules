@@ -258,7 +258,17 @@ Unpublished/
     - Keep an eye on the PR to make sure the automated checks pass, as well as to respond to any comments from reviewers.
     - If you need to make further changes, simply checkout your branch (`git checkout <your-branch-name>`), make your changes, and commit and push them — the PR will automatically update and re-run validation.
 
-16) GitHub will automatically validate your changes when a PR is opened. If you did not include a results.csv, the check will fail — run the rule locally and push the generated results.csv to resolve it. If a difference between your results.csv and the engine output is detected, the check will also fail — re-run the rule locally, verify the results look correct, and push the updated results.csv. If the check continues to fail after updating, flag it for the Engineers Team in the PR comments.
+16) GitHub will automatically validate your changes when a PR is opened.  If you did not include a results.csv, the check will fail — run the rule locally and push the generated results.csv to resolve it. If a difference between your results.csv and the engine output is detected, the check will also fail — re-run the rule locally, verify the results look correct, and push the updated results.csv. If the check continues to fail after updating, flag it for the Engineers Team in the PR comments.
+
+   **Rule Schema Validation** will run and post a comment on the PR showing whether your `rule.yaml` is valid. If the schema check fails, the comment will show the specific validation error — for example, the image below shows a failure caused by an empty `check all:` condition in the rule. The comment will automatically update when you push new code and the action re-runs.
+
+   ![Schema validation failure example](docs/files/schema.png)
+
+   **Test Data Validation** will also run and post a comment showing the results of running the rule against your test data. If the check fails, the comment will indicate why — for example, the image below shows a failure caused by a missing `.env` file in the test data.
+
+   ![Test data validation failure example](docs/files/validation.png)
+
+Once your rule and test data pass these checks, the PR can be merged.
 
 **Approval - Merge PR**
 

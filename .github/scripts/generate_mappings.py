@@ -24,11 +24,14 @@ import sys
 from collections import defaultdict
 from pathlib import Path
 
-try:
-    import yaml
-except ImportError:
-    print("PyYAML is required. Install with: pip install pyyaml")
-    sys.exit(1)
+
+def get_yaml():
+    try:
+        from ruamel.yaml import YAML
+        return YAML
+    except ImportError:
+        print("ruamel.yaml is required. Install with: pip install ruamel.yaml")
+        sys.exit(1)
 
 
 # ---------------------------------------------------------------------------
@@ -129,11 +132,13 @@ def build_standard_rows(rule_files: list[Path]) -> dict[str, list[dict]]:
 
     """
     accumulator: dict[str, dict[str, dict]] = defaultdict(dict)
-
+    yaml = get_yaml()()
+    yaml.preserve_quotes = True
+    yaml.default_flow_style = False
     for rule_file in rule_files:
         raw = rule_file.read_text(encoding="utf-8")
         try:
-            data = yaml.safe_load(raw)
+            data = yaml.load(raw)
         except Exception as exc:
             print(f"  [WARN] Could not parse {rule_file}: {exc}")
             continue
