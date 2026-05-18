@@ -1,0 +1,86 @@
+name: Validate YAML Formatting
+on:
+  pull_request:
+    paths:
+      - 'Unpublished/**/rule.yml'
+      - 'Published/**/rule.yml'
+    types: [opened, synchronize, reopened]
+  workflow_dispatch: {}
+jobs:
+  check-yaml-format:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install pyyaml
+        run: pip install pyyaml
+      - name: Detect changed rule.yml files
+        id: changed-files
+        run: |
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            FILES=$(git diff --name-only origin/${{ github.base_ref }}...HEAD \
+              | grep -E '^(Published|Unpublished)/.*/rule\.yml$' || true)
+          else
+            FILES=$(git diff --name-only HEAD~1 HEAD \
+              | grep -E '^(Published|Unpublished)/.*/rule\.yml$' || true)
+          fi
+          if [ -z "$FILES" ]; then
+            echo "No rule.yml files changed."
+            echo "has_files=false" >> $GITHUB_OUTPUT
+          else
+            echo "has_files=true" >> $GITHUB_OUTPUT
+            echo "$FILES" > /tmp/changed_rule_files.txt
+          fi
+      - name: Check YAML sorting and formatting
+        id: format-check
+        if: steps.changed-files.outputs.has_files == 'true'
+        run: |
+          FILES=$(cat /tmp/changed_rule_files.txt | tr '\n' ' ')
+          python scripts/sort_yaml.py --check $FILES
+        continue-on-error: true
+      - name: Post format check result to PR
+        if: always() && github.event_name == 'pull_request' && steps.changed-files.outputs.has_files == 'true'
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const outcome = '${{ steps.format-check.outcome }}';
+            const marker = '<!-- yaml-format-check -->';
+            let body = marker + '\n';
+            if (outcome === 'success') {
+              body += '## \u2705 YAML Format Check Passed\n\nAll changed `rule.yml` files are correctly sorted and formatted.';
+            } else {
+              body += '## \u274c YAML Format Check Failed\n\n';
+              body += 'One or more `rule.yml` files are not correctly sorted/formatted alphabetically by key.\n\n';
+              body += 'Run the following command locally to fix them:\n\n```bash\npython scripts/sort_yaml.py\n```\n\nThen commit and push.';
+            }
+            const { data: comments } = await github.rest.issues.listComments({
+              owner: context.repo.owner, repo: context.repo.repo,
+              issue_number: context.issue.number,
+            });
+            const existing = comments.find(c => c.user.type === 'Bot' && c.body.includes(marker));
+            if (existing) {
+              await github.rest.issues.updateComment({
+                owner: context.repo.owner, repo: context.repo.repo,
+                comment_id: existing.id, body,
+              });
+            } else {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner, repo: context.repo.repo,
+                issue_number: context.issue.number, body,
+              });
+            }
+      - name: Fail if format check failed
+        if: steps.format-check.outcome == 'failure'
+        run: |
+          echo "YAML format check failed. Run 'python scripts/sort_yaml.py' to fix."
+          exit 1
