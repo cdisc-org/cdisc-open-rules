@@ -96,7 +96,7 @@ for TEST_TYPE in positive negative; do
     echo ""
   } >> "$REPORT_FILE"
 
-  for CASE_DIR in $(find "$TYPE_DIR" -mindepth 1 -maxdepth 1 -type d | sort); do
+  while IFS= read -r -d '' CASE_DIR; do
     CASE_ID=$(basename "$CASE_DIR")
     DATA_DIR="$CASE_DIR/data"
     RESULTS_DIR="$CASE_DIR/results"
