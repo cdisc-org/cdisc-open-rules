@@ -25,7 +25,7 @@ def detect_standard(data: dict) -> str:
     return data.get("Conformance_Details", {}).get("Standard", "").upper()
 
 
-def convert_nonusdm(issue_details: list) -> tuple[list[str], list[tuple]]:
+def convert_non_usdm(issue_details: list) -> tuple[list[str], list[tuple]]:
     header = ["Dataset", "Record", "Variable", "Value"]
     rows = []
     for issue in issue_details:
@@ -65,7 +65,7 @@ def convert(json_path: str, csv_path: str) -> None:
     if standard == "USDM":
         header, rows = convert_usdm(issue_details)
     else:
-        header, rows = convert_nonusdm(issue_details)
+        header, rows = convert_non_usdm(issue_details)
 
     with open(csv_path, "w", newline="") as f:
         writer = csv.writer(f)
