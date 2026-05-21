@@ -145,4 +145,15 @@ fi
 
 VENV_PYTHON=$(which python)
 
+echo "Installing pre-commit..."
+pip install pre-commit --index-url https://pypi.org/simple/ --quiet 2>/dev/null || \
+  pip install pre-commit --quiet 2>/dev/null || true
+if command -v pre-commit >/dev/null 2>&1; then
+    pre-commit install
+    echo "Pre-commit hook installed."
+else
+    echo "Warning: pre-commit not found on PATH after install; skipping hook setup."
+    echo "You can install it manually with: pip install pre-commit && pre-commit install"
+fi
+
 echo "Setup completed successfully!"
