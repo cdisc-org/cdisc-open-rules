@@ -5,6 +5,7 @@ Prompts for a rule folder path, runs the CORE engine against each test case,
 and writes results.json into each case's results/ directory.
 """
 
+import os
 import sys
 import subprocess
 from pathlib import Path
@@ -12,6 +13,8 @@ from typing import Optional, Dict, List
 
 ENGINE_DIR = Path("engine")
 CONVERT_SCRIPT = Path(".github/scripts/convert_results.py")
+
+LOG_LEVELS = ["info", "debug", "error", "critical", "disabled", "warn"]
 
 # ---------------------------------------------------------------------------
 # Rule folder helpers
@@ -83,7 +86,13 @@ def next_results_path(results_dir: Path) -> Path:
 # Engine invocation
 # ---------------------------------------------------------------------------
 
-def run_engine(rule_yml: Path, data_dir: Path, output_path: Path) -> tuple[bool, str]:
+def run_engine(
+    rule_yml: Path,
+    data_dir: Path,
+    output_path: Path,
+    log_level: str,
+    capture_logs: bool,
+) -> tuple[bool, str]:
     env_file = find_env_file(data_dir)
     if env_file is None:
         return False, f"No .env file found in {data_dir}"
@@ -96,11 +105,36 @@ def run_engine(rule_yml: Path, data_dir: Path, output_path: Path) -> tuple[bool,
         "-of",  "JSON",
         "-o",   str(output_path.resolve()),
         "-p",   "disabled",
+        "-l",   log_level,
     ]
 
     try:
-        proc = subprocess.run(cmd, cwd=ENGINE_DIR, capture_output=True, text=True)
-        output = (proc.stdout + proc.stderr).strip()
+        env = os.environ.copy()
+
+        stream_output = log_level != "disabled"
+        lines: list[str] = []
+        with subprocess.Popen(
+            cmd,
+            cwd=ENGINE_DIR,
+            env=env,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.STDOUT,
+            text=True,
+            bufsize=1,
+        ) as proc:
+            for line in proc.stdout:
+                if stream_output:
+                    print(f"    {line}", end="")
+                lines.append(line)
+            proc.wait()
+
+        output = "".join(lines).strip()
+
+        if capture_logs and output:
+            log_path = output_path.parent / f"{output_path.name}_engine.log.txt"
+            log_path.write_text(output, encoding="utf-8")
+            print(f"    Log captured — {log_path}")
+
         return proc.returncode == 0, output
     except Exception as e:
         return False, str(e)
@@ -111,7 +145,12 @@ def run_engine(rule_yml: Path, data_dir: Path, output_path: Path) -> tuple[bool,
 # ---------------------------------------------------------------------------
 
 
-def run_rule(rule_path: Path, specific_case: Optional[str] = None):
+def run_rule(
+    rule_path: Path,
+    specific_case: Optional[str],
+    log_level: str,
+    capture_logs: bool,
+):
     rule_yml  = find_rule_yml(rule_path)
     all_cases = get_test_cases(rule_path)
 
@@ -134,7 +173,7 @@ def run_rule(rule_path: Path, specific_case: Optional[str] = None):
             output_path = next_results_path(case["results_dir"])
 
             print(f"\n  Running {test_type}/{case_id}...")
-            ok, output = run_engine(rule_yml, data_dir, output_path)
+            ok, output = run_engine(rule_yml, data_dir, output_path, log_level, capture_logs)
 
             json_path = Path(str(output_path) + ".json")
             if ok and json_path.exists():
@@ -212,15 +251,37 @@ def prompt_case(cases: Dict[str, List[dict]]) -> Optional[str]:
         print("Invalid — try again.")
 
 
+def prompt_log_level() -> str:
+    print("\nLog level options:")
+    for i, level in enumerate(LOG_LEVELS, 1):
+        print(f"  {i}. {level}")
+    while True:
+        choice = input("Select log level (default: disabled): ").strip().lower()
+        if not choice:
+            return "disabled"
+        if choice in LOG_LEVELS:
+            return choice
+        if choice.isdigit() and 1 <= int(choice) <= len(LOG_LEVELS):
+            return LOG_LEVELS[int(choice) - 1]
+        print("Invalid — try again.")
+
+
+def prompt_capture_logs() -> bool:
+    choice = input("Capture engine logs to results folder? (y/N): ").strip().lower()
+    return choice == "y"
+
+
 # ---------------------------------------------------------------------------
 # Entry point
 # ---------------------------------------------------------------------------
 
 def main():
-    rule_path = prompt_rule_path()
-    cases     = get_test_cases(rule_path)
-    specific  = prompt_case(cases)
-    run_rule(rule_path, specific)
+    rule_path   = prompt_rule_path()
+    cases       = get_test_cases(rule_path)
+    specific    = prompt_case(cases)
+    log_level   = prompt_log_level()
+    capture_logs = prompt_capture_logs()
+    run_rule(rule_path, specific, log_level, capture_logs)
 
 
 if __name__ == "__main__":
