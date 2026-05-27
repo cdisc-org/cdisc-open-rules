@@ -152,7 +152,7 @@ Unpublished/
    **`.env`**
 
    Specifies the standard and version to validate against. `PRODUCT` and `VERSION` are required; `SUBSTANDARD`, `USE_CASE`, `CT`, and `DEFINE_XML` are optional depending on the rule.
-
+   See [`.env.example`](./engine/.env.example) for example env environment variables.
    ```
    PRODUCT=TIG
    VERSION=1-0
@@ -179,14 +179,14 @@ Unpublished/
 
    ```
    dataset,variable,label,type,length
-   cm,STUDYID,Study Identifier,Char,50
-   cm,DOMAIN,Domain Abbreviation,Char,50
-   cm,USUBJID,Unique Subject Identifier,Char,50
-   cm,CMTRT,"Reported Name of Drug, Med, or Therapy",Char,50
-   dm,STUDYID,Study Identifier,Char,50
-   dm,DOMAIN,Domain Abbreviation,Char,50
-   dm,USUBJID,Unique Subject Identifier,Char,50
-   dm,AGE,Age,Num,8
+   CM,STUDYID,Study Identifier,Char,50
+   CM,DOMAIN,Domain Abbreviation,Char,50
+   CM,USUBJID,Unique Subject Identifier,Char,50
+   CM,CMTRT,"Reported Name of Drug, Med, or Therapy",Char,50
+   DM,STUDYID,Study Identifier,Char,50
+   DM,DOMAIN,Domain Abbreviation,Char,50
+   DM,USUBJID,Unique Subject Identifier,Char,50
+   DM,AGE,Age,Num,8
    ...
    ```
 
