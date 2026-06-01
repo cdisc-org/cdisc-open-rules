@@ -224,6 +224,7 @@ Unpublished/
    MAC: `./run/bash_run.sh`
    - If you haven't run the setup script before, don't worry; it will run automatically when you execute this command.
    - You will be prompted to select the rule you wish to run, as well as the test case(s).
+   - You will also be prompted with what logs you would like to see and if you want them captured in a txt file for each test case (these are useful attachments to issues created for CORE Rules Engine Bug Reports)
 
 **Verify Results.**
 
