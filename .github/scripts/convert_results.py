@@ -29,7 +29,7 @@ def convert_non_usdm(issue_details: list) -> tuple[list[str], list[tuple]]:
     header = ["Dataset", "Record", "Variable", "Value"]
     rows = []
     for issue in issue_details:
-        dataset   = issue.get("dataset", "")
+        dataset   = issue.get("dataset", "").removesuffix(".csv")
         record    = str(issue.get("row", ""))
         variables = issue.get("variables") or []
         values    = issue.get("values") or []
