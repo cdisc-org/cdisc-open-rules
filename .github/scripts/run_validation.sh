@@ -55,7 +55,7 @@ FAILED_CASES=0
 # ---------------------------------------------------------------------------
 # Helper: append one JSON line to case_results.jsonl
 # Passes all values via env vars to avoid shell-quoting issues with paths.
-# Args: exec(true|false)  expected  got  match(true|false)  diff_path  stderr_path
+# Args: exec(true|false)  expected  actual  match(true|false)  diff_path  stderr_path
 # ---------------------------------------------------------------------------
 emit_result() {
   R_RULE="$RULE_ID"   \
@@ -63,7 +63,7 @@ emit_result() {
   R_NUM="$CASE_ID"    \
   R_EXEC="$1"         \
   R_EXPECTED="$2"     \
-  R_GOT="$3"          \
+  R_ACTUAL="$3"       \
   R_MATCH="$4"        \
   R_DIFF="$5"         \
   R_STDERR="$6"       \
@@ -76,7 +76,7 @@ print(json.dumps({
   'num':      e['R_NUM'],
   'exec':     e['R_EXEC'] == 'true',
   'expected': e['R_EXPECTED'],
-  'got':      e['R_GOT'],
+  'actual':   e['R_ACTUAL'],
   'match':    e['R_MATCH'] == 'true',
   'diff':     e['R_DIFF'],
   'stderr':   e['R_STDERR'],
@@ -211,7 +211,7 @@ for TEST_TYPE in positive negative; do
 
     # -- Diff
     EXPECTED_COUNT=$(( $(wc -l < "$EXPECTED_RESULTS") - 1 ))
-    GOT_COUNT=$(( $(wc -l < "$ACTUAL_CSV") - 1 ))
+    ACTUAL_COUNT=$(( $(wc -l < "$ACTUAL_CSV") - 1 ))
 
     DIFF_LOG="/tmp/diff_${TEST_TYPE}_${CASE_ID}.txt"
     DIFF_EXIT=0
@@ -225,7 +225,7 @@ for TEST_TYPE in positive negative; do
         echo "### \`$CASE_LABEL\` — ✅ Actual results match expected baseline"
         echo ""
       } >> "$REPORT_FILE"
-      emit_result "true" "$EXPECTED_COUNT" "$GOT_COUNT" "true" "" ""
+      emit_result "true" "$EXPECTED_COUNT" "$ACTUAL_COUNT" "true" "" ""
       PASSED_CASES=$((PASSED_CASES + 1))
     else
       echo "  FAILED — expected results do not match actual engine output"
@@ -240,7 +240,7 @@ for TEST_TYPE in positive negative; do
         echo "</details>"
         echo ""
       } >> "$REPORT_FILE"
-      emit_result "true" "$EXPECTED_COUNT" "$GOT_COUNT" "false" "$DIFF_LOG" ""
+      emit_result "true" "$EXPECTED_COUNT" "$ACTUAL_COUNT" "false" "$DIFF_LOG" ""
       FAILED_CASES=$((FAILED_CASES + 1))
       OVERALL_SUCCESS=false
     fi
