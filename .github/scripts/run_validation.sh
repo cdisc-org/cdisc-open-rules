@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # run_validation.sh — iterates all positive/ and negative/ test cases for a rule,
 # runs the CORE engine against each, converts JSON output to results.csv,
-# diffs against any committed results.csv, and writes two outputs:
+# diffs against any expected results.csv, and writes two outputs:
 #   - $REPO_ROOT/validation_report.md  (detailed markdown, legacy/fallback)
 #   - $REPO_ROOT/case_results.jsonl    (one JSON line per test case for the summary table)
 #
@@ -126,13 +126,13 @@ for TEST_TYPE in positive negative; do
 
     TOTAL_CASES=$((TOTAL_CASES + 1))
 
-    # -- Missing committed baseline
+    # -- Missing expected baseline
     if [ ! -f "$RESULTS_DIR/results.csv" ]; then
-      echo "  ERROR: no committed results.csv found for $CASE_LABEL"
+      echo "  ERROR: no expected results.csv found for $CASE_LABEL"
       {
         echo "### \`$CASE_LABEL\` — ❌ Missing results.csv"
         echo ""
-        echo "No \`results.csv\` was found for this test case. Run the rule locally before opening a PR and commit the generated \`results.csv\`."
+        echo "No \`results.csv\` was found for this test case. Run the rule locally before opening a PR and commit the actual \`results.csv\`."
         echo ""
       } >> "$REPORT_FILE"
       emit_result "false" "" "" "false" "" ""
@@ -141,9 +141,9 @@ for TEST_TYPE in positive negative; do
       continue
     fi
 
-    # Back up committed results.csv before the engine run
-    cp "$RESULTS_DIR/results.csv" "$RESULTS_DIR/results.csv.committed"
-    COMMITTED_RESULTS="$RESULTS_DIR/results.csv.committed"
+    # Back up expected results.csv before the engine run
+    cp "$RESULTS_DIR/results.csv" "$RESULTS_DIR/results.expected.csv"
+    EXPECTED_RESULTS="$RESULTS_DIR/results.expected.csv"
 
     ENGINE_ARGS=(
       "-lr"  "$RULE_YML"
@@ -178,15 +178,15 @@ for TEST_TYPE in positive negative; do
       emit_result "false" "" "" "false" "" "$ENGINE_LOG"
       FAILED_CASES=$((FAILED_CASES + 1))
       OVERALL_SUCCESS=false
-      mv "$COMMITTED_RESULTS" "$RESULTS_DIR/results.csv"
+      mv "$EXPECTED_RESULTS" "$RESULTS_DIR/results.csv"
       continue
     fi
 
     # Convert engine JSON output to a temporary CSV for comparison
-    GENERATED_CSV="/tmp/results_generated_${TEST_TYPE}_${CASE_ID}.csv"
+    ACTUAL_CSV="/tmp/results_actual_${TEST_TYPE}_${CASE_ID}.csv"
     CONVERT_EXIT=0
     $PYTHON_CMD "$SCRIPTS_DIR/convert_results.py" \
-      "$RESULTS_DIR/results.json" "$GENERATED_CSV" \
+      "$RESULTS_DIR/results.json" "$ACTUAL_CSV" \
       2>&1 | tee -a "$ENGINE_LOG" || CONVERT_EXIT=$?
 
     if [ $CONVERT_EXIT -ne 0 ]; then
@@ -205,32 +205,32 @@ for TEST_TYPE in positive negative; do
       emit_result "false" "" "" "false" "" "$ENGINE_LOG"
       FAILED_CASES=$((FAILED_CASES + 1))
       OVERALL_SUCCESS=false
-      mv "$COMMITTED_RESULTS" "$RESULTS_DIR/results.csv"
+      mv "$EXPECTED_RESULTS" "$RESULTS_DIR/results.csv"
       continue
     fi
 
     # -- Diff
-    EXPECTED_COUNT=$(( $(wc -l < "$COMMITTED_RESULTS") - 1 ))
-    GOT_COUNT=$(( $(wc -l < "$GENERATED_CSV") - 1 ))
+    EXPECTED_COUNT=$(( $(wc -l < "$EXPECTED_RESULTS") - 1 ))
+    GOT_COUNT=$(( $(wc -l < "$ACTUAL_CSV") - 1 ))
 
     DIFF_LOG="/tmp/diff_${TEST_TYPE}_${CASE_ID}.txt"
     DIFF_EXIT=0
     $PYTHON_CMD "$SCRIPTS_DIR/diff_results.py" \
-      "$COMMITTED_RESULTS" "$GENERATED_CSV" "$CASE_LABEL" \
+      "$EXPECTED_RESULTS" "$ACTUAL_CSV" "$CASE_LABEL" \
       > "$DIFF_LOG" 2>&1 || DIFF_EXIT=$?
 
     if [ $DIFF_EXIT -eq 0 ]; then
-      echo "  PASSED — results match committed baseline"
+      echo "  PASSED — actual results match expected baseline"
       {
-        echo "### \`$CASE_LABEL\` — ✅ Results match committed baseline"
+        echo "### \`$CASE_LABEL\` — ✅ Actual results match expected baseline"
         echo ""
       } >> "$REPORT_FILE"
       emit_result "true" "$EXPECTED_COUNT" "$GOT_COUNT" "true" "" ""
       PASSED_CASES=$((PASSED_CASES + 1))
     else
-      echo "  FAILED — committed results do not match engine output"
+      echo "  FAILED — expected results do not match actual engine output"
       {
-        echo "### \`$CASE_LABEL\` — ❌ Results do not match engine output"
+        echo "### \`$CASE_LABEL\` — ❌ Expected results do not match actual engine output"
         echo ""
         echo "<details><summary>Diff details</summary>"
         echo ""
@@ -245,7 +245,7 @@ for TEST_TYPE in positive negative; do
       OVERALL_SUCCESS=false
     fi
 
-    mv "$COMMITTED_RESULTS" "$RESULTS_DIR/results.csv"
+    mv "$EXPECTED_RESULTS" "$RESULTS_DIR/results.csv"
 
   done < <(find "$TYPE_DIR" -mindepth 1 -maxdepth 1 -type d -print0 | sort -z)
 done
