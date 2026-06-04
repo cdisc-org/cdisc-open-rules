@@ -126,24 +126,19 @@ for TEST_TYPE in positive negative; do
 
     TOTAL_CASES=$((TOTAL_CASES + 1))
 
-    # -- Missing expected baseline
+    # -- Check for missing expected baseline (engine still runs)
+    MISSING_BASELINE=false
     if [ ! -f "$RESULTS_DIR/results.csv" ]; then
-      echo "  ERROR: no expected results.csv found for $CASE_LABEL"
-      {
-        echo "### \`$CASE_LABEL\` — ❌ Missing results.csv"
-        echo ""
-        echo "No \`results.csv\` was found for this test case. Run the rule locally before opening a PR and commit the actual \`results.csv\`."
-        echo ""
-      } >> "$REPORT_FILE"
-      emit_result "false" "" "" "false" "" ""
-      FAILED_CASES=$((FAILED_CASES + 1))
-      OVERALL_SUCCESS=false
-      continue
+      echo "  WARNING: no expected results.csv found for $CASE_LABEL — engine will still run"
+      MISSING_BASELINE=true
     fi
 
-    # Back up expected results.csv before the engine run
-    cp "$RESULTS_DIR/results.csv" "$RESULTS_DIR/results.expected.csv"
-    EXPECTED_RESULTS="$RESULTS_DIR/results.expected.csv"
+    # Back up expected results.csv before the engine run (only if it exists)
+    EXPECTED_RESULTS=""
+    if [ "$MISSING_BASELINE" = false ]; then
+      cp "$RESULTS_DIR/results.csv" "$RESULTS_DIR/results.expected.csv"
+      EXPECTED_RESULTS="$RESULTS_DIR/results.expected.csv"
+    fi
 
     ENGINE_ARGS=(
       "-lr"  "$RULE_YML"
@@ -178,7 +173,7 @@ for TEST_TYPE in positive negative; do
       emit_result "false" "" "" "false" "" "$ENGINE_LOG"
       FAILED_CASES=$((FAILED_CASES + 1))
       OVERALL_SUCCESS=false
-      mv "$EXPECTED_RESULTS" "$RESULTS_DIR/results.csv"
+      [ "$MISSING_BASELINE" = false ] && mv "$EXPECTED_RESULTS" "$RESULTS_DIR/results.csv"
       continue
     fi
 
@@ -205,13 +200,29 @@ for TEST_TYPE in positive negative; do
       emit_result "false" "" "" "false" "" "$ENGINE_LOG"
       FAILED_CASES=$((FAILED_CASES + 1))
       OVERALL_SUCCESS=false
-      mv "$EXPECTED_RESULTS" "$RESULTS_DIR/results.csv"
+      [ "$MISSING_BASELINE" = false ] && mv "$EXPECTED_RESULTS" "$RESULTS_DIR/results.csv"
+      continue
+    fi
+
+    ACTUAL_COUNT=$(( $(wc -l < "$ACTUAL_CSV") - 1 ))
+
+    # -- Missing baseline: report actual count, no diff
+    if [ "$MISSING_BASELINE" = true ]; then
+      echo "  FAILED — no expected results.csv baseline exists"
+      {
+        echo "### \`$CASE_LABEL\` — ❌ Missing expected results.csv"
+        echo ""
+        echo "No expected \`results.csv\` was found for this test case."
+        echo ""
+      } >> "$REPORT_FILE"
+      emit_result "true" "" "$ACTUAL_COUNT" "false" "" ""
+      FAILED_CASES=$((FAILED_CASES + 1))
+      OVERALL_SUCCESS=false
       continue
     fi
 
     # -- Diff
     EXPECTED_COUNT=$(( $(wc -l < "$EXPECTED_RESULTS") - 1 ))
-    ACTUAL_COUNT=$(( $(wc -l < "$ACTUAL_CSV") - 1 ))
 
     DIFF_LOG="/tmp/diff_${TEST_TYPE}_${CASE_ID}.txt"
     DIFF_EXIT=0
