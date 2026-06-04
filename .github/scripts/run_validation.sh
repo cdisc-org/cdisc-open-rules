@@ -144,7 +144,7 @@ for TEST_TYPE in positive negative; do
       "-lr"  "$RULE_YML"
       "-d"   "$DATA_DIR"
       "-dep" "$ENV_FILE"
-      "-of"  "JSON"
+      "-of"  "CSV"
       "-o"   "$RESULTS_DIR/results"
       "-p"   "disabled"
     )
@@ -157,39 +157,14 @@ for TEST_TYPE in positive negative; do
     (cd "$ENGINE_DIR" && $PYTHON_CMD core.py validate "${ENGINE_ARGS[@]}") \
       2>&1 | tee "$ENGINE_LOG" || ENGINE_EXIT=${PIPESTATUS[0]}
 
-    if [ $ENGINE_EXIT -ne 0 ] || [ ! -f "$RESULTS_DIR/results.json" ]; then
+    ACTUAL_CSV="$RESULTS_DIR/results.csv"
+
+    if [ $ENGINE_EXIT -ne 0 ] || [ ! -f "$ACTUAL_CSV" ]; then
       echo "  ERROR: engine failed or produced no output (exit $ENGINE_EXIT)"
       {
         echo "### \`$CASE_LABEL\` — ❌ Engine error"
         echo ""
         echo "<details><summary>Engine output</summary>"
-        echo ""
-        echo '```'
-        cat "$ENGINE_LOG"
-        echo '```'
-        echo "</details>"
-        echo ""
-      } >> "$REPORT_FILE"
-      emit_result "false" "" "" "false" "" "$ENGINE_LOG"
-      FAILED_CASES=$((FAILED_CASES + 1))
-      OVERALL_SUCCESS=false
-      [ "$MISSING_BASELINE" = false ] && mv "$EXPECTED_RESULTS" "$RESULTS_DIR/results.csv"
-      continue
-    fi
-
-    # Convert engine JSON output to a temporary CSV for comparison
-    ACTUAL_CSV="/tmp/results_actual_${TEST_TYPE}_${CASE_ID}.csv"
-    CONVERT_EXIT=0
-    $PYTHON_CMD "$SCRIPTS_DIR/convert_results.py" \
-      "$RESULTS_DIR/results.json" "$ACTUAL_CSV" \
-      2>&1 | tee -a "$ENGINE_LOG" || CONVERT_EXIT=$?
-
-    if [ $CONVERT_EXIT -ne 0 ]; then
-      echo "  ERROR: failed to convert results.json to CSV"
-      {
-        echo "### \`$CASE_LABEL\` — ❌ Conversion error"
-        echo ""
-        echo "<details><summary>Conversion output</summary>"
         echo ""
         echo '```'
         cat "$ENGINE_LOG"
