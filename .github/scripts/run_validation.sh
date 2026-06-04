@@ -67,7 +67,7 @@ emit_result() {
   R_MATCH="$4"        \
   R_DIFF="$5"         \
   R_STDERR="$6"       \
-  python3 -c "
+  python -c "
 import json, os
 e = os.environ
 print(json.dumps({
