@@ -246,7 +246,7 @@ If you provide a dataset AE where both AESEV and AESHOSP have empty values in a 
 My test data dates are being treated as numbers or the engine is returning errors indicating that my dates cannot be parsed.
 </summary>
 
-When using Excel for data, one of the tradeoffs is that it tries to autoformat. If Excel recognizes a date, it will convert it to a numeric representation of the date and display it formatted. When the Rule Editor loads the date cell, it loads the number instead of the original text string date.
+When using Excel for data, one of the tradeoffs is that it tries to autoformat. If Excel recognizes a date, it will convert it to a numeric representation of the date and display it formatted.
 
 To fix this issue, you can force transparency by [formatting the cells in your spreadsheet as "text"](https://support.microsoft.com/en-us/office/format-numbers-as-text-583160db-936b-4e52-bdff-6f1863518ba4).
 
