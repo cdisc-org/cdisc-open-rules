@@ -43,7 +43,7 @@
 [UI]-.->[Rule List]
 [UI]-.->[Rule YAML Editor]
 [UI]-.->[Rule Test]
-[Rule YAML Editor]<->[cdisc-rules-engine-repo]
+[Rule YAML Editor]<->[cdisc-open-rules-repo]
 
 // API
 [API]-.->[cdisc-rules-engine]
