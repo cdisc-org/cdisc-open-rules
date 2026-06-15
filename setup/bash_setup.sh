@@ -136,7 +136,7 @@ pip install --upgrade pip --quiet
 
 echo "Installing standard requirements..."
 pip install --quiet -e engine/[dev]
-fi
+
 
 VENV_PYTHON=$(which python)
 
