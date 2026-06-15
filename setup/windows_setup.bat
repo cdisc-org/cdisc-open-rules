@@ -147,7 +147,7 @@ echo.
 echo Installing dependencies...
 python -m pip install --upgrade pip setuptools wheel --quiet
 
-python -m pip install -e engine/ --quiet
+python -m pip install -e engine/[dev] --quiet
 if !errorlevel! neq 0 (
     echo Failed to install dependencies
     cd ..

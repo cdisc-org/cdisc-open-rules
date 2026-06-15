@@ -2,17 +2,6 @@
 # Contributor setup script for Mac/Linux
 set -e
 
-INSTALL_BINARY=false
-
-# Parse flags to set INSTALL_BINARY=true if -b or --binary passed
-while [[ "$#" -gt 0 ]]; do
-    case $1 in
-        -b|--binary) INSTALL_BINARY=true ;;
-        *) echo "Unknown parameter passed: $1"; exit 1 ;;
-    esac
-    shift
-done
-
 command_exists() {
     command -v "$1" >/dev/null 2>&1
 }
