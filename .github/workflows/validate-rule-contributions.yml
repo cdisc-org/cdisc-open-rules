@@ -34,7 +34,7 @@ jobs:
           python -m venv venv
           git submodule update --init --recursive
           ./venv/bin/pip install --upgrade pip
-          ./venv/bin/pip install -r engine/requirements.txt
+          ./venv/bin/pip install -e engine/
 
       # -----------------------------------------------------------------------
       # Detect which rule changed

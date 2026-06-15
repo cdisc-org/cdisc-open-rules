@@ -134,13 +134,8 @@ source venv/bin/activate
 echo "Installing dependencies..."
 pip install --upgrade pip --quiet
 
-if [ "$INSTALL_BINARY" = true ]; then
-    echo "Installing with psycopg2-binary swap..."
-    sed 's/^psycopg2==/psycopg2-binary==/g' engine/requirements.txt | pip install --quiet -r /dev/stdin
-    grep -v "^-r requirements.txt" engine/requirements-dev.txt | pip install --quiet -r /dev/stdin
-else
-    echo "Installing standard requirements..."
-    pip install -r engine/requirements-dev.txt --quiet
+echo "Installing standard requirements..."
+pip install --quiet -e engine/[dev]
 fi
 
 VENV_PYTHON=$(which python)
