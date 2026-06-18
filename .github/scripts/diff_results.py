@@ -12,37 +12,71 @@ Exit codes:
 
 import csv
 import sys
-from itertools import zip_longest
+from collections import Counter, defaultdict, deque
 
 
-def load(path: str) -> list[tuple]:
+def load(path: str) -> list[tuple[int, tuple]]:
+    """Load CSV rows as (1-based line number, row tuple), preserving original order."""
     with open(path, newline="") as f:
         reader = csv.DictReader(f)
         header = reader.fieldnames or []
-        rows = [tuple(row[col] for col in header) for row in reader]
-    return sorted(rows)
+        return [
+            (i, tuple(row[col] for col in header))
+            for i, row in enumerate(reader, start=1)
+        ]
 
 
 def diff(expected_path: str, actual_path: str) -> list[str]:
-    diffs = []
-    c_rows = load(expected_path)
-    g_rows = load(actual_path)
+    exp_rows = load(expected_path)
+    act_rows = load(actual_path)
 
-    if len(c_rows) != len(g_rows):
+    exp_content = [row for _, row in exp_rows]
+    act_content = [row for _, row in act_rows]
+
+    exp_counter = Counter(exp_content)
+    act_counter = Counter(act_content)
+    matched = exp_counter & act_counter  # rows present in both (min count)
+
+    unmatched_exp = exp_counter - matched  # rows only in expected
+    unmatched_act = act_counter - matched  # rows only in actual
+
+    if not unmatched_exp and not unmatched_act:
+        if exp_content != act_content:
+            return [
+                "Row order changed: rows are identical but appear in a different order"
+            ]
+        return []
+
+    # Build per-content queues of line numbers; consume matched rows first
+    # so remaining entries represent the truly unmatched lines.
+    exp_linenos: dict[tuple, deque[int]] = defaultdict(deque)
+    for lineno, row in exp_rows:
+        exp_linenos[row].append(lineno)
+
+    act_linenos: dict[tuple, deque[int]] = defaultdict(deque)
+    for lineno, row in act_rows:
+        act_linenos[row].append(lineno)
+
+    for row, count in matched.items():
+        for _ in range(count):
+            exp_linenos[row].popleft()
+            act_linenos[row].popleft()
+
+    diffs = []
+    if len(exp_content) != len(act_content):
         diffs.append(
-            f"Row count changed: {len(c_rows)} expected -> {len(g_rows)} actual"
+            f"Row count changed: {len(exp_content)} expected -> {len(act_content)} actual"
         )
 
-    _ABSENT = object()
-    for i, (c_row, g_row) in enumerate(
-        zip_longest(c_rows, g_rows, fillvalue=_ABSENT), start=1
-    ):
-        if c_row is _ABSENT:
-            diffs.append(f"  Row {i}: present in actual only -> {g_row}")
-        elif g_row is _ABSENT:
-            diffs.append(f"  Row {i}: present in expected only -> {c_row}")
-        elif c_row != g_row:
-            diffs.append(f"  Row {i}: expected={c_row} -> actual={g_row}")
+    for row in sorted(unmatched_exp):
+        for _ in range(unmatched_exp[row]):
+            lineno = exp_linenos[row].popleft()
+            diffs.append(f"  Expected row {lineno} not found in actual: {row}")
+
+    for row in sorted(unmatched_act):
+        for _ in range(unmatched_act[row]):
+            lineno = act_linenos[row].popleft()
+            diffs.append(f"  Actual row {lineno} not found in expected: {row}")
 
     return diffs
 
