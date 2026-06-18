@@ -12,7 +12,7 @@ Exit codes:
 
 import csv
 import sys
-from collections import Counter, defaultdict, deque
+from collections import Counter
 
 
 def load(path: str) -> list[tuple[int, tuple]]:
@@ -24,6 +24,19 @@ def load(path: str) -> list[tuple[int, tuple]]:
             (i, tuple(row[col] for col in header))
             for i, row in enumerate(reader, start=1)
         ]
+
+
+def _filter_unmatched(
+    rows: list[tuple[int, tuple]], unmatched: Counter
+) -> list[tuple[int, tuple]]:
+    """Return rows (in original order) that belong to the unmatched set."""
+    remaining_counts = Counter(unmatched)
+    result = []
+    for lineno, row in rows:
+        if remaining_counts[row] > 0:
+            result.append((lineno, row))
+            remaining_counts[row] -= 1
+    return result
 
 
 def diff(expected_path: str, actual_path: str) -> list[str]:
@@ -47,20 +60,9 @@ def diff(expected_path: str, actual_path: str) -> list[str]:
             ]
         return []
 
-    # Build per-content queues of line numbers; consume matched rows first
-    # so remaining entries represent the truly unmatched lines.
-    exp_linenos: dict[tuple, deque[int]] = defaultdict(deque)
-    for lineno, row in exp_rows:
-        exp_linenos[row].append(lineno)
-
-    act_linenos: dict[tuple, deque[int]] = defaultdict(deque)
-    for lineno, row in act_rows:
-        act_linenos[row].append(lineno)
-
-    for row, count in matched.items():
-        for _ in range(count):
-            exp_linenos[row].popleft()
-            act_linenos[row].popleft()
+    # Rebuild remaining unmatched rows in their original file order.
+    remaining_exp = _filter_unmatched(exp_rows, unmatched_exp)
+    remaining_act = _filter_unmatched(act_rows, unmatched_act)
 
     diffs = []
     if len(exp_content) != len(act_content):
@@ -68,15 +70,19 @@ def diff(expected_path: str, actual_path: str) -> list[str]:
             f"Row count changed: {len(exp_content)} expected -> {len(act_content)} actual"
         )
 
-    for row in sorted(unmatched_exp):
-        for _ in range(unmatched_exp[row]):
-            lineno = exp_linenos[row].popleft()
-            diffs.append(f"  Expected row {lineno} not found in actual: {row}")
+    # Merge both unmatched lists by post-filter index; exp before act when tied.
+    # Sort key: (post_filter_row, 0=Expected/1=Actual)
+    entries = [
+        (post_idx, 0, "Expected", src_lineno, row)
+        for post_idx, (src_lineno, row) in enumerate(remaining_exp, start=1)
+    ] + [
+        (post_idx, 1, "Actual", src_lineno, row)
+        for post_idx, (src_lineno, row) in enumerate(remaining_act, start=1)
+    ]
+    entries.sort(key=lambda e: (e[0], e[1]))
 
-    for row in sorted(unmatched_act):
-        for _ in range(unmatched_act[row]):
-            lineno = act_linenos[row].popleft()
-            diffs.append(f"  Actual row {lineno} not found in expected: {row}")
+    for _, _, label, src_lineno, row in entries:
+        diffs.append(f"  [{label:8}] Row {src_lineno}: {row}")
 
     return diffs
 
