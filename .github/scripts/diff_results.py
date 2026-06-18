@@ -14,6 +14,8 @@ import csv
 import sys
 from collections import Counter
 
+from tabulate import tabulate
+
 
 def load(path: str) -> tuple[list[str], list[tuple[int, tuple]]]:
     """Return (header, [(1-based line number, row tuple)]), preserving original order."""
@@ -81,34 +83,10 @@ def _pair_closest(
     return pairs, unpaired_exp, unpaired_act
 
 
-def create_md_table(table_name, headers, records, property_getter=None):
-    """
-    Create a Markdown table with the given headers and records.
-
-    Args:
-        table_name: The title of the table
-        headers: List of column headers
-        records: List of records to include in the table
-        property_getter: Optional function to extract properties from records.
-                         If None, assumes records are dictionaries.
-    Returns:
-        String containing the formatted Markdown table
-    """
-    title = f"### {table_name}"
-    header = "| " + " | ".join(headers) + " |"
-    underline = "| " + " | ".join(["---" for _ in headers]) + " |"
-
-    if property_getter is None:
-
-        def property_getter(record, prop):
-            return str(record.get(prop, ""))
-
-    values = "\n".join(
-        "| " + " | ".join([property_getter(record, prop) for prop in headers]) + " |"
-        for record in records
-    )
-
-    return f"{title}\n\n{header}\n{underline}\n{values}"
+def _render_diff_table(table_name: str, headers: list[str], records: list[dict]) -> str:
+    rows = [[r.get(h, "") for h in headers] for r in records]
+    table = tabulate(rows, headers=headers, tablefmt="github")
+    return f"### {table_name}\n\n{table}"
 
 
 def diff(expected_path: str, actual_path: str) -> list[str]:
@@ -148,10 +126,10 @@ def diff(expected_path: str, actual_path: str) -> list[str]:
     records = []
     for (exp_lineno, exp_row), (act_lineno, act_row) in pairs:
         exp_record = {"Exp/Act": "Expected", "Result Row": str(exp_lineno)}
-        act_record = {"Exp/Act": "Actual",   "Result Row": str(act_lineno)}
+        act_record = {"Exp/Act": "Actual", "Result Row": str(act_lineno)}
         for col, ev, av in zip(exp_header, exp_row, act_row):
-            exp_record[col] = f"**{ev}**" if ev != av else ev
-            act_record[col] = f"**{av}**" if ev != av else av
+            exp_record[col] = f"**{ev}**" if ev != av and ev != "" else ev
+            act_record[col] = f"**{av}**" if ev != av and av != "" else av
         records.append(exp_record)
         records.append(act_record)
 
@@ -165,7 +143,7 @@ def diff(expected_path: str, actual_path: str) -> list[str]:
         record.update(zip(exp_header, row))
         records.append(record)
 
-    diffs.append(create_md_table("Diff Results", table_headers, records))
+    diffs.append(_render_diff_table("Diff Results", table_headers, records))
 
     return diffs
 
