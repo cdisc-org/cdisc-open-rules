@@ -81,6 +81,36 @@ def _pair_closest(
     return pairs, unpaired_exp, unpaired_act
 
 
+def create_md_table(table_name, headers, records, property_getter=None):
+    """
+    Create a Markdown table with the given headers and records.
+
+    Args:
+        table_name: The title of the table
+        headers: List of column headers
+        records: List of records to include in the table
+        property_getter: Optional function to extract properties from records.
+                         If None, assumes records are dictionaries.
+    Returns:
+        String containing the formatted Markdown table
+    """
+    title = f"### {table_name}"
+    header = "| " + " | ".join(headers) + " |"
+    underline = "| " + " | ".join(["---" for _ in headers]) + " |"
+
+    if property_getter is None:
+
+        def property_getter(record, prop):
+            return str(record.get(prop, ""))
+
+    values = "\n".join(
+        "| " + " | ".join([property_getter(record, prop) for prop in headers]) + " |"
+        for record in records
+    )
+
+    return f"{title}\n\n{header}\n{underline}\n{values}"
+
+
 def diff(expected_path: str, actual_path: str) -> list[str]:
     exp_header, exp_rows = load(expected_path)
     _, act_rows = load(actual_path)
@@ -113,15 +143,29 @@ def diff(expected_path: str, actual_path: str) -> list[str]:
 
     pairs, unpaired_exp, unpaired_act = _pair_closest(remaining_exp, remaining_act)
 
+    table_headers = ["Exp/Act", "Result Row"] + exp_header
+
+    records = []
     for (exp_lineno, exp_row), (act_lineno, act_row) in pairs:
-        diffs.append(f"  [Expected] Row {exp_lineno}: {exp_row}")
-        diffs.append(f"  [Actual  ] Row {act_lineno}: {act_row}")
+        exp_record = {"Exp/Act": "Expected", "Result Row": str(exp_lineno)}
+        act_record = {"Exp/Act": "Actual",   "Result Row": str(act_lineno)}
+        for col, ev, av in zip(exp_header, exp_row, act_row):
+            exp_record[col] = f"**{ev}**" if ev != av else ev
+            act_record[col] = f"**{av}**" if ev != av else av
+        records.append(exp_record)
+        records.append(act_record)
 
     for lineno, row in unpaired_exp:
-        diffs.append(f"  [Expected only] Row {lineno}: {row}")
+        record = {"Exp/Act": "Expected only", "Result Row": str(lineno)}
+        record.update(zip(exp_header, row))
+        records.append(record)
 
     for lineno, row in unpaired_act:
-        diffs.append(f"  [Actual only  ] Row {lineno}: {row}")
+        record = {"Exp/Act": "Actual only", "Result Row": str(lineno)}
+        record.update(zip(exp_header, row))
+        records.append(record)
+
+    diffs.append(create_md_table("Diff Results", table_headers, records))
 
     return diffs
 
