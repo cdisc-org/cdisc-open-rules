@@ -164,7 +164,7 @@ def main():
         sys.exit(2)
 
     if diffs:
-        print(f"### DIFF_FOUND for {case_label}:\n")
+        print(f"DIFF_FOUND for {case_label}:\n")
         for line in diffs:
             print(line)
         sys.exit(1)
