@@ -83,12 +83,6 @@ def _pair_closest(
     return pairs, unpaired_exp, unpaired_act
 
 
-def _render_diff_table(table_name: str, headers: list[str], records: list[dict]) -> str:
-    rows = [[r.get(h, "") for h in headers] for r in records]
-    table = tabulate(rows, headers=headers, tablefmt="github")
-    return f"### {table_name}\n\n{table}"
-
-
 def diff(expected_path: str, actual_path: str) -> list[str]:
     exp_header, exp_rows = load(expected_path)
     _, act_rows = load(actual_path)
@@ -116,7 +110,7 @@ def diff(expected_path: str, actual_path: str) -> list[str]:
     diffs = []
     if len(exp_content) != len(act_content):
         diffs.append(
-            f"Row count changed: {len(exp_content)} expected -> {len(act_content)} actual"
+            f"Row count changed: {len(exp_content)} expected -> {len(act_content)} actual\n"
         )
 
     pairs, unpaired_exp, unpaired_act = _pair_closest(remaining_exp, remaining_act)
@@ -143,7 +137,12 @@ def diff(expected_path: str, actual_path: str) -> list[str]:
         record.update(zip(exp_header, row))
         records.append(record)
 
-    diffs.append(_render_diff_table("Diff Results", table_headers, records))
+    table = tabulate(
+        [[r.get(h, "") for h in table_headers] for r in records],
+        headers=table_headers,
+        tablefmt="github",
+    )
+    diffs.append(table)
 
     return diffs
 
@@ -165,7 +164,7 @@ def main():
         sys.exit(2)
 
     if diffs:
-        print(f"DIFF_FOUND for {case_label}:")
+        print(f"### DIFF_FOUND for {case_label}:\n")
         for line in diffs:
             print(line)
         sys.exit(1)
