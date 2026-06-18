@@ -15,15 +15,16 @@ import sys
 from collections import Counter
 
 
-def load(path: str) -> list[tuple[int, tuple]]:
-    """Load CSV rows as (1-based line number, row tuple), preserving original order."""
+def load(path: str) -> tuple[list[str], list[tuple[int, tuple]]]:
+    """Return (header, [(1-based line number, row tuple)]), preserving original order."""
     with open(path, newline="") as f:
         reader = csv.DictReader(f)
-        header = reader.fieldnames or []
-        return [
+        header = list(reader.fieldnames or [])
+        rows = [
             (i, tuple(row[col] for col in header))
             for i, row in enumerate(reader, start=1)
         ]
+    return header, rows
 
 
 def _filter_unmatched(
@@ -39,19 +40,60 @@ def _filter_unmatched(
     return result
 
 
+def _similarity(a: tuple, b: tuple) -> float:
+    """Fraction of fields that match between two rows (0.0 – 1.0)."""
+    if not a and not b:
+        return 1.0
+    n = max(len(a), len(b))
+    matches = sum(x == y for x, y in zip(a, b))
+    return matches / n
+
+
+def _pair_closest(
+    exp_rows: list[tuple[int, tuple]],
+    act_rows: list[tuple[int, tuple]],
+) -> tuple[
+    list[tuple[tuple[int, tuple], tuple[int, tuple]]],  # paired (exp, act)
+    list[tuple[int, tuple]],  # unpaired expected
+    list[tuple[int, tuple]],  # unpaired actual
+]:
+    """Greedily pair rows from the smaller side with the closest match on the larger side."""
+    exp_is_smaller = len(exp_rows) <= len(act_rows)
+    smaller = exp_rows if exp_is_smaller else act_rows
+    remaining_larger = list(act_rows if exp_is_smaller else exp_rows)
+
+    pairs: list[tuple[tuple[int, tuple], tuple[int, tuple]]] = []
+    unpaired_smaller: list[tuple[int, tuple]] = []
+
+    for item in smaller:
+        if not remaining_larger:
+            unpaired_smaller.append(item)
+            continue
+        best_idx = max(
+            range(len(remaining_larger)),
+            key=lambda i: _similarity(item[1], remaining_larger[i][1]),
+        )
+        matched = remaining_larger.pop(best_idx)
+        pairs.append((item, matched) if exp_is_smaller else (matched, item))
+
+    unpaired_exp = unpaired_smaller if exp_is_smaller else remaining_larger
+    unpaired_act = remaining_larger if exp_is_smaller else unpaired_smaller
+    return pairs, unpaired_exp, unpaired_act
+
+
 def diff(expected_path: str, actual_path: str) -> list[str]:
-    exp_rows = load(expected_path)
-    act_rows = load(actual_path)
+    exp_header, exp_rows = load(expected_path)
+    _, act_rows = load(actual_path)
 
     exp_content = [row for _, row in exp_rows]
     act_content = [row for _, row in act_rows]
 
     exp_counter = Counter(exp_content)
     act_counter = Counter(act_content)
-    matched = exp_counter & act_counter  # rows present in both (min count)
+    matched = exp_counter & act_counter
 
-    unmatched_exp = exp_counter - matched  # rows only in expected
-    unmatched_act = act_counter - matched  # rows only in actual
+    unmatched_exp = exp_counter - matched
+    unmatched_act = act_counter - matched
 
     if not unmatched_exp and not unmatched_act:
         if exp_content != act_content:
@@ -60,7 +102,6 @@ def diff(expected_path: str, actual_path: str) -> list[str]:
             ]
         return []
 
-    # Rebuild remaining unmatched rows in their original file order.
     remaining_exp = _filter_unmatched(exp_rows, unmatched_exp)
     remaining_act = _filter_unmatched(act_rows, unmatched_act)
 
@@ -70,19 +111,17 @@ def diff(expected_path: str, actual_path: str) -> list[str]:
             f"Row count changed: {len(exp_content)} expected -> {len(act_content)} actual"
         )
 
-    # Merge both unmatched lists by post-filter index; exp before act when tied.
-    # Sort key: (post_filter_row, 0=Expected/1=Actual)
-    entries = [
-        (post_idx, 0, "Expected", src_lineno, row)
-        for post_idx, (src_lineno, row) in enumerate(remaining_exp, start=1)
-    ] + [
-        (post_idx, 1, "Actual", src_lineno, row)
-        for post_idx, (src_lineno, row) in enumerate(remaining_act, start=1)
-    ]
-    entries.sort(key=lambda e: (e[0], e[1]))
+    pairs, unpaired_exp, unpaired_act = _pair_closest(remaining_exp, remaining_act)
 
-    for _, _, label, src_lineno, row in entries:
-        diffs.append(f"  [{label:8}] Row {src_lineno}: {row}")
+    for (exp_lineno, exp_row), (act_lineno, act_row) in pairs:
+        diffs.append(f"  [Expected] Row {exp_lineno}: {exp_row}")
+        diffs.append(f"  [Actual  ] Row {act_lineno}: {act_row}")
+
+    for lineno, row in unpaired_exp:
+        diffs.append(f"  [Expected only] Row {lineno}: {row}")
+
+    for lineno, row in unpaired_act:
+        diffs.append(f"  [Actual only  ] Row {lineno}: {row}")
 
     return diffs
 
