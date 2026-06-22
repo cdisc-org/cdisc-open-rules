@@ -157,7 +157,7 @@ for TEST_TYPE in positive negative; do
     (cd "$ENGINE_DIR" && $PYTHON_CMD core.py validate "${ENGINE_ARGS[@]}") \
       2>&1 | tee "$ENGINE_LOG" || ENGINE_EXIT=${PIPESTATUS[0]}
 
-    ACTUAL_CSV="$RESULTS_DIR/actual.csv"
+    ACTUAL_CSV="$RESULTS_DIR/results.csv"
 
     if [ $ENGINE_EXIT -ne 0 ] || [ ! -f "$ACTUAL_CSV" ]; then
       echo "  ERROR: engine failed or produced no output (exit $ENGINE_EXIT)"
