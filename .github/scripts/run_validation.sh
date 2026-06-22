@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # run_validation.sh — iterates all positive/ and negative/ test cases for a rule,
-# runs the CORE engine against each, converts JSON output to results.csv,
+# runs the CORE engine against each, prints output to results.csv,
 # diffs against any expected results.csv, and writes two outputs:
 #   - $REPO_ROOT/validation_report.md  (detailed markdown, legacy/fallback)
 #   - $REPO_ROOT/case_results.jsonl    (one JSON line per test case for the summary table)
