@@ -136,8 +136,8 @@ for TEST_TYPE in positive negative; do
     # Back up expected results.csv before the engine run (only if it exists)
     EXPECTED_RESULTS=""
     if [ "$MISSING_BASELINE" = false ]; then
-      cp "$RESULTS_DIR/results.csv" "$RESULTS_DIR/results.expected.csv"
-      EXPECTED_RESULTS="$RESULTS_DIR/results.expected.csv"
+      cp "$RESULTS_DIR/results.csv" "$RESULTS_DIR/expected.csv"
+      EXPECTED_RESULTS="$RESULTS_DIR/expected.csv"
     fi
 
     ENGINE_ARGS=(
@@ -204,6 +204,9 @@ for TEST_TYPE in positive negative; do
     $PYTHON_CMD "$SCRIPTS_DIR/diff_results.py" \
       "$EXPECTED_RESULTS" "$ACTUAL_CSV" "$CASE_LABEL" \
       > "$DIFF_LOG" 2>&1 || DIFF_EXIT=$?
+
+    # Preserve actual output before restoring the baseline
+    cp "$ACTUAL_CSV" "$RESULTS_DIR/actual.csv"
 
     if [ $DIFF_EXIT -eq 0 ]; then
       echo "  PASSED — actual results match expected baseline"
