@@ -157,7 +157,7 @@ for TEST_TYPE in positive negative; do
     (cd "$ENGINE_DIR" && $PYTHON_CMD core.py validate "${ENGINE_ARGS[@]}") \
       2>&1 | tee "$ENGINE_LOG" || ENGINE_EXIT=${PIPESTATUS[0]}
 
-    ACTUAL_CSV="$RESULTS_DIR/results.csv"
+    ACTUAL_CSV="$RESULTS_DIR/actual.csv"
 
     if [ $ENGINE_EXIT -ne 0 ] || [ ! -f "$ACTUAL_CSV" ]; then
       echo "  ERROR: engine failed or produced no output (exit $ENGINE_EXIT)"
@@ -175,7 +175,7 @@ for TEST_TYPE in positive negative; do
       emit_result "false" "" "" "false" "" "$ENGINE_LOG"
       FAILED_CASES=$((FAILED_CASES + 1))
       OVERALL_SUCCESS=false
-      [ "$MISSING_BASELINE" = false ] && mv "$EXPECTED_RESULTS" "$RESULTS_DIR/results.csv"
+      [ "$MISSING_BASELINE" = false ] && cp "$EXPECTED_RESULTS" "$RESULTS_DIR/results.csv"
       continue
     fi
 
@@ -234,7 +234,7 @@ for TEST_TYPE in positive negative; do
       OVERALL_SUCCESS=false
     fi
 
-    mv "$EXPECTED_RESULTS" "$RESULTS_DIR/results.csv"
+    cp "$EXPECTED_RESULTS" "$RESULTS_DIR/results.csv"
 
   done < <(find "$TYPE_DIR" -mindepth 1 -maxdepth 1 -type d -print0 | sort -z)
 done
