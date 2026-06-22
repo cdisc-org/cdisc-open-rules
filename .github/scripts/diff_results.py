@@ -19,11 +19,11 @@ from tabulate import tabulate
 
 def load(path: str) -> tuple[list[str], list[tuple[int, tuple]]]:
     """Return (header, [(1-based line number, row tuple)]), preserving original order."""
-    with open(path, newline="", encoding="utf-8") as f:
+    with open(path, newline="") as f:
         reader = csv.DictReader(f)
         header = list(reader.fieldnames or [])
         rows = [
-            (i, tuple(row[col].strip("\r") for col in header))
+            (i, tuple(row[col] for col in header))
             for i, row in enumerate(reader, start=1)
         ]
     return header, rows
