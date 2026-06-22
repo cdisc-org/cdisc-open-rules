@@ -97,13 +97,13 @@ def diff(expected_path: str, actual_path: str) -> list[str]:
     unmatched_exp = exp_counter - matched
     unmatched_act = act_counter - matched
 
-    # Uncomment this if we care about row order changes
-    # if not unmatched_exp and not unmatched_act:
-    #     if exp_content != act_content:
-    #         return [
-    #             "Row order changed: rows are identical but appear in a different order"
-    #         ]
-    #     return []
+    if not unmatched_exp and not unmatched_act:
+        # Uncomment this if we care about row order changes
+        # if exp_content != act_content:
+        #     return [
+        #         "Row order changed: rows are identical but appear in a different order"
+        #     ]
+        return []
 
     remaining_exp = _filter_unmatched(exp_rows, unmatched_exp)
     remaining_act = _filter_unmatched(act_rows, unmatched_act)
