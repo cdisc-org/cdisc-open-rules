@@ -1,0 +1,37 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "diff_results: compare two CSVs",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/.github/scripts/diff_results.py",
+      "args": [
+        "${input:expectedCsv}",
+        "${input:actualCsv}",
+        "${input:caseLabel}"
+      ],
+      "console": "integratedTerminal"
+    }
+  ],
+  "inputs": [
+    {
+      "id": "expectedCsv",
+      "type": "promptString",
+      "description": "Path to expected results CSV",
+      "default": "${workspaceFolder}/Published/CORE-000001/negative/01/results/expected.csv"
+    },
+    {
+      "id": "actualCsv",
+      "type": "promptString",
+      "description": "Path to actual results CSV",
+      "default": "${workspaceFolder}/Published/CORE-000001/negative/01/results/actual.csv"
+    },
+    {
+      "id": "caseLabel",
+      "type": "promptString",
+      "description": "Case label (e.g. negative/01)",
+      "default": "negative/01"
+    }
+  ]
+}
