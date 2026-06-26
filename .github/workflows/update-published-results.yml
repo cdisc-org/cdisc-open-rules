@@ -108,7 +108,20 @@ jobs:
             $CORE_IDS_ARG
 
       # -----------------------------------------------------------------------
-      # 5. Write summary to Job Summary
+      # 5. Promote actual.csv → results.csv for all cases that ran
+      #    run_validation.sh restores the original baseline after diffing;
+      #    actual.csv holds the true engine output we want to commit.
+      # -----------------------------------------------------------------------
+      - name: Promote actual results to baseline
+        run: |
+          find Published -path "*/results/actual.csv" | while IFS= read -r actual; do
+            dest="$(dirname "$actual")/results.csv"
+            cp "$actual" "$dest"
+            echo "Updated: $dest"
+          done
+
+      # -----------------------------------------------------------------------
+      # 6. Write summary to Job Summary
       # -----------------------------------------------------------------------
       - name: Write summary to workflow summary
         if: always()
@@ -116,7 +129,7 @@ jobs:
           [ -f summary_table.md ] && cat summary_table.md >> $GITHUB_STEP_SUMMARY || true
 
       # -----------------------------------------------------------------------
-      # 6. Upload reports as artifacts (regardless of outcome)
+      # 7. Upload reports as artifacts (regardless of outcome)
       # -----------------------------------------------------------------------
       - name: Upload validation artifacts
         if: always()
@@ -130,7 +143,7 @@ jobs:
           if-no-files-found: warn
 
       # -----------------------------------------------------------------------
-      # 7. Determine if any results.csv files changed
+      # 8. Determine if any results.csv files changed
       # -----------------------------------------------------------------------
       - name: Check for changed results
         id: check_changes
@@ -148,7 +161,7 @@ jobs:
           git reset HEAD
 
       # -----------------------------------------------------------------------
-      # 8. Create PR with updated results
+      # 9. Create PR with updated results
       # -----------------------------------------------------------------------
       - name: Create Pull Request
         id: create_pr
@@ -181,7 +194,7 @@ jobs:
               or rerun the workflow with a specific `engine_ref` to bisect.
 
       # -----------------------------------------------------------------------
-      # 9. Annotate summary with PR link
+      # 10. Annotate summary with PR link
       # -----------------------------------------------------------------------
       - name: Annotate summary with PR link
         if: steps.create_pr.outcome == 'success'
