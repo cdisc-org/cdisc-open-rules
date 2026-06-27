@@ -97,8 +97,6 @@ jobs:
             CORE_IDS_ARG="--core-ids ${{ inputs.core_ids }}"
           fi
 
-          CORE_IDS_ARG="--core-ids CORE-000007"
-
           ENGINE_DIR_OVERRIDE="$(pwd)/engine" \
           venv/bin/python engine/scripts/validate_published_rules.py \
             --rules-root "$(pwd)" \
