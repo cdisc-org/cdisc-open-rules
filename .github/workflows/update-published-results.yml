@@ -13,10 +13,6 @@
 name: Update Published Results
 
 on:
-  # TODO: remove on push before merging
-  push:
-    branches:
-      - automatic-pr
   workflow_dispatch:
     inputs:
       engine_ref:
@@ -181,6 +177,7 @@ jobs:
             | | |
             |---|---|
             | **Engine ref** | [`${{ env.engine_ref }}`](https://github.com/cdisc-org/cdisc-rules-engine/tree/${{ env.engine_ref }}) |
+            | **Open Rules ref** | [`${{ github.sha }}`](https://github.com/${{ github.repository }}/tree/${{ github.sha }}) |
             | **Rules updated** | ${{ steps.check_changes.outputs.changed_count }} result file(s) changed |
             | **Triggered by** | ${{ github.event_name == 'schedule' && 'Scheduled run (weekly)' || format('Manual run by @{0}', github.actor) }} |
             | **Workflow run** | [#${{ github.run_id }}](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}) |
@@ -192,17 +189,16 @@ jobs:
               or rerun the workflow with a specific `engine_ref` to bisect.
 
       # -----------------------------------------------------------------------
-      # 10. Annotate summary with PR link
+      # 10. Annotate summary with PR link (prepended before the summary table)
       # -----------------------------------------------------------------------
       - name: Annotate summary with PR link
         if: steps.create_pr.outcome == 'success'
         run: |
-          echo "" >> $GITHUB_STEP_SUMMARY
-          echo "## Pull Request" >> $GITHUB_STEP_SUMMARY
-          echo "[📝 PR #${{ steps.create_pr.outputs.pull-request-number }}](${{ steps.create_pr.outputs.pull-request-url }})" >> $GITHUB_STEP_SUMMARY
+          PR_HEADER="## Pull Request\n[📝 PR #${{ steps.create_pr.outputs.pull-request-number }}](${{ steps.create_pr.outputs.pull-request-url }})\n\n"
+          EXISTING=$(cat "$GITHUB_STEP_SUMMARY" 2>/dev/null || true)
+          printf "%b%s" "$PR_HEADER" "$EXISTING" > "$GITHUB_STEP_SUMMARY"
 
       - name: No changes message
         if: steps.check_changes.outputs.changed == 'false'
         run: |
-          echo "" >> $GITHUB_STEP_SUMMARY
           echo "✅ All results.csv files are already up to date — no PR created." >> $GITHUB_STEP_SUMMARY
