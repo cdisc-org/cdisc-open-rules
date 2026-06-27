@@ -174,7 +174,7 @@ jobs:
           branch: update-results-${{ env.engine_ref }}
           delete-branch: true
           title: "Update Published results.csv baselines (engine@${{ env.engine_ref }})"
-          draft: ${{ env.engine_ref != 'main' }}
+          draft: ${{ env.engine_ref != 'main' || github.ref != format('refs/heads/{0}', github.event.repository.default_branch) }}
           reviewers: ${{ vars.REVIEWERS }}
           body: |
             This PR updates the `results.csv` baseline files for Published rules
