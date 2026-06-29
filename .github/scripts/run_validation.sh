@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # run_validation.sh — iterates all positive/ and negative/ test cases for a rule,
-# runs the CORE engine against each, converts JSON output to results.csv,
+# runs the CORE engine against each, prints output to results.csv,
 # diffs against any expected results.csv, and writes two outputs:
 #   - $REPO_ROOT/validation_report.md  (detailed markdown, legacy/fallback)
 #   - $REPO_ROOT/case_results.jsonl    (one JSON line per test case for the summary table)
@@ -136,8 +136,8 @@ for TEST_TYPE in positive negative; do
     # Back up expected results.csv before the engine run (only if it exists)
     EXPECTED_RESULTS=""
     if [ "$MISSING_BASELINE" = false ]; then
-      cp "$RESULTS_DIR/results.csv" "$RESULTS_DIR/results.expected.csv"
-      EXPECTED_RESULTS="$RESULTS_DIR/results.expected.csv"
+      cp "$RESULTS_DIR/results.csv" "$RESULTS_DIR/expected.csv"
+      EXPECTED_RESULTS="$RESULTS_DIR/expected.csv"
     fi
 
     ENGINE_ARGS=(
@@ -175,7 +175,7 @@ for TEST_TYPE in positive negative; do
       emit_result "false" "" "" "false" "" "$ENGINE_LOG"
       FAILED_CASES=$((FAILED_CASES + 1))
       OVERALL_SUCCESS=false
-      [ "$MISSING_BASELINE" = false ] && mv "$EXPECTED_RESULTS" "$RESULTS_DIR/results.csv"
+      [ "$MISSING_BASELINE" = false ] && cp "$EXPECTED_RESULTS" "$RESULTS_DIR/results.csv"
       continue
     fi
 
@@ -205,6 +205,9 @@ for TEST_TYPE in positive negative; do
       "$EXPECTED_RESULTS" "$ACTUAL_CSV" "$CASE_LABEL" \
       > "$DIFF_LOG" 2>&1 || DIFF_EXIT=$?
 
+    # Preserve actual output before restoring the baseline
+    cp "$ACTUAL_CSV" "$RESULTS_DIR/actual.csv"
+
     if [ $DIFF_EXIT -eq 0 ]; then
       echo "  PASSED — actual results match expected baseline"
       {
@@ -231,7 +234,7 @@ for TEST_TYPE in positive negative; do
       OVERALL_SUCCESS=false
     fi
 
-    mv "$EXPECTED_RESULTS" "$RESULTS_DIR/results.csv"
+    cp "$EXPECTED_RESULTS" "$RESULTS_DIR/results.csv"
 
   done < <(find "$TYPE_DIR" -mindepth 1 -maxdepth 1 -type d -print0 | sort -z)
 done
