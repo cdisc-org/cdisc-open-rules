@@ -1,97 +1,97 @@
 path,attribute,value
-,codeSystem,ICD-10-CM
-,decode,Type 2 diabetes mellitus without complications
-,parent_id,Indication_1
-,codeSystemVersion,2
-,parent_entity,Indication
-,id,Code_37
-,parent_rel,codes
-,code,E11.1
-,codeSystem,ICD-10-CM
-,decode,Type 2 DB
-,parent_id,StudyDesign_1
-,codeSystemVersion,2
-,parent_entity,StudyDesign
-,id,Code_38
-,parent_rel,therapeuticAreas
-,code,E11.1
-,codeSystem,SNOMED
-,decode,Administration of X
-,parent_id,StudyIntervention_1
-,codeSystemVersion,"January 31, 2021"
-,parent_entity,StudyIntervention
-,id,Code_46
-,parent_rel,codes
-,code,123456
-,codeSystem,SNOMED
-,decode,Administration of X
-,parent_id,StudyIntervention_1
-,codeSystemVersion,"January 31, 2021"
-,parent_entity,StudyIntervention
-,id,Code_47
-,parent_rel,codes
-,code,123457
-,codeSystem,http://www.cdisc.org
-,decode,Same decode different codes
-,parent_id,StudyDesign_1
-,codeSystemVersion,2023-12-15
-,parent_entity,StudyDesign
-,id,Code_138
-,parent_rel,trialTypes
-,code,C49666
-,codeSystem,http://www.cdisc.org
-,decode,Same decode different codes
-,parent_id,StudyDesign_1
-,codeSystemVersion,2023-12-15
-,parent_entity,StudyDesign
-,id,Code_139
-,parent_rel,trialTypes
-,code,C49667
-,codeSystem,http://www.cdisc.org
-,decode,Same code different decodes
-,parent_id,StudyDesign_1
-,codeSystemVersion,2023-12-15
-,parent_entity,StudyDesign
-,id,Code_143
-,parent_rel,characteristics
-,code,C99907x1
-,codeSystem,http://www.cdisc.org
-,decode,Same code but different decodes
-,parent_id,StudyDesign_1
-,codeSystemVersion,2023-12-15
-,parent_entity,StudyDesign
-,id,Code_144
-,parent_rel,characteristics
-,code,C99907x1
-,codeSystem,CS1
-,decode,My X01 decode
-,parent_id,StudyDesign_1
-,codeSystemVersion,v1
-,parent_entity,StudyDesign
-,id,Code_145
-,parent_rel,characteristics
-,code,X01
-,codeSystem,CS1
-,decode,My X01 decode
-,parent_id,StudyDesign_1
-,codeSystemVersion,v1
-,parent_entity,StudyDesign
-,id,Code_146
-,parent_rel,characteristics
-,code,X02
-,codeSystem,CS1
-,decode,My X02 decode
-,parent_id,StudyDesign_1
-,codeSystemVersion,v1
-,parent_entity,StudyDesign
-,id,Code_147
-,parent_rel,characteristics
-,code,X01
-,codeSystem,CS1
-,decode,My X02 decode
-,parent_id,StudyDesign_1
-,codeSystemVersion,v1
-,parent_entity,StudyDesign
-,id,Code_148
-,parent_rel,characteristics
-,code,X02
+/Code/4,parent_entity,Indication
+/Code/4,parent_id,Indication_1
+/Code/4,parent_rel,codes
+/Code/4,id,Code_37
+/Code/4,codeSystem,ICD-10-CM
+/Code/4,codeSystemVersion,2
+/Code/4,code,E11.1
+/Code/4,decode,Type 2 diabetes mellitus without complications
+/Code/5,parent_entity,StudyDesign
+/Code/5,parent_id,StudyDesign_1
+/Code/5,parent_rel,therapeuticAreas
+/Code/5,id,Code_38
+/Code/5,codeSystem,ICD-10-CM
+/Code/5,codeSystemVersion,2
+/Code/5,code,E11.1
+/Code/5,decode,Type 2 DB
+/Code/6,parent_entity,StudyIntervention
+/Code/6,parent_id,StudyIntervention_1
+/Code/6,parent_rel,codes
+/Code/6,id,Code_46
+/Code/6,codeSystem,SNOMED
+/Code/6,codeSystemVersion,"January 31, 2021"
+/Code/6,code,123456
+/Code/6,decode,Administration of X
+/Code/7,parent_entity,StudyIntervention
+/Code/7,parent_id,StudyIntervention_1
+/Code/7,parent_rel,codes
+/Code/7,id,Code_47
+/Code/7,codeSystem,SNOMED
+/Code/7,codeSystemVersion,"January 31, 2021"
+/Code/7,code,123457
+/Code/7,decode,Administration of X
+/Code/8,parent_entity,StudyDesign
+/Code/8,parent_id,StudyDesign_1
+/Code/8,parent_rel,trialTypes
+/Code/8,id,Code_138
+/Code/8,codeSystem,http://www.cdisc.org
+/Code/8,codeSystemVersion,2023-12-15
+/Code/8,code,C49666
+/Code/8,decode,Same decode different codes
+/Code/9,parent_entity,StudyDesign
+/Code/9,parent_id,StudyDesign_1
+/Code/9,parent_rel,trialTypes
+/Code/9,id,Code_139
+/Code/9,codeSystem,http://www.cdisc.org
+/Code/9,codeSystemVersion,2023-12-15
+/Code/9,code,C49667
+/Code/9,decode,Same decode different codes
+/Code/10,parent_entity,StudyDesign
+/Code/10,parent_id,StudyDesign_1
+/Code/10,parent_rel,characteristics
+/Code/10,id,Code_143
+/Code/10,codeSystem,http://www.cdisc.org
+/Code/10,codeSystemVersion,2023-12-15
+/Code/10,code,C99907x1
+/Code/10,decode,Same code different decodes
+/Code/11,parent_entity,StudyDesign
+/Code/11,parent_id,StudyDesign_1
+/Code/11,parent_rel,characteristics
+/Code/11,id,Code_144
+/Code/11,codeSystem,http://www.cdisc.org
+/Code/11,codeSystemVersion,2023-12-15
+/Code/11,code,C99907x1
+/Code/11,decode,Same code but different decodes
+/Code/12,parent_entity,StudyDesign
+/Code/12,parent_id,StudyDesign_1
+/Code/12,parent_rel,characteristics
+/Code/12,id,Code_145
+/Code/12,codeSystem,CS1
+/Code/12,codeSystemVersion,v1
+/Code/12,code,X01
+/Code/12,decode,My X01 decode
+/Code/13,parent_entity,StudyDesign
+/Code/13,parent_id,StudyDesign_1
+/Code/13,parent_rel,characteristics
+/Code/13,id,Code_146
+/Code/13,codeSystem,CS1
+/Code/13,codeSystemVersion,v1
+/Code/13,code,X02
+/Code/13,decode,My X01 decode
+/Code/14,parent_entity,StudyDesign
+/Code/14,parent_id,StudyDesign_1
+/Code/14,parent_rel,characteristics
+/Code/14,id,Code_147
+/Code/14,codeSystem,CS1
+/Code/14,codeSystemVersion,v1
+/Code/14,code,X01
+/Code/14,decode,My X02 decode
+/Code/15,parent_entity,StudyDesign
+/Code/15,parent_id,StudyDesign_1
+/Code/15,parent_rel,characteristics
+/Code/15,id,Code_148
+/Code/15,codeSystem,CS1
+/Code/15,codeSystemVersion,v1
+/Code/15,code,X02
+/Code/15,decode,My X02 decode

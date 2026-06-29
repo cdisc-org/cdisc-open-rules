@@ -1,31 +1,31 @@
 path,attribute,value
-,parent_entity,StudyProtocolDocumentVersion
-,parent_rel,childIds
-,id,StudyProtocolDocumentVersion_1
-,parent_id,StudyProtocolDocumentVersion_1
-,name,Not in dataset
-,id,BiomedicalConceptCategory_1
-,parent_id,BiomedicalConceptCategory_1
-,parent_entity,BiomedicalConceptCategory
-,name,BCCAT1
-,parent_rel,childIds
-,id,NarrativeContent_1
-,parent_id,NarrativeContent_1
-,parent_entity,NarrativeContent
-,name,ROOT
-,parent_rel,childIds
-,id,NarrativeContent_2
-,parent_id,NarrativeContent_2
-,parent_entity,NarrativeContent
-,name,SECTION 0
-,parent_rel,childIds
-,id,NarrativeContent_3
-,parent_id,NarrativeContent_3
-,parent_entity,NarrativeContent
-,name,SECTION 1
-,parent_rel,childIds
-,id,NarrativeContent_4
-,parent_id,NarrativeContent_4
-,parent_entity,NarrativeContent
-,name,SECTION 1.1
-,parent_rel,childIds
+/BiomedicalConceptCategory/1,parent_entity,BiomedicalConceptCategory
+/BiomedicalConceptCategory/1,parent_id,BiomedicalConceptCategory_1
+/BiomedicalConceptCategory/1,parent_rel,childIds
+/BiomedicalConceptCategory/1,id,BiomedicalConceptCategory_1
+/BiomedicalConceptCategory/1,name,BCCAT1
+/NarrativeContent/4,parent_entity,NarrativeContent
+/NarrativeContent/4,parent_id,NarrativeContent_1
+/NarrativeContent/4,parent_rel,childIds
+/NarrativeContent/4,id,NarrativeContent_1
+/NarrativeContent/4,name,ROOT
+/NarrativeContent/5,parent_entity,NarrativeContent
+/NarrativeContent/5,parent_id,NarrativeContent_2
+/NarrativeContent/5,parent_rel,childIds
+/NarrativeContent/5,id,NarrativeContent_2
+/NarrativeContent/5,name,SECTION 0
+/NarrativeContent/6,parent_entity,NarrativeContent
+/NarrativeContent/6,parent_id,NarrativeContent_3
+/NarrativeContent/6,parent_rel,childIds
+/NarrativeContent/6,id,NarrativeContent_3
+/NarrativeContent/6,name,SECTION 1
+/NarrativeContent/7,parent_entity,NarrativeContent
+/NarrativeContent/7,parent_id,NarrativeContent_4
+/NarrativeContent/7,parent_rel,childIds
+/NarrativeContent/7,id,NarrativeContent_4
+/NarrativeContent/7,name,SECTION 1.1
+/StudyProtocolDocumentVersion/2,parent_entity,StudyProtocolDocumentVersion
+/StudyProtocolDocumentVersion/2,parent_id,StudyProtocolDocumentVersion_1
+/StudyProtocolDocumentVersion/2,parent_rel,childIds
+/StudyProtocolDocumentVersion/2,id,StudyProtocolDocumentVersion_1
+/StudyProtocolDocumentVersion/2,name,Not in dataset

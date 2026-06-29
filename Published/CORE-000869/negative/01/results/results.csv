@@ -1,29 +1,29 @@
 path,attribute,value
-,reasonDurationWillVary,
-,parent_rel,duration
-,durationWillVary,True
-,text,About a month
-,parent_entity,Administration
-,parent_id,Administration_1
-,id,Duration_1
-,reasonDurationWillVary,Depends on dosing rate
-,parent_rel,duration
-,durationWillVary,False
-,text,Two weeks
-,parent_entity,Administration
-,parent_id,Administration_2
-,id,Duration_2
-,reasonDurationWillVary,
-,parent_rel,plannedDuration
-,durationWillVary,
-,text,Three years
-,parent_entity,ScheduleTimeline
-,parent_id,ScheduleTimeline_1
-,id,Duration_3
-,reasonDurationWillVary,Depends on clinical evaluation
-,parent_rel,plannedDuration
-,durationWillVary,
-,text,Three months
-,parent_entity,ScheduleTimeline
-,parent_id,ScheduleTimeline_2
-,id,Duration_4
+/Duration/0,parent_entity,Administration
+/Duration/0,parent_id,Administration_1
+/Duration/0,parent_rel,duration
+/Duration/0,id,Duration_1
+/Duration/0,text,About a month
+/Duration/0,durationWillVary,True
+/Duration/0,reasonDurationWillVary,
+/Duration/1,parent_entity,Administration
+/Duration/1,parent_id,Administration_2
+/Duration/1,parent_rel,duration
+/Duration/1,id,Duration_2
+/Duration/1,text,Two weeks
+/Duration/1,durationWillVary,False
+/Duration/1,reasonDurationWillVary,Depends on dosing rate
+/Duration/2,parent_entity,ScheduleTimeline
+/Duration/2,parent_id,ScheduleTimeline_1
+/Duration/2,parent_rel,plannedDuration
+/Duration/2,id,Duration_3
+/Duration/2,text,Three years
+/Duration/2,durationWillVary,
+/Duration/2,reasonDurationWillVary,
+/Duration/3,parent_entity,ScheduleTimeline
+/Duration/3,parent_id,ScheduleTimeline_2
+/Duration/3,parent_rel,plannedDuration
+/Duration/3,id,Duration_4
+/Duration/3,text,Three months
+/Duration/3,durationWillVary,
+/Duration/3,reasonDurationWillVary,Depends on clinical evaluation

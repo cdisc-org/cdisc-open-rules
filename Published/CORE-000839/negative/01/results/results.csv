@@ -1,17 +1,18 @@
 path,attribute,value
-,name,Treatment
-,parent_rel,epochs
-,$epoch_ids_for_study_design,"['StudyEpoch_2', 'StudyEpoch_1']"
-,parent_entity,StudyDesign
-,parent_id,StudyDesign_1
-,previousId,StudyEpoch_1
-,nextId,StudyEpoch_3
-,id,StudyEpoch_2
-,name,Follow-Up
-,parent_rel,epochs
-,$epoch_ids_for_study_design,['StudyEpoch_3']
-,parent_entity,StudyDesign
-,parent_id,StudyDesign_2
-,previousId,StudyEpoch_2
-,nextId,
-,id,StudyEpoch_3
+/StudyEpoch/1,parent_entity,StudyDesign
+/StudyEpoch/1,parent_id,StudyDesign_1
+/StudyEpoch/1,parent_rel,epochs
+/StudyEpoch/1,id,StudyEpoch_2
+/StudyEpoch/1,name,Treatment
+/StudyEpoch/1,previousId,StudyEpoch_1
+/StudyEpoch/1,nextId,StudyEpoch_3
+/StudyEpoch/1,$epoch_ids_for_study_design,"['StudyEpoch_1', 'StudyEpoch_2']"
+/StudyEpoch/2,parent_entity,StudyDesign
+/StudyEpoch/2,parent_id,StudyDesign_2
+/StudyEpoch/2,parent_rel,epochs
+/StudyEpoch/2,id,StudyEpoch_3
+/StudyEpoch/2,name,Follow-Up
+/StudyEpoch/2,previousId,StudyEpoch_2
+/StudyEpoch/2,nextId,
+/StudyEpoch/2,$epoch_ids_for_study_design,['StudyEpoch_3']
+

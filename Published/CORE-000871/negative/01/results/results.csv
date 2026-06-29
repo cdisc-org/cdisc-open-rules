@@ -1,22 +1,23 @@
 path,attribute,value
-,$primary_objectives,"['To determine if there is a statistically significant relationship (overall Type 1 erroralpha=0.05) between the change in both the ADAS-Cog (11) and CIBIC+ scores, and drug dose (0, 50 cm2 [54 mg], and 75 cm2 [81 mg]).', 'To document the safety profile of the xanomeline TTS.']"
-,id,StudyDesign_1
-,parent_id,StudyVersion_1
-,$num_primary_obj,2
-,name,Study Design 1
-,parent_rel,studyDesigns
-,parent_entity,StudyVersion
-,$primary_objectives,
-,id,StudyDesign_2
-,parent_id,StudyVersion_1
-,$num_primary_obj,0
-,name,Study Design 2
-,parent_rel,studyDesigns
-,parent_entity,StudyVersion
-,$primary_objectives,
-,id,StudyDesign_3
-,parent_id,StudyVersion_1
-,$num_primary_obj,
-,name,Study Design 3
-,parent_rel,studyDesigns
-,parent_entity,StudyVersion
+/StudyDesign/0,parent_entity,StudyVersion
+/StudyDesign/0,parent_id,StudyVersion_1
+/StudyDesign/0,parent_rel,studyDesigns
+/StudyDesign/0,id,StudyDesign_1
+/StudyDesign/0,name,Study Design 1
+/StudyDesign/0,$num_primary_obj,2.0
+/StudyDesign/0,$primary_objectives,"['To determine if there is a statistically significant relationship (overall Type 1 erroralpha=0.05) between the change in both the ADAS-Cog (11) and CIBIC+ scores, and drug dose (0, 50 cm2 [54 mg], and 75 cm2 [81 mg]).', 'To document the safety profile of the xanomeline TTS.']"
+/StudyDesign/1,parent_entity,StudyVersion
+/StudyDesign/1,parent_id,StudyVersion_1
+/StudyDesign/1,parent_rel,studyDesigns
+/StudyDesign/1,id,StudyDesign_2
+/StudyDesign/1,name,Study Design 2
+/StudyDesign/1,$num_primary_obj,0.0
+/StudyDesign/1,$primary_objectives,
+/StudyDesign/2,parent_entity,StudyVersion
+/StudyDesign/2,parent_id,StudyVersion_1
+/StudyDesign/2,parent_rel,studyDesigns
+/StudyDesign/2,id,StudyDesign_3
+/StudyDesign/2,name,Study Design 3
+/StudyDesign/2,$num_primary_obj,
+/StudyDesign/2,$primary_objectives,
+

@@ -1,37 +1,38 @@
 path,attribute,value
-,name,D_APPROVE
-,id,GovernanceDate_1
-,$num_of_geographic_scopes,2
-,$geographic_scope_type_decodes,"['Global', 'Region']"
-,$geographic_scope_type_codes,"['C68846', 'C41129']"
-,parent_id,StudyVersion_1
-,parent_rel,dateValues
-,parent_entity,StudyVersion
-,dateValue,2006-06-01
-,name,P_APPROVE
-,id,GovernanceDate_2
-,$num_of_geographic_scopes,3
-,$geographic_scope_type_decodes,['Region']
-,$geographic_scope_type_codes,"['c68846', 'C41129']"
-,parent_id,StudyProtocolDocumentVersion_1
-,parent_rel,dateValues
-,parent_entity,StudyProtocolDocumentVersion
-,dateValue,2006-07-01
-,name,D_APPROVE
-,id,GovernanceDate_3
-,$num_of_geographic_scopes,2
-,$geographic_scope_type_decodes,"['Country', 'GLOBAL']"
-,$geographic_scope_type_codes,['C25464']
-,parent_id,StudyVersion_2
-,parent_rel,dateValues
-,parent_entity,StudyVersion
-,dateValue,2012-06-01
-,name,P_APPROVE
-,id,GovernanceDate_4
-,$num_of_geographic_scopes,2
-,$geographic_scope_type_decodes,['Global']
-,$geographic_scope_type_codes,['C68846']
-,parent_id,StudyProtocolDocumentVersion_2
-,parent_rel,dateValues
-,parent_entity,StudyProtocolDocumentVersion
-,dateValue,2012-07-01
+/GovernanceDate/0,parent_entity,StudyVersion
+/GovernanceDate/0,parent_id,StudyVersion_1
+/GovernanceDate/0,parent_rel,dateValues
+/GovernanceDate/0,id,GovernanceDate_1
+/GovernanceDate/0,name,D_APPROVE
+/GovernanceDate/0,dateValue,2006-06-01
+/GovernanceDate/0,$num_of_geographic_scopes,2
+/GovernanceDate/0,$geographic_scope_type_codes,"['C68846', 'C41129']"
+/GovernanceDate/0,$geographic_scope_type_decodes,"['Global', 'Region']"
+/GovernanceDate/1,parent_entity,StudyProtocolDocumentVersion
+/GovernanceDate/1,parent_id,StudyProtocolDocumentVersion_1
+/GovernanceDate/1,parent_rel,dateValues
+/GovernanceDate/1,id,GovernanceDate_2
+/GovernanceDate/1,name,P_APPROVE
+/GovernanceDate/1,dateValue,2006-07-01
+/GovernanceDate/1,$num_of_geographic_scopes,3
+/GovernanceDate/1,$geographic_scope_type_codes,"['C41129', 'c68846']"
+/GovernanceDate/1,$geographic_scope_type_decodes,['Region']
+/GovernanceDate/2,parent_entity,StudyVersion
+/GovernanceDate/2,parent_id,StudyVersion_2
+/GovernanceDate/2,parent_rel,dateValues
+/GovernanceDate/2,id,GovernanceDate_3
+/GovernanceDate/2,name,D_APPROVE
+/GovernanceDate/2,dateValue,2012-06-01
+/GovernanceDate/2,$num_of_geographic_scopes,2
+/GovernanceDate/2,$geographic_scope_type_codes,['C25464']
+/GovernanceDate/2,$geographic_scope_type_decodes,"['Country', 'GLOBAL']"
+/GovernanceDate/3,parent_entity,StudyProtocolDocumentVersion
+/GovernanceDate/3,parent_id,StudyProtocolDocumentVersion_2
+/GovernanceDate/3,parent_rel,dateValues
+/GovernanceDate/3,id,GovernanceDate_4
+/GovernanceDate/3,name,P_APPROVE
+/GovernanceDate/3,dateValue,2012-07-01
+/GovernanceDate/3,$num_of_geographic_scopes,2
+/GovernanceDate/3,$geographic_scope_type_codes,['C68846']
+/GovernanceDate/3,$geographic_scope_type_decodes,['Global']
+
