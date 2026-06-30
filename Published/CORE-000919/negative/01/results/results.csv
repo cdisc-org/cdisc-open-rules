@@ -1,106 +1,106 @@
 path,attribute,value
-,decode,Adaptive
-,parent_rel,studyDesigns
-,$value_for_code,
-,$pref_term_for_code,
-,$codelist_code,C207416
-,$code_for_decode_value,
-,$codelist_extensible,
-,codeSystemVersion,P57
-,name,Study Design 1
-,$code_for_decode_pref_term,
-,parent_id,StudyVersion_1
-,code,C98704
-,parent_entity,StudyVersion
-,id,StudyDesign_1
-,codeSystem,http://www.cdisc.org
-,decode,Randomized
-,parent_rel,studyDesigns
-,$value_for_code,Extension
-,$pref_term_for_code,Extension Study Design
-,$codelist_code,C207416
-,$code_for_decode_value,C46079
-,$codelist_extensible,True
-,codeSystemVersion,2024-09-27
-,name,Study Design 1
-,$code_for_decode_pref_term,
-,parent_id,StudyVersion_1
-,code,C207613
-,parent_entity,StudyVersion
-,id,StudyDesign_1
-,codeSystem,http://www.cdisc.org
-,decode,RANDOMIZED CONTROLLED CLINICAL TRIAL
-,parent_rel,studyDesigns
-,$value_for_code,Randomized
-,$pref_term_for_code,Randomized Controlled Clinical Trial
-,$codelist_code,C207416
-,$code_for_decode_value,
-,$codelist_extensible,True
-,codeSystemVersion,2024-09-27
-,name,Study Design 1
-,$code_for_decode_pref_term,C46079
-,parent_id,StudyVersion_1
-,code,C46079
-,parent_entity,StudyVersion
-,id,StudyDesign_1
-,codeSystem,http://www.cdisc.org
-,decode,Single-Centre
-,parent_rel,studyDesigns
-,$value_for_code,
-,$pref_term_for_code,
-,$codelist_code,C207416
-,$code_for_decode_value,C217004
-,$codelist_extensible,True
-,codeSystemVersion,2025-09-26
-,name,Study Design 1
-,$code_for_decode_pref_term,
-,parent_id,StudyVersion_1
-,code,C217004xx
-,parent_entity,StudyVersion
-,id,StudyDesign_1
-,codeSystem,http://www.cdisc.org
-,decode,Multicentre
-,parent_rel,studyDesigns
-,$value_for_code,
-,$pref_term_for_code,
-,$codelist_code,C207416
-,$code_for_decode_value,
-,$codelist_extensible,True
-,codeSystemVersion,2024-09-27
-,name,Study Design 2
-,$code_for_decode_pref_term,
-,parent_id,StudyVersion_1
-,code,C217005
-,parent_entity,StudyVersion
-,id,StudyDesign_2
-,codeSystem,CDISC Terminology
-,decode,Single Country
-,parent_rel,studyDesigns
-,$value_for_code,
-,$pref_term_for_code,
-,$codelist_code,C207416
-,$code_for_decode_value,
-,$codelist_extensible,
-,codeSystemVersion,2023-12-15
-,name,Study Design 2
-,$code_for_decode_pref_term,
-,parent_id,StudyVersion_1
-,code,C217006
-,parent_entity,StudyVersion
-,id,StudyDesign_2
-,codeSystem,http://www.cdisc.org
-,decode,Multicentre Study
-,parent_rel,studyDesigns
-,$value_for_code,Multicentre
-,$pref_term_for_code,Multicenter Study
-,$codelist_code,C207416
-,$code_for_decode_value,
-,$codelist_extensible,True
-,codeSystemVersion,2025-09-26
-,name,Study Design 3
-,$code_for_decode_pref_term,
-,parent_id,StudyVersion_1
-,code,C217005
-,parent_entity,StudyVersion
-,id,StudyDesign_3
-,codeSystem,http://www.cdisc.org
+/StudyDesign/0,parent_entity,StudyVersion
+/StudyDesign/0,parent_id,StudyVersion_1
+/StudyDesign/0,parent_rel,studyDesigns
+/StudyDesign/0,id,StudyDesign_1
+/StudyDesign/0,name,Study Design 1
+/StudyDesign/0,$codelist_code,C207416
+/StudyDesign/0,$codelist_extensible,
+/StudyDesign/0,code,C98704
+/StudyDesign/0,$code_for_decode_value,
+/StudyDesign/0,$code_for_decode_pref_term,
+/StudyDesign/0,codeSystem,http://www.cdisc.org
+/StudyDesign/0,codeSystemVersion,P57
+/StudyDesign/0,decode,Adaptive
+/StudyDesign/0,$value_for_code,
+/StudyDesign/0,$pref_term_for_code,
+/StudyDesign/0,parent_entity,StudyVersion
+/StudyDesign/0,parent_id,StudyVersion_1
+/StudyDesign/0,parent_rel,studyDesigns
+/StudyDesign/0,id,StudyDesign_1
+/StudyDesign/0,name,Study Design 1
+/StudyDesign/0,$codelist_code,C207416
+/StudyDesign/0,$codelist_extensible,True
+/StudyDesign/0,code,C207613
+/StudyDesign/0,$code_for_decode_value,C46079
+/StudyDesign/0,$code_for_decode_pref_term,
+/StudyDesign/0,codeSystem,http://www.cdisc.org
+/StudyDesign/0,codeSystemVersion,2024-09-27
+/StudyDesign/0,decode,Randomized
+/StudyDesign/0,$value_for_code,Extension
+/StudyDesign/0,$pref_term_for_code,Extension Study Design
+/StudyDesign/0,parent_entity,StudyVersion
+/StudyDesign/0,parent_id,StudyVersion_1
+/StudyDesign/0,parent_rel,studyDesigns
+/StudyDesign/0,id,StudyDesign_1
+/StudyDesign/0,name,Study Design 1
+/StudyDesign/0,$codelist_code,C207416
+/StudyDesign/0,$codelist_extensible,True
+/StudyDesign/0,code,C46079
+/StudyDesign/0,$code_for_decode_value,
+/StudyDesign/0,$code_for_decode_pref_term,C46079
+/StudyDesign/0,codeSystem,http://www.cdisc.org
+/StudyDesign/0,codeSystemVersion,2024-09-27
+/StudyDesign/0,decode,RANDOMIZED CONTROLLED CLINICAL TRIAL
+/StudyDesign/0,$value_for_code,Randomized
+/StudyDesign/0,$pref_term_for_code,Randomized Controlled Clinical Trial
+/StudyDesign/0,parent_entity,StudyVersion
+/StudyDesign/0,parent_id,StudyVersion_1
+/StudyDesign/0,parent_rel,studyDesigns
+/StudyDesign/0,id,StudyDesign_1
+/StudyDesign/0,name,Study Design 1
+/StudyDesign/0,$codelist_code,C207416
+/StudyDesign/0,$codelist_extensible,True
+/StudyDesign/0,code,C217004xx
+/StudyDesign/0,$code_for_decode_value,C217004
+/StudyDesign/0,$code_for_decode_pref_term,
+/StudyDesign/0,codeSystem,http://www.cdisc.org
+/StudyDesign/0,codeSystemVersion,2025-09-26
+/StudyDesign/0,decode,Single-Centre
+/StudyDesign/0,$value_for_code,
+/StudyDesign/0,$pref_term_for_code,
+/StudyDesign/1,parent_entity,StudyVersion
+/StudyDesign/1,parent_id,StudyVersion_1
+/StudyDesign/1,parent_rel,studyDesigns
+/StudyDesign/1,id,StudyDesign_2
+/StudyDesign/1,name,Study Design 2
+/StudyDesign/1,$codelist_code,C207416
+/StudyDesign/1,$codelist_extensible,True
+/StudyDesign/1,code,C217005
+/StudyDesign/1,$code_for_decode_value,
+/StudyDesign/1,$code_for_decode_pref_term,
+/StudyDesign/1,codeSystem,CDISC Terminology
+/StudyDesign/1,codeSystemVersion,2024-09-27
+/StudyDesign/1,decode,Multicentre
+/StudyDesign/1,$value_for_code,
+/StudyDesign/1,$pref_term_for_code,
+/StudyDesign/1,parent_entity,StudyVersion
+/StudyDesign/1,parent_id,StudyVersion_1
+/StudyDesign/1,parent_rel,studyDesigns
+/StudyDesign/1,id,StudyDesign_2
+/StudyDesign/1,name,Study Design 2
+/StudyDesign/1,$codelist_code,C207416
+/StudyDesign/1,$codelist_extensible,
+/StudyDesign/1,code,C217006
+/StudyDesign/1,$code_for_decode_value,
+/StudyDesign/1,$code_for_decode_pref_term,
+/StudyDesign/1,codeSystem,http://www.cdisc.org
+/StudyDesign/1,codeSystemVersion,2023-12-15
+/StudyDesign/1,decode,Single Country
+/StudyDesign/1,$value_for_code,
+/StudyDesign/1,$pref_term_for_code,
+/StudyDesign/2,parent_entity,StudyVersion
+/StudyDesign/2,parent_id,StudyVersion_1
+/StudyDesign/2,parent_rel,studyDesigns
+/StudyDesign/2,id,StudyDesign_3
+/StudyDesign/2,name,Study Design 3
+/StudyDesign/2,$codelist_code,C207416
+/StudyDesign/2,$codelist_extensible,True
+/StudyDesign/2,code,C217005
+/StudyDesign/2,$code_for_decode_value,
+/StudyDesign/2,$code_for_decode_pref_term,
+/StudyDesign/2,codeSystem,http://www.cdisc.org
+/StudyDesign/2,codeSystemVersion,2025-09-26
+/StudyDesign/2,decode,Multicentre Study
+/StudyDesign/2,$value_for_code,Multicentre
+/StudyDesign/2,$pref_term_for_code,Multicenter Study

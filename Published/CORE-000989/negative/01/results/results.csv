@@ -1,76 +1,76 @@
 path,attribute,value
-,id,InterventionalStudyDesign_1
-,$code_for_decode_value,C15228
-,$value_for_code,SINGLE BLIND
-,name,Study Design 1
-,$codelist_extensible,True
-,parent_entity,StudyVersion
-,blindingSchema.standardCode.decode,DOUBLE BLIND
-,$code_for_decode_pref_term,
-,$codelist_code,C66735
-,$pref_term_for_code,Single Blind Study
-,blindingSchema.standardCode.codeSystem,http://www.cdisc.org
-,parent_rel,studyDesigns
-,blindingSchema.standardCode.codeSystemVersion,2025-09-26
-,blindingSchema.standardCode.code,C28233
-,parent_id,StudyVersion_1
-,id,InterventionalStudyDesign_2
-,$code_for_decode_value,
-,$value_for_code,OBSERVER BLIND
-,name,Study Design 2
-,$codelist_extensible,True
-,parent_entity,StudyVersion
-,blindingSchema.standardCode.decode,Oberver Blind Study
-,$code_for_decode_pref_term,
-,$codelist_code,C66735
-,$pref_term_for_code,Observer Blind Study
-,blindingSchema.standardCode.codeSystem,http://www.cdisc.org
-,parent_rel,studyDesigns
-,blindingSchema.standardCode.codeSystemVersion,2025-09-26
-,blindingSchema.standardCode.code,C187674
-,parent_id,StudyVersion_1
-,id,InterventionalStudyDesign_3
-,$code_for_decode_value,C156592
-,$value_for_code,
-,name,Study Design 3
-,$codelist_extensible,True
-,parent_entity,StudyVersion
-,blindingSchema.standardCode.decode,OPEN LABEL TO TREATMENT AND DOUBLE BLIND TO IMP DOSE
-,$code_for_decode_pref_term,
-,$codelist_code,C66735
-,$pref_term_for_code,
-,blindingSchema.standardCode.codeSystem,http://www.cdisc.org
-,parent_rel,studyDesigns
-,blindingSchema.standardCode.codeSystemVersion,2024-03-29
-,blindingSchema.standardCode.code,C156592xx
-,parent_id,StudyVersion_1
-,id,InterventionalStudyDesign_4
-,$code_for_decode_value,C49659
-,$value_for_code,OPEN LABEL
-,name,Study Design 4
-,$codelist_extensible,True
-,parent_entity,StudyVersion
-,blindingSchema.standardCode.decode,OPEN LABEL
-,$code_for_decode_pref_term,
-,$codelist_code,C66735
-,$pref_term_for_code,Open Label Study
-,blindingSchema.standardCode.codeSystem,TBLIND
-,parent_rel,studyDesigns
-,blindingSchema.standardCode.codeSystemVersion,2024-03-29
-,blindingSchema.standardCode.code,C49659
-,parent_id,StudyVersion_1
-,id,InterventionalStudyDesign_6
-,$code_for_decode_value,
-,$value_for_code,
-,name,Study Design 6
-,$codelist_extensible,
-,parent_entity,StudyVersion
-,blindingSchema.standardCode.decode,Extension
-,$code_for_decode_pref_term,
-,$codelist_code,C66735
-,$pref_term_for_code,
-,blindingSchema.standardCode.codeSystem,http://www.cdisc.org
-,parent_rel,studyDesigns
-,blindingSchema.standardCode.codeSystemVersion,2024/09/27
-,blindingSchema.standardCode.code,C0041X
-,parent_id,StudyVersion_1
+/InterventionalStudyDesign/0,parent_entity,StudyVersion
+/InterventionalStudyDesign/0,parent_id,StudyVersion_1
+/InterventionalStudyDesign/0,parent_rel,studyDesigns
+/InterventionalStudyDesign/0,id,InterventionalStudyDesign_1
+/InterventionalStudyDesign/0,name,Study Design 1
+/InterventionalStudyDesign/0,$codelist_code,C66735
+/InterventionalStudyDesign/0,$codelist_extensible,True
+/InterventionalStudyDesign/0,blindingSchema.standardCode.code,C28233
+/InterventionalStudyDesign/0,$code_for_decode_value,C15228
+/InterventionalStudyDesign/0,$code_for_decode_pref_term,
+/InterventionalStudyDesign/0,blindingSchema.standardCode.codeSystem,http://www.cdisc.org
+/InterventionalStudyDesign/0,blindingSchema.standardCode.codeSystemVersion,2025-09-26
+/InterventionalStudyDesign/0,blindingSchema.standardCode.decode,DOUBLE BLIND
+/InterventionalStudyDesign/0,$value_for_code,SINGLE BLIND
+/InterventionalStudyDesign/0,$pref_term_for_code,Single Blind Study
+/InterventionalStudyDesign/1,parent_entity,StudyVersion
+/InterventionalStudyDesign/1,parent_id,StudyVersion_1
+/InterventionalStudyDesign/1,parent_rel,studyDesigns
+/InterventionalStudyDesign/1,id,InterventionalStudyDesign_2
+/InterventionalStudyDesign/1,name,Study Design 2
+/InterventionalStudyDesign/1,$codelist_code,C66735
+/InterventionalStudyDesign/1,$codelist_extensible,True
+/InterventionalStudyDesign/1,blindingSchema.standardCode.code,C187674
+/InterventionalStudyDesign/1,$code_for_decode_value,
+/InterventionalStudyDesign/1,$code_for_decode_pref_term,
+/InterventionalStudyDesign/1,blindingSchema.standardCode.codeSystem,http://www.cdisc.org
+/InterventionalStudyDesign/1,blindingSchema.standardCode.codeSystemVersion,2025-09-26
+/InterventionalStudyDesign/1,blindingSchema.standardCode.decode,Oberver Blind Study
+/InterventionalStudyDesign/1,$value_for_code,OBSERVER BLIND
+/InterventionalStudyDesign/1,$pref_term_for_code,Observer Blind Study
+/InterventionalStudyDesign/2,parent_entity,StudyVersion
+/InterventionalStudyDesign/2,parent_id,StudyVersion_1
+/InterventionalStudyDesign/2,parent_rel,studyDesigns
+/InterventionalStudyDesign/2,id,InterventionalStudyDesign_3
+/InterventionalStudyDesign/2,name,Study Design 3
+/InterventionalStudyDesign/2,$codelist_code,C66735
+/InterventionalStudyDesign/2,$codelist_extensible,True
+/InterventionalStudyDesign/2,blindingSchema.standardCode.code,C156592xx
+/InterventionalStudyDesign/2,$code_for_decode_value,C156592
+/InterventionalStudyDesign/2,$code_for_decode_pref_term,
+/InterventionalStudyDesign/2,blindingSchema.standardCode.codeSystem,http://www.cdisc.org
+/InterventionalStudyDesign/2,blindingSchema.standardCode.codeSystemVersion,2024-03-29
+/InterventionalStudyDesign/2,blindingSchema.standardCode.decode,OPEN LABEL TO TREATMENT AND DOUBLE BLIND TO IMP DOSE
+/InterventionalStudyDesign/2,$value_for_code,
+/InterventionalStudyDesign/2,$pref_term_for_code,
+/InterventionalStudyDesign/3,parent_entity,StudyVersion
+/InterventionalStudyDesign/3,parent_id,StudyVersion_1
+/InterventionalStudyDesign/3,parent_rel,studyDesigns
+/InterventionalStudyDesign/3,id,InterventionalStudyDesign_4
+/InterventionalStudyDesign/3,name,Study Design 4
+/InterventionalStudyDesign/3,$codelist_code,C66735
+/InterventionalStudyDesign/3,$codelist_extensible,True
+/InterventionalStudyDesign/3,blindingSchema.standardCode.code,C49659
+/InterventionalStudyDesign/3,$code_for_decode_value,C49659
+/InterventionalStudyDesign/3,$code_for_decode_pref_term,
+/InterventionalStudyDesign/3,blindingSchema.standardCode.codeSystem,TBLIND
+/InterventionalStudyDesign/3,blindingSchema.standardCode.codeSystemVersion,2024-03-29
+/InterventionalStudyDesign/3,blindingSchema.standardCode.decode,OPEN LABEL
+/InterventionalStudyDesign/3,$value_for_code,OPEN LABEL
+/InterventionalStudyDesign/3,$pref_term_for_code,Open Label Study
+/InterventionalStudyDesign/4,parent_entity,StudyVersion
+/InterventionalStudyDesign/4,parent_id,StudyVersion_1
+/InterventionalStudyDesign/4,parent_rel,studyDesigns
+/InterventionalStudyDesign/4,id,InterventionalStudyDesign_6
+/InterventionalStudyDesign/4,name,Study Design 6
+/InterventionalStudyDesign/4,$codelist_code,C66735
+/InterventionalStudyDesign/4,$codelist_extensible,
+/InterventionalStudyDesign/4,blindingSchema.standardCode.code,C0041X
+/InterventionalStudyDesign/4,$code_for_decode_value,
+/InterventionalStudyDesign/4,$code_for_decode_pref_term,
+/InterventionalStudyDesign/4,blindingSchema.standardCode.codeSystem,http://www.cdisc.org
+/InterventionalStudyDesign/4,blindingSchema.standardCode.codeSystemVersion,2024/09/27
+/InterventionalStudyDesign/4,blindingSchema.standardCode.decode,Extension
+/InterventionalStudyDesign/4,$value_for_code,
+/InterventionalStudyDesign/4,$pref_term_for_code,
