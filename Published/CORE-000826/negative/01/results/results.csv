@@ -13,13 +13,13 @@ path,attribute,value
 /Timing/1,name,TIM2
 /Timing/1,windowUpper,P0H
 /Timing/1,windowLabel,-4..0 hours
-,parent_id,ScheduleTimeline_4
-,parent_entity,ScheduleTimeline
-,parent_rel,timings
-,name,TIM3
-,windowLabel,No upper/lower
-,windowUpper,NA
-,id,Timing_3
+/Timing/2,parent_entity,ScheduleTimeline
+/Timing/2,parent_id,ScheduleTimeline_4
+/Timing/2,parent_rel,timings
+/Timing/2,id,Timing_3
+/Timing/2,name,TIM3
+/Timing/2,windowUpper,NA
+/Timing/2,windowLabel,No upper/lower
 /Timing/3,parent_entity,ScheduleTimeline
 /Timing/3,parent_id,ScheduleTimeline_4
 /Timing/3,parent_rel,timings
