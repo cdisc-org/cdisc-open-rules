@@ -1,0 +1,29 @@
+Dataset,Record,Variable,Value
+DM,1,SETCD,a1
+DM,1,$tx_setcd,"['A1', 'A2', 'A-1']"
+DM,2,SETCD,a2
+DM,2,$tx_setcd,"['A1', 'A2', 'A-1']"
+DM,3,SETCD,A16
+DM,3,$tx_setcd,"['A1', 'A2', 'A-1']"
+RELREF,1,SETCD,A_1
+RELREF,1,$tx_setcd,"['A1', 'A2', 'A-1']"
+RELREF,2,SETCD,A4
+RELREF,2,$tx_setcd,"['A1', 'A2', 'A-1']"
+RELREF,3,SETCD,A5
+RELREF,3,$tx_setcd,"['A1', 'A2', 'A-1']"
+RELREF,4,SETCD,A6
+RELREF,4,$tx_setcd,"['A1', 'A2', 'A-1']"
+RELREF,5,SETCD,A7
+RELREF,5,$tx_setcd,"['A1', 'A2', 'A-1']"
+RELREF,6,SETCD,A8
+RELREF,6,$tx_setcd,"['A1', 'A2', 'A-1']"
+RELREF,7,SETCD,A9
+RELREF,7,$tx_setcd,"['A1', 'A2', 'A-1']"
+RELREF,8,SETCD,A10
+RELREF,8,$tx_setcd,"['A1', 'A2', 'A-1']"
+RELREF,9,SETCD,A11
+RELREF,9,$tx_setcd,"['A1', 'A2', 'A-1']"
+RELREF,10,SETCD,A12
+RELREF,10,$tx_setcd,"['A1', 'A2', 'A-1']"
+TX,41,SETCD,
+TX,41,$tx_setcd,"['A1', 'A2', 'A-1']"
