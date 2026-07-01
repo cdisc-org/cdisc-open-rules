@@ -1,91 +1,91 @@
 path,attribute,value
-,studyType.codeSystem,http://www.cdisc.org
-,id,InterventionalStudyDesign_1
-,$code_for_decode_value,C98722
-,$value_for_code,INTERVENTIONAL
-,studyType.decode,EXPANDED ACCESS
-,name,Study Design 1
-,$codelist_extensible,False
-,parent_entity,StudyVersion
-,$code_for_decode_pref_term,
-,$codelist_code,C99077
-,$pref_term_for_code,Interventional Study
-,parent_rel,studyDesigns
-,studyType.code,C98388
-,studyType.codeSystemVersion,2025-09-26
-,parent_id,StudyVersion_1
-,studyType.codeSystem,http://www.cdisc.org
-,id,InterventionalStudyDesign_2
-,$code_for_decode_value,C98388
-,$value_for_code,INTERVENTIONAL
-,studyType.decode,Interventional
-,name,Study Design 2
-,$codelist_extensible,False
-,parent_entity,StudyVersion
-,$code_for_decode_pref_term,
-,$codelist_code,C99077
-,$pref_term_for_code,Interventional Study
-,parent_rel,studyDesigns
-,studyType.code,C98388
-,studyType.codeSystemVersion,2025-09-26
-,parent_id,StudyVersion_1
-,studyType.codeSystem,http://www.cdisc.org
-,id,InterventionalStudyDesign_3
-,$code_for_decode_value,C98388
-,$value_for_code,
-,studyType.decode,INTERVENTIONAL
-,name,Study Design 3
-,$codelist_extensible,False
-,parent_entity,StudyVersion
-,$code_for_decode_pref_term,
-,$codelist_code,C99077
-,$pref_term_for_code,
-,parent_rel,studyDesigns
-,studyType.code,C98388xx
-,studyType.codeSystemVersion,2025-09-26
-,parent_id,StudyVersion_1
-,studyType.codeSystem,http://www.cdisc.org/STYPE
-,id,ObservationalStudyDesign_1
-,$code_for_decode_value,C16084
-,$value_for_code,OBSERVATIONAL
-,studyType.decode,OBSERVATIONAL
-,name,Study Design 4
-,$codelist_extensible,False
-,parent_entity,StudyVersion
-,$code_for_decode_pref_term,
-,$codelist_code,C99077
-,$pref_term_for_code,Observational Study
-,parent_rel,studyDesigns
-,studyType.code,C16084
-,studyType.codeSystemVersion,2025-09-26
-,parent_id,StudyVersion_1
-,studyType.codeSystem,http://www.cdisc.org
-,id,ObservationalStudyDesign_2
-,$code_for_decode_value,
-,$value_for_code,
-,studyType.decode,PATIENT REGISTRY
-,name,Study Design 5
-,$codelist_extensible,
-,parent_entity,StudyVersion
-,$code_for_decode_pref_term,
-,$codelist_code,C99077
-,$pref_term_for_code,
-,parent_rel,studyDesigns
-,studyType.code,C129000
-,studyType.codeSystemVersion,XXXX-XX-XX
-,parent_id,StudyVersion_1
-,studyType.codeSystem,http://www.cdisc.org
-,id,ObservationalStudyDesign_3
-,$code_for_decode_value,
-,$value_for_code,
-,studyType.decode,EXTENSION
-,name,Study Design 6
-,$codelist_extensible,False
-,parent_entity,StudyVersion
-,$code_for_decode_pref_term,
-,$codelist_code,C99077
-,$pref_term_for_code,
-,parent_rel,studyDesigns
-,studyType.code,C0051X
-,studyType.codeSystemVersion,2025-09-26
-,parent_id,StudyVersion_1
+/InterventionalStudyDesign/0,parent_entity,StudyVersion
+/InterventionalStudyDesign/0,parent_id,StudyVersion_1
+/InterventionalStudyDesign/0,parent_rel,studyDesigns
+/InterventionalStudyDesign/0,id,InterventionalStudyDesign_1
+/InterventionalStudyDesign/0,name,Study Design 1
+/InterventionalStudyDesign/0,$codelist_code,C99077
+/InterventionalStudyDesign/0,$codelist_extensible,False
+/InterventionalStudyDesign/0,studyType.code,C98388
+/InterventionalStudyDesign/0,$code_for_decode_value,C98722
+/InterventionalStudyDesign/0,$code_for_decode_pref_term,
+/InterventionalStudyDesign/0,studyType.codeSystem,http://www.cdisc.org
+/InterventionalStudyDesign/0,studyType.codeSystemVersion,2025-09-26
+/InterventionalStudyDesign/0,studyType.decode,EXPANDED ACCESS
+/InterventionalStudyDesign/0,$value_for_code,INTERVENTIONAL
+/InterventionalStudyDesign/0,$pref_term_for_code,Interventional Study
+/InterventionalStudyDesign/1,parent_entity,StudyVersion
+/InterventionalStudyDesign/1,parent_id,StudyVersion_1
+/InterventionalStudyDesign/1,parent_rel,studyDesigns
+/InterventionalStudyDesign/1,id,InterventionalStudyDesign_2
+/InterventionalStudyDesign/1,name,Study Design 2
+/InterventionalStudyDesign/1,$codelist_code,C99077
+/InterventionalStudyDesign/1,$codelist_extensible,False
+/InterventionalStudyDesign/1,studyType.code,C98388
+/InterventionalStudyDesign/1,$code_for_decode_value,C98388
+/InterventionalStudyDesign/1,$code_for_decode_pref_term,
+/InterventionalStudyDesign/1,studyType.codeSystem,http://www.cdisc.org
+/InterventionalStudyDesign/1,studyType.codeSystemVersion,2025-09-26
+/InterventionalStudyDesign/1,studyType.decode,Interventional
+/InterventionalStudyDesign/1,$value_for_code,INTERVENTIONAL
+/InterventionalStudyDesign/1,$pref_term_for_code,Interventional Study
+/InterventionalStudyDesign/2,parent_entity,StudyVersion
+/InterventionalStudyDesign/2,parent_id,StudyVersion_1
+/InterventionalStudyDesign/2,parent_rel,studyDesigns
+/InterventionalStudyDesign/2,id,InterventionalStudyDesign_3
+/InterventionalStudyDesign/2,name,Study Design 3
+/InterventionalStudyDesign/2,$codelist_code,C99077
+/InterventionalStudyDesign/2,$codelist_extensible,False
+/InterventionalStudyDesign/2,studyType.code,C98388xx
+/InterventionalStudyDesign/2,$code_for_decode_value,C98388
+/InterventionalStudyDesign/2,$code_for_decode_pref_term,
+/InterventionalStudyDesign/2,studyType.codeSystem,http://www.cdisc.org
+/InterventionalStudyDesign/2,studyType.codeSystemVersion,2025-09-26
+/InterventionalStudyDesign/2,studyType.decode,INTERVENTIONAL
+/InterventionalStudyDesign/2,$value_for_code,
+/InterventionalStudyDesign/2,$pref_term_for_code,
+/ObservationalStudyDesign/0,parent_entity,StudyVersion
+/ObservationalStudyDesign/0,parent_id,StudyVersion_1
+/ObservationalStudyDesign/0,parent_rel,studyDesigns
+/ObservationalStudyDesign/0,id,ObservationalStudyDesign_1
+/ObservationalStudyDesign/0,name,Study Design 4
+/ObservationalStudyDesign/0,$codelist_code,C99077
+/ObservationalStudyDesign/0,$codelist_extensible,False
+/ObservationalStudyDesign/0,studyType.code,C16084
+/ObservationalStudyDesign/0,$code_for_decode_value,C16084
+/ObservationalStudyDesign/0,$code_for_decode_pref_term,
+/ObservationalStudyDesign/0,studyType.codeSystem,http://www.cdisc.org/STYPE
+/ObservationalStudyDesign/0,studyType.codeSystemVersion,2025-09-26
+/ObservationalStudyDesign/0,studyType.decode,OBSERVATIONAL
+/ObservationalStudyDesign/0,$value_for_code,OBSERVATIONAL
+/ObservationalStudyDesign/0,$pref_term_for_code,Observational Study
+/ObservationalStudyDesign/1,parent_entity,StudyVersion
+/ObservationalStudyDesign/1,parent_id,StudyVersion_1
+/ObservationalStudyDesign/1,parent_rel,studyDesigns
+/ObservationalStudyDesign/1,id,ObservationalStudyDesign_2
+/ObservationalStudyDesign/1,name,Study Design 5
+/ObservationalStudyDesign/1,$codelist_code,C99077
+/ObservationalStudyDesign/1,$codelist_extensible,
+/ObservationalStudyDesign/1,studyType.code,C129000
+/ObservationalStudyDesign/1,$code_for_decode_value,
+/ObservationalStudyDesign/1,$code_for_decode_pref_term,
+/ObservationalStudyDesign/1,studyType.codeSystem,http://www.cdisc.org
+/ObservationalStudyDesign/1,studyType.codeSystemVersion,XXXX-XX-XX
+/ObservationalStudyDesign/1,studyType.decode,PATIENT REGISTRY
+/ObservationalStudyDesign/1,$value_for_code,
+/ObservationalStudyDesign/1,$pref_term_for_code,
+/ObservationalStudyDesign/2,parent_entity,StudyVersion
+/ObservationalStudyDesign/2,parent_id,StudyVersion_1
+/ObservationalStudyDesign/2,parent_rel,studyDesigns
+/ObservationalStudyDesign/2,id,ObservationalStudyDesign_3
+/ObservationalStudyDesign/2,name,Study Design 6
+/ObservationalStudyDesign/2,$codelist_code,C99077
+/ObservationalStudyDesign/2,$codelist_extensible,False
+/ObservationalStudyDesign/2,studyType.code,C0051X
+/ObservationalStudyDesign/2,$code_for_decode_value,
+/ObservationalStudyDesign/2,$code_for_decode_pref_term,
+/ObservationalStudyDesign/2,studyType.codeSystem,http://www.cdisc.org
+/ObservationalStudyDesign/2,studyType.codeSystemVersion,2025-09-26
+/ObservationalStudyDesign/2,studyType.decode,EXTENSION
+/ObservationalStudyDesign/2,$value_for_code,
+/ObservationalStudyDesign/2,$pref_term_for_code,

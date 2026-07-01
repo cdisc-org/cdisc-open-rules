@@ -1,25 +1,25 @@
 path,attribute,value
-,id.StudyVersion,StudyVersion_1
-,type.decode,Global
-,type.code.GovernanceDate,C132352
-,type.decode.GovernanceDate,Sponsor Approval Date
-,$num_geographic_scopes_for_this_date,2
-,dateValue,2006-06-01
-,parent_id.StudyVersion,
-,type.code,C68846
-,$num_dates_of_this_type,1
-,parent_entity.StudyVersion,Study
-,versionIdentifier,2
-,parent_rel.StudyVersion,versions
-,id.StudyVersion,StudyVersion_1
-,type.decode,Global
-,type.code.GovernanceDate,C99903x2
-,type.decode.GovernanceDate,IDMC Approval Date
-,$num_geographic_scopes_for_this_date,1
-,dateValue,2006-06-15
-,parent_id.StudyVersion,
-,type.code,C68846
-,$num_dates_of_this_type,2
-,parent_entity.StudyVersion,Study
-,versionIdentifier,2
-,parent_rel.StudyVersion,versions
+/GeographicScope/0,parent_entity.StudyVersion,Study
+/GeographicScope/0,parent_id.StudyVersion,
+/GeographicScope/0,parent_rel.StudyVersion,versions
+/GeographicScope/0,id.StudyVersion,StudyVersion_1
+/GeographicScope/0,versionIdentifier,2
+/GeographicScope/0,type.code.GovernanceDate,C132352
+/GeographicScope/0,type.decode.GovernanceDate,Sponsor Approval Date
+/GeographicScope/0,dateValue,2006-06-01
+/GeographicScope/0,type.code,C68846
+/GeographicScope/0,type.decode,Global
+/GeographicScope/0,$num_dates_of_this_type,1
+/GeographicScope/0,$num_geographic_scopes_for_this_date,2
+/GeographicScope/3,parent_entity.StudyVersion,Study
+/GeographicScope/3,parent_id.StudyVersion,
+/GeographicScope/3,parent_rel.StudyVersion,versions
+/GeographicScope/3,id.StudyVersion,StudyVersion_1
+/GeographicScope/3,versionIdentifier,2
+/GeographicScope/3,type.code.GovernanceDate,C99903x2
+/GeographicScope/3,type.decode.GovernanceDate,IDMC Approval Date
+/GeographicScope/3,dateValue,2006-06-15
+/GeographicScope/3,type.code,C68846
+/GeographicScope/3,type.decode,Global
+/GeographicScope/3,$num_dates_of_this_type,2
+/GeographicScope/3,$num_geographic_scopes_for_this_date,1

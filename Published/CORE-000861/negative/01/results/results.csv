@@ -1,91 +1,91 @@
 path,attribute,value
-,id,AdministrableProduct_1
-,administrableDoseForm.standardCode.codeSystemVersion,2023-12-15
-,administrableDoseForm.standardCode.decode,PATCH
-,$pref_term_for_code,"Extended Release Capsule, Softgel Dosage Form"
-,administrableDoseForm.standardCode.codeSystem,http://www.cdisc.org
-,$code_for_decode_value,C42968
-,$code_for_decode_pref_term,
-,$value_for_code,"CAPSULE, SOFTGEL, EXTENDED RELEASE"
-,name,AP_FORME_54
-,parent_id,StudyVersion_1
-,parent_rel,administrableProducts
-,administrableDoseForm.standardCode.code,C158215
-,$codelist_extensible,True
-,parent_entity,StudyVersion
-,$codelist_code,C66726
-,id,AdministrableProduct_2
-,administrableDoseForm.standardCode.codeSystemVersion,2024-03-29
-,administrableDoseForm.standardCode.decode,Not Applicable
-,$pref_term_for_code,Dosage Form Not Applicable
-,administrableDoseForm.standardCode.codeSystem,http://www.cdisc.org
-,$code_for_decode_value,C48624
-,$code_for_decode_pref_term,
-,$value_for_code,NOT APPLICABLE
-,name,AP_FORME_27
-,parent_id,StudyVersion_1
-,parent_rel,administrableProducts
-,administrableDoseForm.standardCode.code,C48624
-,$codelist_extensible,True
-,parent_entity,StudyVersion
-,$codelist_code,C66726
-,id,AdministrableProduct_3
-,administrableDoseForm.standardCode.codeSystemVersion,2024-03-29
-,administrableDoseForm.standardCode.decode,Patch Dosage Form
-,$pref_term_for_code,
-,administrableDoseForm.standardCode.codeSystem,http://www.cdisc.org
-,$code_for_decode_value,
-,$code_for_decode_pref_term,C42968
-,$value_for_code,
-,name,AP_FORME_81
-,parent_id,StudyVersion_1
-,parent_rel,administrableProducts
-,administrableDoseForm.standardCode.code,C42968xx
-,$codelist_extensible,True
-,parent_entity,StudyVersion
-,$codelist_code,C66726
-,id,AdministrableProduct_4
-,administrableDoseForm.standardCode.codeSystemVersion,2024-09-27
-,administrableDoseForm.standardCode.decode,Tablet Dosage Form
-,$pref_term_for_code,Tablet Dosage Form
-,administrableDoseForm.standardCode.codeSystem,CDISC Dosage Form
-,$code_for_decode_value,
-,$code_for_decode_pref_term,C42998
-,$value_for_code,TABLET
-,name,AP_FORME_108
-,parent_id,StudyVersion_1
-,parent_rel,administrableProducts
-,administrableDoseForm.standardCode.code,C42998
-,$codelist_extensible,True
-,parent_entity,StudyVersion
-,$codelist_code,C66726
-,id,AdministrableProduct_5
-,administrableDoseForm.standardCode.codeSystemVersion,27-09-2024
-,administrableDoseForm.standardCode.decode,Extension
-,$pref_term_for_code,
-,administrableDoseForm.standardCode.codeSystem,http://www.cdisc.org
-,$code_for_decode_value,
-,$code_for_decode_pref_term,
-,$value_for_code,
-,name,AP_FORME_135
-,parent_id,StudyVersion_1
-,parent_rel,administrableProducts
-,administrableDoseForm.standardCode.code,C0024X
-,$codelist_extensible,
-,parent_entity,StudyVersion
-,$codelist_code,C66726
-,id,AdministrableProduct_9
-,administrableDoseForm.standardCode.codeSystemVersion,2024-09-27
-,administrableDoseForm.standardCode.decode,TABLET DOSAGE FORM
-,$pref_term_for_code,Tablet Dosage Form
-,administrableDoseForm.standardCode.codeSystem,http://www.cdisc.org
-,$code_for_decode_value,
-,$code_for_decode_pref_term,C42998
-,$value_for_code,TABLET
-,name,AP_FORME_243
-,parent_id,StudyVersion_1
-,parent_rel,administrableProducts
-,administrableDoseForm.standardCode.code,C42998
-,$codelist_extensible,True
-,parent_entity,StudyVersion
-,$codelist_code,C66726
+/AdministrableProduct/0,parent_entity,StudyVersion
+/AdministrableProduct/0,parent_id,StudyVersion_1
+/AdministrableProduct/0,parent_rel,administrableProducts
+/AdministrableProduct/0,id,AdministrableProduct_1
+/AdministrableProduct/0,name,AP_FORME_54
+/AdministrableProduct/0,$codelist_code,C66726
+/AdministrableProduct/0,$codelist_extensible,True
+/AdministrableProduct/0,administrableDoseForm.standardCode.code,C158215
+/AdministrableProduct/0,$code_for_decode_value,C42968
+/AdministrableProduct/0,$code_for_decode_pref_term,
+/AdministrableProduct/0,administrableDoseForm.standardCode.codeSystem,http://www.cdisc.org
+/AdministrableProduct/0,administrableDoseForm.standardCode.codeSystemVersion,2023-12-15
+/AdministrableProduct/0,administrableDoseForm.standardCode.decode,PATCH
+/AdministrableProduct/0,$value_for_code,"CAPSULE, SOFTGEL, EXTENDED RELEASE"
+/AdministrableProduct/0,$pref_term_for_code,"Extended Release Capsule, Softgel Dosage Form"
+/AdministrableProduct/1,parent_entity,StudyVersion
+/AdministrableProduct/1,parent_id,StudyVersion_1
+/AdministrableProduct/1,parent_rel,administrableProducts
+/AdministrableProduct/1,id,AdministrableProduct_2
+/AdministrableProduct/1,name,AP_FORME_27
+/AdministrableProduct/1,$codelist_code,C66726
+/AdministrableProduct/1,$codelist_extensible,True
+/AdministrableProduct/1,administrableDoseForm.standardCode.code,C48624
+/AdministrableProduct/1,$code_for_decode_value,C48624
+/AdministrableProduct/1,$code_for_decode_pref_term,
+/AdministrableProduct/1,administrableDoseForm.standardCode.codeSystem,http://www.cdisc.org
+/AdministrableProduct/1,administrableDoseForm.standardCode.codeSystemVersion,2024-03-29
+/AdministrableProduct/1,administrableDoseForm.standardCode.decode,Not Applicable
+/AdministrableProduct/1,$value_for_code,NOT APPLICABLE
+/AdministrableProduct/1,$pref_term_for_code,Dosage Form Not Applicable
+/AdministrableProduct/2,parent_entity,StudyVersion
+/AdministrableProduct/2,parent_id,StudyVersion_1
+/AdministrableProduct/2,parent_rel,administrableProducts
+/AdministrableProduct/2,id,AdministrableProduct_3
+/AdministrableProduct/2,name,AP_FORME_81
+/AdministrableProduct/2,$codelist_code,C66726
+/AdministrableProduct/2,$codelist_extensible,True
+/AdministrableProduct/2,administrableDoseForm.standardCode.code,C42968xx
+/AdministrableProduct/2,$code_for_decode_value,
+/AdministrableProduct/2,$code_for_decode_pref_term,C42968
+/AdministrableProduct/2,administrableDoseForm.standardCode.codeSystem,http://www.cdisc.org
+/AdministrableProduct/2,administrableDoseForm.standardCode.codeSystemVersion,2024-03-29
+/AdministrableProduct/2,administrableDoseForm.standardCode.decode,Patch Dosage Form
+/AdministrableProduct/2,$value_for_code,
+/AdministrableProduct/2,$pref_term_for_code,
+/AdministrableProduct/3,parent_entity,StudyVersion
+/AdministrableProduct/3,parent_id,StudyVersion_1
+/AdministrableProduct/3,parent_rel,administrableProducts
+/AdministrableProduct/3,id,AdministrableProduct_4
+/AdministrableProduct/3,name,AP_FORME_108
+/AdministrableProduct/3,$codelist_code,C66726
+/AdministrableProduct/3,$codelist_extensible,True
+/AdministrableProduct/3,administrableDoseForm.standardCode.code,C42998
+/AdministrableProduct/3,$code_for_decode_value,
+/AdministrableProduct/3,$code_for_decode_pref_term,C42998
+/AdministrableProduct/3,administrableDoseForm.standardCode.codeSystem,CDISC Dosage Form
+/AdministrableProduct/3,administrableDoseForm.standardCode.codeSystemVersion,2024-09-27
+/AdministrableProduct/3,administrableDoseForm.standardCode.decode,Tablet Dosage Form
+/AdministrableProduct/3,$value_for_code,TABLET
+/AdministrableProduct/3,$pref_term_for_code,Tablet Dosage Form
+/AdministrableProduct/4,parent_entity,StudyVersion
+/AdministrableProduct/4,parent_id,StudyVersion_1
+/AdministrableProduct/4,parent_rel,administrableProducts
+/AdministrableProduct/4,id,AdministrableProduct_5
+/AdministrableProduct/4,name,AP_FORME_135
+/AdministrableProduct/4,$codelist_code,C66726
+/AdministrableProduct/4,$codelist_extensible,
+/AdministrableProduct/4,administrableDoseForm.standardCode.code,C0024X
+/AdministrableProduct/4,$code_for_decode_value,
+/AdministrableProduct/4,$code_for_decode_pref_term,
+/AdministrableProduct/4,administrableDoseForm.standardCode.codeSystem,http://www.cdisc.org
+/AdministrableProduct/4,administrableDoseForm.standardCode.codeSystemVersion,27-09-2024
+/AdministrableProduct/4,administrableDoseForm.standardCode.decode,Extension
+/AdministrableProduct/4,$value_for_code,
+/AdministrableProduct/4,$pref_term_for_code,
+/AdministrableProduct/5,parent_entity,StudyVersion
+/AdministrableProduct/5,parent_id,StudyVersion_1
+/AdministrableProduct/5,parent_rel,administrableProducts
+/AdministrableProduct/5,id,AdministrableProduct_9
+/AdministrableProduct/5,name,AP_FORME_243
+/AdministrableProduct/5,$codelist_code,C66726
+/AdministrableProduct/5,$codelist_extensible,True
+/AdministrableProduct/5,administrableDoseForm.standardCode.code,C42998
+/AdministrableProduct/5,$code_for_decode_value,
+/AdministrableProduct/5,$code_for_decode_pref_term,C42998
+/AdministrableProduct/5,administrableDoseForm.standardCode.codeSystem,http://www.cdisc.org
+/AdministrableProduct/5,administrableDoseForm.standardCode.codeSystemVersion,2024-09-27
+/AdministrableProduct/5,administrableDoseForm.standardCode.decode,TABLET DOSAGE FORM
+/AdministrableProduct/5,$value_for_code,TABLET
+/AdministrableProduct/5,$pref_term_for_code,Tablet Dosage Form

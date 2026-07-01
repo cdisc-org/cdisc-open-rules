@@ -1,0 +1,204 @@
+# ==============================================================================
+# update-published-results.yml
+#
+# Runs the CORE engine against every Published rule's test cases, writes the
+# actual results.csv files back into the repo, then opens a PR so the changes
+# can be reviewed and merged.
+#
+# Triggers:
+#   - Manual (workflow_dispatch) — optionally target a specific engine branch
+#     and/or a subset of rules
+#   - Weekly schedule (Monday 00:00 UTC)
+# ==============================================================================
+name: Update Published Results
+
+on:
+  workflow_dispatch:
+    inputs:
+      engine_ref:
+        description: "Branch/tag/SHA of cdisc-rules-engine to run"
+        required: false
+        default: "main"
+        type: string
+      core_ids:
+        description: >-
+          Space-separated rule IDs to update (e.g. CORE-000001 CORE-000002).
+          Leave blank to update all Published rules.
+        required: false
+        default: ""
+        type: string
+  # schedule:
+  #   - cron: "0 0 * * 1"
+
+env:
+  engine_ref: ${{ inputs.engine_ref || 'main' }}
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  update-results:
+    runs-on: ubuntu-latest
+
+    steps:
+      # -----------------------------------------------------------------------
+      # 1. Checkout this repo (cdisc-open-rules) — full history for the PR step
+      # -----------------------------------------------------------------------
+      - name: Checkout cdisc-open-rules
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # -----------------------------------------------------------------------
+      # 2. Checkout the engine into ./engine/
+      # -----------------------------------------------------------------------
+      - name: Checkout cdisc-rules-engine
+        uses: actions/checkout@v4
+        with:
+          repository: cdisc-org/cdisc-rules-engine
+          ref: ${{ env.engine_ref }}
+          path: engine
+
+      # -----------------------------------------------------------------------
+      # 3. Python + dependencies
+      # -----------------------------------------------------------------------
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install engine dependencies
+        run: |
+          python -m venv venv
+          venv/bin/pip install --upgrade pip
+          cd engine
+          ../venv/bin/pip install . --group dev
+
+      - name: Install script dependencies
+        run: venv/bin/pip install tabulate jmespath pyyaml
+
+      # -----------------------------------------------------------------------
+      # 4. Run the engine for every Published rule, writing actual results.csv
+      #    directly into each case's results/ directory (overwriting the old baseline)
+      # -----------------------------------------------------------------------
+      - name: Run engine and write results
+        id: run_engine
+        continue-on-error: true
+        run: |
+          chmod +x .github/scripts/run_validation.sh
+
+          CORE_IDS_ARG=""
+          if [ -n "${{ inputs.core_ids }}" ]; then
+            CORE_IDS_ARG="--core-ids ${{ inputs.core_ids }}"
+          fi
+
+          ENGINE_DIR_OVERRIDE="$(pwd)/engine" \
+          venv/bin/python engine/scripts/validate_published_rules.py \
+            --rules-root "$(pwd)" \
+            --engine-dir "$(pwd)/engine" \
+            --python-cmd "$(pwd)/venv/bin/python" \
+            --output-dir "$(pwd)" \
+            $CORE_IDS_ARG
+
+      # -----------------------------------------------------------------------
+      # 5. Promote actual.csv → results.csv for all cases that ran
+      #    run_validation.sh restores the original baseline after diffing;
+      #    actual.csv holds the true engine output we want to commit.
+      # -----------------------------------------------------------------------
+      - name: Promote actual results to baseline
+        run: |
+          find Published -path "*/results/actual.csv" | while IFS= read -r actual; do
+            dest="$(dirname "$actual")/results.csv"
+            cp "$actual" "$dest"
+            echo "Updated: $dest"
+          done
+
+      # -----------------------------------------------------------------------
+      # 6. Write summary to Job Summary
+      # -----------------------------------------------------------------------
+      - name: Write summary to workflow summary
+        if: always()
+        run: |
+          [ -f summary_table.md ] && cat summary_table.md >> $GITHUB_STEP_SUMMARY || true
+
+      # -----------------------------------------------------------------------
+      # 7. Upload reports as artifacts (regardless of outcome)
+      # -----------------------------------------------------------------------
+      - name: Upload validation artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: update-results-${{ github.run_id }}
+          path: |
+            Published/**/results/results.csv
+            summary_table.md
+            detail_report.md
+          if-no-files-found: warn
+
+      # -----------------------------------------------------------------------
+      # 8. Determine if any results.csv files changed
+      # -----------------------------------------------------------------------
+      - name: Check for changed results
+        id: check_changes
+        run: |
+          git add Published/**/results/results.csv 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+            echo "No results.csv files changed — no PR needed."
+          else
+            echo "changed=true" >> $GITHUB_OUTPUT
+            CHANGED_COUNT=$(git diff --cached --name-only | grep 'results\.csv' | wc -l | tr -d ' ')
+            echo "changed_count=$CHANGED_COUNT" >> $GITHUB_OUTPUT
+            echo "$CHANGED_COUNT results.csv file(s) changed."
+          fi
+          git reset HEAD
+
+      # -----------------------------------------------------------------------
+      # 9. Create PR with updated results
+      # -----------------------------------------------------------------------
+      - name: Create Pull Request
+        id: create_pr
+        if: steps.check_changes.outputs.changed == 'true'
+        uses: peter-evans/create-pull-request@5f6978faf089d4d20b00c7766989d076bb2fc7f1 #v8.1.1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          add-paths: Published/**/results/results.csv
+          commit-message: "ci: update Published results.csv baselines (engine@${{ env.engine_ref }})"
+          branch: update-results-${{ env.engine_ref }}
+          delete-branch: true
+          title: "Update Published results.csv baselines (engine@${{ env.engine_ref }})"
+          draft: ${{ env.engine_ref != 'main' || github.ref != format('refs/heads/{0}', github.event.repository.default_branch) }}
+          reviewers: ${{ vars.REVIEWERS }}
+          body: |
+            This PR updates the `results.csv` baseline files for Published rules
+            using the latest engine output.
+
+            | | |
+            |---|---|
+            | **Engine ref** | [`${{ env.engine_ref }}`](https://github.com/cdisc-org/cdisc-rules-engine/tree/${{ env.engine_ref }}) |
+            | **Open Rules ref** | [`${{ github.sha }}`](https://github.com/${{ github.repository }}/tree/${{ github.sha }}) |
+            | **Rules updated** | ${{ steps.check_changes.outputs.changed_count }} result file(s) changed |
+            | **Triggered by** | ${{ github.event_name == 'schedule' && 'Scheduled run (weekly)' || format('Manual run by @{0}', github.actor) }} |
+            | **Workflow run** | [#${{ github.run_id }}](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}) |
+
+            ### What to review
+            - Each changed `results.csv` is the raw engine output for that test case.
+            - The summary table is available in the [workflow run artifacts](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}).
+            - If results changed unexpectedly, check the `detail_report.md` artifact
+              or rerun the workflow with a specific `engine_ref` to bisect.
+
+      # -----------------------------------------------------------------------
+      # 10. Annotate summary with PR link (prepended before the summary table)
+      # -----------------------------------------------------------------------
+      - name: Annotate summary with PR link
+        if: steps.create_pr.outcome == 'success'
+        run: |
+          PR_HEADER="## Pull Request\n[📝 PR #${{ steps.create_pr.outputs.pull-request-number }}](${{ steps.create_pr.outputs.pull-request-url }})\n\n"
+          EXISTING=$(cat "$GITHUB_STEP_SUMMARY" 2>/dev/null || true)
+          printf "%b%s" "$PR_HEADER" "$EXISTING" > "$GITHUB_STEP_SUMMARY"
+
+      - name: No changes message
+        if: steps.check_changes.outputs.changed == 'false'
+        run: |
+          echo "✅ All results.csv files are already up to date — no PR created." >> $GITHUB_STEP_SUMMARY

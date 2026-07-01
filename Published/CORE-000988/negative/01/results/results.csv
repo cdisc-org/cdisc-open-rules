@@ -1,76 +1,76 @@
 path,attribute,value
-,id,InterventionalStudyDesign_1
-,$code_for_decode_value,C82637
-,model.codeSystem,http://www.cdisc.org
-,model.code,C82640
-,$value_for_code,SINGLE GROUP
-,name,Study Design 1
-,$codelist_extensible,True
-,parent_entity,StudyVersion
-,$code_for_decode_pref_term,
-,$codelist_code,C99076
-,$pref_term_for_code,Single Group Study
-,model.codeSystemVersion,2025-09-26
-,parent_rel,studyDesigns
-,model.decode,CROSS-OVER
-,parent_id,StudyVersion_1
-,id,InterventionalStudyDesign_2
-,$code_for_decode_value,
-,model.codeSystem,http://www.cdisc.org
-,model.code,C82638
-,$value_for_code,FACTORIAL
-,name,Study Design 2
-,$codelist_extensible,True
-,parent_entity,StudyVersion
-,$code_for_decode_pref_term,
-,$codelist_code,C99076
-,$pref_term_for_code,Factorial Study
-,model.codeSystemVersion,2025-09-26
-,parent_rel,studyDesigns
-,model.decode,MULTI-FACTORIAL
-,parent_id,StudyVersion_1
-,id,InterventionalStudyDesign_3
-,$code_for_decode_value,C82639
-,model.codeSystem,http://www.cdisc.org
-,model.code,C82639xx
-,$value_for_code,
-,name,Study Design 3
-,$codelist_extensible,True
-,parent_entity,StudyVersion
-,$code_for_decode_pref_term,
-,$codelist_code,C99076
-,$pref_term_for_code,
-,model.codeSystemVersion,2024-03-29
-,parent_rel,studyDesigns
-,model.decode,PARALLEL
-,parent_id,StudyVersion_1
-,id,InterventionalStudyDesign_4
-,$code_for_decode_value,C142568
-,model.codeSystem,CDISC INTMODEL Codelist
-,model.code,C142568
-,$value_for_code,SEQUENTIAL
-,name,Study Design 4
-,$codelist_extensible,True
-,parent_entity,StudyVersion
-,$code_for_decode_pref_term,
-,$codelist_code,C99076
-,$pref_term_for_code,Group Sequential Design
-,model.codeSystemVersion,2024-03-29
-,parent_rel,studyDesigns
-,model.decode,SEQUENTIAL
-,parent_id,StudyVersion_1
-,id,InterventionalStudyDesign_6
-,$code_for_decode_value,
-,model.codeSystem,http://www.cdisc.org
-,model.code,C0040X
-,$value_for_code,
-,name,Study Design 6
-,$codelist_extensible,
-,parent_entity,StudyVersion
-,$code_for_decode_pref_term,
-,$codelist_code,C99076
-,$pref_term_for_code,
-,model.codeSystemVersion,N/A
-,parent_rel,studyDesigns
-,model.decode,Extension
-,parent_id,StudyVersion_1
+/InterventionalStudyDesign/0,parent_entity,StudyVersion
+/InterventionalStudyDesign/0,parent_id,StudyVersion_1
+/InterventionalStudyDesign/0,parent_rel,studyDesigns
+/InterventionalStudyDesign/0,id,InterventionalStudyDesign_1
+/InterventionalStudyDesign/0,name,Study Design 1
+/InterventionalStudyDesign/0,$codelist_code,C99076
+/InterventionalStudyDesign/0,$codelist_extensible,True
+/InterventionalStudyDesign/0,model.code,C82640
+/InterventionalStudyDesign/0,$code_for_decode_value,C82637
+/InterventionalStudyDesign/0,$code_for_decode_pref_term,
+/InterventionalStudyDesign/0,model.codeSystem,http://www.cdisc.org
+/InterventionalStudyDesign/0,model.codeSystemVersion,2025-09-26
+/InterventionalStudyDesign/0,model.decode,CROSS-OVER
+/InterventionalStudyDesign/0,$value_for_code,SINGLE GROUP
+/InterventionalStudyDesign/0,$pref_term_for_code,Single Group Study
+/InterventionalStudyDesign/1,parent_entity,StudyVersion
+/InterventionalStudyDesign/1,parent_id,StudyVersion_1
+/InterventionalStudyDesign/1,parent_rel,studyDesigns
+/InterventionalStudyDesign/1,id,InterventionalStudyDesign_2
+/InterventionalStudyDesign/1,name,Study Design 2
+/InterventionalStudyDesign/1,$codelist_code,C99076
+/InterventionalStudyDesign/1,$codelist_extensible,True
+/InterventionalStudyDesign/1,model.code,C82638
+/InterventionalStudyDesign/1,$code_for_decode_value,
+/InterventionalStudyDesign/1,$code_for_decode_pref_term,
+/InterventionalStudyDesign/1,model.codeSystem,http://www.cdisc.org
+/InterventionalStudyDesign/1,model.codeSystemVersion,2025-09-26
+/InterventionalStudyDesign/1,model.decode,MULTI-FACTORIAL
+/InterventionalStudyDesign/1,$value_for_code,FACTORIAL
+/InterventionalStudyDesign/1,$pref_term_for_code,Factorial Study
+/InterventionalStudyDesign/2,parent_entity,StudyVersion
+/InterventionalStudyDesign/2,parent_id,StudyVersion_1
+/InterventionalStudyDesign/2,parent_rel,studyDesigns
+/InterventionalStudyDesign/2,id,InterventionalStudyDesign_3
+/InterventionalStudyDesign/2,name,Study Design 3
+/InterventionalStudyDesign/2,$codelist_code,C99076
+/InterventionalStudyDesign/2,$codelist_extensible,True
+/InterventionalStudyDesign/2,model.code,C82639xx
+/InterventionalStudyDesign/2,$code_for_decode_value,C82639
+/InterventionalStudyDesign/2,$code_for_decode_pref_term,
+/InterventionalStudyDesign/2,model.codeSystem,http://www.cdisc.org
+/InterventionalStudyDesign/2,model.codeSystemVersion,2024-03-29
+/InterventionalStudyDesign/2,model.decode,PARALLEL
+/InterventionalStudyDesign/2,$value_for_code,
+/InterventionalStudyDesign/2,$pref_term_for_code,
+/InterventionalStudyDesign/3,parent_entity,StudyVersion
+/InterventionalStudyDesign/3,parent_id,StudyVersion_1
+/InterventionalStudyDesign/3,parent_rel,studyDesigns
+/InterventionalStudyDesign/3,id,InterventionalStudyDesign_4
+/InterventionalStudyDesign/3,name,Study Design 4
+/InterventionalStudyDesign/3,$codelist_code,C99076
+/InterventionalStudyDesign/3,$codelist_extensible,True
+/InterventionalStudyDesign/3,model.code,C142568
+/InterventionalStudyDesign/3,$code_for_decode_value,C142568
+/InterventionalStudyDesign/3,$code_for_decode_pref_term,
+/InterventionalStudyDesign/3,model.codeSystem,CDISC INTMODEL Codelist
+/InterventionalStudyDesign/3,model.codeSystemVersion,2024-03-29
+/InterventionalStudyDesign/3,model.decode,SEQUENTIAL
+/InterventionalStudyDesign/3,$value_for_code,SEQUENTIAL
+/InterventionalStudyDesign/3,$pref_term_for_code,Group Sequential Design
+/InterventionalStudyDesign/4,parent_entity,StudyVersion
+/InterventionalStudyDesign/4,parent_id,StudyVersion_1
+/InterventionalStudyDesign/4,parent_rel,studyDesigns
+/InterventionalStudyDesign/4,id,InterventionalStudyDesign_6
+/InterventionalStudyDesign/4,name,Study Design 6
+/InterventionalStudyDesign/4,$codelist_code,C99076
+/InterventionalStudyDesign/4,$codelist_extensible,
+/InterventionalStudyDesign/4,model.code,C0040X
+/InterventionalStudyDesign/4,$code_for_decode_value,
+/InterventionalStudyDesign/4,$code_for_decode_pref_term,
+/InterventionalStudyDesign/4,model.codeSystem,http://www.cdisc.org
+/InterventionalStudyDesign/4,model.codeSystemVersion,N/A
+/InterventionalStudyDesign/4,model.decode,Extension
+/InterventionalStudyDesign/4,$value_for_code,
+/InterventionalStudyDesign/4,$pref_term_for_code,

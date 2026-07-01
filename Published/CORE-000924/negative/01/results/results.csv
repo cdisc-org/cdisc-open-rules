@@ -1,145 +1,145 @@
 path,attribute,value
-,parent_rel,studyIdentifierScope
-,organizationType.codeSystem,http://www.cdisc.org
-,parent_id,StudyIdentifier_1
-,$codelist_code,C188724
-,organizationType.code,C18240
-,$value_for_code,Academic Institution
-,$code_for_decode_value,
-,organizationType.codeSystemVersion,2025-09-26
-,parent_entity,StudyIdentifier
-,$pref_term_for_code,Academia
-,$codelist_extensible_override,
-,$code_for_decode_pref_term,C93453
-,id,Organization_1
-,$codelist_extensible,True
-,name,Eli Lilly
-,organizationType.decode,Study Registry
-,parent_rel,studyIdentifierScope
-,organizationType.codeSystem,http://www.cdisc.org
-,parent_id,StudyIdentifier_2
-,$codelist_code,C188724
-,organizationType.code,C93453
-,$value_for_code,Clinical Study Registry
-,$code_for_decode_value,
-,organizationType.codeSystemVersion,2025-09-26
-,parent_entity,StudyIdentifier
-,$pref_term_for_code,Study Registry
-,$codelist_extensible_override,
-,$code_for_decode_pref_term,
-,id,Organization_2
-,$codelist_extensible,True
-,name,ClinicalTrials.gov
-,organizationType.decode,Clinical Registry
-,parent_rel,studyIdentifierScope
-,organizationType.codeSystem,Organization Type Value Set Terminology
-,parent_id,StudyIdentifier_3
-,$codelist_code,C188724
-,organizationType.code,C54148
-,$value_for_code,Contract Research Organization
-,$code_for_decode_value,C54148
-,organizationType.codeSystemVersion,2025-09-26
-,parent_entity,StudyIdentifier
-,$pref_term_for_code,Contract Research Organization
-,$codelist_extensible_override,
-,$code_for_decode_pref_term,C54148
-,id,Organization_3
-,$codelist_extensible,True
-,name,3rd Org
-,organizationType.decode,Contract Research Organization
-,parent_rel,studyIdentifierScope
-,organizationType.codeSystem,http://www.cdisc.org
-,parent_id,StudyIdentifier_4
-,$codelist_code,C188724
-,organizationType.code,C199144
-,$value_for_code,
-,$code_for_decode_value,
-,organizationType.codeSystemVersion,P62
-,parent_entity,StudyIdentifier
-,$pref_term_for_code,
-,$codelist_extensible_override,
-,$code_for_decode_pref_term,
-,id,Organization_4
-,$codelist_extensible,
-,name,4th Org
-,organizationType.decode,Government Institute
-,parent_rel,studyIdentifierScope
-,organizationType.codeSystem,http://www.cdisc.org
-,parent_id,StudyIdentifier_5
-,$codelist_code,C188724
-,organizationType.code,C21541xx
-,$value_for_code,
-,$code_for_decode_value,C21541
-,organizationType.codeSystemVersion,2025-09-26
-,parent_entity,StudyIdentifier
-,$pref_term_for_code,
-,$codelist_extensible_override,
-,$code_for_decode_pref_term,C21541
-,id,Organization_5
-,$codelist_extensible,True
-,name,5th Org
-,organizationType.decode,Healthcare Facility
-,parent_rel,studyIdentifierScope
-,organizationType.codeSystem,http://www.cdisc.org
-,parent_id,StudyIdentifier_13
-,$codelist_code,C188724
-,organizationType.code,C70793
-,$value_for_code,Clinical Study Sponsor
-,$code_for_decode_value,
-,organizationType.codeSystemVersion,2024-09-27
-,parent_entity,StudyIdentifier
-,$pref_term_for_code,Clinical Study Sponsor
-,$codelist_extensible_override,
-,$code_for_decode_pref_term,
-,id,Organization_14
-,$codelist_extensible,True
-,name,14th Org
-,organizationType.decode,Study Sponsor
-,parent_rel,organizations
-,organizationType.codeSystem,http://www.cdisc.org
-,parent_id,StudyDesign_1
-,$codelist_code,C188724
-,organizationType.code,C188863
-,$value_for_code,Regulatory Agency
-,$code_for_decode_value,C188863
-,organizationType.codeSystemVersion,2024-09-27
-,parent_entity,StudyDesign
-,$pref_term_for_code,Regulatory Agency
-,$codelist_extensible_override,
-,$code_for_decode_pref_term,C188863
-,id,ResearchOrganization_1
-,$codelist_extensible,True
-,name,SITE_ORG_1
-,organizationType.decode,REGULATORY AGENCY
-,parent_rel,organizations
-,organizationType.codeSystem,Organization Type Value Set Terminology
-,parent_id,StudyDesign_1
-,$codelist_code,C188724
-,organizationType.code,C93448
-,$value_for_code,
-,$code_for_decode_value,
-,organizationType.codeSystemVersion,2025-09-26
-,parent_entity,StudyDesign
-,$pref_term_for_code,
-,$codelist_extensible_override,
-,$code_for_decode_pref_term,
-,id,ResearchOrganization_3
-,$codelist_extensible,True
-,name,SITE_ORG_3
-,organizationType.decode,Research Organization
-,parent_rel,organizations
-,organizationType.codeSystem,http://www.cdisc.org
-,parent_id,StudyDesign_1
-,$codelist_code,C188724
-,organizationType.code,C0028X
-,$value_for_code,
-,$code_for_decode_value,
-,organizationType.codeSystemVersion,P62
-,parent_entity,StudyDesign
-,$pref_term_for_code,
-,$codelist_extensible_override,
-,$code_for_decode_pref_term,
-,id,ResearchOrganization_5
-,$codelist_extensible,
-,name,SITE_ORG_5
-,organizationType.decode,Another Extension
+/Organization/0,parent_entity,StudyIdentifier
+/Organization/0,parent_id,StudyIdentifier_1
+/Organization/0,parent_rel,studyIdentifierScope
+/Organization/0,id,Organization_1
+/Organization/0,name,Eli Lilly
+/Organization/0,$codelist_code,C188724
+/Organization/0,$codelist_extensible,True
+/Organization/0,$codelist_extensible_override,
+/Organization/0,organizationType.code,C18240
+/Organization/0,$code_for_decode_value,
+/Organization/0,$code_for_decode_pref_term,C93453
+/Organization/0,organizationType.codeSystem,http://www.cdisc.org
+/Organization/0,organizationType.codeSystemVersion,2025-09-26
+/Organization/0,organizationType.decode,Study Registry
+/Organization/0,$value_for_code,Academic Institution
+/Organization/0,$pref_term_for_code,Academia
+/Organization/1,parent_entity,StudyIdentifier
+/Organization/1,parent_id,StudyIdentifier_2
+/Organization/1,parent_rel,studyIdentifierScope
+/Organization/1,id,Organization_2
+/Organization/1,name,ClinicalTrials.gov
+/Organization/1,$codelist_code,C188724
+/Organization/1,$codelist_extensible,True
+/Organization/1,$codelist_extensible_override,
+/Organization/1,organizationType.code,C93453
+/Organization/1,$code_for_decode_value,
+/Organization/1,$code_for_decode_pref_term,
+/Organization/1,organizationType.codeSystem,http://www.cdisc.org
+/Organization/1,organizationType.codeSystemVersion,2025-09-26
+/Organization/1,organizationType.decode,Clinical Registry
+/Organization/1,$value_for_code,Clinical Study Registry
+/Organization/1,$pref_term_for_code,Study Registry
+/Organization/2,parent_entity,StudyIdentifier
+/Organization/2,parent_id,StudyIdentifier_3
+/Organization/2,parent_rel,studyIdentifierScope
+/Organization/2,id,Organization_3
+/Organization/2,name,3rd Org
+/Organization/2,$codelist_code,C188724
+/Organization/2,$codelist_extensible,True
+/Organization/2,$codelist_extensible_override,
+/Organization/2,organizationType.code,C54148
+/Organization/2,$code_for_decode_value,C54148
+/Organization/2,$code_for_decode_pref_term,C54148
+/Organization/2,organizationType.codeSystem,Organization Type Value Set Terminology
+/Organization/2,organizationType.codeSystemVersion,2025-09-26
+/Organization/2,organizationType.decode,Contract Research Organization
+/Organization/2,$value_for_code,Contract Research Organization
+/Organization/2,$pref_term_for_code,Contract Research Organization
+/Organization/3,parent_entity,StudyIdentifier
+/Organization/3,parent_id,StudyIdentifier_4
+/Organization/3,parent_rel,studyIdentifierScope
+/Organization/3,id,Organization_4
+/Organization/3,name,4th Org
+/Organization/3,$codelist_code,C188724
+/Organization/3,$codelist_extensible,
+/Organization/3,$codelist_extensible_override,
+/Organization/3,organizationType.code,C199144
+/Organization/3,$code_for_decode_value,
+/Organization/3,$code_for_decode_pref_term,
+/Organization/3,organizationType.codeSystem,http://www.cdisc.org
+/Organization/3,organizationType.codeSystemVersion,P62
+/Organization/3,organizationType.decode,Government Institute
+/Organization/3,$value_for_code,
+/Organization/3,$pref_term_for_code,
+/Organization/4,parent_entity,StudyIdentifier
+/Organization/4,parent_id,StudyIdentifier_5
+/Organization/4,parent_rel,studyIdentifierScope
+/Organization/4,id,Organization_5
+/Organization/4,name,5th Org
+/Organization/4,$codelist_code,C188724
+/Organization/4,$codelist_extensible,True
+/Organization/4,$codelist_extensible_override,
+/Organization/4,organizationType.code,C21541xx
+/Organization/4,$code_for_decode_value,C21541
+/Organization/4,$code_for_decode_pref_term,C21541
+/Organization/4,organizationType.codeSystem,http://www.cdisc.org
+/Organization/4,organizationType.codeSystemVersion,2025-09-26
+/Organization/4,organizationType.decode,Healthcare Facility
+/Organization/4,$value_for_code,
+/Organization/4,$pref_term_for_code,
+/Organization/5,parent_entity,StudyIdentifier
+/Organization/5,parent_id,StudyIdentifier_13
+/Organization/5,parent_rel,studyIdentifierScope
+/Organization/5,id,Organization_14
+/Organization/5,name,14th Org
+/Organization/5,$codelist_code,C188724
+/Organization/5,$codelist_extensible,True
+/Organization/5,$codelist_extensible_override,
+/Organization/5,organizationType.code,C70793
+/Organization/5,$code_for_decode_value,
+/Organization/5,$code_for_decode_pref_term,
+/Organization/5,organizationType.codeSystem,http://www.cdisc.org
+/Organization/5,organizationType.codeSystemVersion,2024-09-27
+/Organization/5,organizationType.decode,Study Sponsor
+/Organization/5,$value_for_code,Clinical Study Sponsor
+/Organization/5,$pref_term_for_code,Clinical Study Sponsor
+/ResearchOrganization/0,parent_entity,StudyDesign
+/ResearchOrganization/0,parent_id,StudyDesign_1
+/ResearchOrganization/0,parent_rel,organizations
+/ResearchOrganization/0,id,ResearchOrganization_1
+/ResearchOrganization/0,name,SITE_ORG_1
+/ResearchOrganization/0,$codelist_code,C188724
+/ResearchOrganization/0,$codelist_extensible,True
+/ResearchOrganization/0,$codelist_extensible_override,
+/ResearchOrganization/0,organizationType.code,C188863
+/ResearchOrganization/0,$code_for_decode_value,C188863
+/ResearchOrganization/0,$code_for_decode_pref_term,C188863
+/ResearchOrganization/0,organizationType.codeSystem,http://www.cdisc.org
+/ResearchOrganization/0,organizationType.codeSystemVersion,2024-09-27
+/ResearchOrganization/0,organizationType.decode,REGULATORY AGENCY
+/ResearchOrganization/0,$value_for_code,Regulatory Agency
+/ResearchOrganization/0,$pref_term_for_code,Regulatory Agency
+/ResearchOrganization/1,parent_entity,StudyDesign
+/ResearchOrganization/1,parent_id,StudyDesign_1
+/ResearchOrganization/1,parent_rel,organizations
+/ResearchOrganization/1,id,ResearchOrganization_3
+/ResearchOrganization/1,name,SITE_ORG_3
+/ResearchOrganization/1,$codelist_code,C188724
+/ResearchOrganization/1,$codelist_extensible,True
+/ResearchOrganization/1,$codelist_extensible_override,
+/ResearchOrganization/1,organizationType.code,C93448
+/ResearchOrganization/1,$code_for_decode_value,
+/ResearchOrganization/1,$code_for_decode_pref_term,
+/ResearchOrganization/1,organizationType.codeSystem,Organization Type Value Set Terminology
+/ResearchOrganization/1,organizationType.codeSystemVersion,2025-09-26
+/ResearchOrganization/1,organizationType.decode,Research Organization
+/ResearchOrganization/1,$value_for_code,
+/ResearchOrganization/1,$pref_term_for_code,
+/ResearchOrganization/2,parent_entity,StudyDesign
+/ResearchOrganization/2,parent_id,StudyDesign_1
+/ResearchOrganization/2,parent_rel,organizations
+/ResearchOrganization/2,id,ResearchOrganization_5
+/ResearchOrganization/2,name,SITE_ORG_5
+/ResearchOrganization/2,$codelist_code,C188724
+/ResearchOrganization/2,$codelist_extensible,
+/ResearchOrganization/2,$codelist_extensible_override,
+/ResearchOrganization/2,organizationType.code,C0028X
+/ResearchOrganization/2,$code_for_decode_value,
+/ResearchOrganization/2,$code_for_decode_pref_term,
+/ResearchOrganization/2,organizationType.codeSystem,http://www.cdisc.org
+/ResearchOrganization/2,organizationType.codeSystemVersion,P62
+/ResearchOrganization/2,organizationType.decode,Another Extension
+/ResearchOrganization/2,$value_for_code,
+/ResearchOrganization/2,$pref_term_for_code,
