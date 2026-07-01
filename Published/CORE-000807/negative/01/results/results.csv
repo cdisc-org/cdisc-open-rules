@@ -1,16 +1,16 @@
 path,attribute,value
-,name,Main Timeline
-,parent_rel,scheduleTimelines
-,parent_id,StudyDesign_1
-,id,ScheduleTimeline_1
-,parent_entity,StudyDesign
-,name,Contingent timeline
-,parent_rel,scheduleTimelines
-,parent_id,StudyDesign_1
-,id,ScheduleTimeline_2
-,parent_entity,StudyDesign
-,name,Main Timeline
-,parent_rel,scheduleTimelines
-,parent_id,StudyDesign_2
-,id,ScheduleTimeline_3
-,parent_entity,StudyDesign
+/ScheduleTimeline/0,parent_entity,StudyDesign
+/ScheduleTimeline/0,parent_id,StudyDesign_1
+/ScheduleTimeline/0,parent_rel,scheduleTimelines
+/ScheduleTimeline/0,id,ScheduleTimeline_1
+/ScheduleTimeline/0,name,Main Timeline
+/ScheduleTimeline/1,parent_entity,StudyDesign
+/ScheduleTimeline/1,parent_id,StudyDesign_1
+/ScheduleTimeline/1,parent_rel,scheduleTimelines
+/ScheduleTimeline/1,id,ScheduleTimeline_2
+/ScheduleTimeline/1,name,Contingent timeline
+/ScheduleTimeline/2,parent_entity,StudyDesign
+/ScheduleTimeline/2,parent_id,StudyDesign_2
+/ScheduleTimeline/2,parent_rel,scheduleTimelines
+/ScheduleTimeline/2,id,ScheduleTimeline_3
+/ScheduleTimeline/2,name,Main Timeline

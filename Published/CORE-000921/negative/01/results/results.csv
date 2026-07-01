@@ -1,106 +1,106 @@
 path,attribute,value
-,productDesignation.codeSystemVersion,2024-09-27
-,productDesignation.codeSystem,http://www.cdisc.org
-,parent_rel,studyInterventions
-,$codelist_code,C207418
-,$pref_term_for_code,Investigational Medicinal Product
-,$value_for_code,IMP
-,$code_for_decode_value,C156473
-,$codelist_extensible,False
-,name,LY
-,parent_id,StudyDesign_1
-,$code_for_decode_pref_term,
-,parent_entity,StudyDesign
-,id,StudyIntervention_1
-,productDesignation.code,C202579
-,productDesignation.decode,NIMP (AxMP)
-,productDesignation.codeSystemVersion,2025-09-26
-,productDesignation.codeSystem,http://www.cdisc.org
-,parent_rel,studyInterventions
-,$codelist_code,C207418
-,$pref_term_for_code,Auxiliary Medicinal Product
-,$value_for_code,NIMP
-,$code_for_decode_value,
-,$codelist_extensible,False
-,name,LY2
-,parent_id,StudyDesign_1
-,$code_for_decode_pref_term,
-,parent_entity,StudyDesign
-,id,StudyIntervention_2
-,productDesignation.code,C156473
-,productDesignation.decode,NIMP (AxMP)
-,productDesignation.codeSystemVersion,2024-09-27
-,productDesignation.codeSystem,CDISC Terminology
-,parent_rel,studyInterventions
-,$codelist_code,C207418
-,$pref_term_for_code,Investigational Medicinal Product
-,$value_for_code,IMP
-,$code_for_decode_value,
-,$codelist_extensible,False
-,name,LY3
-,parent_id,StudyDesign_1
-,$code_for_decode_pref_term,C202579
-,parent_entity,StudyDesign
-,id,StudyIntervention_3
-,productDesignation.code,C202579
-,productDesignation.decode,Investigational Medicinal Product
-,productDesignation.codeSystemVersion,20240927
-,productDesignation.codeSystem,http://www.cdisc.org
-,parent_rel,studyInterventions
-,$codelist_code,C207418
-,$pref_term_for_code,
-,$value_for_code,
-,$code_for_decode_value,
-,$codelist_extensible,
-,name,LY4
-,parent_id,StudyDesign_1
-,$code_for_decode_pref_term,
-,parent_entity,StudyDesign
-,id,StudyIntervention_4
-,productDesignation.code,C156473
-,productDesignation.decode,Auxiliary Medicinal Product
-,productDesignation.codeSystemVersion,2024-09-27
-,productDesignation.codeSystem,http://www.cdisc.org
-,parent_rel,studyInterventions
-,$codelist_code,C207418
-,$pref_term_for_code,Auxiliary Medicinal Product
-,$value_for_code,NIMP (AxMP)
-,$code_for_decode_value,
-,$codelist_extensible,False
-,name,LY5
-,parent_id,StudyDesign_1
-,$code_for_decode_pref_term,
-,parent_entity,StudyDesign
-,id,StudyIntervention_5
-,productDesignation.code,C156473
-,productDesignation.decode,NIMP
-,productDesignation.codeSystemVersion,2024-09-27
-,productDesignation.codeSystem,http://www.cdisc.org
-,parent_rel,studyInterventions
-,$codelist_code,C207418
-,$pref_term_for_code,
-,$value_for_code,
-,$code_for_decode_value,C202579
-,$codelist_extensible,False
-,name,LY6
-,parent_id,StudyDesign_1
-,$code_for_decode_pref_term,
-,parent_entity,StudyDesign
-,id,StudyIntervention_6
-,productDesignation.code,C202579xx
-,productDesignation.decode,IMP
-,productDesignation.codeSystemVersion,2024-09-27
-,productDesignation.codeSystem,http://www.cdisc.org
-,parent_rel,studyInterventions
-,$codelist_code,C207418
-,$pref_term_for_code,
-,$value_for_code,
-,$code_for_decode_value,
-,$codelist_extensible,False
-,name,LY7
-,parent_id,StudyDesign_1
-,$code_for_decode_pref_term,
-,parent_entity,StudyDesign
-,id,StudyIntervention_7
-,productDesignation.code,C0016X
-,productDesignation.decode,Extension
+/StudyIntervention/0,parent_entity,StudyDesign
+/StudyIntervention/0,parent_id,StudyDesign_1
+/StudyIntervention/0,parent_rel,studyInterventions
+/StudyIntervention/0,id,StudyIntervention_1
+/StudyIntervention/0,name,LY
+/StudyIntervention/0,$codelist_code,C207418
+/StudyIntervention/0,$codelist_extensible,False
+/StudyIntervention/0,productDesignation.code,C202579
+/StudyIntervention/0,$code_for_decode_value,C156473
+/StudyIntervention/0,$code_for_decode_pref_term,
+/StudyIntervention/0,productDesignation.codeSystem,http://www.cdisc.org
+/StudyIntervention/0,productDesignation.codeSystemVersion,2024-09-27
+/StudyIntervention/0,productDesignation.decode,NIMP (AxMP)
+/StudyIntervention/0,$value_for_code,IMP
+/StudyIntervention/0,$pref_term_for_code,Investigational Medicinal Product
+/StudyIntervention/1,parent_entity,StudyDesign
+/StudyIntervention/1,parent_id,StudyDesign_1
+/StudyIntervention/1,parent_rel,studyInterventions
+/StudyIntervention/1,id,StudyIntervention_2
+/StudyIntervention/1,name,LY2
+/StudyIntervention/1,$codelist_code,C207418
+/StudyIntervention/1,$codelist_extensible,False
+/StudyIntervention/1,productDesignation.code,C156473
+/StudyIntervention/1,$code_for_decode_value,
+/StudyIntervention/1,$code_for_decode_pref_term,
+/StudyIntervention/1,productDesignation.codeSystem,http://www.cdisc.org
+/StudyIntervention/1,productDesignation.codeSystemVersion,2025-09-26
+/StudyIntervention/1,productDesignation.decode,NIMP (AxMP)
+/StudyIntervention/1,$value_for_code,NIMP
+/StudyIntervention/1,$pref_term_for_code,Auxiliary Medicinal Product
+/StudyIntervention/2,parent_entity,StudyDesign
+/StudyIntervention/2,parent_id,StudyDesign_1
+/StudyIntervention/2,parent_rel,studyInterventions
+/StudyIntervention/2,id,StudyIntervention_3
+/StudyIntervention/2,name,LY3
+/StudyIntervention/2,$codelist_code,C207418
+/StudyIntervention/2,$codelist_extensible,False
+/StudyIntervention/2,productDesignation.code,C202579
+/StudyIntervention/2,$code_for_decode_value,
+/StudyIntervention/2,$code_for_decode_pref_term,C202579
+/StudyIntervention/2,productDesignation.codeSystem,CDISC Terminology
+/StudyIntervention/2,productDesignation.codeSystemVersion,2024-09-27
+/StudyIntervention/2,productDesignation.decode,Investigational Medicinal Product
+/StudyIntervention/2,$value_for_code,IMP
+/StudyIntervention/2,$pref_term_for_code,Investigational Medicinal Product
+/StudyIntervention/3,parent_entity,StudyDesign
+/StudyIntervention/3,parent_id,StudyDesign_1
+/StudyIntervention/3,parent_rel,studyInterventions
+/StudyIntervention/3,id,StudyIntervention_4
+/StudyIntervention/3,name,LY4
+/StudyIntervention/3,$codelist_code,C207418
+/StudyIntervention/3,$codelist_extensible,
+/StudyIntervention/3,productDesignation.code,C156473
+/StudyIntervention/3,$code_for_decode_value,
+/StudyIntervention/3,$code_for_decode_pref_term,
+/StudyIntervention/3,productDesignation.codeSystem,http://www.cdisc.org
+/StudyIntervention/3,productDesignation.codeSystemVersion,20240927
+/StudyIntervention/3,productDesignation.decode,Auxiliary Medicinal Product
+/StudyIntervention/3,$value_for_code,
+/StudyIntervention/3,$pref_term_for_code,
+/StudyIntervention/4,parent_entity,StudyDesign
+/StudyIntervention/4,parent_id,StudyDesign_1
+/StudyIntervention/4,parent_rel,studyInterventions
+/StudyIntervention/4,id,StudyIntervention_5
+/StudyIntervention/4,name,LY5
+/StudyIntervention/4,$codelist_code,C207418
+/StudyIntervention/4,$codelist_extensible,False
+/StudyIntervention/4,productDesignation.code,C156473
+/StudyIntervention/4,$code_for_decode_value,
+/StudyIntervention/4,$code_for_decode_pref_term,
+/StudyIntervention/4,productDesignation.codeSystem,http://www.cdisc.org
+/StudyIntervention/4,productDesignation.codeSystemVersion,2024-09-27
+/StudyIntervention/4,productDesignation.decode,NIMP
+/StudyIntervention/4,$value_for_code,NIMP (AxMP)
+/StudyIntervention/4,$pref_term_for_code,Auxiliary Medicinal Product
+/StudyIntervention/5,parent_entity,StudyDesign
+/StudyIntervention/5,parent_id,StudyDesign_1
+/StudyIntervention/5,parent_rel,studyInterventions
+/StudyIntervention/5,id,StudyIntervention_6
+/StudyIntervention/5,name,LY6
+/StudyIntervention/5,$codelist_code,C207418
+/StudyIntervention/5,$codelist_extensible,False
+/StudyIntervention/5,productDesignation.code,C202579xx
+/StudyIntervention/5,$code_for_decode_value,C202579
+/StudyIntervention/5,$code_for_decode_pref_term,
+/StudyIntervention/5,productDesignation.codeSystem,http://www.cdisc.org
+/StudyIntervention/5,productDesignation.codeSystemVersion,2024-09-27
+/StudyIntervention/5,productDesignation.decode,IMP
+/StudyIntervention/5,$value_for_code,
+/StudyIntervention/5,$pref_term_for_code,
+/StudyIntervention/6,parent_entity,StudyDesign
+/StudyIntervention/6,parent_id,StudyDesign_1
+/StudyIntervention/6,parent_rel,studyInterventions
+/StudyIntervention/6,id,StudyIntervention_7
+/StudyIntervention/6,name,LY7
+/StudyIntervention/6,$codelist_code,C207418
+/StudyIntervention/6,$codelist_extensible,False
+/StudyIntervention/6,productDesignation.code,C0016X
+/StudyIntervention/6,$code_for_decode_value,
+/StudyIntervention/6,$code_for_decode_pref_term,
+/StudyIntervention/6,productDesignation.codeSystem,http://www.cdisc.org
+/StudyIntervention/6,productDesignation.codeSystemVersion,2024-09-27
+/StudyIntervention/6,productDesignation.decode,Extension
+/StudyIntervention/6,$value_for_code,
+/StudyIntervention/6,$pref_term_for_code,

@@ -1,91 +1,91 @@
 path,attribute,value
-,$value_for_code,Primary Endpoint
-,$codelist_code,C188726
-,level.codeSystem,http://www.cdisc.org
-,$code_for_decode_pref_term,C139173
-,$pref_term_for_code,Primary Endpoint
-,id,Endpoint_1
-,level.codeSystemVersion,2023-12-15
-,level.code,C94496
-,parent_id,Objective_1
-,parent_rel,endpoints
-,$code_for_decode_value,C139173
-,parent_entity,Objective
-,$codelist_extensible,False
-,name,END1
-,level.decode,Secondary Endpoint
-,$value_for_code,Secondary Endpoint
-,$codelist_code,C188726
-,level.codeSystem,http://www.cdisc.org
-,$code_for_decode_pref_term,
-,$pref_term_for_code,Secondary Endpoint
-,id,Endpoint_2
-,level.codeSystemVersion,2024-09-27
-,level.code,C139173
-,parent_id,Objective_1
-,parent_rel,endpoints
-,$code_for_decode_value,
-,parent_entity,Objective
-,$codelist_extensible,False
-,name,END2
-,level.decode,Study Secondary Endpoint
-,$value_for_code,
-,$codelist_code,C188726
-,level.codeSystem,http://www.cdisc.org
-,$code_for_decode_pref_term,C170559
-,$pref_term_for_code,
-,id,Endpoint_3
-,level.codeSystemVersion,2024-09-27
-,level.code,C170559xx
-,parent_id,Objective_2
-,parent_rel,endpoints
-,$code_for_decode_value,C170559
-,parent_entity,Objective
-,$codelist_extensible,False
-,name,END3
-,level.decode,Exploratory Endpoint
-,$value_for_code,Exploratory Endpoint
-,$codelist_code,C188726
-,level.codeSystem,CDISC
-,$code_for_decode_pref_term,C170559
-,$pref_term_for_code,Exploratory Endpoint
-,id,Endpoint_3
-,level.codeSystemVersion,2024-09-27
-,level.code,C170559
-,parent_id,Objective_2
-,parent_rel,endpoints
-,$code_for_decode_value,C170559
-,parent_entity,Objective
-,$codelist_extensible,False
-,name,END3
-,level.decode,Exploratory Endpoint
-,$value_for_code,
-,$codelist_code,C188726
-,level.codeSystem,http://www.cdisc.org
-,$code_for_decode_pref_term,
-,$pref_term_for_code,
-,id,Endpoint_3
-,level.codeSystemVersion,2024-09-72
-,level.code,C170559
-,parent_id,Objective_2
-,parent_rel,endpoints
-,$code_for_decode_value,
-,parent_entity,Objective
-,$codelist_extensible,
-,name,END3
-,level.decode,Exploratory Endpoint
-,$value_for_code,
-,$codelist_code,C188726
-,level.codeSystem,http://www.cdisc.org
-,$code_for_decode_pref_term,
-,$pref_term_for_code,
-,id,Endpoint_3
-,level.codeSystemVersion,2024-09-27
-,level.code,C0034X
-,parent_id,Objective_2
-,parent_rel,endpoints
-,$code_for_decode_value,
-,parent_entity,Objective
-,$codelist_extensible,False
-,name,END3
-,level.decode,Extension
+/Endpoint/0,parent_entity,Objective
+/Endpoint/0,parent_id,Objective_1
+/Endpoint/0,parent_rel,endpoints
+/Endpoint/0,id,Endpoint_1
+/Endpoint/0,name,END1
+/Endpoint/0,$codelist_code,C188726
+/Endpoint/0,$codelist_extensible,False
+/Endpoint/0,level.code,C94496
+/Endpoint/0,$code_for_decode_value,C139173
+/Endpoint/0,$code_for_decode_pref_term,C139173
+/Endpoint/0,level.codeSystem,http://www.cdisc.org
+/Endpoint/0,level.codeSystemVersion,2023-12-15
+/Endpoint/0,level.decode,Secondary Endpoint
+/Endpoint/0,$value_for_code,Primary Endpoint
+/Endpoint/0,$pref_term_for_code,Primary Endpoint
+/Endpoint/1,parent_entity,Objective
+/Endpoint/1,parent_id,Objective_1
+/Endpoint/1,parent_rel,endpoints
+/Endpoint/1,id,Endpoint_2
+/Endpoint/1,name,END2
+/Endpoint/1,$codelist_code,C188726
+/Endpoint/1,$codelist_extensible,False
+/Endpoint/1,level.code,C139173
+/Endpoint/1,$code_for_decode_value,
+/Endpoint/1,$code_for_decode_pref_term,
+/Endpoint/1,level.codeSystem,http://www.cdisc.org
+/Endpoint/1,level.codeSystemVersion,2024-09-27
+/Endpoint/1,level.decode,Study Secondary Endpoint
+/Endpoint/1,$value_for_code,Secondary Endpoint
+/Endpoint/1,$pref_term_for_code,Secondary Endpoint
+/Endpoint/2,parent_entity,Objective
+/Endpoint/2,parent_id,Objective_2
+/Endpoint/2,parent_rel,endpoints
+/Endpoint/2,id,Endpoint_3
+/Endpoint/2,name,END3
+/Endpoint/2,$codelist_code,C188726
+/Endpoint/2,$codelist_extensible,False
+/Endpoint/2,level.code,C170559xx
+/Endpoint/2,$code_for_decode_value,C170559
+/Endpoint/2,$code_for_decode_pref_term,C170559
+/Endpoint/2,level.codeSystem,http://www.cdisc.org
+/Endpoint/2,level.codeSystemVersion,2024-09-27
+/Endpoint/2,level.decode,Exploratory Endpoint
+/Endpoint/2,$value_for_code,
+/Endpoint/2,$pref_term_for_code,
+/Endpoint/3,parent_entity,Objective
+/Endpoint/3,parent_id,Objective_2
+/Endpoint/3,parent_rel,endpoints
+/Endpoint/3,id,Endpoint_3
+/Endpoint/3,name,END3
+/Endpoint/3,$codelist_code,C188726
+/Endpoint/3,$codelist_extensible,False
+/Endpoint/3,level.code,C170559
+/Endpoint/3,$code_for_decode_value,C170559
+/Endpoint/3,$code_for_decode_pref_term,C170559
+/Endpoint/3,level.codeSystem,CDISC
+/Endpoint/3,level.codeSystemVersion,2024-09-27
+/Endpoint/3,level.decode,Exploratory Endpoint
+/Endpoint/3,$value_for_code,Exploratory Endpoint
+/Endpoint/3,$pref_term_for_code,Exploratory Endpoint
+/Endpoint/4,parent_entity,Objective
+/Endpoint/4,parent_id,Objective_2
+/Endpoint/4,parent_rel,endpoints
+/Endpoint/4,id,Endpoint_3
+/Endpoint/4,name,END3
+/Endpoint/4,$codelist_code,C188726
+/Endpoint/4,$codelist_extensible,
+/Endpoint/4,level.code,C170559
+/Endpoint/4,$code_for_decode_value,
+/Endpoint/4,$code_for_decode_pref_term,
+/Endpoint/4,level.codeSystem,http://www.cdisc.org
+/Endpoint/4,level.codeSystemVersion,2024-09-72
+/Endpoint/4,level.decode,Exploratory Endpoint
+/Endpoint/4,$value_for_code,
+/Endpoint/4,$pref_term_for_code,
+/Endpoint/5,parent_entity,Objective
+/Endpoint/5,parent_id,Objective_2
+/Endpoint/5,parent_rel,endpoints
+/Endpoint/5,id,Endpoint_3
+/Endpoint/5,name,END3
+/Endpoint/5,$codelist_code,C188726
+/Endpoint/5,$codelist_extensible,False
+/Endpoint/5,level.code,C0034X
+/Endpoint/5,$code_for_decode_value,
+/Endpoint/5,$code_for_decode_pref_term,
+/Endpoint/5,level.codeSystem,http://www.cdisc.org
+/Endpoint/5,level.codeSystemVersion,2024-09-27
+/Endpoint/5,level.decode,Extension
+/Endpoint/5,$value_for_code,
+/Endpoint/5,$pref_term_for_code,

@@ -1,92 +1,92 @@
 path,attribute,value
-,$error_type,The id value references an invalid instance type.
-,parent_rel,contextIds
-,rel_type,reference
-,$condition_name,['COND1']
-,$condition_parent_id,['StudyDesign_1']
-,name,Diastolic Blood Pressure
-,instanceType,BiomedicalConcept
-,$condition_parent_entity,['StudyDesign']
-,$condition_rel_type,['definition']
-,parent_id,Condition_1
-,$condition_parent_rel,['conditions']
-,id,BiomedicalConcept_18
-,value,Not in dataset
-,$error_type,The id value references an invalid instance type.
-,parent_rel,contextIds
-,rel_type,reference
-,$condition_name,['COND1']
-,$condition_parent_id,['StudyDesign_1']
-,name,Heart Rate
-,instanceType,BiomedicalConcept
-,$condition_parent_entity,['StudyDesign']
-,$condition_rel_type,['definition']
-,parent_id,Condition_1
-,$condition_parent_rel,['conditions']
-,id,BiomedicalConcept_19
-,value,Not in dataset
-,$error_type,The id value references an invalid instance type.
-,parent_rel,contextIds
-,rel_type,reference
-,$condition_name,['COND1']
-,$condition_parent_id,['StudyDesign_1']
-,name,Systolic Blood Pressure
-,instanceType,BiomedicalConcept
-,$condition_parent_entity,['StudyDesign']
-,$condition_rel_type,['definition']
-,parent_id,Condition_1
-,$condition_parent_rel,['conditions']
-,id,BiomedicalConcept_17
-,value,Not in dataset
-,$error_type,The id value references an invalid instance type.
-,parent_rel,contextIds
-,rel_type,reference
-,$condition_name,['COND2']
-,$condition_parent_id,['StudyDesign_1']
-,name,COND1
-,instanceType,Condition
-,$condition_parent_entity,['StudyDesign']
-,$condition_rel_type,['definition']
-,parent_id,Condition_2
-,$condition_parent_rel,['conditions']
-,id,Condition_1
-,value,Not in dataset
-,$error_type,The id value references an invalid instance type.
-,parent_rel,contextIds
-,rel_type,reference
-,$condition_name,['COND1']
-,$condition_parent_id,['StudyDesign_1']
-,name,PR_STAND
-,instanceType,Procedure
-,$condition_parent_entity,['StudyDesign']
-,$condition_rel_type,['definition']
-,parent_id,Condition_1
-,$condition_parent_rel,['conditions']
-,id,Procedure_3
-,value,Not in dataset
-,$error_type,The referenced id value is not valid.
-,parent_rel,contextIds
-,rel_type,definition
-,$condition_name,['COND1']
-,$condition_parent_id,['StudyDesign_1']
-,value,Activity_xx
-,$condition_parent_entity,['StudyDesign']
-,$condition_rel_type,['definition']
-,parent_id,Condition_1
-,$condition_parent_rel,['conditions']
-,name,Not in dataset
-,id,Not in dataset
-,instanceType,Not in dataset
-,$error_type,The referenced id value is not valid.
-,parent_rel,contextIds
-,rel_type,definition
-,$condition_name,['COND2']
-,$condition_parent_id,['StudyDesign_1']
-,value,ScheduledActivityInstance_yy
-,$condition_parent_entity,['StudyDesign']
-,$condition_rel_type,['definition']
-,parent_id,Condition_2
-,$condition_parent_rel,['conditions']
-,name,Not in dataset
-,id,Not in dataset
-,instanceType,Not in dataset
+/BiomedicalConcept/6,$condition_parent_entity,['StudyDesign']
+/BiomedicalConcept/6,$condition_parent_id,['StudyDesign_1']
+/BiomedicalConcept/6,$condition_parent_rel,['conditions']
+/BiomedicalConcept/6,$condition_rel_type,['definition']
+/BiomedicalConcept/6,$condition_name,['COND1']
+/BiomedicalConcept/6,id,BiomedicalConcept_18
+/BiomedicalConcept/6,name,Diastolic Blood Pressure
+/BiomedicalConcept/6,parent_id,Condition_1
+/BiomedicalConcept/6,parent_rel,contextIds
+/BiomedicalConcept/6,rel_type,reference
+/BiomedicalConcept/6,instanceType,BiomedicalConcept
+/BiomedicalConcept/6,value,Not in dataset
+/BiomedicalConcept/6,$error_type,The id value references an invalid instance type.
+/BiomedicalConcept/7,$condition_parent_entity,['StudyDesign']
+/BiomedicalConcept/7,$condition_parent_id,['StudyDesign_1']
+/BiomedicalConcept/7,$condition_parent_rel,['conditions']
+/BiomedicalConcept/7,$condition_rel_type,['definition']
+/BiomedicalConcept/7,$condition_name,['COND1']
+/BiomedicalConcept/7,id,BiomedicalConcept_19
+/BiomedicalConcept/7,name,Heart Rate
+/BiomedicalConcept/7,parent_id,Condition_1
+/BiomedicalConcept/7,parent_rel,contextIds
+/BiomedicalConcept/7,rel_type,reference
+/BiomedicalConcept/7,instanceType,BiomedicalConcept
+/BiomedicalConcept/7,value,Not in dataset
+/BiomedicalConcept/7,$error_type,The id value references an invalid instance type.
+/BiomedicalConcept/8,$condition_parent_entity,['StudyDesign']
+/BiomedicalConcept/8,$condition_parent_id,['StudyDesign_1']
+/BiomedicalConcept/8,$condition_parent_rel,['conditions']
+/BiomedicalConcept/8,$condition_rel_type,['definition']
+/BiomedicalConcept/8,$condition_name,['COND1']
+/BiomedicalConcept/8,id,BiomedicalConcept_17
+/BiomedicalConcept/8,name,Systolic Blood Pressure
+/BiomedicalConcept/8,parent_id,Condition_1
+/BiomedicalConcept/8,parent_rel,contextIds
+/BiomedicalConcept/8,rel_type,reference
+/BiomedicalConcept/8,instanceType,BiomedicalConcept
+/BiomedicalConcept/8,value,Not in dataset
+/BiomedicalConcept/8,$error_type,The id value references an invalid instance type.
+/Condition/2,$condition_parent_entity,['StudyDesign']
+/Condition/2,$condition_parent_id,['StudyDesign_1']
+/Condition/2,$condition_parent_rel,['conditions']
+/Condition/2,$condition_rel_type,['definition']
+/Condition/2,$condition_name,['COND2']
+/Condition/2,id,Condition_1
+/Condition/2,name,COND1
+/Condition/2,parent_id,Condition_2
+/Condition/2,parent_rel,contextIds
+/Condition/2,rel_type,reference
+/Condition/2,instanceType,Condition
+/Condition/2,value,Not in dataset
+/Condition/2,$error_type,The id value references an invalid instance type.
+/Procedure/1,$condition_parent_entity,['StudyDesign']
+/Procedure/1,$condition_parent_id,['StudyDesign_1']
+/Procedure/1,$condition_parent_rel,['conditions']
+/Procedure/1,$condition_rel_type,['definition']
+/Procedure/1,$condition_name,['COND1']
+/Procedure/1,id,Procedure_3
+/Procedure/1,name,PR_STAND
+/Procedure/1,parent_id,Condition_1
+/Procedure/1,parent_rel,contextIds
+/Procedure/1,rel_type,reference
+/Procedure/1,instanceType,Procedure
+/Procedure/1,value,Not in dataset
+/Procedure/1,$error_type,The id value references an invalid instance type.
+/string/6,$condition_parent_entity,['StudyDesign']
+/string/6,$condition_parent_id,['StudyDesign_1']
+/string/6,$condition_parent_rel,['conditions']
+/string/6,$condition_rel_type,['definition']
+/string/6,$condition_name,['COND1']
+/string/6,id,Not in dataset
+/string/6,name,Not in dataset
+/string/6,parent_id,Condition_1
+/string/6,parent_rel,contextIds
+/string/6,rel_type,definition
+/string/6,instanceType,Not in dataset
+/string/6,value,Activity_xx
+/string/6,$error_type,The referenced id value is not valid.
+/string/13,$condition_parent_entity,['StudyDesign']
+/string/13,$condition_parent_id,['StudyDesign_1']
+/string/13,$condition_parent_rel,['conditions']
+/string/13,$condition_rel_type,['definition']
+/string/13,$condition_name,['COND2']
+/string/13,id,Not in dataset
+/string/13,name,Not in dataset
+/string/13,parent_id,Condition_2
+/string/13,parent_rel,contextIds
+/string/13,rel_type,definition
+/string/13,instanceType,Not in dataset
+/string/13,value,ScheduledActivityInstance_yy
+/string/13,$error_type,The referenced id value is not valid.

@@ -1,28 +1,28 @@
 path,attribute,value
-,name,TIM3
-,parent_rel,timings
-,id,Timing_3
-,relativeToFrom.code,C0061X
-,parent_entity,ScheduleTimeline
-,relativeToFrom.decode,Start to Start
-,parent_id,ScheduleTimeline_4
-,type.code,C201358
-,type.decode,Fixed Reference
-,name,TIM17
-,parent_rel,timings
-,id,Timing_17
-,relativeToFrom.code,
-,parent_entity,ScheduleTimeline
-,relativeToFrom.decode,
-,parent_id,ScheduleTimeline_1
-,type.code,C201358
-,type.decode,Fixed Reference
-,name,TIM18
-,parent_rel,timings
-,id,Timing_18
-,relativeToFrom.code,C201352
-,parent_entity,ScheduleTimeline
-,relativeToFrom.decode,End to End
-,parent_id,ScheduleTimeline_2
-,type.code,C201358
-,type.decode,Fixed Reference
+/Timing/0,parent_entity,ScheduleTimeline
+/Timing/0,parent_id,ScheduleTimeline_4
+/Timing/0,parent_rel,timings
+/Timing/0,id,Timing_3
+/Timing/0,name,TIM3
+/Timing/0,type.code,C201358
+/Timing/0,type.decode,Fixed Reference
+/Timing/0,relativeToFrom.code,C0061X
+/Timing/0,relativeToFrom.decode,Start to Start
+/Timing/2,parent_entity,ScheduleTimeline
+/Timing/2,parent_id,ScheduleTimeline_1
+/Timing/2,parent_rel,timings
+/Timing/2,id,Timing_17
+/Timing/2,name,TIM17
+/Timing/2,type.code,C201358
+/Timing/2,type.decode,Fixed Reference
+/Timing/2,relativeToFrom.code,
+/Timing/2,relativeToFrom.decode,
+/Timing/3,parent_entity,ScheduleTimeline
+/Timing/3,parent_id,ScheduleTimeline_2
+/Timing/3,parent_rel,timings
+/Timing/3,id,Timing_18
+/Timing/3,name,TIM18
+/Timing/3,type.code,C201358
+/Timing/3,type.decode,Fixed Reference
+/Timing/3,relativeToFrom.code,C201352
+/Timing/3,relativeToFrom.decode,End to End

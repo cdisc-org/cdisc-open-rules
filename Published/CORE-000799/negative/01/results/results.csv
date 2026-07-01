@@ -1,8 +1,8 @@
 path,attribute,value
-,name,POP1
-,parent_id.StudyArm,StudyDesign_1
-,parent_rel,populationIds
-,$parent_of_population,['StudyDesign_2']
-,parent_id,StudyArm_1
-,id,StudyDesignPopulation_1
-,parent_entity,StudyArm
+/StudyDesignPopulation/1,parent_entity,StudyArm
+/StudyDesignPopulation/1,parent_id,StudyArm_1
+/StudyDesignPopulation/1,parent_rel,populationIds
+/StudyDesignPopulation/1,id,StudyDesignPopulation_1
+/StudyDesignPopulation/1,name,POP1
+/StudyDesignPopulation/1,parent_id.StudyArm,StudyDesign_1
+/StudyDesignPopulation/1,$parent_of_population,['StudyDesign_2']

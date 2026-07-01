@@ -27,8 +27,8 @@ on:
         required: false
         default: ""
         type: string
-  schedule:
-    - cron: "0 0 * * 1"
+  # schedule:
+  #   - cron: "0 0 * * 1"
 
 env:
   engine_ref: ${{ inputs.engine_ref || 'main' }}

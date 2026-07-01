@@ -1,91 +1,91 @@
 path,attribute,value
-,id,Administration_1
-,route.standardCode.code,C38217
-,route.standardCode.codeSystem,http://www.cdisc.org
-,$pref_term_for_code,Intracoronal Dental Route of Administration
-,$code_for_decode_value,C38305
-,$code_for_decode_pref_term,
-,$value_for_code,"INTRACORONAL, DENTAL"
-,name,PATCH_50
-,parent_id,StudyIntervention_1
-,parent_rel,administrations
-,route.standardCode.decode,TRANSDERMAL
-,route.standardCode.codeSystemVersion,2023-12-15
-,$codelist_extensible,True
-,parent_entity,StudyIntervention
-,$codelist_code,C66729
-,id,Administration_2
-,route.standardCode.code,C188189
-,route.standardCode.codeSystem,http://www.cdisc.org
-,$pref_term_for_code,Nasoduodenal Route of Administration
-,$code_for_decode_value,C188189
-,$code_for_decode_pref_term,
-,$value_for_code,NASODUODENAL
-,name,PATCH_75
-,parent_id,StudyIntervention_1
-,parent_rel,administrations
-,route.standardCode.decode,Nasoduodenal
-,route.standardCode.codeSystemVersion,2023-12-15
-,$codelist_extensible,True
-,parent_entity,StudyIntervention
-,$codelist_code,C66729
-,id,Administration_3
-,route.standardCode.code,C48623xx
-,route.standardCode.codeSystem,http://www.cdisc.org
-,$pref_term_for_code,
-,$code_for_decode_value,
-,$code_for_decode_pref_term,C48623
-,$value_for_code,
-,name,PATCH_100
-,parent_id,StudyIntervention_2
-,parent_rel,administrations
-,route.standardCode.decode,Route of Administration Not Applicable
-,route.standardCode.codeSystemVersion,2024-09-27
-,$codelist_extensible,True
-,parent_entity,StudyIntervention
-,$codelist_code,C66729
-,id,Administration_4
-,route.standardCode.code,C38305
-,route.standardCode.codeSystem,Route of Administration Response (C66729)
-,$pref_term_for_code,Transdermal Route of Administration
-,$code_for_decode_value,
-,$code_for_decode_pref_term,C38305
-,$value_for_code,TRANSDERMAL
-,name,PATCH_125
-,parent_id,StudyIntervention_2
-,parent_rel,administrations
-,route.standardCode.decode,Transdermal Route of Administration
-,route.standardCode.codeSystemVersion,2024-09-27
-,$codelist_extensible,True
-,parent_entity,StudyIntervention
-,$codelist_code,C66729
-,id,Administration_5
-,route.standardCode.code,C0023X
-,route.standardCode.codeSystem,http://www.cdisc.org
-,$pref_term_for_code,
-,$code_for_decode_value,
-,$code_for_decode_pref_term,
-,$value_for_code,
-,name,PATCH_150
-,parent_id,StudyIntervention_2
-,parent_rel,administrations
-,route.standardCode.decode,Extension
-,route.standardCode.codeSystemVersion,2025-09-27
-,$codelist_extensible,
-,parent_entity,StudyIntervention
-,$codelist_code,C66729
-,id,Administration_9
-,route.standardCode.code,C38305
-,route.standardCode.codeSystem,http://www.cdisc.org
-,$pref_term_for_code,Transdermal Route of Administration
-,$code_for_decode_value,
-,$code_for_decode_pref_term,C38305
-,$value_for_code,TRANSDERMAL
-,name,PATCH_250
-,parent_id,StudyIntervention_2
-,parent_rel,administrations
-,route.standardCode.decode,TRANSDERMAL ROUTE OF ADMINISTRATION
-,route.standardCode.codeSystemVersion,2024-09-27
-,$codelist_extensible,True
-,parent_entity,StudyIntervention
-,$codelist_code,C66729
+/Administration/0,parent_entity,StudyIntervention
+/Administration/0,parent_id,StudyIntervention_1
+/Administration/0,parent_rel,administrations
+/Administration/0,id,Administration_1
+/Administration/0,name,PATCH_50
+/Administration/0,$codelist_code,C66729
+/Administration/0,$codelist_extensible,True
+/Administration/0,route.standardCode.code,C38217
+/Administration/0,$code_for_decode_value,C38305
+/Administration/0,$code_for_decode_pref_term,
+/Administration/0,route.standardCode.codeSystem,http://www.cdisc.org
+/Administration/0,route.standardCode.codeSystemVersion,2023-12-15
+/Administration/0,route.standardCode.decode,TRANSDERMAL
+/Administration/0,$value_for_code,"INTRACORONAL, DENTAL"
+/Administration/0,$pref_term_for_code,Intracoronal Dental Route of Administration
+/Administration/1,parent_entity,StudyIntervention
+/Administration/1,parent_id,StudyIntervention_1
+/Administration/1,parent_rel,administrations
+/Administration/1,id,Administration_2
+/Administration/1,name,PATCH_75
+/Administration/1,$codelist_code,C66729
+/Administration/1,$codelist_extensible,True
+/Administration/1,route.standardCode.code,C188189
+/Administration/1,$code_for_decode_value,C188189
+/Administration/1,$code_for_decode_pref_term,
+/Administration/1,route.standardCode.codeSystem,http://www.cdisc.org
+/Administration/1,route.standardCode.codeSystemVersion,2023-12-15
+/Administration/1,route.standardCode.decode,Nasoduodenal
+/Administration/1,$value_for_code,NASODUODENAL
+/Administration/1,$pref_term_for_code,Nasoduodenal Route of Administration
+/Administration/2,parent_entity,StudyIntervention
+/Administration/2,parent_id,StudyIntervention_2
+/Administration/2,parent_rel,administrations
+/Administration/2,id,Administration_3
+/Administration/2,name,PATCH_100
+/Administration/2,$codelist_code,C66729
+/Administration/2,$codelist_extensible,True
+/Administration/2,route.standardCode.code,C48623xx
+/Administration/2,$code_for_decode_value,
+/Administration/2,$code_for_decode_pref_term,C48623
+/Administration/2,route.standardCode.codeSystem,http://www.cdisc.org
+/Administration/2,route.standardCode.codeSystemVersion,2024-09-27
+/Administration/2,route.standardCode.decode,Route of Administration Not Applicable
+/Administration/2,$value_for_code,
+/Administration/2,$pref_term_for_code,
+/Administration/3,parent_entity,StudyIntervention
+/Administration/3,parent_id,StudyIntervention_2
+/Administration/3,parent_rel,administrations
+/Administration/3,id,Administration_4
+/Administration/3,name,PATCH_125
+/Administration/3,$codelist_code,C66729
+/Administration/3,$codelist_extensible,True
+/Administration/3,route.standardCode.code,C38305
+/Administration/3,$code_for_decode_value,
+/Administration/3,$code_for_decode_pref_term,C38305
+/Administration/3,route.standardCode.codeSystem,Route of Administration Response (C66729)
+/Administration/3,route.standardCode.codeSystemVersion,2024-09-27
+/Administration/3,route.standardCode.decode,Transdermal Route of Administration
+/Administration/3,$value_for_code,TRANSDERMAL
+/Administration/3,$pref_term_for_code,Transdermal Route of Administration
+/Administration/4,parent_entity,StudyIntervention
+/Administration/4,parent_id,StudyIntervention_2
+/Administration/4,parent_rel,administrations
+/Administration/4,id,Administration_5
+/Administration/4,name,PATCH_150
+/Administration/4,$codelist_code,C66729
+/Administration/4,$codelist_extensible,
+/Administration/4,route.standardCode.code,C0023X
+/Administration/4,$code_for_decode_value,
+/Administration/4,$code_for_decode_pref_term,
+/Administration/4,route.standardCode.codeSystem,http://www.cdisc.org
+/Administration/4,route.standardCode.codeSystemVersion,2025-09-27
+/Administration/4,route.standardCode.decode,Extension
+/Administration/4,$value_for_code,
+/Administration/4,$pref_term_for_code,
+/Administration/5,parent_entity,StudyIntervention
+/Administration/5,parent_id,StudyIntervention_2
+/Administration/5,parent_rel,administrations
+/Administration/5,id,Administration_9
+/Administration/5,name,PATCH_250
+/Administration/5,$codelist_code,C66729
+/Administration/5,$codelist_extensible,True
+/Administration/5,route.standardCode.code,C38305
+/Administration/5,$code_for_decode_value,
+/Administration/5,$code_for_decode_pref_term,C38305
+/Administration/5,route.standardCode.codeSystem,http://www.cdisc.org
+/Administration/5,route.standardCode.codeSystemVersion,2024-09-27
+/Administration/5,route.standardCode.decode,TRANSDERMAL ROUTE OF ADMINISTRATION
+/Administration/5,$value_for_code,TRANSDERMAL
+/Administration/5,$pref_term_for_code,Transdermal Route of Administration
