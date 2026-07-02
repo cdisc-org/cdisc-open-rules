@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# run_validation.sh — iterates all positive/ and negative/ test cases for a rule,
+# run_validation.sh — iterates all negative/ and positive/ test cases for a rule,
 # runs the CORE engine against each, prints output to results.csv,
 # diffs against any expected results.csv, and writes two outputs:
 #   - $REPO_ROOT/validation_report.md  (detailed markdown, legacy/fallback)
@@ -86,7 +86,7 @@ print(json.dumps({
 # ---------------------------------------------------------------------------
 # Iterate test types and cases
 # ---------------------------------------------------------------------------
-for TEST_TYPE in positive negative; do
+for TEST_TYPE in negative positive; do
   TYPE_DIR="$RULE_DIR/$TEST_TYPE"
   [ -d "$TYPE_DIR" ] || continue
 
