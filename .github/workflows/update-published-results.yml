@@ -123,6 +123,13 @@ jobs:
           [ -f summary_table.md ] && cat summary_table.md >> $GITHUB_STEP_SUMMARY || true
 
       # -----------------------------------------------------------------------
+      # 6a. Generate rationales.csv template from summary_table.md
+      # -----------------------------------------------------------------------
+      - name: Generate rationales CSV
+        if: always()
+        run: python .github/scripts/generate_rationales.py summary_table.md rationales.csv
+
+      # -----------------------------------------------------------------------
       # 7. Upload reports as artifacts (regardless of outcome)
       # -----------------------------------------------------------------------
       - name: Upload validation artifacts
@@ -134,6 +141,7 @@ jobs:
             Published/**/results/results.csv
             summary_table.md
             detail_report.md
+            rationales.csv
           if-no-files-found: warn
 
       # -----------------------------------------------------------------------
