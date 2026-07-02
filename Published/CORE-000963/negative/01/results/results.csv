@@ -1,9 +1,9 @@
 path,attribute,value
 /study/versions/0/studyDesigns/0/population,StudyDesign.id,InterventionalStudyDesign_1
 /study/versions/0/studyDesigns/0/population,StudyDesign.name,Main Design
-/study/versions/0/studyDesigns/0/population,cohorts.name,"[StudyCohort_1: COHORT1, StudyCohort_2: COHORT2]"
-/study/versions/0/studyDesigns/0/population,cohorts.plannedEnrollmentNumber(value/range),"[StudyCohort_1: 10, StudyCohort_2: Missing]"
-/study/versions/0/studyDesigns/0/population,cohorts.plannedEnrollmentNumber.id,"[StudyCohort_1: Quantity_101, StudyCohort_2: ]"
 /study/versions/0/studyDesigns/0/population,name,POP1
-/study/versions/0/studyDesigns/0/population,plannedEnrollmentNumber(value/range),null
-/study/versions/0/studyDesigns/0/population,plannedEnrollmentNumber.id,null
+/study/versions/0/studyDesigns/0/population,plannedEnrollmentNumber.id,
+/study/versions/0/studyDesigns/0/population,plannedEnrollmentNumber(value/range),
+/study/versions/0/studyDesigns/0/population,cohorts.name,"[StudyCohort_1: COHORT1, StudyCohort_2: COHORT2]"
+/study/versions/0/studyDesigns/0/population,cohorts.plannedEnrollmentNumber.id,"[StudyCohort_1: Quantity_101, StudyCohort_2: ]"
+/study/versions/0/studyDesigns/0/population,cohorts.plannedEnrollmentNumber(value/range),"[StudyCohort_1: 10, StudyCohort_2: Missing]"
