@@ -1,82 +1,82 @@
 path,attribute,value
 /study/versions/0/studyDesigns/0/activities/0,StudyDesign.id,InterventionalStudyDesign_1
 /study/versions/0/studyDesigns/0/activities/0,StudyDesign.name,Main Design
+/study/versions/0/studyDesigns/0/activities/0,name,Eligibility
+/study/versions/0/studyDesigns/0/activities/0,childIds,"['Activity_1', 'Activity_2', 'Activity_3', 'Activity_4', 'Activity_5', 'Activity_6', 'Activity_7', 'Activity_8', 'Activity_9', 'Activity_10']"
+/study/versions/0/studyDesigns/0/activities/0,biomedicalConceptIds,"['BBC_1', 'BBC_2']"
 /study/versions/0/studyDesigns/0/activities/0,bcCategoryIds,['XCat1']
 /study/versions/0/studyDesigns/0/activities/0,bcSurrogateIds,['XSur1']
-/study/versions/0/studyDesigns/0/activities/0,biomedicalConceptIds,"['BBC_1', 'BBC_2']"
-/study/versions/0/studyDesigns/0/activities/0,childIds,"['Activity_1', 'Activity_2', 'Activity_3', 'Activity_4', 'Activity_5', 'Activity_6', 'Activity_7', 'Activity_8', 'Activity_9', 'Activity_10']"
-/study/versions/0/studyDesigns/0/activities/0,definedProcedures.id,Xproc1
-/study/versions/0/studyDesigns/0/activities/0,name,Eligibility
 /study/versions/0/studyDesigns/0/activities/0,timelineId,Xtime1
+/study/versions/0/studyDesigns/0/activities/0,definedProcedures.id,Xproc1
 /study/versions/0/studyDesigns/0/activities/1,StudyDesign.id,InterventionalStudyDesign_1
 /study/versions/0/studyDesigns/0/activities/1,StudyDesign.name,Main Design
+/study/versions/0/studyDesigns/0/activities/1,name,Informed consent
+/study/versions/0/studyDesigns/0/activities/1,childIds,['Activity_2']
+/study/versions/0/studyDesigns/0/activities/1,biomedicalConceptIds,[]
 /study/versions/0/studyDesigns/0/activities/1,bcCategoryIds,[]
 /study/versions/0/studyDesigns/0/activities/1,bcSurrogateIds,[]
-/study/versions/0/studyDesigns/0/activities/1,biomedicalConceptIds,[]
-/study/versions/0/studyDesigns/0/activities/1,childIds,['Activity_2']
+/study/versions/0/studyDesigns/0/activities/1,timelineId,
 /study/versions/0/studyDesigns/0/activities/1,definedProcedures.id,Xproc1
-/study/versions/0/studyDesigns/0/activities/1,name,Informed consent
-/study/versions/0/studyDesigns/0/activities/1,timelineId,null
 /study/versions/0/studyDesigns/0/activities/2,StudyDesign.id,InterventionalStudyDesign_1
 /study/versions/0/studyDesigns/0/activities/2,StudyDesign.name,Main Design
+/study/versions/0/studyDesigns/0/activities/2,name,Admit
+/study/versions/0/studyDesigns/0/activities/2,childIds,"['Activity_3', 'Activity_4']"
+/study/versions/0/studyDesigns/0/activities/2,biomedicalConceptIds,[]
 /study/versions/0/studyDesigns/0/activities/2,bcCategoryIds,[]
 /study/versions/0/studyDesigns/0/activities/2,bcSurrogateIds,[]
-/study/versions/0/studyDesigns/0/activities/2,biomedicalConceptIds,[]
-/study/versions/0/studyDesigns/0/activities/2,childIds,"['Activity_3', 'Activity_4']"
-/study/versions/0/studyDesigns/0/activities/2,definedProcedures.id,null
-/study/versions/0/studyDesigns/0/activities/2,name,Admit
 /study/versions/0/studyDesigns/0/activities/2,timelineId,TIM1
+/study/versions/0/studyDesigns/0/activities/2,definedProcedures.id,
 /study/versions/0/studyDesigns/0/activities/3,StudyDesign.id,InterventionalStudyDesign_1
 /study/versions/0/studyDesigns/0/activities/3,StudyDesign.name,Main Design
+/study/versions/0/studyDesigns/0/activities/3,name,Discharge
+/study/versions/0/studyDesigns/0/activities/3,childIds,['Activity_4']
+/study/versions/0/studyDesigns/0/activities/3,biomedicalConceptIds,"['BC_01', 'BC_02']"
 /study/versions/0/studyDesigns/0/activities/3,bcCategoryIds,[]
 /study/versions/0/studyDesigns/0/activities/3,bcSurrogateIds,[]
-/study/versions/0/studyDesigns/0/activities/3,biomedicalConceptIds,"['BC_01', 'BC_02']"
-/study/versions/0/studyDesigns/0/activities/3,childIds,['Activity_4']
-/study/versions/0/studyDesigns/0/activities/3,definedProcedures.id,null
-/study/versions/0/studyDesigns/0/activities/3,name,Discharge
-/study/versions/0/studyDesigns/0/activities/3,timelineId,null
+/study/versions/0/studyDesigns/0/activities/3,timelineId,
+/study/versions/0/studyDesigns/0/activities/3,definedProcedures.id,
 /study/versions/0/studyDesigns/0/activities/4,StudyDesign.id,InterventionalStudyDesign_1
 /study/versions/0/studyDesigns/0/activities/4,StudyDesign.name,Main Design
+/study/versions/0/studyDesigns/0/activities/4,name,FSH
+/study/versions/0/studyDesigns/0/activities/4,childIds,['Activity_4']
+/study/versions/0/studyDesigns/0/activities/4,biomedicalConceptIds,['xBC01']
 /study/versions/0/studyDesigns/0/activities/4,bcCategoryIds,[]
 /study/versions/0/studyDesigns/0/activities/4,bcSurrogateIds,[]
-/study/versions/0/studyDesigns/0/activities/4,biomedicalConceptIds,['xBC01']
-/study/versions/0/studyDesigns/0/activities/4,childIds,['Activity_4']
-/study/versions/0/studyDesigns/0/activities/4,definedProcedures.id,null
-/study/versions/0/studyDesigns/0/activities/4,name,FSH
-/study/versions/0/studyDesigns/0/activities/4,timelineId,null
+/study/versions/0/studyDesigns/0/activities/4,timelineId,
+/study/versions/0/studyDesigns/0/activities/4,definedProcedures.id,
 /study/versions/0/studyDesigns/0/activities/5,StudyDesign.id,InterventionalStudyDesign_1
 /study/versions/0/studyDesigns/0/activities/5,StudyDesign.name,Main Design
+/study/versions/0/studyDesigns/0/activities/5,name,Medical history/demographics
+/study/versions/0/studyDesigns/0/activities/5,childIds,['Activity_4']
+/study/versions/0/studyDesigns/0/activities/5,biomedicalConceptIds,[]
 /study/versions/0/studyDesigns/0/activities/5,bcCategoryIds,['XCAT01']
 /study/versions/0/studyDesigns/0/activities/5,bcSurrogateIds,[]
-/study/versions/0/studyDesigns/0/activities/5,biomedicalConceptIds,[]
-/study/versions/0/studyDesigns/0/activities/5,childIds,['Activity_4']
-/study/versions/0/studyDesigns/0/activities/5,definedProcedures.id,null
-/study/versions/0/studyDesigns/0/activities/5,name,Medical history/demographics
-/study/versions/0/studyDesigns/0/activities/5,timelineId,null
+/study/versions/0/studyDesigns/0/activities/5,timelineId,
+/study/versions/0/studyDesigns/0/activities/5,definedProcedures.id,
 /study/versions/0/studyDesigns/0/activities/6,StudyDesign.id,InterventionalStudyDesign_1
 /study/versions/0/studyDesigns/0/activities/6,StudyDesign.name,Main Design
+/study/versions/0/studyDesigns/0/activities/6,name,WD history
+/study/versions/0/studyDesigns/0/activities/6,childIds,['Activity_4']
+/study/versions/0/studyDesigns/0/activities/6,biomedicalConceptIds,[]
 /study/versions/0/studyDesigns/0/activities/6,bcCategoryIds,[]
 /study/versions/0/studyDesigns/0/activities/6,bcSurrogateIds,['XBC02']
-/study/versions/0/studyDesigns/0/activities/6,biomedicalConceptIds,[]
-/study/versions/0/studyDesigns/0/activities/6,childIds,['Activity_4']
-/study/versions/0/studyDesigns/0/activities/6,definedProcedures.id,null
-/study/versions/0/studyDesigns/0/activities/6,name,WD history
-/study/versions/0/studyDesigns/0/activities/6,timelineId,null
+/study/versions/0/studyDesigns/0/activities/6,timelineId,
+/study/versions/0/studyDesigns/0/activities/6,definedProcedures.id,
 /study/versions/0/studyDesigns/0/activities/19,StudyDesign.id,InterventionalStudyDesign_1
 /study/versions/0/studyDesigns/0/activities/19,StudyDesign.name,Main Design
+/study/versions/0/studyDesigns/0/activities/19,name,Blood sampling for PK and PD
+/study/versions/0/studyDesigns/0/activities/19,childIds,"['Activity_42', 'Activity_43', 'Activity_44']"
+/study/versions/0/studyDesigns/0/activities/19,biomedicalConceptIds,[]
 /study/versions/0/studyDesigns/0/activities/19,bcCategoryIds,[]
 /study/versions/0/studyDesigns/0/activities/19,bcSurrogateIds,[]
-/study/versions/0/studyDesigns/0/activities/19,biomedicalConceptIds,[]
-/study/versions/0/studyDesigns/0/activities/19,childIds,"['Activity_42', 'Activity_43', 'Activity_44']"
-/study/versions/0/studyDesigns/0/activities/19,definedProcedures.id,null
-/study/versions/0/studyDesigns/0/activities/19,name,Blood sampling for PK and PD
 /study/versions/0/studyDesigns/0/activities/19,timelineId,ScheduleTimeline_3
+/study/versions/0/studyDesigns/0/activities/19,definedProcedures.id,
 /study/versions/0/studyDesigns/0/activities/21,StudyDesign.id,InterventionalStudyDesign_1
 /study/versions/0/studyDesigns/0/activities/21,StudyDesign.name,Main Design
+/study/versions/0/studyDesigns/0/activities/21,name,"Chemistry, hematology, Coagulation"
+/study/versions/0/studyDesigns/0/activities/21,childIds,['Activity_42']
+/study/versions/0/studyDesigns/0/activities/21,biomedicalConceptIds,[]
 /study/versions/0/studyDesigns/0/activities/21,bcCategoryIds,['BC_CAT_01']
 /study/versions/0/studyDesigns/0/activities/21,bcSurrogateIds,[]
-/study/versions/0/studyDesigns/0/activities/21,biomedicalConceptIds,[]
-/study/versions/0/studyDesigns/0/activities/21,childIds,['Activity_42']
-/study/versions/0/studyDesigns/0/activities/21,definedProcedures.id,null
-/study/versions/0/studyDesigns/0/activities/21,name,"Chemistry, hematology, Coagulation"
-/study/versions/0/studyDesigns/0/activities/21,timelineId,null
+/study/versions/0/studyDesigns/0/activities/21,timelineId,
+/study/versions/0/studyDesigns/0/activities/21,definedProcedures.id,
