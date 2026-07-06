@@ -1,0 +1,148 @@
+# ==============================================================================
+# This workflow:
+#   1. Checks out this repo (cdisc-open-rules) — provides Published/ rules + test data
+#   2. Checks out verisianHQ/cdisc-rules-engine (the Verisian engine fork)
+#   3. Installs the Verisian engine's Python dependencies
+#   4. Filters Published/ rules down to those whose Authorities include
+#      CDISC/SDTMIG or FDA/SDTMIG
+#   5. For each qualifying rule's test cases:
+#        - converts the CSV/.env fixture data into the single-xlsx dataset
+#          format the Verisian engine's ExcelDataService expects
+#        - runs the Verisian engine's `core.py validate` against it
+#        - converts the JSON output into the same Dataset,Record,Variable,Value
+#          schema as the committed results.csv, and diffs the two
+#   6. Publishes a Markdown report to the Job Summary and as an artifact
+# ==============================================================================
+name: Validate Verisian Engine Against Published Rules
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+    inputs:
+      core_ids:
+        description: >-
+          Space-separated list of rule IDs to validate
+          (e.g. CORE-000001 CORE-000002). Leave blank to validate all
+          rules matching the CDISC/FDA SDTMIG Authorities filter.
+        required: false
+        default: ""
+
+jobs:
+  validate-verisian-rules:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      # -----------------------------------------------------------------------
+      # 1. Checkout this repo (cdisc-open-rules) — Published/ rules + test data
+      #    and .github/scripts/ (the preprocessing/orchestration scripts below)
+      # -----------------------------------------------------------------------
+      - name: Checkout cdisc-open-rules
+        uses: actions/checkout@v6
+        with:
+          path: open-rules
+
+      # -----------------------------------------------------------------------
+      # 2. Checkout the Verisian engine fork
+      # -----------------------------------------------------------------------
+      - name: Checkout verisianHQ/cdisc-rules-engine
+        uses: actions/checkout@v6
+        with:
+          repository: verisianHQ/cdisc-rules-engine
+          path: engine
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      # -----------------------------------------------------------------------
+      # 2b. Debug — verify directory layout
+      # -----------------------------------------------------------------------
+      - name: Debug — list workspace layout
+        run: |
+          echo "=== Workspace root ==="
+          ls -la
+          echo "=== open-rules/Published/ (first 10) ==="
+          ls open-rules/Published/ 2>/dev/null | head -10 || echo "Published/ NOT FOUND"
+          echo "=== engine/ ==="
+          ls engine/ | head -10 || echo "engine/ NOT FOUND"
+
+      # -----------------------------------------------------------------------
+      # 3. Set up Python
+      # -----------------------------------------------------------------------
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      # -----------------------------------------------------------------------
+      # 4. Install engine dependencies
+      #
+      # NOTE: the engine's pyproject.toml pins numpy==1.23.2, which predates
+      # Python 3.12 and has no prebuilt wheel for it — pip will try to build
+      # it from source, which can fail on newer setuptools
+      # (pkgutil.ImpImporter was removed in Python 3.12's own stdlib, which
+      # numpy's legacy build backend still expects). If this step fails here,
+      # that dependency pin needs attention upstream in the Verisian repo;
+      # pinning an older setuptools locally will NOT fix it, since the
+      # missing attribute is gone from Python 3.12 itself, not from
+      # setuptools.
+      # -----------------------------------------------------------------------
+      - name: Install engine dependencies
+        run: |
+          python -m venv venv
+          venv/bin/pip install --upgrade pip
+          cd engine
+          ../venv/bin/pip install .
+          cd ..
+          venv/bin/pip install tabulate pyyaml openpyxl
+
+      # -----------------------------------------------------------------------
+      # 5. Run validation for every qualifying Published rule
+      # -----------------------------------------------------------------------
+      - name: Run validation against Verisian engine
+        id: validate
+        continue-on-error: true
+        run: |
+          CORE_IDS_ARG=""
+          if [ -n "${{ inputs.core_ids }}" ]; then
+            CORE_IDS_ARG="--core-ids ${{ inputs.core_ids }}"
+          fi
+
+          venv/bin/python open-rules/.github/scripts/validate_verisian_rules.py \
+            --rules-root "$(pwd)/open-rules" \
+            --engine-dir "$(pwd)/engine" \
+            --python-cmd "$(pwd)/venv/bin/python" \
+            --output-dir "$(pwd)/output" \
+            $CORE_IDS_ARG
+
+      # -----------------------------------------------------------------------
+      # 6. Upload reports + actual results as artifacts
+      # -----------------------------------------------------------------------
+      - name: Upload validation artifacts
+        if: always()
+        uses: actions/upload-artifact@v6
+        with:
+          name: verisian-rules-validation-${{ github.run_id }}
+          path: |
+            output/summary_table.md
+            output/detail_report.md
+            output/actual_results/**
+          if-no-files-found: warn
+
+      # -----------------------------------------------------------------------
+      # 7. Write ONLY the summary table to GitHub Actions Job Summary
+      # -----------------------------------------------------------------------
+      - name: Write summary table to workflow summary
+        if: always()
+        run: |
+          [ -f output/summary_table.md ] && cat output/summary_table.md >> $GITHUB_STEP_SUMMARY || true
+
+      # -----------------------------------------------------------------------
+      # 8. Fail the job if any rule failed
+      # -----------------------------------------------------------------------
+      - name: Check overall status
+        if: steps.validate.outcome == 'failure'
+        run: |
+          echo "One or more rules failed validation against the Verisian engine — see the artifacts for detail_report.md."
+          exit 1
