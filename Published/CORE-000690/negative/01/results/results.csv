@@ -1,17 +1,17 @@
 Dataset,Record,Variable,Value
-GT,2,variable_name,DOMAIN
 GT,2,variable_label,Domain Abbreviation
-GT,3,variable_name,GTSEQ
+GT,2,variable_name,DOMAIN
 GT,3,variable_label,Domain Abbreviation
-GT,4,variable_name,GTREFID
+GT,3,variable_name,GTSEQ
 GT,4,variable_label,Reference ID
-GT,5,variable_name,GTTESTCD
+GT,4,variable_name,GTREFID
 GT,5,variable_label,Reference ID
-GT,6,variable_name,GTTEST
+GT,5,variable_name,GTTESTCD
 GT,6,variable_label,Reference ID
-GT,7,variable_name,GTORRES
+GT,6,variable_name,GTTEST
 GT,7,variable_label,Reference ID
-RELREF,5,variable_name,LEVEL
+GT,7,variable_name,GTORRES
 RELREF,5,variable_label,Reference ID Generation Level
-RELREF,6,variable_name,LVLDESC
+RELREF,5,variable_name,LEVEL
 RELREF,6,variable_label,Reference ID Generation Level
+RELREF,6,variable_name,LVLDESC

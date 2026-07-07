@@ -1,10 +1,10 @@
 Dataset,Record,Variable,Value
-AE,,library_variable_label,Results in Death
-AE,,variable_label,Death
 AE,,variable_name,AESDTH
-LB,,library_variable_label,Method of Test or Examination
-LB,,variable_label,Metho of Test or Examination
-LB,,variable_name,LBMETHOD
-EC,,library_variable_label,Route of Administration
-EC,,variable_label,Route of Something
+AE,,variable_label,Death
+AE,,library_variable_label,Results in Death
 EC,,variable_name,ECROUTE
+EC,,variable_label,Route of Something
+EC,,library_variable_label,Route of Administration
+LB,,variable_name,LBMETHOD
+LB,,variable_label,Metho of Test or Examination
+LB,,library_variable_label,Method of Test or Examination
