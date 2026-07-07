@@ -1,16 +1,16 @@
 path,attribute,value
-/study/versions/0/roles/0,name,ROLE_1
-/study/versions/0/roles/0,code,Sponsor
-/study/versions/0/roles/0,appliesToIds,[]
 /study/versions/0/roles/0,StudyVersion.id,StudyVersion_1
 /study/versions/0/roles/0,StudyVersion.studyDesigns.id,"['InterventionalStudyDesign_1', 'InterventionalStudyDesign_2', 'InterventionalStudyDesign_3']"
-/study/versions/0/roles/1,name,ROLE_2
-/study/versions/0/roles/1,code,Study Subject
-/study/versions/0/roles/1,appliesToIds,"['InterventionalStudyDesign_1', 'InterventionalStudyDesign_2', 'StudyVersion_1']"
+/study/versions/0/roles/0,appliesToIds,[]
+/study/versions/0/roles/0,code,Sponsor
+/study/versions/0/roles/0,name,ROLE_1
 /study/versions/0/roles/1,StudyVersion.id,StudyVersion_1
 /study/versions/0/roles/1,StudyVersion.studyDesigns.id,"['InterventionalStudyDesign_1', 'InterventionalStudyDesign_2', 'InterventionalStudyDesign_3']"
-/study/versions/0/roles/2,name,ROLE_3
-/study/versions/0/roles/2,code,Investigator
-/study/versions/0/roles/2,appliesToIds,"['InterventionalStudyDesign_3', 'StudyVersion_xx']"
+/study/versions/0/roles/1,appliesToIds,"['InterventionalStudyDesign_1', 'InterventionalStudyDesign_2', 'StudyVersion_1']"
+/study/versions/0/roles/1,code,Study Subject
+/study/versions/0/roles/1,name,ROLE_2
 /study/versions/0/roles/2,StudyVersion.id,StudyVersion_1
 /study/versions/0/roles/2,StudyVersion.studyDesigns.id,"['InterventionalStudyDesign_1', 'InterventionalStudyDesign_2', 'InterventionalStudyDesign_3']"
+/study/versions/0/roles/2,appliesToIds,"['InterventionalStudyDesign_3', 'StudyVersion_xx']"
+/study/versions/0/roles/2,code,Investigator
+/study/versions/0/roles/2,name,ROLE_3

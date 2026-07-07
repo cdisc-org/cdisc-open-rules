@@ -1,17 +1,17 @@
 path,attribute,value
+/Encounter/1,$encounter_ids_for_study_design,"['Encounter_1', 'Encounter_2']"
+/Encounter/1,id,Encounter_2
+/Encounter/1,name,E3
+/Encounter/1,nextId,Encounter_3
 /Encounter/1,parent_entity,StudyDesign
 /Encounter/1,parent_id,StudyDesign_1
 /Encounter/1,parent_rel,encounters
-/Encounter/1,id,Encounter_2
-/Encounter/1,name,E3
 /Encounter/1,previousId,Encounter_1
-/Encounter/1,nextId,Encounter_3
-/Encounter/1,$encounter_ids_for_study_design,"['Encounter_1', 'Encounter_2']"
+/Encounter/2,$encounter_ids_for_study_design,['Encounter_3']
+/Encounter/2,id,Encounter_3
+/Encounter/2,name,E4
+/Encounter/2,nextId,
 /Encounter/2,parent_entity,StudyDesign
 /Encounter/2,parent_id,StudyDesign_2
 /Encounter/2,parent_rel,encounters
-/Encounter/2,id,Encounter_3
-/Encounter/2,name,E4
 /Encounter/2,previousId,Encounter_2
-/Encounter/2,nextId,
-/Encounter/2,$encounter_ids_for_study_design,['Encounter_3']

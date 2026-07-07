@@ -1,91 +1,91 @@
 path,attribute,value
+/AdministrableProduct/0,$code_for_decode_pref_term,
+/AdministrableProduct/0,$code_for_decode_value,
+/AdministrableProduct/0,$codelist_code,C215483
+/AdministrableProduct/0,$codelist_extensible,
+/AdministrableProduct/0,$pref_term_for_code,
+/AdministrableProduct/0,$value_for_code,
+/AdministrableProduct/0,id,AdmProd_1
+/AdministrableProduct/0,name,AdmProd1
 /AdministrableProduct/0,parent_entity,StudyVersion
 /AdministrableProduct/0,parent_id,StudyVersion_1
 /AdministrableProduct/0,parent_rel,administrableProducts
-/AdministrableProduct/0,id,AdmProd_1
-/AdministrableProduct/0,name,AdmProd1
-/AdministrableProduct/0,$codelist_code,C215483
-/AdministrableProduct/0,$codelist_extensible,
 /AdministrableProduct/0,sourcing.code,C215659
-/AdministrableProduct/0,$code_for_decode_value,
-/AdministrableProduct/0,$code_for_decode_pref_term,
 /AdministrableProduct/0,sourcing.codeSystem,http://www.cdisc.org
 /AdministrableProduct/0,sourcing.codeSystemVersion,2024-09-27
 /AdministrableProduct/0,sourcing.decode,Centrally Sourced
-/AdministrableProduct/0,$value_for_code,
-/AdministrableProduct/0,$pref_term_for_code,
+/AdministrableProduct/1,$code_for_decode_pref_term,
+/AdministrableProduct/1,$code_for_decode_value,C215659
+/AdministrableProduct/1,$codelist_code,C215483
+/AdministrableProduct/1,$codelist_extensible,True
+/AdministrableProduct/1,$pref_term_for_code,Locally Sourced Indicator
+/AdministrableProduct/1,$value_for_code,Locally Sourced
+/AdministrableProduct/1,id,AdmProd_2
+/AdministrableProduct/1,name,AdmProd2
 /AdministrableProduct/1,parent_entity,StudyVersion
 /AdministrableProduct/1,parent_id,StudyVersion_1
 /AdministrableProduct/1,parent_rel,administrableProducts
-/AdministrableProduct/1,id,AdmProd_2
-/AdministrableProduct/1,name,AdmProd2
-/AdministrableProduct/1,$codelist_code,C215483
-/AdministrableProduct/1,$codelist_extensible,True
 /AdministrableProduct/1,sourcing.code,C215660
-/AdministrableProduct/1,$code_for_decode_value,C215659
-/AdministrableProduct/1,$code_for_decode_pref_term,
 /AdministrableProduct/1,sourcing.codeSystem,http://www.cdisc.org
 /AdministrableProduct/1,sourcing.codeSystemVersion,2025-09-26
 /AdministrableProduct/1,sourcing.decode,Centrally Sourced
-/AdministrableProduct/1,$value_for_code,Locally Sourced
-/AdministrableProduct/1,$pref_term_for_code,Locally Sourced Indicator
+/AdministrableProduct/2,$code_for_decode_pref_term,
+/AdministrableProduct/2,$code_for_decode_value,
+/AdministrableProduct/2,$codelist_code,C215483
+/AdministrableProduct/2,$codelist_extensible,True
+/AdministrableProduct/2,$pref_term_for_code,Centrally Sourced Indicator
+/AdministrableProduct/2,$value_for_code,Centrally Sourced
+/AdministrableProduct/2,id,AdmProd_3
+/AdministrableProduct/2,name,AdmProd1
 /AdministrableProduct/2,parent_entity,StudyVersion
 /AdministrableProduct/2,parent_id,StudyVersion_1
 /AdministrableProduct/2,parent_rel,administrableProducts
-/AdministrableProduct/2,id,AdmProd_3
-/AdministrableProduct/2,name,AdmProd1
-/AdministrableProduct/2,$codelist_code,C215483
-/AdministrableProduct/2,$codelist_extensible,True
 /AdministrableProduct/2,sourcing.code,C215659
-/AdministrableProduct/2,$code_for_decode_value,
-/AdministrableProduct/2,$code_for_decode_pref_term,
 /AdministrableProduct/2,sourcing.codeSystem,http://www.cdisc.org
 /AdministrableProduct/2,sourcing.codeSystemVersion,2025-09-26
 /AdministrableProduct/2,sourcing.decode,Central
-/AdministrableProduct/2,$value_for_code,Centrally Sourced
-/AdministrableProduct/2,$pref_term_for_code,Centrally Sourced Indicator
+/AdministrableProduct/3,$code_for_decode_pref_term,C215660
+/AdministrableProduct/3,$code_for_decode_value,
+/AdministrableProduct/3,$codelist_code,C215483
+/AdministrableProduct/3,$codelist_extensible,True
+/AdministrableProduct/3,$pref_term_for_code,
+/AdministrableProduct/3,$value_for_code,
+/AdministrableProduct/3,id,AdmProd_4
+/AdministrableProduct/3,name,AdmProd2
 /AdministrableProduct/3,parent_entity,StudyVersion
 /AdministrableProduct/3,parent_id,StudyVersion_1
 /AdministrableProduct/3,parent_rel,administrableProducts
-/AdministrableProduct/3,id,AdmProd_4
-/AdministrableProduct/3,name,AdmProd2
-/AdministrableProduct/3,$codelist_code,C215483
-/AdministrableProduct/3,$codelist_extensible,True
 /AdministrableProduct/3,sourcing.code,C215660xx
-/AdministrableProduct/3,$code_for_decode_value,
-/AdministrableProduct/3,$code_for_decode_pref_term,C215660
 /AdministrableProduct/3,sourcing.codeSystem,http://www.cdisc.org
 /AdministrableProduct/3,sourcing.codeSystemVersion,2025-09-26
 /AdministrableProduct/3,sourcing.decode,Locally Sourced Indicator
-/AdministrableProduct/3,$value_for_code,
-/AdministrableProduct/3,$pref_term_for_code,
+/AdministrableProduct/4,$code_for_decode_pref_term,
+/AdministrableProduct/4,$code_for_decode_value,C215659
+/AdministrableProduct/4,$codelist_code,C215483
+/AdministrableProduct/4,$codelist_extensible,True
+/AdministrableProduct/4,$pref_term_for_code,Centrally Sourced Indicator
+/AdministrableProduct/4,$value_for_code,Centrally Sourced
+/AdministrableProduct/4,id,AdmProd_5
+/AdministrableProduct/4,name,AdmProd3
 /AdministrableProduct/4,parent_entity,StudyVersion
 /AdministrableProduct/4,parent_id,StudyVersion_1
 /AdministrableProduct/4,parent_rel,administrableProducts
-/AdministrableProduct/4,id,AdmProd_5
-/AdministrableProduct/4,name,AdmProd3
-/AdministrableProduct/4,$codelist_code,C215483
-/AdministrableProduct/4,$codelist_extensible,True
 /AdministrableProduct/4,sourcing.code,C215659
-/AdministrableProduct/4,$code_for_decode_value,C215659
-/AdministrableProduct/4,$code_for_decode_pref_term,
 /AdministrableProduct/4,sourcing.codeSystem,CDISC Administrable Product Sourcing Value Set Terminology
 /AdministrableProduct/4,sourcing.codeSystemVersion,2025-09-26
 /AdministrableProduct/4,sourcing.decode,Centrally Sourced
-/AdministrableProduct/4,$value_for_code,Centrally Sourced
-/AdministrableProduct/4,$pref_term_for_code,Centrally Sourced Indicator
+/AdministrableProduct/5,$code_for_decode_pref_term,
+/AdministrableProduct/5,$code_for_decode_value,
+/AdministrableProduct/5,$codelist_code,C215483
+/AdministrableProduct/5,$codelist_extensible,
+/AdministrableProduct/5,$pref_term_for_code,
+/AdministrableProduct/5,$value_for_code,
+/AdministrableProduct/5,id,AdmProd_6
+/AdministrableProduct/5,name,AdmProd4
 /AdministrableProduct/5,parent_entity,StudyVersion
 /AdministrableProduct/5,parent_id,StudyVersion_1
 /AdministrableProduct/5,parent_rel,administrableProducts
-/AdministrableProduct/5,id,AdmProd_6
-/AdministrableProduct/5,name,AdmProd4
-/AdministrableProduct/5,$codelist_code,C215483
-/AdministrableProduct/5,$codelist_extensible,
 /AdministrableProduct/5,sourcing.code,C215659
-/AdministrableProduct/5,$code_for_decode_value,
-/AdministrableProduct/5,$code_for_decode_pref_term,
 /AdministrableProduct/5,sourcing.codeSystem,http://www.cdisc.org
 /AdministrableProduct/5,sourcing.codeSystemVersion,26-09-2025
 /AdministrableProduct/5,sourcing.decode,Centrally Sourced
-/AdministrableProduct/5,$value_for_code,
-/AdministrableProduct/5,$pref_term_for_code,
