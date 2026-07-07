@@ -1,29 +1,29 @@
 path,attribute,value
+/AdministrationDuration/0,description,About a month
+/AdministrationDuration/0,durationWillVary,True
+/AdministrationDuration/0,id,AdministrationDuration_1
 /AdministrationDuration/0,parent_entity,AgentAdministration
 /AdministrationDuration/0,parent_id,AgentAdministration_1
 /AdministrationDuration/0,parent_rel,duration
-/AdministrationDuration/0,id,AdministrationDuration_1
-/AdministrationDuration/0,description,About a month
-/AdministrationDuration/0,durationWillVary,True
 /AdministrationDuration/0,reasonDurationWillVary,
+/AdministrationDuration/1,description,Two weeks
+/AdministrationDuration/1,durationWillVary,False
+/AdministrationDuration/1,id,AdministrationDuration_2
 /AdministrationDuration/1,parent_entity,AgentAdministration
 /AdministrationDuration/1,parent_id,AgentAdministration_2
 /AdministrationDuration/1,parent_rel,duration
-/AdministrationDuration/1,id,AdministrationDuration_2
-/AdministrationDuration/1,description,Two weeks
-/AdministrationDuration/1,durationWillVary,False
 /AdministrationDuration/1,reasonDurationWillVary,Depends on dosing rate
+/AdministrationDuration/2,description,Three years
+/AdministrationDuration/2,durationWillVary,
+/AdministrationDuration/2,id,AdministrationDuration_3
 /AdministrationDuration/2,parent_entity,AgentAdministration
 /AdministrationDuration/2,parent_id,AgentAdministration_3
 /AdministrationDuration/2,parent_rel,duration
-/AdministrationDuration/2,id,AdministrationDuration_3
-/AdministrationDuration/2,description,Three years
-/AdministrationDuration/2,durationWillVary,
 /AdministrationDuration/2,reasonDurationWillVary,
+/AdministrationDuration/3,description,Three months
+/AdministrationDuration/3,durationWillVary,
+/AdministrationDuration/3,id,AdministrationDuration_4
 /AdministrationDuration/3,parent_entity,AgentAdministration
 /AdministrationDuration/3,parent_id,AgentAdministration_4
 /AdministrationDuration/3,parent_rel,duration
-/AdministrationDuration/3,id,AdministrationDuration_4
-/AdministrationDuration/3,description,Three months
-/AdministrationDuration/3,durationWillVary,
 /AdministrationDuration/3,reasonDurationWillVary,Depends on clinical evaluation

@@ -1,76 +1,76 @@
 path,attribute,value
+/GovernanceDate/0,$code_for_decode_pref_term,C207598
+/GovernanceDate/0,$code_for_decode_value,C207598
+/GovernanceDate/0,$codelist_code,C207413
+/GovernanceDate/0,$codelist_extensible,True
+/GovernanceDate/0,$pref_term_for_code,Protocol Approval by Sponsor Date
+/GovernanceDate/0,$value_for_code,Sponsor Approval Date
+/GovernanceDate/0,description,Design approval date
+/GovernanceDate/0,id,GovernanceDate_1
 /GovernanceDate/0,parent_entity,StudyVersion
 /GovernanceDate/0,parent_id,StudyVersion_1
 /GovernanceDate/0,parent_rel,dateValues
-/GovernanceDate/0,id,GovernanceDate_1
-/GovernanceDate/0,description,Design approval date
-/GovernanceDate/0,$codelist_code,C207413
-/GovernanceDate/0,$codelist_extensible,True
 /GovernanceDate/0,type.code,C132352
-/GovernanceDate/0,$code_for_decode_value,C207598
-/GovernanceDate/0,$code_for_decode_pref_term,C207598
 /GovernanceDate/0,type.codeSystem,http://www.cdisc.org
 /GovernanceDate/0,type.codeSystemVersion,2024-09-27
 /GovernanceDate/0,type.decode,Protocol Effective Date
-/GovernanceDate/0,$value_for_code,Sponsor Approval Date
-/GovernanceDate/0,$pref_term_for_code,Protocol Approval by Sponsor Date
+/GovernanceDate/1,$code_for_decode_pref_term,C132352
+/GovernanceDate/1,$code_for_decode_value,
+/GovernanceDate/1,$codelist_code,C207413
+/GovernanceDate/1,$codelist_extensible,True
+/GovernanceDate/1,$pref_term_for_code,Protocol Approval by Sponsor Date
+/GovernanceDate/1,$value_for_code,Sponsor Approval Date
+/GovernanceDate/1,description,Design approval date
+/GovernanceDate/1,id,GovernanceDate_2
 /GovernanceDate/1,parent_entity,StudyVersion
 /GovernanceDate/1,parent_id,StudyVersion_1
 /GovernanceDate/1,parent_rel,dateValues
-/GovernanceDate/1,id,GovernanceDate_2
-/GovernanceDate/1,description,Design approval date
-/GovernanceDate/1,$codelist_code,C207413
-/GovernanceDate/1,$codelist_extensible,True
 /GovernanceDate/1,type.code,C132352
-/GovernanceDate/1,$code_for_decode_value,
-/GovernanceDate/1,$code_for_decode_pref_term,C132352
 /GovernanceDate/1,type.codeSystem,http://www.cdisc.org
 /GovernanceDate/1,type.codeSystemVersion,2024-09-27
 /GovernanceDate/1,type.decode,Protocol Approval By Sponsor Date
-/GovernanceDate/1,$value_for_code,Sponsor Approval Date
-/GovernanceDate/1,$pref_term_for_code,Protocol Approval by Sponsor Date
+/GovernanceDate/2,$code_for_decode_pref_term,C215664
+/GovernanceDate/2,$code_for_decode_value,C215664
+/GovernanceDate/2,$codelist_code,C207413
+/GovernanceDate/2,$codelist_extensible,True
+/GovernanceDate/2,$pref_term_for_code,Issued Date
+/GovernanceDate/2,$value_for_code,Issued Date
+/GovernanceDate/2,description,Design issue date
+/GovernanceDate/2,id,GovernanceDate_3
 /GovernanceDate/2,parent_entity,StudyVersion
 /GovernanceDate/2,parent_id,StudyVersion_1
 /GovernanceDate/2,parent_rel,dateValues
-/GovernanceDate/2,id,GovernanceDate_3
-/GovernanceDate/2,description,Design issue date
-/GovernanceDate/2,$codelist_code,C207413
-/GovernanceDate/2,$codelist_extensible,True
 /GovernanceDate/2,type.code,C215664
-/GovernanceDate/2,$code_for_decode_value,C215664
-/GovernanceDate/2,$code_for_decode_pref_term,C215664
 /GovernanceDate/2,type.codeSystem,CDISC Governance Date Type Value Set Terminology
 /GovernanceDate/2,type.codeSystemVersion,2025-09-26
 /GovernanceDate/2,type.decode,Issued Date
-/GovernanceDate/2,$value_for_code,Issued Date
-/GovernanceDate/2,$pref_term_for_code,Issued Date
+/GovernanceDate/3,$code_for_decode_pref_term,
+/GovernanceDate/3,$code_for_decode_value,
+/GovernanceDate/3,$codelist_code,C207413
+/GovernanceDate/3,$codelist_extensible,
+/GovernanceDate/3,$pref_term_for_code,
+/GovernanceDate/3,$value_for_code,
+/GovernanceDate/3,description,Protocol document effective date
+/GovernanceDate/3,id,GovernanceDate_4
 /GovernanceDate/3,parent_entity,StudyProtocolDocumentVersion
 /GovernanceDate/3,parent_id,StudyProtocolDocumentVersion_1
 /GovernanceDate/3,parent_rel,dateValues
-/GovernanceDate/3,id,GovernanceDate_4
-/GovernanceDate/3,description,Protocol document effective date
-/GovernanceDate/3,$codelist_code,C207413
-/GovernanceDate/3,$codelist_extensible,
 /GovernanceDate/3,type.code,C207598
-/GovernanceDate/3,$code_for_decode_value,
-/GovernanceDate/3,$code_for_decode_pref_term,
 /GovernanceDate/3,type.codeSystem,http://www.cdisc.org
 /GovernanceDate/3,type.codeSystemVersion,2025-09-27
 /GovernanceDate/3,type.decode,Protocol Effective Date
-/GovernanceDate/3,$value_for_code,
-/GovernanceDate/3,$pref_term_for_code,
+/GovernanceDate/4,$code_for_decode_pref_term,C215663
+/GovernanceDate/4,$code_for_decode_value,C215663
+/GovernanceDate/4,$codelist_code,C207413
+/GovernanceDate/4,$codelist_extensible,True
+/GovernanceDate/4,$pref_term_for_code,
+/GovernanceDate/4,$value_for_code,
+/GovernanceDate/4,description,Protocol effective date
+/GovernanceDate/4,id,GovernanceDate_6
 /GovernanceDate/4,parent_entity,StudyProtocolDocumentVersion
 /GovernanceDate/4,parent_id,StudyProtocolDocumentVersion_1
 /GovernanceDate/4,parent_rel,dateValues
-/GovernanceDate/4,id,GovernanceDate_6
-/GovernanceDate/4,description,Protocol effective date
-/GovernanceDate/4,$codelist_code,C207413
-/GovernanceDate/4,$codelist_extensible,True
 /GovernanceDate/4,type.code,C215663xx
-/GovernanceDate/4,$code_for_decode_value,C215663
-/GovernanceDate/4,$code_for_decode_pref_term,C215663
 /GovernanceDate/4,type.codeSystem,http://www.cdisc.org
 /GovernanceDate/4,type.codeSystemVersion,2025-09-26
 /GovernanceDate/4,type.decode,Effective Date
-/GovernanceDate/4,$value_for_code,
-/GovernanceDate/4,$pref_term_for_code,

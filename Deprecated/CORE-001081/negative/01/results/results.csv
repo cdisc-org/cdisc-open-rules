@@ -1,22 +1,22 @@
 Dataset,Record,Variable,Value
-SV,2,define_variable_role,Timing
-SV,2,library_variable_role,Identifier
-SV,2,define_variable_name,DOMAIN
-SV,9,define_variable_role,Record Qualifier
-SV,9,library_variable_role,Timing
-SV,9,define_variable_name,SVENDY
-SV,10,define_variable_role,Topic
-SV,10,library_variable_role,Record Qualifier
-SV,10,define_variable_name,SVUPDES
-XD,4,define_variable_role,Topic
-XD,4,library_variable_role,Identifier
-XD,4,define_variable_name,XDSEQ
-XD,7,define_variable_role,Topic
-XD,7,library_variable_role,Result Qualifier
-XD,7,define_variable_name,XDORRES
+LB,6,define_variable_name,LBTEST
 LB,6,define_variable_role,Timing
 LB,6,library_variable_role,Synonym Qualifier
-LB,6,define_variable_name,LBTEST
+LB,21,define_variable_name,EPOCH
 LB,21,define_variable_role,Identifier
 LB,21,library_variable_role,Timing
-LB,21,define_variable_name,EPOCH
+SV,2,define_variable_name,DOMAIN
+SV,2,define_variable_role,Timing
+SV,2,library_variable_role,Identifier
+SV,9,define_variable_name,SVENDY
+SV,9,define_variable_role,Record Qualifier
+SV,9,library_variable_role,Timing
+SV,10,define_variable_name,SVUPDES
+SV,10,define_variable_role,Topic
+SV,10,library_variable_role,Record Qualifier
+XD,4,define_variable_name,XDSEQ
+XD,4,define_variable_role,Topic
+XD,4,library_variable_role,Identifier
+XD,7,define_variable_name,XDORRES
+XD,7,define_variable_role,Topic
+XD,7,library_variable_role,Result Qualifier
