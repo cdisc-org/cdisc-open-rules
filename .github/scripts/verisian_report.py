@@ -26,6 +26,7 @@ of Dataset,Record,Variable,Value — "row" maps to "Record".
 
 import csv
 import json
+import re 
 from typing import List, Tuple
 
 Row = Tuple[str, str, str, str]  # (Dataset, Record, Variable, Value)
@@ -39,12 +40,13 @@ def load_actual_json(path: str) -> dict:
 def issue_details_to_rows(report: dict) -> List[Row]:
     rows: List[Row] = []
     for item in report.get("Issue_Details", []) or []:
-        dataset = item.get("dataset", "")
+        dataset = re.sub(r"\.[A-Za-z0-9]+$", "", str(item.get("dataset", ""))).upper()
         record = item.get("row", "")
         variables = item.get("variables", []) or []
         values = item.get("values", []) or []
         for variable, value in zip(variables, values):
-            rows.append((str(dataset), str(record), str(variable), str(value)))
+            value_str = "" if str(value) == "null" else str(value)
+            rows.append((dataset, str(record), str(variable), value_str))
     return sorted(rows)
 
 
