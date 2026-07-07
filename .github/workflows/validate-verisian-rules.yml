@@ -96,7 +96,7 @@ jobs:
           python -m venv venv
           venv/bin/pip install --upgrade pip
           cd engine
-          ../venv/bin/pip install .
+          ../venv/bin/pip install -r requirements.txt
           cd ..
           venv/bin/pip install tabulate pyyaml openpyxl
 
