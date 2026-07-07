@@ -1,21 +1,21 @@
 path,attribute,value
+/AdministrationDuration/0,description,About a month
+/AdministrationDuration/0,durationWillVary,True
+/AdministrationDuration/0,id,AdministrationDuration_1
 /AdministrationDuration/0,parent_entity,AgentAdministration
 /AdministrationDuration/0,parent_id,AgentAdministration_1
 /AdministrationDuration/0,parent_rel,duration
-/AdministrationDuration/0,id,AdministrationDuration_1
-/AdministrationDuration/0,description,About a month
-/AdministrationDuration/0,durationWillVary,True
 /AdministrationDuration/0,quantity,True
 /AdministrationDuration/0,quantity.id,Quantity_1
-/AdministrationDuration/0,quantity.value,1
 /AdministrationDuration/0,quantity.unit.standardCode.decode,MONTHS
+/AdministrationDuration/0,quantity.value,1
+/AdministrationDuration/1,description,Exactly one month
+/AdministrationDuration/1,durationWillVary,False
+/AdministrationDuration/1,id,AdministrationDuration_2
 /AdministrationDuration/1,parent_entity,AgentAdministration
 /AdministrationDuration/1,parent_id,AgentAdministration_2
 /AdministrationDuration/1,parent_rel,duration
-/AdministrationDuration/1,id,AdministrationDuration_2
-/AdministrationDuration/1,description,Exactly one month
-/AdministrationDuration/1,durationWillVary,False
 /AdministrationDuration/1,quantity,False
 /AdministrationDuration/1,quantity.id,
-/AdministrationDuration/1,quantity.value,
 /AdministrationDuration/1,quantity.unit.standardCode.decode,
+/AdministrationDuration/1,quantity.value,
