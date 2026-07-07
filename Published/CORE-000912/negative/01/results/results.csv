@@ -1,91 +1,91 @@
 path,attribute,value
-,$value_for_code,BIO-AVAILABILITY
 ,$code_for_decode_pref_term,
-,id,StudyDesign_1
-,codeSystem,http://www.cdisc.org
+,$code_for_decode_pref_term,
+,$code_for_decode_pref_term,
+,$code_for_decode_pref_term,
+,$code_for_decode_pref_term,C158285
+,$code_for_decode_pref_term,C49666
+,$code_for_decode_value,
+,$code_for_decode_value,
+,$code_for_decode_value,
+,$code_for_decode_value,
+,$code_for_decode_value,C158285
 ,$code_for_decode_value,C49666
 ,$codelist_code,C66739
-,$pref_term_for_code,Bioavailability Study
-,decode,EFFICACY
-,parent_id,StudyVersion_1
-,$codelist_extensible,True
-,parent_entity,StudyVersion
-,name,Study Design 1
-,parent_rel,studyDesigns
-,code,C49664
-,codeSystemVersion,2023-12-15
-,$value_for_code,BIO-AVAILABILITY
-,$code_for_decode_pref_term,
-,id,StudyDesign_1
-,codeSystem,http://www.cdisc.org
-,$code_for_decode_value,
 ,$codelist_code,C66739
-,$pref_term_for_code,Bioavailability Study
-,decode,Bioavailability
-,parent_id,StudyVersion_1
-,$codelist_extensible,True
-,parent_entity,StudyVersion
-,name,Study Design 1
-,parent_rel,studyDesigns
-,code,C49664
-,codeSystemVersion,2023-12-15
-,$value_for_code,
-,$code_for_decode_pref_term,
-,id,StudyDesign_1
-,codeSystem,http://www.cdisc.org
-,$code_for_decode_value,C158285
 ,$codelist_code,C66739
-,$pref_term_for_code,
-,decode,DEVICE-DRUG INTERACTION
-,parent_id,StudyVersion_1
-,$codelist_extensible,True
-,parent_entity,StudyVersion
-,name,Study Design 1
-,parent_rel,studyDesigns
-,code,C158285xx
-,codeSystemVersion,2023-12-15
-,$value_for_code,DEVICE-DRUG INTERACTION
-,$code_for_decode_pref_term,C158285
-,id,StudyDesign_1
-,codeSystem,CDISC Trial Type Response
-,$code_for_decode_value,
 ,$codelist_code,C66739
-,$pref_term_for_code,Device-Drug Interaction Study
-,decode,Device-Drug Interaction Study
-,parent_id,StudyVersion_1
-,$codelist_extensible,True
-,parent_entity,StudyVersion
-,name,Study Design 1
-,parent_rel,studyDesigns
-,code,C158285
-,codeSystemVersion,2023-12-15
-,$value_for_code,
-,$code_for_decode_pref_term,
-,id,StudyDesign_1
-,codeSystem,http://www.cdisc.org
-,$code_for_decode_value,
 ,$codelist_code,C66739
-,$pref_term_for_code,
-,decode,DOSE PROPORTIONALITY
-,parent_id,StudyVersion_1
+,$codelist_code,C66739
 ,$codelist_extensible,
-,parent_entity,StudyVersion
-,name,Study Design 1
-,parent_rel,studyDesigns
-,code,C158290
-,codeSystemVersion,P60
-,$value_for_code,EFFICACY
-,$code_for_decode_pref_term,C49666
-,id,StudyDesign_2
-,codeSystem,http://www.cdisc.org
-,$code_for_decode_value,
-,$codelist_code,C66739
-,$pref_term_for_code,Efficacy Study
-,decode,EFFICACY STUDY
-,parent_id,StudyVersion_1
 ,$codelist_extensible,True
-,parent_entity,StudyVersion
-,name,Study Design 2
-,parent_rel,studyDesigns
+,$codelist_extensible,True
+,$codelist_extensible,True
+,$codelist_extensible,True
+,$codelist_extensible,True
+,$pref_term_for_code,
+,$pref_term_for_code,
+,$pref_term_for_code,Bioavailability Study
+,$pref_term_for_code,Bioavailability Study
+,$pref_term_for_code,Device-Drug Interaction Study
+,$pref_term_for_code,Efficacy Study
+,$value_for_code,
+,$value_for_code,
+,$value_for_code,BIO-AVAILABILITY
+,$value_for_code,BIO-AVAILABILITY
+,$value_for_code,DEVICE-DRUG INTERACTION
+,$value_for_code,EFFICACY
+,code,C158285
+,code,C158285xx
+,code,C158290
+,code,C49664
+,code,C49664
 ,code,C49666
+,codeSystem,CDISC Trial Type Response
+,codeSystem,http://www.cdisc.org
+,codeSystem,http://www.cdisc.org
+,codeSystem,http://www.cdisc.org
+,codeSystem,http://www.cdisc.org
+,codeSystem,http://www.cdisc.org
 ,codeSystemVersion,2023-12-15
+,codeSystemVersion,2023-12-15
+,codeSystemVersion,2023-12-15
+,codeSystemVersion,2023-12-15
+,codeSystemVersion,2023-12-15
+,codeSystemVersion,P60
+,decode,Bioavailability
+,decode,DEVICE-DRUG INTERACTION
+,decode,DOSE PROPORTIONALITY
+,decode,Device-Drug Interaction Study
+,decode,EFFICACY
+,decode,EFFICACY STUDY
+,id,StudyDesign_1
+,id,StudyDesign_1
+,id,StudyDesign_1
+,id,StudyDesign_1
+,id,StudyDesign_1
+,id,StudyDesign_2
+,name,Study Design 1
+,name,Study Design 1
+,name,Study Design 1
+,name,Study Design 1
+,name,Study Design 1
+,name,Study Design 2
+,parent_entity,StudyVersion
+,parent_entity,StudyVersion
+,parent_entity,StudyVersion
+,parent_entity,StudyVersion
+,parent_entity,StudyVersion
+,parent_entity,StudyVersion
+,parent_id,StudyVersion_1
+,parent_id,StudyVersion_1
+,parent_id,StudyVersion_1
+,parent_id,StudyVersion_1
+,parent_id,StudyVersion_1
+,parent_id,StudyVersion_1
+,parent_rel,studyDesigns
+,parent_rel,studyDesigns
+,parent_rel,studyDesigns
+,parent_rel,studyDesigns
+,parent_rel,studyDesigns
+,parent_rel,studyDesigns

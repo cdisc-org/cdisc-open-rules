@@ -1,91 +1,91 @@
 path,attribute,value
-/Encounter/0,parent_entity,StudyDesign
-/Encounter/0,parent_id,StudyDesign_1
-/Encounter/0,parent_rel,encounters
-/Encounter/0,id,Encounter_1
-/Encounter/0,name,E1
-/Encounter/0,$codelist_code,C171445
-/Encounter/0,$codelist_extensible,True
-/Encounter/0,code,C25170
-/Encounter/0,$code_for_decode_value,C175574
+/Encounter/0,$code_for_decode_pref_term,
+/Encounter/0,$code_for_decode_pref_term,
 /Encounter/0,$code_for_decode_pref_term,C175574
-/Encounter/0,codeSystem,http://www.cdisc.org
-/Encounter/0,codeSystemVersion,2023-12-15
-/Encounter/0,decode,IN PERSON
-/Encounter/0,$value_for_code,E-MAIL
-/Encounter/0,$pref_term_for_code,E-mail
-/Encounter/0,parent_entity,StudyDesign
-/Encounter/0,parent_id,StudyDesign_1
-/Encounter/0,parent_rel,encounters
-/Encounter/0,id,Encounter_1
-/Encounter/0,name,E1
-/Encounter/0,$codelist_code,C171445
-/Encounter/0,$codelist_extensible,True
-/Encounter/0,code,C175574xx
-/Encounter/0,$code_for_decode_value,C175574
 /Encounter/0,$code_for_decode_pref_term,C175574
-/Encounter/0,codeSystem,http://www.cdisc.org
-/Encounter/0,codeSystemVersion,2023-12-15
-/Encounter/0,decode,IN PERSON
-/Encounter/0,$value_for_code,
-/Encounter/0,$pref_term_for_code,
-/Encounter/0,parent_entity,StudyDesign
-/Encounter/0,parent_id,StudyDesign_1
-/Encounter/0,parent_rel,encounters
-/Encounter/0,id,Encounter_1
-/Encounter/0,name,E1
-/Encounter/0,$codelist_code,C171445
-/Encounter/0,$codelist_extensible,True
-/Encounter/0,code,C177933
-/Encounter/0,$code_for_decode_value,
 /Encounter/0,$code_for_decode_pref_term,C177933
-/Encounter/0,codeSystem,http://www.cdisc.org
-/Encounter/0,codeSystemVersion,2024-03-29
-/Encounter/0,decode,INTERACTIVE VOICE RESPONSE SYSTEM
-/Encounter/0,$value_for_code,IVRS
-/Encounter/0,$pref_term_for_code,Interactive Voice Response System
-/Encounter/0,parent_entity,StudyDesign
-/Encounter/0,parent_id,StudyDesign_1
-/Encounter/0,parent_rel,encounters
-/Encounter/0,id,Encounter_1
-/Encounter/0,name,E1
-/Encounter/0,$codelist_code,C171445
-/Encounter/0,$codelist_extensible,True
-/Encounter/0,code,C70805
-/Encounter/0,$code_for_decode_value,C70805
 /Encounter/0,$code_for_decode_pref_term,C70805
-/Encounter/0,codeSystem,CDISC CNTMODE SDTM Codelist
-/Encounter/0,codeSystemVersion,2023-12-15
-/Encounter/0,decode,LETTER
-/Encounter/0,$value_for_code,LETTER
-/Encounter/0,$pref_term_for_code,Letter
-/Encounter/0,parent_entity,StudyDesign
-/Encounter/0,parent_id,StudyDesign_1
-/Encounter/0,parent_rel,encounters
-/Encounter/0,id,Encounter_1
-/Encounter/0,name,E1
+/Encounter/0,$code_for_decode_value,
+/Encounter/0,$code_for_decode_value,
+/Encounter/0,$code_for_decode_value,C171524
+/Encounter/0,$code_for_decode_value,C175574
+/Encounter/0,$code_for_decode_value,C175574
+/Encounter/0,$code_for_decode_value,C70805
+/Encounter/0,$codelist_code,C171445
+/Encounter/0,$codelist_code,C171445
+/Encounter/0,$codelist_code,C171445
+/Encounter/0,$codelist_code,C171445
+/Encounter/0,$codelist_code,C171445
 /Encounter/0,$codelist_code,C171445
 /Encounter/0,$codelist_extensible,
+/Encounter/0,$codelist_extensible,True
+/Encounter/0,$codelist_extensible,True
+/Encounter/0,$codelist_extensible,True
+/Encounter/0,$codelist_extensible,True
+/Encounter/0,$codelist_extensible,True
+/Encounter/0,$pref_term_for_code,
+/Encounter/0,$pref_term_for_code,
+/Encounter/0,$pref_term_for_code,Audioconferencing
+/Encounter/0,$pref_term_for_code,E-mail
+/Encounter/0,$pref_term_for_code,Interactive Voice Response System
+/Encounter/0,$pref_term_for_code,Letter
+/Encounter/0,$value_for_code,
+/Encounter/0,$value_for_code,
+/Encounter/0,$value_for_code,E-MAIL
+/Encounter/0,$value_for_code,IVRS
+/Encounter/0,$value_for_code,LETTER
+/Encounter/0,$value_for_code,REMOTE AUDIO
+/Encounter/0,code,C171524
 /Encounter/0,code,C171525
-/Encounter/0,$code_for_decode_value,
-/Encounter/0,$code_for_decode_pref_term,
+/Encounter/0,code,C175574xx
+/Encounter/0,code,C177933
+/Encounter/0,code,C25170
+/Encounter/0,code,C70805
+/Encounter/0,codeSystem,CDISC CNTMODE SDTM Codelist
+/Encounter/0,codeSystem,http://www.cdisc.org
+/Encounter/0,codeSystem,http://www.cdisc.org
+/Encounter/0,codeSystem,http://www.cdisc.org
+/Encounter/0,codeSystem,http://www.cdisc.org
 /Encounter/0,codeSystem,http://www.cdisc.org
 /Encounter/0,codeSystemVersion,2023 12 15
+/Encounter/0,codeSystemVersion,2023-12-15
+/Encounter/0,codeSystemVersion,2023-12-15
+/Encounter/0,codeSystemVersion,2023-12-15
+/Encounter/0,codeSystemVersion,2023-12-15
+/Encounter/0,codeSystemVersion,2024-03-29
+/Encounter/0,decode,IN PERSON
+/Encounter/0,decode,IN PERSON
+/Encounter/0,decode,INTERACTIVE VOICE RESPONSE SYSTEM
+/Encounter/0,decode,LETTER
 /Encounter/0,decode,REMOTE AUDIO VIDEO
-/Encounter/0,$value_for_code,
-/Encounter/0,$pref_term_for_code,
-/Encounter/0,parent_entity,StudyDesign
-/Encounter/0,parent_id,StudyDesign_1
-/Encounter/0,parent_rel,encounters
+/Encounter/0,decode,Remote Audio
+/Encounter/0,id,Encounter_1
+/Encounter/0,id,Encounter_1
+/Encounter/0,id,Encounter_1
+/Encounter/0,id,Encounter_1
+/Encounter/0,id,Encounter_1
 /Encounter/0,id,Encounter_1
 /Encounter/0,name,E1
-/Encounter/0,$codelist_code,C171445
-/Encounter/0,$codelist_extensible,True
-/Encounter/0,code,C171524
-/Encounter/0,$code_for_decode_value,C171524
-/Encounter/0,$code_for_decode_pref_term,
-/Encounter/0,codeSystem,http://www.cdisc.org
-/Encounter/0,codeSystemVersion,2023-12-15
-/Encounter/0,decode,Remote Audio
-/Encounter/0,$value_for_code,REMOTE AUDIO
-/Encounter/0,$pref_term_for_code,Audioconferencing
+/Encounter/0,name,E1
+/Encounter/0,name,E1
+/Encounter/0,name,E1
+/Encounter/0,name,E1
+/Encounter/0,name,E1
+/Encounter/0,parent_entity,StudyDesign
+/Encounter/0,parent_entity,StudyDesign
+/Encounter/0,parent_entity,StudyDesign
+/Encounter/0,parent_entity,StudyDesign
+/Encounter/0,parent_entity,StudyDesign
+/Encounter/0,parent_entity,StudyDesign
+/Encounter/0,parent_id,StudyDesign_1
+/Encounter/0,parent_id,StudyDesign_1
+/Encounter/0,parent_id,StudyDesign_1
+/Encounter/0,parent_id,StudyDesign_1
+/Encounter/0,parent_id,StudyDesign_1
+/Encounter/0,parent_id,StudyDesign_1
+/Encounter/0,parent_rel,encounters
+/Encounter/0,parent_rel,encounters
+/Encounter/0,parent_rel,encounters
+/Encounter/0,parent_rel,encounters
+/Encounter/0,parent_rel,encounters
+/Encounter/0,parent_rel,encounters

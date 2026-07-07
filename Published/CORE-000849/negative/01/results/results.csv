@@ -1,31 +1,31 @@
 path,attribute,value
-/Activity/1,parent_entity,StudyDesign
-/Activity/1,parent_id,StudyDesign_1
-/Activity/1,parent_rel,activities
 /Activity/1,id,Activity_2
 /Activity/1,name,Second activity
 /Activity/1,nextId,Activity_2
-/EligibilityCriterion/1,parent_entity,StudyDesign
-/EligibilityCriterion/1,parent_id,StudyDesign_1
-/EligibilityCriterion/1,parent_rel,eligibilityCriteria
+/Activity/1,parent_entity,StudyDesign
+/Activity/1,parent_id,StudyDesign_1
+/Activity/1,parent_rel,activities
 /EligibilityCriterion/1,id,EligibilityCriteria_2
 /EligibilityCriterion/1,name,Pop criterion
 /EligibilityCriterion/1,nextId,EligibilityCriteria_2
-/Encounter/1,parent_entity,StudyDesign
-/Encounter/1,parent_id,StudyDesign_1
-/Encounter/1,parent_rel,encounters
+/EligibilityCriterion/1,parent_entity,StudyDesign
+/EligibilityCriterion/1,parent_id,StudyDesign_1
+/EligibilityCriterion/1,parent_rel,eligibilityCriteria
 /Encounter/1,id,Encounter_2
 /Encounter/1,name,Visit 2
 /Encounter/1,nextId,Encounter_2
-/NarrativeContent/1,parent_entity,StudyProtocolDocumentVersion
-/NarrativeContent/1,parent_id,StudyProtocolDocumentVersion_1
-/NarrativeContent/1,parent_rel,contents
+/Encounter/1,parent_entity,StudyDesign
+/Encounter/1,parent_id,StudyDesign_1
+/Encounter/1,parent_rel,encounters
 /NarrativeContent/1,id,NarrativeContent_2
 /NarrativeContent/1,name,SECTION 0
 /NarrativeContent/1,nextId,NarrativeContent_2
-/StudyEpoch/1,parent_entity,StudyDesign
-/StudyEpoch/1,parent_id,StudyDesign_1
-/StudyEpoch/1,parent_rel,epochs
+/NarrativeContent/1,parent_entity,StudyProtocolDocumentVersion
+/NarrativeContent/1,parent_id,StudyProtocolDocumentVersion_1
+/NarrativeContent/1,parent_rel,contents
 /StudyEpoch/1,id,StudyEpoch_2
 /StudyEpoch/1,name,Treatment
 /StudyEpoch/1,nextId,StudyEpoch_2
+/StudyEpoch/1,parent_entity,StudyDesign
+/StudyEpoch/1,parent_id,StudyDesign_1
+/StudyEpoch/1,parent_rel,epochs

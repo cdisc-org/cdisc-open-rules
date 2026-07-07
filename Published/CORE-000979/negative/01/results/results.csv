@@ -1,76 +1,76 @@
 path,attribute,value
-/InterventionalStudyDesign/0,parent_entity,StudyVersion
-/InterventionalStudyDesign/0,parent_id,StudyVersion_1
-/InterventionalStudyDesign/0,parent_rel,studyDesigns
-/InterventionalStudyDesign/0,id,InterventionalStudyDesign_1
-/InterventionalStudyDesign/0,name,Study Design 1
+/InterventionalStudyDesign/0,$code_for_decode_pref_term,
+/InterventionalStudyDesign/0,$code_for_decode_pref_term,
+/InterventionalStudyDesign/0,$code_for_decode_value,
+/InterventionalStudyDesign/0,$code_for_decode_value,C15714
+/InterventionalStudyDesign/0,$codelist_code,C66736
 /InterventionalStudyDesign/0,$codelist_code,C66736
 /InterventionalStudyDesign/0,$codelist_extensible,True
+/InterventionalStudyDesign/0,$codelist_extensible,True
+/InterventionalStudyDesign/0,$pref_term_for_code,Cure Study
+/InterventionalStudyDesign/0,$pref_term_for_code,Treatment Study
+/InterventionalStudyDesign/0,$value_for_code,CURE
+/InterventionalStudyDesign/0,$value_for_code,TREATMENT
+/InterventionalStudyDesign/0,code,C49654
 /InterventionalStudyDesign/0,code,C49656
-/InterventionalStudyDesign/0,$code_for_decode_value,C15714
-/InterventionalStudyDesign/0,$code_for_decode_pref_term,
+/InterventionalStudyDesign/0,codeSystem,http://www.cdisc.org
 /InterventionalStudyDesign/0,codeSystem,http://www.cdisc.org
 /InterventionalStudyDesign/0,codeSystemVersion,2023-12-15
+/InterventionalStudyDesign/0,codeSystemVersion,2025-09-26
 /InterventionalStudyDesign/0,decode,BASIC SCIENCE
-/InterventionalStudyDesign/0,$value_for_code,TREATMENT
-/InterventionalStudyDesign/0,$pref_term_for_code,Treatment Study
-/InterventionalStudyDesign/0,parent_entity,StudyVersion
-/InterventionalStudyDesign/0,parent_id,StudyVersion_1
-/InterventionalStudyDesign/0,parent_rel,studyDesigns
+/InterventionalStudyDesign/0,decode,CURING
+/InterventionalStudyDesign/0,id,InterventionalStudyDesign_1
 /InterventionalStudyDesign/0,id,InterventionalStudyDesign_1
 /InterventionalStudyDesign/0,name,Study Design 1
-/InterventionalStudyDesign/0,$codelist_code,C66736
-/InterventionalStudyDesign/0,$codelist_extensible,True
-/InterventionalStudyDesign/0,code,C49654
-/InterventionalStudyDesign/0,$code_for_decode_value,
-/InterventionalStudyDesign/0,$code_for_decode_pref_term,
-/InterventionalStudyDesign/0,codeSystem,http://www.cdisc.org
-/InterventionalStudyDesign/0,codeSystemVersion,2025-09-26
-/InterventionalStudyDesign/0,decode,CURING
-/InterventionalStudyDesign/0,$value_for_code,CURE
-/InterventionalStudyDesign/0,$pref_term_for_code,Cure Study
-/InterventionalStudyDesign/1,parent_entity,StudyVersion
-/InterventionalStudyDesign/1,parent_id,StudyVersion_1
-/InterventionalStudyDesign/1,parent_rel,studyDesigns
-/InterventionalStudyDesign/1,id,InterventionalStudyDesign_2
-/InterventionalStudyDesign/1,name,Study Design 2
-/InterventionalStudyDesign/1,$codelist_code,C66736
-/InterventionalStudyDesign/1,$codelist_extensible,True
-/InterventionalStudyDesign/1,code,C170629xx
-/InterventionalStudyDesign/1,$code_for_decode_value,C170629
+/InterventionalStudyDesign/0,name,Study Design 1
+/InterventionalStudyDesign/0,parent_entity,StudyVersion
+/InterventionalStudyDesign/0,parent_entity,StudyVersion
+/InterventionalStudyDesign/0,parent_id,StudyVersion_1
+/InterventionalStudyDesign/0,parent_id,StudyVersion_1
+/InterventionalStudyDesign/0,parent_rel,studyDesigns
+/InterventionalStudyDesign/0,parent_rel,studyDesigns
 /InterventionalStudyDesign/1,$code_for_decode_pref_term,
-/InterventionalStudyDesign/1,codeSystem,http://www.cdisc.org
-/InterventionalStudyDesign/1,codeSystemVersion,2024-03-29
-/InterventionalStudyDesign/1,decode,DISEASE MODIFYING
-/InterventionalStudyDesign/1,$value_for_code,
-/InterventionalStudyDesign/1,$pref_term_for_code,
-/InterventionalStudyDesign/1,parent_entity,StudyVersion
-/InterventionalStudyDesign/1,parent_id,StudyVersion_1
-/InterventionalStudyDesign/1,parent_rel,studyDesigns
-/InterventionalStudyDesign/1,id,InterventionalStudyDesign_2
-/InterventionalStudyDesign/1,name,Study Design 2
+/InterventionalStudyDesign/1,$code_for_decode_pref_term,C15245
+/InterventionalStudyDesign/1,$code_for_decode_value,C15245
+/InterventionalStudyDesign/1,$code_for_decode_value,C170629
+/InterventionalStudyDesign/1,$codelist_code,C66736
 /InterventionalStudyDesign/1,$codelist_code,C66736
 /InterventionalStudyDesign/1,$codelist_extensible,True
+/InterventionalStudyDesign/1,$codelist_extensible,True
+/InterventionalStudyDesign/1,$pref_term_for_code,
+/InterventionalStudyDesign/1,$pref_term_for_code,Health Services Research
+/InterventionalStudyDesign/1,$value_for_code,
+/InterventionalStudyDesign/1,$value_for_code,HEALTH SERVICES RESEARCH
 /InterventionalStudyDesign/1,code,C15245
-/InterventionalStudyDesign/1,$code_for_decode_value,C15245
-/InterventionalStudyDesign/1,$code_for_decode_pref_term,C15245
+/InterventionalStudyDesign/1,code,C170629xx
+/InterventionalStudyDesign/1,codeSystem,http://www.cdisc.org
 /InterventionalStudyDesign/1,codeSystem,http://www.cdisc.org/TINDTP
 /InterventionalStudyDesign/1,codeSystemVersion,2024-03-29
+/InterventionalStudyDesign/1,codeSystemVersion,2024-03-29
+/InterventionalStudyDesign/1,decode,DISEASE MODIFYING
 /InterventionalStudyDesign/1,decode,HEALTH SERVICES RESEARCH
-/InterventionalStudyDesign/1,$value_for_code,HEALTH SERVICES RESEARCH
-/InterventionalStudyDesign/1,$pref_term_for_code,Health Services Research
-/InterventionalStudyDesign/2,parent_entity,StudyVersion
-/InterventionalStudyDesign/2,parent_id,StudyVersion_1
-/InterventionalStudyDesign/2,parent_rel,studyDesigns
-/InterventionalStudyDesign/2,id,InterventionalStudyDesign_3
-/InterventionalStudyDesign/2,name,Study Design 3
+/InterventionalStudyDesign/1,id,InterventionalStudyDesign_2
+/InterventionalStudyDesign/1,id,InterventionalStudyDesign_2
+/InterventionalStudyDesign/1,name,Study Design 2
+/InterventionalStudyDesign/1,name,Study Design 2
+/InterventionalStudyDesign/1,parent_entity,StudyVersion
+/InterventionalStudyDesign/1,parent_entity,StudyVersion
+/InterventionalStudyDesign/1,parent_id,StudyVersion_1
+/InterventionalStudyDesign/1,parent_id,StudyVersion_1
+/InterventionalStudyDesign/1,parent_rel,studyDesigns
+/InterventionalStudyDesign/1,parent_rel,studyDesigns
+/InterventionalStudyDesign/2,$code_for_decode_pref_term,
+/InterventionalStudyDesign/2,$code_for_decode_value,
 /InterventionalStudyDesign/2,$codelist_code,C66736
 /InterventionalStudyDesign/2,$codelist_extensible,
+/InterventionalStudyDesign/2,$pref_term_for_code,
+/InterventionalStudyDesign/2,$value_for_code,
 /InterventionalStudyDesign/2,code,C0038X
-/InterventionalStudyDesign/2,$code_for_decode_value,
-/InterventionalStudyDesign/2,$code_for_decode_pref_term,
 /InterventionalStudyDesign/2,codeSystem,http://www.cdisc.org
 /InterventionalStudyDesign/2,codeSystemVersion,2024-06-27
 /InterventionalStudyDesign/2,decode,Extension
-/InterventionalStudyDesign/2,$value_for_code,
-/InterventionalStudyDesign/2,$pref_term_for_code,
+/InterventionalStudyDesign/2,id,InterventionalStudyDesign_3
+/InterventionalStudyDesign/2,name,Study Design 3
+/InterventionalStudyDesign/2,parent_entity,StudyVersion
+/InterventionalStudyDesign/2,parent_id,StudyVersion_1
+/InterventionalStudyDesign/2,parent_rel,studyDesigns
