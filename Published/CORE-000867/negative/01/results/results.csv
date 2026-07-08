@@ -1,12 +1,4 @@
 Dataset,Record,Variable,Value
-CM,1,variable_name,USUBJID
-CM,1,variable_value, CDISC001
-CM,4,variable_name,CMTRT
-CM,4,variable_value,       HYTRIN
-CM,2,variable_name,CMDOSU
-CM,2,variable_value, TABLET
-CM,3,variable_name,CMSTDTC
-CM,3,variable_value, 2013-01-11
 CE,4,variable_name,STUDYID
 CE,4,variable_value, CDISCPILOT01
 CE,5,variable_name,STUDYID
@@ -29,6 +21,14 @@ CE,13,variable_name,STUDYID
 CE,13,variable_value, CDISCPILOT01
 CE,14,variable_name,STUDYID
 CE,14,variable_value, CDISCPILOT01
+CM,1,variable_name,USUBJID
+CM,1,variable_value, CDISC001
+CM,2,variable_name,CMDOSU
+CM,2,variable_value, TABLET
+CM,3,variable_name,CMSTDTC
+CM,3,variable_value, 2013-01-11
+CM,4,variable_name,CMTRT
+CM,4,variable_value,       HYTRIN
 LB,1,variable_name,LBENRTPT
 LB,1,variable_value, COINCIDENT
 LB,3,variable_name,LBENRTPT

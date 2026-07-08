@@ -1,55 +1,55 @@
 path,attribute,value
+/Activity/0,id,Activity_1
+/Activity/0,name,First activity
 /Activity/0,parent_entity,StudyDesign
 /Activity/0,parent_id,StudyDesign_1
 /Activity/0,parent_rel,activities
-/Activity/0,id,Activity_1
-/Activity/0,name,First activity
 /Activity/0,previousId,Activity_1
+/EligibilityCriterion/0,id,EligibilityCriteria_1
+/EligibilityCriterion/0,name,Age criterion
 /EligibilityCriterion/0,parent_entity,StudyDesign
 /EligibilityCriterion/0,parent_id,StudyDesign_1
 /EligibilityCriterion/0,parent_rel,eligibilityCriteria
-/EligibilityCriterion/0,id,EligibilityCriteria_1
-/EligibilityCriterion/0,name,Age criterion
 /EligibilityCriterion/0,previousId,EligibilityCriteria_1
+/Encounter/0,id,Encounter_1
+/Encounter/0,name,Visit 1
 /Encounter/0,parent_entity,StudyDesign
 /Encounter/0,parent_id,StudyDesign_1
 /Encounter/0,parent_rel,encounters
-/Encounter/0,id,Encounter_1
-/Encounter/0,name,Visit 1
 /Encounter/0,previousId,Encounter_1
+/NarrativeContent/0,id,NarrativeContent_1
+/NarrativeContent/0,name,ROOT
 /NarrativeContent/0,parent_entity,StudyProtocolDocumentVersion
 /NarrativeContent/0,parent_id,StudyProtocolDocumentVersion_1
 /NarrativeContent/0,parent_rel,contents
-/NarrativeContent/0,id,NarrativeContent_1
-/NarrativeContent/0,name,ROOT
 /NarrativeContent/0,previousId,NarrativeContent_1
+/NarrativeContent/1,id,NarrativeContent_2
+/NarrativeContent/1,name,SECTION 0
 /NarrativeContent/1,parent_entity,StudyProtocolDocumentVersion
 /NarrativeContent/1,parent_id,StudyProtocolDocumentVersion_1
 /NarrativeContent/1,parent_rel,contents
-/NarrativeContent/1,id,NarrativeContent_2
-/NarrativeContent/1,name,SECTION 0
 /NarrativeContent/1,previousId,NarrativeContent_2
+/NarrativeContent/2,id,NarrativeContent_3
+/NarrativeContent/2,name,SECTION 1
 /NarrativeContent/2,parent_entity,StudyProtocolDocumentVersion
 /NarrativeContent/2,parent_id,StudyProtocolDocumentVersion_1
 /NarrativeContent/2,parent_rel,contents
-/NarrativeContent/2,id,NarrativeContent_3
-/NarrativeContent/2,name,SECTION 1
 /NarrativeContent/2,previousId,NarrativeContent_3
+/NarrativeContent/3,id,NarrativeContent_4
+/NarrativeContent/3,name,SECTION 1.1
 /NarrativeContent/3,parent_entity,StudyProtocolDocumentVersion
 /NarrativeContent/3,parent_id,StudyProtocolDocumentVersion_1
 /NarrativeContent/3,parent_rel,contents
-/NarrativeContent/3,id,NarrativeContent_4
-/NarrativeContent/3,name,SECTION 1.1
 /NarrativeContent/3,previousId,NarrativeContent_4
+/StudyAmendment/0,id,StudyAmendment_1
+/StudyAmendment/0,name,Not in dataset
 /StudyAmendment/0,parent_entity,StudyVersion
 /StudyAmendment/0,parent_id,StudyVersion_2
 /StudyAmendment/0,parent_rel,amendments
-/StudyAmendment/0,id,StudyAmendment_1
-/StudyAmendment/0,name,Not in dataset
 /StudyAmendment/0,previousId,StudyAmendment_1
+/StudyEpoch/0,id,StudyEpoch_1
+/StudyEpoch/0,name,Screening
 /StudyEpoch/0,parent_entity,StudyDesign
 /StudyEpoch/0,parent_id,StudyDesign_1
 /StudyEpoch/0,parent_rel,epochs
-/StudyEpoch/0,id,StudyEpoch_1
-/StudyEpoch/0,name,Screening
 /StudyEpoch/0,previousId,StudyEpoch_1
