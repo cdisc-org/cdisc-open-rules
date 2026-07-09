@@ -2,7 +2,7 @@
 """
 Local test runner for CDISC Open Rules.
 Prompts for a rule folder path, runs the CORE engine against each test case,
-and writes results.json into each case's results/ directory.
+and writes results.csv into each case's results/ directory.
 """
 
 import os
@@ -12,7 +12,6 @@ from pathlib import Path
 from typing import Optional, Dict, List
 
 ENGINE_DIR = Path("engine")
-CONVERT_SCRIPT = Path(".github/scripts/convert_results.py")
 
 LOG_LEVELS = ["info", "debug", "error", "critical", "disabled", "warn"]
 
@@ -69,15 +68,15 @@ def find_env_file(data_dir: Path) -> Optional[Path]:
 def next_results_path(results_dir: Path) -> Path:
     """
     Creates results/ if needed. Returns the next available -o path for the engine
-    (without extension — engine appends .json automatically).
-    - No results.json yet  ->  results_dir/results
-    - results.json exists  ->  results_dir/results(1), results_dir/results(2), ...
+    (without extension — engine appends .csv automatically).
+    - No results.csv yet  ->  results_dir/results
+    - results.csv exists  ->  results_dir/results(1), results_dir/results(2), ...
     """
     results_dir.mkdir(parents=True, exist_ok=True)
-    if not (results_dir / "results.json").exists():
+    if not (results_dir / "results.csv").exists():
         return results_dir / "results"
     n = 1
-    while (results_dir / f"results({n}).json").exists():
+    while (results_dir / f"results({n}).csv").exists():
         n += 1
     return results_dir / f"results({n})"
 
@@ -102,7 +101,7 @@ def run_engine(
         "-lr",  str(rule_yml.resolve()),
         "-d",   str(data_dir.resolve()),
         "-dep", str(env_file.resolve()),
-        "-of",  "JSON",
+        "-of",  "CSV",
         "-o",   str(output_path.resolve()),
         "-p",   "disabled",
         "-l",   log_level,
@@ -175,21 +174,9 @@ def run_rule(
             print(f"\n  Running {test_type}/{case_id}...")
             ok, output = run_engine(rule_yml, data_dir, output_path, log_level, capture_logs)
 
-            json_path = Path(str(output_path) + ".json")
-            if ok and json_path.exists():
-                print(f"    Done — results written to {json_path}")
-                csv_path = output_path.with_suffix(".csv")
-                try:
-                    proc = subprocess.run(
-                        [sys.executable, str(CONVERT_SCRIPT), str(json_path), str(csv_path)],
-                        capture_output=True, text=True
-                    )
-                    if proc.returncode == 0:
-                        print(f"    Done — CSV written to {csv_path}")
-                    else:
-                        print(f"    [WARN] CSV conversion failed: {proc.stderr.strip()}")
-                except Exception as e:
-                    print(f"    [WARN] CSV conversion error: {e}")
+            csv_path = Path(str(output_path) + ".csv")
+            if ok and csv_path.exists():
+                print(f"    Done — results written to {csv_path}")
             else:
                 print(f"    [ERROR] Engine failed for {test_type}/{case_id}")
                 for line in output.splitlines():

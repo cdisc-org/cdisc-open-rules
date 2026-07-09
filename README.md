@@ -211,11 +211,11 @@ Unpublished/
 
    - Column headers must exactly match the `variable` values in `_variables.csv` for that dataset.
    - For **positive** cases, ensure the data satisfies all rule conditions so no errors are raised.
-   - For **negative** cases, include data that deliberately triggers the rule. When raising your PR, describe the errors you expect to see in the PR description or as a comment so reviewers can verify the generated `results.json` against your intent. There is no automated validation check for CSV test data; human review of the results is required.
+   - For **negative** cases, include data that deliberately triggers the rule. When raising your PR, describe the errors you expect to see in the PR description or as a comment so reviewers can verify the generated `results.csv` against your intent. There is no automated validation check for CSV test data; human review of the results is required.
 
    **`results/`**
 
-   Leave this folder empty when creating new test cases. The CI pipeline will generate and commit a `results.json` on the first run, or you can generate it locally using the run script below.
+   Leave this folder empty when creating new test cases. The CI pipeline will generate and commit a `results.csv` on the first run, or you can generate it locally using the run script below.
 
 **Perform Local Testing.**
 
@@ -228,15 +228,13 @@ Unpublished/
 **Verify Results.**
 
 8) Check your run results in the `results/` folder of each test case.
-   - There will be a `results.json` file with the engine output and a `results.csv` summarizing the issues found.
+   - There will be a `results.csv` summarizing the issues found.
    - For positive cases, verify that no errors are reported.
    - For negative cases, verify that the errors reported match the violations you introduced in the test data. Include a summary of the expected errors in your PR description so reviewers can confirm the output is correct.
 
 9) If you are unhappy with the results of your changes, continue to edit and run the rule until you are satisfied.
 
 **Request Review via PR.**
-
-> **NOTE:** Once you are satisfied with your results, delete the `results.json` from each test case's results/ folder, but leave the results.csv in place. The CSV is used to verify your results match current engine output  results when your PR is reviewed — it should always reflect your latest local run.
 
 10) Create a PR to add your changes to the repository. To do this, run the following commands: \
        `git add .` \

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # run_validation.sh — iterates all positive/ and negative/ test cases for a rule,
-# runs the CORE engine against each, converts JSON output to results.csv,
+# runs the CORE engine against each, producing results.csv,
 # diffs against any committed results.csv, and writes a markdown report.
 #
 # Usage:
@@ -103,7 +103,7 @@ for TEST_TYPE in positive negative; do
       "-lr"  "$RULE_YML"
       "-d"   "$DATA_DIR"
       "-dep" "$ENV_FILE"
-      "-of"  "JSON"
+      "-of"  "CSV"
       "-o"   "$RESULTS_DIR/results"
       "-p"   "disabled"
     )
@@ -120,7 +120,7 @@ for TEST_TYPE in positive negative; do
     (cd "$ENGINE_DIR" && $PYTHON_CMD core.py validate "${ENGINE_ARGS[@]}") \
       2>&1 | tee "$ENGINE_LOG" || ENGINE_EXIT=${PIPESTATUS[0]}
 
-    if [ $ENGINE_EXIT -ne 0 ] || [ ! -f "$RESULTS_DIR/results.json" ]; then
+    if [ $ENGINE_EXIT -ne 0 ] || [ ! -f "$RESULTS_DIR/results.csv" ]; then
       echo "  ERROR: engine failed or produced no output (exit $ENGINE_EXIT)"
       {
         echo "### \`$CASE_LABEL\` — ❌ Engine error"
@@ -139,32 +139,7 @@ for TEST_TYPE in positive negative; do
       continue
     fi
 
-    # Convert engine JSON output to a temporary CSV for comparison
-    GENERATED_CSV="/tmp/results_generated_${TEST_TYPE}_${CASE_ID}.csv"
-    CONVERT_EXIT=0
-    $PYTHON_CMD "$SCRIPTS_DIR/convert_results.py" \
-      "$RESULTS_DIR/results.json" "$GENERATED_CSV" \
-      2>&1 | tee -a "$ENGINE_LOG" || CONVERT_EXIT=$?
-
-    if [ $CONVERT_EXIT -ne 0 ]; then
-      echo "  ERROR: failed to convert results.json to results.csv"
-      {
-        echo "### \`$CASE_LABEL\` — ❌ Conversion error"
-        echo ""
-        echo "<details><summary>Conversion output</summary>"
-        echo ""
-        echo '```'
-        cat "$ENGINE_LOG"
-        echo '```'
-        echo "</details>"
-        echo ""
-      } >> "$REPORT_FILE"
-      FAILED_CASES=$((FAILED_CASES + 1))
-      OVERALL_SUCCESS=false
-      mv "$COMMITTED_RESULTS" "$RESULTS_DIR/results.csv"
-      continue
-    fi
-
+    GENERATED_CSV="$RESULTS_DIR/results.csv"
     DIFF_LOG="/tmp/diff_${TEST_TYPE}_${CASE_ID}.txt"
     DIFF_EXIT=0
     $PYTHON_CMD "$SCRIPTS_DIR/diff_results.py" \
