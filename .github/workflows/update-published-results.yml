@@ -76,7 +76,7 @@ jobs:
           ../venv/bin/pip install . --group dev
 
       - name: Install script dependencies
-        run: venv/bin/pip install tabulate jmespath pyyaml
+        run: venv/bin/pip install tabulate jmespath pyyaml ruamel.yaml
 
       # -----------------------------------------------------------------------
       # 4. Run the engine for every Published rule, writing actual results.csv
