@@ -1,91 +1,91 @@
 path,attribute,value
-/StudyRole/0,parent_entity,StudyVersion
-/StudyRole/0,parent_id,StudyVersion_1
-/StudyRole/0,parent_rel,roles
-/StudyRole/0,id,StudyRole_1
-/StudyRole/0,description,Sponsor role
+/StudyRole/0,$code_for_decode_pref_term,
+/StudyRole/0,$code_for_decode_value,
 /StudyRole/0,$codelist_code,C215480
 /StudyRole/0,$codelist_extensible,
+/StudyRole/0,$pref_term_for_code,
+/StudyRole/0,$value_for_code,
 /StudyRole/0,code.code,C78726
-/StudyRole/0,$code_for_decode_value,
-/StudyRole/0,$code_for_decode_pref_term,
 /StudyRole/0,code.codeSystem,http://www.cdisc.org
 /StudyRole/0,code.codeSystemVersion,2024-09-27
 /StudyRole/0,code.decode,Adjudication Committee
-/StudyRole/0,$value_for_code,
-/StudyRole/0,$pref_term_for_code,
-/StudyRole/1,parent_entity,StudyVersion
-/StudyRole/1,parent_id,StudyVersion_1
-/StudyRole/1,parent_rel,roles
-/StudyRole/1,id,StudyRole_2
-/StudyRole/1,description,Sponsor role
+/StudyRole/0,description,Sponsor role
+/StudyRole/0,id,StudyRole_1
+/StudyRole/0,parent_entity,StudyVersion
+/StudyRole/0,parent_id,StudyVersion_1
+/StudyRole/0,parent_rel,roles
+/StudyRole/1,$code_for_decode_pref_term,
+/StudyRole/1,$code_for_decode_value,C70793
 /StudyRole/1,$codelist_code,C215480
 /StudyRole/1,$codelist_extensible,True
+/StudyRole/1,$pref_term_for_code,Caregiver
+/StudyRole/1,$value_for_code,Care Provider
 /StudyRole/1,code.code,C17445
-/StudyRole/1,$code_for_decode_value,C70793
-/StudyRole/1,$code_for_decode_pref_term,
 /StudyRole/1,code.codeSystem,http://www.cdisc.org
 /StudyRole/1,code.codeSystemVersion,2025-09-26
 /StudyRole/1,code.decode,Sponsor
-/StudyRole/1,$value_for_code,Care Provider
-/StudyRole/1,$pref_term_for_code,Caregiver
-/StudyRole/2,parent_entity,StudyVersion
-/StudyRole/2,parent_id,StudyVersion_1
-/StudyRole/2,parent_rel,roles
-/StudyRole/2,id,StudyRole_3
-/StudyRole/2,description,Sponsor role
+/StudyRole/1,description,Sponsor role
+/StudyRole/1,id,StudyRole_2
+/StudyRole/1,parent_entity,StudyVersion
+/StudyRole/1,parent_id,StudyVersion_1
+/StudyRole/1,parent_rel,roles
+/StudyRole/2,$code_for_decode_pref_term,
+/StudyRole/2,$code_for_decode_value,
 /StudyRole/2,$codelist_code,C215480
 /StudyRole/2,$codelist_extensible,True
+/StudyRole/2,$pref_term_for_code,Clinical Trial Physician
+/StudyRole/2,$value_for_code,Clinical Trial Physician
 /StudyRole/2,code.code,C215672
-/StudyRole/2,$code_for_decode_value,
-/StudyRole/2,$code_for_decode_pref_term,
 /StudyRole/2,code.codeSystem,http://www.cdisc.org
 /StudyRole/2,code.codeSystemVersion,2025-09-26
 /StudyRole/2,code.decode,Study Physician
-/StudyRole/2,$value_for_code,Clinical Trial Physician
-/StudyRole/2,$pref_term_for_code,Clinical Trial Physician
-/StudyRole/3,parent_entity,StudyVersion
-/StudyRole/3,parent_id,StudyVersion_1
-/StudyRole/3,parent_rel,roles
-/StudyRole/3,id,StudyRole_4
-/StudyRole/3,description,Sponsor role
+/StudyRole/2,description,Sponsor role
+/StudyRole/2,id,StudyRole_3
+/StudyRole/2,parent_entity,StudyVersion
+/StudyRole/2,parent_id,StudyVersion_1
+/StudyRole/2,parent_rel,roles
+/StudyRole/3,$code_for_decode_pref_term,
+/StudyRole/3,$code_for_decode_value,C215669
 /StudyRole/3,$codelist_code,C215480
 /StudyRole/3,$codelist_extensible,True
+/StudyRole/3,$pref_term_for_code,
+/StudyRole/3,$value_for_code,
 /StudyRole/3,code.code,C215669xx
-/StudyRole/3,$code_for_decode_value,C215669
-/StudyRole/3,$code_for_decode_pref_term,
 /StudyRole/3,code.codeSystem,http://www.cdisc.org
 /StudyRole/3,code.codeSystemVersion,2025-09-26
 /StudyRole/3,code.decode,Co-Sponsor
-/StudyRole/3,$value_for_code,
-/StudyRole/3,$pref_term_for_code,
-/StudyRole/4,parent_entity,StudyVersion
-/StudyRole/4,parent_id,StudyVersion_1
-/StudyRole/4,parent_rel,roles
-/StudyRole/4,id,StudyRole_5
-/StudyRole/4,description,Sponsor role
+/StudyRole/3,description,Sponsor role
+/StudyRole/3,id,StudyRole_4
+/StudyRole/3,parent_entity,StudyVersion
+/StudyRole/3,parent_id,StudyVersion_1
+/StudyRole/3,parent_rel,roles
+/StudyRole/4,$code_for_decode_pref_term,C215662
+/StudyRole/4,$code_for_decode_value,C215662
 /StudyRole/4,$codelist_code,C215480
 /StudyRole/4,$codelist_extensible,True
+/StudyRole/4,$pref_term_for_code,Contract Research
+/StudyRole/4,$value_for_code,Contract Research
 /StudyRole/4,code.code,C215662
-/StudyRole/4,$code_for_decode_value,C215662
-/StudyRole/4,$code_for_decode_pref_term,C215662
 /StudyRole/4,code.codeSystem,CDISC Study Role Code Value Set Terminology
 /StudyRole/4,code.codeSystemVersion,2025-09-26
 /StudyRole/4,code.decode,Contract Research
-/StudyRole/4,$value_for_code,Contract Research
-/StudyRole/4,$pref_term_for_code,Contract Research
-/StudyRole/5,parent_entity,StudyVersion
-/StudyRole/5,parent_id,StudyVersion_1
-/StudyRole/5,parent_rel,roles
-/StudyRole/5,id,StudyRole_6
-/StudyRole/5,description,Sponsor role
+/StudyRole/4,description,Sponsor role
+/StudyRole/4,id,StudyRole_5
+/StudyRole/4,parent_entity,StudyVersion
+/StudyRole/4,parent_id,StudyVersion_1
+/StudyRole/4,parent_rel,roles
+/StudyRole/5,$code_for_decode_pref_term,
+/StudyRole/5,$code_for_decode_value,
 /StudyRole/5,$codelist_code,C215480
 /StudyRole/5,$codelist_extensible,
+/StudyRole/5,$pref_term_for_code,
+/StudyRole/5,$value_for_code,
 /StudyRole/5,code.code,C142489
-/StudyRole/5,$code_for_decode_value,
-/StudyRole/5,$code_for_decode_pref_term,
 /StudyRole/5,code.codeSystem,http://www.cdisc.org
 /StudyRole/5,code.codeSystemVersion,2025.09.26
 /StudyRole/5,code.decode,Data Safety Monitoring Board
-/StudyRole/5,$value_for_code,
-/StudyRole/5,$pref_term_for_code,
+/StudyRole/5,description,Sponsor role
+/StudyRole/5,id,StudyRole_6
+/StudyRole/5,parent_entity,StudyVersion
+/StudyRole/5,parent_id,StudyVersion_1
+/StudyRole/5,parent_rel,roles

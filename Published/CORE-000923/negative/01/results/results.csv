@@ -1,91 +1,91 @@
 path,attribute,value
-,decode,CHILDCARE CENTER
-,parent_rel,encounters
-,$value_for_code,CHILD CARE CENTER
-,$pref_term_for_code,Childcare Center
-,$codelist_code,C127262
-,$code_for_decode_value,
-,$codelist_extensible,True
-,codeSystemVersion,2023-12-15
-,name,E1
+,$code_for_decode_pref_term,
+,$code_for_decode_pref_term,
+,$code_for_decode_pref_term,
 ,$code_for_decode_pref_term,C127785
-,parent_id,StudyDesign_1
-,code,C127785
-,parent_entity,StudyDesign
-,id,Encounter_1
-,codeSystem,http://www.cdisc.org
-,decode,HOSPITAL
-,parent_rel,encounters
-,$value_for_code,CLINIC
-,$pref_term_for_code,Clinic
-,$codelist_code,C127262
-,$code_for_decode_value,C16696
-,$codelist_extensible,True
-,codeSystemVersion,2023-12-15
-,name,E1
 ,$code_for_decode_pref_term,C16696
-,parent_id,StudyDesign_1
-,code,C51282
-,parent_entity,StudyDesign
-,id,Encounter_1
-,codeSystem,http://www.cdisc.org
-,decode,FARM
-,parent_rel,encounters
-,$value_for_code,
-,$pref_term_for_code,
-,$codelist_code,C127262
-,$code_for_decode_value,C48953
-,$codelist_extensible,True
-,codeSystemVersion,2024-03-29
-,name,E1
 ,$code_for_decode_pref_term,C48953
-,parent_id,StudyDesign_1
-,code,C48953xx
-,parent_entity,StudyDesign
-,id,Encounter_1
-,codeSystem,http://www.cdisc.org
-,decode,FIELD
-,parent_rel,encounters
-,$value_for_code,FIELD
-,$pref_term_for_code,In the Field
-,$codelist_code,C127262
-,$code_for_decode_value,C102650
-,$codelist_extensible,True
-,codeSystemVersion,2023-12-15
-,name,E1
-,$code_for_decode_pref_term,
-,parent_id,StudyDesign_1
-,code,C102650
-,parent_entity,StudyDesign
-,id,Encounter_1
-,codeSystem,CDISC SETTING SDTM Codelist
-,decode,HEALTH FACILITY
-,parent_rel,encounters
-,$value_for_code,
-,$pref_term_for_code,
-,$codelist_code,C127262
 ,$code_for_decode_value,
-,$codelist_extensible,
-,codeSystemVersion,2023-DEC-15
-,name,E1
-,$code_for_decode_pref_term,
-,parent_id,StudyDesign_1
-,code,C21541
-,parent_entity,StudyDesign
-,id,Encounter_1
-,codeSystem,http://www.cdisc.org
-,decode,Outpatient Clinic
-,parent_rel,encounters
-,$value_for_code,OUTPATIENT CLINIC
-,$pref_term_for_code,Ambulatory Care Facility
-,$codelist_code,C127262
+,$code_for_decode_value,
+,$code_for_decode_value,C102650
 ,$code_for_decode_value,C16281
+,$code_for_decode_value,C16696
+,$code_for_decode_value,C48953
+,$codelist_code,C127262
+,$codelist_code,C127262
+,$codelist_code,C127262
+,$codelist_code,C127262
+,$codelist_code,C127262
+,$codelist_code,C127262
+,$codelist_extensible,
 ,$codelist_extensible,True
-,codeSystemVersion,2023-12-15
-,name,E1
-,$code_for_decode_pref_term,
-,parent_id,StudyDesign_1
+,$codelist_extensible,True
+,$codelist_extensible,True
+,$codelist_extensible,True
+,$codelist_extensible,True
+,$pref_term_for_code,
+,$pref_term_for_code,
+,$pref_term_for_code,Ambulatory Care Facility
+,$pref_term_for_code,Childcare Center
+,$pref_term_for_code,Clinic
+,$pref_term_for_code,In the Field
+,$value_for_code,
+,$value_for_code,
+,$value_for_code,CHILD CARE CENTER
+,$value_for_code,CLINIC
+,$value_for_code,FIELD
+,$value_for_code,OUTPATIENT CLINIC
+,code,C102650
+,code,C127785
 ,code,C16281
-,parent_entity,StudyDesign
-,id,Encounter_1
+,code,C21541
+,code,C48953xx
+,code,C51282
+,codeSystem,CDISC SETTING SDTM Codelist
 ,codeSystem,http://www.cdisc.org
+,codeSystem,http://www.cdisc.org
+,codeSystem,http://www.cdisc.org
+,codeSystem,http://www.cdisc.org
+,codeSystem,http://www.cdisc.org
+,codeSystemVersion,2023-12-15
+,codeSystemVersion,2023-12-15
+,codeSystemVersion,2023-12-15
+,codeSystemVersion,2023-12-15
+,codeSystemVersion,2023-DEC-15
+,codeSystemVersion,2024-03-29
+,decode,CHILDCARE CENTER
+,decode,FARM
+,decode,FIELD
+,decode,HEALTH FACILITY
+,decode,HOSPITAL
+,decode,Outpatient Clinic
+,id,Encounter_1
+,id,Encounter_1
+,id,Encounter_1
+,id,Encounter_1
+,id,Encounter_1
+,id,Encounter_1
+,name,E1
+,name,E1
+,name,E1
+,name,E1
+,name,E1
+,name,E1
+,parent_entity,StudyDesign
+,parent_entity,StudyDesign
+,parent_entity,StudyDesign
+,parent_entity,StudyDesign
+,parent_entity,StudyDesign
+,parent_entity,StudyDesign
+,parent_id,StudyDesign_1
+,parent_id,StudyDesign_1
+,parent_id,StudyDesign_1
+,parent_id,StudyDesign_1
+,parent_id,StudyDesign_1
+,parent_id,StudyDesign_1
+,parent_rel,encounters
+,parent_rel,encounters
+,parent_rel,encounters
+,parent_rel,encounters
+,parent_rel,encounters
+,parent_rel,encounters
