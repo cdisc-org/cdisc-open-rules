@@ -7,21 +7,23 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: If TAETORD and/or EPOCH are added, then the values must be those
+              - Cited Guidance:
+                  If TAETORD and/or EPOCH are added, then the values must be those
                   at the start of the visit.
                 Document: IG v3.4
                 Item: Assumption 11
-                Section: '5.5'
+                Section: "5.5"
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0218
-              Version: '1'
-            Version: '2.0'
-        Version: '3.4'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.4"
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: If TAETORD and/or EPOCH are added, then the values must be those
+              - Cited Guidance:
+                  If TAETORD and/or EPOCH are added, then the values must be those
                   at the start of the visit.It would be inappropriate to add the
                   variables that support time points (--TPT, --TPTNUM, --ELTM,
                   --TPTREF, and --RFTDTC), since the topic of this dataset is
@@ -32,30 +34,32 @@ Authorities:
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0218
-              Version: '1'
-            Version: '2.0'
-        Version: '3.2'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.2"
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: If TAETORD and/or EPOCH are added, then the values must be those
+              - Cited Guidance:
+                  If TAETORD and/or EPOCH are added, then the values must be those
                   at the start of the visit.It would be inappropriate to add the
                   variables that support time points (--TPT, --TPTNUM, --ELTM,
                   --TPTREF, and --RFTDTC), since the topic of this dataset is
                   visits.
                 Document: IG v3.3
                 Item: Assumption 11
-                Section: '5.5'
+                Section: "5.5"
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0218
-              Version: '1'
-            Version: '2.0'
-        Version: '3.3'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.3"
       - Name: TIG
         References:
           - Citations:
-              - Cited Guidance: If TAETORD and/or EPOCH are added, then the values must be those
+              - Cited Guidance:
+                  If TAETORD and/or EPOCH are added, then the values must be those
                   at the start of the visit.
                 Document: TIG 1.0
                 Item: Assumption 11
@@ -63,10 +67,10 @@ Authorities:
             Origin: TIG Conformance Rules
             Rule Identifier:
               Id: TIG0432
-              Version: '1'
-            Version: '1.0'
+              Version: "1"
+            Version: "1.0"
         Substandard: SDTM
-        Version: '1.0'
+        Version: "1.0"
 Check:
   all:
     - name: EPOCH
@@ -83,7 +87,7 @@ Check:
 Core:
   Id: CORE-000097
   Status: Published
-  Version: '1'
+  Version: "1"
 Description: Raise an error when variable EPOCH values don't match between
   Subject Visits (SV) and Subject Elements (SE) datasets.
 Executability: Partially Executable - Possible Overreporting
@@ -94,6 +98,12 @@ Match Datasets:
 Outcome:
   Message: EPOCH values don't match between Subject Visits (SV) and Subject
     Elements (SE) datasets.
+  Output Variables:
+    - SESTDTC
+    - SVSTDTC
+    - SEENDTC
+    - EPOCH
+    - SE.EPOCH
 Rule Type: Record Data
 Scope:
   Classes:
