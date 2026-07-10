@@ -156,6 +156,16 @@ if !errorlevel! neq 0 (
 )
 
 echo.
+echo Installing ruamel.yaml...
+python -m pip install ruamel.yaml --quiet
+if !errorlevel! neq 0 (
+    echo Failed to install ruamel.yaml
+    cd ..
+    pause
+    exit /b 1
+)
+
+echo.
 echo Installing pre-commit...
 python -m pip install pre-commit --index-url https://pypi.org/simple/ --quiet 2>nul || python -m pip install pre-commit --quiet 2>nul
 where pre-commit >nul 2>&1

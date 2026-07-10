@@ -129,6 +129,9 @@ pip install --quiet -e engine/[dev]
 
 VENV_PYTHON=$(which python)
 
+echo "Installing ruamel.yaml..."
+pip install --quiet ruamel.yaml
+
 echo "Installing pre-commit..."
 pip install pre-commit --index-url https://pypi.org/simple/ --quiet 2>/dev/null || \
   pip install pre-commit --quiet 2>/dev/null || true
