@@ -17,34 +17,26 @@ Usage:
 
 import sys
 import argparse
+from io import StringIO
 from pathlib import Path
 
 try:
-    import yaml
+    from ruamel.yaml import YAML
+    from ruamel.yaml.comments import CommentedMap, CommentedSeq
 except ImportError:
-    print("ERROR: pyyaml is not installed. Run: pip install pyyaml", file=sys.stderr)
+    print("ERROR: ruamel.yaml is not installed. Run: pip install ruamel.yaml", file=sys.stderr)
     sys.exit(1)
 
 
 # ---------------------------------------------------------------------------
-# Custom YAML Dumper
+# YAML round-trip instance (loader + dumper), configured once
 # ---------------------------------------------------------------------------
 
-class _SortedDumper(yaml.Dumper):
-    """YAML Dumper that produces consistent, human-readable output."""
-    pass
-
-
-def _str_representer(dumper: yaml.Dumper, data: str):
-    """Represent strings: use literal block style for multi-line, plain otherwise.
-    Strings that look like YAML scalars (booleans, numbers) are quoted.
-    """
-    if "\n" in data:
-        return dumper.represent_scalar("tag:yaml.org,2002:str", data, style="|")
-    return dumper.represent_scalar("tag:yaml.org,2002:str", data)
-
-
-_SortedDumper.add_representer(str, _str_representer)
+_yaml = YAML(typ="rt")
+_yaml.preserve_quotes = True
+_yaml.width = 100
+_yaml.indent(mapping=2, sequence=2, offset=0)
+_yaml.allow_unicode = True
 
 
 # ---------------------------------------------------------------------------
@@ -53,28 +45,36 @@ _SortedDumper.add_representer(str, _str_representer)
 
 def sort_recursive(obj):
     """Recursively sort dict keys alphabetically. Lists are preserved as-is."""
-    if isinstance(obj, dict):
-        return {k: sort_recursive(obj[k]) for k in sorted(obj.keys(), key=str)}
-    if isinstance(obj, list):
-        return [sort_recursive(item) for item in obj]
+    if isinstance(obj, CommentedMap):
+        sorted_map = CommentedMap()
+        for key in sorted(obj.keys(), key=str):
+            sorted_map[key] = sort_recursive(obj[key])
+        sorted_map.ca.items.update(obj.ca.items)
+        if obj.ca.comment is not None:
+            sorted_map.ca.comment = obj.ca.comment
+        sorted_map.ca.end = obj.ca.end
+        return sorted_map
+
+    if isinstance(obj, CommentedSeq):
+        new_seq = CommentedSeq(sort_recursive(item) for item in obj)
+        new_seq.ca.items.update(obj.ca.items)
+        if obj.ca.comment is not None:
+            new_seq.ca.comment = obj.ca.comment
+        new_seq.ca.end = obj.ca.end
+        return new_seq
+
     return obj
 
 
 def canonical(content: str) -> str:
     """Return the canonical (sorted + formatted) representation of a YAML string."""
-    data = yaml.safe_load(content)
+    data = _yaml.load(content)
     if data is None:
         return content
     sorted_data = sort_recursive(data)
-    return yaml.dump(
-        sorted_data,
-        Dumper=_SortedDumper,
-        default_flow_style=False,
-        allow_unicode=True,
-        indent=2,
-        sort_keys=False,  # we already sorted manually
-        width=100,
-    )
+    stream = StringIO()
+    _yaml.dump(sorted_data, stream)
+    return stream.getvalue()
 
 
 def find_rule_files(root: Path) -> list[Path]:
@@ -172,5 +172,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
