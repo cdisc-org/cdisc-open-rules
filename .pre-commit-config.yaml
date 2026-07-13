@@ -7,5 +7,5 @@ repos:
         entry: python scripts/sort_yaml.py --check
         types: [yaml]
         files: ".*/rule\\.yml$"
-        additional_dependencies: [pyyaml]
+        additional_dependencies: [ruamel.yaml]
         pass_filenames: true
