@@ -190,11 +190,7 @@ def run_rule(
 
             csv_path = Path(str(output_path) + ".csv")
             if ok and csv_path.exists():
-<<<<<<< HEAD
                 print(f"    Done — results written to {csv_path}")
-=======
-                print(f"    Done — CSV written to {csv_path}")
->>>>>>> main
             else:
                 print(f"    [ERROR] Engine failed for {test_type}/{case_id}")
                 for line in output.splitlines():
