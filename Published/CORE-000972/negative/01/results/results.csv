@@ -1,81 +1,81 @@
 path,attribute,value
-,id,Organization_1
-,$code_for_decode_value,
-,type.decode,Pharmaceutical Company
-,type.codeSystem,http://www.cdisc.org
-,$value_for_code,Clinical Study Sponsor
-,name,LILLY
-,$codelist_extensible,False
-,type.code,C70793
-,parent_entity,StudyVersion
-,$codelist_extensible_override,Y
-,$code_for_decode_pref_term,
-,$codelist_code,C188724
-,$pref_term_for_code,Clinical Study Sponsor
-,parent_rel,organizations
-,type.codeSystemVersion,2023-12-15
-,parent_id,StudyVersion_1
-,id,Organization_2
-,$code_for_decode_value,
-,type.decode,Study Register
-,type.codeSystem,http://www.cdisc.org
-,$value_for_code,Clinical Study Registry
-,name,CT-GOV
-,$codelist_extensible,False
-,type.code,C93453
-,parent_entity,StudyVersion
-,$codelist_extensible_override,Y
-,$code_for_decode_pref_term,
-,$codelist_code,C188724
-,$pref_term_for_code,Study Registry
-,parent_rel,organizations
-,type.codeSystemVersion,2023-12-15
-,parent_id,StudyVersion_1
-,id,Organization_3
-,$code_for_decode_value,C188863
-,type.decode,Regulatory Agency
-,type.codeSystem,http://www.cdisc.org
-,$value_for_code,
-,name,REG1
-,$codelist_extensible,False
-,type.code,C188863xx
-,parent_entity,StudyVersion
-,$codelist_extensible_override,Y
-,$code_for_decode_pref_term,C188863
-,$codelist_code,C188724
-,$pref_term_for_code,
-,parent_rel,organizations
-,type.codeSystemVersion,2023-12-15
-,parent_id,StudyVersion_1
-,id,Organization_4
-,$code_for_decode_value,
-,type.decode,Healthcare Facility
-,type.codeSystem,CDISC Organization Type
-,$value_for_code,
-,name,ORG1
-,$codelist_extensible,False
-,type.code,C21541
-,parent_entity,StudyVersion
-,$codelist_extensible_override,Y
-,$code_for_decode_pref_term,
-,$codelist_code,C188724
-,$pref_term_for_code,
-,parent_rel,organizations
-,type.codeSystemVersion,2023-12-15
-,parent_id,StudyVersion_1
-,id,Organization_5
-,$code_for_decode_value,
-,type.decode,Pharmaceutical Company
-,type.codeSystem,http://www.cdisc.org
-,$value_for_code,
-,name,ORG2
-,$codelist_extensible,
-,type.code,C54149
-,parent_entity,StudyVersion
-,$codelist_extensible_override,
-,$code_for_decode_pref_term,
-,$codelist_code,C188724
-,$pref_term_for_code,
-,parent_rel,organizations
-,type.codeSystemVersion,2023-15-12
-,parent_id,StudyVersion_1
+/Organization/0,$code_for_decode_pref_term,
+/Organization/0,$code_for_decode_value,
+/Organization/0,$codelist_code,C188724
+/Organization/0,$codelist_extensible,False
+/Organization/0,$codelist_extensible_override,Y
+/Organization/0,$pref_term_for_code,Clinical Study Sponsor
+/Organization/0,$value_for_code,Clinical Study Sponsor
+/Organization/0,id,Organization_1
+/Organization/0,name,LILLY
+/Organization/0,parent_entity,StudyVersion
+/Organization/0,parent_id,StudyVersion_1
+/Organization/0,parent_rel,organizations
+/Organization/0,type.code,C70793
+/Organization/0,type.codeSystem,http://www.cdisc.org
+/Organization/0,type.codeSystemVersion,2023-12-15
+/Organization/0,type.decode,Pharmaceutical Company
+/Organization/1,$code_for_decode_pref_term,
+/Organization/1,$code_for_decode_value,
+/Organization/1,$codelist_code,C188724
+/Organization/1,$codelist_extensible,False
+/Organization/1,$codelist_extensible_override,Y
+/Organization/1,$pref_term_for_code,Study Registry
+/Organization/1,$value_for_code,Clinical Study Registry
+/Organization/1,id,Organization_2
+/Organization/1,name,CT-GOV
+/Organization/1,parent_entity,StudyVersion
+/Organization/1,parent_id,StudyVersion_1
+/Organization/1,parent_rel,organizations
+/Organization/1,type.code,C93453
+/Organization/1,type.codeSystem,http://www.cdisc.org
+/Organization/1,type.codeSystemVersion,2023-12-15
+/Organization/1,type.decode,Study Register
+/Organization/2,$code_for_decode_pref_term,C188863
+/Organization/2,$code_for_decode_value,C188863
+/Organization/2,$codelist_code,C188724
+/Organization/2,$codelist_extensible,False
+/Organization/2,$codelist_extensible_override,Y
+/Organization/2,$pref_term_for_code,
+/Organization/2,$value_for_code,
+/Organization/2,id,Organization_3
+/Organization/2,name,REG1
+/Organization/2,parent_entity,StudyVersion
+/Organization/2,parent_id,StudyVersion_1
+/Organization/2,parent_rel,organizations
+/Organization/2,type.code,C188863xx
+/Organization/2,type.codeSystem,http://www.cdisc.org
+/Organization/2,type.codeSystemVersion,2023-12-15
+/Organization/2,type.decode,Regulatory Agency
+/Organization/3,$code_for_decode_pref_term,
+/Organization/3,$code_for_decode_value,
+/Organization/3,$codelist_code,C188724
+/Organization/3,$codelist_extensible,False
+/Organization/3,$codelist_extensible_override,Y
+/Organization/3,$pref_term_for_code,
+/Organization/3,$value_for_code,
+/Organization/3,id,Organization_4
+/Organization/3,name,ORG1
+/Organization/3,parent_entity,StudyVersion
+/Organization/3,parent_id,StudyVersion_1
+/Organization/3,parent_rel,organizations
+/Organization/3,type.code,C21541
+/Organization/3,type.codeSystem,CDISC Organization Type
+/Organization/3,type.codeSystemVersion,2023-12-15
+/Organization/3,type.decode,Healthcare Facility
+/Organization/4,$code_for_decode_pref_term,
+/Organization/4,$code_for_decode_value,
+/Organization/4,$codelist_code,C188724
+/Organization/4,$codelist_extensible,
+/Organization/4,$codelist_extensible_override,
+/Organization/4,$pref_term_for_code,
+/Organization/4,$value_for_code,
+/Organization/4,id,Organization_5
+/Organization/4,name,ORG2
+/Organization/4,parent_entity,StudyVersion
+/Organization/4,parent_id,StudyVersion_1
+/Organization/4,parent_rel,organizations
+/Organization/4,type.code,C54149
+/Organization/4,type.codeSystem,http://www.cdisc.org
+/Organization/4,type.codeSystemVersion,2023-15-12
+/Organization/4,type.decode,Pharmaceutical Company

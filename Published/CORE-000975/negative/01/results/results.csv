@@ -1,91 +1,91 @@
 path,attribute,value
-,id,MedicalDeviceIdentifier_1
-,$code_for_decode_value,
-,type.decode,Batch Number
-,type.codeSystem,http://www.cdisc.org
-,$value_for_code,
-,$codelist_extensible,
-,type.code,C104504
-,parent_entity,MedicalDevice
-,$code_for_decode_pref_term,
-,$codelist_code,C215484
-,$pref_term_for_code,
-,parent_rel,identifiers
-,type.codeSystemVersion,2024-09-27
-,text,B12345
-,parent_id,MedicalDevice_1
-,id,MedicalDeviceIdentifier_2
-,$code_for_decode_value,
-,type.decode,FDA UDI
-,type.codeSystem,http://www.cdisc.org
-,$value_for_code,FDA Unique Device Identification
-,$codelist_extensible,True
-,type.code,C112279
-,parent_entity,MedicalDevice
-,$code_for_decode_pref_term,
-,$codelist_code,C215484
-,$pref_term_for_code,FDA Unique Device Identifier
-,parent_rel,identifiers
-,type.codeSystemVersion,2025-09-26
-,text,00123456789012
-,parent_id,MedicalDevice_1
-,id,MedicalDeviceIdentifier_3
-,$code_for_decode_value,C99285
-,type.decode,Model Number
-,type.codeSystem,http://www.cdisc.org
-,$value_for_code,Lot Number
-,$codelist_extensible,True
-,type.code,C70848
-,parent_entity,MedicalDevice
-,$code_for_decode_pref_term,C99285
-,$codelist_code,C215484
-,$pref_term_for_code,Lot Number
-,parent_rel,identifiers
-,type.codeSystemVersion,2025-09-26
-,text,L1357
-,parent_id,MedicalDevice_1
-,id,MedicalDeviceIdentifier_4
-,$code_for_decode_value,C99285
-,type.decode,Model Number
-,type.codeSystem,http://www.cdisc.org
-,$value_for_code,
-,$codelist_extensible,True
-,type.code,C99285xx
-,parent_entity,MedicalDevice
-,$code_for_decode_pref_term,C99285
-,$codelist_code,C215484
-,$pref_term_for_code,
-,parent_rel,identifiers
-,type.codeSystemVersion,2025-09-26
-,text,M2468
-,parent_id,MedicalDevice_1
-,id,MedicalDeviceIdentifier_5
-,$code_for_decode_value,
-,type.decode,FDA Unique Device Identifier
-,type.codeSystem,CDISC Medical Device Identifier Type Value Set Terminology
-,$value_for_code,FDA Unique Device Identification
-,$codelist_extensible,True
-,type.code,C112279
-,parent_entity,MedicalDevice
-,$code_for_decode_pref_term,C112279
-,$codelist_code,C215484
-,$pref_term_for_code,FDA Unique Device Identifier
-,parent_rel,identifiers
-,type.codeSystemVersion,2025-09-26
-,text,00123456789012
-,parent_id,MedicalDevice_2
-,id,MedicalDeviceIdentifier_6
-,$code_for_decode_value,
-,type.decode,Extension
-,type.codeSystem,http://www.cdisc.org
-,$value_for_code,
-,$codelist_extensible,
-,type.code,C0101X
-,parent_entity,MedicalDevice
-,$code_for_decode_pref_term,
-,$codelist_code,C215484
-,$pref_term_for_code,
-,parent_rel,identifiers
-,type.codeSystemVersion,2025-09-26 - P63
-,text,EXT0001
-,parent_id,MedicalDevice_2
+/MedicalDeviceIdentifier/0,$code_for_decode_pref_term,
+/MedicalDeviceIdentifier/0,$code_for_decode_value,
+/MedicalDeviceIdentifier/0,$codelist_code,C215484
+/MedicalDeviceIdentifier/0,$codelist_extensible,
+/MedicalDeviceIdentifier/0,$pref_term_for_code,
+/MedicalDeviceIdentifier/0,$value_for_code,
+/MedicalDeviceIdentifier/0,id,MedicalDeviceIdentifier_1
+/MedicalDeviceIdentifier/0,parent_entity,MedicalDevice
+/MedicalDeviceIdentifier/0,parent_id,MedicalDevice_1
+/MedicalDeviceIdentifier/0,parent_rel,identifiers
+/MedicalDeviceIdentifier/0,text,B12345
+/MedicalDeviceIdentifier/0,type.code,C104504
+/MedicalDeviceIdentifier/0,type.codeSystem,http://www.cdisc.org
+/MedicalDeviceIdentifier/0,type.codeSystemVersion,2024-09-27
+/MedicalDeviceIdentifier/0,type.decode,Batch Number
+/MedicalDeviceIdentifier/1,$code_for_decode_pref_term,
+/MedicalDeviceIdentifier/1,$code_for_decode_value,
+/MedicalDeviceIdentifier/1,$codelist_code,C215484
+/MedicalDeviceIdentifier/1,$codelist_extensible,True
+/MedicalDeviceIdentifier/1,$pref_term_for_code,FDA Unique Device Identifier
+/MedicalDeviceIdentifier/1,$value_for_code,FDA Unique Device Identification
+/MedicalDeviceIdentifier/1,id,MedicalDeviceIdentifier_2
+/MedicalDeviceIdentifier/1,parent_entity,MedicalDevice
+/MedicalDeviceIdentifier/1,parent_id,MedicalDevice_1
+/MedicalDeviceIdentifier/1,parent_rel,identifiers
+/MedicalDeviceIdentifier/1,text,00123456789012
+/MedicalDeviceIdentifier/1,type.code,C112279
+/MedicalDeviceIdentifier/1,type.codeSystem,http://www.cdisc.org
+/MedicalDeviceIdentifier/1,type.codeSystemVersion,2025-09-26
+/MedicalDeviceIdentifier/1,type.decode,FDA UDI
+/MedicalDeviceIdentifier/2,$code_for_decode_pref_term,C99285
+/MedicalDeviceIdentifier/2,$code_for_decode_value,C99285
+/MedicalDeviceIdentifier/2,$codelist_code,C215484
+/MedicalDeviceIdentifier/2,$codelist_extensible,True
+/MedicalDeviceIdentifier/2,$pref_term_for_code,Lot Number
+/MedicalDeviceIdentifier/2,$value_for_code,Lot Number
+/MedicalDeviceIdentifier/2,id,MedicalDeviceIdentifier_3
+/MedicalDeviceIdentifier/2,parent_entity,MedicalDevice
+/MedicalDeviceIdentifier/2,parent_id,MedicalDevice_1
+/MedicalDeviceIdentifier/2,parent_rel,identifiers
+/MedicalDeviceIdentifier/2,text,L1357
+/MedicalDeviceIdentifier/2,type.code,C70848
+/MedicalDeviceIdentifier/2,type.codeSystem,http://www.cdisc.org
+/MedicalDeviceIdentifier/2,type.codeSystemVersion,2025-09-26
+/MedicalDeviceIdentifier/2,type.decode,Model Number
+/MedicalDeviceIdentifier/3,$code_for_decode_pref_term,C99285
+/MedicalDeviceIdentifier/3,$code_for_decode_value,C99285
+/MedicalDeviceIdentifier/3,$codelist_code,C215484
+/MedicalDeviceIdentifier/3,$codelist_extensible,True
+/MedicalDeviceIdentifier/3,$pref_term_for_code,
+/MedicalDeviceIdentifier/3,$value_for_code,
+/MedicalDeviceIdentifier/3,id,MedicalDeviceIdentifier_4
+/MedicalDeviceIdentifier/3,parent_entity,MedicalDevice
+/MedicalDeviceIdentifier/3,parent_id,MedicalDevice_1
+/MedicalDeviceIdentifier/3,parent_rel,identifiers
+/MedicalDeviceIdentifier/3,text,M2468
+/MedicalDeviceIdentifier/3,type.code,C99285xx
+/MedicalDeviceIdentifier/3,type.codeSystem,http://www.cdisc.org
+/MedicalDeviceIdentifier/3,type.codeSystemVersion,2025-09-26
+/MedicalDeviceIdentifier/3,type.decode,Model Number
+/MedicalDeviceIdentifier/4,$code_for_decode_pref_term,C112279
+/MedicalDeviceIdentifier/4,$code_for_decode_value,
+/MedicalDeviceIdentifier/4,$codelist_code,C215484
+/MedicalDeviceIdentifier/4,$codelist_extensible,True
+/MedicalDeviceIdentifier/4,$pref_term_for_code,FDA Unique Device Identifier
+/MedicalDeviceIdentifier/4,$value_for_code,FDA Unique Device Identification
+/MedicalDeviceIdentifier/4,id,MedicalDeviceIdentifier_5
+/MedicalDeviceIdentifier/4,parent_entity,MedicalDevice
+/MedicalDeviceIdentifier/4,parent_id,MedicalDevice_2
+/MedicalDeviceIdentifier/4,parent_rel,identifiers
+/MedicalDeviceIdentifier/4,text,00123456789012
+/MedicalDeviceIdentifier/4,type.code,C112279
+/MedicalDeviceIdentifier/4,type.codeSystem,CDISC Medical Device Identifier Type Value Set Terminology
+/MedicalDeviceIdentifier/4,type.codeSystemVersion,2025-09-26
+/MedicalDeviceIdentifier/4,type.decode,FDA Unique Device Identifier
+/MedicalDeviceIdentifier/5,$code_for_decode_pref_term,
+/MedicalDeviceIdentifier/5,$code_for_decode_value,
+/MedicalDeviceIdentifier/5,$codelist_code,C215484
+/MedicalDeviceIdentifier/5,$codelist_extensible,
+/MedicalDeviceIdentifier/5,$pref_term_for_code,
+/MedicalDeviceIdentifier/5,$value_for_code,
+/MedicalDeviceIdentifier/5,id,MedicalDeviceIdentifier_6
+/MedicalDeviceIdentifier/5,parent_entity,MedicalDevice
+/MedicalDeviceIdentifier/5,parent_id,MedicalDevice_2
+/MedicalDeviceIdentifier/5,parent_rel,identifiers
+/MedicalDeviceIdentifier/5,text,EXT0001
+/MedicalDeviceIdentifier/5,type.code,C0101X
+/MedicalDeviceIdentifier/5,type.codeSystem,http://www.cdisc.org
+/MedicalDeviceIdentifier/5,type.codeSystemVersion,2025-09-26 - P63
+/MedicalDeviceIdentifier/5,type.decode,Extension

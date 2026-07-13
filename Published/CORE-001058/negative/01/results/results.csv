@@ -1,91 +1,91 @@
 path,attribute,value
-,id,InterventionalStudyDesign_1
-,$code_for_decode_value,
-,studyPhase.standardCode.codeSystemVersion,2025-09-26
-,$value_for_code,PHASE I/II/III TRIAL
-,name,Study Design 1
-,studyPhase.standardCode.codeSystem,http://www.cdisc.org
-,$codelist_extensible,True
-,parent_entity,StudyVersion
-,studyPhase.standardCode.code,C198366
-,$code_for_decode_pref_term,
-,$codelist_code,C66737
-,$pref_term_for_code,Phase I/II/III Trial
-,parent_rel,studyDesigns
-,studyPhase.standardCode.decode,Phase I/II/III Study
-,parent_id,StudyVersion_1
-,id,InterventionalStudyDesign_2
-,$code_for_decode_value,C198366
-,studyPhase.standardCode.codeSystemVersion,2025-09-26
-,$value_for_code,PHASE I/II/III TRIAL
-,name,Study Design 2
-,studyPhase.standardCode.codeSystem,CDISC
-,$codelist_extensible,True
-,parent_entity,StudyVersion
-,studyPhase.standardCode.code,C198366
-,$code_for_decode_pref_term,C198366
-,$codelist_code,C66737
-,$pref_term_for_code,Phase I/II/III Trial
-,parent_rel,studyDesigns
-,studyPhase.standardCode.decode,PHASE I/II/III TRIAL
-,parent_id,StudyVersion_1
-,id,InterventionalStudyDesign_3
-,$code_for_decode_value,C15602
-,studyPhase.standardCode.codeSystemVersion,2025-09-26
-,$value_for_code,PHASE I/II/III TRIAL
-,name,Study Design 3
-,studyPhase.standardCode.codeSystem,http://www.cdisc.org
-,$codelist_extensible,True
-,parent_entity,StudyVersion
-,studyPhase.standardCode.code,C198366
-,$code_for_decode_pref_term,C15602
-,$codelist_code,C66737
-,$pref_term_for_code,Phase I/II/III Trial
-,parent_rel,studyDesigns
-,studyPhase.standardCode.decode,PHASE III TRIAL
-,parent_id,StudyVersion_1
-,id,ObservationalStudyDesign_1
-,$code_for_decode_value,
-,studyPhase.standardCode.codeSystemVersion,2025-09-26
-,$value_for_code,EARLY PHASE I
-,name,Study Design 4
-,studyPhase.standardCode.codeSystem,http://www.cdisc.org
-,$codelist_extensible,True
-,parent_entity,StudyVersion
-,studyPhase.standardCode.code,C54721
-,$code_for_decode_pref_term,
-,$codelist_code,C66737
-,$pref_term_for_code,Early Phase 1 Trial
-,parent_rel,studyDesigns
-,studyPhase.standardCode.decode,PHASE 0 TRIAL
-,parent_id,StudyVersion_1
-,id,ObservationalStudyDesign_2
-,$code_for_decode_value,C54721
-,studyPhase.standardCode.codeSystemVersion,2025-09-26
-,$value_for_code,
-,name,Study Design 5
-,studyPhase.standardCode.codeSystem,http://www.cdisc.org
-,$codelist_extensible,True
-,parent_entity,StudyVersion
-,studyPhase.standardCode.code,C54721xx
-,$code_for_decode_pref_term,
-,$codelist_code,C66737
-,$pref_term_for_code,
-,parent_rel,studyDesigns
-,studyPhase.standardCode.decode,EARLY PHASE I
-,parent_id,StudyVersion_1
-,id,ObservationalStudyDesign_3
-,$code_for_decode_value,
-,studyPhase.standardCode.codeSystemVersion,N/A
-,$value_for_code,
-,name,Study Design 6
-,studyPhase.standardCode.codeSystem,http://www.cdisc.org
-,$codelist_extensible,
-,parent_entity,StudyVersion
-,studyPhase.standardCode.code,C48660
-,$code_for_decode_pref_term,
-,$codelist_code,C66737
-,$pref_term_for_code,
-,parent_rel,studyDesigns
-,studyPhase.standardCode.decode,NOT APPLICABLE
-,parent_id,StudyVersion_1
+/InterventionalStudyDesign/0,$code_for_decode_pref_term,
+/InterventionalStudyDesign/0,$code_for_decode_value,
+/InterventionalStudyDesign/0,$codelist_code,C66737
+/InterventionalStudyDesign/0,$codelist_extensible,True
+/InterventionalStudyDesign/0,$pref_term_for_code,Phase I/II/III Trial
+/InterventionalStudyDesign/0,$value_for_code,PHASE I/II/III TRIAL
+/InterventionalStudyDesign/0,id,InterventionalStudyDesign_1
+/InterventionalStudyDesign/0,name,Study Design 1
+/InterventionalStudyDesign/0,parent_entity,StudyVersion
+/InterventionalStudyDesign/0,parent_id,StudyVersion_1
+/InterventionalStudyDesign/0,parent_rel,studyDesigns
+/InterventionalStudyDesign/0,studyPhase.standardCode.code,C198366
+/InterventionalStudyDesign/0,studyPhase.standardCode.codeSystem,http://www.cdisc.org
+/InterventionalStudyDesign/0,studyPhase.standardCode.codeSystemVersion,2025-09-26
+/InterventionalStudyDesign/0,studyPhase.standardCode.decode,Phase I/II/III Study
+/InterventionalStudyDesign/1,$code_for_decode_pref_term,C198366
+/InterventionalStudyDesign/1,$code_for_decode_value,C198366
+/InterventionalStudyDesign/1,$codelist_code,C66737
+/InterventionalStudyDesign/1,$codelist_extensible,True
+/InterventionalStudyDesign/1,$pref_term_for_code,Phase I/II/III Trial
+/InterventionalStudyDesign/1,$value_for_code,PHASE I/II/III TRIAL
+/InterventionalStudyDesign/1,id,InterventionalStudyDesign_2
+/InterventionalStudyDesign/1,name,Study Design 2
+/InterventionalStudyDesign/1,parent_entity,StudyVersion
+/InterventionalStudyDesign/1,parent_id,StudyVersion_1
+/InterventionalStudyDesign/1,parent_rel,studyDesigns
+/InterventionalStudyDesign/1,studyPhase.standardCode.code,C198366
+/InterventionalStudyDesign/1,studyPhase.standardCode.codeSystem,CDISC
+/InterventionalStudyDesign/1,studyPhase.standardCode.codeSystemVersion,2025-09-26
+/InterventionalStudyDesign/1,studyPhase.standardCode.decode,PHASE I/II/III TRIAL
+/InterventionalStudyDesign/2,$code_for_decode_pref_term,C15602
+/InterventionalStudyDesign/2,$code_for_decode_value,C15602
+/InterventionalStudyDesign/2,$codelist_code,C66737
+/InterventionalStudyDesign/2,$codelist_extensible,True
+/InterventionalStudyDesign/2,$pref_term_for_code,Phase I/II/III Trial
+/InterventionalStudyDesign/2,$value_for_code,PHASE I/II/III TRIAL
+/InterventionalStudyDesign/2,id,InterventionalStudyDesign_3
+/InterventionalStudyDesign/2,name,Study Design 3
+/InterventionalStudyDesign/2,parent_entity,StudyVersion
+/InterventionalStudyDesign/2,parent_id,StudyVersion_1
+/InterventionalStudyDesign/2,parent_rel,studyDesigns
+/InterventionalStudyDesign/2,studyPhase.standardCode.code,C198366
+/InterventionalStudyDesign/2,studyPhase.standardCode.codeSystem,http://www.cdisc.org
+/InterventionalStudyDesign/2,studyPhase.standardCode.codeSystemVersion,2025-09-26
+/InterventionalStudyDesign/2,studyPhase.standardCode.decode,PHASE III TRIAL
+/ObservationalStudyDesign/0,$code_for_decode_pref_term,
+/ObservationalStudyDesign/0,$code_for_decode_value,
+/ObservationalStudyDesign/0,$codelist_code,C66737
+/ObservationalStudyDesign/0,$codelist_extensible,True
+/ObservationalStudyDesign/0,$pref_term_for_code,Early Phase 1 Trial
+/ObservationalStudyDesign/0,$value_for_code,EARLY PHASE I
+/ObservationalStudyDesign/0,id,ObservationalStudyDesign_1
+/ObservationalStudyDesign/0,name,Study Design 4
+/ObservationalStudyDesign/0,parent_entity,StudyVersion
+/ObservationalStudyDesign/0,parent_id,StudyVersion_1
+/ObservationalStudyDesign/0,parent_rel,studyDesigns
+/ObservationalStudyDesign/0,studyPhase.standardCode.code,C54721
+/ObservationalStudyDesign/0,studyPhase.standardCode.codeSystem,http://www.cdisc.org
+/ObservationalStudyDesign/0,studyPhase.standardCode.codeSystemVersion,2025-09-26
+/ObservationalStudyDesign/0,studyPhase.standardCode.decode,PHASE 0 TRIAL
+/ObservationalStudyDesign/1,$code_for_decode_pref_term,
+/ObservationalStudyDesign/1,$code_for_decode_value,C54721
+/ObservationalStudyDesign/1,$codelist_code,C66737
+/ObservationalStudyDesign/1,$codelist_extensible,True
+/ObservationalStudyDesign/1,$pref_term_for_code,
+/ObservationalStudyDesign/1,$value_for_code,
+/ObservationalStudyDesign/1,id,ObservationalStudyDesign_2
+/ObservationalStudyDesign/1,name,Study Design 5
+/ObservationalStudyDesign/1,parent_entity,StudyVersion
+/ObservationalStudyDesign/1,parent_id,StudyVersion_1
+/ObservationalStudyDesign/1,parent_rel,studyDesigns
+/ObservationalStudyDesign/1,studyPhase.standardCode.code,C54721xx
+/ObservationalStudyDesign/1,studyPhase.standardCode.codeSystem,http://www.cdisc.org
+/ObservationalStudyDesign/1,studyPhase.standardCode.codeSystemVersion,2025-09-26
+/ObservationalStudyDesign/1,studyPhase.standardCode.decode,EARLY PHASE I
+/ObservationalStudyDesign/2,$code_for_decode_pref_term,
+/ObservationalStudyDesign/2,$code_for_decode_value,
+/ObservationalStudyDesign/2,$codelist_code,C66737
+/ObservationalStudyDesign/2,$codelist_extensible,
+/ObservationalStudyDesign/2,$pref_term_for_code,
+/ObservationalStudyDesign/2,$value_for_code,
+/ObservationalStudyDesign/2,id,ObservationalStudyDesign_3
+/ObservationalStudyDesign/2,name,Study Design 6
+/ObservationalStudyDesign/2,parent_entity,StudyVersion
+/ObservationalStudyDesign/2,parent_id,StudyVersion_1
+/ObservationalStudyDesign/2,parent_rel,studyDesigns
+/ObservationalStudyDesign/2,studyPhase.standardCode.code,C48660
+/ObservationalStudyDesign/2,studyPhase.standardCode.codeSystem,http://www.cdisc.org
+/ObservationalStudyDesign/2,studyPhase.standardCode.codeSystemVersion,N/A
+/ObservationalStudyDesign/2,studyPhase.standardCode.decode,NOT APPLICABLE

@@ -1,91 +1,91 @@
 path,attribute,value
-,id,StudyAmendmentImpact_1
-,$code_for_decode_value,
-,type.decode,Study Data Reliability
-,type.codeSystem,http://www.cdisc.org
-,$value_for_code,
-,$codelist_extensible,
-,type.code,C215667
-,parent_entity,StudyAmendment
-,$code_for_decode_pref_term,
-,$codelist_code,C215481
-,$pref_term_for_code,
-,parent_rel,impacts
-,type.codeSystemVersion,2024-09-27
-,text,Amendment 1
-,parent_id,StudyAmendment_1
-,id,StudyAmendmentImpact_2
-,$code_for_decode_value,C215666
-,type.decode,Study Subject Rights
-,type.codeSystem,http://www.cdisc.org
-,$value_for_code,Study Data Robustness
-,$codelist_extensible,True
-,type.code,C215668
-,parent_entity,StudyAmendment
-,$code_for_decode_pref_term,C215666
-,$codelist_code,C215481
-,$pref_term_for_code,Study Data Robustness
-,parent_rel,impacts
-,type.codeSystemVersion,2025-09-26
-,text,Amendment 2
-,parent_id,StudyAmendment_2
-,id,StudyAmendmentImpact_3
-,$code_for_decode_value,
-,type.decode,Subject Rights
-,type.codeSystem,http://www.cdisc.org
-,$value_for_code,Study Subject Rights
-,$codelist_extensible,True
-,type.code,C215666
-,parent_entity,StudyAmendment
-,$code_for_decode_pref_term,
-,$codelist_code,C215481
-,$pref_term_for_code,Study Subject Rights
-,parent_rel,impacts
-,type.codeSystemVersion,2025-09-26
-,text,Amendment 3
-,parent_id,StudyAmendment_3
-,id,StudyAmendmentImpact_4
-,$code_for_decode_value,C215665
-,type.decode,Study Subject Safety
-,type.codeSystem,http://www.cdisc.org
-,$value_for_code,
-,$codelist_extensible,True
-,type.code,C215665xx
-,parent_entity,StudyAmendment
-,$code_for_decode_pref_term,C215665
-,$codelist_code,C215481
-,$pref_term_for_code,
-,parent_rel,impacts
-,type.codeSystemVersion,2025-09-26
-,text,Amendment 4
-,parent_id,StudyAmendment_4
-,id,StudyAmendmentImpact_5
-,$code_for_decode_value,
-,type.decode,Extension
-,type.codeSystem,CDISC Study Amendment Impact Type Value Set Terminology
-,$value_for_code,
-,$codelist_extensible,True
-,type.code,C0100X
-,parent_entity,StudyAmendment
-,$code_for_decode_pref_term,
-,$codelist_code,C215481
-,$pref_term_for_code,
-,parent_rel,impacts
-,type.codeSystemVersion,2025-09-26
-,text,Amendment 5
-,parent_id,StudyAmendment_5
-,id,StudyAmendmentImpact_6
-,$code_for_decode_value,
-,type.decode,Study Data Reliability
-,type.codeSystem,http://www.cdisc.org
-,$value_for_code,
-,$codelist_extensible,
-,type.code,C215667
-,parent_entity,StudyAmendment
-,$code_for_decode_pref_term,
-,$codelist_code,C215481
-,$pref_term_for_code,
-,parent_rel,impacts
-,type.codeSystemVersion,P62
-,text,Amendment 6
-,parent_id,StudyAmendment_6
+/StudyAmendmentImpact/0,$code_for_decode_pref_term,
+/StudyAmendmentImpact/0,$code_for_decode_value,
+/StudyAmendmentImpact/0,$codelist_code,C215481
+/StudyAmendmentImpact/0,$codelist_extensible,
+/StudyAmendmentImpact/0,$pref_term_for_code,
+/StudyAmendmentImpact/0,$value_for_code,
+/StudyAmendmentImpact/0,id,StudyAmendmentImpact_1
+/StudyAmendmentImpact/0,parent_entity,StudyAmendment
+/StudyAmendmentImpact/0,parent_id,StudyAmendment_1
+/StudyAmendmentImpact/0,parent_rel,impacts
+/StudyAmendmentImpact/0,text,Amendment 1
+/StudyAmendmentImpact/0,type.code,C215667
+/StudyAmendmentImpact/0,type.codeSystem,http://www.cdisc.org
+/StudyAmendmentImpact/0,type.codeSystemVersion,2024-09-27
+/StudyAmendmentImpact/0,type.decode,Study Data Reliability
+/StudyAmendmentImpact/1,$code_for_decode_pref_term,C215666
+/StudyAmendmentImpact/1,$code_for_decode_value,C215666
+/StudyAmendmentImpact/1,$codelist_code,C215481
+/StudyAmendmentImpact/1,$codelist_extensible,True
+/StudyAmendmentImpact/1,$pref_term_for_code,Study Data Robustness
+/StudyAmendmentImpact/1,$value_for_code,Study Data Robustness
+/StudyAmendmentImpact/1,id,StudyAmendmentImpact_2
+/StudyAmendmentImpact/1,parent_entity,StudyAmendment
+/StudyAmendmentImpact/1,parent_id,StudyAmendment_2
+/StudyAmendmentImpact/1,parent_rel,impacts
+/StudyAmendmentImpact/1,text,Amendment 2
+/StudyAmendmentImpact/1,type.code,C215668
+/StudyAmendmentImpact/1,type.codeSystem,http://www.cdisc.org
+/StudyAmendmentImpact/1,type.codeSystemVersion,2025-09-26
+/StudyAmendmentImpact/1,type.decode,Study Subject Rights
+/StudyAmendmentImpact/2,$code_for_decode_pref_term,
+/StudyAmendmentImpact/2,$code_for_decode_value,
+/StudyAmendmentImpact/2,$codelist_code,C215481
+/StudyAmendmentImpact/2,$codelist_extensible,True
+/StudyAmendmentImpact/2,$pref_term_for_code,Study Subject Rights
+/StudyAmendmentImpact/2,$value_for_code,Study Subject Rights
+/StudyAmendmentImpact/2,id,StudyAmendmentImpact_3
+/StudyAmendmentImpact/2,parent_entity,StudyAmendment
+/StudyAmendmentImpact/2,parent_id,StudyAmendment_3
+/StudyAmendmentImpact/2,parent_rel,impacts
+/StudyAmendmentImpact/2,text,Amendment 3
+/StudyAmendmentImpact/2,type.code,C215666
+/StudyAmendmentImpact/2,type.codeSystem,http://www.cdisc.org
+/StudyAmendmentImpact/2,type.codeSystemVersion,2025-09-26
+/StudyAmendmentImpact/2,type.decode,Subject Rights
+/StudyAmendmentImpact/3,$code_for_decode_pref_term,C215665
+/StudyAmendmentImpact/3,$code_for_decode_value,C215665
+/StudyAmendmentImpact/3,$codelist_code,C215481
+/StudyAmendmentImpact/3,$codelist_extensible,True
+/StudyAmendmentImpact/3,$pref_term_for_code,
+/StudyAmendmentImpact/3,$value_for_code,
+/StudyAmendmentImpact/3,id,StudyAmendmentImpact_4
+/StudyAmendmentImpact/3,parent_entity,StudyAmendment
+/StudyAmendmentImpact/3,parent_id,StudyAmendment_4
+/StudyAmendmentImpact/3,parent_rel,impacts
+/StudyAmendmentImpact/3,text,Amendment 4
+/StudyAmendmentImpact/3,type.code,C215665xx
+/StudyAmendmentImpact/3,type.codeSystem,http://www.cdisc.org
+/StudyAmendmentImpact/3,type.codeSystemVersion,2025-09-26
+/StudyAmendmentImpact/3,type.decode,Study Subject Safety
+/StudyAmendmentImpact/4,$code_for_decode_pref_term,
+/StudyAmendmentImpact/4,$code_for_decode_value,
+/StudyAmendmentImpact/4,$codelist_code,C215481
+/StudyAmendmentImpact/4,$codelist_extensible,True
+/StudyAmendmentImpact/4,$pref_term_for_code,
+/StudyAmendmentImpact/4,$value_for_code,
+/StudyAmendmentImpact/4,id,StudyAmendmentImpact_5
+/StudyAmendmentImpact/4,parent_entity,StudyAmendment
+/StudyAmendmentImpact/4,parent_id,StudyAmendment_5
+/StudyAmendmentImpact/4,parent_rel,impacts
+/StudyAmendmentImpact/4,text,Amendment 5
+/StudyAmendmentImpact/4,type.code,C0100X
+/StudyAmendmentImpact/4,type.codeSystem,CDISC Study Amendment Impact Type Value Set Terminology
+/StudyAmendmentImpact/4,type.codeSystemVersion,2025-09-26
+/StudyAmendmentImpact/4,type.decode,Extension
+/StudyAmendmentImpact/5,$code_for_decode_pref_term,
+/StudyAmendmentImpact/5,$code_for_decode_value,
+/StudyAmendmentImpact/5,$codelist_code,C215481
+/StudyAmendmentImpact/5,$codelist_extensible,
+/StudyAmendmentImpact/5,$pref_term_for_code,
+/StudyAmendmentImpact/5,$value_for_code,
+/StudyAmendmentImpact/5,id,StudyAmendmentImpact_6
+/StudyAmendmentImpact/5,parent_entity,StudyAmendment
+/StudyAmendmentImpact/5,parent_id,StudyAmendment_6
+/StudyAmendmentImpact/5,parent_rel,impacts
+/StudyAmendmentImpact/5,text,Amendment 6
+/StudyAmendmentImpact/5,type.code,C215667
+/StudyAmendmentImpact/5,type.codeSystem,http://www.cdisc.org
+/StudyAmendmentImpact/5,type.codeSystemVersion,P62
+/StudyAmendmentImpact/5,type.decode,Study Data Reliability

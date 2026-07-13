@@ -1,91 +1,91 @@
 path,attribute,value
-,decode,CHILDCARE CENTER
-,parent_rel,encounters
-,$value_for_code,CHILD CARE CENTER
-,$pref_term_for_code,Childcare Center
-,$codelist_code,C127262
-,$code_for_decode_value,
-,$codelist_extensible,True
-,codeSystemVersion,2023-12-15
-,name,E1
-,$code_for_decode_pref_term,C127785
-,parent_id,StudyDesign_1
-,code,C127785
-,parent_entity,StudyDesign
-,id,Encounter_1
-,codeSystem,http://www.cdisc.org
-,decode,HOSPITAL
-,parent_rel,encounters
-,$value_for_code,CLINIC
-,$pref_term_for_code,Clinic
-,$codelist_code,C127262
-,$code_for_decode_value,C16696
-,$codelist_extensible,True
-,codeSystemVersion,2023-12-15
-,name,E1
-,$code_for_decode_pref_term,C16696
-,parent_id,StudyDesign_1
-,code,C51282
-,parent_entity,StudyDesign
-,id,Encounter_1
-,codeSystem,http://www.cdisc.org
-,decode,FARM
-,parent_rel,encounters
-,$value_for_code,
-,$pref_term_for_code,
-,$codelist_code,C127262
-,$code_for_decode_value,C48953
-,$codelist_extensible,True
-,codeSystemVersion,2024-03-29
-,name,E1
-,$code_for_decode_pref_term,C48953
-,parent_id,StudyDesign_1
-,code,C48953xx
-,parent_entity,StudyDesign
-,id,Encounter_1
-,codeSystem,http://www.cdisc.org
-,decode,FIELD
-,parent_rel,encounters
-,$value_for_code,FIELD
-,$pref_term_for_code,In the Field
-,$codelist_code,C127262
-,$code_for_decode_value,C102650
-,$codelist_extensible,True
-,codeSystemVersion,2023-12-15
-,name,E1
-,$code_for_decode_pref_term,
-,parent_id,StudyDesign_1
-,code,C102650
-,parent_entity,StudyDesign
-,id,Encounter_1
-,codeSystem,CDISC SETTING SDTM Codelist
-,decode,HEALTH FACILITY
-,parent_rel,encounters
-,$value_for_code,
-,$pref_term_for_code,
-,$codelist_code,C127262
-,$code_for_decode_value,
-,$codelist_extensible,
-,codeSystemVersion,2023-DEC-15
-,name,E1
-,$code_for_decode_pref_term,
-,parent_id,StudyDesign_1
-,code,C21541
-,parent_entity,StudyDesign
-,id,Encounter_1
-,codeSystem,http://www.cdisc.org
-,decode,Outpatient Clinic
-,parent_rel,encounters
-,$value_for_code,OUTPATIENT CLINIC
-,$pref_term_for_code,Ambulatory Care Facility
-,$codelist_code,C127262
-,$code_for_decode_value,C16281
-,$codelist_extensible,True
-,codeSystemVersion,2023-12-15
-,name,E1
-,$code_for_decode_pref_term,
-,parent_id,StudyDesign_1
-,code,C16281
-,parent_entity,StudyDesign
-,id,Encounter_1
-,codeSystem,http://www.cdisc.org
+/Encounter/0,$code_for_decode_pref_term,
+/Encounter/0,$code_for_decode_pref_term,
+/Encounter/0,$code_for_decode_pref_term,
+/Encounter/0,$code_for_decode_pref_term,C127785
+/Encounter/0,$code_for_decode_pref_term,C16696
+/Encounter/0,$code_for_decode_pref_term,C48953
+/Encounter/0,$code_for_decode_value,
+/Encounter/0,$code_for_decode_value,
+/Encounter/0,$code_for_decode_value,C102650
+/Encounter/0,$code_for_decode_value,C16281
+/Encounter/0,$code_for_decode_value,C16696
+/Encounter/0,$code_for_decode_value,C48953
+/Encounter/0,$codelist_code,C127262
+/Encounter/0,$codelist_code,C127262
+/Encounter/0,$codelist_code,C127262
+/Encounter/0,$codelist_code,C127262
+/Encounter/0,$codelist_code,C127262
+/Encounter/0,$codelist_code,C127262
+/Encounter/0,$codelist_extensible,
+/Encounter/0,$codelist_extensible,True
+/Encounter/0,$codelist_extensible,True
+/Encounter/0,$codelist_extensible,True
+/Encounter/0,$codelist_extensible,True
+/Encounter/0,$codelist_extensible,True
+/Encounter/0,$pref_term_for_code,
+/Encounter/0,$pref_term_for_code,
+/Encounter/0,$pref_term_for_code,Ambulatory Care Facility
+/Encounter/0,$pref_term_for_code,Childcare Center
+/Encounter/0,$pref_term_for_code,Clinic
+/Encounter/0,$pref_term_for_code,In the Field
+/Encounter/0,$value_for_code,
+/Encounter/0,$value_for_code,
+/Encounter/0,$value_for_code,CHILD CARE CENTER
+/Encounter/0,$value_for_code,CLINIC
+/Encounter/0,$value_for_code,FIELD
+/Encounter/0,$value_for_code,OUTPATIENT CLINIC
+/Encounter/0,code,C102650
+/Encounter/0,code,C127785
+/Encounter/0,code,C16281
+/Encounter/0,code,C21541
+/Encounter/0,code,C48953xx
+/Encounter/0,code,C51282
+/Encounter/0,codeSystem,CDISC SETTING SDTM Codelist
+/Encounter/0,codeSystem,http://www.cdisc.org
+/Encounter/0,codeSystem,http://www.cdisc.org
+/Encounter/0,codeSystem,http://www.cdisc.org
+/Encounter/0,codeSystem,http://www.cdisc.org
+/Encounter/0,codeSystem,http://www.cdisc.org
+/Encounter/0,codeSystemVersion,2023-12-15
+/Encounter/0,codeSystemVersion,2023-12-15
+/Encounter/0,codeSystemVersion,2023-12-15
+/Encounter/0,codeSystemVersion,2023-12-15
+/Encounter/0,codeSystemVersion,2023-DEC-15
+/Encounter/0,codeSystemVersion,2024-03-29
+/Encounter/0,decode,CHILDCARE CENTER
+/Encounter/0,decode,FARM
+/Encounter/0,decode,FIELD
+/Encounter/0,decode,HEALTH FACILITY
+/Encounter/0,decode,HOSPITAL
+/Encounter/0,decode,Outpatient Clinic
+/Encounter/0,id,Encounter_1
+/Encounter/0,id,Encounter_1
+/Encounter/0,id,Encounter_1
+/Encounter/0,id,Encounter_1
+/Encounter/0,id,Encounter_1
+/Encounter/0,id,Encounter_1
+/Encounter/0,name,E1
+/Encounter/0,name,E1
+/Encounter/0,name,E1
+/Encounter/0,name,E1
+/Encounter/0,name,E1
+/Encounter/0,name,E1
+/Encounter/0,parent_entity,StudyDesign
+/Encounter/0,parent_entity,StudyDesign
+/Encounter/0,parent_entity,StudyDesign
+/Encounter/0,parent_entity,StudyDesign
+/Encounter/0,parent_entity,StudyDesign
+/Encounter/0,parent_entity,StudyDesign
+/Encounter/0,parent_id,StudyDesign_1
+/Encounter/0,parent_id,StudyDesign_1
+/Encounter/0,parent_id,StudyDesign_1
+/Encounter/0,parent_id,StudyDesign_1
+/Encounter/0,parent_id,StudyDesign_1
+/Encounter/0,parent_id,StudyDesign_1
+/Encounter/0,parent_rel,encounters
+/Encounter/0,parent_rel,encounters
+/Encounter/0,parent_rel,encounters
+/Encounter/0,parent_rel,encounters
+/Encounter/0,parent_rel,encounters
+/Encounter/0,parent_rel,encounters

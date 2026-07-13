@@ -1,19 +1,19 @@
 path,attribute,value
-,parent_id,BiomedicalConcept_1
-,parent_entity,BiomedicalConcept
-,isRequired,True
-,id,BiomedicalConceptProperty_1
-,name,Sex
-,isEnabled,False
-,parent_id,BiomedicalConcept_2
-,parent_entity,BiomedicalConcept
-,isRequired,
-,id,BiomedicalConceptProperty_2
-,name,Race
-,isEnabled,False
-,parent_id,BiomedicalConcept_3
-,parent_entity,BiomedicalConcept
-,isRequired,True
-,id,BiomedicalConceptProperty_3
-,name,Vital Signs Result
-,isEnabled,
+/BiomedicalConceptProperty/0,id,BiomedicalConceptProperty_1
+/BiomedicalConceptProperty/0,isEnabled,False
+/BiomedicalConceptProperty/0,isRequired,True
+/BiomedicalConceptProperty/0,name,Sex
+/BiomedicalConceptProperty/0,parent_entity,BiomedicalConcept
+/BiomedicalConceptProperty/0,parent_id,BiomedicalConcept_1
+/BiomedicalConceptProperty/1,id,BiomedicalConceptProperty_2
+/BiomedicalConceptProperty/1,isEnabled,False
+/BiomedicalConceptProperty/1,isRequired,
+/BiomedicalConceptProperty/1,name,Race
+/BiomedicalConceptProperty/1,parent_entity,BiomedicalConcept
+/BiomedicalConceptProperty/1,parent_id,BiomedicalConcept_2
+/BiomedicalConceptProperty/2,id,BiomedicalConceptProperty_3
+/BiomedicalConceptProperty/2,isEnabled,
+/BiomedicalConceptProperty/2,isRequired,True
+/BiomedicalConceptProperty/2,name,Vital Signs Result
+/BiomedicalConceptProperty/2,parent_entity,BiomedicalConcept
+/BiomedicalConceptProperty/2,parent_id,BiomedicalConcept_3

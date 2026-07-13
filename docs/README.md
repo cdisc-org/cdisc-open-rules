@@ -5,20 +5,18 @@
 1. Rules are written to flag violations, i.e., triggered on a negative case.
 1. A conformance rule can be either a data rule or a business rule. A data rule is computable with elements to be checked for conformance are anchored to data, CORE-2 OPEN metadata, as well as elements and attributes in an ODM document. When a data rule is outside of the rule engine's capability, then it is not executable.
 
-## Rule Editor
+## Rule Editing with CDISC Open Rules
 
-Production URL: https://rule-editor.cdisc.org
-Training URL: https://training-rule-editor.cdisc.org
-
-Access to CDISC Library account is required.
+Production URL: https://github.com/cdisc-org/cdisc-open-rules
+Training URL: https://github.com/cdisc-org/cdisc-open-rules-training
 
 ### Schema for Rule Schematic
 
-Intellisense is informed by a schema in JSON format. The editor also uses it to provide suggestions.
+Intellisense is informed by a schema in JSON format.
 
 Links to the schema:
 
-- Base Schema: https://github.com/cdisc-org/cdisc-rules-engine/blob/main/resources/schema/rule/CORE-base.json
+- Base Schema: https://github.com/cdisc-org/cdisc-rules-engine/blob/main/resources/schema/rule-merged/CORE-base.json
 
 Reference: [JSON schema as a standard](https://json-schema.org)
 

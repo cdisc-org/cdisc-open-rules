@@ -1,23 +1,23 @@
 path,attribute,value
-,name,EL1
-,transitionStartRule.id,TransitionRule_7
-,parent_entity,StudyDesign
-,parent_id,StudyDesign_1
-,parent_rel,elements
-,id,StudyElement_1
-,transitionStartRule.name,ELEMENT_START_RULE_1
-,transitionStartRule,True
-,transitionEndRule.name,Not in dataset
-,transitionEndRule,Not in dataset
-,transitionEndRule.id,Not in dataset
-,name,E1
-,transitionStartRule.id,TransitionRule_1
-,parent_entity,StudyDesign
-,parent_id,StudyDesign_1
-,parent_rel,encounters
-,id,Encounter_1
-,transitionStartRule.name,ENCOUNTER_START_RULE_1
-,transitionStartRule,True
-,transitionEndRule.name,Not in dataset
-,transitionEndRule,Not in dataset
-,transitionEndRule.id,Not in dataset
+/Encounter/0,id,Encounter_1
+/Encounter/0,name,E1
+/Encounter/0,parent_entity,StudyDesign
+/Encounter/0,parent_id,StudyDesign_1
+/Encounter/0,parent_rel,encounters
+/Encounter/0,transitionEndRule,Not in dataset
+/Encounter/0,transitionEndRule.id,Not in dataset
+/Encounter/0,transitionEndRule.name,Not in dataset
+/Encounter/0,transitionStartRule,True
+/Encounter/0,transitionStartRule.id,TransitionRule_1
+/Encounter/0,transitionStartRule.name,ENCOUNTER_START_RULE_1
+/StudyElement/0,id,StudyElement_1
+/StudyElement/0,name,EL1
+/StudyElement/0,parent_entity,StudyDesign
+/StudyElement/0,parent_id,StudyDesign_1
+/StudyElement/0,parent_rel,elements
+/StudyElement/0,transitionEndRule,Not in dataset
+/StudyElement/0,transitionEndRule.id,Not in dataset
+/StudyElement/0,transitionEndRule.name,Not in dataset
+/StudyElement/0,transitionStartRule,True
+/StudyElement/0,transitionStartRule.id,TransitionRule_7
+/StudyElement/0,transitionStartRule.name,ELEMENT_START_RULE_1

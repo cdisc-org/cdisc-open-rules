@@ -1,15 +1,15 @@
 path,attribute,value
-,parent_rel,duration
-,text,About a month
-,durationWillVary,True
-,parent_entity,Administration
-,parent_id,Administration_1
-,id,Duration_1
-,reasonDurationWillVary,Not in dataset
-,parent_rel,plannedDuration
-,text,Three years
-,durationWillVary,
-,parent_entity,ScheduleTimeline
-,parent_id,ScheduleTimeline_1
-,id,Duration_3
-,reasonDurationWillVary,Not in dataset
+/Duration/0,durationWillVary,True
+/Duration/0,id,Duration_1
+/Duration/0,parent_entity,Administration
+/Duration/0,parent_id,Administration_1
+/Duration/0,parent_rel,duration
+/Duration/0,reasonDurationWillVary,Not in dataset
+/Duration/0,text,About a month
+/Duration/1,durationWillVary,
+/Duration/1,id,Duration_3
+/Duration/1,parent_entity,ScheduleTimeline
+/Duration/1,parent_id,ScheduleTimeline_1
+/Duration/1,parent_rel,plannedDuration
+/Duration/1,reasonDurationWillVary,Not in dataset
+/Duration/1,text,Three years

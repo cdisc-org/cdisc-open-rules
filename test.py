@@ -50,11 +50,13 @@ def get_test_cases(rule_path: Path) -> Dict[str, List[dict]]:
             continue
         for case_dir in sorted(type_dir.iterdir()):
             if case_dir.is_dir() and (case_dir / "data").is_dir():
-                cases[test_type].append({
-                    "case_id":    case_dir.name,
-                    "data_dir":   case_dir / "data",
-                    "results_dir": case_dir / "results",
-                })
+                cases[test_type].append(
+                    {
+                        "case_id": case_dir.name,
+                        "data_dir": case_dir / "data",
+                        "results_dir": case_dir / "results",
+                    }
+                )
     return cases
 
 
@@ -85,6 +87,7 @@ def next_results_path(results_dir: Path) -> Path:
 # Engine invocation
 # ---------------------------------------------------------------------------
 
+
 def run_engine(
     rule_yml: Path,
     data_dir: Path,
@@ -97,14 +100,23 @@ def run_engine(
         return False, f"No .env file found in {data_dir}"
 
     cmd = [
-        sys.executable, "core.py", "validate",
-        "-lr",  str(rule_yml.resolve()),
-        "-d",   str(data_dir.resolve()),
-        "-dep", str(env_file.resolve()),
-        "-of",  "CSV",
-        "-o",   str(output_path.resolve()),
-        "-p",   "disabled",
-        "-l",   log_level,
+        sys.executable,
+        "core.py",
+        "validate",
+        "-lr",
+        str(rule_yml.resolve()),
+        "-d",
+        str(data_dir.resolve()),
+        "-dep",
+        str(env_file.resolve()),
+        "-of",
+        "CSV",
+        "-o",
+        str(output_path.resolve()),
+        "-p",
+        "disabled",
+        "-l",
+        log_level,
     ]
 
     try:
@@ -150,7 +162,7 @@ def run_rule(
     log_level: str,
     capture_logs: bool,
 ):
-    rule_yml  = find_rule_yml(rule_path)
+    rule_yml = find_rule_yml(rule_path)
     all_cases = get_test_cases(rule_path)
 
     if specific_case:
@@ -167,16 +179,22 @@ def run_rule(
     for test_type in ("positive", "negative"):
         for case in all_cases[test_type]:
             any_ran = True
-            case_id     = case["case_id"]
-            data_dir    = case["data_dir"]
+            case_id = case["case_id"]
+            data_dir = case["data_dir"]
             output_path = next_results_path(case["results_dir"])
 
             print(f"\n  Running {test_type}/{case_id}...")
-            ok, output = run_engine(rule_yml, data_dir, output_path, log_level, capture_logs)
+            ok, output = run_engine(
+                rule_yml, data_dir, output_path, log_level, capture_logs
+            )
 
             csv_path = Path(str(output_path) + ".csv")
             if ok and csv_path.exists():
+<<<<<<< HEAD
                 print(f"    Done — results written to {csv_path}")
+=======
+                print(f"    Done — CSV written to {csv_path}")
+>>>>>>> main
             else:
                 print(f"    [ERROR] Engine failed for {test_type}/{case_id}")
                 for line in output.splitlines():
@@ -191,6 +209,7 @@ def run_rule(
 # ---------------------------------------------------------------------------
 # Prompts
 # ---------------------------------------------------------------------------
+
 
 def prompt_rule_path() -> Path:
     print("\nEnter the path to your rule folder (e.g. Unpublished/CORE-000001).")
@@ -215,11 +234,7 @@ def prompt_rule_path() -> Path:
 
 
 def prompt_case(cases: Dict[str, List[dict]]) -> Optional[str]:
-    flat = [
-        f"{t}/{c['case_id']}"
-        for t in ("positive", "negative")
-        for c in cases[t]
-    ]
+    flat = [f"{t}/{c['case_id']}" for t in ("positive", "negative") for c in cases[t]]
     if not flat:
         return None
 
@@ -262,11 +277,12 @@ def prompt_capture_logs() -> bool:
 # Entry point
 # ---------------------------------------------------------------------------
 
+
 def main():
-    rule_path   = prompt_rule_path()
-    cases       = get_test_cases(rule_path)
-    specific    = prompt_case(cases)
-    log_level   = prompt_log_level()
+    rule_path = prompt_rule_path()
+    cases = get_test_cases(rule_path)
+    specific = prompt_case(cases)
+    log_level = prompt_log_level()
     capture_logs = prompt_capture_logs()
     run_rule(rule_path, specific, log_level, capture_logs)
 

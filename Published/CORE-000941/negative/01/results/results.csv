@@ -1,81 +1,81 @@
 path,attribute,value
-,$value_for_code,Virtual Data
-,dataOriginType.decode,Data Generated Within Study
-,dataOriginType.codeSystem,http://www.cdisc.org
-,$codelist_code,C188727
-,$code_for_decode_pref_term,C188866
-,$pref_term_for_code,Virtual Data
-,id,StudyArm_1
-,dataOriginType.codeSystemVersion,2023-12-15
-,parent_id,StudyDesign_1
-,parent_rel,arms
-,$codelist_extensible_override,Y
-,$code_for_decode_value,C188866
-,parent_entity,StudyDesign
-,dataOriginType.code,C188865
-,$codelist_extensible,False
-,name,ARM1
-,$value_for_code,Historical Data
-,dataOriginType.decode,Historic Data
-,dataOriginType.codeSystem,http://www.cdisc.org
-,$codelist_code,C188727
-,$code_for_decode_pref_term,
-,$pref_term_for_code,Historical Data
-,id,StudyArm_2
-,dataOriginType.codeSystemVersion,2023-12-15
-,parent_id,StudyDesign_1
-,parent_rel,arms
-,$codelist_extensible_override,Y
-,$code_for_decode_value,
-,parent_entity,StudyDesign
-,dataOriginType.code,C188864
-,$codelist_extensible,False
-,name,ARM2
-,$value_for_code,
-,dataOriginType.decode,Real World Data
-,dataOriginType.codeSystem,http://www.cdisc.org
-,$codelist_code,C188727
-,$code_for_decode_pref_term,
-,$pref_term_for_code,
-,id,StudyArm_3
-,dataOriginType.codeSystemVersion,2024-09-27
-,parent_id,StudyDesign_1
-,parent_rel,arms
-,$codelist_extensible_override,
-,$code_for_decode_value,C165830
-,parent_entity,StudyDesign
-,dataOriginType.code,C165830xx
-,$codelist_extensible,True
-,name,ARM3
-,$value_for_code,Synthetic Data
-,dataOriginType.decode,Synthetic Data
-,dataOriginType.codeSystem,CDISC Terminology
-,$codelist_code,C188727
-,$code_for_decode_pref_term,C176263
-,$pref_term_for_code,Synthetic Data
-,id,StudyArm_4
-,dataOriginType.codeSystemVersion,2023-12-15
-,parent_id,StudyDesign_1
-,parent_rel,arms
-,$codelist_extensible_override,Y
-,$code_for_decode_value,C176263
-,parent_entity,StudyDesign
-,dataOriginType.code,C176263
-,$codelist_extensible,False
-,name,ARM4
-,$value_for_code,
-,dataOriginType.decode,Virtual Data
-,dataOriginType.codeSystem,http://www.cdisc.org
-,$codelist_code,C188727
-,$code_for_decode_pref_term,
-,$pref_term_for_code,
-,id,StudyArm_5
-,dataOriginType.codeSystemVersion,2024 09 27
-,parent_id,StudyDesign_1
-,parent_rel,arms
-,$codelist_extensible_override,
-,$code_for_decode_value,
-,parent_entity,StudyDesign
-,dataOriginType.code,C188865
-,$codelist_extensible,
-,name,ARM5
+/StudyArm/0,$code_for_decode_pref_term,C188866
+/StudyArm/0,$code_for_decode_value,C188866
+/StudyArm/0,$codelist_code,C188727
+/StudyArm/0,$codelist_extensible,False
+/StudyArm/0,$codelist_extensible_override,Y
+/StudyArm/0,$pref_term_for_code,Virtual Data
+/StudyArm/0,$value_for_code,Virtual Data
+/StudyArm/0,dataOriginType.code,C188865
+/StudyArm/0,dataOriginType.codeSystem,http://www.cdisc.org
+/StudyArm/0,dataOriginType.codeSystemVersion,2023-12-15
+/StudyArm/0,dataOriginType.decode,Data Generated Within Study
+/StudyArm/0,id,StudyArm_1
+/StudyArm/0,name,ARM1
+/StudyArm/0,parent_entity,StudyDesign
+/StudyArm/0,parent_id,StudyDesign_1
+/StudyArm/0,parent_rel,arms
+/StudyArm/1,$code_for_decode_pref_term,
+/StudyArm/1,$code_for_decode_value,
+/StudyArm/1,$codelist_code,C188727
+/StudyArm/1,$codelist_extensible,False
+/StudyArm/1,$codelist_extensible_override,Y
+/StudyArm/1,$pref_term_for_code,Historical Data
+/StudyArm/1,$value_for_code,Historical Data
+/StudyArm/1,dataOriginType.code,C188864
+/StudyArm/1,dataOriginType.codeSystem,http://www.cdisc.org
+/StudyArm/1,dataOriginType.codeSystemVersion,2023-12-15
+/StudyArm/1,dataOriginType.decode,Historic Data
+/StudyArm/1,id,StudyArm_2
+/StudyArm/1,name,ARM2
+/StudyArm/1,parent_entity,StudyDesign
+/StudyArm/1,parent_id,StudyDesign_1
+/StudyArm/1,parent_rel,arms
+/StudyArm/2,$code_for_decode_pref_term,
+/StudyArm/2,$code_for_decode_value,C165830
+/StudyArm/2,$codelist_code,C188727
+/StudyArm/2,$codelist_extensible,True
+/StudyArm/2,$codelist_extensible_override,
+/StudyArm/2,$pref_term_for_code,
+/StudyArm/2,$value_for_code,
+/StudyArm/2,dataOriginType.code,C165830xx
+/StudyArm/2,dataOriginType.codeSystem,http://www.cdisc.org
+/StudyArm/2,dataOriginType.codeSystemVersion,2024-09-27
+/StudyArm/2,dataOriginType.decode,Real World Data
+/StudyArm/2,id,StudyArm_3
+/StudyArm/2,name,ARM3
+/StudyArm/2,parent_entity,StudyDesign
+/StudyArm/2,parent_id,StudyDesign_1
+/StudyArm/2,parent_rel,arms
+/StudyArm/3,$code_for_decode_pref_term,C176263
+/StudyArm/3,$code_for_decode_value,C176263
+/StudyArm/3,$codelist_code,C188727
+/StudyArm/3,$codelist_extensible,False
+/StudyArm/3,$codelist_extensible_override,Y
+/StudyArm/3,$pref_term_for_code,Synthetic Data
+/StudyArm/3,$value_for_code,Synthetic Data
+/StudyArm/3,dataOriginType.code,C176263
+/StudyArm/3,dataOriginType.codeSystem,CDISC Terminology
+/StudyArm/3,dataOriginType.codeSystemVersion,2023-12-15
+/StudyArm/3,dataOriginType.decode,Synthetic Data
+/StudyArm/3,id,StudyArm_4
+/StudyArm/3,name,ARM4
+/StudyArm/3,parent_entity,StudyDesign
+/StudyArm/3,parent_id,StudyDesign_1
+/StudyArm/3,parent_rel,arms
+/StudyArm/4,$code_for_decode_pref_term,
+/StudyArm/4,$code_for_decode_value,
+/StudyArm/4,$codelist_code,C188727
+/StudyArm/4,$codelist_extensible,
+/StudyArm/4,$codelist_extensible_override,
+/StudyArm/4,$pref_term_for_code,
+/StudyArm/4,$value_for_code,
+/StudyArm/4,dataOriginType.code,C188865
+/StudyArm/4,dataOriginType.codeSystem,http://www.cdisc.org
+/StudyArm/4,dataOriginType.codeSystemVersion,2024 09 27
+/StudyArm/4,dataOriginType.decode,Virtual Data
+/StudyArm/4,id,StudyArm_5
+/StudyArm/4,name,ARM5
+/StudyArm/4,parent_entity,StudyDesign
+/StudyArm/4,parent_id,StudyDesign_1
+/StudyArm/4,parent_rel,arms

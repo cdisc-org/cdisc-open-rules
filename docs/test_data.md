@@ -12,8 +12,8 @@
 - Volunteer contributors could also use unit testing for debugging rule logic.
 
 - Unit testing includes testing rule logic on both positive and negative test data.
-    - Positive test data: Test data is in compliance with the conformance rule and will not result in output. All test data passes.
-    - Negative test data: Test data is not in compliance with the conformance rule and will result in output. Not all test data passes.
+  - Positive test data: Test data is in compliance with the conformance rule and will not result in output. All test data passes.
+  - Negative test data: Test data is not in compliance with the conformance rule and will result in output. Not all test data passes.
 - Unit testing will be conducted per CDISC Open Rule. If more than one conformance rule (e.g. conformance rules from 2 different standards like SDTMIG and SENDIG use exactly the same rule logic and scope) is included in 1 CDISC Open Rule, then unit testing should only be done once. The standard used to create test data can be chosen by the volunteer contributor.
 - Test data should be kept relatively small, just enough data points to assert correctness and full functionality of the rule.
 - Existing mock studies are available to the volunteer contributors as a valuable resource.
@@ -61,7 +61,7 @@ CT=sdtmct-2024-03-29
 ```
 
 - Based on the rule being tested and its IG scope, set the applicable `PRODUCT` and `VERSION`. Example: CG0100 is applicable for SDTMIG 3.3 so `PRODUCT=sdtmig` and `VERSION=3-3`.
-- If a rule is applicable for multiple versions of an IG, then only 1 IG should be tested.  If there is a clear distinction in rule logic between IG versions--multiple versions for each version should be created.
+- If a rule is applicable for multiple versions of an IG, then only 1 IG should be tested. If there is a clear distinction in rule logic between IG versions--multiple versions for each version should be created.
 - If a rule needs to use CDISC CT, add the `CT` key with the appropriate CT package.
 
 **`_datasets.csv`**
@@ -93,13 +93,13 @@ dm,USUBJID,Unique Subject Identifier,Char,50
 dm,AGE,Age,Num,8
 ```
 
-| Column | Description |
-|--------|-------------|
-| `dataset` | Filename of the dataset this variable belongs to (must match a `Filename` in `_datasets.csv`) |
-| `variable` | Variable name (e.g. `USUBJID`) |
-| `label` | Variable label |
-| `type` | Data type — `Char` or `Num` |
-| `length` | Maximum field length |
+| Column     | Description                                                                                   |
+| ---------- | --------------------------------------------------------------------------------------------- |
+| `dataset`  | Filename of the dataset this variable belongs to (must match a `Filename` in `_datasets.csv`) |
+| `variable` | Variable name (e.g. `USUBJID`)                                                                |
+| `label`    | Variable label                                                                                |
+| `type`     | Data type — `Char` or `Num`                                                                   |
+| `length`   | Maximum field length                                                                          |
 
 **Dataset CSV files**
 
@@ -123,7 +123,7 @@ under construction
 
 - In case a CDISC Open Rule is using metadata captured in a define.xml to execute rule logic, then a test define.xml needs to be created (negative and positive) and uploaded for unit testing in the `data/` directory of each test.
 - To create this test define.xml, the templates created for the Metadata Submission Guidelines for SDTM and ADaM can be used and adapted accordingly.
-- Reference the define.xml in the `.env` file using `DEFINE_XML=define.xml`.  This should be equal to the name of the define file contained in the directory.
+- Reference the define.xml in the `.env` file using `DEFINE_XML=define.xml`. This should be equal to the name of the define file contained in the directory.
 
 #### TIG
 
@@ -151,6 +151,7 @@ under construction
 **Best Practices**
 
 Creating solid, qualitative test data is a skill on its own and needs to be done with care. Below best practices will help you during this process.
+
 - Test data should test **all** functionalities of the rule logic.
 - Test data should test both **condition** (if applicable) and **rule**.
 - If more than 1 domain is in scope, test data should be created for more than 1 domain.
@@ -164,6 +165,7 @@ Creating solid, qualitative test data is a skill on its own and needs to be done
 - If the rule being tested references CDISC CT, then the correct name and version should be added as `CT` in the `.env` file.
 
 Volunteer contributors should use the information available to create test data, such that:
+
 - Dataset CSV files can be copied from sample data and adapted.
 - Unused variables can be removed from `_variables.csv` and the dataset CSV.
 - Variable metadata can be modified in `_variables.csv` in accordance with the test purpose of the associated rule logic.
@@ -184,7 +186,7 @@ negative/01/    negative/02/ (only if applicable)    ...
 For negative test cases, there is no automated cell-level validation check for CSV test data — human review of the results is required. When raising your PR:
 
 - Describe the errors you expect to see in the PR description or as a comment.
-- Reviewers will verify the generated `results.csv` against your stated intent.
+- Reviewers will verify the actual `results.csv` against your stated expected results.
 - The CI pipeline diffs the `results.csv` you commit locally against engine output during review. If a difference is detected, the check will fail — re-run locally, verify the results look correct, and push the updated `results.csv`.
 
 A `results.csv` summarizing issues found is generated after each local run. **Leave `results/` empty when first creating a test case.** After running locally and confirming results, commit the `results.csv`before opening your PR.
@@ -193,30 +195,30 @@ A `results.csv` summarizing issues found is generated after each local run. **Le
 
 This section contains links to the different Test Data Templates, Test Data Examples, and Sample Data. Together with the instructions given above, this should give volunteer contributors sufficient information to create consistent, qualitative test data.
 
-  #### Template ####
+#### Template
 
-  - The `_datasets.csv` template contains a list of datasets that can be used for unit testing.
-  - The `_variables.csv` template includes Identifier, Events, Interventions, Findings, Timing, and Associated Persons variables from SDTM v2.0.
-  - Domain-specific variable sets are drawn from SDTMIG v3.4, as well as AC, APRELSUB, DI, and TX from SDTM v2.0.
+- The `_datasets.csv` template contains a list of datasets that can be used for unit testing.
+- The `_variables.csv` template includes Identifier, Events, Interventions, Findings, Timing, and Associated Persons variables from SDTM v2.0.
+- Domain-specific variable sets are drawn from SDTMIG v3.4, as well as AC, APRELSUB, DI, and TX from SDTM v2.0.
 
-  [unit-test-sdtmig-sendig-template.xlsx](files/unit-test-sdtmig-sendig-template.xlsx ":ignore")
+[unit-test-sdtmig-sendig-template.xlsx](files/unit-test-sdtmig-sendig-template.xlsx ":ignore")
 
-  #### Examples ####
+#### Examples
 
-  Also, here is a mock Excel workbook for positive and negative testing against which contains:
+Also, here is a mock Excel workbook for positive and negative testing against which contains:
 
-  - dm.xpt and ae.xpt.
-  - Both with variable metadata adjusted, unused columns removed, data rows added.
+- dm.xpt and ae.xpt.
+- Both with variable metadata adjusted, unused columns removed, data rows added.
 
-  [unit-test-ruleid-sdtmigexample-positive.xlsx](files/unit-test-sdtmigexample-positive.xlsx ":ignore")
-  [unit-test-ruleid-sdtmigexample-negative.xlsx](files/unit-test-sdtmigexample-negative.xlsx ":ignore")
+[unit-test-ruleid-sdtmigexample-positive.xlsx](files/unit-test-sdtmigexample-positive.xlsx ":ignore")
+[unit-test-ruleid-sdtmigexample-negative.xlsx](files/unit-test-sdtmigexample-negative.xlsx ":ignore")
 
-  #### Sample Data ####
+#### Sample Data
 
-  CDISC has 2 sets of mock study in SDTM format. They have been converted for use as test data.
+CDISC has 2 sets of mock study in SDTM format. They have been converted for use as test data.
 
-  - [CDISCTestData-sdtm-xpt-xlsx.zip](files/CDISCTestData-sdtm-xpt-xlsx.zip ":ignore") A set of test data files transformed from the CDISCTestData Github repo, sourced from /SDTM/XPT. Per Read Me, this mock study implements "SDTM IG Version 3.2.
-  - [sdtm-msg-2-0-m5-datasets-xlsx.zip](files/sdtm-msg-2-0-m5-datasets-xlsx.zip ":ignore") A set of test data files transformed from the example submission bundled in the SDTM MSG v2.0, sourced from /m5/datasets/cdiscpilot01/tabulations/sdtm, as well as the split subdirectory. Per documentation, this example submission implements "SDTM v1.7/SDTMIG v3.3, and SDTM Terminology 2020-03-27.
+- [CDISCTestData-sdtm-xpt-xlsx.zip](files/CDISCTestData-sdtm-xpt-xlsx.zip ":ignore") A set of test data files transformed from the CDISCTestData Github repo, sourced from /SDTM/XPT. Per Read Me, this mock study implements "SDTM IG Version 3.2.
+- [sdtm-msg-2-0-m5-datasets-xlsx.zip](files/sdtm-msg-2-0-m5-datasets-xlsx.zip ":ignore") A set of test data files transformed from the example submission bundled in the SDTM MSG v2.0, sourced from /m5/datasets/cdiscpilot01/tabulations/sdtm, as well as the split subdirectory. Per documentation, this example submission implements "SDTM v1.7/SDTMIG v3.3, and SDTM Terminology 2020-03-27.
 
 ## Storage
 

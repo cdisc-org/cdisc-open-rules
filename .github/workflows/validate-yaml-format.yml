@@ -2,8 +2,8 @@ name: Validate YAML Formatting
 on:
   pull_request:
     paths:
-      - 'Unpublished/**/rule.yml'
-      - 'Published/**/rule.yml'
+      - "Unpublished/**/rule.yml"
+      - "Published/**/rule.yml"
     types: [opened, synchronize, reopened]
   workflow_dispatch: {}
 jobs:
@@ -20,9 +20,8 @@ jobs:
       - name: Set up Python 3.12
         uses: actions/setup-python@v5
         with:
-          python-version: '3.12'
-      - name: Install pyyaml
-        run: pip install pyyaml
+          python-version: "3.12"
+      - run: pip install ruamel.yaml
       - name: Detect changed rule.yml files
         id: changed-files
         run: |

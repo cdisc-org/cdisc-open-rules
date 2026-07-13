@@ -1,17 +1,17 @@
 path,attribute,value
-,$activity_ids_for_study_design,"['Activity_1', 'Activity_2']"
-,name,Inclusion/exclusion criteria
-,parent_rel,activities
-,parent_entity,StudyDesign
-,parent_id,StudyDesign_1
-,previousId,Activity_1
-,nextId,Activity_3
-,id,Activity_2
-,$activity_ids_for_study_design,['Activity_3']
-,name,Patient number assigned
-,parent_rel,activities
-,parent_entity,StudyDesign
-,parent_id,StudyDesign_2
-,previousId,Activity_2
-,nextId,
-,id,Activity_3
+/Activity/2,$activity_ids_for_study_design,"['Activity_1', 'Activity_2']"
+/Activity/2,id,Activity_2
+/Activity/2,name,Inclusion/exclusion criteria
+/Activity/2,nextId,Activity_3
+/Activity/2,parent_entity,StudyDesign
+/Activity/2,parent_id,StudyDesign_1
+/Activity/2,parent_rel,activities
+/Activity/2,previousId,Activity_1
+/Activity/3,$activity_ids_for_study_design,['Activity_3']
+/Activity/3,id,Activity_3
+/Activity/3,name,Patient number assigned
+/Activity/3,nextId,
+/Activity/3,parent_entity,StudyDesign
+/Activity/3,parent_id,StudyDesign_2
+/Activity/3,parent_rel,activities
+/Activity/3,previousId,Activity_2

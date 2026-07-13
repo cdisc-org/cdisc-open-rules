@@ -1,91 +1,91 @@
 path,attribute,value
-,id,MedicalDevice_1
-,$code_for_decode_value,
-,sourcing.codeSystem,http://www.cdisc.org
-,$value_for_code,
-,name,DEVICE1
-,$codelist_extensible,
-,parent_entity,StudyVersion
-,$code_for_decode_pref_term,
-,$codelist_code,C215482
-,$pref_term_for_code,
-,sourcing.decode,Centrally Sourced
-,parent_rel,medicalDevices
-,sourcing.code,C215659
-,sourcing.codeSystemVersion,2024-09-27
-,parent_id,StudyVersion_1
-,id,MedicalDevice_2
-,$code_for_decode_value,C215659
-,sourcing.codeSystem,http://www.cdisc.org
-,$value_for_code,Locally Sourced
-,name,DEVICE2
-,$codelist_extensible,True
-,parent_entity,StudyVersion
-,$code_for_decode_pref_term,
-,$codelist_code,C215482
-,$pref_term_for_code,Locally Sourced Indicator
-,sourcing.decode,Centrally Sourced
-,parent_rel,medicalDevices
-,sourcing.code,C215660
-,sourcing.codeSystemVersion,2025-09-26
-,parent_id,StudyVersion_1
-,id,MedicalDevice_3
-,$code_for_decode_value,
-,sourcing.codeSystem,http://www.cdisc.org
-,$value_for_code,Centrally Sourced
-,name,DEVICE3
-,$codelist_extensible,True
-,parent_entity,StudyVersion
-,$code_for_decode_pref_term,
-,$codelist_code,C215482
-,$pref_term_for_code,Centrally Sourced Indicator
-,sourcing.decode,Central
-,parent_rel,medicalDevices
-,sourcing.code,C215659
-,sourcing.codeSystemVersion,2025-09-26
-,parent_id,StudyVersion_1
-,id,MedicalDevice_4
-,$code_for_decode_value,
-,sourcing.codeSystem,http://www.cdisc.org
-,$value_for_code,
-,name,DEVICE4
-,$codelist_extensible,True
-,parent_entity,StudyVersion
-,$code_for_decode_pref_term,C215660
-,$codelist_code,C215482
-,$pref_term_for_code,
-,sourcing.decode,Locally Sourced Indicator
-,parent_rel,medicalDevices
-,sourcing.code,C215660xx
-,sourcing.codeSystemVersion,2025-09-26
-,parent_id,StudyVersion_1
-,id,MedicalDevice_5
-,$code_for_decode_value,C215659
-,sourcing.codeSystem,CDISC Medical Device Sourcing Value Set Terminology
-,$value_for_code,Centrally Sourced
-,name,DEVICE5
-,$codelist_extensible,True
-,parent_entity,StudyVersion
-,$code_for_decode_pref_term,
-,$codelist_code,C215482
-,$pref_term_for_code,Centrally Sourced Indicator
-,sourcing.decode,Centrally Sourced
-,parent_rel,medicalDevices
-,sourcing.code,C215659
-,sourcing.codeSystemVersion,2025-09-26
-,parent_id,StudyVersion_1
-,id,MedicalDevice_6
-,$code_for_decode_value,
-,sourcing.codeSystem,http://www.cdisc.org
-,$value_for_code,
-,name,DEVICE6
-,$codelist_extensible,
-,parent_entity,StudyVersion
-,$code_for_decode_pref_term,
-,$codelist_code,C215482
-,$pref_term_for_code,
-,sourcing.decode,Centrally Sourced
-,parent_rel,medicalDevices
-,sourcing.code,C215659
-,sourcing.codeSystemVersion,2025/09/26
-,parent_id,StudyVersion_1
+/MedicalDevice/0,$code_for_decode_pref_term,
+/MedicalDevice/0,$code_for_decode_value,
+/MedicalDevice/0,$codelist_code,C215482
+/MedicalDevice/0,$codelist_extensible,
+/MedicalDevice/0,$pref_term_for_code,
+/MedicalDevice/0,$value_for_code,
+/MedicalDevice/0,id,MedicalDevice_1
+/MedicalDevice/0,name,DEVICE1
+/MedicalDevice/0,parent_entity,StudyVersion
+/MedicalDevice/0,parent_id,StudyVersion_1
+/MedicalDevice/0,parent_rel,medicalDevices
+/MedicalDevice/0,sourcing.code,C215659
+/MedicalDevice/0,sourcing.codeSystem,http://www.cdisc.org
+/MedicalDevice/0,sourcing.codeSystemVersion,2024-09-27
+/MedicalDevice/0,sourcing.decode,Centrally Sourced
+/MedicalDevice/1,$code_for_decode_pref_term,
+/MedicalDevice/1,$code_for_decode_value,C215659
+/MedicalDevice/1,$codelist_code,C215482
+/MedicalDevice/1,$codelist_extensible,True
+/MedicalDevice/1,$pref_term_for_code,Locally Sourced Indicator
+/MedicalDevice/1,$value_for_code,Locally Sourced
+/MedicalDevice/1,id,MedicalDevice_2
+/MedicalDevice/1,name,DEVICE2
+/MedicalDevice/1,parent_entity,StudyVersion
+/MedicalDevice/1,parent_id,StudyVersion_1
+/MedicalDevice/1,parent_rel,medicalDevices
+/MedicalDevice/1,sourcing.code,C215660
+/MedicalDevice/1,sourcing.codeSystem,http://www.cdisc.org
+/MedicalDevice/1,sourcing.codeSystemVersion,2025-09-26
+/MedicalDevice/1,sourcing.decode,Centrally Sourced
+/MedicalDevice/2,$code_for_decode_pref_term,
+/MedicalDevice/2,$code_for_decode_value,
+/MedicalDevice/2,$codelist_code,C215482
+/MedicalDevice/2,$codelist_extensible,True
+/MedicalDevice/2,$pref_term_for_code,Centrally Sourced Indicator
+/MedicalDevice/2,$value_for_code,Centrally Sourced
+/MedicalDevice/2,id,MedicalDevice_3
+/MedicalDevice/2,name,DEVICE3
+/MedicalDevice/2,parent_entity,StudyVersion
+/MedicalDevice/2,parent_id,StudyVersion_1
+/MedicalDevice/2,parent_rel,medicalDevices
+/MedicalDevice/2,sourcing.code,C215659
+/MedicalDevice/2,sourcing.codeSystem,http://www.cdisc.org
+/MedicalDevice/2,sourcing.codeSystemVersion,2025-09-26
+/MedicalDevice/2,sourcing.decode,Central
+/MedicalDevice/3,$code_for_decode_pref_term,C215660
+/MedicalDevice/3,$code_for_decode_value,
+/MedicalDevice/3,$codelist_code,C215482
+/MedicalDevice/3,$codelist_extensible,True
+/MedicalDevice/3,$pref_term_for_code,
+/MedicalDevice/3,$value_for_code,
+/MedicalDevice/3,id,MedicalDevice_4
+/MedicalDevice/3,name,DEVICE4
+/MedicalDevice/3,parent_entity,StudyVersion
+/MedicalDevice/3,parent_id,StudyVersion_1
+/MedicalDevice/3,parent_rel,medicalDevices
+/MedicalDevice/3,sourcing.code,C215660xx
+/MedicalDevice/3,sourcing.codeSystem,http://www.cdisc.org
+/MedicalDevice/3,sourcing.codeSystemVersion,2025-09-26
+/MedicalDevice/3,sourcing.decode,Locally Sourced Indicator
+/MedicalDevice/4,$code_for_decode_pref_term,
+/MedicalDevice/4,$code_for_decode_value,C215659
+/MedicalDevice/4,$codelist_code,C215482
+/MedicalDevice/4,$codelist_extensible,True
+/MedicalDevice/4,$pref_term_for_code,Centrally Sourced Indicator
+/MedicalDevice/4,$value_for_code,Centrally Sourced
+/MedicalDevice/4,id,MedicalDevice_5
+/MedicalDevice/4,name,DEVICE5
+/MedicalDevice/4,parent_entity,StudyVersion
+/MedicalDevice/4,parent_id,StudyVersion_1
+/MedicalDevice/4,parent_rel,medicalDevices
+/MedicalDevice/4,sourcing.code,C215659
+/MedicalDevice/4,sourcing.codeSystem,CDISC Medical Device Sourcing Value Set Terminology
+/MedicalDevice/4,sourcing.codeSystemVersion,2025-09-26
+/MedicalDevice/4,sourcing.decode,Centrally Sourced
+/MedicalDevice/5,$code_for_decode_pref_term,
+/MedicalDevice/5,$code_for_decode_value,
+/MedicalDevice/5,$codelist_code,C215482
+/MedicalDevice/5,$codelist_extensible,
+/MedicalDevice/5,$pref_term_for_code,
+/MedicalDevice/5,$value_for_code,
+/MedicalDevice/5,id,MedicalDevice_6
+/MedicalDevice/5,name,DEVICE6
+/MedicalDevice/5,parent_entity,StudyVersion
+/MedicalDevice/5,parent_id,StudyVersion_1
+/MedicalDevice/5,parent_rel,medicalDevices
+/MedicalDevice/5,sourcing.code,C215659
+/MedicalDevice/5,sourcing.codeSystem,http://www.cdisc.org
+/MedicalDevice/5,sourcing.codeSystemVersion,2025/09/26
+/MedicalDevice/5,sourcing.decode,Centrally Sourced

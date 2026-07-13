@@ -1,21 +1,21 @@
 path,attribute,value
-,parent_id,AgentAdministration_1
-,parent_rel,duration
-,description,About a month
-,id,AdministrationDuration_1
-,parent_entity,AgentAdministration
-,quantity.id,Quantity_1
-,quantity.unit.standardCode.decode,MONTHS
-,quantity.value,1
-,durationWillVary,True
-,quantity,True
-,parent_id,AgentAdministration_2
-,parent_rel,duration
-,description,Exactly one month
-,id,AdministrationDuration_2
-,parent_entity,AgentAdministration
-,quantity.id,
-,quantity.unit.standardCode.decode,
-,quantity.value,
-,durationWillVary,False
-,quantity,False
+/AdministrationDuration/0,description,About a month
+/AdministrationDuration/0,durationWillVary,True
+/AdministrationDuration/0,id,AdministrationDuration_1
+/AdministrationDuration/0,parent_entity,AgentAdministration
+/AdministrationDuration/0,parent_id,AgentAdministration_1
+/AdministrationDuration/0,parent_rel,duration
+/AdministrationDuration/0,quantity,True
+/AdministrationDuration/0,quantity.id,Quantity_1
+/AdministrationDuration/0,quantity.unit.standardCode.decode,MONTHS
+/AdministrationDuration/0,quantity.value,1
+/AdministrationDuration/1,description,Exactly one month
+/AdministrationDuration/1,durationWillVary,False
+/AdministrationDuration/1,id,AdministrationDuration_2
+/AdministrationDuration/1,parent_entity,AgentAdministration
+/AdministrationDuration/1,parent_id,AgentAdministration_2
+/AdministrationDuration/1,parent_rel,duration
+/AdministrationDuration/1,quantity,False
+/AdministrationDuration/1,quantity.id,
+/AdministrationDuration/1,quantity.unit.standardCode.decode,
+/AdministrationDuration/1,quantity.value,

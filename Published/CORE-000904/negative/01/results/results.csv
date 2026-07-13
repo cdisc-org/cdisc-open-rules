@@ -1,106 +1,106 @@
 path,attribute,value
-,type.codeSystem,http://www.cdisc.org
-,$value_for_code,Before
-,id,Timing_2
-,type.code,C201357
-,$code_for_decode_value,
-,$codelist_code,C201264
-,$pref_term_for_code,Before Timing Type
-,parent_id,ScheduleTimeline_4
-,$codelist_extensible,False
-,parent_entity,ScheduleTimeline
-,type.codeSystemVersion,2023-12-15
-,type.decode,Before/After
-,name,TIM2
-,parent_rel,timings
-,$code_for_decode_pref_term,
-,type.codeSystem,http://www.cdisc.org
-,$value_for_code,Before
-,id,Timing_3
-,type.code,C201357
-,$code_for_decode_value,
-,$codelist_code,C201264
-,$pref_term_for_code,Before Timing Type
-,parent_id,ScheduleTimeline_4
-,$codelist_extensible,False
-,parent_entity,ScheduleTimeline
-,type.codeSystemVersion,2023-12-15
-,type.decode,BEFORE TIMING TYPE
-,name,TIM3
-,parent_rel,timings
-,$code_for_decode_pref_term,C201357
-,type.codeSystem,https://www.cdisc.org
-,$value_for_code,Fixed Reference
-,id,Timing_4
-,type.code,C201358
-,$code_for_decode_value,C201358
-,$codelist_code,C201264
-,$pref_term_for_code,Fixed Reference Timing Type
-,parent_id,ScheduleTimeline_4
-,$codelist_extensible,False
-,parent_entity,ScheduleTimeline
-,type.codeSystemVersion,2023-12-15
-,type.decode,Fixed Reference
-,name,TIM4
-,parent_rel,timings
-,$code_for_decode_pref_term,
-,type.codeSystem,http://www.cdisc.org
-,$value_for_code,Fixed Reference
-,id,Timing_5
-,type.code,C201358
-,$code_for_decode_value,
-,$codelist_code,C201264
-,$pref_term_for_code,Fixed Reference Timing Type
-,parent_id,ScheduleTimeline_4
-,$codelist_extensible,False
-,parent_entity,ScheduleTimeline
-,type.codeSystemVersion,2023-12-15
-,type.decode,After Timing Type
-,name,TIM5
-,parent_rel,timings
-,$code_for_decode_pref_term,C201356
-,type.codeSystem,http://www.cdisc.org
-,$value_for_code,
-,id,Timing_6
-,type.code,C201358
-,$code_for_decode_value,
-,$codelist_code,C201264
-,$pref_term_for_code,
-,parent_id,ScheduleTimeline_4
-,$codelist_extensible,
-,parent_entity,ScheduleTimeline
-,type.codeSystemVersion,2023-12-16
-,type.decode,Fixed Reference
-,name,TIM6
-,parent_rel,timings
-,$code_for_decode_pref_term,
-,type.codeSystem,http://www.cdisc.org
-,$value_for_code,
-,id,Timing_7
-,type.code,C201356xx
-,$code_for_decode_value,C201356
-,$codelist_code,C201264
-,$pref_term_for_code,
-,parent_id,ScheduleTimeline_4
-,$codelist_extensible,False
-,parent_entity,ScheduleTimeline
-,type.codeSystemVersion,2024-09-27
-,type.decode,After
-,name,TIM7
-,parent_rel,timings
-,$code_for_decode_pref_term,
-,type.codeSystem,http://www.cdisc.org
-,$value_for_code,
-,id,Timing_8
-,type.code,C0070X
-,$code_for_decode_value,
-,$codelist_code,C201264
-,$pref_term_for_code,
-,parent_id,ScheduleTimeline_4
-,$codelist_extensible,False
-,parent_entity,ScheduleTimeline
-,type.codeSystemVersion,2024-09-27
-,type.decode,Extension
-,name,TIM8
-,parent_rel,timings
-,$code_for_decode_pref_term,
+/Timing/0,$code_for_decode_pref_term,
+/Timing/0,$code_for_decode_value,
+/Timing/0,$codelist_code,C201264
+/Timing/0,$codelist_extensible,False
+/Timing/0,$pref_term_for_code,Before Timing Type
+/Timing/0,$value_for_code,Before
+/Timing/0,id,Timing_2
+/Timing/0,name,TIM2
+/Timing/0,parent_entity,ScheduleTimeline
+/Timing/0,parent_id,ScheduleTimeline_4
+/Timing/0,parent_rel,timings
+/Timing/0,type.code,C201357
+/Timing/0,type.codeSystem,http://www.cdisc.org
+/Timing/0,type.codeSystemVersion,2023-12-15
+/Timing/0,type.decode,Before/After
+/Timing/1,$code_for_decode_pref_term,C201357
+/Timing/1,$code_for_decode_value,
+/Timing/1,$codelist_code,C201264
+/Timing/1,$codelist_extensible,False
+/Timing/1,$pref_term_for_code,Before Timing Type
+/Timing/1,$value_for_code,Before
+/Timing/1,id,Timing_3
+/Timing/1,name,TIM3
+/Timing/1,parent_entity,ScheduleTimeline
+/Timing/1,parent_id,ScheduleTimeline_4
+/Timing/1,parent_rel,timings
+/Timing/1,type.code,C201357
+/Timing/1,type.codeSystem,http://www.cdisc.org
+/Timing/1,type.codeSystemVersion,2023-12-15
+/Timing/1,type.decode,BEFORE TIMING TYPE
+/Timing/2,$code_for_decode_pref_term,
+/Timing/2,$code_for_decode_value,C201358
+/Timing/2,$codelist_code,C201264
+/Timing/2,$codelist_extensible,False
+/Timing/2,$pref_term_for_code,Fixed Reference Timing Type
+/Timing/2,$value_for_code,Fixed Reference
+/Timing/2,id,Timing_4
+/Timing/2,name,TIM4
+/Timing/2,parent_entity,ScheduleTimeline
+/Timing/2,parent_id,ScheduleTimeline_4
+/Timing/2,parent_rel,timings
+/Timing/2,type.code,C201358
+/Timing/2,type.codeSystem,https://www.cdisc.org
+/Timing/2,type.codeSystemVersion,2023-12-15
+/Timing/2,type.decode,Fixed Reference
+/Timing/3,$code_for_decode_pref_term,C201356
+/Timing/3,$code_for_decode_value,
+/Timing/3,$codelist_code,C201264
+/Timing/3,$codelist_extensible,False
+/Timing/3,$pref_term_for_code,Fixed Reference Timing Type
+/Timing/3,$value_for_code,Fixed Reference
+/Timing/3,id,Timing_5
+/Timing/3,name,TIM5
+/Timing/3,parent_entity,ScheduleTimeline
+/Timing/3,parent_id,ScheduleTimeline_4
+/Timing/3,parent_rel,timings
+/Timing/3,type.code,C201358
+/Timing/3,type.codeSystem,http://www.cdisc.org
+/Timing/3,type.codeSystemVersion,2023-12-15
+/Timing/3,type.decode,After Timing Type
+/Timing/4,$code_for_decode_pref_term,
+/Timing/4,$code_for_decode_value,
+/Timing/4,$codelist_code,C201264
+/Timing/4,$codelist_extensible,
+/Timing/4,$pref_term_for_code,
+/Timing/4,$value_for_code,
+/Timing/4,id,Timing_6
+/Timing/4,name,TIM6
+/Timing/4,parent_entity,ScheduleTimeline
+/Timing/4,parent_id,ScheduleTimeline_4
+/Timing/4,parent_rel,timings
+/Timing/4,type.code,C201358
+/Timing/4,type.codeSystem,http://www.cdisc.org
+/Timing/4,type.codeSystemVersion,2023-12-16
+/Timing/4,type.decode,Fixed Reference
+/Timing/5,$code_for_decode_pref_term,
+/Timing/5,$code_for_decode_value,C201356
+/Timing/5,$codelist_code,C201264
+/Timing/5,$codelist_extensible,False
+/Timing/5,$pref_term_for_code,
+/Timing/5,$value_for_code,
+/Timing/5,id,Timing_7
+/Timing/5,name,TIM7
+/Timing/5,parent_entity,ScheduleTimeline
+/Timing/5,parent_id,ScheduleTimeline_4
+/Timing/5,parent_rel,timings
+/Timing/5,type.code,C201356xx
+/Timing/5,type.codeSystem,http://www.cdisc.org
+/Timing/5,type.codeSystemVersion,2024-09-27
+/Timing/5,type.decode,After
+/Timing/6,$code_for_decode_pref_term,
+/Timing/6,$code_for_decode_value,
+/Timing/6,$codelist_code,C201264
+/Timing/6,$codelist_extensible,False
+/Timing/6,$pref_term_for_code,
+/Timing/6,$value_for_code,
+/Timing/6,id,Timing_8
+/Timing/6,name,TIM8
+/Timing/6,parent_entity,ScheduleTimeline
+/Timing/6,parent_id,ScheduleTimeline_4
+/Timing/6,parent_rel,timings
+/Timing/6,type.code,C0070X
+/Timing/6,type.codeSystem,http://www.cdisc.org
+/Timing/6,type.codeSystemVersion,2024-09-27
+/Timing/6,type.decode,Extension

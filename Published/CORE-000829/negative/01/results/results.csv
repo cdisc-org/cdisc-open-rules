@@ -1,19 +1,19 @@
 path,attribute,value
-,codeSystem,http://www.cdisc.org
-,name,E1
-,code,C175574
-,codeSystemVersion,2023-12-15
-,parent_rel,contactModes
-,parent_id,Encounter_1
-,decode,In Person
-,id,Code_85
-,parent_entity,Encounter
-,codeSystem,http://www.cdisc.org
-,name,E1
-,code,C175574
-,codeSystemVersion,2023-12-15
-,parent_rel,contactModes
-,parent_id,Encounter_1
-,decode,Telephone
-,id,Code_86
-,parent_entity,Encounter
+/Code/0,code,C175574
+/Code/0,codeSystem,http://www.cdisc.org
+/Code/0,codeSystemVersion,2023-12-15
+/Code/0,decode,In Person
+/Code/0,id,Code_85
+/Code/0,name,E1
+/Code/0,parent_entity,Encounter
+/Code/0,parent_id,Encounter_1
+/Code/0,parent_rel,contactModes
+/Code/1,code,C175574
+/Code/1,codeSystem,http://www.cdisc.org
+/Code/1,codeSystemVersion,2023-12-15
+/Code/1,decode,Telephone
+/Code/1,id,Code_86
+/Code/1,name,E1
+/Code/1,parent_entity,Encounter
+/Code/1,parent_id,Encounter_1
+/Code/1,parent_rel,contactModes
