@@ -44,7 +44,7 @@ negative/
 
 - Positive and negative test data are kept in separate numbered test case folders.
 - Multiple datasets can be included in a single test case by providing multiple dataset CSV files.
-- The `results/` folder will contain the `results.csv` --this can be generated using the local run script, outlined in the readme. The local script also generates a `results.json` which can we used for testing but should be deleted when sending a rule to QC for publication.
+- The `results/` folder will contain the `results.csv` --this can be generated using the local run script, outlined in the readme.
 
 #### SDTMIG & SENDIG
 
@@ -189,7 +189,7 @@ For negative test cases, there is no automated cell-level validation check for C
 - Reviewers will verify the actual `results.csv` against your stated expected results.
 - The CI pipeline diffs the `results.csv` you commit locally against engine output during review. If a difference is detected, the check will fail — re-run locally, verify the results look correct, and push the updated `results.csv`.
 
-A `results.csv` summarizing issues found is generated alongside `results.json` after each local run. **Leave `results/` empty when first creating a test case.** After running locally and confirming results, commit the `results.csv` but delete `results.json` before opening your PR.
+A `results.csv` summarizing issues found is generated after each local run. **Leave `results/` empty when first creating a test case.** After running locally and confirming results, commit the `results.csv`before opening your PR.
 
 ### Templates - Examples - Sample Data
 
