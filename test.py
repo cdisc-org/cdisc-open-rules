@@ -2,7 +2,7 @@
 """
 Local test runner for CDISC Open Rules.
 Prompts for a rule folder path, runs the CORE engine against each test case,
-and writes results.json into each case's results/ directory.
+and writes results.csv into each case's results/ directory.
 """
 
 import os
@@ -190,7 +190,7 @@ def run_rule(
 
             csv_path = Path(str(output_path) + ".csv")
             if ok and csv_path.exists():
-                print(f"    Done — CSV written to {csv_path}")
+                print(f"    Done — results written to {csv_path}")
             else:
                 print(f"    [ERROR] Engine failed for {test_type}/{case_id}")
                 for line in output.splitlines():
