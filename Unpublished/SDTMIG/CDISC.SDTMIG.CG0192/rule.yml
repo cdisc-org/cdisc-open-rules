@@ -2,22 +2,21 @@
 # Condition: Organisms present in the specimen
 # Rule: MBTESTCD = 'ORGANISM'
 Authorities:
-  - Organization: CDISC
-    Standards:
-      - Name: SDTMIG
-        Version: '3.2'
-        References:
-          - Origin: SDTM and SDTMIG Conformance Rules
-            Rule Identifier:
-              Id: CG0192
-              Version: '1'
-            Version: '2.0'
-            Citations:
-              - Cited Guidance: 3. MBTESTCD value for organisms present in a specimen
-                  is 'ORGANISM'.
-                Document: IG v3.2
-                Item: Assumption 3
-                Section: '6.3'
+- Organization: CDISC
+  Standards:
+  - Name: SDTMIG
+    References:
+    - Citations:
+      - Cited Guidance: 3. MBTESTCD value for organisms present in a specimen is 'ORGANISM'.
+        Document: IG v3.2
+        Item: Assumption 3
+        Section: '6.3'
+      Origin: SDTM and SDTMIG Conformance Rules
+      Rule Identifier:
+        Id: CG0192
+        Version: '1'
+      Version: '2.0'
+    Version: '3.2'
 Check:
   all: []
 Core:
@@ -32,8 +31,8 @@ Rule Type: Record Data
 Scope:
   Classes:
     Include:
-      - FINDINGS
+    - FINDINGS
   Domains:
     Include:
-      - MB
+    - MB
 Sensitivity: Record

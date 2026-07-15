@@ -2,56 +2,53 @@
 # Condition: APID identifies group of associated persons defined in POOLDEF
 # Rule: APID in POOLDEF.POOLID
 Authorities:
-  - Organization: CDISC
-    Standards:
-      - Name: SDTMIG
-        Version: '3.2'
-        References:
-          - Origin: SDTM and SDTMIG Conformance Rules
-            Rule Identifier:
-              Id: CG0156
-              Version: '1'
-            Version: '2.0'
-            Citations:
-              - Cited Guidance: Identifier for a single associated person, a group
-                  of associated persons, or a pool of associated persons. If APID
-                  identifies a pool, POOLDEF records must exist for each associated
-                  person.
-                Document: AP Guide v1.0
-                Item: Specification
-                Section: 2.1.1
-      - Name: SDTMIG
-        Version: '3.3'
-        References:
-          - Origin: SDTM and SDTMIG Conformance Rules
-            Rule Identifier:
-              Id: CG0156
-              Version: '1'
-            Version: '2.0'
-            Citations:
-              - Cited Guidance: Identifier for a single associated person, a group
-                  of associated persons, or a pool of associated persons. If APID
-                  identifies a pool, POOLDEF records must exist for each associated
-                  person.
-                Document: AP Guide v1.0
-                Item: Specification
-                Section: 2.1.1
-      - Name: SDTMIG
-        Version: '3.4'
-        References:
-          - Origin: SDTM and SDTMIG Conformance Rules
-            Rule Identifier:
-              Id: CG0156
-              Version: '1'
-            Version: '2.0'
-            Citations:
-              - Cited Guidance: Identifier for a single associated person, a group
-                  of associated persons, or a pool of associated persons. If APID
-                  identifies a pool, POOLDEF records must exist for each associated
-                  person.
-                Document: AP Guide v1.0
-                Item: Specification
-                Section: 2.1.1
+- Organization: CDISC
+  Standards:
+  - Name: SDTMIG
+    References:
+    - Citations:
+      - Cited Guidance: Identifier for a single associated person, a group of associated persons, or
+          a pool of associated persons. If APID identifies a pool, POOLDEF records must exist for 
+          each associated person.
+        Document: AP Guide v1.0
+        Item: Specification
+        Section: 2.1.1
+      Origin: SDTM and SDTMIG Conformance Rules
+      Rule Identifier:
+        Id: CG0156
+        Version: '1'
+      Version: '2.0'
+    Version: '3.2'
+  - Name: SDTMIG
+    References:
+    - Citations:
+      - Cited Guidance: Identifier for a single associated person, a group of associated persons, or
+          a pool of associated persons. If APID identifies a pool, POOLDEF records must exist for 
+          each associated person.
+        Document: AP Guide v1.0
+        Item: Specification
+        Section: 2.1.1
+      Origin: SDTM and SDTMIG Conformance Rules
+      Rule Identifier:
+        Id: CG0156
+        Version: '1'
+      Version: '2.0'
+    Version: '3.3'
+  - Name: SDTMIG
+    References:
+    - Citations:
+      - Cited Guidance: Identifier for a single associated person, a group of associated persons, or
+          a pool of associated persons. If APID identifies a pool, POOLDEF records must exist for 
+          each associated person.
+        Document: AP Guide v1.0
+        Item: Specification
+        Section: 2.1.1
+      Origin: SDTM and SDTMIG Conformance Rules
+      Rule Identifier:
+        Id: CG0156
+        Version: '1'
+      Version: '2.0'
+    Version: '3.4'
 Check:
   all: []
 Core:
@@ -66,8 +63,8 @@ Rule Type: Record Data
 Scope:
   Classes:
     Include:
-      - ALL
+    - ALL
   Domains:
     Include:
-      - AP--
+    - AP--
 Sensitivity: Record

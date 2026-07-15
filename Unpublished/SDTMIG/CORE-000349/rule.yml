@@ -2,53 +2,50 @@
 # Condition: 
 # Rule: CMTRT = collected medication name only
 Authorities:
-  - Organization: CDISC
-    Standards:
-      - Name: SDTMIG
-        References:
-          - Citations:
-              - Cited Guidance: CMTRT should only include the medication/therapy name and should
-                  not include dosage, formulation, or other qualifying
-                  information.
-                Document: IG v3.4
-                Item: Assumption 2a
-                Section: 6.1.2
-            Origin: SDTM and SDTMIG Conformance Rules
-            Rule Identifier:
-              Id: CG0098
-              Version: '1'
-            Version: '2.0'
-        Version: '3.4'
-      - Name: SDTMIG
-        References:
-          - Citations:
-              - Cited Guidance: CMTRT should only include the medication/therapy name and should
-                  not include dosage, formulation, or other qualifying
-                  information.
-                Document: IG v3.2
-                Item: Assumption 2a
-                Section: '6.1'
-            Origin: SDTM and SDTMIG Conformance Rules
-            Rule Identifier:
-              Id: CG0098
-              Version: '1'
-            Version: '2.0'
-        Version: '3.2'
-      - Name: SDTMIG
-        References:
-          - Citations:
-              - Cited Guidance: CMTRT should only include the medication/therapy name and should
-                  not include dosage, formulation, or other qualifying
-                  information.
-                Document: IG v3.3
-                Item: Assumption 2a
-                Section: 6.1.2
-            Origin: SDTM and SDTMIG Conformance Rules
-            Rule Identifier:
-              Id: CG0098
-              Version: '1'
-            Version: '2.0'
-        Version: '3.3'
+- Organization: CDISC
+  Standards:
+  - Name: SDTMIG
+    References:
+    - Citations:
+      - Cited Guidance: CMTRT should only include the medication/therapy name and should not include
+          dosage, formulation, or other qualifying information.
+        Document: IG v3.4
+        Item: Assumption 2a
+        Section: 6.1.2
+      Origin: SDTM and SDTMIG Conformance Rules
+      Rule Identifier:
+        Id: CG0098
+        Version: '1'
+      Version: '2.0'
+    Version: '3.4'
+  - Name: SDTMIG
+    References:
+    - Citations:
+      - Cited Guidance: CMTRT should only include the medication/therapy name and should not include
+          dosage, formulation, or other qualifying information.
+        Document: IG v3.2
+        Item: Assumption 2a
+        Section: '6.1'
+      Origin: SDTM and SDTMIG Conformance Rules
+      Rule Identifier:
+        Id: CG0098
+        Version: '1'
+      Version: '2.0'
+    Version: '3.2'
+  - Name: SDTMIG
+    References:
+    - Citations:
+      - Cited Guidance: CMTRT should only include the medication/therapy name and should not include
+          dosage, formulation, or other qualifying information.
+        Document: IG v3.3
+        Item: Assumption 2a
+        Section: 6.1.2
+      Origin: SDTM and SDTMIG Conformance Rules
+      Rule Identifier:
+        Id: CG0098
+        Version: '1'
+      Version: '2.0'
+    Version: '3.3'
 Core:
   Id: CORE-000349
   Status: Draft
@@ -61,8 +58,8 @@ Rule Type: Record Data
 Scope:
   Classes:
     Include:
-      - INTERVENTIONS
+    - INTERVENTIONS
   Domains:
     Include:
-      - CM
+    - CM
 Sensitivity: Record

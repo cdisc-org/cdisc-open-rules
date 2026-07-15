@@ -1,30 +1,28 @@
 Authorities:
-  - Organization: CDISC
-    Standards:
-      - Name: USDM
-        References:
-          - Citations:
-              - Cited Guidance: "Within a study design, there must be at least one endpoint with
-                  level primary."
-                Document: 'USDM_CORE_Rules.xlsx'
-            Origin: 'USDM Conformance Rules'
-            Rule Identifier:
-              Id: 'DDF00041'
-              Version: '1'
-            Version: '1.0'
-        Version: '3.0'
-      - Name: USDM
-        References:
-          - Citations:
-              - Cited Guidance: "Within a study design, there must be at least one endpoint with
-                  level primary."
-                Document: 'USDM_CORE_Rules.xlsx'
-            Origin: 'USDM Conformance Rules'
-            Rule Identifier:
-              Id: 'DDF00041'
-              Version: '1'
-            Version: '1.0'
-        Version: '4.0'
+- Organization: CDISC
+  Standards:
+  - Name: USDM
+    References:
+    - Citations:
+      - Cited Guidance: "Within a study design, there must be at least one endpoint with level primary."
+        Document: 'USDM_CORE_Rules.xlsx'
+      Origin: 'USDM Conformance Rules'
+      Rule Identifier:
+        Id: 'DDF00041'
+        Version: '1'
+      Version: '1.0'
+    Version: '3.0'
+  - Name: USDM
+    References:
+    - Citations:
+      - Cited Guidance: "Within a study design, there must be at least one endpoint with level primary."
+        Document: 'USDM_CORE_Rules.xlsx'
+      Origin: 'USDM Conformance Rules'
+      Rule Identifier:
+        Id: 'DDF00041'
+        Version: '1'
+      Version: '1.0'
+    Version: '4.0'
 Check: |-
   $.study.versions.studyDesigns.
     {
@@ -38,20 +36,18 @@ Core:
   Id: 'CORE-001036'
   Status: Published
   Version: '1'
-Description: "Within a study design, there must be at least one endpoint with
-  level primary."
+Description: "Within a study design, there must be at least one endpoint with level primary."
 Executability: Fully Executable
 Outcome:
-  Message: "There is not at least one endpoint with a level of primary within the
-    study design."
+  Message: "There is not at least one endpoint with a level of primary within the study design."
   Output Variables:
-    - name
-    - '# Primary endpoints'
+  - name
+  - '# Primary endpoints'
 Rule Type: JSONata
 Scope:
   Entities:
     Include:
-      - 'StudyDesign'
-      - 'InterventionalStudyDesign'
-      - 'ObservationalStudyDesign'
+    - 'StudyDesign'
+    - 'InterventionalStudyDesign'
+    - 'ObservationalStudyDesign'
 Sensitivity: Record

@@ -2,24 +2,23 @@
 # Condition: Parent record does not exist, and name of event or intervention is coded
 # Rule: --OBJ = coded value
 Authorities:
-  - Organization: CDISC
-    Standards:
-      - Name: SDTMIG
-        Version: '3.4'
-        References:
-          - Origin: SDTM and SDTMIG Conformance Rules
-            Rule Identifier:
-              Id: CG0605
-              Version: '1'
-            Version: '2.0'
-            Citations:
-              - Cited Guidance: When findings are collected about an event or intervention,
-                  and the name of the event or intervention is collected in an "Other,
-                  specify" CRF field, the value in --OBJ variable depends on whether
-                  the FA record has a parent record and whether the "Other, specify"
-                  value was coded.
-                Document: IG v3.4
-                Section: 4.2.7.4
+- Organization: CDISC
+  Standards:
+  - Name: SDTMIG
+    References:
+    - Citations:
+      - Cited Guidance: When findings are collected about an event or intervention, and the name of 
+          the event or intervention is collected in an "Other, specify" CRF field, the value in 
+          --OBJ variable depends on whether the FA record has a parent record and whether the 
+          "Other, specify" value was coded.
+        Document: IG v3.4
+        Section: 4.2.7.4
+      Origin: SDTM and SDTMIG Conformance Rules
+      Rule Identifier:
+        Id: CG0605
+        Version: '1'
+      Version: '2.0'
+    Version: '3.4'
 Check:
   all: []
 Core:
@@ -34,9 +33,9 @@ Rule Type: Record Data
 Scope:
   Classes:
     Include:
-      - FINDINGS ABOUT
+    - FINDINGS ABOUT
   Domains:
     Include:
-      - F
-      - A
+    - F
+    - A
 Sensitivity: Record

@@ -1,57 +1,57 @@
 Authorities:
-  - Organization: 'CDISC'
-    Standards:
-      - Name: 'SDTMIG'
-        References:
-          - Citations:
-              - Cited Guidance: 'Following SDTM-specified controlled terminology and format
-                  guidelines for variables, when provided'
-                Document: 'SDTMIG'
-                Section: '3.2.2'
-            Origin: SDTM and SDTMIG Conformance Rules
-            Rule Identifier:
-              Id: 'CG0011'
-              Version: '1'
-            Version: '2.0'
-        Version: '3.2'
-      - Name: 'SDTMIG'
-        References:
-          - Citations:
-              - Cited Guidance: 'Following SDTM-specified controlled terminology and format
-                  guidelines for variables, when provided'
-                Document: 'SDTMIG'
-                Section: '3.2.2'
-            Origin: SDTM and SDTMIG Conformance Rules
-            Rule Identifier:
-              Id: 'CG0011'
-              Version: '1'
-            Version: '2.0'
-        Version: '3.3'
-      - Name: 'SDTMIG'
-        References:
-          - Citations:
-              - Cited Guidance: 'Following SDTM-specified controlled terminology and format
-                  guidelines for variables, when provided'
-                Document: 'SDTMIG'
-                Section: '3.2.2'
-            Origin: SDTM and SDTMIG Conformance Rules
-            Rule Identifier:
-              Id: 'CG0011'
-              Version: '1'
-            Version: '2.0'
-        Version: '3.4'
+- Organization: 'CDISC'
+  Standards:
+  - Name: 'SDTMIG'
+    References:
+    - Citations:
+      - Cited Guidance: 'Following SDTM-specified controlled terminology and format guidelines for variables,
+          when provided'
+        Document: 'SDTMIG'
+        Section: '3.2.2'
+      Origin: SDTM and SDTMIG Conformance Rules
+      Rule Identifier:
+        Id: 'CG0011'
+        Version: '1'
+      Version: '2.0'
+    Version: '3.2'
+  - Name: 'SDTMIG'
+    References:
+    - Citations:
+      - Cited Guidance: 'Following SDTM-specified controlled terminology and format guidelines for variables,
+          when provided'
+        Document: 'SDTMIG'
+        Section: '3.2.2'
+      Origin: SDTM and SDTMIG Conformance Rules
+      Rule Identifier:
+        Id: 'CG0011'
+        Version: '1'
+      Version: '2.0'
+    Version: '3.3'
+  - Name: 'SDTMIG'
+    References:
+    - Citations:
+      - Cited Guidance: 'Following SDTM-specified controlled terminology and format guidelines for variables,
+          when provided'
+        Document: 'SDTMIG'
+        Section: '3.2.2'
+      Origin: SDTM and SDTMIG Conformance Rules
+      Rule Identifier:
+        Id: 'CG0011'
+        Version: '1'
+      Version: '2.0'
+    Version: '3.4'
 Check:
   # REMARK: This rule is strongly related to rule SEND49
   all:
     # variable has CT assigned
-    - name: define_variable_name
-      operator: is_not_contained_by
-      value:
-        - STUDYID
-        - DOMAIN # seems to give false positives when C66734 codelist is referenced for "DOMAIN"
+  - name: define_variable_name
+    operator: is_not_contained_by
+    value:
+    - STUDYID
+    - DOMAIN     # seems to give false positives when C66734 codelist is referenced for "DOMAIN"
     # check whether variable has assigned CT in the CDISC Library
-    - name: library_variable_ccode
-      operator: non_empty
+  - name: library_variable_ccode
+    operator: non_empty
       # if yes, a "CodeListRef" must be available either on the "Variable-ItemDef" 
       # or on each of the corresponding ValueList ItemDefs
       #- any:
@@ -75,15 +75,15 @@ Executability: Fully Executable
 Outcome:
   Message: 'Test message'
   Output Variables:
-    - library_variable_ccode
-    - define_variable_ccode
+  - library_variable_ccode
+  - define_variable_ccode
 # Rule Type: Variable Metadata Check against Library Metadata
 Rule Type: Define Item Metadata Check against Library Metadata
 Scope:
   Classes:
     Include:
-      - ALL
+    - ALL
   Domains:
     Include:
-      - LB
+    - LB
 Sensitivity: Dataset

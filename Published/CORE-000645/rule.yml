@@ -1,97 +1,97 @@
 Authorities:
-  - Organization: FDA
-    Standards:
-      - Name: SENDIG
-        References:
-          - Citations:
-              - Cited Guidance: Age or age range should be provided for all animals.
-                Document: FDA
-                Section: FDAB086
-            Origin: FDA Business Rules
-            Rule Identifier:
-              Id: FB8601
-              Version: '1'
-            Version: '1.5'
-        Version: '3.0'
-      - Name: SENDIG
-        References:
-          - Citations:
-              - Cited Guidance: Age or age range should be provided for all animals.
-                Document: FDA
-                Section: FDAB086
-            Origin: FDA Business Rules
-            Rule Identifier:
-              Id: FB8601
-              Version: '1'
-            Version: '1.5'
-        Version: '3.1'
-      - Name: SENDIG
-        References:
-          - Citations:
-              - Cited Guidance: Age or age range should be provided for all animals.
-                Document: FDA
-                Section: FDAB086
-            Origin: FDA Business Rules
-            Rule Identifier:
-              Id: FB8601
-              Version: '1'
-            Version: '1.5'
-        Version: '3.1.1'
-      - Name: SENDIG-GENETOX
-        References:
-          - Citations:
-              - Cited Guidance: Age or age range should be provided for all animals.
-                Document: FDA
-                Section: FDAB086
-            Origin: FDA Business Rules
-            Rule Identifier:
-              Id: FB8601
-              Version: '1'
-            Version: '1.5'
-        Version: '1.0'
-      - Name: SENDIG-DART
-        References:
-          - Citations:
-              - Cited Guidance: Age or age range should be provided for all animals.
-                Document: FDA
-                Section: FDAB086
-            Origin: FDA Business Rules
-            Rule Identifier:
-              Id: FB8601
-              Version: '1'
-            Version: '1.5'
-        Version: '1.1'
-      - Name: SENDIG-DART
-        References:
-          - Citations:
-              - Cited Guidance: Age or age range should be provided for all animals.
-                Document: FDA
-                Section: FDAB086
-            Origin: FDA Business Rules
-            Rule Identifier:
-              Id: FB8601
-              Version: '1'
-            Version: '1.5'
-        Version: '1.2'
-      - Name: SENDIG-AR
-        References:
-          - Citations:
-              - Cited Guidance: Age or age range should be provided for all animals.
-                Document: FDA
-                Section: FDAB086
-            Origin: FDA Business Rules
-            Rule Identifier:
-              Id: FB8601
-              Version: '1'
-            Version: '1.5'
-        Version: '1.0'
+- Organization: FDA
+  Standards:
+  - Name: SENDIG
+    References:
+    - Citations:
+      - Cited Guidance: Age or age range should be provided for all animals.
+        Document: FDA
+        Section: FDAB086
+      Origin: FDA Business Rules
+      Rule Identifier:
+        Id: FB8601
+        Version: '1'
+      Version: '1.5'
+    Version: '3.0'
+  - Name: SENDIG
+    References:
+    - Citations:
+      - Cited Guidance: Age or age range should be provided for all animals.
+        Document: FDA
+        Section: FDAB086
+      Origin: FDA Business Rules
+      Rule Identifier:
+        Id: FB8601
+        Version: '1'
+      Version: '1.5'
+    Version: '3.1'
+  - Name: SENDIG
+    References:
+    - Citations:
+      - Cited Guidance: Age or age range should be provided for all animals.
+        Document: FDA
+        Section: FDAB086
+      Origin: FDA Business Rules
+      Rule Identifier:
+        Id: FB8601
+        Version: '1'
+      Version: '1.5'
+    Version: '3.1.1'
+  - Name: SENDIG-GENETOX
+    References:
+    - Citations:
+      - Cited Guidance: Age or age range should be provided for all animals.
+        Document: FDA
+        Section: FDAB086
+      Origin: FDA Business Rules
+      Rule Identifier:
+        Id: FB8601
+        Version: '1'
+      Version: '1.5'
+    Version: '1.0'
+  - Name: SENDIG-DART
+    References:
+    - Citations:
+      - Cited Guidance: Age or age range should be provided for all animals.
+        Document: FDA
+        Section: FDAB086
+      Origin: FDA Business Rules
+      Rule Identifier:
+        Id: FB8601
+        Version: '1'
+      Version: '1.5'
+    Version: '1.1'
+  - Name: SENDIG-DART
+    References:
+    - Citations:
+      - Cited Guidance: Age or age range should be provided for all animals.
+        Document: FDA
+        Section: FDAB086
+      Origin: FDA Business Rules
+      Rule Identifier:
+        Id: FB8601
+        Version: '1'
+      Version: '1.5'
+    Version: '1.2'
+  - Name: SENDIG-AR
+    References:
+    - Citations:
+      - Cited Guidance: Age or age range should be provided for all animals.
+        Document: FDA
+        Section: FDAB086
+      Origin: FDA Business Rules
+      Rule Identifier:
+        Id: FB8601
+        Version: '1'
+      Version: '1.5'
+    Version: '1.0'
 Check:
   all:
     # throw an error when both AGE and AGETXT are not present in DM
-    - name: AGE
-      operator: not_exists
-    - name: AGETXT
-      operator: not_exists
+  - name: AGE
+    operator: not_exists
+  - name: AGETXT
+    operator: not_exists
 
 Core:
   Id: CORE-000645
@@ -105,8 +105,8 @@ Rule Type: Record Data
 Scope:
   Classes:
     Include:
-      - SPECIAL PURPOSE
+    - SPECIAL PURPOSE
   Domains:
     Include:
-      - DM
+    - DM
 Sensitivity: Dataset

@@ -1,19 +1,18 @@
 Authorities:
-  - Organization: CDISC
-    Standards:
-      - Name: USDM
-        References:
-          - Citations:
-              - Cited Guidance: 'The ordering of activities (using the previous and next
-                  attributes) must include the parents (e.g. activities
-                  referring to children) preceding their children.'
-                Document: 'USDM_CORE_Rules.xlsx'
-            Origin: 'USDM Conformance Rules'
-            Rule Identifier:
-              Id: 'DDF00161'
-              Version: '1'
-            Version: '1.0'
-        Version: '4.0'
+- Organization: CDISC
+  Standards:
+  - Name: USDM
+    References:
+    - Citations:
+      - Cited Guidance: 'The ordering of activities (using the previous and next attributes) must include
+          the parents (e.g. activities referring to children) preceding their children.'
+        Document: 'USDM_CORE_Rules.xlsx'
+      Origin: 'USDM Conformance Rules'
+      Rule Identifier:
+        Id: 'DDF00161'
+        Version: '1'
+      Version: '1.0'
+    Version: '4.0'
 Check: |-
   study.versions.studyDesigns@$sd.
       $sd.activities@$a.
@@ -55,31 +54,28 @@ Core:
   Id: 'CORE-001066'
   Status: Published
   Version: '1'
-Description: 'The ordering of activities (using the previous and next
-  attributes) must include the parents (e.g. activities referring to children)
-  preceding their children.'
+Description: 'The ordering of activities (using the previous and next attributes) must include the parents
+  (e.g. activities referring to children) preceding their children.'
 Executability: Fully Executable
 Outcome:
-  Message: "The previous/next ordering of the activity with respect to child
-    activities is incorrect - the activity has children but its nextId is not
-    one if its childIds, the activity is a child but its previousId is not its
-    parent or another descendant of its parent, and/or the activity's previousId
-    refers to an activity with children but the activity is not one of those
-    children."
+  Message: "The previous/next ordering of the activity with respect to child activities is incorrect -
+    the activity has children but its nextId is not one if its childIds, the activity is a child but its
+    previousId is not its parent or another descendant of its parent, and/or the activity's previousId
+    refers to an activity with children but the activity is not one of those children."
   Output Variables:
-    - StudyDesign.id
-    - StudyDesign.name
-    - name
-    - previousId
-    - "Previous Activity's childIds"
-    - nextId
-    - childIds
-    - "Parent Activity's id"
-    - "Parent Activity's other descendants' ids"
-    - "Issue(s)"
+  - StudyDesign.id
+  - StudyDesign.name
+  - name
+  - previousId
+  - "Previous Activity's childIds"
+  - nextId
+  - childIds
+  - "Parent Activity's id"
+  - "Parent Activity's other descendants' ids"
+  - "Issue(s)"
 Rule Type: JSONata
 Scope:
   Entities:
     Include:
-      - 'Activity'
+    - 'Activity'
 Sensitivity: Record

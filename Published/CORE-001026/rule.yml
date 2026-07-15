@@ -1,18 +1,17 @@
 Authorities:
-  - Organization: CDISC
-    Standards:
-      - Name: USDM
-        References:
-          - Citations:
-              - Cited Guidance: Each StudyArm is expected to have one StudyCell for each
-                  StudyEpoch.'
-                Document: 'USDM_CORE_Rules.xlsx'
-            Origin: 'USDM Conformance Rules'
-            Rule Identifier:
-              Id: 'DDF00243'
-              Version: '1'
-            Version: '1.0'
-        Version: '4.0'
+- Organization: CDISC
+  Standards:
+  - Name: USDM
+    References:
+    - Citations:
+      - Cited Guidance: Each StudyArm is expected to have one StudyCell for each StudyEpoch.'
+        Document: 'USDM_CORE_Rules.xlsx'
+      Origin: 'USDM Conformance Rules'
+      Rule Identifier:
+        Id: 'DDF00243'
+        Version: '1'
+      Version: '1.0'
+    Version: '4.0'
 Check: |-
   study.versions.studyDesigns@$sd.
     $sd.arms@$sa.{
@@ -38,15 +37,15 @@ Executability: Partially Executable - Possible Overreporting
 Outcome:
   Message: 'The StudyArm does not have one StudyCell for each StudyEpoch.'
   Output Variables:
-    - StudyDesign.id
-    - StudyDesign.name
-    - name
-    - StudyDesign.epochs
-    - Arm's StudyCell Epoch Refs
-    - Missing Epoch Refs
+  - StudyDesign.id
+  - StudyDesign.name
+  - name
+  - StudyDesign.epochs
+  - Arm's StudyCell Epoch Refs
+  - Missing Epoch Refs
 Rule Type: JSONata
 Scope:
   Entities:
     Include:
-      - 'StudyArm'
+    - 'StudyArm'
 Sensitivity: Record
