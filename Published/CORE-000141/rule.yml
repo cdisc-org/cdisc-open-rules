@@ -133,6 +133,8 @@ Executability: Fully Executable
 Outcome:
   Message: --TPT and --TPTNUM do not have a one-to-one relationship.
   Output Variables:
+  - VISITNUM
+  - --TPTREF
   - --TPT
   - --TPTNUM
 Rule Type: Record Data
