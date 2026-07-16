@@ -1,2 +1,2 @@
 Dataset,Record,Variable,Value
-SUPPLB,1,IDVAR,LBSEK
+SUPPLB,,EXECUTION_ERROR,"Failed to execute rule operation. Operation: distinct, Target: IDVAR, Domain: SUPP--, Error: 'PandasDataset' object has no attribute 'memory_usage'"

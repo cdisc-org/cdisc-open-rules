@@ -1,4 +1,5 @@
 Dataset,Record,Variable,Value
-AE,,,
+AE,,$dataset_variables,"['STUDYID', 'DOMAIN', 'USUBJID', 'AESEQ', 'AETERM', 'AEMODIFY', 'AEBODSYS', 'AESEV', 'AESER', 'AEACN', 'AEREL', 'AEOUT', 'AESCONG', 'AESDISAB', 'AESDTH', 'AESHOSP', 'AESLIFE', 'EPOCH', 'AESTDTC', 'AEENDTC', 'AESTDY', 'AEENDY', 'AEENRF']"
+AE,,$required_variables,"['STUDYID', 'DOMAIN', 'USUBJID', 'AESEQ', 'AETERM', 'AEDECOD']"
 EX,,$dataset_variables,"['STUDYID', 'DOMAIN', 'USUBJID', 'SPDEVID', 'EXSEQ', 'EXDOSE', 'EXDOSU', 'EXDOSFRM', 'EXDOSFRQ', 'EXROUTE', 'EXLOT', 'EPOCH', 'EXSTDTC', 'EXENDTC', 'EXSTDY', 'EXENDY']"
-EX,,$required_variables,"['EXTRT', 'STUDYID', 'EXROUTE', 'EXDOSFRQ', 'EXSEQ', 'DOMAIN']"
+EX,,$required_variables,"['STUDYID', 'DOMAIN', 'USUBJID', 'EXSEQ', 'EXTRT']"
