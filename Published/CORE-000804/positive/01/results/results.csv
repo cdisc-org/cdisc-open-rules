@@ -1,1 +1,4 @@
 path,attribute,value
+ScheduledDecisionInstance,EXECUTION_ERROR,"Failed to build dataset for rule validation. Builder: ContentsDatasetBuilder, Dataset: ScheduledDecisionInstance, Error: 
+  Error reading CSV from: /home/runner/work/cdisc-open-rules/cdisc-open-rules/Published/CORE-000804/positive/01/data/ScheduledDecisionInstance.csv
+  ValueError: ConditionAssignment_1 cannot be cast to bool"

@@ -1,91 +1,91 @@
 path,attribute,value
-,$code_for_decode_pref_term,
-,$code_for_decode_pref_term,
-,$code_for_decode_pref_term,
-,$code_for_decode_pref_term,
-,$code_for_decode_pref_term,
-,$code_for_decode_pref_term,C187674
-,$code_for_decode_value,
-,$code_for_decode_value,
-,$code_for_decode_value,C156592
-,$code_for_decode_value,C156592
-,$code_for_decode_value,C49659
-,$code_for_decode_value,C49659
-,$codelist_code,C66735
-,$codelist_code,C66735
-,$codelist_code,C66735
-,$codelist_code,C66735
-,$codelist_code,C66735
-,$codelist_code,C66735
-,$codelist_extensible,
-,$codelist_extensible,True
-,$codelist_extensible,True
-,$codelist_extensible,True
-,$codelist_extensible,True
-,$codelist_extensible,True
-,$pref_term_for_code,
-,$pref_term_for_code,
-,$pref_term_for_code,Double Blind Study
-,$pref_term_for_code,Observer Blind Study
-,$pref_term_for_code,Open Label Study
-,$pref_term_for_code,Open Label for Treatment And Double Blind to Dose
-,$value_for_code,
-,$value_for_code,
-,$value_for_code,DOUBLE BLIND
-,$value_for_code,OBSERVER BLIND
-,$value_for_code,OPEN LABEL
-,$value_for_code,OPEN LABEL TO TREATMENT AND DOUBLE BLIND TO IMP DOSE
-,blindingSchema.code,C15228
-,blindingSchema.code,C156592
-,blindingSchema.code,C156592xx
-,blindingSchema.code,C187674
-,blindingSchema.code,C28233
-,blindingSchema.code,C49659
-,blindingSchema.codeSystem,CDISC Terminology
-,blindingSchema.codeSystem,http://www.cdisc.org
-,blindingSchema.codeSystem,http://www.cdisc.org
-,blindingSchema.codeSystem,http://www.cdisc.org
-,blindingSchema.codeSystem,http://www.cdisc.org
-,blindingSchema.codeSystem,http://www.cdisc.org
-,blindingSchema.codeSystemVersion,2023-12-15
-,blindingSchema.codeSystemVersion,2023-12-15
-,blindingSchema.codeSystemVersion,2023-12-15
-,blindingSchema.codeSystemVersion,2023-12-15
-,blindingSchema.codeSystemVersion,2023-12-15
-,blindingSchema.codeSystemVersion,2024-10-27
-,blindingSchema.decode,OBSERVER BLIND STUDY
-,blindingSchema.decode,OPEN LABEL
-,blindingSchema.decode,OPEN LABEL
-,blindingSchema.decode,OPEN LABEL TO TREATMENT AND DOUBLE BLIND TO IMP DOSE
-,blindingSchema.decode,Open Label to Treatment And Double Blind to IMP Dose
-,blindingSchema.decode,SINGLE BLIND
-,id,StudyDesign_1
-,id,StudyDesign_2
-,id,StudyDesign_3
-,id,StudyDesign_4
-,id,StudyDesign_5
-,id,StudyDesign_9
-,name,Study Design 1
-,name,Study Design 2
-,name,Study Design 3
-,name,Study Design 4
-,name,Study Design 5
-,name,Study Design 9
-,parent_entity,StudyVersion
-,parent_entity,StudyVersion
-,parent_entity,StudyVersion
-,parent_entity,StudyVersion
-,parent_entity,StudyVersion
-,parent_entity,StudyVersion
-,parent_id,StudyVersion_1
-,parent_id,StudyVersion_1
-,parent_id,StudyVersion_1
-,parent_id,StudyVersion_1
-,parent_id,StudyVersion_1
-,parent_id,StudyVersion_1
-,parent_rel,studyDesigns
-,parent_rel,studyDesigns
-,parent_rel,studyDesigns
-,parent_rel,studyDesigns
-,parent_rel,studyDesigns
-,parent_rel,studyDesigns
+/StudyDesign/0,$code_for_decode_pref_term,
+/StudyDesign/0,$code_for_decode_value,C49659
+/StudyDesign/0,$codelist_code,C66735
+/StudyDesign/0,$codelist_extensible,True
+/StudyDesign/0,$pref_term_for_code,Double Blind Study
+/StudyDesign/0,$value_for_code,DOUBLE BLIND
+/StudyDesign/0,blindingSchema.code,C15228
+/StudyDesign/0,blindingSchema.codeSystem,http://www.cdisc.org
+/StudyDesign/0,blindingSchema.codeSystemVersion,2023-12-15
+/StudyDesign/0,blindingSchema.decode,OPEN LABEL
+/StudyDesign/0,id,StudyDesign_1
+/StudyDesign/0,name,Study Design 1
+/StudyDesign/0,parent_entity,StudyVersion
+/StudyDesign/0,parent_id,StudyVersion_1
+/StudyDesign/0,parent_rel,studyDesigns
+/StudyDesign/1,$code_for_decode_pref_term,C187674
+/StudyDesign/1,$code_for_decode_value,
+/StudyDesign/1,$codelist_code,C66735
+/StudyDesign/1,$codelist_extensible,True
+/StudyDesign/1,$pref_term_for_code,Observer Blind Study
+/StudyDesign/1,$value_for_code,OBSERVER BLIND
+/StudyDesign/1,blindingSchema.code,C187674
+/StudyDesign/1,blindingSchema.codeSystem,http://www.cdisc.org
+/StudyDesign/1,blindingSchema.codeSystemVersion,2023-12-15
+/StudyDesign/1,blindingSchema.decode,OBSERVER BLIND STUDY
+/StudyDesign/1,id,StudyDesign_2
+/StudyDesign/1,name,Study Design 2
+/StudyDesign/1,parent_entity,StudyVersion
+/StudyDesign/1,parent_id,StudyVersion_1
+/StudyDesign/1,parent_rel,studyDesigns
+/StudyDesign/2,$code_for_decode_pref_term,
+/StudyDesign/2,$code_for_decode_value,C156592
+/StudyDesign/2,$codelist_code,C66735
+/StudyDesign/2,$codelist_extensible,True
+/StudyDesign/2,$pref_term_for_code,
+/StudyDesign/2,$value_for_code,
+/StudyDesign/2,blindingSchema.code,C156592xx
+/StudyDesign/2,blindingSchema.codeSystem,http://www.cdisc.org
+/StudyDesign/2,blindingSchema.codeSystemVersion,2023-12-15
+/StudyDesign/2,blindingSchema.decode,OPEN LABEL TO TREATMENT AND DOUBLE BLIND TO IMP DOSE
+/StudyDesign/2,id,StudyDesign_3
+/StudyDesign/2,name,Study Design 3
+/StudyDesign/2,parent_entity,StudyVersion
+/StudyDesign/2,parent_id,StudyVersion_1
+/StudyDesign/2,parent_rel,studyDesigns
+/StudyDesign/3,$code_for_decode_pref_term,
+/StudyDesign/3,$code_for_decode_value,C49659
+/StudyDesign/3,$codelist_code,C66735
+/StudyDesign/3,$codelist_extensible,True
+/StudyDesign/3,$pref_term_for_code,Open Label Study
+/StudyDesign/3,$value_for_code,OPEN LABEL
+/StudyDesign/3,blindingSchema.code,C49659
+/StudyDesign/3,blindingSchema.codeSystem,CDISC Terminology
+/StudyDesign/3,blindingSchema.codeSystemVersion,2023-12-15
+/StudyDesign/3,blindingSchema.decode,OPEN LABEL
+/StudyDesign/3,id,StudyDesign_4
+/StudyDesign/3,name,Study Design 4
+/StudyDesign/3,parent_entity,StudyVersion
+/StudyDesign/3,parent_id,StudyVersion_1
+/StudyDesign/3,parent_rel,studyDesigns
+/StudyDesign/4,$code_for_decode_pref_term,
+/StudyDesign/4,$code_for_decode_value,
+/StudyDesign/4,$codelist_code,C66735
+/StudyDesign/4,$codelist_extensible,
+/StudyDesign/4,$pref_term_for_code,
+/StudyDesign/4,$value_for_code,
+/StudyDesign/4,blindingSchema.code,C28233
+/StudyDesign/4,blindingSchema.codeSystem,http://www.cdisc.org
+/StudyDesign/4,blindingSchema.codeSystemVersion,2024-10-27
+/StudyDesign/4,blindingSchema.decode,SINGLE BLIND
+/StudyDesign/4,id,StudyDesign_5
+/StudyDesign/4,name,Study Design 5
+/StudyDesign/4,parent_entity,StudyVersion
+/StudyDesign/4,parent_id,StudyVersion_1
+/StudyDesign/4,parent_rel,studyDesigns
+/StudyDesign/5,$code_for_decode_pref_term,
+/StudyDesign/5,$code_for_decode_value,C156592
+/StudyDesign/5,$codelist_code,C66735
+/StudyDesign/5,$codelist_extensible,True
+/StudyDesign/5,$pref_term_for_code,Open Label for Treatment And Double Blind to Dose
+/StudyDesign/5,$value_for_code,OPEN LABEL TO TREATMENT AND DOUBLE BLIND TO IMP DOSE
+/StudyDesign/5,blindingSchema.code,C156592
+/StudyDesign/5,blindingSchema.codeSystem,http://www.cdisc.org
+/StudyDesign/5,blindingSchema.codeSystemVersion,2023-12-15
+/StudyDesign/5,blindingSchema.decode,Open Label to Treatment And Double Blind to IMP Dose
+/StudyDesign/5,id,StudyDesign_9
+/StudyDesign/5,name,Study Design 9
+/StudyDesign/5,parent_entity,StudyVersion
+/StudyDesign/5,parent_id,StudyVersion_1
+/StudyDesign/5,parent_rel,studyDesigns
