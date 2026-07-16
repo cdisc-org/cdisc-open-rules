@@ -58,15 +58,9 @@ Authorities:
       Origin: SDTM and SDTMIG Conformance Rules
       Rule Identifier:
         Id: CG0404
-<<<<<<< HEAD
         Version: '2'
       Version: '2.0'
     Version: '3.2'
-=======
-        Version: "2"
-      Version: "2.0"
-    Version: "3.2"
->>>>>>> main
   - Name: SDTMIG
     References:
     - Citations:
@@ -85,15 +79,9 @@ Authorities:
       Origin: SDTM and SDTMIG Conformance Rules
       Rule Identifier:
         Id: CG0404
-<<<<<<< HEAD
         Version: '2'
       Version: '2.0'
     Version: '3.3'
-=======
-        Version: "2"
-      Version: "2.0"
-    Version: "3.3"
->>>>>>> main
   - Name: TIG
     References:
     - Citations:
@@ -120,17 +108,10 @@ Authorities:
       Origin: TIG Conformance Rules
       Rule Identifier:
         Id: TIG0562
-<<<<<<< HEAD
         Version: '1'
       Version: '1.0'
     Substandard: SDTM
     Version: '1.0'
-=======
-        Version: "1"
-      Version: "1.0"
-    Substandard: SDTM
-    Version: "1.0"
->>>>>>> main
 
 Check:
   all:
@@ -144,22 +125,15 @@ Check:
 Core:
   Id: CORE-000118
   Status: Published
-<<<<<<< HEAD
   Version: '1'
-=======
-  Version: "1"
->>>>>>> main
 Description: Raise an error when --PRESP is equal to 'Y' and --OCCUR is empty and --STAT is not 
   present in dataset.
 Executability: Fully Executable
 Outcome:
   Message: --STAT is not present in dataset when --PRESP is equal to "Y" and --OCCUR is blank
-<<<<<<< HEAD
   Output Variables:
   - --PRESP
   - --OCCUR
-=======
->>>>>>> main
 Rule Type: Record Data
 Scope:
   Classes:

@@ -88,7 +88,7 @@ Authorities:
   - Name: TIG
     References:
     - Citations:
-      - Cited Guidance: Short character value for the Trial Set parameter described in TXPARM.  
+      - Cited Guidance: Short character value for the Trial Set parameter described in TXPARM. 
           Maximum 8 characters.
         Document: TIG v1.0
         Item: TXPARMCD CDISC Notes
@@ -109,8 +109,8 @@ Core:
   Id: CORE-000432
   Status: Published
   Version: "1"
-Description: TXPARMCD Short character value for the Trial Set parameter described in TXPARM.  
-  Maximum 8 characters.
+Description: TXPARMCD Short character value for the Trial Set parameter described in TXPARM. Maximum
+  8 characters.
 Executability: Fully Executable
 Outcome:
   Message: TXPARMCD value has more than 8 characters

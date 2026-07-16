@@ -31,15 +31,9 @@ Authorities:
       Origin: SDTM and SDTMIG Conformance Rules
       Rule Identifier:
         Id: CG0218
-<<<<<<< HEAD
         Version: '1'
       Version: '2.0'
     Version: '3.2'
-=======
-        Version: "1"
-      Version: "2.0"
-    Version: "3.2"
->>>>>>> main
   - Name: SDTMIG
     References:
     - Citations:
@@ -49,7 +43,6 @@ Authorities:
           visits.
         Document: IG v3.3
         Item: Assumption 11
-<<<<<<< HEAD
         Section: '5.5'
       Origin: SDTM and SDTMIG Conformance Rules
       Rule Identifier:
@@ -57,15 +50,6 @@ Authorities:
         Version: '1'
       Version: '2.0'
     Version: '3.3'
-=======
-        Section: "5.5"
-      Origin: SDTM and SDTMIG Conformance Rules
-      Rule Identifier:
-        Id: CG0218
-        Version: "1"
-      Version: "2.0"
-    Version: "3.3"
->>>>>>> main
   - Name: TIG
     References:
     - Citations:
@@ -77,17 +61,10 @@ Authorities:
       Origin: TIG Conformance Rules
       Rule Identifier:
         Id: TIG0432
-<<<<<<< HEAD
         Version: '1'
       Version: '1.0'
     Substandard: SDTM
     Version: '1.0'
-=======
-        Version: "1"
-      Version: "1.0"
-    Substandard: SDTM
-    Version: "1.0"
->>>>>>> main
 Check:
   all:
   - name: EPOCH
@@ -104,11 +81,7 @@ Check:
 Core:
   Id: CORE-000097
   Status: Published
-<<<<<<< HEAD
   Version: '1'
-=======
-  Version: "1"
->>>>>>> main
 Description: Raise an error when variable EPOCH values don't match between Subject Visits (SV) and 
   Subject Elements (SE) datasets.
 Executability: Partially Executable - Possible Overreporting
@@ -118,15 +91,12 @@ Match Datasets:
   Name: SE
 Outcome:
   Message: EPOCH values don't match between Subject Visits (SV) and Subject Elements (SE) datasets.
-<<<<<<< HEAD
-=======
   Output Variables:
   - SESTDTC
   - SVSTDTC
   - SEENDTC
   - EPOCH
   - SE.EPOCH
->>>>>>> main
 Rule Type: Record Data
 Scope:
   Classes:
