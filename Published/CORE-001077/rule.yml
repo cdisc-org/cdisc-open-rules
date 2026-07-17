@@ -1,18 +1,19 @@
 Authorities:
-- Organization: CDISC
-  Standards:
-  - Name: USDM
-    References:
-    - Citations:
-      - Cited Guidance: 'If an interventional model indicates a cross-over, parallel or factorial design
-          then more than 1 intervention is expected.'
-        Document: 'USDM_CORE_Rules.xlsx'
-      Origin: 'USDM Conformance Rules'
-      Rule Identifier:
-        Id: 'DDF00213'
-        Version: '1'
-      Version: '1.0'
-    Version: '4.0'
+  - Organization: CDISC
+    Standards:
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance:
+                  "If an interventional model indicates a cross-over, parallel or factorial design
+                  then more than 1 intervention is expected."
+                Document: "USDM_CORE_Rules.xlsx"
+            Origin: "USDM Conformance Rules"
+            Rule Identifier:
+              Id: "DDF00213"
+              Version: "1"
+            Version: "1.0"
+        Version: "4.0"
 Check: |-
   ($.study.versions)@$sv.
     ($sv.studyDesigns[studyType.code = "C98388"])@$sd.
@@ -31,27 +32,29 @@ Check: |-
         (`model.code` in ["C82637","C82639","C82638"] and `# Referenced Study Interventions` <= 1)
       ]
 Core:
-  Id: 'CORE-001077'
+  Id: "CORE-001077"
   Status: Published
-  Version: '1'
-Description: 'If an interventional model indicates a cross-over, parallel or factorial design then more
-  than 1 intervention is expected.'
+  Version: "1"
+Description:
+  "If an interventional model indicates a cross-over, parallel or factorial design then more
+  than 1 intervention is expected."
 Executability: Partially Executable - Possible Overreporting
 Outcome:
-  Message: 'The number of study interventions referenced for the interventional study design is not consistent
+  Message:
+    "The number of study interventions referenced for the interventional study design is not consistent
     with intervention model specified for the study design - the model indicates a cross-over, parallel
     or factorial design (model.code is C82637, C82639, or C82638) and there are not references to multiple
-    study interventions.'
+    study interventions."
   Output Variables:
-  - name
-  - studyType.code
-  - studyType.decode
-  - model.code
-  - model.decode
-  - '# Referenced Study Interventions'
+    - name
+    - studyType.code
+    - studyType.decode
+    - model.code
+    - model.decode
+    - "# Referenced Study Interventions"
 Rule Type: JSONata
 Scope:
   Entities:
     Include:
-    - 'InterventionalStudyDesign'
+      - "InterventionalStudyDesign"
 Sensitivity: Record

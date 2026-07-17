@@ -1,4 +1,4 @@
-name: Validate YAML Formatting
+name: Sort and Format Rule YAML
 on:
   pull_request:
     paths:
@@ -7,21 +7,50 @@ on:
     types: [opened, synchronize, reopened]
   workflow_dispatch: {}
 jobs:
-  check-yaml-format:
+  format-yaml:
     runs-on: ubuntu-latest
     permissions:
-      contents: read
+      contents: write
       pull-requests: write
     steps:
-      - name: Checkout
+      - name: Determine PR origin
+        id: origin
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] || [ "${{ github.event.pull_request.head.repo.full_name }}" = "${{ github.repository }}" ]; then
+            echo "is_internal=true" >> $GITHUB_OUTPUT
+          else
+            echo "is_internal=false" >> $GITHUB_OUTPUT
+          fi
+
+      # Same-repo branches: check out the actual head branch so we can push fixes to it.
+      - name: Checkout (same-repo branch)
+        if: steps.origin.outputs.is_internal == 'true'
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref || github.ref_name }}
+          fetch-depth: 0
+
+      # Fork PRs: check out the default merge ref. Read-only, never pushed to.
+      - name: Checkout (fork PR)
+        if: steps.origin.outputs.is_internal == 'false'
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+
       - name: Set up Python 3.12
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
       - run: pip install ruamel.yaml
+      # Both paths check formatting (sort + Prettier), so both need Node.
+      # Only the internal path actually writes/pushes fixes.
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Install Prettier
+        run: npm ci
+
       - name: Detect changed rule.yml files
         id: changed-files
         run: |
@@ -39,28 +68,51 @@ jobs:
             echo "has_files=true" >> $GITHUB_OUTPUT
             echo "$FILES" > /tmp/changed_rule_files.txt
           fi
-      - name: Check YAML sorting and formatting
-        id: format-check
-        if: steps.changed-files.outputs.has_files == 'true'
+
+      # Same-repo: sort + format in place, then commit and push the fix.
+      - name: Sort and format (same-repo)
+        if: steps.origin.outputs.is_internal == 'true' && steps.changed-files.outputs.has_files == 'true'
+        run: |
+          FILES=$(cat /tmp/changed_rule_files.txt | tr '\n' ' ')
+          python scripts/sort_yaml.py $FILES
+
+      - name: Commit and push formatting fixes
+        id: commit
+        if: steps.origin.outputs.is_internal == 'true' && steps.changed-files.outputs.has_files == 'true'
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add -A
+            git commit -m "chore: auto-sort and format rule.yml files"
+            git push origin HEAD:${{ github.head_ref || github.ref_name }}
+            echo "pushed=true" >> $GITHUB_OUTPUT
+          else
+            echo "pushed=false" >> $GITHUB_OUTPUT
+          fi
+
+      # Fork PRs: full sort + format check (read-only, never writes or pushes).
+      # A failure here shows as a red X on the PR's checks list; the job log
+      # lists exactly which files and prints the fix command to run locally.
+      - name: Check sorting and formatting (fork PR)
+        if: steps.origin.outputs.is_internal == 'false' && steps.changed-files.outputs.has_files == 'true'
         run: |
           FILES=$(cat /tmp/changed_rule_files.txt | tr '\n' ' ')
           python scripts/sort_yaml.py --check $FILES
-        continue-on-error: true
-      - name: Post format check result to PR
-        if: always() && github.event_name == 'pull_request' && steps.changed-files.outputs.has_files == 'true'
+
+      - name: Post result to PR
+        if: always() && steps.origin.outputs.is_internal == 'true' && github.event_name == 'pull_request' && steps.changed-files.outputs.has_files == 'true'
         uses: actions/github-script@v7
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            const outcome = '${{ steps.format-check.outcome }}';
+            const pushed = '${{ steps.commit.outputs.pushed }}';
             const marker = '<!-- yaml-format-check -->';
             let body = marker + '\n';
-            if (outcome === 'success') {
-              body += '## \u2705 YAML Format Check Passed\n\nAll changed `rule.yml` files are correctly sorted and formatted.';
+            if (pushed === 'true') {
+              body += '## \u270f\ufe0f YAML Auto-Formatted\n\nOne or more `rule.yml` files were not sorted/formatted correctly, so this workflow sorted and formatted them automatically and pushed a commit to this branch. Pull the latest changes before continuing.';
             } else {
-              body += '## \u274c YAML Format Check Failed\n\n';
-              body += 'One or more `rule.yml` files are not correctly sorted/formatted alphabetically by key.\n\n';
-              body += 'Run the following command locally to fix them:\n\n```bash\npython scripts/sort_yaml.py\n```\n\nThen commit and push.';
+              body += '## \u2705 YAML Format Check Passed\n\nAll changed `rule.yml` files were already correctly sorted and formatted.';
             }
             const { data: comments } = await github.rest.issues.listComments({
               owner: context.repo.owner, repo: context.repo.repo,
@@ -78,8 +130,3 @@ jobs:
                 issue_number: context.issue.number, body,
               });
             }
-      - name: Fail if format check failed
-        if: steps.format-check.outcome == 'failure'
-        run: |
-          echo "YAML format check failed. Run 'python scripts/sort_yaml.py' to fix."
-          exit 1

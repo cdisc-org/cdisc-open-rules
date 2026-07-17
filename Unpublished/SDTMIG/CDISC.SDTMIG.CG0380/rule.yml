@@ -1,56 +1,56 @@
 # Variable: --PTCD
-# Condition: 
+# Condition:
 # Rule: --PTCD = MedDRA preferred TERM code
 Authorities:
-- Organization: CDISC
-  Standards:
-  - Name: SDTMIG
-    References:
-    - Citations:
-      - Cited Guidance: The preferred term code assigned to the event from MedDRA.
-        Document: Model v2.0
-        Item: --PTCD
-        Section: Events
-      Origin: SDTM and SDTMIG Conformance Rules
-      Rule Identifier:
-        Id: CG0380
-        Version: '1'
-      Version: '2.0'
-    Version: '3.4'
-  - Name: SDTMIG
-    References:
-    - Citations:
-      - Cited Guidance: MedDRA Preferred Term code.
-        Document: Model v1.4
-        Section: 2.2.2
-      Origin: SDTM and SDTMIG Conformance Rules
-      Rule Identifier:
-        Id: CG0380
-        Version: '1'
-      Version: '2.0'
-    Version: '3.2'
-  - Name: SDTMIG
-    References:
-    - Citations:
-      - Cited Guidance: MedDRA Preferred Term code.
-        Document: Model v1.7
-        Section: 2.2.2
-      Origin: SDTM and SDTMIG Conformance Rules
-      Rule Identifier:
-        Id: CG0380
-        Version: '1'
-      Version: '2.0'
-    Version: '3.3'
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: The preferred term code assigned to the event from MedDRA.
+                Document: Model v2.0
+                Item: --PTCD
+                Section: Events
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0380
+              Version: "1"
+            Version: "2.0"
+        Version: "3.4"
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: MedDRA Preferred Term code.
+                Document: Model v1.4
+                Section: 2.2.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0380
+              Version: "1"
+            Version: "2.0"
+        Version: "3.2"
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: MedDRA Preferred Term code.
+                Document: Model v1.7
+                Section: 2.2.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0380
+              Version: "1"
+            Version: "2.0"
+        Version: "3.3"
 Check:
   all:
-  - name: --PTCD
-    operator: is_contained_by
-    value:
-    - MedDRA preferred term code
+    - name: --PTCD
+      operator: is_contained_by
+      value:
+        - MedDRA preferred term code
 Core:
   Id: CDISC.SDTMIG.CG0380
   Status: Draft
-  Version: '1'
+  Version: "1"
 Description: Trigger error when --PTCD  is not a valid MedDRA preferred term code
 Executability: Fully Executable
 Outcome:
@@ -59,10 +59,10 @@ Rule Type: Record Data
 Scope:
   Classes:
     Include:
-    - EVENTS
+      - EVENTS
   Domains:
     Include:
-    - AE
-    - MH
-    - CE
+      - AE
+      - MH
+      - CE
 Sensitivity: Record

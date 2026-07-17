@@ -7,22 +7,24 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: For example, if a subject's Survival Status is "DEAD", the date
+              - Cited Guidance:
+                  For example, if a subject's Survival Status is "DEAD", the date
                   of death must be stored in DM and within a final disposition
                   record in DS.
                 Document: IG v3.2
                 Item: Assumption 2
-                Section: '6.3'
+                Section: "6.3"
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0132
-              Version: '1'
-            Version: '2.0'
-        Version: '3.2'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.2"
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: For example, if a subject's Survival Status is "DEAD", the date
+              - Cited Guidance:
+                  For example, if a subject's Survival Status is "DEAD", the date
                   of death must be stored in DM and within a final disposition
                   record in DS.
                 Document: IG v3.3
@@ -31,13 +33,14 @@ Authorities:
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0132
-              Version: '1'
-            Version: '2.0'
-        Version: '3.3'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.3"
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: 4.5.8[4. If the subject's survival status is "dead", the
+              - Cited Guidance:
+                  4.5.8[4. If the subject's survival status is "dead", the
                   Demographics (DM) variables DTHDTC and DTHFL must be
                   appropriately populated.]|6.3.11[For example, if a subject's
                   survival status is "DEAD", the date of death must be stored in
@@ -48,51 +51,54 @@ Authorities:
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0132
-              Version: '1'
-            Version: '2.0'
-        Version: '3.4'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.4"
   #CG0132 is identical to rule FB0601. Added metadata for FB0601.
   - Organization: FDA
     Standards:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: All death information should be populated for subjects that died
+              - Cited Guidance:
+                  All death information should be populated for subjects that died
                   during the study including any post treatment follow-up.
                 Document: FDA
                 Section: FDAB006
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB0601
-              Version: '1'
-            Version: '1.5'
-        Version: '3.2'
+              Version: "1"
+            Version: "1.5"
+        Version: "3.2"
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: All death information should be populated for subjects that died
+              - Cited Guidance:
+                  All death information should be populated for subjects that died
                   during the study including any post treatment follow-up.
                 Document: FDA
                 Section: FDAB006
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB0601
-              Version: '1'
-            Version: '1.5'
-        Version: '3.3'
+              Version: "1"
+            Version: "1.5"
+        Version: "3.3"
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: All death information should be populated for subjects that died
+              - Cited Guidance:
+                  All death information should be populated for subjects that died
                   during the study including any post treatment follow-up.
                 Document: FDA
                 Section: FDAB006
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB0601
-              Version: '1'
-            Version: '1.5'
-        Version: '3.4'
+              Version: "1"
+            Version: "1.5"
+        Version: "3.4"
 Check:
   all:
     - name: SSSTRESC
@@ -106,7 +112,7 @@ Check:
 Core:
   Id: CORE-000008
   Status: Published
-  Version: '1'
+  Version: "1"
 Description: When survival status is completed as 'DEAD' in the SS dataset then
   death flag (DTHFL) should be populated as 'Y' in the DM dataset for the
   corresponding subject.

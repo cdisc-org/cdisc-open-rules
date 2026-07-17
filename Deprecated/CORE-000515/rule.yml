@@ -7,7 +7,8 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: The Disposition dataset provides an accounting for all subjects
+              - Cited Guidance:
+                  The Disposition dataset provides an accounting for all subjects
                   who entered the study and may include protocol milestones;
                   such as randomization; as well as the subject's completion
                   status or reason for discontinuation for the entire study or
@@ -19,9 +20,9 @@ Authorities:
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0412
-              Version: '1'
-            Version: '2.0'
-        Version: '3.2'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.2"
 Check:
   all:
     - name: ACTARMCD
@@ -36,7 +37,7 @@ Check:
 Core:
   Id: CORE-000515
   Status: Published
-  Version: '1'
+  Version: "1"
 Description: 'Raise an error when DM.ACTARMCD does not equal "SCRNFAIL",
   "NOTASSGN" or "NOTTRT", and there are no DS records for the same subject'
 Executability: Fully Executable

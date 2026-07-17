@@ -5,15 +5,16 @@ Authorities:
   - Organization: CDISC
     Standards:
       - Name: SDTMIG
-        Version: '3.4'
+        Version: "3.4"
         References:
           - Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0501
-              Version: '2'
-            Version: '2.0'
+              Version: "2"
+            Version: "2.0"
             Citations:
-              - Cited Guidance: The name of a specific instance of a Disease Milestone
+              - Cited Guidance:
+                  The name of a specific instance of a Disease Milestone
                   Type (MIDSTYPE) described in the Trial Disease Milestones dataset
                   (see Section 5.1.4.3, Trial Disease Milestones). This should be
                   unique within a subject. Used only in conjunction with RELMIDS and
@@ -22,15 +23,16 @@ Authorities:
                 Item: MIDS
                 Section: Timing
       - Name: SDTMIG
-        Version: '3.3'
+        Version: "3.3"
         References:
           - Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0501
-              Version: '2'
-            Version: '2.0'
+              Version: "2"
+            Version: "2.0"
             Citations:
-              - Cited Guidance: The name of a specific instance of a Disease Milestone
+              - Cited Guidance:
+                  The name of a specific instance of a Disease Milestone
                   Type (MIDSTYPE) described in the Trial Disease Milestones dataset
                   (see Section 3.5, Trial Disease Milestones). This should be unique
                   within a subject. Used only in conjunction with RELMIDS and MIDSDTC.
@@ -47,8 +49,9 @@ Check:
 Core:
   Id: CORE-000297
   Status: Published
-  Version: '1'
-Description: Raise an error when variable MIDS is present in any of the dataset and
+  Version: "1"
+Description:
+  Raise an error when variable MIDS is present in any of the dataset and
   TM dataset is missing.
 Executability: Fully Executable
 Operations:

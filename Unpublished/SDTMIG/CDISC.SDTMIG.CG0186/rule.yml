@@ -1,56 +1,56 @@
 # Variable: LBORNRLO
-# Condition: 
+# Condition:
 # Rule: LBORNRLO is expressed using the units in LBORRESU
 Authorities:
-- Organization: CDISC
-  Standards:
-  - Name: SDTMIG
-    References:
-    - Citations:
-      - Cited Guidance: Lower end of reference range for continuous measurement in original units.
-        Document: SDTMIG v3.4
-        Section: 6.3.5.6
-      Origin: SDTM and SDTMIG Conformance Rules
-      Rule Identifier:
-        Id: CG0186
-        Version: '2'
-      Version: '2.0'
-    Version: '3.4'
-  - Name: SDTMIG
-    References:
-    - Citations:
-      - Cited Guidance: Lower end of reference range for continuous measurements in original units.
-        Document: IG v3.2
-        Item: Specification
-        Section: '6.3'
-      Origin: SDTM and SDTMIG Conformance Rules
-      Rule Identifier:
-        Id: CG0186
-        Version: '2'
-      Version: '2.0'
-    Version: '3.2'
-  - Name: SDTMIG
-    References:
-    - Citations:
-      - Cited Guidance: Lower end of reference range for continuous measurements in original units.
-        Document: IG v3.3
-        Item: Specification
-        Section: 6.3.6
-      Origin: SDTM and SDTMIG Conformance Rules
-      Rule Identifier:
-        Id: CG0186
-        Version: '2'
-      Version: '2.0'
-    Version: '3.3'
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Lower end of reference range for continuous measurement in original units.
+                Document: SDTMIG v3.4
+                Section: 6.3.5.6
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0186
+              Version: "2"
+            Version: "2.0"
+        Version: "3.4"
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Lower end of reference range for continuous measurements in original units.
+                Document: IG v3.2
+                Item: Specification
+                Section: "6.3"
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0186
+              Version: "2"
+            Version: "2.0"
+        Version: "3.2"
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Lower end of reference range for continuous measurements in original units.
+                Document: IG v3.3
+                Item: Specification
+                Section: 6.3.6
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0186
+              Version: "2"
+            Version: "2.0"
+        Version: "3.3"
 Check:
   all:
-  - name: LBORNRLO
-    operator: equal_to
-    value: LBORRESU
+    - name: LBORNRLO
+      operator: equal_to
+      value: LBORRESU
 Core:
   Id: CDISC.SDTMIG.CG0186
   Status: Draft
-  Version: '1'
+  Version: "1"
 Description: LBORNRLO is expressed using the units in LBORRESU
 Executability: Fully Executable
 Outcome:
@@ -59,8 +59,8 @@ Rule Type: Record Data
 Scope:
   Classes:
     Include:
-    - FINDINGS
+      - FINDINGS
   Domains:
     Include:
-    - LB
+      - LB
 Sensitivity: Record

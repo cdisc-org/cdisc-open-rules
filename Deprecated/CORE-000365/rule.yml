@@ -5,15 +5,16 @@ Authorities:
   - Organization: CDISC
     Standards:
       - Name: SDTMIG
-        Version: '3.4'
+        Version: "3.4"
         References:
           - Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0077
-              Version: '1'
-            Version: '2.0'
+              Version: "1"
+            Version: "2.0"
             Citations:
-              - Cited Guidance: This categorization should not group all records (within the MH
+              - Cited Guidance:
+                  This categorization should not group all records (within the MH
                   Domain) into one generic group such as "Medical History" or
                   "General Medical History" because this is  redundant
                   information with the domain code. If no smaller categorization
@@ -23,15 +24,16 @@ Authorities:
                 Item: Assumptions 3.a.1
                 Section: 6.2.6
       - Name: SDTMIG
-        Version: '3.2'
+        Version: "3.2"
         References:
           - Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0077
-              Version: '1'
-            Version: '2.0'
+              Version: "1"
+            Version: "2.0"
             Citations:
-              - Cited Guidance: This categorization should not group all records (within the MH
+              - Cited Guidance:
+                  This categorization should not group all records (within the MH
                   Domain) into one generic group such as "Medical History" or
                   "General Medical History" because this is redundant
                   information with the domain code. If no smaller categorization
@@ -39,17 +41,18 @@ Authorities:
                   this variable.
                 Document: IG v3.2
                 Item: Assumptions 3.a.i
-                Section: '6.2'
+                Section: "6.2"
       - Name: SDTMIG
-        Version: '3.3'
+        Version: "3.3"
         References:
           - Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0077
-              Version: '1'
-            Version: '2.0'
+              Version: "1"
+            Version: "2.0"
             Citations:
-              - Cited Guidance: This categorization should not group all records (within the MH
+              - Cited Guidance:
+                  This categorization should not group all records (within the MH
                   Domain) into one generic group such as "Medical History" or
                   "General Medical History" because this is redundant
                   information with the domain code. If no smaller categorization
@@ -67,7 +70,7 @@ Check:
 Core:
   Id: CORE-000365
   Status: Published
-  Version: '1'
+  Version: "1"
 Description: MHCAT should not group all records.  If no smaller categorization
   can be applied, then it is not necessary to include or populate this variable.
 Executability: Fully Executable

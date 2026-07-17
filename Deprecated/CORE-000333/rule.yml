@@ -14,22 +14,22 @@ Authorities:
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0215
-              Version: '1'
-            Version: '2.0'
-        Version: '3.2'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.2"
       - Name: SDTMIG
         References:
           - Citations:
               - Cited Guidance: Protocol-defined description of clinical encounter.
                 Document: IG v3.3
                 Item: Specification
-                Section: '5.5'
+                Section: "5.5"
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0215
-              Version: '1'
-            Version: '2.0'
-        Version: '3.3'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.3"
 
 Check:
   all:
@@ -44,8 +44,8 @@ Check:
 Core:
   Id: CORE-000333
   Status: Published
-  Version: '1'
-Description: 'Raise an error when SVUPDES is null and SV.VISIT is not in TV.VISIT'
+  Version: "1"
+Description: "Raise an error when SVUPDES is null and SV.VISIT is not in TV.VISIT"
 Executability: Partially Executable - Possible Overreporting
 Operations:
   - domain: TV

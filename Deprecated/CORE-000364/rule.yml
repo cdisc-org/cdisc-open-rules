@@ -7,20 +7,21 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: When DSCAT='PROTOCOL MILESTONE', DSTERM and DSDECOD will contain
+              - Cited Guidance:
+                  When DSCAT='PROTOCOL MILESTONE', DSTERM and DSDECOD will contain
                   the same value drawn from the sponsor's controlled
                   terminology. Examples of controlled terms include 'INFORMED
                   CONSENT OBTAINED' and 'RANDOMIZED.' EPOCH should not be
                   populated when DSCAT = "PROTOCOL MILESTONE".
                 Document: IG v3.2
                 Item: Assumption 3d
-                Section: '6.2'
+                Section: "6.2"
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0073
-              Version: '2'
-            Version: '2.0'
-        Version: '3.2'
+              Version: "2"
+            Version: "2.0"
+        Version: "3.2"
 Check:
   all:
     - name: DSCAT
@@ -31,7 +32,7 @@ Check:
 Core:
   Id: CORE-000364
   Status: Published
-  Version: '1'
+  Version: "1"
 Description: Raise an error when DSCAT = "PROTOCOL MILESTONE" but EPOCH is not
   equal to null.
 Executability: Fully Executable

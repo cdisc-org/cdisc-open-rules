@@ -1,45 +1,47 @@
 # Variable: --STREFN
-# Condition: 
+# Condition:
 # Rule: --STREFN in same units as --STRESN
 Authorities:
-- Organization: CDISC
-  Standards:
-  - Name: SDTMIG
-    References:
-    - Citations:
-      - Cited Guidance: Reference value for continuous or numeric results or findings in standard 
-          format or in standard units. --STREFN uses the same units as --STRESN, if applicable.
-        Document: Model v2.0
-        Item: --STREFN
-        Section: Findings
-      Origin: SDTM and SDTMIG Conformance Rules
-      Rule Identifier:
-        Id: CG0551
-        Version: '1'
-      Version: '2.0'
-    Version: '3.4'
-  - Name: SDTMIG
-    References:
-    - Citations:
-      - Cited Guidance: Reference value for continuous or numeric results or findings in standard 
-          format or in standard units. --STREFN uses the same units as --STRESN, if applicable.
-        Document: Model v1.7
-        Item: --STREFN
-        Section: Table 2.2.3
-      Origin: SDTM and SDTMIG Conformance Rules
-      Rule Identifier:
-        Id: CG0551
-        Version: '1'
-      Version: '2.0'
-    Version: '3.3'
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance:
+                  Reference value for continuous or numeric results or findings in standard
+                  format or in standard units. --STREFN uses the same units as --STRESN, if applicable.
+                Document: Model v2.0
+                Item: --STREFN
+                Section: Findings
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0551
+              Version: "1"
+            Version: "2.0"
+        Version: "3.4"
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance:
+                  Reference value for continuous or numeric results or findings in standard
+                  format or in standard units. --STREFN uses the same units as --STRESN, if applicable.
+                Document: Model v1.7
+                Item: --STREFN
+                Section: Table 2.2.3
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0551
+              Version: "1"
+            Version: "2.0"
+        Version: "3.3"
 Check:
   all:
-  - name: --STREFN
-    operator:
+    - name: --STREFN
+      operator:
 Core:
   Id: CDISC.SDTMIG.CG0551
   Status: Draft
-  Version: '1'
+  Version: "1"
 Description: Trigger error when --STREFN is not in the same units as --STRESN
 Executability: Fully Executable
 Outcome:
@@ -48,8 +50,8 @@ Rule Type: Record Data
 Scope:
   Classes:
     Include:
-    - FINDINGS
+      - FINDINGS
   Domains:
     Include:
-    - ALL
+      - ALL
 Sensitivity: Record

@@ -7,7 +7,8 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: While it would be possible to allow a value such as NONE or
+              - Cited Guidance:
+                  While it would be possible to allow a value such as NONE or
                   UNBOUNDED to be entered in TSVAL, validation programs would
                   then have to recognize this special term as an exception to
                   the expected data format. Therefore, it was decided that a
@@ -18,13 +19,14 @@ Authorities:
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0291
-              Version: '1'
-            Version: '2.0'
-        Version: '3.4'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.4"
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: While it would be possible to allow a value such as NONE or
+              - Cited Guidance:
+                  While it would be possible to allow a value such as NONE or
                   UNBOUNDED to be entered in TSVAL, validation programs would
                   then have to recognize this special term as an exception to
                   the expected data format. Therefore, it was decided that a
@@ -35,13 +37,14 @@ Authorities:
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0291
-              Version: '1'
-            Version: '2.0'
-        Version: '3.3'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.3"
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: While it would be possible to allow a value such as NONE or
+              - Cited Guidance:
+                  While it would be possible to allow a value such as NONE or
                   UNBOUNDED to be entered in TSVAL, validation programs would
                   then have to recognize this special term as an exception to
                   the expected data format. Therefore, it was decided that a
@@ -52,9 +55,9 @@ Authorities:
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0291
-              Version: '1'
-            Version: '2.0'
-        Version: '3.2'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.2"
 Check:
   all:
     - name: TSVALNF
@@ -69,7 +72,7 @@ Check:
 Core:
   Id: CORE-000787
   Status: Published
-  Version: '1'
+  Version: "1"
 Description: Raise an error when TSVALNF is empty and TSVAL is populated with
   values or synonyms of values in the ISO 21090 null flavor codelist (or other
   terms that can be represented as null flavors)

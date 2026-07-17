@@ -7,29 +7,31 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Study start and end date/time should include month, day, and
+              - Cited Guidance:
+                  Study start and end date/time should include month, day, and
                   year.
                 Document: FDA
                 Section: FDAB034
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB3411
-              Version: '1'
-            Version: '1.5'
-        Version: '3.3'
+              Version: "1"
+            Version: "1.5"
+        Version: "3.3"
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Study start and end date/time should include month, day, and
+              - Cited Guidance:
+                  Study start and end date/time should include month, day, and
                   year.
                 Document: FDA
                 Section: FDAB034
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB3411
-              Version: '1'
-            Version: '1.5'
-        Version: '3.4'
+              Version: "1"
+            Version: "1.5"
+        Version: "3.4"
 Check:
   all:
     - name: RFICDTC
@@ -42,7 +44,7 @@ Check:
 Core:
   Id: CORE-000713
   Status: Published
-  Version: '1'
+  Version: "1"
 Description: Date/Time of Informed Consent (RFICDTC) should be prior or equal to
   the Subject Reference Start Date/Time (RFSTDTC).
 Executability: Fully Executable

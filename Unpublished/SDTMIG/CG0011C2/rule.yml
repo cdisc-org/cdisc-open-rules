@@ -1,45 +1,48 @@
 Authorities:
-- Organization: 'CDISC'
-  Standards:
-  - Name: 'SDTMIG'
-    References:
-    - Citations:
-      - Cited Guidance: 'Following SDTM-specified controlled terminology and format guidelines for variables,
-          when provided'
-        Document: 'SDTMIG'
-        Section: '3.2.2'
-      Origin: SDTM and SDTMIG Conformance Rules
-      Rule Identifier:
-        Id: 'CG0011C2'
-        Version: '1'
-      Version: '2.0'
-    Version: '3.2'
-  - Name: 'SDTMIG'
-    References:
-    - Citations:
-      - Cited Guidance: 'Following SDTM-specified controlled terminology and format guidelines for variables,
-          when provided'
-        Document: 'SDTMIG'
-        Section: '3.2.2'
-      Origin: SDTM and SDTMIG Conformance Rules
-      Rule Identifier:
-        Id: 'CG0011C2'
-        Version: '1'
-      Version: '2.0'
-    Version: '3.3'
-  - Name: 'SDTMIG'
-    References:
-    - Citations:
-      - Cited Guidance: 'Following SDTM-specifieda controlled terminology and format guidelines for variables,
-          when provided'
-        Document: 'SDTMIG'
-        Section: '3.2.2'
-      Origin: SDTM and SDTMIG Conformance Rules
-      Rule Identifier:
-        Id: 'CG0011C2'
-        Version: '1'
-      Version: '2.0'
-    Version: '3.4'
+  - Organization: "CDISC"
+    Standards:
+      - Name: "SDTMIG"
+        References:
+          - Citations:
+              - Cited Guidance:
+                  "Following SDTM-specified controlled terminology and format guidelines for variables,
+                  when provided"
+                Document: "SDTMIG"
+                Section: "3.2.2"
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: "CG0011C2"
+              Version: "1"
+            Version: "2.0"
+        Version: "3.2"
+      - Name: "SDTMIG"
+        References:
+          - Citations:
+              - Cited Guidance:
+                  "Following SDTM-specified controlled terminology and format guidelines for variables,
+                  when provided"
+                Document: "SDTMIG"
+                Section: "3.2.2"
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: "CG0011C2"
+              Version: "1"
+            Version: "2.0"
+        Version: "3.3"
+      - Name: "SDTMIG"
+        References:
+          - Citations:
+              - Cited Guidance:
+                  "Following SDTM-specifieda controlled terminology and format guidelines for variables,
+                  when provided"
+                Document: "SDTMIG"
+                Section: "3.2.2"
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: "CG0011C2"
+              Version: "1"
+            Version: "2.0"
+        Version: "3.4"
 # CG0011C2: if the variable is under controlled terminology (according CDISC-Library)
 # then a CodeList must be referenced in the define.xml
 Check:
@@ -63,30 +66,31 @@ Check:
     #- name: library_variable_ccode
     #  operator: equal_to
     #  value: true
-  - name: library_variable_ccode
-    operator: non_empty
-  - name: define_variable_has_codelist
-    operator: equal_to
-    value: false
+    - name: library_variable_ccode
+      operator: non_empty
+    - name: define_variable_has_codelist
+      operator: equal_to
+      value: false
 
 Core:
   Status: Draft
-  Version: '1'
-Description: 'Variables that are under CT must have an associated codelist defined in the define.xml'
+  Version: "1"
+Description: "Variables that are under CT must have an associated codelist defined in the define.xml"
 Executability: Fully Executable
 Outcome:
-  Message: 'The variable is under controlled terminology, but no codelist has been defined for it in the
-    define.xml'
+  Message:
+    "The variable is under controlled terminology, but no codelist has been defined for it in the
+    define.xml"
   Output Variables:
-  - library_variable_ccode
+    - library_variable_ccode
 # Rule Type: Define Item Metadata Check against Library Metadata
-# Rule Type: Define Item Metadata Check against Library Metadata 
+# Rule Type: Define Item Metadata Check against Library Metadata
 Rule Type: Variable Metadata Check against Define XML and Library Metadata
 Scope:
   Classes:
     Include:
-    - ALL
+      - ALL
   Domains:
     Include:
-    - ALL
+      - ALL
 Sensitivity: Record

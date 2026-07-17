@@ -1,17 +1,17 @@
 Authorities:
-- Organization: CDISC
-  Standards:
-  - Name: USDM
-    References:
-    - Citations:
-      - Cited Guidance: 'A planned duration is expected for the main timeline.'
-        Document: 'USDM_CORE_Rules.xlsx'
-      Origin: 'USDM Conformance Rules'
-      Rule Identifier:
-        Id: 'DDF00153'
-        Version: '1'
-      Version: '1.0'
-    Version: '4.0'
+  - Organization: CDISC
+    Standards:
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance: "A planned duration is expected for the main timeline."
+                Document: "USDM_CORE_Rules.xlsx"
+            Origin: "USDM Conformance Rules"
+            Rule Identifier:
+              Id: "DDF00153"
+              Version: "1"
+            Version: "1.0"
+        Version: "4.0"
 Check: |-
   (study.versions.studyDesigns)@$sd.
     $sd.scheduleTimelines@$st.
@@ -26,19 +26,19 @@ Check: |-
             }
         )][check=true]
 Core:
-  Id: 'CORE-001016'
+  Id: "CORE-001016"
   Status: Published
-  Version: '1'
-Description: 'A planned duration is expected for the main timeline.'
+  Version: "1"
+Description: "A planned duration is expected for the main timeline."
 Executability: Partially Executable - Possible Overreporting
 Outcome:
-  Message: 'The planned duration is not specified for the main timeline.'
+  Message: "The planned duration is not specified for the main timeline."
   Output Variables:
-  - name
-  - mainTimeline
+    - name
+    - mainTimeline
 Rule Type: JSONata
 Scope:
   Entities:
     Include:
-    - 'ScheduleTimeline'
+      - "ScheduleTimeline"
 Sensitivity: Record

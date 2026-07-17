@@ -1,5 +1,5 @@
 # Variable: GEN
-# Condition: 
+# Condition:
 # Rule: Metadata attribute of Variable Role = IG Role for domains in IG, Metadata attribute of Variable Role = Model Role for custom domains
 
 Authorities:
@@ -8,22 +8,24 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Each variable can be classified according to its Role. A Role
+              - Cited Guidance:
+                  Each variable can be classified according to its Role. A Role
                   determines the type of information conveyed by the variable
                   about each distinct observation and how it can be used.
                   Variables can be classified into five major roles.
                 Document: IG v3.4
-                Section: '2.1'
+                Section: "2.1"
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0010
-              Version: '2'
-            Version: '2.0'
-        Version: '3.4'
+              Version: "2"
+            Version: "2.0"
+        Version: "3.4"
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: IG v3.2[3.1][Since these roles are predefined for all standard
+              - Cited Guidance:
+                  IG v3.2[3.1][Since these roles are predefined for all standard
                   domains that follow the general observation classes]|Model
                   v1.4[2][Each variable . . . can be classified according to its
                   Role]
@@ -32,24 +34,25 @@ Authorities:
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0010
-              Version: '2'
-            Version: '2.0'
-        Version: '3.2'
+              Version: "2"
+            Version: "2.0"
+        Version: "3.2"
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Each variable can be classified according to its Role. A Role
+              - Cited Guidance:
+                  Each variable can be classified according to its Role. A Role
                   determines the type of information conveyed by the variable
                   about each distinct observation and how it can be used.
                   Variables can be classified into five major roles.
                 Document: IG v3.3
-                Section: '2.1'
+                Section: "2.1"
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0010
-              Version: '2'
-            Version: '2.0'
-        Version: '3.3'
+              Version: "2"
+            Version: "2.0"
+        Version: "3.3"
 Check:
   all:
     - name: define_variable_role
@@ -58,7 +61,7 @@ Check:
 Core:
   Id: CORE-001081
   Status: Published
-  Version: '1'
+  Version: "1"
 Description: Raise an error when the metadata attribute of variable role does
   not match the IG role for domain in IG, or model role (for custom domains)
 Executability: Fully Executable

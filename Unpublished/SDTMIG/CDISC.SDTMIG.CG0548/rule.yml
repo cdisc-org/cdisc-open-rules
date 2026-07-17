@@ -1,43 +1,43 @@
 # Variable: --ORREF
-# Condition: 
+# Condition:
 # Rule: --ORREF in same units as --ORRES
 Authorities:
-- Organization: CDISC
-  Standards:
-  - Name: SDTMIG
-    References:
-    - Citations:
-      - Cited Guidance: --ORREF uses the same units as --ORRES, if applicable.
-        Document: Model v2.0
-        Item: --ORREF
-        Section: Findings
-      Origin: SDTM and SDTMIG Conformance Rules
-      Rule Identifier:
-        Id: CG0548
-        Version: '1'
-      Version: '2.0'
-    Version: '3.4'
-  - Name: SDTMIG
-    References:
-    - Citations:
-      - Cited Guidance: --ORREF uses the same units as --ORRES, if applicable.
-        Document: Model v1.7
-        Item: --ORREF
-        Section: Table 2.2.3
-      Origin: SDTM and SDTMIG Conformance Rules
-      Rule Identifier:
-        Id: CG0548
-        Version: '1'
-      Version: '2.0'
-    Version: '3.3'
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: --ORREF uses the same units as --ORRES, if applicable.
+                Document: Model v2.0
+                Item: --ORREF
+                Section: Findings
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0548
+              Version: "1"
+            Version: "2.0"
+        Version: "3.4"
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: --ORREF uses the same units as --ORRES, if applicable.
+                Document: Model v1.7
+                Item: --ORREF
+                Section: Table 2.2.3
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0548
+              Version: "1"
+            Version: "2.0"
+        Version: "3.3"
 Check:
   all:
-  - name: --ORREF
-    operator:
+    - name: --ORREF
+      operator:
 Core:
   Id: CDISC.SDTMIG.CG0548
   Status: Draft
-  Version: '1'
+  Version: "1"
 Description: Trigger error when --ORREF is not in the same units as --ORRES
 Executability: Fully Executable
 Outcome:
@@ -46,8 +46,8 @@ Rule Type: Record Data
 Scope:
   Classes:
     Include:
-    - FINDINGS
+      - FINDINGS
   Domains:
     Include:
-    - ALL
+      - ALL
 Sensitivity: Record

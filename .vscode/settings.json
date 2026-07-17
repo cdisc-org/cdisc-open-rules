@@ -7,8 +7,13 @@
       {
         "match": "rule\\.yml$",
         "isAsync": false,
-        "cmd": "${workspaceFolder}/venv/bin/python ${workspaceFolder}/scripts/sort_yaml.py ${file}"
+        "cmd": "${workspaceFolder}/venv/bin/python ${workspaceFolder}/scripts/sort_yaml.py --no-format ${file}"
       }
     ]
-  }
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "yaml.format.enable": false
 }

@@ -7,7 +7,8 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Planned study day of the start of the visit based upon RFSTDTC
+              - Cited Guidance:
+                  Planned study day of the start of the visit based upon RFSTDTC
                   in Demographics. Should not be populated for Unplanned Visits
                 Document: IG v3.2
                 Item: Specification
@@ -15,23 +16,24 @@ Authorities:
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0216
-              Version: '1'
-            Version: '2.0'
-        Version: '3.2'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.2"
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: VISITDY is the Planned Study Day of a visit. It should not be
+              - Cited Guidance:
+                  VISITDY is the Planned Study Day of a visit. It should not be
                   populated for unplanned visits.
                 Document: IG v3.3
                 Item: Assumption 4
-                Section: '5.5'
+                Section: "5.5"
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0216
-              Version: '1'
-            Version: '2.0'
-        Version: '3.3'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.3"
 
 Check:
   all:
@@ -42,11 +44,11 @@ Check:
 Core:
   Id: CORE-000501
   Status: Published
-  Version: '1'
-Description: 'Raise an error if SVUPDES is not null when VISITDY is populated.'
+  Version: "1"
+Description: "Raise an error if SVUPDES is not null when VISITDY is populated."
 Executability: Fully Executable
 Outcome:
-  Message: 'VISITDY is populated when SVUPDES is also populated.'
+  Message: "VISITDY is populated when SVUPDES is also populated."
   Output Variables:
     - USUBJID
     - SVUPDES

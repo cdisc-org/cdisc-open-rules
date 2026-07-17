@@ -1,18 +1,19 @@
 Authorities:
-- Organization: CDISC
-  Standards:
-  - Name: USDM
-    References:
-    - Citations:
-      - Cited Guidance: 'Referenced items in the narrative content must be available elsewhere in the
-          data model.'
-        Document: 'USDM_CORE_Rules.xlsx'
-      Origin: 'USDM Conformance Rules'
-      Rule Identifier:
-        Id: 'DDF00131'
-        Version: '1'
-      Version: '1.0'
-    Version: '3.0'
+  - Organization: CDISC
+    Standards:
+      - Name: USDM
+        References:
+          - Citations:
+              - Cited Guidance:
+                  "Referenced items in the narrative content must be available elsewhere in the
+                  data model."
+                Document: "USDM_CORE_Rules.xlsx"
+            Origin: "USDM Conformance Rules"
+            Rule Identifier:
+              Id: "DDF00131"
+              Version: "1"
+            Version: "1.0"
+        Version: "3.0"
 Check: |-
   (
     $lkp:=**[id and instanceType].$each(function($v,$k){{$join([instanceType,id,$k],"|"):$v}})~>$merge;
@@ -66,25 +67,25 @@ Check: |-
               )
   )
 Core:
-  Id: 'CORE-001050'
+  Id: "CORE-001050"
   Status: Published
-  Version: '1'
-Description: 'Referenced items in the narrative content must be available elsewhere in the data model.'
+  Version: "1"
+Description: "Referenced items in the narrative content must be available elsewhere in the data model."
 Executability: Fully Executable
 Outcome:
-  Message: 'The item referenced in the narrative content text is not available elsewhere in the model.'
+  Message: "The item referenced in the narrative content text is not available elsewhere in the model."
   Output Variables:
-  - StudyProtocolDocument.id
-  - StudyProtocolDocument.name
-  - StudyProtocolDocumentVersion.id
-  - StudyProtocolDocumentVersion.protocolVersion
-  - name
-  - sectionNumber
-  - sectionTitle
-  - 'Invalid Reference'
+    - StudyProtocolDocument.id
+    - StudyProtocolDocument.name
+    - StudyProtocolDocumentVersion.id
+    - StudyProtocolDocumentVersion.protocolVersion
+    - name
+    - sectionNumber
+    - sectionTitle
+    - "Invalid Reference"
 Rule Type: JSONata
 Scope:
   Entities:
     Include:
-    - 'NarrativeContent'
+      - "NarrativeContent"
 Sensitivity: Record

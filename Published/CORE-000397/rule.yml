@@ -1,75 +1,75 @@
 Authorities:
-- Organization: CDISC
-  Standards:
-  - Name: SENDIG
-    References:
-    - Citations:
-      - Cited Guidance: Only a single record should be provided in the Trial Summary.
-        Document: IG v3.1
-        Section: 7.6.3
-      Origin: SEND Conformance Rules
-      Rule Identifier:
-        Id: "SEND343"
-        Version: "1"
-      Version: "5.0"
-    Version: "3.1"
-  - Name: SENDIG
-    References:
-    - Citations:
-      - Cited Guidance: Only a single record should be provided in the Trial Summary.
-        Document: IG v3.1.1
-        Section: 7.6.3
-      Origin: SEND Conformance Rules
-      Rule Identifier:
-        Id: "SEND343"
-        Version: "1"
-      Version: "5.0"
-    Version: "3.1.1"
-  - Name: SENDIG-GENETOX
-    References:
-    - Citations:
-      - Cited Guidance: Only a single record should be provided in the Trial Summary.
-        Document: IG v3.1.1
-        Section: 7.6.3
-      Origin: SEND Conformance Rules
-      Rule Identifier:
-        Id: "SEND343"
-        Version: "1"
-      Version: "5.0"
-    Version: "1.0"
-  - Name: SENDIG-DART
-    References:
-    - Citations:
-      - Cited Guidance: Only a single record should be provided in the Trial Summary.
-        Document: IG v3.1
-        Section: 7.6.3
-      Origin: SEND Conformance Rules
-      Rule Identifier:
-        Id: "SEND343"
-        Version: "1"
-      Version: "5.0"
-    Version: "1.1"
-  - Name: SENDIG-DART
-    References:
-    - Citations:
-      - Cited Guidance: Only a single record should be provided in the Trial Summary.
-        Document: IG v3.1.1
-        Section: 7.6.3
-      Origin: SEND Conformance Rules
-      Rule Identifier:
-        Id: "SEND343"
-        Version: "1"
-      Version: "5.0"
-    Version: "1.2"
+  - Organization: CDISC
+    Standards:
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Only a single record should be provided in the Trial Summary.
+                Document: IG v3.1
+                Section: 7.6.3
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: "SEND343"
+              Version: "1"
+            Version: "5.0"
+        Version: "3.1"
+      - Name: SENDIG
+        References:
+          - Citations:
+              - Cited Guidance: Only a single record should be provided in the Trial Summary.
+                Document: IG v3.1.1
+                Section: 7.6.3
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: "SEND343"
+              Version: "1"
+            Version: "5.0"
+        Version: "3.1.1"
+      - Name: SENDIG-GENETOX
+        References:
+          - Citations:
+              - Cited Guidance: Only a single record should be provided in the Trial Summary.
+                Document: IG v3.1.1
+                Section: 7.6.3
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: "SEND343"
+              Version: "1"
+            Version: "5.0"
+        Version: "1.0"
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: Only a single record should be provided in the Trial Summary.
+                Document: IG v3.1
+                Section: 7.6.3
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: "SEND343"
+              Version: "1"
+            Version: "5.0"
+        Version: "1.1"
+      - Name: SENDIG-DART
+        References:
+          - Citations:
+              - Cited Guidance: Only a single record should be provided in the Trial Summary.
+                Document: IG v3.1.1
+                Section: 7.6.3
+            Origin: SEND Conformance Rules
+            Rule Identifier:
+              Id: "SEND343"
+              Version: "1"
+            Version: "5.0"
+        Version: "1.2"
 Check:
   all:
-  - name: TSPARMCD
-    operator: equal_to
-    value: SNDCTVER
-  - name: TSPARMCD
-    operator: is_not_unique_set
-    value:
-    - DOMAIN
+    - name: TSPARMCD
+      operator: equal_to
+      value: SNDCTVER
+    - name: TSPARMCD
+      operator: is_not_unique_set
+      value:
+        - DOMAIN
 Core:
   Id: CORE-000397
   Status: Published
@@ -82,8 +82,8 @@ Rule Type: Record Data
 Scope:
   Classes:
     Include:
-    - TRIAL DESIGN
+      - TRIAL DESIGN
   Domains:
     Include:
-    - TS
+      - TS
 Sensitivity: Record

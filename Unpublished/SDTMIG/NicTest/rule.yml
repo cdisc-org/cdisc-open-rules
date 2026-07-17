@@ -1,31 +1,32 @@
 Authorities:
-- Organization: CDISC
-  Standards:
-  - Name: SDTMIG
-    References:
-    - Citations:
-      - Cited Guidance: For example, if 0 tablets are taken within a timeframe or 0 mL infused at a 
-          visit, then ECOCCUR = 'N' is the standard representation of the collected doses not taken,
-          not given, or missed. Dose amount variables (e.g., ECDOSE, ECDOSTXT) must not be set to 
-          zero (0) as an alternative method for indicating doses not taken, not given, or missed.
-        Document: SDTMIG v3.3
-        Item: Assumption 4a
-        Section: 6.1.3.2
-      Origin: SDTM and SDTMIG Conformance Rules
-      Rule Identifier:
-        Id: Demo
-        Version: '1.0'
-      Version: '2.0'
-    Version: '3.3'
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance:
+                  For example, if 0 tablets are taken within a timeframe or 0 mL infused at a
+                  visit, then ECOCCUR = 'N' is the standard representation of the collected doses not taken,
+                  not given, or missed. Dose amount variables (e.g., ECDOSE, ECDOSTXT) must not be set to
+                  zero (0) as an alternative method for indicating doses not taken, not given, or missed.
+                Document: SDTMIG v3.3
+                Item: Assumption 4a
+                Section: 6.1.3.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: Demo
+              Version: "1.0"
+            Version: "2.0"
+        Version: "3.3"
 Check:
   all:
-  - name: EXOCCUR
-    operator: not_equal_to
-    value: N
+    - name: EXOCCUR
+      operator: not_equal_to
+      value: N
 Core:
   Id: NicTest
   Status: Draft
-  Version: '1'
+  Version: "1"
 Description: Verify the value for ECDOSE is less than 0
 Outcome:
   Message: ECDOSE is less than or equal to 0
@@ -33,8 +34,8 @@ Rule Type: Record Data
 Scope:
   Classes:
     Include:
-    - INTERVENTIONS
+      - INTERVENTIONS
   Domains:
     Include:
-    - EC
+      - EC
 Sensitivity: Record
