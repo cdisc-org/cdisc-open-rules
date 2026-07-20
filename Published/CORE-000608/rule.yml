@@ -78,13 +78,11 @@ Core:
   Id: CORE-000608
   Status: Published
   Version: "1"
-Description:
-  Raise an error when there is more than one record present for any particular
+Description: Raise an error when there is more than one record present for any particular
   respiratory test for a subject and measurement date/time or evaluation interval.
 Executability: Fully Executable
 Outcome:
-  Message:
-    The respiratory test is not unique for this subject and measurement datetime and/or
+  Message: The respiratory test is not unique for this subject and measurement datetime and/or
     evaluation interval.
   Output Variables:
     - USUBJID

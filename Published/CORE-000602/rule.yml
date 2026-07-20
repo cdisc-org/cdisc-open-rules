@@ -31,8 +31,7 @@ Core:
   Id: CORE-000602
   Status: Published
   Version: "1"
-Description:
-  Raise an error when a record does not have associated PARENT records but the value for
+Description: Raise an error when a record does not have associated PARENT records but the value for
   LEVEL does not equal '1'.
 Executability: Fully Executable
 Outcome:

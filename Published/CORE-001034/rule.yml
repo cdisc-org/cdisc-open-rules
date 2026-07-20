@@ -75,8 +75,7 @@ Core:
   Id: CORE-001034
   Status: Published
   Version: "1"
-Description:
-  Raise an error when REPNUM is in the dataset and there are multiple records for a
+Description: Raise an error when REPNUM is in the dataset and there are multiple records for a
   subject for a test within the timeframe identified by the timing variables on the record, and
   --REPNUM is null or not unique per subject per test per timing variables.
 Executability: Fully Executable

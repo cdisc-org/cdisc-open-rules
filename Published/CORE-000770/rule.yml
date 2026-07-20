@@ -16,8 +16,7 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance:
-                  Each Trial Set should have a SPGRPCD in TXPARMCD with corresponding
+              - Cited Guidance: Each Trial Set should have a SPGRPCD in TXPARMCD with corresponding
                   parameter value under TXVAL.
                 Document: IG v3.1
                 Section: 7.2.1.1
@@ -30,8 +29,7 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance:
-                  Each Trial Set should have a SPGRPCD in TXPARMCD with corresponding
+              - Cited Guidance: Each Trial Set should have a SPGRPCD in TXPARMCD with corresponding
                   parameter value under TXVAL.
                 Document: IG v3.1.1
                 Section: 7.2.1.1
@@ -44,8 +42,7 @@ Authorities:
       - Name: SENDIG-GENETOX
         References:
           - Citations:
-              - Cited Guidance:
-                  Each Trial Set should have a SPGRPCD in TXPARMCD with corresponding
+              - Cited Guidance: Each Trial Set should have a SPGRPCD in TXPARMCD with corresponding
                   parameter value under TXVAL.
                 Document: IG v3.1.1
                 Section: 7.2.1.1
@@ -58,8 +55,7 @@ Authorities:
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance:
-                  Each Trial Set should have a SPGRPCD in TXPARMCD with corresponding
+              - Cited Guidance: Each Trial Set should have a SPGRPCD in TXPARMCD with corresponding
                   parameter value under TXVAL.
                 Document: IG v3.1
                 Section: 7.2.1.1
@@ -72,8 +68,7 @@ Authorities:
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance:
-                  Each Trial Set should have a SPGRPCD in TXPARMCD with corresponding
+              - Cited Guidance: Each Trial Set should have a SPGRPCD in TXPARMCD with corresponding
                   parameter value under TXVAL.
                 Document: IG v3.1.1
                 Section: 7.2.1.1
@@ -86,8 +81,7 @@ Authorities:
       - Name: TIG
         References:
           - Citations:
-              - Cited Guidance:
-                  Each Trial Set should have a SPGRPCD in TXPARMCD with corresponding
+              - Cited Guidance: Each Trial Set should have a SPGRPCD in TXPARMCD with corresponding
                   parameter value under TXVAL.
                 Document: TIG v1.0
                 Item: Assumption 3
@@ -98,8 +92,9 @@ Authorities:
               Version: "1"
             Version: "1.0"
         Substandard: SEND
-        Version: "1.0"
-        # FDA rule FB4602 added (SEND-only)
+        Version:
+          "1.0"
+          # FDA rule FB4602 added (SEND-only)
   - Organization: FDA
     Standards:
       # Applicable to SENDIG as of version 3.1

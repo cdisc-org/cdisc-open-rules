@@ -11,8 +11,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  Sponsors may not add any variables other than those described in the
+              - Cited Guidance: Sponsors may not add any variables other than those described in the
                   preceding three bullets. . . . Standard variables must not be renamed or modified for
                   novel usage.
                 Document: IG v3.4
@@ -145,8 +144,7 @@ Operations:
   - id: $allowed_variables
     operator: get_model_column_order
 Outcome:
-  Message:
-    Variables not listed in the Model List of Allowed Variables for Observation Class should
+  Message: Variables not listed in the Model List of Allowed Variables for Observation Class should
     be in SUPPQUAL.
 Rule Type: Variable Metadata Check
 Scope:

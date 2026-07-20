@@ -23,8 +23,7 @@ Core:
   Id: FDA.SDTMIG.CT2001
   Status: Draft
   Version: "1"
-Description:
-  Variable must be populated with terms from its CDISC controlled terminology codelist.
+Description: Variable must be populated with terms from its CDISC controlled terminology codelist.
   New terms cannot be added into non-extensible codelists.
 Operations:
   - domain: DS

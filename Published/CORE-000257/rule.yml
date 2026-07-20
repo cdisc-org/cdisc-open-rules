@@ -68,8 +68,9 @@ Authorities:
               Version: "1"
             Version: "1.0"
         Substandard: SDTM
-        Version: "1.0"
-        # FDA rule FB4401 is identical - added Jozef 2024-12-19
+        Version:
+          "1.0"
+          # FDA rule FB4401 is identical - added Jozef 2024-12-19
   - Organization: "FDA"
     Standards:
       - Name: "SDTMIG"

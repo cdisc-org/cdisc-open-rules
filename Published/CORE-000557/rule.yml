@@ -4,8 +4,7 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance:
-                  RELTYPE; Identifies the hierarchical level of the records in the
+              - Cited Guidance: RELTYPE; Identifies the hierarchical level of the records in the
                   relationship. Values should be either ONE or MANY, only when --SPID is used. However,
                   values are only necessary when identifying a relationship between datasets.
                 Document: SENDIG v3.0
@@ -126,8 +125,9 @@ Check:
           value: ONE
         - name: RELTYPE
           operator: not_equal_to
-          value: MANY
-          # Case that the POOLID column is present
+          value:
+            MANY
+            # Case that the POOLID column is present
     - all:
         - name: USUBJID
           operator: empty
@@ -150,8 +150,7 @@ Core:
 Description: When USUBJID, POOLID, and IDVARVAL are empty, RELTYPE can only be "ONE" or "MANY"
 Executability: Fully Executable
 Outcome:
-  Message:
-    For RELTYPE, only "ONE" and "MANY" are allowed when USUBJID, POOLID, and IDVARVAL are
+  Message: For RELTYPE, only "ONE" and "MANY" are allowed when USUBJID, POOLID, and IDVARVAL are
     null
 Rule Type: Record Data
 Scope:

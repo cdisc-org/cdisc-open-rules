@@ -81,8 +81,7 @@ Core:
   Id: CORE-000080
   Status: Published
   Version: "1"
-Description:
-  Raise an error when --ELTM, --TPTNUM, and --TPT are not present in dataset, but
+Description: Raise an error when --ELTM, --TPTNUM, and --TPT are not present in dataset, but
   --TPTREF is present.
 Executability: Fully Executable
 Outcome:

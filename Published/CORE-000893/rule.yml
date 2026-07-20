@@ -94,8 +94,7 @@ Core:
   Id: CORE-000893
   Status: Published
   Version: "1"
-Description:
-  For each Trial Set (SETCD) in the TX dataset exactly one Group Label (GRPLBL) record
+Description: For each Trial Set (SETCD) in the TX dataset exactly one Group Label (GRPLBL) record
   should be included.
 Executability: Fully Executable
 # We make a list of the distinct values of TXPARMCD within each group with same value for SETCD

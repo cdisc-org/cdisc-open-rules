@@ -47,8 +47,7 @@ Core:
 Description: Raise an error when SVPRESP is null and VISITDY is not null.
 Executability: Fully Executable
 Outcome:
-  Message:
-    VISITDY is populated when SVPRESP is null.  VISITDY is the Planned Study Day of a visit.
+  Message: VISITDY is populated when SVPRESP is null.  VISITDY is the Planned Study Day of a visit.
     It should not be populated for unplanned visits.
 Rule Type: Record Data
 Scope:

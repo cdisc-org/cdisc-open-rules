@@ -59,13 +59,11 @@ Core:
   Id: CDISC.SDTMIG.CG0249
   Status: Draft
   Version: "1"
-Description:
-  Trigger error when element does not end with a decision that could lead to a shortened
+Description: Trigger error when element does not end with a decision that could lead to a shortened
   path within the Arm and TATRANS is not null
 Executability: Fully Executable
 Outcome:
-  Message:
-    TATRANS is populated when the element does not end with a decision that could lead to a
+  Message: TATRANS is populated when the element does not end with a decision that could lead to a
     shortened path within the Arm
 Rule Type: Record Data
 Scope:

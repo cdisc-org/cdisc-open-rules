@@ -4,8 +4,7 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance:
-                  lb.xpt, Laboratory - Findings. One record per test per specimen per
+              - Cited Guidance: lb.xpt, Laboratory - Findings. One record per test per specimen per
                   observation time per subject or pool, Tabulation.
                 Document: SENDIG v3.0
                 Item: Domain Table Header
@@ -19,8 +18,7 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance:
-                  lb.xpt, Laboratory - Findings. One record per test per specimen per
+              - Cited Guidance: lb.xpt, Laboratory - Findings. One record per test per specimen per
                   observation time per subject or pool, Tabulation.
                 Document: SENDIG v3.1
                 Item: Domain Table Header
@@ -34,8 +32,7 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance:
-                  lb.xpt, Laboratory - Findings. One record per test per specimen per
+              - Cited Guidance: lb.xpt, Laboratory - Findings. One record per test per specimen per
                   observation time per subject or pool, Tabulation.
                 Document: SENDIG v3.1.1
                 Item: Domain Table Header
@@ -49,8 +46,7 @@ Authorities:
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance:
-                  lb.xpt, Laboratory - Findings. One record per test per specimen per
+              - Cited Guidance: lb.xpt, Laboratory - Findings. One record per test per specimen per
                   observation time per subject or pool, Tabulation.
                 Document: SENDIG v3.1
                 Item: Domain Table Header
@@ -64,8 +60,7 @@ Authorities:
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance:
-                  lb.xpt, Laboratory - Findings. One record per test per specimen per
+              - Cited Guidance: lb.xpt, Laboratory - Findings. One record per test per specimen per
                   observation time per subject or pool, Tabulation.
                 Document: SENDIG v3.1.1
                 Item: Domain Table Header
@@ -79,8 +74,7 @@ Authorities:
       - Name: SENDIG-GENETOX
         References:
           - Citations:
-              - Cited Guidance:
-                  lb.xpt, Laboratory - Findings. One record per test per specimen per
+              - Cited Guidance: lb.xpt, Laboratory - Findings. One record per test per specimen per
                   observation time per subject or pool, Tabulation.
                 Document: SENDIG v3.1.1
                 Item: Domain Table Header
@@ -135,8 +129,7 @@ Core:
   Id: CORE-000584
   Status: Published
   Version: "1"
-Description:
-  Raise an error when there is more than one record present per test per specimen, in the
+Description: Raise an error when there is more than one record present per test per specimen, in the
   LB Domain, for a subject or pool on a particular date.
 Executability: Fully Executable
 Outcome:

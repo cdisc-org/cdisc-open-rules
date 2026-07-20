@@ -87,8 +87,7 @@ Authorities:
                   DONE".]
                 Document: SDTM v2.1
                 Item: --PRESP|--OCCUR|--STAT
-                Section:
-                  Section 3.1.2 The Events Observation Class|Section 3.1.1 The Interventions
+                Section: Section 3.1.2 The Events Observation Class|Section 3.1.1 The Interventions
                   Observation Class
             Origin: TIG Conformance Rules
             Rule Identifier:
@@ -123,8 +122,7 @@ Core:
   Id: CORE-000014
   Status: Published
   Version: "1"
-Description:
-  Raise an error when --PRESP is not equals to "Y" and --OCCUR is present in dataset or
+Description: Raise an error when --PRESP is not equals to "Y" and --OCCUR is present in dataset or
   --STAT is equal to "NOT DONE" and --OCCUR is not blank
 Executability: Fully Executable
 Outcome:

@@ -140,13 +140,11 @@ Core:
   Id: CORE-000503
   Status: Published
   Version: "1"
-Description:
-  QORIG is used to indicate the origin of the data. Possible values are COLLECTED,
+Description: QORIG is used to indicate the origin of the data. Possible values are COLLECTED,
   DERIVED, OTHER, and NOT AVAILABLE.
 Executability: Fully Executable
 Outcome:
-  Message:
-    When populated, the possible values for QORIG are limited to COLLECTED, DERIVED, OTHER,
+  Message: When populated, the possible values for QORIG are limited to COLLECTED, DERIVED, OTHER,
     and NOT AVAILABLE.
 Rule Type: Record Data
 Scope:

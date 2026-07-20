@@ -83,8 +83,7 @@ Core:
   Id: CORE-000354
   Status: Published
   Version: "1"
-Description:
-  Raise an error when the date portion of --DTC is an incomplete date or the date portion
+Description: Raise an error when the date portion of --DTC is an incomplete date or the date portion
   of DM.RFSTDTC is an incomplete date, but --DY is not empty
 Executability: Fully Executable
 Match Datasets:
@@ -92,8 +91,7 @@ Match Datasets:
       - USUBJID
     Name: DM
 Outcome:
-  Message:
-    The date portion of --DTC is not complete date or the date portion of DM.RFSTDTC is not
+  Message: The date portion of --DTC is not complete date or the date portion of DM.RFSTDTC is not
     complete date, but --DY is not empty
   Output Variables:
     - --DY

@@ -5,8 +5,7 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance:
-                  supp--.xpt, Supplemental Qualifiers for (domain name) - Relationship
+              - Cited Guidance: supp--.xpt, Supplemental Qualifiers for (domain name) - Relationship
                   Datasets. One record per IDVAR, IDVARVAL, and QNAM value per subject per related domain,
                   Tabulation.
                 Document: IG v3.0
@@ -23,8 +22,7 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance:
-                  supp--.xpt, Supplemental Qualifiers for (domain name) - Relationship
+              - Cited Guidance: supp--.xpt, Supplemental Qualifiers for (domain name) - Relationship
                   Datasets. One record per supplemental qualifier per related parent domain record(s),
                   Tabulation.
                 Document: IG v3.1
@@ -41,8 +39,7 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance:
-                  supp--.xpt, Supplemental Qualifiers for (domain name) - Relationship
+              - Cited Guidance: supp--.xpt, Supplemental Qualifiers for (domain name) - Relationship
                   Datasets. One record per supplemental qualifier per related parent domain record(s),
                   Tabulation.
                 Document: IG v3.1.1
@@ -59,8 +56,7 @@ Authorities:
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance:
-                  supp--.xpt, Supplemental Qualifiers for (domain name) - Relationship
+              - Cited Guidance: supp--.xpt, Supplemental Qualifiers for (domain name) - Relationship
                   Datasets. One record per supplemental qualifier per related parent domain record(s),
                   Tabulation.
                 Document: IG v3.1
@@ -77,8 +73,7 @@ Authorities:
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance:
-                  supp--.xpt, Supplemental Qualifiers for (domain name) - Relationship
+              - Cited Guidance: supp--.xpt, Supplemental Qualifiers for (domain name) - Relationship
                   Datasets. One record per supplemental qualifier per related parent domain record(s),
                   Tabulation.
                 Document: IG v3.1.1
@@ -95,8 +90,7 @@ Authorities:
       - Name: SENDIG-GENETOX
         References:
           - Citations:
-              - Cited Guidance:
-                  supp--.xpt, Supplemental Qualifiers for (domain name) - Relationship
+              - Cited Guidance: supp--.xpt, Supplemental Qualifiers for (domain name) - Relationship
                   Datasets. One record per supplemental qualifier per related parent domain record(s),
                   Tabulation.
                 Document: IG v3.1.1
@@ -150,13 +144,11 @@ Core:
   Id: CORE-000551
   Status: Published
   Version: "1"
-Description:
-  There may be only be one record in a SUPP-- dataset with the same QNAM value within
+Description: There may be only be one record in a SUPP-- dataset with the same QNAM value within
   USUBJID or POOLID, RDOMAIN, IDVAR, IDVARVAL.
 Executability: Fully Executable
 Outcome:
-  Message:
-    Duplicate value of the combination of USUBJID or POOLID, RDOMAIN, IDVAR, IDVARVAL with
+  Message: Duplicate value of the combination of USUBJID or POOLID, RDOMAIN, IDVAR, IDVARVAL with
     QNAM
   Output Variables:
     - RDOMAIN

@@ -23,8 +23,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  When the comment text is longer than 200 characters, the first 200
+              - Cited Guidance: When the comment text is longer than 200 characters, the first 200
                   characters of the comment will be in COVAL, the next 200 in COVAL1, and additional text
                   stored as needed to COVALn. See example, Rows 3-4.
                 Document: IG v3.2
@@ -39,8 +38,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  When the comment text is longer than 200 characters, the first 200
+              - Cited Guidance: When the comment text is longer than 200 characters, the first 200
                   characters of the comment will be in COVAL, the next 200 in COVAL1, and additional text
                   stored as needed to COVALn. See example, Rows 3-4.
                 Document: IG v3.3
@@ -62,8 +60,7 @@ Core:
   Id: CDISC.SDTMIG.CG0169
   Status: Draft
   Version: "1"
-Description:
-  Trigger error when there are no comments greater than 200 characters and COVALn is
+Description: Trigger error when there are no comments greater than 200 characters and COVALn is
   present
 Executability: Fully Executable
 Outcome:

@@ -7,8 +7,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  The unique subject identifier (USUBJID) is required in all datasets
+              - Cited Guidance: The unique subject identifier (USUBJID) is required in all datasets
                   containing subject-level data. USUBJID values must be unique for each trial participant
                   (subject) across all trials in the submission.
                 Document: IG v3.4
@@ -22,8 +21,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  The unique subject identifier (USUBJID) is required in all datasets
+              - Cited Guidance: The unique subject identifier (USUBJID) is required in all datasets
                   containing subject-level data. USUBJID values must be unique for each trial participant
                   (subject) across all trials in the submission.
                 Document: IG v3.3
@@ -189,8 +187,7 @@ Core:
   Id: CORE-000201
   Status: Published
   Version: "1"
-Description:
-  Trigger error when domain is not an AP-- domain and USUBJID is not present in
+Description: Trigger error when domain is not an AP-- domain and USUBJID is not present in
   DM.USUBJID
 Executability: Fully Executable
 Operations:

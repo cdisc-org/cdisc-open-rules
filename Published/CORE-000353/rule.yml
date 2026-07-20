@@ -132,8 +132,9 @@ Check:
           operator: equal_to
           value: STENDTC
         - name: TSVAL
-          operator: invalid_date
-          # Duration parameter values - P.S. negative durations are allowed
+          operator:
+            invalid_date
+            # Duration parameter values - P.S. negative durations are allowed
     - all:
         - name: TSPARMCD
           operator: equal_to

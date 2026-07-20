@@ -99,8 +99,7 @@ Core:
   Id: CORE-000771
   Status: Published
   Version: "1"
-Description:
-  Raise an error when there is more than one record present for any particular Result or
+Description: Raise an error when there is more than one record present for any particular Result or
   Findings as Collected, in the CL Domain, for a subject or pool on a particular date.
 Executability: Fully Executable
 # The check for this rule was revised to NOT check the records where CLDTC is null

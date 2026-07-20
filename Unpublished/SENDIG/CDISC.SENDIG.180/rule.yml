@@ -68,14 +68,12 @@ Core:
   Id: CDISC.SENDIG.180
   Status: Draft
   Version: "1"
-Description:
-  Raise an error when there is more than one record present for any particular
+Description: Raise an error when there is more than one record present for any particular
   Microscopic Finding in the MI Domain, for a specific subject, test code, specimen, laterality,
   directionality, anatomical region and standardized resulz
 Executability: Fully Executable
 Outcome:
-  Message:
-    The Microscopic Finding record is not unique for this subject, test code, specimen,
+  Message: The Microscopic Finding record is not unique for this subject, test code, specimen,
     standardized result  and laterality (when present and populated), directionality (when present
     and populated) and anatomical region (when present and populated)
   Output Variables:

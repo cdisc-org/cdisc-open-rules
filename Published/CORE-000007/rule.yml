@@ -62,8 +62,9 @@ Authorities:
               Version: "1"
             Version: "1.0"
         Substandard: SDTM
-        Version: "1.0"
-        #CG0435 is identical to rule FB0606. Added metadata for FB0606.
+        Version:
+          "1.0"
+          #CG0435 is identical to rule FB0606. Added metadata for FB0606.
   - Organization: FDA
     Standards:
       - Name: SDTMIG
@@ -119,8 +120,7 @@ Core:
   Id: CORE-000007
   Status: Published
   Version: "1"
-Description:
-  When Date/Time of Death (DTHDTC) in the DM dataset is populated then death flag (DTHFL)
+Description: When Date/Time of Death (DTHDTC) in the DM dataset is populated then death flag (DTHFL)
   should be populated as 'Y' in the DM dataset for the corresponding subject.
 Executability: Fully Executable
 Outcome:

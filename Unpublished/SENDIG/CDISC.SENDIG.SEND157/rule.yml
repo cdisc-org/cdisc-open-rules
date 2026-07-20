@@ -130,8 +130,7 @@ Core:
   Id: CDISC.SENDIG.SEND157
   Status: Draft
   Version: "1"
-Description:
-  Raise an error when the mass identification is not unique within the subject,
+Description: Raise an error when the mass identification is not unique within the subject,
   regardless of the mass location.
 Outcome:
   Message: The mass identification is not unique within the subject regardless of the mass location.

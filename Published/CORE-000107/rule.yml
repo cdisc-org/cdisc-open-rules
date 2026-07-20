@@ -13,8 +13,7 @@ Authorities:
                   the following subject identifiers USUBJID, SPDEVID, or POOLID.
                 Document: Model v2.0
                 Section: Identifiers
-              - Cited Guidance:
-                  The Associated Persons Identifier (APID) will be required in all AP
+              - Cited Guidance: The Associated Persons Identifier (APID) will be required in all AP
                   datasets, and will identify records as AP data.'
                 Document: Model v2.0
                 Section: Associated Persons Data
@@ -48,8 +47,7 @@ Authorities:
                   the following subject identifiers - SUBJID, SPDEVID, or POOLID.
                 Document: SDTM v2.1
                 Section: Section 3.1.4 Identifiers For All Classes
-              - Cited Guidance:
-                  The Associated Persons Identifier (APID) will be required in all AP
+              - Cited Guidance: The Associated Persons Identifier (APID) will be required in all AP
                   datasets, and will identify records as AP data.
                 Document: SDTM v2.1
                 Section: Section 4.0  Associated Persons Data
@@ -94,14 +92,12 @@ Core:
   Id: CORE-000107
   Status: Published
   Version: "1"
-Description:
-  APID is required in all Associated Persons Data. In addition to STUDYID, DOMAIN, and
+Description: APID is required in all Associated Persons Data. In addition to STUDYID, DOMAIN, and
   --SEQ being required for all domains based on one of the 3 general observation classes, one of
   USUBJID, APID, SPDEVID, or POOLID must also be present.
 Executability: Fully Executable
 Outcome:
-  Message:
-    An appropriate identifier is not present; USUBJID, APID, SPDEVID, SPTOBID, POOLID,
+  Message: An appropriate identifier is not present; USUBJID, APID, SPDEVID, SPTOBID, POOLID,
     SPTOBID, STOCONID should be present.
 Rule Type: Record Data
 Scope:

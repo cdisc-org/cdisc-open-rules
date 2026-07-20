@@ -127,13 +127,11 @@ Core:
   Id: CORE-000576
   Status: Published
   Version: "1"
-Description:
-  The value of TRTDOS is either a number, a semicolon-delimited string containing numbers
+Description: The value of TRTDOS is either a number, a semicolon-delimited string containing numbers
   without spaces, or "SEE PROTOCOL" for more complex dosing regimens.
 Executability: Fully Executable
 Outcome:
-  Message:
-    The value of TXVAL for TXPARMCD=TRTDOS is neither a number, a semicolon-delimited string
+  Message: The value of TXVAL for TXPARMCD=TRTDOS is neither a number, a semicolon-delimited string
     containing numbers without spaces, or "SEE PROTOCOL"
 Rule Type: Record Data
 Scope:

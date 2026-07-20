@@ -38,8 +38,7 @@ Core:
   Id: CORE-000604
   Status: Published
   Version: "1"
-Description:
-  Raise an error when a TOPARMCD in the TO dataset categorized as TOCAT = NEW PRODUCT and
+Description: Raise an error when a TOPARMCD in the TO dataset categorized as TOCAT = NEW PRODUCT and
   TOSCAT = PRODUCT DESCRIPTOR does not have a matching PDPARMCD in the PD dataset.
 Executability: Fully Executable
 Operations:
@@ -50,8 +49,7 @@ Operations:
     name: PDPARMCD
     operator: distinct
 Outcome:
-  Message:
-    TOPARMCD in TO is categorized as TOCAT = NEW PRODUCT and TOSCAT = PRODUCT DESCRIPTOR but
+  Message: TOPARMCD in TO is categorized as TOCAT = NEW PRODUCT and TOSCAT = PRODUCT DESCRIPTOR but
     does not have a matching PDPARMCD per SPTOBID in PD.
   Output Variables:
     - SPTOBID

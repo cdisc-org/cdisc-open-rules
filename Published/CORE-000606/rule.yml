@@ -35,8 +35,7 @@ Core:
   Id: CORE-000606
   Status: Published
   Version: "1"
-Description:
-  Raise an error when IGDCMPID for a tobacco ingredient in the IQ dataset (IQCAT =
+Description: Raise an error when IGDCMPID for a tobacco ingredient in the IQ dataset (IQCAT =
   TOBACCO INGREDIENT) does not have a matching IGDCMPID per SPTOBID in the IT dataset
 Executability: Fully Executable
 Operations:
@@ -47,8 +46,7 @@ Operations:
     name: IGDCMPID
     operator: distinct
 Outcome:
-  Message:
-    IGDCMPID in IQ categorized as IQCAT = TOBACCO INGREDIENT does not have a matching
+  Message: IGDCMPID in IQ categorized as IQCAT = TOBACCO INGREDIENT does not have a matching
     IGDCMPID per SPTOBID in IT.
   Output Variables:
     - SPTOBID

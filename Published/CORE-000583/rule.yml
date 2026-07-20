@@ -112,8 +112,7 @@ Core:
   Id: CORE-000583
   Status: Published
   Version: "1"
-Description:
-  Either TSVAL or TSVALNF is populated, but not both. Trigger error when TSVAL and
+Description: Either TSVAL or TSVALNF is populated, but not both. Trigger error when TSVAL and
   TSVALNF are populated, or when both variables are empty.
 Executability: Fully Executable
 Outcome:

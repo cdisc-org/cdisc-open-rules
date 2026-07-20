@@ -244,8 +244,7 @@ Core:
   Id: CORE-000542
   Status: Published
   Version: "1"
-Description:
-  Raise an error when --STRESC is populated with a numeric value, but --STRESN is not
+Description: Raise an error when --STRESC is populated with a numeric value, but --STRESN is not
   populated, or --STRESN is not equal to --STRESC.
 Executability: Fully Executable
 Outcome:

@@ -68,8 +68,7 @@ Core:
   Id: CORE-000214
   Status: Published
   Version: "1"
-Description:
-  Trigger error when subject has more than one record per Epoch with DSCAT = 'DISPOSITION
+Description: Trigger error when subject has more than one record per Epoch with DSCAT = 'DISPOSITION
   EVENT' and more than one record where DSSCAT = 'STUDY PARTICIPATION'
 Executability: Fully Executable
 Operations:
@@ -83,8 +82,7 @@ Operations:
     name: DSCAT
     operator: record_count
 Outcome:
-  Message:
-    More than 1 record exists per subject per EPOCH with DSCAT = 'DISPOSITION EVENT' and
+  Message: More than 1 record exists per subject per EPOCH with DSCAT = 'DISPOSITION EVENT' and
     DSSCAT = 'STUDY PARTICIPATION'.
   Output Variables:
     - DSSCAT

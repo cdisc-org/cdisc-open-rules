@@ -64,8 +64,9 @@ Authorities:
               Version: "1"
             Version: "1.0"
         Substandard: SDTM
-        Version: "1.0"
-        #CG0135 is identical to rule FB0604. Added metadata for FB0604 by Malini Narreddy on 2025-03-05
+        Version:
+          "1.0"
+          #CG0135 is identical to rule FB0604. Added metadata for FB0604 by Malini Narreddy on 2025-03-05
   - Organization: FDA
     Standards:
       - Name: SDTMIG
@@ -124,8 +125,7 @@ Core:
   Id: CORE-000253
   Status: Published
   Version: "1"
-Description:
-  When a record is present in the AE dataset where AESDTH = 'Y' then death flag (DTHFL)
+Description: When a record is present in the AE dataset where AESDTH = 'Y' then death flag (DTHFL)
   should be populated as 'Y' in the DM dataset for the corresponding subject.
 Executability: Fully Executable
 Match Datasets:

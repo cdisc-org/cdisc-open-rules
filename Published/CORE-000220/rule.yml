@@ -84,13 +84,11 @@ Core:
   Id: CORE-000220
   Status: Published
   Version: "1"
-Description:
-  Part A - Raise an error when --TESTCD > 8 chars or contains more than only letters,
+Description: Part A - Raise an error when --TESTCD > 8 chars or contains more than only letters,
   numbers and underscores, or starts with a number.
 Executability: Fully Executable
 Outcome:
-  Message:
-    --TESTCD > 8 chars or contains more than only letters, numbers, underscores, or starts
+  Message: --TESTCD > 8 chars or contains more than only letters, numbers, underscores, or starts
     with a number.
   Output Variables:
     - --TESTCD

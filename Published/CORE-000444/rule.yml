@@ -61,13 +61,11 @@ Core:
   Id: CORE-000444
   Status: Published
   Version: "1"
-Description:
-  When Result is outside the Limit of Quantification, i.e. it is not a number (e.g.
+Description: When Result is outside the Limit of Quantification, i.e. it is not a number (e.g.
   <200), then PCSTRESC = "BLQ" or PCSTRESC = "ALQ"
 Executability: Fully Executable
 Outcome:
-  Message:
-    The value in PCORRES is not a number (so represents a value outside the Limit of
+  Message: The value in PCORRES is not a number (so represents a value outside the Limit of
     Quantification), in which case PCSTRESC must be either "BLQ" or "ALQ"
 Rule Type: Record Data
 Scope:

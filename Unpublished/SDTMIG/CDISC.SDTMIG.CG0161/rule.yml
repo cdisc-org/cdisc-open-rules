@@ -71,13 +71,11 @@ Core:
   Id: CDISC.SDTMIG.CG0161
   Status: Draft
   Version: "1"
-Description:
-  Trigger error when RDEVID ^= null and SREL does not describe relationship of associated
+Description: Trigger error when RDEVID ^= null and SREL does not describe relationship of associated
   person to device identified in RDEVID
 Executability: Fully Executable
 Outcome:
-  Message:
-    SREL does not describe relationship of associated person to device identified in RDEVID
+  Message: SREL does not describe relationship of associated person to device identified in RDEVID
     when RDEVID ^= null
 Rule Type: Record Data
 Scope:

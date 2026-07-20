@@ -39,8 +39,7 @@ Core:
 Description: Raise an error when INGRADE, INPURITY and TPMF are all not populated.
 Executability: Fully Executable
 Outcome:
-  Message:
-    At least one of INGRADE or INPURITY should be populated. If neither is available due to
+  Message: At least one of INGRADE or INPURITY should be populated. If neither is available due to
     the ingredient being proprietary and originating from a third-party supplier, populate TPMF with
     the Tobacco Product Master File number provided by the supplier.
   Output Variables:

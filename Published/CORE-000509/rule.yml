@@ -84,9 +84,10 @@ Check:
           value: 1
         - name: $record_count_AGE
           operator: greater_than_or_equal_to
-          value: 1
-          # NO TSPARMCD=AGE and no TSPARMCD=AGETXT is present
-          # Both counts are 0
+          value:
+            1
+            # NO TSPARMCD=AGE and no TSPARMCD=AGETXT is present
+            # Both counts are 0
     - all:
         - name: $record_count_AGETXT
           operator: equal_to
@@ -99,8 +100,7 @@ Core:
   Id: CORE-000509
   Status: Published
   Version: "1"
-Description:
-  Either a record with TSPARMCD of AGE or TSPARMCD of AGETXT should be present, but not
+Description: Either a record with TSPARMCD of AGE or TSPARMCD of AGETXT should be present, but not
   both.
 Executability: Fully Executable
 Operations:
@@ -116,8 +116,7 @@ Operations:
     id: $record_count_AGETXT
     operator: record_count
 Outcome:
-  Message:
-    Either a record with TSPARMCD of AGE or TSPARMCD of AGETXT should be present, but not
+  Message: Either a record with TSPARMCD of AGE or TSPARMCD of AGETXT should be present, but not
     both.
   Output Variables:
     #- TSPARMCD

@@ -116,8 +116,7 @@ Core:
   Id: CORE-000376
   Status: Published
   Version: "1"
-Description:
-  Raise an error when the two first characters of a prefixed variable within a custom
+Description: Raise an error when the two first characters of a prefixed variable within a custom
   domain do not match the DOMAIN value.
 Executability: Fully Executable
 Operations:
@@ -127,8 +126,7 @@ Operations:
   - id: $domain_is_custom
     operator: domain_is_custom
 Outcome:
-  Message:
-    First 2 characters of prefixed variable within custom domain do not match the DOMAIN
+  Message: First 2 characters of prefixed variable within custom domain do not match the DOMAIN
     value.
   Output Variables:
     - $domain_list

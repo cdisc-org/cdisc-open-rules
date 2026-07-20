@@ -52,8 +52,7 @@ Authorities:
       - Name: TIG
         References:
           - Citations:
-              - Cited Guidance:
-                  A record in FA may or may not have a parent record in an events or
+              - Cited Guidance: A record in FA may or may not have a parent record in an events or
                   interventions domain. If an FA record does have a parent record, the value in FAOBJ should
                   match the value in --TERM or --TRT, unless the parent domain is dictionary coded or
                   subject to controlled terminology. In such cases, the value represented in FAOBJ will
@@ -82,15 +81,13 @@ Core:
   Id: CORE-000744
   Status: Published
   Version: "1"
-Description:
-  Raise an error when a related record is present in the parent domain dataset but FAOBJ
+Description: Raise an error when a related record is present in the parent domain dataset but FAOBJ
   is not equal to the --TERM, --TRT or --DECOD of the parent domain.
 Executability: Fully Executable
 Match Datasets:
   - Name: RELREC
 Outcome:
-  Message:
-    Related record is present in the parent domain dataset but FAOBJ is not equal to the
+  Message: Related record is present in the parent domain dataset but FAOBJ is not equal to the
     "TERM", "TRT" or "DECOD" of the parent domain.
   Output Variables:
     - FAOBJ

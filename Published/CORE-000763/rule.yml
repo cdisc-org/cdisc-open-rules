@@ -58,8 +58,7 @@ Authorities:
       - Name: TIG
         References:
           - Citations:
-              - Cited Guidance:
-                  If the reference time point corresponds to the date of collection or
+              - Cited Guidance: If the reference time point corresponds to the date of collection or
                   assessment; Start values; an observation can start BEFORE that time point, can start
                   COINCIDENT with that time point, or it is unknown (U) when it started. End values; an
                   observation can end BEFORE that time point, can end COINCIDENT with that time point, can
@@ -103,8 +102,7 @@ Core:
 Description: Trigger error when --STRTPT is not in ('BEFORE', 'COINCIDENT', 'UNKNOWN')
 Executability: Partially Executable
 Outcome:
-  Message:
-    --STTPT is equal to the date of collection or assessment but --STRTPT is not in
+  Message: --STTPT is equal to the date of collection or assessment but --STRTPT is not in
     ('BEFORE', 'COINCIDENT',  'UNKNOWN').
 Rule Type: Record Data
 Scope:

@@ -101,8 +101,7 @@ Core:
   Id: CDISC.SENDIG.105
   Status: Draft
   Version: "1"
-Description:
-  Raise an error when the variable SPECIES is not present in DM, and there is no record
+Description: Raise an error when the variable SPECIES is not present in DM, and there is no record
   TSPARMCD=SPECIES in TS and there is no record TXPARMCD=SPECIES in TX
 Executability: Fully Executable
 #Operations:
@@ -121,8 +120,7 @@ Executability: Fully Executable
 #  name: TXPARMCD
 #  operator: distinct
 Outcome:
-  Message:
-    SPECIES in not present in DM and there is no record TSPARMCD=SPECIES in TS and there is
+  Message: SPECIES in not present in DM and there is no record TSPARMCD=SPECIES in TS and there is
     no record TXPARMCD=SPECIES in TX
   #Output Variables:
   #  - $distinct_tsparmcd

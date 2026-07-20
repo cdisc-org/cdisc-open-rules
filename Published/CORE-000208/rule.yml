@@ -67,8 +67,7 @@ Core:
   Id: CORE-000208
   Status: Published
   Version: "1"
-Description:
-  Trigger error when study does not use multi-stage arm assignments and ACTARMCD ^= null,
+Description: Trigger error when study does not use multi-stage arm assignments and ACTARMCD ^= null,
   and ACTARMCD is not in TA.ARMCD
 Executability: Partially Executable - Possible Overreporting
 Operations:

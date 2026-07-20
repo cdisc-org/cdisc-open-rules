@@ -7,8 +7,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  Note that the key variables shown in this table are examples only. A
+              - Cited Guidance: Note that the key variables shown in this table are examples only. A
                   sponsor's actual key structure may be different.
                 Document: IG v3.4
                 Section: Table 3.2.1
@@ -74,8 +73,7 @@ Core:
   Id: CDISC.SDTMIG.CG0019
   Status: Draft
   Version: "1"
-Description:
-  Trigger error if records are not unique as per sponsor defined key variables as
+Description: Trigger error if records are not unique as per sponsor defined key variables as
   documented in the define.xml
 Executability: Fully Executable
 Match Datasets:
@@ -83,8 +81,7 @@ Match Datasets:
       - USUBJID
     Name: SUPP--
 Outcome:
-  Message:
-    Records are not unique as per sponsor defined key variables as documented in the
+  Message: Records are not unique as per sponsor defined key variables as documented in the
     define.xml
   Output Variables:
     - define_dataset_key_sequence

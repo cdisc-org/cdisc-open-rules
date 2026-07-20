@@ -61,8 +61,7 @@ Core:
   Id: CDISC.SDTMIG.CG0173
   Status: Draft
   Version: "1"
-Description:
-  Trigger error when collected data fits a Qualifier variable listed in specified SDTM
+Description: Trigger error when collected data fits a Qualifier variable listed in specified SDTM
   Sections and are represented in the Findings About domain, and the name of the variable is used as
   FATESTCD
 Executability: Partially Executable - Possible Underreporting
@@ -71,8 +70,7 @@ Operations:
     name: FATESTCD
     operator: label_referenced_variable_metadata
 Outcome:
-  Message:
-    Collected data fits a Qualifier variable listed in specified SDTM Sections and are
+  Message: Collected data fits a Qualifier variable listed in specified SDTM Sections and are
     represented in the Findings About domain, and the name of the variable is used as FATESTCD
   Output Variables:
     - $label_referenced_variable_name

@@ -67,8 +67,7 @@ Core:
 Description: Raise an error when UNII and CASNO are both not populated.
 Executability: Fully Executable
 Outcome:
-  Message:
-    At least one of the UNII and CASNO variables should be present and populated for each
+  Message: At least one of the UNII and CASNO variables should be present and populated for each
     ingredient if available.
   Output Variables:
     - UNII

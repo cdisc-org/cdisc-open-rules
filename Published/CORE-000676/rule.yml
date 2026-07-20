@@ -35,8 +35,7 @@ Core:
   Id: CORE-000676
   Status: Published
   Version: "1"
-Description:
-  Part B - Raise an error when the value of TXVAL for TXPARMCD = SPTOBID in the TX
+Description: Part B - Raise an error when the value of TXVAL for TXPARMCD = SPTOBID in the TX
   dataset does not correspond to a SPTOBID value present in TO.
 Executability: Fully Executable
 Operations:
@@ -45,8 +44,7 @@ Operations:
     name: SPTOBID
     operator: distinct
 Outcome:
-  Message:
-    Value in TXVAL for TXPARMCD = SPTOBID in the TX dataset does not correspond to a SPTOBID
+  Message: Value in TXVAL for TXPARMCD = SPTOBID in the TX dataset does not correspond to a SPTOBID
     value in TO.
   Output Variables:
     - TXVAL

@@ -16,8 +16,7 @@ Authorities:
                 Document: IG v3.4
                 Item: Assumption 4a
                 Section: 6.1.3.2
-              - Cited Guidance:
-                  Qualifiers that indicate dose amount (e.g., ECDOSE, ECDOSTXT) may be
+              - Cited Guidance: Qualifiers that indicate dose amount (e.g., ECDOSE, ECDOSTXT) may be
                   populated with positive (non-zero) values in cases where the sponsor feels it is necessary
                   and/or appropriate to represent specific dose amounts not taken, not given, or missed.
                 Document: IG v3.4
@@ -112,13 +111,11 @@ Core:
   Id: CORE-000004
   Status: Published
   Version: "1"
-Description:
-  When ECOCCUR indicates no dose, then ECDOSE needs to be null or > 0; it cannot be used
+Description: When ECOCCUR indicates no dose, then ECDOSE needs to be null or > 0; it cannot be used
   to indicate a dose wasn't taken.
 Executability: Fully Executable
 Outcome:
-  Message:
-    ECOCCUR indicates dose was not given, but ECDOSE is not blank or has a value less than or
+  Message: ECOCCUR indicates dose was not given, but ECDOSE is not blank or has a value less than or
     equal to 0
   Output Variables:
     - ECDOSE

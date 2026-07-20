@@ -81,8 +81,7 @@ Core:
   Id: CORE-000299
   Status: Published
   Version: "1"
-Description:
-  Raise an error when LBORRES is not a continuous measurement and LBSTNRHI is not empty.
+Description: Raise an error when LBORRES is not a continuous measurement and LBSTNRHI is not empty.
   The interpretation of the guidance is that LBORRES is populated (not null).
 Executability: Fully Executable
 Outcome:

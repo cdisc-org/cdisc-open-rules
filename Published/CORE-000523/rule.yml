@@ -94,13 +94,11 @@ Core:
   Id: CORE-000523
   Status: Published
   Version: "1"
-Description:
-  Raise an error when the value of DOMAIN has a character other than A-Z as the first
+Description: Raise an error when the value of DOMAIN has a character other than A-Z as the first
   character or a character A-Z, 0-9 for the second character
 Executability: Fully Executable
 Outcome:
-  Message:
-    First two characters of DOMAIN value must be in the range A-Z for the first, and A-Z,0-9
+  Message: First two characters of DOMAIN value must be in the range A-Z for the first, and A-Z,0-9
     for the second
   Output Variables:
     - DOMAIN

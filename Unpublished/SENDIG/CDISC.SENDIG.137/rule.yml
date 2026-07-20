@@ -28,13 +28,11 @@ Core:
   Id: CDISC.SENDIG.137
   Status: Draft
   Version: "1"
-Description:
-  Raise a message when the define.xml does not contain an explanation of EXDOSE values
+Description: Raise a message when the define.xml does not contain an explanation of EXDOSE values
   with respect for intended or actual dose levels, using a reference to a def:CommentDef
 Executability: Partially Executable - Possible Underreporting
 Outcome:
-  Message:
-    The define.xml does not contain an explanation of EXDOSE values with respect for intended
+  Message: The define.xml does not contain an explanation of EXDOSE values with respect for intended
     or actual dose levels
 # Rule Type: Value Check against Define XML Variable
 Rule Type: Variable Metadata Check against Define XML

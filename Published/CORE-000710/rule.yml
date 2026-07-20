@@ -99,8 +99,7 @@ Core:
   Status: Published
   Version: "1"
 
-Description:
-  Trigger error when --STRTPT is not in ('BEFORE', 'COINCIDENT', 'AFTER', 'UNKNOWN') and
+Description: Trigger error when --STRTPT is not in ('BEFORE', 'COINCIDENT', 'AFTER', 'UNKNOWN') and
   --STTPT is prior to the date of collection or assessment.
 Executability: Partially Executable
 Outcome:

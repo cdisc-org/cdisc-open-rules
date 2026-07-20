@@ -46,8 +46,7 @@ Core:
   Id: CDISC.ADAMIG.AD0039
   Status: Draft
   Version: "1"
-Description:
-  Raise an error when a variable ends with DTF and values are not according to the DATEFL
+Description: Raise an error when a variable ends with DTF and values are not according to the DATEFL
   controlled terminology codelist
 Outcome:
   Message: The values of ADTF are not following the DATEFL codelist

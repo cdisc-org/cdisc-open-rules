@@ -80,13 +80,11 @@ Core:
   Id: CORE-000212
   Status: Published
   Version: "1"
-Description:
-  When subject has more than one record per Epoch with DSCAT = DISPOSITION EVENT, DSSCAT
+Description: When subject has more than one record per Epoch with DSCAT = DISPOSITION EVENT, DSSCAT
   must be present.
 Executability: Fully Executable
 Outcome:
-  Message:
-    DSSCAT is not present when subject has more than one record per Epoch with DSCAT =
+  Message: DSSCAT is not present when subject has more than one record per Epoch with DSCAT =
     'DISPOSITION EVENT'.
   Output Variables:
     - USUBJID

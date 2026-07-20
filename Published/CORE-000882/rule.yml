@@ -36,8 +36,7 @@ Core:
   Id: CORE-000882
   Status: Published
   Version: "1"
-Description:
-  VISITDY should be populated in the DS dataset for disposition records where DSTERM has
+Description: VISITDY should be populated in the DS dataset for disposition records where DSTERM has
   been mapped to one of 'INTERIM SACRIFICE', 'RECOVERY SACRIFICE', 'REMOVED FROM STUDY ALIVE', or
   'TERMINAL SACRIFICE', as these are required timing variables for identification of the day on
   which group summaries (Group Means and Incidences) are calculated for post mortem data.

@@ -101,13 +101,11 @@ Core:
   Id: CORE-000475
   Status: Published
   Version: "1"
-Description:
-  Raise an error when there is more than one record present for any particular
+Description: Raise an error when there is more than one record present for any particular
   Pharmacokinetics Concentration, in the PC Domain, for a subject or pool on a particular date.
 Executability: Fully Executable
 Outcome:
-  Message:
-    The Pharmacokinetics Concentration test is not unique for this subject or pool and
+  Message: The Pharmacokinetics Concentration test is not unique for this subject or pool and
     specimen and date/time.
   Output Variables:
     - USUBJID

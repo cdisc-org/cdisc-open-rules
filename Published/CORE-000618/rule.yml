@@ -109,8 +109,9 @@ Check:
           value: "BENIGN"
         - name: "MIRESCAT"
           operator: not_equal_to
-          value: "BENIGN"
-          # Christy Kubin: METASTATIC is allowed for MALIGNANT but not for BENIGN
+          value:
+            "BENIGN"
+            # Christy Kubin: METASTATIC is allowed for MALIGNANT but not for BENIGN
     - all:
         - name: "MISTRESC"
           operator: contains

@@ -91,13 +91,11 @@ Core:
   Id: CORE-000555
   Status: Published
   Version: "1"
-Description:
-  Raise an error when there is more than one record present the combination of USUBJID
+Description: Raise an error when there is more than one record present the combination of USUBJID
   and DDORRES or for the combination of USUBJID and DDSTRESC.
 Executability: Fully Executable
 Outcome:
-  Message:
-    There is more than one for the combination of USUBJID and DDORRES or the combination of
+  Message: There is more than one for the combination of USUBJID and DDORRES or the combination of
     USUBJID and DDSTRESC
   Output Variables:
     - USUBJID

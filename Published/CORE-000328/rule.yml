@@ -151,13 +151,11 @@ Core:
   Id: CORE-000328
   Status: Published
   Version: "1"
-Description:
-  Study Day of Start (--STDY) variable should be included into dataset, when Start Study
+Description: Study Day of Start (--STDY) variable should be included into dataset, when Start Study
   Date/Time (--STDTC) variable is present.
 Executability: Fully Executable
 Outcome:
-  Message:
-    The Study Day of Start of Observation (--STDY) is not present in the dataset when Start
+  Message: The Study Day of Start of Observation (--STDY) is not present in the dataset when Start
     Date/Time of Observation (--STDTC) is present.
 Rule Type: Record Data
 Scope:

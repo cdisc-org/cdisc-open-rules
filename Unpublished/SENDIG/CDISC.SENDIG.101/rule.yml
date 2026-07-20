@@ -103,8 +103,7 @@ Core:
   Id: CDISC.SENDIG.101
   Status: Draft
   Version: "1"
-Description:
-  Raise a message when the define.xml does not explain how DM.RFENDTC was populated,
+Description: Raise a message when the define.xml does not explain how DM.RFENDTC was populated,
   using either def:CommentOID (on ItemDef) or MethodOID (on ItemRef)
 Executability: Partially Executable - Possible Underreporting
 Outcome:

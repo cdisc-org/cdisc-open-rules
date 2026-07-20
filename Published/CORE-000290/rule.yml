@@ -7,8 +7,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  Lower end of reference range for continuous measurements for
+              - Cited Guidance: Lower end of reference range for continuous measurements for
                   LBSTRESC/LBSTRESN in standardized units. Should be populated only for continuous results.
                 Document: SDTMIG v3.4
                 Item: Specification
@@ -82,8 +81,7 @@ Core:
   Id: CORE-000290
   Status: Published
   Version: "1"
-Description:
-  Raise an error when LBORRES ^= continuous measurement and LBORNRLO is not empty. The
+Description: Raise an error when LBORRES ^= continuous measurement and LBORNRLO is not empty. The
   interpretation of the guidance is that LBORRES is populated (not null).
 Executability: Fully Executable
 Outcome:

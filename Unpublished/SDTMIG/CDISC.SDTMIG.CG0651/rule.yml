@@ -53,8 +53,7 @@ Core:
   Id: CDISC.SDTMIG.CG0651
   Status: Draft
   Version: "1"
-Description:
-  Raise an error when variable Core Status = Permissible and data is planned to be
+Description: Raise an error when variable Core Status = Permissible and data is planned to be
   collected, but variable is not present
 Executability: Partially Executable - Possible Underreporting
 Operations:
@@ -63,8 +62,7 @@ Operations:
   - id: $get_column_order_from_dataset
     operator: get_column_order_from_dataset
 Outcome:
-  Message:
-    Variable is missing, where variable core status is permissible and data is planned to be
+  Message: Variable is missing, where variable core status is permissible and data is planned to be
     collected.
   Output Variables:
     - define_variable_name

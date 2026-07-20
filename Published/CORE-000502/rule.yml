@@ -88,8 +88,7 @@ Core:
   Id: CORE-000502
   Status: Published
   Version: "1"
-Description:
-  Raise an error when RDOMAIN is populated but the referenced RDOMAIN doesn't exist as a
+Description: Raise an error when RDOMAIN is populated but the referenced RDOMAIN doesn't exist as a
   dataset in the present study
 Executability: Fully Executable
 Operations:

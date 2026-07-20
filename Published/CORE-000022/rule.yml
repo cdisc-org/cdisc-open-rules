@@ -120,13 +120,11 @@ Core:
   Id: CORE-000022
   Status: Published
   Version: "1"
-Description:
-  Raise an error when AESCAN, AESCONG, AESDISAB, AESDTH, AESHOSP, AESLIFE, AESOD or
+Description: Raise an error when AESCAN, AESCONG, AESDISAB, AESDTH, AESHOSP, AESLIFE, AESOD or
   AESMIE = 'Y' and AESER = 'N' or is empty.
 Executability: Fully Executable
 Outcome:
-  Message:
-    At least one of the Seriousness criteria (AESCAN, AESCONG, AESDISAB, AESDTH, AESHOSP,
+  Message: At least one of the Seriousness criteria (AESCAN, AESCONG, AESDISAB, AESDTH, AESHOSP,
     AESLIFE, AESOD or AESMIE)  = 'Y', but AESER = 'N' or empty.
   Output Variables:
     - AETERM

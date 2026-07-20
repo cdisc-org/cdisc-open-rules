@@ -66,8 +66,7 @@ Core:
   Id: CDISC.SDTMIG.CG0546
   Status: Draft
   Version: "1"
-Description:
-  Trigger error when MIDSTYPE=TM.MIDSTYPE and TM.TMRPT=Y and MIDS is not suffixed with a
+Description: Trigger error when MIDSTYPE=TM.MIDSTYPE and TM.TMRPT=Y and MIDS is not suffixed with a
   sequence number in consistent chronological order
 Executability: Fully Executable
 Match Datasets:
@@ -81,8 +80,7 @@ Operations:
     id: $records_per_usubjid_per_midstype
     operator: record_count
 Outcome:
-  Message:
-    MIDS is not suffixed with a sequence number in consistent chronological order with
+  Message: MIDS is not suffixed with a sequence number in consistent chronological order with
     SMSTDTC.
   Output Variables:
     - MIDSTYPE

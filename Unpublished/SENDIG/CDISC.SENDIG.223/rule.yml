@@ -102,8 +102,7 @@ Core:
   Id: CDISC.SENDIG.223
   Status: Draft
   Version: "1"
-Description:
-  When study does not use multi-stage arm assignments and ARMCD is populated, ARMCD must
+Description: When study does not use multi-stage arm assignments and ARMCD is populated, ARMCD must
   be present in TA.ARMCD. This rule has been executed to identify all cases when ARMCD is not
   present in TA.ARMCD and therefore acknowledges that false positives may be recorded when
   multi-stage arm assignments are in use.

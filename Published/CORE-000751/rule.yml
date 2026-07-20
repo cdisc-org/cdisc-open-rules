@@ -54,13 +54,11 @@ Core:
   Id: CORE-000751
   Status: Published
   Version: "1"
-Description:
-  Part B - Raise an error when --SEQ is not a unique number per one of the following
+Description: Part B - Raise an error when --SEQ is not a unique number per one of the following
   identifier variables, per domain; USUBJID, POOLID or SPDEVID.
 Executability: Fully Executable
 Outcome:
-  Message:
-    --SEQ is not a unique number per one of the following identifier variables, per domain;
+  Message: --SEQ is not a unique number per one of the following identifier variables, per domain;
     USUBJID, POOLID or SPDEVID.
   Output Variables:
     - SPDEVID

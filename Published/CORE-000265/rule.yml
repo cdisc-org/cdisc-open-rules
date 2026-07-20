@@ -22,8 +22,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  Identifies the end of the observation as being before or after the
+              - Cited Guidance: Identifies the end of the observation as being before or after the
                   sponsor-defined reference time point defined by variable --ENTPT.
                 Document: Model v1.7
                 Item: Table 2.2.5.1 --ENTPT
@@ -64,8 +63,9 @@ Authorities:
               Version: "1"
             Version: "1.0"
         Substandard: SDTM
-        Version: "1.0"
-        # CG0046 is identical to rule FB4402. Added metadata for FB4402 Jozef Aerts 2024-12-19
+        Version:
+          "1.0"
+          # CG0046 is identical to rule FB4402. Added metadata for FB4402 Jozef Aerts 2024-12-19
   - Organization: "FDA"
     Standards:
       - Name: "SDTMIG"

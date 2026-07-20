@@ -54,8 +54,9 @@ Check:
         - name: VISITDY
           operator: not_exists
         - name: VISITDY
-          operator: "empty"
-          # TEST CONDITION. Remark that --MOMDY is "expected"
+          operator:
+            "empty"
+            # TEST CONDITION. Remark that --MOMDY is "expected"
     - name: --NOMDY
       operator: "empty"
 Core:
@@ -64,8 +65,7 @@ Core:
   Version: "1"
 # Description: 'Either VISITDY or --NOMDY must be populated when # --ORRES is
 #  populated and --USCHFL is not populated'
-Description:
-  VISITDY or --NOMDY should be populated for scheduled records as these are required
+Description: VISITDY or --NOMDY should be populated for scheduled records as these are required
   timing variables for identification of the day on which group summaries (Group Means and
   Incidences) are calculated.
 Executability: Fully Executable

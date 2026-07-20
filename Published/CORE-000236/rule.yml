@@ -113,8 +113,7 @@ Match Datasets:
       - USUBJID
     Name: DM
 Outcome:
-  Message:
-    MHSTDTC ^= null and MHSTDTC is on or after the DM.RFSTDTC. The medical history dataset
+  Message: MHSTDTC ^= null and MHSTDTC is on or after the DM.RFSTDTC. The medical history dataset
     should include the subject's prior history at the start of the trial.
   Output Variables:
     - MHSTDTC

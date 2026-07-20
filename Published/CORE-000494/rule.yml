@@ -119,13 +119,11 @@ Core:
   Id: CORE-000494
   Status: Published
   Version: "1"
-Description:
-  Raise an error when the role provided in the define.xml does not correspond to the role
+Description: Raise an error when the role provided in the define.xml does not correspond to the role
   in the IG
 Executability: Fully Executable
 Outcome:
-  Message:
-    The Role of the variable in the define.xml does not correspond to the Role given by the
+  Message: The Role of the variable in the define.xml does not correspond to the Role given by the
     Implementation Guide
   Output Variables:
     - define_variable_label

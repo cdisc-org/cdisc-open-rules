@@ -149,8 +149,7 @@ Core:
   Id: CORE-000675
   Status: Published
   Version: "1"
-Description:
-  When a test is not done (--STAT = 'NOT DONE'), the result variables (--ORRES and
+Description: When a test is not done (--STAT = 'NOT DONE'), the result variables (--ORRES and
   --STRESC) should not be populated.
 Executability: Fully Executable
 Outcome:

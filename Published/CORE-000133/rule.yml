@@ -72,8 +72,7 @@ Core:
   Id: CORE-000133
   Status: Published
   Version: "1"
-Description:
-  When --STRESU is populated, --STRESC must also be populated. Please note that this
+Description: When --STRESU is populated, --STRESC must also be populated. Please note that this
   rule, as executed, cannot check if --STRESC is populated with the standardized unit.
 Executability: Fully Executable
 Outcome:

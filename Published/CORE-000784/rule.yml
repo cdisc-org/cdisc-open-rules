@@ -86,8 +86,7 @@ Core:
   Id: CORE-000784
   Status: Published
   Version: "1"
-Description:
-  Raise an error when variable TAETORD values don't match between Subject Visits (SV) and
+Description: Raise an error when variable TAETORD values don't match between Subject Visits (SV) and
   Subject Elements (SE) datasets.
 Executability: Fully Executable
 Match Datasets:
@@ -95,8 +94,7 @@ Match Datasets:
       - USUBJID
     Name: SE
 Outcome:
-  Message:
-    TAETORD values don't match between Subject Visits (SV) and Subject Elements (SE)
+  Message: TAETORD values don't match between Subject Visits (SV) and Subject Elements (SE)
     datasets.
   Output Variables:
     - SESTDTC

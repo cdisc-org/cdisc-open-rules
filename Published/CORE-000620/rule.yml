@@ -52,8 +52,9 @@ Authorities:
               Id: SEND113.1
               Version: "1"
             Version: "5.0"
-        Version: "1.1"
-        # 2025-01-05: As identical to FDA business rule FB4901, FDA has been added here
+        Version:
+          "1.1"
+          # 2025-01-05: As identical to FDA business rule FB4901, FDA has been added here
   - Organization: FDA
     Standards:
       - Name: SENDIG

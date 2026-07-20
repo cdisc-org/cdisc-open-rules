@@ -7,8 +7,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  If there are findings for a body system, then either the dictionary
+              - Cited Guidance: If there are findings for a body system, then either the dictionary
                   preferred term (if findings are coded using a dictionary) or PEORRES (if findings are not
                   encoded) should appear here.
                 Document: IG v3.4
@@ -23,8 +22,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  If there are findings for a body system, then either the dictionary
+              - Cited Guidance: If there are findings for a body system, then either the dictionary
                   preferred term (if findings are coded using a dictionary) or PEORRES (if findings are not
                   coded) should appear here.
                 Document: IG v3.2
@@ -38,8 +36,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  If there are findings for a body system, then either the dictionary
+              - Cited Guidance: If there are findings for a body system, then either the dictionary
                   preferred term (if findings are coded using a dictionary) or PEORRES (if findings are not
                   coded) should appear here.
                 Document: IG v3.3
@@ -65,8 +62,7 @@ Core:
   Id: CDISC.SDTMIG.CG0197
   Status: Draft
   Version: "1"
-Description:
-  Trigger error when PESTRESC ^= null but PESTRESC does not equal PEORRES OR a dictionary
+Description: Trigger error when PESTRESC ^= null but PESTRESC does not equal PEORRES OR a dictionary
   coded preferred term
 Executability: Fully Executable
 Outcome:

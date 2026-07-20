@@ -36,8 +36,7 @@ Core:
   Id: CORE-000601
   Status: Published
   Version: "1"
-Description:
-  Raise an error when per SPTOBID, the IQPARENT value does not match any IGDCMPID value
+Description: Raise an error when per SPTOBID, the IQPARENT value does not match any IGDCMPID value
   of another record.
 Executability: Fully Executable
 Operations:
@@ -48,8 +47,7 @@ Operations:
     name: IGDCMPID
     operator: distinct
 Outcome:
-  Message:
-    IQPARENT value does not match an ingredient represented in another records IGDCMPID
+  Message: IQPARENT value does not match an ingredient represented in another records IGDCMPID
     value.
   Output Variables:
     - SPTOBID

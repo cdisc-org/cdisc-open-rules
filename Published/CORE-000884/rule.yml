@@ -89,8 +89,9 @@ Check:
             - name: AGETXT
               operator: non_empty
             - name: AGE
-              operator: non_empty
-          # for TS, they are parameters (values in TSPARMCD)
+              operator:
+                non_empty
+                # for TS, they are parameters (values in TSPARMCD)
     - all:
         - name: DOMAIN
           operator: equal_to
@@ -103,8 +104,7 @@ Core:
   Id: CORE-000884
   Status: Published
   Version: "1"
-Description:
-  AGEU is the unit associated with AGE or AGETXT.  If either of those variables is
+Description: AGEU is the unit associated with AGE or AGETXT.  If either of those variables is
   populated, AGEU should be populated. This applies to both DM (as variables) as to TS (as
   parameters)
 Executability: Fully Executable

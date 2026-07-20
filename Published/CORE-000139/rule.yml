@@ -102,8 +102,7 @@ Core:
   Id: CORE-000139
   Status: Published
   Version: "1"
-Description:
-  Trigger error if --ENDTC or DM.RFSTDTC does not contain complete values in their date
+Description: Trigger error if --ENDTC or DM.RFSTDTC does not contain complete values in their date
   portion, and --ENDY is not null.
 Executability: Fully Executable
 Match Datasets:
@@ -111,8 +110,7 @@ Match Datasets:
       - USUBJID
     Name: DM
 Outcome:
-  Message:
-    --ENDY is not null when either --ENDTC or DM.RFSTDTC do not contain complete values in
+  Message: --ENDY is not null when either --ENDTC or DM.RFSTDTC do not contain complete values in
     their date portion
   Output Variables:
     - --ENDTC

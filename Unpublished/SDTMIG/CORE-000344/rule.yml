@@ -7,8 +7,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  Conformance with the SDTMIG Domain Models is minimally indicated by
+              - Cited Guidance: Conformance with the SDTMIG Domain Models is minimally indicated by
                   following SDTM-specified controlled terminology and format guidelines for variables, when
                   provided
                 Document: IG v3.4
@@ -66,8 +65,7 @@ Core:
   Id: CORE-000344
   Status: Draft
   Version: "1"
-Description:
-  Trigger error if the value of a variable, which is associated with an extensible
+Description: Trigger error if the value of a variable, which is associated with an extensible
   codelist, is in the associated codelist or equal to 'MULTIPLE'
 Executability: Not Executable
 Outcome:

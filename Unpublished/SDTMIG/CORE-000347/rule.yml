@@ -72,13 +72,11 @@ Core:
   Id: CORE-000347
   Status: Draft
   Version: "1"
-Description:
-  Trigger error when DSCAT = 'DISPOSITION EVENT' and DSTERM does not equal 'COMPLETED' or
+Description: Trigger error when DSCAT = 'DISPOSITION EVENT' and DSTERM does not equal 'COMPLETED' or
   the reason for discontinuation
 Executability: Not Executable
 Outcome:
-  Message:
-    DSTERM does not equal 'COMPLETED' or the reason for discontinuation when DSCAT =
+  Message: DSTERM does not equal 'COMPLETED' or the reason for discontinuation when DSCAT =
     'DISPOSITION EVENT'
 Rule Type: Record Data
 Scope:

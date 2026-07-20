@@ -47,8 +47,7 @@ Core:
 Description: Raise an error when --TPTNUM exists in a dataset and --TPT does not exist.
 Executability: Fully Executable
 Outcome:
-  Message:
-    --TPTNUM exists in a dataset, but --TPT does not exist. When time points are represented
+  Message: --TPTNUM exists in a dataset, but --TPT does not exist. When time points are represented
     in SDTMIG domains, both --TPT and --TPTNUM must be used.
 Rule Type: Record Data
 Scope:

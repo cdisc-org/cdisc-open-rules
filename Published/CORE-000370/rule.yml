@@ -98,8 +98,7 @@ Core:
   Id: CORE-000370
   Status: Published
   Version: "1"
-Description:
-  DM.RFICDTC must equal the earliest DS.DSSTDTC when DSTERM indicates informed consent
+Description: DM.RFICDTC must equal the earliest DS.DSSTDTC when DSTERM indicates informed consent
   obtained.
 Executability: Fully Executable
 Match Datasets:
@@ -114,8 +113,7 @@ Operations:
     name: DSSTDTC
     operator: min_date
 Outcome:
-  Message:
-    DM.RFICDTC is not equal to the earliest DSSTDTC, when DSTERM indicates Informed consent
+  Message: DM.RFICDTC is not equal to the earliest DSSTDTC, when DSTERM indicates Informed consent
     obtained.
   Output Variables:
     - DSDECOD

@@ -45,13 +45,11 @@ Core:
   Id: CDISC.SDTMIG.CG0527
   Status: Draft
   Version: "1"
-Description:
-  Trigger error when RACE does not equal "MULTIPLE" when multiple races collected and
+Description: Trigger error when RACE does not equal "MULTIPLE" when multiple races collected and
   primary race not specified
 Executability: Fully Executable
 Outcome:
-  Message:
-    RACE does not equal "MULTIPLE" when multiple races collected and primary race not
+  Message: RACE does not equal "MULTIPLE" when multiple races collected and primary race not
     specified
 Rule Type: Record Data
 Scope:

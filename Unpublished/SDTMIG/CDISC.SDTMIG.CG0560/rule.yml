@@ -65,8 +65,7 @@ Core:
   Id: CDISC.SDTMIG.CG0560
   Status: Draft
   Version: "1"
-Description:
-  Trigger error when parameter is normalized by weight and value in PPSTRESU is not for a
+Description: Trigger error when parameter is normalized by weight and value in PPSTRESU is not for a
   parameter not normalized by weight.
 Executability: Fully Executable
 Operations:
@@ -83,8 +82,7 @@ Operations:
     operator: codelist_terms
     returntype: value
 Outcome:
-  Message:
-    Parameter is normalized by weight, and the value in PPSTRESU is not in codelist PKUWG nor
+  Message: Parameter is normalized by weight, and the value in PPSTRESU is not in codelist PKUWG nor
     in codelist PKUWKG.
   Output Variables:
     - PPTESTCD

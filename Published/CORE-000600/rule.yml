@@ -38,8 +38,7 @@ Core:
   Id: CORE-000600
   Status: Published
   Version: "1"
-Description:
-  Raise an error when a record has a PARENT value but no other record exists with REFID
+Description: Raise an error when a record has a PARENT value but no other record exists with REFID
   value = PARENT value.
 Executability: Fully Executable
 Operations:

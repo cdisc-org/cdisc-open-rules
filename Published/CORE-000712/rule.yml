@@ -100,8 +100,7 @@ Core:
   Id: CORE-000712
   Status: Published
   Version: "1"
-Description:
-  Part A - Raise and error when IDVAR in SUPP-- is not populated with a valid variable
+Description: Part A - Raise and error when IDVAR in SUPP-- is not populated with a valid variable
   from the dataset referenced in RDOMAIN.
 Executability: Fully Executable
 Match Datasets:
@@ -118,8 +117,7 @@ Operations:
     operator: distinct
     value_is_reference: true
 Outcome:
-  Message:
-    Value for IDVAR in SUPP-- does not represent a variable present in the dataset referenced
+  Message: Value for IDVAR in SUPP-- does not represent a variable present in the dataset referenced
     in RDOMAIN.
   Output Variables:
     - IDVAR

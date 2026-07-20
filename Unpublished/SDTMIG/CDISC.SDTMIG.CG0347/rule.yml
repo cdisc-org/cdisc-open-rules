@@ -67,13 +67,11 @@ Core:
   Id: CDISC.SDTMIG.CG0347
   Status: Draft
   Version: "1"
-Description:
-  Trigger error when --ORRES is equal to MULTIPLE when it is not a valid response in the
+Description: Trigger error when --ORRES is equal to MULTIPLE when it is not a valid response in the
   context of the finding (e.g., Questionnaire CT)
 Executability: Fully Executable
 Outcome:
-  Message:
-    --ORRES is equal to MULTIPLE when it is not a valid response in the context of the
+  Message: --ORRES is equal to MULTIPLE when it is not a valid response in the context of the
     finding (e.g., Questionnaire CT)
 Rule Type: Record Data
 Scope:

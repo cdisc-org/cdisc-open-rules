@@ -7,8 +7,7 @@ Authorities:
       - Name: "TIG"
         References:
           - Citations:
-              - Cited Guidance:
-                  When quantifying ingredients in IQ, every ingredient (every value of
+              - Cited Guidance: When quantifying ingredients in IQ, every ingredient (every value of
                   IGDCMPID in IT) must be accounted for in IQ (see IQ domain specification and assumptions
                   for more information).
                 Document: "TIG 1.0"
@@ -26,8 +25,7 @@ Authorities:
       - Name: "TIG"
         References:
           - Citations:
-              - Cited Guidance:
-                  When quantifying ingredients in IQ, every ingredient (every value of
+              - Cited Guidance: When quantifying ingredients in IQ, every ingredient (every value of
                   IGDCMPID in IN) must be accounted for in IQ (see IQ domain specification and assumptions
                   for more information).
                 Document: "TIG 1.0"
@@ -50,8 +48,7 @@ Core:
   Id: CORE-000605
   Status: Published
   Version: "1"
-Description:
-  Raise an error when a IGDCMPID in the dataset does not have a matching IGDCMPID in the
+Description: Raise an error when a IGDCMPID in the dataset does not have a matching IGDCMPID in the
   IQ dataset per SPTOBID.
 Executability: Fully Executable
 Operations:

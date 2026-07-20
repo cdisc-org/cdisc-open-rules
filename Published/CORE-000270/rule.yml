@@ -82,8 +82,7 @@ Core:
   Id: CORE-000270
   Status: Published
   Version: "1"
-Description:
-  Verify when VISITNUM is not null in any given domain and VISITNUM is planned (SVPRESP =
+Description: Verify when VISITNUM is not null in any given domain and VISITNUM is planned (SVPRESP =
   'Y'), then VISIT should be among TV.VISITNUM.
 Executability: Fully Executable
 Match Datasets:
@@ -97,8 +96,7 @@ Operations:
     name: VISITNUM
     operator: distinct
 Outcome:
-  Message:
-    For a planned visit (SVPRESP = 'Y'), non-missing VISITNUM value must be among those
+  Message: For a planned visit (SVPRESP = 'Y'), non-missing VISITNUM value must be among those
     present in TV.VISITNUM. in TV.VISITNUM
   Output Variables:
     - VISITNUM

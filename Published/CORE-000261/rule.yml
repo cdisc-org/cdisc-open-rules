@@ -22,8 +22,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  Identifies the start of the observation as being before or after the
+              - Cited Guidance: Identifies the start of the observation as being before or after the
                   sponsor-defined reference time point defined by variable --STTPT.
                 Document: Model v1.7
                 Item: Table 2.2.5.1 --STRTPT
@@ -75,8 +74,7 @@ Core:
   Id: CORE-000261
   Status: Published
   Version: "1"
-Description:
-  Raise an error when --STTPT is present in dataset and --STRTPT is not present in
+Description: Raise an error when --STTPT is present in dataset and --STRTPT is not present in
   dataset.
 Executability: Fully Executable
 Outcome:

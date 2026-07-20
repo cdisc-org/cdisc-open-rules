@@ -57,13 +57,11 @@ Core:
   Id: CDISC.SDTMIG.CG0400
   Status: Draft
   Version: "1"
-Description:
-  Trigger error when --LOINC is not a valid code in the version of the LOINC dictionary
+Description: Trigger error when --LOINC is not a valid code in the version of the LOINC dictionary
   specified in define.xml
 Executability: Fully Executable
 Outcome:
-  Message:
-    --LOINC is not a valid code in the version of the LOINC dictionary specified in
+  Message: --LOINC is not a valid code in the version of the LOINC dictionary specified in
     define.xml
 Rule Type: Record Data
 Scope:

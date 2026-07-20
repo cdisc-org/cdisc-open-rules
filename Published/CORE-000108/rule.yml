@@ -71,8 +71,9 @@ Authorities:
               Version: "1"
             Version: "1.0"
         Substandard: SDTM
-        Version: "1.0"
-        #CG0133 is identical to rule FB0602. Added metadata for FB0602.
+        Version:
+          "1.0"
+          #CG0133 is identical to rule FB0602. Added metadata for FB0602.
   - Organization: FDA
     Standards:
       - Name: SDTMIG
@@ -129,8 +130,7 @@ Core:
   Id: CORE-000108
   Status: Published
   Version: "1"
-Description:
-  When a record is present in the DD dataset then death flag (DTHFL) should be populated
+Description: When a record is present in the DD dataset then death flag (DTHFL) should be populated
   as 'Y' in the DM dataset for the corresponding subject.
 Executability: Fully Executable
 Match Datasets:

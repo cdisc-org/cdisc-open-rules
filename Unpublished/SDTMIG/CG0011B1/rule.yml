@@ -60,8 +60,9 @@ Check:
         - name: --ENDTC
           operator: non_empty
         - name: --ENDTC
-          operator: invalid_date
-          # DM-specific date/time variables
+          operator:
+            invalid_date
+            # DM-specific date/time variables
     - all:
         - name: RFSTDTC
           operator: non_empty

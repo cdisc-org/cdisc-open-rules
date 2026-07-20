@@ -81,8 +81,7 @@ Core:
   Id: CORE-000238
   Status: Published
   Version: "1"
-Description:
-  Raise an error when EX records are present for subject but RFXENDTC does not equal the
+Description: Raise an error when EX records are present for subject but RFXENDTC does not equal the
   latest value of EX.EXSTDTC or EX.EXENDTC
 Executability: Fully Executable
 Operations:

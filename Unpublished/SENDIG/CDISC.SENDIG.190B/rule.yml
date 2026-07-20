@@ -52,13 +52,14 @@ Check:
           value: ""
         - name: OMSTRESU
           operator: not_equal_to
-          value: "%"
-          # Part B of the rule: i.e. that within OMTESTCD, OMSTRESU=% and OMSTRESU=null may not be mixed
-          # 2026-03-03: we exclude OMSTAT='NOT DONE'
-          # "RATIO" is not considered here
-          # OMTESTCD=OWBR: Organ to Brain Weight Ratio
-          # Raise a violation when the number of OMSTRESU='%'' rcords > 0
-          # AND the number of OMSTRESU=null rcords > 0
+          value:
+            "%"
+            # Part B of the rule: i.e. that within OMTESTCD, OMSTRESU=% and OMSTRESU=null may not be mixed
+            # 2026-03-03: we exclude OMSTAT='NOT DONE'
+            # "RATIO" is not considered here
+            # OMTESTCD=OWBR: Organ to Brain Weight Ratio
+            # Raise a violation when the number of OMSTRESU='%'' rcords > 0
+            # AND the number of OMSTRESU=null rcords > 0
     - all:
         - name: OMTESTCD
           operator: equal_to
@@ -71,11 +72,12 @@ Check:
           value: 0
         - name: $owbr_ratio_null_unit
           operator: greater_than
-          value: 0
-          # OMTESTCD=OWBW: Organ to BodyWeight Ratio
-          # Raise a violation when the number of OMSTRESU='%'' rcords > 0
-          # AND the number of OMSTRESU=null rcords > 0
-          # 2026-03-03: we exclude OMSTAT='NOT DONE'
+          value:
+            0
+            # OMTESTCD=OWBW: Organ to BodyWeight Ratio
+            # Raise a violation when the number of OMSTRESU='%'' rcords > 0
+            # AND the number of OMSTRESU=null rcords > 0
+            # 2026-03-03: we exclude OMSTAT='NOT DONE'
     - all:
         - name: OMTESTCD
           operator: equal_to
@@ -88,10 +90,11 @@ Check:
           value: 0
         - name: $owbw_ratio_null_unit
           operator: greater_than
-          value: 0
-          # OMTESTCD=OWHT: Organ to Heart Weight Ratio
-          # Raise a violation when the number of OMSTRESU='%'' rcords > 0
-          # AND the number of OMSTRESU='RATIO'' rcords > 0
+          value:
+            0
+            # OMTESTCD=OWHT: Organ to Heart Weight Ratio
+            # Raise a violation when the number of OMSTRESU='%'' rcords > 0
+            # AND the number of OMSTRESU='RATIO'' rcords > 0
     - all:
         - name: OMTESTCD
           operator: equal_to
@@ -109,8 +112,7 @@ Core:
   Id: CDISC.SENDIG.190B
   Status: Draft
   Version: "1"
-Description:
-  Trigger error when, for the given test, the value of OMSTRESU is inconsistent  in the
+Description: Trigger error when, for the given test, the value of OMSTRESU is inconsistent  in the
   dataset when OMTESTCD is either OWBR, OWBW or OWHT
 Executability: Fully Executable
 Operations:
@@ -172,8 +174,7 @@ Operations:
       #  operator: distinct
 
 Outcome:
-  Message:
-    The organ weight standardized measurement unit must be consistent for the given
+  Message: The organ weight standardized measurement unit must be consistent for the given
     OMTESTCD'.
   Output Variables:
     - OMTESTCD

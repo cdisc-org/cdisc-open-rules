@@ -71,13 +71,11 @@ Core:
   Id: CDISC.SDTMIG.CG0160
   Status: Draft
   Version: "1"
-Description:
-  Trigger error when RSUBJID ^= null and SREL does not describe the relationship of
+Description: Trigger error when RSUBJID ^= null and SREL does not describe the relationship of
   associated person to study subject or pool
 Executability: Fully Executable
 Outcome:
-  Message:
-    SREL does not describe the relationship of associated person to study subject or pool
+  Message: SREL does not describe the relationship of associated person to study subject or pool
     when RSUBJID is not null
 Rule Type: Record Data
 Scope:

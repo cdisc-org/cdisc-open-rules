@@ -100,8 +100,7 @@ Core:
   Id: CDISC.SENDIG.71
   Status: Draft
   Version: "1"
-Description:
-  --DY = (date portion of --DTC) - (date portion of RFSTDTC) + 1 if --DTC is on or after
+Description: --DY = (date portion of --DTC) - (date portion of RFSTDTC) + 1 if --DTC is on or after
   RFSTDTC; --DY = (date portion of --DTC) - (date portion of RFSTDTC) if --DTC precedes RFSTDTC
 Executability: Fully Executable
 Match Datasets:

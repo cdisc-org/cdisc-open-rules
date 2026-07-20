@@ -135,13 +135,11 @@ Core:
   Id: CORE-000217
   Status: Published
   Version: "1"
-Description:
-  Raise an error when ECDOSE is empty, ECOCCUR is not equal to 'N', ECSTAT is empty and
+Description: Raise an error when ECDOSE is empty, ECOCCUR is not equal to 'N', ECSTAT is empty and
   ECDOSTXT is empty
 Executability: Fully Executable
 Outcome:
-  Message:
-    ECDOSE is empty, ECOCCUR is not equal to 'N' and ECSTAT is empty, but ECDOSTXT is also
+  Message: ECDOSE is empty, ECOCCUR is not equal to 'N' and ECSTAT is empty, but ECDOSTXT is also
     empty.
   Output Variables:
     - ECDOSE

@@ -72,8 +72,7 @@ Core:
   Id: CORE-000093
   Status: Published
   Version: "1"
-Description:
-  Raise an error when --DOSU = null and (--DOSE ^= null or --DOSTOT ^= null or --DOSTXT
+Description: Raise an error when --DOSU = null and (--DOSE ^= null or --DOSTOT ^= null or --DOSTXT
   ^= null)
 Executability: Fully Executable
 Outcome:

@@ -100,14 +100,12 @@ Core:
   Id: CORE-000142
   Status: Published
   Version: "1"
-Description:
-  Raise an error when --TPT ^= null and --TPTNUM ^= null and --ELTM ^= null and --ELTM
+Description: Raise an error when --TPT ^= null and --TPTNUM ^= null and --ELTM ^= null and --ELTM
   does not have the same value across records with the same values of DOMAIN, VISITNUM, --TPTREF,
   and --TPTNUM.
 Executability: Fully Executable
 Outcome:
-  Message:
-    --ELTM is not the same value across records with the same values of DOMAIN, VISITNUM,
+  Message: --ELTM is not the same value across records with the same values of DOMAIN, VISITNUM,
     --TPTREF, and --TPTNUM.
   Output Variables:
     - --TPT

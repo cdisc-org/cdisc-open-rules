@@ -444,8 +444,7 @@ Core:
   Id: CORE-000529
   Status: Published
   Version: "1"
-Description:
-  Raise an error when --DY is not calculated as per the study day algorithm as a non-zero
+Description: Raise an error when --DY is not calculated as per the study day algorithm as a non-zero
   integer value when the date portion of --DTC is complete and the date portion of DM.RFSTDTC is a
   complete date AND --DY is not empty
 Executability: Fully Executable
@@ -458,8 +457,7 @@ Operations:
     name: --DTC
     operator: dy # does dy op take into acct +1?
 Outcome:
-  Message:
-    --DY is not correctly calculated even though the date portion of --DTC is complete, the
+  Message: --DY is not correctly calculated even though the date portion of --DTC is complete, the
     date portion of RFSTDTC is complete, and --DY is not empty.
   Output Variables:
     - $val_dy

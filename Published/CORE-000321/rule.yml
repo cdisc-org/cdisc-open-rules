@@ -151,13 +151,11 @@ Core:
   Id: CORE-000321
   Status: Published
   Version: "1"
-Description:
-  When Date/Time of Collection (--DTC) is present in the dataset, then the Study Day of
+Description: When Date/Time of Collection (--DTC) is present in the dataset, then the Study Day of
   Visit/Collection/Exam (--DY) should also present in the dataset.
 Executability: Fully Executable
 Outcome:
-  Message:
-    Study Day of Visit/Collection/Exam (--DY) variable is missing when Date/Time of
+  Message: Study Day of Visit/Collection/Exam (--DY) variable is missing when Date/Time of
     Collection (--DTC) is present.
 Rule Type: Record Data
 Scope:

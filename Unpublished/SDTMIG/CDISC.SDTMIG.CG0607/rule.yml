@@ -29,13 +29,11 @@ Core:
   Id: CDISC.SDTMIG.CG0607
   Status: Draft
   Version: "1"
-Description:
-  Verify MBTEST equals the name of the organism/antigen targeted by the identification
+Description: Verify MBTEST equals the name of the organism/antigen targeted by the identification
   assay.
 Executability: Fully Executable
 Outcome:
-  Message:
-    Test targets an organism, group of organisms, or antigen, but MBTEST is not the name of
+  Message: Test targets an organism, group of organisms, or antigen, but MBTEST is not the name of
     the  organism/antigen.
 Rule Type: Range and limit
 Scope:

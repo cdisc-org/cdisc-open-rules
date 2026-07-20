@@ -113,8 +113,7 @@ Match Datasets:
       - USUBJID
     Name: DM
 Outcome:
-  Message:
-    --STDY is not null when either --STDTC or DM.RFSTDTC do not contain complete values in
+  Message: --STDY is not null when either --STDTC or DM.RFSTDTC do not contain complete values in
     their date portion
   Output Variables:
     - --STDY

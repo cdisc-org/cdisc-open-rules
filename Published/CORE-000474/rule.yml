@@ -84,8 +84,7 @@ Core:
   Id: CORE-000474
   Status: Published
   Version: "1"
-Description:
-  Raise an error when there is more than one record present for any particular ECG test
+Description: Raise an error when there is more than one record present for any particular ECG test
   for a subject and measurement date/time.
 Executability: Partially Executable - Possible Underreporting
 Outcome:

@@ -30,8 +30,7 @@ Check:
 Core:
   Status: Draft
   Version: "1"
-Description:
-  Raise an error when a record has a PARENT record but the value for LEVEL does not equal
+Description: Raise an error when a record has a PARENT record but the value for LEVEL does not equal
   the level of the PARENT LEVEL + 1.
 Executability: Fully Executable
 Match Datasets:
@@ -41,8 +40,7 @@ Match Datasets:
         Right: REFID
     Name: RELREF
 Outcome:
-  Message:
-    Record has a PARENT record but the value for LEVEL does not equal the level of the PARENT
+  Message: Record has a PARENT record but the value for LEVEL does not equal the level of the PARENT
     LEVEL + 1.
   Output Variables:
     - LEVEL

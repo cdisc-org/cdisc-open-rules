@@ -61,13 +61,11 @@ Core:
   Id: CDISC.SDTMIG.CG0252
   Status: Draft
   Version: "1"
-Description:
-  Trigger error when trial Design allows for a Subject to transition to an Element other
+Description: Trigger error when trial Design allows for a Subject to transition to an Element other
   than the next Element in sequence, and TATRANS is null
 Executability: Not Executable
 Outcome:
-  Message:
-    TATRANS is null when trial Design allows for a Subject to transition to an Element other
+  Message: TATRANS is null when trial Design allows for a Subject to transition to an Element other
     than the next Element in sequence
 Rule Type: Record Data
 Scope:
