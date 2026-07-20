@@ -53,12 +53,12 @@ Check:
         - name: OMSTRESU
           operator: not_equal_to
           value: "%"
-      # Part B of the rule: i.e. that within OMTESTCD, OMSTRESU=% and OMSTRESU=null may not be mixed
-      # 2026-03-03: we exclude OMSTAT='NOT DONE'
-      # "RATIO" is not considered here
-      # OMTESTCD=OWBR: Organ to Brain Weight Ratio
-      # Raise a violation when the number of OMSTRESU='%'' rcords > 0
-      # AND the number of OMSTRESU=null rcords > 0
+          # Part B of the rule: i.e. that within OMTESTCD, OMSTRESU=% and OMSTRESU=null may not be mixed
+          # 2026-03-03: we exclude OMSTAT='NOT DONE'
+          # "RATIO" is not considered here
+          # OMTESTCD=OWBR: Organ to Brain Weight Ratio
+          # Raise a violation when the number of OMSTRESU='%'' rcords > 0
+          # AND the number of OMSTRESU=null rcords > 0
     - all:
         - name: OMTESTCD
           operator: equal_to
@@ -72,10 +72,10 @@ Check:
         - name: $owbr_ratio_null_unit
           operator: greater_than
           value: 0
-      # OMTESTCD=OWBW: Organ to BodyWeight Ratio
-      # Raise a violation when the number of OMSTRESU='%'' rcords > 0
-      # AND the number of OMSTRESU=null rcords > 0
-      # 2026-03-03: we exclude OMSTAT='NOT DONE'
+          # OMTESTCD=OWBW: Organ to BodyWeight Ratio
+          # Raise a violation when the number of OMSTRESU='%'' rcords > 0
+          # AND the number of OMSTRESU=null rcords > 0
+          # 2026-03-03: we exclude OMSTAT='NOT DONE'
     - all:
         - name: OMTESTCD
           operator: equal_to
@@ -89,9 +89,9 @@ Check:
         - name: $owbw_ratio_null_unit
           operator: greater_than
           value: 0
-      # OMTESTCD=OWHT: Organ to Heart Weight Ratio
-      # Raise a violation when the number of OMSTRESU='%'' rcords > 0
-      # AND the number of OMSTRESU='RATIO'' rcords > 0
+          # OMTESTCD=OWHT: Organ to Heart Weight Ratio
+          # Raise a violation when the number of OMSTRESU='%'' rcords > 0
+          # AND the number of OMSTRESU='RATIO'' rcords > 0
     - all:
         - name: OMTESTCD
           operator: equal_to
@@ -129,8 +129,9 @@ Operations:
         # OMSTRESU: empty # 2026-02-10
     id: $owbr_ratio_null_unit
     name: OMTESTCD # 2026-02-10
-    operator: record_count
-    # OWBW: Organ to BodyWeight Ratio
+    operator:
+      record_count
+      # OWBW: Organ to BodyWeight Ratio
   - filter:
       OMSTRESU: "%"
       OMTESTCD: "OWBW"
@@ -145,8 +146,9 @@ Operations:
         # OMSTRESU: empty # 2026-02-10
     id: $owbw_ratio_null_unit
     name: OMTESTCD # 2026-02-10
-    operator: record_count
-    # OWHT: Organ to Heart Weight Ratio
+    operator:
+      record_count
+      # OWHT: Organ to Heart Weight Ratio
   - filter:
       OMSTRESU: "%"
       OMTESTCD: "OWHT"
@@ -161,12 +163,13 @@ Operations:
         # OMSTRESU: empty # 2026-02-10
     id: $owht_ratio_null_unit
     name: OMTESTCD # 2026-02-10
-    operator: record_count
-    # NOT USED FOR THE MOMENT
-    # - domain: OM
-    #  id: $om_stresu_distinct
-    #  name: OMSTRESU
-    #  operator: distinct
+    operator:
+      record_count
+      # NOT USED FOR THE MOMENT
+      # - domain: OM
+      #  id: $om_stresu_distinct
+      #  name: OMSTRESU
+      #  operator: distinct
 
 Outcome:
   Message:

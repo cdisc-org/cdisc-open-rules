@@ -103,8 +103,9 @@ Check:
     # First part: check whether variable name is defined in the define.xml
     - name: variable_name
       operator: equal_to
-      value: define_variable_name
-      # Second part: check whether the data types match
+      value:
+        define_variable_name
+        # Second part: check whether the data types match
     - name: variable_data_type
       operator: not_equal_to
       value: define_variable_data_type

@@ -18,8 +18,9 @@ Authorities:
             Origin: ADaM Conformance Rules
             Rule Identifier:
               Id: "53"
-              Version: "1"
-            # Version 4.0 for ADaM/ADaMIG should be allowed according to yaml validation schema
+              Version:
+                "1"
+                # Version 4.0 for ADaM/ADaMIG should be allowed according to yaml validation schema
             Version: "4.0"
         Version: "1.3"
 Check:

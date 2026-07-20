@@ -86,7 +86,7 @@ Check:
         - name: USUBJID
           operator: is_not_contained_by
           value: $ds_usubjid
-      # TODO: how do we express that for each record in DM, there must exactly be one record in DS?
+          # TODO: how do we express that for each record in DM, there must exactly be one record in DS?
 
 Core:
   Id: CDISC.SENDIG.140

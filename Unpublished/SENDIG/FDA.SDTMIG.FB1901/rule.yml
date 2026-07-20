@@ -189,8 +189,9 @@ Check:
   all:
     - name: LBTESTCD ## only for exploring
       operator: not_equal_to
-      value: "test variable"
-      # See DDF00110 (Richard Marshall)
+      value:
+        "test variable"
+        # See DDF00110 (Richard Marshall)
     - name: $codelist_extensible
       operator: equal_to
       value:
@@ -227,35 +228,36 @@ Operations:
     ct_package_type: SDTM
     id: $codelist_extensible
     operator: codelist_extensible
-    version: category.codeSystemVersion
-    #- id: $column_order_from_library
-    #  operator: get_column_order_from_library
-    # P.S. it would be nice whem instead of the codelist name, one could also provide the NCI Code of the codelist
-    # TODO: as we need to iterate over ALL variables that do have a codelist
-    # How do I pass the variable name and/or its codelist name as an argument to this?
-    #  - codelist: 'NOT DONE' # Can ignore schema warning - it IS required, and is name of the Codelist for which CT is checked
-    #   id: $codelist_extensible
-    #   operator: codelist_extensible
-    #
+    version:
+      category.codeSystemVersion
+      #- id: $column_order_from_library
+      #  operator: get_column_order_from_library
+      # P.S. it would be nice whem instead of the codelist name, one could also provide the NCI Code of the codelist
+      # TODO: as we need to iterate over ALL variables that do have a codelist
+      # How do I pass the variable name and/or its codelist name as an argument to this?
+      #  - codelist: 'NOT DONE' # Can ignore schema warning - it IS required, and is name of the Codelist for which CT is checked
+      #   id: $codelist_extensible
+      #   operator: codelist_extensible
+      #
 
-    #  - id: $codelist_terms
-    #    operator: codelist_terms
-    #  ct_packages:
-    #    - sdtmct-2020-03-27
-    #  ct_version: LBVERSION
-    #  id: $CODELISTEXTENSIBLE
-    #  name: LBTESTCD
-    #  operator: get_codelist_attributes
-    #- id: $column_order_from_library
-    #  operator: get_column_order_from_library
+      #  - id: $codelist_terms
+      #    operator: codelist_terms
+      #  ct_packages:
+      #    - sdtmct-2020-03-27
+      #  ct_version: LBVERSION
+      #  id: $CODELISTEXTENSIBLE
+      #  name: LBTESTCD
+      #  operator: get_codelist_attributes
+      #- id: $column_order_from_library
+      #  operator: get_column_order_from_library
 
-    #  - ct_attribute: extensible
-    #    ct_packages:
-    #      - sdtmct-2020-03-27
-    #    ct_version: 'LBVERSION'
-    #    id: $CODELISTEXTENSIBLE
-    #    name: LBTESTCD
-    #    operator: get_codelist_attributes
+      #  - ct_attribute: extensible
+      #    ct_packages:
+      #      - sdtmct-2020-03-27
+      #    ct_version: 'LBVERSION'
+      #    id: $CODELISTEXTENSIBLE
+      #    name: LBTESTCD
+      #    operator: get_codelist_attributes
 
 Outcome:
   Message: A new term has been added to a non-extensible code list.

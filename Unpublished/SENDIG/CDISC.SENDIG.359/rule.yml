@@ -40,13 +40,14 @@ Check:
       value: ^[+-]?[0-9]+$
     - name: --RPDY
       operator: not_matches_regex
-      value: ^[+-]?[0-9]+$
-      #- name: --RPSTDY
-      #  operator: not_matches_regex
-      #  value: ^[+-]?[0-9]+$
-      #- name: --RPENDY
-      #  operator: not_matches_regex
-      #  value: ^[+-]?[0-9]+$
+      value:
+        ^[+-]?[0-9]+$
+        #- name: --RPSTDY
+        #  operator: not_matches_regex
+        #  value: ^[+-]?[0-9]+$
+        #- name: --RPENDY
+        #  operator: not_matches_regex
+        #  value: ^[+-]?[0-9]+$
 Core:
   Id: CDISC.SENDIG.359
   Status: Draft

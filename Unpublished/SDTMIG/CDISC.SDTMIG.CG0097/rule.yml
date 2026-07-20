@@ -47,11 +47,12 @@ Check:
   all:
     - name: variable_name
       operator: equal_to
-      value: CMTRT
-      # skipping cases when CMTRT is not provided (though this should never be the case)
-      #- name: CMTRT
-      #  operator: non_empty
-      # Generate an issue when CMTRT is not declared as "collected" in the define.xml
+      value:
+        CMTRT
+        # skipping cases when CMTRT is not provided (though this should never be the case)
+        #- name: CMTRT
+        #  operator: non_empty
+        # Generate an issue when CMTRT is not declared as "collected" in the define.xml
     - name: define_variable_is_collected
       operator: equal_to
       value: false

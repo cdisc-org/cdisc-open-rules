@@ -110,9 +110,9 @@ Check:
         - name: TSPARMCD
           operator: does_not_contain
           value: RECSAC
-      # TSVAL empty for TSPARMCD=RECSAC
-      # REMARK: test at the record level
-      # OR: should we use a "filter" here?
+          # TSVAL empty for TSPARMCD=RECSAC
+          # REMARK: test at the record level
+          # OR: should we use a "filter" here?
     - all:
         - name: TSPARMCD
           operator: equal_to

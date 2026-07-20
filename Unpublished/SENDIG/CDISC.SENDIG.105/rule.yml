@@ -83,19 +83,20 @@ Check:
   all:
     # DM: SPECIES variable does not exists
     - name: SPECIES
-      operator: not_exists
-      # There is no TSPARMCD=SPECIES in TS
-      #- name: $distinct_tsparmcd
-      #  operator: does_not_contain
-      #  value: SPECIES
-      #  value_is_literal: true
-      #- all:
-      #    #- name: TX
-      #    #  operator: non_empty
-      #    - name: $distinct_txparmcd
-      #      operator: is_not_contained_by
-      #      value: SPECIES
-      #      #value_is_literal: true
+      operator:
+        not_exists
+        # There is no TSPARMCD=SPECIES in TS
+        #- name: $distinct_tsparmcd
+        #  operator: does_not_contain
+        #  value: SPECIES
+        #  value_is_literal: true
+        #- all:
+        #    #- name: TX
+        #    #  operator: non_empty
+        #    - name: $distinct_txparmcd
+        #      operator: is_not_contained_by
+        #      value: SPECIES
+        #      #value_is_literal: true
 Core:
   Id: CDISC.SENDIG.105
   Status: Draft

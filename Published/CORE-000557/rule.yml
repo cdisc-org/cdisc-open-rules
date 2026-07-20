@@ -127,7 +127,7 @@ Check:
         - name: RELTYPE
           operator: not_equal_to
           value: MANY
-      # Case that the POOLID column is present
+          # Case that the POOLID column is present
     - all:
         - name: USUBJID
           operator: empty

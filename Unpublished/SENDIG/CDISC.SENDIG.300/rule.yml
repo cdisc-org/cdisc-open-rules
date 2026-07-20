@@ -61,10 +61,11 @@ Check:
   all:
     - name: $record_count
       operator: equal_to
-      value: 0
-      # check whether there is an entry for the dataset in the define.xml
-      #- name: define_dataset_name
-      #  operator: exists
+      value:
+        0
+        # check whether there is an entry for the dataset in the define.xml
+        #- name: define_dataset_name
+        #  operator: exists
     - name: define_dataset_name
       operator:
         exists

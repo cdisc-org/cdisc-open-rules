@@ -87,8 +87,8 @@ Check:
           value: "MEASUREMENT"
         - name: EGEVAL
           operator: non_empty
-      # report an error when EGORRESU is not null and EGEVAL is populated
-      # the idea is that evaluations do not have a unit
+          # report an error when EGORRESU is not null and EGEVAL is populated
+          # the idea is that evaluations do not have a unit
     - all:
         - name: EGORRESU
           operator: non_empty

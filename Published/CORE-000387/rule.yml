@@ -84,16 +84,17 @@ Check:
       operator: non_empty
     - name: COSEQ
       operator: is_not_unique_set
-      value: USUBJID
-      # case that USUBJID is not populated
-      #- all:
-      #    - name: USUBJID
-      #      operator: empty
-      #    - name: POOLID
-      #      operator: non_empty
-      #    - name: COSEQ
-      #      operator: is_not_unique_set
-      #      value: POOLID
+      value:
+        USUBJID
+        # case that USUBJID is not populated
+        #- all:
+        #    - name: USUBJID
+        #      operator: empty
+        #    - name: POOLID
+        #      operator: non_empty
+        #    - name: COSEQ
+        #      operator: is_not_unique_set
+        #      value: POOLID
 Core:
   Id: CORE-000387
   Status: Published

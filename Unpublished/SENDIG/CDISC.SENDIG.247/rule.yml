@@ -148,13 +148,14 @@ Check:
     - name: $distinct_tsparmcd
       operator: does_not_contain
       value: GLPFL
-      value_is_literal: true
-      ## GLPTYP is only mandatory in SENDIG-3.0
-      ## SO TODO? split off SENDIG-3.0 in separate file/rule
-      ##- name: $distinct_tsparmcd
-      ##  operator: does_not_contain
-      ## value: GLPTYP
-      ##  value_is_literal: true
+      value_is_literal:
+        true
+        ## GLPTYP is only mandatory in SENDIG-3.0
+        ## SO TODO? split off SENDIG-3.0 in separate file/rule
+        ##- name: $distinct_tsparmcd
+        ##  operator: does_not_contain
+        ## value: GLPTYP
+        ##  value_is_literal: true
     - name: $distinct_tsparmcd
       operator: does_not_contain
       value: ROUTE

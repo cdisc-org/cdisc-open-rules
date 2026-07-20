@@ -89,7 +89,7 @@ Check:
             - USUBJID
             - TFSPEC
             - TFANTREG
-      # case that TFANTREG is not present
+          # case that TFANTREG is not present
     - all:
         - name: TFANTREG
           operator: not_exists

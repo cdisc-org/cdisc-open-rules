@@ -81,9 +81,9 @@ Check:
           operator: not_exists
         - name: STRAIN
           operator: empty
-      # Either TSPARMCD=STRAIN is missing from TS
-      # or TSVAL is null when TSPARMCD=STRAIN
-      # or TXVAL is null when TXPARMCD=STRAIN
+          # Either TSPARMCD=STRAIN is missing from TS
+          # or TSVAL is null when TSPARMCD=STRAIN
+          # or TXVAL is null when TXPARMCD=STRAIN
     - all:
         - any:
             - name: $distinct_tsparmcd
@@ -127,8 +127,9 @@ Operations:
   - domain: TS
     id: $distinct_tsparmcd
     name: TSPARMCD
-    operator: distinct
-    # gets the distinct values of TXPARMCD
+    operator:
+      distinct
+      # gets the distinct values of TXPARMCD
 Outcome:
   Message: Missing STRAIN Trial Summary and Trial Sets Parameter when STRAIN is not present in DM
   Output Variables:

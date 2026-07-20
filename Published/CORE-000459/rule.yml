@@ -95,12 +95,14 @@ Check:
   all:
     - name: TXPARMCD
       operator: equal_to
-      value: ENVTEMPU
-      # addition Jozef 2024-03-16
-      # pre-condition is that TXVAL is not null
+      value:
+        ENVTEMPU
+        # addition Jozef 2024-03-16
+        # pre-condition is that TXVAL is not null
     - name: TXVAL
-      operator: non_empty
-      # end of addition
+      operator:
+        non_empty
+        # end of addition
     - name: TXVAL
       operator: not_equal_to
       value: C

@@ -82,7 +82,7 @@ Check:
         - name: STRAIN
           operator: is_inconsistent_across_dataset
           value: SETCD
-      # Second case: SPECIES
+          # Second case: SPECIES
     - all:
         # only apply when SPECIES is present, as it is "permissible"
         - name: SPECIES

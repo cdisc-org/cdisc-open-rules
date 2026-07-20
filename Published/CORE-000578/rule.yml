@@ -54,8 +54,9 @@ Check:
   all:
     - name: PCSTRESC
       operator: equal_to
-      value: "BLQ"
-      # report an error when either PCLLOQ is not populated or PCSTRESU is not populated
+      value:
+        "BLQ"
+        # report an error when either PCLLOQ is not populated or PCSTRESU is not populated
     - any:
         - name: PCLLOQ
           operator: empty

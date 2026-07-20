@@ -139,29 +139,33 @@ Operations:
     group:
       - SETCD
     id: $num_trtdos
-    operator: record_count
-    # count the number of records for TXOARMCD=TRTDOSU within each SETCD group
+    operator:
+      record_count
+      # count the number of records for TXOARMCD=TRTDOSU within each SETCD group
   - filter:
       TXPARMCD: TRTDOSU
     group:
       - SETCD
     id: $num_trtdosu
-    operator: record_count
-    # count the number of records for TXPARMCD=ARMCD within each SETCD group
+    operator:
+      record_count
+      # count the number of records for TXPARMCD=ARMCD within each SETCD group
   - filter:
       TXPARMCD: ARMCD
     group:
       - SETCD
     id: $num_armcd
-    operator: record_count
-    # count the number of records for TXPARMCD=SPGRPCD within each SETCD group
+    operator:
+      record_count
+      # count the number of records for TXPARMCD=SPGRPCD within each SETCD group
   - filter:
       TXPARMCD: SPGRPCD
     group:
       - SETCD
     id: $num_spgrpcd
-    operator: record_count
-    # count the number of records for TXPARMCD=GRPLBL within each SETCD group
+    operator:
+      record_count
+      # count the number of records for TXPARMCD=GRPLBL within each SETCD group
   - filter:
       TXPARMCD: GRPLBL
     group:

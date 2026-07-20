@@ -54,27 +54,31 @@ Check:
     - name: USUBJID
       operator: non_empty
     - name: PCSCAT
-      operator: not_exists
-      # 2025-07-09: JUST TRYING: only check rows with PCELTM='PT0H'
+      operator:
+        not_exists
+        # 2025-07-09: JUST TRYING: only check rows with PCELTM='PT0H'
     - name: PCELTM
       operator: equal_to
-      value: "PT0H"
-      # 2025-07-09: PPCAT must correspond to PCTESTCD
-      # 2025-07-09: Somehow, this doesn't work as it always leads to "success" (i.e. no violation)
-      # and when commented out, causes a false positive for e.g. PCTESTCD='NOT FOR PROFILE'
-      #- name: PCTESTCD
-      #  operator: is_contained_by
-      #  value: $pp_cat
-      # reference of measurement in PC must be equal to reference of profile in PP
-      # P.S. This must be for the GIVEN SUBJECT!
+      value:
+        "PT0H"
+        # 2025-07-09: PPCAT must correspond to PCTESTCD
+        # 2025-07-09: Somehow, this doesn't work as it always leads to "success" (i.e. no violation)
+        # and when commented out, causes a false positive for e.g. PCTESTCD='NOT FOR PROFILE'
+        #- name: PCTESTCD
+        #  operator: is_contained_by
+        #  value: $pp_cat
+        # reference of measurement in PC must be equal to reference of profile in PP
+        # P.S. This must be for the GIVEN SUBJECT!
     - name: PCTPTREF
       operator: is_contained_by
-      value: $pp_tptref
-      # reference time (time point) must be equal to reference time of profile in PP
+      value:
+        $pp_tptref
+        # reference time (time point) must be equal to reference time of profile in PP
     - name: PCRFTDTC
       operator: is_contained_by
-      value: $pp_rftdtc
-      # Report a violation when the number of records for PCELTM=PT0H is not 1
+      value:
+        $pp_rftdtc
+        # Report a violation when the number of records for PCELTM=PT0H is not 1
     - name: $pc_group_no_pcscat
       operator: not_equal_to
       value: 1
@@ -89,8 +93,9 @@ Operations:
       PC
       # we will count the number of records for which PCELTM = PT0H within each group
     filter:
-      PCELTM: PT0H
-      # The group consists of USUBJID, PCTESTCD, PCCAT, and PCTPTREF - PCSCAT is absent
+      PCELTM:
+        PT0H
+        # The group consists of USUBJID, PCTESTCD, PCCAT, and PCTPTREF - PCSCAT is absent
     group:
       - USUBJID
       - PCTESTCD
@@ -98,8 +103,9 @@ Operations:
       - PCSPEC # added 2025-07-09
       - PCTPTREF
     id: $pc_group_no_pcscat
-    operator: record_count
-    # 2025-07-09: PPCAT and PCTESTCD must correspond
+    operator:
+      record_count
+      # 2025-07-09: PPCAT and PCTESTCD must correspond
   - domain:
       PP
       # we only want it for the current subject
@@ -107,8 +113,9 @@ Operations:
       - USUBJID
     id: $pp_cat
     name: PPCAT
-    operator: distinct
-    # Value of PCTPTREF must be present in PPTPTREF (for the same USUBJID, so we need "group")
+    operator:
+      distinct
+      # Value of PCTPTREF must be present in PPTPTREF (for the same USUBJID, so we need "group")
   - domain:
       PP
       # we only want it for the current subject

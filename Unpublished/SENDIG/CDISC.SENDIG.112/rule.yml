@@ -95,19 +95,21 @@ Check:
   all:
     - name: variable_name
       operator: equal_to
-      value: AGE
-      # This may cause to be "overreporting", as there is no function define_variable_is_derived
-      # but essentially, AGE should not be "assigned"
+      value:
+        AGE
+        # This may cause to be "overreporting", as there is no function define_variable_is_derived
+        # but essentially, AGE should not be "assigned"
     - name: define_variable_is_collected
       operator: equal_to
       value: false
     - name: define_variable_has_comment
       operator: equal_to
-      value: false
-      # Commented out for the moment, as awaiting new function
-      #- name: define_variable_has_method
-      #  operator: equal_to
-      #  value: false
+      value:
+        false
+        # Commented out for the moment, as awaiting new function
+        #- name: define_variable_has_method
+        #  operator: equal_to
+        #  value: false
 Core:
   Id: CDISC.SENDIG.112
   Status: Draft

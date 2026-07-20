@@ -26,11 +26,12 @@ Check:
       operator:
         is_not_contained_by
         # REMARK: the NEOPLASM codelist is NOT the standard codelist for MISTRESC !!!
-      value: $NEOPASM_CODELIST
-      # The following does not seem to work => "invalid operator"
-      #- name: MISTRESC
-      #  operator: does_not_use_valid_codelist_terms
-      #  value: NEOPLASM
+      value:
+        $NEOPASM_CODELIST
+        # The following does not seem to work => "invalid operator"
+        #- name: MISTRESC
+        #  operator: does_not_use_valid_codelist_terms
+        #  value: NEOPLASM
 Core:
   Status: Draft
   Version: "1"

@@ -88,8 +88,9 @@ Authorities:
 Check:
   all:
     - name: RFSTDTC
-      operator: non_empty
-      # TODO: change into "has_method" (function requested: https://github.com/cdisc-org/cdisc-rules-engine/issues/1047)
+      operator:
+        non_empty
+        # TODO: change into "has_method" (function requested: https://github.com/cdisc-org/cdisc-rules-engine/issues/1047)
     - name: define_variable_has_comment
       operator: equal_to
       value: false

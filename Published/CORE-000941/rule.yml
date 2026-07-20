@@ -110,9 +110,10 @@ Operations:
     ct_package_type: DDF
     id: $codelist_extensible
     operator: codelist_extensible
-    version: dataOriginType.codeSystemVersion
-    # DDF codelist extensibility was not defined in earlier CT packages and
-    # defaults to false, so assigning an override:
+    version:
+      dataOriginType.codeSystemVersion
+      # DDF codelist extensibility was not defined in earlier CT packages and
+      # defaults to false, so assigning an override:
   - id: $codelist_extensible_override
     map:
       - dataOriginType.codeSystemVersion: "2022-09-30"

@@ -59,7 +59,7 @@ Check:
               operator: empty
             - name: PCELTM
               operator: empty
-      # case that POOLID is populated. ATTENTION: POOLID is permissible!
+          # case that POOLID is populated. ATTENTION: POOLID is permissible!
     - all:
         # PC-POOLID column is present
         - name: POOLID

@@ -48,8 +48,9 @@ Check:
   all:
     - name: PCORRES
       operator: not_matches_regex
-      value: "[+-]?([0-9]*[.])?[0-9]+$"
-      # report an error when either PCORRES is not a number, and PCSTRESC is neither "BLQ" or "ALQ"
+      value:
+        "[+-]?([0-9]*[.])?[0-9]+$"
+        # report an error when either PCORRES is not a number, and PCSTRESC is neither "BLQ" or "ALQ"
     - name: PCSTRESC
       operator: not_equal_to
       value: "BLQ"

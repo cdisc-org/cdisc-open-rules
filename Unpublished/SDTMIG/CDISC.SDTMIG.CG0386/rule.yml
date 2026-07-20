@@ -52,11 +52,12 @@ Check:
   all:
     - metadata: $valid_codes
       operator: equal_to
-      value: true
-      #- name: --BDSYCD
-      #  operator: is_contained_by
-      #  value:
-      #    - MedDRA system organ class code
+      value:
+        true
+        #- name: --BDSYCD
+        #  operator: is_contained_by
+        #  value:
+        #    - MedDRA system organ class code
 Core:
   Id: CDISC.SDTMIG.CG0386
   Status: Draft

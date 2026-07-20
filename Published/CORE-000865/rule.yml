@@ -148,12 +148,13 @@ Check:
     - name: "--TPTREF"
       operator: exists
     - name: "--ELTM"
-      operator: exists
-      #- name: '--TPTREF'
-      #  operator: 'non_empty'
-      #- name: '--ELTM'
-      #  operator: 'empty'
-      # Correction 2025-09-05
+      operator:
+        exists
+        #- name: '--TPTREF'
+        #  operator: 'non_empty'
+        #- name: '--ELTM'
+        #  operator: 'empty'
+        # Correction 2025-09-05
     - name: "--ELTM"
       operator: "non_empty"
     - name: "--TPTREF"

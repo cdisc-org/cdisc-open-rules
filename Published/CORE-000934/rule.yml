@@ -96,12 +96,13 @@ Check:
     # TODO: check whether each "splitted part follows the CT for "SPEC" (codelist)
     - name: PPSPEC
       operator: contains
-      value: ";"
-      # 2025-11-19: part that iterates of the "splitted parts" and checks each of them
-      #- name: $ppspec_value
-      #  operator: not_contains_all
-      #  value: $ppspec_codelist
-      # TRYING JUST THE OTHER WAY AROUND - THIS SEEMS TO BE THE RIGHT WAY
+      value:
+        ";"
+        # 2025-11-19: part that iterates of the "splitted parts" and checks each of them
+        #- name: $ppspec_value
+        #  operator: not_contains_all
+        #  value: $ppspec_codelist
+        # TRYING JUST THE OTHER WAY AROUND - THIS SEEMS TO BE THE RIGHT WAY
     - name: $ppspec_codelist
       operator: not_contains_all
       value:

@@ -48,12 +48,13 @@ Check:
   all:
     - name: PCTESTCD
       operator: is_contained_by
-      value: $pp_ppcat
-      # TODO: count number of distinct values of PPCAT for this subject
-      #- name: $pp_cat
-      #  operator: equal_to
-      #  value: 'blabla'
-      # TODO: when count = 1, check that PCNOMDY=PPNOMDY and PPCTPTREF=PPTPTREF
+      value:
+        $pp_ppcat
+        # TODO: count number of distinct values of PPCAT for this subject
+        #- name: $pp_cat
+        #  operator: equal_to
+        #  value: 'blabla'
+        # TODO: when count = 1, check that PCNOMDY=PPNOMDY and PPCTPTREF=PPTPTREF
     - any:
         - name: PCNOMDY # old
           operator: empty
@@ -76,14 +77,15 @@ Operations:
       - USUBJID
     id: $pp_ppcat
     name: PPCAT
-    operator: distinct
-    #- id: $countppcat
-    #  name: $pp_ppcat
-    #  operator: record_count
+    operator:
+      distinct
+      #- id: $countppcat
+      #  name: $pp_ppcat
+      #  operator: record_count
 
-    # just trying something else
-    #- group:
-    #    - PCTESTCD
+      # just trying something else
+      #- group:
+      #    - PCTESTCD
   - domain: PP
     filter:
       PPCAT: PCTESTCD # This would mean that the value of PPCAT must be the string 'PSTESTCD', not the value of the variable PCTESTCD

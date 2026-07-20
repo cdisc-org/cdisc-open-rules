@@ -35,8 +35,9 @@ Check:
   all:
     - name: PYTESTCD
       operator: equal_to
-      value: PREGSTAT
-      # TODO: retrieve values from CDISC Library for codelist PYFINDRS
+      value:
+        PREGSTAT
+        # TODO: retrieve values from CDISC Library for codelist PYFINDRS
     - name: PYSTRESC
       operator: is_not_contained_by
       value:

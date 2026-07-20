@@ -41,8 +41,9 @@ Check:
       value: 1
     - name: ICSTAT
       operator: equal_to
-      value: "NOT DONE"
-      # Raise issue when ICIMPLBL is not "ALL"
+      value:
+        "NOT DONE"
+        # Raise issue when ICIMPLBL is not "ALL"
     - name: ICIMPLBL
       operator: not_equal_to
       value: ALL

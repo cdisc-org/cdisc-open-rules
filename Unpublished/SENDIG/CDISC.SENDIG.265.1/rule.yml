@@ -54,10 +54,11 @@ Check:
   all:
     - name: define_variable_role
       operator: equal_to
-      value: "Identifier"
-      #- name: define_variable_role
-      #  operator: equal_to
-      #  value: 'Identifier'
+      value:
+        "Identifier"
+        #- name: define_variable_role
+        #  operator: equal_to
+        #  value: 'Identifier'
     - name: define_variable_name
       operator: is_not_contained_by
       value: $model_variables

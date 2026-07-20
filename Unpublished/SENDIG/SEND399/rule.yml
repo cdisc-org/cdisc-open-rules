@@ -40,9 +40,10 @@ Check:
     # check on whether there is a record with TSPARMCD=SNDIGVER
     - name: $distinct_tsparmcd
       operator: does_not_contain
-      value: SNDIGVER
-      # when there is a record with TSPARMCD=SNDIGVER,
-      # then TSVAL must be one from the SNDIGVER for DART-1.1 or DART-1.2
+      value:
+        SNDIGVER
+        # when there is a record with TSPARMCD=SNDIGVER,
+        # then TSVAL must be one from the SNDIGVER for DART-1.1 or DART-1.2
     - all:
         - name: TSPARMCD
           operator: equal_to

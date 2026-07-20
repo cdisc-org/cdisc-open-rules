@@ -121,8 +121,9 @@ Operations:
     group:
       - SETCD
     id: $num_trtdos_see_protocol
-    operator: record_count
-    # counts the records with TRTDOSU='SEE PROTOCOL' within the group
+    operator:
+      record_count
+      # counts the records with TRTDOSU='SEE PROTOCOL' within the group
   - filter:
       TXPARMCD: TRTDOSU
       TXVAL: "SEE PROTOCOL"

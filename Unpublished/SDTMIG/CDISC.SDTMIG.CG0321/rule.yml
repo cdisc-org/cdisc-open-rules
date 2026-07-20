@@ -88,11 +88,12 @@ Operations:
   - id: $custom_domain
     operator: domain_is_custom
   - id: $dataset_variables
-    operator: get_column_order_from_dataset
-    # - id: $model_filtered_variables`
-    #   key_name: "role"
-    #   key_value: "Identifier"
-    #   operation: get_model_filtered_variables`
+    operator:
+      get_column_order_from_dataset
+      # - id: $model_filtered_variables`
+      #   key_name: "role"
+      #   key_value: "Identifier"
+      #   operation: get_model_filtered_variables`
 Outcome:
   Message: Custom domain is not based on one of the observation classes
   Output Variables:

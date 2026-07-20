@@ -60,7 +60,7 @@ Check:
               operator: exists
             - name: --RPENDY
               operator: non_empty
-      # when one of the above is populated, RPHASE may not be empty
+          # when one of the above is populated, RPHASE may not be empty
     - name: RPHASE
       operator: empty
 

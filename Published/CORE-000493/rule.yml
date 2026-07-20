@@ -60,9 +60,10 @@ Authorities:
               Id: SEND102
               Version: "1"
             Version: "5.0"
-        Version: "1.1"
-        # FDA Business rule FB5301 is identical, so extending the scope here
-        # FB5301 as of SEND 3.1
+        Version:
+          "1.1"
+          # FDA Business rule FB5301 is identical, so extending the scope here
+          # FB5301 as of SEND 3.1
   - Organization: "FDA"
     Standards:
       - Name: "SENDIG"

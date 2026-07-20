@@ -92,7 +92,7 @@ Check:
         - name: OMTESTCD
           operator: equal_to
           value: OWHT
-      # Part: Ratios and percentages should not be mixed.
+          # Part: Ratios and percentages should not be mixed.
     - all:
         - name: OMSTRESU
           operator: is_inconsistent_across_dataset

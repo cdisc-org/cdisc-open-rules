@@ -55,7 +55,7 @@ Check:
           operator: not_exists
         - name: VISITDY
           operator: "empty"
-      # TEST CONDITION. Remark that --MOMDY is "expected"
+          # TEST CONDITION. Remark that --MOMDY is "expected"
     - name: --NOMDY
       operator: "empty"
 Core:

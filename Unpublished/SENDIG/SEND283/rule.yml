@@ -94,8 +94,9 @@ Check:
     # As such, the rule is currently "partially executable".
     - name: "DSSTDTC"
       operator: "date_less_than"
-      value: "$max_seendtc"
-      # TODO in FUTURE: part that states that DSSTDTC may not be larger than max(SEENDTC) + small fraction
+      value:
+        "$max_seendtc"
+        # TODO in FUTURE: part that states that DSSTDTC may not be larger than max(SEENDTC) + small fraction
 Core:
   Status: Draft
   Version: "1"

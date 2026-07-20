@@ -66,9 +66,10 @@ Check:
       value: AG
     - name: variable_name #in dataset
       operator: ends_with
-      value: N
-      #- name: Root_variable_name #substrings up to 'N' and checks fro presence, if returns false then fails
-      # operator: not_exists
+      value:
+        N
+        #- name: Root_variable_name #substrings up to 'N' and checks fro presence, if returns false then fails
+        # operator: not_exists
 
 Core:
   Id: CDSIC.ADaMIG.AD0070

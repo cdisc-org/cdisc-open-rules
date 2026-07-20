@@ -53,16 +53,18 @@ Check:
       operator: is_contained_by
       value: $pp_ppcat
     - name: PCELTM
-      operator: non_empty
-      # value of PCELTM may not start with a dash (minus-character)
+      operator:
+        non_empty
+        # value of PCELTM may not start with a dash (minus-character)
     - name: PCELTM
       operator: starts_with
-      value: "-"
-      # Alternative test for first character being "-"
-      # - name: PCELTM
-      #  operator: prefix_equal_to
-      #  prefix: 1
-      #  value: '-'
+      value:
+        "-"
+        # Alternative test for first character being "-"
+        # - name: PCELTM
+        #  operator: prefix_equal_to
+        #  prefix: 1
+        #  value: '-'
 Core:
   Status: Draft
   Version: "1"

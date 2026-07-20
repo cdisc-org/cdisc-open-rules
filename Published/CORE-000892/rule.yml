@@ -169,8 +169,9 @@ Check:
                 - name: --STRTPT
                   operator: not_exists
                 - name: --STRTPT
-                  operator: empty
-              # Case ENRF populated: check that one of --STDTC, --STRF or --STRTPT is populated
+                  operator:
+                    empty
+                    # Case ENRF populated: check that one of --STDTC, --STRF or --STRTPT is populated
         - all:
             - name: --ENRF
               operator:
@@ -194,9 +195,10 @@ Check:
                 - name: --STRTPT
                   operator: not_exists
                 - name: --STRTPT
-                  operator: empty
+                  operator:
+                    empty
 
-              # Case ENRTPT populated: check that one of --STDTC, --STRF or --STRTPT is populated
+                    # Case ENRTPT populated: check that one of --STDTC, --STRF or --STRTPT is populated
         - all:
             - name: --ENRTPT
               operator:

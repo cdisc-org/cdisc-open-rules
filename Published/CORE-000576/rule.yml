@@ -107,12 +107,14 @@ Check:
   all:
     - name: TXPARMCD
       operator: equal_to
-      value: TRTDOS
-      # check whether value is a number
+      value:
+        TRTDOS
+        # check whether value is a number
     - name: TXVAL
       operator: not_matches_regex
-      value: "[+-]?([0-9]*[.])?[0-9]+$"
-      # check whether a comma-separated list of values
+      value:
+        "[+-]?([0-9]*[.])?[0-9]+$"
+        # check whether a comma-separated list of values
     - name: TXVAL
       operator:
         not_matches_regex

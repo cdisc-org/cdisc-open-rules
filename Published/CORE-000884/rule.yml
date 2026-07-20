@@ -90,7 +90,7 @@ Check:
               operator: non_empty
             - name: AGE
               operator: non_empty
-      # for TS, they are parameters (values in TSPARMCD)
+          # for TS, they are parameters (values in TSPARMCD)
     - all:
         - name: DOMAIN
           operator: equal_to
@@ -113,11 +113,12 @@ Operations:
       TS
       # only keep the records with TSPARMCD=AGEU
     filter:
-      TSPARMCD: AGEU
-      # group the records by value of TXSETCD
-      #group:
-      #  - SETCD
-      # within the filtered and grouped records, count the number of TXVAL records
+      TSPARMCD:
+        AGEU
+        # group the records by value of TXSETCD
+        #group:
+        #  - SETCD
+        # within the filtered and grouped records, count the number of TXVAL records
     id: $ageu_count
     name: TSVAL
     operator: record_count

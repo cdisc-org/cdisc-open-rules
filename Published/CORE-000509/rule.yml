@@ -85,8 +85,8 @@ Check:
         - name: $record_count_AGE
           operator: greater_than_or_equal_to
           value: 1
-      # NO TSPARMCD=AGE and no TSPARMCD=AGETXT is present
-      # Both counts are 0
+          # NO TSPARMCD=AGE and no TSPARMCD=AGETXT is present
+          # Both counts are 0
     - all:
         - name: $record_count_AGETXT
           operator: equal_to
@@ -108,8 +108,9 @@ Operations:
   - filter:
       TSPARMCD: AGE
     id: $record_count_AGE
-    operator: record_count
-    # Record count for TSPARMCD=AGETXT
+    operator:
+      record_count
+      # Record count for TSPARMCD=AGETXT
   - filter:
       TSPARMCD: AGETXT
     id: $record_count_AGETXT

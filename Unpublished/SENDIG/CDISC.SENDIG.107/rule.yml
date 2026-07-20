@@ -32,10 +32,11 @@ Check:
     #  value: true
     # Just trying an alternative 2024-06-04
     - name: ARMCD
-      operator: empty
-      #- name: $TA_exists
-      #  operator: equal_to
-      #  value: true
+      operator:
+        empty
+        #- name: $TA_exists
+        #  operator: equal_to
+        #  value: true
     - name: $TA_present
       operator: equal_to
       value: true
@@ -54,15 +55,17 @@ Operations:
   - domain: DM # necessary?
     id: $DM_ARMCD_null
     name: ARMCD
-    operator: variable_is_null
-    # Alternative approach 2024-06-04
-    # BUT this fails when there is no TA dataset at all
+    operator:
+      variable_is_null
+      # Alternative approach 2024-06-04
+      # BUT this fails when there is no TA dataset at all
   - domain: TA
     id: $TA_exists
     name: ARMCD
-    operator: variable_exists
-    # 2024-06-04: does this check whether TA is present in the study?
-    # NO: it doesn't like that it works as I was thinking
+    operator:
+      variable_exists
+      # 2024-06-04: does this check whether TA is present in the study?
+      # NO: it doesn't like that it works as I was thinking
   - id: $TA_present
     name: TA
     operator: study_domains

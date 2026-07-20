@@ -52,7 +52,7 @@ Check:
       value:
         - STUDYID
         - DOMAIN # seems to give false positives when C66734 codelist is referenced for "DOMAIN"
-      # check whether variable has assigned CT in the CDISC Library
+          # check whether variable has assigned CT in the CDISC Library
     - name: library_variable_ccode
       operator:
         non_empty

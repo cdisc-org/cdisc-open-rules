@@ -97,8 +97,9 @@ Operations:
       TX
       # only keep the records with TXPARMCD=ARMCD
     filter:
-      TXPARMCD: ARMCD
-      # group the records by value of TXSETCD
+      TXPARMCD:
+        ARMCD
+        # group the records by value of TXSETCD
     group:
       - SETCD
         # within the filtered and grouped records, count the number of TXVAL records

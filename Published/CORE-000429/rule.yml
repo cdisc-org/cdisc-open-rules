@@ -20,9 +20,10 @@ Check:
   all:
     - name: PCORRES
       operator: not_matches_regex
-      value: "[+-]?([0-9]*[.])?[0-9]+$"
-      # report an error when either PCORRES does not represent a number - all:
-      # and PCSTRESN is populated
+      value:
+        "[+-]?([0-9]*[.])?[0-9]+$"
+        # report an error when either PCORRES does not represent a number - all:
+        # and PCSTRESN is populated
     - name: PCSTRESN
       operator: non_empty
 Core:

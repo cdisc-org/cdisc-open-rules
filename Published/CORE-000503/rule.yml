@@ -124,17 +124,18 @@ Check:
       value: OTHER
     - name: QORIG
       operator: not_equal_to
-      value: NOT AVAILABLE
-      # Simplification 2024-05-21
-      # NO: this is NOT how is_not_contained_by works, it requires a reference to a separate operation
-      # see e.g. CG0118
-      # - name: QORIG
-      #  operator: is_not_contained_by
-      #  value:
-      #    - COLLECTED
-      #    - DERIVED
-      #    - OTHER
-      #    - NOT AVAILABLE
+      value:
+        NOT AVAILABLE
+        # Simplification 2024-05-21
+        # NO: this is NOT how is_not_contained_by works, it requires a reference to a separate operation
+        # see e.g. CG0118
+        # - name: QORIG
+        #  operator: is_not_contained_by
+        #  value:
+        #    - COLLECTED
+        #    - DERIVED
+        #    - OTHER
+        #    - NOT AVAILABLE
 Core:
   Id: CORE-000503
   Status: Published

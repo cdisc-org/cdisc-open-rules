@@ -106,8 +106,9 @@ Check:
       operator: equal_to
       value: library_variable_name
     - name: library_variable_label
-      operator: non_empty
-      # variable label must be equal to that in the CDISC-library
+      operator:
+        non_empty
+        # variable label must be equal to that in the CDISC-library
     - name: variable_label
       operator: not_equal_to
       value: library_variable_label

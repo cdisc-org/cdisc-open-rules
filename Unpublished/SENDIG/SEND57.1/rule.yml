@@ -113,18 +113,19 @@ Check:
       operator: equal_to
       value: Char
     - name: variable_value
-      operator: non_empty
-      ## The following works for FB1502 test data
-      #- name: variable_value
-      #  operator: equal_to
-      #  value: '.'
-      #  value_is_literal: true
-      ## The following DOES NOT work
-      #- name: variable_value
-      #  operator: contains
-      #  value: ';'
-      #  value_is_literal: true
-      # Trying with a regex: does not return anything even when value has a semicolon
+      operator:
+        non_empty
+        ## The following works for FB1502 test data
+        #- name: variable_value
+        #  operator: equal_to
+        #  value: '.'
+        #  value_is_literal: true
+        ## The following DOES NOT work
+        #- name: variable_value
+        #  operator: contains
+        #  value: ';'
+        #  value_is_literal: true
+        # Trying with a regex: does not return anything even when value has a semicolon
     - name: variable_value
       operator: matches_regex
       value: ";"

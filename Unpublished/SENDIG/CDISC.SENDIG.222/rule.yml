@@ -99,8 +99,9 @@ Check:
   all:
     # TA.ETCD non-empty. Required as otherwise the "blank" value is checked against TE
     - name: ETCD
-      operator: non_empty
-      # TA.ETCD is not in the list of distinct values of ETCD in TE
+      operator:
+        non_empty
+        # TA.ETCD is not in the list of distinct values of ETCD in TE
     - name: ETCD
       operator: is_not_contained_by
       value: $te_etcd

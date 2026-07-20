@@ -96,9 +96,10 @@ Operations:
     ct_package_type: DDF
     id: $codelist_extensible
     operator: codelist_extensible
-    version: type.codeSystemVersion
-    # DDF codelist extensibility was not defined in earlier CT packages and
-    # defaults to false, so assigning an override:
+    version:
+      type.codeSystemVersion
+      # DDF codelist extensibility was not defined in earlier CT packages and
+      # defaults to false, so assigning an override:
   - id: $codelist_extensible_override
     map:
       - output: "Y"

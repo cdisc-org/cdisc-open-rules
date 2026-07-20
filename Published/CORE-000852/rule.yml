@@ -196,8 +196,9 @@ Executability: Fully Executable
 Operations:
   # variable order in CDISC-Library
   - id: $column_order_from_library
-    operator: get_column_order_from_library
-    # variable order in dataset
+    operator:
+      get_column_order_from_library
+      # variable order in dataset
   - id: $column_order_from_dataset
     operator: get_column_order_from_dataset
 Outcome:

@@ -21,8 +21,9 @@ Check:
   all:
     - name: $records_in_dataset
       operator: equal_to
-      value: 0
-      # check whether the dataset is described in the define.xml
+      value:
+        0
+        # check whether the dataset is described in the define.xml
     - name: define_dataset_name
       operator: not_equal_to
       value: "test"

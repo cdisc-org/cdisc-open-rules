@@ -99,7 +99,7 @@ Authorities:
             Version: "1.0"
         Substandard: SEND
         Version: "1.0"
-    # FDA rule FB4602 added (SEND-only)
+        # FDA rule FB4602 added (SEND-only)
   - Organization: FDA
     Standards:
       # Applicable to SENDIG as of version 3.1
@@ -181,8 +181,9 @@ Check:
     # See Github issue https://github.com/cdisc-org/cdisc-rules-engine/issues/831
     - name: "$txgroupsbysetcd"
       operator: "does_not_contain"
-      value: "SPGRPCD"
-      # TODO???: also check the TXVAL is populated for TXPARMCD=SPGRPCD, this however seems not to be part of the rule
+      value:
+        "SPGRPCD"
+        # TODO???: also check the TXVAL is populated for TXPARMCD=SPGRPCD, this however seems not to be part of the rule
 Core:
   Id: CORE-000770
   Status: Published
