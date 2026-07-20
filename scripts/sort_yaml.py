@@ -1,23 +1,24 @@
 #!/usr/bin/env python3
 """
-Sort and format rule YAML files alphabetically and recursively by key name.
+Sort rule YAML files alphabetically and recursively by key name, preserving comments.
 
-This matches the auto-format/auto-sort behavior of the CDISC conformance rules editor.
+This matches the auto-sort behavior of the CDISC conformance rules editor.
+Prettier formatting is handled separately (via the VS Code extension locally,
+or in CI) — this script only handles key sorting.
 
 Usage:
-    # Format files in-place (default: all rule.yml under Published/ and Unpublished/)
+    # Sort files in-place (default: all rule.yml under Published/ and Unpublished/)
     python scripts/sort_yaml.py
 
-    # Format specific files
+    # Sort specific files
     python scripts/sort_yaml.py path/to/rule.yml another/rule.yml
 
-    # Check mode: exit with code 1 if any file is not formatted correctly
+    # Check mode: exit with code 1 if any file is not sorted correctly
     python scripts/sort_yaml.py --check [files...]
 """
 
 import sys
 import argparse
-import subprocess
 from io import StringIO
 from pathlib import Path
 
@@ -67,40 +68,15 @@ def sort_recursive(obj):
     return obj
 
 
-def run_prettier(content: str, path: Path) -> str:
-    """Format a YAML string through Prettier. `path` is only used so Prettier
-    can infer the parser/config (via --stdin-filepath); the file itself is
-    not read or written here."""
-    try:
-        result = subprocess.run(
-            ["npx", "--no-install", "prettier", "--stdin-filepath", str(path)],
-            input=content,
-            capture_output=True,
-            text=True,
-            check=True,
-        )
-    except FileNotFoundError as exc:
-        raise RuntimeError(
-            "Prettier not found. Run `npm ci` (or `npm install`) in the repo root first."
-        ) from exc
-    except subprocess.CalledProcessError as exc:
-        raise RuntimeError(f"Prettier failed on {path}:\n{exc.stderr}") from exc
-    return result.stdout
-
-
-def canonical(content: str, path: Path, format_with_prettier: bool = True) -> str:
-    """Return the canonical representation of a YAML string: keys sorted, and
-    (unless format_with_prettier is False) passed through Prettier."""
+def canonical(content: str) -> str:
+    """Return the canonical (sorted) representation of a YAML string."""
     data = _yaml.load(content)
     if data is None:
         return content
     sorted_data = sort_recursive(data)
     stream = StringIO()
     _yaml.dump(sorted_data, stream)
-    result = stream.getvalue()
-    if format_with_prettier:
-        result = run_prettier(result, path)
-    return result
+    return stream.getvalue()
 
 
 def find_rule_files(root: Path) -> list[Path]:
@@ -113,15 +89,15 @@ def find_rule_files(root: Path) -> list[Path]:
     return sorted(files)
 
 
-def process_files(files: list[Path], check_mode: bool, format_with_prettier: bool = True) -> int:
-    """Format (or check) the given files. Returns exit code."""
+def process_files(files: list[Path], check_mode: bool) -> int:
+    """Sort (or check) the given files. Returns exit code."""
     changed = []
     errors = []
 
     for path in files:
         try:
             original = path.read_text(encoding="utf-8")
-            formatted = canonical(original, path, format_with_prettier=format_with_prettier)
+            formatted = canonical(original)
         except Exception as exc:
             errors.append(f"  {path}: {exc}")
             continue
@@ -130,7 +106,7 @@ def process_files(files: list[Path], check_mode: bool, format_with_prettier: boo
             changed.append(path)
             if not check_mode:
                 path.write_text(formatted, encoding="utf-8")
-                print(f"  Formatted: {path}")
+                print(f"  Sorted: {path}")
 
     if errors:
         print("\nERROR: Failed to process the following files:", file=sys.stderr)
@@ -141,7 +117,7 @@ def process_files(files: list[Path], check_mode: bool, format_with_prettier: boo
     if check_mode:
         if changed:
             print(
-                "\nThe following rule.yml files are not correctly sorted/formatted:\n",
+                "\nThe following rule.yml files are not correctly sorted:\n",
                 file=sys.stderr,
             )
             for p in changed:
@@ -152,10 +128,10 @@ def process_files(files: list[Path], check_mode: bool, format_with_prettier: boo
             )
             return 1
         else:
-            print("All rule.yml files are correctly sorted and formatted.")
+            print("All rule.yml files are correctly sorted.")
     else:
         if not changed:
-            print("All rule.yml files are already correctly sorted and formatted.")
+            print("All rule.yml files are already correctly sorted.")
 
     return 0
 
@@ -169,13 +145,7 @@ def main():
     parser.add_argument(
         "--check",
         action="store_true",
-        help="Check mode: exit 1 if any file needs formatting, without modifying files.",
-    )
-    parser.add_argument(
-        "--no-format",
-        action="store_true",
-        help="Sort keys only; skip the Prettier formatting pass. Doesn't require Node — "
-        "intended for the pre-commit hook, where format-on-save already covers styling.",
+        help="Check mode: exit 1 if any file needs sorting, without modifying files.",
     )
     parser.add_argument(
         "files",
@@ -196,10 +166,10 @@ def main():
         print("No rule.yml files found.")
         return 0
 
-    mode = "Checking" if args.check else "Formatting"
+    mode = "Checking" if args.check else "Sorting"
     print(f"{mode} {len(files)} rule.yml file(s)...")
 
-    sys.exit(process_files(files, check_mode=args.check, format_with_prettier=not args.no_format))
+    sys.exit(process_files(files, check_mode=args.check))
 
 
 if __name__ == "__main__":
