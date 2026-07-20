@@ -11,6 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
+      issues: write
       pull-requests: write
     steps:
       - name: Checkout
@@ -81,6 +82,24 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             const fs = require('fs');
+
+            function truncatedList(path, maxChars = 3000) {
+              let raw = '';
+              try { raw = fs.readFileSync(path, 'utf8'); } catch (e) { return ''; }
+              const lines = raw.split('\n').filter(l => l.trim().length > 0);
+              let out = [];
+              let total = 0;
+              for (const line of lines) {
+                if (total + line.length > maxChars) {
+                  out.push(`...and ${lines.length - out.length} more`);
+                  break;
+                }
+                out.push(line);
+                total += line.length + 1;
+              }
+              return out.join('\n');
+            }
+
             const sortOk = '${{ steps.sort-check.outcome }}' === 'success';
             const prettierOk = '${{ steps.prettier-check.outputs.passed }}' === 'true';
             const marker = '<!-- yaml-format-check -->';
@@ -90,42 +109,52 @@ jobs:
               body += '## \u2705 YAML Format Check Passed\n\nAll changed `rule.yml` files are correctly sorted and formatted.';
             } else {
               body += '## \u274c YAML Format Check Failed\n\n';
-
               if (!sortOk) {
-                let sortList = '';
-                try { sortList = fs.readFileSync('/tmp/sort_stderr.txt', 'utf8'); } catch (e) {}
+                const sortList = truncatedList('/tmp/sort_stderr.txt');
                 body += '**Sorting issue** — one or more `rule.yml` files are not sorted alphabetically by key.\n\n';
                 body += 'Run the following command locally to fix them:\n\n```bash\npython scripts/sort_yaml.py\n```\n\n';
-                if (sortList) {
-                  body += '<details><summary>Details</summary>\n\n```\n' + sortList + '\n```\n</details>\n\n';
-                }
+                if (sortList) body += '<details><summary>Details</summary>\n\n```\n' + sortList + '\n```\n</details>\n\n';
               }
-
               if (!prettierOk) {
-                let prettierList = '';
-                try { prettierList = fs.readFileSync('/tmp/prettier_unformatted.txt', 'utf8'); } catch (e) {}
+                const prettierList = truncatedList('/tmp/prettier_unformatted.txt');
                 body += '**Formatting issue** — the following files are not formatted with Prettier:\n\n';
-                body += '```\n' + prettierList + '```\n\n';
-                body += 'Install the [Prettier VS Code extension](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) (recommended in `.vscode/extensions.json`) and make sure "Format On Save" is enabled, then re-save these files and push.\n\n';
+                body += '```\n' + prettierList + '\n```\n\n';
+                body += 'Install the [Prettier VS Code extension](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) and enable "Format On Save", then re-save these files and push.\n\n';
                 body += 'Alternatively, trigger the **Auto-format Rule YAML** workflow to fix them automatically.';
               }
             }
 
-            const { data: comments } = await github.rest.issues.listComments({
-              owner: context.repo.owner, repo: context.repo.repo,
-              issue_number: context.issue.number,
-            });
-            const existing = comments.find(c => c.user.type === 'Bot' && c.body.includes(marker));
-            if (existing) {
-              await github.rest.issues.updateComment({
+            if (body.length > 60000) {
+              body = body.slice(0, 60000) + '\n\n...(comment truncated — see workflow run logs for full details)';
+            }
+
+            core.info(`Comment body length: ${body.length}`);
+            core.info(`Issue number: ${context.issue.number}`);
+
+            try {
+              const { data: comments } = await github.rest.issues.listComments({
                 owner: context.repo.owner, repo: context.repo.repo,
-                comment_id: existing.id, body,
+                issue_number: context.issue.number,
               });
-            } else {
-              await github.rest.issues.createComment({
-                owner: context.repo.owner, repo: context.repo.repo,
-                issue_number: context.issue.number, body,
-              });
+              core.info(`Found ${comments.length} existing comments on this PR.`);
+              const existing = comments.find(c => c.user.type === 'Bot' && c.body.includes(marker));
+              if (existing) {
+                core.info(`Updating existing comment id ${existing.id}`);
+                const res = await github.rest.issues.updateComment({
+                  owner: context.repo.owner, repo: context.repo.repo,
+                  comment_id: existing.id, body,
+                });
+                core.info(`Updated comment: ${res.data.html_url}`);
+              } else {
+                core.info('No existing marker comment found — creating a new one.');
+                const res = await github.rest.issues.createComment({
+                  owner: context.repo.owner, repo: context.repo.repo,
+                  issue_number: context.issue.number, body,
+                });
+                core.info(`Created comment: ${res.data.html_url}`);
+              }
+            } catch (err) {
+              core.setFailed(`Failed to post PR comment: ${err.message}`);
             }
 
       - name: Fail if any check failed
