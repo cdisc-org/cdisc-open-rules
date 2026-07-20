@@ -54,8 +54,8 @@ jobs:
         id: sort-check
         if: steps.changed-files.outputs.has_files == 'true'
         run: |
-          FILES=$(cat /tmp/changed_rule_files.txt | tr '\n' ' ')
-          python scripts/sort_yaml.py --check $FILES 2> /tmp/sort_stderr.txt
+          mapfile -t FILES < /tmp/changed_rule_files.txt
+          python scripts/sort_yaml.py --check "${FILES[@]}" 2> /tmp/sort_stderr.txt
         continue-on-error: true
 
       - name: Check Prettier formatting
