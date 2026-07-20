@@ -6,6 +6,10 @@ This matches the auto-sort behavior of the CDISC conformance rules editor.
 Prettier formatting is handled separately (via the VS Code extension locally,
 or in CI) — this script only handles key sorting.
 
+Check mode (--check) verifies key order structurally, independent of exact
+formatting bytes, so it agrees regardless of whether Prettier, ruamel, or an
+editor last touched the file's whitespace/quotes/wrapping.
+
 Usage:
     # Sort files in-place (default: all rule.yml under Published/ and Unpublished/)
     python scripts/sort_yaml.py
@@ -13,7 +17,7 @@ Usage:
     # Sort specific files
     python scripts/sort_yaml.py path/to/rule.yml another/rule.yml
 
-    # Check mode: exit with code 1 if any file is not sorted correctly
+    # Check mode: exit with code 1 if any file's keys are not sorted
     python scripts/sort_yaml.py --check [files...]
 """
 
@@ -68,6 +72,25 @@ def sort_recursive(obj):
     return obj
 
 
+def is_sorted_recursive(obj) -> bool:
+    """Check whether dict keys are already alphabetically sorted at every level.
+
+    This is a structural check on key order only — it says nothing about
+    whitespace, quote style, or line wrapping, so it agrees with the file
+    regardless of which tool (Prettier, ruamel, an editor) last formatted it.
+    """
+    if isinstance(obj, CommentedMap):
+        keys = list(obj.keys())
+        if [str(k) for k in keys] != sorted(str(k) for k in keys):
+            return False
+        return all(is_sorted_recursive(v) for v in obj.values())
+
+    if isinstance(obj, CommentedSeq):
+        return all(is_sorted_recursive(item) for item in obj)
+
+    return True
+
+
 def canonical(content: str) -> str:
     """Return the canonical (sorted) representation of a YAML string."""
     data = _yaml.load(content)
@@ -97,14 +120,31 @@ def process_files(files: list[Path], check_mode: bool) -> int:
     for path in files:
         try:
             original = path.read_text(encoding="utf-8")
-            formatted = canonical(original)
         except Exception as exc:
             errors.append(f"  {path}: {exc}")
             continue
 
-        if original != formatted:
-            changed.append(path)
-            if not check_mode:
+        if check_mode:
+            try:
+                data = _yaml.load(original)
+            except Exception as exc:
+                errors.append(f"  {path}: {exc}")
+                continue
+
+            if data is None:
+                continue
+
+            if not is_sorted_recursive(data):
+                changed.append(path)
+        else:
+            try:
+                formatted = canonical(original)
+            except Exception as exc:
+                errors.append(f"  {path}: {exc}")
+                continue
+
+            if original != formatted:
+                changed.append(path)
                 path.write_text(formatted, encoding="utf-8")
                 print(f"  Sorted: {path}")
 
@@ -145,7 +185,7 @@ def main():
     parser.add_argument(
         "--check",
         action="store_true",
-        help="Check mode: exit 1 if any file needs sorting, without modifying files.",
+        help="Check mode: exit 1 if any file's keys are not sorted, without modifying files.",
     )
     parser.add_argument(
         "files",
