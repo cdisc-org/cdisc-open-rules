@@ -30,7 +30,7 @@ jobs:
         with:
           node-version: "20"
       - name: Install Prettier
-        run: npm install -g prettier@3.3.3
+        run: npm install -g prettier
 
       - name: Detect changed rule.yml files
         id: changed-files
