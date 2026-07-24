@@ -88,24 +88,21 @@ jobs:
         continue-on-error: true
         run: |
           chmod +x .github/scripts/run_validation.sh
-
           FILTER_STANDARDS=("USDM" "TIG")
-          FILTERED_CORE_IDS="$(venv/bin/python .github/scripts/filter_core_ids_by_standard.py \
+          mapfile -t FILTER_RESULT < <(venv/bin/python .github/scripts/filter_core_ids_by_standard.py \
             --rules-root "$(pwd)" \
-            --standards "${FILTER_STANDARDS[@]}")"
+            --standards "${FILTER_STANDARDS[@]}" \
+            --core-ids "${{ inputs.core_ids }}")
+          FILTERED_CORE_IDS="${FILTER_RESULT[0]}"
+          CORE_IDS_TO_RUN="${FILTER_RESULT[1]}"
 
           if [ -z "$FILTERED_CORE_IDS" ]; then
             echo "No Published rules found for standards: ${FILTER_STANDARDS[*]}"
             exit 0
           fi
 
-          CORE_IDS_TO_RUN="$(venv/bin/python .github/scripts/filter_core_ids_by_standard.py \
-            --rules-root "$(pwd)" \
-            --standards "${FILTER_STANDARDS[@]}" \
-            --core-ids "${{ inputs.core_ids }}")"
-
           if [ -z "$CORE_IDS_TO_RUN" ]; then
-            echo "No rules match the standards filter and requested CORE IDs."
+            echo "No requested core_ids matched Published rules for standards: ${FILTER_STANDARDS[*]}"
             exit 0
           fi
 
