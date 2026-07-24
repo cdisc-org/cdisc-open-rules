@@ -5,45 +5,48 @@ Authorities:
   - Organization: CDISC
     Standards:
       - Name: SDTMIG
-        Version: '3.4'
+        Version: "3.4"
         References:
           - Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0095
-              Version: '2'
-            Version: '2.0'
+              Version: "2"
+            Version: "2.0"
             Citations:
-              - Cited Guidance: Events[Variable Qualifier of --LOC]|Interventions[Variable
+              - Cited Guidance:
+                  Events[Variable Qualifier of --LOC]|Interventions[Variable
                   Qualifier of --LOC]|Findings[Variable Qualifier of --LOC]
                 Document: Model v2.0
                 Section: Events|Interventions|Findings
                 Item: --LAT
       - Name: SDTMIG
-        Version: '3.2'
+        Version: "3.2"
         References:
           - Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0095
-              Version: '2'
-            Version: '2.0'
+              Version: "2"
+            Version: "2.0"
             Citations:
-              - Cited Guidance: Qualifier for anatomical location further detailing
+              - Cited Guidance:
+                  Qualifier for anatomical location further detailing
                   laterality.
                 Document: Model v1.4
                 Section: 2.2.2
       - Name: SDTMIG
-        Version: '3.3'
+        Version: "3.3"
         References:
           - Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0095
-              Version: '2'
-            Version: '2.0'
+              Version: "2"
+            Version: "2.0"
             Citations:
-              - Cited Guidance: Qualifier for anatomical location further detailing
+              - Cited Guidance:
+                  Qualifier for anatomical location further detailing
                   laterality.
                 Document: Model v1.7
-                Item: 'Table 3.2.2: --LAT'
+                Item: "Table 3.2.2: --LAT"
                 Section: 2.2.2
 Check:
   all:
@@ -54,7 +57,7 @@ Check:
 Core:
   Id: CORE-000079
   Status: Published
-  Version: '1'
+  Version: "1"
 Description: Raise an error when --LOC is not present and --LAT is present.
 Executability: Fully Executable
 Outcome:

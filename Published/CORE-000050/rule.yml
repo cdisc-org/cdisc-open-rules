@@ -1,5 +1,5 @@
 # Variable: --RSTIND
-# Condition: 
+# Condition:
 # Rule: --RSTIND not present in dataset
 Authorities:
   - Organization: CDISC
@@ -14,9 +14,9 @@ Authorities:
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0623
-              Version: '1'
-            Version: '2.0'
-        Version: '3.4'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.4"
       - Name: TIG
         References:
           - Citations:
@@ -27,10 +27,10 @@ Authorities:
             Origin: TIG Conformance Rules
             Rule Identifier:
               Id: TIG0664
-              Version: '1'
-            Version: '1.0'
+              Version: "1"
+            Version: "1.0"
         Substandard: SDTM
-        Version: '1.0'
+        Version: "1.0"
 Check:
   all:
     - name: --RSTIND
@@ -38,7 +38,7 @@ Check:
 Core:
   Id: CORE-000050
   Status: Published
-  Version: '1'
+  Version: "1"
 Description: Raise an error when --RSTIND is present.
 Executability: Fully Executable
 Outcome:

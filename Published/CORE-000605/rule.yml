@@ -2,42 +2,42 @@
 # Condition: IQ domain present in study
 # Rule: IGDCMPID in IQ.IGDCMPID
 Authorities:
-  - Organization: 'CDISC'
+  - Organization: "CDISC"
     Standards:
-      - Name: 'TIG'
+      - Name: "TIG"
         References:
           - Citations:
-              - Cited Guidance: When quantifying ingredients in IQ, every ingredient (every
-                  value of IGDCMPID in IT) must be accounted for in IQ (see IQ
-                  domain specification and assumptions for more information).
-                Document: 'TIG 1.0'
-                Item: 'assumption 2b'
-                Section: '2.8.8.4'
+              - Cited Guidance: When quantifying ingredients in IQ, every ingredient (every value of
+                  IGDCMPID in IT) must be accounted for in IQ (see IQ domain specification and assumptions
+                  for more information).
+                Document: "TIG 1.0"
+                Item: "assumption 2b"
+                Section: "2.8.8.4"
             Origin: TIG Conformance Rules
             Rule Identifier:
-              Id: 'TIG0008'
-              Version: '1'
-            Version: '1.0'
+              Id: "TIG0008"
+              Version: "1"
+            Version: "1.0"
         Substandard: SDTM
-        Version: '1.0'
-  - Organization: 'CDISC'
+        Version: "1.0"
+  - Organization: "CDISC"
     Standards:
-      - Name: 'TIG'
+      - Name: "TIG"
         References:
           - Citations:
-              - Cited Guidance: When quantifying ingredients in IQ, every ingredient (every
-                  value of IGDCMPID in IN) must be accounted for in IQ (see IQ
-                  domain specification and assumptions for more information).
-                Document: 'TIG 1.0'
-                Item: 'assumption 2b'
-                Section: '2.8.8.5'
+              - Cited Guidance: When quantifying ingredients in IQ, every ingredient (every value of
+                  IGDCMPID in IN) must be accounted for in IQ (see IQ domain specification and assumptions
+                  for more information).
+                Document: "TIG 1.0"
+                Item: "assumption 2b"
+                Section: "2.8.8.5"
             Origin: TIG Conformance Rules
             Rule Identifier:
-              Id: 'TIG0009'
-              Version: '1'
-            Version: '1.0'
+              Id: "TIG0009"
+              Version: "1"
+            Version: "1.0"
         Substandard: SDTM
-        Version: '1.0'
+        Version: "1.0"
 Check:
   all:
     - name: IGDCMPID
@@ -45,11 +45,11 @@ Check:
       value: $iq_igdcmpid
       within: SPTOBID
 Core:
-  Status: Published
-  Version: '1'
   Id: CORE-000605
-Description: Raise an error when a IGDCMPID in the dataset does not have a
-  matching IGDCMPID in the IQ dataset per SPTOBID.
+  Status: Published
+  Version: "1"
+Description: Raise an error when a IGDCMPID in the dataset does not have a matching IGDCMPID in the
+  IQ dataset per SPTOBID.
 Executability: Fully Executable
 Operations:
   - domain: IQ

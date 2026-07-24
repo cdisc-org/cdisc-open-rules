@@ -7,7 +7,8 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Description of actual Arm. When an Arm is not planned (not in
+              - Cited Guidance:
+                  Description of actual Arm. When an Arm is not planned (not in
                   Trial Arms), ACTARM will be “Unplanned Treatment”. Randomized
                   subjects who were not treated will be given a value of “Not
                   Treated”. Values should be “Screen Failure” for screen
@@ -16,17 +17,18 @@ Authorities:
                   cases.
                 Document: IG v3.2
                 Item: Specification
-                Section: '5'
+                Section: "5"
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0117
-              Version: '1'
-            Version: '2.0'
-        Version: '3.2'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.2"
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Description of actual Arm. When an Arm is not planned (not in
+              - Cited Guidance:
+                  Description of actual Arm. When an Arm is not planned (not in
                   Trial Arms), ACTARM will be “Unplanned Treatment”. Randomized
                   subjects who were not treated will be given a value of “Not
                   Treated”. Values should be “Screen Failure” for screen
@@ -35,13 +37,13 @@ Authorities:
                   cases.
                 Document: IG v3.2
                 Item: Specification
-                Section: '5'
+                Section: "5"
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0118
-              Version: '1'
-            Version: '2.0'
-        Version: '3.2'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.2"
 Check:
   all:
     - name: ACTARM
@@ -61,7 +63,7 @@ Check:
 Core:
   Id: CORE-000367
   Status: Published
-  Version: '1'
+  Version: "1"
 Description: Raise an error when no TA.ARM exists for ACTARM in DM and ACTARM
   does not equal Screen Failure, Not Assigned, Not Treated, or Unplanned
   Treatment in DM

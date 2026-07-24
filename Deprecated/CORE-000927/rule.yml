@@ -7,29 +7,31 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: For interventional studies all treated subjects should have
+              - Cited Guidance:
+                  For interventional studies all treated subjects should have
                   exposure data.
                 Document: FDA
                 Section: FDAB023
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB2304
-              Version: '1'
-            Version: '1.5'
-        Version: '3.3'
+              Version: "1"
+            Version: "1.5"
+        Version: "3.3"
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: For interventional studies all treated subjects should have
+              - Cited Guidance:
+                  For interventional studies all treated subjects should have
                   exposure data.
                 Document: FDA
                 Section: FDAB023
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB2304
-              Version: '1'
-            Version: '1.5'
-        Version: '3.4'
+              Version: "1"
+            Version: "1.5"
+        Version: "3.4"
 Check:
   all:
     - name: ARMNRS
@@ -51,7 +53,7 @@ Check:
       value: $usubjids_in_ex
 Core:
   Status: Published
-  Version: '1'
+  Version: "1"
   Id: CORE-000927
 Description: All subjects in the Exposure domain who are participating in a
   study that includes an interventional product must be assigned to an ARM.

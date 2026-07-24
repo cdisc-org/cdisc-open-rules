@@ -3,78 +3,78 @@ Authorities:
     Standards:
       - Name: SENDIG
         References:
-          - #need to determine what can be done with catalog version 5 if anything
-            Citations:
-              - Cited Guidance: One record per test per observation time per subject,
-                  Tabulation.
-                #SMEs do we want to keep "Tabulation" for any reason?
+          #need to determine what can be done with catalog version 5 if anything
+          - Citations:
+              - Cited Guidance:
+                  One record per test per observation time per subject, Tabulation.
+                  #SMEs do we want to keep "Tabulation" for any reason?
                 Document: SENDIG v3.1
                 Section: 6.3.1
             Origin: SENDIG Conformance Rules
             Rule Identifier:
-              Id: 'SEND142'
-              Version: '1'
-            Version: '5'
-        Version: '3.0'
+              Id: "SEND142"
+              Version: "1"
+            Version: "5"
+        Version: "3.0"
       - Name: SENDIG
         References:
-          - #need to determine what can be done with catalog version 5 if anything
-            Citations:
-              - Cited Guidance: One record per test per observation time per subject,
-                  Tabulation.
-                #SMEs do we want to keep "Tabulation" for any reason?
+          #need to determine what can be done with catalog version 5 if anything
+          - Citations:
+              - Cited Guidance:
+                  One record per test per observation time per subject, Tabulation.
+                  #SMEs do we want to keep "Tabulation" for any reason?
                 Document: SENDIG v3.1
                 Section: 6.3.1
             Origin: SENDIG Conformance Rules
             Rule Identifier:
-              Id: 'SEND142'
-              Version: '1'
-            Version: '5'
-        Version: '3.1'
+              Id: "SEND142"
+              Version: "1"
+            Version: "5"
+        Version: "3.1"
       - Name: SENDIG-DART
         References:
-          - #need to determine what can be done with catalog version 5 if anything
-            Citations:
-              - Cited Guidance: One record per test per observation time per subject,
-                  Tabulation.
-                #SMEs do we want to keep "Tabulation" for any reason?
+          #need to determine what can be done with catalog version 5 if anything
+          - Citations:
+              - Cited Guidance:
+                  One record per test per observation time per subject, Tabulation.
+                  #SMEs do we want to keep "Tabulation" for any reason?
                 Document: SENDIG v3.1
                 Section: 6.3.1
             Origin: SENDIG Conformance Rules
             Rule Identifier:
-              Id: 'SEND142'
-              Version: '1'
-            Version: '5'
+              Id: "SEND142"
+              Version: "1"
+            Version: "5"
         Version: v1.1
       - Name: SENDIG-DART
         References:
-          - #need to determine what can be done with catalog version 5 if anything
-            Citations:
-              - Cited Guidance: One record per test per observation time per subject,
-                  Tabulation.
-                #SMEs do we want to keep "Tabulation" for any reason?
+          #need to determine what can be done with catalog version 5 if anything
+          - Citations:
+              - Cited Guidance:
+                  One record per test per observation time per subject, Tabulation.
+                  #SMEs do we want to keep "Tabulation" for any reason?
                 Document: SENDIG v3.1
                 Section: 6.3.1
             Origin: SENDIG Conformance Rules
             Rule Identifier:
-              Id: 'SEND142'
-              Version: '1'
-            Version: '5'
+              Id: "SEND142"
+              Version: "1"
+            Version: "5"
         Version: v1.2
       - Name: SENDID-GENETOX
         References:
-          - #need to determine what can be done with catalog version 5 if anything
-            Citations:
-              - Cited Guidance: One record per test per observation time per subject,
-                  Tabulation.
-                #SMEs do we want to keep "Tabulation" for any reason?
+          #need to determine what can be done with catalog version 5 if anything
+          - Citations:
+              - Cited Guidance:
+                  One record per test per observation time per subject, Tabulation.
+                  #SMEs do we want to keep "Tabulation" for any reason?
                 Document: SENDIG v3.1
                 Section: 6.3.1
             Origin: SENDIG Conformance Rules
             Rule Identifier:
-              Id: 'SEND142'
-              Version: '1'
-            Version: '5'
+              Id: "SEND142"
+              Version: "1"
+            Version: "5"
         Version: v1.0 #double check the last few
 Check:
   all:
@@ -88,10 +88,9 @@ Check:
 Core:
   Id: CDISC.SENDIG.SEND142
   Status: Draft
-  Version: '1'
-Description: Raise an error when there is more than one record present for any
-  particular Body Weight test, in the BW Domain, for a subject on a particular
-  date.
+  Version: "1"
+Description: Raise an error when there is more than one record present for any particular Body
+  Weight test, in the BW Domain, for a subject on a particular date.
 #The check for this rule was revised to NOT check the records where BWDTC is null
 Outcome:
   Message: The Body Weight test is not unique for this subject and date/time.

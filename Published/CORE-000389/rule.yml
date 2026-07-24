@@ -5,73 +5,78 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: The sequence number must be unique for each record within a
-                  USUBJID or POOLID, whichever applies for the record.
+              - Cited Guidance:
+                  The sequence number must be unique for each record within a USUBJID or
+                  POOLID, whichever applies for the record.
                 Document: IG v3.1
                 Item: COSEQ CDISC Notes
-                Section: '5.2'
+                Section: "5.2"
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND312
-              Version: '1'
-            Version: '5.0'
-        Version: '3.1'
+              Version: "1"
+            Version: "5.0"
+        Version: "3.1"
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: The sequence number must be unique for each record within a
-                  USUBJID or POOLID, whichever applies for the record.
+              - Cited Guidance:
+                  The sequence number must be unique for each record within a USUBJID or
+                  POOLID, whichever applies for the record.
                 Document: IG v3.1.1
                 Item: COSEQ CDISC Notes
-                Section: '5.2'
+                Section: "5.2"
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND312
-              Version: '1'
-            Version: '5.0'
+              Version: "1"
+            Version: "5.0"
         Version: 3.1.1
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance: The sequence number must be unique for each record within a
-                  USUBJID or POOLID, whichever applies for the record.
+              - Cited Guidance:
+                  The sequence number must be unique for each record within a USUBJID or
+                  POOLID, whichever applies for the record.
                 Document: IG v3.1
                 Item: COSEQ CDISC Notes
-                Section: '5.2'
+                Section: "5.2"
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND312
-              Version: '1'
-            Version: '5.0'
-        Version: '1.1'
+              Version: "1"
+            Version: "5.0"
+        Version: "1.1"
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance: The sequence number must be unique for each record within a
-                  USUBJID or POOLID, whichever applies for the record.
+              - Cited Guidance:
+                  The sequence number must be unique for each record within a USUBJID or
+                  POOLID, whichever applies for the record.
                 Document: IG v3.1.1
                 Item: COSEQ CDISC Notes
-                Section: '5.2'
+                Section: "5.2"
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND312
-              Version: '1'
-            Version: '5.0'
-        Version: '1.2'
+              Version: "1"
+            Version: "5.0"
+        Version: "1.2"
       - Name: SENDIG-GENETOX
         References:
           - Citations:
-              - Cited Guidance: The sequence number must be unique for each record within a
-                  USUBJID or POOLID, whichever applies for the record.
+              - Cited Guidance:
+                  The sequence number must be unique for each record within a USUBJID or
+                  POOLID, whichever applies for the record.
                 Document: IG v3.1
                 Item: COSEQ CDISC Notes
-                Section: '5.2'
+                Section: "5.2"
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND312
-              Version: '1'
-            Version: '5.0'
-        Version: '1.0'
+              Version: "1"
+            Version: "5.0"
+        Version: "1.0"
 Check:
   # case that POOLID ("permissible") is populated
   all:
@@ -83,7 +88,7 @@ Check:
 Core:
   Id: CORE-000389
   Status: Published
-  Version: '1'
+  Version: "1"
 Description: Raise an error when COSEQ is not unique within POOLID
 Executability: Fully Executable
 Outcome:

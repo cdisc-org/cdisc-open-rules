@@ -5,50 +5,53 @@ Authorities:
   - Organization: CDISC
     Standards:
       - Name: SDTMIG
-        Version: '3.4'
+        Version: "3.4"
         References:
           - Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0255
-              Version: '1'
-            Version: '2.0'
+              Version: "1"
+            Version: "2.0"
             Citations:
-              - Cited Guidance: If inclusion/exclusion criteria were amended during
+              - Cited Guidance:
+                  If inclusion/exclusion criteria were amended during
                   the trial, then each complete set of criteria must be included in
                   the TI domain. TIVERS is used to distinguish between the versions.
                 Document: IG v3.4
                 Item: Assumption 1
                 Section: 7.4.1
       - Name: SDTMIG
-        Version: '3.3'
+        Version: "3.3"
         References:
           - Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0255
-              Version: '1'
-            Version: '2.0'
+              Version: "1"
+            Version: "2.0"
             Citations:
-              - Cited Guidance: If inclusion/exclusion criteria were amended during
+              - Cited Guidance:
+                  If inclusion/exclusion criteria were amended during
                   the trial, then each complete set of criteria must be included in
                   the TI domain. TIVERS is used to distinguish between the versions.
                 Document: IG v3.3
                 Item: Assumption 1
                 Section: 7.4.1
       - Name: SDTMIG
-        Version: '3.2'
+        Version: "3.2"
         References:
           - Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0255
-              Version: '1'
-            Version: '2.0'
+              Version: "1"
+            Version: "2.0"
             Citations:
-              - Cited Guidance: If inclusion/exclusion criteria were amended during
+              - Cited Guidance:
+                  If inclusion/exclusion criteria were amended during
                   the trial, then each complete set of criteria must be included in
                   the TI domain. TIVERS is used to distinguish between the versions.
                 Document: IG v3.2
                 Item: Assumption 1
-                Section: '7.4'
+                Section: "7.4"
 Check:
   all:
     - name: TIVERS
@@ -59,8 +62,9 @@ Check:
 Core:
   Id: CORE-000145
   Status: Published
-  Version: '1'
-Description: Trigger error when TIVERS is present and IETESTCD is not unique within
+  Version: "1"
+Description:
+  Trigger error when TIVERS is present and IETESTCD is not unique within
   TIVERS
 Executability: Fully Executable
 Outcome:

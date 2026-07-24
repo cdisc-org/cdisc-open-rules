@@ -14,9 +14,9 @@ Authorities:
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0394
-              Version: '1'
-            Version: '2.0'
-        Version: '3.4'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.4"
       - Name: SDTMIG
         References:
           - Citations:
@@ -27,23 +27,22 @@ Authorities:
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0394
-              Version: '1'
-            Version: '2.0'
-        Version: '3.3'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.3"
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Did the event occur with an overdose? Valid values are 'Y' and
-                  'N'.
+              - Cited Guidance: Did the event occur with an overdose? Valid values are 'Y' and 'N'.
                 Document: Model v1.4
-                Item: ''
+                Item: ""
                 Section: 2.2.2
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0394
-              Version: '1'
-            Version: '2.0'
-        Version: '3.2'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.2"
       - Name: TIG
         References:
           - Citations:
@@ -54,10 +53,10 @@ Authorities:
             Origin: TIG Conformance Rules
             Rule Identifier:
               Id: TIG0556
-              Version: '1'
-            Version: '1.0'
+              Version: "1"
+            Version: "1.0"
         Substandard: SDTM
-        Version: '1.0'
+        Version: "1.0"
 Check:
   all:
     - name: AESOD
@@ -70,7 +69,7 @@ Check:
 Core:
   Id: CORE-000129
   Status: Published
-  Version: '1'
+  Version: "1"
 Description: Raise an error when AESOD is completed and value is not 'Y' or 'N'
 Executability: Fully Executable
 Outcome:

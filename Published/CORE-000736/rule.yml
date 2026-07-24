@@ -1,118 +1,119 @@
 # Variable: TSPARMCD
-# Condition: 
+# Condition:
 # Rule: Either 'AGE' or 'AGETXT' is in the list of TSPARAMCDs with TSVAL populated, not both.
 Authorities:
-  - Organization: 'FDA'
+  - Organization: "FDA"
     Standards:
-      - Name: 'SDTMIG'
+      - Name: "SDTMIG"
         References:
           - Citations:
-              - Cited Guidance: 'TCG, Appendix B'
-                Document: 'FDA'
-                Section: 'FDAB011'
-            Origin: 'FDA Business Rules'
+              - Cited Guidance: "TCG, Appendix B"
+                Document: "FDA"
+                Section: "FDAB011"
+            Origin: "FDA Business Rules"
             Rule Identifier:
-              Id: 'FB1116'
-              Version: '1'
-            Version: '1.5'
-        Version: '3.3'
-      - Name: 'SDTMIG'
+              Id: "FB1116"
+              Version: "1"
+            Version: "1.5"
+        Version: "3.3"
+      - Name: "SDTMIG"
         References:
           - Citations:
-              - Cited Guidance: 'TCG, Appendix B'
-                Document: 'FDA'
-                Section: 'FDAB011'
-            Origin: 'FDA Business Rules'
+              - Cited Guidance: "TCG, Appendix B"
+                Document: "FDA"
+                Section: "FDAB011"
+            Origin: "FDA Business Rules"
             Rule Identifier:
-              Id: 'FB1116'
-              Version: '1'
-            Version: '1.5'
-        Version: '3.4'
-      # SEND-IGs added Jozef
-      - Name: 'SENDIG'
+              Id: "FB1116"
+              Version: "1"
+            Version: "1.5"
+        Version:
+          "3.4"
+          # SEND-IGs added Jozef
+      - Name: "SENDIG"
         References:
           - Citations:
-              - Cited Guidance: 'TCG, Appendix B'
-                Document: 'FDA'
-                Section: 'FDAB011'
-            Origin: 'FDA Business Rules'
+              - Cited Guidance: "TCG, Appendix B"
+                Document: "FDA"
+                Section: "FDAB011"
+            Origin: "FDA Business Rules"
             Rule Identifier:
-              Id: 'FB1116'
-              Version: '1'
-            Version: '1.5'
-        Version: '3.0'
-      - Name: 'SENDIG'
+              Id: "FB1116"
+              Version: "1"
+            Version: "1.5"
+        Version: "3.0"
+      - Name: "SENDIG"
         References:
           - Citations:
-              - Cited Guidance: 'TCG, Appendix B'
-                Document: 'FDA'
-                Section: 'FDAB011'
-            Origin: 'FDA Business Rules'
+              - Cited Guidance: "TCG, Appendix B"
+                Document: "FDA"
+                Section: "FDAB011"
+            Origin: "FDA Business Rules"
             Rule Identifier:
-              Id: 'FB1116'
-              Version: '1'
-            Version: '1.5'
-        Version: '3.1'
-      - Name: 'SENDIG'
+              Id: "FB1116"
+              Version: "1"
+            Version: "1.5"
+        Version: "3.1"
+      - Name: "SENDIG"
         References:
           - Citations:
-              - Cited Guidance: 'TCG, Appendix B'
-                Document: 'FDA'
-                Section: 'FDAB011'
-            Origin: 'FDA Business Rules'
+              - Cited Guidance: "TCG, Appendix B"
+                Document: "FDA"
+                Section: "FDAB011"
+            Origin: "FDA Business Rules"
             Rule Identifier:
-              Id: 'FB1116'
-              Version: '1'
-            Version: '1.5'
-        Version: '3.1.1'
-      - Name: 'SENDIG-GENETOX'
+              Id: "FB1116"
+              Version: "1"
+            Version: "1.5"
+        Version: "3.1.1"
+      - Name: "SENDIG-GENETOX"
         References:
           - Citations:
-              - Cited Guidance: 'TCG, Appendix B'
-                Document: 'FDA'
-                Section: 'FDAB011'
-            Origin: 'FDA Business Rules'
+              - Cited Guidance: "TCG, Appendix B"
+                Document: "FDA"
+                Section: "FDAB011"
+            Origin: "FDA Business Rules"
             Rule Identifier:
-              Id: 'FB1116'
-              Version: '1'
-            Version: '1.5'
-        Version: '1.0'
-      - Name: 'SENDIG-DART'
+              Id: "FB1116"
+              Version: "1"
+            Version: "1.5"
+        Version: "1.0"
+      - Name: "SENDIG-DART"
         References:
           - Citations:
-              - Cited Guidance: 'TCG, Appendix B'
-                Document: 'FDA'
-                Section: 'FDAB011'
-            Origin: 'FDA Business Rules'
+              - Cited Guidance: "TCG, Appendix B"
+                Document: "FDA"
+                Section: "FDAB011"
+            Origin: "FDA Business Rules"
             Rule Identifier:
-              Id: 'FB1116'
-              Version: '1'
-            Version: '1.5'
-        Version: '1.1'
-      - Name: 'SENDIG-DART'
+              Id: "FB1116"
+              Version: "1"
+            Version: "1.5"
+        Version: "1.1"
+      - Name: "SENDIG-DART"
         References:
           - Citations:
-              - Cited Guidance: 'TCG, Appendix B'
-                Document: 'FDA'
-                Section: 'FDAB011'
-            Origin: 'FDA Business Rules'
+              - Cited Guidance: "TCG, Appendix B"
+                Document: "FDA"
+                Section: "FDAB011"
+            Origin: "FDA Business Rules"
             Rule Identifier:
-              Id: 'FB1116'
-              Version: '1'
-            Version: '1.5'
-        Version: '1.2'
-      - Name: 'SENDIG-AR'
+              Id: "FB1116"
+              Version: "1"
+            Version: "1.5"
+        Version: "1.2"
+      - Name: "SENDIG-AR"
         References:
           - Citations:
-              - Cited Guidance: 'TCG, Appendix B'
-                Document: 'FDA'
-                Section: 'FDAB011'
-            Origin: 'FDA Business Rules'
+              - Cited Guidance: "TCG, Appendix B"
+                Document: "FDA"
+                Section: "FDAB011"
+            Origin: "FDA Business Rules"
             Rule Identifier:
-              Id: 'FB1116'
-              Version: '1'
-            Version: '1.5'
-        Version: '1.0'
+              Id: "FB1116"
+              Version: "1"
+            Version: "1.5"
+        Version: "1.0"
 Check:
   all:
     - any:
@@ -133,9 +134,8 @@ Check:
 Core:
   Id: CORE-000736
   Status: Published
-  Version: '1'
-Description: 'Either AGE or AGETXT is in the list of TSPARMCDs with TSVAL
-  populated, not both.'
+  Version: "1"
+Description: "Either AGE or AGETXT is in the list of TSPARMCDs with TSVAL populated, not both."
 Executability: Fully Executable
 Operations:
   - domain: TS
@@ -151,7 +151,7 @@ Operations:
     name: TSPARMCD
     operator: record_count
 Outcome:
-  Message: 'AGE and AGETXT are in the list of TSPARAMCDs with TSVAL populated.'
+  Message: "AGE and AGETXT are in the list of TSPARAMCDs with TSVAL populated."
   Output Variables:
     - TSPARMCD
     - TSVAL

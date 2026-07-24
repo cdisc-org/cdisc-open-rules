@@ -7,64 +7,64 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Date/time of death for any subject who died, in ISO 8601 format.
-                  Should represent the date/time that is captured in the
-                  clinical-trial database.
+              - Cited Guidance:
+                  Date/time of death for any subject who died, in ISO 8601 format. Should
+                  represent the date/time that is captured in the clinical-trial database.
                 Document: SDTMIG v3.4
                 Item: Specification
-                Section: '5.2'
+                Section: "5.2"
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0069
-              Version: '1'
-            Version: '2.0'
-        Version: '3.4'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.4"
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Date/time of death for any subject who died, in ISO 8601 format.
-                  Should represent the date/time that is captured in the
-                  clinical-trial database.
+              - Cited Guidance:
+                  Date/time of death for any subject who died, in ISO 8601 format. Should
+                  represent the date/time that is captured in the clinical-trial database.
                 Document: SDTMIG v3.3
                 Item: Specification
-                Section: '5.2'
+                Section: "5.2"
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0069
-              Version: '1'
-            Version: '2.0'
-        Version: '3.3'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.3"
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Date/time of death for any subject who died, in ISO 8601 format.
-                  Should represent the date/time that is captured in the
-                  clinical-trial database.
+              - Cited Guidance:
+                  Date/time of death for any subject who died, in ISO 8601 format. Should
+                  represent the date/time that is captured in the clinical-trial database.
                 Document: SDTMIG v3.2
                 Item: Specification
-                Section: '5'
+                Section: "5"
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0069
-              Version: '1'
-            Version: '2.0'
-        Version: '3.2'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.2"
       - Name: TIG
         References:
           - Citations:
-              - Cited Guidance: Date/time of death for any subject who died, in ISO 8601 format.
-                  Should represent the date/time that is captured in the
-                  clinical-trial database.
+              - Cited Guidance:
+                  Date/time of death for any subject who died, in ISO 8601 format. Should
+                  represent the date/time that is captured in the clinical-trial database.
                 Document: TIG 1.0
                 Item: Specification
                 Section: 2.8.10.4
             Origin: TIG Conformance Rules
             Rule Identifier:
               Id: TIG0339
-              Version: '1'
-            Version: '1.0'
+              Version: "1"
+            Version: "1.0"
         Substandard: SDTM
-        Version: '1.0'
+        Version: "1.0"
 Check:
   all:
     - name: DSDECOD
@@ -76,9 +76,8 @@ Check:
 Core:
   Id: CORE-000034
   Status: Published
-  Version: '1'
-Description: Raise an error when DSSTDTC is not equal to DM.DTHDTC and DSDECOD
-  is equal to "DEATH"
+  Version: "1"
+Description: Raise an error when DSSTDTC is not equal to DM.DTHDTC and DSDECOD is equal to "DEATH"
 Executability: Fully Executable
 Match Datasets:
   - Keys:

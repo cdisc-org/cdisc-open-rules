@@ -5,73 +5,68 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: One record per test per observation time or evaluation interval
-                  per subject
+              - Cited Guidance: One record per test per observation time or evaluation interval per subject
                 Document: SENDIG v3.1
                 Item: Domain Table Header
                 Section: 6.3.17
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND336
-              Version: '1'
-            Version: '5.0'
-        Version: '3.1'
+              Version: "1"
+            Version: "5.0"
+        Version: "3.1"
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: One record per test per observation time or evaluation interval
-                  per subject
+              - Cited Guidance: One record per test per observation time or evaluation interval per subject
                 Document: SENDIG v3.1.1
                 Item: Domain Table Header
                 Section: 6.3.17
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND336
-              Version: '1'
-            Version: '5.0'
+              Version: "1"
+            Version: "5.0"
         Version: 3.1.1
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance: One record per test per observation time or evaluation interval
-                  per subject
+              - Cited Guidance: One record per test per observation time or evaluation interval per subject
                 Document: SENDIG v3.1
                 Item: Domain Table Header
                 Section: 6.3.17
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND336
-              Version: '1'
-            Version: '5.0'
-        Version: '1.1'
+              Version: "1"
+            Version: "5.0"
+        Version: "1.1"
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance: One record per test per observation time or evaluation interval
-                  per subject
+              - Cited Guidance: One record per test per observation time or evaluation interval per subject
                 Document: SENDIG v3.1.1
                 Item: Domain Table Header
                 Section: 6.3.17
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND336
-              Version: '1'
-            Version: '5.0'
-        Version: '1.2'
+              Version: "1"
+            Version: "5.0"
+        Version: "1.2"
       - Name: SENDIG-GENETOX
         References:
           - Citations:
-              - Cited Guidance: One record per test per observation time or evaluation interval
-                  per subject
+              - Cited Guidance: One record per test per observation time or evaluation interval per subject
                 Document: SENDIG v3.1.1
                 Item: Domain Table Header
                 Section: 6.3.17
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND336
-              Version: '1'
-            Version: '5.0'
-        Version: '1.0'
+              Version: "1"
+            Version: "5.0"
+        Version: "1.0"
 Check:
   # Implemented as that combination of USUBJID, CVTESTCD and CVDTC must be unique
   all:
@@ -83,13 +78,12 @@ Check:
 Core:
   Id: CORE-000390
   Status: Published
-  Version: '1'
-Description: Raise an error when there is more than one record present for any
-  particular cardiovascular test for a subject and measurement date/time
+  Version: "1"
+Description: Raise an error when there is more than one record present for any particular
+  cardiovascular test for a subject and measurement date/time
 Executability: Fully Executable
 Outcome:
-  Message: The cardiovascular test is not unique for this subject and measurement
-    datetime.
+  Message: The cardiovascular test is not unique for this subject and measurement datetime.
   Output Variables:
     - USUBJID
     - CVTESTCD

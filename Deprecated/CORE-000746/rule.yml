@@ -7,7 +7,8 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: The term "Spanish origin" can be used to collect ethnicity data.
+              - Cited Guidance:
+                  The term "Spanish origin" can be used to collect ethnicity data.
                   If the term "Spanish origin" is collected, it should be mapped
                   to the controlled terminology "HISPANIC OR LATINO" for
                   submission.
@@ -16,13 +17,14 @@ Authorities:
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB5801
-              Version: '1'
-            Version: '1.5'
-        Version: '3.2'
+              Version: "1"
+            Version: "1.5"
+        Version: "3.2"
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: The term "Spanish origin" can be used to collect ethnicity data.
+              - Cited Guidance:
+                  The term "Spanish origin" can be used to collect ethnicity data.
                   If the term "Spanish origin" is collected, it should be mapped
                   to the controlled terminology "HISPANIC OR LATINO" for
                   submission.
@@ -31,13 +33,14 @@ Authorities:
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB5801
-              Version: '1'
-            Version: '1.5'
-        Version: '3.3'
+              Version: "1"
+            Version: "1.5"
+        Version: "3.3"
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: The term "Spanish origin" can be used to collect ethnicity data.
+              - Cited Guidance:
+                  The term "Spanish origin" can be used to collect ethnicity data.
                   If the term "Spanish origin" is collected, it should be mapped
                   to the controlled terminology "HISPANIC OR LATINO" for
                   submission.
@@ -46,26 +49,26 @@ Authorities:
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB5801
-              Version: '1'
-            Version: '1.5'
-        Version: '3.4'
+              Version: "1"
+            Version: "1.5"
+        Version: "3.4"
 Check:
   all:
     - name: ETHNIC
       operator: non_empty
     - name: ETHNIC
       operator: not_equal_to
-      value: 'HISPANIC OR LATINO'
+      value: "HISPANIC OR LATINO"
     - name: QNAM
       operator: equal_to
       value: CETHNIC
     - name: QVAL
       operator: equal_to
-      value: 'SPANISH ORIGIN'
+      value: "SPANISH ORIGIN"
 Core:
   Id: CORE-000746
   Status: Published
-  Version: '1'
+  Version: "1"
 Description: When ethnicity term 'Spanish origin' is collected (SUPPDM.CETHNIC),
   it should be mapped to Ethnicity (ETHNIC) 'HISPANIC OR LATINO' in the DM
   dataset

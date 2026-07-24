@@ -1,5 +1,5 @@
 # Variable: --METHOD
-# Condition: 
+# Condition:
 # Rule: --METHOD not present in dataset
 Authorities:
   - Organization: CDISC
@@ -14,9 +14,9 @@ Authorities:
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0621
-              Version: '1'
-            Version: '2.0'
-        Version: '3.4'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.4"
       - Name: TIG
         References:
           - Citations:
@@ -27,10 +27,10 @@ Authorities:
             Origin: TIG Conformance Rules
             Rule Identifier:
               Id: TIG0662
-              Version: '1'
-            Version: '1.0'
+              Version: "1"
+            Version: "1.0"
         Substandard: SDTM
-        Version: '1.0'
+        Version: "1.0"
 Check:
   all:
     - name: --METHOD
@@ -38,7 +38,7 @@ Check:
 Core:
   Id: CORE-000048
   Status: Published
-  Version: '1'
+  Version: "1"
 Description: Raise an error when --METHOD is present in an Interventions dataset.
 Executability: Fully Executable
 Outcome:

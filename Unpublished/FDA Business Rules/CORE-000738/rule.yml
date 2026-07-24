@@ -1,42 +1,42 @@
 Authorities:
-  - Organization: 'FDA'
+  - Organization: "FDA"
     Standards:
-      - Name: 'SDTMIG'
+      - Name: "SDTMIG"
         References:
           - Citations:
-              - Cited Guidance: 'TCG, Appendix B'
-                Document: 'FDA'
-                Section: 'FDAB011'
-            Origin: 'FDA Business Rules'
+              - Cited Guidance: "TCG, Appendix B"
+                Document: "FDA"
+                Section: "FDAB011"
+            Origin: "FDA Business Rules"
             Rule Identifier:
-              Id: 'FB1106'
-              Version: '1'
-            Version: '1.5'
-        Version: '3.2'
-      - Name: 'SDTMIG'
+              Id: "FB1106"
+              Version: "1"
+            Version: "1.5"
+        Version: "3.2"
+      - Name: "SDTMIG"
         References:
           - Citations:
-              - Cited Guidance: 'TCG, Appendix B'
-                Document: 'FDA'
-                Section: 'FDAB011'
-            Origin: 'FDA Business Rules'
+              - Cited Guidance: "TCG, Appendix B"
+                Document: "FDA"
+                Section: "FDAB011"
+            Origin: "FDA Business Rules"
             Rule Identifier:
-              Id: 'FB1106'
-              Version: '1'
-            Version: '1.5'
-        Version: '3.3'
-      - Name: 'SDTMIG'
+              Id: "FB1106"
+              Version: "1"
+            Version: "1.5"
+        Version: "3.3"
+      - Name: "SDTMIG"
         References:
           - Citations:
-              - Cited Guidance: 'TCG, Appendix B'
-                Document: 'FDA'
-                Section: 'FDAB011'
-            Origin: 'FDA Business Rules'
+              - Cited Guidance: "TCG, Appendix B"
+                Document: "FDA"
+                Section: "FDAB011"
+            Origin: "FDA Business Rules"
             Rule Identifier:
-              Id: 'FB1106'
-              Version: '1'
-            Version: '1.5'
-        Version: '3.4'
+              Id: "FB1106"
+              Version: "1"
+            Version: "1.5"
+        Version: "3.4"
 Check:
   any:
     - name: $crmdur_count
@@ -44,19 +44,19 @@ Check:
       value: 1
     - all:
         - name: $crmdur_count
-          operator: 'greater_than_or_equal_to'
+          operator: "greater_than_or_equal_to"
           value: 1
         - name: TSPARMCD
           operator: equal_to
-          value: 'CRMDUR'
+          value: "CRMDUR"
         - name: TSVAL
           operator: empty
 
 Core:
   Id: CORE-000738
   Status: Draft
-  Version: '1'
-Description: 'No occurrence of TSPARMCD=’CRMDUR’ is included in TS or TSVAL is null.'
+  Version: "1"
+Description: "No occurrence of TSPARMCD=’CRMDUR’ is included in TS or TSVAL is null."
 Executability: Partially Executable
 Operations:
   - domain: TS
@@ -66,7 +66,7 @@ Operations:
     name: TSPARMCD
     operator: record_count
 Outcome:
-  Message: 'No occurrence of TSPARMCD=’CRMDUR’ is included in TS or TSVAL is null.'
+  Message: "No occurrence of TSPARMCD=’CRMDUR’ is included in TS or TSVAL is null."
   Output Variables:
     - TSPARMCD
     - TSVAL

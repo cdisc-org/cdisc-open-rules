@@ -11,22 +11,22 @@ Authorities:
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0248
-              Version: '1'
-            Version: '2.0'
-        Version: '3.4'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.4"
       - Name: SDTMIG
         References:
           - Citations:
               - Cited Guidance: TAETORD is an integer.
                 Document: IG v3.2
                 Item: Assumption 1
-                Section: '7.2'
+                Section: "7.2"
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0248
-              Version: '1'
-            Version: '2.0'
-        Version: '3.2'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.2"
       - Name: SDTMIG
         References:
           - Citations:
@@ -37,9 +37,9 @@ Authorities:
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0248
-              Version: '1'
-            Version: '2.0'
-        Version: '3.3'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.3"
       - Name: SENDIG
         References:
           - Citations:
@@ -49,9 +49,9 @@ Authorities:
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND221
-              Version: '1'
-            Version: '5.0'
-        Version: '3.0'
+              Version: "1"
+            Version: "5.0"
+        Version: "3.0"
       - Name: SENDIG
         References:
           - Citations:
@@ -61,9 +61,9 @@ Authorities:
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND221
-              Version: '1'
-            Version: '5.0'
-        Version: '3.1'
+              Version: "1"
+            Version: "5.0"
+        Version: "3.1"
       - Name: SENDIG
         References:
           - Citations:
@@ -73,8 +73,8 @@ Authorities:
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND221
-              Version: '1'
-            Version: '5.0'
+              Version: "1"
+            Version: "5.0"
         Version: 3.1.1
       - Name: SENDIG-DART
         References:
@@ -85,9 +85,9 @@ Authorities:
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND221
-              Version: '1'
-            Version: '5.0'
-        Version: '1.1'
+              Version: "1"
+            Version: "5.0"
+        Version: "1.1"
       - Name: SENDIG-DART
         References:
           - Citations:
@@ -97,9 +97,9 @@ Authorities:
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND221
-              Version: '1'
-            Version: '5.0'
-        Version: '1.2'
+              Version: "1"
+            Version: "5.0"
+        Version: "1.2"
       - Name: SENDIG-GENETOX
         References:
           - Citations:
@@ -109,9 +109,9 @@ Authorities:
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND221
-              Version: '1'
-            Version: '5.0'
-        Version: '1.0'
+              Version: "1"
+            Version: "5.0"
+        Version: "1.0"
       - Name: TIG
         References:
           - Citations:
@@ -122,10 +122,10 @@ Authorities:
             Origin: TIG Conformance Rules
             Rule Identifier:
               Id: TIG0452
-              Version: '1'
-            Version: '1.0'
+              Version: "1"
+            Version: "1.0"
         Substandard: SDTM
-        Version: '1.0'
+        Version: "1.0"
       - Name: TIG
         References:
           - Citations:
@@ -136,12 +136,12 @@ Authorities:
             Origin: TIG Conformance Rules
             Rule Identifier:
               Id: TIG0148
-              Version: '1'
-            Version: '1.0'
+              Version: "1"
+            Version: "1.0"
         Substandard: SEND
-        Version: '1.0'
+        Version: "1.0"
 # Variable: TAETORD
-# Condition: 
+# Condition:
 # Rule: TAETORD is an integer
 Check:
   all:
@@ -151,7 +151,7 @@ Check:
 Core:
   Id: CORE-000534
   Status: Published
-  Version: '1'
+  Version: "1"
 Description: TAETORD must be an integer
 Executability: Fully Executable
 Outcome:

@@ -5,31 +5,31 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: 'Required timing variables for identification of the day on
-                  which group summaries (group means and incidences) are
-                  calculated should be populated for nonclinical data.'
+              - Cited Guidance:
+                  "Required timing variables for identification of the day on which group summaries
+                  (group means and incidences) are calculated should be populated for nonclinical data."
                 Document: FDA
                 Section: FDAB047
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB4702
-              Version: '1'
-            Version: '1.5'
-        Version: '3.1'
+              Version: "1"
+            Version: "1.5"
+        Version: "3.1"
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: 'Required timing variables for identification of the day on
-                  which group summaries (group means and incidences) are
-                  calculated should be populated for nonclinical data.'
+              - Cited Guidance:
+                  "Required timing variables for identification of the day on which group summaries
+                  (group means and incidences) are calculated should be populated for nonclinical data."
                 Document: FDA
                 Section: FDAB042
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB4702
-              Version: '1'
-            Version: '1.5'
-        Version: '3.1.1'
+              Version: "1"
+            Version: "1.5"
+        Version: "3.1.1"
 Check:
   all:
     # Rule = At least one of VISITDY or --NOMDY is populated as these are required timing variables
@@ -49,24 +49,25 @@ Check:
         - name: --USCHFL
           operator: empty
     - any:
-        # --VISITDY column is absent or --VISITDY is 
+        # --VISITDY column is absent or --VISITDY is
         # P.S. VISITDY = PLANNED Study Day of Collection
         - name: VISITDY
           operator: not_exists
         - name: VISITDY
-          operator: 'empty'
-    # TEST CONDITION. Remark that --MOMDY is "expected"
+          operator:
+            "empty"
+            # TEST CONDITION. Remark that --MOMDY is "expected"
     - name: --NOMDY
-      operator: 'empty'
+      operator: "empty"
 Core:
   Id: FDA.SENDIG.FB4702
   Status: Draft
-  Version: '1'
-# Description: 'Either VISITDY or --NOMDY must be populated when # --ORRES is 
+  Version: "1"
+# Description: 'Either VISITDY or --NOMDY must be populated when # --ORRES is
 #  populated and --USCHFL is not populated'
-Description: VISITDY or --NOMDY should be populated for scheduled records as
-  these are required timing variables for identification of the day on which
-  group summaries (Group Means and Incidences) are calculated.
+Description: VISITDY or --NOMDY should be populated for scheduled records as these are required
+  timing variables for identification of the day on which group summaries (Group Means and
+  Incidences) are calculated.
 Executability: Fully Executable
 Outcome:
   #Message: 'Either VISITDY or --NOMDY must be populated when --ORRES is populated

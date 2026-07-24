@@ -11,9 +11,9 @@ Authorities:
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND113.1
-              Version: '1'
-            Version: '5.0'
-        Version: '3.0'
+              Version: "1"
+            Version: "5.0"
+        Version: "3.0"
       - Name: SENDIG
         References:
           - Citations:
@@ -24,9 +24,9 @@ Authorities:
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND113.1
-              Version: '1'
-            Version: '5.0'
-        Version: '3.1'
+              Version: "1"
+            Version: "5.0"
+        Version: "3.1"
       - Name: SENDIG
         References:
           - Citations:
@@ -37,8 +37,8 @@ Authorities:
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND113.1
-              Version: '1'
-            Version: '5.0'
+              Version: "1"
+            Version: "5.0"
         Version: 3.1.1
       - Name: SENDIG-DART
         References:
@@ -50,85 +50,87 @@ Authorities:
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND113.1
-              Version: '1'
-            Version: '5.0'
-        Version: '1.1'
-  # 2025-01-05: As identical to FDA business rule FB4901, FDA has been added here
+              Version: "1"
+            Version: "5.0"
+        Version:
+          "1.1"
+          # 2025-01-05: As identical to FDA business rule FB4901, FDA has been added here
   - Organization: FDA
     Standards:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: 'Set code should match trial sets for nonclinical data.'
+              - Cited Guidance: "Set code should match trial sets for nonclinical data."
                 Document: FDA
                 Section: FDAB049
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB4901
-              Version: '1'
-            Version: '1.5'
-        Version: '3.0'
+              Version: "1"
+            Version: "1.5"
+        Version: "3.0"
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: 'Set code should match trial sets for nonclinical data.'
+              - Cited Guidance: "Set code should match trial sets for nonclinical data."
                 Document: FDA
                 Section: FDAB049
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB4901
-              Version: '1'
-            Version: '1.5'
-        Version: '3.1'
+              Version: "1"
+            Version: "1.5"
+        Version: "3.1"
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: 'Set code should match trial sets for nonclinical data.'
+              - Cited Guidance: "Set code should match trial sets for nonclinical data."
                 Document: FDA
                 Section: FDAB049
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB4901
-              Version: '1'
-            Version: '1.5'
-        Version: '3.1.1'
+              Version: "1"
+            Version: "1.5"
+        Version: "3.1.1"
       - Name: SENDIG-GENETOX
         References:
           - Citations:
-              - Cited Guidance: 'Set code should match trial sets for nonclinical data.'
+              - Cited Guidance: "Set code should match trial sets for nonclinical data."
                 Document: FDA
                 Section: FDAB049
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB4901
-              Version: '1'
-            Version: '1.5'
-        Version: '1.0'
+              Version: "1"
+            Version: "1.5"
+        Version: "1.0"
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance: 'Set code should match trial sets for nonclinical data.'
+              - Cited Guidance: "Set code should match trial sets for nonclinical data."
                 Document: FDA
                 Section: FDAB049
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB4901
-              Version: '1'
-            Version: '1.5'
-        Version: '1.1'
+              Version: "1"
+            Version: "1.5"
+        Version: "1.1"
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance: 'Set code should match trial sets for nonclinical data.'
+              - Cited Guidance: "Set code should match trial sets for nonclinical data."
                 Document: FDA
                 Section: FDAB049
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB4901
-              Version: '1'
-            Version: '1.5'
-        Version: '1.2'
-      # P.S. NOT applicable to SENDIG-AR
+              Version: "1"
+            Version: "1.5"
+        Version:
+          "1.2"
+          # P.S. NOT applicable to SENDIG-AR
 Check:
   all:
     - name: SETCD
@@ -139,9 +141,8 @@ Check:
 Core:
   Id: CORE-000620
   Status: Published
-  Version: '1'
-Description: SETCD value in the DM dataset should match one of the SETCD values
-  in the TX dataset.
+  Version: "1"
+Description: SETCD value in the DM dataset should match one of the SETCD values in the TX dataset.
 Executability: Fully Executable
 Operations:
   - domain: TX

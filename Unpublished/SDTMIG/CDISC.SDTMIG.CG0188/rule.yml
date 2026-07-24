@@ -1,5 +1,5 @@
 # Variable: LBSTNRLO
-# Condition: 
+# Condition:
 # Rule: LBSTNRLO  is expressed using the units in LBSTRESU
 Authorities:
   - Organization: CDISC
@@ -15,9 +15,9 @@ Authorities:
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0188
-              Version: '2'
-            Version: '2.0'
-        Version: '3.4'
+              Version: "2"
+            Version: "2.0"
+        Version: "3.4"
       - Name: SDTMIG
         References:
           - Citations:
@@ -25,13 +25,13 @@ Authorities:
                   LBSTRESC/LBSTRESN in standardized units.
                 Document: IG v3.2
                 Item: Specification
-                Section: '6.3'
+                Section: "6.3"
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0188
-              Version: '2'
-            Version: '2.0'
-        Version: '3.2'
+              Version: "2"
+            Version: "2.0"
+        Version: "3.2"
       - Name: SDTMIG
         References:
           - Citations:
@@ -43,9 +43,9 @@ Authorities:
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0188
-              Version: '2'
-            Version: '2.0'
-        Version: '3.3'
+              Version: "2"
+            Version: "2.0"
+        Version: "3.3"
 Check:
   all:
     - name: LBSTRESU
@@ -59,7 +59,7 @@ Check:
 Core:
   Id: CDISC.SDTMIG.CG0188
   Status: Draft
-  Version: '1'
+  Version: "1"
 Description: Trigger error if LBORNRLO is not expressed using the units in LBSTRESU
 Executability: Fully Executable
 Outcome:

@@ -1,5 +1,5 @@
 Authorities:
-  - Organization: 'CDISC'
+  - Organization: "CDISC"
     Standards:
       - Name: SENDIG-GENETOX
         References:
@@ -10,23 +10,23 @@ Authorities:
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND408
-              Version: '1'
-            Version: '5.0'
-        Version: '1.0'
+              Version: "1"
+            Version: "5.0"
+        Version: "1.0"
 # Comet is represented at the subject level, not the gel level.
 # i.e. when GVCAT = 'IN VIVO COMET' then USUBJID must be populated, not POOLID
 # REMARK: but USUBJID = "required" anyway
 Check:
   all:
-    - name: 'GVCAT'
+    - name: "GVCAT"
       operator: equal_to
-      value: 'IN VIVO COMET'
-    - name: 'USUBJID'
+      value: "IN VIVO COMET"
+    - name: "USUBJID"
       operator: empty
 Core:
   Id: CDISC.SENDIG.408
   Status: Draft
-  Version: '1'
+  Version: "1"
 Description: Comet is represented at the subject level, not the gel level.
 Executability: Fully Executable
 Outcome:

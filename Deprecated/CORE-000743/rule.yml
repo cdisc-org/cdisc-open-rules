@@ -1,13 +1,14 @@
 # Variable: IETEST, IETESTCD
 # Condition:
-# Rule: IETESTCD and IETEST have a one-to-one relationship 
+# Rule: IETESTCD and IETEST have a one-to-one relationship
 Authorities:
   - Organization: FDA
     Standards:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: All paired variables should have a one-to-one relationship.
+              - Cited Guidance:
+                  All paired variables should have a one-to-one relationship.
                   Examples include short name and name of test; parameter name
                   and parameter code or number; variable name and variable
                   label, etc.
@@ -16,13 +17,14 @@ Authorities:
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB0918
-              Version: '1'
-            Version: '1.5'
-        Version: '3.2'
+              Version: "1"
+            Version: "1.5"
+        Version: "3.2"
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: All paired variables should have a one-to-one relationship.
+              - Cited Guidance:
+                  All paired variables should have a one-to-one relationship.
                   Examples include short name and name of test; parameter name
                   and parameter code or number; variable name and variable
                   label, etc.
@@ -31,13 +33,14 @@ Authorities:
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB0918
-              Version: '1'
-            Version: '1.5'
-        Version: '3.3'
+              Version: "1"
+            Version: "1.5"
+        Version: "3.3"
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: All paired variables should have a one-to-one relationship.
+              - Cited Guidance:
+                  All paired variables should have a one-to-one relationship.
                   Examples include short name and name of test; parameter name
                   and parameter code or number; variable name and variable
                   label, etc.
@@ -46,9 +49,9 @@ Authorities:
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB0918
-              Version: '1'
-            Version: '1.5'
-        Version: '3.4'
+              Version: "1"
+            Version: "1.5"
+        Version: "3.4"
 Check:
   all:
     - name: IETEST
@@ -61,7 +64,7 @@ Check:
 Core:
   Id: CORE-000743
   Status: Published
-  Version: '1'
+  Version: "1"
 Description: IETESTCD and IETEST should have a one-to-one relationship.
 Executability: Fully Executable
 Outcome:

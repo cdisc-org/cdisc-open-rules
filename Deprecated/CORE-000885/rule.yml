@@ -7,29 +7,31 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: For interventional studies all treated subjects should have
+              - Cited Guidance:
+                  For interventional studies all treated subjects should have
                   exposure data.
                 Document: FDA
                 Section: FDAB023
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB2302
-              Version: '1'
-            Version: '1.5'
-        Version: '3.3'
+              Version: "1"
+            Version: "1.5"
+        Version: "3.3"
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: For interventional studies all treated subjects should have
+              - Cited Guidance:
+                  For interventional studies all treated subjects should have
                   exposure data.
                 Document: FDA
                 Section: FDAB023
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB2302
-              Version: '1'
-            Version: '1.5'
-        Version: '3.4'
+              Version: "1"
+            Version: "1.5"
+        Version: "3.4"
 Check:
   any:
     - all:
@@ -65,7 +67,7 @@ Check:
 Core:
   Id: CORE-000885
   Status: Published
-  Version: '1'
+  Version: "1"
 Description: All subjects in the Demographics domain who are participating in a
   study that includes an interventional product must have at least one
   corresponding record in the Exposure domain, except for subjects who failed

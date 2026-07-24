@@ -2,23 +2,24 @@
 # Condition: TOPARMCD where TOCAT="NEW PRODUCT" and TOSCAT="PRODUCT DESCRIPTOR"
 # Rule: TOPARMCD in PDPARMCD
 Authorities:
-  - Organization: 'CDISC'
+  - Organization: "CDISC"
     Standards:
-      - Name: 'TIG'
+      - Name: "TIG"
         References:
           - Citations:
-              - Cited Guidance: Design parameter data must be included for all new tobacco
-                  products in the application
-                Document: 'TIG 1.0'
-                Item: 'assumption 4'
-                Section: '2.8.8.2'
+              - Cited Guidance:
+                  Design parameter data must be included for all new tobacco products in the
+                  application
+                Document: "TIG 1.0"
+                Item: "assumption 4"
+                Section: "2.8.8.2"
             Origin: TIG Conformance Rules
             Rule Identifier:
-              Id: 'TIG0005'
-              Version: '1'
-            Version: '1.0'
+              Id: "TIG0005"
+              Version: "1"
+            Version: "1.0"
         Substandard: SDTM
-        Version: '1.0'
+        Version: "1.0"
 Check:
   all:
     - name: TOCAT
@@ -36,10 +37,9 @@ Check:
 Core:
   Id: CORE-000604
   Status: Published
-  Version: '1'
-Description: Raise an error when a TOPARMCD in the TO dataset categorized as
-  TOCAT = NEW PRODUCT and TOSCAT = PRODUCT DESCRIPTOR does not have a matching
-  PDPARMCD in the PD dataset.
+  Version: "1"
+Description: Raise an error when a TOPARMCD in the TO dataset categorized as TOCAT = NEW PRODUCT and
+  TOSCAT = PRODUCT DESCRIPTOR does not have a matching PDPARMCD in the PD dataset.
 Executability: Fully Executable
 Operations:
   - domain: PD
@@ -49,8 +49,8 @@ Operations:
     name: PDPARMCD
     operator: distinct
 Outcome:
-  Message: TOPARMCD in TO is categorized as TOCAT = NEW PRODUCT and TOSCAT =
-    PRODUCT DESCRIPTOR but does not have a matching PDPARMCD per SPTOBID in PD.
+  Message: TOPARMCD in TO is categorized as TOCAT = NEW PRODUCT and TOSCAT = PRODUCT DESCRIPTOR but
+    does not have a matching PDPARMCD per SPTOBID in PD.
   Output Variables:
     - SPTOBID
     - TOPARMCD

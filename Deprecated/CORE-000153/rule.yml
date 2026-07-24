@@ -5,43 +5,46 @@ Authorities:
   - Organization: CDISC
     Standards:
       - Name: SDTMIG
-        Version: '3.4'
+        Version: "3.4"
         References:
           - Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0266
-              Version: '1'
-            Version: '2.0'
+              Version: "1"
+            Version: "2.0"
             Citations:
-              - Cited Guidance: The version number of the Reference Terminology, if
+              - Cited Guidance:
+                  The version number of the Reference Terminology, if
                   applicable.
                 Document: IG v3.4
                 Item: Specification
                 Section: 7.4.2
       - Name: SDTMIG
-        Version: '3.2'
+        Version: "3.2"
         References:
           - Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0266
-              Version: '1'
-            Version: '2.0'
+              Version: "1"
+            Version: "2.0"
             Citations:
-              - Cited Guidance: The version number of the Reference Terminology, if
+              - Cited Guidance:
+                  The version number of the Reference Terminology, if
                   applicable.
                 Document: IG v3.2
                 Item: Specification
-                Section: '7.4'
+                Section: "7.4"
       - Name: SDTMIG
-        Version: '3.3'
+        Version: "3.3"
         References:
           - Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0266
-              Version: '1'
-            Version: '2.0'
+              Version: "1"
+            Version: "2.0"
             Citations:
-              - Cited Guidance: The version number of the Reference Terminology, if
+              - Cited Guidance:
+                  The version number of the Reference Terminology, if
                   applicable.
                 Document: IG v3.3
                 Item: Specification
@@ -55,7 +58,7 @@ Check:
 Core:
   Id: CORE-000153
   Status: Published
-  Version: '1'
+  Version: "1"
 Description: Trigger error when TSVCDVER is populated and TSVCDREF is null
 Executability: Fully Executable
 Outcome:

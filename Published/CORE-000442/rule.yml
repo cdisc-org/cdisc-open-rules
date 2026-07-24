@@ -4,16 +4,17 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: 'VSTPTNUM: Numerical version of VSTPT to aid in sorting;
-                  required if time points are included within the domain.'
+              - Cited Guidance:
+                  "VSTPTNUM: Numerical version of VSTPT to aid in sorting; required if time points
+                  are included within the domain."
                 Document: IG v3.0
                 Section: 6.3.15
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND207
-              Version: '1'
-            Version: '5.0'
-        Version: '3.0'
+              Version: "1"
+            Version: "5.0"
+        Version: "3.0"
 
 Check:
   all:
@@ -24,7 +25,7 @@ Check:
 Core:
   Id: CORE-000442
   Status: Published
-  Version: '1'
+  Version: "1"
 Description: When VSTPT is populated, VSTPTNUM must be populated
 Executability: Fully Executable
 Outcome:

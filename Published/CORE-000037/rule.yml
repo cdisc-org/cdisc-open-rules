@@ -1,5 +1,5 @@
 # Variable: SVPRESP
-# Condition: 
+# Condition:
 # Rule: SVPRESP in ("Y", null)
 Authorities:
   - Organization: CDISC
@@ -13,9 +13,9 @@ Authorities:
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0653
-              Version: '1'
-            Version: '2.0'
-        Version: '3.4'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.4"
       - Name: TIG
         References:
           - Citations:
@@ -26,10 +26,10 @@ Authorities:
             Origin: TIG Conformance Rules
             Rule Identifier:
               Id: TIG0691
-              Version: '1'
-            Version: '1.0'
+              Version: "1"
+            Version: "1.0"
         Substandard: SDTM
-        Version: '1.0'
+        Version: "1.0"
 Check:
   all:
     - name: SVPRESP
@@ -40,7 +40,7 @@ Check:
 Core:
   Id: CORE-000037
   Status: Published
-  Version: '1'
+  Version: "1"
 Description: Raise an error when SVPRESP not "Y" or null.
 Executability: Fully Executable
 Outcome:

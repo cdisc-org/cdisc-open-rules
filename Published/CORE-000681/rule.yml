@@ -4,22 +4,22 @@ Authorities:
       - Name: USDM
         References:
           - Citations:
-              - Cited Guidance: 'At least one attribute must be specified for an address.'
-                Document: 'USDM_CORE_Rules.xlsx'
-            Origin: 'USDM Conformance Rules'
+              - Cited Guidance: "At least one attribute must be specified for an address."
+                Document: "USDM_CORE_Rules.xlsx"
+            Origin: "USDM Conformance Rules"
             Rule Identifier:
-              Id: 'DDF00045'
-              Version: '1'
-            Version: '1.0'
-        Version: '3.0'
+              Id: "DDF00045"
+              Version: "1"
+            Version: "1.0"
+        Version: "3.0"
 Check:
   all:
     - name: instanceType
       operator: equal_to
-      value: 'Address'
+      value: "Address"
     - name: rel_type
       operator: equal_to
-      value: 'definition'
+      value: "definition"
     - any:
         - name: text
           operator: not_exists
@@ -59,13 +59,13 @@ Check:
           operator: equal_to
           value: false
 Core:
-  Id: 'CORE-000681'
+  Id: "CORE-000681"
   Status: Published
-  Version: '1'
-Description: 'At least one attribute must be specified for an address.'
+  Version: "1"
+Description: "At least one attribute must be specified for an address."
 Executability: Fully Executable
 Outcome:
-  Message: 'All attributes of the address are blank.'
+  Message: "All attributes of the address are blank."
   Output Variables:
     - parent_entity
     - parent_id

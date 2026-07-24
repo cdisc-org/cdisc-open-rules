@@ -1,22 +1,22 @@
 Authorities:
-  - Organization: 'CDISC'
+  - Organization: "CDISC"
     Standards:
-      - Name: 'TIG'
+      - Name: "TIG"
         References:
           - Citations:
-              - Cited Guidance: DSSCAT = "PRODUCT EXPOSURE" is used when a study has only a
-                  single product|2.b.iii If a study has multiple products, then
-                  DSSCAT should name the individual product.
+              - Cited Guidance: DSSCAT = "PRODUCT EXPOSURE" is used when a study has only a single
+                  product|2.b.iii If a study has multiple products, then DSSCAT should name the individual
+                  product.
                 Document: TIG v1.0
                 Item: 2.b.ii
                 Section: 2.8.10.8
             Origin: TIG Conformance Rules
             Rule Identifier:
               Id: TIG0632
-              Version: '1'
-            Version: '1.0'
+              Version: "1"
+            Version: "1.0"
         Substandard: SDTM
-        Version: '1.0'
+        Version: "1.0"
 Check:
   all:
     - name: $disposition_event_count
@@ -32,12 +32,11 @@ Check:
         - USUBJID
         - EPOCH
 Core:
-  Status: Published
-  Version: '1'
   Id: CORE-000764
-Description: Trigger error when subject has more than one record per Epoch with
-  DSCAT = 'DISPOSITION EVENT' and more than one record where DSSCAT = PRODUCT
-  EXPOSURE'
+  Status: Published
+  Version: "1"
+Description: Trigger error when subject has more than one record per Epoch with DSCAT = 'DISPOSITION
+  EVENT' and more than one record where DSSCAT = PRODUCT EXPOSURE'
 Executability: Fully Executable
 Operations:
   - domain: DS
@@ -50,8 +49,8 @@ Operations:
     name: DSCAT
     operator: record_count
 Outcome:
-  Message: More than 1 record exists per subject per EPOCH with DSCAT =
-    'DISPOSITION EVENT' and DSSCAT = 'PRODUCT EXPOSURE'.
+  Message: More than 1 record exists per subject per EPOCH with DSCAT = 'DISPOSITION EVENT' and
+    DSSCAT = 'PRODUCT EXPOSURE'.
   Output Variables:
     - USUBJID
     - DSCAT

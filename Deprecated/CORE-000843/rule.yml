@@ -7,7 +7,8 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: "Records for unplanned visits should be included in the SV
+              - Cited Guidance:
+                  "Records for unplanned visits should be included in the SV
                   dataset. For unplanned visits, SVUPDES should be populated
                   with a description of the reason for the unplanned visit. Some
                   judgment may be required to determine what constitutes an
@@ -28,13 +29,14 @@ Authorities:
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0214
-              Version: '1'
-            Version: '2.0'
-        Version: '3.2'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.2"
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Records for unplanned visits should be included in the SV
+              - Cited Guidance:
+                  Records for unplanned visits should be included in the SV
                   dataset. For unplanned visits, SVUPDES should be populated
                   with a description of the reason for the unplanned visit. Some
                   judgment may be required to determine what constitutes an
@@ -51,13 +53,13 @@ Authorities:
                   visit variables for unplanned visits.
                 Document: IG v3.3
                 Item: Assumption 3
-                Section: '5.5'
+                Section: "5.5"
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0214
-              Version: '1'
-            Version: '2.0'
-        Version: '3.3'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.3"
 Check:
   all:
     - name: SVUPDES
@@ -68,7 +70,7 @@ Check:
 Core:
   Id: CORE-000843
   Status: Published
-  Version: '1'
+  Version: "1"
 Description: When SVUPDES is populated, then the VISITNUM should not be equal to
   a VISITNUM in TV
 Executability: Fully Executable

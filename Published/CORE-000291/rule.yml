@@ -7,9 +7,9 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: '"When the EC domain is implemented in conjunction with the EX
-                  domain, EXVAMT and EXVAMTU should not be used in
-                  EX;  collected values instead would be represented in ECDOSE
+              - Cited Guidance:
+                  '"When the EC domain is implemented in conjunction with the EX domain, EXVAMT
+                  and EXVAMTU should not be used in EX;  collected values instead would be represented in ECDOSE
                   and ECDOSU."'
                 Document: IG v3.4
                 Item: Assumption 6c
@@ -17,56 +17,58 @@ Authorities:
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0105
-              Version: '1'
-            Version: '2.0'
-        Version: '3.4'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.4"
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: When the EC domain is implemented in conjunction with the EX
-                  domain, EXVAMT and EXVAMTU should not be used in EX; collected
-                  values instead would be represented in ECDOSE and ECDOSU.
+              - Cited Guidance:
+                  When the EC domain is implemented in conjunction with the EX domain, EXVAMT
+                  and EXVAMTU should not be used in EX; collected values instead would be represented in
+                  ECDOSE and ECDOSU.
                 Document: IG v3.3
                 Item: Assumption 6c
                 Section: 6.1.3.1
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0105
-              Version: '1'
-            Version: '2.0'
-        Version: '3.3'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.3"
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: When the EC domain (See Section 6.1.2.3) is implemented in
-                  conjunction with the EX domain, EXVAMT and EXVAMTU should not
-                  be used in EX; collected values instead would be represented
-                  in ECDOSE and ECDOSU
+              - Cited Guidance:
+                  When the EC domain (See Section 6.1.2.3) is implemented in conjunction with
+                  the EX domain, EXVAMT and EXVAMTU should not be used in EX; collected values instead would
+                  be represented in ECDOSE and ECDOSU
                 Document: IG v3.2
                 Item: Assumption 6c
-                Section: '6.1'
+                Section: "6.1"
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0105
-              Version: '1'
-            Version: '2.0'
-        Version: '3.2'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.2"
       - Name: TIG
         References:
           - Citations:
-              - Cited Guidance: When the EC domain is implemented in conjunction with the EX
-                  domain, EXVAMT and EXVAMTU should not be used in EX; collected
-                  values instead would be represented in ECDOSE and ECDOSU.
+              - Cited Guidance:
+                  When the EC domain is implemented in conjunction with the EX domain, EXVAMT
+                  and EXVAMTU should not be used in EX; collected values instead would be represented in
+                  ECDOSE and ECDOSU.
                 Document: TIG 1.0
                 Item: Assumption 6c
                 Section: 2.8.10.10
             Origin: TIG Conformance Rules
             Rule Identifier:
               Id: TIG0370
-              Version: '1'
-            Version: '1.0'
+              Version: "1"
+            Version: "1.0"
         Substandard: SDTM
-        Version: '1.0'
+        Version: "1.0"
 
 Check:
   all:
@@ -78,7 +80,7 @@ Check:
 Core:
   Id: CORE-000291
   Status: Published
-  Version: '1'
+  Version: "1"
 Description: When EC exists, EXVAMT should not be used.
 Executability: Fully Executable
 Match Datasets:

@@ -5,48 +5,51 @@ Authorities:
   - Organization: CDISC
     Standards:
       - Name: SDTMIG
-        Version: '3.4'
+        Version: "3.4"
         References:
           - Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0365
-              Version: '1'
-            Version: '2.0'
+              Version: "1"
+            Version: "2.0"
             Citations:
-              - Cited Guidance: Associated Persons (AP) are persons other than study
+              - Cited Guidance:
+                  Associated Persons (AP) are persons other than study
                   subjects who can be associated with a study, a particular study
                   subject, or a device used in the study.
                 Document: Model v2.0
-                Item: ' '
+                Item: " "
                 Section: Associated Persons
       - Name: SDTMIG
-        Version: '3.2'
+        Version: "3.2"
         References:
           - Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0365
-              Version: '1'
-            Version: '2.0'
+              Version: "1"
+            Version: "2.0"
             Citations:
-              - Cited Guidance: Associated Persons (AP) are persons who can be associated
+              - Cited Guidance:
+                  Associated Persons (AP) are persons who can be associated
                   with a study; a particular study subject or a device used in the
                   study.
                 Document: Model v1.4
                 Section: 5.1.1
       - Name: SDTMIG
-        Version: '3.3'
+        Version: "3.3"
         References:
           - Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0365
-              Version: '1'
-            Version: '2.0'
+              Version: "1"
+            Version: "2.0"
             Citations:
-              - Cited Guidance: Associated Persons (AP) are persons who can be associated
+              - Cited Guidance:
+                  Associated Persons (AP) are persons who can be associated
                   with a study; a particular study subject or a device used in the
                   study.
                 Document: Model v1.7
-                Section: '6.1'
+                Section: "6.1"
 Check:
   all:
     - name: RSUBJID
@@ -56,12 +59,14 @@ Check:
 Core:
   Id: CORE-000233
   Status: Published
-  Version: '1'
-Description: Related Device Identifier (RDEVID) and Related Subject or Pool Identifier
+  Version: "1"
+Description:
+  Related Device Identifier (RDEVID) and Related Subject or Pool Identifier
   (RSUBJID) should not both be populated for the same record.
 Executability: Fully Executable
 Outcome:
-  Message: RDEVID must be empty when RSUBJID is populated and RSUBJID must be empty
+  Message:
+    RDEVID must be empty when RSUBJID is populated and RSUBJID must be empty
     when RDEVID is populated
   Output Variables:
     - RSUBJID

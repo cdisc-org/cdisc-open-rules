@@ -4,15 +4,14 @@ Authorities:
       - Name: USDM
         References:
           - Citations:
-              - Cited Guidance: 'A primary study amendment reason is not expected to be ''not
-                  applicable''.'
-                Document: 'USDM_CORE_Rules.xlsx'
-            Origin: 'USDM Conformance Rules'
+              - Cited Guidance: "A primary study amendment reason is not expected to be 'not applicable'."
+                Document: "USDM_CORE_Rules.xlsx"
+            Origin: "USDM Conformance Rules"
             Rule Identifier:
-              Id: 'DDF00255'
-              Version: '1'
-            Version: '1.0'
-        Version: '4.0'
+              Id: "DDF00255"
+              Version: "1"
+            Version: "1.0"
+        Version: "4.0"
 Check: |-
   (study.versions.amendments)@$am.
     $am.primaryReason@$pr.
@@ -29,13 +28,13 @@ Check: |-
             }
         )][check=true]
 Core:
-  Id: 'CORE-001011'
+  Id: "CORE-001011"
   Status: Published
-  Version: '1'
-Description: 'A primary study amendment reason is not expected to be ''not applicable''.'
+  Version: "1"
+Description: "A primary study amendment reason is not expected to be 'not applicable'."
 Executability: Partially Executable - Possible Overreporting
 Outcome:
-  Message: 'The primary study amendment reason is ''not applicable'' (code=C48660).'
+  Message: "The primary study amendment reason is 'not applicable' (code=C48660)."
   Output Variables:
     - StudyAmendment.id
     - StudyAmendment.name
@@ -44,5 +43,5 @@ Rule Type: JSONata
 Scope:
   Entities:
     Include:
-      - 'StudyAmendmentReason'
+      - "StudyAmendmentReason"
 Sensitivity: Record

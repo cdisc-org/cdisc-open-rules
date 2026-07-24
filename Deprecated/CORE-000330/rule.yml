@@ -7,20 +7,21 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Data for screen failure subjects, if submitted, should be
+              - Cited Guidance:
+                  Data for screen failure subjects, if submitted, should be
                   included in the Demographics dataset, with ARMCD = "SCRNFAIL'
                   and ARM = "Screen Failure". Subjects withdrawn from a trial
                   before assignment to an Arm, if they are not screen failures,
                   should have ARMCD ='NOTASSGN' and ARM = 'Not Assigned'.
                 Document: IG v3.2
                 Item: Assumption 4
-                Section: '5'
+                Section: "5"
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0122
-              Version: '1'
-            Version: '2.0'
-        Version: '3.2'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.2"
 Check:
   all:
     - name: ARM
@@ -36,7 +37,7 @@ Check:
 Core:
   Id: CORE-000330
   Status: Published
-  Version: '1'
+  Version: "1"
 Description: 'ACTARM value must match ARM value in Demographics when ARM equals
   "Screen Failure" or "Not Assigned"'
 Executability: Fully Executable

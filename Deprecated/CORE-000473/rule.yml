@@ -7,7 +7,8 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: IG v3.2[7.4][Assumption 3][Further information about the
+              - Cited Guidance:
+                  IG v3.2[7.4][Assumption 3][Further information about the
                   parameters is included below in Table 1. TSVAL may have
                   controlled terminology depending on the value of TSPARMCD]|IG
                   v3.2[Appendix C1][If the study population is healthy subjects
@@ -22,13 +23,14 @@ Authorities:
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0272
-              Version: '2'
-            Version: '2.0'
-        Version: '3.2'
+              Version: "2"
+            Version: "2.0"
+        Version: "3.2"
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: IG v3.3[7.4.2][Assumption 3][Further information about the
+              - Cited Guidance:
+                  IG v3.3[7.4.2][Assumption 3][Further information about the
                   parameters is included Appendix C1, Trial Summary Codes. TSVAL
                   may have controlled terminology depending on the value of
                   TSPARMCD. Conditions for including parameters are included in
@@ -45,9 +47,9 @@ Authorities:
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0272
-              Version: '2'
-            Version: '2.0'
-        Version: '3.3'
+              Version: "2"
+            Version: "2.0"
+        Version: "3.3"
 Check:
   all:
     - name: TSPARMCD
@@ -59,17 +61,17 @@ Check:
     - all:
         - name: TSVAL
           operator: not_equal_to
-          value: 'HEALTHY SUBJECTS'
+          value: "HEALTHY SUBJECTS"
           value_is_literal: true
         - name: TSVAL
           operator: non_empty
 Core:
   Id: CORE-000473
   Status: Published
-  Version: '1'
-Description: 'Raise an error when a record exists in TS where TSPARMCD =
+  Version: "1"
+Description: "Raise an error when a record exists in TS where TSPARMCD =
   HLTSUBJI and TSVAL = Y but TSVAL for TSPARMCD = TDIGRP is not empty or does
-  not equal HEALTHY SUBJECTS.'
+  not equal HEALTHY SUBJECTS."
 Executability: Fully Executable
 Operations:
   - filter:
@@ -80,9 +82,9 @@ Operations:
     id: $HLTSUBJI_Y
     operator: record_count
 Outcome:
-  Message: 'A record exists in TS where TSPARMCD = HLTSUBJI and TSVAL = Y but
+  Message: "A record exists in TS where TSPARMCD = HLTSUBJI and TSVAL = Y but
     TSVAL for TSPARMCD = TDIGRP is not empty or does not equal HEALTHY
-    SUBJECTS.'
+    SUBJECTS."
   Output Variables:
     - TSGRPID
     - TSPARMCD

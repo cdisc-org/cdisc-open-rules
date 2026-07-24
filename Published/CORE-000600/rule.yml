@@ -1,26 +1,26 @@
 # Variable: PARENT
 # Rule: For each value in PARENT there must exist one record with REFID value = PARENT value.
 Authorities:
-  - Organization: 'CDISC'
+  - Organization: "CDISC"
     Standards:
-      - Name: 'TIG'
+      - Name: "TIG"
         References:
           - Citations:
-              - Cited Guidance: Every value of PARENT must be defined once and only once. Every
-                  PARENT must have a unique REFID which may be referenced by
-                  multiple records with the same PARENT. (Each REFID with a
-                  PARENT, has only one PARENT and that PARENT is described in a
-                  unique PARENT record.).
-                Document: 'TIG 1.0'
-                Item: 'assumption 4'
-                Section: '2.8.9.23'
+              - Cited Guidance:
+                  Every value of PARENT must be defined once and only once. Every PARENT must
+                  have a unique REFID which may be referenced by multiple records with the same PARENT.
+                  (Each REFID with a PARENT, has only one PARENT and that PARENT is described in a unique
+                  PARENT record.).
+                Document: "TIG 1.0"
+                Item: "assumption 4"
+                Section: "2.8.9.23"
             Origin: TIG Conformance Rules
             Rule Identifier:
-              Id: 'TIG0030'
-              Version: '1'
-            Version: '1.0'
+              Id: "TIG0030"
+              Version: "1"
+            Version: "1.0"
         Substandard: SEND
-        Version: '1.0'
+        Version: "1.0"
 Check:
   all:
     - name: LEVEL
@@ -35,11 +35,11 @@ Check:
           operator: equal_to
           value: REFID
 Core:
-  Status: Published
-  Version: '1'
   Id: CORE-000600
-Description: Raise an error when a record has a PARENT value but no other record
-  exists with REFID value = PARENT value.
+  Status: Published
+  Version: "1"
+Description: Raise an error when a record has a PARENT value but no other record exists with REFID
+  value = PARENT value.
 Executability: Fully Executable
 Operations:
   - domain: RELREF

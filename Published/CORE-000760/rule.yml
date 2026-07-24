@@ -7,29 +7,27 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Study start and end date/time should include month, day, and
-                  year.
+              - Cited Guidance: Study start and end date/time should include month, day, and year.
                 Document: FDA
                 Section: FDAB034
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB3413
-              Version: '1'
-            Version: '1.5'
-        Version: '3.4'
+              Version: "1"
+            Version: "1.5"
+        Version: "3.4"
       - Name: SENDIG-AR
         References:
           - Citations:
-              - Cited Guidance: Study start and end date/time should include month, day, and
-                  year.
+              - Cited Guidance: Study start and end date/time should include month, day, and year.
                 Document: FDA
                 Section: FDAB034
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB3413
-              Version: '1'
-            Version: '1.5'
-        Version: '1.0'
+              Version: "1"
+            Version: "1.5"
+        Version: "1.0"
 Check:
   all:
     - name: RFCSTDTC
@@ -42,9 +40,9 @@ Check:
 Core:
   Id: CORE-000760
   Status: Published
-  Version: '1'
-Description: Date/Time of First Challenge Agent Admin (RFCSTDTC) should be prior
-  or equal to the Date/Time of Last Challenge Agent Admin (RFCENDTC).
+  Version: "1"
+Description: Date/Time of First Challenge Agent Admin (RFCSTDTC) should be prior or equal to the
+  Date/Time of Last Challenge Agent Admin (RFCENDTC).
 Executability: Fully Executable
 Outcome:
   Message: RFCSTDTC falls after RFCENDTC.

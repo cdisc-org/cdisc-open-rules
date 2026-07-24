@@ -14,22 +14,22 @@ Authorities:
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0265
-              Version: '1'
-            Version: '2.0'
-        Version: '3.4'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.4"
       - Name: SDTMIG
         References:
           - Citations:
               - Cited Guidance: This is the code of the term in TSVAL.
                 Document: IG v3.2
                 Item: Specification
-                Section: '7.4'
+                Section: "7.4"
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0265
-              Version: '1'
-            Version: '2.0'
-        Version: '3.2'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.2"
       - Name: SDTMIG
         References:
           - Citations:
@@ -40,9 +40,9 @@ Authorities:
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0265
-              Version: '1'
-            Version: '2.0'
-        Version: '3.3'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.3"
       - Name: TIG
         References:
           - Citations:
@@ -53,10 +53,10 @@ Authorities:
             Origin: TIG Conformance Rules
             Rule Identifier:
               Id: TIG0467
-              Version: '1'
-            Version: '1.0'
+              Version: "1"
+            Version: "1.0"
         Substandard: SDTM
-        Version: '1.0'
+        Version: "1.0"
 Check:
   all:
     - name: TSVAL
@@ -69,9 +69,9 @@ Check:
 Core:
   Id: CORE-000152
   Status: Published
-  Version: '1'
-Description: When TSVAL and TSVALCD are populated, there must be a one-to-one
-  relationship between TSVALCD and TSVAL
+  Version: "1"
+Description: When TSVAL and TSVALCD are populated, there must be a one-to-one relationship between
+  TSVALCD and TSVAL
 Executability: Fully Executable
 Outcome:
   Message: There is not a one-to-one relationship between TSVAL and TSVALCD

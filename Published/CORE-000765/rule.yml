@@ -1,5 +1,5 @@
 # Variable: dataset_size
-# Condition: 
+# Condition:
 # Rule: dataset_size is not greater than 5GB
 Authorities:
   - Organization: FDA
@@ -7,133 +7,143 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Large datasets should be split into smaller datasets no larger
-                  than 5 GB in size.
+              - Cited Guidance:
+                  Large datasets should be split into smaller datasets no larger than 5 GB in
+                  size.
                 Document: FDA
                 Section: FDAB024
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB2401
-              Version: '1'
-            Version: '1.5'
-        Version: '3.2'
+              Version: "1"
+            Version: "1.5"
+        Version: "3.2"
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Large datasets should be split into smaller datasets no larger
-                  than 5 GB in size.
+              - Cited Guidance:
+                  Large datasets should be split into smaller datasets no larger than 5 GB in
+                  size.
                 Document: FDA
                 Section: FDAB024
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB2401
-              Version: '1'
-            Version: '1.5'
-        Version: '3.3'
+              Version: "1"
+            Version: "1.5"
+        Version: "3.3"
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Large datasets should be split into smaller datasets no larger
-                  than 5 GB in size.
+              - Cited Guidance:
+                  Large datasets should be split into smaller datasets no larger than 5 GB in
+                  size.
                 Document: FDA
                 Section: FDAB024
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB2401
-              Version: '1'
-            Version: '1.5'
-        Version: '3.4'
+              Version: "1"
+            Version: "1.5"
+        Version: "3.4"
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: Large datasets should be split into smaller datasets no larger
-                  than 5 GB in size.
+              - Cited Guidance:
+                  Large datasets should be split into smaller datasets no larger than 5 GB in
+                  size.
                 Document: FDA
                 Section: FDAB024
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB2401
-              Version: '1'
-            Version: '1.5'
-        Version: '3.0'
+              Version: "1"
+            Version: "1.5"
+        Version: "3.0"
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: Large datasets should be split into smaller datasets no larger
-                  than 5 GB in size.
+              - Cited Guidance:
+                  Large datasets should be split into smaller datasets no larger than 5 GB in
+                  size.
                 Document: FDA
                 Section: FDAB024
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB2401
-              Version: '1'
-            Version: '1.5'
-        Version: '3.1'
+              Version: "1"
+            Version: "1.5"
+        Version: "3.1"
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: Large datasets should be split into smaller datasets no larger
-                  than 5 GB in size.
+              - Cited Guidance:
+                  Large datasets should be split into smaller datasets no larger than 5 GB in
+                  size.
                 Document: FDA
                 Section: FDAB024
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB2401
-              Version: '1'
-            Version: '1.5'
-        Version: '3.1.1'
+              Version: "1"
+            Version: "1.5"
+        Version: "3.1.1"
       - Name: SENDIG-GENETOX
         References:
           - Citations:
-              - Cited Guidance: Large datasets should be split into smaller datasets no larger
-                  than 5 GB in size.
+              - Cited Guidance:
+                  Large datasets should be split into smaller datasets no larger than 5 GB in
+                  size.
                 Document: FDA
                 Section: FDAB024
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB2401
-              Version: '1'
-            Version: '1.5'
-        Version: '1.0'
+              Version: "1"
+            Version: "1.5"
+        Version: "1.0"
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance: Large datasets should be split into smaller datasets no larger
-                  than 5 GB in size.
+              - Cited Guidance:
+                  Large datasets should be split into smaller datasets no larger than 5 GB in
+                  size.
                 Document: FDA
                 Section: FDAB024
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB2401
-              Version: '1'
-            Version: '1.5'
-        Version: '1.1'
+              Version: "1"
+            Version: "1.5"
+        Version: "1.1"
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance: Large datasets should be split into smaller datasets no larger
-                  than 5 GB in size.
+              - Cited Guidance:
+                  Large datasets should be split into smaller datasets no larger than 5 GB in
+                  size.
                 Document: FDA
                 Section: FDAB024
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB2401
-              Version: '1'
-            Version: '1.5'
-        Version: '1.2'
+              Version: "1"
+            Version: "1.5"
+        Version: "1.2"
       - Name: SENDIG-AR
         References:
           - Citations:
-              - Cited Guidance: Large datasets should be split into smaller datasets no larger
-                  than 5 GB in size.
+              - Cited Guidance:
+                  Large datasets should be split into smaller datasets no larger than 5 GB in
+                  size.
                 Document: FDA
                 Section: FDAB024
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB2401
-              Version: '1'
-            Version: '1.5'
-        Version: '1.0'
+              Version: "1"
+            Version: "1.5"
+        Version: "1.0"
 Check:
   all:
     - name: $dataset_size
@@ -142,7 +152,7 @@ Check:
 Core:
   Id: CORE-000765
   Status: Published
-  Version: '1'
+  Version: "1"
 Description: The submitted dataset is larger than 5 GB
 Executability: Fully Executable
 Operations:

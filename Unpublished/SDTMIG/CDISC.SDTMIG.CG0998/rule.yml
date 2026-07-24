@@ -1,6 +1,6 @@
 # Variable: --
-# Condition: 
-# Rule: 
+# Condition:
+# Rule:
 Authorities:
   - Organization: CDISC
     Standards:
@@ -10,16 +10,16 @@ Authorities:
               - Cited Guidance: xxx.
                 Document: IG v3.4
                 Item: Item 3.b.
-                Section: '2.6'
+                Section: "2.6"
               - Cited Guidance: yyyyyyy.
                 Document: IG v3.4
                 Section: 4.3.6
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0998
-              Version: '2'
-            Version: '2.0'
-        Version: '3.4'
+              Version: "2"
+            Version: "2.0"
+        Version: "3.4"
 
 Check:
   any:
@@ -33,9 +33,8 @@ Check:
 Core:
   Id: CDISC.SDTMIG.CG0998
   Status: Draft
-  Version: '1'
-Description: All TDM dataset(s) for the corresponding IG should be included in
-  every submission.
+  Version: "1"
+Description: All TDM dataset(s) for the corresponding IG should be included in every submission.
 Executability: Fully Executable
 Grouping_Variables:
   - $study_domains

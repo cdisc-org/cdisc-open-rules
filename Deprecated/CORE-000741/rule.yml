@@ -1,42 +1,42 @@
 Authorities:
-  - Organization: 'FDA'
+  - Organization: "FDA"
     Standards:
-      - Name: 'SDTMIG'
+      - Name: "SDTMIG"
         References:
           - Citations:
-              - Cited Guidance: 'TCG, Appendix B'
-                Document: 'FDA'
-                Section: 'FDAB011'
-            Origin: 'FDA Business Rules'
+              - Cited Guidance: "TCG, Appendix B"
+                Document: "FDA"
+                Section: "FDAB011"
+            Origin: "FDA Business Rules"
             Rule Identifier:
-              Id: 'FB1111'
-              Version: '1'
-            Version: '1.5'
-        Version: '3.2'
-      - Name: 'SDTMIG'
+              Id: "FB1111"
+              Version: "1"
+            Version: "1.5"
+        Version: "3.2"
+      - Name: "SDTMIG"
         References:
           - Citations:
-              - Cited Guidance: 'TCG, Appendix B'
-                Document: 'FDA'
-                Section: 'FDAB011'
-            Origin: 'FDA Business Rules'
+              - Cited Guidance: "TCG, Appendix B"
+                Document: "FDA"
+                Section: "FDAB011"
+            Origin: "FDA Business Rules"
             Rule Identifier:
-              Id: 'FB1111'
-              Version: '1'
-            Version: '1.5'
-        Version: '3.3'
-      - Name: 'SDTMIG'
+              Id: "FB1111"
+              Version: "1"
+            Version: "1.5"
+        Version: "3.3"
+      - Name: "SDTMIG"
         References:
           - Citations:
-              - Cited Guidance: 'TCG, Appendix B'
-                Document: 'FDA'
-                Section: 'FDAB011'
-            Origin: 'FDA Business Rules'
+              - Cited Guidance: "TCG, Appendix B"
+                Document: "FDA"
+                Section: "FDAB011"
+            Origin: "FDA Business Rules"
             Rule Identifier:
-              Id: 'FB1111'
-              Version: '1'
-            Version: '1.5'
-        Version: '3.4'
+              Id: "FB1111"
+              Version: "1"
+            Version: "1.5"
+        Version: "3.4"
 Check:
   any:
     - name: TSPARMCD
@@ -69,7 +69,7 @@ Check:
       value: 1
 Core:
   Status: Published
-  Version: '1'
+  Version: "1"
   Id: CORE-000741
 Description: The set  ('INTMODEL’, 'INTTYPE','PCLASS') is not in the list of
   TSPARAMCD with TSVAL populated.

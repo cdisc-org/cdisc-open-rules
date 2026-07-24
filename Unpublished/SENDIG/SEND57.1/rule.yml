@@ -4,13 +4,12 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: "In some cases, a variable value may comprise multiple
-                  individual values. In these cases, each contributing value is
-                  a separately collected or analyzed item...In these scenarios,
-                  when controlled terminology applies to the corresponding
-                  variable, each contributing value must be included as its
-                  controlled terminology submission value, and delimited from
-                  other terms by a semicolon."
+              - Cited Guidance:
+                  "In some cases, a variable value may comprise multiple individual values. In these
+                  cases, each contributing value is a separately collected or analyzed item...In these scenarios,
+                  when controlled terminology applies to the corresponding variable, each contributing value must
+                  be included as its controlled terminology submission value, and delimited from other terms by
+                  a semicolon."
                 Document: IG v3.1
                 Section: 4.3.6.2
             Origin: SEND Conformance Rules
@@ -22,13 +21,12 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: "In some cases, a variable value may comprise multiple
-                  individual values. In these cases, each contributing value is
-                  a separately collected or analyzed item...In these scenarios,
-                  when controlled terminology applies to the corresponding
-                  variable, each contributing value must be included as its
-                  controlled terminology submission value, and delimited from
-                  other terms by a semicolon."
+              - Cited Guidance:
+                  "In some cases, a variable value may comprise multiple individual values. In these
+                  cases, each contributing value is a separately collected or analyzed item...In these scenarios,
+                  when controlled terminology applies to the corresponding variable, each contributing value must
+                  be included as its controlled terminology submission value, and delimited from other terms by
+                  a semicolon."
                 Document: IG v3.1.1
                 Section: 4.3.6.2
             Origin: SEND Conformance Rules
@@ -40,13 +38,12 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: "In some cases, a variable value may comprise multiple
-                  individual values. In these cases, each contributing value is
-                  a separately collected or analyzed item...In these scenarios,
-                  when controlled terminology applies to the corresponding
-                  variable, each contributing value must be included as its
-                  controlled terminology submission value, and delimited from
-                  other terms by a semicolon."
+              - Cited Guidance:
+                  "In some cases, a variable value may comprise multiple individual values. In these
+                  cases, each contributing value is a separately collected or analyzed item...In these scenarios,
+                  when controlled terminology applies to the corresponding variable, each contributing value must
+                  be included as its controlled terminology submission value, and delimited from other terms by
+                  a semicolon."
                 Document: IG v3.1.1
                 Section: 4.3.6.2
             Origin: SEND Conformance Rules
@@ -58,13 +55,12 @@ Authorities:
       - Name: SENDIG-GENETOX
         References:
           - Citations:
-              - Cited Guidance: "In some cases, a variable value may comprise multiple
-                  individual values. In these cases, each contributing value is
-                  a separately collected or analyzed item...In these scenarios,
-                  when controlled terminology applies to the corresponding
-                  variable, each contributing value must be included as its
-                  controlled terminology submission value, and delimited from
-                  other terms by a semicolon."
+              - Cited Guidance:
+                  "In some cases, a variable value may comprise multiple individual values. In these
+                  cases, each contributing value is a separately collected or analyzed item...In these scenarios,
+                  when controlled terminology applies to the corresponding variable, each contributing value must
+                  be included as its controlled terminology submission value, and delimited from other terms by
+                  a semicolon."
                 Document: IG v3.1.1
                 Section: 4.3.6.2
             Origin: SEND Conformance Rules
@@ -76,13 +72,12 @@ Authorities:
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance: "In some cases, a variable value may comprise multiple
-                  individual values. In these cases, each contributing value is
-                  a separately collected or analyzed item...In these scenarios,
-                  when controlled terminology applies to the corresponding
-                  variable, each contributing value must be included as its
-                  controlled terminology submission value, and delimited from
-                  other terms by a semicolon."
+              - Cited Guidance:
+                  "In some cases, a variable value may comprise multiple individual values. In these
+                  cases, each contributing value is a separately collected or analyzed item...In these scenarios,
+                  when controlled terminology applies to the corresponding variable, each contributing value must
+                  be included as its controlled terminology submission value, and delimited from other terms by
+                  a semicolon."
                 Document: IG v3.1
                 Section: 4.3.6.2
             Origin: SEND Conformance Rules
@@ -94,13 +89,12 @@ Authorities:
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance: "In some cases, a variable value may comprise multiple
-                  individual values. In these cases, each contributing value is
-                  a separately collected or analyzed item...In these scenarios,
-                  when controlled terminology applies to the corresponding
-                  variable, each contributing value must be included as its
-                  controlled terminology submission value, and delimited from
-                  other terms by a semicolon."
+              - Cited Guidance:
+                  "In some cases, a variable value may comprise multiple individual values. In these
+                  cases, each contributing value is a separately collected or analyzed item...In these scenarios,
+                  when controlled terminology applies to the corresponding variable, each contributing value must
+                  be included as its controlled terminology submission value, and delimited from other terms by
+                  a semicolon."
                 Document: IG v3.1.1
                 Section: 4.3.6.2
             Origin: SEND Conformance Rules
@@ -119,30 +113,31 @@ Check:
       operator: equal_to
       value: Char
     - name: variable_value
-      operator: non_empty
-    ## The following works for FB1502 test data
-    #- name: variable_value
-    #  operator: equal_to
-    #  value: '.'
-    #  value_is_literal: true
-    ## The following DOES NOT work
-    #- name: variable_value
-    #  operator: contains
-    #  value: ';'
-    #  value_is_literal: true
-    # Trying with a regex: does not return anything even when value has a semicolon
+      operator:
+        non_empty
+        ## The following works for FB1502 test data
+        #- name: variable_value
+        #  operator: equal_to
+        #  value: '.'
+        #  value_is_literal: true
+        ## The following DOES NOT work
+        #- name: variable_value
+        #  operator: contains
+        #  value: ';'
+        #  value_is_literal: true
+        # Trying with a regex: does not return anything even when value has a semicolon
     - name: variable_value
       operator: matches_regex
-      value: ';'
+      value: ";"
 Core:
   Status: Draft
-  Version: '1'
-Description: ''
+  Version: "1"
+Description: ""
 Executability: Fully Executable
 Outcome:
-  Message: "The variable value is a list of values separated by a semicolon, and
-    the variable is under controlled terminology, but not all values after
-    splitting are in the controlled terminology list"
+  Message:
+    "The variable value is a list of values separated by a semicolon, and the variable is under
+    controlled terminology, but not all values after splitting are in the controlled terminology list"
 # Rule Type: Record Data
 Rule Type: Value Check with Variable Metadata
 Scope:

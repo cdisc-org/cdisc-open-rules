@@ -5,73 +5,73 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: If this variable is excluded in the DM domain, the information
-                  must be present at a higher level (either Trial Sets or Trial
-                  Summary).
+              - Cited Guidance:
+                  If this variable is excluded in the DM domain, the information must be
+                  present at a higher level (either Trial Sets or Trial Summary).
                 Document: IG v3.1
                 Section: 5.1.1
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND106.1
-              Version: '1'
-            Version: '5.0'
-        Version: '3.1'
+              Version: "1"
+            Version: "5.0"
+        Version: "3.1"
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: If this variable is excluded in the DM domain, the information
-                  must be present at a higher level (either Trial Sets or Trial
-                  Summary).
+              - Cited Guidance:
+                  If this variable is excluded in the DM domain, the information must be
+                  present at a higher level (either Trial Sets or Trial Summary).
                 Document: IG v3.1.1
                 Section: 5.1.1
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND106.1
-              Version: '1'
-            Version: '5.0'
-        Version: '3.1.1'
+              Version: "1"
+            Version: "5.0"
+        Version: "3.1.1"
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance: If this variable is excluded in the DM domain, the information
-                  must be present at a higher level (either Trial Sets or Trial
-                  Summary).
+              - Cited Guidance:
+                  If this variable is excluded in the DM domain, the information must be
+                  present at a higher level (either Trial Sets or Trial Summary).
                 Document: IG v3.1
                 Section: 5.1.1
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND106.1
-              Version: '1'
-            Version: '5.0'
-        Version: '1.1'
+              Version: "1"
+            Version: "5.0"
+        Version: "1.1"
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance: If this variable is excluded in the DM domain, the information
-                  must be present at a higher level (either Trial Sets or Trial
-                  Summary).
+              - Cited Guidance:
+                  If this variable is excluded in the DM domain, the information must be
+                  present at a higher level (either Trial Sets or Trial Summary).
                 Document: IG v3.1.1
                 Section: 5.1.1
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND106.1
-              Version: '1'
-            Version: '5.0'
-        Version: '1.2'
+              Version: "1"
+            Version: "5.0"
+        Version: "1.2"
       - Name: SENDIG-GENETOX
         References:
           - Citations:
-              - Cited Guidance: If this variable is excluded in the DM domain, the information
-                  must be present at a higher level (either Trial Sets or Trial
-                  Summary).
+              - Cited Guidance:
+                  If this variable is excluded in the DM domain, the information must be
+                  present at a higher level (either Trial Sets or Trial Summary).
                 Document: IG v3.1.1
                 Section: 5.1.1
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND106.1
-              Version: '1'
-            Version: '5.0'
-        Version: '1.0'
+              Version: "1"
+            Version: "5.0"
+        Version: "1.0"
 Check:
   # 2025-02-25: NOT TESTED AT ALL YET - first need to resolve issues for SEND106
   all:
@@ -80,10 +80,11 @@ Check:
         - name: STRAIN
           operator: not_exists
         - name: STRAIN
-          operator: empty
-    # Either TSPARMCD=STRAIN is missing from TS
-    # or TSVAL is null when TSPARMCD=STRAIN
-    # or TXVAL is null when TXPARMCD=STRAIN
+          operator:
+            empty
+            # Either TSPARMCD=STRAIN is missing from TS
+            # or TSVAL is null when TSPARMCD=STRAIN
+            # or TXVAL is null when TXPARMCD=STRAIN
     - all:
         - any:
             - name: $distinct_tsparmcd
@@ -112,9 +113,9 @@ Check:
 Core:
   Id: SEND106.1
   Status: Draft
-  Version: '1'
-Description: When "STRAIN" is absent in DM, and also absent as a parameter in TS
-  and TX, report an error
+  Version: "1"
+Description: When "STRAIN" is absent in DM, and also absent as a parameter in TS and TX, report an
+  error
 Executability: Fully Executable
 # 2025-02-25: Jozef: what is this doing?
 Match Datasets:
@@ -126,11 +127,11 @@ Operations:
   - domain: TS
     id: $distinct_tsparmcd
     name: TSPARMCD
-    operator: distinct
-  # gets the distinct values of TXPARMCD
+    operator:
+      distinct
+      # gets the distinct values of TXPARMCD
 Outcome:
-  Message: Missing STRAIN Trial Summary and Trial Sets Parameter when STRAIN is
-    not present in DM
+  Message: Missing STRAIN Trial Summary and Trial Sets Parameter when STRAIN is not present in DM
   Output Variables:
     - TSPARMCD
     - TSVAL

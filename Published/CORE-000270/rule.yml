@@ -7,69 +7,69 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: For planned visits, values of VISIT, VISITNUM, and VISITDY must
-                  be those defined in the Trial Visits (TV) dataset (Section
-                  7.3.1, Trial Visits).
+              - Cited Guidance:
+                  For planned visits, values of VISIT, VISITNUM, and VISITDY must be those
+                  defined in the Trial Visits (TV) dataset (Section 7.3.1, Trial Visits).
                 Document: SDTMIG v3.4
-                Item: ''
+                Item: ""
                 Section: 4.4.5
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0033
-              Version: '2'
-            Version: '2.0'
-        Version: '3.4'
+              Version: "2"
+            Version: "2.0"
+        Version: "3.4"
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: For planned visits, values of VISIT, VISITNUM, and VISITDY must
-                  be those defined in the Trial Visits dataset.
+              - Cited Guidance:
+                  For planned visits, values of VISIT, VISITNUM, and VISITDY must be those
+                  defined in the Trial Visits dataset.
                 Document: SDTMIG v3.3
-                Item: ''
+                Item: ""
                 Section: 4.4.5
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0033
-              Version: '2'
-            Version: '2.0'
-        Version: '3.3'
+              Version: "2"
+            Version: "2.0"
+        Version: "3.3"
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: For planned visits, values of VISIT, VISITNUM, and VISITDY must
-                  be those defined in the Trial Visits dataset.
+              - Cited Guidance:
+                  For planned visits, values of VISIT, VISITNUM, and VISITDY must be those
+                  defined in the Trial Visits dataset.
                 Document: SDTMIG v3.2
-                Item: ''
+                Item: ""
                 Section: 4.1.4.5
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0033
-              Version: '2'
-            Version: '2.0'
-        Version: '3.2'
+              Version: "2"
+            Version: "2.0"
+        Version: "3.2"
       - Name: TIG
         References:
           - Citations:
-              - Cited Guidance: The values of VISITNUM in the TV dataset are the valid values of
-                  VISITNUM for planned visits. Any values of VISITNUM that
-                  appear in subject-level datasets that are not in the TV
-                  dataset are assumed to correspond to unplanned visits. There
-                  will be a one-to-one relationship between values of VISIT and
-                  VISITNUM in TV. If a subject-level dataset includes both
-                  VISITNUM and VISIT, then records that include values of
-                  VISITNUM that appear in the TV dataset should also include the
-                  corresponding values of VISIT from the TV dataset.
-                  Specification VISITDY Planned study day of VISIT.
+              - Cited Guidance:
+                  The values of VISITNUM in the TV dataset are the valid values of VISITNUM
+                  for planned visits. Any values of VISITNUM that appear in subject-level datasets that are
+                  not in the TV dataset are assumed to correspond to unplanned visits. There will be a
+                  one-to-one relationship between values of VISIT and VISITNUM in TV. If a subject-level
+                  dataset includes both VISITNUM and VISIT, then records that include values of VISITNUM
+                  that appear in the TV dataset should also include the corresponding values of VISIT from
+                  the TV dataset. Specification VISITDY Planned study day of VISIT.
                 Document: TIG 1.0
                 Item: Assumption 6 |Specifications VISITDY
                 Section: 2.8.10.31
             Origin: TIG Conformance Rules
             Rule Identifier:
               Id: TIG0314
-              Version: '1'
-            Version: '1.0'
+              Version: "1"
+            Version: "1.0"
         Substandard: SDTM
-        Version: '1.0'
+        Version: "1.0"
 Check:
   all:
     - name: SVPRESP
@@ -81,9 +81,9 @@ Check:
 Core:
   Id: CORE-000270
   Status: Published
-  Version: '1'
-Description: Verify when VISITNUM is not null in any given domain and VISITNUM
-  is planned (SVPRESP = 'Y'), then VISIT should be among TV.VISITNUM.
+  Version: "1"
+Description: Verify when VISITNUM is not null in any given domain and VISITNUM is planned (SVPRESP =
+  'Y'), then VISIT should be among TV.VISITNUM.
 Executability: Fully Executable
 Match Datasets:
   - Keys:
@@ -96,8 +96,8 @@ Operations:
     name: VISITNUM
     operator: distinct
 Outcome:
-  Message: For a planned visit (SVPRESP = 'Y'), non-missing VISITNUM value must be
-    among those present in TV.VISITNUM. in TV.VISITNUM
+  Message: For a planned visit (SVPRESP = 'Y'), non-missing VISITNUM value must be among those
+    present in TV.VISITNUM. in TV.VISITNUM
   Output Variables:
     - VISITNUM
     - SVPRESP

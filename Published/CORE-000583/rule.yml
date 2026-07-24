@@ -1,13 +1,14 @@
 Authorities:
-  - Organization: CDISC
-    # REMARK: NOT applicable to SENDIG-3.0 (which has similar rule xxx)
+  - Organization:
+      CDISC
+      # REMARK: NOT applicable to SENDIG-3.0 (which has similar rule xxx)
     Standards:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: Null flavor for the value of the TSPARMs, which should be
-                  included according to the trial summary code table below if
-                  and only if TSVAL is null.
+              - Cited Guidance:
+                  Null flavor for the value of the TSPARMs, which should be included according
+                  to the trial summary code table below if and only if TSVAL is null.
                 Document: IG v3.1
                 Item: Specification
                 Section: 7.6.1.1
@@ -20,9 +21,9 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: Null flavor for the value of the TSPARMs, which should be
-                  included according to the trial summary code table below if
-                  and only if TSVAL is null.
+              - Cited Guidance:
+                  Null flavor for the value of the TSPARMs, which should be included according
+                  to the trial summary code table below if and only if TSVAL is null.
                 Document: IG v3.1.1
                 Item: Specification
                 Section: 7.6.1.1
@@ -35,9 +36,9 @@ Authorities:
       - Name: SENDIG-GENETOX
         References:
           - Citations:
-              - Cited Guidance: Null flavor for the value of the TSPARMs, which should be
-                  included according to the trial summary code table below if
-                  and only if TSVAL is null.
+              - Cited Guidance:
+                  Null flavor for the value of the TSPARMs, which should be included according
+                  to the trial summary code table below if and only if TSVAL is null.
                 Document: IG v3.1.1
                 Item: Specification
                 Section: 7.6.1.1
@@ -50,9 +51,9 @@ Authorities:
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance: Null flavor for the value of the TSPARMs, which should be
-                  included according to the trial summary code table below if
-                  and only if TSVAL is null.
+              - Cited Guidance:
+                  Null flavor for the value of the TSPARMs, which should be included according
+                  to the trial summary code table below if and only if TSVAL is null.
                 Document: IG v3.1
                 Item: Specification
                 Section: 7.6.1.1
@@ -65,9 +66,9 @@ Authorities:
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance: Null flavor for the value of the TSPARMs, which should be
-                  included according to the trial summary code table below if
-                  and only if TSVAL is null.
+              - Cited Guidance:
+                  Null flavor for the value of the TSPARMs, which should be included according
+                  to the trial summary code table below if and only if TSVAL is null.
                 Document: IG v3.1.1
                 Item: Specification
                 Section: 7.6.1.1
@@ -80,9 +81,9 @@ Authorities:
       - Name: TIG
         References:
           - Citations:
-              - Cited Guidance: Null flavor for the value of the TSPARMs, which should be
-                  included according to the trial summary code table below if
-                  and only if TSVAL is null.
+              - Cited Guidance:
+                  Null flavor for the value of the TSPARMs, which should be included according
+                  to the trial summary code table below if and only if TSVAL is null.
                 Document: TIG v1.0
                 Item: TSVALNF CDISC Notes
                 Section: 2.8.9.32
@@ -94,7 +95,7 @@ Authorities:
         Substandard: SEND
         Version: "1.0"
 Check:
-  # 2024-11-19: after discussion with SEND team, also raise an error 
+  # 2024-11-19: after discussion with SEND team, also raise an error
   # when NONE of TSVAL and TSVALNF are populated
   any:
     - all:
@@ -111,8 +112,8 @@ Core:
   Id: CORE-000583
   Status: Published
   Version: "1"
-Description: Either TSVAL or TSVALNF is populated, but not both. Trigger error
-  when TSVAL and TSVALNF are populated, or when both variables are empty.
+Description: Either TSVAL or TSVALNF is populated, but not both. Trigger error when TSVAL and
+  TSVALNF are populated, or when both variables are empty.
 Executability: Fully Executable
 Outcome:
   Message: Either both TSVALNF and TSVAL are populated, or both are empty.

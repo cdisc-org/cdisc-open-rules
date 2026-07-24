@@ -4,15 +4,16 @@ Authorities:
       - Name: USDM
         References:
           - Citations:
-              - Cited Guidance: 'If a strength numerator range is specified, both the minValue
-                  and maxValue must have a unit.'
-                Document: 'USDM_CORE_Rules.xlsx'
-            Origin: 'USDM Conformance Rules'
+              - Cited Guidance:
+                  "If a strength numerator range is specified, both the minValue and maxValue must
+                  have a unit."
+                Document: "USDM_CORE_Rules.xlsx"
+            Origin: "USDM Conformance Rules"
             Rule Identifier:
-              Id: 'DDF00239'
-              Version: '1'
-            Version: '1.0'
-        Version: '4.0'
+              Id: "DDF00239"
+              Version: "1"
+            Version: "1.0"
+        Version: "4.0"
 Check: |-
   (study.versions)@$sv.
     $sv.administrableProducts@$ap.
@@ -36,15 +37,15 @@ Check: |-
             }
         )][check=true]
 Core:
-  Id: 'CORE-001008'
+  Id: "CORE-001008"
   Status: Published
-  Version: '1'
-Description: 'If a strength numerator range is specified, both the minValue and
-  maxValue must have a unit.'
+  Version: "1"
+Description: "If a strength numerator range is specified, both the minValue and maxValue must have a unit."
 Executability: Fully Executable
 Outcome:
-  Message: 'The strength numerator range is specified but the minValue and/or
-    maxValue does not have a unit.'
+  Message:
+    "The strength numerator range is specified but the minValue and/or maxValue does not have a
+    unit."
   Output Variables:
     - AdministrableProduct.id
     - AdministrableProduct.name
@@ -58,5 +59,5 @@ Rule Type: JSONata
 Scope:
   Entities:
     Include:
-      - 'Strength'
+      - "Strength"
 Sensitivity: Record

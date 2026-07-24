@@ -4,41 +4,44 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: Variables with controlled terminology should follow the case
-                  sensitivity of the Controlled Terminology List
+              - Cited Guidance:
+                  Variables with controlled terminology should follow the case sensitivity of
+                  the Controlled Terminology List
                 Document: IG v3.0
                 Section: 4.2.4
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND40
-              Version: '1'
-            Version: '5.0'
-        Version: '3.0'
+              Version: "1"
+            Version: "5.0"
+        Version: "3.0"
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: 'Variables with controlled terminology should follow the case
-                  sensitivity of the Controlled Terminology List '
+              - Cited Guidance:
+                  "Variables with controlled terminology should follow the case sensitivity of the
+                  Controlled Terminology List "
                 Document: IG v3.1
                 Section: 4.2.4
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND40
-              Version: '1'
-            Version: '5.0'
-        Version: '3.1'
+              Version: "1"
+            Version: "5.0"
+        Version: "3.1"
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: 'Variables with controlled terminology should follow the case
-                  sensitivity of the Controlled Terminology List '
+              - Cited Guidance:
+                  "Variables with controlled terminology should follow the case sensitivity of the
+                  Controlled Terminology List "
                 Document: IG v3.1.1
                 Section: 4.2.4
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND40
-              Version: '1'
-            Version: '5.0'
+              Version: "1"
+            Version: "5.0"
         Version: 3.1.1
 Check:
   all:
@@ -56,14 +59,15 @@ Check:
     #codelistcheck: value # can be "value" or "code"
     #codelistlevel: term # can be "term" or "codelist"
     - name: LBTESTCD # name: variable_name
-      operator: does_not_use_valid_codelist_terms
-      # Next line must become a lookup in the IG
+      operator:
+        does_not_use_valid_codelist_terms
+        # Next line must become a lookup in the IG
       value: LBTESTCD # means terms of LBTESTCD codelist - TODO: replace by lookup for corresponding codelist
 Core:
   Id: CDISC.SENDIG.40
   Status: Draft
-  Version: '1'
-Description: ''
+  Version: "1"
+Description: ""
 Executability: Fully Executable
 Outcome:
   Message: Variable does not use valid codelist terms

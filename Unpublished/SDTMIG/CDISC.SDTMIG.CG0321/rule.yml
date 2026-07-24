@@ -5,45 +5,45 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: This section describes the overall process for creating a custom
-                  domain, which must be based on one of the three SDTM general
-                  observation classes.
+              - Cited Guidance:
+                  This section describes the overall process for creating a custom domain,
+                  which must be based on one of the three SDTM general observation classes.
                 Document: IG v3.4
-                Section: '2.6'
+                Section: "2.6"
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0321
-              Version: '1'
-            Version: '2.0'
-        Version: '3.4'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.4"
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: This section describes the overall process for creating a custom
-                  domain, which must be based on one of the three SDTM general
-                  observation classes.
+              - Cited Guidance:
+                  This section describes the overall process for creating a custom domain,
+                  which must be based on one of the three SDTM general observation classes.
                 Document: IG v3.2
-                Section: '2.6'
+                Section: "2.6"
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0321
-              Version: '1'
-            Version: '2.0'
-        Version: '3.2'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.2"
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: This section describes the overall process for creating a custom
-                  domain, which must be based on one of the three SDTM general
-                  observation classes.
+              - Cited Guidance:
+                  This section describes the overall process for creating a custom domain,
+                  which must be based on one of the three SDTM general observation classes.
                 Document: IG v3.3
-                Section: '2.6'
+                Section: "2.6"
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0321
-              Version: '1'
-            Version: '2.0'
-        Version: '3.3'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.3"
 # Variable: GEN
 # Condition: Custom domain present in study
 # Rule: Custom domain is based on one of the observation classes
@@ -79,28 +79,29 @@ Check:
 Core:
   Id: CDISC.SDTMIG.CG0321
   Status: Draft
-  Version: '1'
-Description: Trigger error when a custom domain is present and is not based on
-  one of the observation classes
+  Version: "1"
+Description: Trigger error when a custom domain is present and is not based on one of the
+  observation classes
 Executability: Fully Executable
 Operations:
   - id: $custom_domain
     operator: domain_is_custom
   - id: $dataset_variables
-    operator: get_column_order_from_dataset
-  # - id: $model_filtered_variables`
-  #   key_name: "role"
-  #   key_value: "Identifier"
-  #   operation: get_model_filtered_variables`
+    operator:
+      get_column_order_from_dataset
+      # - id: $model_filtered_variables`
+      #   key_name: "role"
+      #   key_value: "Identifier"
+      #   operation: get_model_filtered_variables`
 Outcome:
   Message: Custom domain is not based on one of the observation classes
   Output Variables:
     - dataset_name
     - $dataset_variables
     - $custom_domain
-    # - define_dataset_name
-    # - define_dataset_is_non_standard
-    # - define_dataset_class
+      # - define_dataset_name
+      # - define_dataset_is_non_standard
+      # - define_dataset_class
 Rule Type: Dataset Metadata Check
 Scope:
   Classes:
@@ -110,5 +111,4 @@ Scope:
     Include:
       - ALL
 Sensitivity: Dataset
-
 # Document End

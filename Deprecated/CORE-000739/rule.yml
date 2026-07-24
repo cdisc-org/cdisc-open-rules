@@ -7,7 +7,8 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: The EX domain is required for all studies that include
+              - Cited Guidance:
+                  The EX domain is required for all studies that include
                   protocol-specified study treatment.
                 Document: IG v3.4
                 Item: Assumption 1c
@@ -15,26 +16,28 @@ Authorities:
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0407
-              Version: '1'
-            Version: '2.0'
-        Version: '3.4'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.4"
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: The EX domain is required for all studies that include
+              - Cited Guidance:
+                  The EX domain is required for all studies that include
                   protocol-specified study treatment.
                 Document: IG v3.2
-                Section: '6.1'
+                Section: "6.1"
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0407
-              Version: '1'
-            Version: '2.0'
-        Version: '3.2'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.2"
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: The EX domain is required for all studies that include
+              - Cited Guidance:
+                  The EX domain is required for all studies that include
                   protocol-specified study treatment.
                 Document: IG v3.3
                 Item: Assumption 1.c
@@ -42,9 +45,9 @@ Authorities:
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0407
-              Version: '1'
-            Version: '2.0'
-        Version: '3.3'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.3"
 Check:
   all:
     - name: EX
@@ -52,12 +55,13 @@ Check:
 Core:
   Id: CORE-000739
   Status: Published
-  Version: '1'
+  Version: "1"
 Description: Trigger error when study includes protocol-specified study
   treatment and EX is not present
 Executability: Fully Executable
 Outcome:
-  Message: EX is not present in study when study includes protocol-specified study
+  Message:
+    EX is not present in study when study includes protocol-specified study
     treatment
 Rule Type: Domain Presence Check
 Scope:

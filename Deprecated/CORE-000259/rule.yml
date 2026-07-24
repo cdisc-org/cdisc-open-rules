@@ -7,7 +7,8 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Subject Status does not contain details about the circumstances
+              - Cited Guidance:
+                  Subject Status does not contain details about the circumstances
                   of a subject's status. The response to the status assessment
                   may trigger collection of additional details, but those
                   details are to be stored in appropriate separate domains. For
@@ -21,13 +22,14 @@ Authorities:
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0171
-              Version: '1'
-            Version: '2.0'
-        Version: '3.4'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.4"
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Subject Status does not contain details about the circumstances
+              - Cited Guidance:
+                  Subject Status does not contain details about the circumstances
                   of a subject's status. The response to the status assessment
                   may trigger collection of additional details but those details
                   are to be stored in appropriate separate domains. For example,
@@ -41,13 +43,14 @@ Authorities:
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0171
-              Version: '1'
-            Version: '2.0'
-        Version: '3.3'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.3"
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Subject Status does not contain details about the circumstances
+              - Cited Guidance:
+                  Subject Status does not contain details about the circumstances
                   of a subject's status. The response to the status assessment
                   may trigger collection of additional details but those details
                   are to be stored in appropriate separate domains. For example,
@@ -61,51 +64,54 @@ Authorities:
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0171
-              Version: '1'
-            Version: '2.0'
-        Version: '3.2'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.2"
   #CG0171 is identical to rule FB0613. Added metadata for FB0613 on 2025-01-20
   - Organization: FDA
     Standards:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: All death information should be populated for subjects that died
+              - Cited Guidance:
+                  All death information should be populated for subjects that died
                   during the study including any post treatment follow-up.
                 Document: FDA
                 Section: FDAB006
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB0613
-              Version: '1'
-            Version: '1.5'
-        Version: '3.2'
+              Version: "1"
+            Version: "1.5"
+        Version: "3.2"
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: All death information should be populated for subjects that died
+              - Cited Guidance:
+                  All death information should be populated for subjects that died
                   during the study including any post treatment follow-up.
                 Document: FDA
                 Section: FDAB006
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB0613
-              Version: '1'
-            Version: '1.5'
-        Version: '3.3'
+              Version: "1"
+            Version: "1.5"
+        Version: "3.3"
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: All death information should be populated for subjects that died
+              - Cited Guidance:
+                  All death information should be populated for subjects that died
                   during the study including any post treatment follow-up.
                 Document: FDA
                 Section: FDAB006
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB0613
-              Version: '1'
-            Version: '1.5'
-        Version: '3.4'
+              Version: "1"
+            Version: "1.5"
+        Version: "3.4"
 Check:
   all:
     - name: SSSTRESC
@@ -118,7 +124,7 @@ Check:
 Core:
   Id: CORE-000259
   Status: Published
-  Version: '1'
+  Version: "1"
 Description: Date/time of collection of subject status in SS dataset where
   survival status (SSSTRESC) = 'DEAD' should be equal to or after the Date/Time
   of Death (DTHDTC) in the DM dataset for the corresponding subject. #Message has been updated as per the FDA Business Rules Spreadsheet.
@@ -128,7 +134,8 @@ Match Datasets:
       - USUBJID
     Name: DM
 Outcome:
-  Message: SSDTC in SS dataset where SSTRESC = 'DEAD' is not equal to or after the
+  Message:
+    SSDTC in SS dataset where SSTRESC = 'DEAD' is not equal to or after the
     DTHDTC in the DM dataset. #Error message has been updated as per the FDA Business Rules Spreadsheet.
   Output Variables:
     - SSSTRESC

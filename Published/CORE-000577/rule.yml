@@ -6,25 +6,25 @@ Authorities:
           - Citations:
               - Cited Guidance: One record per actual Repro Stage per subject
                 Document: IG-DART v1.1
-                Section: '4.1'
+                Section: "4.1"
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND349
-              Version: '1'
-            Version: '5.0'
-        Version: '1.1'
+              Version: "1"
+            Version: "5.0"
+        Version: "1.1"
       - Name: SENDIG-DART
         References:
           - Citations:
               - Cited Guidance: One record per actual Repro Stage per subject
                 Document: IG-DART v1.2
-                Section: '4.1'
+                Section: "4.1"
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND349
-              Version: '1'
-            Version: '5.0'
-        Version: '1.2'
+              Version: "1"
+            Version: "5.0"
+        Version: "1.2"
 
 Check:
   all:
@@ -35,7 +35,7 @@ Check:
 Core:
   Id: CORE-000577
   Status: Published
-  Version: '1'
+  Version: "1"
 Description: Raise an error when RSTGCD is not unique within USUBJID
 Executability: Fully Executable
 Outcome:

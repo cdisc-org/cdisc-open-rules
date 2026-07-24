@@ -4,47 +4,50 @@ Authorities:
       - Name: USDM
         References:
           - Citations:
-              - Cited Guidance: 'A study cell must only reference an epoch that is defined
-                  within the same study design as the study cell.'
-                Document: 'USDM_CORE_Rules.xlsx'
-            Origin: 'USDM Conformance Rules'
+              - Cited Guidance:
+                  "A study cell must only reference an epoch that is defined within the same study
+                  design as the study cell."
+                Document: "USDM_CORE_Rules.xlsx"
+            Origin: "USDM Conformance Rules"
             Rule Identifier:
-              Id: 'DDF00072'
-              Version: '1'
-            Version: '1.0'
-        Version: '3.0'
+              Id: "DDF00072"
+              Version: "1"
+            Version: "1.0"
+        Version: "3.0"
       - Name: USDM
         References:
           - Citations:
-              - Cited Guidance: 'A study cell must only reference an epoch that is defined
-                  within the same study design as the study cell.'
-                Document: 'USDM_CORE_Rules.xlsx'
-            Origin: 'USDM Conformance Rules'
+              - Cited Guidance:
+                  "A study cell must only reference an epoch that is defined within the same study
+                  design as the study cell."
+                Document: "USDM_CORE_Rules.xlsx"
+            Origin: "USDM Conformance Rules"
             Rule Identifier:
-              Id: 'DDF00072'
-              Version: '1'
-            Version: '1.0'
-        Version: '4.0'
+              Id: "DDF00072"
+              Version: "1"
+            Version: "1.0"
+        Version: "4.0"
 Check:
   all:
     - name: instanceType
       operator: equal_to
-      value: 'StudyCell'
+      value: "StudyCell"
     - name: parent_entity
       operator: equal_to
-      value: 'StudyDesign'
+      value: "StudyDesign"
     - name: rel_type
       operator: equal_to
-      value: 'definition'
+      value: "definition"
     - name: parent_id
       operator: not_equal_to
       value: parent_id.StudyEpoch
 Core:
-  Id: 'CORE-000836'
+  Id: "CORE-000836"
   Status: Published
-  Version: '1'
-Description: 'A study cell must only reference an epoch that is defined within
-  the same study design as the study cell.'
+  Version: "1"
+Description:
+  "A study cell must only reference an epoch that is defined within the same study design as
+  the study cell."
 Executability: Fully Executable
 Match Datasets:
   - Keys:
@@ -54,8 +57,9 @@ Match Datasets:
       - rel_type
     Name: StudyEpoch
 Outcome:
-  Message: 'The study cell references an epoch that is not defined within the same
-    study design as the study cell.'
+  Message:
+    "The study cell references an epoch that is not defined within the same study design as the
+    study cell."
   Output Variables:
     - parent_entity
     - parent_id
@@ -67,5 +71,5 @@ Rule Type: Record Data
 Scope:
   Entities:
     Include:
-      - 'StudyCell'
+      - "StudyCell"
 Sensitivity: Record

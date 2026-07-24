@@ -4,22 +4,22 @@ Authorities:
       - Name: USDM
         References:
           - Citations:
-              - Cited Guidance: "A masking role must be specified according to the extensible
-                  masking role (C207414) DDF codelist (e.g. an entry with a code
-                  or decode used from the codelist should be consistent with the
-                  full entry in the codelist)."
-                Document: 'USDM_CORE_Rules.xlsx'
-            Origin: 'USDM Conformance Rules'
+              - Cited Guidance:
+                  "A masking role must be specified according to the extensible masking role (C207414)
+                  DDF codelist (e.g. an entry with a code or decode used from the codelist should be consistent
+                  with the full entry in the codelist)."
+                Document: "USDM_CORE_Rules.xlsx"
+            Origin: "USDM Conformance Rules"
             Rule Identifier:
-              Id: 'DDF00123'
-              Version: '1'
-            Version: '1.0'
-        Version: '3.0'
+              Id: "DDF00123"
+              Version: "1"
+            Version: "1.0"
+        Version: "3.0"
 Check:
   all:
     - name: rel_type
       operator: equal_to
-      value: 'definition'
+      value: "definition"
     - name: role
       operator: exists
     - name: role
@@ -29,7 +29,7 @@ Check:
         all:
           - name: role.codeSystem
             operator: equal_to
-            value: 'http://www.cdisc.org'
+            value: "http://www.cdisc.org"
           - name: role.codeSystemVersion
             operator: is_contained_by
             value: $valid_versions
@@ -71,12 +71,13 @@ Check:
                         operator: equal_to
                         value: $value_for_code
 Core:
-  Id: 'CORE-000920'
+  Id: "CORE-000920"
   Status: Published
-  Version: '1'
-Description: "A masking role must be specified according to the extensible
-  masking role (C207414) DDF codelist (e.g. an entry with a code or decode used
-  from the codelist should be consistent with the full entry in the codelist)."
+  Version: "1"
+Description:
+  "A masking role must be specified according to the extensible masking role (C207414) DDF
+  codelist (e.g. an entry with a code or decode used from the codelist should be consistent with the full
+  entry in the codelist)."
 Executability: Fully Executable
 Operations:
   - id: $codelist_code
@@ -121,12 +122,11 @@ Operations:
     term_value: role.decode
     version: role.codeSystemVersion
 Outcome:
-  Message: 'The masking role is not specified according to the extensible masking
-    role (C207414) DDF codelist - codeSystem is not "http://www.cdisc.org",
-    codeSystemVersion is not a valid terminology package date, and/or the code
-    or decode (either as preferred term or as submission value) is found in the
-    codelist (case insensitive) but the corresponding decode or code does not
-    match the codelist value (case sensitive).'
+  Message:
+    'The masking role is not specified according to the extensible masking role (C207414) DDF codelist
+    - codeSystem is not "http://www.cdisc.org", codeSystemVersion is not a valid terminology package date,
+    and/or the code or decode (either as preferred term or as submission value) is found in the codelist
+    (case insensitive) but the corresponding decode or code does not match the codelist value (case sensitive).'
   Output Variables:
     - parent_entity
     - parent_id
@@ -147,5 +147,5 @@ Rule Type: Record Data
 Scope:
   Entities:
     Include:
-      - 'Masking'
+      - "Masking"
 Sensitivity: Record

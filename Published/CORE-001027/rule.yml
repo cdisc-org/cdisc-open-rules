@@ -4,15 +4,16 @@ Authorities:
       - Name: USDM
         References:
           - Citations:
-              - Cited Guidance: 'An eligibility criterion item must not be used more than once
-                  within a study design.'
-                Document: 'USDM_CORE_Rules.xlsx'
-            Origin: 'USDM Conformance Rules'
+              - Cited Guidance:
+                  "An eligibility criterion item must not be used more than once within a study
+                  design."
+                Document: "USDM_CORE_Rules.xlsx"
+            Origin: "USDM Conformance Rules"
             Rule Identifier:
-              Id: 'DDF00248'
-              Version: '1'
-            Version: '1.0'
-        Version: '4.0'
+              Id: "DDF00248"
+              Version: "1"
+            Version: "1.0"
+        Version: "4.0"
 Check: |-
   study.versions.studyDesigns@$sd.
     (
@@ -32,15 +33,13 @@ Check: |-
         }{group:$count(details)>1?details}
     ).*
 Core:
-  Id: 'CORE-001027'
+  Id: "CORE-001027"
   Status: Published
-  Version: '1'
-Description: 'An eligibility criterion item must not be used more than once
-  within a study design.'
+  Version: "1"
+Description: "An eligibility criterion item must not be used more than once within a study design."
 Executability: Fully Executable
 Outcome:
-  Message: "The eligibility criterion item is used more than once within the study
-    design."
+  Message: "The eligibility criterion item is used more than once within the study design."
   Output Variables:
     - StudyDesign.id
     - StudyDesign.name
@@ -50,5 +49,5 @@ Rule Type: JSONata
 Scope:
   Entities:
     Include:
-      - 'EligibilityCriterion'
+      - "EligibilityCriterion"
 Sensitivity: Record

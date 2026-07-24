@@ -4,24 +4,24 @@ Authorities:
       - Name: USDM
         References:
           - Citations:
-              - Cited Guidance: 'Date values associated to a study protocol document version
-                  must be unique regarding the combination of type and
-                  geographic scopes of the date.'
-                Document: 'USDM_CORE_Rules.xlsx'
-            Origin: 'USDM Conformance Rules'
+              - Cited Guidance:
+                  "Date values associated to a study protocol document version must be unique regarding
+                  the combination of type and geographic scopes of the date."
+                Document: "USDM_CORE_Rules.xlsx"
+            Origin: "USDM Conformance Rules"
             Rule Identifier:
-              Id: 'DDF00092'
-              Version: '1'
-            Version: '1.0'
-        Version: '3.0'
+              Id: "DDF00092"
+              Version: "1"
+            Version: "1.0"
+        Version: "3.0"
 Check:
   all:
     - name: instanceType
       operator: equal_to
-      value: 'StudyProtocolDocumentVersion'
+      value: "StudyProtocolDocumentVersion"
     - name: rel_type
       operator: equal_to
-      value: 'definition'
+      value: "definition"
     - any:
         - all:
             - name: code.standardCode.code
@@ -41,12 +41,12 @@ Check:
                 - type.code
                 - type.code.GeographicScope
 Core:
-  Id: 'CORE-000872'
+  Id: "CORE-000872"
   Status: Published
-  Version: '1'
-Description: 'Date values associated to a study protocol document version must
-  be unique regarding the combination of type and geographic scopes of the
-  date.'
+  Version: "1"
+Description:
+  "Date values associated to a study protocol document version must be unique regarding the
+  combination of type and geographic scopes of the date."
 Executability: Fully Executable
 Match Datasets:
   - Keys:
@@ -60,8 +60,9 @@ Match Datasets:
       - rel_type
     Name: GeographicScope
 Outcome:
-  Message: 'The study protocol document version has more than one governance date
-    with the same type and geographic scope.'
+  Message:
+    "The study protocol document version has more than one governance date with the same type and
+    geographic scope."
   Output Variables:
     - parent_entity
     - parent_id
@@ -81,5 +82,5 @@ Rule Type: Record Data
 Scope:
   Entities:
     Include:
-      - 'StudyProtocolDocumentVersion'
+      - "StudyProtocolDocumentVersion"
 Sensitivity: Record

@@ -4,15 +4,16 @@ Authorities:
       - Name: USDM
         References:
           - Citations:
-              - Cited Guidance: 'Any parameter name referenced in a tag in the text should be
-                  specified in the data dictionary parameter maps.'
-                Document: 'USDM_CORE_Rules.xlsx'
-            Origin: 'USDM Conformance Rules'
+              - Cited Guidance:
+                  "Any parameter name referenced in a tag in the text should be specified in the
+                  data dictionary parameter maps."
+                Document: "USDM_CORE_Rules.xlsx"
+            Origin: "USDM Conformance Rules"
             Rule Identifier:
-              Id: 'DDF00089'
-              Version: '1'
-            Version: '1.0'
-        Version: '3.0'
+              Id: "DDF00089"
+              Version: "1"
+            Version: "1.0"
+        Version: "3.0"
 Check: |-
   **.study.versions@$sv.
     ($sv.studyDesigns)@$sd.($sd.**[$type(text)="string" and $contains(text,/usdm:tag/)])@$st.
@@ -45,17 +46,18 @@ Check: |-
           }
       )
 Core:
-  Id: 'CORE-001037'
+  Id: "CORE-001037"
   Status: Published
-  Version: '1'
-Description: 'Any parameter name referenced in a tag in the text should be
-  specified in the data dictionary parameter maps.'
+  Version: "1"
+Description:
+  "Any parameter name referenced in a tag in the text should be specified in the data dictionary
+  parameter maps."
 Executability: Fully Executable
 Outcome:
-  Message: "The parameter name referenced in the text is not specified in the data
-    dictionary parameter map - the dictionaryId is missing or invalid, or the
-    parameter name does not match a tag in any of the dictionary's parameter
-    maps."
+  Message:
+    "The parameter name referenced in the text is not specified in the data dictionary parameter
+    map - the dictionaryId is missing or invalid, or the parameter name does not match a tag in any of
+    the dictionary's parameter maps."
   Output Variables:
     - name
     - Parameter reference
@@ -67,9 +69,9 @@ Rule Type: JSONata
 Scope:
   Entities:
     Include:
-      - 'EligibilityCriterion'
-      - 'Characteristic'
-      - 'Condition'
-      - 'Objective'
-      - 'Endpoint'
+      - "EligibilityCriterion"
+      - "Characteristic"
+      - "Condition"
+      - "Objective"
+      - "Endpoint"
 Sensitivity: Record

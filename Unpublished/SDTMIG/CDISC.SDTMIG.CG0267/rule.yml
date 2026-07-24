@@ -14,22 +14,22 @@ Authorities:
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0267
-              Version: '1'
-            Version: '2.0'
-        Version: '3.4'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.4"
       - Name: SDTMIG
         References:
           - Citations:
               - Cited Guidance: The version number of the Reference Terminology, if applicable.
                 Document: IG v3.2
                 Item: Specification
-                Section: '7.4'
+                Section: "7.4"
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0267
-              Version: '1'
-            Version: '2.0'
-        Version: '3.2'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.2"
       - Name: SDTMIG
         References:
           - Citations:
@@ -40,15 +40,15 @@ Authorities:
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0267
-              Version: '1'
-            Version: '2.0'
-        Version: '3.3'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.3"
 Check:
   all:
 Core:
   Id: CDISC.SDTMIG.CG0267
   Status: Draft
-  Version: '1'
+  Version: "1"
 Description: Trigger error when Reference Terminology is versioned and TSVCDVER is null
 Executability: Not Executable
 Outcome:

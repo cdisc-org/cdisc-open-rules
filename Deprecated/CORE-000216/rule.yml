@@ -5,35 +5,37 @@ Authorities:
   - Organization: CDISC
     Standards:
       - Name: SDTMIG
-        Version: '3.4'
+        Version: "3.4"
         References:
           - Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0545
-              Version: '1'
-            Version: '2.0'
+              Version: "1"
+            Version: "2.0"
             Citations:
-              - Cited Guidance: For Disease Milestones that can occur only once (TMRPT = "N")
+              - Cited Guidance:
+                  For Disease Milestones that can occur only once (TMRPT = "N")
                   the value of MIDS may be the value in MIDSTYPE or may an
                   abbreviated version.
                 Document: IG v3.4
                 Item: Assumption 2.a
-                Section: '5.4'
+                Section: "5.4"
       - Name: SDTMIG
-        Version: '3.3'
+        Version: "3.3"
         References:
           - Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0545
-              Version: '1'
-            Version: '2.0'
+              Version: "1"
+            Version: "2.0"
             Citations:
-              - Cited Guidance: For Disease Milestones that can occur only once (TMRPT = "N")
+              - Cited Guidance:
+                  For Disease Milestones that can occur only once (TMRPT = "N")
                   the value of MIDS may be the value in MIDSTYPE or may an
                   abbreviated version.
                 Document: IG v3.4
                 Item: Assumption 2.a
-                Section: '5.5'
+                Section: "5.5"
 Check:
   all:
     - name: MIDSTYPE
@@ -48,7 +50,7 @@ Check:
 Core:
   Id: CORE-000216
   Status: Published
-  Version: '1'
+  Version: "1"
 Description: MIDSTYPE must be unique within subject when MIDSTYPE = TM.MIDSTYPE
   and TM.TMRPT = 'N'
 Executability: Fully Executable

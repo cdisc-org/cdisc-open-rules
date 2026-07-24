@@ -7,133 +7,123 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Study start and end date/time should include month, day, and
-                  year.
+              - Cited Guidance: Study start and end date/time should include month, day, and year.
                 Document: FDA
                 Section: FDAB034
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB3404
-              Version: '1'
-            Version: '1.5'
-        Version: '3.2'
+              Version: "1"
+            Version: "1.5"
+        Version: "3.2"
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Study start and end date/time should include month, day, and
-                  year.
+              - Cited Guidance: Study start and end date/time should include month, day, and year.
                 Document: FDA
                 Section: FDAB034
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB3404
-              Version: '1'
-            Version: '1.5'
-        Version: '3.3'
+              Version: "1"
+            Version: "1.5"
+        Version: "3.3"
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Study start and end date/time should include month, day, and
-                  year.
+              - Cited Guidance: Study start and end date/time should include month, day, and year.
                 Document: FDA
                 Section: FDAB034
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB3404
-              Version: '1'
-            Version: '1.5'
-        Version: '3.4'
+              Version: "1"
+            Version: "1.5"
+        Version: "3.4"
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: Study start and end date/time should include month, day, and
-                  year.
+              - Cited Guidance: Study start and end date/time should include month, day, and year.
                 Document: FDA
                 Section: FDAB034
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB3404
-              Version: '1'
-            Version: '1.5'
-        Version: '3.0'
+              Version: "1"
+            Version: "1.5"
+        Version: "3.0"
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: Study start and end date/time should include month, day, and
-                  year.
+              - Cited Guidance: Study start and end date/time should include month, day, and year.
                 Document: FDA
                 Section: FDAB034
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB3404
-              Version: '1'
-            Version: '1.5'
-        Version: '3.1'
+              Version: "1"
+            Version: "1.5"
+        Version: "3.1"
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: Study start and end date/time should include month, day, and
-                  year.
+              - Cited Guidance: Study start and end date/time should include month, day, and year.
                 Document: FDA
                 Section: FDAB034
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB3404
-              Version: '1'
-            Version: '1.5'
-        Version: '3.1.1'
+              Version: "1"
+            Version: "1.5"
+        Version: "3.1.1"
       - Name: SENDIG-GENETOX
         References:
           - Citations:
-              - Cited Guidance: Study start and end date/time should include month, day, and
-                  year.
+              - Cited Guidance: Study start and end date/time should include month, day, and year.
                 Document: FDA
                 Section: FDAB034
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB3404
-              Version: '1'
-            Version: '1.5'
-        Version: '1.0'
+              Version: "1"
+            Version: "1.5"
+        Version: "1.0"
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance: Study start and end date/time should include month, day, and
-                  year.
+              - Cited Guidance: Study start and end date/time should include month, day, and year.
                 Document: FDA
                 Section: FDAB034
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB3404
-              Version: '1'
-            Version: '1.5'
-        Version: '1.1'
+              Version: "1"
+            Version: "1.5"
+        Version: "1.1"
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance: Study start and end date/time should include month, day, and
-                  year.
+              - Cited Guidance: Study start and end date/time should include month, day, and year.
                 Document: FDA
                 Section: FDAB034
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB3404
-              Version: '1'
-            Version: '1.5'
-        Version: '1.2'
+              Version: "1"
+            Version: "1.5"
+        Version: "1.2"
       - Name: SENDIG-AR
         References:
           - Citations:
-              - Cited Guidance: Study start and end date/time should include month, day, and
-                  year.
+              - Cited Guidance: Study start and end date/time should include month, day, and year.
                 Document: FDA
                 Section: FDAB034
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB3404
-              Version: '1'
-            Version: '1.5'
-        Version: '1.0'
+              Version: "1"
+            Version: "1.5"
+        Version: "1.0"
 Check:
   all:
     - name: RFSTDTC
@@ -146,9 +136,9 @@ Check:
 Core:
   Id: CORE-000711
   Status: Published
-  Version: '1'
-Description: Subject Reference Start Date/Time (RFSTDTC) should be prior or
-  equal to the Subject Reference End Date/Time (RFENDTC).
+  Version: "1"
+Description: Subject Reference Start Date/Time (RFSTDTC) should be prior or equal to the Subject
+  Reference End Date/Time (RFENDTC).
 Executability: Fully Executable
 Outcome:
   Message: RFSTDTC falls after RFENDTC.

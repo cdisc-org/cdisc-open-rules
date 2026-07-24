@@ -4,8 +4,9 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: TXPARMCD Short character value for the Trial Set parameter
-                  described in TXPARM.  Maximum 8 characters.
+              - Cited Guidance:
+                  TXPARMCD Short character value for the Trial Set parameter described in
+                  TXPARM.  Maximum 8 characters.
                 Document: IG v3.0
                 Item: Specification
                 Section: 7.4.1
@@ -18,8 +19,9 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: TXPARMCD Short character value for the Trial Set parameter
-                  described in TXPARM.  Maximum 8 characters.
+              - Cited Guidance:
+                  TXPARMCD Short character value for the Trial Set parameter described in
+                  TXPARM.  Maximum 8 characters.
                 Document: IG v3.1
                 Item: Specification
                 Section: 7.4.1
@@ -32,8 +34,9 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: TXPARMCD Short character value for the Trial Set parameter
-                  described in TXPARM.  Maximum 8 characters.
+              - Cited Guidance:
+                  TXPARMCD Short character value for the Trial Set parameter described in
+                  TXPARM.  Maximum 8 characters.
                 Document: IG v3.1.1
                 Item: Specification
                 Section: 7.4.1
@@ -46,8 +49,9 @@ Authorities:
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance: TXPARMCD Short character value for the Trial Set parameter
-                  described in TXPARM.  Maximum 8 characters.
+              - Cited Guidance:
+                  TXPARMCD Short character value for the Trial Set parameter described in
+                  TXPARM.  Maximum 8 characters.
                 Document: IG v3.1
                 Item: Specification
                 Section: 7.4.1
@@ -60,8 +64,9 @@ Authorities:
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance: TXPARMCD Short character value for the Trial Set parameter
-                  described in TXPARM.  Maximum 8 characters.
+              - Cited Guidance:
+                  TXPARMCD Short character value for the Trial Set parameter described in
+                  TXPARM.  Maximum 8 characters.
                 Document: IG v3.1.1
                 Item: Specification
                 Section: 7.4.1
@@ -74,8 +79,9 @@ Authorities:
       - Name: SENDIG-GENETOX
         References:
           - Citations:
-              - Cited Guidance: TXPARMCD Short character value for the Trial Set parameter
-                  described in TXPARM.  Maximum 8 characters.
+              - Cited Guidance:
+                  TXPARMCD Short character value for the Trial Set parameter described in
+                  TXPARM.  Maximum 8 characters.
                 Document: IG v3.1.1
                 Item: Specification
                 Section: 7.4.1
@@ -88,8 +94,9 @@ Authorities:
       - Name: TIG
         References:
           - Citations:
-              - Cited Guidance: Short character value for the Trial Set parameter described in
-                  TXPARM.  Maximum 8 characters.
+              - Cited Guidance:
+                  Short character value for the Trial Set parameter described in TXPARM.
+                  Maximum 8 characters.
                 Document: TIG v1.0
                 Item: TXPARMCD CDISC Notes
                 Section: 2.8.9.28
@@ -109,8 +116,8 @@ Core:
   Id: CORE-000432
   Status: Published
   Version: "1"
-Description: TXPARMCD Short character value for the Trial Set parameter
-  described in TXPARM.  Maximum 8 characters.
+Description: TXPARMCD Short character value for the Trial Set parameter described in TXPARM. Maximum
+  8 characters.
 Executability: Fully Executable
 Outcome:
   Message: TXPARMCD value has more than 8 characters

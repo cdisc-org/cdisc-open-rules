@@ -4,28 +4,29 @@ Authorities:
       - Name: USDM
         References:
           - Citations:
-              - Cited Guidance: 'A unit must not be specified for a planned enrollment number or
-                  a planned completion number.'
-                Document: 'USDM_CORE_Rules.xlsx'
-            Origin: 'USDM Conformance Rules'
+              - Cited Guidance:
+                  "A unit must not be specified for a planned enrollment number or a planned completion
+                  number."
+                Document: "USDM_CORE_Rules.xlsx"
+            Origin: "USDM Conformance Rules"
             Rule Identifier:
-              Id: 'DDF00043'
-              Version: '1'
-            Version: '1.0'
-        Version: '3.0'
+              Id: "DDF00043"
+              Version: "1"
+            Version: "1.0"
+        Version: "3.0"
 Check:
   all:
     - name: instanceType
       operator: equal_to
-      value: 'Range'
+      value: "Range"
     - name: rel_type
       operator: equal_to
-      value: 'definition'
+      value: "definition"
     - name: parent_rel
       operator: is_contained_by
       value:
-        - 'plannedCompletionNumber'
-        - 'plannedEnrollmentNumber'
+        - "plannedCompletionNumber"
+        - "plannedEnrollmentNumber"
     - not:
         any:
           - name: unit
@@ -36,15 +37,13 @@ Check:
           - name: unit
             operator: not_exists
 Core:
-  Id: 'CORE-000680'
+  Id: "CORE-000680"
   Status: Published
-  Version: '1'
-Description: 'A unit must not be specified for a planned enrollment number or a
-  planned completion number.'
+  Version: "1"
+Description: "A unit must not be specified for a planned enrollment number or a planned completion number."
 Executability: Fully Executable
 Outcome:
-  Message: 'A unit is specified for a planned enrollment number or a planned
-    completion number.'
+  Message: "A unit is specified for a planned enrollment number or a planned completion number."
   Output Variables:
     - parent_entity
     - parent_id

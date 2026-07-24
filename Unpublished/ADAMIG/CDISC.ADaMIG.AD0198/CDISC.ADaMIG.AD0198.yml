@@ -4,26 +4,27 @@ Authorities:
       - Name: ADaMIG-MD
         References:
           - Citations:
-              - Cited Guidance: The MDBDS supports analysis needs by adding SPDEVID as a
+              - Cited Guidance:
+                  The MDBDS supports analysis needs by adding SPDEVID as a
                   required key variable and USUBJID as a conditionally required
                   variable. See the BDS class for further details.
                 Document: ADaMIG-MD v1.0
-                Item: ''
-                Section: '3.1'
+                Item: ""
+                Section: "3.1"
             Criteria:
               Logical Expression:
-                Condition: ''
-                Rule: ''
-              Plain Language Expression: ''
+                Condition: ""
+                Rule: ""
+              Plain Language Expression: ""
               Type: Failure
             Origin: ADaM Conformance Rules
-            Release Notes: ''
+            Release Notes: ""
             Rule Identifier:
-              Id: '198'
-              Version: '2'
-            Validator Rule Message: ''
-            Version: '5.0'
-        Version: '1.0'
+              Id: "198"
+              Version: "2"
+            Validator Rule Message: ""
+            Version: "5.0"
+        Version: "1.0"
       - Name: ADaMIG
         References:
           - Citations:
@@ -33,18 +34,18 @@ Authorities:
                 Section: 3.2.4
             Criteria:
               Logical Expression:
-                Condition: ''
-                Rule: ''
-              Plain Language Expression: ''
+                Condition: ""
+                Rule: ""
+              Plain Language Expression: ""
               Type: Failure
             Origin: ADaM Conformance Rules
-            Release Notes: ''
+            Release Notes: ""
             Rule Identifier:
-              Id: '198'
-              Version: ''
-            Validator Rule Message: ''
-            Version: '5.0'
-        Version: '1.0'
+              Id: "198"
+              Version: ""
+            Validator Rule Message: ""
+            Version: "5.0"
+        Version: "1.0"
       - Name: ADaMIG
         References:
           - Citations:
@@ -54,65 +55,67 @@ Authorities:
                 Section: 3.3.4
             Criteria:
               Logical Expression:
-                Condition: ''
-                Rule: ''
-              Plain Language Expression: ''
+                Condition: ""
+                Rule: ""
+              Plain Language Expression: ""
               Type: Failure
             Origin: ADaM Conformance Rules
-            Release Notes: ''
+            Release Notes: ""
             Rule Identifier:
-              Id: '198'
-              Version: ''
-            Validator Rule Message: ''
-            Version: '5.0'
-        Version: '1.1'
+              Id: "198"
+              Version: ""
+            Validator Rule Message: ""
+            Version: "5.0"
+        Version: "1.1"
       - Name: ADaMIG
         References:
           - Citations:
-              - Cited Guidance: AVALC is required if AVAL is not present, since either AVAL or
+              - Cited Guidance:
+                  AVALC is required if AVAL is not present, since either AVAL or
                   AVALC must be present in the dataset.
                 Document: ADaMIG
                 Item: Table 3.3.4.1.1
                 Section: 3.3.4.1
             Criteria:
               Logical Expression:
-                Condition: ''
-                Rule: ''
-              Plain Language Expression: ''
+                Condition: ""
+                Rule: ""
+              Plain Language Expression: ""
               Type: Failure
             Origin: ADaM Conformance Rules
             #Related Rules:
             #  - Id: ''
             #    Relationship: Predecessor | Related | Successor
-            Release Notes: ''
+            Release Notes: ""
             Rule Identifier:
-              Id: '198'
-              Version: ''
-            Validator Rule Message: ''
-            Version: '5.0'
-        Version: '1.2'
+              Id: "198"
+              Version: ""
+            Validator Rule Message: ""
+            Version: "5.0"
+        Version: "1.2"
       - Name: ADaMIG
         References:
           - Citations:
-              - Cited Guidance: AVALC is required if AVAL is not present, since either AVAL or
+              - Cited Guidance:
+                  AVALC is required if AVAL is not present, since either AVAL or
                   AVALC must be present in the dataset.
                 Document: ADaMIG
                 Item: Table 3.3.4.1.1
                 Section: 3.3.4.1
             Criteria:
               Logical Expression:
-                Condition: ''
-                Rule: ''
-              Plain Language Expression: ''
+                Condition: ""
+                Rule: ""
+              Plain Language Expression: ""
               Type: Failure
             Origin: ADaM Conformance Rules
-            Release Notes: ''
+            Release Notes: ""
             Rule Identifier:
-              Id: '198'
-              Version: ''
-            Validator Rule Message: ''
-            Version: '5.0'
-        Version: '1.3'
+              Id: "198"
+              Version: ""
+            Validator Rule Message: ""
+            Version: "5.0"
+        Version: "1.3"
 Check:
   all:
     - name: AVALC
@@ -122,8 +125,8 @@ Check:
 Core:
   Id: CDISC.ADaMIG.AD0198
   Status: Draft
-  Version: '1'
-Description: ''
+  Version: "1"
+Description: ""
 Executability: Fully Executable
 Outcome:
   Message: AVAL or AVALC must be present in dataset

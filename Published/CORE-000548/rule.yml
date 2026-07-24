@@ -4,13 +4,12 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: Other variables that represent durations or elapsed times
-                  include --EVLINT and --ELTM. These should be represented in
-                  accordance with the ISO 8601 standard. Both duration and
-                  duration units can be represented in a single --DUR variable,
-                  in accordance with the ISO 8601 standard as follows... For the
-                  purposes of data submission, an additional format is allowed
-                  to represent "negative" intervals of time (intervals of time
+              - Cited Guidance:
+                  Other variables that represent durations or elapsed times include --EVLINT
+                  and --ELTM. These should be represented in accordance with the ISO 8601 standard. Both
+                  duration and duration units can be represented in a single --DUR variable, in accordance
+                  with the ISO 8601 standard as follows... For the purposes of data submission, an
+                  additional format is allowed to represent "negative" intervals of time (intervals of time
                   preceding a reference point).
                 Document: IG v3.0
                 Item: Specification
@@ -18,22 +17,20 @@ Authorities:
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND59.1
-              Version: '1'
-            Version: '5.0'
-        Version: '3.0'
+              Version: "1"
+            Version: "5.0"
+        Version: "3.0"
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: Duration is frequently used during a review; however, the
-                  duration timing variable (--DUR) should generally be used in a
-                  domain if it was collected in lieu of a start date/time
-                  (--DTC) and end date/time (--ENDTC). If both --DTC and --ENDTC
-                  are collected, durations can be calculated by the difference
-                  in these two values and need not be in the submission dataset.
-                  Durations and associated units can be provided in a single
-                  variable, in accordance with the ISO 8601 standard as
-                  follows...For the purposes of data submission, an additional
-                  format is allowed to represent "negative" intervals of time
+              - Cited Guidance:
+                  Duration is frequently used during a review; however, the duration timing
+                  variable (--DUR) should generally be used in a domain if it was collected in lieu of a
+                  start date/time (--DTC) and end date/time (--ENDTC). If both --DTC and --ENDTC are
+                  collected, durations can be calculated by the difference in these two values and need not
+                  be in the submission dataset. Durations and associated units can be provided in a single
+                  variable, in accordance with the ISO 8601 standard as follows...For the purposes of data
+                  submission, an additional format is allowed to represent "negative" intervals of time
                   (intervals of time preceding a reference point).
                 Document: IG v3.1
                 Item: Specification
@@ -41,22 +38,20 @@ Authorities:
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND59.1
-              Version: '1'
-            Version: '5.0'
-        Version: '3.1'
+              Version: "1"
+            Version: "5.0"
+        Version: "3.1"
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: Duration is frequently used during a review; however, the
-                  duration timing variable (--DUR) should generally be used in a
-                  domain if it was collected in lieu of a start date/time
-                  (--DTC) and end date/time (--ENDTC). If both --DTC and --ENDTC
-                  are collected, durations can be calculated by the difference
-                  in these two values and need not be in the submission dataset.
-                  Durations and associated units can be provided in a single
-                  variable, in accordance with the ISO 8601 standard as
-                  follows...For the purposes of data submission, an additional
-                  format is allowed to represent "negative" intervals of time
+              - Cited Guidance:
+                  Duration is frequently used during a review; however, the duration timing
+                  variable (--DUR) should generally be used in a domain if it was collected in lieu of a
+                  start date/time (--DTC) and end date/time (--ENDTC). If both --DTC and --ENDTC are
+                  collected, durations can be calculated by the difference in these two values and need not
+                  be in the submission dataset. Durations and associated units can be provided in a single
+                  variable, in accordance with the ISO 8601 standard as follows...For the purposes of data
+                  submission, an additional format is allowed to represent "negative" intervals of time
                   (intervals of time preceding a reference point).
                 Document: IG v3.1.1
                 Item: Specification
@@ -64,22 +59,20 @@ Authorities:
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND59.1
-              Version: '1'
-            Version: '5.0'
+              Version: "1"
+            Version: "5.0"
         Version: 3.1.1
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance: Duration is frequently used during a review; however, the
-                  duration timing variable (--DUR) should generally be used in a
-                  domain if it was collected in lieu of a start date/time
-                  (--DTC) and end date/time (--ENDTC). If both --DTC and --ENDTC
-                  are collected, durations can be calculated by the difference
-                  in these two values and need not be in the submission dataset.
-                  Durations and associated units can be provided in a single
-                  variable, in accordance with the ISO 8601 standard as
-                  follows...For the purposes of data submission, an additional
-                  format is allowed to represent "negative" intervals of time
+              - Cited Guidance:
+                  Duration is frequently used during a review; however, the duration timing
+                  variable (--DUR) should generally be used in a domain if it was collected in lieu of a
+                  start date/time (--DTC) and end date/time (--ENDTC). If both --DTC and --ENDTC are
+                  collected, durations can be calculated by the difference in these two values and need not
+                  be in the submission dataset. Durations and associated units can be provided in a single
+                  variable, in accordance with the ISO 8601 standard as follows...For the purposes of data
+                  submission, an additional format is allowed to represent "negative" intervals of time
                   (intervals of time preceding a reference point).
                 Document: IG v3.1
                 Item: Specification
@@ -87,22 +80,20 @@ Authorities:
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND59.1
-              Version: '1'
-            Version: '5.0'
-        Version: '1.1'
+              Version: "1"
+            Version: "5.0"
+        Version: "1.1"
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance: Duration is frequently used during a review; however, the
-                  duration timing variable (--DUR) should generally be used in a
-                  domain if it was collected in lieu of a start date/time
-                  (--DTC) and end date/time (--ENDTC). If both --DTC and --ENDTC
-                  are collected, durations can be calculated by the difference
-                  in these two values and need not be in the submission dataset.
-                  Durations and associated units can be provided in a single
-                  variable, in accordance with the ISO 8601 standard as
-                  follows...For the purposes of data submission, an additional
-                  format is allowed to represent "negative" intervals of time
+              - Cited Guidance:
+                  Duration is frequently used during a review; however, the duration timing
+                  variable (--DUR) should generally be used in a domain if it was collected in lieu of a
+                  start date/time (--DTC) and end date/time (--ENDTC). If both --DTC and --ENDTC are
+                  collected, durations can be calculated by the difference in these two values and need not
+                  be in the submission dataset. Durations and associated units can be provided in a single
+                  variable, in accordance with the ISO 8601 standard as follows...For the purposes of data
+                  submission, an additional format is allowed to represent "negative" intervals of time
                   (intervals of time preceding a reference point).
                 Document: IG v3.1.1
                 Item: Specification
@@ -110,22 +101,20 @@ Authorities:
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND59.1
-              Version: '1'
-            Version: '5.0'
-        Version: '1.2'
+              Version: "1"
+            Version: "5.0"
+        Version: "1.2"
       - Name: SENDIG-GENETOX
         References:
           - Citations:
-              - Cited Guidance: Duration is frequently used during a review; however, the
-                  duration timing variable (--DUR) should generally be used in a
-                  domain if it was collected in lieu of a start date/time
-                  (--DTC) and end date/time (--ENDTC). If both --DTC and --ENDTC
-                  are collected, durations can be calculated by the difference
-                  in these two values and need not be in the submission dataset.
-                  Durations and associated units can be provided in a single
-                  variable, in accordance with the ISO 8601 standard as
-                  follows...For the purposes of data submission, an additional
-                  format is allowed to represent "negative" intervals of time
+              - Cited Guidance:
+                  Duration is frequently used during a review; however, the duration timing
+                  variable (--DUR) should generally be used in a domain if it was collected in lieu of a
+                  start date/time (--DTC) and end date/time (--ENDTC). If both --DTC and --ENDTC are
+                  collected, durations can be calculated by the difference in these two values and need not
+                  be in the submission dataset. Durations and associated units can be provided in a single
+                  variable, in accordance with the ISO 8601 standard as follows...For the purposes of data
+                  submission, an additional format is allowed to represent "negative" intervals of time
                   (intervals of time preceding a reference point).
                 Document: IG v3.1.1
                 Item: Specification
@@ -133,9 +122,9 @@ Authorities:
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND59.1
-              Version: '1'
-            Version: '5.0'
-        Version: '1.0'
+              Version: "1"
+            Version: "5.0"
+        Version: "1.0"
 Check:
   any:
     - all:
@@ -168,10 +157,9 @@ Check:
 Core:
   Id: CORE-000548
   Status: Published
-  Version: '1'
-Description: --EVLINT, --ELTM, --DUR must be in ISO 8601 duration format,
-  including the additional format that allows the representation of  "negative"
-  intervals of time.
+  Version: "1"
+Description: --EVLINT, --ELTM, --DUR must be in ISO 8601 duration format, including the additional
+  format that allows the representation of  "negative" intervals of time.
 Executability: Fully Executable
 Outcome:
   Message: --DUR, --EVLINT or --ELTM is not in ISO 8601 Duration format

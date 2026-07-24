@@ -7,16 +7,17 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: For interventional studies all treated subjects should have
+              - Cited Guidance:
+                  For interventional studies all treated subjects should have
                   exposure data.
                 Document: FDA
                 Section: FDAB023
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB2305
-              Version: '1'
-            Version: '1.5'
-        Version: '3.2'
+              Version: "1"
+            Version: "1.5"
+        Version: "3.2"
 Check:
   all:
     - name: ACTARMCD
@@ -39,7 +40,7 @@ Check:
 Core:
   Id: CORE-001064
   Status: Published
-  Version: '1'
+  Version: "1"
 Description: All subjects that have no record in the Exposure domain who are
   participating in a study that includes an interventional product should not be
   assigned to a treatment. #needs an update based on update in FDA business rules spreadsheet#

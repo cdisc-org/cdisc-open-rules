@@ -7,47 +7,48 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Events[Variable Qualifer of --LOC.] Interventions[Variable
-                  Qualifer of --LOC.] Findings[Variable Qualifer of --LOC.]
+              - Cited Guidance:
+                  Events[Variable Qualifer of --LOC.] Interventions[Variable Qualifer of
+                  --LOC.] Findings[Variable Qualifer of --LOC.]
                 Document: Model v2.0
                 Item: --PORTOT
                 Section: Events Interventions Findings
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0115
-              Version: '2'
-            Version: '2.0'
-        Version: '3.4'
+              Version: "2"
+            Version: "2.0"
+        Version: "3.4"
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Qualifier for anatomical location further detailing the
-                  distribution, which means arrangement of, apportioning of the
-                  intervention administration.
+              - Cited Guidance:
+                  Qualifier for anatomical location further detailing the distribution, which
+                  means arrangement of, apportioning of the intervention administration.
                 Document: Model v1.4
                 Item: --PORTOT Specification
                 Section: 2.2.2
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0115
-              Version: '2'
-            Version: '2.0'
-        Version: '3.2'
+              Version: "2"
+            Version: "2.0"
+        Version: "3.2"
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Qualifier for anatomical location further detailing the
-                  distribution, which means arrangement of, apportioning of the
-                  intervention administration.
+              - Cited Guidance:
+                  Qualifier for anatomical location further detailing the distribution, which
+                  means arrangement of, apportioning of the intervention administration.
                 Document: Model v1.7
                 Item: --PORTOT Specification
                 Section: 2.2.1
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0115
-              Version: '2'
-            Version: '2.0'
-        Version: '3.3'
+              Version: "2"
+            Version: "2.0"
+        Version: "3.3"
       - Name: TIG
         References:
           - Citations:
@@ -66,10 +67,10 @@ Authorities:
             Origin: TIG Conformance Rules
             Rule Identifier:
               Id: TIG0378
-              Version: '1'
-            Version: '1.0'
+              Version: "1"
+            Version: "1.0"
         Substandard: SDTM
-        Version: '1.0'
+        Version: "1.0"
 Check:
   all:
     - name: --LOC
@@ -79,12 +80,11 @@ Check:
 Core:
   Id: CORE-000096
   Status: Published
-  Version: '1'
+  Version: "1"
 Description: Raise an error when --LOC does not exists in a dataset, --PORTOT exists.
 Executability: Fully Executable
 Outcome:
-  Message: --PORTOT variable is present, when --LOC variable does not exist in a
-    dataset.
+  Message: --PORTOT variable is present, when --LOC variable does not exist in a dataset.
   Output Variables:
     - --LOC
     - --PORTOT

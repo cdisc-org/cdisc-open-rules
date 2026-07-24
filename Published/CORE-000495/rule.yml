@@ -10,9 +10,9 @@ Authorities:
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND175
-              Version: '1'
-            Version: '5.0'
-        Version: '3.0'
+              Version: "1"
+            Version: "5.0"
+        Version: "3.0"
       - Name: SENDIG
         References:
           - Citations:
@@ -22,9 +22,9 @@ Authorities:
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND175
-              Version: '1'
-            Version: '5.0'
-        Version: '3.1'
+              Version: "1"
+            Version: "5.0"
+        Version: "3.1"
       - Name: SENDIG
         References:
           - Citations:
@@ -34,9 +34,9 @@ Authorities:
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND175
-              Version: '1'
-            Version: '5.0'
-        Version: '3.1.1'
+              Version: "1"
+            Version: "5.0"
+        Version: "3.1.1"
       - Name: SENDIG-DART
         References:
           - Citations:
@@ -46,9 +46,9 @@ Authorities:
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND175
-              Version: '1'
-            Version: '5.0'
-        Version: '1.1'
+              Version: "1"
+            Version: "5.0"
+        Version: "1.1"
       - Name: SENDIG-DART
         References:
           - Citations:
@@ -58,9 +58,9 @@ Authorities:
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND175
-              Version: '1'
-            Version: '5.0'
-        Version: '1.2'
+              Version: "1"
+            Version: "5.0"
+        Version: "1.2"
       - Name: SENDIG-GENETOX
         References:
           - Citations:
@@ -70,24 +70,25 @@ Authorities:
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND175
-              Version: '1'
-            Version: '5.0'
-        Version: '1.0'
+              Version: "1"
+            Version: "5.0"
+        Version: "1.0"
       - Name: TIG
         References:
           - Citations:
-              - Cited Guidance: ma.xpt, Macroscopic Findings - Findings. One record per finding
-                  per specimen per subject, Tabulation.
+              - Cited Guidance:
+                  ma.xpt, Macroscopic Findings - Findings. One record per finding per specimen
+                  per subject, Tabulation.
                 Document: TIG v1.0
                 Item: Domain Table Header
                 Section: 2.8.9.15
             Origin: TIG Conformance Rules
             Rule Identifier:
               Id: TIG0104
-              Version: '1'
-            Version: '1.0'
+              Version: "1"
+            Version: "1.0"
         Substandard: SEND
-        Version: '1.0'
+        Version: "1.0"
 Check:
   all:
     - name: MAORRES
@@ -103,10 +104,9 @@ Check:
 Core:
   Id: CORE-000495
   Status: Published
-  Version: '1'
-Description: Raise an error when there is more than one record present for any
-  particular Macroscopic Finding test and result in the MA Domain, within a
-  subject.
+  Version: "1"
+Description: Raise an error when there is more than one record present for any particular
+  Macroscopic Finding test and result in the MA Domain, within a subject.
 Executability: Fully Executable
 Outcome:
   Message: The Macroscopic Finding test result is not unique for this subject and test.

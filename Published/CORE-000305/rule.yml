@@ -12,9 +12,9 @@ Authorities:
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB4005
-              Version: '1'
-            Version: '1.5'
-        Version: '3.2'
+              Version: "1"
+            Version: "1.5"
+        Version: "3.2"
       - Name: SDTMIG
         References:
           - Citations:
@@ -26,9 +26,9 @@ Authorities:
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB4005
-              Version: '1'
-            Version: '1.5'
-        Version: '3.3'
+              Version: "1"
+            Version: "1.5"
+        Version: "3.3"
       - Name: SDTMIG
         References:
           - Citations:
@@ -40,9 +40,9 @@ Authorities:
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB4005
-              Version: '1'
-            Version: '1.5'
-        Version: '3.4'
+              Version: "1"
+            Version: "1.5"
+        Version: "3.4"
       - Name: SENDIG
         References:
           - Citations:
@@ -54,9 +54,9 @@ Authorities:
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB4005
-              Version: '1'
-            Version: '1.5'
-        Version: '3.0'
+              Version: "1"
+            Version: "1.5"
+        Version: "3.0"
       - Name: SENDIG
         References:
           - Citations:
@@ -68,9 +68,9 @@ Authorities:
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB4005
-              Version: '1'
-            Version: '1.5'
-        Version: '3.1'
+              Version: "1"
+            Version: "1.5"
+        Version: "3.1"
       - Name: SENDIG
         References:
           - Citations:
@@ -82,8 +82,8 @@ Authorities:
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB4005
-              Version: '1'
-            Version: '1.5'
+              Version: "1"
+            Version: "1.5"
         Version: 3.1.1
       - Name: SENDIG-GENETOX
         References:
@@ -96,9 +96,9 @@ Authorities:
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB4005
-              Version: '1'
-            Version: '1.5'
-        Version: '1.0'
+              Version: "1"
+            Version: "1.5"
+        Version: "1.0"
       - Name: SENDIG-DART
         References:
           - Citations:
@@ -110,9 +110,9 @@ Authorities:
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB4005
-              Version: '1'
-            Version: '1.5'
-        Version: '1.1'
+              Version: "1"
+            Version: "1.5"
+        Version: "1.1"
       - Name: SENDIG-DART
         References:
           - Citations:
@@ -124,9 +124,9 @@ Authorities:
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB4005
-              Version: '1'
-            Version: '1.5'
-        Version: '1.2'
+              Version: "1"
+            Version: "1.5"
+        Version: "1.2"
       - Name: SENDIG-AR
         References:
           - Citations:
@@ -138,20 +138,20 @@ Authorities:
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB4005
-              Version: '1'
-            Version: '1.5'
-        Version: '1.0'
+              Version: "1"
+            Version: "1.5"
+        Version: "1.0"
 Check:
   all:
     - name: --DUR
       operator: non_empty
     - name: --DUR
       operator: contains
-      value: '-'
+      value: "-"
 Core:
   Id: CORE-000305
   Status: Published
-  Version: '1'
+  Version: "1"
 Description: Collected Duration (--DUR) value should not be negative.
 Executability: Fully Executable
 Outcome:

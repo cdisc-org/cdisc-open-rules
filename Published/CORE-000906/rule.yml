@@ -4,8 +4,9 @@ Authorities:
       - Name: USDM
         References:
           - Citations:
-              - Cited Guidance: "The unit of a planned age is expected to be specified using
-                  terms from the Age Unit (C66781) SDTM codelist."
+              - Cited Guidance:
+                  "The unit of a planned age is expected to be specified using terms from the Age
+                  Unit (C66781) SDTM codelist."
                 Document: "USDM_CORE_Rules.xlsx"
             Origin: "USDM Conformance Rules"
             Rule Identifier:
@@ -70,8 +71,9 @@ Core:
   Id: "CORE-000906"
   Status: Published
   Version: "1"
-Description: "The unit of a planned age is expected to be specified using terms
-  from the Age Unit (C66781) SDTM codelist."
+Description:
+  "The unit of a planned age is expected to be specified using terms from the Age Unit (C66781)
+  SDTM codelist."
 Executability: Partially Executable - Possible Overreporting
 Operations:
   - id: $codelist_code
@@ -116,13 +118,12 @@ Operations:
     term_value: plannedAge.unit.decode
     version: plannedAge.unit.codeSystemVersion
 Outcome:
-  Message: 'The unit of the planned age is not specified using the Age Unit
-    (C66781) SDTM codelist - codeSystem is not "http://www.cdisc.org",
-    codeSystemVersion is not a valid terminology package date, the code or
-    decode (either as preferred term or as submission value) is found in the
-    codelist (case insensitive) but the corresponding decode or code does not
-    match the codelist value (case sensitive), and/or neither code nor decode is
-    found in the codelist.'
+  Message:
+    'The unit of the planned age is not specified using the Age Unit (C66781) SDTM codelist - codeSystem
+    is not "http://www.cdisc.org", codeSystemVersion is not a valid terminology package date, the code
+    or decode (either as preferred term or as submission value) is found in the codelist (case insensitive)
+    but the corresponding decode or code does not match the codelist value (case sensitive), and/or neither
+    code nor decode is found in the codelist.'
   Output Variables:
     - parent_entity
     - parent_id

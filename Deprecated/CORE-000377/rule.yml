@@ -7,17 +7,18 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Values should be "SCRNFAIL" for screen failures and "NOTASSGN"
+              - Cited Guidance:
+                  Values should be "SCRNFAIL" for screen failures and "NOTASSGN"
                   for subjects not assigned to treatment.
                 Document: IG v3.2
                 Item: Specification
-                Section: '5'
+                Section: "5"
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0129
-              Version: '1'
-            Version: '2.0'
-        Version: '3.2'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.2"
 Check:
   all:
     - name: ARMCD
@@ -31,13 +32,13 @@ Check:
 Core:
   Id: CORE-000377
   Status: Published
-  Version: '1'
+  Version: "1"
 Description: 'ARMCD value must match ACTARMCD value in Demographics when ARMCD
   equals "SCRFNFAIL" or "NOTASSGN"'
 Executability: Fully Executable
 Outcome:
-  Message: 'DM.ARMCD must equal DM.ACTARMCD when subject is either a screen
-    failure or not assigned to treatment'
+  Message: "DM.ARMCD must equal DM.ACTARMCD when subject is either a screen
+    failure or not assigned to treatment"
 Rule Type: Record Data
 Scope:
   Classes:

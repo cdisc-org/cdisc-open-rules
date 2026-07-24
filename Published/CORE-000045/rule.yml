@@ -7,53 +7,53 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: With the exception of studies which use multi-stage Arm
-                  assignments, must be a value of ARMCD in the Trial Arms
-                  Dataset. If the subject was not assigned to an Arm, ARMCD is
-                  null and ARMNRS is populated
+              - Cited Guidance:
+                  With the exception of studies which use multi-stage Arm assignments, must be
+                  a value of ARMCD in the Trial Arms Dataset. If the subject was not assigned to an Arm,
+                  ARMCD is null and ARMNRS is populated
                 Document: IG v3.4
                 Item: Specification
-                Section: '5.2'
+                Section: "5.2"
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0517
-              Version: '1'
-            Version: '2.0'
-        Version: '3.4'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.4"
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: With the exception of studies which use multi-stage arm
-                  assignments, must be a value of ARMCD in the Trial Arms
-                  Dataset. If the subject was not assigned to an arm or followed
-                  a course not described by any planned arm, ACTARMCD is null
-                  and ARMNRS is populated.
+              - Cited Guidance:
+                  With the exception of studies which use multi-stage arm assignments, must be
+                  a value of ARMCD in the Trial Arms Dataset. If the subject was not assigned to an arm or
+                  followed a course not described by any planned arm, ACTARMCD is null and ARMNRS is
+                  populated.
                 Document: IG v3.3
                 Item: Specification
-                Section: '5.2'
+                Section: "5.2"
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0517
-              Version: '1'
-            Version: '2.0'
-        Version: '3.3'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.3"
       - Name: TIG
         References:
           - Citations:
-              - Cited Guidance: With the exception of studies which use multi-stage Arm
-                  assignments, must be a value of ARMCD in the Trial Arms
-                  Dataset.  If the subject was not assigned to an Arm, ARMCD is
-                  null and ARMNRS is populated
+              - Cited Guidance:
+                  With the exception of studies which use multi-stage Arm assignments, must be
+                  a value of ARMCD in the Trial Arms Dataset.  If the subject was not assigned to an Arm,
+                  ARMCD is null and ARMNRS is populated
                 Document: TIG 1.0
                 Item: Specification:ARMNRS
                 Section: 2.8.10.4
             Origin: TIG Conformance Rules
             Rule Identifier:
               Id: TIG0612
-              Version: '1'
-            Version: '1.0'
+              Version: "1"
+            Version: "1.0"
         Substandard: SDTM
-        Version: '1.0'
+        Version: "1.0"
 Check:
   all:
     - name: ARMCD
@@ -63,7 +63,7 @@ Check:
 Core:
   Id: CORE-000045
   Status: Published
-  Version: '1'
+  Version: "1"
 Description: Verify ARMNRS is not null when ARMCD is null
 Executability: Fully Executable
 Outcome:

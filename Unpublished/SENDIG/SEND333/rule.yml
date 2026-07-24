@@ -1,59 +1,60 @@
 Authorities:
   # Only applicable to SENDIG-3.1.1, SENDIG-GENETOX-1.0 and SENDIG-DART-1.2
-  - Organization: 'CDISC'
+  - Organization: "CDISC"
     Standards:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: 'For PC records contributing to a single time concentration
-                  profile, the PCNOMDY and PCTPTREF pair must be the same as the
-                  PPNOMDY and PPTPTREF pair for that same profile.'
+              - Cited Guidance:
+                  "For PC records contributing to a single time concentration profile, the PCNOMDY
+                  and PCTPTREF pair must be the same as the PPNOMDY and PPTPTREF pair for that same profile."
                 Document: IG v3.1.1
                 Section: 6.3.11.1
             Origin: SEND Conformance Rules
             Rule Identifier:
-              Id: 'SEND333'
-              Version: '1'
-            Version: '5.0'
-        Version: '3.1.1'
+              Id: "SEND333"
+              Version: "1"
+            Version: "5.0"
+        Version: "3.1.1"
       - Name: SENDIG-GENETOX
         References:
           - Citations:
-              - Cited Guidance: 'For PC records contributing to a single time concentration
-                  profile, the PCNOMDY and PCTPTREF pair must be the same as the
-                  PPNOMDY and PPTPTREF pair for that same profile.'
+              - Cited Guidance:
+                  "For PC records contributing to a single time concentration profile, the PCNOMDY
+                  and PCTPTREF pair must be the same as the PPNOMDY and PPTPTREF pair for that same profile."
                 Document: IG v3.1.1
                 Section: 6.3.11.1
             Origin: SEND Conformance Rules
             Rule Identifier:
-              Id: 'SEND333'
-              Version: '1'
-            Version: '5.0'
-        Version: '1.0'
+              Id: "SEND333"
+              Version: "1"
+            Version: "5.0"
+        Version: "1.0"
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance: 'For PC records contributing to a single time concentration
-                  profile, the PCNOMDY and PCTPTREF pair must be the same as the
-                  PPNOMDY and PPTPTREF pair for that same profile.'
+              - Cited Guidance:
+                  "For PC records contributing to a single time concentration profile, the PCNOMDY
+                  and PCTPTREF pair must be the same as the PPNOMDY and PPTPTREF pair for that same profile."
                 Document: IG v3.1.1
                 Section: 6.3.11.1
             Origin: SEND Conformance Rules
             Rule Identifier:
-              Id: 'SEND333'
-              Version: '1'
-            Version: '5.0'
-        Version: '1.2'
+              Id: "SEND333"
+              Version: "1"
+            Version: "5.0"
+        Version: "1.2"
 Check:
   all:
     - name: PCTESTCD
       operator: is_contained_by
-      value: $pp_ppcat
-    # TODO: count number of distinct values of PPCAT for this subject
-    #- name: $pp_cat
-    #  operator: equal_to
-    #  value: 'blabla'
-    # TODO: when count = 1, check that PCNOMDY=PPNOMDY and PPCTPTREF=PPTPTREF
+      value:
+        $pp_ppcat
+        # TODO: count number of distinct values of PPCAT for this subject
+        #- name: $pp_cat
+        #  operator: equal_to
+        #  value: 'blabla'
+        # TODO: when count = 1, check that PCNOMDY=PPNOMDY and PPCTPTREF=PPTPTREF
     - any:
         - name: PCNOMDY # old
           operator: empty
@@ -63,9 +64,10 @@ Check:
           operator: empty
 Core:
   Status: Draft
-  Version: '1'
-Description: 'When PC record is used in only 1 concentration profile, ensure
-  that PCNOMDY=PPNOMDY and PPCTPTREF=PPTPTREF'
+  Version: "1"
+Description:
+  "When PC record is used in only 1 concentration profile, ensure that PCNOMDY=PPNOMDY and
+  PPCTPTREF=PPTPTREF"
 Executability: Fully Executable
 Operations:
   # get the distinct values of PPCAT per subject in domain PP
@@ -75,14 +77,15 @@ Operations:
       - USUBJID
     id: $pp_ppcat
     name: PPCAT
-    operator: distinct
-  #- id: $countppcat
-  #  name: $pp_ppcat
-  #  operator: record_count
+    operator:
+      distinct
+      #- id: $countppcat
+      #  name: $pp_ppcat
+      #  operator: record_count
 
-  # just trying something else
-  #- group:
-  #    - PCTESTCD
+      # just trying something else
+      #- group:
+      #    - PCTESTCD
   - domain: PP
     filter:
       PPCAT: PCTESTCD # This would mean that the value of PPCAT must be the string 'PSTESTCD', not the value of the variable PCTESTCD
@@ -91,8 +94,9 @@ Operations:
     id: $profile_count
     operator: record_count
 Outcome:
-  Message: 'PCNOMDY, PCTPTREF and PCELTM must be populated as the record
-    contributes to a concentration profile in PP'
+  Message:
+    "PCNOMDY, PCTPTREF and PCELTM must be populated as the record contributes to a concentration
+    profile in PP"
   Output Variables:
     - USUBJID
     - PCNOMDY
@@ -100,7 +104,7 @@ Outcome:
     - PCELTM
     - $pp_ppcat
     - $profile_count
-    #- $countppcat
+      #- $countppcat
 Rule Type: Record Data
 Scope:
   Classes:
