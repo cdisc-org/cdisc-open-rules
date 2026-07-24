@@ -79,8 +79,9 @@ jobs:
         run: venv/bin/pip install tabulate jmespath pyyaml ruamel.yaml
 
       # -----------------------------------------------------------------------
-      # 4. Run the engine for every Published rule, writing actual results.csv
-      #    directly into each case's results/ directory (overwriting the old baseline)
+      # 4. Run the engine for Published rules filtered by Authorities.Standards.Name,
+      #    writing actual results.csv directly into each case's results/ directory
+      #    (overwriting the old baseline)
       # -----------------------------------------------------------------------
       - name: Run engine and write results
         id: run_engine
@@ -88,10 +89,30 @@ jobs:
         run: |
           chmod +x .github/scripts/run_validation.sh
 
-          CORE_IDS_ARG=""
-          if [ -n "${{ inputs.core_ids }}" ]; then
-            CORE_IDS_ARG="--core-ids ${{ inputs.core_ids }}"
+          FILTER_STANDARDS=("USDM" "TIG")
+          FILTERED_CORE_IDS="$(venv/bin/python .github/scripts/filter_core_ids_by_standard.py \
+            --rules-root "$(pwd)" \
+            --standards "${FILTER_STANDARDS[@]}")"
+
+          if [ -z "$FILTERED_CORE_IDS" ]; then
+            echo "No Published rules found for standards: ${FILTER_STANDARDS[*]}"
+            exit 0
           fi
+
+          CORE_IDS_TO_RUN="$(venv/bin/python .github/scripts/filter_core_ids_by_standard.py \
+            --rules-root "$(pwd)" \
+            --standards "${FILTER_STANDARDS[@]}" \
+            --core-ids "${{ inputs.core_ids }}")"
+
+          if [ -z "$CORE_IDS_TO_RUN" ]; then
+            echo "No rules match the standards filter and requested CORE IDs."
+            exit 0
+          fi
+
+          echo "Running validation for standards: ${FILTER_STANDARDS[*]}"
+          echo "Rule count: $(echo "$CORE_IDS_TO_RUN" | wc -w | tr -d ' ')"
+
+          CORE_IDS_ARG="--core-ids $CORE_IDS_TO_RUN"
 
           ENGINE_DIR_OVERRIDE="$(pwd)/engine" \
           venv/bin/python engine/scripts/validate_published_rules.py \
