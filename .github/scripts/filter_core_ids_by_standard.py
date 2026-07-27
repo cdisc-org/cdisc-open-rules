@@ -93,6 +93,7 @@ def main() -> int:
 
     filtered_core_ids = collect_filtered_core_ids(rules_root, args.standards)
     output_core_ids = intersect_with_requested(filtered_core_ids, args.core_ids)
+    print(" ".join(filtered_core_ids))
     print(" ".join(output_core_ids))
     return 0
 
