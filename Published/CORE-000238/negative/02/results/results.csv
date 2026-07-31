@@ -1,4 +1,2 @@
 Dataset,Record,Variable,Value
-DM,1,$max_ex_exendtc,2013-01-22
-DM,1,$max_ex_exstdtc,2013-01-23
-DM,1,RFXENDTC,2013-01-24
+DM,,EXECUTION_ERROR,"Failed to execute rule operation. Operation: max_date, Target: EXSTDTC, Domain: EX, Error: agg function failed [how->max,dtype->object]"
