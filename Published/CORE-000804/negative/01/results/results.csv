@@ -97,10 +97,6 @@ path,attribute,value
 /ScheduledActivityInstance/9,parent_id,Timing_1
 /ScheduledActivityInstance/9,parent_id.Timing,ScheduleTimeline_1
 /ScheduledActivityInstance/9,parent_rel,relativeToScheduledInstanceId
-/ScheduledDecisionInstance/2,$parent_of_scheduled_instance,['ScheduleTimeline_4']
-/ScheduledDecisionInstance/2,id,ScheduledDecisionInstance_1
-/ScheduledDecisionInstance/2,name,Meet requirements for WK6 or end
-/ScheduledDecisionInstance/2,parent_entity,Timing
-/ScheduledDecisionInstance/2,parent_id,Timing_6
-/ScheduledDecisionInstance/2,parent_id.Timing,ScheduleTimeline_1
-/ScheduledDecisionInstance/2,parent_rel,relativeToScheduledInstanceId
+ScheduledDecisionInstance,EXECUTION_ERROR,"Failed to build dataset for rule validation. Builder: ContentsDatasetBuilder, Dataset: ScheduledDecisionInstance, Error: 
+  Error reading CSV from: /home/runner/work/cdisc-open-rules/cdisc-open-rules/Published/CORE-000804/negative/01/data/ScheduledDecisionInstance.csv
+  ValueError: ConditionAssignment_1 cannot be cast to bool"

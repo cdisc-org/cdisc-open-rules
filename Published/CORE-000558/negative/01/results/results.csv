@@ -1,3 +1,4 @@
 Dataset,Record,Variable,Value
-DS,3,DSDY,0
-DS,4,DSDY,3.2
+DS,,EXECUTION_ERROR,"Failed to build dataset for rule validation. Builder: ContentsDatasetBuilder, Dataset: DS, Error: 
+  Error reading CSV from: /home/runner/work/cdisc-open-rules/cdisc-open-rules/Published/CORE-000558/negative/01/data/ds.csv
+  ValueError: could not convert string to float: 'invalid'"

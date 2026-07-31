@@ -1,16 +1,13 @@
 Dataset,Record,Variable,Value
-TX,4,$txgroupsbysetcd,"['XXSPGRPCD', 'GRPLBL', 'ARMCD']"
+TX,4,$txgroupsbysetcd,"['ARMCD', 'XXSPGRPCD', 'GRPLBL']"
 TX,4,SETCD,SET2
 TX,4,TXPARMCD,ARMCD
-TX,5,$txgroupsbysetcd,"['XXSPGRPCD', 'GRPLBL', 'ARMCD']"
+TX,5,$txgroupsbysetcd,"['ARMCD', 'XXSPGRPCD', 'GRPLBL']"
 TX,5,SETCD,SET2
 TX,5,TXPARMCD,XXSPGRPCD
-TX,6,$txgroupsbysetcd,"['XXSPGRPCD', 'GRPLBL', 'ARMCD']"
+TX,6,$txgroupsbysetcd,"['ARMCD', 'XXSPGRPCD', 'GRPLBL']"
 TX,6,SETCD,SET2
 TX,6,TXPARMCD,GRPLBL
-TX,7,$txgroupsbysetcd,"['TCNTRL', 'ARMCD']"
+TX,7,$txgroupsbysetcd,['ARMCD']
 TX,7,SETCD,SET3
 TX,7,TXPARMCD,ARMCD
-TX,8,$txgroupsbysetcd,"['TCNTRL', 'ARMCD']"
-TX,8,SETCD,SET3
-TX,8,TXPARMCD,TCNTRL
