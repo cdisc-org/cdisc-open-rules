@@ -5,87 +5,87 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: 'Pool ID should match pool definition for nonclinical data.'
+              - Cited Guidance: "Pool ID should match pool definition for nonclinical data."
                 Document: FDA
                 Section: FDAB054
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB5401
-              Version: '1'
-            Version: '1.5'
-        Version: '3.0'
+              Version: "1"
+            Version: "1.5"
+        Version: "3.0"
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: 'Pool ID should match pool definition for nonclinical data.'
+              - Cited Guidance: "Pool ID should match pool definition for nonclinical data."
                 Document: FDA
                 Section: FDAB054
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB5401
-              Version: '1'
-            Version: '1.5'
-        Version: '3.1'
+              Version: "1"
+            Version: "1.5"
+        Version: "3.1"
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: 'Pool ID should match pool definition for nonclinical data.'
+              - Cited Guidance: "Pool ID should match pool definition for nonclinical data."
                 Document: FDA
                 Section: FDAB054
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB5401
-              Version: '1'
-            Version: '1.5'
-        Version: '3.1.1'
+              Version: "1"
+            Version: "1.5"
+        Version: "3.1.1"
       - Name: SENDIG-GENETOX
         References:
           - Citations:
-              - Cited Guidance: 'Pool ID should match pool definition for nonclinical data.'
+              - Cited Guidance: "Pool ID should match pool definition for nonclinical data."
                 Document: FDA
                 Section: FDAB054
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB5401
-              Version: '1'
-            Version: '1.5'
-        Version: '1.0'
+              Version: "1"
+            Version: "1.5"
+        Version: "1.0"
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance: 'Pool ID should match pool definition for nonclinical data.'
+              - Cited Guidance: "Pool ID should match pool definition for nonclinical data."
                 Document: FDA
                 Section: FDAB054
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB5401
-              Version: '1'
-            Version: '1.5'
-        Version: '1.1'
+              Version: "1"
+            Version: "1.5"
+        Version: "1.1"
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance: 'Pool ID should match pool definition for nonclinical data.'
+              - Cited Guidance: "Pool ID should match pool definition for nonclinical data."
                 Document: FDA
                 Section: FDAB054
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB5401
-              Version: '1'
-            Version: '1.5'
-        Version: '1.2'
+              Version: "1"
+            Version: "1.5"
+        Version: "1.2"
       - Name: SENDIG-AR
         References:
           - Citations:
-              - Cited Guidance: 'Pool ID should match pool definition for nonclinical data.'
+              - Cited Guidance: "Pool ID should match pool definition for nonclinical data."
                 Document: FDA
                 Section: FDAB054
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB5401
-              Version: '1'
-            Version: '1.5'
-        Version: '1.0'
+              Version: "1"
+            Version: "1.5"
+        Version: "1.0"
 Check:
   all:
     - name: POOLID
@@ -96,9 +96,8 @@ Check:
 Core:
   Id: CORE-000896
   Status: Published
-  Version: '1'
-Description: 'POOLID value in the dataset should match one of the POOLID values
-  in the POOLDEF dataset'
+  Version: "1"
+Description: "POOLID value in the dataset should match one of the POOLID values in the POOLDEF dataset"
 Executability: Fully Executable
 Operations:
   - domain: POOLDEF
@@ -106,7 +105,7 @@ Operations:
     name: POOLID
     operator: distinct
 Outcome:
-  Message: 'POOLID value does not match a POOLID value in the POOLDEF dataset.'
+  Message: "POOLID value does not match a POOLID value in the POOLDEF dataset."
 Rule Type: Record Data
 Scope:
   Classes:

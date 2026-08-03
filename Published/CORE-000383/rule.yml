@@ -4,73 +4,73 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: The SEND Implementation Guide version used for the submission
-                  containing this dataset. Only a single record should be
-                  provided in the Trial Summary dataset.
+              - Cited Guidance:
+                  The SEND Implementation Guide version used for the submission containing
+                  this dataset. Only a single record should be provided in the Trial Summary dataset.
                 Document: IG v3.1
                 Section: 7.6.3
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND341
-              Version: '1'
-            Version: '5.0'
-        Version: '3.1'
+              Version: "1"
+            Version: "5.0"
+        Version: "3.1"
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: The SEND Implementation Guide version used for the submission
-                  containing this dataset. Only a single record should be
-                  provided in the Trial Summary dataset.
+              - Cited Guidance:
+                  The SEND Implementation Guide version used for the submission containing
+                  this dataset. Only a single record should be provided in the Trial Summary dataset.
                 Document: IG v3.1.1
                 Section: 7.6.3
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND341
-              Version: '1'
-            Version: '5.0'
-        Version: '3.1.1'
+              Version: "1"
+            Version: "5.0"
+        Version: "3.1.1"
       - Name: SENDIG-GENETOX
         References:
           - Citations:
-              - Cited Guidance: The SEND Implementation Guide version used for the submission
-                  containing this dataset. Only a single record should be
-                  provided in the Trial Summary dataset.
+              - Cited Guidance:
+                  The SEND Implementation Guide version used for the submission containing
+                  this dataset. Only a single record should be provided in the Trial Summary dataset.
                 Document: IG v3.1.1
                 Section: 7.6.3
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND341
-              Version: '1'
-            Version: '5.0'
-        Version: '1.0'
+              Version: "1"
+            Version: "5.0"
+        Version: "1.0"
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance: The SEND Implementation Guide version used for the submission
-                  containing this dataset. Only a single record should be
-                  provided in the Trial Summary dataset.
+              - Cited Guidance:
+                  The SEND Implementation Guide version used for the submission containing
+                  this dataset. Only a single record should be provided in the Trial Summary dataset.
                 Document: IG v3.1
                 Section: 7.6.3
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND341
-              Version: '1'
-            Version: '5.0'
-        Version: '1.1'
+              Version: "1"
+            Version: "5.0"
+        Version: "1.1"
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance: The SEND Implementation Guide version used for the submission
-                  containing this dataset. Only a single record should be
-                  provided in the Trial Summary dataset.
+              - Cited Guidance:
+                  The SEND Implementation Guide version used for the submission containing
+                  this dataset. Only a single record should be provided in the Trial Summary dataset.
                 Document: IG v3.1.1
                 Section: 7.6.3
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND341
-              Version: '1'
-            Version: '5.0'
-        Version: '1.2'
+              Version: "1"
+            Version: "5.0"
+        Version: "1.2"
 Check:
   all:
     - name: TSPARMCD
@@ -83,7 +83,7 @@ Check:
 Core:
   Id: CORE-000383
   Status: Published
-  Version: '1'
+  Version: "1"
 Description: Raise an error when there is more than one record with TSPARMCD=SNDIGVER
 Executability: Fully Executable
 Outcome:

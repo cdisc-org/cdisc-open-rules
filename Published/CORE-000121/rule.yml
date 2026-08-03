@@ -7,54 +7,52 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: "\"Specification [A coded reason that arm variables (ARM and
-                  ARMCD) and/or actual arm variables (ACTARM and ACTARMCD) are
-                  null.]
-
-                  \ Assumption  4[ARMNRS may not be populated if both ARMCD and
-                  ACTARMCD are populated]\""
+              - Cited Guidance:
+                  "\"Specification [A coded reason that arm variables (ARM and ARMCD) and/or actual
+                  arm variables (ACTARM and ACTARMCD) are null.]\n Assumption  4[ARMNRS may not be populated if
+                  both ARMCD and ACTARMCD are populated]\""
                 Document: IG v3.4
                 Item: Specification|Assumption 4
-                Section: '5.2'
+                Section: "5.2"
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0520
-              Version: '1'
-            Version: '2.0'
-        Version: '3.4'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.4"
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Specification[A coded reason that arm variables (ARM and ARMCD)
-                  and/or actual arm variables (ACTARM and ACTARMCD) are
-                  null.]|Assumption 4[ARMNRS may not be populated if both ARMCD
-                  and ACTARMCD are populated]
+              - Cited Guidance:
+                  Specification[A coded reason that arm variables (ARM and ARMCD) and/or
+                  actual arm variables (ACTARM and ACTARMCD) are null.]|Assumption 4[ARMNRS may not be
+                  populated if both ARMCD and ACTARMCD are populated]
                 Document: IG v3.3
                 Item: Specification|Assumption 4
-                Section: '5.2'
+                Section: "5.2"
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0520
-              Version: '1'
-            Version: '2.0'
-        Version: '3.3'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.3"
       - Name: TIG
         References:
           - Citations:
-              - Cited Guidance: Specification  ARMNRS [A coded reason that arm variables (ARM
-                  and ARMCD) and/or actual arm variables (ACTARM and ACTARMCD)
-                  are null.]|Assumption 4[ARMNRS may not be populated if both
-                  ARMCD and ACTARMCD are populated]
+              - Cited Guidance:
+                  Specification  ARMNRS [A coded reason that arm variables (ARM and ARMCD)
+                  and/or actual arm variables (ACTARM and ACTARMCD) are null.]|Assumption 4[ARMNRS may not
+                  be populated if both ARMCD and ACTARMCD are populated]
                 Document: TIG 1.0
                 Item: Specification|Assumption 4.a.iii
                 Section: 2.8.10.4
             Origin: TIG Conformance Rules
             Rule Identifier:
               Id: TIG0615
-              Version: '1'
-            Version: '1.0'
+              Version: "1"
+            Version: "1.0"
         Substandard: SDTM
-        Version: '1.0'
+        Version: "1.0"
 Check:
   all:
     - name: ARMCD
@@ -66,12 +64,11 @@ Check:
 Core:
   Id: CORE-000121
   Status: Published
-  Version: '1'
+  Version: "1"
 Description: Verify the value for ARMNRS, when both ARMCD and ACTARMCD values are populated
 Executability: Fully Executable
 Outcome:
-  Message: Value for ARMNRS is populated, when both ARMCD and ACTARMCD values are
-    populated
+  Message: Value for ARMNRS is populated, when both ARMCD and ACTARMCD values are populated
   Output Variables:
     - ARMCD
     - ACTARMCD

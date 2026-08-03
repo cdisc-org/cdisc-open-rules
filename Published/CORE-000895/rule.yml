@@ -1,108 +1,101 @@
 Authorities:
-  - Organization: 'FDA'
+  - Organization: "FDA"
     Standards:
-      - Name: 'SENDIG'
+      - Name: "SENDIG"
         References:
           - Citations:
-              - Cited Guidance: 'All nonclinical studies should include Trial Sets (tx.xpt)
-                  dataset.'
-                Document: 'FDA'
-                Section: 'FDAB046'
-            Origin: 'FDA Business Rules'
+              - Cited Guidance: "All nonclinical studies should include Trial Sets (tx.xpt) dataset."
+                Document: "FDA"
+                Section: "FDAB046"
+            Origin: "FDA Business Rules"
             Rule Identifier:
-              Id: 'FB4606'
-              Version: '1'
-            Version: '1.5'
-        Version: '3.0'
-      - Name: 'SENDIG'
+              Id: "FB4606"
+              Version: "1"
+            Version: "1.5"
+        Version: "3.0"
+      - Name: "SENDIG"
         References:
           - Citations:
-              - Cited Guidance: 'All nonclinical studies should include Trial Sets (tx.xpt)
-                  dataset.'
-                Document: 'FDA'
-                Section: 'FDAB046'
-            Origin: 'FDA Business Rules'
+              - Cited Guidance: "All nonclinical studies should include Trial Sets (tx.xpt) dataset."
+                Document: "FDA"
+                Section: "FDAB046"
+            Origin: "FDA Business Rules"
             Rule Identifier:
-              Id: 'FB4606'
-              Version: '1'
-            Version: '1.5'
-        Version: '3.1'
-      - Name: 'SENDIG'
+              Id: "FB4606"
+              Version: "1"
+            Version: "1.5"
+        Version: "3.1"
+      - Name: "SENDIG"
         References:
           - Citations:
-              - Cited Guidance: 'All nonclinical studies should include Trial Sets (tx.xpt)
-                  dataset.'
-                Document: 'FDA'
-                Section: 'FDAB046'
-            Origin: 'FDA Business Rules'
+              - Cited Guidance: "All nonclinical studies should include Trial Sets (tx.xpt) dataset."
+                Document: "FDA"
+                Section: "FDAB046"
+            Origin: "FDA Business Rules"
             Rule Identifier:
-              Id: 'FB4606'
-              Version: '1'
-            Version: '1.5'
-        Version: '3.1.1'
-      - Name: 'SENDIG-GENETOX'
+              Id: "FB4606"
+              Version: "1"
+            Version: "1.5"
+        Version: "3.1.1"
+      - Name: "SENDIG-GENETOX"
         References:
           - Citations:
-              - Cited Guidance: 'All nonclinical studies should include Trial Sets (tx.xpt)
-                  dataset.'
-                Document: 'FDA'
-                Section: 'FDAB046'
-            Origin: 'FDA Business Rules'
+              - Cited Guidance: "All nonclinical studies should include Trial Sets (tx.xpt) dataset."
+                Document: "FDA"
+                Section: "FDAB046"
+            Origin: "FDA Business Rules"
             Rule Identifier:
-              Id: 'FB4606'
-              Version: '1'
-            Version: '1.5'
-        Version: '1.0'
-      - Name: 'SENDIG-DART'
+              Id: "FB4606"
+              Version: "1"
+            Version: "1.5"
+        Version: "1.0"
+      - Name: "SENDIG-DART"
         References:
           - Citations:
-              - Cited Guidance: 'All nonclinical studies should include Trial Sets (tx.xpt)
-                  dataset.'
-                Document: 'FDA'
-                Section: 'FDAB046'
-            Origin: 'FDA Business Rules'
+              - Cited Guidance: "All nonclinical studies should include Trial Sets (tx.xpt) dataset."
+                Document: "FDA"
+                Section: "FDAB046"
+            Origin: "FDA Business Rules"
             Rule Identifier:
-              Id: 'FB4606'
-              Version: '1'
-            Version: '1.5'
-        Version: '1.1'
-      - Name: 'SENDIG-DART'
+              Id: "FB4606"
+              Version: "1"
+            Version: "1.5"
+        Version: "1.1"
+      - Name: "SENDIG-DART"
         References:
           - Citations:
-              - Cited Guidance: 'All nonclinical studies should include Trial Sets (tx.xpt)
-                  dataset.'
-                Document: 'FDA'
-                Section: 'FDAB046'
-            Origin: 'FDA Business Rules'
+              - Cited Guidance: "All nonclinical studies should include Trial Sets (tx.xpt) dataset."
+                Document: "FDA"
+                Section: "FDAB046"
+            Origin: "FDA Business Rules"
             Rule Identifier:
-              Id: 'FB4606'
-              Version: '1'
-            Version: '1.5'
-        Version: '1.2'
-      - Name: 'SENDIG-AR'
+              Id: "FB4606"
+              Version: "1"
+            Version: "1.5"
+        Version: "1.2"
+      - Name: "SENDIG-AR"
         References:
           - Citations:
-              - Cited Guidance: 'All nonclinical studies should include Trial Sets (tx.xpt)
-                  dataset.'
-                Document: 'FDA'
-                Section: 'FDAB046'
-            Origin: 'FDA Business Rules'
+              - Cited Guidance: "All nonclinical studies should include Trial Sets (tx.xpt) dataset."
+                Document: "FDA"
+                Section: "FDAB046"
+            Origin: "FDA Business Rules"
             Rule Identifier:
-              Id: 'FB4606'
-              Version: '1'
-            Version: '1.5'
-        Version: '1.0'
+              Id: "FB4606"
+              Version: "1"
+            Version: "1.5"
+        Version: "1.0"
 Check:
   all:
-    - name: '$txparmcd'
-      operator: 'does_not_contain'
-      value: 'TRTDOSU'
+    - name: "$txparmcd"
+      operator: "does_not_contain"
+      value: "TRTDOSU"
 Core:
   Id: CORE-000895
   Status: Published
-  Version: '1'
-Description: For each Trial Set (SETCD) in the TX dataset a Dose Units (TRTDOSU)
-  record should be included.
+  Version: "1"
+Description: For each Trial Set (SETCD) in the TX dataset a Dose Units (TRTDOSU) record should be
+  included.
 Executability: Fully Executable
 # We make a list of the distinct values of TXPARMCD within each group with same value for SETCD
 Operations:

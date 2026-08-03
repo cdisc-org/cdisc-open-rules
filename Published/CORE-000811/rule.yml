@@ -4,44 +4,46 @@ Authorities:
       - Name: USDM
         References:
           - Citations:
-              - Cited Guidance: 'The same Biomedical Concept Category must not be referenced
-                  more than once from the same activity.'
-                Document: 'USDM_CORE_Rules.xlsx'
-            Origin: 'USDM Conformance Rules'
+              - Cited Guidance:
+                  "The same Biomedical Concept Category must not be referenced more than once from
+                  the same activity."
+                Document: "USDM_CORE_Rules.xlsx"
+            Origin: "USDM Conformance Rules"
             Rule Identifier:
-              Id: 'DDF00090'
-              Version: '1'
-            Version: '1.0'
-        Version: '3.0'
+              Id: "DDF00090"
+              Version: "1"
+            Version: "1.0"
+        Version: "3.0"
       - Name: USDM
         References:
           - Citations:
-              - Cited Guidance: 'The same Biomedical Concept Category must not be referenced
-                  more than once from the same activity.'
-                Document: 'USDM_CORE_Rules.xlsx'
-            Origin: 'USDM Conformance Rules'
+              - Cited Guidance:
+                  "The same Biomedical Concept Category must not be referenced more than once from
+                  the same activity."
+                Document: "USDM_CORE_Rules.xlsx"
+            Origin: "USDM Conformance Rules"
             Rule Identifier:
-              Id: 'DDF00090'
-              Version: '1'
-            Version: '1.0'
-        Version: '4.0'
+              Id: "DDF00090"
+              Version: "1"
+            Version: "1.0"
+        Version: "4.0"
 Check:
   all:
     - name: instanceType
       operator: equal_to
-      value: 'BiomedicalConceptCategory'
+      value: "BiomedicalConceptCategory"
     - name: rel_type
       operator: equal_to
-      value: 'reference'
+      value: "reference"
     - name: rel_type.Activity
       operator: equal_to
-      value: 'definition'
+      value: "definition"
     - name: parent_entity
       operator: equal_to
-      value: 'Activity'
+      value: "Activity"
     - name: parent_rel
       operator: equal_to
-      value: 'bcCategoryIds'
+      value: "bcCategoryIds"
       value_is_literal: true
     - name: id
       operator: is_not_unique_set
@@ -51,11 +53,12 @@ Check:
         - parent_rel
         - rel_type.Activity
 Core:
-  Id: 'CORE-000811'
+  Id: "CORE-000811"
   Status: Published
-  Version: '1'
-Description: 'The same Biomedical Concept Category must not be referenced more
-  than once from the same activity.'
+  Version: "1"
+Description:
+  "The same Biomedical Concept Category must not be referenced more than once from the same
+  activity."
 Executability: Fully Executable
 Match Datasets:
   - Keys:
@@ -65,8 +68,7 @@ Match Datasets:
         Right: instanceType
     Name: Activity
 Outcome:
-  Message: 'The biomedical concept category is referenced more than once from the
-    same activity.'
+  Message: "The biomedical concept category is referenced more than once from the same activity."
   Output Variables:
     - parent_entity
     - parent_id
@@ -78,5 +80,5 @@ Rule Type: Record Data
 Scope:
   Entities:
     Include:
-      - 'BiomedicalConceptCategory'
+      - "BiomedicalConceptCategory"
 Sensitivity: Record

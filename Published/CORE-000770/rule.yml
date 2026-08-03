@@ -10,185 +10,182 @@ Authorities:
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND234
-              Version: '1'
-            Version: '5.0'
-        Version: '3.0'
+              Version: "1"
+            Version: "5.0"
+        Version: "3.0"
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: Each Trial Set should have a SPGRPCD in TXPARMCD with
-                  corresponding parameter value under TXVAL.
+              - Cited Guidance: Each Trial Set should have a SPGRPCD in TXPARMCD with corresponding
+                  parameter value under TXVAL.
                 Document: IG v3.1
                 Section: 7.2.1.1
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND234
-              Version: '1'
-            Version: '5.0'
-        Version: '3.1'
+              Version: "1"
+            Version: "5.0"
+        Version: "3.1"
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: Each Trial Set should have a SPGRPCD in TXPARMCD with
-                  corresponding parameter value under TXVAL.
+              - Cited Guidance: Each Trial Set should have a SPGRPCD in TXPARMCD with corresponding
+                  parameter value under TXVAL.
                 Document: IG v3.1.1
                 Section: 7.2.1.1
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND234
-              Version: '1'
-            Version: '5.0'
-        Version: '3.1.1'
+              Version: "1"
+            Version: "5.0"
+        Version: "3.1.1"
       - Name: SENDIG-GENETOX
         References:
           - Citations:
-              - Cited Guidance: Each Trial Set should have a SPGRPCD in TXPARMCD with
-                  corresponding parameter value under TXVAL.
+              - Cited Guidance: Each Trial Set should have a SPGRPCD in TXPARMCD with corresponding
+                  parameter value under TXVAL.
                 Document: IG v3.1.1
                 Section: 7.2.1.1
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND234
-              Version: '1'
-            Version: '5.0'
-        Version: '1.0'
+              Version: "1"
+            Version: "5.0"
+        Version: "1.0"
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance: Each Trial Set should have a SPGRPCD in TXPARMCD with
-                  corresponding parameter value under TXVAL.
+              - Cited Guidance: Each Trial Set should have a SPGRPCD in TXPARMCD with corresponding
+                  parameter value under TXVAL.
                 Document: IG v3.1
                 Section: 7.2.1.1
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND234
-              Version: '1'
-            Version: '5.0'
-        Version: '1.1'
+              Version: "1"
+            Version: "5.0"
+        Version: "1.1"
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance: Each Trial Set should have a SPGRPCD in TXPARMCD with
-                  corresponding parameter value under TXVAL.
+              - Cited Guidance: Each Trial Set should have a SPGRPCD in TXPARMCD with corresponding
+                  parameter value under TXVAL.
                 Document: IG v3.1.1
                 Section: 7.2.1.1
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND234
-              Version: '1'
-            Version: '5.0'
-        Version: '1.2'
+              Version: "1"
+            Version: "5.0"
+        Version: "1.2"
       - Name: TIG
         References:
           - Citations:
-              - Cited Guidance: Each Trial Set should have a SPGRPCD in TXPARMCD with
-                  corresponding parameter value under TXVAL.
+              - Cited Guidance: Each Trial Set should have a SPGRPCD in TXPARMCD with corresponding
+                  parameter value under TXVAL.
                 Document: TIG v1.0
                 Item: Assumption 3
                 Section: 2.8.9.28
             Origin: TIG Conformance Rules
             Rule Identifier:
               Id: TIG0162
-              Version: '1'
-            Version: '1.0'
+              Version: "1"
+            Version: "1.0"
         Substandard: SEND
-        Version: '1.0'
-  # FDA rule FB4602 added (SEND-only)
+        Version:
+          "1.0"
+          # FDA rule FB4602 added (SEND-only)
   - Organization: FDA
     Standards:
       # Applicable to SENDIG as of version 3.1
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: 'All nonclinical studies should include Trial Sets (tx.xpt)
-                  dataset.'
+              - Cited Guidance: "All nonclinical studies should include Trial Sets (tx.xpt) dataset."
                 Document: FDA
                 Section: FDAB046
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB4602
-              Version: '1'
-            Version: '1.5'
-        Version: '3.1'
+              Version: "1"
+            Version: "1.5"
+        Version: "3.1"
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: 'All nonclinical studies should include Trial Sets (tx.xpt)
-                  dataset.'
+              - Cited Guidance: "All nonclinical studies should include Trial Sets (tx.xpt) dataset."
                 Document: FDA
                 Section: FDAB046
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB4602
-              Version: '1'
-            Version: '1.5'
-        Version: '3.1.1'
+              Version: "1"
+            Version: "1.5"
+        Version: "3.1.1"
       - Name: SENDIG-GENETOX
         References:
           - Citations:
-              - Cited Guidance: 'All nonclinical studies should include Trial Sets (tx.xpt)
-                  dataset.'
+              - Cited Guidance: "All nonclinical studies should include Trial Sets (tx.xpt) dataset."
                 Document: FDA
                 Section: FDAB046
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB4602
-              Version: '1'
-            Version: '1.5'
-        Version: '1.0'
+              Version: "1"
+            Version: "1.5"
+        Version: "1.0"
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance: 'All nonclinical studies should include Trial Sets (tx.xpt)
-                  dataset.'
+              - Cited Guidance: "All nonclinical studies should include Trial Sets (tx.xpt) dataset."
                 Document: FDA
                 Section: FDAB046
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB4602
-              Version: '1'
-            Version: '1.5'
-        Version: '1.1'
+              Version: "1"
+            Version: "1.5"
+        Version: "1.1"
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance: 'All nonclinical studies should include Trial Sets (tx.xpt)
-                  dataset.'
+              - Cited Guidance: "All nonclinical studies should include Trial Sets (tx.xpt) dataset."
                 Document: FDA
                 Section: FDAB046
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB4602
-              Version: '1'
-            Version: '1.5'
-        Version: '1.2'
+              Version: "1"
+            Version: "1.5"
+        Version: "1.2"
       - Name: SENDIG-AR
         References:
           - Citations:
-              - Cited Guidance: 'All nonclinical studies should include Trial Sets (tx.xpt)
-                  dataset.'
+              - Cited Guidance: "All nonclinical studies should include Trial Sets (tx.xpt) dataset."
                 Document: FDA
                 Section: FDAB046
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB4602
-              Version: '1'
-            Version: '1.5'
-        Version: '1.0'
+              Version: "1"
+            Version: "1.5"
+        Version: "1.0"
 Check:
   all:
     # 2025-03-13: REMARK that only the first violation is reported when Sensitivity is set to "Dataset"
     # See Github issue https://github.com/cdisc-org/cdisc-rules-engine/issues/831
-    - name: '$txgroupsbysetcd'
-      operator: 'does_not_contain'
-      value: 'SPGRPCD'
-    # TODO???: also check the TXVAL is populated for TXPARMCD=SPGRPCD, this however seems not to be part of the rule
+    - name: "$txgroupsbysetcd"
+      operator: "does_not_contain"
+      value:
+        "SPGRPCD"
+        # TODO???: also check the TXVAL is populated for TXPARMCD=SPGRPCD, this however seems not to be part of the rule
 Core:
   Id: CORE-000770
   Status: Published
-  Version: '1'
-Description: 'For each Trial Set (SETCD) in the TX dataset exactly one
-  Sponsor-Defined Group Code (SPGRPCD) record should be included.'
+  Version: "1"
+Description:
+  "For each Trial Set (SETCD) in the TX dataset exactly one Sponsor-Defined Group Code (SPGRPCD)
+  record should be included."
 Executability: Fully Executable
 Operations:
   - domain: TX

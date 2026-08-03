@@ -7,27 +7,29 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: For domains with two-letter domain codes (i.e., other than
+              - Cited Guidance:
+                  For domains with two-letter domain codes (i.e., other than
                   SUPPxx and RELREC), split dataset names can be up to four
                   characters in length... The four-character dataset-name
                   limitation allows the use of a Supplemental Qualifier dataset
                   associated with the split dataset
                 Document: IG v3.4
-                Item: '6'
+                Item: "6"
                 Section: 4.1.7
               - Cited Guidance: AP domain codes are therefore four characters long.
                 Document: AP Guide v1.0
-                Section: '2'
+                Section: "2"
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0017
-              Version: '2'
-            Version: '2.0'
-        Version: '3.4'
+              Version: "2"
+            Version: "2.0"
+        Version: "3.4"
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: 4.1.1.7[Split dataset names can be up to four characters in
+              - Cited Guidance:
+                  4.1.1.7[Split dataset names can be up to four characters in
                   length. For example, if splitting by --CAT, then dataset names
                   would be the domain name plus up to two additional characters
                   (e.g., QS36 for SF-36). If splitting Findings About by parent
@@ -41,13 +43,14 @@ Authorities:
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0017
-              Version: '2'
-            Version: '2.0'
-        Version: '3.2'
+              Version: "2"
+            Version: "2.0"
+        Version: "3.2"
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: 4.1.7[Split dataset names can be up to four characters in
+              - Cited Guidance:
+                  4.1.7[Split dataset names can be up to four characters in
                   length. For example, if splitting by --CAT, then dataset names
                   would be the domain name plus up to two additional characters
                   (e.g., QS36 for SF-36). If splitting Findings About by parent
@@ -61,9 +64,9 @@ Authorities:
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0017
-              Version: '2'
-            Version: '2.0'
-        Version: '3.3'
+              Version: "2"
+            Version: "2.0"
+        Version: "3.3"
 Check:
   any:
     - name: dataset_name
@@ -75,7 +78,7 @@ Check:
 Core:
   Id: CORE-000510
   Status: Published
-  Version: '1'
+  Version: "1"
 Description: Split datasets (excluding supplemental qualifiers) is expected to
   have a have a length of 3 or 4 characters
 Executability: Fully Executable

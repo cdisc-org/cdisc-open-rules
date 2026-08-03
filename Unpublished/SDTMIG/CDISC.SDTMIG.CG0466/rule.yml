@@ -5,44 +5,46 @@ Authorities:
   - Organization: CDISC
     Standards:
       - Name: SDTMIG
-        Version: '3.4'
         References:
-          - Origin: SDTM and SDTMIG Conformance Rules
-            Rule Identifier:
-              Id: CG0466
-              Version: '1'
-            Version: '2.0'
-            Citations:
+          - Citations:
               - Cited Guidance: Units will be those used for --STRESU.
                 Document: Model v2.0
                 Item: --LLOQ
                 Section: Findings
-      - Name: SDTMIG
-        Version: '3.2'
-        References:
-          - Origin: SDTM and SDTMIG Conformance Rules
+            Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0466
-              Version: '1'
-            Version: '2.0'
-            Citations:
-              - Cited Guidance: Indicates the lower limit of quantitation for an assay.
-                  Units will be those used for --STRESU.
+              Version: "1"
+            Version: "2.0"
+        Version: "3.4"
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance:
+                  Indicates the lower limit of quantitation for an assay. Units will be those
+                  used for --STRESU.
                 Document: Model v1.4
                 Section: 2.2.3
-      - Name: SDTMIG
-        Version: '3.3'
-        References:
-          - Origin: SDTM and SDTMIG Conformance Rules
+            Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0466
-              Version: '1'
-            Version: '2.0'
-            Citations:
-              - Cited Guidance: Indicates the lower limit of quantitation for an assay.
-                  Units will be those used for --STRESU.
+              Version: "1"
+            Version: "2.0"
+        Version: "3.2"
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance:
+                  Indicates the lower limit of quantitation for an assay. Units will be those
+                  used for --STRESU.
                 Document: Model v1.7
                 Section: 2.2.3
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0466
+              Version: "1"
+            Version: "2.0"
+        Version: "3.3"
 Check:
   all:
     - name: --LLOQ
@@ -52,7 +54,7 @@ Check:
 Core:
   Id: CDISC.SDTMIG.CG0466
   Status: Draft
-  Version: '1'
+  Version: "1"
 Description: Trigger error when --LLOQ is not expressed using the units in --STRESU
 Executability: Fully Executable
 Outcome:

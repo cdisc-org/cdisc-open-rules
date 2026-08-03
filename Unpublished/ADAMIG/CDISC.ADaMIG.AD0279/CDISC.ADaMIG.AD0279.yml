@@ -1,11 +1,11 @@
 Authorities:
   - Organization: CDISC
     Standards:
-
       - Name: ADaMIG
         References:
           - Citations:
-              - Cited Guidance: -< In a pair of corresponding variables (e.g., TRTP and TRTPN),
+              - Cited Guidance:
+                  -< In a pair of corresponding variables (e.g., TRTP and TRTPN),
                   the primary or most commonly used variable does not have the
                   suffix or extension (i.e., N for Numeric or C for Character).
                   The relevant suffix is used only on the name of the secondary
@@ -19,93 +19,97 @@ Authorities:
                   one-to-one relationship between the values of the two
                   variables, as described in Item 5 above.
                 Document: ADaMIG-MD v1.0
-                Item: '6'
-                Section: '3.1.1'
+                Item: "6"
+                Section: "3.1.1"
             Criteria:
               Logical Expression:
-                Condition: ''
-                Rule: ''
-              Plain Language Expression: ''
+                Condition: ""
+                Rule: ""
+              Plain Language Expression: ""
               Type: Failure
             Origin: ADaM Conformance Rules
-            Release Notes: ''
+            Release Notes: ""
             Rule Identifier:
-              Id: '279'
-              Version: '2'
-            Validator Rule Message: ''
-            Version: '5.0'
-        Version: '1.3'
+              Id: "279"
+              Version: "2"
+            Validator Rule Message: ""
+            Version: "5.0"
+        Version: "1.3"
       - Name: ADaMIG-MD
         References:
           - Citations:
-              - Cited Guidance: The MDBDS supports analysis needs by adding SPDEVID as a
+              - Cited Guidance:
+                  The MDBDS supports analysis needs by adding SPDEVID as a
                   required key variable and allowing USUBJID as a conditionally
                   required variable. See the OCCDS class for further details.
                 Document: ADaMIG-MD v1.0
-                Item: ''
-                Section: '3.1'
+                Item: ""
+                Section: "3.1"
             Criteria:
               Logical Expression:
-                Condition: ''
-                Rule: ''
-              Plain Language Expression: ''
+                Condition: ""
+                Rule: ""
+              Plain Language Expression: ""
               Type: Failure
             Origin: ADaM Conformance Rules
-            Release Notes: ''
+            Release Notes: ""
             Rule Identifier:
-              Id: '279'
-              Version: '2'
-            Validator Rule Message: ''
-            Version: '5.0'
-        Version: '1.3'
+              Id: "279"
+              Version: "2"
+            Validator Rule Message: ""
+            Version: "5.0"
+        Version: "1.3"
       - Name: OCCDS
         References:
           - Citations:
-              - Cited Guidance: <-CDISC Notes for AESEVN state':' Code AE.AESEV to numeric, Code
+              - Cited Guidance:
+                  <-CDISC Notes for AESEVN state':' Code AE.AESEV to numeric, Code
                   List / Controlled Terms have allowable values of ';' "1, 2,
                   3".
                 Document: OCCDS v1.1
-                Item: 'Table 3.2.8.1'
-                Section: '3.2.8'
+                Item: "Table 3.2.8.1"
+                Section: "3.2.8"
             Criteria:
               Logical Expression:
-                Condition: ''
-                Rule: ''
-              Plain Language Expression: ''
+                Condition: ""
+                Rule: ""
+              Plain Language Expression: ""
               Type: Failure
             Origin: ADaM Conformance Rules
-            Release Notes: ''
+            Release Notes: ""
             Rule Identifier:
-              Id: '279'
-              Version: '2'
-            Validator Rule Message: ''
-            Version: '5.0'
+              Id: "279"
+              Version: "2"
+            Validator Rule Message: ""
+            Version: "5.0"
           - Citations:
-              - Cited Guidance: <-CDISC Notes for AESEVN state':' Code AE.AESEV to numeric, Code
+              - Cited Guidance:
+                  <-CDISC Notes for AESEVN state':' Code AE.AESEV to numeric, Code
                   List / Controlled Terms have allowable values of ';' "1, 2,
                   3".
                 Document: OCCDS v1.0
-                Item: 'Table 3.2.8.1'
-                Section: '3.2.8'
+                Item: "Table 3.2.8.1"
+                Section: "3.2.8"
             Criteria:
               Logical Expression:
-                Condition: ''
-                Rule: ''
-              Plain Language Expression: ''
+                Condition: ""
+                Rule: ""
+              Plain Language Expression: ""
               Type: Failure
             Origin: ADaM Conformance Rules
-            Release Notes: ''
+            Release Notes: ""
             Rule Identifier:
-              Id: '279'
-              Version: '2'
-            Validator Rule Message: ''
-            Version: '5.0'
-        Version: '1.3'
+              Id: "279"
+              Version: "2"
+            Validator Rule Message: ""
+            Version: "5.0"
+        Version: "1.3"
 
       - Name: ADaMIG
         References:
           - Citations:
-              - Cited Guidance: -< In a pair of corresponding variables (e.g., TRTP and TRTPN),
+              - Cited Guidance:
+                  -< In a pair of corresponding variables (e.g., TRTP and TRTPN),
                   the primary or most commonly used variable does not have the
                   suffix or extension (i.e., N for Numeric or C for Character).
                   The relevant suffix is used only on the name of the secondary
@@ -119,70 +123,73 @@ Authorities:
                   one-to-one relationship between the values of the two
                   variables, as described in Item 5 above.
                 Document: ADaMIG-MD v1.0
-                Item: '6'
-                Section: '3.1.1'
+                Item: "6"
+                Section: "3.1.1"
             Criteria:
               Logical Expression:
-                Condition: ''
-                Rule: ''
-              Plain Language Expression: ''
+                Condition: ""
+                Rule: ""
+              Plain Language Expression: ""
               Type: Failure
             Origin: ADaM Conformance Rules
-            Release Notes: ''
+            Release Notes: ""
             Rule Identifier:
-              Id: '279'
-              Version: '1'
-            Validator Rule Message: ''
-            Version: '5.0'
-        Version: '1.2'
+              Id: "279"
+              Version: "1"
+            Validator Rule Message: ""
+            Version: "5.0"
+        Version: "1.2"
       - Name: OCCDS
         References:
           - Citations:
-              - Cited Guidance: <-CDISC Notes for AESEVN state':' Code AE.AESEV to numeric, Code
+              - Cited Guidance:
+                  <-CDISC Notes for AESEVN state':' Code AE.AESEV to numeric, Code
                   List / Controlled Terms have allowable values of ';' "1, 2,
                   3".
                 Document: OCCDS v1.1
-                Item: 'Table 3.2.8.1'
-                Section: '3.2.8'
+                Item: "Table 3.2.8.1"
+                Section: "3.2.8"
             Criteria:
               Logical Expression:
-                Condition: ''
-                Rule: ''
-              Plain Language Expression: ''
+                Condition: ""
+                Rule: ""
+              Plain Language Expression: ""
               Type: Failure
             Origin: ADaM Conformance Rules
-            Release Notes: ''
+            Release Notes: ""
             Rule Identifier:
-              Id: '279'
-              Version: '1'
-            Validator Rule Message: ''
-            Version: '5.0'
+              Id: "279"
+              Version: "1"
+            Validator Rule Message: ""
+            Version: "5.0"
           - Citations:
-              - Cited Guidance: <-CDISC Notes for AESEVN state':' Code AE.AESEV to numeric, Code
+              - Cited Guidance:
+                  <-CDISC Notes for AESEVN state':' Code AE.AESEV to numeric, Code
                   List / Controlled Terms have allowable values of ';' "1, 2,
                   3".
                 Document: OCCDS v1.0
-                Item: 'Table 3.2.8.1'
-                Section: '3.2.8'
+                Item: "Table 3.2.8.1"
+                Section: "3.2.8"
             Criteria:
               Logical Expression:
-                Condition: ''
-                Rule: ''
-              Plain Language Expression: ''
+                Condition: ""
+                Rule: ""
+              Plain Language Expression: ""
               Type: Failure
             Origin: ADaM Conformance Rules
-            Release Notes: ''
+            Release Notes: ""
             Rule Identifier:
-              Id: '279'
-              Version: '1'
-            Validator Rule Message: ''
-            Version: '5.0'
-        Version: '1.2'
+              Id: "279"
+              Version: "1"
+            Validator Rule Message: ""
+            Version: "5.0"
+        Version: "1.2"
 
       - Name: ADaMIG
         References:
           - Citations:
-              - Cited Guidance: -<  In a pair of corresponding variables (e.g., TRTP and TRTPN),
+              - Cited Guidance:
+                  -<  In a pair of corresponding variables (e.g., TRTP and TRTPN),
                   the primary or most commonly used variable does not have the
                   suffix or extension (e.g., N for Numeric or C for Character).
                   The relevant suffix is used only on the name of the
@@ -197,70 +204,73 @@ Authorities:
                   the values of the two variables, as described in ADaMIG v1.1,
                   Section 3.1.1, Item 5.
                 Document: ADaMIG-MD v1.0
-                Item: '6'
-                Section: '3.1.1'
+                Item: "6"
+                Section: "3.1.1"
             Criteria:
               Logical Expression:
-                Condition: ''
-                Rule: ''
-              Plain Language Expression: ''
+                Condition: ""
+                Rule: ""
+              Plain Language Expression: ""
               Type: Failure
             Origin: ADaM Conformance Rules
-            Release Notes: ''
+            Release Notes: ""
             Rule Identifier:
-              Id: '279'
-              Version: '1'
-            Validator Rule Message: ''
-            Version: '5.0'
-        Version: '1.1'
+              Id: "279"
+              Version: "1"
+            Validator Rule Message: ""
+            Version: "5.0"
+        Version: "1.1"
       - Name: OCCDS
         References:
           - Citations:
-              - Cited Guidance: <-CDISC Notes for AESEVN state':' Code AE.AESEV to numeric, Code
+              - Cited Guidance:
+                  <-CDISC Notes for AESEVN state':' Code AE.AESEV to numeric, Code
                   List / Controlled Terms have allowable values of ';' "1, 2,
                   3".
                 Document: OCCDS v1.1
-                Item: 'Table 3.2.8.1'
-                Section: '3.2.8'
+                Item: "Table 3.2.8.1"
+                Section: "3.2.8"
             Criteria:
               Logical Expression:
-                Condition: ''
-                Rule: ''
-              Plain Language Expression: ''
+                Condition: ""
+                Rule: ""
+              Plain Language Expression: ""
               Type: Failure
             Origin: ADaM Conformance Rules
-            Release Notes: ''
+            Release Notes: ""
             Rule Identifier:
-              Id: '279'
-              Version: '1'
-            Validator Rule Message: ''
-            Version: '5.0'
+              Id: "279"
+              Version: "1"
+            Validator Rule Message: ""
+            Version: "5.0"
           - Citations:
-              - Cited Guidance: <-CDISC Notes for AESEVN state':' Code AE.AESEV to numeric, Code
+              - Cited Guidance:
+                  <-CDISC Notes for AESEVN state':' Code AE.AESEV to numeric, Code
                   List / Controlled Terms have allowable values of ';' "1, 2,
                   3".
                 Document: OCCDS v1.0
-                Item: 'Table 3.2.8.1'
-                Section: '3.2.8'
+                Item: "Table 3.2.8.1"
+                Section: "3.2.8"
             Criteria:
               Logical Expression:
-                Condition: ''
-                Rule: ''
-              Plain Language Expression: ''
+                Condition: ""
+                Rule: ""
+              Plain Language Expression: ""
               Type: Failure
             Origin: ADaM Conformance Rules
-            Release Notes: ''
+            Release Notes: ""
             Rule Identifier:
-              Id: '279'
-              Version: '1'
-            Validator Rule Message: ''
-            Version: '5.0'
-        Version: '1.1'
+              Id: "279"
+              Version: "1"
+            Validator Rule Message: ""
+            Version: "5.0"
+        Version: "1.1"
 
       - Name: ADaMIG
         References:
           - Citations:
-              - Cited Guidance: -<   In general, if SDTM character variables are converted to
+              - Cited Guidance:
+                  -<   In general, if SDTM character variables are converted to
                   numeric variables in ADaM datasets, then they should be named
                   as they are in the SDTM with an "N" suffix added. For example,
                   the numeric version of the DM SEX variable is SEXN in an ADaM
@@ -272,61 +282,61 @@ Authorities:
                   character variables. Note also that this convention does not
                   apply to date/time variables.
                 Document: ADaMIG-MD v1.0
-                Item: '9 (General Variable Naming Conventions)'
-                Section: '3.1.1'
+                Item: "9 (General Variable Naming Conventions)"
+                Section: "3.1.1"
             Criteria:
               Logical Expression:
-                Condition: ''
-                Rule: ''
-              Plain Language Expression: ''
+                Condition: ""
+                Rule: ""
+              Plain Language Expression: ""
               Type: Failure
             Origin: ADaM Conformance Rules
-            Release Notes: ''
+            Release Notes: ""
             Rule Identifier:
-              Id: '279'
-              Version: '1'
-            Validator Rule Message: ''
-            Version: '5.0'
-        Version: '1.0'
+              Id: "279"
+              Version: "1"
+            Validator Rule Message: ""
+            Version: "5.0"
+        Version: "1.0"
       - Name: OCCDS
         References:
           - Citations:
               - Cited Guidance: <-CDISC Notes for AESEVN state':' "Code AE.AESEV to numeric".
                 Document: OCCDS v1.1
-                Item: 'Table 3.2.8.1'
-                Section: '3.2.8'
+                Item: "Table 3.2.8.1"
+                Section: "3.2.8"
             Criteria:
               Logical Expression:
-                Condition: ''
-                Rule: ''
-              Plain Language Expression: ''
+                Condition: ""
+                Rule: ""
+              Plain Language Expression: ""
               Type: Failure
             Origin: ADaM Conformance Rules
-            Release Notes: ''
+            Release Notes: ""
             Rule Identifier:
-              Id: '279'
-              Version: '1'
-            Validator Rule Message: ''
-            Version: '5.0'
+              Id: "279"
+              Version: "1"
+            Validator Rule Message: ""
+            Version: "5.0"
           - Citations:
               - Cited Guidance: <-CDISC Notes for AESEVN state':' "Code AE.AESEV to numeric".
                 Document: OCCDS v1.0
-                Item: 'Table 3.2.8.1'
-                Section: '3.2.8'
+                Item: "Table 3.2.8.1"
+                Section: "3.2.8"
             Criteria:
               Logical Expression:
-                Condition: ''
-                Rule: ''
-              Plain Language Expression: ''
+                Condition: ""
+                Rule: ""
+              Plain Language Expression: ""
               Type: Failure
             Origin: ADaM Conformance Rules
-            Release Notes: ''
+            Release Notes: ""
             Rule Identifier:
-              Id: '279'
-              Version: '1'
-            Validator Rule Message: ''
-            Version: '5.0'
-        Version: '1.0'
+              Id: "279"
+              Version: "1"
+            Validator Rule Message: ""
+            Version: "5.0"
+        Version: "1.0"
 
 Check:
   all:
@@ -348,8 +358,8 @@ Check:
 Core:
   Id: CDISC.ADaMIG.AD0279
   Status: Draft
-  Version: '1'
-Description: ''
+  Version: "1"
+Description: ""
 Executability: Fully Executable
 Outcome:
   Message: AESEVN not equal to Y or null

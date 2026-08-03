@@ -7,7 +7,8 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Identifier for a related study subject or pool of study
+              - Cited Guidance:
+                  Identifier for a related study subject or pool of study
                   subjects. The subject(s) may be human or animal. RSUBJID will
                   be populated with the USUBJID of the related subject or the
                   POOLID of the related pool. RSUBJID will be null for data
@@ -19,13 +20,14 @@ Authorities:
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0367
-              Version: '1'
-            Version: '2.0'
-        Version: '3.4'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.4"
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Identifier for a related study subject or pool of study
+              - Cited Guidance:
+                  Identifier for a related study subject or pool of study
                   subjects. The subject(s) may be human or animal. RSUBJID will
                   be populated with the USUBJID of the related subject or the
                   POOLID of the related pool. RSUBJID will be null for data
@@ -36,13 +38,14 @@ Authorities:
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0367
-              Version: '1'
-            Version: '2.0'
-        Version: '3.2'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.2"
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Identifier for a related subject or pool of subjects. RSUBJID
+              - Cited Guidance:
+                  Identifier for a related subject or pool of subjects. RSUBJID
                   may be populated with the USUBJID of the related subject or
                   the POOLID of the related pool.  RSUBJID will be null for data
                   about associated persons who are related to the study but not
@@ -52,9 +55,9 @@ Authorities:
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0367
-              Version: '1'
-            Version: '2.0'
-        Version: '3.3'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.3"
 Check:
   all:
     - name: RSUBJID
@@ -68,7 +71,7 @@ Check:
 Core:
   Id: CORE-000235
   Status: Published
-  Version: '1'
+  Version: "1"
 Description: Verify that RSUBJID=DM.USUBJID when RSUBJID is populated and
   RSUBJID is not equal to POOLID
 Executability: Fully Executable

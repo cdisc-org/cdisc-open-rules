@@ -4,29 +4,27 @@ Authorities:
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance: RPHASE variable is required when any Repro Phase day variable is
-                  used
+              - Cited Guidance: RPHASE variable is required when any Repro Phase day variable is used
                 Document: IG-DART v1.1
-                Section: '4.1.1'
+                Section: "4.1.1"
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND351
-              Version: '1'
-            Version: '5.0'
-        Version: '1.1'
+              Version: "1"
+            Version: "5.0"
+        Version: "1.1"
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance: RPHASE variable is required when any Repro Phase day variable is
-                  used
+              - Cited Guidance: RPHASE variable is required when any Repro Phase day variable is used
                 Document: IG-DART v1.2
-                Section: '4.1.1'
+                Section: "4.1.1"
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND351
-              Version: '1'
-            Version: '5.0'
-        Version: '1.2'
+              Version: "1"
+            Version: "5.0"
+        Version: "1.2"
 
 Check:
   all:
@@ -61,17 +59,18 @@ Check:
             - name: --RPENDY
               operator: exists
             - name: --RPENDY
-              operator: non_empty
-    # when one of the above is populated, RPHASE may not be empty
+              operator:
+                non_empty
+                # when one of the above is populated, RPHASE may not be empty
     - name: RPHASE
       operator: empty
 
 Core:
   Id: CORE-000946
   Status: Published
-  Version: '1'
-Description: Raise an error when one of the timing variables is populated and
-  RPHASE is not populated
+  Version: "1"
+Description: Raise an error when one of the timing variables is populated and RPHASE is not
+  populated
 Executability: Fully Executable
 Outcome:
   Message: RPHASE must be populated when one of the timing variables is populated

@@ -14,37 +14,35 @@ Authorities:
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0114
-              Version: '1'
-            Version: '2.0'
-        Version: '3.4'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.4"
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: 'Units for --DOSE, --DOSTOT, or --DOSTXT (Examples: ng, mg,
-                  mg/kg).'
+              - Cited Guidance: "Units for --DOSE, --DOSTOT, or --DOSTXT (Examples: ng, mg, mg/kg)."
                 Document: Model v1.4
                 Item: --DOSU Specification
                 Section: 2.2.1
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0114
-              Version: '1'
-            Version: '2.0'
-        Version: '3.2'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.2"
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: 'Units for --DOSE, --DOSTOT, or --DOSTXT. Examples: "ng", "mg",
-                  "mg/kg".'
+              - Cited Guidance: 'Units for --DOSE, --DOSTOT, or --DOSTXT. Examples: "ng", "mg", "mg/kg".'
                 Document: Model v1.7
                 Item: Specification
                 Section: 2.2.1
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0114
-              Version: '1'
-            Version: '2.0'
-        Version: '3.3'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.3"
       - Name: TIG
         References:
           - Citations:
@@ -55,10 +53,10 @@ Authorities:
             Origin: TIG Conformance Rules
             Rule Identifier:
               Id: TIG0377
-              Version: '1'
-            Version: '1.0'
+              Version: "1"
+            Version: "1.0"
         Substandard: SDTM
-        Version: '1.0'
+        Version: "1.0"
 Check:
   all:
     - name: --DOSU
@@ -73,9 +71,9 @@ Check:
 Core:
   Id: CORE-000093
   Status: Published
-  Version: '1'
-Description: Raise an error when --DOSU = null and (--DOSE ^= null or --DOSTOT
-  ^= null or --DOSTXT ^= null)
+  Version: "1"
+Description: Raise an error when --DOSU = null and (--DOSE ^= null or --DOSTOT ^= null or --DOSTXT
+  ^= null)
 Executability: Fully Executable
 Outcome:
   Message: Missing value for --DOSU, when --DOSE, --DOSTXT or --DOSTOT is provided
