@@ -71,10 +71,8 @@ Authorities:
         Version: "1.0"
 Check:
   all:
-    - name: QNAM
-      operator: equal_to
-      value: AESOSP
-      value_is_literal: true
+    - name: AESOSP
+      operator: non_empty
     - name: AESMIE
       operator: not_equal_to
       value: Y
@@ -91,7 +89,7 @@ Match Datasets:
 Outcome:
   Message: Missing AESMIE=Y where SUPPAE.QNAM=AESOSP
   Output Variables:
-    - QNAM
+    - AESOSP
     - AESMIE
 Rule Type: Record Data
 Scope:
