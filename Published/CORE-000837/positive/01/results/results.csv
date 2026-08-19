@@ -1,1 +1,4 @@
 path,attribute,value
+Activity,EXECUTION_ERROR,"Failed to build dataset for rule validation. Builder: ContentsDatasetBuilder, Dataset: Activity, Error: 
+  Error reading CSV from: /home/runner/work/cdisc-open-rules/cdisc-open-rules/Published/CORE-000837/positive/01/data/Activity.csv
+  ValueError: definedProcedures cannot be cast to bool"

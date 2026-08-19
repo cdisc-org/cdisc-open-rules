@@ -1,91 +1,91 @@
 path,attribute,value
-,$code_for_decode_pref_term,
-,$code_for_decode_pref_term,
-,$code_for_decode_pref_term,
-,$code_for_decode_pref_term,
-,$code_for_decode_pref_term,C82638
-,$code_for_decode_pref_term,C82639
-,$code_for_decode_value,
-,$code_for_decode_value,
-,$code_for_decode_value,
-,$code_for_decode_value,
-,$code_for_decode_value,C82638
-,$code_for_decode_value,C82640
-,$codelist_code,C99076
-,$codelist_code,C99076
-,$codelist_code,C99076
-,$codelist_code,C99076
-,$codelist_code,C99076
-,$codelist_code,C99076
-,$codelist_extensible,
-,$codelist_extensible,True
-,$codelist_extensible,True
-,$codelist_extensible,True
-,$codelist_extensible,True
-,$codelist_extensible,True
-,$pref_term_for_code,
-,$pref_term_for_code,
-,$pref_term_for_code,Crossover Study
-,$pref_term_for_code,Crossover Study
-,$pref_term_for_code,Factorial Study
-,$pref_term_for_code,Parallel Study
-,$value_for_code,
-,$value_for_code,
-,$value_for_code,CROSS-OVER
-,$value_for_code,CROSS-OVER
-,$value_for_code,FACTORIAL
-,$value_for_code,PARALLEL
-,id,StudyDesign_1
-,id,StudyDesign_2
-,id,StudyDesign_3
-,id,StudyDesign_4
-,id,StudyDesign_5
-,id,StudyDesign_6
-,interventionModel.code,C82637
-,interventionModel.code,C82637
-,interventionModel.code,C82638
-,interventionModel.code,C82638xx
-,interventionModel.code,C82639
-,interventionModel.code,C82639
-,interventionModel.codeSystem,Intervention Model Response (C99076)
-,interventionModel.codeSystem,http://www.cdisc.org
-,interventionModel.codeSystem,http://www.cdisc.org
-,interventionModel.codeSystem,http://www.cdisc.org
-,interventionModel.codeSystem,http://www.cdisc.org
-,interventionModel.codeSystem,http://www.cdisc.org
-,interventionModel.codeSystemVersion,2023-12-15
-,interventionModel.codeSystemVersion,2023-12-15
-,interventionModel.codeSystemVersion,2023-12-15
-,interventionModel.codeSystemVersion,2023-12-15
-,interventionModel.codeSystemVersion,2023-12-15
-,interventionModel.codeSystemVersion,2023-15-12
-,interventionModel.decode,Crossover
-,interventionModel.decode,FACTORIAL
-,interventionModel.decode,Factorial Study
-,interventionModel.decode,PARALLEL
-,interventionModel.decode,PARALLEL STUDY
-,interventionModel.decode,SINGLE GROUP
-,name,Study Design 1
-,name,Study Design 2
-,name,Study Design 3
-,name,Study Design 4
-,name,Study Design 5
-,name,Study Design 6
-,parent_entity,StudyVersion
-,parent_entity,StudyVersion
-,parent_entity,StudyVersion
-,parent_entity,StudyVersion
-,parent_entity,StudyVersion
-,parent_entity,StudyVersion
-,parent_id,StudyVersion_1
-,parent_id,StudyVersion_1
-,parent_id,StudyVersion_1
-,parent_id,StudyVersion_1
-,parent_id,StudyVersion_1
-,parent_id,StudyVersion_1
-,parent_rel,studyDesigns
-,parent_rel,studyDesigns
-,parent_rel,studyDesigns
-,parent_rel,studyDesigns
-,parent_rel,studyDesigns
-,parent_rel,studyDesigns
+/StudyDesign/0,$code_for_decode_pref_term,
+/StudyDesign/0,$code_for_decode_value,C82640
+/StudyDesign/0,$codelist_code,C99076
+/StudyDesign/0,$codelist_extensible,True
+/StudyDesign/0,$pref_term_for_code,Crossover Study
+/StudyDesign/0,$value_for_code,CROSS-OVER
+/StudyDesign/0,id,StudyDesign_1
+/StudyDesign/0,interventionModel.code,C82637
+/StudyDesign/0,interventionModel.codeSystem,http://www.cdisc.org
+/StudyDesign/0,interventionModel.codeSystemVersion,2023-12-15
+/StudyDesign/0,interventionModel.decode,SINGLE GROUP
+/StudyDesign/0,name,Study Design 1
+/StudyDesign/0,parent_entity,StudyVersion
+/StudyDesign/0,parent_id,StudyVersion_1
+/StudyDesign/0,parent_rel,studyDesigns
+/StudyDesign/1,$code_for_decode_pref_term,
+/StudyDesign/1,$code_for_decode_value,
+/StudyDesign/1,$codelist_code,C99076
+/StudyDesign/1,$codelist_extensible,True
+/StudyDesign/1,$pref_term_for_code,Crossover Study
+/StudyDesign/1,$value_for_code,CROSS-OVER
+/StudyDesign/1,id,StudyDesign_2
+/StudyDesign/1,interventionModel.code,C82637
+/StudyDesign/1,interventionModel.codeSystem,http://www.cdisc.org
+/StudyDesign/1,interventionModel.codeSystemVersion,2023-12-15
+/StudyDesign/1,interventionModel.decode,Crossover
+/StudyDesign/1,name,Study Design 2
+/StudyDesign/1,parent_entity,StudyVersion
+/StudyDesign/1,parent_id,StudyVersion_1
+/StudyDesign/1,parent_rel,studyDesigns
+/StudyDesign/2,$code_for_decode_pref_term,
+/StudyDesign/2,$code_for_decode_value,C82638
+/StudyDesign/2,$codelist_code,C99076
+/StudyDesign/2,$codelist_extensible,True
+/StudyDesign/2,$pref_term_for_code,
+/StudyDesign/2,$value_for_code,
+/StudyDesign/2,id,StudyDesign_3
+/StudyDesign/2,interventionModel.code,C82638xx
+/StudyDesign/2,interventionModel.codeSystem,http://www.cdisc.org
+/StudyDesign/2,interventionModel.codeSystemVersion,2023-12-15
+/StudyDesign/2,interventionModel.decode,FACTORIAL
+/StudyDesign/2,name,Study Design 3
+/StudyDesign/2,parent_entity,StudyVersion
+/StudyDesign/2,parent_id,StudyVersion_1
+/StudyDesign/2,parent_rel,studyDesigns
+/StudyDesign/3,$code_for_decode_pref_term,C82638
+/StudyDesign/3,$code_for_decode_value,
+/StudyDesign/3,$codelist_code,C99076
+/StudyDesign/3,$codelist_extensible,True
+/StudyDesign/3,$pref_term_for_code,Factorial Study
+/StudyDesign/3,$value_for_code,FACTORIAL
+/StudyDesign/3,id,StudyDesign_4
+/StudyDesign/3,interventionModel.code,C82638
+/StudyDesign/3,interventionModel.codeSystem,Intervention Model Response (C99076)
+/StudyDesign/3,interventionModel.codeSystemVersion,2023-12-15
+/StudyDesign/3,interventionModel.decode,Factorial Study
+/StudyDesign/3,name,Study Design 4
+/StudyDesign/3,parent_entity,StudyVersion
+/StudyDesign/3,parent_id,StudyVersion_1
+/StudyDesign/3,parent_rel,studyDesigns
+/StudyDesign/4,$code_for_decode_pref_term,
+/StudyDesign/4,$code_for_decode_value,
+/StudyDesign/4,$codelist_code,C99076
+/StudyDesign/4,$codelist_extensible,
+/StudyDesign/4,$pref_term_for_code,
+/StudyDesign/4,$value_for_code,
+/StudyDesign/4,id,StudyDesign_5
+/StudyDesign/4,interventionModel.code,C82639
+/StudyDesign/4,interventionModel.codeSystem,http://www.cdisc.org
+/StudyDesign/4,interventionModel.codeSystemVersion,2023-15-12
+/StudyDesign/4,interventionModel.decode,PARALLEL
+/StudyDesign/4,name,Study Design 5
+/StudyDesign/4,parent_entity,StudyVersion
+/StudyDesign/4,parent_id,StudyVersion_1
+/StudyDesign/4,parent_rel,studyDesigns
+/StudyDesign/5,$code_for_decode_pref_term,C82639
+/StudyDesign/5,$code_for_decode_value,
+/StudyDesign/5,$codelist_code,C99076
+/StudyDesign/5,$codelist_extensible,True
+/StudyDesign/5,$pref_term_for_code,Parallel Study
+/StudyDesign/5,$value_for_code,PARALLEL
+/StudyDesign/5,id,StudyDesign_6
+/StudyDesign/5,interventionModel.code,C82639
+/StudyDesign/5,interventionModel.codeSystem,http://www.cdisc.org
+/StudyDesign/5,interventionModel.codeSystemVersion,2023-12-15
+/StudyDesign/5,interventionModel.decode,PARALLEL STUDY
+/StudyDesign/5,name,Study Design 6
+/StudyDesign/5,parent_entity,StudyVersion
+/StudyDesign/5,parent_id,StudyVersion_1
+/StudyDesign/5,parent_rel,studyDesigns
