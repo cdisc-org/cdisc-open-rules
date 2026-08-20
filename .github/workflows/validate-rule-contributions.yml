@@ -3,7 +3,7 @@ name: Validate Rule Contributions
 on:
   pull_request:
     paths:
-      - 'Unpublished/**'
+      - "Unpublished/**"
     types: [opened, synchronize, reopened]
   workflow_dispatch: {}
 
@@ -27,7 +27,7 @@ jobs:
       - name: Set up Python 3.12
         uses: actions/setup-python@v5
         with:
-          python-version: '3.12'
+          python-version: "3.12"
 
       - name: Install engine dependencies
         run: |

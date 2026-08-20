@@ -7,50 +7,53 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Include the topic variable from the identified general
-                  observation class (e.g., --TESTCD for Findings) in the SDTM.
+              - Cited Guidance:
+                  Include the topic variable from the identified general observation class
+                  (e.g., --TESTCD for Findings) in the SDTM.
                 Document: IG v3.4
                 Item: Item 3.b.
-                Section: '2.6'
-              - Cited Guidance: For a Findings domain, the topic variable, --TESTCD, should use
-                  Controlled Terminology (e.g., "SYSBP" for Systolic Blood
-                  Pressure)
+                Section: "2.6"
+              - Cited Guidance:
+                  For a Findings domain, the topic variable, --TESTCD, should use Controlled
+                  Terminology (e.g., "SYSBP" for Systolic Blood Pressure)
                 Document: IG v3.4
                 Section: 4.3.6
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0320
-              Version: '2'
-            Version: '2.0'
-        Version: '3.4'
+              Version: "2"
+            Version: "2.0"
+        Version: "3.4"
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Include the Topic variable from the identified general
-                  observation class (e.g., --TESTCD for Findings)
+              - Cited Guidance:
+                  Include the Topic variable from the identified general observation class
+                  (e.g., --TESTCD for Findings)
                 Document: IG v3.2
                 Item: 3.b
-                Section: '2.6'
+                Section: "2.6"
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0320
-              Version: '2'
-            Version: '2.0'
-        Version: '3.2'
+              Version: "2"
+            Version: "2.0"
+        Version: "3.2"
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Include the Topic variable from the identified general
-                  observation class (e.g., --TESTCD for Findings)
+              - Cited Guidance:
+                  Include the Topic variable from the identified general observation class
+                  (e.g., --TESTCD for Findings)
                 Document: IG v3.3
                 Item: 3.b
-                Section: '2.6'
+                Section: "2.6"
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0320
-              Version: '2'
-            Version: '2.0'
-        Version: '3.3'
+              Version: "2"
+            Version: "2.0"
+        Version: "3.3"
 Check:
   all:
     - name: define_dataset_is_non_standard
@@ -65,7 +68,7 @@ Check:
 Core:
   Id: CDISC.SDTMIG.CG0320
   Status: Draft
-  Version: '1'
+  Version: "1"
 Description: Raise an error when variable --TESTCD is missing for custom Findings domains
 Executability: Fully Executable
 Operations:

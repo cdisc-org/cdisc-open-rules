@@ -5,34 +5,35 @@ Authorities:
   - Organization: CDISC
     Standards:
       - Name: SDTMIG
-        Version: '3.4'
         References:
-          - Origin: SDTM and SDTMIG Conformance Rules
-            Rule Identifier:
-              Id: CG0523
-              Version: '1'
-            Version: '2.0'
-            Citations:
-              - Cited Guidance: Both ARMCD and ACTARMCD will be null for subjects
-                  who were not assigned to treatment.  The same reason will provide
-                  the reason that both are null.
+          - Citations:
+              - Cited Guidance:
+                  Both ARMCD and ACTARMCD will be null for subjects who were not assigned to
+                  treatment.  The same reason will provide the reason that both are null.
                 Document: IG v3.4
                 Item: Assumption 4
-                Section: '5.2'
-      - Name: SDTMIG
-        Version: '3.3'
-        References:
-          - Origin: SDTM and SDTMIG Conformance Rules
+                Section: "5.2"
+            Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0523
-              Version: '1'
-            Version: '2.0'
-            Citations:
-              - Cited Guidance: Both ARMCD and ACTARMCD will be null for subjects
-                  who were not assigned to treatment
+              Version: "1"
+            Version: "2.0"
+        Version: "3.4"
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance:
+                  Both ARMCD and ACTARMCD will be null for subjects who were not assigned to
+                  treatment
                 Document: IG v3.3
                 Item: Assumption 4
-                Section: '5.2'
+                Section: "5.2"
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0523
+              Version: "1"
+            Version: "2.0"
+        Version: "3.3"
 Check:
   all:
     - name:
@@ -42,9 +43,8 @@ Check:
 Core:
   Id: CDISC.SDTMIG.CG0523
   Status: Draft
-  Version: '1'
-Description: Trigger error when ARMCD is populated for a subject who was not assigned
-  to treatment
+  Version: "1"
+Description: Trigger error when ARMCD is populated for a subject who was not assigned to treatment
 Executability: Fully Executable
 Outcome:
   Message: ARMCD is populated for a subject who was not assigned to treatment

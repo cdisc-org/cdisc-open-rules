@@ -1,5 +1,5 @@
 # Variable: --SOCCD
-# Condition: 
+# Condition:
 # Rule: --SOCCD = MedDRA primary system organ class
 Authorities:
   - Organization: CDISC
@@ -13,9 +13,9 @@ Authorities:
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0437
-              Version: '1'
-            Version: '2.0'
-        Version: '3.2'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.2"
       - Name: SDTMIG
         References:
           - Citations:
@@ -25,23 +25,24 @@ Authorities:
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0437
-              Version: '1'
-            Version: '2.0'
-        Version: '3.3'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.3"
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: The system organ class code from the primary hierarchy assigned
-                  in the MedDRA dictionary.
+              - Cited Guidance:
+                  The system organ class code from the primary hierarchy assigned in the
+                  MedDRA dictionary.
                 Document: Model v2.0
                 Item: --SOCCD
                 Section: Events
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0437
-              Version: '1'
-            Version: '2.0'
-        Version: '3.4'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.4"
 Check:
   all:
     - name: --SOCCD
@@ -51,9 +52,8 @@ Check:
 Core:
   Id: CDISC.SDTMIG.CG0437
   Status: Draft
-  Version: '1'
-Description: Trigger error when --SOCCD is not a valid MedDRA primary system
-  organ class code
+  Version: "1"
+Description: Trigger error when --SOCCD is not a valid MedDRA primary system organ class code
 Executability: Fully Executable
 Outcome:
   Message: --SOCCD is not a valid MedDRA primary system organ class code

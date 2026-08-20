@@ -5,20 +5,21 @@ Authorities:
   - Organization: CDISC
     Standards:
       - Name: SDTMIG
-        Version: '3.2'
+        Version: "3.2"
         References:
           - Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0066
-              Version: '1'
-            Version: '2.0'
+              Version: "1"
+            Version: "2.0"
             Citations:
-              - Cited Guidance: d. When DSCAT='PROTOCOL MILESTONE', DSTERM and DSDECOD
+              - Cited Guidance:
+                  d. When DSCAT='PROTOCOL MILESTONE', DSTERM and DSDECOD
                   will contain the same value drawn from the sponsor's controlled
                   terminology.
                 Document: IG v3.2
                 Item: Assumption 3d
-                Section: '6.2'
+                Section: "6.2"
 Check:
   all:
     - name: DSCAT
@@ -31,8 +32,9 @@ Check:
 Core:
   Id: CORE-000322
   Status: Published
-  Version: '1'
-Description: When DSCAT equals PROTOCOL MILESTONE, then DSTERM should be equal to
+  Version: "1"
+Description:
+  When DSCAT equals PROTOCOL MILESTONE, then DSTERM should be equal to
   DSDECOD
 Executability: Fully Executable
 Outcome:

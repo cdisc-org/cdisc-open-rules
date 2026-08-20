@@ -1,28 +1,29 @@
 Authorities:
   - Organization: CDISC
     Standards:
-      - Name: 'ADaMIG'
+      - Name: "ADaMIG"
         References:
           - Citations:
-              - Cited Guidance: <- Unique character representation of SUBJTYP. For
+              - Cited Guidance:
+                  <- Unique character representation of SUBJTYP. For
                   first-in-human studies, the value can be “Healthy volunteers.
                 Document: ADPPKIG v1.0
-                Item: 'Table 3.2'
-                Section: '3.2'
+                Item: "Table 3.2"
+                Section: "3.2"
             Criteria:
               Logical Expression:
-                Condition: ''
-                Rule: ''
-              Plain Language Expression: ''
+                Condition: ""
+                Rule: ""
+              Plain Language Expression: ""
               Type: Failure
             Origin: ADaM Conformance Rules
-            Release Notes: ''
+            Release Notes: ""
             Rule Identifier:
-              Id: '807'
-              Version: '1'
-            Validator Rule Message: ''
-            Version: '5.0'
-        Version: '1.3'
+              Id: "807"
+              Version: "1"
+            Validator Rule Message: ""
+            Version: "5.0"
+        Version: "1.3"
 
 Check:
   all:
@@ -36,8 +37,8 @@ Check:
 Core:
   Id: CDISC.ADaMIG.AD0807
   Status: Draft
-  Version: '1'
-Description: ''
+  Version: "1"
+Description: ""
 Executability: Fully Executable
 Outcome:
   Message: SUBJTYPC is not unique for a given value of SUBJTYP

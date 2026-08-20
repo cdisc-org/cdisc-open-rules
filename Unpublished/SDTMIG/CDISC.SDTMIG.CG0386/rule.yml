@@ -1,5 +1,5 @@
 # Variable: --BDSYCD
-# Condition: 
+# Condition:
 # Rule: --BDSYCD = MedDRA system organ class code
 Authorities:
   - Organization: CDISC
@@ -7,58 +7,59 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: A standardized or dictionary derived short sequence of
-                  characters used to represent the body system or organ class.
-                  MedDRA System Organ Class code corresponding to --BODSYS
-                  assigned for analysis.
+              - Cited Guidance:
+                  A standardized or dictionary derived short sequence of characters used to
+                  represent the body system or organ class. MedDRA System Organ Class code corresponding to
+                  --BODSYS assigned for analysis.
                 Document: Model v2.0
                 Item: --BDSYCD
                 Section: Events
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0386
-              Version: '1'
-            Version: '2.0'
-        Version: '3.4'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.4"
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: MedDRA System Organ Class code corresponding to -BODSYS assigned
-                  for analysis.
+              - Cited Guidance: MedDRA System Organ Class code corresponding to -BODSYS assigned for
+                  analysis.
                 Document: Model v1.4
                 Section: 2.2.2
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0386
-              Version: '1'
-            Version: '2.0'
-        Version: '3.2'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.2"
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: MedDRA System Organ Class code corresponding to -BODSYS assigned
-                  for analysis.
+              - Cited Guidance: MedDRA System Organ Class code corresponding to -BODSYS assigned for
+                  analysis.
                 Document: Model v1.7
                 Section: 2.2.2
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0386
-              Version: '1'
-            Version: '2.0'
-        Version: '3.3'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.3"
 Check:
   all:
     - metadata: $valid_codes
       operator: equal_to
-      value: true
-    #- name: --BDSYCD
-    #  operator: is_contained_by
-    #  value:
-    #    - MedDRA system organ class code
+      value:
+        true
+        #- name: --BDSYCD
+        #  operator: is_contained_by
+        #  value:
+        #    - MedDRA system organ class code
 Core:
   Id: CDISC.SDTMIG.CG0386
   Status: Draft
-  Version: '1'
+  Version: "1"
 Description: Trigger error when --BDSYCD is not a valid MedDRA system organ class code
 Executability: Fully Executable
 Operations:

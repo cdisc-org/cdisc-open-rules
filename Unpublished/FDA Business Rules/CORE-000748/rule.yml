@@ -13,9 +13,9 @@ Authorities:
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB2504
-              Version: '1'
-            Version: '1.5'
-        Version: '3.3'
+              Version: "1"
+            Version: "1.5"
+        Version: "3.3"
       - Name: SDTMIG
         References:
           - Citations:
@@ -25,9 +25,9 @@ Authorities:
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB2504
-              Version: '1'
-            Version: '1.5'
-        Version: '3.4'
+              Version: "1"
+            Version: "1.5"
+        Version: "3.4"
 Check:
   all:
     - name: ARMNRS
@@ -42,9 +42,8 @@ Check:
 Core:
   Id: CORE-000748
   Status: Draft
-  Version: '1'
-Description: If a subject is assigned to an arm code, the subject should have a
-  record in EX.
+  Version: "1"
+Description: If a subject is assigned to an arm code, the subject should have a record in EX.
 Executability: Partially Executable
 Operations:
   - domain: EX

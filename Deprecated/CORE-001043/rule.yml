@@ -7,42 +7,45 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Age should be provided for all subjects, except where not
+              - Cited Guidance:
+                  Age should be provided for all subjects, except where not
                   collected for screen failures.
                 Document: FDA
                 Section: FDAB005
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB0501
-              Version: '1'
-            Version: '1.5'
-        Version: '3.2'
+              Version: "1"
+            Version: "1.5"
+        Version: "3.2"
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Age should be provided for all subjects, except where not
+              - Cited Guidance:
+                  Age should be provided for all subjects, except where not
                   collected for screen failures.
                 Document: FDA
                 Section: FDAB005
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB0501
-              Version: '1'
-            Version: '1.5'
-        Version: '3.3'
+              Version: "1"
+            Version: "1.5"
+        Version: "3.3"
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Age should be provided for all subjects, except where not
+              - Cited Guidance:
+                  Age should be provided for all subjects, except where not
                   collected for screen failures.
                 Document: FDA
                 Section: FDAB005
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB0501
-              Version: '1'
-            Version: '1.5'
-        Version: '3.4'
+              Version: "1"
+            Version: "1.5"
+        Version: "3.4"
 Check:
   all:
     - name: AGE
@@ -66,7 +69,7 @@ Check:
 Core:
   Id: CORE-001043
   Status: Published
-  Version: '1'
+  Version: "1"
 Description: Age should be provided for all subjects, except where not collected
   for screen failures.
 Executability: Fully Executable
