@@ -7,33 +7,35 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: 'Further information about the parameters is included below in
+              - Cited Guidance:
+                  "Further information about the parameters is included below in
                   Table 1. TSVAL may have     controlled terminology depending
-                  on the value of TSPARMCD'
+                  on the value of TSPARMCD"
                 Document: SDTM and SDTMIG Conformance Rules v2.0
                 Item: Assumption 3
-                Section: '7.4'
-            Origin: 'SDTM and SDTMIG Conformance Rules'
+                Section: "7.4"
+            Origin: "SDTM and SDTMIG Conformance Rules"
             Rule Identifier:
-              Id: 'CG0444'
-              Version: '1'
-            Version: '2.0'
-        Version: '3.2'
+              Id: "CG0444"
+              Version: "1"
+            Version: "2.0"
+        Version: "3.2"
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: 'Further information about the parameters is included below in
+              - Cited Guidance:
+                  "Further information about the parameters is included below in
                   Table 1. TSVAL may have     controlled terminology depending
-                  on the value of TSPARMCD'
+                  on the value of TSPARMCD"
                 Document: SDTM and SDTMIG Conformance Rules v2.0
                 Item: Assumption 3
-                Section: '7.4'
-            Origin: 'SDTM and SDTMIG Conformance Rules'
+                Section: "7.4"
+            Origin: "SDTM and SDTMIG Conformance Rules"
             Rule Identifier:
-              Id: 'CG0444'
-              Version: '1'
-            Version: '2.0'
-        Version: '3.3'
+              Id: "CG0444"
+              Version: "1"
+            Version: "2.0"
+        Version: "3.3"
 Check:
   all:
     - any:
@@ -48,17 +50,17 @@ Check:
           value: TRT
     - name: TSVCDREF
       operator: not_equal_to
-      value: 'UNII'
+      value: "UNII"
 
 Core:
   Id: CORE-000735
   Status: Published
-  Version: '1'
-Description: 'When TSPARMCD is equal to COMPTRT, CURTRT or TRT, TSVCDREF should equal UNII'
+  Version: "1"
+Description: "When TSPARMCD is equal to COMPTRT, CURTRT or TRT, TSVCDREF should equal UNII"
 Executability: Fully Executable
 Outcome:
-  Message: 'Throw error when TSPARMCD is equal to COMPTRT, CURTRT, or TRT and
-    TSVCDREF ^= UNII'
+  Message: "Throw error when TSPARMCD is equal to COMPTRT, CURTRT, or TRT and
+    TSVCDREF ^= UNII"
   Output Variables:
     - TSPARMCD
     - TSVCDREF

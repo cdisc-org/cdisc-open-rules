@@ -7,58 +7,59 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: For planned visits, values of VISIT, VISITNUM, and VISITDY must
-                  be those defined in the Trial Visits (TV) dataset (Section
-                  7.3.1, Trial Visits).
+              - Cited Guidance:
+                  For planned visits, values of VISIT, VISITNUM, and VISITDY must be those
+                  defined in the Trial Visits (TV) dataset (Section 7.3.1, Trial Visits).
                 Document: IG v3.4
-                Item: ''
+                Item: ""
                 Section: 4.4.5
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0032
-              Version: '2'
-            Version: '2.0'
-        Version: '3.4'
+              Version: "2"
+            Version: "2.0"
+        Version: "3.4"
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: For planned visits, values of VISIT, VISITNUM, and VISITDY must
-                  be those defined in the Trial Visits dataset,
+              - Cited Guidance:
+                  For planned visits, values of VISIT, VISITNUM, and VISITDY must be those
+                  defined in the Trial Visits dataset,
                 Document: IG v3.3
-                Item: ''
+                Item: ""
                 Section: 4.4.5
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0032
-              Version: '2'
-            Version: '2.0'
-        Version: '3.3'
+              Version: "2"
+            Version: "2.0"
+        Version: "3.3"
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: For planned visits, values of VISIT, VISITNUM, and VISITDY must
-                  be those defined in the Trial Visits dataset,
+              - Cited Guidance:
+                  For planned visits, values of VISIT, VISITNUM, and VISITDY must be those
+                  defined in the Trial Visits dataset,
                 Document: IG v3.2
-                Item: ''
+                Item: ""
                 Section: 4.1.4.5
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0032
-              Version: '2'
-            Version: '2.0'
-        Version: '3.2'
+              Version: "2"
+            Version: "2.0"
+        Version: "3.2"
       - Name: TIG
         References:
           - Citations:
-              - Cited Guidance: The values of VISITNUM in the TV dataset are the valid values of
-                  VISITNUM for planned visits. Any values of VISITNUM that
-                  appear in subject-level datasets that are not in the TV
-                  dataset are assumed to correspond to unplanned visits. There
-                  will be a one-to-one relationship between values of VISIT and
-                  VISITNUM in TV. If a subject-level dataset includes both
-                  VISITNUM and VISIT, then records that include values of
-                  VISITNUM that appear in the TV dataset should also include the
-                  corresponding values of VISIT from the TV dataset.
+              - Cited Guidance:
+                  The values of VISITNUM in the TV dataset are the valid values of VISITNUM
+                  for planned visits. Any values of VISITNUM that appear in subject-level datasets that are
+                  not in the TV dataset are assumed to correspond to unplanned visits. There will be a
+                  one-to-one relationship between values of VISIT and VISITNUM in TV. If a subject-level
+                  dataset includes both VISITNUM and VISIT, then records that include values of VISITNUM
+                  that appear in the TV dataset should also include the corresponding values of VISIT from
+                  the TV dataset.
                 Document: TIG 1.0
                 Item: 2.8.10.31 Assumption 6
                 Section: 2.8.7.5
@@ -69,10 +70,10 @@ Authorities:
             Origin: TIG Conformance Rules
             Rule Identifier:
               Id: TIG0313
-              Version: '1'
-            Version: '1.0'
+              Version: "1"
+            Version: "1.0"
         Substandard: SDTM
-        Version: '1.0'
+        Version: "1.0"
 Check:
   all:
     - name: VISITDY
@@ -86,7 +87,7 @@ Check:
 Core:
   Id: CORE-000249
   Status: Published
-  Version: '1'
+  Version: "1"
 Description: Verify that visitdy is planned and exists in TV
 Executability: Fully Executable
 Match Datasets:

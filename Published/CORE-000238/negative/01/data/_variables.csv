@@ -25,20 +25,20 @@ dm,ACTARM,Description of Actual Arm,Char,50
 dm,ARMNRS,Reason Arm and/or Actual Arm is Null,Char,50
 dm,ACTARMUD,Description of Unplanned Actual Arm,Char,50
 dm,COUNTRY,Country,Char,50
-ex,STUDYID,50,CDISCPILOT01,CDISCPILOT01
-ex,DOMAIN,50,EX,EX
-ex,USUBJID,50,CDISC001,CDISC001
-ex,SPDEVID,200,DEV0001,DEV0001
-ex,EXSEQ,8,1,2
-ex,EXTRT,50,ZANOMALINE,ZANOMALINE
-ex,EXDOSE,8,54,54
-ex,EXDOSU,50,mg,mg
-ex,EXDOSFRM,50,INJECTION,INJECTION
-ex,EXDOSFRQ,50,QD,QD
-ex,EXROUTE,50,SUBCUTANEOUS,SUBCUTANEOUS
-ex,EXLOT,50,SDS580-359,SDS580-359
-ex,EPOCH,50,TREATMENT,TREATMENT
-ex,EXSTDTC,50,2012-11-30,2012-12-01
-ex,EXENDTC,50,2012-11-30,2012-12-01
-ex,EXSTDY,8,1,2
-ex,EXENDY,8,1,2
+ex,STUDYID,Study Identifier,Char,50
+ex,DOMAIN,Domain Abbreviation,Char,50
+ex,USUBJID,Unique Subject Identifier,Char,50
+ex,SPDEVID,Sponsor Device Identifier,Char,200
+ex,EXSEQ,Sequence Number,Num,8
+ex,EXTRT,Name of Treatment,Char,50
+ex,EXDOSE,Dose,Num,8
+ex,EXDOSU,Dose Units,Char,50
+ex,EXDOSFRM,Dose Form,Char,50
+ex,EXDOSFRQ,Dosing Frequency per Interval,Char,50
+ex,EXROUTE,Route of Administration,Char,50
+ex,EXLOT,Lot Number,Char,50
+ex,EPOCH,Epoch,Char,50
+ex,EXSTDTC,Start Date/Time of Treatment,Char,50
+ex,EXENDTC,End Date/Time of Treatment,Char,50
+ex,EXSTDY,Study Day of Start of Treatment,Num,8
+ex,EXENDY,Study Day of End of Treatment,Num,8

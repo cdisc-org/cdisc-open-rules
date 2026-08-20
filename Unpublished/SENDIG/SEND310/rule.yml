@@ -1,83 +1,89 @@
 Authorities:
-  - Organization: 'CDISC'
+  - Organization: "CDISC"
     Standards:
       # Not applicable to SENDIG 3.0
-      - Name: 'SENDIG'
+      - Name: "SENDIG"
         References:
           - Citations:
-              - Cited Guidance: 'Trial Sets (TX) can have multiple species and/or strains if
-                  they are different by set.'
-                Document: 'IG v3.1'
-                Section: '5.1.1.1'
-            Origin: 'SEND Conformance Rules'
+              - Cited Guidance:
+                  "Trial Sets (TX) can have multiple species and/or strains if they are different
+                  by set."
+                Document: "IG v3.1"
+                Section: "5.1.1.1"
+            Origin: "SEND Conformance Rules"
             Rule Identifier:
-              Id: 'SEND310'
-              Version: '1'
-            Version: '5.0'
-        Version: '3.1'
-      - Name: 'SENDIG'
+              Id: "SEND310"
+              Version: "1"
+            Version: "5.0"
+        Version: "3.1"
+      - Name: "SENDIG"
         References:
           - Citations:
-              - Cited Guidance: 'Trial Sets (TX) can have multiple species and/or strains if
-                  they are different by set.'
-                Document: 'IG v3.1.1'
-                Section: '5.1.1.1'
-            Origin: 'SEND Conformance Rules'
+              - Cited Guidance:
+                  "Trial Sets (TX) can have multiple species and/or strains if they are different
+                  by set."
+                Document: "IG v3.1.1"
+                Section: "5.1.1.1"
+            Origin: "SEND Conformance Rules"
             Rule Identifier:
-              Id: 'SEND310'
-              Version: '1'
-            Version: '5.0'
-        Version: '3.1.1'
-      - Name: 'SENDIG-GENETOX'
+              Id: "SEND310"
+              Version: "1"
+            Version: "5.0"
+        Version: "3.1.1"
+      - Name: "SENDIG-GENETOX"
         References:
           - Citations:
-              - Cited Guidance: 'Trial Sets (TX) can have multiple species and/or strains if
-                  they are different by set.'
-                Document: 'IG v3.1.1'
-                Section: '5.1.1.1'
-            Origin: 'SEND Conformance Rules'
+              - Cited Guidance:
+                  "Trial Sets (TX) can have multiple species and/or strains if they are different
+                  by set."
+                Document: "IG v3.1.1"
+                Section: "5.1.1.1"
+            Origin: "SEND Conformance Rules"
             Rule Identifier:
-              Id: 'SEND310'
-              Version: '1'
-            Version: '5.0'
-        Version: '1.0'
-      - Name: 'SENDIG-DART'
+              Id: "SEND310"
+              Version: "1"
+            Version: "5.0"
+        Version: "1.0"
+      - Name: "SENDIG-DART"
         References:
           - Citations:
-              - Cited Guidance: 'Trial Sets (TX) can have multiple species and/or strains if
-                  they are different by set.'
-                Document: 'IG v3.1'
-                Section: '5.1.1.1'
-            Origin: 'SEND Conformance Rules'
+              - Cited Guidance:
+                  "Trial Sets (TX) can have multiple species and/or strains if they are different
+                  by set."
+                Document: "IG v3.1"
+                Section: "5.1.1.1"
+            Origin: "SEND Conformance Rules"
             Rule Identifier:
-              Id: 'SEND310'
-              Version: '1'
-            Version: '5.0'
-        Version: '1.1'
-      - Name: 'SENDIG-DART'
+              Id: "SEND310"
+              Version: "1"
+            Version: "5.0"
+        Version: "1.1"
+      - Name: "SENDIG-DART"
         References:
           - Citations:
-              - Cited Guidance: 'Trial Sets (TX) can have multiple species and/or strains if
-                  they are different by set.'
-                Document: 'IG v3.1.1'
-                Section: '5.1.1.1'
-            Origin: 'SEND Conformance Rules'
+              - Cited Guidance:
+                  "Trial Sets (TX) can have multiple species and/or strains if they are different
+                  by set."
+                Document: "IG v3.1.1"
+                Section: "5.1.1.1"
+            Origin: "SEND Conformance Rules"
             Rule Identifier:
-              Id: 'SEND310'
-              Version: '1'
-            Version: '5.0'
-        Version: '1.2'
+              Id: "SEND310"
+              Version: "1"
+            Version: "5.0"
+        Version: "1.2"
 Check:
   any:
     # First case: STRAIN
     - all:
         # Only apply when STRAIN is present, as it is "permissible"
-        - name: 'STRAIN'
+        - name: "STRAIN"
           operator: exists
         - name: STRAIN
           operator: is_inconsistent_across_dataset
-          value: SETCD
-    # Second case: SPECIES
+          value:
+            SETCD
+            # Second case: SPECIES
     - all:
         # only apply when SPECIES is present, as it is "permissible"
         - name: SPECIES
@@ -88,9 +94,8 @@ Check:
 
 Core:
   Status: Draft
-  Version: '1'
-Description: 'DM records with different values for DM.STRAIN must have different
-  values for DM.SETCD.'
+  Version: "1"
+Description: "DM records with different values for DM.STRAIN must have different values for DM.SETCD."
 Executability: Fully Executable
 # Operations:
 # The following operations, only used for reporting purposes,
@@ -110,13 +115,12 @@ Executability: Fully Executable
 #  name: SPECIES
 #  operator: distinct
 Outcome:
-  Message: 'Within each SETCD, only a single STRAIN and only a single SPECIES is
-    allowed'
+  Message: "Within each SETCD, only a single STRAIN and only a single SPECIES is allowed"
   Output Variables:
     - STRAIN
     - SPECIES
-    #- $distinct_strain
-    #- $distinct_species
+      #- $distinct_strain
+      #- $distinct_species
 Rule Type: Record Data
 Scope:
   Classes:

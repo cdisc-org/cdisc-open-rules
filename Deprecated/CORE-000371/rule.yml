@@ -1,5 +1,5 @@
 # Variable: ARM
-# Condition: 
+# Condition:
 # Rule: ARM not in ('Screen Failure', 'Not Assigned', 'Unplanned Treatment', 'Not Treated')
 Authorities:
   - Organization: CDISC
@@ -14,9 +14,9 @@ Authorities:
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0244
-              Version: '2'
-            Version: '2.0'
-        Version: '3.2'
+              Version: "2"
+            Version: "2.0"
+        Version: "3.2"
 Check:
   all:
     - name: ARM
@@ -29,12 +29,13 @@ Check:
 Core:
   Id: CORE-000371
   Status: Published
-  Version: '1'
+  Version: "1"
 Description: 'Raise an error when ARM is "Screen Failure", "Not Assigned",
   "Unplanned Treatment" or "Not Treated"'
 Executability: Fully Executable
 Outcome:
-  Message: 'ARM is "Screen Failure", "Not Assigned", "Unplanned Treatment" or "Not
+  Message:
+    'ARM is "Screen Failure", "Not Assigned", "Unplanned Treatment" or "Not
     Treated"'
 Rule Type: Record Data
 Scope:

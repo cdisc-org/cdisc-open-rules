@@ -5,44 +5,47 @@ Authorities:
   - Organization: CDISC
     Standards:
       - Name: SDTMIG
-        Version: '3.4'
+        Version: "3.4"
         References:
           - Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0364
-              Version: '1'
-            Version: '2.0'
+              Version: "1"
+            Version: "2.0"
             Citations:
-              - Cited Guidance: Identifier used to identify a related subject or pool
+              - Cited Guidance:
+                  Identifier used to identify a related subject or pool
                   of subjects. RSUBJID will be populated with either the  USUBJID
                   of the related subject or the POOLID of the related pool.
                 Document: Model v2.0
                 Item: RSUBJID
                 Section: RELSUB
       - Name: SDTMIG
-        Version: '3.2'
+        Version: "3.2"
         References:
           - Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0364
-              Version: '1'
-            Version: '2.0'
+              Version: "1"
+            Version: "2.0"
             Citations:
-              - Cited Guidance: Identifier used to identify a related subject or pool
+              - Cited Guidance:
+                  Identifier used to identify a related subject or pool
                   of subjects. RSUBJID will be populated with either the USUBJID of
                   the related subject or the POOLID of the related pool.
                 Document: Model v1.4
                 Section: 4.1.4
       - Name: SDTMIG
-        Version: '3.3'
+        Version: "3.3"
         References:
           - Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0364
-              Version: '1'
-            Version: '2.0'
+              Version: "1"
+            Version: "2.0"
             Citations:
-              - Cited Guidance: Identifier used to identify a related subject or pool
+              - Cited Guidance:
+                  Identifier used to identify a related subject or pool
                   of subjects. RSUBJID will be populated with either the USUBJID of
                   the related subject or the POOLID of the related pool.
                 Document: Model v1.7
@@ -57,7 +60,7 @@ Check:
 Core:
   Id: CORE-000232
   Status: Published
-  Version: '1'
+  Version: "1"
 Description: Verify when RSUBJID is populated it does not equal POOLID
 Executability: Fully Executable
 Outcome:

@@ -4,11 +4,10 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: The controlled terminology or a link to the controlled
-                  terminology should be included in the data definition file
-                  wherever applicable. See the define.xml specification for
-                  details on including or referencing controlled terminology
-                  lists. Transport format)"
+              - Cited Guidance:
+                  The controlled terminology or a link to the controlled terminology should be
+                  included in the data definition file wherever applicable. See the define.xml specification
+                  for details on including or referencing controlled terminology lists. Transport format)"
                 Document: IG v3.0
                 Item: Specification
                 Section: 4.3.3
@@ -24,15 +23,15 @@ Check:
       operator: not_equal_to
       value: STUDYID
     - name: define_vlm_ccode
-      operator: 'not_equal_to'
-      value: '99999'
+      operator: "not_equal_to"
+      value: "99999"
 Core:
   Status: Draft
-  Version: '1'
-Description: ''
+  Version: "1"
+Description: ""
 Executability: Fully Executable
 Outcome:
-  Message: 'test message'
+  Message: "test message"
 Rule Type: Define Item Metadata Check against Library Metadata
 Scope:
   Classes:

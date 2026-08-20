@@ -104,3 +104,9 @@ fa,FATESTCD,Findings About Test Short Name,Char,8
 fa,FATEST,Findings About Test Name,Char,40
 fa,FAOBJ,Object of the Observation,Char,50
 fa,FASCAT,Subcategory for Findings About,Char,50
+ti,STUDYID,Study Identifier,Char,12
+ti,DOMAIN,Domain Abbreviation,Char,2
+ti,IETESTCD,Incl/Excl Criterion Short Name,Char,7
+ti,IETEST,Inclusion/Exclusion Criterion,Char,196
+ti,IESCAT,Inclusion/Exclusion Subcategory,Char,9
+ti,TIVERS,Protocol Criteria Versions,Char,200
