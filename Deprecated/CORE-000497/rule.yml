@@ -7,7 +7,8 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: IG v3.3[7.4.2][Assumption 3][Further information about the
+              - Cited Guidance:
+                  IG v3.3[7.4.2][Assumption 3][Further information about the
                   parameters is included below in Table 1. TSVAL may have
                   controlled terminology depending on the value of TSPARMCD]|IG
                   v3.3[Appendix C1][If study type is "INTERVENTIONAL" and if
@@ -19,13 +20,14 @@ Authorities:
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0279
-              Version: '1'
-            Version: '2.0'
-        Version: '3.2'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.2"
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: IG v3.3[7.4.2][Assumption 3][Further information about the
+              - Cited Guidance:
+                  IG v3.3[7.4.2][Assumption 3][Further information about the
                   parameters is included Appendix C1, Trial Summary Codes. TSVAL
                   may have controlled terminology depending on the value of
                   TSPARMCD. Conditions for including parameters are included in
@@ -39,9 +41,9 @@ Authorities:
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0279
-              Version: '1'
-            Version: '2.0'
-        Version: '3.3'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.3"
 Check:
   all:
     - name: TSPARMCD
@@ -55,10 +57,10 @@ Check:
 Core:
   Id: CORE-000497
   Status: Published
-  Version: '1'
-Description: 'Raise an error when a record exists in TS where TSPARMCD = STYPE
+  Version: "1"
+Description: "Raise an error when a record exists in TS where TSPARMCD = STYPE
   and TSVAL = INTERVENTIONAL but TSVAL for TSPARMCD = TPCLAS is empty but
-  applicable.'
+  applicable."
 Executability: Partially Executable - Possible Overreporting
 Operations:
   - filter:
@@ -69,9 +71,9 @@ Operations:
     id: $STYPE_INTERVENTIONAL
     operator: record_count
 Outcome:
-  Message: 'A record exists in TS where TSPARMCD = STYPE and TSVAL =
+  Message: "A record exists in TS where TSPARMCD = STYPE and TSVAL =
     INTERVENTIONAL but TSVAL for TSPARMCD = PCLAS is empty when PCLAS is
-    applicable.'
+    applicable."
   Output Variables:
     - TSGRPID
     - TSPARMCD

@@ -89,7 +89,7 @@ Check:
             - USUBJID
             - TFSPEC
             - TFANTREG
-    # case that TFANTREG is not present
+              # case that TFANTREG is not present
     - all:
         - name: TFANTREG
           operator: not_exists
@@ -103,8 +103,8 @@ Core:
   Id: CORE-000561
   Status: Published
   Version: "1"
-Description: Raise an error when there is more than one record present for any
-  particular tumor test result for a subject and specimen.
+Description: Raise an error when there is more than one record present for any particular tumor test
+  result for a subject and specimen.
 Executability: Fully Executable
 Outcome:
   Message: The Tumor Findings test result is not unique for this subject and specimen.

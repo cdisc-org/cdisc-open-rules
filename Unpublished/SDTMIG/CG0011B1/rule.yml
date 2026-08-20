@@ -1,46 +1,49 @@
 Authorities:
-  - Organization: 'CDISC'
+  - Organization: "CDISC"
     Standards:
-      - Name: 'SDTMIG'
+      - Name: "SDTMIG"
         References:
           - Citations:
-              - Cited Guidance: 'Following SDTM-specified controlled terminology and format
-                  guidelines for variables, when provided'
-                Document: 'SDTMIG'
-                Section: '3.2.2'
+              - Cited Guidance:
+                  "Following SDTM-specified controlled terminology and format guidelines for variables,
+                  when provided"
+                Document: "SDTMIG"
+                Section: "3.2.2"
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
-              Id: 'CG0011B1'
-              Version: '1'
-            Version: '2.0'
-        Version: '3.2'
-      - Name: 'SDTMIG'
+              Id: "CG0011B1"
+              Version: "1"
+            Version: "2.0"
+        Version: "3.2"
+      - Name: "SDTMIG"
         References:
           - Citations:
-              - Cited Guidance: 'Following SDTM-specified controlled terminology and format
-                  guidelines for variables, when provided'
-                Document: 'SDTMIG'
-                Section: '3.2.2'
+              - Cited Guidance:
+                  "Following SDTM-specified controlled terminology and format guidelines for variables,
+                  when provided"
+                Document: "SDTMIG"
+                Section: "3.2.2"
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
-              Id: 'CG0011B1'
-              Version: '1'
-            Version: '2.0'
-        Version: '3.3'
-      - Name: 'SDTMIG'
+              Id: "CG0011B1"
+              Version: "1"
+            Version: "2.0"
+        Version: "3.3"
+      - Name: "SDTMIG"
         References:
           - Citations:
-              - Cited Guidance: 'Following SDTM-specifieda controlled terminology and format
-                  guidelines for variables, when provided'
-                Document: 'SDTMIG'
-                Section: '3.2.2'
+              - Cited Guidance:
+                  "Following SDTM-specifieda controlled terminology and format guidelines for variables,
+                  when provided"
+                Document: "SDTMIG"
+                Section: "3.2.2"
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
-              Id: 'CG0011B1'
-              Version: '1'
-            Version: '2.0'
-        Version: '3.4'
-# TODO?: when 2 violations in same row, this is reported as 1 violation 
+              Id: "CG0011B1"
+              Version: "1"
+            Version: "2.0"
+        Version: "3.4"
+# TODO?: when 2 violations in same row, this is reported as 1 violation
 Check:
   any:
     - all:
@@ -57,8 +60,9 @@ Check:
         - name: --ENDTC
           operator: non_empty
         - name: --ENDTC
-          operator: invalid_date
-    # DM-specific date/time variables
+          operator:
+            invalid_date
+            # DM-specific date/time variables
     - all:
         - name: RFSTDTC
           operator: non_empty
@@ -108,11 +112,11 @@ Check:
       operator: invalid_date
 Core:
   Status: Draft
-  Version: '1'
-Description: ''
+  Version: "1"
+Description: ""
 Executability: Fully Executable
 Outcome:
-  Message: ''
+  Message: ""
 Rule Type: Record Data
 Scope:
   Classes:

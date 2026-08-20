@@ -1,5 +1,5 @@
 # Variable: QNAM
-# Condition: 
+# Condition:
 # Rule: ADSL Population flags not in SUPPDM
 Authorities:
   - Organization: CDISC
@@ -7,7 +7,8 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: The standard Supplemental Qualifiers included in previous
+              - Cited Guidance:
+                  The standard Supplemental Qualifiers included in previous
                   versions of the SDTMIG (COMPLT, FULLSET, ITT, PPROT, and
                   SAFETY) should not be used. Note that the ADaM subject-level
                   analysis dataset (ADSL) specifies standard variable names for
@@ -17,17 +18,18 @@ Authorities:
                   variables.
                 Document: IG v3.4
                 Item: Assumption 5
-                Section: '5.2'
+                Section: "5.2"
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0528
-              Version: '1'
-            Version: '2.0'
-        Version: '3.4'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.4"
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: The standard Supplemental Qualifiers included in previous
+              - Cited Guidance:
+                  The standard Supplemental Qualifiers included in previous
                   versions of the SDTMIG (COMPLT; FULLSET; ITT; PPROT; and
                   SAFETY) should not be used. Note that the ADaM subject-level
                   analysis dataset (ADSL) specifies standard variable names for
@@ -37,13 +39,13 @@ Authorities:
                   variables.
                 Document: IG v3.3
                 Item: Assumption 5
-                Section: '5.2'
+                Section: "5.2"
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0528
-              Version: '1'
-            Version: '2.0'
-        Version: '3.3'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.3"
 Check:
   all:
     - name: RDOMAIN
@@ -55,7 +57,7 @@ Check:
 Core:
   Id: CORE-000211
   Status: Published
-  Version: '1'
+  Version: "1"
 Description: SUPPDM must not include population flags.
 Executability: Fully Executable
 Outcome:

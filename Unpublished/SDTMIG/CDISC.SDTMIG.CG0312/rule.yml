@@ -7,46 +7,48 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: "'A custom domain may only be created if the data are different
-                  in nature and do not fit into an existing published domain.'"
+              - Cited Guidance:
+                  "'A custom domain may only be created if the data are different in nature and
+                  do not fit into an existing published domain.'"
                 Document: IG v3.4
                 Item: NA
-                Section: '2.6'
+                Section: "2.6"
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0312
-              Version: '1'
-            Version: '2.0'
-        Version: '3.4'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.4"
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: The following standard domains, listed in alphabetical order by
-                  Domain Code, with their respective domain codes have been
-                  defined or referenced by the CDISC SDS Team in this document.
-                  Note that other domain models may be posted separately for
-                  comment after this publication. See list in 2.5
+              - Cited Guidance:
+                  The following standard domains, listed in alphabetical order by Domain Code,
+                  with their respective domain codes have been defined or referenced by the CDISC SDS Team
+                  in this document. Note that other domain models may be posted separately for comment after
+                  this publication. See list in 2.5
                 Document: IG v3.2
-                Section: '2.5'
+                Section: "2.5"
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0312
-              Version: '1'
-            Version: '2.0'
-        Version: '3.2'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.2"
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: A custom domain may only be created if the data are different in
-                  nature and do not fit into an existing published domain.
+              - Cited Guidance:
+                  A custom domain may only be created if the data are different in nature and
+                  do not fit into an existing published domain.
                 Document: IG v3.3
-                Section: '2.6'
+                Section: "2.6"
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0312
-              Version: '1'
-            Version: '2.0'
-        Version: '3.3'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.3"
 Check:
   any:
     - all:
@@ -176,7 +178,7 @@ Check:
 Core:
   Id: CDISC.SDTMIG.CG0312
   Status: Draft
-  Version: '1'
+  Version: "1"
 Description: Raise an error when custom domains use the reserved or modelled standard names
 Executability: Fully Executable
 Operations:

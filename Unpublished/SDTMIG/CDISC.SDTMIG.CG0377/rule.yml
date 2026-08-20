@@ -1,5 +1,5 @@
 # Variable: --LLT
-# Condition: 
+# Condition:
 # Rule: --LLT = MedDRA lowest level TERM
 Authorities:
   - Organization: CDISC
@@ -14,9 +14,9 @@ Authorities:
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0377
-              Version: '1'
-            Version: '2.0'
-        Version: '3.4'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.4"
       - Name: SDTMIG
         References:
           - Citations:
@@ -26,9 +26,9 @@ Authorities:
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0377
-              Version: '1'
-            Version: '2.0'
-        Version: '3.3'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.3"
       - Name: SDTMIG
         References:
           - Citations:
@@ -38,9 +38,9 @@ Authorities:
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0377
-              Version: '1'
-            Version: '2.0'
-        Version: '3.2'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.2"
 Check:
   all:
     - name: $is_valid_llt_value
@@ -49,7 +49,7 @@ Check:
 Core:
   Id: CDISC.SDTMIG.CG0377
   Status: Draft
-  Version: '1'
+  Version: "1"
 Description: Raise an error when --LLT is not a valid MedDRA lowest level TERM.
 Executability: Fully Executable
 Operations:

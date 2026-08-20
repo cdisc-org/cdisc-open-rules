@@ -1,99 +1,92 @@
 Authorities:
-  - Organization: 'FDA'
+  - Organization: "FDA"
     Standards:
-      - Name: 'SENDIG'
+      - Name: "SENDIG"
         References:
           - Citations:
-              - Cited Guidance: 'DS, CL, EG, EX, LB, MA, MI, PC, PP, and VS should be submitted
-                  if collected.'
-                Document: 'FDA'
-                Section: 'FDAB056'
-            Origin: 'FDA Business Rules'
+              - Cited Guidance: "DS, CL, EG, EX, LB, MA, MI, PC, PP, and VS should be submitted if collected."
+                Document: "FDA"
+                Section: "FDAB056"
+            Origin: "FDA Business Rules"
             Rule Identifier:
-              Id: 'FB6510'
-              Version: '1'
-            Version: '1.5'
-        Version: '3.0'
-      - Name: 'SENDIG'
+              Id: "FB6510"
+              Version: "1"
+            Version: "1.5"
+        Version: "3.0"
+      - Name: "SENDIG"
         References:
           - Citations:
-              - Cited Guidance: 'DS, CL, EG, EX, LB, MA, MI, PC, PP, and VS should be submitted
-                  if collected.'
-                Document: 'FDA'
-                Section: 'FDAB056'
-            Origin: 'FDA Business Rules'
+              - Cited Guidance: "DS, CL, EG, EX, LB, MA, MI, PC, PP, and VS should be submitted if collected."
+                Document: "FDA"
+                Section: "FDAB056"
+            Origin: "FDA Business Rules"
             Rule Identifier:
-              Id: 'FB6510'
-              Version: '1'
-            Version: '1.5'
-        Version: '3.1'
-      - Name: 'SENDIG'
+              Id: "FB6510"
+              Version: "1"
+            Version: "1.5"
+        Version: "3.1"
+      - Name: "SENDIG"
         References:
           - Citations:
-              - Cited Guidance: 'DS, CL, EG, EX, LB, MA, MI, PC, PP, and VS should be submitted
-                  if collected.'
-                Document: 'FDA'
-                Section: 'FDAB056'
-            Origin: 'FDA Business Rules'
+              - Cited Guidance: "DS, CL, EG, EX, LB, MA, MI, PC, PP, and VS should be submitted if collected."
+                Document: "FDA"
+                Section: "FDAB056"
+            Origin: "FDA Business Rules"
             Rule Identifier:
-              Id: 'FB6510'
-              Version: '1'
-            Version: '1.5'
-        Version: '3.1.1'
-      - Name: 'SENDIG-GENETOX'
+              Id: "FB6510"
+              Version: "1"
+            Version: "1.5"
+        Version: "3.1.1"
+      - Name: "SENDIG-GENETOX"
         References:
           - Citations:
-              - Cited Guidance: 'DS, CL, EG, EX, LB, MA, MI, PC, PP, and VS should be submitted
-                  if collected.'
-                Document: 'FDA'
-                Section: 'FDAB056'
-            Origin: 'FDA Business Rules'
+              - Cited Guidance: "DS, CL, EG, EX, LB, MA, MI, PC, PP, and VS should be submitted if collected."
+                Document: "FDA"
+                Section: "FDAB056"
+            Origin: "FDA Business Rules"
             Rule Identifier:
-              Id: 'FB6510'
-              Version: '1'
-            Version: '1.5'
-        Version: '1.0'
-      - Name: 'SENDIG-DART'
+              Id: "FB6510"
+              Version: "1"
+            Version: "1.5"
+        Version: "1.0"
+      - Name: "SENDIG-DART"
         References:
           - Citations:
-              - Cited Guidance: 'DS, CL, EG, EX, LB, MA, MI, PC, PP, and VS should be submitted
-                  if collected.'
-                Document: 'FDA'
-                Section: 'FDAB056'
-            Origin: 'FDA Business Rules'
+              - Cited Guidance: "DS, CL, EG, EX, LB, MA, MI, PC, PP, and VS should be submitted if collected."
+                Document: "FDA"
+                Section: "FDAB056"
+            Origin: "FDA Business Rules"
             Rule Identifier:
-              Id: 'FB6510'
-              Version: '1'
-            Version: '1.5'
-        Version: '1.1'
-      - Name: 'SENDIG-DART'
+              Id: "FB6510"
+              Version: "1"
+            Version: "1.5"
+        Version: "1.1"
+      - Name: "SENDIG-DART"
         References:
           - Citations:
-              - Cited Guidance: 'DS, CL, EG, EX, LB, MA, MI, PC, PP, and VS should be submitted
-                  if collected.'
-                Document: 'FDA'
-                Section: 'FDAB056'
-            Origin: 'FDA Business Rules'
+              - Cited Guidance: "DS, CL, EG, EX, LB, MA, MI, PC, PP, and VS should be submitted if collected."
+                Document: "FDA"
+                Section: "FDAB056"
+            Origin: "FDA Business Rules"
             Rule Identifier:
-              Id: 'FB6510'
-              Version: '1'
-            Version: '1.5'
-        Version: '1.2'
-      - Name: 'SENDIG-AR'
+              Id: "FB6510"
+              Version: "1"
+            Version: "1.5"
+        Version: "1.2"
+      - Name: "SENDIG-AR"
         References:
           - Citations:
-              - Cited Guidance: 'DS, CL, EG, EX, LB, MA, MI, PC, PP, and VS should be submitted
-                  if collected.'
-                Document: 'FDA'
-                Section: 'FDAB056'
-            Origin: 'FDA Business Rules'
+              - Cited Guidance: "DS, CL, EG, EX, LB, MA, MI, PC, PP, and VS should be submitted if collected."
+                Document: "FDA"
+                Section: "FDAB056"
+            Origin: "FDA Business Rules"
             Rule Identifier:
-              Id: 'FB6510'
-              Version: '1'
-            Version: '1.5'
-        Version: '1.0'
+              Id: "FB6510"
+              Version: "1"
+            Version: "1.5"
+        Version: "1.0"
 # Rule FB6510: When VS domain is present in the define.xml, but no VS dataset is present in the submission
-# then the define.xml must contain ItemGroupDef for VS with attribute def:HasNoData marked as "Yes" 
+# then the define.xml must contain ItemGroupDef for VS with attribute def:HasNoData marked as "Yes"
 Check:
   all:
     # Also SEE FB0405
@@ -105,11 +98,11 @@ Check:
       value: false
     - name: filename
       operator: empty
-#    
+#
 Core:
   Status: Draft
-  Version: '1'
-Description: 'VS dataset should be present in the submission when related data is collected'
+  Version: "1"
+Description: "VS dataset should be present in the submission when related data is collected"
 Executability: Fully Executable
 Outcome:
   Message: Missing VS dataset.

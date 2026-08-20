@@ -4,98 +4,104 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: If both --DTC and --ENDTC are collected, durations can be
-                  calculated by the difference in these two values...
+              - Cited Guidance:
+                  If both --DTC and --ENDTC are collected, durations can be calculated by the
+                  difference in these two values...
                 Document: IG v3.0
                 Section: 4.4.3
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND58
-              Version: '1'
-            Version: '5.0'
-        Version: '3.0'
+              Version: "1"
+            Version: "5.0"
+        Version: "3.0"
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: If both --DTC and --ENDTC are collected, durations can be
-                  calculated by the difference in these two values...
+              - Cited Guidance:
+                  If both --DTC and --ENDTC are collected, durations can be calculated by the
+                  difference in these two values...
                 Document: IG v3.1
                 Section: 4.4.3
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND58
-              Version: '1'
-            Version: '5.0'
-        Version: '3.1'
+              Version: "1"
+            Version: "5.0"
+        Version: "3.1"
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: If both --DTC and --ENDTC are collected, durations can be
-                  calculated by the difference in these two values...
+              - Cited Guidance:
+                  If both --DTC and --ENDTC are collected, durations can be calculated by the
+                  difference in these two values...
                 Document: IG v3.1.1
                 Section: 4.4.3
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND58
-              Version: '1'
-            Version: '5.0'
+              Version: "1"
+            Version: "5.0"
         Version: 3.1.1
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance: If both --DTC and --ENDTC are collected, durations can be
-                  calculated by the difference in these two values...
+              - Cited Guidance:
+                  If both --DTC and --ENDTC are collected, durations can be calculated by the
+                  difference in these two values...
                 Document: IG v3.1
                 Section: 4.4.3
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND58
-              Version: '1'
-            Version: '5.0'
-        Version: '1.1'
+              Version: "1"
+            Version: "5.0"
+        Version: "1.1"
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance: If both --DTC and --ENDTC are collected, durations can be
-                  calculated by the difference in these two values...
+              - Cited Guidance:
+                  If both --DTC and --ENDTC are collected, durations can be calculated by the
+                  difference in these two values...
                 Document: IG v3.1.1
                 Section: 4.4.3
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND58
-              Version: '1'
-            Version: '5.0'
-        Version: '1.2'
+              Version: "1"
+            Version: "5.0"
+        Version: "1.2"
       - Name: SENDIG-GENETOX
         References:
           - Citations:
-              - Cited Guidance: If both --DTC and --ENDTC are collected, durations can be
-                  calculated by the difference in these two values...
+              - Cited Guidance:
+                  If both --DTC and --ENDTC are collected, durations can be calculated by the
+                  difference in these two values...
                 Document: IG v3.1.1
                 Section: 4.4.3
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND58
-              Version: '1'
-            Version: '5.0'
-        Version: '1.0'
+              Version: "1"
+            Version: "5.0"
+        Version: "1.0"
       - Name: TIG
         References:
           - Citations:
-              - Cited Guidance: "The length of time an observation continues, i.e., the duration
-                  of the observation, is represented using variables - --DTC or
-                  --STDTC for the start of the observation and --ENDTC for the
-                  end of the observation when date/times are collected."
+              - Cited Guidance:
+                  "The length of time an observation continues, i.e., the duration of the observation,
+                  is represented using variables - --DTC or --STDTC for the start of the observation and --ENDTC
+                  for the end of the observation when date/times are collected."
                 Document: TIG v1.0
                 Item: Text
                 Section: 2.8.7.5 Representing Planned and Actual Timing
             Origin: TIG Conformance Rules
             Rule Identifier:
               Id: TIG0264
-              Version: '1'
-            Version: '1.0'
+              Version: "1"
+            Version: "1.0"
         Substandard: SEND
-        Version: '1.0'
+        Version: "1.0"
 Check:
   all:
     - name: --ENDTC
@@ -108,7 +114,7 @@ Check:
 Core:
   Id: CORE-000653
   Status: Published
-  Version: '1'
+  Version: "1"
 Description: Raise an error when --ENDTC before --DTC
 Executability: Fully Executable
 Outcome:
