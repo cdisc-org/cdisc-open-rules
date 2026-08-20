@@ -4,43 +4,44 @@ Authorities:
       - Name: USDM
         References:
           - Citations:
-              - Cited Guidance: 'At least one scheduled activity instance within a timeline must
-                  point to a timeline exit.'
-                Document: 'USDM_CORE_Rules.xlsx'
+              - Cited Guidance:
+                  "At least one scheduled activity instance within a timeline must point to a timeline
+                  exit."
+                Document: "USDM_CORE_Rules.xlsx"
             Origin: USDM Conformance Rules
             Rule Identifier:
-              Id: 'DDF00037'
-              Version: '1'
-            Version: '1.0'
-        Version: '3.0'
+              Id: "DDF00037"
+              Version: "1"
+            Version: "1.0"
+        Version: "3.0"
       - Name: USDM
         References:
           - Citations:
-              - Cited Guidance: 'At least one scheduled activity instance within a timeline must
-                  point to a timeline exit.'
-                Document: 'USDM_CORE_Rules.xlsx'
+              - Cited Guidance:
+                  "At least one scheduled activity instance within a timeline must point to a timeline
+                  exit."
+                Document: "USDM_CORE_Rules.xlsx"
             Origin: USDM Conformance Rules
             Rule Identifier:
-              Id: 'DDF00037'
-              Version: '1'
-            Version: '1.0'
-        Version: '4.0'
+              Id: "DDF00037"
+              Version: "1"
+            Version: "1.0"
+        Version: "4.0"
 Check:
   all:
     - name: instanceType
       operator: equal_to
-      value: 'ScheduleTimeline'
+      value: "ScheduleTimeline"
     - name: rel_type
       operator: equal_to
-      value: 'definition'
+      value: "definition"
     - name: $timeline_exits
       operator: empty
 Core:
-  Status: Published
-  Version: '1'
   Id: CORE-000807
-Description: 'At least one scheduled activity instance within a timeline must
-  point to a timeline exit.'
+  Status: Published
+  Version: "1"
+Description: "At least one scheduled activity instance within a timeline must point to a timeline exit."
 Executability: Fully Executable
 Operations:
   - domain: ScheduledActivityInstance
@@ -52,8 +53,9 @@ Operations:
     name: timelineExitId
     operator: distinct
 Outcome:
-  Message: 'The schedule timeline does not have a defined exit: none of its
-    scheduled activity instances has a timeline exit.'
+  Message:
+    "The schedule timeline does not have a defined exit: none of its scheduled activity instances
+    has a timeline exit."
   Output Variables:
     - parent_entity
     - parent_id

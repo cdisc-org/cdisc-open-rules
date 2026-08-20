@@ -10,9 +10,9 @@ Authorities:
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB2501
-              Version: '1'
-            Version: '1.5'
-        Version: '3.2'
+              Version: "1"
+            Version: "1.5"
+        Version: "3.2"
       - Name: SDTMIG
         References:
           - Citations:
@@ -22,9 +22,9 @@ Authorities:
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB2501
-              Version: '1'
-            Version: '1.5'
-        Version: '3.3'
+              Version: "1"
+            Version: "1.5"
+        Version: "3.3"
       - Name: SDTMIG
         References:
           - Citations:
@@ -34,9 +34,9 @@ Authorities:
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB2501
-              Version: '1'
-            Version: '1.5'
-        Version: '3.4'
+              Version: "1"
+            Version: "1.5"
+        Version: "3.4"
 Check:
   all:
     - name: ARMCD
@@ -49,7 +49,7 @@ Check:
 Core:
   Id: CORE-000655
   Status: Published
-  Version: '1'
+  Version: "1"
 Description: Values in ARMCD and ACTARMCD should match
 Executability: Fully Executable
 Outcome:

@@ -4,11 +4,10 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: "Defines the type of specimen used for a measurement. Examples:
-                  SERUM, PLASMA, URINE. If multiple specimen types are used for
-                  a calculation (e.g., serum and urine for creatinine
-                  clearance), then refer to Section 4.3.6.2 for guidance on how
-                  to populate."
+              - Cited Guidance:
+                  "Defines the type of specimen used for a measurement. Examples: SERUM, PLASMA,
+                  URINE. If multiple specimen types are used for a calculation (e.g., serum and urine for creatinine
+                  clearance), then refer to Section 4.3.6.2 for guidance on how to populate."
                 Document: IG v3.1
                 Item: PPSPEC CDISC Notes
                 Section: 6.3.12
@@ -21,11 +20,10 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: "Defines the type of specimen used for a measurement. Examples:
-                  SERUM, PLASMA, URINE. If multiple specimen types are used for
-                  a calculation (e.g., serum and urine for creatinine
-                  clearance), then refer to Section 4.3.6.2 for guidance on how
-                  to populate."
+              - Cited Guidance:
+                  "Defines the type of specimen used for a measurement. Examples: SERUM, PLASMA,
+                  URINE. If multiple specimen types are used for a calculation (e.g., serum and urine for creatinine
+                  clearance), then refer to Section 4.3.6.2 for guidance on how to populate."
                 Document: IG v3.1.1
                 Item: PPSPEC CDISC Notes
                 Section: 6.3.12
@@ -38,11 +36,10 @@ Authorities:
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance: "Defines the type of specimen used for a measurement. Examples:
-                  SERUM, PLASMA, URINE. If multiple specimen types are used for
-                  a calculation (e.g., serum and urine for creatinine
-                  clearance), then refer to Section 4.3.6.2 for guidance on how
-                  to populate."
+              - Cited Guidance:
+                  "Defines the type of specimen used for a measurement. Examples: SERUM, PLASMA,
+                  URINE. If multiple specimen types are used for a calculation (e.g., serum and urine for creatinine
+                  clearance), then refer to Section 4.3.6.2 for guidance on how to populate."
                 Document: IG v3.1
                 Item: PPSPEC CDISC Notes
                 Section: 6.3.12
@@ -55,11 +52,10 @@ Authorities:
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance: "Defines the type of specimen used for a measurement. Examples:
-                  SERUM, PLASMA, URINE. If multiple specimen types are used for
-                  a calculation (e.g., serum and urine for creatinine
-                  clearance), then refer to Section 4.3.6.2 for guidance on how
-                  to populate."
+              - Cited Guidance:
+                  "Defines the type of specimen used for a measurement. Examples: SERUM, PLASMA,
+                  URINE. If multiple specimen types are used for a calculation (e.g., serum and urine for creatinine
+                  clearance), then refer to Section 4.3.6.2 for guidance on how to populate."
                 Document: IG v3.1.1
                 Item: PPSPEC CDISC Notes
                 Section: 6.3.12
@@ -72,11 +68,10 @@ Authorities:
       - Name: SENDIG-GENETOX
         References:
           - Citations:
-              - Cited Guidance: "Defines the type of specimen used for a measurement. Examples:
-                  SERUM, PLASMA, URINE. If multiple specimen types are used for
-                  a calculation (e.g., serum and urine for creatinine
-                  clearance), then refer to Section 4.3.6.2 for guidance on how
-                  to populate."
+              - Cited Guidance:
+                  "Defines the type of specimen used for a measurement. Examples: SERUM, PLASMA,
+                  URINE. If multiple specimen types are used for a calculation (e.g., serum and urine for creatinine
+                  clearance), then refer to Section 4.3.6.2 for guidance on how to populate."
                 Document: IG v3.1.1
                 Item: PPSPEC CDISC Notes
                 Section: 6.3.12
@@ -101,28 +96,29 @@ Check:
     # TODO: check whether each "splitted part follows the CT for "SPEC" (codelist)
     - name: PPSPEC
       operator: contains
-      value: ';'
-    # 2025-11-19: part that iterates of the "splitted parts" and checks each of them
-    #- name: $ppspec_value
-    #  operator: not_contains_all
-    #  value: $ppspec_codelist
-    # TRYING JUST THE OTHER WAY AROUND - THIS SEEMS TO BE THE RIGHT WAY
+      value:
+        ";"
+        # 2025-11-19: part that iterates of the "splitted parts" and checks each of them
+        #- name: $ppspec_value
+        #  operator: not_contains_all
+        #  value: $ppspec_codelist
+        # TRYING JUST THE OTHER WAY AROUND - THIS SEEMS TO BE THE RIGHT WAY
     - name: $ppspec_codelist
       operator: not_contains_all
-      value: $ppspec_value
-      # operator: not_equal_to
-      # value: 'TEST'
+      value:
+        $ppspec_value
+        # operator: not_equal_to
+        # value: 'TEST'
 Core:
   Id: CORE-000934
   Status: Published
   Version: "1"
-Description: If multiple specimen types are used for a calculation (e.g., serum
-  and urine for creatinine clearance), then this field should be populated with
-  values from the (SPEC) Controlled Terminology codelist delimited by a
-  semicolon.
+Description: If multiple specimen types are used for a calculation (e.g., serum and urine for
+  creatinine clearance), then this field should be populated with values from the (SPEC) Controlled
+  Terminology codelist delimited by a semicolon.
 Executability: Fully Executable
 Operations:
-  - delimiter: ';'
+  - delimiter: ";"
     id: $ppspec_value
     name: PPSPEC
     operator: split_by

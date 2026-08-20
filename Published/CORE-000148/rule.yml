@@ -11,22 +11,22 @@ Authorities:
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0258
-              Version: '1'
-            Version: '2.0'
-        Version: '3.4'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.4"
       - Name: SDTMIG
         References:
           - Citations:
               - Cited Guidance: The value in TSPARM cannot be longer than 40 characters.
                 Document: IG v3.2
                 Item: Specification
-                Section: '7.4'
+                Section: "7.4"
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0258
-              Version: '1'
-            Version: '2.0'
-        Version: '3.2'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.2"
       - Name: SDTMIG
         References:
           - Citations:
@@ -37,9 +37,9 @@ Authorities:
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0258
-              Version: '1'
-            Version: '2.0'
-        Version: '3.3'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.3"
       - Name: TIG
         References:
           - Citations:
@@ -50,12 +50,12 @@ Authorities:
             Origin: TIG Conformance Rules
             Rule Identifier:
               Id: TIG0462
-              Version: '1'
-            Version: '1.0'
+              Version: "1"
+            Version: "1.0"
         Substandard: SDTM
-        Version: '1.0'
+        Version: "1.0"
 # Variable: TSPARM
-# Condition: 
+# Condition:
 # Rule: TSPARM value length <= 40
 Check:
   all:
@@ -65,7 +65,7 @@ Check:
 Core:
   Id: CORE-000148
   Status: Published
-  Version: '1'
+  Version: "1"
 Description: Trigger error when length of TSPARM value is greater than 40
 Executability: Fully Executable
 Outcome:

@@ -1,72 +1,78 @@
 Authorities:
-  - Organization: CDISC
-    # REMARK: Rule 342 is not applicable to SENDIG-3.0
+  - Organization:
+      CDISC
+      # REMARK: Rule 342 is not applicable to SENDIG-3.0
     Standards:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: The most appropriate single value, as defined by the sponsor,
-                  should be included for Trial Summary purposes.
+              - Cited Guidance:
+                  The most appropriate single value, as defined by the sponsor, should be
+                  included for Trial Summary purposes.
                 Document: IG v3.1
                 Section: 7.6.3
             Origin: SEND Conformance Rules
             Rule Identifier:
-              Id: 'SEND342'
-              Version: '1'
-            Version: '5.0'
-        Version: '3.1'
+              Id: "SEND342"
+              Version: "1"
+            Version: "5.0"
+        Version: "3.1"
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: The most appropriate single value, as defined by the sponsor,
-                  should be included for Trial Summary purposes.
+              - Cited Guidance:
+                  The most appropriate single value, as defined by the sponsor, should be
+                  included for Trial Summary purposes.
                 Document: IG v3.1.1
                 Section: 7.6.3
             Origin: SEND Conformance Rules
             Rule Identifier:
-              Id: 'SEND342'
-              Version: '1'
-            Version: '5.0'
-        Version: '3.1.1'
+              Id: "SEND342"
+              Version: "1"
+            Version: "5.0"
+        Version: "3.1.1"
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance: The most appropriate single value, as defined by the sponsor,
-                  should be included for Trial Summary purposes.
+              - Cited Guidance:
+                  The most appropriate single value, as defined by the sponsor, should be
+                  included for Trial Summary purposes.
                 Document: IG v3.1
                 Section: 7.6.3
             Origin: SEND Conformance Rules
             Rule Identifier:
-              Id: 'SEND342'
-              Version: '1'
-            Version: '5.0'
-        Version: '1.1'
+              Id: "SEND342"
+              Version: "1"
+            Version: "5.0"
+        Version: "1.1"
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance: The most appropriate single value, as defined by the sponsor,
-                  should be included for Trial Summary purposes.
+              - Cited Guidance:
+                  The most appropriate single value, as defined by the sponsor, should be
+                  included for Trial Summary purposes.
                 Document: IG v3.1.1
                 Section: 7.6.3
             Origin: SEND Conformance Rules
             Rule Identifier:
-              Id: 'SEND342'
-              Version: '1'
-            Version: '5.0'
-        Version: '1.2'
+              Id: "SEND342"
+              Version: "1"
+            Version: "5.0"
+        Version: "1.2"
       - Name: SENDIG-GENETOX
         References:
           - Citations:
-              - Cited Guidance: The most appropriate single value, as defined by the sponsor,
-                  should be included for Trial Summary purposes.
+              - Cited Guidance:
+                  The most appropriate single value, as defined by the sponsor, should be
+                  included for Trial Summary purposes.
                 Document: IG v3.1.1
                 Section: 7.6.3
             Origin: SEND Conformance Rules
             Rule Identifier:
-              Id: 'SEND342'
-              Version: '1'
-            Version: '5.0'
-        Version: '1.0'
+              Id: "SEND342"
+              Version: "1"
+            Version: "5.0"
+        Version: "1.0"
 Check:
   all:
     - name: TSPARMCD
@@ -79,7 +85,7 @@ Check:
 Core:
   Id: CORE-000537
   Status: Published
-  Version: '1'
+  Version: "1"
 Description: Raise an error when there is more than record with TSPARMCD=SDESIGN
 Executability: Fully Executable
 Outcome:
