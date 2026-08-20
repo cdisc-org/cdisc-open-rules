@@ -14,9 +14,9 @@ Authorities:
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0392
-              Version: '1'
-            Version: '2.0'
-        Version: '3.4'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.4"
       - Name: SDTMIG
         References:
           - Citations:
@@ -27,23 +27,24 @@ Authorities:
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0392
-              Version: '1'
-            Version: '2.0'
-        Version: '3.3'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.3"
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Did the event require or prolong hospitalization? Valid values
-                  are 'Y' and 'N'.
+              - Cited Guidance:
+                  Did the event require or prolong hospitalization? Valid values are 'Y' and
+                  'N'.
                 Document: Model v1.4
-                Item: ''
+                Item: ""
                 Section: 2.2.2
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0392
-              Version: '1'
-            Version: '2.0'
-        Version: '3.2'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.2"
       - Name: TIG
         References:
           - Citations:
@@ -54,10 +55,10 @@ Authorities:
             Origin: TIG Conformance Rules
             Rule Identifier:
               Id: TIG0554
-              Version: '1'
-            Version: '1.0'
+              Version: "1"
+            Version: "1.0"
         Substandard: SDTM
-        Version: '1.0'
+        Version: "1.0"
 Check:
   all:
     - name: AESHOSP
@@ -70,7 +71,7 @@ Check:
 Core:
   Id: CORE-000127
   Status: Published
-  Version: '1'
+  Version: "1"
 Description: Raise an error when AESHOSP is completed and value is not 'Y' or 'N'
 Executability: Fully Executable
 Outcome:

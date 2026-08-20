@@ -5,31 +5,31 @@ Authorities:
   - Organization: CDISC
     Standards:
       - Name: SDTMIG
-        Version: '3.4'
         References:
-          - Origin: SDTM and SDTMIG Conformance Rules
-            Rule Identifier:
-              Id: CG0617
-              Version: '1'
-            Version: '2.0'
-            Citations:
-              - Cited Guidance: Culture characteristics covers concepts such as growth/no
-                  growth, colony quantification measures, colony color, colony morphology,
-                  etc.... MBTESTCD/MBTEST should be the name of the organism or group
-                  of organisms being characterized.
+          - Citations:
+              - Cited Guidance:
+                  Culture characteristics covers concepts such as growth/no growth, colony
+                  quantification measures, colony color, colony morphology, etc.... MBTESTCD/MBTEST should
+                  be the name of the organism or group of organisms being characterized.
                 Document: IG v3.4
                 Item: Assumption 1
                 Section: 6.3.5.7.1
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0617
+              Version: "1"
+            Version: "2.0"
+        Version: "3.4"
 Check:
   all: []
 Core:
   Id: CDISC.SDTMIG.CG0617
   Status: Draft
-  Version: '1'
-Description: ''
+  Version: "1"
+Description: ""
 Executability: Fully Executable
 Outcome:
-  Message: ''
+  Message: ""
 Rule Type: Record Data
 Scope:
   Classes:

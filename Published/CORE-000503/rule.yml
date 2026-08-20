@@ -4,8 +4,9 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: QORIG is used to indicate the origin of the data. Possible
-                  values are COLLECTED, DERIVED, OTHER, and NOT AVAILABLE.
+              - Cited Guidance:
+                  QORIG is used to indicate the origin of the data. Possible values are
+                  COLLECTED, DERIVED, OTHER, and NOT AVAILABLE.
                 Document: SENDIG v3.0
                 Item: QORIG CDISC Notes
                 Section: "8.5"
@@ -18,8 +19,9 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: QORIG is used to indicate the origin of the data. Possible
-                  values are COLLECTED, DERIVED, OTHER, and NOT AVAILABLE.
+              - Cited Guidance:
+                  QORIG is used to indicate the origin of the data. Possible values are
+                  COLLECTED, DERIVED, OTHER, and NOT AVAILABLE.
                 Document: SENDIG v3.1
                 Item: QORIG CDISC Notes
                 Section: "8.3"
@@ -32,8 +34,9 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: QORIG is used to indicate the origin of the data. Possible
-                  values are COLLECTED, DERIVED, OTHER, and NOT AVAILABLE.
+              - Cited Guidance:
+                  QORIG is used to indicate the origin of the data. Possible values are
+                  COLLECTED, DERIVED, OTHER, and NOT AVAILABLE.
                 Document: SENDIG v3.1.1
                 Item: QORIG CDISC Notes
                 Section: "8.3"
@@ -46,8 +49,9 @@ Authorities:
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance: QORIG is used to indicate the origin of the data. Possible
-                  values are COLLECTED, DERIVED, OTHER, and NOT AVAILABLE.
+              - Cited Guidance:
+                  QORIG is used to indicate the origin of the data. Possible values are
+                  COLLECTED, DERIVED, OTHER, and NOT AVAILABLE.
                 Document: SENDIG v3.1
                 Item: QORIG CDISC Notes
                 Section: "8.3"
@@ -60,8 +64,9 @@ Authorities:
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance: QORIG is used to indicate the origin of the data. Possible
-                  values are COLLECTED, DERIVED, OTHER, and NOT AVAILABLE.
+              - Cited Guidance:
+                  QORIG is used to indicate the origin of the data. Possible values are
+                  COLLECTED, DERIVED, OTHER, and NOT AVAILABLE.
                 Document: SENDIG v3.1.1
                 Item: QORIG CDISC Notes
                 Section: "8.3"
@@ -74,8 +79,9 @@ Authorities:
       - Name: SENDIG-GENETOX
         References:
           - Citations:
-              - Cited Guidance: QORIG is used to indicate the origin of the data. Possible
-                  values are COLLECTED, DERIVED, OTHER, and NOT AVAILABLE.
+              - Cited Guidance:
+                  QORIG is used to indicate the origin of the data. Possible values are
+                  COLLECTED, DERIVED, OTHER, and NOT AVAILABLE.
                 Document: SENDIG v3.1.1
                 Item: QORIG CDISC Notes
                 Section: "8.3"
@@ -88,8 +94,9 @@ Authorities:
       - Name: TIG
         References:
           - Citations:
-              - Cited Guidance: QORIG is used to indicate the origin of the data. Possible
-                  values are COLLECTED, DERIVED, OTHER, and NOT AVAILABLE.
+              - Cited Guidance:
+                  QORIG is used to indicate the origin of the data. Possible values are
+                  COLLECTED, DERIVED, OTHER, and NOT AVAILABLE.
                 Document: TIG v1.0
                 Item: QORIG CDISC Notes
                 Section: 2.8.9.27
@@ -117,27 +124,28 @@ Check:
       value: OTHER
     - name: QORIG
       operator: not_equal_to
-      value: NOT AVAILABLE
-    # Simplification 2024-05-21
-    # NO: this is NOT how is_not_contained_by works, it requires a reference to a separate operation
-    # see e.g. CG0118
-    # - name: QORIG
-    #  operator: is_not_contained_by
-    #  value:
-    #    - COLLECTED
-    #    - DERIVED
-    #    - OTHER
-    #    - NOT AVAILABLE
+      value:
+        NOT AVAILABLE
+        # Simplification 2024-05-21
+        # NO: this is NOT how is_not_contained_by works, it requires a reference to a separate operation
+        # see e.g. CG0118
+        # - name: QORIG
+        #  operator: is_not_contained_by
+        #  value:
+        #    - COLLECTED
+        #    - DERIVED
+        #    - OTHER
+        #    - NOT AVAILABLE
 Core:
   Id: CORE-000503
   Status: Published
   Version: "1"
-Description: QORIG is used to indicate the origin of the data. Possible values
-  are COLLECTED, DERIVED, OTHER, and NOT AVAILABLE.
+Description: QORIG is used to indicate the origin of the data. Possible values are COLLECTED,
+  DERIVED, OTHER, and NOT AVAILABLE.
 Executability: Fully Executable
 Outcome:
-  Message: When populated, the possible values for QORIG are limited to COLLECTED,
-    DERIVED, OTHER, and NOT AVAILABLE.
+  Message: When populated, the possible values for QORIG are limited to COLLECTED, DERIVED, OTHER,
+    and NOT AVAILABLE.
 Rule Type: Record Data
 Scope:
   Classes:

@@ -1,5 +1,5 @@
 # Variable: SETCD
-# Condition: 
+# Condition:
 # Rule: SETCD value length <= 8
 Authorities:
   - Organization: CDISC
@@ -14,9 +14,9 @@ Authorities:
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0149
-              Version: '1'
-            Version: '2.0'
-        Version: '3.4'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.4"
       - Name: SDTMIG
         References:
           - Citations:
@@ -26,9 +26,9 @@ Authorities:
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0149
-              Version: '1'
-            Version: '2.0'
-        Version: '3.2'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.2"
       - Name: SDTMIG
         References:
           - Citations:
@@ -38,120 +38,121 @@ Authorities:
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0149
-              Version: '1'
-            Version: '2.0'
-        Version: '3.3'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.3"
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: ETCD (the companion to ELEMENT), SETCD (the short name of a
-                  specific Trial Set), and TSPARMCD (the companion to TSPARM)
-                  are limited to 8 characters, but do not have special character
-                  restrictions
+              - Cited Guidance:
+                  ETCD (the companion to ELEMENT), SETCD (the short name of a specific Trial
+                  Set), and TSPARMCD (the companion to TSPARM) are limited to 8 characters, but do not have
+                  special character restrictions
                 Document: IG v3.0
                 Item: Specification
                 Section: 4.2.1
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND25
-              Version: '1'
-            Version: '5.0'
-        Version: '3.0'
+              Version: "1"
+            Version: "5.0"
+        Version: "3.0"
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: ETCD (the companion to ELEMENT), SETCD (the short name of a
-                  specific Trial Set), and TSPARMCD (the companion to TSPARM)
-                  are limited to 8 characters, but do not have special character
-                  restrictions
+              - Cited Guidance:
+                  ETCD (the companion to ELEMENT), SETCD (the short name of a specific Trial
+                  Set), and TSPARMCD (the companion to TSPARM) are limited to 8 characters, but do not have
+                  special character restrictions
                 Document: IG v3.1
                 Item: Specification
                 Section: 4.2.1
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND25
-              Version: '1'
-            Version: '5.0'
-        Version: '3.1'
+              Version: "1"
+            Version: "5.0"
+        Version: "3.1"
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: ETCD (the companion to ELEMENT), SETCD (the short name of a
-                  specific Trial Set), and TSPARMCD (the companion to TSPARM)
-                  are limited to 8 characters, but do not have special character
-                  restrictions
+              - Cited Guidance:
+                  ETCD (the companion to ELEMENT), SETCD (the short name of a specific Trial
+                  Set), and TSPARMCD (the companion to TSPARM) are limited to 8 characters, but do not have
+                  special character restrictions
                 Document: IG v3.1.1
                 Item: Specification
                 Section: 4.2.1
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND25
-              Version: '1'
-            Version: '5.0'
+              Version: "1"
+            Version: "5.0"
         Version: 3.1.1
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance: ETCD (the companion to ELEMENT), SETCD (the short name of a
-                  specific Trial Set), and TSPARMCD (the companion to TSPARM)
-                  are limited to 8 characters, but do not have special character
-                  restrictions
+              - Cited Guidance:
+                  ETCD (the companion to ELEMENT), SETCD (the short name of a specific Trial
+                  Set), and TSPARMCD (the companion to TSPARM) are limited to 8 characters, but do not have
+                  special character restrictions
                 Document: IG v3.1
                 Item: Specification
                 Section: 4.2.1
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND25
-              Version: '1'
-            Version: '5.0'
-        Version: '1.1'
+              Version: "1"
+            Version: "5.0"
+        Version: "1.1"
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance: ETCD (the companion to ELEMENT), SETCD (the short name of a
-                  specific Trial Set), and TSPARMCD (the companion to TSPARM)
-                  are limited to 8 characters, but do not have special character
-                  restrictions
+              - Cited Guidance:
+                  ETCD (the companion to ELEMENT), SETCD (the short name of a specific Trial
+                  Set), and TSPARMCD (the companion to TSPARM) are limited to 8 characters, but do not have
+                  special character restrictions
                 Document: IG v3.1
                 Item: Specification
                 Section: 4.2.1
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND25
-              Version: '1'
-            Version: '5.0'
-        Version: '1.2'
+              Version: "1"
+            Version: "5.0"
+        Version: "1.2"
       - Name: SENDIG-GENETOX
         References:
           - Citations:
-              - Cited Guidance: ETCD (the companion to ELEMENT), SETCD (the short name of a
-                  specific Trial Set), and TSPARMCD (the companion to TSPARM)
-                  are limited to 8 characters, but do not have special character
-                  restrictions
+              - Cited Guidance:
+                  ETCD (the companion to ELEMENT), SETCD (the short name of a specific Trial
+                  Set), and TSPARMCD (the companion to TSPARM) are limited to 8 characters, but do not have
+                  special character restrictions
                 Document: IG v3.1
                 Item: Specification
                 Section: 4.2.1
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND25
-              Version: '1'
-            Version: '5.0'
-        Version: '1.0'
+              Version: "1"
+            Version: "5.0"
+        Version: "1.0"
       - Name: TIG
         References:
           - Citations:
-              - Cited Guidance: Short name of the Trial Set. The same element may occur more
-                  than once within an Arm. Maximum 8 characters.
+              - Cited Guidance:
+                  Short name of the Trial Set. The same element may occur more than once
+                  within an Arm. Maximum 8 characters.
                 Document: TIG v1.0
                 Item: SETCD CDISC Notes
                 Section: 2.8.9.31
             Origin: TIG Conformance Rules
             Rule Identifier:
               Id: TIG0169
-              Version: '1'
-            Version: '1.0'
+              Version: "1"
+            Version: "1.0"
         Substandard: SEND
-        Version: '1.0'
+        Version: "1.0"
       - Name: TIG
         References:
           - Citations:
@@ -162,10 +163,10 @@ Authorities:
             Origin: TIG Conformance Rules
             Rule Identifier:
               Id: TIG0390
-              Version: '1'
-            Version: '1.0'
+              Version: "1"
+            Version: "1.0"
         Substandard: SDTM
-        Version: '1.0'
+        Version: "1.0"
 Check:
   all:
     - name: SETCD
@@ -174,7 +175,7 @@ Check:
 Core:
   Id: CORE-000088
   Status: Published
-  Version: '1'
+  Version: "1"
 Description: Verify that the length of value in SETCD variable is <= 8
 Executability: Fully Executable
 Outcome:

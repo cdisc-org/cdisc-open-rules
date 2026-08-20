@@ -1,98 +1,105 @@
 Authorities:
-  - Organization: 'FDA'
+  - Organization: "FDA"
     Standards:
       # Alsot applicable to SENDIG-3.0
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: All treatment exposure date/time should be between first and
-                  last study treatment date/time.
+              - Cited Guidance:
+                  All treatment exposure date/time should be between first and last study
+                  treatment date/time.
                 Document: FDA
                 Section: FDAB008
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB0803
-              Version: '1'
-            Version: '1.5'
-        Version: '3.0'
+              Version: "1"
+            Version: "1.5"
+        Version: "3.0"
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: All treatment exposure date/time should be between first and
-                  last study treatment date/time.
+              - Cited Guidance:
+                  All treatment exposure date/time should be between first and last study
+                  treatment date/time.
                 Document: FDA
                 Section: FDAB008
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB0803
-              Version: '1'
-            Version: '1.5'
-        Version: '3.1'
+              Version: "1"
+            Version: "1.5"
+        Version: "3.1"
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: All treatment exposure date/time should be between first and
-                  last study treatment date/time.
+              - Cited Guidance:
+                  All treatment exposure date/time should be between first and last study
+                  treatment date/time.
                 Document: FDA
                 Section: FDAB008
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB0803
-              Version: '1'
-            Version: '1.5'
-        Version: '3.1.1'
+              Version: "1"
+            Version: "1.5"
+        Version: "3.1.1"
       - Name: SENDIG-GENETOX
         References:
           - Citations:
-              - Cited Guidance: All treatment exposure date/time should be between first and
-                  last study treatment date/time.
+              - Cited Guidance:
+                  All treatment exposure date/time should be between first and last study
+                  treatment date/time.
                 Document: FDA
                 Section: FDAB008
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB0803
-              Version: '1'
-            Version: '1.5'
-        Version: '1.0'
+              Version: "1"
+            Version: "1.5"
+        Version: "1.0"
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance: All treatment exposure date/time should be between first and
-                  last study treatment date/time.
+              - Cited Guidance:
+                  All treatment exposure date/time should be between first and last study
+                  treatment date/time.
                 Document: FDA
                 Section: FDAB008
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB0803
-              Version: '1'
-            Version: '1.5'
-        Version: '1.1'
+              Version: "1"
+            Version: "1.5"
+        Version: "1.1"
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance: All treatment exposure date/time should be between first and
-                  last study treatment date/time.
+              - Cited Guidance:
+                  All treatment exposure date/time should be between first and last study
+                  treatment date/time.
                 Document: FDA
                 Section: FDAB008
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB0803
-              Version: '1'
-            Version: '1.5'
-        Version: '1.2'
+              Version: "1"
+            Version: "1.5"
+        Version: "1.2"
       - Name: SENDIG-AR
         References:
           - Citations:
-              - Cited Guidance: All treatment exposure date/time should be between first and
-                  last study treatment date/time.
+              - Cited Guidance:
+                  All treatment exposure date/time should be between first and last study
+                  treatment date/time.
                 Document: FDA
                 Section: FDAB008
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB0803
-              Version: '1'
-            Version: '1.5'
-        Version: '1.0'
+              Version: "1"
+            Version: "1.5"
+        Version: "1.0"
 # rule failure criteria: TSPARMCD.EXPSTDTC => EXSTDTC OR EXSTDTC => TSPARMCD.EXPENDTC
 Check:
   all:
@@ -102,10 +109,9 @@ Check:
 Core:
   Id: FDA.SDTMIG.FB0803
   Status: Draft
-  Version: '1'
-Description: Treatment exposure start date/time (EXSTDTC) should fall on or
-  between the date/time experimental start (EXPSTDTC) and end date (EXPENDTC) in
-  the TS dataset.
+  Version: "1"
+Description: Treatment exposure start date/time (EXSTDTC) should fall on or between the date/time
+  experimental start (EXPSTDTC) and end date (EXPENDTC) in the TS dataset.
 Executability: Fully Executable
 Operations:
   - domain: TS

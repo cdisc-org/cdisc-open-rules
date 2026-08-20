@@ -1,5 +1,5 @@
 # Variable: --RPSTDY
-# Condition: 
+# Condition:
 # Rule: --RPSTDY not present in dataset
 Authorities:
   - Organization: CDISC
@@ -13,9 +13,9 @@ Authorities:
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0638
-              Version: '1'
-            Version: '2.0'
-        Version: '3.4'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.4"
       - Name: TIG
         References:
           - Citations:
@@ -26,10 +26,10 @@ Authorities:
             Origin: TIG Conformance Rules
             Rule Identifier:
               Id: TIG0679
-              Version: '1'
-            Version: '1.0'
+              Version: "1"
+            Version: "1.0"
         Substandard: SDTM
-        Version: '1.0'
+        Version: "1.0"
 Check:
   all:
     - name: --RPSTDY
@@ -37,7 +37,7 @@ Check:
 Core:
   Id: CORE-000065
   Status: Published
-  Version: '1'
+  Version: "1"
 Description: Raise an error when --RPSTDY is present.
 Executability: Fully Executable
 Outcome:

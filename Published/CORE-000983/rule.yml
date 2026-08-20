@@ -4,16 +4,16 @@ Authorities:
       - Name: USDM
         References:
           - Citations:
-              - Cited Guidance: 'A procedure must only reference a study intervention that is
-                  referenced by the same study design as the activity within
-                  which the procedure is defined.'
-                Document: 'USDM_CORE_Rules.xlsx'
-            Origin: 'USDM Conformance Rules'
+              - Cited Guidance:
+                  "A procedure must only reference a study intervention that is referenced by the
+                  same study design as the activity within which the procedure is defined."
+                Document: "USDM_CORE_Rules.xlsx"
+            Origin: "USDM Conformance Rules"
             Rule Identifier:
-              Id: 'DDF00240'
-              Version: '1'
-            Version: '1.0'
-        Version: '4.0'
+              Id: "DDF00240"
+              Version: "1"
+            Version: "1.0"
+        Version: "4.0"
 Check: |-
   (study.versions)@$sv.
     $sv.studyDesigns@$sd.
@@ -35,16 +35,17 @@ Check: |-
                 "StudyIntervention.name": $sv.studyInterventions[id=$sp.studyInterventionId].name 
             }]
 Core:
-  Id: 'CORE-000983'
+  Id: "CORE-000983"
   Status: Published
-  Version: '1'
-Description: 'A procedure must only reference a study intervention that is
-  referenced by the same study design as the activity within which the procedure
-  is defined.'
+  Version: "1"
+Description:
+  "A procedure must only reference a study intervention that is referenced by the same study
+  design as the activity within which the procedure is defined."
 Executability: Fully Executable
 Outcome:
-  Message: 'The reference to the intervention is not targetting an intervention
-    that has been referenced by the study design as a study intervention.'
+  Message:
+    "The reference to the intervention is not targetting an intervention that has been referenced
+    by the study design as a study intervention."
   Output Variables:
     - StudyDesign.id
     - StudyDesign.name
@@ -58,5 +59,5 @@ Rule Type: JSONata
 Scope:
   Entities:
     Include:
-      - 'Procedure'
+      - "Procedure"
 Sensitivity: Record

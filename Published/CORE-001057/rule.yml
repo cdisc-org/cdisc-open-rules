@@ -4,23 +4,22 @@ Authorities:
       - Name: USDM
         References:
           - Citations:
-              - Cited Guidance: "An observational study design's sub types must be specified
-                  according to the extensible observational study design subtype
-                  (C215486) DDF codelist (e.g. an entry with a code or decode
-                  used from the codelist should be consistent with the full
-                  entry in the codelist)."
-                Document: 'USDM_CORE_Rules.xlsx'
-            Origin: 'USDM Conformance Rules'
+              - Cited Guidance:
+                  "An observational study design's sub types must be specified according to the
+                  extensible observational study design subtype (C215486) DDF codelist (e.g. an entry with a code
+                  or decode used from the codelist should be consistent with the full entry in the codelist)."
+                Document: "USDM_CORE_Rules.xlsx"
+            Origin: "USDM Conformance Rules"
             Rule Identifier:
-              Id: 'DDF00226'
-              Version: '1'
-            Version: '1.0'
-        Version: '4.0'
+              Id: "DDF00226"
+              Version: "1"
+            Version: "1.0"
+        Version: "4.0"
 Check:
   all:
     - name: rel_type
       operator: equal_to
-      value: 'definition'
+      value: "definition"
     - name: subTypes
       operator: exists
     - name: subTypes
@@ -28,13 +27,13 @@ Check:
       value: true
     - name: parent_rel.Code
       operator: equal_to
-      value: 'subTypes'
+      value: "subTypes"
       value_is_literal: true
     - not:
         all:
           - name: codeSystem
             operator: equal_to
-            value: 'http://www.cdisc.org'
+            value: "http://www.cdisc.org"
           - name: codeSystemVersion
             operator: is_contained_by
             value: $valid_versions
@@ -76,13 +75,13 @@ Check:
                         operator: equal_to
                         value: $value_for_code
 Core:
-  Id: 'CORE-001057'
+  Id: "CORE-001057"
   Status: Published
-  Version: '1'
-Description: "An observational study design's sub types must be specified
-  according to the extensible observational study design subtype (C215486) DDF
-  codelist (e.g. an entry with a code or decode used from the codelist should be
-  consistent with the full entry in the codelist)."
+  Version: "1"
+Description:
+  "An observational study design's sub types must be specified according to the extensible
+  observational study design subtype (C215486) DDF codelist (e.g. an entry with a code or decode used
+  from the codelist should be consistent with the full entry in the codelist)."
 Executability: Fully Executable
 Match Datasets:
   - Keys:
@@ -96,7 +95,7 @@ Operations:
   - id: $codelist_code
     map:
       - output: C215486
-        parent_rel.Code: 'subTypes'
+        parent_rel.Code: "subTypes"
     operator: map
   - ct_package_types:
       - DDF
@@ -136,13 +135,12 @@ Operations:
     term_value: decode
     version: codeSystemVersion
 Outcome:
-  Message: 'The observational study design''s sub type is not specified according
-    to the extensible observational study design subtype (C215486) DDF codelist
-    - codeSystem is not "http://www.cdisc.org", codeSystemVersion is not a valid
-    terminology package date, and/or the code or decode (either as preferred
-    term or as submission value) is found in the codelist (case insensitive) but
-    the corresponding decode or code does not match the codelist value (case
-    sensitive).'
+  Message:
+    'The observational study design''s sub type is not specified according to the extensible observational
+    study design subtype (C215486) DDF codelist - codeSystem is not "http://www.cdisc.org", codeSystemVersion
+    is not a valid terminology package date, and/or the code or decode (either as preferred term or as
+    submission value) is found in the codelist (case insensitive) but the corresponding decode or code
+    does not match the codelist value (case sensitive).'
   Output Variables:
     - parent_entity
     - parent_id
@@ -163,5 +161,5 @@ Rule Type: Record Data
 Scope:
   Entities:
     Include:
-      - 'ObservationalStudyDesign'
+      - "ObservationalStudyDesign"
 Sensitivity: Record

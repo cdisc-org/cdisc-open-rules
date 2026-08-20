@@ -4,34 +4,34 @@ Authorities:
       - Name: USDM
         References:
           - Citations:
-              - Cited Guidance: 'A timing''s relative to/from property must be specified using
-                  the Timing Relative To From Value Set Terminology (C201265)
-                  DDF codelist.'
-                Document: 'USDM_CORE_Rules.xlsx'
-            Origin: 'USDM Conformance Rules'
+              - Cited Guidance:
+                  "A timing's relative to/from property must be specified using the Timing Relative
+                  To From Value Set Terminology (C201265) DDF codelist."
+                Document: "USDM_CORE_Rules.xlsx"
+            Origin: "USDM Conformance Rules"
             Rule Identifier:
-              Id: 'DDF00104'
-              Version: '1'
-            Version: '1.0'
-        Version: '3.0'
+              Id: "DDF00104"
+              Version: "1"
+            Version: "1.0"
+        Version: "3.0"
       - Name: USDM
         References:
           - Citations:
-              - Cited Guidance: 'A timing''s relative to/from property must be specified using
-                  the Timing Relative To From Value Set Terminology (C201265)
-                  DDF codelist.'
-                Document: 'USDM_CORE_Rules.xlsx'
-            Origin: 'USDM Conformance Rules'
+              - Cited Guidance:
+                  "A timing's relative to/from property must be specified using the Timing Relative
+                  To From Value Set Terminology (C201265) DDF codelist."
+                Document: "USDM_CORE_Rules.xlsx"
+            Origin: "USDM Conformance Rules"
             Rule Identifier:
-              Id: 'DDF00104'
-              Version: '1'
-            Version: '1.0'
-        Version: '4.0'
+              Id: "DDF00104"
+              Version: "1"
+            Version: "1.0"
+        Version: "4.0"
 Check:
   all:
     - name: rel_type
       operator: equal_to
-      value: 'definition'
+      value: "definition"
     - name: relativeToFrom
       operator: equal_to
       value: true
@@ -39,7 +39,7 @@ Check:
         all:
           - name: relativeToFrom.codeSystem
             operator: equal_to
-            value: 'http://www.cdisc.org'
+            value: "http://www.cdisc.org"
           - name: relativeToFrom.codeSystemVersion
             operator: is_contained_by
             value: $valid_versions
@@ -81,11 +81,12 @@ Check:
                   - name: $value_for_code
                     operator: empty
 Core:
-  Id: 'CORE-000905'
+  Id: "CORE-000905"
   Status: Published
-  Version: '1'
-Description: 'A timing''s relative to/from property must be specified using the
-  Timing Relative To From Value Set Terminology (C201265) DDF codelist.'
+  Version: "1"
+Description:
+  "A timing's relative to/from property must be specified using the Timing Relative To From
+  Value Set Terminology (C201265) DDF codelist."
 Executability: Fully Executable
 Operations:
   - id: $codelist_code
@@ -130,13 +131,12 @@ Operations:
     term_value: relativeToFrom.decode
     version: relativeToFrom.codeSystemVersion
 Outcome:
-  Message: 'The timing''s relative to/from property is not specified using the
-    Timing Relative To From Value Set Terminology (C201265) DDF codelist -
-    codeSystem is not "http://www.cdisc.org", codeSystemVersion is not a valid
-    terminology package date, the code or decode (either as preferred term or as
-    submission value) is found in the codelist (case insensitive) but the
-    corresponding decode or code does not match the codelist value (case
-    sensitive), and/or neither code nor decode is found in the codelist.'
+  Message:
+    'The timing''s relative to/from property is not specified using the Timing Relative To From
+    Value Set Terminology (C201265) DDF codelist - codeSystem is not "http://www.cdisc.org", codeSystemVersion
+    is not a valid terminology package date, the code or decode (either as preferred term or as submission
+    value) is found in the codelist (case insensitive) but the corresponding decode or code does not match
+    the codelist value (case sensitive), and/or neither code nor decode is found in the codelist.'
   Output Variables:
     - parent_entity
     - parent_id
@@ -157,5 +157,5 @@ Rule Type: Record Data
 Scope:
   Entities:
     Include:
-      - 'Timing'
+      - "Timing"
 Sensitivity: Record
