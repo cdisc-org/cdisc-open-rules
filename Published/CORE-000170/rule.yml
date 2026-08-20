@@ -1,5 +1,5 @@
 # Variable: --LOBXFL
-# Condition: 
+# Condition:
 # Rule: Value must be 'Y' or null
 Authorities:
   - Organization: CDISC
@@ -14,9 +14,9 @@ Authorities:
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0541
-              Version: '1'
-            Version: '2.0'
-        Version: '3.4'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.4"
       - Name: SDTMIG
         References:
           - Citations:
@@ -27,9 +27,9 @@ Authorities:
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0541
-              Version: '1'
-            Version: '2.0'
-        Version: '3.3'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.3"
       - Name: TIG
         References:
           - Citations:
@@ -40,10 +40,10 @@ Authorities:
             Origin: TIG Conformance Rules
             Rule Identifier:
               Id: TIG0634
-              Version: '1'
-            Version: '1.0'
+              Version: "1"
+            Version: "1.0"
         Substandard: SDTM
-        Version: '1.0'
+        Version: "1.0"
 Check:
   all:
     - name: --LOBXFL
@@ -54,7 +54,7 @@ Check:
 Core:
   Id: CORE-000170
   Status: Published
-  Version: '1'
+  Version: "1"
 Description: Raise an error when --LOBXFL is not 'Y' or null
 Executability: Fully Executable
 Outcome:

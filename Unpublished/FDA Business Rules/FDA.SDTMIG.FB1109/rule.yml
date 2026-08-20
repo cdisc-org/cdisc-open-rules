@@ -1,42 +1,42 @@
 Authorities:
-  - Organization: 'FDA'
+  - Organization: "FDA"
     Standards:
-      - Name: 'SDTMIG'
+      - Name: "SDTMIG"
         References:
           - Citations:
-              - Cited Guidance: 'TCG, Appendix B'
-                Document: 'FDA'
-                Section: 'FDAB011'
-            Origin: 'FDA Business Rules'
+              - Cited Guidance: "TCG, Appendix B"
+                Document: "FDA"
+                Section: "FDAB011"
+            Origin: "FDA Business Rules"
             Rule Identifier:
-              Id: 'FB1109'
-              Version: '1'
-            Version: '1.5'
-        Version: '3.2'
-      - Name: 'SDTMIG'
+              Id: "FB1109"
+              Version: "1"
+            Version: "1.5"
+        Version: "3.2"
+      - Name: "SDTMIG"
         References:
           - Citations:
-              - Cited Guidance: 'TCG, Appendix B'
-                Document: 'FDA'
-                Section: 'FDAB011'
-            Origin: 'FDA Business Rules'
+              - Cited Guidance: "TCG, Appendix B"
+                Document: "FDA"
+                Section: "FDAB011"
+            Origin: "FDA Business Rules"
             Rule Identifier:
-              Id: 'FB1109'
-              Version: '1'
-            Version: '1.5'
-        Version: '3.3'
-      - Name: 'SDTMIG'
+              Id: "FB1109"
+              Version: "1"
+            Version: "1.5"
+        Version: "3.3"
+      - Name: "SDTMIG"
         References:
           - Citations:
-              - Cited Guidance: 'TCG, Appendix B'
-                Document: 'FDA'
-                Section: 'FDAB011'
-            Origin: 'FDA Business Rules'
+              - Cited Guidance: "TCG, Appendix B"
+                Document: "FDA"
+                Section: "FDAB011"
+            Origin: "FDA Business Rules"
             Rule Identifier:
-              Id: 'FB1109'
-              Version: '1'
-            Version: '1.5'
-        Version: '3.4'
+              Id: "FB1109"
+              Version: "1"
+            Version: "1.5"
+        Version: "3.4"
 Check:
   all:
     - name: TSPARMCD
@@ -84,72 +84,72 @@ Check:
 Core:
   Id: FDA.SDTMIG.FB1109
   Status: Draft
-  Version: '1'
-Description: 'The set (EGBLIND, EGCTMON, EGLEADPR, EGLEADSM, EGRDMETH, EGREPLBL,
-  EGREPLTR, EGTWVALG) is included in the list of TSPARAMCD with TSVAL
-  populated.'
+  Version: "1"
+Description:
+  "The set (EGBLIND, EGCTMON, EGLEADPR, EGLEADSM, EGRDMETH, EGREPLBL, EGREPLTR, EGTWVALG) is
+  included in the list of TSPARAMCD with TSVAL populated."
 Executability: Fully Executable
 Operations:
   - domain: TS
     filter:
       TSPARMCD: EGBLIND
-      TSVAL: ''
+      TSVAL: ""
     id: $blind_count
     name: TSPARMCD
     operator: record_count
   - domain: TS
     filter:
       TSPARMCD: EGCTMON
-      TSVAL: ''
+      TSVAL: ""
     id: $ctmon_count
     name: TSPARMCD
     operator: record_count
   - domain: TS
     filter:
       TSPARMCD: EGLEADPR
-      TSVAL: ''
+      TSVAL: ""
     id: $leadpr_count
     name: TSPARMCD
     operator: record_count
   - domain: TS
     filter:
       TSPARMCD: EGLEADSM
-      TSVAL: ''
+      TSVAL: ""
     id: $leadsm_count
     name: TSPARMCD
     operator: record_count
   - domain: TS
     filter:
       TSPARMCD: EGRDMETH
-      TSVAL: ''
+      TSVAL: ""
     id: $rdmeth_count
     name: TSPARMCD
     operator: record_count
   - domain: TS
     filter:
       TSPARMCD: EGREPLBL
-      TSVAL: ''
+      TSVAL: ""
     id: $replbl_count
     name: TSPARMCD
     operator: record_count
   - domain: TS
     filter:
       TSPARMCD: EGREPLTR
-      TSVAL: ''
+      TSVAL: ""
     id: $repltr_count
     name: TSPARMCD
     operator: record_count
   - domain: TS
     filter:
       TSPARMCD: EGTWVALG
-      TSVAL: ''
+      TSVAL: ""
     id: $twvalg_count
     name: TSPARMCD
     operator: record_count
 Outcome:
-  Message: 'The set (EGBLIND, EGCTMON, EGLEADPR, EGLEADSM, EGRDMETH, EGREPLBL,
-    EGREPLTR, EGTWVALG) is included in the list of TSPARAMCD with TSVAL
-    populated.'
+  Message:
+    "The set (EGBLIND, EGCTMON, EGLEADPR, EGLEADSM, EGRDMETH, EGREPLBL, EGREPLTR, EGTWVALG) is
+    included in the list of TSPARAMCD with TSVAL populated."
   Output Variables:
     - TSVAL
     - $blind_count

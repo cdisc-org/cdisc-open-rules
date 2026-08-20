@@ -4,11 +4,10 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: The controlled terminology or a link to the controlled
-                  terminology should be included in the data definition file
-                  wherever applicable. See the define.xml specification for
-                  details on including or referencing controlled terminology
-                  lists. Transport format)"
+              - Cited Guidance:
+                  The controlled terminology or a link to the controlled terminology should be
+                  included in the data definition file wherever applicable. See the define.xml specification
+                  for details on including or referencing controlled terminology lists. Transport format)"
                 Document: IG v3.0
                 Item: Specification
                 Section: 4.3.3
@@ -21,11 +20,10 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: The controlled terminology or a link to the controlled
-                  terminology should be included in the data definition file
-                  wherever applicable. See the define.xml specification for
-                  details on including or referencing controlled terminology
-                  lists. Transport format)"
+              - Cited Guidance:
+                  The controlled terminology or a link to the controlled terminology should be
+                  included in the data definition file wherever applicable. See the define.xml specification
+                  for details on including or referencing controlled terminology lists. Transport format)"
                 Document: IG v3.1
                 Item: Specification
                 Section: 4.3.3
@@ -38,11 +36,10 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: The controlled terminology or a link to the controlled
-                  terminology should be included in the data definition file
-                  wherever applicable. See the define.xml specification for
-                  details on including or referencing controlled terminology
-                  lists.
+              - Cited Guidance:
+                  The controlled terminology or a link to the controlled terminology should be
+                  included in the data definition file wherever applicable. See the define.xml specification
+                  for details on including or referencing controlled terminology lists.
                 Document: IG v3.1.1
                 Item: Specification
                 Section: 4.3.3
@@ -55,11 +52,10 @@ Authorities:
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance: The controlled terminology or a link to the controlled
-                  terminology should be included in the data definition file
-                  wherever applicable. See the define.xml specification for
-                  details on including or referencing controlled terminology
-                  lists.
+              - Cited Guidance:
+                  The controlled terminology or a link to the controlled terminology should be
+                  included in the data definition file wherever applicable. See the define.xml specification
+                  for details on including or referencing controlled terminology lists.
                 Document: IG v3.1
                 Item: Specification
                 Section: 4.3.3
@@ -72,11 +68,10 @@ Authorities:
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance: The controlled terminology or a link to the controlled
-                  terminology should be included in the data definition file
-                  wherever applicable. See the define.xml specification for
-                  details on including or referencing controlled terminology
-                  lists.
+              - Cited Guidance:
+                  The controlled terminology or a link to the controlled terminology should be
+                  included in the data definition file wherever applicable. See the define.xml specification
+                  for details on including or referencing controlled terminology lists.
                 Document: IG v3.1.1
                 Item: Specification
                 Section: 4.3.3
@@ -89,11 +84,10 @@ Authorities:
       - Name: SENDIG-GENETOX
         References:
           - Citations:
-              - Cited Guidance: The controlled terminology or a link to the controlled
-                  terminology should be included in the data definition file
-                  wherever applicable. See the define.xml specification for
-                  details on including or referencing controlled terminology
-                  lists.
+              - Cited Guidance:
+                  The controlled terminology or a link to the controlled terminology should be
+                  included in the data definition file wherever applicable. See the define.xml specification
+                  for details on including or referencing controlled terminology lists.
                 Document: IG v3.1.1
                 Item: Specification
                 Section: 4.3.3
@@ -110,27 +104,29 @@ Check:
     # ALSO: the current implementation only reports the FIRST violation per dataset
     - name: library_variable_ccode
       operator: not_equal_to
-      value: ''
-      # 2025-11-08: TEMPORARY solution: 
-      #- name: define_variable_has_codelist
-      #  operator: equal_to
-      #  value: true
-      # better would be to also have a "define_variable_has_valuelist"
-      # so that the rule can be implemented as:
-      # "do not check when there is no codelist referenced on the Variable level,
-      # but there is a ValueList referenced".
-      # Remark however this may lead to false negatives
+      value:
+        ""
+        # 2025-11-08: TEMPORARY solution:
+        #- name: define_variable_has_codelist
+        #  operator: equal_to
+        #  value: true
+        # better would be to also have a "define_variable_has_valuelist"
+        # so that the rule can be implemented as:
+        # "do not check when there is no codelist referenced on the Variable level,
+        # but there is a ValueList referenced".
+        # Remark however this may lead to false negatives
     - name: library_variable_ccode
       operator: not_equal_to
       value: define_variable_ccode
 Core:
   Status: Draft
-  Version: '1'
-Description: ''
+  Version: "1"
+Description: ""
 Executability: Fully Executable
 Outcome:
-  Message: 'The associated codelist for this variable does not match the codelist
-    provided in the define.xml through the CDISC-NCI Code'
+  Message:
+    "The associated codelist for this variable does not match the codelist provided in the define.xml
+    through the CDISC-NCI Code"
   Output Variables:
     - define_variable_name
     - library_variable_ccode

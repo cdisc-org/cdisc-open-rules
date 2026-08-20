@@ -1,47 +1,48 @@
 # Variable: --HLT
-# Condition: 
+# Condition:
 # Rule: --HLT = MedDRA high level TERM
 Authorities:
   - Organization: CDISC
     Standards:
       - Name: SDTMIG
-        Version: '3.4'
         References:
-          - Origin: SDTM and SDTMIG Conformance Rules
-            Rule Identifier:
-              Id: CG0381
-              Version: '1'
-            Version: '2.0'
-            Citations:
-              - Cited Guidance: The high-level term from the primary hierarchy assigned
-                  to the event from MedDRA.
+          - Citations:
+              - Cited Guidance:
+                  The high-level term from the primary hierarchy assigned to the event from
+                  MedDRA.
                 Document: Model v2.0
                 Item: --HLT
                 Section: Events
-      - Name: SDTMIG
-        Version: '3.2'
-        References:
-          - Origin: SDTM and SDTMIG Conformance Rules
+            Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0381
-              Version: '1'
-            Version: '2.0'
-            Citations:
+              Version: "1"
+            Version: "2.0"
+        Version: "3.4"
+      - Name: SDTMIG
+        References:
+          - Citations:
               - Cited Guidance: MedDRA High Level Term from the primary path.
                 Document: Model v1.4
                 Section: 2.2.2
-      - Name: SDTMIG
-        Version: '3.3'
-        References:
-          - Origin: SDTM and SDTMIG Conformance Rules
+            Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0381
-              Version: '1'
-            Version: '2.0'
-            Citations:
+              Version: "1"
+            Version: "2.0"
+        Version: "3.2"
+      - Name: SDTMIG
+        References:
+          - Citations:
               - Cited Guidance: MedDRA High Level Term from the primary path.
                 Document: Model v1.7
                 Section: 2.2.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0381
+              Version: "1"
+            Version: "2.0"
+        Version: "3.3"
 Check:
   all:
     - name: --HLT
@@ -51,7 +52,7 @@ Check:
 Core:
   Id: CDISC.SDTMIG.CG0381
   Status: Draft
-  Version: '1'
+  Version: "1"
 Description: Trigger error when --HLT  is not a valid MedDRA high level TERM
 Executability: Fully Executable
 Outcome:

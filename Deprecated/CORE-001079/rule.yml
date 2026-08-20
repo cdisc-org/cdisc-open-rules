@@ -1,19 +1,19 @@
 # Variable: GEN
-# Condition: 
+# Condition:
 # Rule: Variable = Model List of Allowed Variables for Observation Class
 Authorities:
   - Organization: CDISC
     Standards:
-
       # 2025-11-18: SDTMIG-3-3 is implemented as a separate rule
-      # as SDTMIG has "domain-specific" variables: 
+      # as SDTMIG has "domain-specific" variables:
       # which are NOT in the "SDTM Model"
       # For SDTMIG-3-2 there are none such "domain-specific" variables
       # and for SDTMIG-3-4 they are also present in the "SDTM Model".
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: IG v3.3[2.5][Sponsors may not add any other variables. . . .
+              - Cited Guidance:
+                  IG v3.3[2.5][Sponsors may not add any other variables. . . .
                   Standard variables must not be renamed or modified for novel
                   usage]|IG v3.3[2.5][[Using SDTM-specified standard variable
                   names]|Model v1.7[3.2.2 2.1][Each observation can be described
@@ -26,9 +26,9 @@ Authorities:
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0013
-              Version: '1'
-            Version: '2.0'
-        Version: '3.3'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.3"
       #- Name: SDTMIG
       #  References:
       #    - Citations:
@@ -52,9 +52,9 @@ Authorities:
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0351
-              Version: '1'
-            Version: '2.0'
-        Version: '3.3'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.3"
 Check:
   all:
     # 2025-11-17: exclude EXMETHOD, EGBEATNO, ICIMPLBL, MSAGENT, MSCONC, MSCONCU
@@ -82,7 +82,7 @@ Check:
 Core:
   Id: CORE-001079
   Status: Published
-  Version: '1'
+  Version: "1"
 Description: Raise an error when a variable is not an allowed variable for an
   Observation Class
 Executability: Partially Executable - Possible Underreporting

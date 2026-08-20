@@ -8,7 +8,8 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: 'When collecting ethnicity demographic data from clinical trial
+              - Cited Guidance:
+                  'When collecting ethnicity demographic data from clinical trial
                   participants, the following two minimum choices should be
                   offered: "HISPANIC OR LATINO" or "NOT HISPANIC OR LATINO"'
                 Document: FDA
@@ -16,13 +17,14 @@ Authorities:
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB5701
-              Version: '1'
-            Version: '1.5'
-        Version: '3.2'
+              Version: "1"
+            Version: "1.5"
+        Version: "3.2"
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: 'When collecting ethnicity demographic data from clinical trial
+              - Cited Guidance:
+                  'When collecting ethnicity demographic data from clinical trial
                   participants, the following two minimum choices should be
                   offered: "HISPANIC OR LATINO" or "NOT HISPANIC OR LATINO"'
                 Document: FDA
@@ -30,13 +32,14 @@ Authorities:
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB5701
-              Version: '1'
-            Version: '1.5'
-        Version: '3.3'
+              Version: "1"
+            Version: "1.5"
+        Version: "3.3"
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: 'When collecting ethnicity demographic data from clinical trial
+              - Cited Guidance:
+                  'When collecting ethnicity demographic data from clinical trial
                   participants, the following two minimum choices should be
                   offered: "HISPANIC OR LATINO" or "NOT HISPANIC OR LATINO"'
                 Document: FDA
@@ -44,9 +47,9 @@ Authorities:
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB5701
-              Version: '1'
-            Version: '1.5'
-        Version: '3.4'
+              Version: "1"
+            Version: "1.5"
+        Version: "3.4"
 Check:
   any:
     - all:
@@ -74,7 +77,7 @@ Check:
 Core:
   Id: CORE-000726
   Status: Published
-  Version: '1'
+  Version: "1"
 Description: When Ethnicity was collected and it was not mapped as "HISPANIC OR
   LATINO" or "NOT HISPANIC OR LATINO".
 Executability: Partially Executable
@@ -83,7 +86,8 @@ Match Datasets:
       - USUBJID
     Name: SUPPDM
 Outcome:
-  Message: Ethnicity has been collected but the values is not mapped to "HISPANIC
+  Message:
+    Ethnicity has been collected but the values is not mapped to "HISPANIC
     OR LATINO" or "NOT HISPANIC OR LATINO"
   Output Variables:
     - ETHNIC

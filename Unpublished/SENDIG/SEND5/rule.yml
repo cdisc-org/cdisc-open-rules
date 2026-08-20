@@ -4,10 +4,10 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: "The define.xml specification includes seven distinct attributes
-                  to describe variable-level metadata: ...The Variable Name
-                  (limited to 8 characters for compatibility with the SAS v5
-                  Transport format)"
+              - Cited Guidance:
+                  "The define.xml specification includes seven distinct attributes to describe variable-level
+                  metadata: ...The Variable Name (limited to 8 characters for compatibility with the SAS v5 Transport
+                  format)"
                 Document: IG v3.0
                 Item: Specification
                 Section: 3.2.2
@@ -20,10 +20,10 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: "The define.xml specification includes seven distinct attributes
-                  to describe variable-level metadata: ...The Variable Name
-                  (limited to 8 characters for compatibility with the SAS v5
-                  Transport format)"
+              - Cited Guidance:
+                  "The define.xml specification includes seven distinct attributes to describe variable-level
+                  metadata: ...The Variable Name (limited to 8 characters for compatibility with the SAS v5 Transport
+                  format)"
                 Document: IG v3.1
                 Item: Specification
                 Section: 3.2.2
@@ -36,10 +36,10 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: "The define.xml specification includes seven distinct attributes
-                  to describe variable-level metadata: ...The Variable Name
-                  (limited to 8 characters for compatibility with the SAS v5
-                  Transport format)"
+              - Cited Guidance:
+                  "The define.xml specification includes seven distinct attributes to describe variable-level
+                  metadata: ...The Variable Name (limited to 8 characters for compatibility with the SAS v5 Transport
+                  format)"
                 Document: IG v3.1.1
                 Item: Specification
                 Section: 3.2.2
@@ -52,10 +52,10 @@ Authorities:
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance: "The define.xml specification includes seven distinct attributes
-                  to describe variable-level metadata: ...The Variable Name
-                  (limited to 8 characters for compatibility with the SAS v5
-                  Transport format)"
+              - Cited Guidance:
+                  "The define.xml specification includes seven distinct attributes to describe variable-level
+                  metadata: ...The Variable Name (limited to 8 characters for compatibility with the SAS v5 Transport
+                  format)"
                 Document: IG v3.1
                 Item: Specification
                 Section: 3.2.2
@@ -68,10 +68,10 @@ Authorities:
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance: "The define.xml specification includes seven distinct attributes
-                  to describe variable-level metadata: ...The Variable Name
-                  (limited to 8 characters for compatibility with the SAS v5
-                  Transport format)"
+              - Cited Guidance:
+                  "The define.xml specification includes seven distinct attributes to describe variable-level
+                  metadata: ...The Variable Name (limited to 8 characters for compatibility with the SAS v5 Transport
+                  format)"
                 Document: IG v3.1.1
                 Item: Specification
                 Section: 3.2.2
@@ -84,10 +84,10 @@ Authorities:
       - Name: SENDIG-GENETOX
         References:
           - Citations:
-              - Cited Guidance: "The define.xml specification includes seven distinct attributes
-                  to describe variable-level metadata: ...The Variable Name
-                  (limited to 8 characters for compatibility with the SAS v5
-                  Transport format)"
+              - Cited Guidance:
+                  "The define.xml specification includes seven distinct attributes to describe variable-level
+                  metadata: ...The Variable Name (limited to 8 characters for compatibility with the SAS v5 Transport
+                  format)"
                 Document: IG v3.1.1
                 Item: Specification
                 Section: 3.2.2
@@ -100,17 +100,19 @@ Authorities:
 Check:
   all:
     - name: define_variable_name
-      operator: not_equal_to
-      # P.S.: library_variable_name points to the IG plus to the model.
+      operator:
+        not_equal_to
+        # P.S.: library_variable_name points to the IG plus to the model.
       value: library_variable_name
 Core:
   Status: Draft
-  Version: '1'
-Description: 'Checks the variable name in the define.xml for its existence in
-  the CDISC Library for the provided SENDIG version'
+  Version: "1"
+Description:
+  "Checks the variable name in the define.xml for its existence in the CDISC Library for the
+  provided SENDIG version"
 Executability: Fully Executable
 Outcome:
-  Message: 'The variable in the define.xml is not from the SENDIG'
+  Message: "The variable in the define.xml is not from the SENDIG"
 Rule Type: Define Item Metadata Check against Library Metadata
 Scope:
   Classes:

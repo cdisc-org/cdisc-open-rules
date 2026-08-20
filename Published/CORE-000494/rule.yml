@@ -4,12 +4,11 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: "The define.xml specification includes seven distinct attributes
-                  to describe variable-level metadata: ...The Role of the
-                  variable, which determines how the variable is used in the
-                  dataset. For SEND Domain. Models, Roles are used to represent
-                  the categories of variables such as Identifier, Topic, Timing,
-                  or the five types of Qualifiers"
+              - Cited Guidance:
+                  "The define.xml specification includes seven distinct attributes to describe variable-level
+                  metadata: ...The Role of the variable, which determines how the variable is used in the dataset.
+                  For SEND Domain. Models, Roles are used to represent the categories of variables such as Identifier,
+                  Topic, Timing, or the five types of Qualifiers"
                 Document: IG v3.0
                 Item: Specification
                 Section: 3.2.2
@@ -22,12 +21,11 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: "The define.xml specification includes seven distinct attributes
-                  to describe variable-level metadata: ...The Role of the
-                  variable, which determines how the variable is used in the
-                  dataset. For SEND Domain. Models, Roles are used to represent
-                  the categories of variables such as Identifier, Topic, Timing,
-                  or the five types of Qualifiers"
+              - Cited Guidance:
+                  "The define.xml specification includes seven distinct attributes to describe variable-level
+                  metadata: ...The Role of the variable, which determines how the variable is used in the dataset.
+                  For SEND Domain. Models, Roles are used to represent the categories of variables such as Identifier,
+                  Topic, Timing, or the five types of Qualifiers"
                 Document: IG v3.1
                 Item: Specification
                 Section: 3.2.2
@@ -40,12 +38,11 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: "The define.xml specification includes seven distinct attributes
-                  to describe variable-level metadata: ...The Role of the
-                  variable, which determines how the variable is used in the
-                  dataset. For SEND Domain. Models, Roles are used to represent
-                  the categories of variables such as Identifier, Topic, Timing,
-                  or the five types of Qualifiers"
+              - Cited Guidance:
+                  "The define.xml specification includes seven distinct attributes to describe variable-level
+                  metadata: ...The Role of the variable, which determines how the variable is used in the dataset.
+                  For SEND Domain. Models, Roles are used to represent the categories of variables such as Identifier,
+                  Topic, Timing, or the five types of Qualifiers"
                 Document: IG v3.1.1
                 Item: Specification
                 Section: 3.2.2
@@ -58,12 +55,11 @@ Authorities:
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance: "The define.xml specification includes seven distinct attributes
-                  to describe variable-level metadata: ...The Role of the
-                  variable, which determines how the variable is used in the
-                  dataset. For SEND Domain. Models, Roles are used to represent
-                  the categories of variables such as Identifier, Topic, Timing,
-                  or the five types of Qualifiers"
+              - Cited Guidance:
+                  "The define.xml specification includes seven distinct attributes to describe variable-level
+                  metadata: ...The Role of the variable, which determines how the variable is used in the dataset.
+                  For SEND Domain. Models, Roles are used to represent the categories of variables such as Identifier,
+                  Topic, Timing, or the five types of Qualifiers"
                 Document: IG v3.1
                 Item: Specification
                 Section: 3.2.2
@@ -76,12 +72,11 @@ Authorities:
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance: "The define.xml specification includes seven distinct attributes
-                  to describe variable-level metadata: ...The Role of the
-                  variable, which determines how the variable is used in the
-                  dataset. For SEND Domain. Models, Roles are used to represent
-                  the categories of variables such as Identifier, Topic, Timing,
-                  or the five types of Qualifiers"
+              - Cited Guidance:
+                  "The define.xml specification includes seven distinct attributes to describe variable-level
+                  metadata: ...The Role of the variable, which determines how the variable is used in the dataset.
+                  For SEND Domain. Models, Roles are used to represent the categories of variables such as Identifier,
+                  Topic, Timing, or the five types of Qualifiers"
                 Document: IG v3.1.1
                 Item: Specification
                 Section: 3.2.2
@@ -94,12 +89,11 @@ Authorities:
       - Name: SENDIG-GENETOX
         References:
           - Citations:
-              - Cited Guidance: "The define.xml specification includes seven distinct attributes
-                  to describe variable-level metadata: ...The Role of the
-                  variable, which determines how the variable is used in the
-                  dataset. For SEND Domain. Models, Roles are used to represent
-                  the categories of variables such as Identifier, Topic, Timing,
-                  or the five types of Qualifiers"
+              - Cited Guidance:
+                  "The define.xml specification includes seven distinct attributes to describe variable-level
+                  metadata: ...The Role of the variable, which determines how the variable is used in the dataset.
+                  For SEND Domain. Models, Roles are used to represent the categories of variables such as Identifier,
+                  Topic, Timing, or the five types of Qualifiers"
                 Document: IG v3.1.1
                 Item: Specification
                 Section: 3.2.2
@@ -125,12 +119,12 @@ Core:
   Id: CORE-000494
   Status: Published
   Version: "1"
-Description: Raise an error when the role provided in the define.xml does not
-  correspond to the role in the IG
+Description: Raise an error when the role provided in the define.xml does not correspond to the role
+  in the IG
 Executability: Fully Executable
 Outcome:
-  Message: The Role of the variable in the define.xml does not correspond to the
-    Role given by the Implementation Guide
+  Message: The Role of the variable in the define.xml does not correspond to the Role given by the
+    Implementation Guide
   Output Variables:
     - define_variable_label
     - define_variable_name

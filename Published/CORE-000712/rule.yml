@@ -7,82 +7,86 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Identifying variable in the parent dataset that identifies the
-                  record(s) to which the comment applies.
+              - Cited Guidance:
+                  Identifying variable in the parent dataset that identifies the record(s) to
+                  which the comment applies.
                 Document: Model v2.0
                 Item: IDVAR
                 Section: Comments
-              - Cited Guidance: Name of the identifying variable in the
-                  general-observation-class dataset that identifies the related
-                  record(s).
+              - Cited Guidance:
+                  Name of the identifying variable in the general-observation-class dataset
+                  that identifies the related record(s).
                 Document: Model v2.0
                 Item: IDVAR
                 Section: Supplemental Qualifiers
-              - Cited Guidance: Name of the  identifying variable in the
-                  general-observation-class dataset that identifies the related
-                  record(s).
+              - Cited Guidance:
+                  Name of the  identifying variable in the general-observation-class dataset
+                  that identifies the related record(s).
                 Document: Model v2.0
                 Item: IDVAR
                 Section: Related Records
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0370
-              Version: '1'
-            Version: '2.0'
-        Version: '3.4'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.4"
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Identifying variable in the parent dataset that identifies the
-                  record(s) to which the comment applies.
+              - Cited Guidance:
+                  Identifying variable in the parent dataset that identifies the record(s) to
+                  which the comment applies.
                 Document: Model v1.4
                 Section: 2.2.7
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0370
-              Version: '1'
-            Version: '2.0'
-        Version: '3.2'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.2"
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Identifying variable in the parent dataset that identifies the
-                  record(s) to which the comment applies.
+              - Cited Guidance:
+                  Identifying variable in the parent dataset that identifies the record(s) to
+                  which the comment applies.
                 Document: Model v1.7
                 Section: 2.2.7
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0370
-              Version: '1'
-            Version: '2.0'
-        Version: '3.3'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.3"
       - Name: TIG
         References:
           - Citations:
-              - Cited Guidance: Identifying variable in the parent dataset that identifies the
-                  record(s) to which the comment applies.
+              - Cited Guidance:
+                  Identifying variable in the parent dataset that identifies the record(s) to
+                  which the comment applies.
                 Document: SDTM v2.1
                 Item: IDVAR
                 Section: 3.2.2 Comments
-              - Cited Guidance: Name of the identifying variable in the
-                  general-observation-class dataset that identifies the related
-                  record(s).
+              - Cited Guidance:
+                  Name of the identifying variable in the general-observation-class dataset
+                  that identifies the related record(s).
                 Document: SDTM v2.1
                 Item: IDVAR
                 Section: 6.2 Supplemental Qualifiers Datasets
-              - Cited Guidance: Name of the  identifying variable in the
-                  general-observation-class dataset that identifies the related
-                  record(s).
+              - Cited Guidance:
+                  Name of the  identifying variable in the general-observation-class dataset
+                  that identifies the related record(s).
                 Document: SDTM v2.1
                 Item: IDVAR
                 Section: Section 6.1 Related Records Dataset
             Origin: TIG Conformance Rules
             Rule Identifier:
               Id: TIG0534
-              Version: '1'
-            Version: '1.0'
+              Version: "1"
+            Version: "1.0"
         Substandard: SDTM
-        Version: '1.0'
+        Version: "1.0"
 Check:
   all:
     - name: RDOMAIN
@@ -95,9 +99,9 @@ Check:
 Core:
   Id: CORE-000712
   Status: Published
-  Version: '1'
-Description: Part A - Raise and error when IDVAR in SUPP-- is not populated with
-  a valid variable from the dataset referenced in RDOMAIN.
+  Version: "1"
+Description: Part A - Raise and error when IDVAR in SUPP-- is not populated with a valid variable
+  from the dataset referenced in RDOMAIN.
 Executability: Fully Executable
 Match Datasets:
   - Child: true
@@ -113,8 +117,8 @@ Operations:
     operator: distinct
     value_is_reference: true
 Outcome:
-  Message: Value for IDVAR in SUPP-- does not represent a variable present in the
-    dataset referenced in RDOMAIN.
+  Message: Value for IDVAR in SUPP-- does not represent a variable present in the dataset referenced
+    in RDOMAIN.
   Output Variables:
     - IDVAR
 Rule Type: Record Data
