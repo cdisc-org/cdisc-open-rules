@@ -10,9 +10,9 @@ Authorities:
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND143
-              Version: '1'
-            Version: '5.0'
-        Version: '3.0'
+              Version: "1"
+            Version: "5.0"
+        Version: "3.0"
       - Name: SENDIG
         References:
           - Citations:
@@ -22,9 +22,9 @@ Authorities:
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND143
-              Version: '1'
-            Version: '5.0'
-        Version: '3.1'
+              Version: "1"
+            Version: "5.0"
+        Version: "3.1"
       - Name: SENDIG
         References:
           - Citations:
@@ -34,8 +34,8 @@ Authorities:
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND143
-              Version: '1'
-            Version: '5.0'
+              Version: "1"
+            Version: "5.0"
         Version: 3.1.1
       - Name: SENDIG-GENETOX
         References:
@@ -46,9 +46,9 @@ Authorities:
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND143
-              Version: '1'
-            Version: '5.0'
-        Version: '1.0'
+              Version: "1"
+            Version: "5.0"
+        Version: "1.0"
       - Name: SENDIG-DART
         References:
           - Citations:
@@ -58,9 +58,9 @@ Authorities:
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND143
-              Version: '1'
-            Version: '5.0'
-        Version: '1.1'
+              Version: "1"
+            Version: "5.0"
+        Version: "1.1"
       - Name: SENDIG-DART
         References:
           - Citations:
@@ -70,9 +70,9 @@ Authorities:
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND143
-              Version: '1'
-            Version: '5.0'
-        Version: '1.2'
+              Version: "1"
+            Version: "5.0"
+        Version: "1.2"
       - Name: TIG
         References:
           - Citations:
@@ -83,10 +83,10 @@ Authorities:
             Origin: TIG Conformance Rules
             Rule Identifier:
               Id: TIG0079
-              Version: '1'
-            Version: '1.0'
+              Version: "1"
+            Version: "1.0"
         Substandard: SEND
-        Version: '1.0'
+        Version: "1.0"
 Check:
   all:
     - name: --STAT
@@ -97,9 +97,9 @@ Check:
 Core:
   Id: CORE-000567
   Status: Published
-  Version: '1'
-Description: Trigger error when --STAT is non-empty and does not contain a value
-  from the ND codelist
+  Version: "1"
+Description: Trigger error when --STAT is non-empty and does not contain a value from the ND
+  codelist
 Executability: Fully Executable
 Outcome:
   Message: --STAT does not contain a value from the (ND) codelist

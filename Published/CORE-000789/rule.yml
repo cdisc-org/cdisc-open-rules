@@ -5,107 +5,113 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: 'Variables intended only for human studies should not be
-                  included in nonclinical data.'
+              - Cited Guidance:
+                  "Variables intended only for human studies should not be included in nonclinical
+                  data."
                 Document: FDA
                 Section: FDAB051
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB5134
-              Version: '1'
-            Version: '1.5'
-        Version: '3.0'
+              Version: "1"
+            Version: "1.5"
+        Version: "3.0"
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: 'Variables intended only for human studies should not be
-                  included in nonclinical data.'
+              - Cited Guidance:
+                  "Variables intended only for human studies should not be included in nonclinical
+                  data."
                 Document: FDA
                 Section: FDAB051
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB5134
-              Version: '1'
-            Version: '1.5'
-        Version: '3.1'
+              Version: "1"
+            Version: "1.5"
+        Version: "3.1"
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: 'Variables intended only for human studies should not be
-                  included in nonclinical data.'
+              - Cited Guidance:
+                  "Variables intended only for human studies should not be included in nonclinical
+                  data."
                 Document: FDA
                 Section: FDAB051
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB5134
-              Version: '1'
-            Version: '1.5'
-        Version: '3.1.1'
+              Version: "1"
+            Version: "1.5"
+        Version: "3.1.1"
       - Name: SENDIG-GENETOX
         References:
           - Citations:
-              - Cited Guidance: 'Variables intended only for human studies should not be
-                  included in nonclinical data.'
+              - Cited Guidance:
+                  "Variables intended only for human studies should not be included in nonclinical
+                  data."
                 Document: FDA
                 Section: FDAB051
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB5134
-              Version: '1'
-            Version: '1.5'
-        Version: '1.0'
+              Version: "1"
+            Version: "1.5"
+        Version: "1.0"
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance: 'Variables intended only for human studies should not be
-                  included in nonclinical data.'
+              - Cited Guidance:
+                  "Variables intended only for human studies should not be included in nonclinical
+                  data."
                 Document: FDA
                 Section: FDAB051
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB5134
-              Version: '1'
-            Version: '1.5'
-        Version: '1.1'
+              Version: "1"
+            Version: "1.5"
+        Version: "1.1"
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance: 'Variables intended only for human studies should not be
-                  included in nonclinical data.'
+              - Cited Guidance:
+                  "Variables intended only for human studies should not be included in nonclinical
+                  data."
                 Document: FDA
                 Section: FDAB051
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB5134
-              Version: '1'
-            Version: '1.5'
-        Version: '1.2'
+              Version: "1"
+            Version: "1.5"
+        Version: "1.2"
       - Name: SENDIG-AR
         References:
           - Citations:
-              - Cited Guidance: 'Variables intended only for human studies should not be
-                  included in nonclinical data.'
+              - Cited Guidance:
+                  "Variables intended only for human studies should not be included in nonclinical
+                  data."
                 Document: FDA
                 Section: FDAB051
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB5134
-              Version: '1'
-            Version: '1.5'
-        Version: '1.0'
+              Version: "1"
+            Version: "1.5"
+        Version: "1.0"
 Check:
   all:
-    - name: 'TSVCDVER'
+    - name: "TSVCDVER"
       operator: exists
 Core:
-  Status: Published
-  Version: '1'
   Id: CORE-000789
-Description: 'TSVCDVER (Version of the Reference Terminology) must not be
-  present in SEND dataset'
+  Status: Published
+  Version: "1"
+Description: "TSVCDVER (Version of the Reference Terminology) must not be present in SEND dataset"
 Executability: Fully Executable
 Outcome:
-  Message: 'TSVCDVER must not be present in SEND dataset'
+  Message: "TSVCDVER must not be present in SEND dataset"
 Rule Type: Record Data
 Scope:
   Classes:

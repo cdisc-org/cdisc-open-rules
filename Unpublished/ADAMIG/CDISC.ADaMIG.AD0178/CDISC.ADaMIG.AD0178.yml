@@ -4,28 +4,28 @@ Authorities:
       - Name: ADaMIG
         References:
           - Citations:
-              - Cited Guidance: 'Codelist/Controlled Terms: Y {Y, NULL}'
+              - Cited Guidance: "Codelist/Controlled Terms: Y {Y, NULL}"
                 Document: ADaMIG
                 Item: Table 3.2.6.1
                 Section: 3.2.6
             Criteria:
               Logical Expression:
-                Condition: ''
+                Condition: ""
                 Rule: ANLzzzL is equal to Y or null
               Plain Language Expression: ANLzzFL is equal to Y or missing
               Type: Failure
             Origin: ADaM Conformance Rules
-            Release Notes: ''
+            Release Notes: ""
             Rule Identifier:
-              Id: '178'
-              Version: ''
+              Id: "178"
+              Version: ""
             Validator Rule Message: ANLzzFL must equal to Y or missing
-            Version: '5.0'
-        Version: '1.0'
+            Version: "5.0"
+        Version: "1.0"
       - Name: ADaMIG
         References:
           - Citations:
-              - Cited Guidance: 'Codelist/Controlled Terms: Y {Y, NULL}'
+              - Cited Guidance: "Codelist/Controlled Terms: Y {Y, NULL}"
                 Document: ADaMIG
                 Item: Table 3.3.8.1
                 Section: 3.3.8
@@ -36,22 +36,22 @@ Authorities:
               Plain Language Expression: ANLzzFL is equal to Y or missing
               Type: Failure
             Origin: ADaM Conformance Rules
-            Release Notes: ''
+            Release Notes: ""
             Rule Identifier:
-              Id: '178'
-              Version: ''
+              Id: "178"
+              Version: ""
             Validator Rule Message: ANLzzFL must equal to Y or missing
-            Version: '5.0'
-        Version: '1.1'
+            Version: "5.0"
+        Version: "1.1"
 Check:
   all:
     - name: variable_name
       operator: matches_regex
-      value: 'AN/[0-9]/[0-9]/FL'
-    - name: &variable_name #how to refer to return variable from first check?
+      value: "AN/[0-9]/[0-9]/FL"
+    - name: &variable_name  #how to refer to return variable from first check?
       operator: is_not_contained_by
       value:
-        - 'Y'
+        - "Y"
 
 #or
 #  all:
@@ -63,12 +63,11 @@ Check:
 #      value:
 #        - 'Y'
 
-
 Core:
   Id: CDISC.ADaMIG.AD0178
   Status: Draft
-  Version: '1'
-Description: ''
+  Version: "1"
+Description: ""
 Executability: Fully Executable
 Outcome:
   Message: ANLzzFL is not equal to Y or missing

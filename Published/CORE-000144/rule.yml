@@ -1,5 +1,5 @@
 # Variable: TAETORD
-# Condition: 
+# Condition:
 # Rule: TAETORD is unique within an ARM
 Authorities:
   - Organization: CDISC
@@ -14,35 +14,35 @@ Authorities:
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0247
-              Version: '1'
-            Version: '2.0'
-        Version: '3.4'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.4"
       - Name: SDTMIG
         References:
           - Citations:
               - Cited Guidance: Number that gives the order of the Element within the Arm.
                 Document: IG v3.3
                 Item: Specification
-                Section: '7.2'
+                Section: "7.2"
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0247
-              Version: '1'
-            Version: '2.0'
-        Version: '3.3'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.3"
       - Name: SDTMIG
         References:
           - Citations:
               - Cited Guidance: Number that gives the order of the Element within the Arm.
                 Document: IG v3.2
                 Item: Specification
-                Section: '7.2'
+                Section: "7.2"
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0247
-              Version: '1'
-            Version: '2.0'
-        Version: '3.2'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.2"
       - Name: TIG
         References:
           - Citations:
@@ -53,10 +53,10 @@ Authorities:
             Origin: TIG Conformance Rules
             Rule Identifier:
               Id: TIG0451
-              Version: '1'
-            Version: '1.0'
+              Version: "1"
+            Version: "1.0"
         Substandard: SDTM
-        Version: '1.0'
+        Version: "1.0"
 Check:
   all:
     - name: TAETORD
@@ -66,7 +66,7 @@ Check:
 Core:
   Id: CORE-000144
   Status: Published
-  Version: '1'
+  Version: "1"
 Description: Trigger error when TAETORD is not unique within an ARM
 Executability: Fully Executable
 Outcome:
