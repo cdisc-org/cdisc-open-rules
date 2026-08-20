@@ -120,7 +120,8 @@ jobs:
                 body += '**Formatting issue** — the following files are not formatted with Prettier:\n\n';
                 body += '```\n' + prettierList + '\n```\n\n';
                 body += 'Install the [Prettier VS Code extension](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) and enable "Format On Save", then re-save these files and push.\n\n';
-                body += 'Alternatively, trigger the **Auto-format Rule YAML** workflow to fix them automatically.';
+                body += 'Alternatively, you can run npx prettier --write Path/To/File to format in the Console\n\n';
+                body += 'Or you may also trigger the **Auto-format Rule YAML** workflow to fix them automatically.';
               }
             }
 
