@@ -91,116 +91,108 @@ Authorities:
         Version: "1.0"
 Check:
   any:
-  - all:
-    - name: ECDOSE
-      operator: empty
-    - name: ECOCCUR
-      operator: not_equal_to
-      value: N
-      value_is_literal: true
-    - name: ECSTAT
-      operator: empty
-    - name: ECDOSTXT
-      operator: empty
-  - all:
-    - name: ECDOSE
-      operator: empty
-    - name: ECOCCUR
-      operator: not_equal_to
-      value: N
-      value_is_literal: true
-    - name: ECSTAT
-      operator: empty
-    - name: ECDOSTXT
-      operator: not_exists
-  - all:
-    - name: ECDOSE
-      operator: empty
-    - name: ECOCCUR
-      operator: not_equal_to
-      value: N
-      value_is_literal: true
-    - name: ECSTAT
-      operator: not_exists
-    - name: ECDOSTXT
-      operator: empty
-  - all:
-    - name: ECDOSE
-      operator: empty
-    - name: ECOCCUR
-      operator: not_equal_to
-      value: N
-      value_is_literal: true
-    - name: ECSTAT
-      operator: not_exists
-    - name: ECDOSTXT
-      operator: not_exists
-  - all:
-    - name: ECDOSE
-      operator: empty
-    - name: ECOCCUR
-      operator: not_exists
-    - name: ECSTAT
-      operator: empty
-    - name: ECDOSTXT
-      operator: empty
-  - all:
-    - name: ECDOSE
-      operator: empty
-    - name: ECOCCUR
-      operator: not_exists
-    - name: ECSTAT
-      operator: empty
-    - name: ECDOSTXT
-      operator: not_exists
-  - all:
-    - name: ECDOSE
-      operator: empty
-    - name: ECOCCUR
-      operator: not_exists
-    - name: ECSTAT
-      operator: not_exists
-    - name: ECDOSTXT
-      operator: empty
-  - all:
-    - name: ECDOSE
-      operator: empty
-    - name: ECOCCUR
-      operator: not_exists
-    - name: ECSTAT
-      operator: not_exists
-    - name: ECDOSTXT
-      operator: not_exists
+    - all:
+        - name: ECDOSE
+          operator: empty
+        - name: ECOCCUR
+          operator: not_equal_to
+          value: N
+          value_is_literal: true
+        - name: ECSTAT
+          operator: empty
+        - name: ECDOSTXT
+          operator: empty
+    - all:
+        - name: ECDOSE
+          operator: empty
+        - name: ECOCCUR
+          operator: not_equal_to
+          value: N
+          value_is_literal: true
+        - name: ECSTAT
+          operator: empty
+        - name: ECDOSTXT
+          operator: not_exists
+    - all:
+        - name: ECDOSE
+          operator: empty
+        - name: ECOCCUR
+          operator: not_equal_to
+          value: N
+          value_is_literal: true
+        - name: ECSTAT
+          operator: not_exists
+        - name: ECDOSTXT
+          operator: empty
+    - all:
+        - name: ECDOSE
+          operator: empty
+        - name: ECOCCUR
+          operator: not_equal_to
+          value: N
+          value_is_literal: true
+        - name: ECSTAT
+          operator: not_exists
+        - name: ECDOSTXT
+          operator: not_exists
+    - all:
+        - name: ECDOSE
+          operator: empty
+        - name: ECOCCUR
+          operator: not_exists
+        - name: ECSTAT
+          operator: empty
+        - name: ECDOSTXT
+          operator: empty
+    - all:
+        - name: ECDOSE
+          operator: empty
+        - name: ECOCCUR
+          operator: not_exists
+        - name: ECSTAT
+          operator: empty
+        - name: ECDOSTXT
+          operator: not_exists
+    - all:
+        - name: ECDOSE
+          operator: empty
+        - name: ECOCCUR
+          operator: not_exists
+        - name: ECSTAT
+          operator: not_exists
+        - name: ECDOSTXT
+          operator: empty
+    - all:
+        - name: ECDOSE
+          operator: empty
+        - name: ECOCCUR
+          operator: not_exists
+        - name: ECSTAT
+          operator: not_exists
+        - name: ECDOSTXT
+          operator: not_exists
 Core:
   Id: CORE-000217
   Status: Published
   Version: "1"
-<<<<<<< HEAD
 Description: Raise an error when ECDOSE is empty, ECOCCUR is not equal to 'N', ECSTAT is empty and
   ECDOSTXT is empty
 Executability: Fully Executable
 Outcome:
   Message: ECDOSE is empty, ECOCCUR is not equal to 'N' and ECSTAT is empty, but ECDOSTXT is also
-=======
-Description: Raise an error when ECDOSE is empty, ECOCCUR is not equal to 'N', ECSTAT is empty and 
-  ECDOSTXT is empty
-Executability: Fully Executable
-Outcome:
-  Message: ECDOSE is empty, ECOCCUR is not equal to 'N' and ECSTAT is empty, but ECDOSTXT is also 
->>>>>>> 3020fdf8821bdbd68102e422bb3cd4ae825e59ac
     empty.
   Output Variables:
-  - ECDOSE
-  - ECOCCUR
-  - ECSTAT
-  - ECDOSTXT
+    - ECDOSE
+    - ECOCCUR
+    - ECSTAT
+    - ECDOSTXT
 Rule Type: Record Data
 Scope:
   Classes:
     Include:
-    - INTERVENTIONS
+      - INTERVENTIONS
   Domains:
     Include:
-    - EC
+      - EC
   Use Case: INDH
 Sensitivity: Record
