@@ -1,4 +1,11 @@
 dataset,variable,label,type,length
+su,STUDYID,Study Identifier,Char,50
+su,DOMAIN,Domain Abbreviation,Char,50
+su,USUBJID,Unique Subject Identifier,Char,50
+su,SUSEQ,Sequence Number,Num,8
+su,SUTRT,Reported Name of Substance,Char,50
+su,SUPRESP,SU Pre-Specified,Char,50
+su,SUOCCUR,SU Occurrence,Char,50
 apsu,STUDYID,Study Identifier,Char,50
 apsu,DOMAIN,Domain Abbreviation,Char,50
 apsu,APID,Associated Persons Identifier,Char,50

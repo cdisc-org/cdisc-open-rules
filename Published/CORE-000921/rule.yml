@@ -4,20 +4,21 @@ Authorities:
       - Name: USDM
         References:
           - Citations:
-              - Cited Guidance: 'A study intervention''s product designation must be specified
-                  using the product designation (C207418) DDF codelist.'
-                Document: 'USDM_CORE_Rules.xlsx'
-            Origin: 'USDM Conformance Rules'
+              - Cited Guidance:
+                  "A study intervention's product designation must be specified using the product
+                  designation (C207418) DDF codelist."
+                Document: "USDM_CORE_Rules.xlsx"
+            Origin: "USDM Conformance Rules"
             Rule Identifier:
-              Id: 'DDF00129'
-              Version: '1'
-            Version: '1.0'
-        Version: '3.0'
+              Id: "DDF00129"
+              Version: "1"
+            Version: "1.0"
+        Version: "3.0"
 Check:
   all:
     - name: rel_type
       operator: equal_to
-      value: 'definition'
+      value: "definition"
     - name: productDesignation
       operator: equal_to
       value: true
@@ -25,7 +26,7 @@ Check:
         all:
           - name: productDesignation.codeSystem
             operator: equal_to
-            value: 'http://www.cdisc.org'
+            value: "http://www.cdisc.org"
           - name: productDesignation.codeSystemVersion
             operator: is_contained_by
             value: $valid_versions
@@ -67,11 +68,12 @@ Check:
                   - name: $value_for_code
                     operator: empty
 Core:
-  Id: 'CORE-000921'
+  Id: "CORE-000921"
   Status: Published
-  Version: '1'
-Description: 'A study intervention''s product designation must be specified
-  using the product designation (C207418) DDF codelist.'
+  Version: "1"
+Description:
+  "A study intervention's product designation must be specified using the product designation
+  (C207418) DDF codelist."
 Executability: Fully Executable
 Operations:
   - id: $codelist_code
@@ -116,13 +118,12 @@ Operations:
     term_value: productDesignation.decode
     version: productDesignation.codeSystemVersion
 Outcome:
-  Message: 'The study intervention''s product designation is not specified using
-    the product designation (C207418) DDF codelist - codeSystem is not
-    "http://www.cdisc.org", codeSystemVersion is not a valid terminology package
-    date, the code or decode (either as preferred term or as submission value)
-    is found in the codelist (case insensitive) but the corresponding decode or
-    code does not match the codelist value (case sensitive), and/or neither code
-    nor decode is found in the codelist.'
+  Message:
+    'The study intervention''s product designation is not specified using the product designation
+    (C207418) DDF codelist - codeSystem is not "http://www.cdisc.org", codeSystemVersion is not a valid
+    terminology package date, the code or decode (either as preferred term or as submission value) is
+    found in the codelist (case insensitive) but the corresponding decode or code does not match the codelist
+    value (case sensitive), and/or neither code nor decode is found in the codelist.'
   Output Variables:
     - parent_entity
     - parent_id
@@ -143,5 +144,5 @@ Rule Type: Record Data
 Scope:
   Entities:
     Include:
-      - 'StudyIntervention'
+      - "StudyIntervention"
 Sensitivity: Record

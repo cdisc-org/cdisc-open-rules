@@ -7,39 +7,37 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: '[Associated Persons datasets are given a prefix of AP-- to
-                  identify the data as AP data to and distinguish them from
-                  study subject data.][Associated Persons domain codes in the
-                  DOMAIN column of every record are also given a prefix of AP--
-                  to identify the domains as AP domains and to distinguish them
-                  from study subject domains. AP domain codes are therefore four
-                  characters long.]'
+              - Cited Guidance:
+                  "[Associated Persons datasets are given a prefix of AP-- to identify the data
+                  as AP data to and distinguish them from study subject data.][Associated Persons domain codes
+                  in the DOMAIN column of every record are also given a prefix of AP-- to identify the domains
+                  as AP domains and to distinguish them from study subject domains. AP domain codes are therefore
+                  four characters long.]"
                 Document: AP Guide v1.0
-                Section: '2'
+                Section: "2"
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0155
-              Version: '1'
-            Version: '2.0'
-        Version: '3.2'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.2"
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: '[Associated Persons datasets are given a prefix of AP-- to
-                  identify the data as AP data to and distinguish them from
-                  study subject data.][Associated Persons domain codes in the
-                  DOMAIN column of every record are also given a prefix of AP--
-                  to identify the domains as AP domains and to distinguish them
-                  from study subject domains. AP domain codes are therefore four
-                  characters long.]'
+              - Cited Guidance:
+                  "[Associated Persons datasets are given a prefix of AP-- to identify the data
+                  as AP data to and distinguish them from study subject data.][Associated Persons domain codes
+                  in the DOMAIN column of every record are also given a prefix of AP-- to identify the domains
+                  as AP domains and to distinguish them from study subject domains. AP domain codes are therefore
+                  four characters long.]"
                 Document: AP Guide v1.0
-                Section: '2'
+                Section: "2"
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0155
-              Version: '1'
-            Version: '2.0'
-        Version: '3.3'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.3"
 Check:
   all:
     - name: DOMAIN
@@ -51,9 +49,9 @@ Check:
 Core:
   Id: CDISC.SDTMIG.CG0155
   Status: Draft
-  Version: '1'
-Description: Raise an error when DOMAIN value begins with AP and length of
-  domain variable is not 4 or DOMAIN value doesn't end with a valid SDTM domain.
+  Version: "1"
+Description: Raise an error when DOMAIN value begins with AP and length of domain variable is not 4
+  or DOMAIN value doesn't end with a valid SDTM domain.
 Executability: Partially Executable - Possible Overreporting
 Outcome:
   Message: AP DOMAIN value should start with 'AP' and length should be equal to 4.

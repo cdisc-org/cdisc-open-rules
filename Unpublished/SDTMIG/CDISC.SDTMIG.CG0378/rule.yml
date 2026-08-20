@@ -14,39 +14,37 @@ Authorities:
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0379
-              Version: '1'
-            Version: '2.0'
-        Version: '3.4'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.4"
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Dictionary or sponsor-defined derived text description of the
-                  topic variable; --TERM; or the modified topic variable
-                  (--MODIFY); if applicable. Equivalent to the Preferred Term
-                  (PT in MedDRA).
+              - Cited Guidance: Dictionary or sponsor-defined derived text description of the topic
+                  variable; --TERM; or the modified topic variable (--MODIFY); if applicable. Equivalent to
+                  the Preferred Term (PT in MedDRA).
                 Document: Model v1.7
                 Section: 2.2.2
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0379
-              Version: '1'
-            Version: '2.0'
-        Version: '3.3'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.3"
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Dictionary or sponsor-defined derived text description of the
-                  topic variable; --TERM; or the modified topic variable
-                  (--MODIFY); if applicable. Equivalent to the Preferred Term
-                  (PT in MedDRA).
+              - Cited Guidance: Dictionary or sponsor-defined derived text description of the topic
+                  variable; --TERM; or the modified topic variable (--MODIFY); if applicable. Equivalent to
+                  the Preferred Term (PT in MedDRA).
                 Document: Model v1.4
                 Section: 2.2.1
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0379
-              Version: '1'
-            Version: '2.0'
-        Version: '3.2'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.2"
 Check:
   all:
     - name: --DECOD
@@ -57,9 +55,8 @@ Check:
 Core:
   Id: CDISC.SDTMIG.CG0378
   Status: Draft
-  Version: '1'
-Description: Raise an error when --DECOD is completed but is not a valid MedDRA
-  preferred TERM.
+  Version: "1"
+Description: Raise an error when --DECOD is completed but is not a valid MedDRA preferred TERM.
 Executability: Fully Executable
 Operations:
   - case_sensitive: true

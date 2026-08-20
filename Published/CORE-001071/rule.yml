@@ -4,15 +4,16 @@ Authorities:
       - Name: USDM
         References:
           - Citations:
-              - Cited Guidance: 'A masking is expected to be defined for at least two study
-                  roles in a study design with a double blind blinding schema.'
-                Document: 'USDM_CORE_Rules.xlsx'
-            Origin: 'USDM Conformance Rules'
+              - Cited Guidance:
+                  "A masking is expected to be defined for at least two study roles in a study design
+                  with a double blind blinding schema."
+                Document: "USDM_CORE_Rules.xlsx"
+            Origin: "USDM Conformance Rules"
             Rule Identifier:
-              Id: 'DDF00192'
-              Version: '1'
-            Version: '1.0'
-        Version: '4.0'
+              Id: "DDF00192"
+              Version: "1"
+            Version: "1.0"
+        Version: "4.0"
 Check: |-
   ($.study.versions)@$sv.
     ($sv.studyDesigns)@$sd
@@ -47,15 +48,17 @@ Check: |-
           )
         ][`# Masked Roles` < 2]
 Core:
-  Id: 'CORE-001071'
+  Id: "CORE-001071"
   Status: Published
-  Version: '1'
-Description: 'A masking is expected to be defined for at least two study roles
-  in a study design with a double blind blinding schema.'
+  Version: "1"
+Description:
+  "A masking is expected to be defined for at least two study roles in a study design with
+  a double blind blinding schema."
 Executability: Partially Executable - Possible Overreporting
 Outcome:
-  Message: 'The study design has a double blind blinding schema (code=C15228) but
-    there are not at least two applicable study roles that are masked.'
+  Message:
+    "The study design has a double blind blinding schema (code=C15228) but there are not at least
+    two applicable study roles that are masked."
   Output Variables:
     - name
     - blindingSchema.code
@@ -66,5 +69,5 @@ Rule Type: JSONata
 Scope:
   Entities:
     Include:
-      - 'InterventionalStudyDesign'
+      - "InterventionalStudyDesign"
 Sensitivity: Record

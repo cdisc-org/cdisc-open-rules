@@ -4,31 +4,31 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: When there are multiple terms that express the same base
-                  concept, SEND CT provides the Preferred Term to include in a
-                  submission, and thus the term to which the synonymous term(s)
-                  should be mapped.
+              - Cited Guidance:
+                  When there are multiple terms that express the same base concept, SEND CT
+                  provides the Preferred Term to include in a submission, and thus the term to which the
+                  synonymous term(s) should be mapped.
                 Document: IG v3.1
-                Section: '4.3.7'
+                Section: "4.3.7"
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND304
-              Version: ''
-            Version: '5.0'
-        Version: '3.1'
+              Version: ""
+            Version: "5.0"
+        Version: "3.1"
 Check:
   all:
     - name: LBTESTCD
-      operator: 'equal_to'
-      value: 'ALB'
+      operator: "equal_to"
+      value: "ALB"
     - name: LBTEST
       operator: not_equal_to
-      value: 'Albumin'
+      value: "Albumin"
 Core:
   Id: CDISC.SENDIG.304
   Status: Draft
-  Version: '1'
-Description: ''
+  Version: "1"
+Description: ""
 Executability: Fully Executable
 Operations:
   #- codelists:
@@ -41,13 +41,13 @@ Operations:
     id: $extensible
     operator: codelist_extensible
 Outcome:
-  Message: 'test message'
+  Message: "test message"
   Output Variables:
     - LBTESTCD
     - LBTEST
-    # - $codelist_terms
+      # - $codelist_terms
     - $extensible
-    # - $synonyms
+      # - $synonyms
 Rule Type: Record Data
 Scope:
   Classes:

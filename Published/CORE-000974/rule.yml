@@ -4,14 +4,14 @@ Authorities:
       - Name: USDM
         References:
           - Citations:
-              - Cited Guidance: 'The sponsor study role must be applicable to a study version.'
-                Document: 'USDM_CORE_Rules.xlsx'
-            Origin: 'USDM Conformance Rules'
+              - Cited Guidance: "The sponsor study role must be applicable to a study version."
+                Document: "USDM_CORE_Rules.xlsx"
+            Origin: "USDM Conformance Rules"
             Rule Identifier:
-              Id: 'DDF00203'
-              Version: '1'
-            Version: '1.0'
-        Version: '4.0'
+              Id: "DDF00203"
+              Version: "1"
+            Version: "1.0"
+        Version: "4.0"
 Check: |-
   study.versions@$sv.
     ($sv.roles[code.code = "C70793" and $not($sv.id in appliesToIds)])@$r.
@@ -26,15 +26,15 @@ Check: |-
         "StudyVersion.id": $sv.id
       }
 Core:
-  Id: 'CORE-000974'
+  Id: "CORE-000974"
   Status: Published
-  Version: '1'
-Description: 'The sponsor study role must be applicable to a study version.'
+  Version: "1"
+Description: "The sponsor study role must be applicable to a study version."
 Executability: Fully Executable
 Outcome:
-  Message: "The study role is a sponsor role (code.code is C70793) but it is not
-    applicable to the study version (appliesToIds does not contain the id of the
-    study version)."
+  Message:
+    "The study role is a sponsor role (code.code is C70793) but it is not applicable to the study
+    version (appliesToIds does not contain the id of the study version)."
   Output Variables:
     - name
     - code.code
@@ -45,5 +45,5 @@ Rule Type: JSONata
 Scope:
   Entities:
     Include:
-      - 'StudyRole'
+      - "StudyRole"
 Sensitivity: Record

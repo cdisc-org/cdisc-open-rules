@@ -5,45 +5,45 @@ Authorities:
   - Organization: CDISC
     Standards:
       - Name: SDTMIG
-        Version: '3.2'
         References:
-          - Origin: SDTM and SDTMIG Conformance Rules
-            Rule Identifier:
-              Id: CG0451
-              Version: '1'
-            Version: '2.0'
-            Citations:
-              - Cited Guidance: Further information about the parameters is included
-                  below in Table 1. TSVAL may have controlled terminology depending
-                  on the value of TSPARMCD
+          - Citations:
+              - Cited Guidance:
+                  Further information about the parameters is included below in Table 1. TSVAL
+                  may have controlled terminology depending on the value of TSPARMCD
                 Document: IG v3.2
                 Item: Assumption 3
                 Section: 7.4|Appendix C1
-      - Name: SDTMIG
-        Version: '3.3'
-        References:
-          - Origin: SDTM and SDTMIG Conformance Rules
+            Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0451
-              Version: '1'
-            Version: '2.0'
-            Citations:
-              - Cited Guidance: Further information about the parameters is included
-                  below in Table 1. TSVAL may have controlled terminology depending
-                  on the value of TSPARMCD
+              Version: "1"
+            Version: "2.0"
+        Version: "3.2"
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance:
+                  Further information about the parameters is included below in Table 1. TSVAL
+                  may have controlled terminology depending on the value of TSPARMCD
                 Document: IG v3.3
                 Item: Assumption 3
-                Section: '7.4'
+                Section: "7.4"
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0451
+              Version: "1"
+            Version: "2.0"
+        Version: "3.3"
 Check:
   all: []
 Core:
   Id: CDISC.SDTMIG.CG0451
   Status: Draft
-  Version: '1'
-Description: ''
+  Version: "1"
+Description: ""
 Executability: Fully Executable
 Outcome:
-  Message: ''
+  Message: ""
 Rule Type: Record Data
 Scope:
   Classes:

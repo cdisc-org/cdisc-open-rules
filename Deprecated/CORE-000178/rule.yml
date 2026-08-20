@@ -5,13 +5,13 @@ Authorities:
   - Organization: CDISC
     Standards:
       - Name: SDTMIG
-        Version: '3.4'
+        Version: "3.4"
         References:
           - Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0172
-              Version: '2'
-            Version: '2.0'
+              Version: "2"
+            Version: "2.0"
             Citations:
               - Cited Guidance: Subject Status does not contain details about the circumstances
                   of a subject's status. The response to the status assessment
@@ -25,13 +25,13 @@ Authorities:
                 Item: Assumption 1
                 Section: 6.3.11
       - Name: SDTMIG
-        Version: '3.3'
+        Version: "3.3"
         References:
           - Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0172
-              Version: '2'
-            Version: '2.0'
+              Version: "2"
+            Version: "2.0"
             Citations:
               - Cited Guidance: Subject Status does not contain details about the circumstances
                   of a subject's status. The response to the status assessment
@@ -45,13 +45,13 @@ Authorities:
                 Item: Assumption 1
                 Section: 6.3.15
       - Name: SDTMIG
-        Version: '3.2'
+        Version: "3.2"
         References:
           - Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0172
-              Version: '2'
-            Version: '2.0'
+              Version: "2"
+            Version: "2.0"
             Citations:
               - Cited Guidance: Subject Status does not contain details about the circumstances
                   of a subject's status. The response to the status assessment
@@ -76,7 +76,7 @@ Check:
 Core:
   Id: CORE-000178
   Status: Published
-  Version: '1'
+  Version: "1"
 Description: Raise an error when SSSTRESC = 'DEAD' and SSDTC < max DS.DSSTDTC.
 Executability: Fully Executable
 Operations:

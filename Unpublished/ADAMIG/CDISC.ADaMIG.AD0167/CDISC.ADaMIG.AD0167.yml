@@ -4,12 +4,13 @@ Authorities:
       - Name: ADaMIG-MD
         References:
           - Citations:
-              - Cited Guidance: The MDBDS supports analysis needs by adding SPDEVID as a
+              - Cited Guidance:
+                  The MDBDS supports analysis needs by adding SPDEVID as a
                   required key variable and USUBJID as a conditionally required
                   variable. See the BDS class for further details."
                 Document: ADaMIG-MD v1.0
-                Item: ''
-                Section: '3.1'
+                Item: ""
+                Section: "3.1"
             Criteria:
               Logical Expression:
                 Condition: BNRIND is present and ABLFL is not present
@@ -17,13 +18,13 @@ Authorities:
               Plain Language Expression: When BNRIND is present, ABLFL must also be present
               Type: Failure
             Origin: ADaM Conformance Rules
-            Release Notes: ''
+            Release Notes: ""
             Rule Identifier:
-              Id: '167'
-              Version: '2'
+              Id: "167"
+              Version: "2"
             Validator Rule Message: BNRIND is present but ABLFL is not present
-            Version: '5.0'
-        Version: '1.0'
+            Version: "5.0"
+        Version: "1.0"
       - Name: ADaMIG
         References:
           - Citations:
@@ -38,13 +39,13 @@ Authorities:
               Plain Language Expression: When BNRIND is present, ABLFL must also be present
               Type: Failure
             Origin: ADaM Conformance Rules
-            Release Notes: ''
+            Release Notes: ""
             Rule Identifier:
-              Id: '167'
-              Version: '1'
+              Id: "167"
+              Version: "1"
             Validator Rule Message: BNRIND is present but ABLFL is not present
-            Version: '5.0'
-        Version: '1.0'
+            Version: "5.0"
+        Version: "1.0"
 
       - Name: ADaMIG
         References:
@@ -60,13 +61,13 @@ Authorities:
               Plain Language Expression: When BNRIND is present, ABLFL must also be present
               Type: Failure
             Origin: ADaM Conformance Rules
-            Release Notes: ''
+            Release Notes: ""
             Rule Identifier:
-              Id: '167'
-              Version: '1'
+              Id: "167"
+              Version: "1"
             Validator Rule Message: BNRIND is present but ABLFL is not present
-            Version: '5.0'
-        Version: '1.1'
+            Version: "5.0"
+        Version: "1.1"
 
       - Name: ADaMIG
         References:
@@ -82,13 +83,13 @@ Authorities:
               Plain Language Expression: When BNRIND is present, ABLFL must also be present
               Type: Failure
             Origin: ADaM Conformance Rules
-            Release Notes: ''
+            Release Notes: ""
             Rule Identifier:
-              Id: '167'
-              Version: '1'
+              Id: "167"
+              Version: "1"
             Validator Rule Message: BNRIND is present but ABLFL is not present
-            Version: '5.0'
-        Version: '1.2'
+            Version: "5.0"
+        Version: "1.2"
 
       - Name: ADaMIG
         References:
@@ -104,13 +105,13 @@ Authorities:
               Plain Language Expression: When BNRIND is present, ABLFL must also be present
               Type: Failure
             Origin: ADaM Conformance Rules
-            Release Notes: ''
+            Release Notes: ""
             Rule Identifier:
-              Id: '167'
-              Version: '2'
+              Id: "167"
+              Version: "2"
             Validator Rule Message: BNRIND is present but ABLFL is not present
-            Version: '5.0'
-        Version: '1.3'
+            Version: "5.0"
+        Version: "1.3"
 
 Check:
   all:
@@ -122,8 +123,8 @@ Check:
 Core:
   Id: CDISC.ADaMIG.AD0167
   Status: Draft
-  Version: '1'
-Description: ''
+  Version: "1"
+Description: ""
 Executability: Fully Executable
 Outcome:
   Message: BNRIND is present but ABLFL is not present

@@ -4,7 +4,8 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Text over 200 characters can be added to additional columns
+              - Cited Guidance:
+                  Text over 200 characters can be added to additional columns
                   TSVAL1-TSVALn.
                 Document: IG v3.4
                 Item: Specification
@@ -12,27 +13,29 @@ Authorities:
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0262
-              Version: '1'
-            Version: '2.0'
-        Version: '3.4'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.4"
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Text over 200 characters can be added to additional columns
+              - Cited Guidance:
+                  Text over 200 characters can be added to additional columns
                   TSVAL1-TSVALn.
                 Document: IG v3.2
                 Item: Specification
-                Section: '7.4'
+                Section: "7.4"
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0262
-              Version: '1'
-            Version: '2.0'
-        Version: '3.2'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.2"
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Text over 200 characters can be added to additional columns
+              - Cited Guidance:
+                  Text over 200 characters can be added to additional columns
                   TSVAL1-TSVALn.
                 Document: IG v3.3
                 Item: Specification
@@ -40,9 +43,9 @@ Authorities:
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0262
-              Version: '1'
-            Version: '2.0'
-        Version: '3.3'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.3"
 # Variable: TSVALn
 # Condition: TSVAL(n+1) ^= null
 # Rule: TSVALn ^= null
@@ -53,7 +56,7 @@ Check:
 Core:
   Id: CORE-000582
   Status: Published
-  Version: '1'
+  Version: "1"
 Description: Raise an error when TSVAL(n+1) ^= null and TSVALn = null
 Executability: Fully Executable
 Outcome:
