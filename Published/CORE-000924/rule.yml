@@ -4,22 +4,22 @@ Authorities:
       - Name: USDM
         References:
           - Citations:
-              - Cited Guidance: "An organization type must be specified according to the
-                  extensible organization type (C188724) DDF codelist (e.g. an
-                  entry with a code or decode used from the codelist should be
-                  consistent with the full entry in the codelist)."
-                Document: 'USDM_CORE_Rules.xlsx'
-            Origin: 'USDM Conformance Rules'
+              - Cited Guidance:
+                  "An organization type must be specified according to the extensible organization
+                  type (C188724) DDF codelist (e.g. an entry with a code or decode used from the codelist should
+                  be consistent with the full entry in the codelist)."
+                Document: "USDM_CORE_Rules.xlsx"
+            Origin: "USDM Conformance Rules"
             Rule Identifier:
-              Id: 'DDF00140'
-              Version: '1'
-            Version: '1.0'
-        Version: '3.0'
+              Id: "DDF00140"
+              Version: "1"
+            Version: "1.0"
+        Version: "3.0"
 Check:
   all:
     - name: rel_type
       operator: equal_to
-      value: 'definition'
+      value: "definition"
     - name: organizationType
       operator: exists
     - name: organizationType
@@ -29,7 +29,7 @@ Check:
         all:
           - name: organizationType.codeSystem
             operator: equal_to
-            value: 'http://www.cdisc.org'
+            value: "http://www.cdisc.org"
           - name: organizationType.codeSystemVersion
             operator: is_contained_by
             value: $valid_versions
@@ -39,7 +39,7 @@ Check:
                 value: true
               - name: $codelist_extensible_override
                 operator: equal_to
-                value: 'Y'
+                value: "Y"
           - any:
               - all:
                   - name: $code_for_decode_pref_term
@@ -75,13 +75,13 @@ Check:
                         operator: equal_to
                         value: $value_for_code
 Core:
-  Id: 'CORE-000924'
+  Id: "CORE-000924"
   Status: Published
-  Version: '1'
-Description: "An organization type must be specified according to the extensible
-  organization type (C188724) DDF codelist (e.g. an entry with a code or decode
-  used from the codelist should be consistent with the full entry in the
-  codelist)."
+  Version: "1"
+Description:
+  "An organization type must be specified according to the extensible organization type (C188724)
+  DDF codelist (e.g. an entry with a code or decode used from the codelist should be consistent with the
+  full entry in the codelist)."
 Executability: Fully Executable
 Operations:
   - id: $codelist_code
@@ -96,24 +96,25 @@ Operations:
     ct_package_type: DDF
     id: $codelist_extensible
     operator: codelist_extensible
-    version: organizationType.codeSystemVersion
-  # DDF codelist extensibility was not defined in earlier CT packages and
-  # defaults to false, so assigning an override:
+    version:
+      organizationType.codeSystemVersion
+      # DDF codelist extensibility was not defined in earlier CT packages and
+      # defaults to false, so assigning an override:
   - id: $codelist_extensible_override
     map:
-      - organizationType.codeSystemVersion: '2022-09-30'
+      - organizationType.codeSystemVersion: "2022-09-30"
         output: "Y"
-      - organizationType.codeSystemVersion: '2022-12-16'
+      - organizationType.codeSystemVersion: "2022-12-16"
         output: "Y"
-      - organizationType.codeSystemVersion: '2023-03-31'
+      - organizationType.codeSystemVersion: "2023-03-31"
         output: "Y"
-      - organizationType.codeSystemVersion: '2023-06-30'
+      - organizationType.codeSystemVersion: "2023-06-30"
         output: "Y"
-      - organizationType.codeSystemVersion: '2023-09-29'
+      - organizationType.codeSystemVersion: "2023-09-29"
         output: "Y"
-      - organizationType.codeSystemVersion: '2023-12-15'
+      - organizationType.codeSystemVersion: "2023-12-15"
         output: "Y"
-      - organizationType.codeSystemVersion: '2024-03-29'
+      - organizationType.codeSystemVersion: "2024-03-29"
         output: "Y"
     operator: map
   - codelist_code: $codelist_code
@@ -145,12 +146,12 @@ Operations:
     term_value: organizationType.decode
     version: organizationType.codeSystemVersion
 Outcome:
-  Message: 'The organization type is not specified according to the extensible
-    organization type (C188724) DDF codelist - codeSystem is not
-    "http://www.cdisc.org", codeSystemVersion is not a valid terminology package
-    date, and/or the code or decode (either as preferred term or as submission
-    value) is found in the codelist (case insensitive) but the corresponding
-    decode or code does not match the codelist value (case sensitive).'
+  Message:
+    'The organization type is not specified according to the extensible organization type (C188724)
+    DDF codelist - codeSystem is not "http://www.cdisc.org", codeSystemVersion is not a valid terminology
+    package date, and/or the code or decode (either as preferred term or as submission value) is found
+    in the codelist (case insensitive) but the corresponding decode or code does not match the codelist
+    value (case sensitive).'
   Output Variables:
     - parent_entity
     - parent_id
@@ -172,6 +173,6 @@ Rule Type: Record Data
 Scope:
   Entities:
     Include:
-      - 'Organization'
-      - 'ResearchOrganization'
+      - "Organization"
+      - "ResearchOrganization"
 Sensitivity: Record

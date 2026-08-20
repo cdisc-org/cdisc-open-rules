@@ -5,53 +5,53 @@ Authorities:
   - Organization: CDISC
     Standards:
       - Name: SDTMIG
-        Version: '3.4'
         References:
-          - Origin: SDTM and SDTMIG Conformance Rules
-            Rule Identifier:
-              Id: CG0323
-              Version: '1'
-            Version: '2.0'
-            Citations:
-              - Cited Guidance: TESTRL should be expressed without referring to Epoch.
-                  If the Element appears in more than one Epoch in the Trial Arms
-                  dataset, then the Element description (ELEMENT) must not refer to
-                  any Epochs.
+          - Citations:
+              - Cited Guidance:
+                  TESTRL should be expressed without referring to Epoch. If the Element
+                  appears in more than one Epoch in the Trial Arms dataset, then the Element description
+                  (ELEMENT) must not refer to any Epochs.
                 Document: IG v3.4
                 Item: Assumption 9
                 Section: 7.2.2
-      - Name: SDTMIG
-        Version: '3.2'
-        References:
-          - Origin: SDTM and SDTMIG Conformance Rules
+            Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0323
-              Version: '1'
-            Version: '2.0'
-            Citations:
-              - Cited Guidance: TESTRL should be expressed without referring to Epoch.
-                  If the Element appears in more than one Epoch in the Trial Arms
-                  dataset; then the Element description (ELEMENT) must not refer to
-                  any Epochs.
+              Version: "1"
+            Version: "2.0"
+        Version: "3.4"
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance:
+                  TESTRL should be expressed without referring to Epoch. If the Element
+                  appears in more than one Epoch in the Trial Arms dataset; then the Element description
+                  (ELEMENT) must not refer to any Epochs.
                 Document: IG v3.2
                 Item: Assumption 9 for TE
-                Section: '7.2'
-      - Name: SDTMIG
-        Version: '3.3'
-        References:
-          - Origin: SDTM and SDTMIG Conformance Rules
+                Section: "7.2"
+            Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0323
-              Version: '1'
-            Version: '2.0'
-            Citations:
-              - Cited Guidance: TESTRL should be expressed without referring to Epoch.
-                  If the Element appears in more than one Epoch in the Trial Arms
-                  dataset; then the Element description (ELEMENT) must not refer to
-                  any Epochs.
+              Version: "1"
+            Version: "2.0"
+        Version: "3.2"
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance:
+                  TESTRL should be expressed without referring to Epoch. If the Element
+                  appears in more than one Epoch in the Trial Arms dataset; then the Element description
+                  (ELEMENT) must not refer to any Epochs.
                 Document: IG v3.3
                 Item: Assumption 9
                 Section: 7.2.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0323
+              Version: "1"
+            Version: "2.0"
+        Version: "3.3"
 Check:
   all:
     - name: $ta_element
@@ -63,9 +63,9 @@ Check:
 Core:
   Id: CDISC.SDTMIG.CG0323
   Status: Draft
-  Version: '1'
-Description: When ELEMENT is associated with more than 1 EPOCH, ELEMENT should not
-  refer to a specific EPOCH.
+  Version: "1"
+Description: When ELEMENT is associated with more than 1 EPOCH, ELEMENT should not refer to a
+  specific EPOCH.
 Executability: Fully Executable
 Operations:
   - domain: TA
@@ -77,8 +77,7 @@ Operations:
     name: EPOCH
     operator: distinct
 Outcome:
-  Message: ELEMENT refers to a specific EPOCH when ELEMENT is associated with more
-    than 1 EPOCH
+  Message: ELEMENT refers to a specific EPOCH when ELEMENT is associated with more than 1 EPOCH
 Rule Type: Record Data
 Scope:
   Classes:

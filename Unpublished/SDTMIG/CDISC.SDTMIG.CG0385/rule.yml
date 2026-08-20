@@ -1,53 +1,53 @@
 # Variable: --BODSYS
-# Condition: 
+# Condition:
 # Rule: --BODSYS = MedDRA system organ class
 Authorities:
   - Organization: CDISC
     Standards:
       - Name: SDTMIG
-        Version: '3.4'
         References:
-          - Origin: SDTM and SDTMIG Conformance Rules
-            Rule Identifier:
-              Id: CG0385
-              Version: '1'
-            Version: '2.0'
-            Citations:
-              - Cited Guidance: A standardized or dictionary derived name for the
-                  body system or organ class. Body system or system organ class assigned
-                  for analysis from a standard hierarchy (e.g., MedDRA) associated
-                  with an event.
+          - Citations:
+              - Cited Guidance:
+                  A standardized or dictionary derived name for the body system or organ
+                  class. Body system or system organ class assigned for analysis from a standard hierarchy
+                  (e.g., MedDRA) associated with an event.
                 Document: Model v2.0
                 Item: --BODSYS
                 Section: Events
-      - Name: SDTMIG
-        Version: '3.2'
-        References:
-          - Origin: SDTM and SDTMIG Conformance Rules
+            Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0385
-              Version: '1'
-            Version: '2.0'
-            Citations:
-              - Cited Guidance: 'Body system or system organ class assigned for analysis
-                  from a standard hierarchy (e.g. MedDRA) associated with an event.
-                  Example: GASTROINTESTINAL DISORDERS.'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.4"
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance:
+                  "Body system or system organ class assigned for analysis from a standard hierarchy
+                  (e.g. MedDRA) associated with an event. Example: GASTROINTESTINAL DISORDERS."
                 Document: Model v1.4
                 Section: 2.2.2
-      - Name: SDTMIG
-        Version: '3.3'
-        References:
-          - Origin: SDTM and SDTMIG Conformance Rules
+            Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0385
-              Version: '1'
-            Version: '2.0'
-            Citations:
-              - Cited Guidance: 'Body system or system organ class assigned for analysis
-                  from a standard hierarchy (e.g. MedDRA) associated with an event.
-                  Example: GASTROINTESTINAL DISORDERS.'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.2"
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance:
+                  "Body system or system organ class assigned for analysis from a standard hierarchy
+                  (e.g. MedDRA) associated with an event. Example: GASTROINTESTINAL DISORDERS."
                 Document: Model v1.7
                 Section: 2.2.2
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0385
+              Version: "1"
+            Version: "2.0"
+        Version: "3.3"
 Check:
   all:
     - name: --BODSYS
@@ -57,7 +57,7 @@ Check:
 Core:
   Id: CDISC.SDTMIG.CG0385
   Status: Draft
-  Version: '1'
+  Version: "1"
 Description: Trigger error when --BODSYS  is not a valid MedDRA system organ class
 Executability: Fully Executable
 Outcome:

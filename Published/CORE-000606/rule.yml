@@ -2,25 +2,25 @@
 # Condition: IQCAT = TOBACCO INGREDIENT
 # Rule: IGDCMPID in IT.IGDCMPID
 Authorities:
-  - Organization: 'CDISC'
+  - Organization: "CDISC"
     Standards:
-      - Name: 'TIG'
+      - Name: "TIG"
         References:
           - Citations:
-              - Cited Guidance: IGDCMPID represents the unique ingredient name established in
-                  either the Tobacco Ingredients (IT) domain or the Non-Tobacco
-                  Ingredients (IN) domain. Therefore, every value of IDGCMPID in
-                  the IQ domain must have an exact match in either IT or IN
-                Document: 'TIG 1.0'
-                Item: 'assumption 2'
-                Section: '2.8.8.6'
+              - Cited Guidance:
+                  IGDCMPID represents the unique ingredient name established in either the
+                  Tobacco Ingredients (IT) domain or the Non-Tobacco Ingredients (IN) domain. Therefore,
+                  every value of IDGCMPID in the IQ domain must have an exact match in either IT or IN
+                Document: "TIG 1.0"
+                Item: "assumption 2"
+                Section: "2.8.8.6"
             Origin: TIG Conformance Rules
             Rule Identifier:
-              Id: 'TIG0013'
-              Version: '1'
-            Version: '1.0'
+              Id: "TIG0013"
+              Version: "1"
+            Version: "1.0"
         Substandard: SDTM
-        Version: '1.0'
+        Version: "1.0"
 Check:
   all:
     - name: IQCAT
@@ -32,12 +32,11 @@ Check:
       value: $it_igdcmpid
       within: SPTOBID
 Core:
-  Status: Published
-  Version: '1'
   Id: CORE-000606
-Description: Raise an error when IGDCMPID for a tobacco ingredient in the IQ
-  dataset (IQCAT = TOBACCO INGREDIENT) does not have a matching IGDCMPID per
-  SPTOBID in the IT dataset
+  Status: Published
+  Version: "1"
+Description: Raise an error when IGDCMPID for a tobacco ingredient in the IQ dataset (IQCAT =
+  TOBACCO INGREDIENT) does not have a matching IGDCMPID per SPTOBID in the IT dataset
 Executability: Fully Executable
 Operations:
   - domain: IT
@@ -47,8 +46,8 @@ Operations:
     name: IGDCMPID
     operator: distinct
 Outcome:
-  Message: IGDCMPID in IQ categorized as IQCAT = TOBACCO INGREDIENT does not have
-    a matching IGDCMPID per SPTOBID in IT.
+  Message: IGDCMPID in IQ categorized as IQCAT = TOBACCO INGREDIENT does not have a matching
+    IGDCMPID per SPTOBID in IT.
   Output Variables:
     - SPTOBID
     - IGDCMPID

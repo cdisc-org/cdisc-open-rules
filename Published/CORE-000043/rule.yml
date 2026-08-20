@@ -1,5 +1,5 @@
-# Variable: 
-# Condition: 
+# Variable:
+# Condition:
 # Rule: TP dataset not present
 Authorities:
   - Organization: CDISC
@@ -13,9 +13,9 @@ Authorities:
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0648
-              Version: '1'
-            Version: '2.0'
-        Version: '3.4'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.4"
       - Name: TIG
         References:
           - Citations:
@@ -25,10 +25,10 @@ Authorities:
             Origin: TIG Conformance Rules
             Rule Identifier:
               Id: TIG0688
-              Version: '1'
-            Version: '1.0'
+              Version: "1"
+            Version: "1.0"
         Substandard: SDTM
-        Version: '1.0'
+        Version: "1.0"
 Check:
   all:
     - name: TP
@@ -36,7 +36,7 @@ Check:
 Core:
   Id: CORE-000043
   Status: Published
-  Version: '1'
+  Version: "1"
 Description: Raise an error when TP dataset is present.
 Executability: Fully Executable
 Outcome:

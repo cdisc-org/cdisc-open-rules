@@ -1,0 +1,35 @@
+name: Auto-format Rule YAML
+on:
+  workflow_dispatch: {}
+jobs:
+  format-yaml:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref || github.ref_name }}
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install ruamel.yaml
+
+      - name: Sort rule.yml files
+        run: python scripts/sort_yaml.py
+
+      - uses: actions/setup-node@v4
+      - name: Run Prettier to format rule.yml files
+        run: |
+          npm i prettier
+          npx prettier "Published/**/rule.yml" "Unpublished/**/rule.yml" --write
+
+      - name: Commit and push formatting fixes
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@cdisc.org
+          git add Published Unpublished
+          git diff-index --quiet HEAD || git commit -m "chore: sort and format rule.yml files"
+          git push

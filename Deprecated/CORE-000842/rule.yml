@@ -7,7 +7,8 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: "The method for deriving these values should be consistent with
+              - Cited Guidance:
+                  "The method for deriving these values should be consistent with
                   the visit definitions in the Trial Visits dataset [see Section
                   '7.3 - Schedule for Assessments: Trial Visits (TV)']."
                 Document: IG v3.2
@@ -16,24 +17,25 @@ Authorities:
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0213
-              Version: '1'
-            Version: '2.0'
-        Version: '3.2'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.2"
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: The method for deriving these values should be consistent with
+              - Cited Guidance:
+                  The method for deriving these values should be consistent with
                   the visit definitions in the Trial Visits (TV) dataset
                   (Section 7.3.1, Trial Visits).
                 Document: IG v3.3
                 Item: Description
-                Section: '5.5'
+                Section: "5.5"
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0213
-              Version: '1'
-            Version: '2.0'
-        Version: '3.3'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.3"
 Check:
   all:
     - any:
@@ -47,7 +49,7 @@ Check:
 Core:
   Id: CORE-000842
   Status: Published
-  Version: '1'
+  Version: "1"
 Description: When SVUPDES is not populated, then the VISITNUM should be equal to
   a VISITNUM in TV
 Executability: Partially Executable - Possible Overreporting

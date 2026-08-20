@@ -4,133 +4,143 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Drugs and metabolite names in pharmacokinetic datasets should be
-                  consistent with naming in other datasets across a submission.
+              - Cited Guidance:
+                  Drugs and metabolite names in pharmacokinetic datasets should be consistent
+                  with naming in other datasets across a submission.
                 Document: FDA
                 Section: FDAB069
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB6901
-              Version: '1'
-            Version: '1.5'
-        Version: '3.2'
+              Version: "1"
+            Version: "1.5"
+        Version: "3.2"
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Drugs and metabolite names in pharmacokinetic datasets should be
-                  consistent with naming in other datasets across a submission.
+              - Cited Guidance:
+                  Drugs and metabolite names in pharmacokinetic datasets should be consistent
+                  with naming in other datasets across a submission.
                 Document: FDA
                 Section: FDAB069
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB6901
-              Version: '1'
-            Version: '1.5'
-        Version: '3.3'
+              Version: "1"
+            Version: "1.5"
+        Version: "3.3"
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Drugs and metabolite names in pharmacokinetic datasets should be
-                  consistent with naming in other datasets across a submission.
+              - Cited Guidance:
+                  Drugs and metabolite names in pharmacokinetic datasets should be consistent
+                  with naming in other datasets across a submission.
                 Document: FDA
                 Section: FDAB069
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB6901
-              Version: '1'
-            Version: '1.5'
-        Version: '3.4'
+              Version: "1"
+            Version: "1.5"
+        Version: "3.4"
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: Drugs and metabolite names in pharmacokinetic datasets should be
-                  consistent with naming in other datasets across a submission.
+              - Cited Guidance:
+                  Drugs and metabolite names in pharmacokinetic datasets should be consistent
+                  with naming in other datasets across a submission.
                 Document: FDA
                 Section: FDAB069
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB6901
-              Version: '1'
-            Version: '1.5'
-        Version: '3.0'
+              Version: "1"
+            Version: "1.5"
+        Version: "3.0"
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: Drugs and metabolite names in pharmacokinetic datasets should be
-                  consistent with naming in other datasets across a submission.
+              - Cited Guidance:
+                  Drugs and metabolite names in pharmacokinetic datasets should be consistent
+                  with naming in other datasets across a submission.
                 Document: FDA
                 Section: FDAB069
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB6901
-              Version: '1'
-            Version: '1.5'
-        Version: '3.1'
+              Version: "1"
+            Version: "1.5"
+        Version: "3.1"
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: Drugs and metabolite names in pharmacokinetic datasets should be
-                  consistent with naming in other datasets across a submission.
+              - Cited Guidance:
+                  Drugs and metabolite names in pharmacokinetic datasets should be consistent
+                  with naming in other datasets across a submission.
                 Document: FDA
                 Section: FDAB069
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB6901
-              Version: '1'
-            Version: '1.5'
-        Version: '3.1.1'
+              Version: "1"
+            Version: "1.5"
+        Version: "3.1.1"
       - Name: SENDIG-GENETOX
         References:
           - Citations:
-              - Cited Guidance: Drugs and metabolite names in pharmacokinetic datasets should be
-                  consistent with naming in other datasets across a submission.
+              - Cited Guidance:
+                  Drugs and metabolite names in pharmacokinetic datasets should be consistent
+                  with naming in other datasets across a submission.
                 Document: FDA
                 Section: FDAB069
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB6901
-              Version: '1'
-            Version: '1.5'
-        Version: '1.0'
+              Version: "1"
+            Version: "1.5"
+        Version: "1.0"
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance: Drugs and metabolite names in pharmacokinetic datasets should be
-                  consistent with naming in other datasets across a submission.
+              - Cited Guidance:
+                  Drugs and metabolite names in pharmacokinetic datasets should be consistent
+                  with naming in other datasets across a submission.
                 Document: FDA
                 Section: FDAB069
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB6901
-              Version: '1'
-            Version: '1.5'
-        Version: '1.1'
+              Version: "1"
+            Version: "1.5"
+        Version: "1.1"
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance: Drugs and metabolite names in pharmacokinetic datasets should be
-                  consistent with naming in other datasets across a submission.
+              - Cited Guidance:
+                  Drugs and metabolite names in pharmacokinetic datasets should be consistent
+                  with naming in other datasets across a submission.
                 Document: FDA
                 Section: FDAB069
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB6901
-              Version: '1'
-            Version: '1.5'
-        Version: '1.2'
+              Version: "1"
+            Version: "1.5"
+        Version: "1.2"
       - Name: SENDIG-AR
         References:
           - Citations:
-              - Cited Guidance: Drugs and metabolite names in pharmacokinetic datasets should be
-                  consistent with naming in other datasets across a submission.
+              - Cited Guidance:
+                  Drugs and metabolite names in pharmacokinetic datasets should be consistent
+                  with naming in other datasets across a submission.
                 Document: FDA
                 Section: FDAB069
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB6901
-              Version: '1'
-            Version: '1.5'
-        Version: '1.0'
+              Version: "1"
+            Version: "1.5"
+        Version: "1.0"
 Check:
   all:
     - name: PPCAT
@@ -144,16 +154,16 @@ Check:
       operator: not_equal_to
       value: RELREC.PCTEST
 Core:
-  Status: Published
-  Version: '1'
   Id: CORE-000901
-Description: 'The values of PPCAT and PCTEST do not match at the same reference timepoint'
+  Status: Published
+  Version: "1"
+Description: "The values of PPCAT and PCTEST do not match at the same reference timepoint"
 Executability: Partially Executable
 Match Datasets:
   - Name: RELREC
     Wildcard: PC
 Outcome:
-  Message: 'The values of PPCAT and PCTEST do not match at the same reference timepoint'
+  Message: "The values of PPCAT and PCTEST do not match at the same reference timepoint"
   Output Variables:
     - PPCAT
     - PPRFTDTC
