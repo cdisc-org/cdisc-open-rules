@@ -110,9 +110,31 @@ Check:
           value: N
           value_is_literal: true
         - name: ECSTAT
+          operator: empty
+        - name: ECDOSTXT
+          operator: not_exists
+    - all:
+        - name: ECDOSE
+          operator: empty
+        - name: ECOCCUR
+          operator: not_equal_to
+          value: N
+          value_is_literal: true
+        - name: ECSTAT
           operator: not_exists
         - name: ECDOSTXT
           operator: empty
+    - all:
+        - name: ECDOSE
+          operator: empty
+        - name: ECOCCUR
+          operator: not_equal_to
+          value: N
+          value_is_literal: true
+        - name: ECSTAT
+          operator: not_exists
+        - name: ECDOSTXT
+          operator: not_exists
     - all:
         - name: ECDOSE
           operator: empty
@@ -128,9 +150,27 @@ Check:
         - name: ECOCCUR
           operator: not_exists
         - name: ECSTAT
+          operator: empty
+        - name: ECDOSTXT
+          operator: not_exists
+    - all:
+        - name: ECDOSE
+          operator: empty
+        - name: ECOCCUR
+          operator: not_exists
+        - name: ECSTAT
           operator: not_exists
         - name: ECDOSTXT
           operator: empty
+    - all:
+        - name: ECDOSE
+          operator: empty
+        - name: ECOCCUR
+          operator: not_exists
+        - name: ECSTAT
+          operator: not_exists
+        - name: ECDOSTXT
+          operator: not_exists
 Core:
   Id: CORE-000217
   Status: Published
