@@ -19,9 +19,9 @@ Authorities:
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0371
-              Version: '1'
-            Version: '2.0'
-        Version: '3.4'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.4"
       - Name: SDTMIG
         References:
           - Citations:
@@ -31,9 +31,9 @@ Authorities:
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0371
-              Version: '1'
-            Version: '2.0'
-        Version: '3.2'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.2"
       - Name: SDTMIG
         References:
           - Citations:
@@ -43,160 +43,160 @@ Authorities:
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0371
-              Version: '1'
-            Version: '2.0'
-        Version: '3.3'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.3"
       - Name: TIG
         References:
           - Citations:
-              - Cited Guidance: Identifying variable in the parent dataset that identifies the
-                  record(s) to which the comment applies.
+              - Cited Guidance:
+                  Identifying variable in the parent dataset that identifies the record(s) to
+                  which the comment applies.
                 Document: SDTM v2.1
                 Item: IDVARVAL
                 Section: 3.2.2 Comments
-              - Cited Guidance: Name of the identifying variable in the
-                  general-observation-class dataset that identifies the related
-                  record(s).
+              - Cited Guidance:
+                  Name of the identifying variable in the general-observation-class dataset
+                  that identifies the related record(s).
                 Document: SDTM v2.1
                 Item: IDVARVAL
                 Section: 6.2 Supplemental Qualifiers Datasets
-              - Cited Guidance: Name of the  identifying variable in the
-                  general-observation-class dataset that identifies the related
-                  record(s).
+              - Cited Guidance:
+                  Name of the  identifying variable in the general-observation-class dataset
+                  that identifies the related record(s).
                 Document: SDTM v2.1
                 Item: IDVARVAL
                 Section: Section 6.1 Related Records Dataset
             Origin: TIG Conformance Rules
             Rule Identifier:
               Id: TIG0535
-              Version: '1'
-            Version: '1.0'
+              Version: "1"
+            Version: "1.0"
         Substandard: SDTM
-        Version: '1.0'
+        Version: "1.0"
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: "CDISC Notes for IDVAR and IDVARVAL: 'Identifiying variable of
-                  the parent record(s)to which the comment applies.' and 'Value
-                  of identifying variable of the parent record(s).',
-                  respectively."
+              - Cited Guidance:
+                  "CDISC Notes for IDVAR and IDVARVAL: 'Identifiying variable of the parent record(s)to
+                  which the comment applies.' and 'Value of identifying variable of the parent record(s).', respectively."
                 Document: SENDIG v3.0
                 Item: Assumption 3.a
                 Section: 5.2.1
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND121
-              Version: '1'
-            Version: '5.0'
-        Version: '3.0'
+              Version: "1"
+            Version: "5.0"
+        Version: "3.0"
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: Related to a specific parent record or group of parent records,
-                  in which case the value of the variable RDOMAIN is set to the
-                  DOMAIN code of the parent record(s), and the variables IDVAR
-                  and IDVARVAL are populated with the key variable name and
-                  value of the parent record(s). Assumptions for populating
-                  IDVAR and IDVARVAL are further described in Section 8.2.
+              - Cited Guidance:
+                  Related to a specific parent record or group of parent records, in which
+                  case the value of the variable RDOMAIN is set to the DOMAIN code of the parent record(s),
+                  and the variables IDVAR and IDVARVAL are populated with the key variable name and value of
+                  the parent record(s). Assumptions for populating IDVAR and IDVARVAL are further described
+                  in Section 8.2.
                 Document: SENDIG v3.1
                 Item: Assumption 3.a
                 Section: 5.2.1.1
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND121
-              Version: '1'
-            Version: '5.0'
-        Version: '3.1'
+              Version: "1"
+            Version: "5.0"
+        Version: "3.1"
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: Related to a specific parent record or group of parent records,
-                  in which case the value of the variable RDOMAIN is set to the
-                  DOMAIN code of the parent record(s), and the variables IDVAR
-                  and IDVARVAL are populated with the key variable name and
-                  value of the parent record(s). Assumptions for populating
-                  IDVAR and IDVARVAL are further described in Section 8.2.
+              - Cited Guidance:
+                  Related to a specific parent record or group of parent records, in which
+                  case the value of the variable RDOMAIN is set to the DOMAIN code of the parent record(s),
+                  and the variables IDVAR and IDVARVAL are populated with the key variable name and value of
+                  the parent record(s). Assumptions for populating IDVAR and IDVARVAL are further described
+                  in Section 8.2.
                 Document: SENDIG v3.1.1
                 Item: Assumption 3.a
                 Section: 5.2.1.1
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND121
-              Version: '1'
-            Version: '5.0'
+              Version: "1"
+            Version: "5.0"
         Version: 3.1.1
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance: Related to a specific parent record or group of parent records,
-                  in which case the value of the variable RDOMAIN is set to the
-                  DOMAIN code of the parent record(s), and the variables IDVAR
-                  and IDVARVAL are populated with the key variable name and
-                  value of the parent record(s). Assumptions for populating
-                  IDVAR and IDVARVAL are further described in Section 8.2.
+              - Cited Guidance:
+                  Related to a specific parent record or group of parent records, in which
+                  case the value of the variable RDOMAIN is set to the DOMAIN code of the parent record(s),
+                  and the variables IDVAR and IDVARVAL are populated with the key variable name and value of
+                  the parent record(s). Assumptions for populating IDVAR and IDVARVAL are further described
+                  in Section 8.2.
                 Document: SENDIG v3.1
                 Item: Assumption 3.a
                 Section: 5.2.1.1
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND121
-              Version: '1'
-            Version: '5.0'
-        Version: '1.1'
+              Version: "1"
+            Version: "5.0"
+        Version: "1.1"
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance: Related to a specific parent record or group of parent records,
-                  in which case the value of the variable RDOMAIN is set to the
-                  DOMAIN code of the parent record(s), and the variables IDVAR
-                  and IDVARVAL are populated with the key variable name and
-                  value of the parent record(s). Assumptions for populating
-                  IDVAR and IDVARVAL are further described in Section 8.2.
+              - Cited Guidance:
+                  Related to a specific parent record or group of parent records, in which
+                  case the value of the variable RDOMAIN is set to the DOMAIN code of the parent record(s),
+                  and the variables IDVAR and IDVARVAL are populated with the key variable name and value of
+                  the parent record(s). Assumptions for populating IDVAR and IDVARVAL are further described
+                  in Section 8.2.
                 Document: SENDIG v3.1.1
                 Item: Assumption 3.a
                 Section: 5.2.1.1
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND121
-              Version: '1'
-            Version: '5.0'
-        Version: '1.2'
+              Version: "1"
+            Version: "5.0"
+        Version: "1.2"
       - Name: SENDIG-GENETOX
         References:
           - Citations:
-              - Cited Guidance: Related to a specific parent record or group of parent records,
-                  in which case the value of the variable RDOMAIN is set to the
-                  DOMAIN code of the parent record(s), and the variables IDVAR
-                  and IDVARVAL are populated with the key variable name and
-                  value of the parent record(s). Assumptions for populating
-                  IDVAR and IDVARVAL are further described in Section 8.2.
+              - Cited Guidance:
+                  Related to a specific parent record or group of parent records, in which
+                  case the value of the variable RDOMAIN is set to the DOMAIN code of the parent record(s),
+                  and the variables IDVAR and IDVARVAL are populated with the key variable name and value of
+                  the parent record(s). Assumptions for populating IDVAR and IDVARVAL are further described
+                  in Section 8.2.
                 Document: SENDIG v3.1.1
                 Item: Assumption 3.a
                 Section: 5.2.1.1
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND121
-              Version: '1'
-            Version: '5.0'
-        Version: '1.0'
+              Version: "1"
+            Version: "5.0"
+        Version: "1.0"
       - Name: TIG
         References:
           - Citations:
-              - Cited Guidance: Related to a specific parent record or group of parent records,
-                  in which case the value of the variable RDOMAIN is set to the
-                  DOMAIN code of the parent record(s), and the variables IDVAR
-                  and IDVARVAL are populated with the key variable name and
-                  value of the parent record(s).
+              - Cited Guidance:
+                  Related to a specific parent record or group of parent records, in which
+                  case the value of the variable RDOMAIN is set to the DOMAIN code of the parent record(s),
+                  and the variables IDVAR and IDVARVAL are populated with the key variable name and value of
+                  the parent record(s).
                 Document: TIG v1.0
                 Item: Assumption 3.a
                 Section: 2.8.9.4 SEND Comments (CO)
             Origin: TIG Conformance Rules
             Rule Identifier:
               Id: TIG0058
-              Version: '1'
-            Version: '1.0'
+              Version: "1"
+            Version: "1.0"
         Substandard: SEND
-        Version: '1.0'
+        Version: "1.0"
 # Variable: IDVARVAL
 # Condition: IDVAR ^= null
 # Rule: IDVARVAL = value of variable = IDVAR in domain = RDOMAIN
@@ -214,9 +214,9 @@ Check:
 Core:
   Id: CORE-000206
   Status: Published
-  Version: '1'
-Description: When IDVAR is populated, IDVARVAL must equal a value of the
-  variable referenced by IDVAR within the domain referenced by RDOMAIN
+  Version: "1"
+Description: When IDVAR is populated, IDVARVAL must equal a value of the variable referenced by
+  IDVAR within the domain referenced by RDOMAIN
 Executability: Fully Executable
 Match Datasets:
   - Child: true
@@ -238,8 +238,7 @@ Match Datasets:
       - IDVARVAL
     Name: RELREC
 Outcome:
-  Message: IDVARVAL does not equal a value of the variable referenced by IDVAR in
-    domain = RDOMAIN.
+  Message: IDVARVAL does not equal a value of the variable referenced by IDVAR in domain = RDOMAIN.
   Output Variables:
     - RDOMAIN
     - USUBJID

@@ -7,7 +7,8 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Identifier used to identify a related subject or pool of
+              - Cited Guidance:
+                  Identifier used to identify a related subject or pool of
                   subjects. RSUBJID will be populated with either the USUBJID of
                   the related subject or the POOLID of the related pool.
                 Document: Model v2.0
@@ -16,13 +17,14 @@ Authorities:
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0363
-              Version: '1'
-            Version: '2.0'
-        Version: '3.4'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.4"
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Identifier used to identify a related subject or pool of
+              - Cited Guidance:
+                  Identifier used to identify a related subject or pool of
                   subjects. RSUBJID will be populated with either the USUBJID of
                   the related subject or the POOLID of the related pool.
                 Document: Model v1.4
@@ -30,13 +32,14 @@ Authorities:
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0363
-              Version: '1'
-            Version: '2.0'
-        Version: '3.2'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.2"
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Identifier used to identify a related subject or pool of
+              - Cited Guidance:
+                  Identifier used to identify a related subject or pool of
                   subjects. RSUBJID will be populated with either the USUBJID of
                   the related subject or the POOLID of the related pool.
                 Document: Model v1.7
@@ -44,9 +47,9 @@ Authorities:
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0363
-              Version: '1'
-            Version: '2.0'
-        Version: '3.3'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.3"
 Check:
   all:
     - name: RSUBJID
@@ -57,7 +60,7 @@ Check:
 Core:
   Id: CORE-000231
   Status: Published
-  Version: '1'
+  Version: "1"
 Description: Verify that when RSUBJID populated, RSUBJID does not equal USUBJID
 Executability: Fully Executable
 Outcome:

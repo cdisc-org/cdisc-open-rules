@@ -1,31 +1,31 @@
 # Variable: REFID
 # Rule: REFID value is unique
 Authorities:
-  - Organization: 'CDISC'
+  - Organization: "CDISC"
     Standards:
-      - Name: 'TIG'
+      - Name: "TIG"
         References:
           - Citations:
               - Cited Guidance: One record per Reference ID
-                Document: 'TIG 1.0'
-                Item: 'Domain Table Header'
-                Section: '2.8.9.23'
+                Document: "TIG 1.0"
+                Item: "Domain Table Header"
+                Section: "2.8.9.23"
             Origin: TIG Conformance Rules
             Rule Identifier:
-              Id: 'TIG0034'
-              Version: '1'
-            Version: '1.0'
+              Id: "TIG0034"
+              Version: "1"
+            Version: "1.0"
         Substandard: SEND
-        Version: '1.0'
+        Version: "1.0"
 Check:
   all:
     - name: REFID
       operator: is_not_unique_set
       value: STUDYID
 Core:
-  Status: Published
-  Version: '1'
   Id: CORE-000603
+  Status: Published
+  Version: "1"
 Description: Raise an error when the REFID value is not unique.
 Executability: Fully Executable
 Outcome:

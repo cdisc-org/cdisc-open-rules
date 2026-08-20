@@ -1,28 +1,29 @@
 Authorities:
   - Organization: CDISC
     Standards:
-      - Name: 'ADaMIG'
+      - Name: "ADaMIG"
         References:
           - Citations:
-              - Cited Guidance: <-When a secondary variable is included in the dataset, then the
+              - Cited Guidance:
+                  <-When a secondary variable is included in the dataset, then the
                   primary variable must also be included.
                 Document: ADaMIG v1.3
-                Item: '6'
-                Section: '3.1.1'
+                Item: "6"
+                Section: "3.1.1"
             Criteria:
               Logical Expression:
-                Condition: ''
-                Rule: ''
-              Plain Language Expression: ''
+                Condition: ""
+                Rule: ""
+              Plain Language Expression: ""
               Type: Failure
             Origin: ADaM Conformance Rules
-            Release Notes: ''
+            Release Notes: ""
             Rule Identifier:
-              Id: '819'
-              Version: '1'
-            Validator Rule Message: ''
-            Version: '5.0'
-        Version: '1.3'
+              Id: "819"
+              Version: "1"
+            Validator Rule Message: ""
+            Version: "5.0"
+        Version: "1.3"
 
 Check:
   all:
@@ -33,8 +34,8 @@ Check:
 Core:
   Id: CDISC.ADaMIG.AD0819
   Status: Draft
-  Version: '1'
-Description: ''
+  Version: "1"
+Description: ""
 Executability: Fully Executable
 Outcome:
   Message: SUBJIDN is present, but SUBJID is not present

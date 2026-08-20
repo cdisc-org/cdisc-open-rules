@@ -1,2 +1,8 @@
 # Explicitly force LF for files
 *.csv     text eol=lf
+
+# Force LF line endings for text files, regardless of local core.autocrlf
+* text=auto eol=lf
+
+*.yml     text eol=lf
+*.yaml    text eol=lf

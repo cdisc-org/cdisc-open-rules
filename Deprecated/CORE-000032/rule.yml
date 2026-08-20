@@ -5,25 +5,28 @@ Authorities:
   - Organization: CDISC
     Standards:
       - Name: SDTMIG
-        Version: '3.4'
+        Version: "3.4"
         References:
           - Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0660
-              Version: '1'
-            Version: '2.0'
+              Version: "1"
+            Version: "2.0"
             Citations:
-              - Cited Guidance: --EVAL and --EVALID must not be used to model QRS
+              - Cited Guidance:
+                  --EVAL and --EVALID must not be used to model QRS
                   data in SDTM.
                 Document: SDTMIG v3.4
                 Item: Assumption 8
                 Section: 6.3.9.1
-              - Cited Guidance: --EVAL and --EVALID must not be used to model QRS
+              - Cited Guidance:
+                  --EVAL and --EVALID must not be used to model QRS
                   data in SDTM.
                 Document: SDTMIG v3.4
                 Item: Assumption 8
                 Section: 6.3.9.2
-              - Cited Guidance: --EVAL and --EVALID must not be used to model QRS
+              - Cited Guidance:
+                  --EVAL and --EVALID must not be used to model QRS
                   data in SDTM.
                 Document: SDTMIG v3.4
                 Item: Assumption 8
@@ -43,8 +46,9 @@ Check:
 Core:
   Id: CORE-000032
   Status: Published
-  Version: '1'
-Description: --EVALID must not be used to model QRS data.   This includes the 'QS'
+  Version: "1"
+Description:
+  --EVALID must not be used to model QRS data.   This includes the 'QS'
   and 'FT' domains as well as the 'RS' domain when the record pertains to a Clinical
   Classification Use Case). This rule has been fully executed for the QS and FT domains
   only.

@@ -2,46 +2,46 @@
 # Condition: PTMETHOD = null / PTXFN = null
 # Rule: PTXFN ^= null / PTMETHOD ^= null
 Authorities:
-  - Organization: 'CDISC'
+  - Organization: "CDISC"
     Standards:
-      - Name: 'TIG'
+      - Name: "TIG"
         References:
           - Citations:
-              - Cited Guidance: When lab methodology is too complex for the single PTMETHOD
-                  variable, PTXFN should be used to reference a file name or
-                  path to a file in the application that describes the
-                  methodology used. One or the other of PTMETHOD or PTXFN should
-                  be included in the data.
-                Document: 'TIG 1.0'
-                Item: 'assumption 6'
-                Section: '2.8.8.3'
+              - Cited Guidance:
+                  When lab methodology is too complex for the single PTMETHOD variable, PTXFN
+                  should be used to reference a file name or path to a file in the application that
+                  describes the methodology used. One or the other of PTMETHOD or PTXFN should be included
+                  in the data.
+                Document: "TIG 1.0"
+                Item: "assumption 6"
+                Section: "2.8.8.3"
             Origin: TIG Conformance Rules
             Rule Identifier:
-              Id: 'TIG0006'
-              Version: '1'
-            Version: '1.0'
+              Id: "TIG0006"
+              Version: "1"
+            Version: "1.0"
         Substandard: SDTM
-        Version: '1.0'
-  - Organization: 'CDISC'
+        Version: "1.0"
+  - Organization: "CDISC"
     Standards:
-      - Name: 'TIG'
+      - Name: "TIG"
         References:
           - Citations:
-              - Cited Guidance: When lab methodology is too complex for the single PTMETHOD
-                  variable, PTXFN should be used to reference a file name or
-                  path to a file in the application that describes the
-                  methodology used. One or the other of PTMETHOD or PTXFN should
-                  be included in the data.
-                Document: 'TIG 1.0'
-                Item: 'assumption 6'
-                Section: '2.8.8.3'
+              - Cited Guidance:
+                  When lab methodology is too complex for the single PTMETHOD variable, PTXFN
+                  should be used to reference a file name or path to a file in the application that
+                  describes the methodology used. One or the other of PTMETHOD or PTXFN should be included
+                  in the data.
+                Document: "TIG 1.0"
+                Item: "assumption 6"
+                Section: "2.8.8.3"
             Origin: TIG Conformance Rules
             Rule Identifier:
-              Id: 'TIG0007'
-              Version: '1'
-            Version: '1.0'
+              Id: "TIG0007"
+              Version: "1"
+            Version: "1.0"
         Substandard: SDTM
-        Version: '1.0'
+        Version: "1.0"
 Check:
   all:
     - name: PTMETHOD
@@ -49,9 +49,9 @@ Check:
     - name: PTXFN
       operator: empty
 Core:
-  Status: Published
-  Version: '1'
   Id: CORE-000593
+  Status: Published
+  Version: "1"
 Description: Raise an error when PTMETHOD and PTXFN are both not populated.
 Executability: Fully Executable
 Outcome:

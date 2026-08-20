@@ -1,5 +1,5 @@
 # Variable: USUBJID
-# Condition: 
+# Condition:
 # Rule: USUBJID unique within a submission
 Authorities:
   - Organization: CDISC
@@ -7,67 +7,64 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Identifier used to uniquely identify a subject across all
-                  studies for all applications or submissions involving the
-                  product.
+              - Cited Guidance:
+                  Identifier used to uniquely identify a subject across all studies for all
+                  applications or submissions involving the product.
                 Document: IG v3.4
                 Item: Specification
-                Section: '5.2'
+                Section: "5.2"
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0151
-              Version: '1'
-            Version: '2.0'
-        Version: '3.4'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.4"
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Identifier used to uniquely identify a subject across all
-                  studies
+              - Cited Guidance: Identifier used to uniquely identify a subject across all studies
                 Document: IG v3.2
                 Item: Specification
-                Section: '5'
+                Section: "5"
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0151
-              Version: '1'
-            Version: '2.0'
-        Version: '3.2'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.2"
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Identifier used to uniquely identify a subject across all
-                  studies
+              - Cited Guidance: Identifier used to uniquely identify a subject across all studies
                 Document: IG v3.3
                 Item: Specification
-                Section: '5.2'
+                Section: "5.2"
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0151
-              Version: '1'
-            Version: '2.0'
-        Version: '3.3'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.3"
       - Name: TIG
         References:
           - Citations:
-              - Cited Guidance: Identifier used to uniquely identify a subject across all
-                  studies for all applications or submissions involving the
-                  product.
+              - Cited Guidance:
+                  Identifier used to uniquely identify a subject across all studies for all
+                  applications or submissions involving the product.
                 Document: TIG 1.0
                 Item: Specification
                 Section: 2.8.10.4
             Origin: TIG Conformance Rules
             Rule Identifier:
               Id: TIG0392
-              Version: '1'
-            Version: '1.0'
+              Version: "1"
+            Version: "1.0"
         Substandard: SDTM
-        Version: '1.0'
+        Version: "1.0"
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: No more than one animal may have the same USUBJID within a
-                  submission.
+              - Cited Guidance: No more than one animal may have the same USUBJID within a submission.
                 Document: SENDIG v3.0
                 Item: Text
                 Section: 4.2.3
@@ -80,8 +77,7 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: No more than one animal may have the same USUBJID within a
-                  submission.
+              - Cited Guidance: No more than one animal may have the same USUBJID within a submission.
                 Document: SENDIG v3.1
                 Item: Text
                 Section: 4.2.3
@@ -94,8 +90,7 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: No more than one animal may have the same USUBJID within a
-                  submission.
+              - Cited Guidance: No more than one animal may have the same USUBJID within a submission.
                 Document: SENDIG v3.1.1
                 Item: Text
                 Section: 4.2.3
@@ -108,8 +103,7 @@ Authorities:
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance: No more than one animal may have the same USUBJID within a
-                  submission.
+              - Cited Guidance: No more than one animal may have the same USUBJID within a submission.
                 Document: SENDIG v3.1
                 Item: Text
                 Section: 4.2.3
@@ -122,8 +116,7 @@ Authorities:
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance: No more than one animal may have the same USUBJID within a
-                  submission.
+              - Cited Guidance: No more than one animal may have the same USUBJID within a submission.
                 Document: SENDIG v3.1.1
                 Item: Text
                 Section: 4.2.3
@@ -136,8 +129,7 @@ Authorities:
       - Name: SENDIG-GENETOX
         References:
           - Citations:
-              - Cited Guidance: No more than one animal may have the same USUBJID within a
-                  submission.
+              - Cited Guidance: No more than one animal may have the same USUBJID within a submission.
                 Document: SENDIG v3.1.1
                 Item: Text
                 Section: 4.2.3
@@ -150,9 +142,9 @@ Authorities:
       - Name: TIG
         References:
           - Citations:
-              - Cited Guidance: A sequence of characters used to uniquely identify a subject
-                  across all studies for all applications or submissions
-                  involving the product.
+              - Cited Guidance:
+                  A sequence of characters used to uniquely identify a subject across all
+                  studies for all applications or submissions involving the product.
                 Document: TIG v1.0
                 Item: Text
                 Section: SDTM v2.1, Identifiers for All Classes, USUBJID
@@ -171,7 +163,7 @@ Check:
 Core:
   Id: CORE-000351
   Status: Published
-  Version: '1'
+  Version: "1"
 Description: USUBJID must be unique across all studies
 Executability: Partially Executable
 Outcome:

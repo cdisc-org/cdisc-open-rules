@@ -5,101 +5,101 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: 'When possible, RFSTDTC should be the first day of exposure to
-                  test compound rather than challenge agents or other
-                  interventions.'
+              - Cited Guidance:
+                  "When possible, RFSTDTC should be the first day of exposure to test compound rather
+                  than challenge agents or other interventions."
                 Document: FDA
                 Section: FDAB064
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB6401
-              Version: '1'
-            Version: '1.5'
-        Version: '3.0'
+              Version: "1"
+            Version: "1.5"
+        Version: "3.0"
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: 'When possible, RFSTDTC should be the first day of exposure to
-                  test compound rather than challenge agents or other
-                  interventions.'
+              - Cited Guidance:
+                  "When possible, RFSTDTC should be the first day of exposure to test compound rather
+                  than challenge agents or other interventions."
                 Document: FDA
                 Section: FDAB064
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB6401
-              Version: '1'
-            Version: '1.5'
-        Version: '3.1'
+              Version: "1"
+            Version: "1.5"
+        Version: "3.1"
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: 'When possible, RFSTDTC should be the first day of exposure to
-                  test compound rather than challenge agents or other
-                  interventions.'
+              - Cited Guidance:
+                  "When possible, RFSTDTC should be the first day of exposure to test compound rather
+                  than challenge agents or other interventions."
                 Document: FDA
                 Section: FDAB064
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB6401
-              Version: '1'
-            Version: '1.5'
-        Version: '3.1.1'
+              Version: "1"
+            Version: "1.5"
+        Version: "3.1.1"
       - Name: SENDIG-GENETOX
         References:
           - Citations:
-              - Cited Guidance: 'When possible, RFSTDTC should be the first day of exposure to
-                  test compound rather than challenge agents or other
-                  interventions.'
+              - Cited Guidance:
+                  "When possible, RFSTDTC should be the first day of exposure to test compound rather
+                  than challenge agents or other interventions."
                 Document: FDA
                 Section: FDAB064
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB6401
-              Version: '1'
-            Version: '1.5'
-        Version: '1.0'
+              Version: "1"
+            Version: "1.5"
+        Version: "1.0"
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance: 'When possible, RFSTDTC should be the first day of exposure to
-                  test compound rather than challenge agents or other
-                  interventions.'
+              - Cited Guidance:
+                  "When possible, RFSTDTC should be the first day of exposure to test compound rather
+                  than challenge agents or other interventions."
                 Document: FDA
                 Section: FDAB064
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB6401
-              Version: '1'
-            Version: '1.5'
-        Version: '1.1'
+              Version: "1"
+            Version: "1.5"
+        Version: "1.1"
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance: 'When possible, RFSTDTC should be the first day of exposure to
-                  test compound rather than challenge agents or other
-                  interventions.'
+              - Cited Guidance:
+                  "When possible, RFSTDTC should be the first day of exposure to test compound rather
+                  than challenge agents or other interventions."
                 Document: FDA
                 Section: FDAB064
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB6401
-              Version: '1'
-            Version: '1.5'
-        Version: '1.2'
+              Version: "1"
+            Version: "1.5"
+        Version: "1.2"
       - Name: SENDIG-AR
         References:
           - Citations:
-              - Cited Guidance: 'When possible, RFSTDTC should be the first day of exposure to
-                  test compound rather than challenge agents or other
-                  interventions.'
+              - Cited Guidance:
+                  "When possible, RFSTDTC should be the first day of exposure to test compound rather
+                  than challenge agents or other interventions."
                 Document: FDA
                 Section: FDAB064
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB6401
-              Version: '1'
-            Version: '1.5'
-        Version: '1.0'
+              Version: "1"
+            Version: "1.5"
+        Version: "1.0"
 Check:
   all:
     - name: "RFSTDTC"
@@ -108,9 +108,9 @@ Check:
 Core:
   Id: CORE-001044
   Status: Published
-  Version: '1'
-Description: Subject Reference Start Date/Time (RFSTDTC) should be equal to the
-  first Start Date/Time of Treatment (EXSDTC).
+  Version: "1"
+Description: Subject Reference Start Date/Time (RFSTDTC) should be equal to the first Start
+  Date/Time of Treatment (EXSDTC).
 Executability: Fully Executable
 Operations:
   - domain: "EX"

@@ -13,9 +13,9 @@ Authorities:
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0433
-              Version: '1'
-            Version: '2.0'
-        Version: '3.2'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.2"
       - Name: SDTMIG
         References:
           - Citations:
@@ -25,9 +25,9 @@ Authorities:
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0433
-              Version: '1'
-            Version: '2.0'
-        Version: '3.3'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.3"
 Check:
   all:
     - name: AGEU
@@ -45,7 +45,7 @@ Check:
 Core:
   Id: CORE-000453
   Status: Published
-  Version: '1'
+  Version: "1"
 Description: Raise an error when AGE is empty, but AGEU is not empty.
 Executability: Fully Executable
 Outcome:

@@ -1,28 +1,27 @@
 # Variable: SPTOBID
 # Rule: SPTOBID in TO.SPTOBID
 Authorities:
-  - Organization: 'CDISC'
+  - Organization: "CDISC"
     Standards:
-      - Name: 'TIG'
+      - Name: "TIG"
         References:
           - Citations:
-              - Cited Guidance: SPTOBID is used in the Product Design (PD), Tobacco Ingredients
-                  (IT), Non-Tobacco Ingredients (IN), and Ingredient Quantities
-                  by Component (IQ) domains, as well as any domain in the
-                  general observation classes where there are records pertaining
-                  to the tobacco product it identifies/describes (e.g., PT).
-                  Every value of SPTOBID in any dataset must correspond to a
-                  product described in the TO dataset.
-                Document: 'TIG 1.0'
-                Item: 'assumption 1b'
-                Section: '2.8.8.1'
+              - Cited Guidance:
+                  SPTOBID is used in the Product Design (PD), Tobacco Ingredients (IT),
+                  Non-Tobacco Ingredients (IN), and Ingredient Quantities by Component (IQ) domains, as well
+                  as any domain in the general observation classes where there are records pertaining to the
+                  tobacco product it identifies/describes (e.g., PT). Every value of SPTOBID in any dataset
+                  must correspond to a product described in the TO dataset.
+                Document: "TIG 1.0"
+                Item: "assumption 1b"
+                Section: "2.8.8.1"
             Origin: TIG Conformance Rules
             Rule Identifier:
-              Id: 'TIG0002'
-              Version: '1'
-            Version: '1.0'
+              Id: "TIG0002"
+              Version: "1"
+            Version: "1.0"
         Substandard: SEND
-        Version: '1.0'
+        Version: "1.0"
 Check:
   all:
     - name: TXPARMCD
@@ -33,12 +32,11 @@ Check:
       operator: is_not_contained_by
       value: $to_sptobid
 Core:
-  Status: Published
-  Version: '1'
   Id: CORE-000676
-Description: Part B - Raise an error when the value of TXVAL for TXPARMCD =
-  SPTOBID in the TX dataset does not correspond to a SPTOBID value present in
-  TO.
+  Status: Published
+  Version: "1"
+Description: Part B - Raise an error when the value of TXVAL for TXPARMCD = SPTOBID in the TX
+  dataset does not correspond to a SPTOBID value present in TO.
 Executability: Fully Executable
 Operations:
   - domain: TO
@@ -46,8 +44,8 @@ Operations:
     name: SPTOBID
     operator: distinct
 Outcome:
-  Message: Value in TXVAL for TXPARMCD = SPTOBID in the TX dataset does not
-    correspond to a SPTOBID value in TO.
+  Message: Value in TXVAL for TXPARMCD = SPTOBID in the TX dataset does not correspond to a SPTOBID
+    value in TO.
   Output Variables:
     - TXVAL
     - $to_sptobid
