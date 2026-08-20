@@ -5,46 +5,49 @@ Authorities:
   - Organization: CDISC
     Standards:
       - Name: SDTMIG
-        Version: '3.4'
+        Version: "3.4"
         References:
           - Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0107
-              Version: '1'
-            Version: '2.0'
+              Version: "1"
+            Version: "2.0"
             Citations:
-              - Cited Guidance: "\"When the EC domain is implemented in conjunction\
+              - Cited Guidance:
+                  "\"When the EC domain is implemented in conjunction\
                   \ with the EX domain, EXVAMT and EXVAMTU should not be used in EX;\n\
                   \ collected values instead would be represented in ECDOSE and ECDOSU.\""
                 Document: IG v3.4
                 Item: Assumption 6c
                 Section: 6.1.3.1
       - Name: SDTMIG
-        Version: '3.2'
+        Version: "3.2"
         References:
           - Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0107
-              Version: '1'
-            Version: '2.0'
+              Version: "1"
+            Version: "2.0"
             Citations:
-              - Cited Guidance: When the EC domain (See Section 6.1.2.3) is implemented
+              - Cited Guidance:
+                  When the EC domain (See Section 6.1.2.3) is implemented
                   in conjunction with the EX domain, EXVAMT and EXVAMTU should not
                   be used in EX; collected values instead would be represented in
                   ECDOSE and ECDOSU
                 Document: IG v3.2
                 Item: Assumption 6c
-                Section: '6.1'
+                Section: "6.1"
       - Name: SDTMIG
-        Version: '3.3'
+        Version: "3.3"
         References:
           - Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0107
-              Version: '1'
-            Version: '2.0'
+              Version: "1"
+            Version: "2.0"
             Citations:
-              - Cited Guidance: When the EC domain (See Section 6.1.2.3) is implemented
+              - Cited Guidance:
+                  When the EC domain (See Section 6.1.2.3) is implemented
                   in conjunction with the EX domain, EXVAMT and EXVAMTU should not
                   be used in EX; collected values instead would be represented in
                   ECDOSE and ECDOSU
@@ -61,7 +64,7 @@ Check:
 Core:
   Id: CORE-000292
   Status: Published
-  Version: '1'
+  Version: "1"
 Description: When EC exists, EXVAMTU should not be used.
 Executability: Fully Executable
 Operations:

@@ -7,7 +7,8 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Further information about the parameters is included below in
+              - Cited Guidance:
+                  Further information about the parameters is included below in
                   Table 1. TSVAL may have controlled terminology depending on
                   the value of TSPARMCD
                 Document: IG v3.2
@@ -16,24 +17,25 @@ Authorities:
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0439
-              Version: '1'
-            Version: '2.0'
-        Version: '3.2'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.2"
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Further information about the parameters is included below in
+              - Cited Guidance:
+                  Further information about the parameters is included below in
                   Table 1. TSVAL may have controlled terminology depending on
                   the value of TSPARMCD
                 Document: IG v3.3
                 Item: Assumption 3
-                Section: '7.4'
+                Section: "7.4"
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0439
-              Version: '1'
-            Version: '2.0'
-        Version: '3.3'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.3"
 Check:
   all:
     - name: TSPARMCD
@@ -47,12 +49,12 @@ Check:
 Core:
   Id: CORE-000731
   Status: Published
-  Version: '1'
-Description: 'When TSPARMCD = LENGTH and TSVAL ^= NULL, TSVAL needs to conform
-  to ISO 8601 time period'
+  Version: "1"
+Description: "When TSPARMCD = LENGTH and TSVAL ^= NULL, TSVAL needs to conform
+  to ISO 8601 time period"
 Executability: Fully Executable
 Outcome:
-  Message: 'TSVAL is not NULL and does not conform to ISO 8601 time period'
+  Message: "TSVAL is not NULL and does not conform to ISO 8601 time period"
   Output Variables:
     - TSVAL
     - TSPARMCD

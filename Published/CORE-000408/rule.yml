@@ -4,34 +4,34 @@ Authorities:
       - Name: USDM
         References:
           - Citations:
-              - Cited Guidance: 'If a biomedical concept property is required then it must also
-                  be enabled, while if it is not enabled then it must not be
-                  required.'
-                Document: 'USDM_CORE_Rules.xlsx'
-            Origin: 'USDM Conformance Rules'
+              - Cited Guidance:
+                  "If a biomedical concept property is required then it must also be enabled, while
+                  if it is not enabled then it must not be required."
+                Document: "USDM_CORE_Rules.xlsx"
+            Origin: "USDM Conformance Rules"
             Rule Identifier:
-              Id: 'DDF00013'
-              Version: '1'
-            Version: '1.0'
-        Version: '3.0'
+              Id: "DDF00013"
+              Version: "1"
+            Version: "1.0"
+        Version: "3.0"
       - Name: USDM
         References:
           - Citations:
-              - Cited Guidance: 'If a biomedical concept property is required then it must also
-                  be enabled, while if it is not enabled then it must not be
-                  required.'
-                Document: 'USDM_CORE_Rules.xlsx'
-            Origin: 'USDM Conformance Rules'
+              - Cited Guidance:
+                  "If a biomedical concept property is required then it must also be enabled, while
+                  if it is not enabled then it must not be required."
+                Document: "USDM_CORE_Rules.xlsx"
+            Origin: "USDM Conformance Rules"
             Rule Identifier:
-              Id: 'DDF00013'
-              Version: '1'
-            Version: '1.0'
-        Version: '4.0'
+              Id: "DDF00013"
+              Version: "1"
+            Version: "1.0"
+        Version: "4.0"
 Check:
   all:
     - name: instanceType
       operator: equal_to
-      value: 'BiomedicalConceptProperty'
+      value: "BiomedicalConceptProperty"
     - any:
         - all:
             - name: isRequired
@@ -48,16 +48,18 @@ Check:
               operator: not_equal_to
               value: false
 Core:
-  Id: 'CORE-000408'
+  Id: "CORE-000408"
   Status: Published
-  Version: '1'
-Description: 'If a biomedical concept property is required then it must also be
-  enabled, while if it is not enabled then it must not be required.'
+  Version: "1"
+Description:
+  "If a biomedical concept property is required then it must also be enabled, while if it is
+  not enabled then it must not be required."
 Executability: Fully Executable
 Outcome:
-  Message: 'A required biomedical concept property (isRequired=true) is not
-    enabled (isEnabled is not true), or a disabled biomedical concept property
-    (isEnabled=false) is required (isRequired is not false).'
+  Message:
+    "A required biomedical concept property (isRequired=true) is not enabled (isEnabled is not
+    true), or a disabled biomedical concept property (isEnabled=false) is required (isRequired is not
+    false)."
   Output Variables:
     - parent_entity
     - parent_id

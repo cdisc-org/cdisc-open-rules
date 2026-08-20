@@ -7,7 +7,8 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: "ICH E3: Section 10.1 indicates that 'the specific reason for
+              - Cited Guidance:
+                  "ICH E3: Section 10.1 indicates that 'the specific reason for
                   discontinuation' should be presented; and that summaries
                   should be 'grouped by treatment and by major reason.' The
                   CDISC SDS Team interprets this guidance as requiring one
@@ -21,9 +22,9 @@ Authorities:
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0398
-              Version: '2'
-            Version: '2.0'
-        Version: '3.2'
+              Version: "2"
+            Version: "2.0"
+        Version: "3.2"
 Check:
   all:
     - name: DSCAT
@@ -38,13 +39,14 @@ Check:
 Core:
   Id: CORE-000586
   Status: Published
-  Version: '1'
-Description: 'Raise an error when DSCAT = DISPOSITION EVENT and there is more
-  than one record per subject for an EPOCH'
+  Version: "1"
+Description: "Raise an error when DSCAT = DISPOSITION EVENT and there is more
+  than one record per subject for an EPOCH"
 Executability: Fully Executable
 Outcome:
-  Message: 'Multiple records exist within the same EPOCH for a subject when DSCAT
-    = DISPOSITION EVENT'
+  Message:
+    "Multiple records exist within the same EPOCH for a subject when DSCAT
+    = DISPOSITION EVENT"
   Output Variables:
     - DSCAT
     - EPOCH

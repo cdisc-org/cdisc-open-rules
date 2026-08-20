@@ -1,57 +1,55 @@
 Authorities:
-  - Organization: 'FDA'
+  - Organization: "FDA"
     Standards:
-      - Name: 'SDTMIG'
+      - Name: "SDTMIG"
         References:
           - Citations:
-              - Cited Guidance: 'TCG, Appendix B'
-                Document: 'FDA'
-                Section: 'FDAB011'
-            Origin: 'FDA Business Rules'
+              - Cited Guidance: "TCG, Appendix B"
+                Document: "FDA"
+                Section: "FDAB011"
+            Origin: "FDA Business Rules"
             Rule Identifier:
-              Id: 'FB1108'
-              Version: '1'
-            Version: '1.5'
-        Version: '3.2'
-      - Name: 'SDTMIG'
+              Id: "FB1108"
+              Version: "1"
+            Version: "1.5"
+        Version: "3.2"
+      - Name: "SDTMIG"
         References:
           - Citations:
-              - Cited Guidance: 'TCG, Appendix B'
-                Document: 'FDA'
-                Section: 'FDAB011'
-            Origin: 'FDA Business Rules'
+              - Cited Guidance: "TCG, Appendix B"
+                Document: "FDA"
+                Section: "FDAB011"
+            Origin: "FDA Business Rules"
             Rule Identifier:
-              Id: 'FB1108'
-              Version: '1'
-            Version: '1.5'
-        Version: '3.3'
-      - Name: 'SDTMIG'
+              Id: "FB1108"
+              Version: "1"
+            Version: "1.5"
+        Version: "3.3"
+      - Name: "SDTMIG"
         References:
           - Citations:
-              - Cited Guidance: 'TCG, Appendix B'
-                Document: 'FDA'
-                Section: 'FDAB011'
-            Origin: 'FDA Business Rules'
+              - Cited Guidance: "TCG, Appendix B"
+                Document: "FDA"
+                Section: "FDAB011"
+            Origin: "FDA Business Rules"
             Rule Identifier:
-              Id: 'FB1108'
-              Version: '1'
-            Version: '1.5'
-        Version: '3.4'
+              Id: "FB1108"
+              Version: "1"
+            Version: "1.5"
+        Version: "3.4"
 Check:
   all:
-    - name: 'TSPARMCD'
+    - name: "TSPARMCD"
       operator: equal_to
       value: DCUTDESC
 Core:
   Id: FDA.SDTMIG.FB1108
   Status: Draft
-  Version: '1'
-Description: 'TSPARAMCD=DCUTDESC and TSPARAMCD=DCUTDTC do not share the same
-  TSGRPID and TSVAL values.'
+  Version: "1"
+Description: "TSPARAMCD=DCUTDESC and TSPARAMCD=DCUTDTC do not share the same TSGRPID and TSVAL values."
 Executability: Fully Executable
 Outcome:
-  Message: 'TSPARAMCD=DCUTDESC and TSPARAMCD=DCUTDTC do not share the same TSGRPID
-    and TSVAL values.'
+  Message: "TSPARAMCD=DCUTDESC and TSPARAMCD=DCUTDTC do not share the same TSGRPID and TSVAL values."
   Output Variables:
     - TSPARMCD
     - TSVAL
