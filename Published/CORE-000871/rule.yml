@@ -4,32 +4,34 @@ Authorities:
       - Name: USDM
         References:
           - Citations:
-              - Cited Guidance: "Within a study design there is expected to be exactly one
-                  objective with level 'Primary Objective'."
-                Document: 'USDM_CORE_Rules.xlsx'
-            Origin: 'USDM Conformance Rules'
+              - Cited Guidance:
+                  "Within a study design there is expected to be exactly one objective with level
+                  'Primary Objective'."
+                Document: "USDM_CORE_Rules.xlsx"
+            Origin: "USDM Conformance Rules"
             Rule Identifier:
-              Id: 'DDF00084'
-              Version: '1'
-            Version: '1.0'
-        Version: '3.0'
+              Id: "DDF00084"
+              Version: "1"
+            Version: "1.0"
+        Version: "3.0"
       - Name: USDM
         References:
           - Citations:
-              - Cited Guidance: "Within a study design there is expected to be exactly one
-                  objective with level 'Primary Objective'."
-                Document: 'USDM_CORE_Rules.xlsx'
-            Origin: 'USDM Conformance Rules'
+              - Cited Guidance:
+                  "Within a study design there is expected to be exactly one objective with level
+                  'Primary Objective'."
+                Document: "USDM_CORE_Rules.xlsx"
+            Origin: "USDM Conformance Rules"
             Rule Identifier:
-              Id: 'DDF00084'
-              Version: '1'
-            Version: '1.0'
-        Version: '4.0'
+              Id: "DDF00084"
+              Version: "1"
+            Version: "1.0"
+        Version: "4.0"
 Check:
   all:
     - name: rel_type
       operator: equal_to
-      value: 'definition'
+      value: "definition"
     - not:
         all:
           - name: $num_primary_obj
@@ -38,17 +40,18 @@ Check:
             operator: equal_to
             value: 1
 Core:
-  Id: 'CORE-000871'
+  Id: "CORE-000871"
   Status: Published
-  Version: '1'
-Description: "Within a study design there is expected to be exactly one
-  objective with level 'Primary Objective'."
+  Version: "1"
+Description:
+  "Within a study design there is expected to be exactly one objective with level 'Primary
+  Objective'."
 Executability: Partially Executable - Possible Overreporting
 Operations:
   - domain: Objective
     filter:
-      level.code: 'C85826'
-      rel_type: 'definition'
+      level.code: "C85826"
+      rel_type: "definition"
     group:
       - parent_id
       - rel_type
@@ -58,8 +61,8 @@ Operations:
     operator: record_count
   - domain: Objective
     filter:
-      level.code: 'C85826'
-      rel_type: 'definition'
+      level.code: "C85826"
+      rel_type: "definition"
     group:
       - parent_id
       - rel_type
@@ -69,8 +72,7 @@ Operations:
     name: text
     operator: distinct
 Outcome:
-  Message: "There is not exactly one objective with a level of 'Primary Objective'
-    within the study design."
+  Message: "There is not exactly one objective with a level of 'Primary Objective' within the study design."
   Output Variables:
     - parent_entity
     - parent_id
@@ -83,7 +85,7 @@ Rule Type: Record Data
 Scope:
   Entities:
     Include:
-      - 'StudyDesign'
-      - 'InterventionalStudyDesign'
-      - 'ObservationalStudyDesign'
+      - "StudyDesign"
+      - "InterventionalStudyDesign"
+      - "ObservationalStudyDesign"
 Sensitivity: Record

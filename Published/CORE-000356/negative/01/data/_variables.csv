@@ -1,76 +1,77 @@
 dataset,variable,label,type,length
-ta,STUDYID,Study Identifier,Char,10
-ta,DOMAIN,Domain Abbreviation,Char,2
-ta,ARMCD,Planned Arm Code,Char,1
-ta,ARM,Description of Planned Arm,Char,13
-ta,TAETORD,Planned Order of Element within Arm,Num,8
-ta,ETCD,Element Code,Char,4
-ta,ELEMENT,Description of Element,Char,13
-ta,TABRANCH,Branch,Char,1
-ta,TATRANS,Transition Rule,Char,1
-ta,EPOCH,Epoch,Char,9
-ae,STUDYID,Study Identifier,Char,50
-ae,DOMAIN,Domain Abbreviation,Char,50
-ae,USUBJID,Unique Subject Identifier,Char,50
-ae,AESEQ,Sequence Number,Num,8
-ae,AETERM,Reported Term for the Adverse Event,Char,50
-ae,AEMODIFY,Modified Reported Term,Char,50
-ae,AEBODSYS,Body System or Organ Class,Char,50
-ae,AESEV,Severity/Intensity,Char,50
-ae,AESER,Serious Event,Char,50
-ae,AEACN,Action Taken with Study Treatment,Char,50
-ae,AEREL,Causality,Char,50
-ae,AEOUT,Outcome of Adverse Event,Char,50
-ae,AESCONG,Congenital Anomaly or Birth Defect,Char,50
-ae,AESDISAB,Persist or Signif Disability/Incapacity,Char,50
-ae,AESDTH,Results in Death,Char,50
-ae,AESHOSP,Requires or Prolongs Hospitalization,Char,50
-ae,AESLIFE,Is Life Threatening,Char,50
-ae,EPOCH,Epoch,Char,50
-ae,AESTDTC,Start Date/Time of Adverse Event,Char,50
-ae,AEENDTC,End Date/Time of Adverse Event,Char,50
-ae,AESTDY,Study Day of Start of Adverse Event,Num,8
-ae,AEENDY,Study Day of End of Adverse Event,Num,8
-ae,AEENRF,End Relative to Reference Period,Char,50
-lb,STUDYID,Study Identifier,Char,10
-lb,DOMAIN,Domain Abbreviation,Char,2
-lb,USUBJID,Unique Subject Identifier,Char,14
-lb,LBSEQ,Sequence Number,Num,8
-lb,LBSPID,Sponsor-Defined Identifier,Char,4
-lb,LBTESTCD,Lab Test or Examination Short Name,Char,8
-lb,LBTEST,Lab Test or Examination Name,Char,25
-lb,LBCAT,Category for Lab Test,Char,18
-lb,LBORRES,Result or Finding in Original Units,Char,6
-lb,LBORRESU,Original Units,Char,8
-lb,LBORNRLO,Reference Range Lower Limit in Orig Unit,Char,1
-lb,LBORNRHI,Reference Range Upper Limit in Orig Unit,Char,1
-lb,LBSTRESC,Character Result/Finding in Std Format,Char,6
-lb,LBSTRESN,Numeric Result/Finding in Standard Units,Num,8
-lb,LBSTRESU,Standard Units,Char,8
-lb,LBSTNRLO,Reference Range Lower Limit-Std Units,Num,8
-lb,LBSTNRHI,Reference Range Upper Limit-Std Units,Num,8
-lb,LBNRIND,Reference Range Indicator,Char,1
-lb,LBLOINC,LOINC Code,Char,7
-lb,LBSPEC,Specimen Type,Char,5
-lb,LBBLFL,Baseline Flag,Char,1
-lb,EPOCH,Epoch,Char,9
-lb,VISITNUM,Visit Number,Num,8
-lb,VISIT,Visit Name,Char,18
-lb,LBDTC,Date/Time of Specimen Collection,Char,10
-lb,LBDY,Study Day of Specimen Collection,Num,8
-ex,STUDYID,Study Identifier,Char,12
-ex,DOMAIN,Domain Abbreviation,Char,2
-ex,USUBJID,Unique Subject Identifier,Char,8
-ex,SPDEVID,Sponsor Device Identifier,Char,200
-ex,EXSEQ,Sequence Number,Num,8
-ex,EXDOSE,Dose,Num,8
-ex,EXDOSU,Dose Units,Char,2
-ex,EXDOSFRM,Dose Form,Char,9
-ex,EXDOSFRQ,Dosing Frequency per Interval,Char,2
-ex,EXROUTE,Route of Administration,Char,12
-ex,EXLOT,Lot Number,Char,200
-ex,EPOCH,Epoch,Char,9
-ex,EXSTDTC,Start Date/Time of Treatment,Char,10
-ex,EXENDTC,End Date/Time of Treatment,Char,10
-ex,EXSTDY,Study Day of Start of Treatment,Num,8
-ex,EXENDY,Study Day of End of Treatment,Num,8
+ta,1,STUDYID,Study Identifier,Char,10
+ta,2,DOMAIN,Domain Abbreviation,Char,2
+ta,3,ARMCD,Planned Arm Code,Char,1
+ta,4,ARM,Description of Planned Arm,Char,13
+ta,5,TAETORD,Planned Order of Element within Arm,Num,8
+ta,6,ETCD,Element Code,Char,4
+ta,7,ELEMENT,Description of Element,Char,13
+ta,8,TABRANCH,Branch,Char,1
+ta,9,TATRANS,Transition Rule,Char,1
+ta,10,EPOCH,Epoch,Char,9
+ae,1,STUDYID,Study Identifier,Char,50
+ae,2,DOMAIN,Domain Abbreviation,Char,50
+ae,3,USUBJID,Unique Subject Identifier,Char,50
+ae,4,AESEQ,Sequence Number,Num,8
+ae,5,AETERM,Reported Term for the Adverse Event,Char,50
+ae,6,AEMODIFY,Modified Reported Term,Char,50
+ae,7,AEBODSYS,Body System or Organ Class,Char,50
+ae,8,AESEV,Severity/Intensity,Char,50
+ae,9,AESER,Serious Event,Char,50
+ae,10,AEACN,Action Taken with Study Treatment,Char,50
+ae,11,AEREL,Causality,Char,50
+ae,12,AEOUT,Outcome of Adverse Event,Char,50
+ae,13,AESCONG,Congenital Anomaly or Birth Defect,Char,50
+ae,14,AESDISAB,Persist or Signif Disability/Incapacity,Char,50
+ae,15,AESDTH,Results in Death,Char,50
+ae,16,AESHOSP,Requires or Prolongs Hospitalization,Char,50
+ae,17,AESLIFE,Is Life Threatening,Char,50
+ae,18,EPOCH,Epoch,Char,50
+ae,19,AESTDTC,Start Date/Time of Adverse Event,Char,50
+ae,20,AEENDTC,End Date/Time of Adverse Event,Char,50
+ae,21,AESTDY,Study Day of Start of Adverse Event,Num,8
+ae,22,AEENDY,Study Day of End of Adverse Event,Num,8
+ae,23,AEENRF,End Relative to Reference Period,Char,50
+lb,1,STUDYID,Study Identifier,Char,10
+lb,2,DOMAIN,Domain Abbreviation,Char,2
+lb,3,USUBJID,Unique Subject Identifier,Char,14
+lb,4,LBSEQ,Sequence Number,Num,8
+lb,5,LBSPID,Sponsor-Defined Identifier,Char,4
+lb,6,LBTESTCD,Lab Test or Examination Short Name,Char,8
+lb,7,LBTEST,Lab Test or Examination Name,Char,25
+lb,8,LBCAT,Category for Lab Test,Char,18
+lb,9,LBORRES,Result or Finding in Original Units,Char,6
+lb,10,LBORRESU,Original Units,Char,8
+lb,11,LBORNRLO,Reference Range Lower Limit in Orig Unit,Char,1
+lb,12,LBORNRHI,Reference Range Upper Limit in Orig Unit,Char,1
+lb,13,LBSTRESC,Character Result/Finding in Std Format,Char,6
+lb,14,LBSTRESN,Numeric Result/Finding in Standard Units,Num,8
+lb,15,LBSTRESU,Standard Units,Char,8
+lb,16,LBSTNRLO,Reference Range Lower Limit-Std Units,Num,8
+lb,17,LBSTNRHI,Reference Range Upper Limit-Std Units,Num,8
+lb,18,LBNRIND,Reference Range Indicator,Char,1
+lb,19,LBLOINC,LOINC Code,Char,7
+lb,20,LBSPEC,Specimen Type,Char,5
+lb,21,LBBLFL,Baseline Flag,Char,1
+lb,22,EPOCH,Epoch,Char,9
+lb,23,VISITNUM,Visit Number,Num,8
+lb,24,VISIT,Visit Name,Char,18
+lb,25,LBDTC,Date/Time of Specimen Collection,Char,10
+lb,26,LBDY,Study Day of Specimen Collection,Num,8
+ex,1,STUDYID,Study Identifier,Char,12
+ex,2,DOMAIN,Domain Abbreviation,Char,2
+ex,3,USUBJID,Unique Subject Identifier,Char,8
+ex,4,SPDEVID,Sponsor Device Identifier,Char,200
+ex,5,EXSEQ,Sequence Number,Num,8
+ex,6,EXTRT,Name of Treatment,Char,10
+ex,7,EXDOSE,Dose,Num,8
+ex,8,EXDOSU,Dose Units,Char,2
+ex,9,EXDOSFRM,Dose Form,Char,9
+ex,10,EXDOSFRQ,Dosing Frequency per Interval,Char,2
+ex,11,EXROUTE,Route of Administration,Char,12
+ex,12,EXLOT,Lot Number,Char,200
+ex,13,EPOCH,Epoch,Char,9
+ex,14,EXSTDTC,Start Date/Time of Treatment,Char,10
+ex,15,EXENDTC,End Date/Time of Treatment,Char,10
+ex,16,EXSTDY,Study Day of Start of Treatment,Num,8
+ex,17,EXENDY,Study Day of End of Treatment,Num,8

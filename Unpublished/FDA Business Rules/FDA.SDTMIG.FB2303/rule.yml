@@ -7,16 +7,15 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: For interventional studies all treated subjects should have
-                  exposure data.
+              - Cited Guidance: For interventional studies all treated subjects should have exposure data.
                 Document: FDA
                 Section: FDAB023
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB2303
-              Version: '1'
-            Version: '1.5'
-        Version: '3.2'
+              Version: "1"
+            Version: "1.5"
+        Version: "3.2"
 Check:
   all:
     - name: ACTARMCD
@@ -39,9 +38,9 @@ Check:
 Core:
   Id: FDA.SDTMIG.FB2303
   Status: Draft
-  Version: '1'
-Description: All subjects in the Exposure domain who are participating in a
-  study that includes an interventional product must be assigned to a treatment.
+  Version: "1"
+Description: All subjects in the Exposure domain who are participating in a study that includes an
+  interventional product must be assigned to a treatment.
 Executability: Fully Executable
 Match Datasets:
   - Keys:
@@ -53,8 +52,8 @@ Operations:
     name: USUBJID
     operator: distinct
 Outcome:
-  Message: A subject has a record in EX but is not assigned to a treatment while
-    participating in an interventional study
+  Message: A subject has a record in EX but is not assigned to a treatment while participating in an
+    interventional study
   Output Variables:
     - ACTARMCD
     - TSPARMCD

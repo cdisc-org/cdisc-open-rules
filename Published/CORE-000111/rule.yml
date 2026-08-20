@@ -1,5 +1,5 @@
 # Variable: --AGENT
-# Condition: 
+# Condition:
 # Rule: --AGENT not present in dataset
 Authorities:
   - Organization: CDISC
@@ -14,25 +14,25 @@ Authorities:
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0564
-              Version: '1'
-            Version: '2.0'
-        Version: '3.4'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.4"
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: The concept of domain-specific variables was first introduced in
-                  SDTM v1.5. These variables are for use only in a specific
-                  domain and will be identified in the appropriate
-                  implementation guide.
+              - Cited Guidance:
+                  The concept of domain-specific variables was first introduced in SDTM v1.5.
+                  These variables are for use only in a specific domain and will be identified in the
+                  appropriate implementation guide.
                 Document: Model v1.7
                 Item: MSAGENT
                 Section: Table 2.2.12.1
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0564
-              Version: '1'
-            Version: '2.0'
-        Version: '3.3'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.3"
       - Name: TIG
         References:
           - Citations:
@@ -43,10 +43,10 @@ Authorities:
             Origin: TIG Conformance Rules
             Rule Identifier:
               Id: TIG0649
-              Version: '1'
-            Version: '1.0'
+              Version: "1"
+            Version: "1.0"
         Substandard: SDTM
-        Version: '1.0'
+        Version: "1.0"
 Check:
   all:
     - name: --AGENT
@@ -54,7 +54,7 @@ Check:
 Core:
   Id: CORE-000111
   Status: Published
-  Version: '1'
+  Version: "1"
 Description: Raise an error when --AGENT is present in a dataset other than MS.
 Executability: Fully Executable
 Outcome:

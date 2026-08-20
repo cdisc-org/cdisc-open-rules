@@ -1,5 +1,5 @@
 # Variable: --BDSYCD
-# Condition: 
+# Condition:
 # Rule: --BDSYCD and --BODSYS have a one-to-one relationship
 Authorities:
   - Organization: CDISC
@@ -14,9 +14,9 @@ Authorities:
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0083
-              Version: '2'
-            Version: '2.0'
-        Version: '3.4'
+              Version: "2"
+            Version: "2.0"
+        Version: "3.4"
       - Name: SDTMIG
         References:
           - Citations:
@@ -26,9 +26,9 @@ Authorities:
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0083
-              Version: '2'
-            Version: '2.0'
-        Version: '3.3'
+              Version: "2"
+            Version: "2.0"
+        Version: "3.3"
       - Name: SDTMIG
         References:
           - Citations:
@@ -38,9 +38,9 @@ Authorities:
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0083
-              Version: '2'
-            Version: '2.0'
-        Version: '3.2'
+              Version: "2"
+            Version: "2.0"
+        Version: "3.2"
       - Name: TIG
         References:
           - Citations:
@@ -51,57 +51,57 @@ Authorities:
             Origin: TIG Conformance Rules
             Rule Identifier:
               Id: TIG0348
-              Version: '1'
-            Version: '1.0'
+              Version: "1"
+            Version: "1.0"
         Substandard: SDTM
-        Version: '1.0'
+        Version: "1.0"
   - Organization: FDA
     Standards:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: All paired variables should have a one-to-one relationship.
-                  Examples include short name and name of test; parameter name
-                  and parameter code or number; variable name and variable
-                  label, etc.
+              - Cited Guidance:
+                  All paired variables should have a one-to-one relationship. Examples include
+                  short name and name of test; parameter name and parameter code or number; variable name
+                  and variable label, etc.
                 Document: FDA
                 Section: FDAB009
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB0910
-              Version: '1'
-            Version: '1.5'
-        Version: '3.2'
+              Version: "1"
+            Version: "1.5"
+        Version: "3.2"
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: All paired variables should have a one-to-one relationship.
-                  Examples include short name and name of test; parameter name
-                  and parameter code or number; variable name and variable
-                  label, etc.
+              - Cited Guidance:
+                  All paired variables should have a one-to-one relationship. Examples include
+                  short name and name of test; parameter name and parameter code or number; variable name
+                  and variable label, etc.
                 Document: FDA
                 Section: FDAB009
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB0910
-              Version: '1'
-            Version: '1.5'
-        Version: '3.3'
+              Version: "1"
+            Version: "1.5"
+        Version: "3.3"
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: All paired variables should have a one-to-one relationship.
-                  Examples include short name and name of test; parameter name
-                  and parameter code or number; variable name and variable
-                  label, etc.
+              - Cited Guidance:
+                  All paired variables should have a one-to-one relationship. Examples include
+                  short name and name of test; parameter name and parameter code or number; variable name
+                  and variable label, etc.
                 Document: FDA
                 Section: FDAB009
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB0910
-              Version: '1'
-            Version: '1.5'
-        Version: '3.4'
+              Version: "1"
+            Version: "1.5"
+        Version: "3.4"
 Check:
   all:
     - name: --BDSYCD
@@ -114,7 +114,7 @@ Check:
 Core:
   Id: CORE-000184
   Status: Published
-  Version: '1'
+  Version: "1"
 Description: --BODSYS and --BDSYCD  have a one-to-one relationship.
 Executability: Fully Executable
 Outcome:

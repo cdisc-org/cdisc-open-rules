@@ -1,42 +1,42 @@
 Authorities:
-  - Organization: 'FDA'
+  - Organization: "FDA"
     Standards:
-      - Name: 'SDTMIG'
+      - Name: "SDTMIG"
         References:
           - Citations:
-              - Cited Guidance: 'TCG, Appendix B'
-                Document: 'FDA'
-                Section: 'FDAB011'
-            Origin: 'FDA Business Rules'
+              - Cited Guidance: "TCG, Appendix B"
+                Document: "FDA"
+                Section: "FDAB011"
+            Origin: "FDA Business Rules"
             Rule Identifier:
-              Id: 'FB1112'
-              Version: '1'
-            Version: '1.5'
-        Version: '3.2'
-      - Name: 'SDTMIG'
+              Id: "FB1112"
+              Version: "1"
+            Version: "1.5"
+        Version: "3.2"
+      - Name: "SDTMIG"
         References:
           - Citations:
-              - Cited Guidance: 'TCG, Appendix B'
-                Document: 'FDA'
-                Section: 'FDAB011'
-            Origin: 'FDA Business Rules'
+              - Cited Guidance: "TCG, Appendix B"
+                Document: "FDA"
+                Section: "FDAB011"
+            Origin: "FDA Business Rules"
             Rule Identifier:
-              Id: 'FB1112'
-              Version: '1'
-            Version: '1.5'
-        Version: '3.3'
-      - Name: 'SDTMIG'
+              Id: "FB1112"
+              Version: "1"
+            Version: "1.5"
+        Version: "3.3"
+      - Name: "SDTMIG"
         References:
           - Citations:
-              - Cited Guidance: 'TCG, Appendix B'
-                Document: 'FDA'
-                Section: 'FDAB011'
-            Origin: 'FDA Business Rules'
+              - Cited Guidance: "TCG, Appendix B"
+                Document: "FDA"
+                Section: "FDAB011"
+            Origin: "FDA Business Rules"
             Rule Identifier:
-              Id: 'FB1112'
-              Version: '1'
-            Version: '1.5'
-        Version: '3.4'
+              Id: "FB1112"
+              Version: "1"
+            Version: "1.5"
+        Version: "3.4"
 Check:
   all:
     - name: $PCLASS_COUNT
@@ -54,9 +54,10 @@ Check:
 Core:
   Id: FDA.SDTMIG.FB1112
   Status: Draft
-  Version: '1'
-Description: 'The count of occurrences of TSPARAMCD = PCLASS is in the list of
-  TSPARAMCD with TSVAL populated is gt 1.'
+  Version: "1"
+Description:
+  "The count of occurrences of TSPARAMCD = PCLASS is in the list of TSPARAMCD with TSVAL populated
+  is gt 1."
 Executability: Partially Executable
 Operations:
   - filter:
@@ -68,8 +69,9 @@ Operations:
     id: $INTTYPE_EXISTS
     operator: record_count
 Outcome:
-  Message: 'The count of occurrences of TSPARAMCD = PCLASS is in the list of
-    TSPARAMCD with TSVAL populated is gt 1.'
+  Message:
+    "The count of occurrences of TSPARAMCD = PCLASS is in the list of TSPARAMCD with TSVAL populated
+    is gt 1."
   Output Variables:
     - TSPARMCD
     - TSVAL

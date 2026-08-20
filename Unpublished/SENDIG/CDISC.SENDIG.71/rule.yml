@@ -4,9 +4,9 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: The Permissible Study Day variables (--DY, --STDY, and --ENDY)
-                  describe the relative day of the observation starting with the
-                  reference date as Day 1.
+              - Cited Guidance:
+                  The Permissible Study Day variables (--DY, --STDY, and --ENDY) describe the
+                  relative day of the observation starting with the reference date as Day 1.
                 Document: IG v3.0
                 Section: 4.4.4
             Origin: SEND Conformance Rules
@@ -18,9 +18,9 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: The Permissible Study Day variables (--DY, --STDY, and --ENDY)
-                  describe the relative day of the observation starting with the
-                  reference date as Day 1.
+              - Cited Guidance:
+                  The Permissible Study Day variables (--DY, --STDY, and --ENDY) describe the
+                  relative day of the observation starting with the reference date as Day 1.
                 Document: IG v3.1
                 Section: 4.4.4
             Origin: SEND Conformance Rules
@@ -32,9 +32,9 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: The Permissible Study Day variables (--DY, --STDY, and --ENDY)
-                  describe the relative day of the observation starting with the
-                  reference date as Day 1.
+              - Cited Guidance:
+                  The Permissible Study Day variables (--DY, --STDY, and --ENDY) describe the
+                  relative day of the observation starting with the reference date as Day 1.
                 Document: IG v3.1.1
                 Section: 4.4.4
             Origin: SEND Conformance Rules
@@ -46,9 +46,9 @@ Authorities:
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance: The Permissible Study Day variables (--DY, --STDY, and --ENDY)
-                  describe the relative day of the observation starting with the
-                  reference date as Day 1.
+              - Cited Guidance:
+                  The Permissible Study Day variables (--DY, --STDY, and --ENDY) describe the
+                  relative day of the observation starting with the reference date as Day 1.
                 Document: IG v3.1
                 Section: 4.4.4
             Origin: SEND Conformance Rules
@@ -60,9 +60,9 @@ Authorities:
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance: The Permissible Study Day variables (--DY, --STDY, and --ENDY)
-                  describe the relative day of the observation starting with the
-                  reference date as Day 1.
+              - Cited Guidance:
+                  The Permissible Study Day variables (--DY, --STDY, and --ENDY) describe the
+                  relative day of the observation starting with the reference date as Day 1.
                 Document: IG v3.1.1
                 Section: 4.4.4
             Origin: SEND Conformance Rules
@@ -74,9 +74,9 @@ Authorities:
       - Name: SENDIG-GENETOX
         References:
           - Citations:
-              - Cited Guidance: The Permissible Study Day variables (--DY, --STDY, and --ENDY)
-                  describe the relative day of the observation starting with the
-                  reference date as Day 1.
+              - Cited Guidance:
+                  The Permissible Study Day variables (--DY, --STDY, and --ENDY) describe the
+                  relative day of the observation starting with the reference date as Day 1.
                 Document: IG v3.1.1
                 Section: 4.4.4
             Origin: SEND Conformance Rules
@@ -100,9 +100,8 @@ Core:
   Id: CDISC.SENDIG.71
   Status: Draft
   Version: "1"
-Description: --DY = (date portion of --DTC) - (date portion of RFSTDTC) + 1 if
-  --DTC is on or after RFSTDTC; --DY = (date portion of --DTC) - (date portion
-  of RFSTDTC) if --DTC precedes RFSTDTC
+Description: --DY = (date portion of --DTC) - (date portion of RFSTDTC) + 1 if --DTC is on or after
+  RFSTDTC; --DY = (date portion of --DTC) - (date portion of RFSTDTC) if --DTC precedes RFSTDTC
 Executability: Fully Executable
 Match Datasets:
   - Keys:

@@ -1,5 +1,5 @@
 # Variable: ARM
-# Condition: 
+# Condition:
 # Rule: ARM not in ('Screen Failure', 'Not Assigned', 'Unplanned Product Exposure', 'Not Exposed to Product')
 Authorities:
   - Organization: CDISC
@@ -14,10 +14,10 @@ Authorities:
             Origin: TIG Conformance Rules
             Rule Identifier:
               Id: TIG0654
-              Version: '1'
-            Version: '1.0'
+              Version: "1"
+            Version: "1.0"
         Substandard: SDTM
-        Version: '1.0'
+        Version: "1.0"
 Check:
   all:
     - name: ARM
@@ -30,13 +30,13 @@ Check:
 Core:
   Id: "CORE-000721"
   Status: Published
-  Version: '1'
-Description: Raise an error when ARM is 'Screen Failure', 'Not Assigned',
-  'Unplanned Product Exposure', or 'Not Exposed to Product'
+  Version: "1"
+Description: Raise an error when ARM is 'Screen Failure', 'Not Assigned', 'Unplanned Product
+  Exposure', or 'Not Exposed to Product'
 Executability: Fully Executable
 Outcome:
-  Message: ARM cannot be equal to 'Screen Failure', 'Not Assigned', 'Unplanned
-    Product Exposure' or 'Not Exposed to Product'.
+  Message: ARM cannot be equal to 'Screen Failure', 'Not Assigned', 'Unplanned Product Exposure' or
+    'Not Exposed to Product'.
 Rule Type: Record Data
 Scope:
   Classes:

@@ -10,9 +10,9 @@ Authorities:
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB8601
-              Version: '1'
-            Version: '1.5'
-        Version: '3.0'
+              Version: "1"
+            Version: "1.5"
+        Version: "3.0"
       - Name: SENDIG
         References:
           - Citations:
@@ -22,9 +22,9 @@ Authorities:
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB8601
-              Version: '1'
-            Version: '1.5'
-        Version: '3.1'
+              Version: "1"
+            Version: "1.5"
+        Version: "3.1"
       - Name: SENDIG
         References:
           - Citations:
@@ -34,9 +34,9 @@ Authorities:
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB8601
-              Version: '1'
-            Version: '1.5'
-        Version: '3.1.1'
+              Version: "1"
+            Version: "1.5"
+        Version: "3.1.1"
       - Name: SENDIG-GENETOX
         References:
           - Citations:
@@ -46,9 +46,9 @@ Authorities:
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB8601
-              Version: '1'
-            Version: '1.5'
-        Version: '1.0'
+              Version: "1"
+            Version: "1.5"
+        Version: "1.0"
       - Name: SENDIG-DART
         References:
           - Citations:
@@ -58,9 +58,9 @@ Authorities:
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB8601
-              Version: '1'
-            Version: '1.5'
-        Version: '1.1'
+              Version: "1"
+            Version: "1.5"
+        Version: "1.1"
       - Name: SENDIG-DART
         References:
           - Citations:
@@ -70,9 +70,9 @@ Authorities:
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB8601
-              Version: '1'
-            Version: '1.5'
-        Version: '1.2'
+              Version: "1"
+            Version: "1.5"
+        Version: "1.2"
       - Name: SENDIG-AR
         References:
           - Citations:
@@ -82,9 +82,9 @@ Authorities:
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB8601
-              Version: '1'
-            Version: '1.5'
-        Version: '1.0'
+              Version: "1"
+            Version: "1.5"
+        Version: "1.0"
 Check:
   all:
     # throw an error when both AGE and AGETXT are not present in DM
@@ -96,7 +96,7 @@ Check:
 Core:
   Id: CORE-000645
   Status: Published
-  Version: '1'
+  Version: "1"
 Description: At least one of variables AGE or AGETXT is present in the DM dataset.
 Executability: Fully Executable
 Outcome:

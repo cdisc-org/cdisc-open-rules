@@ -4,8 +4,9 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: om.xpt, Organ Measurements - Findings. One record per test per
-                  specimen per subject, Tabulation.
+              - Cited Guidance:
+                  om.xpt, Organ Measurements - Findings. One record per test per specimen per
+                  subject, Tabulation.
                 Document: SENDIG v3.0
                 Section: 6.3.9
             Origin: SEND Conformance Rules
@@ -17,8 +18,9 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: om.xpt, Organ Measurements - Findings. One record per test per
-                  specimen per subject, Tabulation.
+              - Cited Guidance:
+                  om.xpt, Organ Measurements - Findings. One record per test per specimen per
+                  subject, Tabulation.
                 Document: SENDIG v3.1
                 Section: 6.3.9
             Origin: SEND Conformance Rules
@@ -30,8 +32,9 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: om.xpt, Organ Measurements - Findings. One record per test per
-                  specimen per subject, Tabulation.
+              - Cited Guidance:
+                  om.xpt, Organ Measurements - Findings. One record per test per specimen per
+                  subject, Tabulation.
                 Document: SENDIG v3.1.1
                 Section: 6.3.9
             Origin: SEND Conformance Rules
@@ -43,8 +46,9 @@ Authorities:
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance: om.xpt, Organ Measurements - Findings. One record per test per
-                  specimen per subject, Tabulation.
+              - Cited Guidance:
+                  om.xpt, Organ Measurements - Findings. One record per test per specimen per
+                  subject, Tabulation.
                 Document: SENDIG v3.1
                 Section: 6.3.9
             Origin: SEND Conformance Rules
@@ -56,8 +60,9 @@ Authorities:
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance: om.xpt, Organ Measurements - Findings. One record per test per
-                  specimen per subject, Tabulation.
+              - Cited Guidance:
+                  om.xpt, Organ Measurements - Findings. One record per test per specimen per
+                  subject, Tabulation.
                 Document: SENDIG v3.1.1
                 Section: 6.3.9
             Origin: SEND Conformance Rules
@@ -69,8 +74,9 @@ Authorities:
       - Name: SENDIG-GENETOX
         References:
           - Citations:
-              - Cited Guidance: om.xpt, Organ Measurements - Findings. One record per test per
-                  specimen per subject, Tabulation.
+              - Cited Guidance:
+                  om.xpt, Organ Measurements - Findings. One record per test per specimen per
+                  subject, Tabulation.
                 Document: SENDIG v3.1.1
                 Section: 6.3.9
             Origin: SEND Conformance Rules
@@ -94,8 +100,8 @@ Core:
   Id: CORE-000499
   Status: Published
   Version: "1"
-Description: Raise an error when there is more than one record present per
-  subject for any particular Organ Measurement test in the OM Domain
+Description: Raise an error when there is more than one record present per subject for any
+  particular Organ Measurement test in the OM Domain
 Executability: Fully Executable
 Outcome:
   Message: The Organ Measurement test is not unique for this subject.

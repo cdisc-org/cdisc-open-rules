@@ -1,6 +1,6 @@
 # Variable: --
-# Condition: 
-# Rule: 
+# Condition:
+# Rule:
 Authorities:
   - Organization: CDISC
     Standards:
@@ -10,16 +10,16 @@ Authorities:
               - Cited Guidance: xxx.
                 Document: IG v3.4
                 Item: Item 3.b.
-                Section: '2.6'
+                Section: "2.6"
               - Cited Guidance: yyyyyyy.
                 Document: IG v3.4
                 Section: 4.3.6
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0999
-              Version: '2'
-            Version: '2.0'
-        Version: '3.4'
+              Version: "2"
+            Version: "2.0"
+        Version: "3.4"
 
 Check:
   all:
@@ -38,9 +38,8 @@ Check:
 Core:
   Id: CDISC.SDTMIG.CG0999
   Status: Draft
-  Version: '1'
-Description: Testing rule type Variables Metadata Check against Define XML and
-  Library Metadata
+  Version: "1"
+Description: Testing rule type Variables Metadata Check against Define XML and Library Metadata
 Executability: Fully Executable
 Outcome:
   Message: "Issue with codelist definition in the Define-XML document."

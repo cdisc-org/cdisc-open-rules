@@ -4,10 +4,10 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: The TXPARMCD values marked as "Yes" in the "Should Include"
-                  column in Section 7.4.2 should be included in a well-formed TX
-                  domain submission. These TXPARMCD values are expected to occur
-                  in almost all studies and may be necessary for clear
+              - Cited Guidance:
+                  The TXPARMCD values marked as "Yes" in the "Should Include" column in
+                  Section 7.4.2 should be included in a well-formed TX domain submission. These TXPARMCD
+                  values are expected to occur in almost all studies and may be necessary for clear
                   interpretation of the data package.
                 Document: IG v3.0
                 Item: Specification
@@ -15,16 +15,16 @@ Authorities:
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND239
-              Version: '1'
-            Version: '5.0'
-        Version: '3.0'
+              Version: "1"
+            Version: "5.0"
+        Version: "3.0"
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: The TXPARMCD values marked as "Yes" in the "Should Include"
-                  column in Section 7.4.2 should be included in a well-formed TX
-                  domain submission. These TXPARMCD values are expected to occur
-                  in almost all studies and may be necessary for clear
+              - Cited Guidance:
+                  The TXPARMCD values marked as "Yes" in the "Should Include" column in
+                  Section 7.4.2 should be included in a well-formed TX domain submission. These TXPARMCD
+                  values are expected to occur in almost all studies and may be necessary for clear
                   interpretation of the data package.
                 Document: IG v3.1
                 Item: Specification
@@ -32,16 +32,16 @@ Authorities:
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND239
-              Version: '1'
-            Version: '5.0'
-        Version: '3.1'
+              Version: "1"
+            Version: "5.0"
+        Version: "3.1"
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: The TXPARMCD values marked as "Yes" in the "Should Include"
-                  column in Section 7.4.2 should be included in a well-formed TX
-                  domain submission. These TXPARMCD values are expected to occur
-                  in almost all studies and may be necessary for clear
+              - Cited Guidance:
+                  The TXPARMCD values marked as "Yes" in the "Should Include" column in
+                  Section 7.4.2 should be included in a well-formed TX domain submission. These TXPARMCD
+                  values are expected to occur in almost all studies and may be necessary for clear
                   interpretation of the data package.
                 Document: IG v3.1.1
                 Item: Specification
@@ -49,16 +49,16 @@ Authorities:
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND239
-              Version: '1'
-            Version: '5.0'
-        Version: '3.1.1'
+              Version: "1"
+            Version: "5.0"
+        Version: "3.1.1"
       - Name: SENDIG-GENETOX
         References:
           - Citations:
-              - Cited Guidance: The TXPARMCD values marked as "Yes" in the "Should Include"
-                  column in Section 7.4.2 should be included in a well-formed TX
-                  domain submission. These TXPARMCD values are expected to occur
-                  in almost all studies and may be necessary for clear
+              - Cited Guidance:
+                  The TXPARMCD values marked as "Yes" in the "Should Include" column in
+                  Section 7.4.2 should be included in a well-formed TX domain submission. These TXPARMCD
+                  values are expected to occur in almost all studies and may be necessary for clear
                   interpretation of the data package.
                 Document: IG v3.1.1
                 Item: Specification
@@ -66,16 +66,16 @@ Authorities:
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND239
-              Version: '1'
-            Version: '5.0'
-        Version: '1.0'
+              Version: "1"
+            Version: "5.0"
+        Version: "1.0"
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance: The TXPARMCD values marked as "Yes" in the "Should Include"
-                  column in Section 7.4.2 should be included in a well-formed TX
-                  domain submission. These TXPARMCD values are expected to occur
-                  in almost all studies and may be necessary for clear
+              - Cited Guidance:
+                  The TXPARMCD values marked as "Yes" in the "Should Include" column in
+                  Section 7.4.2 should be included in a well-formed TX domain submission. These TXPARMCD
+                  values are expected to occur in almost all studies and may be necessary for clear
                   interpretation of the data package.
                 Document: IG v3.1
                 Item: Specification
@@ -83,16 +83,16 @@ Authorities:
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND239
-              Version: '1'
-            Version: '5.0'
-        Version: '1.1'
+              Version: "1"
+            Version: "5.0"
+        Version: "1.1"
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance: The TXPARMCD values marked as "Yes" in the "Should Include"
-                  column in Section 7.4.2 should be included in a well-formed TX
-                  domain submission. These TXPARMCD values are expected to occur
-                  in almost all studies and may be necessary for clear
+              - Cited Guidance:
+                  The TXPARMCD values marked as "Yes" in the "Should Include" column in
+                  Section 7.4.2 should be included in a well-formed TX domain submission. These TXPARMCD
+                  values are expected to occur in almost all studies and may be necessary for clear
                   interpretation of the data package.
                 Document: IG v3.1.1
                 Item: Specification
@@ -100,9 +100,9 @@ Authorities:
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND239
-              Version: '1'
-            Version: '5.0'
-        Version: '1.2'
+              Version: "1"
+            Version: "5.0"
+        Version: "1.2"
 Check:
   # all:
   # count the number of TRTDOC records within each group
@@ -127,10 +127,10 @@ Check:
       value: 0
 Core:
   Status: Draft
-  Version: '1'
-Description: ''
+  Version: "1"
+Description: ""
 Executability: Fully Executable
-# Within each SETCD group, we must have at least one record 
+# Within each SETCD group, we must have at least one record
 # with  TXPARMCD = TRTDOS, TRTDOSU, ARMCD, SPGRPCD, and GRPLBL
 Operations:
   # count the number of records for TXPARMCD=TRTDOS within each SETCD group
@@ -139,29 +139,33 @@ Operations:
     group:
       - SETCD
     id: $num_trtdos
-    operator: record_count
-  # count the number of records for TXOARMCD=TRTDOSU within each SETCD group
+    operator:
+      record_count
+      # count the number of records for TXOARMCD=TRTDOSU within each SETCD group
   - filter:
       TXPARMCD: TRTDOSU
     group:
       - SETCD
     id: $num_trtdosu
-    operator: record_count
-  # count the number of records for TXPARMCD=ARMCD within each SETCD group
+    operator:
+      record_count
+      # count the number of records for TXPARMCD=ARMCD within each SETCD group
   - filter:
       TXPARMCD: ARMCD
     group:
       - SETCD
     id: $num_armcd
-    operator: record_count
-  # count the number of records for TXPARMCD=SPGRPCD within each SETCD group
+    operator:
+      record_count
+      # count the number of records for TXPARMCD=SPGRPCD within each SETCD group
   - filter:
       TXPARMCD: SPGRPCD
     group:
       - SETCD
     id: $num_spgrpcd
-    operator: record_count
-  # count the number of records for TXPARMCD=GRPLBL within each SETCD group
+    operator:
+      record_count
+      # count the number of records for TXPARMCD=GRPLBL within each SETCD group
   - filter:
       TXPARMCD: GRPLBL
     group:
@@ -169,8 +173,9 @@ Operations:
     id: $num_grplbl
     operator: record_count
 Outcome:
-  Message: 'For each set, a record with TXPARMCD=ARMCD, TXPARMCD=SPGRPCD,
-    TXPARMCD=GRPLBL, TXPARMCD=TRTDOC and TXPARMCD=TRTDOSU must be provided'
+  Message:
+    "For each set, a record with TXPARMCD=ARMCD, TXPARMCD=SPGRPCD, TXPARMCD=GRPLBL, TXPARMCD=TRTDOC
+    and TXPARMCD=TRTDOSU must be provided"
   Output Variables:
     - SETCD
     - $num_trtdos
@@ -186,6 +191,6 @@ Scope:
   Domains:
     Include:
       - TX
-# When set to "Dataset" only the first violation is 
+# When set to "Dataset" only the first violation is
 # When set to "Record", EVERY row within the set that violates the rule is reported
 Sensitivity: Record

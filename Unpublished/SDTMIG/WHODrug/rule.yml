@@ -6,25 +6,25 @@ Authorities:
           - Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: WHODrug
-              Version: '1'
-            Version: '2.0'
-        Version: '3.4'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.4"
       - Name: SDTMIG
         References:
           - Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: WHODrug
-              Version: '1'
-            Version: '2.0'
-        Version: '3.3'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.3"
       - Name: SDTMIG
         References:
           - Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: WHODrug
-              Version: '1'
-            Version: '2.0'
-        Version: '3.2'
+              Version: "1"
+            Version: "2.0"
+        Version: "3.2"
 Check:
   all:
     - name: $valid_whodrug_codes
@@ -33,7 +33,7 @@ Check:
 Core:
   Id: WHODrug
   Status: Draft
-  Version: '1'
+  Version: "1"
 Description: WHODRUG hierarchy is valid in provided whodrug dictionary version
 Executability: Fully Executable
 Operations:
