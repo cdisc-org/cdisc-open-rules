@@ -1,3 +1,5 @@
 Dataset,Record,Variable,Value
-DM,1,$min_ex_exstdtc,2012-11-30
-DM,1,RFXSTDTC,2012-11-29
+DM,,EXECUTION_ERROR,"Failed to execute rule operation. Operation: min_date, Target: EXSTDTC, Domain: EX, Error: Time data Char is not ISO8601 format. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this."
