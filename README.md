@@ -1,5 +1,9 @@
 # cdisc-open-rules
 
+A Note from the Dev Team: Currently, SDTM-only rules are housed in the Deprecated/ dir. This is due to ongoing work with Verisian on FDA Business Rules and SDTMIG rules. These rules may work, but their execution and data has not been fully validated — please please use discernment if using them.
+
+The same goes for SEND-only rules in Published/: as we transferred these from SharePoint, they were not scoped within v1.0. We continue to house them in Published/, but the rules and their data have not been fully validated at this juncture.
+
 **Rule Authoring Reference Guide**
 https://cdisc-org.github.io/cdisc-open-rules/#/
 
