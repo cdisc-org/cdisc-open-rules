@@ -1,5 +1,11 @@
 # cdisc-open-rules
 
+**Rule Authoring Reference Guide**
+https://cdisc-org.github.io/cdisc-open-rules/#/
+
+**Rule Engine Readme**
+https://cdisc-org.github.io/cdisc-rules-engine/#/
+
 Contains rules and test data that can be processed by CORE
 
 **BEFORE CONTRIBUTING, MAKE SURE YOU HAVE GONE THROUGH THE CDISC VOLUNTEERING ONBOARDING PROCESS** \
