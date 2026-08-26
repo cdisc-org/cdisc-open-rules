@@ -79,7 +79,7 @@ Check:
   all:
     - name: dataset_name
       operator: matches_regex
-      value: ^[a-z(?-i)]{2}[a-z(?-i)]{1,2}
+      value: ^[A-Za-z]{2}[A-Za-z]{1,2}
     - name: dataset_name
       operator: prefix_equal_to
       prefix: 2
