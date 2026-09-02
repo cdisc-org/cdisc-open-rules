@@ -2,7 +2,7 @@
 """
 Local test runner for CDISC Open Rules.
 Prompts for a rule folder path, runs the CORE engine against each test case,
-and writes results.json into each case's results/ directory.
+and writes results.csv into each case's results/ directory.
 """
 
 import os
