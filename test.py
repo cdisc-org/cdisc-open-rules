@@ -2,7 +2,7 @@
 """
 Local test runner for CDISC Open Rules.
 Prompts for a rule folder path, runs the CORE engine against each test case,
-and writes results.csv into each case's results/ directory.
+and writes results.json into each case's results/ directory.
 """
 
 import os
@@ -12,6 +12,7 @@ from pathlib import Path
 from typing import Optional, Dict, List
 
 ENGINE_DIR = Path("engine")
+CONVERT_SCRIPT = Path(".github/scripts/convert_results.py")
 
 LOG_LEVELS = ["info", "debug", "error", "critical", "disabled", "warn"]
 
@@ -50,13 +51,11 @@ def get_test_cases(rule_path: Path) -> Dict[str, List[dict]]:
             continue
         for case_dir in sorted(type_dir.iterdir()):
             if case_dir.is_dir() and (case_dir / "data").is_dir():
-                cases[test_type].append(
-                    {
-                        "case_id": case_dir.name,
-                        "data_dir": case_dir / "data",
-                        "results_dir": case_dir / "results",
-                    }
-                )
+                cases[test_type].append({
+                    "case_id":    case_dir.name,
+                    "data_dir":   case_dir / "data",
+                    "results_dir": case_dir / "results",
+                })
     return cases
 
 
@@ -70,15 +69,15 @@ def find_env_file(data_dir: Path) -> Optional[Path]:
 def next_results_path(results_dir: Path) -> Path:
     """
     Creates results/ if needed. Returns the next available -o path for the engine
-    (without extension — engine appends .csv automatically).
-    - No results.csv yet  ->  results_dir/results
-    - results.csv exists  ->  results_dir/results(1), results_dir/results(2), ...
+    (without extension — engine appends .json automatically).
+    - No results.json yet  ->  results_dir/results
+    - results.json exists  ->  results_dir/results(1), results_dir/results(2), ...
     """
     results_dir.mkdir(parents=True, exist_ok=True)
-    if not (results_dir / "results.csv").exists():
+    if not (results_dir / "results.json").exists():
         return results_dir / "results"
     n = 1
-    while (results_dir / f"results({n}).csv").exists():
+    while (results_dir / f"results({n}).json").exists():
         n += 1
     return results_dir / f"results({n})"
 
@@ -86,7 +85,6 @@ def next_results_path(results_dir: Path) -> Path:
 # ---------------------------------------------------------------------------
 # Engine invocation
 # ---------------------------------------------------------------------------
-
 
 def run_engine(
     rule_yml: Path,
@@ -100,23 +98,14 @@ def run_engine(
         return False, f"No .env file found in {data_dir}"
 
     cmd = [
-        sys.executable,
-        "core.py",
-        "validate",
-        "-lr",
-        str(rule_yml.resolve()),
-        "-d",
-        str(data_dir.resolve()),
-        "-dep",
-        str(env_file.resolve()),
-        "-of",
-        "CSV",
-        "-o",
-        str(output_path.resolve()),
-        "-p",
-        "disabled",
-        "-l",
-        log_level,
+        sys.executable, "core.py", "validate",
+        "-lr",  str(rule_yml.resolve()),
+        "-d",   str(data_dir.resolve()),
+        "-dep", str(env_file.resolve()),
+        "-of",  "JSON",
+        "-o",   str(output_path.resolve()),
+        "-p",   "disabled",
+        "-l",   log_level,
     ]
 
     try:
@@ -162,7 +151,7 @@ def run_rule(
     log_level: str,
     capture_logs: bool,
 ):
-    rule_yml = find_rule_yml(rule_path)
+    rule_yml  = find_rule_yml(rule_path)
     all_cases = get_test_cases(rule_path)
 
     if specific_case:
@@ -179,18 +168,28 @@ def run_rule(
     for test_type in ("positive", "negative"):
         for case in all_cases[test_type]:
             any_ran = True
-            case_id = case["case_id"]
-            data_dir = case["data_dir"]
+            case_id     = case["case_id"]
+            data_dir    = case["data_dir"]
             output_path = next_results_path(case["results_dir"])
 
             print(f"\n  Running {test_type}/{case_id}...")
-            ok, output = run_engine(
-                rule_yml, data_dir, output_path, log_level, capture_logs
-            )
+            ok, output = run_engine(rule_yml, data_dir, output_path, log_level, capture_logs)
 
-            csv_path = Path(str(output_path) + ".csv")
-            if ok and csv_path.exists():
-                print(f"    Done — results written to {csv_path}")
+            json_path = Path(str(output_path) + ".json")
+            if ok and json_path.exists():
+                print(f"    Done — results written to {json_path}")
+                csv_path = output_path.with_suffix(".csv")
+                try:
+                    proc = subprocess.run(
+                        [sys.executable, str(CONVERT_SCRIPT), str(json_path), str(csv_path)],
+                        capture_output=True, text=True
+                    )
+                    if proc.returncode == 0:
+                        print(f"    Done — CSV written to {csv_path}")
+                    else:
+                        print(f"    [WARN] CSV conversion failed: {proc.stderr.strip()}")
+                except Exception as e:
+                    print(f"    [WARN] CSV conversion error: {e}")
             else:
                 print(f"    [ERROR] Engine failed for {test_type}/{case_id}")
                 for line in output.splitlines():
@@ -205,7 +204,6 @@ def run_rule(
 # ---------------------------------------------------------------------------
 # Prompts
 # ---------------------------------------------------------------------------
-
 
 def prompt_rule_path() -> Path:
     print("\nEnter the path to your rule folder (e.g. Unpublished/CORE-000001).")
@@ -230,7 +228,11 @@ def prompt_rule_path() -> Path:
 
 
 def prompt_case(cases: Dict[str, List[dict]]) -> Optional[str]:
-    flat = [f"{t}/{c['case_id']}" for t in ("positive", "negative") for c in cases[t]]
+    flat = [
+        f"{t}/{c['case_id']}"
+        for t in ("positive", "negative")
+        for c in cases[t]
+    ]
     if not flat:
         return None
 
@@ -273,12 +275,11 @@ def prompt_capture_logs() -> bool:
 # Entry point
 # ---------------------------------------------------------------------------
 
-
 def main():
-    rule_path = prompt_rule_path()
-    cases = get_test_cases(rule_path)
-    specific = prompt_case(cases)
-    log_level = prompt_log_level()
+    rule_path   = prompt_rule_path()
+    cases       = get_test_cases(rule_path)
+    specific    = prompt_case(cases)
+    log_level   = prompt_log_level()
     capture_logs = prompt_capture_logs()
     run_rule(rule_path, specific, log_level, capture_logs)
 
