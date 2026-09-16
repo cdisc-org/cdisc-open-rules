@@ -27,7 +27,7 @@ For example, if your Rule column references variables from the DM domain, your s
 
 ### 3. Split Dataset Handling
 
-The `include_split_datasets` flag (when set to `true`) allows split datasets to be processed separately from their parent datasets. This is useful when you need to analyze split datasets independently.  `SPLIT DATASETS` can also be added to Domain inclusion/exclusion Scope criteria if the rule is applicable to unmerged split datasets.
+The `include_split_datasets` flag (when set to `true`) allows split datasets to be processed separately from their parent datasets. This is useful when you need to analyze split datasets independently.  `SPLIT DATASETS` and `AP SPLIT DATASETS` can also be added in Rule Domain inclusion/exclusion scope criteria if the rule is applicable to unmerged split datasets.
 
 ### 4. Use Case Selection
 
@@ -105,8 +105,19 @@ According to the schema, the following classes are available:
 ### Domains
 The following domain options are available:
 - Standard domains like `DM`, `AE`, `LB`, etc.
-- Special values like `ALL`, `AP--`, `APRELSUB`, `POOLDEF`, etc.
-- Supplementary datasets using patterns like `SUPP--`, `SUPP[domain]`
+- Special values like `ALL`, `APRELSUB`, `POOLDEF`, etc.
+- The fixed property keywords: `SUPPQUAL`, `AP--`, `SPLIT DATASETS`, `AP SPLIT DATASETS`
+
+## Fixed Property Keywords
+Unlike literal domain names (`AE`, `LB`, `APRELSUB`, etc.), the following keywords match against **derived dataset properties** rather than the dataset name itself. See [README.md](./README.md#dataset-metadata-submission-guide) for how each property is derived: for the full definitions these properties are based on.
+
+| Keyword | Matches when | Derived from |
+|---|---|---|
+| `SUPPQUAL` | Dataset name starts with `SUPP` or `SQ` | `is_supp` |
+| `AP--` | Dataset is an Associated Persons domain | `is_ap` |
+| `SPLIT DATASETS` | Dataset name differs from its unsplit/parent domain name | `is_split` |
+| `AP SPLIT DATASETS` | Dataset is an AP domain **and** split **and not** a SUPP/SQ dataset | `is_ap AND is_split AND NOT is_supp` |
+
 
 ### Data Structures
 Alternative to Classes/Domains, you can specify data structures:
