@@ -27,7 +27,7 @@ For example, if your Rule column references variables from the DM domain, your s
 
 ### 3. Split Dataset Handling
 
-The `include_split_datasets` flag (when set to `true`) allows split datasets to be processed separately from their parent datasets. This is useful when you need to analyze split datasets independently.
+The `include_split_datasets` flag (when set to `true`) allows split datasets to be processed separately from their parent datasets. This is useful when you need to analyze split datasets independently.  `SPLIT DATASETS` can also be added to Domain inclusion/exclusion Scope criteria if the rule is applicable to unmerged split datasets.
 
 ### 4. Use Case Selection
 
