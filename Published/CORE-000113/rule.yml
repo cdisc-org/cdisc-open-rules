@@ -20,10 +20,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  The concept of domain-specific variables was first introduced in SDTM v1.5.
-                  These variables are for use only in a specific domain and will be identified in the
-                  appropriate implementation guide.
+              - Cited Guidance: The concept of domain-specific variables was first introduced in SDTM v1.5. These variables are for use only in a specific domain and will be identified in the appropriate implementation guide.
                 Document: Model v1.7
                 Item: MSCONCU
                 Section: Table 2.2.12.1
@@ -55,10 +52,10 @@ Core:
   Id: CORE-000113
   Status: Published
   Version: "1"
-Description: Raise an error when --CONCU is present in a dataset other than MS.
+Description: Raise an error when --CONCU is present in a dataset other than the MS dataset.
 Executability: Fully Executable
 Outcome:
-  Message: --CONCU is present in a dataset other than MS.
+  Message: --CONCU must not be present.
   Output Variables:
     - --CONCU
 Rule Type: Record Data

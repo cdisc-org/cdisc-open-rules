@@ -4,9 +4,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  Start date/time of observation (--DTC) should be submitted, if collected,
-                  and study day of observation (--DY) should be submitted.
+              - Cited Guidance: Start date/time of observation (--DTC) should be submitted, if collected, and study day of observation (--DY) should be submitted.
                 Document: FDA
                 Section: FDAB032
             Origin: FDA Business Rules
@@ -18,9 +16,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  Start date/time of observation (--DTC) should be submitted, if collected,
-                  and study day of observation (--DY) should be submitted.
+              - Cited Guidance: Start date/time of observation (--DTC) should be submitted, if collected, and study day of observation (--DY) should be submitted.
                 Document: FDA
                 Section: FDAB032
             Origin: FDA Business Rules
@@ -32,9 +28,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  Start date/time of observation (--DTC) should be submitted, if collected,
-                  and study day of observation (--DY) should be submitted.
+              - Cited Guidance: Start date/time of observation (--DTC) should be submitted, if collected, and study day of observation (--DY) should be submitted.
                 Document: FDA
                 Section: FDAB032
             Origin: FDA Business Rules
@@ -46,9 +40,7 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance:
-                  Start date/time of observation (--DTC) should be submitted, if collected,
-                  and study day of observation (--DY) should be submitted.
+              - Cited Guidance: Start date/time of observation (--DTC) should be submitted, if collected, and study day of observation (--DY) should be submitted.
                 Document: FDA
                 Section: FDAB032
             Origin: FDA Business Rules
@@ -60,9 +52,7 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance:
-                  Start date/time of observation (--DTC) should be submitted, if collected,
-                  and study day of observation (--DY) should be submitted.
+              - Cited Guidance: Start date/time of observation (--DTC) should be submitted, if collected, and study day of observation (--DY) should be submitted.
                 Document: FDA
                 Section: FDAB032
             Origin: FDA Business Rules
@@ -74,9 +64,7 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance:
-                  Start date/time of observation (--DTC) should be submitted, if collected,
-                  and study day of observation (--DY) should be submitted.
+              - Cited Guidance: Start date/time of observation (--DTC) should be submitted, if collected, and study day of observation (--DY) should be submitted.
                 Document: FDA
                 Section: FDAB032
             Origin: FDA Business Rules
@@ -88,9 +76,7 @@ Authorities:
       - Name: SENDIG-AR
         References:
           - Citations:
-              - Cited Guidance:
-                  Start date/time of observation (--DTC) should be submitted, if collected,
-                  and study day of observation (--DY) should be submitted.
+              - Cited Guidance: Start date/time of observation (--DTC) should be submitted, if collected, and study day of observation (--DY) should be submitted.
                 Document: FDA
                 Section: FDAB032
             Origin: FDA Business Rules
@@ -102,9 +88,7 @@ Authorities:
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance:
-                  Start date/time of observation (--DTC) should be submitted, if collected,
-                  and study day of observation (--DY) should be submitted.
+              - Cited Guidance: Start date/time of observation (--DTC) should be submitted, if collected, and study day of observation (--DY) should be submitted.
                 Document: FDA
                 Section: FDAB032
             Origin: FDA Business Rules
@@ -116,9 +100,7 @@ Authorities:
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance:
-                  Start date/time of observation (--DTC) should be submitted, if collected,
-                  and study day of observation (--DY) should be submitted.
+              - Cited Guidance: Start date/time of observation (--DTC) should be submitted, if collected, and study day of observation (--DY) should be submitted.
                 Document: FDA
                 Section: FDAB032
             Origin: FDA Business Rules
@@ -130,9 +112,7 @@ Authorities:
       - Name: SENDIG-GENETOX
         References:
           - Citations:
-              - Cited Guidance:
-                  Start date/time of observation (--DTC) should be submitted, if collected,
-                  and study day of observation (--DY) should be submitted.
+              - Cited Guidance: Start date/time of observation (--DTC) should be submitted, if collected, and study day of observation (--DY) should be submitted.
                 Document: FDA
                 Section: FDAB032
             Origin: FDA Business Rules
@@ -151,12 +131,10 @@ Core:
   Id: CORE-000862
   Status: Published
   Version: "1"
-Description: When Study Day of Start of Observation (--STDY) is present in the dataset, then the
-  Start Date/Time of Observation (--STDTC) is also present in the dataset.
+Description: Raise an error when Study Day of Start of Observation (--STDY) is present in the dataset and Start Date/Time of Observation (--STDTC) is not present in the dataset.
 Executability: Fully Executable
 Outcome:
-  Message: Start Date/Time of Observation (--STDTC) variable is missing when Study Day of Start of
-    Observation (--STDY) is present.
+  Message: Start Date/Time of Observation (--STDTC) variable is missing when Study Day of Start of Observation (--STDY) is present.
 Rule Type: Record Data
 Scope:
   Classes:

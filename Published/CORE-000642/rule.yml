@@ -5,9 +5,7 @@ Authorities:
       - Name: "SDTMIG"
         References:
           - Citations:
-              - Cited Guidance:
-                  "When timing info is provided as a reference to a particular timepoint, the timepoint
-                  should be also populated."
+              - Cited Guidance: "When timing info is provided as a reference to a particular timepoint, the timepoint should be also populated."
                 Document: "FDA"
                 Section: "FDAB044"
             Origin: FDA Business Rules
@@ -19,9 +17,7 @@ Authorities:
       - Name: "SDTMIG"
         References:
           - Citations:
-              - Cited Guidance:
-                  "When timing info is provided as a reference to a particular timepoint, the timepoint
-                  should be also populated."
+              - Cited Guidance: "When timing info is provided as a reference to a particular timepoint, the timepoint should be also populated."
                 Document: "FDA"
                 Section: "FDAB044"
             Origin: FDA Business Rules
@@ -33,9 +29,7 @@ Authorities:
       - Name: "SDTMIG"
         References:
           - Citations:
-              - Cited Guidance:
-                  "When timing info is provided as a reference to a particular timepoint, the timepoint
-                  should be also populated."
+              - Cited Guidance: "When timing info is provided as a reference to a particular timepoint, the timepoint should be also populated."
                 Document: "FDA"
                 Section: "FDAB044"
             Origin: FDA Business Rules
@@ -43,15 +37,12 @@ Authorities:
               Id: "FB4404"
               Version: "1"
             Version: "1.5"
-        Version:
-          "3.4"
+        Version: "3.4"
           # REMARK: SENDIG: NOT applicable to SEND 3.0 and 3.1
       - Name: "SENDIG"
         References:
           - Citations:
-              - Cited Guidance:
-                  "When timing info is provided as a reference to a particular timepoint, the timepoint
-                  should be also populated."
+              - Cited Guidance: "When timing info is provided as a reference to a particular timepoint, the timepoint should be also populated."
                 Document: "FDA"
                 Section: "FDAB044"
             Origin: FDA Business Rules
@@ -63,9 +54,7 @@ Authorities:
       - Name: "SENDIG-DART"
         References:
           - Citations:
-              - Cited Guidance:
-                  "When timing info is provided as a reference to a particular timepoint, the timepoint
-                  should be also populated."
+              - Cited Guidance: "When timing info is provided as a reference to a particular timepoint, the timepoint should be also populated."
                 Document: "FDA"
                 Section: "FDAB044"
             Origin: FDA Business Rules
@@ -77,9 +66,7 @@ Authorities:
       - Name: "SENDIG-DART"
         References:
           - Citations:
-              - Cited Guidance:
-                  "When timing info is provided as a reference to a particular timepoint, the timepoint
-                  should be also populated."
+              - Cited Guidance: "When timing info is provided as a reference to a particular timepoint, the timepoint should be also populated."
                 Document: "FDA"
                 Section: "FDAB044"
             Origin: FDA Business Rules
@@ -91,9 +78,7 @@ Authorities:
       - Name: "SENDIG-AR"
         References:
           - Citations:
-              - Cited Guidance:
-                  "When timing info is provided as a reference to a particular timepoint, the timepoint
-                  should be also populated."
+              - Cited Guidance: "When timing info is provided as a reference to a particular timepoint, the timepoint should be also populated."
                 Document: "FDA"
                 Section: "FDAB044"
             Origin: FDA Business Rules
@@ -105,9 +90,7 @@ Authorities:
       - Name: "SENDIG-GENETOX"
         References:
           - Citations:
-              - Cited Guidance:
-                  "When timing info is provided as a reference to a particular timepoint, the timepoint
-                  should be also populated."
+              - Cited Guidance: "When timing info is provided as a reference to a particular timepoint, the timepoint should be also populated."
                 Document: "FDA"
                 Section: "FDAB044"
             Origin: FDA Business Rules
@@ -131,9 +114,7 @@ Core:
   Id: CORE-000642
   Status: Published
   Version: "1"
-Description:
-  "When Planned End of Assessment Interval (--ENINT) is populated, Time Point Reference (--TPTREF)
-  should also be populated."
+Description: "Planned End of Assessment Interval (--ENINT) is populated and Time Point Reference (--TPREF) is not populated."
 Executability: Fully Executable
 Outcome:
   Message: --ENINT is populated, but --TPTREF is missing.

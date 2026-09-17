@@ -4,9 +4,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  All records for the same USUBJID that have the same RELID are considered
-                  "related/associated."
+              - Cited Guidance: All records for the same USUBJID that have the same RELID are considered "related/associated."
                 Document: IG v3.4
                 Item: Specification
                 Section: 8.2.1
@@ -19,9 +17,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  All records for the same USUBJID that have the same RELID are considered
-                  "related/associated."
+              - Cited Guidance: All records for the same USUBJID that have the same RELID are considered "related/associated."
                 Document: IG v3.2
                 Item: Specification
                 Section: 8.2.1
@@ -34,9 +30,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  All records for the same USUBJID that have the same RELID are considered
-                  "related/associated."
+              - Cited Guidance: All records for the same USUBJID that have the same RELID are considered "related/associated."
                 Document: IG v3.3
                 Item: Specification
                 Section: 8.2.1
@@ -49,9 +43,7 @@ Authorities:
       - Name: TIG
         References:
           - Citations:
-              - Cited Guidance:
-                  All records for the same USUBJID that have the same RELID are considered
-                  "related/associated."
+              - Cited Guidance: All records for the same USUBJID that have the same RELID are considered "related/associated."
                 Document: TIG 1.0
                 Item: Specification-RELID
                 Section: 2.8.10.21
@@ -74,10 +66,10 @@ Core:
   Id: CORE-000484
   Status: Published
   Version: "1"
-Description: Within a subject, each unique RELID should be present on multiple RELREC records
+Description: Raise an error when within a subject, each unique RELID is not present on multiple RELREC records.
 Executability: Fully Executable
 Outcome:
-  Message: Unique RELID is NOT present on multiple RELREC records within a subject.
+  Message: Unique RELID is not present on multiple RELREC records within a subject.
   Output Variables:
     - RELID
 Rule Type: Record Data

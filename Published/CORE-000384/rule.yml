@@ -66,13 +66,13 @@ Core:
   Id: CORE-000384
   Status: Published
   Version: "1"
-Description: RELREC.RDOMAIN must represent a dataset that is present in the study.
+Description: Raise an error when RELREC.RDOMAIN represents a dataset that is not present in the study.
 Executability: Fully Executable
 Operations:
   - id: $study_domains
     operator: study_domains
 Outcome:
-  Message: RELREC.RDOMAIN does not represent a dataset present in the study
+  Message: RELREC.RDOMAIN must represent a dataset present in the study.
   Output Variables:
     - RDOMAIN
 Rule Type: Record Data

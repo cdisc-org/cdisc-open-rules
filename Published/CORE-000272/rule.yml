@@ -7,9 +7,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  Values for --CAT and --SCAT should not be redundant with the domain name or
-                  dictionary classification provided by --DECOD and --BODSYS.
+              - Cited Guidance: Values for --CAT and --SCAT should not be redundant with the domain name or dictionary classification provided by --DECOD and --BODSYS.
                 Document: IG v3.4
                 Section: 4.2.6
             Origin: SDTM and SDTMIG Conformance Rules
@@ -21,9 +19,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  Values for --CAT and --SCAT should not be redundant with the domain name or
-                  dictionary classification provided by --DECOD and --BODSYS.
+              - Cited Guidance: Values for --CAT and --SCAT should not be redundant with the domain name or dictionary classification provided by --DECOD and --BODSYS.
                 Document: IG v3.3
                 Section: 4.2.6
             Origin: SDTM and SDTMIG Conformance Rules
@@ -35,9 +31,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  Values for --CAT and --SCAT should not be redundant with the domain name or
-                  dictionary classification provided by --DECOD and --BODSYS.
+              - Cited Guidance: Values for --CAT and --SCAT should not be redundant with the domain name or dictionary classification provided by --DECOD and --BODSYS.
                 Document: IG v3.2
                 Section: 4.1.2.6
             Origin: SDTM and SDTMIG Conformance Rules
@@ -49,9 +43,7 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance:
-                  Values for --CAT and --SCAT should not be redundant with the domain or
-                  dictionary classification provided by --DECOD and --BODSYS.
+              - Cited Guidance: Values for --CAT and --SCAT should not be redundant with the domain or dictionary classification provided by --DECOD and --BODSYS.
                 Document: IG v.3.0
                 Section: 4.2.6
             Origin: SEND Conformance Rules
@@ -63,9 +55,7 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance:
-                  Values for --CAT and --SCAT should not be redundant with the domain or
-                  dictionary classification provided by --DECOD and --BODSYS.
+              - Cited Guidance: Values for --CAT and --SCAT should not be redundant with the domain or dictionary classification provided by --DECOD and --BODSYS.
                 Document: IG v.3.1
                 Section: 4.2.6
             Origin: SEND Conformance Rules
@@ -77,9 +67,7 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance:
-                  Values for --CAT and --SCAT should not be redundant with the domain or
-                  dictionary classification provided by --DECOD and --BODSYS.
+              - Cited Guidance: Values for --CAT and --SCAT should not be redundant with the domain or dictionary classification provided by --DECOD and --BODSYS.
                 Document: IG v.3.1.1
                 Section: 4.2.6
             Origin: SEND Conformance Rules
@@ -91,9 +79,7 @@ Authorities:
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance:
-                  Values for --CAT and --SCAT should not be redundant with the domain or
-                  dictionary classification provided by --DECOD and --BODSYS.
+              - Cited Guidance: Values for --CAT and --SCAT should not be redundant with the domain or dictionary classification provided by --DECOD and --BODSYS.
                 Document: IG v.3.1
                 Section: 4.2.6
             Origin: SEND Conformance Rules
@@ -105,9 +91,7 @@ Authorities:
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance:
-                  Values for --CAT and --SCAT should not be redundant with the domain or
-                  dictionary classification provided by --DECOD and --BODSYS.
+              - Cited Guidance: Values for --CAT and --SCAT should not be redundant with the domain or dictionary classification provided by --DECOD and --BODSYS.
                 Document: IG v.3.1.1
                 Section: 4.2.6
             Origin: SEND Conformance Rules
@@ -119,9 +103,7 @@ Authorities:
       - Name: SENDIG-GENETOX
         References:
           - Citations:
-              - Cited Guidance:
-                  Values for --CAT and --SCAT should not be redundant with the domain or
-                  dictionary classification provided by --DECOD and --BODSYS.
+              - Cited Guidance: Values for --CAT and --SCAT should not be redundant with the domain or dictionary classification provided by --DECOD and --BODSYS.
                 Document: IG v.3.1.1
                 Section: 4.2.6
             Origin: SEND Conformance Rules
@@ -133,9 +115,7 @@ Authorities:
       - Name: TIG
         References:
           - Citations:
-              - Cited Guidance:
-                  Values for --CAT and --SCAT will not be the domain name or dictionary
-                  classification represented in --DECOD and --BODSYS.
+              - Cited Guidance: Values for --CAT and --SCAT will not be the domain name or dictionary classification represented in --DECOD and --BODSYS.
                 Document: TIG 1.0
                 Item: General Conventions table NUM 7
                 Section: "2.8.7.1"
@@ -155,13 +135,13 @@ Core:
   Id: CORE-000272
   Status: Published
   Version: "1"
-Description: Raise an error when --CAT is equal to the domain label.
+Description: Raise an error when --CAT = DOMAIN.
 Executability: Fully Executable
 Operations:
   - id: $domain_label
     operator: domain_label
 Outcome:
-  Message: --CAT must not be equal to the domain label.
+  Message: --CAT is equal to DOMAIN.
   Output Variables:
     - --CAT
 Rule Type: Record Data

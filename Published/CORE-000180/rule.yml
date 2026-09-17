@@ -43,10 +43,7 @@ Authorities:
       - Name: TIG
         References:
           - Citations:
-              - Cited Guidance:
-                  Domain datasets based on the SDTM general observations classes will be named
-                  using the two-character code for the domain or using the applicable four-character code
-                  when a dataset is split.
+              - Cited Guidance: Domain datasets based on the SDTM general observations classes will be named using the two-character code for the domain or using the applicable four-character code when a dataset is split.
                 Document: TIG 1.0
                 Item: Num 2
                 Section: "2.6"
@@ -67,10 +64,10 @@ Core:
   Id: CORE-000180
   Status: Published
   Version: "1"
-Description: Raise an error when DOMAIN value length is not equal 2.
+Description: Raise an error when DOMAIN value length is not equal to 2.
 Executability: Fully Executable
 Outcome:
-  Message: Domain value length is not equal 2.
+  Message: DOMAIN value length is not equal to 2.
 Rule Type: Record Data
 Scope:
   Classes:

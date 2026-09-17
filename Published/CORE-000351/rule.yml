@@ -7,9 +7,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  Identifier used to uniquely identify a subject across all studies for all
-                  applications or submissions involving the product.
+              - Cited Guidance: Identifier used to uniquely identify a subject across all studies for all applications or submissions involving the product.
                 Document: IG v3.4
                 Item: Specification
                 Section: "5.2"
@@ -48,9 +46,7 @@ Authorities:
       - Name: TIG
         References:
           - Citations:
-              - Cited Guidance:
-                  Identifier used to uniquely identify a subject across all studies for all
-                  applications or submissions involving the product.
+              - Cited Guidance: Identifier used to uniquely identify a subject across all studies for all applications or submissions involving the product.
                 Document: TIG 1.0
                 Item: Specification
                 Section: 2.8.10.4
@@ -142,9 +138,7 @@ Authorities:
       - Name: TIG
         References:
           - Citations:
-              - Cited Guidance:
-                  A sequence of characters used to uniquely identify a subject across all
-                  studies for all applications or submissions involving the product.
+              - Cited Guidance: A sequence of characters used to uniquely identify a subject across all studies for all applications or submissions involving the product.
                 Document: TIG v1.0
                 Item: Text
                 Section: SDTM v2.1, Identifiers for All Classes, USUBJID
@@ -164,10 +158,10 @@ Core:
   Id: CORE-000351
   Status: Published
   Version: "1"
-Description: USUBJID must be unique across all studies
+Description: Raise an error when USUBJID is not unique across all studies
 Executability: Partially Executable
 Outcome:
-  Message: USUBJID is not unique within study
+  Message: USUBJID is not unique within study.
   Output Variables:
     - USUBJID
 Rule Type: Record Data

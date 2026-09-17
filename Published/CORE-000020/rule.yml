@@ -7,10 +7,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  TAETORD will not be populated for subject Elements that are not planned for
-                  the Arm to which the subject was assigned. Thus, TAETORD will not be populated for any
-                  Element with an ETCD value of UNPLAN.
+              - Cited Guidance: TAETORD will not be populated for subject Elements that are not planned for the Arm to which the subject was assigned. Thus, TAETORD will not be populated for any Element with an ETCD value of UNPLAN.
                 Document: IG v3.4
                 Item: Assumption 6
                 Section: "5.3"
@@ -23,18 +20,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  TAETORD will not be populated for subject Elements that are not planned for
-                  the Arm to which the subject was assigned. Thus, TAETORD will not be populated for any
-                  Element with an ETCD value of "UNPLAN". TAETORD will also not be populated if a subject
-                  passed through an Element that, although defined in the TE dataset, was out of place for
-                  the Arm to which the subject was assigned. For example, if a subject in a parallel study
-                  of Drug A vs. Drug B was assigned to receive Drug A, but received Drug B instead, then
-                  TAETORD would be left blank for the SE record for their Drug B Element. If a subject was
-                  assigned to receive the sequence of Elements A, B, C, D, and instead received A, D, B, C,
-                  then the sponsor would have to decide for which of these subject Element records TAETORD
-                  should be populated. The rationale for this decision should be documented in the Comments
-                  column of the define.xml.
+              - Cited Guidance: TAETORD will not be populated for subject Elements that are not planned for the Arm to which the subject was assigned. Thus, TAETORD will not be populated for any Element with an ETCD value of "UNPLAN". TAETORD will also not be populated if a subject passed through an Element that, although defined in the TE dataset, was out of place for the Arm to which the subject was assigned. For example, if a subject in a parallel study of Drug A vs. Drug B was assigned to receive Drug A, but received Drug B instead, then TAETORD would be left blank for the SE record for their Drug B Element. If a subject was assigned to receive the sequence of Elements A, B, C, D, and instead received A, D, B, C, then the sponsor would have to decide for which of these subject Element records TAETORD should be populated. The rationale for this decision should be documented in the Comments column of the define.xml.
                 Document: IG v3.2
                 Item: Assumption 8
                 Section: 5 SE
@@ -47,18 +33,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  TAETORD will not be populated for subject Elements that are not planned for
-                  the Arm to which the subject was assigned. Thus, TAETORD will not be populated for any
-                  Element with an ETCD value of "UNPLAN". TAETORD will also not be populated if a subject
-                  passed through an Element that, although defined in the TE dataset, was out of place for
-                  the Arm to which the subject was assigned. For example, if a subject in a parallel study
-                  of Drug A vs. Drug B was assigned to receive Drug A, but received Drug B instead, then
-                  TAETORD would be left blank for the SE record for their Drug B Element. If a subject was
-                  assigned to receive the sequence of Elements A, B, C, D, and instead received A, D, B, C,
-                  then the sponsor would have to decide for which of these subject Element records TAETORD
-                  should be populated. The rationale for this decision should be documented in the Comments
-                  column of the define.xml.
+              - Cited Guidance: TAETORD will not be populated for subject Elements that are not planned for the Arm to which the subject was assigned. Thus, TAETORD will not be populated for any Element with an ETCD value of "UNPLAN". TAETORD will also not be populated if a subject passed through an Element that, although defined in the TE dataset, was out of place for the Arm to which the subject was assigned. For example, if a subject in a parallel study of Drug A vs. Drug B was assigned to receive Drug A, but received Drug B instead, then TAETORD would be left blank for the SE record for their Drug B Element. If a subject was assigned to receive the sequence of Elements A, B, C, D, and instead received A, D, B, C, then the sponsor would have to decide for which of these subject Element records TAETORD should be populated. The rationale for this decision should be documented in the Comments column of the define.xml.
                 Document: IG v3.3
                 Item: Assumption 6
                 Section: "5.3"
@@ -71,10 +46,7 @@ Authorities:
       - Name: TIG
         References:
           - Citations:
-              - Cited Guidance:
-                  TAETORD will not be populated for subject Elements that are not planned for
-                  the Arm to which the subject was assigned. Thus, TAETORD will not be populated for any
-                  Element with an ETCD value of “UNPLAN”.
+              - Cited Guidance: TAETORD will not be populated for subject Elements that are not planned for the Arm to which the subject was assigned. Thus, TAETORD will not be populated for any Element with an ETCD value of “UNPLAN”.
                 Document: TIG 1.0
                 Item: Assumption  5
                 Section: 2.8.10.24
@@ -96,10 +68,10 @@ Core:
   Id: CORE-000020
   Status: Published
   Version: "1"
-Description: Raise an error when ETCD="UNPLAN" and TAETORD is not null.
+Description: Raise an error when ETCD = 'UNPLAN' but TAETORD is populated.
 Executability: Fully Executable
 Outcome:
-  Message: TAETORD should be null when ETCD = 'UNPLAN'.
+  Message: TAETORD must be null when ETCD = 'UNPLAN'.
   Output Variables:
     - ETCD
     - TAETORD

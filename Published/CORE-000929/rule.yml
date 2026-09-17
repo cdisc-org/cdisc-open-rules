@@ -5,7 +5,7 @@ Authorities:
         References:
           - Citations:
               - Cited Guidance: Using SDTM-specified standard domain names and prefixes where applicable.
-                Document: SDTMIG v3.4
+                Document: IG v3.4
                 Section: 3.2.2
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
@@ -16,10 +16,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Check the CDISC Controlled Terminology [see Appendix C - Controlled
-                  Terminology] for reserved two-character domain identifiers or abbreviations. If one has
-                  not been assigned by CDISC, then the sponsor may select the unique two-character domain
-                  code to be used consistently throughout the submission.
+              - Cited Guidance: Check the CDISC Controlled Terminology [see Appendix C - Controlled Terminology] for reserved two-character domain identifiers or abbreviations. If one has not been assigned by CDISC, then the sponsor may select the unique two-character domain code to be used consistently throughout the submission.
                 Document: IG v3.2
                 Item: 3.d
                 Section: "2.6"
@@ -32,13 +29,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  Determine the domain code, one that is not a domain code in the CDISC
-                  Controlled Terminology codelist "SDTM Domain Abbreviations" available at
-                  http://www.cancer.gov/research/resources/terminology/cdisc. If it desired to have this
-                  domain code as part of CDISC controlled terminology, then submit a request to
-                  https://ncitermform.nci.nih.gov/ncitermform/?version=cdisc. The sponsor-selected,
-                  two-character domain code should be used consistently throughout the submission.
+              - Cited Guidance: Determine the domain code, one that is not a domain code in the CDISC Controlled Terminology codelist "SDTM Domain Abbreviations" available at http://www.cancer.gov/research/resources/terminology/cdisc. If it desired to have this domain code as part of CDISC controlled terminology, then submit a request to https://ncitermform.nci.nih.gov/ncitermform/?version=cdisc. The sponsor-selected, two-character domain code should be used consistently throughout the submission.
                 Document: IG v3.3
                 Item: 3.e
                 Section: "2.6"
@@ -51,11 +42,7 @@ Authorities:
       - Name: TIG
         References:
           - Citations:
-              - Cited Guidance:
-                  A dataset is created using a domain specification in this guide when the
-                  scientific nature or role of the data is within the scope of a domain. Domains are
-                  extended or custom domain specifications are only used when data are different in nature
-                  and are not in scope for domains in this guide.
+              - Cited Guidance: A dataset is created using a domain specification in this guide when the scientific nature or role of the data is within the scope of a domain. Domains are extended or custom domain specifications are only used when data are different in nature and are not in scope for domains in this guide.
                 Document: TIG 1.0
                 Item: Table 2 Num 2
                 Section: "2.5"
@@ -147,9 +134,7 @@ Authorities:
       - Name: TIG
         References:
           - Citations:
-              - Cited Guidance:
-                  To support implementation of standards, controlled terminology will be used
-                  to name domain datasets and variables in datasets when applicable.
+              - Cited Guidance: To support implementation of standards, controlled terminology will be used to name domain datasets and variables in datasets when applicable.
                 Document: TIG v1.0
                 Item: Standards for Tabulation
                 Section: 2.3.
@@ -178,7 +163,7 @@ Core:
   Id: CORE-000929
   Status: Published
   Version: "1"
-Description: Raise and error when the DOMAIN Code is not a valid Domain Code published by CDISC.
+Description: Raise an error when a dataset is not a custom domain but the DOMAIN Code is not a valid Domain Code published by CDISC.
 Executability: Fully Executable
 Operations:
   - id: $domain_is_custom
@@ -190,7 +175,7 @@ Operations:
     operator: codelist_terms
     returntype: code
 Outcome:
-  Message: DOMAIN Code is not a published DOMAIN Code in CDISC Controlled Terminology.
+  Message: Dataset is not a custom domain, but the DOMAIN code in the define.xml document is not a published DOMAIN code in the CDISC Controlled Terminology version specified for the study.
   Output Variables:
     - $domain_lib_ccode
     - define_variable_codelist_coded_codes

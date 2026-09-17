@@ -7,10 +7,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  With the exception of studies which use multi-stage Arm assignments, must be
-                  a value of ARMCD in the Trial Arms Dataset.  If the subject was not assigned to an Arm,
-                  ARMCD is null and ARMNRS is populated
+              - Cited Guidance: With the exception of studies which use multi-stage Arm assignments, must be a value of ARMCD in the Trial Arms Dataset.  If the subject was not assigned to an Arm, ARMCD is null and ARMNRS is populated
                 Document: IG v3.4
                 Item: Specification
                 Section: "5.2"
@@ -23,11 +20,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  With the exception of studies which use multi-stage arm assignments, must be
-                  a value of ARMCD in the Trial Arms Dataset. If the subject was not assigned to an arm or
-                  followed a course not described by any planned arm, ACTARMCD is null and ARMNRS is
-                  populated.
+              - Cited Guidance: With the exception of studies which use multi-stage arm assignments, must be a value of ARMCD in the Trial Arms Dataset. If the subject was not assigned to an arm or followed a course not described by any planned arm, ACTARMCD is null and ARMNRS is populated.
                 Document: IG v3.3
                 Item: Specification
                 Section: "5.2"
@@ -40,10 +33,7 @@ Authorities:
       - Name: TIG
         References:
           - Citations:
-              - Cited Guidance:
-                  With the exception of studies which use multi-stage Arm assignments, must be
-                  a value of ARMCD in the Trial Arms Dataset.  If the subject was not assigned to an Arm,
-                  ARMCD is null and ARMNRS is populated
+              - Cited Guidance: With the exception of studies which use multi-stage Arm assignments, must be a value of ARMCD in the Trial Arms Dataset.  If the subject was not assigned to an Arm, ARMCD is null and ARMNRS is populated
                 Document: TIG 1.0
                 Item: Specification:ARMCD
                 Section: 2.8.10.4
@@ -65,10 +55,7 @@ Core:
   Id: CORE-000210
   Status: Published
   Version: "1"
-Description: When study does not use multi-stage arm assignments and ARMCD is populated, ARMCD must
-  be present in TA.ARMCD. This rule has been executed to identify all cases when ARMCD is not
-  present in TA.ARMCD and therefore acknowledges that false positives may be recorded when
-  multi-stage arm assignments are in use.
+Description: Raise an error when ARMCD value in DM dataset does not match any ARMCD value in TA dataset.
 Executability: Partially Executable - Possible Overreporting
 Operations:
   - domain: TA
@@ -76,7 +63,7 @@ Operations:
     name: ARMCD
     operator: distinct
 Outcome:
-  Message: ARMCD is not present in TA.ARMCD
+  Message: ARMCD value in DM dataset does not match any ARMCD value in TA dataset. This is only acceptable for multi-stage studies with incomplete ARM assignments.
 Rule Type: Record Data
 Scope:
   Classes:

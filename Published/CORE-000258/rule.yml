@@ -7,10 +7,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  The description or date and/or time of a time point that acts as a fixed
-                  reference  for characterizing the start of an observation. This is the sponsor-defined
-                  reference point referred to by --STRTPT.
+              - Cited Guidance: The description or date and/or time of a time point that acts as a fixed reference  for characterizing the start of an observation. This is the sponsor-defined reference point referred to by --STRTPT.
                 Document: Model v2.0
                 Item: --STTPT
                 Section: Timing
@@ -23,12 +20,9 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  Description or date/time in ISO 8601 or other character format of the
-                  sponsor-defined reference point referred to by --STRTPT. Examples; "2003-12-15" or "VISIT
-                  1".
+              - Cited Guidance: 'Description or date/time in ISO 8601 or other character format of the sponsor-defined reference point referred to by --STRTPT. Examples: "2003-12-15" or "VISIT 1".'
                 Document: Model v1.7
-                Item: Table 2.2.5.1 --STTPT
+                Item: 'Table 2.2.5.1: --STTPT'
                 Section: 2.2.5 Timing Variables for All Classes
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
@@ -39,10 +33,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  (--STTPT) Description or date/time in ISO 8601 or other character format of
-                  the sponsor-defined reference point referred to by --STRTPT. Examples; "2003-12-15" or
-                  "VISIT 1".
+              - Cited Guidance: '(--STTPT) Description or date/time in ISO 8601 or other character format of the sponsor-defined reference point referred to by --STRTPT. Examples: "2003-12-15" or "VISIT 1".'
                 Document: Model v1.4
                 Item: Specification
                 Section: 2.2.5 Timing Variables for All Classes
@@ -55,10 +46,7 @@ Authorities:
       - Name: TIG
         References:
           - Citations:
-              - Cited Guidance:
-                  The description or date and/or time of a time point that acts as a fixed
-                  reference for characterizing the start of an observation. This is the sponsor-defined
-                  reference point referred to by --STRTPT.
+              - Cited Guidance: The description or date and/or time of a time point that acts as a fixed reference for characterizing the start of an observation. This is the sponsor-defined reference point referred to by --STRTPT.
                 Document: SDTM v2.1
                 Item: --STTPT
                 Section: Section 3.1.5 Timing Variables for All Classes
@@ -79,8 +67,7 @@ Core:
   Id: CORE-000258
   Status: Published
   Version: "1"
-Description: Raise an error when --STRTPT is present in dataset and --STTPT is not present in
-  dataset.
+Description: Raise an error when --STRTPT is present in dataset and --STTPT is not present in dataset.
 Executability: Fully Executable
 Outcome:
   Message: --STRTPT is present in dataset, but --STTPT is not present in dataset.

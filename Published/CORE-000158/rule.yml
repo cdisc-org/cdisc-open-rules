@@ -7,10 +7,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  Identifying variable in the parent dataset that identifies the record(s) to
-                  which the comment applies.  Examples AESEQ or CMGRPID. Used only when individual comments
-                  are related to domain records.  Null for comments collected on separate CRFs.
+              - Cited Guidance: Identifying variable in the parent dataset that identifies the record(s) to which the comment applies.  Examples AESEQ or CMGRPID. Used only when individual comments are related to domain records.  Null for comments collected on separate CRFs.
                 Document: IG v3.4
                 Item: Specification
                 Section: "5.1"
@@ -23,10 +20,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  Identifying variable in the parent dataset that identifies the record(s) to
-                  which the comment applies. Examples AESEQ or CMGRPID. Used only when individual comments
-                  are related to domain records. null for comments collected on separate CRFs.
+              - Cited Guidance: Identifying variable in the parent dataset that identifies the record(s) to which the comment applies. Examples AESEQ or CMGRPID. Used only when individual comments are related to domain records. null for comments collected on separate CRFs.
                 Document: IG v3.2
                 Item: Specification
                 Section: "5"
@@ -39,10 +33,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  Identifying variable in the parent dataset that identifies the record(s) to
-                  which the comment applies. Examples AESEQ or CMGRPID. Used only when individual comments
-                  are related to domain records. null for comments collected on separate CRFs.
+              - Cited Guidance: Identifying variable in the parent dataset that identifies the record(s) to which the comment applies. Examples AESEQ or CMGRPID. Used only when individual comments are related to domain records. null for comments collected on separate CRFs.
                 Document: IG v3.3
                 Item: Specification
                 Section: "5.1"
@@ -55,10 +46,7 @@ Authorities:
       - Name: TIG
         References:
           - Citations:
-              - Cited Guidance:
-                  Identifying variable in the parent dataset that identifies the record(s) to
-                  which the comment applies. Examples AESEQ or CMGRPID. Used only when individual comments
-                  are related to domain records. Null for comments collected on separate CRFs.
+              - Cited Guidance: Identifying variable in the parent dataset that identifies the record(s) to which the comment applies. Examples AESEQ or CMGRPID. Used only when individual comments are related to domain records. Null for comments collected on separate CRFs.
                 Document: TIG 1.0
                 Item: Specification
                 Section: 2.8.10.2
@@ -85,10 +73,10 @@ Core:
   Id: CORE-000158
   Status: Published
   Version: "1"
-Description: IDVAR must be specified.
+Description: Raise an error when RDOMAIN is populated and is not equal to 'DM' but IDVAR is not populated.
 Executability: Fully Executable
 Outcome:
-  Message: IDVAR should not be missing when RDOMAIN is not in (empty, DM).
+  Message: IDVAR must be populated when RDOMAIN is populated and is not equal to 'DM'.
   Output Variables:
     - RDOMAIN
     - IDVAR

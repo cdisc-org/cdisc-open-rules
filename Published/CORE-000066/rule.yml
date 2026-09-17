@@ -7,9 +7,10 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: --RPENDY is not be used in human clinical trials.
-                Document: SDTM v2.0
+              - Cited Guidance: Not in human clinical trials.
+                Document: Model v2.0
                 Section: Timing
+                Item: --RPENDY
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0639
@@ -41,7 +42,7 @@ Core:
 Description: Raise an error when --RPENDY is present.
 Executability: Fully Executable
 Outcome:
-  Message: --RPENDY is present.
+  Message: --RPENDY must not be present.
 Rule Type: Record Data
 Scope:
   Classes:

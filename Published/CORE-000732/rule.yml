@@ -137,10 +137,10 @@ Core:
   Id: CORE-000732
   Status: Published
   Version: "1"
-Description: "--STRESC is not populated with a numeric value, but --STRESN is not empty."
+Description: "--STRESC is not populated with a numeric value and --STRESN is not populated."
 Executability: Fully Executable
 Outcome:
-  Message: "--STRESC is not numeric but --STRESN is not empty"
+  Message: "--STRESC is not numeric but --STRESN is populated."
   Output Variables:
     - --STRESC
     - --STRESN

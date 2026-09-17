@@ -7,15 +7,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  The permissible Study Day variables (--DY, --STDY, and --ENDY) describe the
-                  relative day of the observation  starting with the reference date as Day 1. They are
-                  determined by comparing the date portion of the  respective date/time variables (--DTC,
-                  --STDTC, and --ENDTC) to the date portion of the Subject Reference  Start Date (RFSTDTC
-                  from the Demographics domain). All Study Day values are integers. Thus, to calculate Study
-                  Day,  --DY = (date portion of --DTC) - (date portion of RFSTDTC) + 1 if --DTC is on or
-                  after RFSTDTC,  --DY = (date portion of --DTC) - (date portion of RFSTDTC) if --DTC
-                  precedes RFSTDTC.  This algorithm should be used across all domains.
+              - Cited Guidance: The permissible Study Day variables (--DY, --STDY, and --ENDY) describe the relative day of the observation  starting with the reference date as Day 1. They are determined by comparing the date portion of the  respective date/time variables (--DTC, --STDTC, and --ENDTC) to the date portion of the Subject Reference  Start Date (RFSTDTC from the Demographics domain). All Study Day values are integers. Thus, to calculate Study Day,  --DY = (date portion of --DTC) - (date portion of RFSTDTC) + 1 if --DTC is on or after RFSTDTC,  --DY = (date portion of --DTC) - (date portion of RFSTDTC) if --DTC precedes RFSTDTC.  This algorithm should be used across all domains.
                 Document: IG v3.4
                 Section: 4.4.4
             Origin: SDTM and SDTMIG Conformance Rules
@@ -27,15 +19,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  "[The permissible Study Day variables (--DY, --STDY, and --ENDY) describe the
-                  relative day of the observation starting with the reference date as Day 1. They are determined
-                  by comparing the date portion of the respective date/time variables (--DTC, --STDTC, and --ENDTC)
-                  to the date portion of the Subject Reference Start Date (RFSTDTC from the Demographics domain).][All
-                  Study Day values are integers. Thus, to calculate Study Day: --DY = (date portion of --DTC)
-                  - (date portion of RFSTDTC) + 1 if --DTC is on or after RFSTDTC, --DY = (date portion of --DTC)
-                  - (date portion of RFSTDTC) if --DTC precedes RFSTDTC. This algorithm should be used across
-                  all domains.]"
+              - Cited Guidance: "[The permissible Study Day variables (--DY, --STDY, and --ENDY) describe the relative day of the observation starting with the reference date as Day 1. They are determined by comparing the date portion of the respective date/time variables (--DTC, --STDTC, and --ENDTC) to the date portion of the Subject Reference Start Date (RFSTDTC from the Demographics domain).][All Study Day values are integers. Thus, to calculate Study Day: --DY = (date portion of --DTC) - (date portion of RFSTDTC) + 1 if --DTC is on or after RFSTDTC, --DY = (date portion of --DTC) - (date portion of RFSTDTC) if --DTC precedes RFSTDTC. This algorithm should be used across all domains.]"
                 Document: IG v3.2
                 Section: 4.1.4
             Origin: SDTM and SDTMIG Conformance Rules
@@ -47,15 +31,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  "[The permissible Study Day variables (--DY, --STDY, and --ENDY) describe the
-                  relative day of the observation starting with the reference date as Day 1. They are determined
-                  by comparing the date portion of the respective date/time variables (--DTC, --STDTC, and --ENDTC)
-                  to the date portion of the Subject Reference Start Date (RFSTDTC from the Demographics domain).][All
-                  Study Day values are integers. Thus, to calculate Study Day: --DY = (date portion of --DTC)
-                  - (date portion of RFSTDTC) + 1 if --DTC is on or after RFSTDTC, --DY = (date portion of --DTC)
-                  - (date portion of RFSTDTC) if --DTC precedes RFSTDTC. This algorithm should be used across
-                  all domains.]"
+              - Cited Guidance: "[The permissible Study Day variables (--DY, --STDY, and --ENDY) describe the relative day of the observation starting with the reference date as Day 1. They are determined by comparing the date portion of the respective date/time variables (--DTC, --STDTC, and --ENDTC) to the date portion of the Subject Reference Start Date (RFSTDTC from the Demographics domain).][All Study Day values are integers. Thus, to calculate Study Day: --DY = (date portion of --DTC) - (date portion of RFSTDTC) + 1 if --DTC is on or after RFSTDTC, --DY = (date portion of --DTC) - (date portion of RFSTDTC) if --DTC precedes RFSTDTC. This algorithm should be used across all domains.]"
                 Document: IG v3.3
                 Section: 4.4.4
             Origin: SDTM and SDTMIG Conformance Rules
@@ -67,15 +43,7 @@ Authorities:
       - Name: TIG
         References:
           - Citations:
-              - Cited Guidance:
-                  "The permissible Study Day variables (--DY, --STDY, and --ENDY) describe the relative
-                  day of the observation starting with the reference date as Day 1. They are determined by comparing
-                  the date portion of the respective date/time variables (--DTC, --STDTC, and --ENDTC) to the
-                  date portion of the Subject Reference Start Date (RFSTDTC from the Demographics domain).][All
-                  Study Day values are integers. Thus, to calculate Study Day; --DY = (date portion of --DTC)
-                  - (date portion of RFSTDTC) + 1 if --DTC is on or after RFSTDTC, --DY = (date portion of --DTC)
-                  - (date portion of RFSTDTC) if --DTC precedes RFSTDTC. This algorithm should be used across
-                  all domains."
+              - Cited Guidance: "The permissible Study Day variables (--DY, --STDY, and --ENDY) describe the relative day of the observation starting with the reference date as Day 1. They are determined by comparing the date portion of the respective date/time variables (--DTC, --STDTC, and --ENDTC) to the date portion of the Subject Reference Start Date (RFSTDTC from the Demographics domain).][All Study Day values are integers. Thus, to calculate Study Day; --DY = (date portion of --DTC) - (date portion of RFSTDTC) + 1 if --DTC is on or after RFSTDTC, --DY = (date portion of --DTC) - (date portion of RFSTDTC) if --DTC precedes RFSTDTC. This algorithm should be used across all domains."
                 Document: TIG 1.0
                 Item: Num 1
                 Section: 2.8.7.6
@@ -101,7 +69,7 @@ Core:
   Id: CORE-000553
   Status: Published
   Version: "1"
-Description: Study day must be calculated using the algorithm detailed in the SDTMIG.
+Description: Raise an error when Study Day of End of Observation (--ENDY) is not correctly calculated as per the study day algorithm as a non-zero integer value when the date portion of --ENDTC is complete and the date portion of RFSTDTC is complete.
 Executability: Fully Executable
 Match Datasets:
   - Keys:
@@ -112,7 +80,7 @@ Operations:
     name: --ENDTC
     operator: dy
 Outcome:
-  Message: --ENDY is not properly calculated per study day algorithm
+  Message: --ENDY is not calculated correctly even though the date portion of --ENDTC is complete and the date portion of RFSTDTC is complete.
   Output Variables:
     - --ENDY
     - --ENDTC

@@ -7,9 +7,7 @@ Authorities:
       - Name: "SDTMIG"
         References:
           - Citations:
-              - Cited Guidance:
-                  Records with a baseline flag should have a corresponding standard result
-                  with a standardized unit where available.
+              - Cited Guidance: Records with a baseline flag should have a corresponding standard result with a standardized unit where available.
                 Document: "FDA"
                 Section: "FDAB026"
             Origin: "FDA Business Rules"
@@ -21,9 +19,7 @@ Authorities:
       - Name: "SDTMIG"
         References:
           - Citations:
-              - Cited Guidance:
-                  Records with a baseline flag should have a corresponding standard result
-                  with a standardized unit where available.
+              - Cited Guidance: Records with a baseline flag should have a corresponding standard result with a standardized unit where available.
                 Document: "FDA"
                 Section: "FDAB026"
             Origin: "FDA Business Rules"
@@ -35,9 +31,7 @@ Authorities:
       - Name: "SDTMIG"
         References:
           - Citations:
-              - Cited Guidance:
-                  Records with a baseline flag should have a corresponding standard result
-                  with a standardized unit where available.
+              - Cited Guidance: Records with a baseline flag should have a corresponding standard result with a standardized unit where available.
                 Document: "FDA"
                 Section: "FDAB026"
             Origin: "FDA Business Rules"
@@ -49,9 +43,7 @@ Authorities:
       - Name: "SENDIG"
         References:
           - Citations:
-              - Cited Guidance:
-                  Records with a baseline flag should have a corresponding standard result
-                  with a standardized unit where available.
+              - Cited Guidance: Records with a baseline flag should have a corresponding standard result with a standardized unit where available.
                 Document: "FDA"
                 Section: "FDAB026"
             Origin: "FDA Business Rules"
@@ -63,9 +55,7 @@ Authorities:
       - Name: "SENDIG"
         References:
           - Citations:
-              - Cited Guidance:
-                  Records with a baseline flag should have a corresponding standard result
-                  with a standardized unit where available.
+              - Cited Guidance: Records with a baseline flag should have a corresponding standard result with a standardized unit where available.
                 Document: "FDA"
                 Section: "FDAB026"
             Origin: "FDA Business Rules"
@@ -77,9 +67,7 @@ Authorities:
       - Name: "SENDIG"
         References:
           - Citations:
-              - Cited Guidance:
-                  Records with a baseline flag should have a corresponding standard result
-                  with a standardized unit where available.
+              - Cited Guidance: Records with a baseline flag should have a corresponding standard result with a standardized unit where available.
                 Document: "FDA"
                 Section: "FDAB026"
             Origin: "FDA Business Rules"
@@ -91,9 +79,7 @@ Authorities:
       - Name: "SENDIG-GENETOX"
         References:
           - Citations:
-              - Cited Guidance:
-                  Records with a baseline flag should have a corresponding standard result
-                  with a standardized unit where available.
+              - Cited Guidance: Records with a baseline flag should have a corresponding standard result with a standardized unit where available.
                 Document: "FDA"
                 Section: "FDAB026"
             Origin: "FDA Business Rules"
@@ -105,9 +91,7 @@ Authorities:
       - Name: "SENDIG-DART"
         References:
           - Citations:
-              - Cited Guidance:
-                  Records with a baseline flag should have a corresponding standard result
-                  with a standardized unit where available.
+              - Cited Guidance: Records with a baseline flag should have a corresponding standard result with a standardized unit where available.
                 Document: "FDA"
                 Section: "FDAB026"
             Origin: "FDA Business Rules"
@@ -119,9 +103,7 @@ Authorities:
       - Name: "SENDIG-DART"
         References:
           - Citations:
-              - Cited Guidance:
-                  Records with a baseline flag should have a corresponding standard result
-                  with a standardized unit where available.
+              - Cited Guidance: Records with a baseline flag should have a corresponding standard result with a standardized unit where available.
                 Document: "FDA"
                 Section: "FDAB026"
             Origin: "FDA Business Rules"
@@ -133,9 +115,7 @@ Authorities:
       - Name: "SENDIG-AR"
         References:
           - Citations:
-              - Cited Guidance:
-                  Records with a baseline flag should have a corresponding standard result
-                  with a standardized unit where available.
+              - Cited Guidance: Records with a baseline flag should have a corresponding standard result with a standardized unit where available.
                 Document: "FDA"
                 Section: "FDAB026"
             Origin: "FDA Business Rules"
@@ -165,8 +145,7 @@ Core:
   Id: CORE-000914
   Status: Published
   Version: "1"
-Description: There should be only one record with a baseline flag and non missing character standard
-  result value having the same --TESTCD, --CAT, --SCAT, --SPEC, --METHOD values.
+Description: Exactly one record is present with a baseline flag (--BLFL is equal to 'Y') per unique --TESTCD, --CAT, --SCAT, --SPEC, --METHOD combination.
 Executability: Fully Executable
 Outcome:
   Message: There are multiple records per assigned baseline flag (--BLFL).

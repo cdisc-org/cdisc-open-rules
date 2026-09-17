@@ -7,12 +7,9 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  The complete list of Inclusion/Exclusion criteria can be found in the Trial
-                  Inclusion/Exclusion Criteria (TI) dataset described in Section 7.4.1, Trial
-                  Inclusion/Exclusion Criteria.
+              - Cited Guidance: The complete list of Inclusion/Exclusion criteria can be found in the Trial Inclusion/Exclusion Criteria (TI) dataset described in Section 7.4.1, Trial Inclusion/Exclusion Criteria.
                 Document: IG v3.4
-                Item: Specification
+                Item: Assumption 1
                 Section: 6.3.4
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
@@ -23,10 +20,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  "The complete list of Inclusion/Exclusion criteria can be found in the TI trial
-                  inclusion/exclusion criteria dataset described in Section 7.4 - Trial Summary and Eligibility:
-                  Trial Inclusion/Exclusion Criteria (TI)."
+              - Cited Guidance: "The complete list of Inclusion/Exclusion criteria can be found in the TI trial inclusion/exclusion criteria dataset described in Section 7.4 - Trial Summary and Eligibility: Trial Inclusion/Exclusion Criteria (TI)."
                 Document: IG v3.2
                 Item: Assumption 2
                 Section: "6.3"
@@ -39,10 +33,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  The complete list of Inclusion/Exclusion criteria can be found in the Trial
-                  Inclusion/Exclusion Criteria (TI) dataset described in Section 7.4.1, Trial
-                  Inclusion/Exclusion Criteria.
+              - Cited Guidance: The complete list of Inclusion/Exclusion criteria can be found in the Trial Inclusion/Exclusion Criteria (TI) dataset described in Section 7.4.1, Trial Inclusion/Exclusion Criteria.
                 Document: IG v3.3
                 Item: Assumption 1
                 Section: 6.3.4
@@ -55,9 +46,7 @@ Authorities:
       - Name: TIG
         References:
           - Citations:
-              - Cited Guidance:
-                  The complete list of Inclusion/Exclusion criteria can be found in the Trial
-                  Inclusion/Exclusion Criteria (TI) dataset.
+              - Cited Guidance: The complete list of Inclusion/Exclusion criteria can be found in the Trial Inclusion/Exclusion Criteria (TI) dataset.
                 Document: TIG 1.0
                 Item: Assumption 1
                 Section: 2.8.10.13
@@ -77,7 +66,7 @@ Core:
   Id: CORE-000228
   Status: Published
   Version: "1"
-Description: Check if IETESTCD is present in TI.IETESTCD
+Description: Raise an error when IETESTCD does not exist in IETESTCD in the TI dataset.
 Executability: Fully Executable
 Operations:
   - domain: TI
@@ -85,7 +74,7 @@ Operations:
     name: IETESTCD
     operator: distinct
 Outcome:
-  Message: IETESTCD from IE domain does not exist in IETESTCD of TI domain.
+  Message: IETESTCD value does not match any IETESTCD value in the TI dataset.
   Output Variables:
     - IETESTCD
 Rule Type: Record Data

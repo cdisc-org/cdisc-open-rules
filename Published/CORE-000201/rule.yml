@@ -7,9 +7,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: The unique subject identifier (USUBJID) is required in all datasets
-                  containing subject-level data. USUBJID values must be unique for each trial participant
-                  (subject) across all trials in the submission.
+              - Cited Guidance: The unique subject identifier (USUBJID) is required in all datasets containing subject-level data. USUBJID values must be unique for each trial participant (subject) across all trials in the submission.
                 Document: IG v3.4
                 Section: 4.2.3
             Origin: SDTM and SDTMIG Conformance Rules
@@ -21,9 +19,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: The unique subject identifier (USUBJID) is required in all datasets
-                  containing subject-level data. USUBJID values must be unique for each trial participant
-                  (subject) across all trials in the submission.
+              - Cited Guidance: The unique subject identifier (USUBJID) is required in all datasets containing subject-level data. USUBJID values must be unique for each trial participant (subject) across all trials in the submission.
                 Document: IG v3.3
                 Section: 4.2.3
             Origin: SDTM and SDTMIG Conformance Rules
@@ -35,10 +31,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  "... a unique identifier (USUBJID) should be assigned and included in all datasets.
-                  The unique subject identifier (USUBJID) is required in all datasets containing subject-level
-                  data."
+              - Cited Guidance: "... a unique identifier (USUBJID) should be assigned and included in all datasets. The unique subject identifier (USUBJID) is required in all datasets containing subject-level data."
                 Document: IG v3.2
                 Section: 4.1.2.3
             Origin: SDTM and SDTMIG Conformance Rules
@@ -50,10 +43,7 @@ Authorities:
       - Name: TIG
         References:
           - Citations:
-              - Cited Guidance:
-                  Identifier used to uniquely identify a subject across all studies for all
-                  applications or submissions involving the product. This must be a unique value, and could
-                  be a compound identifier formed by concatenating STUDYID-SITEID-SUBJID.
+              - Cited Guidance: Identifier used to uniquely identify a subject across all studies for all applications or submissions involving the product. This must be a unique value, and could be a compound identifier formed by concatenating STUDYID-SITEID-SUBJID.
                 Document: TIG 1.0
                 Item: Specification- USUBJID
                 Section: 2.8.10.4
@@ -67,10 +57,7 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance:
-                  To identify a subject uniquely across a submission, a unique identifier
-                  (USUBJID) should be assigned and included in all subject-related datasets in the
-                  submission.
+              - Cited Guidance: To identify a subject uniquely across a submission, a unique identifier (USUBJID) should be assigned and included in all subject-related datasets in the submission.
                 Document: SENDIG v3.0
                 Item: Assumption 1
                 Section: 5.1.1.1
@@ -83,10 +70,7 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance:
-                  To identify a subject uniquely across a submission, a unique identifier
-                  (USUBJID) should be assigned and included in all subject-related datasets in the
-                  submission.
+              - Cited Guidance: To identify a subject uniquely across a submission, a unique identifier (USUBJID) should be assigned and included in all subject-related datasets in the submission.
                 Document: SENDIG v3.1
                 Item: Assumption 1
                 Section: 5.1.1.1
@@ -99,10 +83,7 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance:
-                  To identify a subject uniquely across a submission, a unique identifier
-                  (USUBJID) should be assigned and included in all subject-related datasets in the
-                  submission.
+              - Cited Guidance: To identify a subject uniquely across a submission, a unique identifier (USUBJID) should be assigned and included in all subject-related datasets in the submission.
                 Document: SENDIG v3.1.1
                 Item: Assumption 1
                 Section: 5.1.1.1
@@ -115,10 +96,7 @@ Authorities:
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance:
-                  To identify a subject uniquely across a submission, a unique identifier
-                  (USUBJID) should be assigned and included in all subject-related datasets in the
-                  submission.
+              - Cited Guidance: To identify a subject uniquely across a submission, a unique identifier (USUBJID) should be assigned and included in all subject-related datasets in the submission.
                 Document: SENDIG v3.1
                 Item: Assumption 1
                 Section: 5.1.1.1
@@ -131,10 +109,7 @@ Authorities:
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance:
-                  To identify a subject uniquely across a submission, a unique identifier
-                  (USUBJID) should be assigned and included in all subject-related datasets in the
-                  submission.
+              - Cited Guidance: To identify a subject uniquely across a submission, a unique identifier (USUBJID) should be assigned and included in all subject-related datasets in the submission.
                 Document: SENDIG v3.1.1
                 Item: Assumption 1
                 Section: 5.5.5.1
@@ -147,10 +122,7 @@ Authorities:
       - Name: SENDIG-GENETOX
         References:
           - Citations:
-              - Cited Guidance:
-                  To identify a subject uniquely across a submission, a unique identifier
-                  (USUBJID) should be assigned and included in all subject-related datasets in the
-                  submission.
+              - Cited Guidance: To identify a subject uniquely across a submission, a unique identifier (USUBJID) should be assigned and included in all subject-related datasets in the submission.
                 Document: SENDIG v3.1.1
                 Item: Assumption 1
                 Section: 5.1.1.1
@@ -163,9 +135,7 @@ Authorities:
       - Name: TIG
         References:
           - Citations:
-              - Cited Guidance:
-                  Identifier used to uniquely identify a subject across all studies for all
-                  applications or submissions involving the product.
+              - Cited Guidance: Identifier used to uniquely identify a subject across all studies for all applications or submissions involving the product.
                 Document: TIG 1.0
                 Item: USUBJID CDISC Notes
                 Section: 2.8.9.6 SEND Demographics (DM)
@@ -187,8 +157,7 @@ Core:
   Id: CORE-000201
   Status: Published
   Version: "1"
-Description: Trigger error when domain is not an AP-- domain and USUBJID is not present in
-  DM.USUBJID
+Description: Raise an error when domain is not an AP-- domain but USUBJID value is not present in the DM dataset.
 Executability: Fully Executable
 Operations:
   - domain: DM
@@ -196,7 +165,7 @@ Operations:
     name: USUBJID
     operator: distinct
 Outcome:
-  Message: USUBJID is not found in DM.USUBJID
+  Message: USUBJID value is missing in the DM dataset.
 Rule Type: Record Data
 Scope:
   Classes:

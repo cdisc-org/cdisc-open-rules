@@ -75,10 +75,10 @@ Core:
   Id: CORE-000122
   Status: Published
   Version: "1"
-Description: Raise an error when AGEU is completed but both AGETXT and AGE are not completed.
+Description: Raise an error when AGEU is populated, but neither AGE nor AGETXT is populated.
 Executability: Fully Executable
 Outcome:
-  Message: AGEU is completed, but both AGE and AGETXT are not completed.
+  Message: AGE or AGETXT must be populated when AGEU is populated.
   Output Variables:
     - AGE
     - AGEU

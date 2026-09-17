@@ -7,10 +7,8 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  Reference value for continuous or numeric results or findings in standard
-                  format or in standard units. --STREFN uses the same units as --STRESN, if applicable.
-                Document: SDTM v2.0
+              - Cited Guidance: Reference value for continuous or numeric results or findings in standard format or in standard units. --STREFN uses the same units as --STRESN, if applicable.
+                Document: Model v2.0
                 Item: --STREFN
                 Section: Findings
             Origin: SDTM and SDTMIG Conformance Rules
@@ -22,9 +20,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  Reference value for continuous or numeric results or findings in standard
-                  format or in standard units. --STREFN uses the same units as --STRESN, if applicable
+              - Cited Guidance: Reference value for continuous or numeric results or findings in standard format or in standard units. --STREFN uses the same units as --STRESN, if applicable
                 Document: Model v1.7
                 Item: --STREFN
                 Section: Table 2.2.3
@@ -37,9 +33,7 @@ Authorities:
       - Name: TIG
         References:
           - Citations:
-              - Cited Guidance:
-                  Reference value for continuous or numeric results or findings in standard
-                  format or in standard units. --STREFN uses the same units as --STRESN, if applicable.
+              - Cited Guidance: Reference value for continuous or numeric results or findings in standard format or in standard units. --STREFN uses the same units as --STRESN, if applicable.
                 Document: SDTM v2.1
                 Item: --STREFN
                 Section: 3.1.3 The Findings Observation Class
@@ -60,10 +54,10 @@ Core:
   Id: CORE-000295
   Status: Published
   Version: "1"
-Description: When --STREFC is populated, --STREFN should also be populated.
+Description: Raise an error when --STREFC is populated but --STREFN is not populated.
 Executability: Fully Executable
 Outcome:
-  Message: --STREFN is null when --STREFC is populated.
+  Message: --STREFN is not populated when --STREFC is populated.
 Rule Type: Record Data
 Scope:
   Classes:
