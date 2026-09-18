@@ -77,6 +77,8 @@ Operations:
 Outcome:
   Message: ARM value in DM dataset does not match any ARM value in TA dataset. This is only
     acceptable for multi-stage studies with incomplete ARM assignments.
+  Output Variables:
+    - ARM
 Rule Type: Record Data
 Scope:
   Classes:

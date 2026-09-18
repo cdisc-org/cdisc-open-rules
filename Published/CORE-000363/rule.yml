@@ -105,10 +105,10 @@ Outcome:
   Message: DSDECOD is equal to 'INFORMED CONSENT OBTAINED' but RFICDTC in the DM dataset is not
     equal to the earliest DSSTDTC.
   Output Variables:
-    - RFICDTC
-    - $min_ds_dsstdtc
     - DSDECOD
+    - RFICDTC
     - DSSTDTC
+    - $min_ds_dsstdtc
 Rule Type: Record Data
 Scope:
   Classes:

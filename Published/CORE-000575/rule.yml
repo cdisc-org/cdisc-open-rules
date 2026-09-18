@@ -213,15 +213,14 @@ Executability: Partially Executable - Possible Underreporting
 Operations:
   - id: $dataset_variables
     operator: get_column_order_from_dataset
-  - id: $timing_variables
+  - id: $model_timing_variables
     key_name: role
     key_value: Timing
     operator: get_model_filtered_variables
 Outcome:
   Message: At least one timing variable must be present in the dataset.
   Output Variables:
-    - $dataset_variables
-    - $timing_variables
+    - $model_timing_variables
 Rule Type: Variable Metadata Check
 Scope:
   Classes:

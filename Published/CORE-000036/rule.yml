@@ -70,6 +70,10 @@ Operations:
     operator: distinct
 Outcome:
   Message: VISIT value for planned visit does not match any VISIT value in the TV dataset.
+  Output Variables:
+    - VISITNUM
+    - VISIT
+    - SVPRESP
 Rule Type: Record Data
 Scope:
   Classes:

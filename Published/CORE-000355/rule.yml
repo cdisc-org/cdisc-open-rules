@@ -198,11 +198,14 @@ Operations:
     operator: required_variables
   - id: $dataset_variables
     operator: get_column_order_from_dataset
+  - id: $missing_required_variables
+    name: $required_variables
+    operator: minus
+    subtract: $dataset_variables
 Outcome:
   Message: Required variable is missing from the dataset.
   Output Variables:
-    - $dataset_variables
-    - $required_variables
+    - $missing_required_variables
 Rule Type: Variable Metadata Check
 Scope:
   Classes:

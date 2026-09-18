@@ -100,10 +100,13 @@ Core:
 Description: Raise an error when TSVAL is not populated with values or synonyms of values in the ISO
   21090 null flavor codelist (or other terms that can be represented as null flavors) but TSVALNF is
   populated.
-Executability: Fully Executable
+Executability: Partially Executable - Possible Underreporting
 Outcome:
   Message: TSVAL is not populated with an ISO 21090 null flavor or null flavor description but
     TSVALNF is populated.
+  Output Variables:
+    - TSVAL
+    - TSVALNF
 Rule Type: Record Data
 Scope:
   Classes:

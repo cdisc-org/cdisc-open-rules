@@ -155,7 +155,6 @@ Outcome:
   Message: A DD record is present, but DTHFL is not equal to 'Y'.
   Output Variables:
     - DTHFL
-    - USUBJID
 Rule Type: Record Data
 Scope:
   Classes:
@@ -165,4 +164,4 @@ Scope:
     Include:
       - DM
   Use Case: INDH
-Sensitivity: Dataset
+Sensitivity: Record

@@ -159,6 +159,9 @@ Description:
 Executability: Fully Executable
 Outcome:
   Message: Collection study day (--DY) is missing when date/time of collection (--DTC) is populated.
+  Output Variables:
+    - --DTC
+    - --DY
 Rule Type: Record Data
 Scope:
   Classes:

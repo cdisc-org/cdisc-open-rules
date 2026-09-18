@@ -98,6 +98,13 @@ Description: Raise an error when APID is not present in an Associated Persons Da
 Executability: Fully Executable
 Outcome:
   Message: At least one of USUBJID, APID, SPDEVID, POOLID, SPTOBID or STOCONID must be present.
+  Output Variables:
+    - APID
+    - USUBJID
+    - SPDEVID
+    - POOLID
+    - SPTOBID
+    - STOCONID
 Rule Type: Record Data
 Scope:
   Classes:

@@ -156,6 +156,9 @@ Description: Raise an error when Dose (--DOSE) value is negative.
 Executability: Fully Executable
 Outcome:
   Message: Negative value for --DOSE.
+  Output Variables:
+    - --TRT
+    - --DOSE
 Rule Type: Record Data
 Scope:
   Classes:

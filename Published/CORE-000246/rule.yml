@@ -96,6 +96,8 @@ Description: Raise an error when --NOMLBL is present.
 Executability: Fully Executable
 Outcome:
   Message: --NOMLBL must not be present.
+  Output Variables:
+    - --NOMLBL
 Rule Type: Record Data
 Scope:
   Classes:
