@@ -439,7 +439,7 @@ Check:
       operator: is_complete_date
     - name: --DY # checking failure criteria
       operator: not_equal_to
-      value: $val_dy # this is created in the operations statement that follows
+      value: $value_dy_algorithm # this is created in the operations statement that follows
 Core:
   Id: CORE-000529
   Status: Published
@@ -453,14 +453,14 @@ Match Datasets:
       - USUBJID
     Name: DM
 Operations:
-  - id: $val_dy # ex in devops 2538 used -- but that threw an error
+  - id: $value_dy_algorithm # ex in devops 2538 used -- but that threw an error
     name: --DTC
     operator: dy # does dy op take into acct +1?
 Outcome:
   Message: --DY is not calculated correctly even though the date portion of --DTC is complete, the
     date portion of RFSTDTC is complete, and --DY is not empty.
   Output Variables:
-    - $val_dy
+    - $value_dy_algorithm
     - --DY
     - --DTC
     - RFSTDTC

@@ -165,10 +165,11 @@ Authorities:
         Version: "1.0"
 Check:
   all:
-    - name: $required_variables
-      operator: exists
     - name: variable_name
       operator: is_contained_by
+      value: $required_variables
+    - name: variable_value
+      operator: empty
       value: $required_variables
     - name: variable_value
       operator: empty

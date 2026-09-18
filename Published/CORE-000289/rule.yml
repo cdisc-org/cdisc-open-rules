@@ -77,7 +77,7 @@ Check:
         # value: ^-?(0|[1-9]\d*)(\.\d+)?$
         # Change by Jozef Aerts to allow values starting with a dot, e.g. ".25"
         # Also see Github ticket https://github.com/cdisc-org/cdisc-rules-engine/issues/520
-      value: ^-?(\d+(\.\d+)?$)|(\.\d+$)
+      value: ^(<|>|< |> )?(-?((\d+(\.\d+)?)|(\.\d+)))$
     - name: LBORNRHI
       operator: non_empty
     - name: LBORRES
@@ -94,6 +94,10 @@ Description:
 Executability: Fully Executable
 Outcome:
   Message: LBORNRHI is populated when LBORRES is not a quantitative value.
+  Output Variables:
+    - LBTESTCD
+    - LBORRES
+    - LBORNRHI
 Rule Type: Record Data
 Scope:
   Classes:

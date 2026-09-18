@@ -110,17 +110,6 @@ Check:
           value: N
           value_is_literal: true
         - name: ECSTAT
-          operator: empty
-        - name: ECDOSTXT
-          operator: not_exists
-    - all:
-        - name: ECDOSE
-          operator: empty
-        - name: ECOCCUR
-          operator: not_equal_to
-          value: N
-          value_is_literal: true
-        - name: ECSTAT
           operator: not_exists
         - name: ECDOSTXT
           operator: empty
@@ -128,13 +117,24 @@ Check:
         - name: ECDOSE
           operator: empty
         - name: ECOCCUR
-          operator: not_equal_to
+          operator: not_exists
+          value: N
+          value_is_literal: true
+        - name: ECSTAT
+          operator: empty
+        - name: ECDOSTXT
+          operator: empty
+    - all:
+        - name: ECDOSE
+          operator: empty
+        - name: ECOCCUR
+          operator: not_exists
           value: N
           value_is_literal: true
         - name: ECSTAT
           operator: not_exists
         - name: ECDOSTXT
-          operator: not_exists
+          operator: empty
     - all:
         - name: ECDOSE
           operator: empty

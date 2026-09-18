@@ -94,6 +94,9 @@ Description: Raise an error when a PP dataset is present in study, but a PC data
 Executability: Fully Executable
 Outcome:
   Message: PP dataset is present in  study, but PC dataset is not present in study.
+  Output Variables:
+    - PP
+    - PC
 Rule Type: Domain Presence Check
 Scope:
   Classes:
@@ -104,4 +107,4 @@ Scope:
       - PC
       - PP
   Use Case: INDH
-Sensitivity: Record
+Sensitivity: Dataset

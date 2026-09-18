@@ -157,6 +157,9 @@ Executability: Fully Executable
 Outcome:
   Message: Study Day of End of Observation (--ENDY) variable is missing when End Date/Time of
     Observation (--ENDTC) is present.
+  Output Variables:
+    - --ENDY
+    - --ENDTC
 Rule Type: Record Data
 Scope:
   Classes:

@@ -96,6 +96,7 @@ Check:
       operator: suffix_matches_regex
       suffix: 3
       value: SEQ
+      value_is_literal: true
     - name: RELTYPE
       operator: non_empty
 Core:

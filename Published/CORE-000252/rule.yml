@@ -133,6 +133,9 @@ Match Datasets:
     Name: DS
 Outcome:
   Message: DTHFL is not equal to 'Y' but DSDECOD is equal to 'DEATH'.
+  Output Variables:
+    - DTHFL
+    - DSDECOD
 Rule Type: Record Data
 Scope:
   Classes:

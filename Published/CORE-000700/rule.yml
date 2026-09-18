@@ -157,6 +157,9 @@ Executability: Fully Executable
 Outcome:
   Message: Date/Time of Collection (--DTC) variable is missing when Study Day of
     Visit/Collection/Exam (--DY) is present.
+  Output Variables:
+    - --DTC
+    - --DY
 Rule Type: Record Data
 Scope:
   Classes:
