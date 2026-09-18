@@ -306,6 +306,9 @@ Description: Raise an error when --TPTREF is not populated but --RFTDTC is popul
 Executability: Fully Executable
 Outcome:
   Message: When --TPTREF is not populated, then --RFTDTC should also be not populated.
+  Output Variables:
+    - --TPTREF
+    - --RFTDTC
 Rule Type: Record Data
 Scope:
   Classes:

@@ -71,6 +71,8 @@ Description: Raise an error when DOMAIN value length is not equal to 2.
 Executability: Fully Executable
 Outcome:
   Message: DOMAIN value length is not equal to 2.
+  Output Variables:
+    - DOMAIN
 Rule Type: Record Data
 Scope:
   Classes:
@@ -80,4 +82,4 @@ Scope:
     Exclude:
       - AP--
   Use Case: INDH, PROD
-Sensitivity: Record
+Sensitivity: Dataset

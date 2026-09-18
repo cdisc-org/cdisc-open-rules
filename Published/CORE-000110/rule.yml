@@ -70,6 +70,8 @@ Executability: Fully Executable
 Outcome:
   Message: --STREFC is not populated when --ORREF is populated or --DRVFL is equal to 'Y'.
   Output Variables:
+    - --TESTCD
+    - --TEST
     - --ORREF
     - --DRVFL
     - --STREFC

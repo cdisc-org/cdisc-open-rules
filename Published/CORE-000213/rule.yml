@@ -99,7 +99,8 @@ Outcome:
   Message: More than one record exists per subject per DSSCAT per EPOCH when DSCAT is equal to
     'DISPOSITION EVENT'.
   Output Variables:
-    - USUBJID
+    - DSDECOD
+    - DSCAT
     - DSSCAT
     - EPOCH
 Rule Type: Record Data

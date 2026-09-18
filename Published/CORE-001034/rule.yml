@@ -83,7 +83,7 @@ Operations:
   - id: $TIMING_VARIABLES
     key_name: role
     key_value: Timing
-    operator: get_dataset_filtered_variables
+    operator: get_model_filtered_variables
   - group:
       - USUBJID
       - --TESTCD

@@ -96,6 +96,7 @@ Executability: Fully Executable
 Outcome:
   Message: The combination of IDVAR, IDVARVAL, and QNAM must be unique per parent subject record.
   Output Variables:
+    - RDOMAIN
     - USUBJID
     - IDVAR
     - IDVARVAL

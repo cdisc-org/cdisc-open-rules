@@ -121,6 +121,7 @@ Executability: Fully Executable
 Outcome:
   Message: ECOCCUR is equal to 'N', but ECDOSE is populated and less than or equal to 0.
   Output Variables:
+    - ECTRT
     - ECDOSE
     - ECOCCUR
 Rule Type: Record Data

@@ -20,7 +20,7 @@ Authorities:
                   timing of a  contingent Visit. If contingent visits are not included in  the TV dataset, then
                   they would be treated as unplanned  visits in the Subject Visits (SV) domain.]
                 Document: IG v3.4
-                Item: 7.3.1.1 TV, TV Issues 4
+                Item: "[7.3.1.1 TV][TV Issues 4]"
                 Section: "5.5|7.3.1.1"
               - Cited Guidance:
                   Some data collection is contingent on the occurrence of a "trigger" event,
@@ -110,7 +110,7 @@ Outcome:
   Message: VISITNUM in the SV dataset must be unique within USUBJID when the VISITNUM value is in
     the TV dataset.
   Output Variables:
-    - USUBJID
+    - VISITNUM
     - VISITNUM
 Rule Type: Record Data
 Scope:

@@ -89,6 +89,10 @@ Description:
 Executability: Fully Executable
 Outcome:
   Message: LBSTNRHI is populated when LBORRES is not a quantitative value.
+  Output Variables:
+    - LBTESTCD
+    - LBORRES
+    - LBSTNRHI
 Rule Type: Record Data
 Scope:
   Classes:

@@ -198,10 +198,14 @@ Operations:
     operator: expected_variables
   - id: $dataset_variables
     operator: get_column_order_from_dataset
+  - id: $missing_expected_variables
+    name: $expected_variables
+    operator: minus
+    subtract: $dataset_variables
 Outcome:
   Message: Expected variable is missing from the dataset.
   Output Variables:
-    - $dataset_variables
+    - $missing_expected_variables
     - $expected_variables
 Rule Type: Variable Metadata Check
 Scope:

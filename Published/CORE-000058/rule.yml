@@ -43,6 +43,8 @@ Description: Raise an error when RPHASE is present.
 Executability: Fully Executable
 Outcome:
   Message: RPHASE must not be present.
+  Output Variables:
+    - RPHASE
 Rule Type: Record Data
 Scope:
   Classes:

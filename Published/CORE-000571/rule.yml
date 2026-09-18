@@ -85,11 +85,14 @@ Core:
 Description: Raise an error when --LNKID is present in one domain but not present in another domain.
 Executability: Fully Executable
 Operations:
-  - id: $VARIABLE_COUNT
+  - id: $LNKID_variable_count
     name: --LNKID
     operator: variable_count
 Outcome:
   Message: "LNKID variable is present but not in any other domain."
+  Output Variables:
+    - --LNKID
+    - $LNKID_variable_count
 Rule Type: Record Data
 Scope:
   Classes:

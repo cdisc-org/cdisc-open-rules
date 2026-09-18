@@ -157,6 +157,9 @@ Executability: Fully Executable
 Outcome:
   Message: Study Day of Start of Observation (--STDY) variable is missing when Start Date/Time of
     Observation (--STDTC) is present.
+  Output Variables:
+    - --STDY
+    - --STDTC
 Rule Type: Record Data
 Scope:
   Classes:

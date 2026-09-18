@@ -160,7 +160,7 @@ Core:
 Description:
   "Parameter Category for a drug or metabolite (PPCAT) matches Test Name (PCTEST) for that
   same drug or metabolite."
-Executability: Partially Executable
+Executability: Partially Executable - Possible Underreporting
 Match Datasets:
   - Name: RELREC
     Wildcard: PC
@@ -171,8 +171,8 @@ Outcome:
   Output Variables:
     - PPCAT
     - PPRFTDTC
-    - PPCAT
     - RELREC.PCRFTDTC
+    - RELREC.PCTEST
     - RELREC.PCTEST
 Rule Type: Record Data
 Scope:

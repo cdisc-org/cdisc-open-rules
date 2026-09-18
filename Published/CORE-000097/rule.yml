@@ -97,10 +97,11 @@ Outcome:
   Message: EPOCH value in the SV dataset doesn't match the corresponding EPOCH value in the SE
     dataset.
   Output Variables:
-    - SESTDTC
-    - SVSTDTC
-    - SEENDTC
+    - VISIT
     - EPOCH
+    - SVSTDTC
+    - SESTDTC
+    - SEENDTC
     - SE.EPOCH
 Rule Type: Record Data
 Scope:

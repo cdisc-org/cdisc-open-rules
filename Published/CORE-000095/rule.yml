@@ -91,6 +91,9 @@ Description: Raise an error when SEUPDES is populated but ETCD is not equal to '
 Executability: Fully Executable
 Outcome:
   Message: SEUPDES is populated but ETCD is not equal to 'UNPLAN'.
+  Output Variables:
+    - SEUPDES
+    - ETCD
 Rule Type: Record Data
 Scope:
   Classes:

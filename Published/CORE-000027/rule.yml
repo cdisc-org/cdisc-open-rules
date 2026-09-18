@@ -37,7 +37,7 @@ Authorities:
               Id: CG0328
               Version: "1"
             Version: "2.0"
-        Version: "3.2"
+        Version: "3.3"
       - Name: SDTMIG
         References:
           - Citations:
@@ -52,18 +52,18 @@ Authorities:
               Id: CG0328
               Version: "1"
             Version: "2.0"
-        Version: "3.3"
+        Version: "3.2"
       - Name: TIG
         References:
           - Citations:
               - Cited Guidance: Either TEENRL or TEDUR must be present for each Element.
                 Document: TIG 1.0
                 Item: Specification TEENRL
-                Section: 2.8.10.29
+                Section: 2.8.10.28
               - Cited Guidance: At least one of TEENRL and TEDUR must be populated. Both may be populated.
                 Document: TIG 1.0
                 Item: Assumption 12
-                Section: 2.8.10.29
+                Section: 2.8.10.28
             Origin: TIG Conformance Rules
             Rule Identifier:
               Id: TIG0496
@@ -104,7 +104,7 @@ Authorities:
               Id: CG0329
               Version: "1"
             Version: "2.0"
-        Version: "3.2"
+        Version: "3.3"
       - Name: SDTMIG
         References:
           - Citations:
@@ -119,7 +119,7 @@ Authorities:
               Id: CG0329
               Version: "1"
             Version: "2.0"
-        Version: "3.3"
+        Version: "3.2"
       - Name: TIG
         References:
           - Citations:
@@ -129,7 +129,7 @@ Authorities:
                   populated.]
                 Document: TIG 1.0
                 Item: Specification TEENRL |Assumption 12
-                Section: 2.8.10.29
+                Section: 2.8.10.28
               - Cited Guidance:
                   Assumption 12[At least one of TEENRL and TEDUR must be populated. Both may
                   be populated.]
@@ -143,20 +143,21 @@ Authorities:
             Version: "1.0"
         Substandard: SDTM
         Version: "1.0"
-      - Name: SENDIG
+      - Name: TIG
         References:
           - Citations:
               - Cited Guidance: Either TEENRL or TEDUR must be present for each Element; both may be
-                  present. present.
-                Document: IG v3.0
-                Item: Specification
-                Section: 7.2.1
-            Origin: SEND Conformance Rules
+                  present.
+                Document: TIG v1.0
+                Item: TEENRL CDISC Notes
+                Section: 2.8.9.29
+            Origin: TIG Conformance Rules
             Rule Identifier:
-              Id: SEND214
+              Id: TIG0141
               Version: "1"
-            Version: "5.0"
-        Version: "3.0"
+            Version: "1.0"
+        Substandard: SEND
+        Version: "1.0"
       - Name: SENDIG
         References:
           - Citations:
@@ -170,7 +171,7 @@ Authorities:
               Id: SEND214
               Version: "1"
             Version: "5.0"
-        Version: "3.1"
+        Version: "3.1.1"
       - Name: SENDIG
         References:
           - Citations:
@@ -184,8 +185,8 @@ Authorities:
               Id: SEND214
               Version: "1"
             Version: "5.0"
-        Version: 3.1.1
-      - Name: SENDIG-DART
+        Version: "3.1"
+      - Name: SENDIG
         References:
           - Citations:
               - Cited Guidance: Either TEENRL or TEDUR must be present for each Element; both may be
@@ -198,7 +199,7 @@ Authorities:
               Id: SEND214
               Version: "1"
             Version: "5.0"
-        Version: "1.1"
+        Version: "3.0"
       - Name: SENDIG-DART
         References:
           - Citations:
@@ -213,7 +214,7 @@ Authorities:
               Version: "1"
             Version: "5.0"
         Version: "1.2"
-      - Name: SENDIG-GENETOX
+      - Name: SENDIG-DART
         References:
           - Citations:
               - Cited Guidance: Either TEENRL or TEDUR must be present for each Element; both may be
@@ -226,8 +227,8 @@ Authorities:
               Id: SEND214
               Version: "1"
             Version: "5.0"
-        Version: "1.0"
-      - Name: TIG
+        Version: "1.1"
+      - Name: SENDIG-GENETOX
         References:
           - Citations:
               - Cited Guidance: Either TEENRL or TEDUR must be present for each Element; both may be
@@ -235,11 +236,11 @@ Authorities:
                 Document: SENDIG v3.1.1
                 Item: Specification
                 Section: 7.2.1
-            Origin: TIG Conformance Rules
+            Origin: SEND Conformance Rules
             Rule Identifier:
-              Id: TIG0141
+              Id: SEND214
               Version: "1"
-            Version: "1.0"
+            Version: "5.0"
         Substandard: SEND
         Version: "1.0"
 Check:
@@ -263,8 +264,8 @@ Executability: Fully Executable
 Outcome:
   Message: At least one of TEENRL and TEDUR must be populated.
   Output Variables:
-    - ETCD
     - TEDUR
+    - TEENRL
     - TEENRL
 Rule Type: Record Data
 Scope:

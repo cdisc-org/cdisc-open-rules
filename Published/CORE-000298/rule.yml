@@ -89,6 +89,10 @@ Description:
 Executability: Fully Executable
 Outcome:
   Message: LBSTNRLO is populated when LBORRES is not a quantitative value.
+  Output Variables:
+    - LBTESTCD
+    - LBORRES
+    - LBSTNRLO
 Rule Type: Record Data
 Scope:
   Classes:

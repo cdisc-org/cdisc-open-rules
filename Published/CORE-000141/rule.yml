@@ -141,10 +141,10 @@ Outcome:
   Message: --TPT and --TPTNUM do not have a one-to-one relationship when VISITNUM and --TPTREF are
     not present in the dataset.
   Output Variables:
-    - VISITNUM
-    - --TPTREF
     - --TPT
     - --TPTNUM
+    - VISITNUM
+    - --TPTREF
 Rule Type: Record Data
 Scope:
   Classes:

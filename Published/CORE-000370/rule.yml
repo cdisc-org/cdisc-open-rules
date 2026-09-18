@@ -116,7 +116,7 @@ Outcome:
   Message: DSTERM indicates INFORMED CONSENT OBTAINED but RFICDTC in the DM dataset is not equal to
     the earliest DSSTDTC.
   Output Variables:
-    - DSDECOD
+    - DSTERM
     - RFICDTC
     - DSSTDTC
     - $min_ds_dsstdtc

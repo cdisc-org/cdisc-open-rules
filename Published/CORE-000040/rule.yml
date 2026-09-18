@@ -66,6 +66,10 @@ Operations:
     operator: distinct
 Outcome:
   Message: VISITNUM for unplanned visit matches a VISITNUM value in the TV dataset.
+  Output Variables:
+    - VISITNUM
+    - VISIT
+    - SVPRESP
 Rule Type: Record Data
 Scope:
   Classes:
