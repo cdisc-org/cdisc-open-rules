@@ -7,9 +7,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  ARMCD is limited to 20 characters and does not have special character
-                  restrictions.
+              - Cited Guidance: ARMCD is limited to 20 characters and does not have special character restrictions.
                 Document: IG v3.4
                 Item: Specification
                 Section: 7.3.1
@@ -22,9 +20,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  ARMCD is limited to 20 characters and does not have special character
-                  restrictions.
+              - Cited Guidance: ARMCD is limited to 20 characters and does not have special character restrictions.
                 Document: IG v3.2
                 Item: Specification
                 Section: "7"
@@ -37,9 +33,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  ARMCD is limited to 20 characters and does not have special character
-                  restrictions.
+              - Cited Guidance: ARMCD is limited to 20 characters and does not have special character restrictions.
                 Document: IG v3.3
                 Item: Specification
                 Section: 7.3.1
@@ -52,9 +46,7 @@ Authorities:
       - Name: TIG
         References:
           - Citations:
-              - Cited Guidance:
-                  ARMCD is limited to 20 characters and does not have special character
-                  restrictions.
+              - Cited Guidance: ARMCD is limited to 20 characters and does not have special character restrictions.
                 Document: TIG 1.0
                 Item: Specification:ARMCD
                 Section: 2.8.10.31
@@ -74,10 +66,10 @@ Core:
   Id: CORE-000157
   Status: Published
   Version: "1"
-Description: The length of ARMCD is limited to 20 characters.
+Description: Raise an error when the length of ARMCD is greater than 20 characters.
 Executability: Fully Executable
 Outcome:
-  Message: Length of ARMCD is greater than 20
+  Message: ARMCD value length is greater than 20 characters.
   Output Variables:
     - ARMCD
 Rule Type: Record Data

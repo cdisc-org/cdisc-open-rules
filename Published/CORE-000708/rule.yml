@@ -7,9 +7,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  Start date/time of observation (--DTC) should be submitted, if collected,
-                  and study day of observation (--DY) should be submitted.
+              - Cited Guidance: Start date/time of observation (--DTC) should be submitted, if collected, and study day of observation (--DY) should be submitted.
                 Document: FDA
                 Section: FDAB032
             Origin: FDA Business Rules
@@ -21,9 +19,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  Start date/time of observation (--DTC) should be submitted, if collected,
-                  and study day of observation (--DY) should be submitted.
+              - Cited Guidance: Start date/time of observation (--DTC) should be submitted, if collected, and study day of observation (--DY) should be submitted.
                 Document: FDA
                 Section: FDAB032
             Origin: FDA Business Rules
@@ -35,9 +31,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  Start date/time of observation (--DTC) should be submitted, if collected,
-                  and study day of observation (--DY) should be submitted.
+              - Cited Guidance: Start date/time of observation (--DTC) should be submitted, if collected, and study day of observation (--DY) should be submitted.
                 Document: FDA
                 Section: FDAB032
             Origin: FDA Business Rules
@@ -49,9 +43,7 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance:
-                  Start date/time of observation (--DTC) should be submitted, if collected,
-                  and study day of observation (--DY) should be submitted.
+              - Cited Guidance: Start date/time of observation (--DTC) should be submitted, if collected, and study day of observation (--DY) should be submitted.
                 Document: FDA
                 Section: FDAB032
             Origin: FDA Business Rules
@@ -63,9 +55,7 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance:
-                  Start date/time of observation (--DTC) should be submitted, if collected,
-                  and study day of observation (--DY) should be submitted.
+              - Cited Guidance: Start date/time of observation (--DTC) should be submitted, if collected, and study day of observation (--DY) should be submitted.
                 Document: FDA
                 Section: FDAB032
             Origin: FDA Business Rules
@@ -77,9 +67,7 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance:
-                  Start date/time of observation (--DTC) should be submitted, if collected,
-                  and study day of observation (--DY) should be submitted.
+              - Cited Guidance: Start date/time of observation (--DTC) should be submitted, if collected, and study day of observation (--DY) should be submitted.
                 Document: FDA
                 Section: FDAB032
             Origin: FDA Business Rules
@@ -91,9 +79,7 @@ Authorities:
       - Name: SENDIG-GENETOX
         References:
           - Citations:
-              - Cited Guidance:
-                  Start date/time of observation (--DTC) should be submitted, if collected,
-                  and study day of observation (--DY) should be submitted.
+              - Cited Guidance: Start date/time of observation (--DTC) should be submitted, if collected, and study day of observation (--DY) should be submitted.
                 Document: FDA
                 Section: FDAB032
             Origin: FDA Business Rules
@@ -105,9 +91,7 @@ Authorities:
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance:
-                  Start date/time of observation (--DTC) should be submitted, if collected,
-                  and study day of observation (--DY) should be submitted.
+              - Cited Guidance: Start date/time of observation (--DTC) should be submitted, if collected, and study day of observation (--DY) should be submitted.
                 Document: FDA
                 Section: FDAB032
             Origin: FDA Business Rules
@@ -119,9 +103,7 @@ Authorities:
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance:
-                  Start date/time of observation (--DTC) should be submitted, if collected,
-                  and study day of observation (--DY) should be submitted.
+              - Cited Guidance: Start date/time of observation (--DTC) should be submitted, if collected, and study day of observation (--DY) should be submitted.
                 Document: FDA
                 Section: FDAB032
             Origin: FDA Business Rules
@@ -133,9 +115,7 @@ Authorities:
       - Name: SENDIG-AR
         References:
           - Citations:
-              - Cited Guidance:
-                  Start date/time of observation (--DTC) should be submitted, if collected,
-                  and study day of observation (--DY) should be submitted.
+              - Cited Guidance: Start date/time of observation (--DTC) should be submitted, if collected, and study day of observation (--DY) should be submitted.
                 Document: FDA
                 Section: FDAB032
             Origin: FDA Business Rules
@@ -157,8 +137,7 @@ Core:
   Id: CORE-000708
   Status: Published
   Version: "1"
-Description: When Study Day of End of Observation (--ENDY) is present in the dataset, then the End
-  Date/Time of Observation (--ENDTC) should also be present in the dataset.
+Description: Raise an error when Study Day of Start of Observation (--STDY) is greater than Study Day of End of Observation (--ENDY).
 Executability: Fully Executable
 Outcome:
   Message: --STDY is greater than --ENDY.

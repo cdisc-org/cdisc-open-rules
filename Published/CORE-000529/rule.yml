@@ -4,14 +4,8 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  The Study Day value is incremented by 1 for each date following RFSTDTC.
-                  Dates prior to RFSTDTC are decreased by 1, with the date preceding RFSTDTC designated as
-                  Study Day -1 (there is no Study Day 0)....All Study Day values are integers. Thus to
-                  calculate Study Day, --DY = (date portion of --DTC) - (date portion of RFSTDTC) + 1 if
-                  --DTC is on or after RFSTDTC, --DY = (date portion of --DTC) - (date portion of RFSTDTC)
-                  if --DTC precedes RFSTDTC. This algorithm should be used across all domains.
-                Document: SDTMIG v3.4
+              - Cited Guidance: The Study Day value is incremented by 1 for each date following RFSTDTC. Dates prior to RFSTDTC are decreased by 1, with the date preceding RFSTDTC designated as Study Day -1 (there is no Study Day 0)....All Study Day values are integers. Thus to calculate Study Day, --DY = (date portion of --DTC) - (date portion of RFSTDTC) + 1 if --DTC is on or after RFSTDTC, --DY = (date portion of --DTC) - (date portion of RFSTDTC) if --DTC precedes RFSTDTC. This algorithm should be used across all domains.
+                Document: IG v3.4
                 Section: 4.4.4
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
@@ -22,13 +16,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  "IG v3.2[4.1.4.4][The Study Day value is incremented by 1 for each date following
-                  RFSTDTC. Dates prior to RFSTDTC are decreased by 1, with the date preceding RFSTDTC designated
-                  as Study Day -1 (there is no Study Day 0). . . . All Study Day values are integers.]IG v3.2[4.1.4.4][Thus,
-                  to calculate Study Day:  --DY = (date portion of --DTC) - (date portion of RFSTDTC) + 1 if --DTC
-                  is on or after RFSTDTC --DY = (date portion of --DTC) - (date portion of RFSTDTC) if --DTC precedes
-                  RFSTDTC This algorithm should be used across all domains.]"
+              - Cited Guidance: "IG v3.2[4.1.4.4][The Study Day value is incremented by 1 for each date following RFSTDTC. Dates prior to RFSTDTC are decreased by 1, with the date preceding RFSTDTC designated as Study Day -1 (there is no Study Day 0). . . . All Study Day values are integers.]IG v3.2[4.1.4.4][Thus, to calculate Study Day:  --DY = (date portion of --DTC) - (date portion of RFSTDTC) + 1 if --DTC is on or after RFSTDTC --DY = (date portion of --DTC) - (date portion of RFSTDTC) if --DTC precedes RFSTDTC This algorithm should be used across all domains.]"
                 Document: IG v3.2
                 Section: 4.1.4.4
             Origin: SDTM and SDTMIG Conformance Rules
@@ -40,13 +28,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  "IG v3.3[4.4.4][The Study Day value is incremented by 1 for each date following
-                  RFSTDTC. Dates prior to RFSTDTC are decreased by 1, with the date preceding RFSTDTC designated
-                  as Study Day -1 (there is no Study Day 0). . . . All Study Day values are integers.]'IG v3.3[4.4.4][
-                  Thus, to calculate Study Day:  --DY = (date portion of --DTC) - (date portion of RFSTDTC) +
-                  1 if --DTC is on or after RFSTDTC --DY = (date portion of --DTC) - (date portion of RFSTDTC)
-                  if --DTC precedes RFSTDTC This algorithm should be used across all domains.]"
+              - Cited Guidance: "IG v3.3[4.4.4][The Study Day value is incremented by 1 for each date following RFSTDTC. Dates prior to RFSTDTC are decreased by 1, with the date preceding RFSTDTC designated as Study Day -1 (there is no Study Day 0). . . . All Study Day values are integers.] IG v3.3[4.4.4][ Thus, to calculate Study Day:  --DY = (date portion of --DTC) - (date portion of RFSTDTC) + 1 if --DTC is on or after RFSTDTC --DY = (date portion of --DTC) - (date portion of RFSTDTC) if --DTC precedes RFSTDTC This algorithm should be used across all domains.]"
                 Document: IG v3.3
                 Section: 4.4.4
             Origin: SDTM and SDTMIG Conformance Rules
@@ -58,13 +40,7 @@ Authorities:
       - Name: TIG
         References:
           - Citations:
-              - Cited Guidance:
-                  All relative day values will be integers and there will be no study day 0.
-                  The reference start date is considered day 1 and the study day value is increased by 1 for
-                  each date following the reference start date and decreased by 1 for each date prior to the
-                  reference start date, e.g.; --DY = (date portion of --DTC) - (date portion of RFSTDTC) + 1
-                  if --DTC is on or after RFSTDTC --DY = (date portion of --DTC) - (date portion of RFSTDTC)
-                  if --DTC precedes RFSTDTC
+              - Cited Guidance: All relative day values will be integers and there will be no study day 0. The reference start date is considered day 1 and the study day value is increased by 1 for each date following the reference start date and decreased by 1 for each date prior to the reference start date, e.g.; --DY = (date portion of --DTC) - (date portion of RFSTDTC) + 1 if --DTC is on or after RFSTDTC --DY = (date portion of --DTC) - (date portion of RFSTDTC) if --DTC precedes RFSTDTC
                 Document: TIG v1.0
                 Item: Table 1 Num 1
                 Section: 2.8.7.6
@@ -78,9 +54,7 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance:
-                  All Study Day values are integers. Thus, to calculate Study Day --DY = (date
-                  portion of --DTC) minus (date portion of RFSTDTC) + 1 if --DTC is on or after RFSTDTC.
+              - Cited Guidance: All Study Day values are integers. Thus, to calculate Study Day --DY = (date portion of --DTC) minus (date portion of RFSTDTC) + 1 if --DTC is on or after RFSTDTC.
                 Document: SENDIG v3.0
                 Item: Text
                 Section: 4.4.4
@@ -93,9 +67,7 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance:
-                  All Study Day values are integers. Thus, to calculate Study Day --DY = (date
-                  portion of --DTC) minus (date portion of RFSTDTC) + 1 if --DTC is on or after RFSTDTC.
+              - Cited Guidance: All Study Day values are integers. Thus, to calculate Study Day --DY = (date portion of --DTC) minus (date portion of RFSTDTC) + 1 if --DTC is on or after RFSTDTC.
                 Document: SENDIG v3.1
                 Item: Text
                 Section: 4.4.4
@@ -108,9 +80,7 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance:
-                  All Study Day values are integers. Thus, to calculate Study Day --DY = (date
-                  portion of --DTC) minus (date portion of RFSTDTC) + 1 if --DTC is on or after RFSTDTC.
+              - Cited Guidance: All Study Day values are integers. Thus, to calculate Study Day --DY = (date portion of --DTC) minus (date portion of RFSTDTC) + 1 if --DTC is on or after RFSTDTC.
                 Document: SENDIG v3.1.1
                 Item: Text
                 Section: 4.4.4
@@ -123,9 +93,7 @@ Authorities:
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance:
-                  All Study Day values are integers. Thus, to calculate Study Day --DY = (date
-                  portion of --DTC) minus (date portion of RFSTDTC) + 1 if --DTC is on or after RFSTDTC.
+              - Cited Guidance: All Study Day values are integers. Thus, to calculate Study Day --DY = (date portion of --DTC) minus (date portion of RFSTDTC) + 1 if --DTC is on or after RFSTDTC.
                 Document: SENDIG v3.1
                 Item: Text
                 Section: 4.4.4
@@ -138,9 +106,7 @@ Authorities:
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance:
-                  All Study Day values are integers. Thus, to calculate Study Day --DY = (date
-                  portion of --DTC) minus (date portion of RFSTDTC) + 1 if --DTC is on or after RFSTDTC.
+              - Cited Guidance: All Study Day values are integers. Thus, to calculate Study Day --DY = (date portion of --DTC) minus (date portion of RFSTDTC) + 1 if --DTC is on or after RFSTDTC.
                 Document: SENDIG v3.1.1
                 Item: Text
                 Section: 4.4.4
@@ -153,9 +119,7 @@ Authorities:
       - Name: SENDIG-GENETOX
         References:
           - Citations:
-              - Cited Guidance:
-                  All Study Day values are integers. Thus, to calculate Study Day --DY = (date
-                  portion of --DTC) minus (date portion of RFSTDTC) + 1 if --DTC is on or after RFSTDTC.
+              - Cited Guidance: All Study Day values are integers. Thus, to calculate Study Day --DY = (date portion of --DTC) minus (date portion of RFSTDTC) + 1 if --DTC is on or after RFSTDTC.
                 Document: SENDIG v3.1.1
                 Item: Text
                 Section: 4.4.4
@@ -168,9 +132,7 @@ Authorities:
       - Name: TIG
         References:
           - Citations:
-              - Cited Guidance:
-                  "All Study Day values are integers. Thus, to calculate Study Day: --DY = (date
-                  portion of --DTC) - (date portion of RFSTDTC) + 1 if --DTC is on or after RFSTDTC"
+              - Cited Guidance: "All Study Day values are integers. Thus, to calculate Study Day; --DY = (date portion of --DTC) - (date portion of RFSTDTC) + 1 if --DTC is on or after RFSTDTC"
                 Document: TIG v1.0
                 Item: Text
                 Section: 2.8.7.6
@@ -184,9 +146,7 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance:
-                  All Study Day values are integers. Thus, to calculate Study Day. --DY =
-                  (date portion of --DTC) - (date portion of RFSTDTC) if --DTC precedes RFSTDTC
+              - Cited Guidance: All Study Day values are integers. Thus, to calculate Study Day. --DY = (date portion of --DTC) - (date portion of RFSTDTC) if --DTC precedes RFSTDTC
                 Document: SENDIG v3.0
                 Item: Text
                 Section: 4.4.4
@@ -199,9 +159,7 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance:
-                  All Study Day values are integers. Thus, to calculate Study Day. --DY =
-                  (date portion of --DTC) - (date portion of RFSTDTC) if --DTC precedes RFSTDTC
+              - Cited Guidance: All Study Day values are integers. Thus, to calculate Study Day. --DY = (date portion of --DTC) - (date portion of RFSTDTC) if --DTC precedes RFSTDTC
                 Document: SENDIG v3.1
                 Item: Text
                 Section: 4.4.4
@@ -214,9 +172,7 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance:
-                  All Study Day values are integers. Thus, to calculate Study Day. --DY =
-                  (date portion of --DTC) - (date portion of RFSTDTC) if --DTC precedes RFSTDTC
+              - Cited Guidance: All Study Day values are integers. Thus, to calculate Study Day. --DY = (date portion of --DTC) - (date portion of RFSTDTC) if --DTC precedes RFSTDTC
                 Document: SENDIG v3.1.1
                 Item: Text
                 Section: 4.4.4
@@ -229,9 +185,7 @@ Authorities:
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance:
-                  All Study Day values are integers. Thus, to calculate Study Day. --DY =
-                  (date portion of --DTC) - (date portion of RFSTDTC) if --DTC precedes RFSTDTC
+              - Cited Guidance: All Study Day values are integers. Thus, to calculate Study Day. --DY = (date portion of --DTC) - (date portion of RFSTDTC) if --DTC precedes RFSTDTC
                 Document: SENDIG v3.1
                 Item: Text
                 Section: 4.4.4
@@ -244,9 +198,7 @@ Authorities:
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance:
-                  All Study Day values are integers. Thus, to calculate Study Day. --DY =
-                  (date portion of --DTC) - (date portion of RFSTDTC) if --DTC precedes RFSTDTC
+              - Cited Guidance: All Study Day values are integers. Thus, to calculate Study Day. --DY = (date portion of --DTC) - (date portion of RFSTDTC) if --DTC precedes RFSTDTC
                 Document: SENDIG v3.1.1
                 Item: Text
                 Section: 4.4.4
@@ -259,9 +211,7 @@ Authorities:
       - Name: SENDIG-GENETOX
         References:
           - Citations:
-              - Cited Guidance:
-                  All Study Day values are integers. Thus, to calculate Study Day. --DY =
-                  (date portion of --DTC) - (date portion of RFSTDTC) if --DTC precedes RFSTDTC
+              - Cited Guidance: All Study Day values are integers. Thus, to calculate Study Day. --DY = (date portion of --DTC) - (date portion of RFSTDTC) if --DTC precedes RFSTDTC
                 Document: SENDIG v3.1.1
                 Item: Text
                 Section: 4.4.4
@@ -274,9 +224,7 @@ Authorities:
       - Name: TIG
         References:
           - Citations:
-              - Cited Guidance:
-                  "All Study Day values are integers. Thus, to calculate Study Day: --DY = (date
-                  portion of --DTC) - (date portion of RFSTDTC) if --DTC precedes RFSTDTC"
+              - Cited Guidance: "All Study Day values are integers. Thus, to calculate Study Day: --DY = (date portion of --DTC) - (date portion of RFSTDTC) if --DTC precedes RFSTDTC"
                 Document: TIG v1.0
                 Item: Text
                 Section: 2.8.7.6
@@ -292,9 +240,7 @@ Authorities:
       - Name: "SDTMIG"
         References:
           - Citations:
-              - Cited Guidance:
-                  Collection study day should be populated when date/time of collection is
-                  available.
+              - Cited Guidance: Collection study day should be populated when date/time of collection is available.
                 Document: FDA
                 Section: FDAB016
             Origin: FDA Business Rules
@@ -306,9 +252,7 @@ Authorities:
       - Name: "SDTMIG"
         References:
           - Citations:
-              - Cited Guidance:
-                  Collection study day should be populated when date/time of collection is
-                  available.
+              - Cited Guidance: Collection study day should be populated when date/time of collection is available.
                 Document: FDA
                 Section: FDAB016
             Origin: FDA Business Rules
@@ -320,9 +264,7 @@ Authorities:
       - Name: "SDTMIG"
         References:
           - Citations:
-              - Cited Guidance:
-                  Collection study day should be populated when date/time of collection is
-                  available.
+              - Cited Guidance: Collection study day should be populated when date/time of collection is available.
                 Document: FDA
                 Section: FDAB016
             Origin: FDA Business Rules
@@ -334,9 +276,7 @@ Authorities:
       - Name: "SENDIG"
         References:
           - Citations:
-              - Cited Guidance:
-                  Collection study day should be populated when date/time of collection is
-                  available.
+              - Cited Guidance: Collection study day should be populated when date/time of collection is available.
                 Document: FDA
                 Section: FDAB016
             Origin: FDA Business Rules
@@ -348,9 +288,7 @@ Authorities:
       - Name: "SENDIG"
         References:
           - Citations:
-              - Cited Guidance:
-                  Collection study day should be populated when date/time of collection is
-                  available.
+              - Cited Guidance: Collection study day should be populated when date/time of collection is available.
                 Document: FDA
                 Section: FDAB016
             Origin: FDA Business Rules
@@ -362,9 +300,7 @@ Authorities:
       - Name: "SENDIG"
         References:
           - Citations:
-              - Cited Guidance:
-                  Collection study day should be populated when date/time of collection is
-                  available.
+              - Cited Guidance: Collection study day should be populated when date/time of collection is available.
                 Document: FDA
                 Section: FDAB016
             Origin: FDA Business Rules
@@ -376,9 +312,7 @@ Authorities:
       - Name: "SENDIG-GENETOX"
         References:
           - Citations:
-              - Cited Guidance:
-                  Collection study day should be populated when date/time of collection is
-                  available.
+              - Cited Guidance: Collection study day should be populated when date/time of collection is available.
                 Document: FDA
                 Section: FDAB016
             Origin: FDA Business Rules
@@ -390,9 +324,7 @@ Authorities:
       - Name: "SENDIG-DART"
         References:
           - Citations:
-              - Cited Guidance:
-                  Collection study day should be populated when date/time of collection is
-                  available.
+              - Cited Guidance: Collection study day should be populated when date/time of collection is available.
                 Document: FDA
                 Section: FDAB016
             Origin: FDA Business Rules
@@ -404,9 +336,7 @@ Authorities:
       - Name: "SENDIG-DART"
         References:
           - Citations:
-              - Cited Guidance:
-                  Collection study day should be populated when date/time of collection is
-                  available.
+              - Cited Guidance: Collection study day should be populated when date/time of collection is available.
                 Document: FDA
                 Section: FDAB016
             Origin: FDA Business Rules
@@ -418,9 +348,7 @@ Authorities:
       - Name: "SENDIG-AR"
         References:
           - Citations:
-              - Cited Guidance:
-                  Collection study day should be populated when date/time of collection is
-                  available.
+              - Cited Guidance: Collection study day should be populated when date/time of collection is available.
                 Document: FDA
                 Section: FDAB016
             Origin: FDA Business Rules
@@ -444,9 +372,7 @@ Core:
   Id: CORE-000529
   Status: Published
   Version: "1"
-Description: Raise an error when --DY is not calculated as per the study day algorithm as a non-zero
-  integer value when the date portion of --DTC is complete and the date portion of DM.RFSTDTC is a
-  complete date AND --DY is not empty
+Description: Raise an error when the collection study day (--DY) is not correctly calculated as per the study day algorithm as a non-zero integer value when the date portion of --DTC is complete and the date portion of RFSTDTC is a complete date and --DY is not empty.
 Executability: Fully Executable
 Match Datasets:
   - Keys:
@@ -457,8 +383,7 @@ Operations:
     name: --DTC
     operator: dy # does dy op take into acct +1?
 Outcome:
-  Message: --DY is not correctly calculated even though the date portion of --DTC is complete, the
-    date portion of RFSTDTC is complete, and --DY is not empty.
+  Message: --DY is not calculated correctly even though the date portion of --DTC is complete, the date portion of RFSTDTC is complete, and --DY is not empty.
   Output Variables:
     - $val_dy
     - --DY

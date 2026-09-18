@@ -7,9 +7,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  Variable descriptive names (labels), up to 40 characters, should be provided
-                  as data variable labels for all variables, including Supplemental Qualifier variables.
+              - Cited Guidance: Variable descriptive names (labels), up to 40 characters, should be provided as data variable labels for all variables, including Supplemental Qualifier variables.
                 Document: IG v3.4
                 Section: 4.2.1
             Origin: SDTM and SDTMIG Conformance Rules
@@ -21,9 +19,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  A descriptive Variable Label, using up to 40 characters, which should be
-                  unique for each variable in the dataset
+              - Cited Guidance: A descriptive Variable Label, using up to 40 characters, which should be unique for each variable in the dataset
                 Document: IG v3.2
                 Section: "2.2"
             Origin: SDTM and SDTMIG Conformance Rules
@@ -35,9 +31,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  Variable descriptive names (labels), up to 40 characters, should be provided
-                  as data variable labels for all variables, including Supplemental Qualifier variables.
+              - Cited Guidance: Variable descriptive names (labels), up to 40 characters, should be provided as data variable labels for all variables, including Supplemental Qualifier variables.
                 Document: IG v3.3
                 Section: 4.2.1
             Origin: SDTM and SDTMIG Conformance Rules
@@ -49,11 +43,10 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance:
-                  A descriptive Variable Label, using up to 40 characters, which should be
-                  unique for each variable in the dataset.
-                Document: IG v3.1
+              - Cited Guidance: A descriptive Variable Label, using up to 40 characters, which should be unique for each variable in the dataset.
+                Document: SENDIG v3.1
                 Section: 3.2.2
+                Item: Text
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND3
@@ -63,11 +56,10 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance:
-                  A descriptive Variable Label, using up to 40 characters, which should be
-                  unique for each variable in the dataset.
-                Document: IG v3.1.1
+              - Cited Guidance: A descriptive Variable Label, using up to 40 characters, which should be unique for each variable in the dataset.
+                Document: SENDIG v3.1.1
                 Section: 3.2.2
+                Item: Text
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND3
@@ -77,11 +69,10 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance:
-                  A descriptive Variable Label, using up to 40 characters, which should be
-                  unique for each variable in the dataset.
-                Document: IG v3.0
+              - Cited Guidance: A descriptive Variable Label, using up to 40 characters, which should be unique for each variable in the dataset.
+                Document: SENDIG v3.0
                 Section: 3.2.2
+                Item: Text
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND3
@@ -91,11 +82,10 @@ Authorities:
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance:
-                  A descriptive Variable Label, using up to 40 characters, which should be
-                  unique for each variable in the dataset.
-                Document: IG v3.1
+              - Cited Guidance: A descriptive Variable Label, using up to 40 characters, which should be unique for each variable in the dataset.
+                Document: SENDIG v3.1
                 Section: 3.2.2
+                Item: Text
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND3
@@ -105,11 +95,10 @@ Authorities:
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance:
-                  A descriptive Variable Label, using up to 40 characters, which should be
-                  unique for each variable in the dataset.
-                Document: IG v3.1.1
+              - Cited Guidance: A descriptive Variable Label, using up to 40 characters, which should be unique for each variable in the dataset.
+                Document: SENDIG v3.1.1
                 Section: 3.2.2
+                Item: Text
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND3
@@ -119,11 +108,10 @@ Authorities:
       - Name: SENDIG-GENETOX
         References:
           - Citations:
-              - Cited Guidance:
-                  A descriptive Variable Label, using up to 40 characters, which should be
-                  unique for each variable in the dataset.
-                Document: IG v3.1.1
+              - Cited Guidance: A descriptive Variable Label, using up to 40 characters, which should be unique for each variable in the dataset.
+                Document: SENDIG v3.1.1
                 Section: 3.2.2
+                Item: Text
             Origin: SEND Conformance Rules
             Rule Identifier:
               Id: SEND3
@@ -133,9 +121,7 @@ Authorities:
       - Name: TIG
         References:
           - Citations:
-              - Cited Guidance:
-                  Descriptive labels per this guide, up to 40 characters, will be provided as
-                  data variable labels for all variables, including Supplemental Qualifier variables.
+              - Cited Guidance: Descriptive labels per this guide, up to 40 characters, will be provided as data variable labels for all variables, including Supplemental Qualifier variables.
                 Document: TIG 1.0
                 Item: "Num 5"
                 Section: "2.6"
@@ -149,9 +135,7 @@ Authorities:
       - Name: TIG
         References:
           - Citations:
-              - Cited Guidance:
-                  Descriptive labels per this guide, up to 40 characters, will be provided as
-                  data variable labels for all variables, including Supplemental Qualifier variables.
+              - Cited Guidance: Descriptive labels per this guide, up to 40 characters, will be provided as data variable labels for all variables, including Supplemental Qualifier variables.
                 Document: TIG v1.0
                 Item: Tabulation Datasets Table, Num 5
                 Section: 2.6 Guidance for Datasets
@@ -171,10 +155,10 @@ Core:
   Id: CORE-000019
   Status: Published
   Version: "1"
-Description: Raise and error if Variable label length > 40 characters
+Description: Raise an error when Variable label length > 40.
 Executability: Fully Executable
 Outcome:
-  Message: Variable label length should be less than or equal to 40 characters
+  Message: Variable label length should <= 40.
 Rule Type: Variable Metadata Check
 Scope:
   Classes:

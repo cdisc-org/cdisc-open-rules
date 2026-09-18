@@ -7,26 +7,16 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  Do not create separate domains based on time; rather, represent both prior
-                  and current observations in a domain (e.g., CM for all non-study medications). Note that
-                  Adverse Events and Medical History are an exception to this best practice because of
-                  regulatory reporting needs.
+              - Cited Guidance: Do not create separate domains based on time; rather, represent both prior and current observations in a domain (e.g., CM for all non-study medications). Note that Adverse Events and Medical History are an exception to this best practice because of regulatory reporting needs.
                 Document: IG v3.4
                 Item: "1"
                 Section: "2.6"
-              - Cited Guidance:
-                  Adverse Events (AE), Medical History (MH), and Clinical Events (CE), for
-                  example, are conceptually the same data, the only differences being when the event started
-                  relative to the study start and whether the event is considered a regulatory-reportable
-                  adverse event in the study.
-                Document: SDTMIG v3.4
+              - Cited Guidance: Adverse Events (AE), Medical History (MH), and Clinical Events (CE), for example, are conceptually the same data, the only differences being when the event started relative to the study start and whether the event is considered a regulatory-reportable adverse event in the study.
+                Document: IG v3.4
                 Item: 3a
                 Section: 4.2.6
-              - Cited Guidance:
-                  An events domain that contains data that includes the subject's prior
-                  medical history at the start of the trial.
-                Document: SDTMIG v3.4
+              - Cited Guidance: An events domain that contains data that includes the subject's prior medical history at the start of the trial.
+                Document: IG v3.4
                 Section: "6.2"
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
@@ -37,18 +27,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  "IG v3.2[2.6][Section 2.6: Do not create separate domains based on time, rather
-                  represent both prior and current observations in a domain (e.g., CM for all non-study medications).
-                  Note that AE and MH are an exception to this best practice because of regulatory reporting needs.]|IG
-                  v3.2[4.1.2.6][Section 4.1.2.6, Item 2.B.3.A (Discussion of --CAT/--SCAT): Adverse Events (AE),
-                  Medical History (MH) and Clinical Events (CE), for example, are conceptually the same data,
-                  the only differences being when the event started relative to the study start and whether the
-                  event is considered a regulatory reportable adverse event in the study.]|IG v3.2[6.2][Domain
-                  Code Table: The medical history dataset includes the subject's prior history at the start of
-                  the trial.][MH: The medical history dataset includes the subject's prior history at the start
-                  of the trial.][Assumption 1:The Medical History dataset generally includes the subject's prior
-                  and concomitant conditions at the start of the trial.]"
+              - Cited Guidance: "IG v3.2[2.6][Section 2.6: Do not create separate domains based on time, rather represent both prior and current observations in a domain (e.g., CM for all non-study medications). Note that AE and MH are an exception to this best practice because of regulatory reporting needs.]|IG v3.2[4.1.2.6][Section 4.1.2.6, Item 2.B.3.A (Discussion of --CAT/--SCAT): Adverse Events (AE), Medical History (MH) and Clinical Events (CE), for example, are conceptually the same data, the only differences being when the event started relative to the study start and whether the event is considered a regulatory reportable adverse event in the study.]|IG v3.2[6.2][Domain Code Table: The medical history dataset includes the subject's prior history at the start of the trial.][MH: The medical history dataset includes the subject's prior history at the start of the trial.][Assumption 1:The Medical History dataset generally includes the subject's prior and concomitant conditions at the start of the trial.]"
                 Document: IG v3.2
                 Section: IG v3.2[2.6]|IG v3.2[4.1.2.6]|IG v3.2[6.2]
             Origin: SDTM and SDTMIG Conformance Rules
@@ -60,16 +39,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  "IG v3.3[2.6][Do not create separate domains based on time; rather, represent
-                  both prior and current observations in a domain (e.g., CM for all non-study medications). Note
-                  that AE and MH are an exception to this best practice because of regulatory reporting needs]|IG
-                  v3.3[4.2.6][Item 2.B.3.A (Discussion of --CAT/--SCAT):  Adverse Events (AE), Medical History
-                  (MH), and Clinical Events (CE), for example, are conceptually the same data, the only differences
-                  being when the event started relative to the study start and whether the event is considered
-                  a regulatory reportable adverse event in the study.]|IG v3.3[6.2][Domain Code Table: The medical
-                  history dataset includes the subject's prior history at the start of the trial.][MH: The medical
-                  history dataset includes the subject's prior history at the start of the trial.]"
+              - Cited Guidance: "IG v3.3[2.6][Do not create separate domains based on time; rather, represent both prior and current observations in a domain (e.g., CM for all non-study medications). Note that AE and MH are an exception to this best practice because of regulatory reporting needs]|IG v3.3[4.2.6][Item 2.B.3.A (Discussion of --CAT/--SCAT):  Adverse Events (AE), Medical History (MH), and Clinical Events (CE), for example, are conceptually the same data, the only differences being when the event started relative to the study start and whether the event is considered a regulatory reportable adverse event in the study.]|IG v3.3[6.2][Domain Code Table: The medical history dataset includes the subject's prior history at the start of the trial.][MH: The medical history dataset includes the subject's prior history at the start of the trial.]"
                 Document: IG v3.3
                 Section: IG v3.3[2.6]|IG v3.3[4.2.6]|IG v3.3[6.2]
             Origin: SDTM and SDTMIG Conformance Rules
@@ -81,11 +51,7 @@ Authorities:
       - Name: TIG
         References:
           - Citations:
-              - Cited Guidance:
-                  Custom domains will be used to represent logically related observations
-                  based on the scientific subject matter of the data and will not be created based on:The
-                  timing of collected observations (e.g., all vital signs measurements will be represented
-                  in domain Vital Signs (VS) irrespective of when measurements occurred).
+              - Cited Guidance: Custom domains will be used to represent logically related observations based on the scientific subject matter of the data and will not be created based on:The timing of collected observations (e.g., all vital signs measurements will be represented in domain Vital Signs (VS) irrespective of when measurements occurred).
                 Document: TIG 1.0
                 Section: 2.8.3
             Origin: TIG Conformance Rules
@@ -106,15 +72,14 @@ Core:
   Id: CORE-000236
   Status: Published
   Version: "1"
-Description: Raise an issue if MHSTDTC has a non-empty date that later than DM.RFSTDTC
+Description: Raise an error when MHSTDTC is populated and the value is equal to or after RFSTDTC in the DM dataset.
 Executability: Fully Executable
 Match Datasets:
   - Keys:
       - USUBJID
     Name: DM
 Outcome:
-  Message: MHSTDTC ^= null and MHSTDTC is on or after the DM.RFSTDTC. The medical history dataset
-    should include the subject's prior history at the start of the trial.
+  Message: MHSTDTC is populated but falls on or after RFSTDTC in the DM dataset.
   Output Variables:
     - MHSTDTC
     - RFSTDTC

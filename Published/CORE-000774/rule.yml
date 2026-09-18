@@ -4,9 +4,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  When a test is not done, the result variable should not be populated, and
-                  the reason not done should be provided in the appropriate variable.
+              - Cited Guidance: When a test is not done, the result variable should not be populated, and the reason not done should be provided in the appropriate variable.
                 Document: FDA
                 Section: FDAB042
             Origin: FDA Business Rules
@@ -18,9 +16,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  When a test is not done, the result variable should not be populated, and
-                  the reason not done should be provided in the appropriate variable.
+              - Cited Guidance: When a test is not done, the result variable should not be populated, and the reason not done should be provided in the appropriate variable.
                 Document: FDA
                 Section: FDAB042
             Origin: FDA Business Rules
@@ -32,9 +28,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  When a test is not done, the result variable should not be populated, and
-                  the reason not done should be provided in the appropriate variable.
+              - Cited Guidance: When a test is not done, the result variable should not be populated, and the reason not done should be provided in the appropriate variable.
                 Document: FDA
                 Section: FDAB042
             Origin: FDA Business Rules
@@ -46,9 +40,7 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance:
-                  When a test is not done, the result variable should not be populated, and
-                  the reason not done should be provided in the appropriate variable.
+              - Cited Guidance: When a test is not done, the result variable should not be populated, and the reason not done should be provided in the appropriate variable.
                 Document: FDA
                 Section: FDAB042
             Origin: FDA Business Rules
@@ -60,9 +52,7 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance:
-                  When a test is not done, the result variable should not be populated, and
-                  the reason not done should be provided in the appropriate variable.
+              - Cited Guidance: When a test is not done, the result variable should not be populated, and the reason not done should be provided in the appropriate variable.
                 Document: FDA
                 Section: FDAB042
             Origin: FDA Business Rules
@@ -74,9 +64,7 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance:
-                  When a test is not done, the result variable should not be populated, and
-                  the reason not done should be provided in the appropriate variable.
+              - Cited Guidance: When a test is not done, the result variable should not be populated, and the reason not done should be provided in the appropriate variable.
                 Document: FDA
                 Section: FDAB042
             Origin: FDA Business Rules
@@ -88,9 +76,7 @@ Authorities:
       - Name: SENDIG-GENETOX
         References:
           - Citations:
-              - Cited Guidance:
-                  When a test is not done, the result variable should not be populated, and
-                  the reason not done should be provided in the appropriate variable.
+              - Cited Guidance: When a test is not done, the result variable should not be populated, and the reason not done should be provided in the appropriate variable.
                 Document: FDA
                 Section: FDAB042
             Origin: FDA Business Rules
@@ -102,9 +88,7 @@ Authorities:
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance:
-                  When a test is not done, the result variable should not be populated, and
-                  the reason not done should be provided in the appropriate variable.
+              - Cited Guidance: When a test is not done, the result variable should not be populated, and the reason not done should be provided in the appropriate variable.
                 Document: FDA
                 Section: FDAB042
             Origin: FDA Business Rules
@@ -116,9 +100,7 @@ Authorities:
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance:
-                  When a test is not done, the result variable should not be populated, and
-                  the reason not done should be provided in the appropriate variable.
+              - Cited Guidance: When a test is not done, the result variable should not be populated, and the reason not done should be provided in the appropriate variable.
                 Document: FDA
                 Section: FDAB042
             Origin: FDA Business Rules
@@ -130,9 +112,7 @@ Authorities:
       - Name: SENDIG-AR
         References:
           - Citations:
-              - Cited Guidance:
-                  When a test is not done, the result variable should not be populated, and
-                  the reason not done should be provided in the appropriate variable.
+              - Cited Guidance: When a test is not done, the result variable should not be populated, and the reason not done should be provided in the appropriate variable.
                 Document: FDA
                 Section: FDAB042
             Origin: FDA Business Rules
@@ -156,8 +136,7 @@ Core:
   Id: CORE-000774
   Status: Published
   Version: "1"
-Description: When a test is not done (--STAT = NOT DONE), the Reason Not Done (--REASND) should be
-  populated.
+Description: Test is not done (--STAT = NOT DONE) and the Reason Not Done (--REASND) is populated.
 Executability: Partially Executable - Possible Overreporting
 Outcome:
   Message: --STAT = NOT DONE, but --REASND is missing.

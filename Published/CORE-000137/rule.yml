@@ -7,17 +7,11 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  For example, if 0 tablets are taken within a timeframe or 0 mL infused at a
-                  visit, then ECOCCUR = 'N' is the standard representation of the collected doses not taken,
-                  not given, or missed. Dose amount variables (e.g., ECDOSE, ECDOSTXT) must not be set to
-                  zero (0) as an alternative method for indicating doses not taken, not given, or missed.
+              - Cited Guidance: For example, if 0 tablets are taken within a timeframe or 0 mL infused at a visit, then ECOCCUR = 'N' is the standard representation of the collected doses not taken, not given, or missed. Dose amount variables (e.g., ECDOSE, ECDOSTXT) must not be set to zero (0) as an alternative method for indicating doses not taken, not given, or missed.
                 Document: IG v3.4
                 Item: Assumption 4a
                 Section: 6.1.3.2
-              - Cited Guidance: Qualifiers that indicate dose amount (e.g., ECDOSE, ECDOSTXT) may be
-                  populated with positive (non-zero) values in cases where the sponsor feels it is necessary
-                  and/or appropriate to represent specific dose amounts not taken, not  given, or missed.
+              - Cited Guidance: Qualifiers that indicate dose amount (e.g., ECDOSE, ECDOSTXT) may be populated with positive (non-zero) values in cases where the sponsor feels it is necessary and/or appropriate to represent specific dose amounts not taken, not  given, or missed.
                 Document: IG v3.4
                 Item: Assumption 4b
                 Section: 6.1.3.2
@@ -30,17 +24,11 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  For example, if 0 tablets are taken within a timeframe or 0 mL infused at a
-                  visit, then ECOCCUR = 'N' is the standard representation of the collected doses not taken,
-                  not given, or missed. Dose amount variables (e.g., ECDOSE, ECDOSTXT) must not be set to
-                  zero (0) as an alternative method for indicating doses not taken, not given, or missed.
+              - Cited Guidance: For example, if 0 tablets are taken within a timeframe or 0 mL infused at a visit, then ECOCCUR = 'N' is the standard representation of the collected doses not taken, not given, or missed. Dose amount variables (e.g., ECDOSE, ECDOSTXT) must not be set to zero (0) as an alternative method for indicating doses not taken, not given, or missed.
                 Document: IG v3.3
                 Item: Assumption 4a
                 Section: 6.1.3.2
-              - Cited Guidance: Qualifiers that indicate dose amount (e.g., ECDOSE, ECDOSTXT) may be
-                  populated with positive (non-zero) values in cases where the sponsor feels it is necessary
-                  and/or appropriate to represent specific dose amounts not taken, not  given, or missed.
+              - Cited Guidance: Qualifiers that indicate dose amount (e.g., ECDOSE, ECDOSTXT) may be populated with positive (non-zero) values in cases where the sponsor feels it is necessary and/or appropriate to represent specific dose amounts not taken, not  given, or missed.
                 Document: IG v3.3
                 Item: Assumption 4b
                 Section: 6.1.3.2
@@ -53,17 +41,11 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  For example, if 0 tablets are taken within a timeframe or 0 mL infused at a
-                  visit, then ECOCCUR = 'N' is the standard representation of the collected doses not taken,
-                  not given, or missed. Dose amount variables (e.g., ECDOSE, ECDOSTXT) must not be set to
-                  zero (0) as an alternative method for indicating doses not taken, not given, or missed.
+              - Cited Guidance: For example, if 0 tablets are taken within a timeframe or 0 mL infused at a visit, then ECOCCUR = 'N' is the standard representation of the collected doses not taken, not given, or missed. Dose amount variables (e.g., ECDOSE, ECDOSTXT) must not be set to zero (0) as an alternative method for indicating doses not taken, not given, or missed.
                 Document: IG v3.2
                 Item: Assumption 4a
                 Section: 6.1.
-              - Cited Guidance: Qualifiers that indicate dose amount (e.g., ECDOSE, ECDOSTXT) may be
-                  populated with positive (non-zero) values in cases where the sponsor feels it is necessary
-                  and/or appropriate to represent specific dose amounts not taken, not given, or missed.
+              - Cited Guidance: Qualifiers that indicate dose amount (e.g., ECDOSE, ECDOSTXT) may be populated with positive (non-zero) values in cases where the sponsor feels it is necessary and/or appropriate to represent specific dose amounts not taken, not given, or missed.
                 Document: IG v3.2
                 Item: Assumption 4b
                 Section: 6.1.
@@ -76,20 +58,11 @@ Authorities:
       - Name: TIG
         References:
           - Citations:
-              - Cited Guidance:
-                  Assumption 4a[For example, if 0 tablets are taken within a timeframe or 0 mL
-                  infused at a visit, then ECOCCUR = 'N' is the standard representation of the collected
-                  doses not taken, not given, or missed. Dose amount variables (e.g., ECDOSE, ECDOSTXT) must
-                  not be set to zero (0) as an alternative method for indicating doses not taken, not given,
-                  or missed.]
+              - Cited Guidance: Assumption 4a[For example, if 0 tablets are taken within a timeframe or 0 mL infused at a visit, then ECOCCUR = 'N' is the standard representation of the collected doses not taken, not given, or missed. Dose amount variables (e.g., ECDOSE, ECDOSTXT) must not be set to zero (0) as an alternative method for indicating doses not taken, not given, or missed.]
                 Document: TIG 1.0
                 Item: Assumption 4a
                 Section: 2.8.10.11
-              - Cited Guidance:
-                  Assumption 4b[Qualifiers that indicate dose amount (e.g., ECDOSE, ECDOSTXT)
-                  may be populated with positive (non-zero) values in cases where the sponsor feels it is
-                  necessary and/or appropriate to represent specific dose amounts not taken, not given, or
-                  missed.]
+              - Cited Guidance: Assumption 4b[Qualifiers that indicate dose amount (e.g., ECDOSE, ECDOSTXT) may be populated with positive (non-zero) values in cases where the sponsor feels it is necessary and/or appropriate to represent specific dose amounts not taken, not given, or missed.]
                 Document: TIG 1.0
                 Item: Assumption 4b
                 Section: 2.8.10.11
@@ -154,12 +127,10 @@ Core:
   Id: CORE-000137
   Status: Published
   Version: "1"
-Description: Raise an error when ECOCCUR is not equal to 'N', ECSTAT and ECDOSTXT are both empty but
-  ECDOSE less than or equal to 0.
+Description: Raise an error when ECOCCUR is not equal to 'N', ECSTAT and ECDOSTXT are both empty but ECDOSE less than or equal to 0.
 Executability: Fully Executable
 Outcome:
-  Message: ECOCCUR is not 'N', ECSTAT and ECDOSTXT are both empty but ECDOSE is less than or equal
-    to 0.
+  Message: ECDOSE must not be less than or equal to 0 when ECOCCUR is not equal to 'N' and ECSTAT and ECDOSTXT are both not populated.
   Output Variables:
     - ECOCCUR
     - ECSTAT

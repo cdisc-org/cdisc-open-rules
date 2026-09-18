@@ -20,9 +20,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  Was another treatment given because of the occurrence of the event? Valid
-                  values are "Y", "N", and null.
+              - Cited Guidance: Was another treatment given because of the occurrence of the event? Valid values are "Y", "N", and null.
                 Document: Model v1.7
                 Item: --CONTRT
                 Section: 2.2.2.1
@@ -35,9 +33,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  Was another treatment given because of the occurrence of the event? Valid
-                  values are 'Y' and 'N'.
+              - Cited Guidance: Was another treatment given because of the occurrence of the event? Valid values are 'Y' and 'N'.
                 Document: Model v1.4
                 Item: ""
                 Section: 2.2.2
@@ -74,10 +70,10 @@ Core:
   Id: CORE-000131
   Status: Published
   Version: "1"
-Description: Raise an error when AECONTRT is completed and value is not 'Y' or 'N'
+Description: Raise an error when AECONTRT is populated and value is not 'Y' or 'N'.
 Executability: Fully Executable
 Outcome:
-  Message: AECONTRT is completed, but not equal to "N" or "Y"
+  Message: AECONTRT is populated, but not equal to 'N' or 'Y'.
   Output Variables:
     - AECONTRT
 Rule Type: Record Data

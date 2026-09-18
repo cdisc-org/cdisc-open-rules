@@ -7,11 +7,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  The --ORRES variable contains the result of the measurement or finding as
-                  originally received or collected. --ORRES is an expected variable and should always be
-                  populated, except (1) when --STAT = "NOT DONE" (because there is no result for such a
-                  record) or (2) for derived records.
+              - Cited Guidance: The --ORRES variable contains the result of the measurement or finding as originally received or collected. --ORRES is an expected variable and should always be populated, except (1) when --STAT = "NOT DONE" (because there is no result for such a record) or (2) for derived records.
                 Document: IG v3.4
                 Item: --STAT
                 Section: 4.5.1.1
@@ -28,8 +24,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Used to indicate exam not done. Should be null if a result exists in
-                  LBORRES.
+              - Cited Guidance: Used to indicate exam not done. Should be null if a result exists in LBORRES.
                 Document: IG v3.2
                 Section: 6.3 LB
             Origin: SDTM and SDTMIG Conformance Rules
@@ -41,8 +36,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Used to indicate exam not done. Should be null if a result exists in
-                  LBORRES.
+              - Cited Guidance: Used to indicate exam not done. Should be null if a result exists in LBORRES.
                 Document: IG v3.3
                 Section: 6.3.6 LB
             Origin: SDTM and SDTMIG Conformance Rules
@@ -54,11 +48,7 @@ Authorities:
       - Name: TIG
         References:
           - Citations:
-              - Cited Guidance:
-                  2.8.7.3 This section describes how to populate --ORRES.  Tests Not Done have
-                  --ORRES  null and --STAT  "NOT DONE".   {All Findings Domain Specifications- --STAT} Used
-                  to indicate that a test was not done or a measurement was not taken. Should be null if a
-                  result exists in REORRES.
+              - Cited Guidance: 2.8.7.3 This section describes how to populate --ORRES.  Tests Not Done have --ORRES  null and --STAT  "NOT DONE".   {All Findings Domain Specifications- --STAT} Used to indicate that a test was not done or a measurement was not taken. Should be null if a result exists in REORRES.
                 Document: TIG 1.0
                 Item: Findings Class Domains- Num 3 and Num 5
                 Section: 2.8.7.3
@@ -79,10 +69,10 @@ Core:
   Id: CORE-000099
   Status: Published
   Version: "1"
-Description: Raise an error when both --ORRES and --STAT values are populated
+Description: Raise an error when --ORRES is populated but --STAT is populated.
 Executability: Fully Executable
 Outcome:
-  Message: Value for --STAT is populated, when --ORRES is populated
+  Message: --STAT must not be populated when --ORRES is populated.
   Output Variables:
     - --ORRES
     - --STAT

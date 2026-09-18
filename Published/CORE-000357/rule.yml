@@ -7,10 +7,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  Supplemental Qualifier datasets for split domains would also be split. The
-                  nomenclature would include the additional one-to-two characters used to identify the split
-                  dataset.
+              - Cited Guidance: Supplemental Qualifier datasets for split domains would also be split. The nomenclature would include the additional one-to-two characters used to identify the split dataset.
                 Document: IG v3.4
                 Item: "7"
                 Section: 4.1.7
@@ -23,10 +20,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  Supplemental Qualifier datasets for split domains would also be split. The
-                  nomenclature would include the additional one-to-two characters used to identify the split
-                  dataset.
+              - Cited Guidance: Supplemental Qualifier datasets for split domains would also be split. The nomenclature would include the additional one-to-two characters used to identify the split dataset.
                 Document: IG v3.2
                 Item: Rule 7
                 Section: 4.1.1.7
@@ -39,10 +33,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  Supplemental Qualifier datasets for split domains would also be split. The
-                  nomenclature would include the additional one-to-two characters used to identify the split
-                  dataset.
+              - Cited Guidance: Supplemental Qualifier datasets for split domains would also be split. The nomenclature would include the additional one-to-two characters used to identify the split dataset.
                 Document: IG v3.3
                 Item: Rule 7
                 Section: 4.1.7
@@ -55,10 +46,7 @@ Authorities:
       - Name: TIG
         References:
           - Citations:
-              - Cited Guidance:
-                  Supplemental Qualifier datasets for split domains would also be split. The
-                  nomenclature will include the additional one to two characters used to identify the split
-                  dataset (e.g., SUPPLBHM, SUPPFACM).
+              - Cited Guidance: Supplemental Qualifier datasets for split domains would also be split. The nomenclature will include the additional one to two characters used to identify the split dataset (e.g., SUPPLBHM, SUPPFACM).
                 Document: TIG 1.0
                 Item: Num 9.3.ii
                 Section: "2.6"
@@ -78,12 +66,10 @@ Core:
   Id: CORE-000357
   Status: Published
   Version: "1"
-Description: When a supplemental qualifier dataset is associated with a split dataset, the dataset
-  name length must not be greater than 8 characters.
+Description: Raise an error when a supplemental qualifier dataset is associated with a split dataset, but the dataset name length is greater than 8 characters.
 Executability: Fully Executable
 Outcome:
-  Message: Supplemental qualifier dataset associated with a split dataset is greater than 8
-    characters in length
+  Message: Split dataset name length of -- dataset > 8.
 Rule Type: Dataset Metadata Check
 Scope:
   Classes:

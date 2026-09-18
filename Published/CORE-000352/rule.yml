@@ -7,10 +7,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  Since there are, by definition, no gaps between Elements, the value of
-                  SEENDTC for one Element will always be the same as the value of SESTDTC for the next
-                  Element.
+              - Cited Guidance: Since there are, by definition, no gaps between Elements, the value of SEENDTC for one Element will always be the same as the value of SESTDTC for the next Element.
                 Document: IG v3.4
                 Item: Assumption 8
                 Section: "5.3"
@@ -23,10 +20,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  Since there are, by definition, no gaps between Elements, the value of
-                  SEENDTC for one Element will always be the same as the value of SESTDTC for the next
-                  Element
+              - Cited Guidance: Since there are, by definition, no gaps between Elements, the value of SEENDTC for one Element will always be the same as the value of SESTDTC for the next Element
                 Document: IG v3.2
                 Item: Assumption 10
                 Section: 5 SE
@@ -39,10 +33,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  Since there are, by definition, no gaps between Elements, the value of
-                  SEENDTC for one Element will always be the same as the value of SESTDTC for the next
-                  Element
+              - Cited Guidance: Since there are, by definition, no gaps between Elements, the value of SEENDTC for one Element will always be the same as the value of SESTDTC for the next Element
                 Document: IG v3.3
                 Item: Assumption 8
                 Section: "5.3"
@@ -55,10 +46,8 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance:
-                  Because there are no time gaps between Elements, the SEENDTC value for one
-                  element will always be the same as the SESTDTC value for the next Element.
-                Document: IG v3.0
+              - Cited Guidance: There are, by definition, no time gaps between Elements; therefore, the value SEENDTC for one Element will always be the same as the value of SESTDTC for the next Element. Each Element continues until the time at which the next Element begins.
+                Document: SENDIG v3.0
                 Item: Assumption 1
                 Section: 5.3.1.1
             Origin: SEND Conformance Rules
@@ -70,11 +59,7 @@ Authorities:
       - Name: TIG
         References:
           - Citations:
-              - Cited Guidance:
-                  Since there are, by definition, no gaps between Elements, the value of
-                  SEENDTC for one Element will always be the same as the value of SESTDTC for the next
-                  Element. Because there are, by definition, no gaps between elements, the value of SEENDTC
-                  for one element will always be the same as the value of SESTDTC for the next element.
+              - Cited Guidance: Since there are, by definition, no gaps between Elements, the value of SEENDTC for one Element will always be the same as the value of SESTDTC for the next Element. Because there are, by definition, no gaps between elements, the value of SEENDTC for one element will always be the same as the value of SESTDTC for the next element.
                 Document: TIG 1.0
                 Item: Assumption 7
                 Section: 2.8.10.24
@@ -96,7 +81,7 @@ Core:
   Id: CORE-000352
   Status: Published
   Version: "1"
-Description: Trigger error where SEENDTC is not equal to SESTDTC of the next element.
+Description: Raise an error when SEENDTC is not equal to SESTDTC of the next element.
 Executability: Fully Executable
 Outcome:
   Message: SEENDTC is not equal to SESTDTC of the next element.

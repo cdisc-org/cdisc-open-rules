@@ -4,10 +4,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  All paired variables should have a one-to-one relationship. Examples include
-                  short name and name of test; parameter name and parameter code or number; variable name
-                  and variable label, etc.
+              - Cited Guidance: All paired variables should have a one-to-one relationship. Examples include short name and name of test; parameter name and parameter code or number; variable name and variable label, etc.
                 Document: FDA
                 Section: FDAB009
             Origin: FDA Business Rules
@@ -19,10 +16,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  All paired variables should have a one-to-one relationship. Examples include
-                  short name and name of test; parameter name and parameter code or number; variable name
-                  and variable label, etc.
+              - Cited Guidance: All paired variables should have a one-to-one relationship. Examples include short name and name of test; parameter name and parameter code or number; variable name and variable label, etc.
                 Document: FDA
                 Section: FDAB009
             Origin: FDA Business Rules
@@ -34,10 +28,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  All paired variables should have a one-to-one relationship. Examples include
-                  short name and name of test; parameter name and parameter code or number; variable name
-                  and variable label, etc.
+              - Cited Guidance: All paired variables should have a one-to-one relationship. Examples include short name and name of test; parameter name and parameter code or number; variable name and variable label, etc.
                 Document: FDA
                 Section: FDAB009
             Origin: FDA Business Rules
@@ -49,10 +40,7 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance:
-                  All paired variables should have a one-to-one relationship. Examples include
-                  short name and name of test; parameter name and parameter code or number; variable name
-                  and variable label, etc.
+              - Cited Guidance: All paired variables should have a one-to-one relationship. Examples include short name and name of test; parameter name and parameter code or number; variable name and variable label, etc.
                 Document: FDA
                 Section: FDAB009
             Origin: FDA Business Rules
@@ -64,10 +52,7 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance:
-                  All paired variables should have a one-to-one relationship. Examples include
-                  short name and name of test; parameter name and parameter code or number; variable name
-                  and variable label, etc.
+              - Cited Guidance: All paired variables should have a one-to-one relationship. Examples include short name and name of test; parameter name and parameter code or number; variable name and variable label, etc.
                 Document: FDA
                 Section: FDAB009
             Origin: FDA Business Rules
@@ -79,10 +64,7 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance:
-                  All paired variables should have a one-to-one relationship. Examples include
-                  short name and name of test; parameter name and parameter code or number; variable name
-                  and variable label, etc.
+              - Cited Guidance: All paired variables should have a one-to-one relationship. Examples include short name and name of test; parameter name and parameter code or number; variable name and variable label, etc.
                 Document: FDA
                 Section: FDAB009
             Origin: FDA Business Rules
@@ -94,10 +76,7 @@ Authorities:
       - Name: SENDIG-GENETOX
         References:
           - Citations:
-              - Cited Guidance:
-                  All paired variables should have a one-to-one relationship. Examples include
-                  short name and name of test; parameter name and parameter code or number; variable name
-                  and variable label, etc.
+              - Cited Guidance: All paired variables should have a one-to-one relationship. Examples include short name and name of test; parameter name and parameter code or number; variable name and variable label, etc.
                 Document: FDA
                 Section: FDAB009
             Origin: FDA Business Rules
@@ -109,10 +88,7 @@ Authorities:
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance:
-                  All paired variables should have a one-to-one relationship. Examples include
-                  short name and name of test; parameter name and parameter code or number; variable name
-                  and variable label, etc.
+              - Cited Guidance: All paired variables should have a one-to-one relationship. Examples include short name and name of test; parameter name and parameter code or number; variable name and variable label, etc.
                 Document: FDA
                 Section: FDAB009
             Origin: FDA Business Rules
@@ -124,10 +100,7 @@ Authorities:
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance:
-                  All paired variables should have a one-to-one relationship. Examples include
-                  short name and name of test; parameter name and parameter code or number; variable name
-                  and variable label, etc.
+              - Cited Guidance: All paired variables should have a one-to-one relationship. Examples include short name and name of test; parameter name and parameter code or number; variable name and variable label, etc.
                 Document: FDA
                 Section: FDAB009
             Origin: FDA Business Rules
@@ -139,10 +112,7 @@ Authorities:
       - Name: SENDIG-AR
         References:
           - Citations:
-              - Cited Guidance:
-                  All paired variables should have a one-to-one relationship. Examples include
-                  short name and name of test; parameter name and parameter code or number; variable name
-                  and variable label, etc.
+              - Cited Guidance: All paired variables should have a one-to-one relationship. Examples include short name and name of test; parameter name and parameter code or number; variable name and variable label, etc.
                 Document: FDA
                 Section: FDAB009
             Origin: FDA Business Rules
@@ -160,7 +130,7 @@ Core:
   Id: CORE-000791
   Status: Published
   Version: "1"
-Description: ACTARMCD and ACTARM should have a one-to-one relationship.
+Description: Raise an error when ACTARMCD and ACTARM do not have a one-to-one relationship.
 Executability: Fully Executable
 Outcome:
   Message: ACTARMCD and ACTARM do not have a one-to-one relationship.

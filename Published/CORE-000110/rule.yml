@@ -7,10 +7,8 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  Reference value for the result or finding copied or derived from --ORREF in
-                  a standard format.
-                Document: SDTM v2.0
+              - Cited Guidance: Reference value for the result or finding copied or derived from --ORREF in a standard format.
+                Document: Model v2.0
                 Item: --STREFC
                 Section: Findings
             Origin: SDTM and SDTMIG Conformance Rules
@@ -22,9 +20,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  Reference value for the result or finding copied or derived from --ORREF in
-                  a standard format.
+              - Cited Guidance: Reference value for the result or finding copied or derived from --ORREF in a standard format.
                 Document: Model v1.7
                 Item: --STREFC
                 Section: Table 2.2.3
@@ -37,9 +33,7 @@ Authorities:
       - Name: TIG
         References:
           - Citations:
-              - Cited Guidance:
-                  Reference value for the result or finding copied or derived from --ORREF in
-                  a standard format.
+              - Cited Guidance: Reference value for the result or finding copied or derived from --ORREF in a standard format.
                 Document: SDTM v2.1
                 Item: --STREFC
                 Section: 3.1.3 The Findings Observation Class
@@ -64,10 +58,10 @@ Core:
   Id: CORE-000110
   Status: Published
   Version: "1"
-Description: Raise an error when (--ORREF ^= null or --DRVFL='Y') and --STREFC is null.
+Description: Raise an error when --ORREF is populated or --DRVFL is equal to 'Y', but --STREFC is not populated.
 Executability: Fully Executable
 Outcome:
-  Message: --STREFC is null when --ORREF is non-empty or --DRVFL is equal to 'Y'
+  Message: --STREFC is not populated when --ORREF is populated or --DRVFL is equal to 'Y'.
   Output Variables:
     - --ORREF
     - --DRVFL

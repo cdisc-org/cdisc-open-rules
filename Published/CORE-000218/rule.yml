@@ -7,9 +7,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Comments[Value of identifying variable of the parent
-                  record(s).]|Supplemental Qualifiers[Value of identifying variable of the parent
-                  record(s).]
+              - Cited Guidance: Comments[Value of identifying variable of the parent record(s).]|Supplemental Qualifiers[Value of identifying variable of the parent record(s).]
                 Document: Model v2.0
                 Item: IDVARVAL
                 Section: Comments|Supplemental Qualifiers
@@ -22,12 +20,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  Identifying variable in the parent dataset that identifies the record(s) to
-                  which the comment applies. Examples AESEQ or CMGRPID. Used only when individual comments
-                  are related to domain records. Null for comments collected on separate CRFs. Value of
-                  identifying variable of the parent record(s). Null for comments collected on separate
-                  CRFs.
+              - Cited Guidance: Identifying variable in the parent dataset that identifies the record(s) to which the comment applies. Examples AESEQ or CMGRPID. Used only when individual comments are related to domain records. Null for comments collected on separate CRFs. Value of identifying variable of the parent record(s). Null for comments collected on separate CRFs.
                 Document: Model v1.7
                 Item: ""
                 Section: 2.2.7|5.1.2
@@ -40,12 +33,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  Identifying variable in the parent dataset that identifies the record(s) to
-                  which the comment applies. Examples AESEQ or CMGRPID. Used only when individual comments
-                  are related to domain records. Null for comments collected on separate CRFs. Value of
-                  identifying variable of the parent record(s). Null for comments collected on separate
-                  CRFs.
+              - Cited Guidance: Identifying variable in the parent dataset that identifies the record(s) to which the comment applies. Examples AESEQ or CMGRPID. Used only when individual comments are related to domain records. Null for comments collected on separate CRFs. Value of identifying variable of the parent record(s). Null for comments collected on separate CRFs.
                 Document: Model v1.4
                 Item: ""
                 Section: 2.2.7
@@ -58,8 +46,7 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: IDVARVAL is used only when individual comments are related to domain
-                  records. Cannot be populated if IDVAR is null.
+              - Cited Guidance: IDVARVAL is used only when individual comments are related to domain records. Cannot be populated if IDVAR is null.
                 Document: IG v3.0
                 Item: Specification
                 Section: 5.2.2.1
@@ -72,8 +59,7 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: IDVARVAL is used only when individual comments are related to domain
-                  records. Cannot be populated if IDVAR is null.
+              - Cited Guidance: IDVARVAL is used only when individual comments are related to domain records. Cannot be populated if IDVAR is null.
                 Document: IG v3.1
                 Item: Specification
                 Section: 5.2.2.1
@@ -86,8 +72,7 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance: IDVARVAL is used only when individual comments are related to domain
-                  records. Cannot be populated if IDVAR is null.
+              - Cited Guidance: IDVARVAL is used only when individual comments are related to domain records. Cannot be populated if IDVAR is null.
                 Document: IG v3.1.1
                 Item: Specification
                 Section: 5.2.2.1
@@ -100,8 +85,7 @@ Authorities:
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance: IDVARVAL is used only when individual comments are related to domain
-                  records. Cannot be populated if IDVAR is null.
+              - Cited Guidance: IDVARVAL is used only when individual comments are related to domain records. Cannot be populated if IDVAR is null.
                 Document: IG v3.1
                 Item: Specification
                 Section: 5.2.2.1
@@ -114,8 +98,7 @@ Authorities:
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance: IDVARVAL is used only when individual comments are related to domain
-                  records. Cannot be populated if IDVAR is null.
+              - Cited Guidance: IDVARVAL is used only when individual comments are related to domain records. Cannot be populated if IDVAR is null.
                 Document: IG v3.1.1
                 Item: Specification
                 Section: 5.2.2.1
@@ -128,8 +111,7 @@ Authorities:
       - Name: SENDIG-GENETOX
         References:
           - Citations:
-              - Cited Guidance: IDVARVAL is used only when individual comments are related to domain
-                  records. Cannot be populated if IDVAR is null.
+              - Cited Guidance: IDVARVAL is used only when individual comments are related to domain records. Cannot be populated if IDVAR is null.
                 Document: IG v3.1
                 Item: Specification
                 Section: 5.2.2.1
@@ -156,9 +138,7 @@ Authorities:
       - Name: TIG
         References:
           - Citations:
-              - Cited Guidance:
-                  Used only when individual comments are related to domain records.  Cannot be
-                  populated if IDVAR is null.
+              - Cited Guidance: Used only when individual comments are related to domain records.  Cannot be populated if IDVAR is null.
                 Document: TIG v1.0
                 Item: IDVARVAL CDISC Notes
                 Section: 2.8.9.4 SEND Comments (CO)
@@ -179,10 +159,10 @@ Core:
   Id: CORE-000218
   Status: Published
   Version: "1"
-Description: Raise an error when IDVAR is empty and IDVARVAL is not empty
+Description: Raise an error when IDVAR is not populated but IDVARVAL is populated.
 Executability: Fully Executable
 Outcome:
-  Message: IDVAR is empty but IDVARVAL is not empty
+  Message: IDVARVAL must not be populated when IDVAR is not populated.
   Output Variables:
     - IDVAR
     - IDVARVAL

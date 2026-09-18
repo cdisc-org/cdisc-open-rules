@@ -7,10 +7,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  --LNKGRP is a grouping identifier used to identify a group of records in one
-                  domain that is related to a record in another domain, often forming a many-to-one
-                  relationship.
+              - Cited Guidance: --LNKGRP is a grouping identifier used to identify a group of records in one domain that is related to a record in another domain, often forming a many-to-one relationship.
                 Document: SDTMIG v3.4
                 Item: 2.E.2
                 Section: 4.2.6
@@ -23,10 +20,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  --LNKGRP is a grouping identifier used to identify a group of records in one
-                  domain that is related to a record in another domain, often forming a many-to-one
-                  relationship.
+              - Cited Guidance: --LNKGRP is a grouping identifier used to identify a group of records in one domain that is related to a record in another domain, often forming a many-to-one relationship.
                 Document: SDTMIG v3.3
                 Item: 2.E.2
                 Section: 4.2.6
@@ -52,18 +46,11 @@ Authorities:
       - Name: TIG
         References:
           - Citations:
-              - Cited Guidance:
-                  A sequence of characters used to uniquely identify a group of records, for a
-                  subject, in one domain and link it to 1 or more records for that subject in another
-                  domain.
+              - Cited Guidance: A sequence of characters used to uniquely identify a group of records, for a subject, in one domain and link it to 1 or more records for that subject in another domain.
                 Document: SDTM v2.1
                 Item: --LNKGRP, Definition column
                 Section: SDTM- 3.1.4 Identifiers for All Classes
-              - Cited Guidance:
-                  Groups of records can be related by using grouping variables such as --LNKID
-                  or --LNKGRP in IDVAR.  Using --LNKID or --LNKGRP can be a more efficient method of
-                  representing relationships in RELREC when relating a single or group of records in one
-                  dataset to a group of records in another dataset.
+              - Cited Guidance: Groups of records can be related by using grouping variables such as --LNKID or --LNKGRP in IDVAR.  Using --LNKID or --LNKGRP can be a more efficient method of representing relationships in RELREC when relating a single or group of records in one dataset to a group of records in another dataset.
                 Document: SDTM v2.1
                 Item: --LNKGRP, Definition column
                 Section: 2.8.5.2
@@ -85,8 +72,7 @@ Core:
   Id: CORE-000358
   Status: Published
   Version: "1"
-Description: Verify that when --LNKGRP is present in one domain it is also present in another
-  domain.
+Description: Raise an error when --LNKGRP is present in one domain but not in another domain.
 Executability: Fully Executable
 Operations:
   - id: $VARIABLE_COUNT

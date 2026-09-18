@@ -7,13 +7,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  Within the context that defines uniqueness for a time point, which may
-                  include domain, visit, and reference time point, there must be a one-to-relationship
-                  between values of --TPT and --TPTNUM. in other words, if domain, visit, and reference time
-                  point uniquely identify subject data, then if two subjects have records with the same
-                  values of DOMAIN, VISITNUM, --TPTREF, and --TPTNUM, then these records may not have
-                  different time point descriptions in --TPT.
+              - Cited Guidance: Within the context that defines uniqueness for a time point, which may include domain, visit, and reference time point, there must be a one-to-relationship between values of --TPT and --TPTNUM. in other words, if domain, visit, and reference time point uniquely identify subject data, then if two subjects have records with the same values of DOMAIN, VISITNUM, --TPTREF, and --TPTNUM, then these records may not have different time point descriptions in --TPT.
                 Document: IG v3.4
                 Section: 4.4.10
             Origin: SDTM and SDTMIG Conformance Rules
@@ -25,13 +19,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  Within the context that defines uniqueness for a time point, which may
-                  include domain, visit, and reference time point, there must be a one-to-relationship
-                  between values of --TPT and --TPTNUM. in other words, if domain, visit, and reference time
-                  point uniquely identify subject data, then if two subjects have records with the same
-                  values of DOMAIN, VISITNUM, --TPTREF, and --TPTNUM, then these records may not have
-                  different time point descriptions in --TPT.
+              - Cited Guidance: Within the context that defines uniqueness for a time point, which may include domain, visit, and reference time point, there must be a one-to-relationship between values of --TPT and --TPTNUM. in other words, if domain, visit, and reference time point uniquely identify subject data, then if two subjects have records with the same values of DOMAIN, VISITNUM, --TPTREF, and --TPTNUM, then these records may not have different time point descriptions in --TPT.
                 Document: IG v3.3
                 Section: 4.4.10
             Origin: SDTM and SDTMIG Conformance Rules
@@ -43,13 +31,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  Within the context that defines uniqueness for a time point, which may
-                  include domain, visit, and reference time point, there must be a one-to-relationship
-                  between values of --TPT and --TPTNUM. in other words, if domain, visit, and reference time
-                  point uniquely identify subject data, then if two subjects have records with the same
-                  values of DOMAIN, VISITNUM, --TPTREF, and --TPTNUM, then these records may not have
-                  different time point descriptions in --TPT.
+              - Cited Guidance: Within the context that defines uniqueness for a time point, which may include domain, visit, and reference time point, there must be a one-to-relationship between values of --TPT and --TPTNUM. in other words, if domain, visit, and reference time point uniquely identify subject data, then if two subjects have records with the same values of DOMAIN, VISITNUM, --TPTREF, and --TPTNUM, then these records may not have different time point descriptions in --TPT.
                 Document: IG v3.2
                 Section: 4.1.4.10
             Origin: SDTM and SDTMIG Conformance Rules
@@ -61,9 +43,7 @@ Authorities:
       - Name: TIG
         References:
           - Citations:
-              - Cited Guidance:
-                  Timepoints will be represented using both --TPT and --TPTNUM. There will be
-                  a one-to-one relationship between the values of --TPT and --TPTNUM.
+              - Cited Guidance: Timepoints will be represented using both --TPT and --TPTNUM. There will be a one-to-one relationship between the values of --TPT and --TPTNUM.
                 Document: TIG 1.0
                 Item: Sub Section Planned Timing Num 5
                 Section: "2.8.7.5"
@@ -79,10 +59,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  All paired variables should have a one-to-one relationship. Examples include
-                  short name and name of test; parameter name and parameter code or number; variable name
-                  and variable label, etc.
+              - Cited Guidance: All paired variables should have a one-to-one relationship. Examples include short name and name of test; parameter name and parameter code or number; variable name and variable label, etc.
                 Document: FDA
                 Section: FDAB009
             Origin: FDA Business Rules
@@ -94,10 +71,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  All paired variables should have a one-to-one relationship. Examples include
-                  short name and name of test; parameter name and parameter code or number; variable name
-                  and variable label, etc.
+              - Cited Guidance: All paired variables should have a one-to-one relationship. Examples include short name and name of test; parameter name and parameter code or number; variable name and variable label, etc.
                 Document: FDA
                 Section: FDAB009
             Origin: FDA Business Rules
@@ -109,10 +83,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  All paired variables should have a one-to-one relationship. Examples include
-                  short name and name of test; parameter name and parameter code or number; variable name
-                  and variable label, etc.
+              - Cited Guidance: All paired variables should have a one-to-one relationship. Examples include short name and name of test; parameter name and parameter code or number; variable name and variable label, etc.
                 Document: FDA
                 Section: FDAB009
             Origin: FDA Business Rules
@@ -134,11 +105,10 @@ Core:
   Id: CORE-000141
   Status: Published
   Version: "1"
-Description: VISITNUM and --TPTREF are not present then --TPT and --TPTNUM should have a one-to-one
-  relationship.
+Description: Raise an error when VISITNUM and --TPTREF are not present and --TPT and --TPTNUM does not have a one-to-one relationship
 Executability: Fully Executable
 Outcome:
-  Message: --TPT and --TPTNUM do not have a one-to-one relationship.
+  Message: --TPT and --TPTNUM do not have a one-to-one relationship when VISITNUM and --TPTREF are not present in the dataset.
   Output Variables:
     - VISITNUM
     - --TPTREF

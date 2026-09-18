@@ -7,9 +7,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  Upper end of reference range for continuous measurement in original units.
-                  Should be populated only for continuous results.
+              - Cited Guidance: Upper end of reference range for continuous measurement in original units. Should be populated only for continuous results.
                 Document: SDTMIG v3.4
                 Item: Specification
                 Section: 6.3.5.6
@@ -22,9 +20,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  Upper end of reference range for continuous measurements in original units.
-                  Should be populated only for continuous results.
+              - Cited Guidance: Upper end of reference range for continuous measurements in original units. Should be populated only for continuous results.
                 Document: IG v3.2
                 Item: Specification
                 Section: "6.3"
@@ -37,9 +33,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  Upper end of reference range for continuous measurements in original units.
-                  Should be populated only for continuous results.
+              - Cited Guidance: Upper end of reference range for continuous measurements in original units. Should be populated only for continuous results.
                 Document: IG v3.3
                 Item: Specification
                 Section: 6.3.6
@@ -52,9 +46,7 @@ Authorities:
       - Name: TIG
         References:
           - Citations:
-              - Cited Guidance:
-                  Upper end of reference range for continuous measurement in original units.
-                  Should be populated only for continuous results.
+              - Cited Guidance: Upper end of reference range for continuous measurement in original units. Should be populated only for continuous results.
                 Document: TIG 1.0
                 Item: Specification-LBORNRHI
                 Section: 2.8.10.14
@@ -72,8 +64,7 @@ Check:
   # Changed to Fully Executable. See Jira ticket: CORERULES-156 (CG0180)
   all:
     - name: LBORRES
-      operator:
-        not_matches_regex
+      operator: not_matches_regex
         # value: ^-?(0|[1-9]\d*)(\.\d+)?$
         # Change by Jozef Aerts to allow values starting with a dot, e.g. ".25"
         # Also see Github ticket https://github.com/cdisc-org/cdisc-rules-engine/issues/520
@@ -86,11 +77,10 @@ Core:
   Id: CORE-000289
   Status: Published
   Version: "1"
-Description: Raise an error when LBORRES is not a continuous measurement and LBORNRHI is not empty.
-  The interpretation of the guidance is that LBORRES is populated (not null).
+Description: 'Raise an error when LBORRES is not a quantitative value and LBORNRHI is populated. The interpretation of the guidance is that the rule applies when LBORRES is populated (not null). Note: the rule logic applies until such time there is availability of reliable metadata to verify if the test is quantitative or not.'
 Executability: Fully Executable
 Outcome:
-  Message: LBORRES is not a continuous measurement but LBORNRHI is not empty.
+  Message: LBORNRHI is populated when LBORRES is not a quantitative value.
 Rule Type: Record Data
 Scope:
   Classes:

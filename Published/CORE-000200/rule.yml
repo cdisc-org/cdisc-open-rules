@@ -7,12 +7,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  '--ORRES variable contains the result of the measurement or finding as originally
-                  received or collected.  --ORRES is an expected variable and should always be populated, with
-                  two exceptions'':'' When --STAT = "NOT DONE" since there is no result for such a record When
-                  --DRVFL = "Y" since the distinction between an original result and a standard result is not
-                  applicable for records for which --DRVFL = "Y" '
+              - Cited Guidance: 'The --ORRES variable contains the result of the measurement or finding as originally received or collected. --ORRES is an expected variable and should always be populated, with two exceptions: When --STAT = ''NOT DONE'' since there is no result for such a record. When --DRVFL = ''Y'' since the distinction between an original result and a standard result is not applicable for records for which --DRVFL = ''Y''.'
                 Document: IG v3.4
                 Item: "    "
                 Section: 4.5.1.1
@@ -25,11 +20,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  "The --ORRES variable contains the result of the measurement or finding as originally
-                  received or collected. --ORRES is an expected variable and should always be populated; with
-                  two exceptions: When --STAT = 'NOT DONE'. --ORRES should generally not be populated for derived
-                  records."
+              - Cited Guidance: "The --ORRES variable contains the result of the measurement or finding as originally received or collected. --ORRES is an expected variable and should always be populated; with two exceptions: When --STAT = 'NOT DONE'. --ORRES should generally not be populated for derived records."
                 Document: IG v3.2
                 Section: 4.1.5.1.1
             Origin: SDTM and SDTMIG Conformance Rules
@@ -41,11 +32,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  "The --ORRES variable contains the result of the measurement or finding as originally
-                  received or collected. --ORRES is an expected variable and should always be populated; with
-                  two exceptions: When --STAT = 'NOT DONE'. --ORRES should generally not be populated for derived
-                  records."
+              - Cited Guidance: "The --ORRES variable contains the result of the measurement or finding as originally received or collected. --ORRES is an expected variable and should always be populated; with two exceptions: When --STAT = 'NOT DONE'. --ORRES should generally not be populated for derived records."
                 Document: IG v3.3
                 Section: 4.5.1.1
             Origin: SDTM and SDTMIG Conformance Rules
@@ -57,9 +44,7 @@ Authorities:
       - Name: TIG
         References:
           - Citations:
-              - Cited Guidance:
-                  In general observation class domains, --STAT will be populated with "NOT
-                  DONE" when data are not collected for the topic of the observation.
+              - Cited Guidance: In general observation class domains, --STAT will be populated with "NOT DONE" when data are not collected for the topic of the observation.
                 Document: TIG 1.0
                 Item: Findings table Num 5
                 Section: 2.8.7.1
@@ -101,11 +86,10 @@ Core:
   Id: CORE-000200
   Status: Published
   Version: "1"
-Description: Verify that --ORRES is not missing when either --STAT is null or --DRVFL not equal to
-  'Y'
+Description: Raise an error when --STAT is not populated and --DRVFL is not equal to 'Y', but --ORRES is not populated.
 Executability: Fully Executable
 Outcome:
-  Message: --ORRES cannot be null when --STAT is null or --DRVFL not equal to 'Y'
+  Message: --STAT is not populated and --DRVFL is not equal to 'Y', but --ORRES is not populated.
   Output Variables:
     - --STAT
     - --DRVFL

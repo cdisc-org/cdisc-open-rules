@@ -7,9 +7,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  Standardized or dictionary-derived text for the description of an event or
-                  intervention. Equivalent to the Preferred Term (PT in MedDRA).
+              - Cited Guidance: Standardized or dictionary-derived text for the description of an event or intervention. Equivalent to the Preferred Term (PT in MedDRA).
                 Document: Model v2.0
                 Item: --DECOD
                 Section: Events
@@ -26,9 +24,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Dictionary or sponsor-defined derived text description of the topic
-                  variable, --TERM, or the modified topic variable (--MODIFY), if applicable. Equivalent to
-                  the Preferred Term (PT in MedDRA).
+              - Cited Guidance: Dictionary or sponsor-defined derived text description of the topic variable, --TERM, or the modified topic variable (--MODIFY), if applicable. Equivalent to the Preferred Term (PT in MedDRA).
                 Document: Model v1.7
                 Item: --DECOD
                 Section: 2.2.2
@@ -45,9 +41,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Dictionary or sponsor-defined derived text description of the topic
-                  variable, --TERM, or the modified topic variable (--MODIFY), if applicable. Equivalent to
-                  the Preferred Term (PT in MedDRA).
+              - Cited Guidance: Dictionary or sponsor-defined derived text description of the topic variable, --TERM, or the modified topic variable (--MODIFY), if applicable. Equivalent to the Preferred Term (PT in MedDRA).
                 Document: Model v1.4
                 Item: --DECOD
                 Section: 2.2.2
@@ -64,10 +58,7 @@ Authorities:
       - Name: TIG
         References:
           - Citations:
-              - Cited Guidance:
-                  --DECOD[Standardized or dictionary-derived text for the description of an
-                  event or intervention. Equivalent to the Preferred Term (PT in MedDRA).]|--PTCD[The
-                  preferred term code assigned to the event from MedDRA.]
+              - Cited Guidance: --DECOD[Standardized or dictionary-derived text for the description of an event or intervention. Equivalent to the Preferred Term (PT in MedDRA).]|--PTCD[The preferred term code assigned to the event from MedDRA.]
                 Document: SDTM v2.1
                 Item: --DECOD|--PTCD
                 Section: 3.1.2 The Events Observation Class
@@ -83,10 +74,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  All paired variables should have a one-to-one relationship. Examples include
-                  short name and name of test; parameter name and parameter code or number; variable name
-                  and variable label, etc.
+              - Cited Guidance: All paired variables should have a one-to-one relationship. Examples include short name and name of test; parameter name and parameter code or number; variable name and variable label, etc.
                 Document: FDA
                 Section: FDAB009
             Origin: FDA Business Rules
@@ -98,10 +86,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  All paired variables should have a one-to-one relationship. Examples include
-                  short name and name of test; parameter name and parameter code or number; variable name
-                  and variable label, etc.
+              - Cited Guidance: All paired variables should have a one-to-one relationship. Examples include short name and name of test; parameter name and parameter code or number; variable name and variable label, etc.
                 Document: FDA
                 Section: FDAB009
             Origin: FDA Business Rules
@@ -113,10 +98,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  All paired variables should have a one-to-one relationship. Examples include
-                  short name and name of test; parameter name and parameter code or number; variable name
-                  and variable label, etc.
+              - Cited Guidance: All paired variables should have a one-to-one relationship. Examples include short name and name of test; parameter name and parameter code or number; variable name and variable label, etc.
                 Document: FDA
                 Section: FDAB009
             Origin: FDA Business Rules
@@ -138,7 +120,7 @@ Core:
   Id: CORE-000268
   Status: Published
   Version: "1"
-Description: --DECOD and --PTCD should have a one-to-one relationship.
+Description: Raise an error when --DECOD and --PTCD do not have a one-to-one relationship.
 Executability: Fully Executable
 Outcome:
   Message: --DECOD and --PTCD do not have a one-to-one relationship.

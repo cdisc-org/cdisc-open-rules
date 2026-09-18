@@ -7,8 +7,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Lower end of reference range for continuous measurements for
-                  LBSTRESC/LBSTRESN in standardized units. Should be populated only for continuous results.
+              - Cited Guidance: Lower end of reference range for continuous measurements for LBSTRESC/LBSTRESN in standardized units. Should be populated only for continuous results.
                 Document: SDTMIG v3.4
                 Item: Specification
                 Section: 6.3.5.6
@@ -21,9 +20,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  Lower end of reference range for continuous measurements in original units.
-                  Should be populated only for continuous results.
+              - Cited Guidance: Lower end of reference range for continuous measurements in original units. Should be populated only for continuous results.
                 Document: IG v3.2
                 Item: Specification
                 Section: "6.3"
@@ -36,9 +33,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  Lower end of reference range for continuous measurements in original units.
-                  Should be populated only for continuous results.
+              - Cited Guidance: Lower end of reference range for continuous measurements in original units. Should be populated only for continuous results.
                 Document: IG v3.3
                 Item: Specification
                 Section: 6.3.6
@@ -51,9 +46,7 @@ Authorities:
       - Name: TIG
         References:
           - Citations:
-              - Cited Guidance:
-                  Lower end of reference range for continuous measurement in original units.
-                  Should be populated only for continuous results.
+              - Cited Guidance: Lower end of reference range for continuous measurement in original units. Should be populated only for continuous results.
                 Document: TIG 1.0
                 Item: Specification
                 Section: 2.8.10.14
@@ -81,11 +74,10 @@ Core:
   Id: CORE-000290
   Status: Published
   Version: "1"
-Description: Raise an error when LBORRES ^= continuous measurement and LBORNRLO is not empty. The
-  interpretation of the guidance is that LBORRES is populated (not null).
+Description: 'Raise an error when LBORRES is not a quantitative value and LBORNRLO is populated. The interpretation of the guidance is that the rule applies when LBORRES is populated (not null). Note: the rule logic applies until such time there is availability of reliable metadata to verify if the test is quantitative or not.'
 Executability: Fully Executable
 Outcome:
-  Message: LBORRES is not a continuous measurement but LBORNRLO is not empty.
+  Message: LBORNRLO is populated when LBORRES is not a quantitative value.
 Rule Type: Record Data
 Scope:
   Classes:

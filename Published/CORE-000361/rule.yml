@@ -7,9 +7,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  There should be a one-to-one relationship between values of VISIT and
-                  VISITNUM.
+              - Cited Guidance: There should be a one-to-one relationship between values of VISIT and VISITNUM.
                 Document: IG v3.4
                 Section: 4.4.5
             Origin: SDTM and SDTMIG Conformance Rules
@@ -21,9 +19,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  There should be a one-to-one relationship between values of VISIT and
-                  VISITNUM.
+              - Cited Guidance: There should be a one-to-one relationship between values of VISIT and VISITNUM.
                 Document: IG v3.3
                 Section: 4.4.5
             Origin: SDTM and SDTMIG Conformance Rules
@@ -35,9 +31,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  There should be a one-to-one relationship between values of VISIT and
-                  VISITNUM.
+              - Cited Guidance: There should be a one-to-one relationship between values of VISIT and VISITNUM.
                 Document: IG v3.2
                 Section: 4.1.4.5
             Origin: SDTM and SDTMIG Conformance Rules
@@ -49,15 +43,11 @@ Authorities:
       - Name: TIG
         References:
           - Citations:
-              - Cited Guidance:
-                  There will be a one-to-one relationship between values of VISIT and VISITNUM
-                  in TV.
+              - Cited Guidance: There will be a one-to-one relationship between values of VISIT and VISITNUM in TV.
                 Document: TIG 1.0
                 Item: Assumption 6
                 Section: 2.8.10.31
-              - Cited Guidance:
-                  Values of VISIT, VISITNUM, and VISITDY will be represented as defined in the
-                  Trial Visits (TV) dataset.
+              - Cited Guidance: Values of VISIT, VISITNUM, and VISITDY will be represented as defined in the Trial Visits (TV) dataset.
                 Document: TIG 1.0
                 Item: Planned Timing table NUM 1
                 Section: 2.8.7.5
@@ -73,10 +63,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  All paired variables should have a one-to-one relationship. Examples include
-                  short name and name of test; parameter name and parameter code or number; variable name
-                  and variable label, etc.
+              - Cited Guidance: All paired variables should have a one-to-one relationship. Examples include short name and name of test; parameter name and parameter code or number; variable name and variable label, etc.
                 Document: FDA
                 Section: FDAB009
             Origin: FDA Business Rules
@@ -88,10 +75,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  All paired variables should have a one-to-one relationship. Examples include
-                  short name and name of test; parameter name and parameter code or number; variable name
-                  and variable label, etc.
+              - Cited Guidance: All paired variables should have a one-to-one relationship. Examples include short name and name of test; parameter name and parameter code or number; variable name and variable label, etc.
                 Document: FDA
                 Section: FDAB009
             Origin: FDA Business Rules
@@ -103,10 +87,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  All paired variables should have a one-to-one relationship. Examples include
-                  short name and name of test; parameter name and parameter code or number; variable name
-                  and variable label, etc.
+              - Cited Guidance: All paired variables should have a one-to-one relationship. Examples include short name and name of test; parameter name and parameter code or number; variable name and variable label, etc.
                 Document: FDA
                 Section: FDAB009
             Origin: FDA Business Rules
@@ -127,8 +108,7 @@ Core:
   Id: CORE-000361
   Status: Published
   Version: "1"
-Description: When VISITNUM is present in TV, VISIT and VISITNUM should have a one-to-one
-  relationship.
+Description: Raise an error when VISITNUM value matches a VISITNUM value in the TV dataset but VISIT and VISITNUM do not have a one-to-one relationship.
 Executability: Fully Executable
 Operations:
   - domain: TV

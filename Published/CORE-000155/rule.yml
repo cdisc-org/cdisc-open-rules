@@ -7,9 +7,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  2. If the timing of Visits for a trial does not depend on which ARM a
-                  subject is in, then ARMCD should be null.
+              - Cited Guidance: 2. If the timing of Visits for a trial does not depend on which ARM a subject is in, then ARMCD should be null.
                 Document: IG v3.4
                 Item: Specification
                 Section: 7.3.1
@@ -22,9 +20,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  2. If the timing of Visits for a trial does not depend on which ARM a
-                  subject is in, then ARMCD should be null.
+              - Cited Guidance: 2. If the timing of Visits for a trial does not depend on which ARM a subject is in, then ARMCD should be null.
                 Document: IG v3.2
                 Item: Specification
                 Section: "7"
@@ -37,9 +33,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  2. If the timing of Visits for a trial does not depend on which ARM a
-                  subject is in, then ARMCD should be null.
+              - Cited Guidance: 2. If the timing of Visits for a trial does not depend on which ARM a subject is in, then ARMCD should be null.
                 Document: IG v3.3
                 Item: Specification
                 Section: 7.3.1
@@ -52,9 +46,7 @@ Authorities:
       - Name: TIG
         References:
           - Citations:
-              - Cited Guidance:
-                  2. If the timing of Visits for a trial does not depend on which ARM a
-                  subject is in, then ARMCD should be null.
+              - Cited Guidance: 2. If the timing of Visits for a trial does not depend on which ARM a subject is in, then ARMCD should be null.
                 Document: TIG 1.0
                 Item: Specification ARMCD
                 Section: 2.8.10.31
@@ -76,7 +68,7 @@ Core:
   Id: CORE-000155
   Status: Published
   Version: "1"
-Description: Trigger error when ARMCD is populated and ARMCD is not in TA.ARMCD
+Description: Raise an error when ARMCD is populated but ARMCD is not in TA.ARMCD.
 Executability: Fully Executable
 Operations:
   - domain: TA
@@ -84,7 +76,7 @@ Operations:
     name: ARMCD
     operator: distinct
 Outcome:
-  Message: ARMCD is not in TA.ARMCD
+  Message: ARMCD must be in TA.ARMCD when ARMCD is populated.
   Output Variables:
     - ARMCD
 Rule Type: Record Data

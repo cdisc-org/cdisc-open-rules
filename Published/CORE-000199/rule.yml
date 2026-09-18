@@ -7,13 +7,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  Since the --TEST variable is meant to serve as a label for a --TESTCD when a
-                  Findings dataset is transposed to a more horizontal format, the length of --TEST is
-                  limited to 40 characters (except as noted below) to conform to the limitations of the SAS
-                  v5 Transport format currently used for submission datasets.... IETEST values in IE and TI
-                  are exceptions to the above 40-character rule and are limited to 200 characters, since
-                  they are not expected to be transformed to column labels.
+              - Cited Guidance: Since the --TEST variable is meant to serve as a label for a --TESTCD when a Findings dataset is transposed to a more horizontal format, the length of --TEST is limited to 40 characters (except as noted below) to conform to the limitations of the SAS v5 Transport format currently used for submission datasets.... IETEST values in IE and TI are exceptions to the above 40-character rule and are limited to 200 characters, since they are not expected to be transformed to column labels.
                 Document: IG v3.4
                 Section: 4.5.3.1
             Origin: SDTM and SDTMIG Conformance Rules
@@ -25,11 +19,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  The length of --TEST is normally limited to 40 characters to conform to the
-                  limitations of the SAS V5 Transport format currently used for submission datasets. IETEST
-                  values in IE and TI are exceptions to the above 40-character rule and are limited to 200
-                  characters since they are not expected to be transformed to a column labels.
+              - Cited Guidance: Sponsors may have test descriptions (--TEST) longer than 40 characters in their operational database. Since the --TEST variable is meant to serve as a label for a --TESTCD when a Findings dataset is transposed to a more horizontal format; the length of --TEST is limited to 40 characters (except as noted below) to conform to the limitations of the SAS v5 Transport format currently used for submission datasets. IETEST values in IE and TI are exceptions to the above 40-character rule and are limited to 200 characters since they are not expected to be transformed to a column labels.
                 Document: IG v3.3
                 Section: 4.5.3.1
             Origin: SDTM and SDTMIG Conformance Rules
@@ -41,11 +31,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  The length of --TEST is normally limited to 40 characters to conform to the
-                  limitations of the SAS V5 Transport format currently used for submission datasets. IETEST
-                  values in IE and TI are exceptions to the above 40-character rule and are limited to 200
-                  characters since they are not expected to be transformed to a column labels.
+              - Cited Guidance: The length of --TEST is normally limited to 40 characters to conform to the limitations of the SAS V5 Transport format currently used for submission datasets. IETEST values in IE and TI are exceptions to the above 40-character rule and are limited to 200 characters since they are not expected to be transformed to a column labels.
                 Document: IG v3.2
                 Section: 4.1.5.3.1
             Origin: SDTM and SDTMIG Conformance Rules
@@ -57,11 +43,8 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance:
-                  Because of limitations of SAS v5 Transport files, the lengths of data values
-                  cannot exceed 200 characters. Because --TEST values may become column labels upon
-                  transformation, the SDTM additionally restricts them to 40 characters.
-                Document: IG v3.0
+              - Cited Guidance: Because of limitations of SAS v5 Transport files, the lengths of data values cannot exceed 200 characters. Because --TEST values may become column labels upon transformation, the SDTM additionally restricts them to 40 characters.
+                Document: SENDIG v3.0
                 Section: 4.5.3
             Origin: SEND Conformance Rules
             Rule Identifier:
@@ -72,10 +55,8 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance:
-                  Because --TEST values may become column labels upon transformation, the SDTM
-                  additionally restricts them to 40 characters.
-                Document: IG v3.1
+              - Cited Guidance: Because --TEST values may become column labels upon transformation, the SDTM additionally restricts them to 40 characters.
+                Document: SENDIG v3.1
                 Section: 4.5.2
             Origin: SEND Conformance Rules
             Rule Identifier:
@@ -86,10 +67,8 @@ Authorities:
       - Name: SENDIG
         References:
           - Citations:
-              - Cited Guidance:
-                  Because --TEST values may become column labels upon transformation, the SDTM
-                  additionally restricts them to 40 characters.
-                Document: IG v3.1.1
+              - Cited Guidance: Because --TEST values may become column labels upon transformation, the SDTM additionally restricts them to 40 characters.
+                Document: SENDIG v3.1.1
                 Section: 4.5.2
             Origin: SEND Conformance Rules
             Rule Identifier:
@@ -100,10 +79,8 @@ Authorities:
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance:
-                  Because --TEST values may become column labels upon transformation, the SDTM
-                  additionally restricts them to 40 characters.
-                Document: IG v3.1
+              - Cited Guidance: Because --TEST values may become column labels upon transformation, the SDTM additionally restricts them to 40 characters.
+                Document: SENDIG v3.1
                 Section: 4.5.2
             Origin: SEND Conformance Rules
             Rule Identifier:
@@ -114,10 +91,8 @@ Authorities:
       - Name: SENDIG-DART
         References:
           - Citations:
-              - Cited Guidance:
-                  Because --TEST values may become column labels upon transformation, the SDTM
-                  additionally restricts them to 40 characters.
-                Document: IG v3.1.1
+              - Cited Guidance: Because --TEST values may become column labels upon transformation, the SDTM additionally restricts them to 40 characters.
+                Document: SENDIG v3.1.1
                 Section: 4.5.2
             Origin: SEND Conformance Rules
             Rule Identifier:
@@ -128,10 +103,8 @@ Authorities:
       - Name: SENDIG-GENETOX
         References:
           - Citations:
-              - Cited Guidance:
-                  Because --TEST values may become column labels upon transformation, the SDTM
-                  additionally restricts them to 40 characters.
-                Document: IG v3.1.1
+              - Cited Guidance: Because --TEST values may become column labels upon transformation, the SDTM additionally restricts them to 40 characters.
+                Document: SENDIG v3.1.1
                 Section: 4.5.2
             Origin: SEND Conformance Rules
             Rule Identifier:
@@ -142,11 +115,7 @@ Authorities:
       - Name: TIG
         References:
           - Citations:
-              - Cited Guidance:
-                  Since the --TEST variable is meant to serve as a label for a --TESTCD when a
-                  Findings dataset is transposed to a more horizontal format, the length of --TEST is
-                  limited to 40 characters (except as noted below) to conform to the limitations of the SAS
-                  v5 Transport format currently used for submission datasets.
+              - Cited Guidance: Since the --TEST variable is meant to serve as a label for a --TESTCD when a Findings dataset is transposed to a more horizontal format, the length of --TEST is limited to 40 characters (except as noted below) to conform to the limitations of the SAS v5 Transport format currently used for submission datasets.
                 Document: TIG 1.0
                 Section: Finding Domain Specifications
             Origin: TIG Conformance Rules
@@ -165,10 +134,10 @@ Core:
   Id: CORE-000199
   Status: Published
   Version: "1"
-Description: Raise an error when length of --TEST > 40.
+Description: Raise an error when the length of --TEST is greater than 40 characters.
 Executability: Fully Executable
 Outcome:
-  Message: Value length of --TEST > 40.
+  Message: --TEST value length is greater than 40 characters.
   Output Variables:
     - --TEST
 Rule Type: Record Data
