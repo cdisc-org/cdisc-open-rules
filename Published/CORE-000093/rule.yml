@@ -59,7 +59,12 @@ Authorities:
         Version: "1.0"
 Check:
   all:
-    - name: --DOSU
+    - any:
+        - name: --DOSU
+          operator: not_exists
+        - name: --DOSU
+          operator: empty
+      name: --DOSU
       operator: empty
     - any:
         - name: --DOSE
@@ -78,6 +83,7 @@ Executability: Fully Executable
 Outcome:
   Message: --DOSE, --DOSTOT, or --DOSTXT is populated but --DOSU is not populated.
   Output Variables:
+    - --TRT
     - --DOSE
     - --DOSTXT
     - --DOSTOT

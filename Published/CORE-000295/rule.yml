@@ -54,7 +54,12 @@ Check:
   all:
     - name: --STREFC
       operator: non_empty
-    - name: --STREFN
+    - any:
+        - name: --STREFN
+          operator: not_exists
+        - name: --STREFN
+          operator: empty
+      name: --STREFN
       operator: empty
 Core:
   Id: CORE-000295
@@ -64,6 +69,11 @@ Description: Raise an error when --STREFC is populated but --STREFN is not popul
 Executability: Fully Executable
 Outcome:
   Message: --STREFN is not populated when --STREFC is populated.
+  Output Variables:
+    - --TESTCD
+    - --TEST
+    - --STREFC
+    - --STREFN
 Rule Type: Record Data
 Scope:
   Classes:

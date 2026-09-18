@@ -65,8 +65,8 @@ Authorities:
 Check:
   all:
     - name: ARMCD
-      operator: matches_regex
-      value: ^(.){21,}$
+      operator: longer_than
+      value: 20
 Core:
   Id: CORE-000010
   Status: Published

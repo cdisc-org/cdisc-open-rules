@@ -91,6 +91,14 @@ Authorities:
         Substandard: SDTM
         Version: "1.0"
 Check:
+  all:
+    - name: --STDY
+      operator: non_empty
+    - any:
+        - name: --STDTC
+          operator: is_incomplete_date
+        - name: RFSTDTC
+          operator: is_incomplete_date
   any:
     - all:
         - name: --STDTC

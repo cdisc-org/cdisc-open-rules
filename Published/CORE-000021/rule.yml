@@ -96,6 +96,7 @@ Check:
         - name: --DRVFL
           operator: equal_to
           value: Y
+          value_is_literal: true
     - all:
         - name: --STRESC
           operator: empty

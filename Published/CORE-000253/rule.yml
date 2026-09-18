@@ -134,6 +134,11 @@ Match Datasets:
     Name: AE
 Outcome:
   Message: DTHFL is not equal to 'Y' but AESDTH in the AE dataset is equal to 'Y'.
+  Output Variables:
+    - DTHFL
+    - AESDTH
+    - AETERM
+    - AESTDTC
 Rule Type: Record Data
 Scope:
   Classes:

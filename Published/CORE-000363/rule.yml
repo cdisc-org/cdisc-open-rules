@@ -77,6 +77,7 @@ Check:
     - name: DSDECOD
       operator: equal_to
       value: INFORMED CONSENT OBTAINED
+      value_is_literal: true
     - name: $min_ds_dsstdtc
       operator: not_equal_to
       value: RFICDTC
@@ -105,10 +106,10 @@ Outcome:
   Message: DSDECOD is equal to 'INFORMED CONSENT OBTAINED' but RFICDTC in the DM dataset is not
     equal to the earliest DSSTDTC.
   Output Variables:
-    - RFICDTC
-    - $min_ds_dsstdtc
     - DSDECOD
+    - RFICDTC
     - DSSTDTC
+    - $min_ds_dsstdtc
 Rule Type: Record Data
 Scope:
   Classes:

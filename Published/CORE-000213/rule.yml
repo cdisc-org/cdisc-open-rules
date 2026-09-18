@@ -81,12 +81,11 @@ Check:
       value_is_literal: true
     - name: DSSCAT
       operator: exists
-    - name: EPOCH
+    - name: DSSCAT
       operator: is_not_unique_set
       value:
         - USUBJID
-        - DSSCAT
-
+        - EPOCH
 Core:
   Id: CORE-000213
   Status: Published
@@ -99,7 +98,8 @@ Outcome:
   Message: More than one record exists per subject per DSSCAT per EPOCH when DSCAT is equal to
     'DISPOSITION EVENT'.
   Output Variables:
-    - USUBJID
+    - DSDECOD
+    - DSCAT
     - DSSCAT
     - EPOCH
 Rule Type: Record Data

@@ -181,6 +181,9 @@ Description: Raise an error when Variable label length > 40.
 Executability: Fully Executable
 Outcome:
   Message: Variable label length should <= 40.
+  Output Variables:
+    - variable_name
+    - variable_label
 Rule Type: Variable Metadata Check
 Scope:
   Classes:
@@ -190,4 +193,4 @@ Scope:
     Include:
       - ALL
   Use Case: INDH, PROD, NONCLIN
-Sensitivity: Dataset
+Sensitivity: Record

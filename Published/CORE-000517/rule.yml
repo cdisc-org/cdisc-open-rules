@@ -148,6 +148,7 @@ Check:
     - name: --DOSTOT
       operator: less_than
       value: 0
+      value_is_literal: true
 Core:
   Id: "CORE-000517"
   Status: Published
@@ -156,6 +157,9 @@ Description: Raise an error when Total Daily Dose (--DOSTOT) value is negative.
 Executability: Fully Executable
 Outcome:
   Message: Negative value for --DOSTOT.
+  Output Variables:
+    - --TRT
+    - --DOSTOT
 Rule Type: Record Data
 Scope:
   Classes:

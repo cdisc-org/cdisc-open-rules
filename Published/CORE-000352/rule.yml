@@ -101,6 +101,9 @@ Description: Raise an error when SEENDTC is not equal to SESTDTC of the next ele
 Executability: Fully Executable
 Outcome:
   Message: SEENDTC is not equal to SESTDTC of the next element.
+  Output Variables:
+    - SESTDTC
+    - ETCD
 Rule Type: Record Data
 Scope:
   Classes:

@@ -147,11 +147,12 @@ Authorities:
 Check:
   all:
     - name: --DY
-      operator: exists
-    - name: --ENDY
-      operator: exists
-    - name: --DY
       operator: non_empty
+    - name: --ENDY
+      operator: non_empty
+    - name: --DY
+      operator: greater_than
+      value: --ENDY
     - name: --ENDY
       operator: non_empty
     - name: --DY

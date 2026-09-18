@@ -70,8 +70,9 @@ Check:
     - name: DSDECOD
       operator: equal_to
       value: DEATH
+      value_is_literal: true
     - name: DSSTDTC
-      operator: not_equal_to
+      operator: date_not_equal_to
       value: DTHDTC
 Core:
   Id: CORE-000034

@@ -49,6 +49,7 @@ Check:
     - name: --LOBXFL
       operator: not_equal_to
       value: Y
+      value_is_literal: true
     - name: --LOBXFL
       operator: non_empty
 Core:
@@ -61,7 +62,6 @@ Outcome:
   Message: Value of --LOBXFL must be 'Y' or null.
   Output Variables:
     - --CAT
-    - --TEST
     - --TESTCD
     - --LOBXFL
 Rule Type: Record Data

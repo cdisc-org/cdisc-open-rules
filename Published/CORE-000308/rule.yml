@@ -148,6 +148,7 @@ Check:
     - name: --DOSE
       operator: less_than
       value: 0
+      value_is_literal: true
 Core:
   Id: CORE-000308
   Status: Published
@@ -156,6 +157,9 @@ Description: Raise an error when Dose (--DOSE) value is negative.
 Executability: Fully Executable
 Outcome:
   Message: Negative value for --DOSE.
+  Output Variables:
+    - --TRT
+    - --DOSE
 Rule Type: Record Data
 Scope:
   Classes:

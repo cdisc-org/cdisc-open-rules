@@ -72,7 +72,7 @@ Check:
   all:
     - name: LBORRES
       operator: not_matches_regex
-      value: ^-?(\d+(\.\d+)?$)|(\.\d+$)
+      value: ^(<|>|< |> )?(-?((\d+(\.\d+)?)|(\.\d+)))$
     - name: LBSTNRLO
       operator: non_empty
     - name: LBORRES
@@ -89,6 +89,10 @@ Description:
 Executability: Fully Executable
 Outcome:
   Message: LBSTNRLO is populated when LBORRES is not a quantitative value.
+  Output Variables:
+    - LBTESTCD
+    - LBORRES
+    - LBSTNRLO
 Rule Type: Record Data
 Scope:
   Classes:
