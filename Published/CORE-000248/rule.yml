@@ -302,11 +302,10 @@ Core:
   Id: CORE-000248
   Status: Published
   Version: "1"
-Description: Time point reference (--TPTREF) should be populated when reference time point
-  (--RFTDTC) is populated.
+Description: Raise an error when --TPTREF is not populated but --RFTDTC is populated.
 Executability: Fully Executable
 Outcome:
-  Message: --TPTREF value is missing when --RFTDTC is populated.
+  Message: When --TPTREF is not populated, then --RFTDTC should also be not populated.
 Rule Type: Record Data
 Scope:
   Classes:

@@ -81,10 +81,10 @@ Core:
   Id: CORE-000100
   Status: Published
   Version: "1"
-Description: Raise an error when --VAMT is not empty, but --TRTV is empty.
+Description: Raise an error when --TRTV is not populated and --VAMT is populated.
 Executability: Fully Executable
 Outcome:
-  Message: Missing --TRTV value, when --VAMT value is populated.
+  Message: --TRTV is not populated when --VAMT is populated.
   Output Variables:
     - --TRTV
     - --VAMT

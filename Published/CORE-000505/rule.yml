@@ -201,11 +201,11 @@ Core:
   Id: CORE-000505
   Status: Published
   Version: "1"
-Description: Study Start Date (SSTDTC) value in the TS dataset should be populated in ISO 8601
-  format.
+Description: Raise an error when Study Initiation Date (STSTDTC) value in the TS dataset is not
+  populated in ISO 8601 format.
 Executability: Fully Executable
 Outcome:
-  Message: TSVAL where TSPARMCD = SSTDTC is not in ISO 8601 format.
+  Message: TSVAL where TSPARMCD = 'STSTDTC' is not in ISO 8601 format.
 Rule Type: Record Data
 Scope:
   Classes:

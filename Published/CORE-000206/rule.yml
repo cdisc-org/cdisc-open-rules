@@ -215,8 +215,8 @@ Core:
   Id: CORE-000206
   Status: Published
   Version: "1"
-Description: When IDVAR is populated, IDVARVAL must equal a value of the variable referenced by
-  IDVAR within the domain referenced by RDOMAIN
+Description: Raise an error when IDVARVAL is not equal to a value of the variable referenced by
+  IDVAR within the domain referenced by RDOMAIN when IDVAR is populated.
 Executability: Fully Executable
 Match Datasets:
   - Child: true
@@ -238,7 +238,8 @@ Match Datasets:
       - IDVARVAL
     Name: RELREC
 Outcome:
-  Message: IDVARVAL does not equal a value of the variable referenced by IDVAR in domain = RDOMAIN.
+  Message: IDVARVAL does not equal a value of the variable referenced by IDVAR where domain is equal
+    to RDOMAIN.
   Output Variables:
     - RDOMAIN
     - USUBJID

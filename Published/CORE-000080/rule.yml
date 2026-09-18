@@ -25,7 +25,7 @@ Authorities:
           - Citations:
               - Cited Guidance:
                   "(--TPTREF) Description of the fixed reference point referred to by --ELTM, --TPTNUM,
-                  and --TPT. Examples: PREVIOUS DOSE, PREVIOUS MEAL."
+                  and --TPT. Examples include PREVIOUS DOSE, PREVIOUS MEAL."
                 Document: Model v1.4
                 Item: Specification
                 Section: 2.2.5 Timing Variables for All Classes
@@ -39,8 +39,8 @@ Authorities:
         References:
           - Citations:
               - Cited Guidance:
-                  'Description of the fixed reference point referred to by --ELTM, --TPTNUM, --TPT,
-                  --STINT, and --ENINT. Examples: "PREVIOUS DOSE", "PREVIOUS MEAL".'
+                  "Description of the fixed reference point referred to by --ELTM, --TPTNUM, --TPT,
+                  --STINT, and --ENINT. Examples include 'PREVIOUS DOSE', 'PREVIOUS MEAL'."
                 Document: Model v1.7
                 Item: "Table 2.2.5.1: --TPTREF"
                 Section: 2.2.5 Timing Variables for All Classes
@@ -85,7 +85,7 @@ Description: Raise an error when --ELTM, --TPTNUM, and --TPT are not present in 
   --TPTREF is present.
 Executability: Fully Executable
 Outcome:
-  Message: --TPTREF is present when --ELTM, --TPTNUM, and --TPT are not present.
+  Message: --TPTREF must not be present when --ELTM, --TPTNUM, and --TPT are not present.
   Output Variables:
     - --TPTREF
     - --ELTM

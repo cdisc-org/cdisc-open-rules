@@ -38,6 +38,7 @@ Authorities:
                   A further step is necessary when --STRESC contains numeric values. These are
                   converted to numeric type and written to --STRESN.
                 Document: SENDIG v3.1.1
+                Item: Text
                 Section: 4.5.1.1
             Origin: SEND Conformance Rules
             Rule Identifier:
@@ -67,6 +68,7 @@ Authorities:
                   A further step is necessary when --STRESC contains numeric values. These are
                   converted to numeric type and written to --STRESN.
                 Document: SENDIG v3.1.1
+                Item: Text
                 Section: 4.5.1.1
             Origin: SEND Conformance Rules
             Rule Identifier:
@@ -81,6 +83,7 @@ Authorities:
                   A further step is necessary when --STRESC contains numeric values. These are
                   converted to numeric type and written to --STRESN.
                 Document: SENDIG v3.1.1
+                Item: Text
                 Section: 4.5.1.1
             Origin: SEND Conformance Rules
             Rule Identifier:
@@ -244,11 +247,10 @@ Core:
   Id: CORE-000542
   Status: Published
   Version: "1"
-Description: Raise an error when --STRESC is populated with a numeric value, but --STRESN is not
-  populated, or --STRESN is not equal to --STRESC.
+Description: --STRESC is populated with a numeric value and --STRESN is equal to --STRESC.
 Executability: Fully Executable
 Outcome:
-  Message: --STRESC is numeric but --STRESN is not populated or not equal to --STRESC.
+  Message: --STRESC is numeric but --STRESN is not equal to --STRESC.
   Output Variables:
     - --STRESC
     - --STRESN

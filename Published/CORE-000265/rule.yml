@@ -9,7 +9,7 @@ Authorities:
           - Citations:
               - Cited Guidance:
                   The characterization of the end of an observation relative to a reference
-                  time point.  The sponsor-defined reference time point is in --ENTPT.
+                  time point.  The sponsor- defined reference time point is in --ENTPT.
                 Document: Model v2.0
                 Item: --ENRTPT
                 Section: Timing
@@ -53,7 +53,7 @@ Authorities:
           - Citations:
               - Cited Guidance:
                   The characterization of the end of an observation relative to a reference
-                  time point. The sponsor-defined reference time point is in --ENTPT.
+                  time point. The sponsor- defined reference time point is in --ENTPT.
                 Document: SDTM v2.1
                 Item: --ENRTPT
                 Section: Section 3.1.5 Timing Variables for All Classes
@@ -72,8 +72,8 @@ Authorities:
         References:
           - Citations:
               - Cited Guidance:
-                  "When using --ENRTPT, --ENTPT must be defined. --ENRTPT uses the time point established
-                  by --ENTPT to characterize the start of an observation."
+                  "When timing info is provided as a reference to a particular timepoint, the timepoint
+                  should be also populated."
                 Document: "FDA"
                 Section: "FDAB044"
             Origin: FDA Business Rules
@@ -86,8 +86,8 @@ Authorities:
         References:
           - Citations:
               - Cited Guidance:
-                  "When using --ENRTPT, --ENTPT must be defined. --ENRTPT uses the time point established
-                  by --ENTPT to characterize the start of an observation."
+                  "When timing info is provided as a reference to a particular timepoint, the timepoint
+                  should be also populated."
                 Document: "FDA"
                 Section: "FDAB044"
             Origin: FDA Business Rules
@@ -100,8 +100,8 @@ Authorities:
         References:
           - Citations:
               - Cited Guidance:
-                  "When using --ENRTPT, --ENTPT must be defined. --ENRTPT uses the time point established
-                  by --ENTPT to characterize the start of an observation."
+                  "When timing info is provided as a reference to a particular timepoint, the timepoint
+                  should be also populated."
                 Document: "FDA"
                 Section: "FDAB044"
             Origin: FDA Business Rules
@@ -114,8 +114,8 @@ Authorities:
         References:
           - Citations:
               - Cited Guidance:
-                  "When using --ENRTPT, --ENTPT must be defined. --ENRTPT uses the time point established
-                  by --ENTPT to characterize the start of an observation."
+                  "When timing info is provided as a reference to a particular timepoint, the timepoint
+                  should be also populated."
                 Document: "FDA"
                 Section: "FDAB044"
             Origin: FDA Business Rules
@@ -128,8 +128,8 @@ Authorities:
         References:
           - Citations:
               - Cited Guidance:
-                  "When using --ENRTPT, --ENTPT must be defined. --ENRTPT uses the time point established
-                  by --ENTPT to characterize the start of an observation."
+                  "When timing info is provided as a reference to a particular timepoint, the timepoint
+                  should be also populated."
                 Document: "FDA"
                 Section: "FDAB044"
             Origin: FDA Business Rules
@@ -142,8 +142,8 @@ Authorities:
         References:
           - Citations:
               - Cited Guidance:
-                  "When using --ENRTPT, --ENTPT must be defined. --ENRTPT uses the time point established
-                  by --ENTPT to characterize the start of an observation."
+                  "When timing info is provided as a reference to a particular timepoint, the timepoint
+                  should be also populated."
                 Document: "FDA"
                 Section: "FDAB044"
             Origin: FDA Business Rules
@@ -156,8 +156,8 @@ Authorities:
         References:
           - Citations:
               - Cited Guidance:
-                  "When using --ENRTPT, --ENTPT must be defined. --ENRTPT uses the time point established
-                  by --ENTPT to characterize the start of an observation."
+                  "When timing info is provided as a reference to a particular timepoint, the timepoint
+                  should be also populated."
                 Document: "FDA"
                 Section: "FDAB044"
             Origin: FDA Business Rules
@@ -170,8 +170,8 @@ Authorities:
         References:
           - Citations:
               - Cited Guidance:
-                  "When using --ENRTPT, --ENTPT must be defined. --ENRTPT uses the time point established
-                  by --ENTPT to characterize the start of an observation."
+                  "When timing info is provided as a reference to a particular timepoint, the timepoint
+                  should be also populated."
                 Document: "FDA"
                 Section: "FDAB044"
             Origin: FDA Business Rules
@@ -184,8 +184,8 @@ Authorities:
         References:
           - Citations:
               - Cited Guidance:
-                  "When using --ENRTPT, --ENTPT must be defined. --ENRTPT uses the time point established
-                  by --ENTPT to characterize the start of an observation."
+                  "When timing info is provided as a reference to a particular timepoint, the timepoint
+                  should be also populated."
                 Document: "FDA"
                 Section: "FDAB044"
             Origin: FDA Business Rules
@@ -198,8 +198,8 @@ Authorities:
         References:
           - Citations:
               - Cited Guidance:
-                  "When using --ENRTPT, --ENTPT must be defined. --ENRTPT uses the time point established
-                  by --ENTPT to characterize the start of an observation."
+                  "When timing info is provided as a reference to a particular timepoint, the timepoint
+                  should be also populated."
                 Document: "FDA"
                 Section: "FDAB044"
             Origin: FDA Business Rules
@@ -219,8 +219,8 @@ Core:
   Status: Published
   Version: "1"
 Description:
-  "When End Relative to Reference Time Point (--ENRTPT) is populated, End Reference Time Point
-  (--ENTPT) should also be populated."
+  "End Relative to Reference Time Point (--ENRTPT) is populated and End Reference Time Point
+  (--ENTPT) is also populated."
 Executability: Fully Executable
 Outcome:
   Message: --ENRTPT is populated, but --ENTPT is missing.

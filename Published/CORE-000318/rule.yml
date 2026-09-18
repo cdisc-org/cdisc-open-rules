@@ -160,7 +160,7 @@ Core:
   Id: CORE-000318
   Status: Published
   Version: "1"
-Description: ARMCD and ARM should have a one-to-one relationship.
+Description: Raise an error when ARMCD and ARM do not have a one-to-one relationship.
 Executability: Fully Executable
 Outcome:
   Message: ARMCD and ARM do not have a one-to-one relationship.

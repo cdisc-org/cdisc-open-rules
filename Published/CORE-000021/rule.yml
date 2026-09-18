@@ -103,10 +103,10 @@ Core:
   Id: CORE-000021
   Status: Published
   Version: "1"
-Description: Raise an error when the value for --STRESC is null.
+Description: Raise an error when either --ORRES is populated or --DRVFL = 'Y' but --STRESC is empty.
 Executability: Fully Executable
 Outcome:
-  Message: --STRESC should not be blank when either --ORRES is provided or --DRVFL = 'Y' .
+  Message: --STRESC should be populated when either --ORRES is provided or --DRVFL = 'Y'.
   Output Variables:
     - --ORRES
     - --DRVFL

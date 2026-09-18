@@ -80,14 +80,16 @@ Core:
   Id: CORE-000597
   Status: Published
   Version: "1"
-Description: When SUPPAE.QNAM=AESOSP is present, a record with AESMIE=Y should be present
+Description: Raise an error when there is a record in the SUPPAE dataset where QNAM is equal to
+  'AESOSP' but no record with AESMIE equal to 'Y' is present in the AE dataset.
 Executability: Fully Executable
 Match Datasets:
   - Keys:
       - USUBJID
     Name: SUPPAE
 Outcome:
-  Message: Missing AESMIE=Y where SUPPAE.QNAM=AESOSP
+  Message: QNAM equal to 'AESOSP' is present in the SUPPAE dataset, but no record with AESMIE equal
+    to 'Y' is present in the AE dataset.
   Output Variables:
     - AESOSP
     - AESMIE

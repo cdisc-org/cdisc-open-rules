@@ -50,8 +50,8 @@ Authorities:
           - Citations:
               - Cited Guidance:
                   ARMCD is limited to 20 characters and does not have special character
-                  restrictions. The maximum length of ARMCD is longer than that for other short variables to
-                  accommodate the kind of values that are likely to be needed for crossover trials.
+                  restrictions. The maximum length of ARMCD is longer than that for other 'short' variables
+                  to accommodate the kind of values that are likely to be needed for crossover trials.
                 Document: TIG 1.0
                 Item: Specification ARMCD
                 Section: 2.8.10.27
@@ -71,10 +71,10 @@ Core:
   Id: CORE-000010
   Status: Published
   Version: "1"
-Description: Verify ARMCD value length is <= 20
+Description: Raise an error when ARMCD value length > 20.
 Executability: Fully Executable
 Outcome:
-  Message: ARMCD value length is greater than 20
+  Message: ARMCD value length should be <= 20.
   Output Variables:
     - ARMCD
 Rule Type: Record Data

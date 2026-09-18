@@ -160,7 +160,7 @@ Core:
   Id: CORE-000303
   Status: Published
   Version: "1"
-Description: --TESTCD and --TEST should have a one-to-one relationship.
+Description: Raise an error when --TESTCD and --TEST do not have a one-to-one relationship.
 Executability: Fully Executable
 Outcome:
   Message: --TESTCD and --TEST do not have a one-to-one relationship.

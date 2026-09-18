@@ -17,7 +17,7 @@ Authorities:
         References:
           - Citations:
               - Cited Guidance:
-                  Sponsors must use the predefined SENDIG-standard labels in all standard
+                  Sponsors must use the predefined SENDIG- standard labels in all standard
                   domains
                 Document: SENDIG v3.0
                 Section: "4.2.1"
@@ -31,7 +31,7 @@ Authorities:
         References:
           - Citations:
               - Cited Guidance:
-                  Sponsors must use the predefined SENDIG-standard labels in all standard
+                  Sponsors must use the predefined SENDIG- standard labels in all standard
                   domains
                 Document: SENDIG v3.1
                 Section: "4.2.1"
@@ -45,7 +45,7 @@ Authorities:
         References:
           - Citations:
               - Cited Guidance:
-                  Sponsors must use the predefined SENDIG-standard labels in all standard
+                  Sponsors must use the predefined SENDIG- standard labels in all standard
                   domains
                 Document: SENDIG v3.1.1
                 Section: "4.2.1"
@@ -59,7 +59,7 @@ Authorities:
         References:
           - Citations:
               - Cited Guidance:
-                  Sponsors must use the predefined SENDIG-standard labels in all standard
+                  Sponsors must use the predefined SENDIG- standard labels in all standard
                   domains
                 Document: SENDIG v3.1
                 Section: "4.2.1"
@@ -73,7 +73,7 @@ Authorities:
         References:
           - Citations:
               - Cited Guidance:
-                  Sponsors must use the predefined SENDIG-standard labels in all standard
+                  Sponsors must use the predefined SENDIG- standard labels in all standard
                   domains
                 Document: SENDIG v3.1.1
                 Section: "4.2.1"
@@ -87,7 +87,7 @@ Authorities:
         References:
           - Citations:
               - Cited Guidance:
-                  Sponsors must use the predefined SENDIG-standard labels in all standard
+                  Sponsors must use the predefined SENDIG- standard labels in all standard
                   domains
                 Document: SENDIG v3.1.1
                 Section: "4.2.1"
@@ -120,7 +120,7 @@ Description: Raise an error when the variable label for an IG-variable does not 
   variable label in the Implementation Guide.
 Executability: Fully Executable
 Outcome:
-  Message: The label of the variable does not correspond to the label in the IG
+  Message: The label of the variable must correspond to the label in the IG
   Output Variables:
     - variable_name
     - variable_label

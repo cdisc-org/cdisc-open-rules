@@ -50,9 +50,12 @@ Authorities:
         References:
           - Citations:
               - Cited Guidance:
-                  Required variables must always be included in the dataset and cannot be null
-                  for any record.
-                Document: IG v3.0
+                  A Required variable is any variable that is basic to the identification of a
+                  data record (i.e., essential key variables and a topic variable) or is necessary to make
+                  the record meaningful. Required variables must always be included in the dataset and
+                  cannot be null for any record.
+                Document: SENDIG v3.0
+                Item: Text
                 Section: 4.1.3
             Origin: SEND Conformance Rules
             Rule Identifier:
@@ -64,9 +67,12 @@ Authorities:
         References:
           - Citations:
               - Cited Guidance:
-                  Required variables must always be included in the dataset and cannot be null
-                  for any record.
-                Document: IG v3.1
+                  A Required variable is any variable that is basic to the identification of a
+                  data record (i.e., essential key variables and a topic variable) or is necessary to make
+                  the record meaningful. Required variables must always be included in the dataset and
+                  cannot be null for any record.
+                Document: SENDIG v3.1
+                Item: Text
                 Section: 4.1.3
             Origin: SEND Conformance Rules
             Rule Identifier:
@@ -78,9 +84,12 @@ Authorities:
         References:
           - Citations:
               - Cited Guidance:
-                  Required variables must always be included in the dataset and cannot be null
-                  for any record.
-                Document: IG v3.1.1
+                  A Required variable is any variable that is basic to the identification of a
+                  data record (i.e., essential key variables and a topic variable) or is necessary to make
+                  the record meaningful. Required variables must always be included in the dataset and
+                  cannot be null for any record.
+                Document: SENDIG v3.1.1
+                Item: Text
                 Section: 4.1.3
             Origin: SEND Conformance Rules
             Rule Identifier:
@@ -92,9 +101,12 @@ Authorities:
         References:
           - Citations:
               - Cited Guidance:
-                  Required variables must always be included in the dataset and cannot be null
-                  for any record.
-                Document: IG v3.1
+                  A Required variable is any variable that is basic to the identification of a
+                  data record (i.e., essential key variables and a topic variable) or is necessary to make
+                  the record meaningful. Required variables must always be included in the dataset and
+                  cannot be null for any record.
+                Document: SENDIG v3.1
+                Item: Text
                 Section: 4.1.3
             Origin: SEND Conformance Rules
             Rule Identifier:
@@ -106,9 +118,12 @@ Authorities:
         References:
           - Citations:
               - Cited Guidance:
-                  Required variables must always be included in the dataset and cannot be null
-                  for any record.
-                Document: IG v3.1.1
+                  A Required variable is any variable that is basic to the identification of a
+                  data record (i.e., essential key variables and a topic variable) or is necessary to make
+                  the record meaningful. Required variables must always be included in the dataset and
+                  cannot be null for any record.
+                Document: SENDIG v3.1.1
+                Item: Text
                 Section: 4.1.3
             Origin: SEND Conformance Rules
             Rule Identifier:
@@ -120,9 +135,12 @@ Authorities:
         References:
           - Citations:
               - Cited Guidance:
-                  Required variables must always be included in the dataset and cannot be null
-                  for any record.
-                Document: IG v3.1.1
+                  A Required variable is any variable that is basic to the identification of a
+                  data record (i.e., essential key variables and a topic variable) or is necessary to make
+                  the record meaningful. Required variables must always be included in the dataset and
+                  cannot be null for any record.
+                Document: SENDIG v3.1.1
+                Item: Text
                 Section: 4.1.3
             Origin: SEND Conformance Rules
             Rule Identifier:
@@ -181,7 +199,7 @@ Operations:
   - id: $dataset_variables
     operator: get_column_order_from_dataset
 Outcome:
-  Message: At least one required variable is missing from dataset
+  Message: Required variable is missing from the dataset.
   Output Variables:
     - $dataset_variables
     - $required_variables

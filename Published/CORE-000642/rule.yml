@@ -132,8 +132,8 @@ Core:
   Status: Published
   Version: "1"
 Description:
-  "When Planned End of Assessment Interval (--ENINT) is populated, Time Point Reference (--TPTREF)
-  should also be populated."
+  "Planned End of Assessment Interval (--ENINT) is populated and Time Point Reference (--TPREF)
+  is not populated."
 Executability: Fully Executable
 Outcome:
   Message: --ENINT is populated, but --TPTREF is missing.
