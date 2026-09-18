@@ -153,7 +153,9 @@ Core:
   Id: CORE-000793
   Status: Published
   Version: "1"
-Description: "Collection study day (--DY) should be present when date/time of collection (--DTC) is populated"
+Description:
+  "Raise an error when collection study day (--DY) is not present when date/time of collection
+  (--DTC) is populated."
 Executability: Fully Executable
 Outcome:
   Message: Collection study day (--DY) is missing when date/time of collection (--DTC) is populated.

@@ -59,12 +59,12 @@ Authorities:
         References:
           - Citations:
               - Cited Guidance:
-                  "If the reference time point is prior to the date of collection or assessment:
-                  Start      values: an observation can start BEFORE the reference point, can start COINCIDENT
-                  with the reference point, can start AFTER the reference point, or it may not be known (U) when
-                  it started. End values: an observation can end BEFORE the reference point, can end COINCIDENT
-                  with the reference point, can end AFTER the reference point, can be known that it didn't end
-                  but was ONGOING, or it is unknown (U) when it ended or if it was ongoing."
+                  "If the reference time point is prior to the  date of collection or assessment:
+                  Start values: an  observation can start BEFORE the reference point, can start  COINCIDENT with
+                  the reference point, can start AFTER the  reference point, or it may not be known (U) when it
+                  started. End values: an observation can end BEFORE the reference  point, can end COINCIDENT
+                  with the reference point, can end  AFTER the reference point, can be known that it didn''t end
+                  but was ONGOING, or it is unknown (U) when it ended or if it was ongoing.\n"
                 Document: TIG 1.0
                 Item: Num 3
                 Section: 2.8.7.6
@@ -99,11 +99,12 @@ Core:
   Status: Published
   Version: "1"
 
-Description: Trigger error when --STRTPT is not in ('BEFORE', 'COINCIDENT', 'AFTER', 'UNKNOWN') and
-  --STTPT is prior to the date of collection or assessment.
+Description: Raise an error when --STTPT is prior to the date of collection or assessment but
+  --STRTPT is not equal to 'BEFORE', 'COINCIDENT', 'AFTER', or 'UNKNOWN'.
 Executability: Partially Executable
 Outcome:
-  Message: --STRTPT is not in ('BEFORE', 'COINCIDENT', 'AFTER', 'UNKNOWN')
+  Message: --STRTPT must be equal to 'BEFORE', 'COINCIDENT', 'AFTER', or 'UNKNOWN' when --STTPT is
+    prior to the date of collection or assessment.
   Output Variables:
     - --STTPT
     - --STRTPT

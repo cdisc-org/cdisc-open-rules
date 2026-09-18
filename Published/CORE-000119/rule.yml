@@ -60,10 +60,10 @@ Core:
   Id: CORE-000119
   Status: Published
   Version: "1"
-Description: Raise an error when ARM is not empty, but ARMCD is empty
+Description: Raise an error when ARMCD is not populated but ARM is populated.
 Executability: Fully Executable
 Outcome:
-  Message: ARM is populated, when ARMCD is NULL
+  Message: ARM must not be populated when ARMCD is not populated.
   Output Variables:
     - ARMCD
     - ARM

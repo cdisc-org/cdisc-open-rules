@@ -218,7 +218,7 @@ Core:
   Id: CORE-000179
   Status: Published
   Version: "1"
-Description: TSPARMCD and TSPARM should have a one-to-one relationship.
+Description: Raise an error when TSPARM and TSPARMCD do not have a one-to-one relationship.
 Executability: Fully Executable
 Outcome:
   Message: TSPARM and TSPARMCD do not have a one-to-one relationship.

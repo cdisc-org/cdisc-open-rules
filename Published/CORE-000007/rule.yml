@@ -9,7 +9,7 @@ Authorities:
           - Citations:
               - Cited Guidance:
                   DTHDTC[The date or date and time of death, represented in a standardized
-                  character format.] DTHFL[An indication that the subject died.]
+                  character format.]|DTHFL[An indication that the subject died.]
                 Document: Model v2.0
                 Item: DTHDTC|DTHFL
                 Section: Demographics
@@ -37,7 +37,7 @@ Authorities:
         References:
           - Citations:
               - Cited Guidance:
-                  A value of "Y" indicates the subject died. Should be "Y" or null. Should be
+                  A value of 'Y' indicates the subject died. Should be 'Y' or null. Should be
                   populated even when the death date is unknown.
                 Document: Model v1.7
                 Section: Table 2.2.6.1
@@ -120,11 +120,10 @@ Core:
   Id: CORE-000007
   Status: Published
   Version: "1"
-Description: When Date/Time of Death (DTHDTC) in the DM dataset is populated then death flag (DTHFL)
-  should be populated as 'Y' in the DM dataset for the corresponding subject.
+Description: Raise an error when DTHDTC is populated but DTHFL is not equal to 'Y'.
 Executability: Fully Executable
 Outcome:
-  Message: DTHDTC is populated but DTHFL in DM dataset is not "Y".
+  Message: DTHFL must be equal to 'Y' when DTHDTC is populated.
   Output Variables:
     - DTHDTC
     - DTHFL

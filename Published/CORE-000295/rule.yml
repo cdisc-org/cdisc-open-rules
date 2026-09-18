@@ -10,7 +10,7 @@ Authorities:
               - Cited Guidance:
                   Reference value for continuous or numeric results or findings in standard
                   format or in standard units. --STREFN uses the same units as --STRESN, if applicable.
-                Document: SDTM v2.0
+                Document: Model v2.0
                 Item: --STREFN
                 Section: Findings
             Origin: SDTM and SDTMIG Conformance Rules
@@ -60,10 +60,10 @@ Core:
   Id: CORE-000295
   Status: Published
   Version: "1"
-Description: When --STREFC is populated, --STREFN should also be populated.
+Description: Raise an error when --STREFC is populated but --STREFN is not populated.
 Executability: Fully Executable
 Outcome:
-  Message: --STREFN is null when --STREFC is populated.
+  Message: --STREFN is not populated when --STREFC is populated.
 Rule Type: Record Data
 Scope:
   Classes:

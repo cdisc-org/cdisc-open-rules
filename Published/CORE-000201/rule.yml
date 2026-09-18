@@ -187,8 +187,8 @@ Core:
   Id: CORE-000201
   Status: Published
   Version: "1"
-Description: Trigger error when domain is not an AP-- domain and USUBJID is not present in
-  DM.USUBJID
+Description: Raise an error when domain is not an AP-- domain but USUBJID value is not present in
+  the DM dataset.
 Executability: Fully Executable
 Operations:
   - domain: DM
@@ -196,7 +196,7 @@ Operations:
     name: USUBJID
     operator: distinct
 Outcome:
-  Message: USUBJID is not found in DM.USUBJID
+  Message: USUBJID value is missing in the DM dataset.
 Rule Type: Record Data
 Scope:
   Classes:

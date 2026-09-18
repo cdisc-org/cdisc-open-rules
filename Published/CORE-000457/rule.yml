@@ -84,13 +84,14 @@ Core:
   Id: CORE-000457
   Status: Published
   Version: "1"
-Description: Trigger error when SUPP--.RDOMAIN does not represent a dataset present in the study
+Description: Raise an error when the value of RDOMAIN in the SUPP-- dataset does not correspond to a
+  dataset present in the study.
 Executability: Fully Executable
 Operations:
   - id: $study_domains
     operator: study_domains
 Outcome:
-  Message: SUPP--.RDOMAIN does not represent a dataset present in the study
+  Message: RDOMAIN value in the -- dataset does not correspond to a dataset present in the study.
 Rule Type: Record Data
 Scope:
   Classes:

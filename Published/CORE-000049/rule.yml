@@ -9,7 +9,7 @@ Authorities:
           - Citations:
               - Cited Guidance:
                   The following SDTM variables, defined for use in non-clinical studies
-                  (SEND), must NEVER be used in the submission of SDTM-based data for human clinical trials,
+                  (SEND), must NEVER be used in the submission of SDTM-based data for human clinical trials;
                   --USCHFL (Interventions, Events, Findings), --DTHREL (Findings), --EXCLFL (Findings),
                   --REASEX (Findings), --IMPLBL (Findings), FETUSID (Identifiers), --DETECT (Timing
                   Variables), --NOMDY (Timing Variables), --NOMLBL (Timing Variables)
@@ -40,7 +40,7 @@ Authorities:
           - Citations:
               - Cited Guidance:
                   "The following SDTM variables; defined for use in non-clinical studies (SEND);
-                  must NEVER be used in the submission of SDTM-based data for human clinical trials: --USCHFL
+                  must NEVER be used in the submission of SDTM-based data for human clinical trials; --USCHFL
                   (Interventions, Events, Findings), --DTHREL (Findings), --EXCLFL (Findings), --REASEX (Findings),
                   --IMPLBL (Findings), --FETUSID (Identifiers), --DETECT (Timing Variables), --NOMDY (Timing Variables),
                   --NOMLBL (Timing Variables)"
@@ -96,7 +96,7 @@ Core:
 Description: Raise an error when --USCHFL is present.
 Executability: Fully Executable
 Outcome:
-  Message: --USCHFL is present.
+  Message: --USCHFL must not be present.
 Rule Type: Record Data
 Scope:
   Classes:

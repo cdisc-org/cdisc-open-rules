@@ -95,7 +95,8 @@ Core:
 Description: Raise an error when --LOBXFL = 'Y' and --STRESC is empty.
 Executability: Fully Executable
 Outcome:
-  Message: --LOBXFL = 'Y', but --STRESC is empty.
+  Message: Record has a last observation before exposure flag (--LOBXFL = 'Y') but character
+    standard result (--STRESC) is missing.
   Output Variables:
     - --LOBXFL
     - --TESTCD

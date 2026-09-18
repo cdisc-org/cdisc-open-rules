@@ -8,8 +8,8 @@ Authorities:
         References:
           - Citations:
               - Cited Guidance:
-                  '"If value is from a numeric scale, represent only the number  (e.g., "2" and
-                  not "Grade 2")."'
+                  "If value is from a numeric scale, represent only the number  (e.g., '2' and
+                  not 'Grade 2')."
                 Document: IG v3.4
                 Item: Specification
                 Section: 6.3.5.6
@@ -23,8 +23,8 @@ Authorities:
         References:
           - Citations:
               - Cited Guidance:
-                  If value is from a numeric scale, represent only the number (e.g., "2" and
-                  not "Grade 2").
+                  If value is from a numeric scale, represent only the number (e.g., '2' and
+                  not 'Grade 2').
                 Document: IG v3.2
                 Item: Specification
                 Section: "6.3"
@@ -38,8 +38,8 @@ Authorities:
         References:
           - Citations:
               - Cited Guidance:
-                  If value is from a numeric scale, represent only the number (e.g., "2" and
-                  not "Grade 2").
+                  If value is from a numeric scale, represent only the number (e.g., '2' and
+                  not 'Grade 2').
                 Document: IG v3.3
                 Item: Specification
                 Section: 6.3.6
@@ -54,8 +54,8 @@ Authorities:
           - Citations:
               - Cited Guidance:
                   Records toxicity grade value using a standard toxicity scale (such as the
-                  NCI CTCAE). If value is from a numeric scale, represent only the number (e.g., "2" and not
-                  "Grade 2").
+                  NCI CTCAE). If value is from a numeric scale, represent only the number (e.g., '2' and not
+                  'Grade 2').
                 Document: TIG 1.0
                 Item: Specification-LBTOXGR
                 Section: 2.8.10.14
@@ -78,10 +78,10 @@ Core:
   Id: CORE-000169
   Status: Published
   Version: "1"
-Description: Raise a warning when LBTOXGR is not numeric
+Description: Raise an error when LBTOXGR uses a numeric scale but contains non-numeric values.
 Executability: Fully Executable
 Outcome:
-  Message: Verify that LBTOXGR value is not from a numeric scale
+  Message: LBTOXGR must not include non-numeric values when a numeric scale is used.
   Output Variables:
     - LBTOXGR
     - LBTOX

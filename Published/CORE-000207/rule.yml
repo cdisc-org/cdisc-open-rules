@@ -9,7 +9,7 @@ Authorities:
           - Citations:
               - Cited Guidance:
                   Note that --STDTC should not be used in the Findings general observation
-                  class and is therefore blank in the following table.
+                  class and is therefore blank in the following table. table.
                 Document: IG v3.4
                 Section: 4.4.8
             Origin: SDTM and SDTMIG Conformance Rules
@@ -92,7 +92,8 @@ Authorities:
                   is always represented in the same variable, the --DTC variable is used to represent the
                   time of specimen collection...Note that --STDTC is not used for collection dates over an
                   interval...
-                Document: IG v3.0
+                Document: SENDIG v3.0
+                Item: Text
                 Section: 4.4.6
             Origin: SEND Conformance Rules
             Rule Identifier:
@@ -109,7 +110,8 @@ Authorities:
                   is always represented in the same variable, the --DTC variable is used to represent the
                   time of specimen collection...Note that --STDTC is not used for collection dates over an
                   interval...
-                Document: IG v3.1
+                Document: SENDIG v3.1
+                Item: Text
                 Section: 4.4.6
             Origin: SEND Conformance Rules
             Rule Identifier:
@@ -126,7 +128,8 @@ Authorities:
                   is always represented in the same variable, the --DTC variable is used to represent the
                   time of specimen collection...Note that --STDTC is not used for collection dates over an
                   interval...
-                Document: IG v3.1.1
+                Document: SENDIG v3.1.1
+                Item: Text
                 Section: 4.4.6
             Origin: SEND Conformance Rules
             Rule Identifier:
@@ -143,7 +146,8 @@ Authorities:
                   is always represented in the same variable, the --DTC variable is used to represent the
                   time of specimen collection...Note that --STDTC is not used for collection dates over an
                   interval...
-                Document: IG v3.1
+                Document: SENDIG v3.1
+                Item: Text
                 Section: 4.4.6
             Origin: SEND Conformance Rules
             Rule Identifier:
@@ -160,7 +164,8 @@ Authorities:
                   is always represented in the same variable, the --DTC variable is used to represent the
                   time of specimen collection...Note that --STDTC is not used for collection dates over an
                   interval...
-                Document: IG v3.1.1
+                Document: SENDIG v3.1.1
+                Item: Text
                 Section: 4.4.6
             Origin: SEND Conformance Rules
             Rule Identifier:
@@ -178,6 +183,7 @@ Authorities:
                   time of specimen collection...Note that --STDTC is not used for collection dates over an
                   interval...
                 Document: IG v3.1.1
+                Item: Text
                 Section: 4.4.6
             Origin: SEND Conformance Rules
             Rule Identifier:
@@ -189,13 +195,13 @@ Authorities:
         References:
           - Citations:
               - Cited Guidance:
-                  Not in Findings class domains | Select variables for the domain from the
-                  SDTM. Selection of variables must align with SDTM Usage Restrictions.
+                  Not in Findings class domains|Select variables for the domain from the SDTM.
+                  Selection of variables must align with SDTM Usage Restrictions.
                 Document: SDTM v2.1|TIG v1.0
                 Item: Specification|--STDTC
                 Section:
-                  Section 3.1.5 - Timing Variables for All Classes | 2.8.2 How Extend Domains | 2.8.3
-                  How to Create New Specifications
+                  Section 3.1.5 - Timing Variables for All Classes|2.8.2 How Extend Domains|2.8.3 How
+                  to Create New Specifications
             Origin: TIG Conformance Rules
             Rule Identifier:
               Id: TIG0597
@@ -211,9 +217,9 @@ Authorities:
                   should go into the --DTC field...In order to ensure that the critical timing information
                   is always represented in the same variable, the --DTC variable is used to represent the
                   time of specimen collection...Note that --STDTC is not used for collection dates over an
-                  interval.
+                  interval...
                 Document: TIG v1.0
-                Item: text
+                Item: Text
                 Section: 2.8.7.5
             Origin: TIG Conformance Rules
             Rule Identifier:
@@ -230,10 +236,10 @@ Core:
   Id: CORE-000207
   Status: Published
   Version: "1"
-Description: Trigger error when --STDTC is present in a Findings general observation class
+Description: Raise an error when --STDTC is present in a Findings domain.
 Executability: Fully Executable
 Outcome:
-  Message: --STDTC is present in a Findings general observation class
+  Message: --STDTC must not be present in a Findings domain.
   Output Variables:
     - --STDTC
 Rule Type: Record Data

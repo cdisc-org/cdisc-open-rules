@@ -7,8 +7,9 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: --IMPLBL is not be used in human clinical trials.
-                Document: SDTM v2.0
+              - Cited Guidance: Not in human clinical trials.
+                Document: Model v2.0
+                Item: --IMPLBL
                 Section: Findings
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
@@ -41,7 +42,7 @@ Core:
 Description: Raise an error when --IMPLBL is present.
 Executability: Fully Executable
 Outcome:
-  Message: --IMPLBL is present.
+  Message: --IMPLBL must not be present.
 Rule Type: Record Data
 Scope:
   Classes:

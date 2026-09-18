@@ -91,7 +91,7 @@ Core:
   Id: CORE-000173
   Status: Published
   Version: "1"
-Description: Raise an error when ETCD is not equal to 'UNPLAN' and not equal to TE.ETCD
+Description: Raise an error when ETCD is not equal to 'UNPLAN' and not equal to TE.ETCD.
 Executability: Fully Executable
 Operations:
   - domain: TE
@@ -99,7 +99,7 @@ Operations:
     name: ETCD
     operator: distinct
 Outcome:
-  Message: ETCD is not equal to 'UNPLAN' and not equal to TE.ETCD
+  Message: ETCD must be equal to TE.ETCD or 'UNPLAN'.
   Output Variables:
     - ETCD
 Rule Type: Record Data
