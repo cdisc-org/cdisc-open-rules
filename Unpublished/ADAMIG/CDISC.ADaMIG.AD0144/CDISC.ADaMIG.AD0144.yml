@@ -4,8 +4,7 @@ Authorities:
       - Name: "ADaMIG-MD"
         References:
           - Citations:
-              - Cited Guidance:
-                  <-The MDBDS supports analysis needs by adding SPDEVID as a
+              - Cited Guidance: <-The MDBDS supports analysis needs by adding SPDEVID as a
                   required key variable and USUBJID as a conditionally required
                   variable. See the BDS class for further details.
                 Document: ADaMIG-MD v1.0
@@ -31,8 +30,7 @@ Authorities:
       - Name: ADaMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  To ensure compliance with SAS Version 5 transport file format
+              - Cited Guidance: To ensure compliance with SAS Version 5 transport file format
                   and Oracle constraints, all ADaM variable names must be no
                   more than 8 characters in length, start with a letter (not
                   underscore), and be comprised only of letters (A-Z),
@@ -60,8 +58,7 @@ Authorities:
             Validator Rule Message: ""
             Version: "5.0"
           - Citations:
-              - Cited Guidance:
-                  Values of PARAMCD should follow the SAS Version 5 transport file
+              - Cited Guidance: Values of PARAMCD should follow the SAS Version 5 transport file
                   format and Oracle constraints as noted under General Variable
                   Conventions in Section 3.1.1.
                 Document: ADaMIG v1.1
@@ -90,8 +87,7 @@ Authorities:
       - Name: ADaMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  To ensure compliance with SAS Version 5 transport file format
+              - Cited Guidance: To ensure compliance with SAS Version 5 transport file format
                   and Oracle constraints, all ADaM variable names must be no
                   more than 8 characters in length, start with a letter (not
                   underscore), and be comprised only of letters (A-Z),
@@ -119,8 +115,7 @@ Authorities:
             Validator Rule Message: ""
             Version: "5.0"
           - Citations:
-              - Cited Guidance:
-                  Values of PARAMCD should follow the SAS Version 5 transport file
+              - Cited Guidance: Values of PARAMCD should follow the SAS Version 5 transport file
                   format and Oracle constraints as noted under General Variable
                   Conventions in Section 3.1.1.
                 Document: ADaMIG v1.1
@@ -149,8 +144,7 @@ Authorities:
       - Name: ADaMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  To ensure compliance with SAS Version 5 transport file format
+              - Cited Guidance: To ensure compliance with SAS Version 5 transport file format
                   and Oracle constraints, all ADaM variable names must be no
                   more than 8 characters in length, start with a letter (not
                   underscore), and be comprised only of letters (A-Z),
@@ -178,8 +172,7 @@ Authorities:
             Validator Rule Message: ""
             Version: "5.0"
           - Citations:
-              - Cited Guidance:
-                  Values of PARAMCD should follow the SAS Version 5 transport file
+              - Cited Guidance: Values of PARAMCD should follow the SAS Version 5 transport file
                   format and Oracle constraints as noted under General Variable
                   Conventions in Section 3.1.1.
                 Document: ADaMIG v1.1
@@ -208,8 +201,7 @@ Authorities:
       - Name: ADaMIG
         References:
           - Citations:
-              - Cited Guidance:
-                  Values of PARAMCD should follow SAS 5 variable naming
+              - Cited Guidance: Values of PARAMCD should follow SAS 5 variable naming
                   conventions (8 characters or less; starts with a letter;
                   contains only letters and digits).
                 Document: ADaMIG v1.0
