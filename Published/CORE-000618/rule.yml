@@ -1,126 +1,117 @@
 Authorities:
-  - Organization: "FDA"
-    Standards:
-      - Name: "SENDIG"
-        References:
-          - Citations:
-              - Cited Guidance:
-                  "For findings in MISTRESC using the NEOPLASM controlled terminology list, malignancy
-                  status in MIRESCAT should align with any benign or malignant designation in NEOPLASM. "
-                Document: "FDA"
-                Section: "FDAB085"
-            Origin: "FDA Business Rules"
-            Rule Identifier:
-              Id: "FB8501"
-              Version: "1"
-            Version: "1.5"
-        Version: "3.0"
-      - Name: "SENDIG"
-        References:
-          - Citations:
-              - Cited Guidance:
-                  "For findings in MISTRESC using the NEOPLASM controlled terminology list, malignancy
-                  status in MIRESCAT should align with any benign or malignant designation in NEOPLASM. "
-                Document: "FDA"
-                Section: "FDAB085"
-            Origin: "FDA Business Rules"
-            Rule Identifier:
-              Id: "FB8501"
-              Version: "1"
-            Version: "1.5"
-        Version: "3.1"
-      - Name: "SENDIG"
-        References:
-          - Citations:
-              - Cited Guidance:
-                  "For findings in MISTRESC using the NEOPLASM controlled terminology list, malignancy
-                  status in MIRESCAT should align with any benign or malignant designation in NEOPLASM. "
-                Document: "FDA"
-                Section: "FDAB085"
-            Origin: "FDA Business Rules"
-            Rule Identifier:
-              Id: "FB8501"
-              Version: "1"
-            Version: "1.5"
-        Version: "3.1.1"
-      - Name: "SENDIG-GENETOX"
-        References:
-          - Citations:
-              - Cited Guidance:
-                  "For findings in MISTRESC using the NEOPLASM controlled terminology list, malignancy
-                  status in MIRESCAT should align with any benign or malignant designation in NEOPLASM. "
-                Document: "FDA"
-                Section: "FDAB085"
-            Origin: "FDA Business Rules"
-            Rule Identifier:
-              Id: "FB8501"
-              Version: "1"
-            Version: "1.5"
-        Version: "1.0"
-      - Name: "SENDIG-DART"
-        References:
-          - Citations:
-              - Cited Guidance:
-                  "For findings in MISTRESC using the NEOPLASM controlled terminology list, malignancy
-                  status in MIRESCAT should align with any benign or malignant designation in NEOPLASM. "
-                Document: "FDA"
-                Section: "FDAB085"
-            Origin: "FDA Business Rules"
-            Rule Identifier:
-              Id: "FB8501"
-              Version: "1"
-            Version: "1.5"
-        Version: "1.1"
-      - Name: "SENDIG-DART"
-        References:
-          - Citations:
-              - Cited Guidance:
-                  "For findings in MISTRESC using the NEOPLASM controlled terminology list, malignancy
-                  status in MIRESCAT should align with any benign or malignant designation in NEOPLASM. "
-                Document: "FDA"
-                Section: "FDAB085"
-            Origin: "FDA Business Rules"
-            Rule Identifier:
-              Id: "FB8501"
-              Version: "1"
-            Version: "1.5"
-        Version: "1.2"
-      - Name: "SENDIG-AR"
-        References:
-          - Citations:
-              - Cited Guidance:
-                  "For findings in MISTRESC using the NEOPLASM controlled terminology list, malignancy
-                  status in MIRESCAT should align with any benign or malignant designation in NEOPLASM. "
-                Document: "FDA"
-                Section: "FDAB085"
-            Origin: "FDA Business Rules"
-            Rule Identifier:
-              Id: "FB8501"
-              Version: "1"
-            Version: "1.5"
-        Version: "1.0"
+- Organization: "FDA"
+  Standards:
+  - Name: "SENDIG"
+    References:
+    - Citations:
+      - Cited Guidance: "For findings in MISTRESC using the NEOPLASM controlled terminology list, malignancy
+          status in MIRESCAT should align with any benign or malignant designation in NEOPLASM. "
+        Document: "FDA"
+        Section: "FDAB085"
+      Origin: "FDA Business Rules"
+      Rule Identifier:
+        Id: "FB8501"
+        Version: "1"
+      Version: "1.5"
+    Version: "3.0"
+  - Name: "SENDIG"
+    References:
+    - Citations:
+      - Cited Guidance: "For findings in MISTRESC using the NEOPLASM controlled terminology list, malignancy
+          status in MIRESCAT should align with any benign or malignant designation in NEOPLASM. "
+        Document: "FDA"
+        Section: "FDAB085"
+      Origin: "FDA Business Rules"
+      Rule Identifier:
+        Id: "FB8501"
+        Version: "1"
+      Version: "1.5"
+    Version: "3.1"
+  - Name: "SENDIG"
+    References:
+    - Citations:
+      - Cited Guidance: "For findings in MISTRESC using the NEOPLASM controlled terminology list, malignancy
+          status in MIRESCAT should align with any benign or malignant designation in NEOPLASM. "
+        Document: "FDA"
+        Section: "FDAB085"
+      Origin: "FDA Business Rules"
+      Rule Identifier:
+        Id: "FB8501"
+        Version: "1"
+      Version: "1.5"
+    Version: "3.1.1"
+  - Name: "SENDIG-GENETOX"
+    References:
+    - Citations:
+      - Cited Guidance: "For findings in MISTRESC using the NEOPLASM controlled terminology list, malignancy
+          status in MIRESCAT should align with any benign or malignant designation in NEOPLASM. "
+        Document: "FDA"
+        Section: "FDAB085"
+      Origin: "FDA Business Rules"
+      Rule Identifier:
+        Id: "FB8501"
+        Version: "1"
+      Version: "1.5"
+    Version: "1.0"
+  - Name: "SENDIG-DART"
+    References:
+    - Citations:
+      - Cited Guidance: "For findings in MISTRESC using the NEOPLASM controlled terminology list, malignancy
+          status in MIRESCAT should align with any benign or malignant designation in NEOPLASM. "
+        Document: "FDA"
+        Section: "FDAB085"
+      Origin: "FDA Business Rules"
+      Rule Identifier:
+        Id: "FB8501"
+        Version: "1"
+      Version: "1.5"
+    Version: "1.1"
+  - Name: "SENDIG-DART"
+    References:
+    - Citations:
+      - Cited Guidance: "For findings in MISTRESC using the NEOPLASM controlled terminology list, malignancy
+          status in MIRESCAT should align with any benign or malignant designation in NEOPLASM. "
+        Document: "FDA"
+        Section: "FDAB085"
+      Origin: "FDA Business Rules"
+      Rule Identifier:
+        Id: "FB8501"
+        Version: "1"
+      Version: "1.5"
+    Version: "1.2"
+  - Name: "SENDIG-AR"
+    References:
+    - Citations:
+      - Cited Guidance: "For findings in MISTRESC using the NEOPLASM controlled terminology list, malignancy
+          status in MIRESCAT should align with any benign or malignant designation in NEOPLASM. "
+        Document: "FDA"
+        Section: "FDAB085"
+      Origin: "FDA Business Rules"
+      Rule Identifier:
+        Id: "FB8501"
+        Version: "1"
+      Version: "1.5"
+    Version: "1.0"
 Check:
   any:
-    - all:
-        - name:
-            "MISTRESC"
+  - all:
+    - name: "MISTRESC"
             # 'contains' means 'contains the word'
-          operator: contains
-          value: "BENIGN"
-        - name: "MIRESCAT"
-          operator: not_equal_to
-          value:
-            "BENIGN"
+      operator: contains
+      value: "BENIGN"
+    - name: "MIRESCAT"
+      operator: not_equal_to
+      value: "BENIGN"
             # Christy Kubin: METASTATIC is allowed for MALIGNANT but not for BENIGN
-    - all:
-        - name: "MISTRESC"
-          operator: contains
-          value: "MALIGNANT"
-        - name: "MIRESCAT"
-          operator: is_not_contained_by
-          value:
-            - "MALIGNANT"
-            - "METASTATIC"
+  - all:
+    - name: "MISTRESC"
+      operator: contains
+      value: "MALIGNANT"
+    - name: "MIRESCAT"
+      operator: is_not_contained_by
+      value:
+      - "MALIGNANT"
+      - "METASTATIC"
 Core:
   Id: CORE-000618
   Status: Published
@@ -134,8 +125,8 @@ Rule Type: Record Data
 Scope:
   Classes:
     Include:
-      - FINDINGS
+    - FINDINGS
   Domains:
     Include:
-      - MI
+    - MI
 Sensitivity: Record
