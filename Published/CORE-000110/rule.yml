@@ -10,7 +10,7 @@ Authorities:
               - Cited Guidance:
                   Reference value for the result or finding copied or derived from --ORREF in
                   a standard format.
-                Document: SDTM v2.0
+                Document: Model v2.0
                 Item: --STREFC
                 Section: Findings
             Origin: SDTM and SDTMIG Conformance Rules
@@ -64,10 +64,11 @@ Core:
   Id: CORE-000110
   Status: Published
   Version: "1"
-Description: Raise an error when (--ORREF ^= null or --DRVFL='Y') and --STREFC is null.
+Description: Raise an error when --ORREF is populated or --DRVFL is equal to 'Y', but --STREFC is
+  not populated.
 Executability: Fully Executable
 Outcome:
-  Message: --STREFC is null when --ORREF is non-empty or --DRVFL is equal to 'Y'
+  Message: --STREFC is not populated when --ORREF is populated or --DRVFL is equal to 'Y'.
   Output Variables:
     - --ORREF
     - --DRVFL

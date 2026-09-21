@@ -9,8 +9,8 @@ Authorities:
           - Citations:
               - Cited Guidance:
                   "The following SDTM variables, defined for use in non-clinical studies (SEND),
-                  must  NEVER be used in the submission of SDTM-based data for human clinical trials: --DTHREL
-                  (Findings) --EXCLFL (Findings) --REASEX (Findings) --DETECT (Findings)"
+                  must NEVER be used in the submission of SDTM-based data for human clinical trials: • --DTHREL
+                  (Findings) • --EXCLFL (Findings) • --REASEX (Findings) • --DETECT (Findings)"
                 Document: IG v3.4
                 Section: "2.7"
             Origin: SDTM and SDTMIG Conformance Rules
@@ -24,9 +24,11 @@ Authorities:
           - Citations:
               - Cited Guidance:
                   "The following SDTM variables; defined for use in non-clinical studies (SEND);
-                  must NEVER be used in the submission of SDTM-based data for human clinical trials: --DTHREL
-                  (Findings) --EXCLFL (Findings) --REASEX (Findings) --DETECT (Findings)"
-                Document: IG v3.2
+                  must NEVER be used in the submission of SDTM-based data for human clinical trials: --USCHFL
+                  (Interventions; Events; Findings) --DTHREL (Findings) --EXCLFL (Findings) --REASEX (Findings)
+                  --IMPLBL (Findings) FETUSID (Identifiers) --DETECT (Timing Variables) --NOMDY (Timing Variables)
+                  --NOMLBL (Timing Variables)"
+                Document: IG v3.3
                 Section: "2.7"
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
@@ -39,11 +41,9 @@ Authorities:
           - Citations:
               - Cited Guidance:
                   "The following SDTM variables; defined for use in non-clinical studies (SEND);
-                  must NEVER be used in the submission of SDTM-based data for human clinical trials: --USCHFL
-                  (Interventions; Events; Findings) --DTHREL (Findings) --EXCLFL (Findings) --REASEX (Findings)
-                  --IMPLBL (Findings) FETUSID (Identifiers) --DETECT (Timing Variables) --NOMDY (Timing Variables)
-                  --NOMLBL (Timing Variables)"
-                Document: IG v3.3
+                  must NEVER be used in the submission of SDTM-based data for human clinical trials: --DTHREL
+                  (Findings) --EXCLFL (Findings) --REASEX (Findings) --DETECT (Findings)"
+                Document: IG v3.2
                 Section: "2.7"
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
@@ -77,10 +77,10 @@ Core:
   Id: CORE-000242
   Status: Published
   Version: "1"
-Description: Raise an error when --EXCLFL is present in dataset.
+Description: Raise an error when --EXCLFL is present in the dataset.
 Executability: Fully Executable
 Outcome:
-  Message: --EXCLFL must never be used in SDTM-based human trials
+  Message: --EXCLFL must not be present.
   Output Variables:
     - --EXCLFL
 Rule Type: Record Data

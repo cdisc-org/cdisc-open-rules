@@ -125,15 +125,14 @@ Core:
   Id: CORE-000254
   Status: Published
   Version: "1"
-Description: When a record is present in the AE dataset where AEOUT = 'FATAL' then death flag
-  (DTHFL) should be populated as 'Y' in the DM dataset for the  corresponding subject.
+Description: Raise an error when AEOUT is equal to 'FATAL' but DTHFL is not equal to 'Y'.
 Executability: Fully Executable
 Match Datasets:
   - Keys:
       - USUBJID
     Name: AE
 Outcome:
-  Message: AEOUT is 'FATAL' in AE dataset, but DTHFL in DM dataset is not "Y".
+  Message: DTHFL is not equal to 'Y' but AEOUT in AE dataset is equal to 'FATAL'.
   Output Variables:
     - DTHFL
     - AEOUT

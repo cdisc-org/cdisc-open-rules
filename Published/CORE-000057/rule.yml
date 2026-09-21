@@ -7,8 +7,9 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: FETUSID is not be used in human clinical trials.
-                Document: SDTM v2.0
+              - Cited Guidance: Not in human clinical trials.
+                Document: Model v2.0
+                Item: FETUSID
                 Section: Identifiers
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
@@ -21,10 +22,10 @@ Authorities:
           - Citations:
               - Cited Guidance:
                   The following SDTM variables, defined for use in non-clinical studies
-                  (SEND), must NEVER be used in the submission of SDTM-based data for human clinical trials
-                  --USCHFL (Interventions, Events, Findings) --DTHREL (Findings) --EXCLFL (Findings)
-                  --REASEX (Findings) --IMPLBL (Findings) FETUSID (Identifiers) --DETECT (Timing Variables)
-                  --NOMDY (Timing Variables) --NOMLBL (Timing Variables)
+                  (SEND); must NEVER be used in the submission of SDTM-based data for human clinical trials;
+                  --USCHFL (Interventions, Events, Findings), --DTHREL (Findings), --EXCLFL (Findings),
+                  --REASEX (Findings), --IMPLBL (Findings), FETUSID (Identifiers), --DETECT (Timing
+                  Variables), --NOMDY (Timing Variables), --NOMLBL (Timing Variables)
                 Document: IG v3.4
                 Item: SDTM Variables Not Allowed in SDTMIG
                 Section: "2.7"
@@ -39,7 +40,7 @@ Authorities:
           - Citations:
               - Cited Guidance:
                   "The following SDTM variables; defined for use in non-clinical studies (SEND);
-                  must NEVER be used in the submission of SDTM-based data for human clinical trials: --USCHFL
+                  must NEVER be used in the submission of SDTM-based data for human clinical trials; --USCHFL
                   (Interventions, Events, Findings), --DTHREL (Findings), --EXCLFL (Findings), --REASEX (Findings),
                   --IMPLBL (Findings), --FETUSID (Identifiers), --DETECT (Timing Variables), --NOMDY (Timing Variables),
                   --NOMLBL (Timing Variables)"
@@ -60,7 +61,7 @@ Authorities:
                 Document: SDTM v2.1|TIG v1.0
                 Item: Specification|--FETUSID
                 Section:
-                  Section 3.1.4 - Identifiers for All Classes | 2.8.2 How Extend Domains |2.8.3 How
+                  Section 3.1.4 - Identifiers for All Classes | 2.8.2 How Extend Domains | 2.8.3 How
                   to Create New Specifications
             Origin: TIG Conformance Rules
             Rule Identifier:
@@ -91,10 +92,10 @@ Core:
   Id: CORE-000057
   Status: Published
   Version: "1"
-Description: FETUSID must not be present in SDTM domains.
+Description: Raise an error when FETUSID is present.
 Executability: Fully Executable
 Outcome:
-  Message: FETUSID is present.
+  Message: FETUSID must not be present.
 Rule Type: Record Data
 Scope:
   Classes:

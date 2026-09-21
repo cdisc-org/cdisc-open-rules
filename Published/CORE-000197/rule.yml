@@ -71,10 +71,10 @@ Core:
   Id: CORE-000197
   Status: Published
   Version: "1"
-Description: Raise an error when --CAT = --BODSYS.
+Description: Raise an error when --CAT is equal to --BODSYS.
 Executability: Fully Executable
 Outcome:
-  Message: --CAT is equal to --BODSYS.
+  Message: --CAT must not be equal to --BODSYS.
   Output Variables:
     - --TERM
     - --CAT

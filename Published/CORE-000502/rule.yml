@@ -88,14 +88,14 @@ Core:
   Id: CORE-000502
   Status: Published
   Version: "1"
-Description: Raise an error when RDOMAIN is populated but the referenced RDOMAIN doesn't exist as a
-  dataset in the present study
+Description: Raise an error when RDOMAIN is populated but the referenced RDOMAIN does not exist as a
+  dataset in the study.
 Executability: Fully Executable
 Operations:
   - id: $study_domains
     operator: study_domains
 Outcome:
-  Message: RDOMAIN does not represent a dataset present in the study.
+  Message: RDOMAIN does not represent a dataset in the study.
   Output Variables:
     - RDOMAIN
     - $study_domains

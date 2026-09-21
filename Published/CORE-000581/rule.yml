@@ -222,7 +222,7 @@ Core:
   Id: CORE-000581
   Status: Published
   Version: "1"
-Description: DM dataset should be present.
+Description: Raise an error when DM dataset is not present.
 Executability: Fully Executable
 Outcome:
   Message: DM dataset is missing.

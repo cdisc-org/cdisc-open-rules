@@ -35,11 +35,13 @@ Authorities:
         References:
           - Citations:
               - Cited Guidance:
-                  The SDTM allows for the inclusion of a sponsor's non-SDTM variables using
-                  the Supplemental Qualifiers special purpose dataset structure, described in Section 8.4,
-                  Relating Non-Standard Variables Values to a Parent Domain.
-                Document: IG v3.3
-                Section: "2.5"
+                  IG v3.3[2.5][The SDTM allows for the inclusion of a sponsor's non-SDTM
+                  variables using the Supplemental Qualifiers special purpose dataset structure, described
+                  in Section 8.4, Relating Non-Standard Variables Values to a Parent Domain.]|Model
+                  v1.7[2.1][New sponsor-defined variables must not be added, and existing variables must not
+                  be renamed or modified for novel usage.]
+                Document: IG v3.3|Model v1.7
+                Section: "IG v3.3[2.5]|Model v1.7[2.1]"
               - Cited Guidance:
                   New sponsor-defined variables must not be added, and existing variables must
                   not be renamed or modified for novel usage.
@@ -160,8 +162,8 @@ Operations:
   - id: $model_variables
     operator: get_parent_model_column_order
 Outcome:
-  Message: SUPP--.QNAM is present in the dataset, but the value of SUPP--.QNAM equals a variable
-    name defined in the corresponding SDTM version.
+  Message: --.QNAM is present in the dataset, but the value of --.QNAM must not be equal to a
+    variable name defined in the corresponding SDTM version.
   Output Variables:
     - QNAM
     - $model_variables

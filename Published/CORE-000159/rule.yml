@@ -28,7 +28,7 @@ Authorities:
                   'Findings: "Other; Specify" for tests may be handled similarly to Interventions.
                   --TESTCD and --TEST should be populated with the code and description of the test found in the
                   specified text. If specific tests are not prespecified on the CRF and the investigator has the
-                  option of writing in tests, then the name of the test would have to be coded to ensure that
+                  option of writing in tests; then the name of the test would have to be coded to ensure that
                   all --TESTCD and --TEST values are consistent with the test controlled terminology.'
                 Document: IG v3.3
                 Section: 4.2.7.3
@@ -42,11 +42,11 @@ Authorities:
         References:
           - Citations:
               - Cited Guidance:
-                  'Findings: "Other; Specify" for tests may be handled similarly to Interventions.
+                  "Findings: 'Other; Specify' for tests may be handled similarly to Interventions.
                   --TESTCD and --TEST should be populated with the code and description of the test found in the
                   specified text. If specific tests are not prespecified on the CRF and the investigator has the
                   option of writing free text for tests; then the name of the test would have to be coded to ensure
-                  that all --TESTCD and --TEST values are controlled terminology and are not free text.'
+                  that all --TESTCD and --TEST values are controlled terminology and are not free text."
                 Document: IG v3.2
                 Section: 4.1.2.7.3
             Origin: SDTM and SDTMIG Conformance Rules
@@ -80,10 +80,10 @@ Core:
   Id: CORE-000159
   Status: Published
   Version: "1"
-Description: Raise an error when --TESTCD = 'OTHER'
+Description: Raise an error when --TESTCD is equal to 'OTHER'.
 Executability: Fully Executable
 Outcome:
-  Message: --TESTCD is equal to 'OTHER'
+  Message: --TESTCD must not be equal to 'OTHER'.
   Output Variables:
     - --TESTCD
 Rule Type: Record Data

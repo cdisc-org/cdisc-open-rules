@@ -182,7 +182,7 @@ Operations:
   - id: $required_variables
     operator: required_variables
 Outcome:
-  Message: At least one Required variable has a null value
+  Message: Required variable has a missing value.
   Output Variables:
     - variable_name
     - variable_value

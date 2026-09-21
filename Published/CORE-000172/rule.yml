@@ -149,8 +149,7 @@ Core:
   Id: CORE-000172
   Status: Published
   Version: "1"
-Description: Raise an error when STUDYID is not equal to DM.STUDYID. The STUDYID in all domains must
-  be the same in all records across the study.
+Description: Raise an error when STUDYID is not equal to STUDYID in the DM dataset.
 Executability: Fully Executable
 Operations:
   - domain: DM
@@ -158,7 +157,7 @@ Operations:
     name: STUDYID
     operator: distinct
 Outcome:
-  Message: STUDYID is not equal to DM.STUDYID
+  Message: STUDYID must be equal to STUDYID in the DM dataset.
   Output Variables:
     - STUDYID
 Rule Type: Record Data

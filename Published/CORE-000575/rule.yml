@@ -208,8 +208,7 @@ Core:
   Id: CORE-000575
   Status: Published
   Version: "1"
-Description: There must be at least one timing variable for any of the domains based on the three
-  general observation classes
+Description: Raise an error when no timing variable is present in the dataset.
 Executability: Partially Executable - Possible Underreporting
 Operations:
   - id: $dataset_variables
@@ -219,7 +218,7 @@ Operations:
     key_value: Timing
     operator: get_model_filtered_variables
 Outcome:
-  Message: No timing variable is provided
+  Message: At least one timing variable must be present in the dataset.
   Output Variables:
     - $dataset_variables
     - $timing_variables

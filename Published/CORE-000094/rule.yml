@@ -11,6 +11,7 @@ Authorities:
                   A textual description of the quantity of an agent (e.g., drug, substance,
                   radiation) taken or absorbed at a single administration.
                 Document: Model v2.0
+                Item: --DOSTXT
                 Section: Interventions
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
@@ -75,7 +76,7 @@ Core:
   Id: CORE-000094
   Status: Published
   Version: "1"
-Description: Raise an error if --DOSTXT value is numeric.
+Description: Raise an error when --DOSTXT value is numeric.
 Executability: Fully Executable
 Outcome:
   Message: --DOSTXT value is numeric.

@@ -82,14 +82,14 @@ Core:
   Id: CORE-000177
   Status: Published
   Version: "1"
-Description: Raise an error when DM.RFENDTC is empty and --ENRF is not empty.
+Description: Raise an error when RFENDTC in the DM dataset is not populated but --ENRF is populated.
 Executability: Fully Executable
 Match Datasets:
   - Keys:
       - USUBJID
     Name: DM
 Outcome:
-  Message: DM.RFENDTC is empty, but --ENRF is completed.
+  Message: RFENDTC in the DM dataset is not populated, but --ENRF is populated.
   Output Variables:
     - --ENRF
 Rule Type: Record Data

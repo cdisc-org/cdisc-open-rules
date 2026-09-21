@@ -55,7 +55,7 @@ Authorities:
               - Cited Guidance:
                   Variable descriptive names (labels), up to 40 characters in title case,
                   should be provided as data variable labels.
-                Document: IG v3.0
+                Document: SENDIG v3.0
                 Section: 4.2.1
             Origin: SEND Conformance Rules
             Rule Identifier:
@@ -69,7 +69,7 @@ Authorities:
               - Cited Guidance:
                   Variable descriptive names (labels), up to 40 characters in title case,
                   should be provided as data variable labels.
-                Document: IG v3.1
+                Document: SENDIG v3.1
                 Section: 4.2.1
             Origin: SEND Conformance Rules
             Rule Identifier:
@@ -83,7 +83,7 @@ Authorities:
               - Cited Guidance:
                   Variable descriptive names (labels), up to 40 characters in title case,
                   should be provided as data variable labels.
-                Document: IG v3.1.1
+                Document: SENDIG v3.1.1
                 Section: 4.2.1
             Origin: SEND Conformance Rules
             Rule Identifier:
@@ -97,7 +97,7 @@ Authorities:
               - Cited Guidance:
                   Variable descriptive names (labels), up to 40 characters in title case,
                   should be provided as data variable labels.
-                Document: IG v3.1
+                Document: SENDIG v3.1
                 Section: 4.2.1
             Origin: SEND Conformance Rules
             Rule Identifier:
@@ -111,7 +111,7 @@ Authorities:
               - Cited Guidance:
                   Variable descriptive names (labels), up to 40 characters in title case,
                   should be provided as data variable labels.
-                Document: IG v3.1.1
+                Document: SENDIG v3.1.1
                 Section: 4.2.1
             Origin: SEND Conformance Rules
             Rule Identifier:
@@ -125,7 +125,7 @@ Authorities:
               - Cited Guidance:
                   Variable descriptive names (labels), up to 40 characters in title case,
                   should be provided as data variable labels.
-                Document: IG v3.1.1
+                Document: SENDIG v3.1.1
                 Section: 4.2.1
             Origin: SEND Conformance Rules
             Rule Identifier:
@@ -139,7 +139,7 @@ Authorities:
               - Cited Guidance:
                   Descriptive labels per this guide, up to 40 characters, will be provided as
                   data variable labels for all variables, including Supplemental Qualifier variables. Use
-                  title case for all labels
+                  title case for all labels.
                 Document: TIG 1.0
                 Item: Tabulation Datasets table NUM 5
                 Section: 2.6|2.8.2|2.8.3
@@ -157,7 +157,7 @@ Authorities:
                   Descriptive labels per this guide, up to 40 characters, will be provided as
                   data variable labels for all variables, including Supplemental Qualifier variables.
                 Document: TIG 1.0
-                Item: Tabulation Datasets table, Num 5
+                Item: Tabulation Datasets Table, Num 5
                 Section: 2.6 Guidance for Datasets
             Origin: TIG Conformance Rules
             Rule Identifier:
@@ -181,10 +181,10 @@ Core:
   Id: CORE-000594
   Status: Published
   Version: "1"
-Description: Raise an error when a variable label is not in title case
+Description: Raise an error when a variable label is not in title case.
 Executability: Fully Executable
 Outcome:
-  Message: Variable label is not in title case.
+  Message: Variable label must be in title case.
 Rule Type: Variable Metadata Check
 Scope:
   Classes:

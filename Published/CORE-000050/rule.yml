@@ -42,7 +42,7 @@ Core:
 Description: Raise an error when --RSTIND is present.
 Executability: Fully Executable
 Outcome:
-  Message: --RSTIND is present.
+  Message: --RSTIND must not be present.
 Rule Type: Record Data
 Scope:
   Classes:

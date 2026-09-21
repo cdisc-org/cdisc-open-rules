@@ -8,11 +8,18 @@ Authorities:
         References:
           - Citations:
               - Cited Guidance:
-                  An indication that the event was prospectively stated or detailed on the
-                  CRF.
+                  Events[--PRESP][An indication that the event was prospectively stated or
+                  detailed on the CRF.]|Events|[--OCCUR][An indication as to whether a prespecified event
+                  has occurred.]|Events[--STAT][Used to indicate when a question about the occurrence of a
+                  prespecified event was not answered.]|Interventions[--PRESP][An indication that the
+                  intervention was prospectively stated or detailed on the CRF.]|Interventions[--OCCUR][An
+                  indication as to whether a prespecified intervention has
+                  occurred.]|Interventions[--STAT][Used to indicate when a question about the occurrence of
+                  a prespecified intervention was not answered. Should be null or have a value of "NOT
+                  DONE".]
                 Document: Model v2.0
-                Item: --PRESP
-                Section: Events
+                Item: --PRESP|--OCCUR|STAT
+                Section: Events|Interventions
               - Cited Guidance: An indication as to whether a prespecified event has occurred.
                 Document: Model v2.0
                 Item: --OCCUR
@@ -128,11 +135,12 @@ Core:
   Id: CORE-000117
   Status: Published
   Version: "1"
-Description: Raise an error when --STAT not equal to 'NOT DONE' when --PRESP = 'Y' and --OCCUR is
-  null
+Description: Raise an error when when --PRESP is equal to 'Y' and --OCCUR is not populated, but
+  --STAT is not equal to 'NOT DONE'.
 Executability: Fully Executable
 Outcome:
-  Message: --STAT should equal 'NOT DONE' when --PRESP = 'Y' and --OCCUR = null
+  Message: --PRESP is equal to 'Y' and --OCCUR is not populated but --STAT is not equal to 'NOT
+    DONE'.
   Output Variables:
     - --STAT
     - --PRESP

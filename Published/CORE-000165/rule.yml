@@ -8,11 +8,11 @@ Authorities:
         References:
           - Citations:
               - Cited Guidance:
-                  '"The actual date or date and time of a time point that acts as a fixed reference
+                  "The actual date or date and time of a time point that acts as a fixed reference
                   for a series of planned time points, represented in a standardized character format. The fixed
-                  reference point is in --TPTREF"'
+                  reference point is in --TPTREF."
                 Document: Model v2.0
-                Item: RFTDTC
+                Item: --RFTDTC
                 Section: Timing
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
@@ -23,9 +23,9 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: '"Date/time for a fixed reference time point defined by --TPTREF."'
+              - Cited Guidance: "Date/time for a fixed reference time point defined by --TPTREF."
                 Document: Model v1.7
-                Item: Table 2.2.5.1 --RFTDTC
+                Item: Table 2.2.5.1, --RFTDTC
                 Section: 2.2.5 Timing Variables for All Classes
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
@@ -197,11 +197,10 @@ Core:
   Id: CORE-000165
   Status: Published
   Version: "1"
-Description: Time point reference (--TPTREF) should be present in the dataset, when reference time
-  point (--RFTDTC) is also present in the dataset.
+Description: Raise an error when --TPTREF is not present in dataset when --RFTDTC is present.
 Executability: Fully Executable
 Outcome:
-  Message: --TPTREF is missing when --RFTDTC is present.
+  Message: --TPTREF is not present in dataset when --RFTDTC is present in dataset.
   Output Variables:
     - --RFTDTC
     - --TPTREF

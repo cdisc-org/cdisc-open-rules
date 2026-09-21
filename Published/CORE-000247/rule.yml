@@ -7,7 +7,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: Not be used in human clinical trials.
+              - Cited Guidance: Not in human clinical trials.
                 Document: Model v2.0
                 Item: --RESLOC
                 Section: Findings
@@ -82,7 +82,7 @@ Core:
 Description: Raise an error when --RESLOC is present.
 Executability: Fully Executable
 Outcome:
-  Message: --RESLOC is present.
+  Message: --RESLOC must not be present.
 Rule Type: Record Data
 Scope:
   Classes:

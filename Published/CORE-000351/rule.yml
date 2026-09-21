@@ -164,10 +164,10 @@ Core:
   Id: CORE-000351
   Status: Published
   Version: "1"
-Description: USUBJID must be unique across all studies
+Description: Raise an error when USUBJID is not unique across all studies
 Executability: Partially Executable
 Outcome:
-  Message: USUBJID is not unique within study
+  Message: USUBJID is not unique within study.
   Output Variables:
     - USUBJID
 Rule Type: Record Data

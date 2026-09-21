@@ -76,10 +76,10 @@ Core:
   Id: CORE-000102
   Status: Published
   Version: "1"
-Description: Raise an error when --TOX is not empty, but --TOXGR is empty.
+Description: Raise an error when --TOX is populated but --TOXGR is not populated.
 Executability: Fully Executable
 Outcome:
-  Message: --TOXGR should not be null when --TOX is populated.
+  Message: --TOXGR must be populated when --TOX is populated.
   Output Variables:
     - --TOX
     - --TOXGR

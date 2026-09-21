@@ -138,7 +138,7 @@ Core:
   Id: CORE-000268
   Status: Published
   Version: "1"
-Description: --DECOD and --PTCD should have a one-to-one relationship.
+Description: Raise an error when --DECOD and --PTCD do not have a one-to-one relationship.
 Executability: Fully Executable
 Outcome:
   Message: --DECOD and --PTCD do not have a one-to-one relationship.

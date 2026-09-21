@@ -81,11 +81,14 @@ Core:
   Id: CORE-000298
   Status: Published
   Version: "1"
-Description: Raise an error when LBORRES is not a continuous measurement and LBSTNRLO is not empty.
-  The interpretation of the guidance is that LBORRES is populated (not null).
+Description:
+  "Raise an error when LBORRES is not a quantitative value and LBSTNRLO is populated. The interpretation
+  of the guidance is that the rule applies when LBORRES is populated (not null). Note: the rule logic
+  applies until such time there is availability of reliable metadata to verify if the test is quantitative
+  or not."
 Executability: Fully Executable
 Outcome:
-  Message: LBORRES is not a continuous measurment but LBSTNRLO is not empty.
+  Message: LBSTNRLO is populated when LBORRES is not a quantitative value.
 Rule Type: Record Data
 Scope:
   Classes:

@@ -79,10 +79,10 @@ Core:
   Id: CORE-000099
   Status: Published
   Version: "1"
-Description: Raise an error when both --ORRES and --STAT values are populated
+Description: Raise an error when --ORRES is populated but --STAT is populated.
 Executability: Fully Executable
 Outcome:
-  Message: Value for --STAT is populated, when --ORRES is populated
+  Message: --STAT must not be populated when --ORRES is populated.
   Output Variables:
     - --ORRES
     - --STAT

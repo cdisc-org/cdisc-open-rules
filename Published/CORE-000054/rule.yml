@@ -7,8 +7,8 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: --DTHREL is not be used in human clinical trials.
-                Document: SDTM v2.0
+              - Cited Guidance: Not in human clinical trials.
+                Document: Model v2.0
                 Section: Findings
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
@@ -38,10 +38,10 @@ Core:
   Id: CORE-000054
   Status: Published
   Version: "1"
-Description: Raise an error when --DTHREL is present.
+Description: Raise an error when --DTHREL is present in the dataset.
 Executability: Fully Executable
 Outcome:
-  Message: --DTHREL is present.
+  Message: --DTHREL must not be present.
 Rule Type: Record Data
 Scope:
   Classes:

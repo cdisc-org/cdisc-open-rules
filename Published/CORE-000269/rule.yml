@@ -88,8 +88,9 @@ Core:
   Id: CORE-000269
   Status: Published
   Version: "1"
-Description: Verify when VISIT is not null in any given domain and VISIT is planned (SVPRESP = 'Y'),
-  then VISIT should be among TV.VISIT.
+Description: Raise an error when planned VISIT is populated, but VISIT value does not match any
+  VISIT value in the TV dataset. If SVPRESP is not present, all non-missing VISIT values are checked
+  against TV.VISIT.
 Executability: Fully Executable
 Match Datasets:
   - Keys:
@@ -102,8 +103,7 @@ Operations:
     name: VISIT
     operator: distinct
 Outcome:
-  Message: For a planned visit (SVPRESP = 'Y'), non-missing VISIT value must be among those present
-    in TV.VISIT.
+  Message: VISIT value for planned visit does not match any VISIT value in the TV dataset.
   Output Variables:
     - VISIT
     - VISITNUM

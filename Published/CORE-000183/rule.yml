@@ -8,12 +8,14 @@ Authorities:
         References:
           - Citations:
               - Cited Guidance:
-                  Note, domain pairs have been modeled for microbiology data (MB/MS domains)
-                  and PK data (PC/PP domains) to enable dataset-level relationships to be described using
-                  RELREC.
+                  2.6[Item 1][Note, domain pairs have been modeled for microbiology data
+                  (MB/MS domains) and PK data (PC/PP domains) to enable dataset-level relationships to be
+                  described using RELREC.]|6.3.5.6.2[PP - Description/Overview][A findings domain that
+                  contains pharmacokinetic parameters derived from pharmacokinetic concentration-time (PC)
+                  data.]
                 Document: IG v3.4
-                Item: "1"
-                Section: "2.6"
+                Item: "2.6[Item 1]|6.3.5.6.2[PP - Description/Overview]"
+                Section: "2.6|6.3.5.6.2"
               - Cited Guidance:
                   A findings domain that contains pharmacokinetic parameters derived from
                   pharmacokinetic concentration-time (PC) data.
@@ -69,7 +71,7 @@ Authorities:
                   pharmacokinetic concentration-time (PC) data.
                 Document: TIG 1.0
                 Item: Description
-                Section: 2.8.10.17
+                Section: 2.8.10.17 S
             Origin: TIG Conformance Rules
             Rule Identifier:
               Id: TIG0489

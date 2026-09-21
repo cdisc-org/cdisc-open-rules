@@ -125,15 +125,14 @@ Core:
   Id: CORE-000252
   Status: Published
   Version: "1"
-Description: When a record is present in the DS dataset where DSDECOD = 'DEATH' then death flag
-  (DTHFL) should be populated as 'Y' in the DM dataset for the corresponding subject.
+Description: Raise an error when DSDECOD is equal to 'DEATH' and DTHFL is not equal to 'Y'.
 Executability: Fully Executable
 Match Datasets:
   - Keys:
       - USUBJID
     Name: DS
 Outcome:
-  Message: DSDECOD is 'DEATH' in DS dataset, but DTHFL in DM dataset is not "Y".
+  Message: DTHFL is not equal to 'Y' but DSDECOD is equal to 'DEATH'.
 Rule Type: Record Data
 Scope:
   Classes:

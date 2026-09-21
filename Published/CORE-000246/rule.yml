@@ -9,10 +9,10 @@ Authorities:
           - Citations:
               - Cited Guidance:
                   The following SDTM variables, defined for use in non-clinical studies
-                  (SEND), must NEVER be used in the submission of SDTM-based data for human clinical trials
-                  --USCHFL (Interventions, Events, Findings) --DTHREL (Findings) --EXCLFL (Findings)
-                  --REASEX (Findings) --IMPLBL (Findings) FETUSID (Identifiers) --DETECT (Timing Variables)
-                  --NOMDY (Timing Variables) --NOMLBL (Timing Variables)
+                  (SEND), must NEVER be used in the submission of SDTM-based data for human clinical trials;
+                  --USCHFL (Interventions, Events, Findings), --DTHREL (Findings), --EXCLFL (Findings),
+                  --REASEX (Findings), --IMPLBL (Findings), FETUSID (Identifiers), --DETECT (Timing
+                  Variables), --NOMDY (Timing Variables), --NOMLBL (Timing Variables)
                 Document: IG v3.4
                 Item: SDTM Variables Not Allowed in SDTMIG
                 Section: "2.7"
@@ -27,7 +27,7 @@ Authorities:
           - Citations:
               - Cited Guidance:
                   "The following SDTM variables; defined for use in non-clinical studies (SEND);
-                  must NEVER be used in the submission of SDTM-based data for human clinical trials: --USCHFL
+                  must NEVER be used in the submission of SDTM-based data for human clinical trials; --USCHFL
                   (Interventions, Events, Findings), --DTHREL (Findings), --EXCLFL (Findings), --REASEX (Findings),
                   --IMPLBL (Findings), --FETUSID (Identifiers), --DETECT (Timing Variables), --NOMDY (Timing Variables),
                   --NOMLBL (Timing Variables)"
@@ -60,8 +60,9 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: --NOMLBL is not be used in human clinical trials.
-                Document: SDTM v2.0
+              - Cited Guidance: Not in human clinical trials.
+                Document: Model v2.0
+                Item: --NOMLBL
                 Section: Timing
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
@@ -94,7 +95,7 @@ Core:
 Description: Raise an error when --NOMLBL is present.
 Executability: Fully Executable
 Outcome:
-  Message: --NOMLBL is present.
+  Message: --NOMLBL must not be present.
 Rule Type: Record Data
 Scope:
   Classes:

@@ -8,7 +8,7 @@ Authorities:
         References:
           - Citations:
               - Cited Guidance:
-                  DSSCAT = "STUDY PARTICIPATION" is used to represent disposition of study
+                  DSSCAT = 'STUDY PARTICIPATION' is used to represent disposition of study
                   participation
                 Document: IG v3.4
                 Item: Assumption 2.b.1
@@ -23,7 +23,7 @@ Authorities:
         References:
           - Citations:
               - Cited Guidance:
-                  DSSCAT = "STUDY PARTICIPATION" is used to represent disposition of study
+                  DSSCAT = 'STUDY PARTICIPATION' is used to represent disposition of study
                   participation.
                 Document: IG v3.3
                 Item: Assumption 2.b.1
@@ -38,7 +38,7 @@ Authorities:
         References:
           - Citations:
               - Cited Guidance:
-                  DSSCAT = "STUDY PARTICIPATION" is used to represent disposition of study
+                  DSSCAT = 'STUDY PARTICIPATION' is used to represent disposition of study
                   participation.
                 Document: TIG 1.0
                 Item: 2.b.i
@@ -68,8 +68,9 @@ Core:
   Id: CORE-000214
   Status: Published
   Version: "1"
-Description: Trigger error when subject has more than one record per Epoch with DSCAT = 'DISPOSITION
-  EVENT' and more than one record where DSSCAT = 'STUDY PARTICIPATION'
+Description: Raise an error when subject has more than one record per Epoch with DSCAT is equal to
+  'DISPOSITION EVENT' and more than one record where DSSCAT is equal to 'STUDY PARTICIPATION'
+  exists.
 Executability: Fully Executable
 Operations:
   - domain: DS
@@ -82,8 +83,8 @@ Operations:
     name: DSCAT
     operator: record_count
 Outcome:
-  Message: More than 1 record exists per subject per EPOCH with DSCAT = 'DISPOSITION EVENT' and
-    DSSCAT = 'STUDY PARTICIPATION'.
+  Message: More than 1 record exists per subject per EPOCH with DSCAT is equal to 'DISPOSITION
+    EVENT' and DSSCAT is equal to 'STUDY PARTICIPATION'.
   Output Variables:
     - DSSCAT
     - USUBJID

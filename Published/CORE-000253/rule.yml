@@ -125,15 +125,15 @@ Core:
   Id: CORE-000253
   Status: Published
   Version: "1"
-Description: When a record is present in the AE dataset where AESDTH = 'Y' then death flag (DTHFL)
-  should be populated as 'Y' in the DM dataset for the corresponding subject.
+Description: Raise an error when AESDTH in the AE dataset is equal to 'Y' and DTHFL is not equal to
+  'Y'
 Executability: Fully Executable
 Match Datasets:
   - Keys:
       - USUBJID
     Name: AE
 Outcome:
-  Message: AESDTH is 'Y' in AE dataset, but DTHFL in DM dataset is not "Y".
+  Message: DTHFL is not equal to 'Y' but AESDTH in the AE dataset is equal to 'Y'.
 Rule Type: Record Data
 Scope:
   Classes:
