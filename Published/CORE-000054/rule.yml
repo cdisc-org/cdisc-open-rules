@@ -42,6 +42,8 @@ Description: Raise an error when --DTHREL is present in the dataset.
 Executability: Fully Executable
 Outcome:
   Message: --DTHREL must not be present.
+  Output Variables:
+    - --DTHREL
 Rule Type: Record Data
 Scope:
   Classes:

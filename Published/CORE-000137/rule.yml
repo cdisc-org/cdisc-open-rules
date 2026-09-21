@@ -101,6 +101,25 @@ Authorities:
         Substandard: SDTM
         Version: "1.0"
 Check:
+  all:
+    - name: ECOCCUR
+      operator: not_equal_to
+      value: N
+      value_is_literal: true
+    - name: ECDOSE
+      operator: less_than_or_equal_to
+      value: 0
+    - all:
+        - any:
+            - name: ECSTAT
+              operator: empty
+            - name: ECSTAT
+              operator: not_exists
+        - any:
+            - name: ECDOSTXT
+              operator: empty
+            - name: ECDOSTXT
+              operator: not_exists
   any:
     - all:
         - name: ECOCCUR
@@ -165,7 +184,6 @@ Outcome:
     - ECSTAT
     - ECDOSTXT
     - ECDOSE
-    - ECSTDTC
 Rule Type: Record Data
 Scope:
   Classes:

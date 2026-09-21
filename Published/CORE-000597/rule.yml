@@ -71,10 +71,17 @@ Authorities:
         Version: "1.0"
 Check:
   all:
+    - any:
+        - name: AESMIE
+          operator: not_equal_to
+          value: Y
+          value_is_literal: true
+        - name: AESMIE
+          operator: not_exists
+      name: AESOSP
+      operator: non_empty
     - name: AESOSP
       operator: non_empty
-    - name: AESMIE
-      operator: not_equal_to
       value: Y
 Core:
   Id: CORE-000597
@@ -92,6 +99,7 @@ Outcome:
     to 'Y' is present in the AE dataset.
   Output Variables:
     - AESOSP
+    - AETERM
     - AESMIE
 Rule Type: Record Data
 Scope:

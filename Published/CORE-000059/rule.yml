@@ -43,6 +43,8 @@ Description: Raise an error when RPPLDY is present.
 Executability: Fully Executable
 Outcome:
   Message: RPPLDY must not be present.
+  Output Variables:
+    - RPPLDY
 Rule Type: Record Data
 Scope:
   Classes:

@@ -161,7 +161,7 @@ Core:
   Status: Published
   Version: "1"
 Description: Raise an error when QNAM and QLABEL do not have a one-to-one relationship.
-Executability: Fully Executable
+Executability: Partially Executable - Possible Overreporting
 Outcome:
   Message: QNAM and QLABEL do not have a one-to-one relationship.
   Output Variables:

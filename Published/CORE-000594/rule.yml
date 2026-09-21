@@ -176,7 +176,7 @@ Check:
         # as these appear in existing labels in SDTM Model 2.0 (I did not check in earlier model versions)
         # value: ^\s*[A-Z]\S*\s*((a|an|the|and|per|to|but|or|for|in|of|on|with|and/or|is|within|from|([A-Z]\S*))\s*)*$
         # update 2025-07-24:
-      value: ^\s*[A-Z]\S*\s*((a|an|the|as|and|per|to|but|or|for|in|is|of|on|with|and\/or|is|within|from|([A-Z]\S*))\s*)*$
+      value: ^\s*[A-Z]\S*(?:\s+(?:(?:a|an|the|as|and|per|to|but|or|for|in|is|of|on|with|within|from)|[A-Z]\S*|[^A-Za-z\s]+))*\s*$
 Core:
   Id: CORE-000594
   Status: Published
@@ -185,6 +185,8 @@ Description: Raise an error when a variable label is not in title case.
 Executability: Fully Executable
 Outcome:
   Message: Variable label must be in title case.
+  Output Variables:
+    - variable_label
 Rule Type: Variable Metadata Check
 Scope:
   Classes:

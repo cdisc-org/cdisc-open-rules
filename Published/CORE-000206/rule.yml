@@ -222,27 +222,20 @@ Match Datasets:
   - Child: true
     Keys:
       - USUBJID
-      - IDVAR
-      - IDVARVAL
     Name: SUPP--
   - Child: true
     Keys:
       - USUBJID
-      - IDVAR
-      - IDVARVAL
     Name: CO
   - Child: true
     Keys:
       - USUBJID
-      - IDVAR
-      - IDVARVAL
     Name: RELREC
 Outcome:
   Message: IDVARVAL does not equal a value of the variable referenced by IDVAR where domain is equal
     to RDOMAIN.
   Output Variables:
     - RDOMAIN
-    - USUBJID
     - IDVAR
     - IDVARVAL
 Rule Type: Record Data

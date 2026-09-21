@@ -126,11 +126,13 @@ Check:
     - name: --PRESP
       operator: equal_to
       value: Y
+      value_is_literal: true
     - name: --OCCUR
       operator: empty
     - name: --STAT
       operator: not_equal_to
       value: NOT DONE
+      value_is_literal: true
 Core:
   Id: CORE-000117
   Status: Published
@@ -142,9 +144,9 @@ Outcome:
   Message: --PRESP is equal to 'Y' and --OCCUR is not populated but --STAT is not equal to 'NOT
     DONE'.
   Output Variables:
-    - --STAT
     - --PRESP
     - --OCCUR
+    - --STAT
 Rule Type: Record Data
 Scope:
   Classes:

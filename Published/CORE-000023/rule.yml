@@ -105,6 +105,8 @@ Description: Raise an error when --TOXGR is not present in dataset, but --TOX is
 Executability: Fully Executable
 Outcome:
   Message: --TOX should not be present when --TOXGR is not present.
+  Output Variables:
+    - --TOX
 Rule Type: Record Data
 Scope:
   Classes:
