@@ -758,20 +758,26 @@ Scope:
       - ALL
       - AP--
       - APRELSUB
+      - APRELSPEC
       - POOLDEF
       - RELREC
       - RELSPEC
       - RELSUB
-      - SUPP--
+      - SUPPQUAL
+      - SPLIT DATASETS
+      - AP SPLIT DATASETS
     Include:
       - ALL
       - AP--
       - APRELSUB
+      - APRELSPEC
       - POOLDEF
       - RELREC
       - RELSPEC
       - RELSUB
-      - SUPP--
+      - SUPPQUAL
+      - SPLIT DATASETS
+      - AP SPLIT DATASETS
     include_split_datasets: true | false
   Subclasses:
     Exclude:

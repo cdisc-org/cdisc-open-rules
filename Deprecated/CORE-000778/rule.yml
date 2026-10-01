@@ -13,8 +13,7 @@ Authorities:
               Version: "1"
             Version: "2.0"
             Citations:
-              - Cited Guidance:
-                  Supplemental Qualifier datasets for split domains would also be
+              - Cited Guidance: Supplemental Qualifier datasets for split domains would also be
                   split. The nomenclature would include the additional
                   one-to-two characters used to identify the split dataset.
                 Document: IG v3.4
@@ -29,8 +28,7 @@ Authorities:
               Version: "1"
             Version: "2.0"
             Citations:
-              - Cited Guidance:
-                  AP Guide v1.0[2][Associated Persons datasets are given a prefix
+              - Cited Guidance: AP Guide v1.0[2][Associated Persons datasets are given a prefix
                   of AP-- to identify the data as AP data to and distinguish
                   them from study subject data.]|IG v3.2[4.1.1.7][Item 6][For
                   example, if splitting by --CAT, then dataset names would be
@@ -48,8 +46,7 @@ Authorities:
               Version: "1"
             Version: "2.0"
             Citations:
-              - Cited Guidance:
-                  AP Guide v1.0[2][Associated Persons datasets are given a prefix
+              - Cited Guidance: AP Guide v1.0[2][Associated Persons datasets are given a prefix
                   of AP-- to identify the data as AP data to and distinguish
                   them from study subject data.]|IG v3.3[4.1.7][Item 6][For
                   example, if splitting by --CAT, then dataset names would be
@@ -75,8 +72,7 @@ Description: When an Associated Persons non-supplemental qualifier dataset is
   4 and less than, or equal to, 6.
 Executability: Fully Executable
 Outcome:
-  Message:
-    Associated Persons non-supplemental qualifier dataset associated with a
+  Message: Associated Persons non-supplemental qualifier dataset associated with a
     split dataset does not have a dataset name with a length greater than 4 and
     less than, or equal to, 6.
 Rule Type: Dataset Metadata Check
@@ -86,6 +82,10 @@ Scope:
       - ALL
   Domains:
     Include:
-      - AP--
+      - AP SPLIT DATASETS
+    Exclude:
+      - SUPPQUAL
+      - APRELSUB
+      - APRELSPEC
     include_split_datasets: true
 Sensitivity: Dataset
