@@ -171,6 +171,7 @@ Check:
     - name: define_variable_ccode
       operator: equal_to
       value: C66734
+      value_is_literal: true
     - name: define_variable_codelist_coded_codes
       operator: is_not_contained_by
       value: $domain_lib_ccode
@@ -186,15 +187,18 @@ Operations:
     operator: domain_is_custom
   - codelists:
       - DOMAIN
+    ct_attribute: Term CCODE
+    ct_conditions:
+      - Codelist Code: C66734
     id: $domain_lib_ccode
     level: term
-    operator: codelist_terms
+    name: DOMAIN
+    operator: get_codelist_attributes
     returntype: code
 Outcome:
   Message: Dataset is not a custom domain, but the DOMAIN code in the define.xml document is not a
     published DOMAIN code in the CDISC Controlled Terminology version specified for the study.
   Output Variables:
-    - $domain_lib_ccode
     - define_variable_codelist_coded_codes
 Rule Type: Define Item Metadata Check against Library Metadata
 Scope:

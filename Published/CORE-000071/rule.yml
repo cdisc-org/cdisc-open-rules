@@ -43,6 +43,8 @@ Description: Raise an error when SBSTRAIN is present.
 Executability: Fully Executable
 Outcome:
   Message: SBSTRAIN must not be present.
+  Output Variables:
+    - SBSTRAIN
 Rule Type: Record Data
 Scope:
   Classes:

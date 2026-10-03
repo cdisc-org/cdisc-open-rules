@@ -76,6 +76,8 @@ Operations:
 Outcome:
   Message: ARMCD value in DM dataset does not match any ARMCD value in TA dataset. This is only
     acceptable for multi-stage studies with incomplete ARM assignments.
+  Output Variables:
+    - ARMCD
 Rule Type: Record Data
 Scope:
   Classes:

@@ -72,13 +72,20 @@ Authorities:
         Version: "1.0"
 Check:
   all:
-    - name: --DY
+    - any:
+        - name: --DTC
+          operator: is_incomplete_date
+        - name: RFSTDTC
+          operator: is_incomplete_date
+      name: --DY
       operator: non_empty
     - any:
         - name: --DTC
           operator: is_incomplete_date
         - name: RFSTDTC
           operator: is_incomplete_date
+      name: --DY
+      operator: non_empty
 Core:
   Id: CORE-000354
   Status: Published
@@ -93,9 +100,9 @@ Match Datasets:
 Outcome:
   Message: The date portion of --DTC or RFSTDTC is incomplete, but --DY is not empty.
   Output Variables:
-    - --DY
-    - --DTC
     - RFSTDTC
+    - --DTC
+    - --DY
 Rule Type: Record Data
 Scope:
   Classes:

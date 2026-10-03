@@ -104,6 +104,7 @@ Check:
     - name: ECOCCUR # The condition is ECOCCUR = "N"
       operator: equal_to
       value: N
+      value_is_literal: true
     - name:
         ECDOSE
         # The rule is ECDOSE is null or > 0
@@ -111,6 +112,8 @@ Check:
         # which is the same as just LE 0
       operator: less_than_or_equal_to
       value: 0
+    - name: ECDOSE
+      operator: non_empty
 Core:
   Id: CORE-000004
   Status: Published
@@ -121,6 +124,7 @@ Executability: Fully Executable
 Outcome:
   Message: ECOCCUR is equal to 'N', but ECDOSE is populated and less than or equal to 0.
   Output Variables:
+    - ECTRT
     - ECDOSE
     - ECOCCUR
 Rule Type: Record Data

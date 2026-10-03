@@ -57,11 +57,12 @@ Check:
     - name: --LOBXFL
       operator: equal_to
       value: Y
+      value_is_literal: true
     - any:
         - name: --DRVFL
           operator: not_exists
         - name: --DRVFL
-          operator: not_equal_to
+          operator: empty
           value: Y
 Core:
   Id: CORE-000083
@@ -74,6 +75,7 @@ Outcome:
   Message: --ORRES must be populated when --LOBXFL = 'Y' and either --DRVFL is not present in
     dataset or is not populated.
   Output Variables:
+    - --TESTCD
     - --ORRES
     - --LOBXFL
     - --DRVFL

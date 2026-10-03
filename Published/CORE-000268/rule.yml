@@ -127,8 +127,9 @@ Authorities:
         Version: "3.4"
 Check:
   all:
-    - name: --DECOD
-      operator: exists
+    - name: --PTCD
+      operator: is_not_unique_relationship
+      value: --DECOD
     - name: --PTCD
       operator: exists
     - name: --PTCD

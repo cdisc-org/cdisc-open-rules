@@ -58,7 +58,13 @@ Check:
         - name: --DRVFL
           operator: equal_to
           value: Y
-    - name: --STREFC
+          value_is_literal: true
+    - any:
+        - name: --STREFC
+          operator: not_exists
+        - name: --STREFC
+          operator: empty
+      name: --STREFC
       operator: empty
 Core:
   Id: CORE-000110
@@ -70,6 +76,8 @@ Executability: Fully Executable
 Outcome:
   Message: --STREFC is not populated when --ORREF is populated or --DRVFL is equal to 'Y'.
   Output Variables:
+    - --TESTCD
+    - --TEST
     - --ORREF
     - --DRVFL
     - --STREFC

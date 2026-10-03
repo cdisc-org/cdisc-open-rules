@@ -71,7 +71,8 @@ Executability: Fully Executable
 Outcome:
   Message: ARMNRS must be populated when ACTARM is not populated.
   Output Variables:
-    - USUBJID
+    - ACTARM
+    - ARMNRS
 Rule Type: Record Data
 Scope:
   Classes:

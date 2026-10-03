@@ -50,6 +50,7 @@ Check:
     - name: SVPRESP
       operator: equal_to
       value: Y
+      value_is_literal: true
     - name: VISITNUM
       operator: is_not_contained_by
       value: $tv_visitnum
@@ -67,6 +68,10 @@ Operations:
     operator: distinct
 Outcome:
   Message: VISITNUM value for planned visit does not match any VISITNUM value in the TV dataset.
+  Output Variables:
+    - VISITNUM
+    - VISIT
+    - SVPRESP
 Rule Type: Record Data
 Scope:
   Classes:

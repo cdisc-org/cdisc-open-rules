@@ -164,6 +164,7 @@ Outcome:
   Message: --SCAT must not be equal to domain name.
   Output Variables:
     - --SCAT
+    - $domain_label
 Rule Type: Record Data
 Scope:
   Classes:
