@@ -27,7 +27,7 @@ Instructions below will guide you step-by-step through the:
 **_IMPORTANT NOTE_** \
 _You may need your IT support team to install some of the following software for you. In particular, the setup script requires python3.12 to run properly. If you don't have it installed, the script will attempt to install it for you, but this is likely to be blocked by your company settings. If so, you will need to contact IT._
 
-**Follow steps 1 - 9 carefully.**
+**Follow steps 1 - 11 carefully.**
 
 1. Create a free GitHub account: https://github.com/signup
 2. Install Git, following the instructions here: https://git-scm.com/install
@@ -61,7 +61,7 @@ _You may need your IT support team to install some of the following software for
 
 8. In VSCode, select "Open Folder" and select the repository folder you just cloned - it should be called `cdisc-open-rules`
    - VSCode may show a prompt asking if you trust the authors of the files in this folder — click **Yes, I trust the authors**
-   - You should also see a prompt to install the workspace recommended extensions in the bottom right corner — click **Install All**. If you miss this prompt, don't worry — step 10 will cover it
+   - You should also see a prompt to install the workspace recommended extensions in the bottom right corner — click **Install All**. If you miss this prompt, don't worry — step 11 will cover it
 
 9. This should re-open a new terminal in the repository folder. If this doesn't happen, open a new terminal in VSCode and navigate to the repository folder again.
 
@@ -76,7 +76,7 @@ _***IMPORTANT NOTE***\
  If you start the setup script and stop it midway through, you may get some strange errors when you try to run rules in the future. If you have any doubts, rerun the setup script, and make sure it completes._
 
 11. Set up the rule authoring auto-completion and real-time schema validation:
-    - When you opened the repository folder in step 7, VSCode should have shown a prompt to install the workspace recommended extensions — click **Install All** if you haven't already
+    - When you opened the repository folder in step 8, VSCode should have shown a prompt to install the workspace recommended extensions — click **Install All** if you haven't already
     - If you missed the prompt, go to Extensions on the left sidebar, search for `@recommended` in the Extensions search bar and install them from there
     - That's it! Schema validation and CSV highlighting will be active automatically once the extensions are installed. If you don't see this behaviour after a few seconds, try restarting VSCode
 
@@ -161,7 +161,7 @@ Unpublished/
 
 **Create Test Data.**
 
-> **NOTE:** The workspace recommended extensions installed in step 10 include 'Excel Viewer' and 'Rainbow CSV'. Excel Viewer displays CSVs as a formatted table — to use it, open any CSV file and click the table icon in the top right corner of the editor, or right-click (Windows/Linux) / two-finger click (Mac) the file and select **Open With... → Excel Viewer**. Rainbow CSV color-codes each column directly in the raw CSV view to make it easier to read.
+> **NOTE:** The workspace recommended extensions installed in step 11 include 'Excel Viewer' and 'Rainbow CSV'. Excel Viewer displays CSVs as a formatted table — to use it, open any CSV file and click the table icon in the top right corner of the editor, or right-click (Windows/Linux) / two-finger click (Mac) the file and select **Open With... → Excel Viewer**. Rainbow CSV color-codes each column directly in the raw CSV view to make it easier to read.
 
 6. Each test case's `data/` folder must contain the following files:
 
