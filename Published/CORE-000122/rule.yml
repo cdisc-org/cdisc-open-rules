@@ -57,30 +57,15 @@ Authorities:
         Version: "1.0"
 Check:
   all:
-    - name: AGEU
-      operator: non_empty
-    - name: AGE
-      operator: empty
-    - any:
-        - name: AGETXT
-          operator: not_exists
-        - name: AGETXT
-          operator: empty
-  any:
-    - all:
-        - name: AGEU
-          operator: non_empty
-        - name: AGE
-          operator: empty
-        - name: AGETXT
-          operator: empty
-    - all:
-        - name: AGEU
-          operator: non_empty
-        - name: AGE
-          operator: empty
-        - name: AGETXT
-          operator: not_exists
+      - name: AGEU
+        operator: non_empty
+      - name: AGE
+        operator: empty
+      - any:
+          - name: AGETXT
+            operator: not_exists
+          - name: AGETXT
+            operator: empty
 Core:
   Id: CORE-000122
   Status: Published

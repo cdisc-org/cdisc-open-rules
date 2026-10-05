@@ -75,8 +75,6 @@ Check:
           operator: not_exists
         - name: --TOXGR
           operator: empty
-      name: --TOXGR
-      operator: empty
 Core:
   Id: CORE-000102
   Status: Published

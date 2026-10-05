@@ -77,14 +77,7 @@ Check:
           operator: is_incomplete_date
         - name: RFSTDTC
           operator: is_incomplete_date
-      name: --DY
-      operator: non_empty
-    - any:
-        - name: --DTC
-          operator: is_incomplete_date
-        - name: RFSTDTC
-          operator: is_incomplete_date
-      name: --DY
+    - name: --DY
       operator: non_empty
 Core:
   Id: CORE-000354

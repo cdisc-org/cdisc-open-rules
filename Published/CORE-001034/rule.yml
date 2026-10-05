@@ -90,7 +90,6 @@ Operations:
       - $TIMING_VARIABLES
     id: $record_count_per_subject_test_timing
     operator: record_count
-    regex: ^\d{4}-\d{2}-\d{2}
 Outcome:
   Message: --REPNUM must not be null and must be unique per subject per test per timing variables.
   Output Variables:

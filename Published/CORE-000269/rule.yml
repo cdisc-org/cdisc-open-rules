@@ -77,17 +77,14 @@ Authorities:
 Check:
   all:
     - any:
-        - name: SVPRESP
-          operator: not_exists
-        - name: SVPRESP
-          operator: equal_to
-          value: Y
-          value_is_literal: true
-      name: VISIT
-      operator: non_empty
+      - name: SVPRESP
+        operator: not_exists
+      - name: SVPRESP
+        operator: equal_to
+        value: Y
+        value_is_literal: true
     - name: VISIT
       operator: non_empty
-      value: Y
     - name: VISIT
       operator: is_not_contained_by
       value: $tv_visit

@@ -80,8 +80,6 @@ Check:
           operator: not_exists
         - name: DSSCAT
           operator: empty
-      name: DSSCAT
-      operator: not_exists
 Core:
   Id: CORE-000212
   Status: Published

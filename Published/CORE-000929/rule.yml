@@ -185,16 +185,12 @@ Executability: Fully Executable
 Operations:
   - id: $domain_is_custom
     operator: domain_is_custom
-  - codelists:
-      - DOMAIN
-    ct_attribute: Term CCODE
+  - ct_attribute: Term CCODE
+    id: $domain_lib_ccode
+    operator: get_codelist_attributes
+    name: DOMAIN
     ct_conditions:
       - Codelist Code: C66734
-    id: $domain_lib_ccode
-    level: term
-    name: DOMAIN
-    operator: get_codelist_attributes
-    returntype: code
 Outcome:
   Message: Dataset is not a custom domain, but the DOMAIN code in the define.xml document is not a
     published DOMAIN code in the CDISC Controlled Terminology version specified for the study.

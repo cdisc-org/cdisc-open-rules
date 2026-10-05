@@ -111,64 +111,15 @@ Check:
       value: 0
     - all:
         - any:
-            - name: ECSTAT
-              operator: empty
-            - name: ECSTAT
-              operator: not_exists
+          - name: ECSTAT
+            operator: empty
+          - name: ECSTAT
+            operator: not_exists
         - any:
-            - name: ECDOSTXT
-              operator: empty
-            - name: ECDOSTXT
-              operator: not_exists
-  any:
-    - all:
-        - name: ECOCCUR
-          operator: not_equal_to
-          value: N
-          value_is_literal: true
-        - name: ECSTAT
-          operator: empty
-        - name: ECDOSTXT
-          operator: empty
-        - name: ECDOSE
-          operator: less_than_or_equal_to
-          value: 0
-    - all:
-        - name: ECOCCUR
-          operator: not_equal_to
-          value: N
-          value_is_literal: true
-        - name: ECSTAT
-          operator: not_exists
-        - name: ECDOSTXT
-          operator: empty
-        - name: ECDOSE
-          operator: less_than_or_equal_to
-          value: 0
-    - all:
-        - name: ECOCCUR
-          operator: not_equal_to
-          value: N
-          value_is_literal: true
-        - name: ECSTAT
-          operator: empty
-        - name: ECDOSTXT
-          operator: not_exists
-        - name: ECDOSE
-          operator: less_than_or_equal_to
-          value: 0
-    - all:
-        - name: ECOCCUR
-          operator: not_equal_to
-          value: N
-          value_is_literal: true
-        - name: ECSTAT
-          operator: not_exists
-        - name: ECDOSTXT
-          operator: not_exists
-        - name: ECDOSE
-          operator: less_than_or_equal_to
-          value: 0
+          - name: ECDOSTXT
+            operator: empty
+          - name: ECDOSTXT
+            operator: not_exists
 Core:
   Id: CORE-000137
   Status: Published

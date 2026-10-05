@@ -74,17 +74,13 @@ Check:
   all:
     - name: VISITNUM
       operator: non_empty
-      value: Y
     - any:
-        - name: SVPRESP
-          operator: not_exists
-        - name: SVPRESP
-          operator: equal_to
-          value: Y
-          value_is_literal: true
-      name: VISITNUM
-      operator: is_not_contained_by
-      value: $TV_VISITNUM
+      - name: SVPRESP
+        operator: not_exists
+      - name: SVPRESP
+        operator: equal_to
+        value: Y
+        value_is_literal: true
     - name: VISITNUM
       operator: is_not_contained_by
       value: $TV_VISITNUM

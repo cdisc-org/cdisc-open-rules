@@ -289,12 +289,7 @@ Authorities:
         Version: "1.0"
 Check:
   all:
-    - any:
-        - name: --TPTREF
-          operator: not_exists
-        - name: --TPTREF
-          operator: empty
-      name: --TPTREF
+    - name: --TPTREF
       operator: empty
     - name: --RFTDTC
       operator: exists

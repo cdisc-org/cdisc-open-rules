@@ -64,8 +64,6 @@ Check:
           operator: not_exists
         - name: --DOSU
           operator: empty
-      name: --DOSU
-      operator: empty
     - any:
         - name: --DOSE
           operator: non_empty

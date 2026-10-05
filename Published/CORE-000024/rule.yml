@@ -64,8 +64,6 @@ Check:
           operator: not_exists
         - name: --BDSYCD
           operator: empty
-      name: --BDSYCD
-      operator: empty
 Core:
   Id: CORE-000024
   Status: Published

@@ -107,8 +107,6 @@ Check:
           operator: not_exists
         - name: --STAT
           operator: empty
-      name: --STAT
-      operator: empty
     - name: --OCCUR
       operator: exists
     - name: --OCCUR
