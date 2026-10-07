@@ -49,6 +49,11 @@ Description: Raise an error when a visit is unplanned (SVPRESP is null) but VISI
 Executability: Fully Executable
 Outcome:
   Message: Visit is unplanned but VISITDY is populated.
+  Output Variables:
+    - VISITNUM
+    - VISIT
+    - VISITDY
+    - SVPRESP
 Rule Type: Record Data
 Scope:
   Classes:

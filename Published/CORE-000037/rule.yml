@@ -36,6 +36,7 @@ Check:
     - name: SVPRESP
       operator: not_equal_to
       value: Y
+      value_is_literal: true
     - name: SVPRESP
       operator: non_empty
 Core:

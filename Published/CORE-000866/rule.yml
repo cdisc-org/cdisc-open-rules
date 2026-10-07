@@ -155,7 +155,7 @@ Check:
     - name: --ENDTC
       operator: non_empty
     - name: --DTC
-      operator: date_greater_than_or_equal_to
+      operator: date_greater_than
       value: --ENDTC
 Core:
   Id: CORE-000866

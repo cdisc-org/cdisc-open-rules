@@ -64,9 +64,11 @@ Check:
     - name: DSTERM
       operator: equal_to
       value: COMPLETED
+      value_is_literal: true
     - name: DSDECOD
       operator: not_equal_to
       value: COMPLETED
+      value_is_literal: true
 Core:
   Id: CORE-000033
   Status: Published

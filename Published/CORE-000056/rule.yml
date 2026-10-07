@@ -43,6 +43,8 @@ Description: Raise an error when --REASEX is present.
 Executability: Fully Executable
 Outcome:
   Message: --REASEX must not be present.
+  Output Variables:
+    - --REASEX
 Rule Type: Record Data
 Scope:
   Classes:

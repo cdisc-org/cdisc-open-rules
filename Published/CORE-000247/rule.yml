@@ -83,6 +83,8 @@ Description: Raise an error when --RESLOC is present.
 Executability: Fully Executable
 Outcome:
   Message: --RESLOC must not be present.
+  Output Variables:
+    - --RESLOC
 Rule Type: Record Data
 Scope:
   Classes:

@@ -113,9 +113,9 @@ Outcome:
   Message: --ENDY is populated but either --ENDTC or RFSTDTC in the DM dataset do not contain
     complete values in the date portion.
   Output Variables:
+    - --ENDY
     - --ENDTC
     - RFSTDTC
-    - --ENDY
 Rule Type: Record Data
 Scope:
   Classes:

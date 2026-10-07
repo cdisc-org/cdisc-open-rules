@@ -85,6 +85,9 @@ Description: Raise an error when --PRESP is not present in the dataset, but --RE
 Executability: Fully Executable
 Outcome:
   Message: --REASND must not be present in the dataset when --PRESP is not present.
+  Output Variables:
+    - --PRESP
+    - --REASND
 Rule Type: Record Data
 Scope:
   Classes:
