@@ -170,8 +170,8 @@ Authorities:
 Check:
   all:
     - name: SETCD
-      operator: matches_regex
-      value: ^(.){9,}$
+      operator: longer_than
+      value: 8
 Core:
   Id: CORE-000088
   Status: Published

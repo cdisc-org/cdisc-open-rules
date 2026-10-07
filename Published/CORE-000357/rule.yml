@@ -83,6 +83,8 @@ Description: Raise an error when a supplemental qualifier dataset is associated 
 Executability: Fully Executable
 Outcome:
   Message: Split dataset name length of -- dataset > 8.
+  Output Variables:
+    - dataset_name
 Rule Type: Dataset Metadata Check
 Scope:
   Classes:
@@ -93,4 +95,4 @@ Scope:
       - SUPP--
     include_split_datasets: true
   Use Case: INDH, PROD
-Sensitivity: Record
+Sensitivity: Dataset

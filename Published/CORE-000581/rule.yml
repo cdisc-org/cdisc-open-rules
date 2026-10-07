@@ -226,6 +226,8 @@ Description: Raise an error when DM dataset is not present.
 Executability: Fully Executable
 Outcome:
   Message: DM dataset is missing.
+  Output Variables:
+    - DM
 Rule Type: Domain Presence Check
 Scope:
   Classes:
@@ -235,4 +237,4 @@ Scope:
     Include:
       - ALL
   Use Case: INDH
-Sensitivity: Dataset
+Sensitivity: Study

@@ -193,6 +193,7 @@ Check:
     - name: ETCD
       operator: equal_to
       value: UNPLAN
+      value_is_literal: true
 Core:
   Id: CORE-000256
   Status: Published
@@ -201,6 +202,9 @@ Description: Raise an error when SEUPDES is not populated but ETCD is equal to '
 Executability: Fully Executable
 Outcome:
   Message: SEUPDES is not populated but ETCD is equal to 'UNPLAN'.
+  Output Variables:
+    - SEUPDES
+    - ETCD
 Rule Type: Record Data
 Scope:
   Classes:

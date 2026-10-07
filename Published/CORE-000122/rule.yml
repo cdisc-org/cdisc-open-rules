@@ -56,21 +56,16 @@ Authorities:
         Substandard: SDTM
         Version: "1.0"
 Check:
-  any:
-    - all:
-        - name: AGEU
-          operator: non_empty
-        - name: AGE
-          operator: empty
-        - name: AGETXT
-          operator: empty
-    - all:
-        - name: AGEU
-          operator: non_empty
-        - name: AGE
-          operator: empty
+  all:
+    - name: AGEU
+      operator: non_empty
+    - name: AGE
+      operator: empty
+    - any:
         - name: AGETXT
           operator: not_exists
+        - name: AGETXT
+          operator: empty
 Core:
   Id: CORE-000122
   Status: Published
@@ -81,8 +76,8 @@ Outcome:
   Message: AGE or AGETXT must be populated when AGEU is populated.
   Output Variables:
     - AGE
-    - AGEU
     - AGETXT
+    - AGEU
 Rule Type: Record Data
 Scope:
   Classes:

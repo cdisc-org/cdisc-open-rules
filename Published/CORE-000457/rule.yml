@@ -92,6 +92,9 @@ Operations:
     operator: study_domains
 Outcome:
   Message: RDOMAIN value in the -- dataset does not correspond to a dataset present in the study.
+  Output Variables:
+    - RDOMAIN
+    - USUBJID
 Rule Type: Record Data
 Scope:
   Classes:

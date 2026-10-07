@@ -50,6 +50,7 @@ Check:
     - name: SVPRESP
       operator: not_equal_to
       value: Y
+      value_is_literal: true
 Core:
   Id: CORE-000038
   Status: Published
@@ -58,6 +59,9 @@ Description: Raise an error when SVOCCUR is not null and SVPRESP is not equal to
 Executability: Fully Executable
 Outcome:
   Message: SVOCCUR is populated but SVPRESP is not equal to 'Y'.
+  Output Variables:
+    - SVPRESP
+    - SVOCCUR
 Rule Type: Record Data
 Scope:
   Classes:

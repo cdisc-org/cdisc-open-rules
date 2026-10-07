@@ -43,6 +43,8 @@ Description: Raise an error when --IMPLBL is present.
 Executability: Fully Executable
 Outcome:
   Message: --IMPLBL must not be present.
+  Output Variables:
+    - --IMPLBL
 Rule Type: Record Data
 Scope:
   Classes:

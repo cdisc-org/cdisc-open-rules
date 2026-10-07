@@ -96,6 +96,8 @@ Description: Raise an error when --NOMDY is present.
 Executability: Fully Executable
 Outcome:
   Message: --NOMDY must not be present.
+  Output Variables:
+    - --NOMDY
 Rule Type: Record Data
 Scope:
   Classes:

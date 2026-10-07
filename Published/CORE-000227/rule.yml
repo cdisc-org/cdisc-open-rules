@@ -86,6 +86,8 @@ Operations:
     operator: distinct
 Outcome:
   Message: IETEST does not match any IETEST value in the TI dataset.
+  Output Variables:
+    - IETEST
 Rule Type: Record Data
 Scope:
   Classes:

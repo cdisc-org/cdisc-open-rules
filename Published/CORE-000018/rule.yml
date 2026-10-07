@@ -101,8 +101,12 @@ Check:
     - name: --PRESP
       operator: equal_to
       value: Y
-    - name: --STAT
-      operator: empty
+      value_is_literal: true
+    - any:
+        - name: --STAT
+          operator: not_exists
+        - name: --STAT
+          operator: empty
     - name: --OCCUR
       operator: exists
     - name: --OCCUR

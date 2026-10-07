@@ -88,8 +88,11 @@ Check:
   all:
     - name: --SCAT
       operator: non_empty
-    - name: --CAT
-      operator: empty
+    - any:
+        - name: --CAT
+          operator: not_exists
+        - name: --CAT
+          operator: empty
 Core:
   Id: CORE-000103
   Status: Published

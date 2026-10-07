@@ -94,6 +94,7 @@ Check:
         - COINCIDENT
         - AFTER
         - UNKNOWN
+      value_is_literal: true
 Core:
   Id: CORE-000710
   Status: Published
@@ -101,7 +102,7 @@ Core:
 
 Description: Raise an error when --STTPT is prior to the date of collection or assessment but
   --STRTPT is not equal to 'BEFORE', 'COINCIDENT', 'AFTER', or 'UNKNOWN'.
-Executability: Partially Executable
+Executability: Fully Executable
 Outcome:
   Message: --STRTPT must be equal to 'BEFORE', 'COINCIDENT', 'AFTER', or 'UNKNOWN' when --STTPT is
     prior to the date of collection or assessment.

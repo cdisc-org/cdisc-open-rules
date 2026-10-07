@@ -83,21 +83,19 @@ Operations:
   - id: $TIMING_VARIABLES
     key_name: role
     key_value: Timing
-    operator: get_dataset_filtered_variables
+    operator: get_model_filtered_variables
   - group:
       - USUBJID
       - --TESTCD
       - $TIMING_VARIABLES
     id: $record_count_per_subject_test_timing
     operator: record_count
-    regex: ^\d{4}-\d{2}-\d{2}
 Outcome:
   Message: --REPNUM must not be null and must be unique per subject per test per timing variables.
   Output Variables:
     - USUBJID
     - --TESTCD
     - --REPNUM
-    - $TIMING_VARIABLES
 Rule Type: Record Data
 Scope:
   Classes:
