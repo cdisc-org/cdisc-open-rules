@@ -67,27 +67,33 @@ Authorities:
 Check:
   all:
     - name: DSCAT
+      operator: equal_to
+      value: DISPOSITION EVENT
+      value_is_literal: true
+    - name: DSCAT
       operator: is_not_unique_set
       value:
         - USUBJID
         - EPOCH
-    - name: DSCAT
-      operator: equal_to
-      value: DISPOSITION EVENT
-    - name: DSSCAT
-      operator: not_exists
+    - any:
+        - name: DSSCAT
+          operator: not_exists
+        - name: DSSCAT
+          operator: empty
 Core:
   Id: CORE-000212
   Status: Published
   Version: "1"
-Description: When subject has more than one record per Epoch with DSCAT = DISPOSITION EVENT, DSSCAT
-  must be present.
+Description: Raise an error when a subject has more than one record per EPOCH with DSCAT =
+  'DISPOSITION EVENT', but DSSCAT is not populated.
 Executability: Fully Executable
 Outcome:
-  Message: DSSCAT is not present when subject has more than one record per Epoch with DSCAT =
+  Message: DSSCAT must be populated when a subject has more than one record per EPOCH with DSCAT =
     'DISPOSITION EVENT'.
   Output Variables:
-    - USUBJID
+    - DSDECOD
+    - DSCAT
+    - DSSCAT
 Rule Type: Record Data
 Scope:
   Classes:

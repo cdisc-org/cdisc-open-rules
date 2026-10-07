@@ -71,10 +71,10 @@ Core:
   Id: CORE-000195
   Status: Published
   Version: "1"
-Description: Raise an error when --SCAT = --DECOD.
+Description: Raise an error when --SCAT is equal to --DECOD.
 Executability: Fully Executable
 Outcome:
-  Message: --SCAT is equal to --DECOD.
+  Message: --SCAT must not be equal to --DECOD.
   Output Variables:
     - --DECOD
     - --SCAT

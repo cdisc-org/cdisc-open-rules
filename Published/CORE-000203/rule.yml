@@ -90,12 +90,13 @@ Core:
   Id: CORE-000203
   Status: Published
   Version: "1"
-Description: Trigger error when the combination of IDVAR, IDVARVAL, and QNAM is not unique per
-  parent subject record
+Description: Raise an error when the combination of IDVAR, IDVARVAL, and QNAM is not unique per
+  parent subject record.
 Executability: Fully Executable
 Outcome:
-  Message: The combination of IDVAR, IDVARVAL, and QNAM is not unique per parent subject record
+  Message: The combination of IDVAR, IDVARVAL, and QNAM must be unique per parent subject record.
   Output Variables:
+    - RDOMAIN
     - USUBJID
     - IDVAR
     - IDVARVAL

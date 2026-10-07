@@ -91,6 +91,7 @@ mh,MHEVDTYP,Medical History Event Date Type,Char,13
 mh,MHDTC,Date/Time of Collection of Medical History Event,Char,10
 mh,MHSTDTC,Start Date/Time of Medical History Event,Char,10
 mh,MHSTDY,Study Day of Start of Observation,Num,8
+mh,MHDY,Study Day of Visit/Collection/Exam,Num,8
 se,STUDYID,Study Identifier,Char,12
 se,DOMAIN,Domain Abbreviation,Char,2
 se,USUBJID,Unique Subject Identifier,Char,8

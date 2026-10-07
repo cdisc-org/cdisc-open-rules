@@ -105,7 +105,8 @@ Authorities:
 Check:
   all:
     - name: --BDSYCD
-      operator: exists
+      operator: is_not_unique_relationship
+      value: --BODSYS
     - name: --BODSYS
       operator: exists
     - name: --BDSYCD
@@ -115,11 +116,13 @@ Core:
   Id: CORE-000184
   Status: Published
   Version: "1"
-Description: --BODSYS and --BDSYCD  have a one-to-one relationship.
+Description: Raise an error when --BDSYCD and --BODSYS are present, but do not have a one-to-one
+  relationship.
 Executability: Fully Executable
 Outcome:
-  Message: --BODSYS and --BDSYCD do not have a one-to-one relationship.
+  Message: --BDSYCD and --BODSYS do not have a one-to-one relationship.
   Output Variables:
+    - --DECOD
     - --BODSYS
     - --BDSYCD
 Rule Type: Record Data

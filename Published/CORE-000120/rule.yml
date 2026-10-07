@@ -8,9 +8,9 @@ Authorities:
         References:
           - Citations:
               - Cited Guidance:
-                  "\"If ACTARMCD is null, then ACTARM must be null and ARMNRS must  be populated
-                  with the reason ACTARMCD is null.\n Both ARMCD and ACTARMCD will be null for subjects who were
-                  not assigned to treatment. \n The same reason  will provide the reason that both are null.\""
+                  "If ACTARMCD is null, then ACTARM must be null and ARMNRS must be populated with
+                  the reason ACTARMCD is null. Both ARMCD and ACTARMCD will be null for subjects who were not
+                  assigned to treatment.  The same reason will provide the reason that both are null.\n"
                 Document: IG v3.4
                 Item: Assumption 4
                 Section: "5.2"
@@ -62,10 +62,10 @@ Core:
   Id: CORE-000120
   Status: Published
   Version: "1"
-Description: Raise an error when ACTARM is not empty, but ACTARMCD is empty
+Description: Raise an error when ACTARM is populated but ACTARMCD is not populated.
 Executability: Fully Executable
 Outcome:
-  Message: ACTARM is populated, when ACTARMCD is NULL
+  Message: ACTARM must not be populated when ACTARMCD is not populated.
   Output Variables:
     - ACTARMCD
     - ACTARM

@@ -148,11 +148,12 @@ Check:
     - name: --DUR
       operator: contains
       value: "-"
+      value_is_literal: true
 Core:
   Id: CORE-000305
   Status: Published
   Version: "1"
-Description: Collected Duration (--DUR) value should not be negative.
+Description: Collected Duration (--DUR) value is not negative.
 Executability: Fully Executable
 Outcome:
   Message: Negative value for --DUR.

@@ -134,10 +134,10 @@ Core:
   Id: CORE-000863
   Status: Published
   Version: "1"
-Description: When --STRESC is populated with a numeric value, --STRESN should be populated.
+Description: --STRESC is populated with a numeric value and --STRESN is also populated.
 Executability: Fully Executable
 Outcome:
-  Message: --STRESC is populated with a numeric value, but --STRESN is not populated.
+  Message: Missing value for --STRESN when --STRESC is numeric.
   Output Variables:
     - --STRESC
     - --STRESN

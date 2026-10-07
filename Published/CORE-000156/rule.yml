@@ -77,7 +77,7 @@ Core:
   Id: CORE-000156
   Status: Published
   Version: "1"
-Description: Trigger error when ARM is populated and ARM is not in TA.ARM
+Description: Raise an error when ARM is populated and ARM is not in TA.ARM.
 Executability: Fully Executable
 Operations:
   - domain: TA
@@ -85,7 +85,7 @@ Operations:
     name: ARM
     operator: distinct
 Outcome:
-  Message: ARM is not in TA.ARM
+  Message: ARM must be in TA.ARM.
 Rule Type: Record Data
 Scope:
   Classes:

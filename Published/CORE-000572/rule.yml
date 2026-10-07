@@ -97,15 +97,17 @@ Check:
         - ONGOING
         - AFTER
         - UNKNOWN
+      value_is_literal: true
 Core:
   Id: CORE-000572
   Status: Published
   Version: "1"
-Description: Trigger error when --ENRTPT is not in ('BEFORE', 'COINCIDENT', 'ONGOING', 'AFTER',
-  'UNKNOWN')
-Executability: Partially Executable
+Description: Raise an error when --ENRTPT is not equal to 'BEFORE', 'COINCIDENT', 'ONGOING',
+  'AFTER', 'UNKNOWN' and --ENTPT is prior to the date of collection or assessment.
+Executability: Fully Executable
 Outcome:
-  Message: --ENRTPT is not in ('BEFORE', 'COINCIDENT', 'ONGOING', 'AFTER', 'UNKNOWN')
+  Message: --ENRTPT must be equal to 'BEFORE', 'COINCIDENT', 'ONGOING', 'AFTER', or 'UNKNOWN' when
+    --ENTPT is prior to the date of collection or assessment.
   Output Variables:
     - --ENTPT
     - --ENRTPT
