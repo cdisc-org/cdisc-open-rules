@@ -2,70 +2,70 @@
 # Condition: AGEU ^= null and AGE = null
 # Rule: AGETXT ^= null
 Authorities:
-- Organization: CDISC
-  Standards:
-  - Name: SDTMIG
-    References:
-    - Citations:
-      - Cited Guidance: Variable Qualifier of AGE or AGETXT.
-        Document: Model v2.0
-        Item: AGEU
-        Section: Demographics
-      Origin: SDTM and SDTMIG Conformance Rules
-      Rule Identifier:
-        Id: CG0434
-        Version: "1"
-      Version: "2.0"
-    Version: "3.4"
-  - Name: SDTMIG
-    References:
-    - Citations:
-      - Cited Guidance: Units associated with AGE or AGETXT.
-        Document: Model v1.4
-        Section: 2.2.6
-      Origin: SDTM and SDTMIG Conformance Rules
-      Rule Identifier:
-        Id: CG0434
-        Version: "1"
-      Version: "2.0"
-    Version: "3.2"
-  - Name: SDTMIG
-    References:
-    - Citations:
-      - Cited Guidance: Units associated with AGE or AGETXT.
-        Document: Model v1.7
-        Section: Table 2.2.6.1
-      Origin: SDTM and SDTMIG Conformance Rules
-      Rule Identifier:
-        Id: CG0434
-        Version: "1"
-      Version: "2.0"
-    Version: "3.3"
-  - Name: TIG
-    References:
-    - Citations:
-      - Cited Guidance: Variable Qualifier of AGE or AGETXT.
-        Document: SDTM v2.1
-        Item: AGEU
-        Section: 3.2.1 Demographics
-      Origin: TIG Conformance Rules
-      Rule Identifier:
-        Id: TIG0586
-        Version: "1"
-      Version: "1.0"
-    Substandard: SDTM
-    Version: "1.0"
+  - Organization: CDISC
+    Standards:
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Variable Qualifier of AGE or AGETXT.
+                Document: Model v2.0
+                Item: AGEU
+                Section: Demographics
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0434
+              Version: "1"
+            Version: "2.0"
+        Version: "3.4"
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Units associated with AGE or AGETXT.
+                Document: Model v1.4
+                Section: 2.2.6
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0434
+              Version: "1"
+            Version: "2.0"
+        Version: "3.2"
+      - Name: SDTMIG
+        References:
+          - Citations:
+              - Cited Guidance: Units associated with AGE or AGETXT.
+                Document: Model v1.7
+                Section: Table 2.2.6.1
+            Origin: SDTM and SDTMIG Conformance Rules
+            Rule Identifier:
+              Id: CG0434
+              Version: "1"
+            Version: "2.0"
+        Version: "3.3"
+      - Name: TIG
+        References:
+          - Citations:
+              - Cited Guidance: Variable Qualifier of AGE or AGETXT.
+                Document: SDTM v2.1
+                Item: AGEU
+                Section: 3.2.1 Demographics
+            Origin: TIG Conformance Rules
+            Rule Identifier:
+              Id: TIG0586
+              Version: "1"
+            Version: "1.0"
+        Substandard: SDTM
+        Version: "1.0"
 Check:
   all:
-  - name: AGEU
-    operator: non_empty
-  - name: AGE
-    operator: empty
-  - any:
-    - name: AGETXT
-      operator: not_exists
-    - name: AGETXT
+    - name: AGEU
+      operator: non_empty
+    - name: AGE
       operator: empty
+    - any:
+        - name: AGETXT
+          operator: not_exists
+        - name: AGETXT
+          operator: empty
 Core:
   Id: CORE-000122
   Status: Published
@@ -75,16 +75,16 @@ Executability: Fully Executable
 Outcome:
   Message: AGE or AGETXT must be populated when AGEU is populated.
   Output Variables:
-  - AGE
-  - AGETXT
-  - AGEU
+    - AGE
+    - AGETXT
+    - AGEU
 Rule Type: Record Data
 Scope:
   Classes:
     Include:
-    - SPECIAL PURPOSE
+      - SPECIAL PURPOSE
   Domains:
     Include:
-    - DM
+      - DM
   Use Case: INDH
 Sensitivity: Record
