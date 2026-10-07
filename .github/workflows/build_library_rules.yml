@@ -1,0 +1,58 @@
+name: Build Library rule.json
+
+on:
+  schedule:
+    - cron: "0 11 * * 1"
+  push:
+    branches: [main]
+    paths:
+      - "Published/**/*.yml"
+      - "Published/**/*.yaml"
+      - ".github/scripts/build_library_rules.py"
+
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: build-library-rules
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out cdisc-open-rules
+        uses: actions/checkout@v5
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install pyyaml requests
+
+      - name: Build Library/rule.json
+        env:
+          GITHUB_TOKEN: ${{ secrets.CORE_CONTRIBUTOR_TOKEN || github.token }}
+          CORE_CONTRIBUTOR_REPO: cdisc-org/core-contributor
+          CORE_CONTRIBUTOR_REF: main
+          CORE_CONTRIBUTOR_RULES_DIR: rules
+          OPEN_RULES_DIR: Published
+          OUTPUT_PATH: Library/rule.json
+          PR_BODY_PATH: ${{ runner.temp }}/pr_body.md
+        run: python .github/scripts/build_library_rules.py
+
+      - name: Open or update PR
+        uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ github.token }}
+          branch: automation/library-rule-json
+          delete-branch: true
+          add-paths: Library/rule.json
+          commit-message: "chore: rebuild Library/rule.json"
+          title: "Update Library/rule.json"
+          body-path: ${{ runner.temp }}/pr_body.md
