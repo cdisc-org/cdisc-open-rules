@@ -82,8 +82,9 @@ Scope:
       - ALL
   Domains:
     Include:
-      - SUPP--
+      - AP SPLIT DATASETS
     Exclude:
+      - SUPP--
       - APRELSUB
       - APRELSPEC
     include_split_datasets: true
