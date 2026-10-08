@@ -106,14 +106,14 @@ According to the schema, the following classes are available:
 The following domain options are available:
 - Standard domains like `DM`, `AE`, `LB`, etc.
 - Special values like `ALL`, `APRELSUB`, `POOLDEF`, etc.
-- The fixed property keywords: `SUPPQUAL`, `AP--`, `SPLIT DATASETS`, `AP SPLIT DATASETS`
+- The fixed property keywords: `SUPP--`, `SQ--`, `AP--`, `SPLIT DATASETS`, `AP SPLIT DATASETS`
 
 ## Fixed Property Keywords
 Unlike literal domain names (`AE`, `LB`, `APRELSUB`, etc.), the following keywords match against **derived dataset properties** rather than the dataset name itself. See [README.md](./README.md#dataset-metadata-submission-guide) for how each property is derived: for the full definitions these properties are based on.
 
 | Keyword | Matches when | Derived from |
 |---|---|---|
-| `SUPPQUAL` | Dataset name starts with `SUPP` or `SQ` | `is_supp` |
+| `SUPP--` or `SQ--` | Dataset name starts with `SUPP` or `SQ` (interchangeable) | `is_supp` |
 | `AP--` | Dataset is an Associated Persons domain | `is_ap` |
 | `SPLIT DATASETS` | Dataset name differs from its unsplit/parent domain name | `is_split` |
 | `AP SPLIT DATASETS` | Dataset is an AP domain **and** split **and not** a SUPP/SQ dataset | `is_ap AND is_split AND NOT is_supp` |

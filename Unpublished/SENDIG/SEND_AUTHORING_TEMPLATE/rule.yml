@@ -763,7 +763,8 @@ Scope:
       - RELREC
       - RELSPEC
       - RELSUB
-      - SUPPQUAL
+      - SUPP--
+      - SQ--
       - SPLIT DATASETS
       - AP SPLIT DATASETS
     Include:
@@ -775,7 +776,8 @@ Scope:
       - RELREC
       - RELSPEC
       - RELSUB
-      - SUPPQUAL
+      - SUPP--
+      - SQ--
       - SPLIT DATASETS
       - AP SPLIT DATASETS
     include_split_datasets: true | false
