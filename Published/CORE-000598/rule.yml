@@ -187,7 +187,7 @@ Description: The dataset name must begin with the DOMAIN value.
 Executability: Fully Executable
 Outcome:
   Message: Dataset name does not begin with DOMAIN value
-Rule Type: Dataset Metadata Check
+Rule Type: Value Check with Dataset Metadata
 Scope:
   Classes:
     Include:

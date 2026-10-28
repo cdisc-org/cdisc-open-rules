@@ -139,14 +139,13 @@ Core:
   Id: "CORE-000758"
   Status: Published
   Version: "1"
-Description:
-  "Raise an error when the milestone associated with RFSTDTC is the start of treatment and
-  ARMNRS is populated and ARMNRS is not equal to 'UNPLANNED TREATMENT'."
-Executability: Partially Executable - Possible Overreporting
+Description: Raise an error when the milestone associated with RFSTDTC is the start of 
+  treatment and ARMNRS is populated and ARMNRS is not equal to 'UNPLANNED TREATMENT'.
+Executability: Fully Executable
 Outcome:
-  Message:
-    "RFSTDTC must not be populated when ARMNRS is populated with a value other than 'UNPLANNED
-    TREATMENT', provided that this study defines RFSTDTC as the date/time of first treatment exposure."
+  Message: RFSTDTC must not be populated when ARMNRS is populated with a value
+    other than 'UNPLANNED TREATMENT', provided that this study defines RFSTDTC
+    as the date/time of first treatment exposure.
   Output Variables:
     - ARM
     - ARMNRS
