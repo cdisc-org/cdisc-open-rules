@@ -202,16 +202,17 @@ This section contains links to the different Test Data Templates, Test Data Exam
 - Domain-specific variable sets are drawn from SDTMIG v3.4, as well as AC, APRELSUB, DI, and TX from SDTM v2.0.
 
 [unit-test-sdtmig-sendig-template.xlsx](files/unit-test-sdtmig-sendig-template.xlsx ":ignore")
+[unit-test-sdtmig-3-4-template.xlsx](files/unit-test-sdtmig-3-4-template.xlsx ":ignore")
 
 #### Examples
 
 Also, here is a mock Excel workbook for positive and negative testing against which contains:
 
-- dm.xpt and ae.xpt.
+- dm.xpt and ae.xpt
 - Both with variable metadata adjusted, unused columns removed, data rows added.
 
-[unit-test-ruleid-sdtmigexample-positive.xlsx](files/unit-test-sdtmigexample-positive.xlsx ":ignore")
-[unit-test-ruleid-sdtmigexample-negative.xlsx](files/unit-test-sdtmigexample-negative.xlsx ":ignore")
+[unit-test-ruleid-sdtmigexample-positive.xlsx](files/unit-test-ruleid-sdtmigexample-positive.xlsx ":ignore")
+[unit-test-ruleid-sdtmigexample-negative.xlsx](files/unit-test-ruleid-sdtmigexample-negative.xlsx ":ignore")
 
 #### Sample Data
 
@@ -219,6 +220,8 @@ CDISC has 2 sets of mock study in SDTM format. They have been converted for use 
 
 - [CDISCTestData-sdtm-xpt-xlsx.zip](files/CDISCTestData-sdtm-xpt-xlsx.zip ":ignore") A set of test data files transformed from the CDISCTestData Github repo, sourced from /SDTM/XPT. Per Read Me, this mock study implements "SDTM IG Version 3.2.
 - [sdtm-msg-2-0-m5-datasets-xlsx.zip](files/sdtm-msg-2-0-m5-datasets-xlsx.zip ":ignore") A set of test data files transformed from the example submission bundled in the SDTM MSG v2.0, sourced from /m5/datasets/cdiscpilot01/tabulations/sdtm, as well as the split subdirectory. Per documentation, this example submission implements "SDTM v1.7/SDTMIG v3.3, and SDTM Terminology 2020-03-27.
+
+Throughout this repository there is test data for individual rules in .csv format.  The above test data can be run with the open rules engine itself, not using the open-rules repo submodule.
 
 ## Storage
 
