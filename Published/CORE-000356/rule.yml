@@ -170,9 +170,7 @@ Check:
       value: $required_variables
     - name: variable_value
       operator: empty
-      value: $required_variables
-    - name: variable_value
-      operator: empty
+
 Core:
   Id: CORE-000356
   Status: Published
