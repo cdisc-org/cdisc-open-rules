@@ -1,23 +1,34 @@
 # Ticket Submission
 
-There are cases where you may be trying to write a rule and you find that operators or processes are not yet available to allow you to write your rule. In other cases, you may find that the rule can be written but it is not working as expected or the CORE engine is returning a strange error in the results. The following are steps to help you through the process of creating a new CORE engine ticket.
+There are cases where you may be trying to write a rule and you find that operators or processes are not yet available to allow you to write your rule. In other cases, you may find that the rule can be written but it is not working as expected or the CORE engine is returning a strange error in the results. The following steps will help you decide where to report the problem and how to create a ticket.
 
-1. Before submitting a ticket, double check the [FAQ](./faq.md) to ensure that your question has not already been answered.
-1. Identify the JIRA issue that is tracking your Rule
-   1. Navigate to https://jira.cdisc.org/projects/CORERULES/issue
-   1. Click the `View all issues and filters` link
-   1. Filter for your issue using the `summary` field, which contains the conformance rule id.
-   1. Once you've identified the JIRA issue, make note of the the JIRA issue url and id. The id will appear at the top of the issue and is of the format: `CORERULES-#####`
-1. Create a Github issue
-   1. The issue submission in the repository for the CORE engine code is located here: https://github.com/cdisc-org/cdisc-rules-engine/issues/new/choose
-      - Note that if you do not have a Github account, you will need to follow the prompts to create one
-   1. Select between a `Rule-Blocking Bug` or `Rule-Blocking Enhancement` and click `Get started` (green button)
-   1. Follow the instructions in the issue template to fill out the github issue
-      - Use the JIRA id (`CORERULES-#####`) and url that you noted in the previous steps to create the title and issue content.
-      - Note that you can switch to the `Preview` tab to view a preview of your issue.
-   1. After creating the github issue, make note of the new issue url
-1. Create a reference to the Github issue
-   1. Return to the original jira ticket
-   1. Set the ticket's workflow status to `Blocked`
-   1. Edit the ticket and set the `Azure Work Item URL` field to the Github url noted in the previous steps.
-   1. Create a new comment with a brief description explaining the bug or missing feature and state that a github issue has been created
+## Is it an engine issue?
+
+Report the issue to the **CORE engine repository** ([cdisc-org/cdisc-rules-engine](https://github.com/cdisc-org/cdisc-rules-engine/issues)) if:
+
+- The engine returns an error, crashes, or produces unexpected results for a rule that appears to be written correctly
+- An operator behaves differently than its documentation describes
+- An operator or process you need to write your rule does not exist yet
+
+If the problem is with a rule's own logic or content rather than the engine, it is not an engine bug. Do not file it in the engine repository. Instead, open an issue in the rule repository for that standard:
+
+| Standard | Where to report rule issues |
+| --- | --- |
+| SDTM, ADaM, FDA Business Rules | [verisianHQ/core-contributor](https://github.com/verisianHQ/core-contributor/issues) |
+| SEND, TIG, USDM | [cdisc-org/cdisc-open-rules](https://github.com/cdisc-org/cdisc-open-rules/issues) |
+
+## Submitting a ticket
+
+1. Before submitting a ticket, check the [FAQ](./faq.md) to make sure your question has not already been answered.
+2. Search the existing issues to see whether the problem has already been reported. For engine problems, look in the [engine issues](https://github.com/cdisc-org/cdisc-rules-engine/issues). For rule problems, look in the rule repository from the table above. If the issue already exists, add a comment with your example instead of opening a duplicate.
+3. Create a GitHub issue in the correct repository and choose the template that fits:
+   - **Rule-Blocking Bug** (engine repository): the engine is not behaving as expected
+   - **Rule-Blocking Enhancement** (engine repository): the engine needs an operator or process that does not exist yet
+   - **New Rule or Existing Rule Bug** (rule repository): a rule has a logic issue, or a new rule needs to be created
+
+   If you do not have a GitHub account, follow the prompts to create one.
+4. Follow the instructions in the issue template and include as much information as possible to help with triage and development.
+
+## Volunteering
+
+If you would like to author rules as a volunteer, please visit https://www.cdisc.org/volunteer/form
