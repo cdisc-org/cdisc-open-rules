@@ -1753,6 +1753,7 @@
     "Outcome": {
       "Message": "IEORRES is not equal to 'Y', but IECAT is equal to 'EXCLUSION'.",
       "Output_Variables": [
+        "IETESTCD",
         "IECAT",
         "IEORRES"
       ]
@@ -4974,19 +4975,19 @@
                 "Citations": [
                   {
                     "Cited_Guidance": "--EVAL and --EVALID must not be used to model QRS data in SDTM.",
-                    "Document": "SDTMIG v3.4",
+                    "Document": "IG v3.4",
                     "Item": "Assumption 8",
                     "Section": "6.3.9.1"
                   },
                   {
                     "Cited_Guidance": "--EVAL and --EVALID must not be used to model QRS data in SDTM.",
-                    "Document": "SDTMIG v3.4",
+                    "Document": "IG v3.4",
                     "Item": "Assumption 8",
                     "Section": "6.3.9.2"
                   },
                   {
                     "Cited_Guidance": "--EVAL and --EVALID must not be used to model QRS data in SDTM.",
-                    "Document": "SDTMIG v3.4",
+                    "Document": "IG v3.4",
                     "Item": "Assumption 8",
                     "Section": "6.3.9.3.2"
                   }
@@ -5005,13 +5006,9 @@
       }
     ],
     "Check": {
-      "any": [
+      "all": [
         {
-          "name": "QSEVAL",
-          "operator": "exists"
-        },
-        {
-          "name": "FTEVAL",
+          "name": "--EVAL",
           "operator": "exists"
         }
       ]
@@ -5021,10 +5018,13 @@
       "Status": "Published",
       "Version": "1"
     },
-    "Description": "--EVAL must not be used to model QRS data.   This includes the 'QS' and 'FT' domains as well as the 'RS' domain when the record pertains to a Clinical Classification Use Case). This rule has been fully executed for the QS and FT domains only.",
+    "Description": "Raise an error when --EVAL is present in the QS or FT dataset.",
     "Executability": "Fully Executable",
     "Outcome": {
-      "Message": "--EVAL is present.  --EVAL must not be used to model QRS data."
+      "Message": "--EVAL must not be present.",
+      "Output_Variables": [
+        "--EVAL"
+      ]
     },
     "Rule_Type": "Record Data",
     "Scope": {
@@ -5036,8 +5036,7 @@
       "Domains": {
         "Include": [
           "QS",
-          "FT",
-          "RS"
+          "FT"
         ]
       }
     },
@@ -5055,19 +5054,19 @@
                 "Citations": [
                   {
                     "Cited_Guidance": "--EVAL and --EVALID must not be used to model QRS data in SDTM.",
-                    "Document": "SDTMIG v3.4",
+                    "Document": "IG v3.4",
                     "Item": "Assumption 8",
                     "Section": "6.3.9.1"
                   },
                   {
                     "Cited_Guidance": "--EVAL and --EVALID must not be used to model QRS data in SDTM.",
-                    "Document": "SDTMIG v3.4",
+                    "Document": "IG v3.4",
                     "Item": "Assumption 8",
                     "Section": "6.3.9.2"
                   },
                   {
                     "Cited_Guidance": "--EVAL and --EVALID must not be used to model QRS data in SDTM.",
-                    "Document": "SDTMIG v3.4",
+                    "Document": "IG v3.4",
                     "Item": "Assumption 8",
                     "Section": "6.3.9.3.2"
                   }
@@ -5086,13 +5085,9 @@
       }
     ],
     "Check": {
-      "any": [
+      "all": [
         {
-          "name": "QSEVALID",
-          "operator": "exists"
-        },
-        {
-          "name": "FTEVALID",
+          "name": "--EVALID",
           "operator": "exists"
         }
       ]
@@ -5102,10 +5097,13 @@
       "Status": "Published",
       "Version": "1"
     },
-    "Description": "--EVALID must not be used to model QRS data.   This includes the 'QS' and 'FT' domains as well as the 'RS' domain when the record pertains to a Clinical Classification Use Case). This rule has been fully executed for the QS and FT domains only.",
+    "Description": "Raise an error when --EVALID is present in the QS or FT dataset.",
     "Executability": "Fully Executable",
     "Outcome": {
-      "Message": "--EVALID is present.  --EVALID must not be used to model QRS data."
+      "Message": "--EVALID must not be present.",
+      "Output_Variables": [
+        "--EVALID"
+      ]
     },
     "Rule_Type": "Record Data",
     "Scope": {
@@ -5117,8 +5115,7 @@
       "Domains": {
         "Include": [
           "QS",
-          "FT",
-          "RS"
+          "FT"
         ]
       }
     },
@@ -19141,6 +19138,11 @@
             "VISITNUM",
             "--TPTREF",
             "--TPTNUM"
+          ],
+          "where_populated_columns": [
+            "--TPT",
+            "--TPTNUM",
+            "--ELTM"
           ]
         }
       ]
@@ -19150,14 +19152,20 @@
       "Status": "Published",
       "Version": "1"
     },
-    "Description": "Raise an error when --TPT ^= null and --TPTNUM ^= null and --ELTM ^= null and --ELTM does not have the same value across records with the same values of DOMAIN, VISITNUM, --TPTREF, and --TPTNUM.",
+    "Description": "Raise an error when --TPT is populated and --TPTNUM is populated and --ELTM is populated but --ELTM does not have the same value across records with the same values of DOMAIN, VISITNUM, --TPTREF, and --TPTNUM.",
     "Executability": "Fully Executable",
+    "Grouping_Variables": [
+      "DOMAIN",
+      "VISITNUM",
+      "--TPTREF",
+      "--TPTNUM"
+    ],
     "Outcome": {
-      "Message": "--ELTM is not the same value across records with the same values of DOMAIN, VISITNUM, --TPTREF, and --TPTNUM.",
+      "Message": "--ELTM is not the same value across records with the same values of DOMAIN, VISITNUM, --TPTREF, and --TPTNUM when --TPT, --TPTNUM, and --ELTM are populated.",
       "Output_Variables": [
         "--TPT",
         "--TPTNUM",
-        "--ELTM",
+        "--TPTREF",
         "VISITNUM",
         "DOMAIN"
       ]
@@ -19176,7 +19184,7 @@
       },
       "Use_Case": "INDH"
     },
-    "Sensitivity": "Record"
+    "Sensitivity": "Group"
   },
   "CORE-000143": {
     "Authorities": [
@@ -25417,10 +25425,16 @@
       "Status": "Published",
       "Version": "1"
     },
-    "Description": "Raise an error when AP-- domain value length is not equal to 4.",
+    "Description": "Raise an error when DOMAIN value length is not equal to 4.",
     "Executability": "Fully Executable",
+    "Grouping_Variables": [
+      "DOMAIN"
+    ],
     "Outcome": {
-      "Message": "AP-- Domain value length is not equal to 4."
+      "Message": "DOMAIN value length is not equal to 4.",
+      "Output_Variables": [
+        "DOMAIN"
+      ]
     },
     "Rule_Type": "Record Data",
     "Scope": {
@@ -25435,7 +25449,7 @@
         ]
       }
     },
-    "Sensitivity": "Record"
+    "Sensitivity": "Group"
   },
   "CORE-000182": {
     "Authorities": [
@@ -28060,6 +28074,22 @@
               "operator": "not_equal_to",
               "value": "Y",
               "value_is_literal": true
+            },
+            {
+              "name": "--ORRES",
+              "operator": "empty"
+            }
+          ]
+        },
+        {
+          "all": [
+            {
+              "name": "--STAT",
+              "operator": "not_exists"
+            },
+            {
+              "name": "--DRVFL",
+              "operator": "not_exists"
             },
             {
               "name": "--ORRES",
@@ -33025,7 +33055,7 @@
     "Description": "Raise an error when RSUBJID is populated and RSUBJID is equal to USUBJID.",
     "Executability": "Fully Executable",
     "Outcome": {
-      "Message": "When RSUBJID is populated the value cannot be equal to USUBJID.",
+      "Message": "RSUBJID must not be equal to USUBJID when RSUBJID is populated.",
       "Output_Variables": [
         "RSUBJID",
         "USUBJID"
@@ -33035,7 +33065,7 @@
     "Scope": {
       "Classes": {
         "Include": [
-          "ALL"
+          "RELATIONSHIP"
         ]
       },
       "Domains": {
@@ -33139,7 +33169,7 @@
     "Description": "Raise an error when RSUBJID is populated and is equal to POOLID.",
     "Executability": "Fully Executable",
     "Outcome": {
-      "Message": "When RSUBJID is populated, RSUBJID cannot be equal to POOLID.",
+      "Message": "RSUBJID must not be equal to POOLID when RSUBJID is populated.",
       "Output_Variables": [
         "RSUBJID",
         "POOLID"
@@ -34064,14 +34094,72 @@
           "value": "$ex_usubjid"
         },
         {
-          "name": "RFXENDTC",
-          "operator": "not_equal_to",
-          "value": "$max_ex_exstdtc"
-        },
-        {
-          "name": "RFXENDTC",
-          "operator": "not_equal_to",
-          "value": "$max_ex_exendtc"
+          "any": [
+            {
+              "all": [
+                {
+                  "name": "RFXENDTC",
+                  "operator": "non_empty"
+                },
+                {
+                  "any": [
+                    {
+                      "name": "RFXENDTC",
+                      "operator": "date_not_equal_to",
+                      "value": "$max_ex_exstdtc"
+                    },
+                    {
+                      "name": "$max_ex_exstdtc",
+                      "operator": "empty"
+                    }
+                  ]
+                },
+                {
+                  "any": [
+                    {
+                      "name": "RFXENDTC",
+                      "operator": "date_not_equal_to",
+                      "value": "$max_ex_exendtc"
+                    },
+                    {
+                      "name": "$max_ex_exendtc",
+                      "operator": "empty"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "all": [
+                {
+                  "name": "RFXENDTC",
+                  "operator": "empty"
+                },
+                {
+                  "any": [
+                    {
+                      "name": "$max_ex_exstdtc",
+                      "operator": "non_empty"
+                    },
+                    {
+                      "name": "$max_ex_exendtc",
+                      "operator": "non_empty"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "RFXENDTC",
+              "operator": "date_less_than",
+              "value": "$max_ex_exendtc"
+            },
+            {
+              "name": "RFXENDTC",
+              "operator": "date_less_than",
+              "value": "$max_ex_exstdtc"
+            }
+          ]
         }
       ]
     },
@@ -34238,7 +34326,7 @@
         },
         {
           "name": "RFXSTDTC",
-          "operator": "not_equal_to",
+          "operator": "date_not_equal_to",
           "value": "$min_ex_exstdtc"
         }
       ]
@@ -34696,7 +34784,8 @@
         "Include": [
           "ALL"
         ]
-      }
+      },
+      "Use_Case": "INDH, PROD"
     },
     "Sensitivity": "Dataset"
   },
@@ -40017,7 +40106,6 @@
                   {
                     "Cited_Guidance": "For planned visits, values of VISIT, VISITNUM, and VISITDY must be those defined in the Trial Visits (TV) dataset (Section 7.3.1, Trial Visits).",
                     "Document": "SDTMIG v3.4",
-                    "Item": "",
                     "Section": "4.4.5"
                   }
                 ],
@@ -40039,7 +40127,6 @@
                   {
                     "Cited_Guidance": "For planned visits, values of VISIT, VISITNUM, and VISITDY must be those defined in the Trial Visits dataset.",
                     "Document": "SDTMIG v3.3",
-                    "Item": "",
                     "Section": "4.4.5"
                   }
                 ],
@@ -40061,7 +40148,6 @@
                   {
                     "Cited_Guidance": "For planned visits, values of VISIT, VISITNUM, and VISITDY must be those defined in the Trial Visits dataset.",
                     "Document": "SDTMIG v3.2",
-                    "Item": "",
                     "Section": "4.1.4.5"
                   }
                 ],
@@ -40397,7 +40483,8 @@
                 "Citations": [
                   {
                     "Cited_Guidance": "Values for --CAT and --SCAT should not be redundant with the domain or dictionary classification provided by --DECOD and --BODSYS.",
-                    "Document": "IG v.3.0",
+                    "Document": "SENDIG v.3.0",
+                    "Item": "Text",
                     "Section": "4.2.6"
                   }
                 ],
@@ -40418,7 +40505,8 @@
                 "Citations": [
                   {
                     "Cited_Guidance": "Values for --CAT and --SCAT should not be redundant with the domain or dictionary classification provided by --DECOD and --BODSYS.",
-                    "Document": "IG v.3.1",
+                    "Document": "SENDIG v.3.1",
+                    "Item": "Text",
                     "Section": "4.2.6"
                   }
                 ],
@@ -40439,7 +40527,8 @@
                 "Citations": [
                   {
                     "Cited_Guidance": "Values for --CAT and --SCAT should not be redundant with the domain or dictionary classification provided by --DECOD and --BODSYS.",
-                    "Document": "IG v.3.1.1",
+                    "Document": "SENDIG v.3.1.1",
+                    "Item": "Text",
                     "Section": "4.2.6"
                   }
                 ],
@@ -40460,7 +40549,8 @@
                 "Citations": [
                   {
                     "Cited_Guidance": "Values for --CAT and --SCAT should not be redundant with the domain or dictionary classification provided by --DECOD and --BODSYS.",
-                    "Document": "IG v.3.1",
+                    "Document": "SENDIG v.3.1",
+                    "Item": "Text",
                     "Section": "4.2.6"
                   }
                 ],
@@ -40481,7 +40571,8 @@
                 "Citations": [
                   {
                     "Cited_Guidance": "Values for --CAT and --SCAT should not be redundant with the domain or dictionary classification provided by --DECOD and --BODSYS.",
-                    "Document": "IG v.3.1.1",
+                    "Document": "SENDIG v.3.1.1",
+                    "Item": "Text",
                     "Section": "4.2.6"
                   }
                 ],
@@ -40502,7 +40593,8 @@
                 "Citations": [
                   {
                     "Cited_Guidance": "Values for --CAT and --SCAT should not be redundant with the domain or dictionary classification provided by --DECOD and --BODSYS.",
-                    "Document": "IG v.3.1.1",
+                    "Document": "SENDIG v.3.1.1",
+                    "Item": "Text",
                     "Section": "4.2.6"
                   }
                 ],
@@ -40547,7 +40639,7 @@
         {
           "name": "--CAT",
           "operator": "equal_to_case_insensitive",
-          "value": "$domain_label"
+          "value": "$domain_name"
         }
       ]
     },
@@ -40556,18 +40648,19 @@
       "Status": "Published",
       "Version": "1"
     },
-    "Description": "Raise an error when --CAT = DOMAIN.",
+    "Description": "Raise an error when --CAT is equal to Domain Name.",
     "Executability": "Fully Executable",
     "Operations": [
       {
-        "id": "$domain_label",
+        "id": "$domain_name",
         "operator": "domain_label"
       }
     ],
     "Outcome": {
-      "Message": "--CAT is equal to DOMAIN.",
+      "Message": "--CAT must not be equal to Domain Name.",
       "Output_Variables": [
-        "--CAT"
+        "--CAT",
+        "$domain_name"
       ]
     },
     "Rule_Type": "Record Data",
@@ -40578,8 +40671,8 @@
         ]
       },
       "Domains": {
-        "Include": [
-          "ALL"
+        "Exclude": [
+          "TI"
         ]
       },
       "Use_Case": "INDH, PROD"
@@ -42194,7 +42287,7 @@
                 "Citations": [
                   {
                     "Cited_Guidance": "Lower end of reference range for continuous measurements for LBSTRESC/LBSTRESN in standardized units. Should be populated  only for continuous results. ",
-                    "Document": "SDTMIG v3.4",
+                    "Document": "IG v3.4",
                     "Item": "Specification",
                     "Section": "6.3.5.6"
                   }
@@ -42301,10 +42394,10 @@
       "Status": "Published",
       "Version": "1"
     },
-    "Description": "Raise an error when LBORRES is not a quantitative value and LBSTNRLO is populated. The interpretation of the guidance is that the rule applies when LBORRES is populated (not null). Note: the rule logic applies until such time there is availability of reliable metadata to verify if the test is quantitative or not.",
+    "Description": "Raise an error when LBORRES is not a continuous measurement but LBSTNRLO is populated.",
     "Executability": "Fully Executable",
     "Outcome": {
-      "Message": "LBSTNRLO is populated when LBORRES is not a quantitative value.",
+      "Message": "LBSTNRLO must not be populated when LBORRES is not a continuous measurement.",
       "Output_Variables": [
         "LBTESTCD",
         "LBORRES",
@@ -43211,8 +43304,8 @@
         },
         {
           "name": "--DUR",
-          "negative": false,
-          "operator": "invalid_duration"
+          "operator": "matches_regex",
+          "value": "-"
         }
       ]
     },
@@ -48155,7 +48248,7 @@
         {
           "name": "SEENDTC",
           "operator": "does_not_have_next_corresponding_record",
-          "ordering": "SESEQ",
+          "ordering": "SESTDTC",
           "value": "SESTDTC",
           "within": "USUBJID"
         }
@@ -50168,12 +50261,12 @@
         },
         {
           "name": "$min_ds_dsstdtc",
-          "operator": "not_equal_to",
+          "operator": "date_not_equal_to",
           "value": "RFICDTC"
         },
         {
           "name": "$min_ds_dsstdtc",
-          "operator": "equal_to",
+          "operator": "date_equal_to",
           "value": "DSSTDTC"
         }
       ]
@@ -50920,14 +51013,46 @@
           "value_is_literal": true
         },
         {
-          "name": "RFICDTC",
-          "operator": "date_not_equal_to",
-          "value": "$min_ds_dsstdtc"
-        },
-        {
-          "name": "$min_ds_dsstdtc",
-          "operator": "equal_to",
-          "value": "DSSTDTC"
+          "any": [
+            {
+              "all": [
+                {
+                  "name": "$min_ds_dsstdtc",
+                  "operator": "date_equal_to",
+                  "value": "DSSTDTC"
+                },
+                {
+                  "any": [
+                    {
+                      "name": "RFICDTC",
+                      "operator": "date_not_equal_to",
+                      "value": "$min_ds_dsstdtc"
+                    },
+                    {
+                      "name": "RFICDTC",
+                      "operator": "empty"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "all": [
+                {
+                  "name": "DSSTDTC",
+                  "operator": "empty"
+                },
+                {
+                  "name": "RFICDTC",
+                  "operator": "non_empty"
+                },
+                {
+                  "name": "$min_consent_dsstdtc",
+                  "operator": "empty"
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -50953,6 +51078,18 @@
           "USUBJID"
         ],
         "id": "$min_ds_dsstdtc",
+        "name": "DSSTDTC",
+        "operator": "min_date"
+      },
+      {
+        "domain": "DS",
+        "filter": {
+          "DSDECOD": "INFORMED CONSENT OBTAINED"
+        },
+        "group": [
+          "USUBJID"
+        ],
+        "id": "$min_consent_dsstdtc",
         "name": "DSSTDTC",
         "operator": "min_date"
       }
@@ -73549,6 +73686,10 @@
           "operator": "non_empty"
         },
         {
+          "name": "--STRESN",
+          "operator": "exists"
+        },
+        {
           "name": "--STRESC",
           "operator": "matches_regex",
           "value": "^-?(0|[1-9]\\d*)(\\.\\d+)?$"
@@ -73562,7 +73703,7 @@
             {
               "name": "--STRESC",
               "operator": "not_equal_to",
-              "type_insensitive": true,
+              "type_insensitive": "numeric",
               "value": "--STRESN"
             }
           ]
@@ -73574,7 +73715,7 @@
       "Status": "Published",
       "Version": "1"
     },
-    "Description": "--STRESC is populated with a numeric value and --STRESN is equal to --STRESC.",
+    "Description": "Raise an error when --STRESC is populated with a numeric value and --STRESN is equal to --STRESC.",
     "Executability": "Fully Executable",
     "Outcome": {
       "Message": "--STRESC is numeric but --STRESN is not equal to --STRESC.",
@@ -73756,10 +73897,6 @@
         {
           "all": [
             {
-              "name": "--SEQ",
-              "operator": "exists"
-            },
-            {
               "name": "USUBJID",
               "operator": "non_empty"
             },
@@ -73775,10 +73912,6 @@
         },
         {
           "all": [
-            {
-              "name": "--SEQ",
-              "operator": "exists"
-            },
             {
               "name": "POOLID",
               "operator": "non_empty"
@@ -73800,21 +73933,27 @@
       "Status": "Published",
       "Version": "1"
     },
-    "Description": "Excluding TS.TSSEQ, raise an error when --SEQ is not a unique number per USUBJID per domain, or not a unique number per POOLID per domain, including when the domain is split into multiple files.",
+    "Description": "Raise an error when --SEQ is not TSSEQ but --SEQ is not a unique number per USUBJID per domain, or not a unique number per POOLID per domain, including when the domain is split into multiple files.",
     "Executability": "Fully Executable",
     "Outcome": {
-      "Message": "--SEQ is not a unique number per USUBJID per domain, nor a unique number per POOLID per domain, including when the domain is split into multiple files"
+      "Message": "--SEQ must be a unique number per USUBJID per domain, or a unique number per POOLID per domain, including when the domain is split into multiple files.",
+      "Output_Variables": [
+        "DOMAIN",
+        "POOLID"
+      ]
     },
     "Rule_Type": "Record Data",
     "Scope": {
       "Classes": {
-        "Include": [
-          "ALL"
+        "Exclude": [
+          "TRIAL DESIGN",
+          "STUDY REFERENCE",
+          "RELATIONSHIP"
         ]
       },
       "Domains": {
-        "Exclude": [
-          "TS"
+        "Include": [
+          "ALL"
         ]
       }
     },
@@ -81505,7 +81644,7 @@
         {
           "name": "variable_label",
           "operator": "not_matches_regex",
-          "value": "^\\s*[A-Z]\\S*(?:\\s+(?:(?:a|an|the|as|and|per|to|but|or|for|in|is|of|on|with|within|from)|[A-Z]\\S*|[^A-Za-z\\s]+))*\\s*$"
+          "value": "^\\s*[A-Z]\\S*(?:\\s+(?:(?:a|an|the|as|and|or|nor|but|for|so|yet|per|to|in|is|of|on|at|by|up|via|vs|with|within|without|from|into|onto|over|than|after|before|between)(?:/(?:a|an|the|as|and|or|nor|but|for|so|yet|per|to|in|is|of|on|at|by|up|via|vs|with|within|without|from|into|onto|over|than|after|before|between|[A-Z]\\S*))*|[A-Z]\\S*|[^A-Za-z\\s]+))*\\s*$"
         }
       ]
     },
@@ -82177,10 +82316,16 @@
     "Check": {
       "all": [
         {
+          "name": "variable_name",
+          "operator": "equal_to",
+          "value": "DOMAIN",
+          "value_is_literal": true
+        },
+        {
           "name": "dataset_name",
           "operator": "prefix_not_equal_to",
           "prefix": 2,
-          "value": "DOMAIN"
+          "value": "variable_value"
         }
       ]
     },
@@ -82189,12 +82334,17 @@
       "Status": "Published",
       "Version": "1"
     },
-    "Description": "The dataset name must begin with the DOMAIN value.",
+    "Description": "Raise an error when the dataset name does not begin with the DOMAIN value.",
     "Executability": "Fully Executable",
     "Outcome": {
-      "Message": "Dataset name does not begin with DOMAIN value"
+      "Message": "Dataset name must begin with the DOMAIN value.",
+      "Output_Variables": [
+        "variable_name",
+        "variable_value",
+        "dataset_name"
+      ]
     },
-    "Rule_Type": "Dataset Metadata Check",
+    "Rule_Type": "Value Check with Dataset Metadata",
     "Scope": {
       "Classes": {
         "Include": [
@@ -94433,12 +94583,11 @@
       "Status": "Published",
       "Version": "1"
     },
-    "Description": "When a test is not done (--STAT = 'NOT DONE'), the result variables (--ORRES and --STRESC) should not be populated.",
+    "Description": "Raise an error when test is not done (--STAT is equal to 'NOT DONE') and the result variables (--ORRES, --STRESC and --STRESN) are not populated.",
     "Executability": "Fully Executable",
     "Outcome": {
-      "Message": "--STAT = NOT DONE, but  a result variable (--ORRES, --STRESC and/or --STRESN) is populated.",
+      "Message": "--STAT is equal to 'NOT DONE', but  a result variable (--ORRES, --STRESC and/or --STRESN) is populated.",
       "Output_Variables": [
-        "--TESTCD",
         "--ORRES",
         "--STRESC",
         "--STRESN",
@@ -95048,10 +95197,9 @@
           "value_is_literal": true
         },
         {
-          "name": "$ds_dsdecod",
-          "operator": "does_not_contain",
-          "value": "DEATH",
-          "value_is_literal": true
+          "name": "$ds_death_count",
+          "operator": "equal_to",
+          "value": 0
         }
       ]
     },
@@ -95062,23 +95210,18 @@
     },
     "Description": "Raise an error when DTHFL is equal to 'Y' in the DM dataset but a record where DSDECOD is equal to 'DEATH' is not present in the DS dataset for the corresponding subject.",
     "Executability": "Fully Executable",
-    "Match_Datasets": [
-      {
-        "Keys": [
-          "USUBJID"
-        ],
-        "Name": "DM"
-      }
-    ],
     "Operations": [
       {
         "domain": "DS",
+        "filter": {
+          "DSDECOD": "DEATH"
+        },
         "group": [
           "USUBJID"
         ],
-        "id": "$ds_dsdecod",
+        "id": "$ds_death_count",
         "name": "DSDECOD",
-        "operator": "distinct"
+        "operator": "record_count"
       }
     ],
     "Outcome": {
@@ -95086,23 +95229,23 @@
       "Output_Variables": [
         "USUBJID",
         "DTHFL",
-        "$ds_dsdecod"
+        "$ds_death_count"
       ]
     },
     "Rule_Type": "Record Data",
     "Scope": {
       "Classes": {
         "Include": [
-          "EVENTS"
+          "SPECIAL PURPOSE"
         ]
       },
       "Domains": {
         "Include": [
-          "DS"
+          "DM"
         ]
       }
     },
-    "Sensitivity": "Dataset"
+    "Sensitivity": "Record"
   },
   "CORE-000680": {
     "Authorities": [
@@ -97346,7 +97489,7 @@
       "Status": "Published",
       "Version": "1"
     },
-    "Description": "Standard units should be consistent within the same assessment (having the same --TESTCD, --CAT, --SCAT, --SPEC, --METHOD values)",
+    "Description": "Raise an error when standard unit (--STRESU) is not consistent within the same assessment (unique --TESTCD, --CAT, --SCAT, --SPEC, --METHOD combination).",
     "Executability": "Fully Executable",
     "Grouping_Variables": [
       "--TESTCD",
@@ -97356,9 +97499,8 @@
       "--METHOD"
     ],
     "Outcome": {
-      "Message": "Standards units are inconsistent within the same test (category, sub-category, specimen and method)",
+      "Message": "Standard unit (--STRESU) is not consistent within the same assessment (--TESTCD, --CAT, --SCAT, --SPEC, --METHOD).",
       "Output_Variables": [
-        "--STRESU",
         "--TESTCD",
         "--CAT",
         "--SCAT",
@@ -100519,7 +100661,7 @@
     "Description": "Raise an error when Start Date/Time of Observation (--STDTC) is after the End Date/Time of Observation (--ENDTC).",
     "Executability": "Fully Executable",
     "Outcome": {
-      "Message": "--STDTC falls after  --ENDTC.",
+      "Message": "--STDTC falls after --ENDTC.",
       "Output_Variables": [
         "--STDTC",
         "--ENDTC"
@@ -101149,7 +101291,7 @@
               {
                 "Citations": [
                   {
-                    "Cited_Guidance": "When collecting ethnicity demographic data from clinical trial participants, the following two minimum choices should be offered: \"HISPANIC OR LATINO\" or \"NOT HISPANIC OR LATINO\"",
+                    "Cited_Guidance": "When collecting ethnicity demographic data from clinical trial participants, the following two minimum choices should be offered: 'HISPANIC OR LATINO' or 'NOT HISPANIC OR LATINO'\n",
                     "Document": "FDA",
                     "Section": "FDAB057"
                   }
@@ -101170,7 +101312,7 @@
               {
                 "Citations": [
                   {
-                    "Cited_Guidance": "When collecting ethnicity demographic data from clinical trial participants, the following two minimum choices should be offered: \"HISPANIC OR LATINO\" or \"NOT HISPANIC OR LATINO\"",
+                    "Cited_Guidance": "When collecting ethnicity demographic data from clinical trial participants, the following two minimum choices should be offered: 'HISPANIC OR LATINO' or 'NOT HISPANIC OR LATINO'\n",
                     "Document": "FDA",
                     "Section": "FDAB057"
                   }
@@ -101191,7 +101333,7 @@
               {
                 "Citations": [
                   {
-                    "Cited_Guidance": "When collecting ethnicity demographic data from clinical trial participants, the following two minimum choices should be offered: \"HISPANIC OR LATINO\" or \"NOT HISPANIC OR LATINO\"",
+                    "Cited_Guidance": "When collecting ethnicity demographic data from clinical trial participants, the following two minimum choices should be offered: 'HISPANIC OR LATINO' or 'NOT HISPANIC OR LATINO'\n",
                     "Document": "FDA",
                     "Section": "FDAB057"
                   }
@@ -101210,49 +101352,34 @@
       }
     ],
     "Check": {
-      "any": [
+      "all": [
         {
-          "all": [
+          "any": [
             {
-              "name": "ETHNIC",
-              "operator": "non_empty"
+              "name": "define_variable_name",
+              "operator": "equal_to",
+              "value": "ETHNIC",
+              "value_is_literal": true
             },
             {
-              "name": "ETHNIC",
-              "operator": "is_not_contained_by",
-              "value": [
-                "HISPANIC OR LATINO",
-                "NOT HISPANIC OR LATINO"
-              ],
+              "name": "define_variable_name",
+              "operator": "equal_to",
+              "value": "CETHNIC",
               "value_is_literal": true
             }
           ]
         },
         {
-          "all": [
+          "any": [
             {
-              "name": "QNAM",
-              "operator": "equal_to",
-              "value": "CETHNIC",
-              "value_is_literal": true
+              "name": "define_variable_codelist_coded_values",
+              "operator": "not_matches_regex",
+              "value": "(^|,)HISPANIC OR LATINO(,|$)"
             },
             {
-              "name": "QVAL",
-              "operator": "is_not_contained_by",
-              "value": [
-                "HISPANIC OR LATINO",
-                "NOT HISPANIC OR LATINO"
-              ],
-              "value_is_literal": true
-            },
-            {
-              "name": "ETHNIC",
-              "operator": "is_not_contained_by",
-              "value": [
-                "HISPANIC OR LATINO",
-                "NOT HISPANIC OR LATINO"
-              ],
-              "value_is_literal": true
+              "name": "define_variable_codelist_coded_values",
+              "operator": "not_matches_regex",
+              "value": "(^|,)NOT HISPANIC OR LATINO(,|$)"
             }
           ]
         }
@@ -101263,24 +101390,16 @@
       "Status": "Published",
       "Version": "1"
     },
-    "Description": "When Ethnicity was collected and it was not mapped as \"HISPANIC OR LATINO\" or \"NOT HISPANIC OR LATINO\".",
-    "Executability": "Partially Executable",
-    "Match_Datasets": [
-      {
-        "Keys": [
-          "USUBJID"
-        ],
-        "Name": "SUPPDM"
-      }
-    ],
+    "Description": "Raise an error when Ethnicity is collected and 'HISPANIC OR LATINO' or 'NOT HISPANIC OR LATINO' are not offered options.\n",
+    "Executability": "Fully Executable",
     "Outcome": {
-      "Message": "Ethnicity has been collected but the values is not mapped to \"HISPANIC OR LATINO\" or \"NOT HISPANIC OR LATINO\"",
+      "Message": "Ethnicity is collected, but one of the following ethnicity options are not offered: 'HISPANIC OR LATINO' or 'NOT HISPANIC OR LATINO'.\n",
       "Output_Variables": [
-        "ETHNIC",
-        "CETHNIC"
+        "define_variable_name",
+        "define_variable_codelist_coded_values"
       ]
     },
-    "Rule_Type": "Record Data",
+    "Rule_Type": "Define Item Metadata Check",
     "Scope": {
       "Classes": {
         "Include": [
@@ -101290,7 +101409,8 @@
       },
       "Domains": {
         "Include": [
-          "DM"
+          "DM",
+          "SUPPDM"
         ]
       }
     },
@@ -102656,6 +102776,229 @@
     },
     "Sensitivity": "Record"
   },
+  "CORE-000737": {
+    "Authorities": [
+      {
+        "Organization": "FDA",
+        "Standards": [
+          {
+            "Name": "SDTMIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Cited_Guidance": "All trial design data should be submitted as specified in the FDA Study Data Technical Conformance Guide (TCG).",
+                    "Document": "FDA",
+                    "Section": "FDAB011"
+                  }
+                ],
+                "Origin": "FDA Business Rules",
+                "Rule_Identifier": {
+                  "Id": "FB1102",
+                  "Version": "1"
+                },
+                "Version": "1.5"
+              }
+            ],
+            "Version": "3.2"
+          },
+          {
+            "Name": "SDTMIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Cited_Guidance": "All trial design data should be submitted as specified in the FDA Study Data Technical Conformance Guide (TCG).",
+                    "Document": "FDA",
+                    "Section": "FDAB011"
+                  }
+                ],
+                "Origin": "FDA Business Rules",
+                "Rule_Identifier": {
+                  "Id": "FB1102",
+                  "Version": "1"
+                },
+                "Version": "1.5"
+              }
+            ],
+            "Version": "3.3"
+          },
+          {
+            "Name": "SDTMIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Cited_Guidance": "All trial design data should be submitted as specified in the FDA Study Data Technical Conformance Guide (TCG).",
+                    "Document": "FDA",
+                    "Section": "FDAB011"
+                  }
+                ],
+                "Origin": "FDA Business Rules",
+                "Rule_Identifier": {
+                  "Id": "FB1102",
+                  "Version": "1"
+                },
+                "Version": "1.5"
+              }
+            ],
+            "Version": "3.4"
+          }
+        ]
+      }
+    ],
+    "Check": {
+      "any": [
+        {
+          "name": "$FDAdesired_missing_tsparmcds",
+          "operator": "non_empty"
+        },
+        {
+          "name": "$FDAdesired_empty_tsparmcds",
+          "operator": "non_empty"
+        }
+      ]
+    },
+    "Core": {
+      "Id": "CORE-000737",
+      "Status": "Published",
+      "Version": "1"
+    },
+    "Description": "Raise an error when not all FDA Desired Trial Summary (TS) Parameters (TSPARMCDs) are present in the TS dataset or TSVAL is not populated.",
+    "Executability": "Fully Executable",
+    "Operations": [
+      {
+        "id": "$distinct_tsparmcds",
+        "name": "TSPARMCD",
+        "operator": "distinct"
+      },
+      {
+        "id": "$FDAdesired_missing_tsparmcds",
+        "name": [
+          "ACTSUB",
+          "ADAPT",
+          "ADDON",
+          "AGEMAX",
+          "AGEMIN",
+          "COMPTRT",
+          "DCUTDESC",
+          "DCUTDTC",
+          "EXTTIND",
+          "FCNTRY",
+          "FDATCHSP",
+          "HLTSUBJI",
+          "LENGTH",
+          "NARMS",
+          "NCOHORT",
+          "OBJPRIM",
+          "OBJSEC",
+          "ONGOSIND",
+          "OUTMSPRI",
+          "PDPSTIND",
+          "PDSTIND",
+          "PIPIND",
+          "PLANSUB",
+          "RDIND",
+          "REGID",
+          "SENDTC",
+          "SEXPOP",
+          "SPONSOR",
+          "SDTMVER",
+          "SDTIGVER",
+          "STYPE",
+          "STOPRULE",
+          "SSTDTC",
+          "TBLIND",
+          "TCNTRL",
+          "THERAREA",
+          "TITLE",
+          "TPHASE",
+          "TTYPE",
+          "INDIC",
+          "SPREFID"
+        ],
+        "operator": "minus",
+        "subtract": "$distinct_tsparmcds"
+      },
+      {
+        "filter": {
+          "TSVAL": ""
+        },
+        "id": "$empty_tsval_tsparmcds",
+        "name": "TSPARMCD",
+        "operator": "distinct"
+      },
+      {
+        "id": "$FDAdesired_empty_tsparmcds",
+        "name": "$empty_tsval_tsparmcds",
+        "operator": "intersect",
+        "subtract": [
+          "ACTSUB",
+          "ADAPT",
+          "ADDON",
+          "AGEMAX",
+          "AGEMIN",
+          "COMPTRT",
+          "DCUTDESC",
+          "DCUTDTC",
+          "EXTTIND",
+          "FCNTRY",
+          "FDATCHSP",
+          "HLTSUBJI",
+          "LENGTH",
+          "NARMS",
+          "NCOHORT",
+          "OBJPRIM",
+          "OBJSEC",
+          "ONGOSIND",
+          "OUTMSPRI",
+          "PDPSTIND",
+          "PDSTIND",
+          "PIPIND",
+          "PLANSUB",
+          "RDIND",
+          "REGID",
+          "SENDTC",
+          "SEXPOP",
+          "SPONSOR",
+          "SDTMVER",
+          "SDTIGVER",
+          "STYPE",
+          "STOPRULE",
+          "SSTDTC",
+          "TBLIND",
+          "TCNTRL",
+          "THERAREA",
+          "TITLE",
+          "TPHASE",
+          "TTYPE",
+          "INDIC",
+          "SPREFID"
+        ]
+      }
+    ],
+    "Outcome": {
+      "Message": "At least one FDA Desired TSPARMCD is missing in the TS dataset or TSVAL is not populated.",
+      "Output_Variables": [
+        "$FDAdesired_missing_tsparmcds",
+        "$FDAdesired_empty_tsparmcds"
+      ]
+    },
+    "Rule_Type": "Record Data",
+    "Scope": {
+      "Classes": {
+        "Include": [
+          "TRIAL DESIGN"
+        ]
+      },
+      "Domains": {
+        "Include": [
+          "TS"
+        ]
+      }
+    },
+    "Sensitivity": "Dataset"
+  },
   "CORE-000738": {
     "Authorities": [
       {
@@ -103091,317 +103434,6 @@
     },
     "Sensitivity": "Dataset"
   },
-  "CORE-000741": {
-    "Authorities": [
-      {
-        "Organization": "FDA",
-        "Standards": [
-          {
-            "Name": "SDTMIG",
-            "References": [
-              {
-                "Citations": [
-                  {
-                    "Cited_Guidance": "TCG, Appendix B",
-                    "Document": "FDA",
-                    "Section": "FDAB011"
-                  }
-                ],
-                "Origin": "FDA Business Rules",
-                "Rule_Identifier": {
-                  "Id": "FB1111",
-                  "Version": "1"
-                },
-                "Version": "1.5"
-              }
-            ],
-            "Version": "3.2"
-          },
-          {
-            "Name": "SDTMIG",
-            "References": [
-              {
-                "Citations": [
-                  {
-                    "Cited_Guidance": "TCG, Appendix B",
-                    "Document": "FDA",
-                    "Section": "FDAB011"
-                  }
-                ],
-                "Origin": "FDA Business Rules",
-                "Rule_Identifier": {
-                  "Id": "FB1111",
-                  "Version": "1"
-                },
-                "Version": "1.5"
-              }
-            ],
-            "Version": "3.3"
-          },
-          {
-            "Name": "SDTMIG",
-            "References": [
-              {
-                "Citations": [
-                  {
-                    "Cited_Guidance": "TCG, Appendix B",
-                    "Document": "FDA",
-                    "Section": "FDAB011"
-                  }
-                ],
-                "Origin": "FDA Business Rules",
-                "Rule_Identifier": {
-                  "Id": "FB1111",
-                  "Version": "1"
-                },
-                "Version": "1.5"
-              }
-            ],
-            "Version": "3.4"
-          }
-        ]
-      }
-    ],
-    "Check": {
-      "any": [
-        {
-          "name": "TSPARMCD",
-          "operator": "not_contains_all",
-          "value": [
-            "INTMODEL",
-            "INTTYPE",
-            "PCLASS"
-          ],
-          "value_is_literal": true
-        },
-        {
-          "any": [
-            {
-              "all": [
-                {
-                  "name": "TSPARMCD",
-                  "operator": "equal_to",
-                  "value": "INTMODEL",
-                  "value_is_literal": true
-                },
-                {
-                  "name": "TSVAL",
-                  "operator": "empty"
-                }
-              ]
-            },
-            {
-              "all": [
-                {
-                  "name": "TSPARMCD",
-                  "operator": "equal_to",
-                  "value": "INTTYPE",
-                  "value_is_literal": true
-                },
-                {
-                  "name": "TSVAL",
-                  "operator": "empty"
-                }
-              ]
-            },
-            {
-              "all": [
-                {
-                  "name": "TSPARMCD",
-                  "operator": "equal_to",
-                  "value": "PCLASS",
-                  "value_is_literal": true
-                },
-                {
-                  "name": "TSVAL",
-                  "operator": "empty"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "$STYPE_INTERVENTIONAL",
-          "operator": "not_equal_to",
-          "value": 1
-        }
-      ]
-    },
-    "Core": {
-      "Id": "CORE-000741",
-      "Status": "Published",
-      "Version": "1"
-    },
-    "Description": "The set  ('INTMODEL’, 'INTTYPE','PCLASS') is not in the list of TSPARAMCD with TSVAL populated.",
-    "Executability": "Fully Executable",
-    "Operations": [
-      {
-        "filter": {
-          "TSPARMCD": "STYPE",
-          "TSVAL": "INTERVENTIONAL"
-        },
-        "id": "$STYPE_INTERVENTIONAL",
-        "operator": "record_count"
-      }
-    ],
-    "Outcome": {
-      "Message": "The set  ('INTMODEL’, 'INTTYPE','PCLASS') is not in the list of TSPARAMCD with TSVAL populated.",
-      "Output_Variables": [
-        "TSPARMCD",
-        "TSVAL",
-        "$STYPE_INTERVENTIONAL"
-      ]
-    },
-    "Rule_Type": "Record Data",
-    "Scope": {
-      "Classes": {
-        "Include": [
-          "TRIAL DESIGN"
-        ]
-      },
-      "Domains": {
-        "Include": [
-          "TS"
-        ]
-      }
-    },
-    "Sensitivity": "Record"
-  },
-  "CORE-000742": {
-    "Authorities": [
-      {
-        "Organization": "FDA",
-        "Standards": [
-          {
-            "Name": "SDTMIG",
-            "References": [
-              {
-                "Citations": [
-                  {
-                    "Cited_Guidance": "TCG, Appendix B",
-                    "Document": "FDA",
-                    "Section": "FDAB011"
-                  }
-                ],
-                "Origin": "FDA Business Rules",
-                "Rule_Identifier": {
-                  "Id": "FB1110",
-                  "Version": "1"
-                },
-                "Version": "1.5"
-              }
-            ],
-            "Version": "3.2"
-          },
-          {
-            "Name": "SDTMIG",
-            "References": [
-              {
-                "Citations": [
-                  {
-                    "Cited_Guidance": "TCG, Appendix B",
-                    "Document": "FDA",
-                    "Section": "FDAB011"
-                  }
-                ],
-                "Origin": "FDA Business Rules",
-                "Rule_Identifier": {
-                  "Id": "FB1110",
-                  "Version": "1"
-                },
-                "Version": "1.5"
-              }
-            ],
-            "Version": "3.3"
-          },
-          {
-            "Name": "SDTMIG",
-            "References": [
-              {
-                "Citations": [
-                  {
-                    "Cited_Guidance": "TCG, Appendix B",
-                    "Document": "FDA",
-                    "Section": "FDAB011"
-                  }
-                ],
-                "Origin": "FDA Business Rules",
-                "Rule_Identifier": {
-                  "Id": "FB1110",
-                  "Version": "1"
-                },
-                "Version": "1.5"
-              }
-            ],
-            "Version": "3.4"
-          }
-        ]
-      }
-    ],
-    "Check": {
-      "all": [
-        {
-          "name": "$HLTSUBJI",
-          "operator": "equal_to",
-          "value": 1
-        },
-        {
-          "name": "$INDIC",
-          "operator": "not_equal_to",
-          "value": 1
-        }
-      ]
-    },
-    "Core": {
-      "Id": "CORE-000742",
-      "Status": "Published",
-      "Version": "1"
-    },
-    "Description": "TSVALNF is not equal to NA when TSPARAMCD=INDIC",
-    "Executability": "Fully Executable",
-    "Operations": [
-      {
-        "filter": {
-          "TSPARMCD": "INDIC",
-          "TSVALNF": "NA"
-        },
-        "id": "$INDIC",
-        "operator": "record_count"
-      },
-      {
-        "filter": {
-          "TSPARMCD": "HLTSUBJI",
-          "TSVAL": "Y"
-        },
-        "id": "$HLTSUBJI",
-        "operator": "record_count"
-      }
-    ],
-    "Outcome": {
-      "Message": "TSVALNF is not equal to NA when TSPARAMCD=INDIC",
-      "Output_Variables": [
-        "TSPARMCD",
-        "TSVAL",
-        "TSVALNF",
-        "$INDIC",
-        "$HLTSUBJI"
-      ]
-    },
-    "Rule_Type": "Record Data",
-    "Scope": {
-      "Classes": {
-        "Include": [
-          "TRIAL DESIGN"
-        ]
-      },
-      "Domains": {
-        "Include": [
-          "TS"
-        ]
-      }
-    },
-    "Sensitivity": "Record"
-  },
   "CORE-000743": {
     "Authorities": [
       {
@@ -103605,38 +103637,66 @@
       }
     ],
     "Check": {
-      "any": [
+      "all": [
         {
-          "all": [
+          "any": [
             {
               "name": "RELREC.**TERM",
               "operator": "non_empty"
             },
             {
+              "name": "RELREC.**TRT",
+              "operator": "non_empty"
+            },
+            {
+              "name": "RELREC.**DECOD",
+              "operator": "non_empty"
+            }
+          ]
+        },
+        {
+          "any": [
+            {
+              "name": "RELREC.**TERM",
+              "operator": "not_exists"
+            },
+            {
+              "name": "RELREC.**TERM",
+              "operator": "empty"
+            },
+            {
               "name": "FAOBJ",
-              "operator": "not_equal_to",
+              "operator": "not_equal_to_case_insensitive",
               "value": "RELREC.**TERM"
             }
           ]
         },
         {
-          "all": [
+          "any": [
             {
               "name": "RELREC.**TRT",
-              "operator": "non_empty"
+              "operator": "not_exists"
+            },
+            {
+              "name": "RELREC.**TRT",
+              "operator": "empty"
             },
             {
               "name": "FAOBJ",
-              "operator": "not_equal_to",
+              "operator": "not_equal_to_case_insensitive",
               "value": "RELREC.**TRT"
             }
           ]
         },
         {
-          "all": [
+          "any": [
             {
               "name": "RELREC.**DECOD",
-              "operator": "non_empty"
+              "operator": "not_exists"
+            },
+            {
+              "name": "RELREC.**DECOD",
+              "operator": "empty"
             },
             {
               "name": "FAOBJ",
@@ -103788,273 +103848,6 @@
       "Domains": {
         "Include": [
           "OI"
-        ]
-      }
-    },
-    "Sensitivity": "Record"
-  },
-  "CORE-000746": {
-    "Authorities": [
-      {
-        "Organization": "FDA",
-        "Standards": [
-          {
-            "Name": "SDTMIG",
-            "References": [
-              {
-                "Citations": [
-                  {
-                    "Cited_Guidance": "The term \"Spanish origin\" can be used to collect ethnicity data. If the term \"Spanish origin\" is collected, it should be mapped to the controlled terminology \"HISPANIC OR LATINO\" for submission.",
-                    "Document": "FDA",
-                    "Section": "FDAB058"
-                  }
-                ],
-                "Origin": "FDA Business Rules",
-                "Rule_Identifier": {
-                  "Id": "FB5801",
-                  "Version": "1"
-                },
-                "Version": "1.5"
-              }
-            ],
-            "Version": "3.2"
-          },
-          {
-            "Name": "SDTMIG",
-            "References": [
-              {
-                "Citations": [
-                  {
-                    "Cited_Guidance": "The term \"Spanish origin\" can be used to collect ethnicity data. If the term \"Spanish origin\" is collected, it should be mapped to the controlled terminology \"HISPANIC OR LATINO\" for submission.",
-                    "Document": "FDA",
-                    "Section": "FDAB058"
-                  }
-                ],
-                "Origin": "FDA Business Rules",
-                "Rule_Identifier": {
-                  "Id": "FB5801",
-                  "Version": "1"
-                },
-                "Version": "1.5"
-              }
-            ],
-            "Version": "3.3"
-          },
-          {
-            "Name": "SDTMIG",
-            "References": [
-              {
-                "Citations": [
-                  {
-                    "Cited_Guidance": "The term \"Spanish origin\" can be used to collect ethnicity data. If the term \"Spanish origin\" is collected, it should be mapped to the controlled terminology \"HISPANIC OR LATINO\" for submission.",
-                    "Document": "FDA",
-                    "Section": "FDAB058"
-                  }
-                ],
-                "Origin": "FDA Business Rules",
-                "Rule_Identifier": {
-                  "Id": "FB5801",
-                  "Version": "1"
-                },
-                "Version": "1.5"
-              }
-            ],
-            "Version": "3.4"
-          }
-        ]
-      }
-    ],
-    "Check": {
-      "all": [
-        {
-          "name": "ETHNIC",
-          "operator": "non_empty"
-        },
-        {
-          "name": "ETHNIC",
-          "operator": "not_equal_to",
-          "value": "HISPANIC OR LATINO",
-          "value_is_literal": true
-        },
-        {
-          "name": "QNAM",
-          "operator": "equal_to",
-          "value": "CETHNIC",
-          "value_is_literal": true
-        },
-        {
-          "name": "QVAL",
-          "operator": "equal_to",
-          "value": "SPANISH ORIGIN",
-          "value_is_literal": true
-        }
-      ]
-    },
-    "Core": {
-      "Id": "CORE-000746",
-      "Status": "Published",
-      "Version": "1"
-    },
-    "Description": "When ethnicity term 'Spanish origin' is collected (SUPPDM.CETHNIC), it should be mapped to Ethnicity (ETHNIC) 'HISPANIC OR LATINO' in the DM dataset",
-    "Executability": "Fully Executable",
-    "Match_Datasets": [
-      {
-        "Keys": [
-          "USUBJID"
-        ],
-        "Name": "SUPPDM"
-      }
-    ],
-    "Outcome": {
-      "Message": "Ethnicity Term 'Spanish origin' (SUPPDM.CETHNIC) is collected but is not mapped as ETHNIC = HISPANIC OR LATINO.",
-      "Output_Variables": [
-        "ETHNIC"
-      ]
-    },
-    "Rule_Type": "Record Data",
-    "Scope": {
-      "Classes": {
-        "Include": [
-          "SPECIAL PURPOSE"
-        ]
-      },
-      "Domains": {
-        "Include": [
-          "DM"
-        ]
-      }
-    },
-    "Sensitivity": "Record"
-  },
-  "CORE-000747": {
-    "Authorities": [
-      {
-        "Organization": "FDA",
-        "Standards": [
-          {
-            "Name": "SDTMIG",
-            "References": [
-              {
-                "Citations": [
-                  {
-                    "Cited_Guidance": "The term \"Hatian or Negro\" can be used collect race data. If the term \"Hatian or Negro\" is collected, it should be mapped to the controlled terminology \"BLACK OR AFRICAN AMERICAN\" for submission.",
-                    "Document": "FDA",
-                    "Section": "FDAB060"
-                  }
-                ],
-                "Origin": "FDA Business Rules",
-                "Rule_Identifier": {
-                  "Id": "FB6001",
-                  "Version": "1"
-                },
-                "Version": "1.5"
-              }
-            ],
-            "Version": "3.2"
-          },
-          {
-            "Name": "SDTMIG",
-            "References": [
-              {
-                "Citations": [
-                  {
-                    "Cited_Guidance": "The term \"Hatian or Negro\" can be used collect race data. If the term \"Hatian or Negro\" is collected, it should be mapped to the controlled terminology \"BLACK OR AFRICAN AMERICAN\" for submission.",
-                    "Document": "FDA",
-                    "Section": "FDAB060"
-                  }
-                ],
-                "Origin": "FDA Business Rules",
-                "Rule_Identifier": {
-                  "Id": "FB6001",
-                  "Version": "1"
-                },
-                "Version": "1.5"
-              }
-            ],
-            "Version": "3.3"
-          },
-          {
-            "Name": "SDTMIG",
-            "References": [
-              {
-                "Citations": [
-                  {
-                    "Cited_Guidance": "The term \"Hatian or Negro\" can be used collect race data. If the term \"Hatian or Negro\" is collected, it should be mapped to the controlled terminology \"BLACK OR AFRICAN AMERICAN\" for submission.",
-                    "Document": "FDA",
-                    "Section": "FDAB060"
-                  }
-                ],
-                "Origin": "FDA Business Rules",
-                "Rule_Identifier": {
-                  "Id": "FB6001",
-                  "Version": "1"
-                },
-                "Version": "1.5"
-              }
-            ],
-            "Version": "3.4"
-          }
-        ]
-      }
-    ],
-    "Check": {
-      "all": [
-        {
-          "name": "RACE",
-          "operator": "non_empty"
-        },
-        {
-          "name": "RACE",
-          "operator": "not_equal_to",
-          "value": "BLACK OR AFRICAN AMERICAN",
-          "value_is_literal": true
-        },
-        {
-          "name": "QNAM",
-          "operator": "equal_to",
-          "value": "CRACE",
-          "value_is_literal": true
-        },
-        {
-          "name": "QVAL",
-          "operator": "equal_to",
-          "value": "HATIAN or NEGRO",
-          "value_is_literal": true
-        }
-      ]
-    },
-    "Core": {
-      "Id": "CORE-000747",
-      "Status": "Published",
-      "Version": "1"
-    },
-    "Description": "When Race Term 'Haitian' or 'Negro' (SUPPDM.CRACE) is collected, it should be mapped to Race (RACE) 'BLACK OR AFRICAN AMERICAN' in the DM dataset.",
-    "Executability": "Fully Executable",
-    "Match_Datasets": [
-      {
-        "Keys": [
-          "USUBJID"
-        ],
-        "Name": "SUPPDM"
-      }
-    ],
-    "Outcome": {
-      "Message": "Race Term 'Haitian' or 'Negro' is collected (SUPPDM.CRACE) but is not mapped to RACE = BLACK OR AFRICAN AMERICAN in DM dataset.",
-      "Output_Variables": [
-        "RACE"
-      ]
-    },
-    "Rule_Type": "Record Data",
-    "Scope": {
-      "Classes": {
-        "Include": [
-          "SPECIAL PURPOSE",
-          "RELATIONSHIP"
-        ]
-      },
-      "Domains": {
-        "Include": [
-          "DM"
         ]
       }
     },
@@ -105532,10 +105325,20 @@
     "Check": {
       "all": [
         {
-          "name": "TSVCDREF",
-          "operator": "equal_to",
-          "value": "CDISC",
-          "value_is_literal": true
+          "any": [
+            {
+              "name": "TSVCDREF",
+              "operator": "equal_to",
+              "value": "CDISC",
+              "value_is_literal": true
+            },
+            {
+              "name": "TSVCDREF",
+              "operator": "equal_to",
+              "value": "CDISC CT",
+              "value_is_literal": true
+            }
+          ]
         },
         {
           "name": "TSVCDVER",
@@ -106250,7 +106053,8 @@
         {
           "name": "$dataset_size",
           "operator": "greater_than",
-          "value": 5368709120
+          "value": 5368709120,
+          "value_is_literal": true
         }
       ]
     },
@@ -106259,7 +106063,7 @@
       "Status": "Published",
       "Version": "1"
     },
-    "Description": "The submitted dataset is larger than 5 GB",
+    "Description": "Raise an error when the submitted dataset is larger than 5 GB.",
     "Executability": "Fully Executable",
     "Operations": [
       {
@@ -106269,7 +106073,7 @@
       }
     ],
     "Outcome": {
-      "Message": "The submitted dataset is larger than 5 GB",
+      "Message": "The submitted dataset is larger than 5 GB.",
       "Output_Variables": [
         "$dataset_size"
       ]
@@ -106411,8 +106215,12 @@
           "operator": "non_empty"
         },
         {
+          "name": "RELREC.FAOBJ",
+          "operator": "non_empty"
+        },
+        {
           "name": "--DECOD",
-          "operator": "not_equal_to",
+          "operator": "not_equal_to_case_insensitive",
           "value": "RELREC.FAOBJ"
         }
       ]
@@ -109659,9 +109467,9 @@
           "operator": "exists"
         },
         {
-          "name": "SVSTDTC",
-          "operator": "date_greater_than_or_equal_to",
-          "value": "SESTDTC"
+          "name": "SESTDTC",
+          "operator": "date_less_than_or_equal_to",
+          "value": "SVSTDTC"
         },
         {
           "name": "SVSTDTC",
@@ -109680,8 +109488,8 @@
       "Status": "Published",
       "Version": "1"
     },
-    "Description": "Raise an error when variable TAETORD values don't match between Subject Visits (SV) and Subject Elements (SE) datasets.",
-    "Executability": "Fully Executable",
+    "Description": "Raise an error when the TAETORD values don't match between Subject Visits (SV) and Subject Elements (SE) datasets.",
+    "Executability": "Partially Executable - Possible Overreporting",
     "Match_Datasets": [
       {
         "Keys": [
@@ -109691,12 +109499,12 @@
       }
     ],
     "Outcome": {
-      "Message": "TAETORD values don't match between Subject Visits (SV) and Subject Elements (SE) datasets.",
+      "Message": "TAETORD value in the SV dataset doesn't match the corresponding TAETORD value in the SE dataset.",
       "Output_Variables": [
+        "TAETORD",
+        "SVSTDTC",
         "SESTDTC",
         "SEENDTC",
-        "SVSTDTC",
-        "TAETORD",
         "SE.TAETORD"
       ]
     },
@@ -118276,7 +118084,7 @@
               {
                 "Citations": [
                   {
-                    "Cited_Guidance": "Variables for the three general observation classes must be ordered with Identifiers first; followed by the Topic; Qualifier; and Timing variables. Within each role; variables must be ordered as shown in SDTM: Tables 2.2.1; 2.2.2; 2.2.3; 2.2.3.1; 2.2.4; and 2.2.5",
+                    "Cited_Guidance": "Variables for the three general observation classes must be ordered with Identifiers first; followed by the Topic; Qualifier; and Timing variables. Within each role; variables must be ordered as shown in SDTM: Tables 2.2.1; 2.2.2; 2.2.3; 2.2.3.1; 2.2.4; and 2.2.5\n",
                     "Document": "IG v3.2",
                     "Section": "4.1.1.4"
                   }
@@ -118297,7 +118105,7 @@
               {
                 "Citations": [
                   {
-                    "Cited_Guidance": "Variables for the three general observation classes must be ordered with Identifiers first; followed by the Topic; Qualifier; and Timing variables. Within each role; variables must be ordered as shown in SDTM: Tables 2.2.1; 2.2.2; 2.2.3; 2.2.3.1; 2.2.4; and 2.2.5",
+                    "Cited_Guidance": "Variables for the three general observation classes must be ordered with Identifiers first; followed by the Topic; Qualifier; and Timing variables. Within each role; variables must be ordered as shown in SDTM: Tables 2.2.1; 2.2.2; 2.2.3; 2.2.3.1; 2.2.4; and 2.2.5\n",
                     "Document": "IG v3.3",
                     "Section": "4.1.4"
                   }
@@ -118496,7 +118304,7 @@
         {
           "name": "$column_order_from_dataset",
           "operator": "is_not_ordered_subset_of",
-          "value": "$column_order_from_library"
+          "value": "$library_with_dataset_only"
         }
       ]
     },
@@ -118515,13 +118323,19 @@
       {
         "id": "$column_order_from_dataset",
         "operator": "get_column_order_from_dataset"
+      },
+      {
+        "id": "$library_with_dataset_only",
+        "name": "$column_order_from_library",
+        "operator": "intersect",
+        "subtract": "$column_order_from_dataset"
       }
     ],
     "Outcome": {
       "Message": "Variables are not in the correct order as shown in SDTM for the observation class.",
       "Output_Variables": [
         "$column_order_from_dataset",
-        "$column_order_from_library"
+        "$library_with_dataset_only"
       ]
     },
     "Rule_Type": "Variable Metadata Check",
@@ -124147,8 +123961,8 @@
         },
         {
           "name": "--PDUR",
-          "negative": false,
-          "operator": "invalid_duration"
+          "operator": "matches_regex",
+          "value": "-"
         }
       ]
     },
@@ -124823,58 +124637,37 @@
       }
     ],
     "Check": {
-      "any": [
+      "all": [
         {
-          "all": [
+          "any": [
             {
               "name": "ARMNRS",
               "operator": "empty"
             },
             {
-              "name": "TSPARMCD",
-              "operator": "equal_to",
-              "value": "STYPE",
-              "value_is_literal": true
-            },
-            {
-              "name": "TSVAL",
-              "operator": "equal_to",
-              "value": "INTERVENTIONAL",
-              "value_is_literal": true
-            },
-            {
-              "name": "USUBJID",
-              "operator": "is_not_contained_by",
-              "value": "$usubjids_in_ex"
-            }
-          ]
-        },
-        {
-          "all": [
-            {
               "name": "ARMNRS",
               "operator": "equal_to",
               "value": "UNPLANNED TREATMENT",
               "value_is_literal": true
-            },
-            {
-              "name": "TSPARMCD",
-              "operator": "equal_to",
-              "value": "STYPE",
-              "value_is_literal": true
-            },
-            {
-              "name": "TSVAL",
-              "operator": "equal_to",
-              "value": "INTERVENTIONAL",
-              "value_is_literal": true
-            },
-            {
-              "name": "USUBJID",
-              "operator": "is_not_contained_by",
-              "value": "$usubjids_in_ex"
             }
           ]
+        },
+        {
+          "name": "TSPARMCD",
+          "operator": "equal_to",
+          "value": "STYPE",
+          "value_is_literal": true
+        },
+        {
+          "name": "TSVAL",
+          "operator": "equal_to",
+          "value": "INTERVENTIONAL",
+          "value_is_literal": true
+        },
+        {
+          "name": "USUBJID",
+          "operator": "is_not_contained_by",
+          "value": "$usubjids_in_ex"
         }
       ]
     },
@@ -124883,7 +124676,7 @@
       "Status": "Published",
       "Version": "1"
     },
-    "Description": "All subjects in the Demographics domain who are participating in a study that includes an interventional product must have at least one corresponding record in the Exposure domain, except for subjects who failed screening, were not fully assigned to an Arm, or did not receive study treatment.",
+    "Description": "Raise an error when subject participating in an interventional study and assigned to an actual treatment, has no record in the EX dataset.",
     "Executability": "Fully Executable",
     "Match_Datasets": [
       {
@@ -124902,7 +124695,7 @@
       }
     ],
     "Outcome": {
-      "Message": "A subject has a record in DM but not in EX while participating in an interventional study",
+      "Message": "Subject in interventional study, assigned to an actual treatment is missing exposure records in EX dataset.",
       "Output_Variables": [
         "ARMNRS",
         "TSVAL"
@@ -130775,9 +130568,60 @@
           "value_is_literal": true
         },
         {
-          "name": "DSSTDTC",
-          "operator": "not_equal_to",
-          "value": "DTHDTC"
+          "any": [
+            {
+              "name": "DSSTDTC",
+              "operator": "date_not_equal_to",
+              "value": "DTHDTC"
+            },
+            {
+              "all": [
+                {
+                  "name": "DSSTDTC",
+                  "operator": "not_equal_to",
+                  "value": "DTHDTC"
+                },
+                {
+                  "any": [
+                    {
+                      "name": "DSSTDTC",
+                      "operator": "not_matches_regex",
+                      "value": "^\\d{4}(-\\d{2}(-\\d{2}([T ]\\d{2}(:\\d{2}(:\\d{2}(\\.\\d+)?)?)?(Z|[+-]\\d{2}:?\\d{2})?)?)?)?$"
+                    },
+                    {
+                      "name": "DTHDTC",
+                      "operator": "not_matches_regex",
+                      "value": "^\\d{4}(-\\d{2}(-\\d{2}([T ]\\d{2}(:\\d{2}(:\\d{2}(\\.\\d+)?)?)?(Z|[+-]\\d{2}:?\\d{2})?)?)?)?$"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "all": [
+                {
+                  "name": "DTHDTC",
+                  "operator": "empty"
+                },
+                {
+                  "name": "DSSTDTC",
+                  "operator": "non_empty"
+                }
+              ]
+            },
+            {
+              "all": [
+                {
+                  "name": "DSSTDTC",
+                  "operator": "empty"
+                },
+                {
+                  "name": "DTHDTC",
+                  "operator": "non_empty"
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -145983,15 +145827,24 @@
           "operator": "exists"
         },
         {
-          "name": "$record_count_per_subject_test_timing",
-          "operator": "greater_than",
-          "value": 1
-        },
-        {
           "any": [
             {
-              "name": "--REPNUM",
-              "operator": "empty"
+              "all": [
+                {
+                  "name": "--REPNUM",
+                  "operator": "empty"
+                },
+                {
+                  "name": "USUBJID",
+                  "operator": "is_not_unique_set",
+                  "value": [
+                    "--TESTCD",
+                    "VISITNUM",
+                    "--TPTNUM",
+                    "--TPTREF"
+                  ]
+                }
+              ]
             },
             {
               "name": "--REPNUM",
@@ -145999,7 +145852,9 @@
               "value": [
                 "USUBJID",
                 "--TESTCD",
-                "$TIMING_VARIABLES"
+                "VISITNUM",
+                "--TPTNUM",
+                "--TPTREF"
               ]
             }
           ]
@@ -146013,18 +145868,6 @@
     },
     "Description": "Raise an error when REPNUM is present and there are multiple records for a subject for a test within the timeframe identified by the timing variables on the record, and --REPNUM is null or not unique per subject per test per timing variables.",
     "Executability": "Fully Executable",
-    "Operations": [
-      {
-        "id": "$TIMING_VARIABLES",
-        "key_name": "role",
-        "key_value": "Timing",
-        "operator": "get_model_filtered_variables"
-      },
-      {
-        "id": "$record_count_per_subject_test_timing",
-        "operator": "record_count"
-      }
-    ],
     "Outcome": {
       "Message": "--REPNUM must not be null and must be unique per subject per test per timing variables.",
       "Output_Variables": [
@@ -150783,6 +150626,149 @@
     },
     "Sensitivity": "Record"
   },
+  "CORE-001080": {
+    "Authorities": [
+      {
+        "Organization": "CDISC",
+        "Standards": [
+          {
+            "Name": "SDTMIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Cited_Guidance": "The version number of the Reference Terminology, if applicable.",
+                    "Document": "IG v3.4",
+                    "Item": "Specification",
+                    "Section": "7.4.2"
+                  }
+                ],
+                "Origin": "SDTM and SDTMIG Conformance Rules",
+                "Rule_Identifier": {
+                  "Id": "CG0288",
+                  "Version": "1"
+                },
+                "Version": "2.0"
+              }
+            ],
+            "Version": "3.4"
+          },
+          {
+            "Name": "SDTMIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Cited_Guidance": "The version number of the Reference Terminology, if applicable.",
+                    "Document": "IG v3.3",
+                    "Item": "Specification",
+                    "Section": "7.4.2"
+                  }
+                ],
+                "Origin": "SDTM and SDTMIG Conformance Rules",
+                "Rule_Identifier": {
+                  "Id": "CG0288",
+                  "Version": "1"
+                },
+                "Version": "2.0"
+              }
+            ],
+            "Version": "3.3"
+          },
+          {
+            "Name": "SDTMIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Cited_Guidance": "The version number of the Reference Terminology, if applicable.",
+                    "Document": "IG v3.2",
+                    "Item": "Specification",
+                    "Section": "7.4"
+                  }
+                ],
+                "Origin": "SDTM and SDTMIG Conformance Rules",
+                "Rule_Identifier": {
+                  "Id": "CG0288",
+                  "Version": "1"
+                },
+                "Version": "2.0"
+              }
+            ],
+            "Version": "3.2"
+          }
+        ]
+      }
+    ],
+    "Check": {
+      "all": [
+        {
+          "any": [
+            {
+              "name": "TSVCDREF",
+              "operator": "equal_to",
+              "value": "CDISC",
+              "value_is_literal": true
+            },
+            {
+              "name": "TSVCDREF",
+              "operator": "equal_to",
+              "value": "CDISC CT",
+              "value_is_literal": true
+            }
+          ]
+        },
+        {
+          "name": "$VALID_TERM_CODES",
+          "operator": "non_empty"
+        },
+        {
+          "name": "TSVALCD",
+          "operator": "is_not_contained_by",
+          "value": "$VALID_TERM_CODES"
+        }
+      ]
+    },
+    "Core": {
+      "Id": "CORE-001080",
+      "Status": "Published",
+      "Version": "1"
+    },
+    "Description": "Raise an error when TSVCDREF is equal to 'CDISC' and TSVALCD is not a valid code in the version identified in TSVCDVER.",
+    "Executability": "Fully Executable",
+    "Operations": [
+      {
+        "ct_attribute": "Term CCODE",
+        "id": "$VALID_TERM_CODES",
+        "name": "TSVCDREF",
+        "operator": "get_codelist_attributes",
+        "version": "TSVCDVER"
+      }
+    ],
+    "Outcome": {
+      "Message": "TSVALCD must be a valid code in the CDISC CT version identified in TSVCDVER.",
+      "Output_Variables": [
+        "TSVALCD",
+        "TSPARMCD",
+        "TSVCDVER",
+        "TSVCDREF"
+      ]
+    },
+    "Rule_Type": "Record Data",
+    "Scope": {
+      "Classes": {
+        "Include": [
+          "TRIAL DESIGN"
+        ]
+      },
+      "Domains": {
+        "Include": [
+          "TS"
+        ]
+      }
+    },
+    "Sensitivity": "Record"
+  },
   "CORE-001081": {
     "Authorities": [
       {
@@ -150858,6 +150844,10 @@
       "all": [
         {
           "name": "define_variable_name",
+          "operator": "non_empty"
+        },
+        {
+          "name": "define_variable_role",
           "operator": "non_empty"
         },
         {
@@ -151269,8 +151259,8 @@
     "Rule_Type": "Value Check against Define XML Variable",
     "Scope": {
       "Classes": {
-        "Include": [
-          "ALL"
+        "Exclude": [
+          "TRIAL DESIGN"
         ]
       },
       "Domains": {
@@ -156497,6 +156487,10 @@
       "all": [
         {
           "name": "ARMCD",
+          "operator": "non_empty"
+        },
+        {
+          "name": "ARMCD",
           "operator": "is_not_contained_by_case_insensitive",
           "value": [
             "SCRNFAIL",
@@ -159356,7 +159350,7 @@
       "Version": "1"
     },
     "Description": "All trial design model datasets as listed in the corresponding IG are present in the submission.",
-    "Executability": "Fully Executable",
+    "Executability": "Partially Executable - Possible Overreporting",
     "Operations": [
       {
         "domain_class": "TRIAL DESIGN",
@@ -160341,24 +160335,57 @@
     "Check": {
       "any": [
         {
-          "name": "variable_length",
-          "operator": "not_equal_to",
-          "value": "$max_variable_value_length"
-        },
-        {
           "name": "$global_max_variable_length",
           "operator": "not_equal_to",
           "value": "$global_min_variable_length"
         },
         {
-          "name": "variable_length",
-          "operator": "not_equal_to",
-          "value": "$global_max_variable_length"
+          "all": [
+            {
+              "name": "variable_data_type",
+              "operator": "equal_to",
+              "value": "Char",
+              "value_is_literal": true
+            },
+            {
+              "name": "$max_variable_value_length",
+              "operator": "greater_than",
+              "value": 0
+            },
+            {
+              "name": "variable_length",
+              "operator": "not_equal_to",
+              "value": "$max_variable_value_length"
+            }
+          ]
         },
         {
-          "name": "variable_length",
-          "operator": "not_equal_to",
-          "value": "$global_min_variable_length"
+          "all": [
+            {
+              "name": "variable_data_type",
+              "operator": "equal_to",
+              "value": "Char",
+              "value_is_literal": true
+            },
+            {
+              "any": [
+                {
+                  "name": "$max_variable_value_length",
+                  "operator": "equal_to",
+                  "value": 0
+                },
+                {
+                  "name": "$max_variable_value_length",
+                  "operator": "empty"
+                }
+              ]
+            },
+            {
+              "name": "variable_length",
+              "operator": "not_equal_to",
+              "value": 1
+            }
+          ]
         }
       ]
     },
@@ -160376,31 +160403,19 @@
     ],
     "Operations": [
       {
-        "domain": "global_value_check",
-        "group": [
-          "variable_name"
-        ],
         "id": "$max_variable_value_length",
-        "name": "variable_value_length",
-        "operator": "max"
+        "name": "variable_name",
+        "operator": "max_variable_value_length"
       },
       {
-        "domain": "global_value_check",
-        "group": [
-          "variable_name"
-        ],
         "id": "$global_max_variable_length",
-        "name": "variable_length",
-        "operator": "max"
+        "name": "variable_name",
+        "operator": "global_max_variable_length"
       },
       {
-        "domain": "global_value_check",
-        "group": [
-          "variable_name"
-        ],
         "id": "$global_min_variable_length",
-        "name": "variable_length",
-        "operator": "min"
+        "name": "variable_name",
+        "operator": "global_min_variable_length"
       },
       {
         "id": "$domain_label",
@@ -160653,9 +160668,50 @@
     "Check": {
       "all": [
         {
-          "name": "variable_length",
-          "operator": "greater_than",
-          "value": "$max_variable_value_length"
+          "name": "variable_data_type",
+          "operator": "equal_to",
+          "value": "Char",
+          "value_is_literal": true
+        },
+        {
+          "any": [
+            {
+              "all": [
+                {
+                  "name": "$max_variable_value_length",
+                  "operator": "greater_than",
+                  "value": 0
+                },
+                {
+                  "name": "variable_length",
+                  "operator": "greater_than",
+                  "value": "$max_variable_value_length"
+                }
+              ]
+            },
+            {
+              "all": [
+                {
+                  "any": [
+                    {
+                      "name": "$max_variable_value_length",
+                      "operator": "equal_to",
+                      "value": 0
+                    },
+                    {
+                      "name": "$max_variable_value_length",
+                      "operator": "empty"
+                    }
+                  ]
+                },
+                {
+                  "name": "variable_length",
+                  "operator": "greater_than",
+                  "value": 1
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -160834,6 +160890,10 @@
         },
         {
           "name": "TSVAL",
+          "operator": "non_empty"
+        },
+        {
+          "name": "TSVAL",
           "operator": "is_not_valid_unii_term_reference"
         }
       ]
@@ -160998,6 +161058,10 @@
         },
         {
           "name": "TSVAL",
+          "operator": "non_empty"
+        },
+        {
+          "name": "TSVAL",
           "operator": "is_not_valid_unii_term_reference"
         }
       ]
@@ -161159,6 +161223,10 @@
           "operator": "equal_to",
           "value": "CURTRT",
           "value_is_literal": true
+        },
+        {
+          "name": "TSVAL",
+          "operator": "non_empty"
         },
         {
           "name": "TSVAL",
@@ -161648,6 +161716,10 @@
         },
         {
           "name": "TSVALCD",
+          "operator": "non_empty"
+        },
+        {
+          "name": "TSVALCD",
           "operator": "is_not_valid_unii_code_reference"
         }
       ]
@@ -161812,6 +161884,10 @@
         },
         {
           "name": "TSVALCD",
+          "operator": "non_empty"
+        },
+        {
+          "name": "TSVALCD",
           "operator": "is_not_valid_unii_code_reference"
         }
       ]
@@ -161973,6 +162049,10 @@
           "operator": "equal_to",
           "value": "COMPTRT",
           "value_is_literal": true
+        },
+        {
+          "name": "TSVALCD",
+          "operator": "non_empty"
         },
         {
           "name": "TSVALCD",
@@ -165287,6 +165367,112 @@
     },
     "Sensitivity": "Record"
   },
+  "CORE-002090": {
+    "Authorities": [
+      {
+        "Organization": "FDA",
+        "Standards": [
+          {
+            "Name": "SDTMIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Cited_Guidance": "For interventional studies all treated subjects should have exposure data.",
+                    "Document": "FDA",
+                    "Section": "FDAB023"
+                  }
+                ],
+                "Origin": "FDA Business Rules",
+                "Rule_Identifier": {
+                  "Id": "FB2303",
+                  "Version": "1"
+                },
+                "Version": "1.5"
+              }
+            ],
+            "Version": "3.2"
+          }
+        ]
+      }
+    ],
+    "Check": {
+      "all": [
+        {
+          "name": "ACTARMCD",
+          "operator": "is_contained_by_case_insensitive",
+          "value": [
+            "SCRNFAIL",
+            "NOTASSGN",
+            "NOTTRT"
+          ],
+          "value_is_literal": true
+        },
+        {
+          "name": "TSPARMCD",
+          "operator": "equal_to",
+          "value": "STYPE",
+          "value_is_literal": true
+        },
+        {
+          "name": "TSVAL",
+          "operator": "equal_to",
+          "value": "INTERVENTIONAL",
+          "value_is_literal": true
+        },
+        {
+          "name": "USUBJID",
+          "operator": "is_contained_by",
+          "value": "$usubjids_in_ex"
+        }
+      ]
+    },
+    "Core": {
+      "Id": "CORE-002090",
+      "Status": "Published",
+      "Version": "1"
+    },
+    "Description": "Raise an error when subject participating in an interventional study with at least one record in the EX dataset, is not assigned to an actual treatment.",
+    "Executability": "Fully Executable",
+    "Match_Datasets": [
+      {
+        "Keys": [
+          "STUDYID"
+        ],
+        "Name": "TS"
+      }
+    ],
+    "Operations": [
+      {
+        "domain": "EX",
+        "id": "$usubjids_in_ex",
+        "name": "USUBJID",
+        "operator": "distinct"
+      }
+    ],
+    "Outcome": {
+      "Message": "Subject in interventional study with exposure records in the EX dataset is not assigned to an actual treatment.",
+      "Output_Variables": [
+        "ACTARMCD",
+        "TSPARMCD",
+        "TSVAL"
+      ]
+    },
+    "Rule_Type": "Record Data",
+    "Scope": {
+      "Classes": {
+        "Include": [
+          "SPECIAL PURPOSE"
+        ]
+      },
+      "Domains": {
+        "Include": [
+          "DM"
+        ]
+      }
+    },
+    "Sensitivity": "Record"
+  },
   "CORE-002091": {
     "Authorities": [
       {
@@ -167001,6 +167187,10 @@
             },
             {
               "name": "TAETORD",
+              "operator": "non_empty"
+            },
+            {
+              "name": "TAETORD",
               "operator": "is_not_contained_by",
               "value": "$ta_taetord_for_arm"
             }
@@ -167011,6 +167201,10 @@
             {
               "name": "TAETORD",
               "operator": "exists"
+            },
+            {
+              "name": "TAETORD",
+              "operator": "non_empty"
             },
             {
               "name": "TAETORD",
@@ -167375,7 +167569,7 @@
       "Status": "Published",
       "Version": "1"
     },
-    "Description": "Raise an error when value for --DECOD is not found in MedDRA dictionary.",
+    "Description": "Raise an error when value for --DECOD is not found in the WHODrug dictionary.",
     "Executability": "Fully Executable",
     "Outcome": {
       "Message": "CMDECOD is not a valid WHODrug dictionary preferred drug name.",
@@ -168419,7 +168613,821 @@
     },
     "Sensitivity": "Record"
   },
-  "FB2303": {
+  "CORE-002110": {
+    "Authorities": [
+      {
+        "Organization": "CDISC",
+        "Standards": [
+          {
+            "Name": "SDTMIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Cited_Guidance": "The number of this version of the Inclusion/Exclusion criteria. May be omitted if there is only one version.",
+                    "Document": "IG v3.2",
+                    "Item": "Specification",
+                    "Section": "7.4"
+                  }
+                ],
+                "Origin": "SDTM and SDTMIG Conformance Rules",
+                "Rule_Identifier": {
+                  "Id": "CG0254",
+                  "Version": "1"
+                },
+                "Version": "2.0"
+              }
+            ],
+            "Version": "3.2"
+          },
+          {
+            "Name": "SDTMIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Cited_Guidance": "The number of this version of the Inclusion/Exclusion criteria. May be omitted if there is only one version.",
+                    "Document": "IG v3.3",
+                    "Item": "Specification",
+                    "Section": "7.4.1"
+                  }
+                ],
+                "Origin": "SDTM and SDTMIG Conformance Rules",
+                "Rule_Identifier": {
+                  "Id": "CG0254",
+                  "Version": "1"
+                },
+                "Version": "2.0"
+              }
+            ],
+            "Version": "3.3"
+          },
+          {
+            "Name": "SDTMIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Cited_Guidance": "The number of this version of the Inclusion/Exclusion criteria. May be omitted if there is only one version.",
+                    "Document": "IG v3.4",
+                    "Item": "Specification",
+                    "Section": "7.4.1"
+                  }
+                ],
+                "Origin": "SDTM and SDTMIG Conformance Rules",
+                "Rule_Identifier": {
+                  "Id": "CG0254",
+                  "Version": "1"
+                },
+                "Version": "2.0"
+              }
+            ],
+            "Version": "3.4"
+          }
+        ]
+      }
+    ],
+    "Check": {
+      "all": [
+        {
+          "name": "TIVERS",
+          "operator": "not_exists"
+        },
+        {
+          "name": "IETESTCD",
+          "operator": "is_not_unique_set",
+          "value": "DOMAIN"
+        }
+      ]
+    },
+    "Core": {
+      "Id": "CORE-002110",
+      "Status": "Published",
+      "Version": "1"
+    },
+    "Description": "Raise an error when an inclusion/exclusion criterion occurs more than once in the TI dataset but TIVERS is not present in the dataset.",
+    "Executability": "Fully Executable",
+    "Outcome": {
+      "Message": "TIVERS must be present in the TI dataset when at least one inclusion/exclusion criterion (IETESTCD) occurs more than once.",
+      "Output_Variables": [
+        "IETESTCD",
+        "TIVERS"
+      ]
+    },
+    "Rule_Type": "Record Data",
+    "Scope": {
+      "Classes": {
+        "Include": [
+          "TRIAL DESIGN"
+        ]
+      },
+      "Domains": {
+        "Include": [
+          "TI"
+        ]
+      }
+    },
+    "Sensitivity": "Dataset"
+  },
+  "CORE-002111": {
+    "Authorities": [
+      {
+        "Organization": "CDISC",
+        "Standards": [
+          {
+            "Name": "SDTMIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Cited_Guidance": "Values for --CAT and --SCAT should not be redundant with the domain name or dictionary classification provided by --DECOD and --BODSYS.",
+                    "Document": "IG v3.4",
+                    "Section": "4.2.6"
+                  }
+                ],
+                "Origin": "SDTM and SDTMIG Conformance Rules",
+                "Rule_Identifier": {
+                  "Id": "CG0336",
+                  "Version": "1"
+                },
+                "Version": "2.0"
+              }
+            ],
+            "Version": "3.4"
+          },
+          {
+            "Name": "SDTMIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Cited_Guidance": "Values for --CAT and --SCAT should not be redundant with the domain name or dictionary classification provided by --DECOD and --BODSYS.",
+                    "Document": "IG v3.3",
+                    "Section": "4.2.6"
+                  }
+                ],
+                "Origin": "SDTM and SDTMIG Conformance Rules",
+                "Rule_Identifier": {
+                  "Id": "CG0336",
+                  "Version": "1"
+                },
+                "Version": "2.0"
+              }
+            ],
+            "Version": "3.3"
+          },
+          {
+            "Name": "SDTMIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Cited_Guidance": "Values for --CAT and --SCAT should not be redundant with the domain name or dictionary classification provided by --DECOD and --BODSYS.",
+                    "Document": "IG v3.2",
+                    "Section": "4.1.2.6"
+                  }
+                ],
+                "Origin": "SDTM and SDTMIG Conformance Rules",
+                "Rule_Identifier": {
+                  "Id": "CG0336",
+                  "Version": "1"
+                },
+                "Version": "2.0"
+              }
+            ],
+            "Version": "3.2"
+          },
+          {
+            "Name": "SENDIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Cited_Guidance": "Values for --CAT and --SCAT should not be redundant with the domain or dictionary classification provided by --DECOD and --BODSYS.",
+                    "Document": "SENDIG v.3.0",
+                    "Item": "Text",
+                    "Section": "4.2.6"
+                  }
+                ],
+                "Origin": "SEND Conformance Rules",
+                "Rule_Identifier": {
+                  "Id": "SEND46",
+                  "Version": "1"
+                },
+                "Version": "5.0"
+              }
+            ],
+            "Version": "3.0"
+          },
+          {
+            "Name": "SENDIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Cited_Guidance": "Values for --CAT and --SCAT should not be redundant with the domain or dictionary classification provided by --DECOD and --BODSYS.",
+                    "Document": "SENDIG v.3.1",
+                    "Item": "Text",
+                    "Section": "4.2.6"
+                  }
+                ],
+                "Origin": "SEND Conformance Rules",
+                "Rule_Identifier": {
+                  "Id": "SEND46",
+                  "Version": "1"
+                },
+                "Version": "5.0"
+              }
+            ],
+            "Version": "3.1"
+          },
+          {
+            "Name": "SENDIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Cited_Guidance": "Values for --CAT and --SCAT should not be redundant with the domain or dictionary classification provided by --DECOD and --BODSYS.",
+                    "Document": "SENDIG v.3.1.1",
+                    "Item": "Text",
+                    "Section": "4.2.6"
+                  }
+                ],
+                "Origin": "SEND Conformance Rules",
+                "Rule_Identifier": {
+                  "Id": "SEND46",
+                  "Version": "1"
+                },
+                "Version": "5.0"
+              }
+            ],
+            "Version": "3.1.1"
+          },
+          {
+            "Name": "SENDIG-DART",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Cited_Guidance": "Values for --CAT and --SCAT should not be redundant with the domain or dictionary classification provided by --DECOD and --BODSYS.",
+                    "Document": "SENDIG v.3.1",
+                    "Item": "Text",
+                    "Section": "4.2.6"
+                  }
+                ],
+                "Origin": "SEND Conformance Rules",
+                "Rule_Identifier": {
+                  "Id": "SEND46",
+                  "Version": "1"
+                },
+                "Version": "5.0"
+              }
+            ],
+            "Version": "1.1"
+          },
+          {
+            "Name": "SENDIG-DART",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Cited_Guidance": "Values for --CAT and --SCAT should not be redundant with the domain or dictionary classification provided by --DECOD and --BODSYS.",
+                    "Document": "SENDIG v.3.1.1",
+                    "Item": "Text",
+                    "Section": "4.2.6"
+                  }
+                ],
+                "Origin": "SEND Conformance Rules",
+                "Rule_Identifier": {
+                  "Id": "SEND46",
+                  "Version": "1"
+                },
+                "Version": "5.0"
+              }
+            ],
+            "Version": "1.2"
+          },
+          {
+            "Name": "SENDIG-GENETOX",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Cited_Guidance": "Values for --CAT and --SCAT should not be redundant with the domain or dictionary classification provided by --DECOD and --BODSYS.",
+                    "Document": "SENDIG v.3.1.1",
+                    "Item": "Text",
+                    "Section": "4.2.6"
+                  }
+                ],
+                "Origin": "SEND Conformance Rules",
+                "Rule_Identifier": {
+                  "Id": "SEND46",
+                  "Version": "1"
+                },
+                "Version": "5.0"
+              }
+            ],
+            "Version": "1.0"
+          },
+          {
+            "Name": "TIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Cited_Guidance": "Values for --CAT and --SCAT will not be the domain name or dictionary classification represented in --DECOD and --BODSYS.",
+                    "Document": "TIG 1.0",
+                    "Item": "General Conventions table NUM 7",
+                    "Section": "2.8.7.1"
+                  }
+                ],
+                "Origin": "TIG Conformance Rules",
+                "Rule_Identifier": {
+                  "Id": "TIG0501",
+                  "Version": "1"
+                },
+                "Version": "1.0"
+              }
+            ],
+            "Substandard": "SDTM",
+            "Version": "1.0"
+          }
+        ]
+      }
+    ],
+    "Check": {
+      "all": [
+        {
+          "name": "IECAT",
+          "operator": "equal_to_case_insensitive",
+          "value": "$domain_name"
+        }
+      ]
+    },
+    "Core": {
+      "Id": "CORE-002111",
+      "Status": "Published",
+      "Version": "1"
+    },
+    "Description": "Raise an error when IECAT is equal to Domain Name.",
+    "Executability": "Fully Executable",
+    "Operations": [
+      {
+        "id": "$domain_name",
+        "operator": "domain_label"
+      }
+    ],
+    "Outcome": {
+      "Message": "IECAT must not be equal to Domain Name.",
+      "Output_Variables": [
+        "IECAT",
+        "$domain_name"
+      ]
+    },
+    "Rule_Type": "Record Data",
+    "Scope": {
+      "Classes": {
+        "Include": [
+          "ALL"
+        ]
+      },
+      "Domains": {
+        "Include": [
+          "TI"
+        ]
+      },
+      "Use_Case": "INDH, PROD"
+    },
+    "Sensitivity": "Record"
+  },
+  "CORE-002112": {
+    "Authorities": [
+      {
+        "Organization": "CDISC",
+        "Standards": [
+          {
+            "Name": "SDTMIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Cited_Guidance": "If inclusion/exclusion criteria were amended during the trial, then each complete set of criteria must be included in the TI domain. TIVERS is used to distinguish between the versions.",
+                    "Document": "IG v3.2",
+                    "Item": "Assumption 1",
+                    "Section": "7.4"
+                  }
+                ],
+                "Origin": "SDTM and SDTMIG Conformance Rules",
+                "Rule_Identifier": {
+                  "Id": "CG0253",
+                  "Version": "1"
+                },
+                "Version": "2.0"
+              }
+            ],
+            "Version": "3.2"
+          },
+          {
+            "Name": "SDTMIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Cited_Guidance": "If inclusion/exclusion criteria were amended during the trial, then each complete set of criteria must be included in the TI domain. TIVERS is used to distinguish between the versions.",
+                    "Document": "IG v3.3",
+                    "Item": "Assumption 1",
+                    "Section": "7.4.1"
+                  }
+                ],
+                "Origin": "SDTM and SDTMIG Conformance Rules",
+                "Rule_Identifier": {
+                  "Id": "CG0253",
+                  "Version": "1"
+                },
+                "Version": "2.0"
+              }
+            ],
+            "Version": "3.3"
+          },
+          {
+            "Name": "SDTMIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Cited_Guidance": "If inclusion/exclusion criteria were amended during the trial, then each complete set of criteria must be included in the TI domain. TIVERS is used to distinguish between the versions.",
+                    "Document": "IG v3.4",
+                    "Item": "Assumption 1",
+                    "Section": "7.4.1"
+                  }
+                ],
+                "Origin": "SDTM and SDTMIG Conformance Rules",
+                "Rule_Identifier": {
+                  "Id": "CG0253",
+                  "Version": "1"
+                },
+                "Version": "2.0"
+              }
+            ],
+            "Version": "3.4"
+          }
+        ]
+      }
+    ],
+    "Check": {
+      "all": [
+        {
+          "name": "TIVERS",
+          "operator": "exists"
+        },
+        {
+          "name": "TIVERS",
+          "operator": "empty"
+        },
+        {
+          "name": "$max_count_ietestcd",
+          "operator": "greater_than",
+          "value": 1
+        }
+      ]
+    },
+    "Core": {
+      "Id": "CORE-002112",
+      "Status": "Published",
+      "Version": "1"
+    },
+    "Description": "Raise an error when an inclusion/exclusion criterion occurs more than once in the TI dataset but TIVERS is not populated on every TI record.",
+    "Executability": "Fully Executable",
+    "Grouping_Variables": [
+      "IETESTCD"
+    ],
+    "Operations": [
+      {
+        "domain": "TI",
+        "group": [
+          "IETESTCD"
+        ],
+        "id": "$count_ietestcd",
+        "operator": "record_count"
+      },
+      {
+        "id": "$max_count_ietestcd",
+        "name": "$count_ietestcd",
+        "operator": "max"
+      }
+    ],
+    "Outcome": {
+      "Message": "At least one inclusion/exclusion criterion (IETESTCD) occurs more than once in the TI dataset but TIVERS is not populated on every TI record.",
+      "Output_Variables": [
+        "IETESTCD",
+        "TIVERS"
+      ]
+    },
+    "Rule_Type": "Record Data",
+    "Scope": {
+      "Classes": {
+        "Include": [
+          "TRIAL DESIGN"
+        ]
+      },
+      "Domains": {
+        "Include": [
+          "TI"
+        ]
+      }
+    },
+    "Sensitivity": "Group"
+  },
+  "CORE-002113": {
+    "Authorities": [
+      {
+        "Organization": "CDISC",
+        "Standards": [
+          {
+            "Name": "SDTMIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Cited_Guidance": "Following SDTM-specified controlled terminology and format guidelines for variables, when provided",
+                    "Document": "IG v3.2",
+                    "Section": "3.2.2"
+                  }
+                ],
+                "Origin": "SDTM and SDTMIG Conformance Rules",
+                "Rule_Identifier": {
+                  "Id": "CG0011",
+                  "Version": "1"
+                },
+                "Version": "2.0"
+              }
+            ],
+            "Version": "3.2"
+          },
+          {
+            "Name": "SDTMIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Cited_Guidance": "Following SDTM-specified controlled terminology and format guidelines for variables, when provided",
+                    "Document": "IG v3.3",
+                    "Section": "3.2.2"
+                  }
+                ],
+                "Origin": "SDTM and SDTMIG Conformance Rules",
+                "Rule_Identifier": {
+                  "Id": "CG0011",
+                  "Version": "1"
+                },
+                "Version": "2.0"
+              }
+            ],
+            "Version": "3.3"
+          },
+          {
+            "Name": "SDTMIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Cited_Guidance": "Following SDTM-specified controlled terminology and format guidelines for variables, when provided",
+                    "Document": "IG v3.4",
+                    "Section": "3.2.2"
+                  }
+                ],
+                "Origin": "SDTM and SDTMIG Conformance Rules",
+                "Rule_Identifier": {
+                  "Id": "CG0011",
+                  "Version": "1"
+                },
+                "Version": "2.0"
+              }
+            ],
+            "Version": "3.4"
+          }
+        ]
+      }
+    ],
+    "Check": {
+      "all": [
+        {
+          "any": [
+            {
+              "name": "variable_name",
+              "operator": "ends_with",
+              "value": "DUR",
+              "value_is_literal": true
+            },
+            {
+              "name": "variable_name",
+              "operator": "ends_with",
+              "value": "PDUR",
+              "value_is_literal": true
+            },
+            {
+              "name": "variable_name",
+              "operator": "ends_with",
+              "value": "ELTM",
+              "value_is_literal": true
+            },
+            {
+              "name": "variable_name",
+              "operator": "ends_with",
+              "value": "STINT",
+              "value_is_literal": true
+            },
+            {
+              "name": "variable_name",
+              "operator": "ends_with",
+              "value": "ENINT",
+              "value_is_literal": true
+            },
+            {
+              "name": "variable_name",
+              "operator": "is_contained_by",
+              "value": [
+                "TEDUR",
+                "TDSTOFF",
+                "TDTGTPAI",
+                "TDMINPAI",
+                "TDMAXPAI"
+              ],
+              "value_is_literal": true
+            }
+          ]
+        },
+        {
+          "name": "variable_value",
+          "operator": "non_empty"
+        },
+        {
+          "name": "variable_value",
+          "negative": true,
+          "operator": "invalid_duration"
+        }
+      ]
+    },
+    "Core": {
+      "Id": "CORE-002113",
+      "Status": "Published",
+      "Version": "1"
+    },
+    "Description": "Part C - Raise an error when any of the values for --DUR, --PDUR, --ELTM, --STINT, --ENINT, TEDUR, TDSTOFF, TDTGTPAI, TDMINPAI, TDMAXPAI is not ISO 8601 duration.",
+    "Executability": "Fully Executable",
+    "Outcome": {
+      "Message": "Value must be a valid ISO 8601 duration.",
+      "Output_Variables": [
+        "variable_name",
+        "variable_value"
+      ]
+    },
+    "Rule_Type": "Value Check with Dataset Metadata",
+    "Scope": {
+      "Classes": {
+        "Include": [
+          "ALL"
+        ]
+      },
+      "Domains": {
+        "Include": [
+          "ALL"
+        ]
+      }
+    },
+    "Sensitivity": "Record"
+  },
+  "CORE-002114": {
+    "Authorities": [
+      {
+        "Organization": "CDISC",
+        "Standards": [
+          {
+            "Name": "SDTMIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Cited_Guidance": "Following SDTM-specified controlled terminology and format guidelines for variables, when provided",
+                    "Document": "IG v3.2",
+                    "Section": "3.2.2"
+                  }
+                ],
+                "Origin": "SDTM and SDTMIG Conformance Rules",
+                "Rule_Identifier": {
+                  "Id": "CG0011",
+                  "Version": "1"
+                },
+                "Version": "2.0"
+              }
+            ],
+            "Version": "3.2"
+          },
+          {
+            "Name": "SDTMIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Cited_Guidance": "Following SDTM-specified controlled terminology and format guidelines for variables, when provided",
+                    "Document": "IG v3.3",
+                    "Section": "3.2.2"
+                  }
+                ],
+                "Origin": "SDTM and SDTMIG Conformance Rules",
+                "Rule_Identifier": {
+                  "Id": "CG0011",
+                  "Version": "1"
+                },
+                "Version": "2.0"
+              }
+            ],
+            "Version": "3.3"
+          },
+          {
+            "Name": "SDTMIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Cited_Guidance": "Following SDTM-specified controlled terminology and format guidelines for variables, when provided",
+                    "Document": "IG v3.4",
+                    "Section": "3.2.2"
+                  }
+                ],
+                "Origin": "SDTM and SDTMIG Conformance Rules",
+                "Rule_Identifier": {
+                  "Id": "CG0011",
+                  "Version": "1"
+                },
+                "Version": "2.0"
+              }
+            ],
+            "Version": "3.4"
+          }
+        ]
+      }
+    ],
+    "Check": {
+      "all": [
+        {
+          "name": "TSVALNF",
+          "operator": "non_empty"
+        },
+        {
+          "name": "TSVALNF",
+          "operator": "is_not_contained_by",
+          "value": [
+            "NI",
+            "NA",
+            "INV",
+            "OTH",
+            "PINF",
+            "NINF",
+            "UNC",
+            "DER",
+            "UNK",
+            "ASKU",
+            "NAV",
+            "NASK",
+            "TRC",
+            "MSK",
+            "QS"
+          ],
+          "value_is_literal": true
+        }
+      ]
+    },
+    "Core": {
+      "Id": "CORE-002114",
+      "Status": "Published",
+      "Version": "1"
+    },
+    "Description": "Part E - Raise an error when value for TSVALNF is not populated with a valid ISO 21090 NullFlavor.",
+    "Executability": "Fully Executable",
+    "Outcome": {
+      "Message": "TSVALNF must be a valid ISO 21090 NullFlavor.",
+      "Output_Variables": [
+        "TSPARMCD",
+        "TSVALNF"
+      ]
+    },
+    "Rule_Type": "Record Data",
+    "Scope": {
+      "Classes": {
+        "Include": [
+          "TRIAL DESIGN"
+        ]
+      },
+      "Domains": {
+        "Include": [
+          "TS"
+        ]
+      }
+    },
+    "Sensitivity": "Record"
+  },
+  "CORE-002115": {
     "Authorities": [
       {
         "Organization": "FDA",
@@ -168430,14 +169438,184 @@
               {
                 "Citations": [
                   {
-                    "Cited_Guidance": "For interventional studies all treated subjects should have exposure data.",
+                    "Cited_Guidance": "All trial design data should be submitted as specified in the FDA Study Data Technical Conformance Guide (TCG).",
                     "Document": "FDA",
-                    "Section": "FDAB023"
+                    "Section": "FDAB011"
                   }
                 ],
                 "Origin": "FDA Business Rules",
                 "Rule_Identifier": {
-                  "Id": "FB2303",
+                  "Id": "FB1113",
+                  "Version": "1"
+                },
+                "Version": "1.5"
+              }
+            ],
+            "Version": "3.2"
+          },
+          {
+            "Name": "SDTMIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Cited_Guidance": "All trial design data should be submitted as specified in the FDA Study Data Technical Conformance Guide (TCG).",
+                    "Document": "FDA",
+                    "Section": "FDAB011"
+                  }
+                ],
+                "Origin": "FDA Business Rules",
+                "Rule_Identifier": {
+                  "Id": "FB1113",
+                  "Version": "1"
+                },
+                "Version": "1.5"
+              }
+            ],
+            "Version": "3.3"
+          },
+          {
+            "Name": "SDTMIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Cited_Guidance": "All trial design data should be submitted as specified in the FDA Study Data Technical Conformance Guide (TCG).",
+                    "Document": "FDA",
+                    "Section": "FDAB011"
+                  }
+                ],
+                "Origin": "FDA Business Rules",
+                "Rule_Identifier": {
+                  "Id": "FB1113",
+                  "Version": "1"
+                },
+                "Version": "1.5"
+              }
+            ],
+            "Version": "3.4"
+          }
+        ]
+      }
+    ],
+    "Check": {
+      "all": [
+        {
+          "name": "TSPARMCD",
+          "operator": "equal_to",
+          "value": "SSTDTC",
+          "value_is_literal": true
+        },
+        {
+          "name": "TSVAL",
+          "operator": "non_empty"
+        },
+        {
+          "name": "TSVAL",
+          "operator": "date_not_equal_to",
+          "value": "$dm_rficdtc"
+        }
+      ]
+    },
+    "Core": {
+      "Id": "CORE-002115",
+      "Status": "Published",
+      "Version": "1"
+    },
+    "Description": "Raise an error when Trial Summary Parameter Study Start Date (SSTDTC) is not equal to the earliest date of informed consent (min RFICDTC) in the DM dataset.",
+    "Executability": "Fully Executable",
+    "Operations": [
+      {
+        "domain": "DM",
+        "id": "$dm_rficdtc",
+        "name": "RFICDTC",
+        "operator": "min_date"
+      }
+    ],
+    "Outcome": {
+      "Message": "TS parameter SSTDTC is not equal to the earliest RFICDTC in the DM dataset.",
+      "Output_Variables": [
+        "TSPARMCD",
+        "TSVAL",
+        "$dm_rficdtc"
+      ]
+    },
+    "Rule_Type": "Record Data",
+    "Scope": {
+      "Classes": {
+        "Include": [
+          "TRIAL DESIGN"
+        ]
+      },
+      "Domains": {
+        "Include": [
+          "TS"
+        ]
+      }
+    },
+    "Sensitivity": "Record"
+  },
+  "CORE-002116": {
+    "Authorities": [
+      {
+        "Organization": "FDA",
+        "Standards": [
+          {
+            "Name": "SDTMIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Cited_Guidance": "The correct STF file-tags must be used for all standardized datasets and corresponding define.xml files in Module 4, sections 4.2.3.1, 4.2.3.2, 4.2.3.4, and in Module 5, sections 5.3.1.1, 5.3.1.2, 5.3.3.1, 5.3.3.2, 5.3.3.3, 5.3.3.4, 5.3.4, 5.3.5.1, 5.3.5.2.",
+                    "Document": "FDA",
+                    "Section": "TRC1735"
+                  }
+                ],
+                "Origin": "FDA Business Rules",
+                "Rule_Identifier": {
+                  "Id": "TRC1735",
+                  "Version": "1"
+                },
+                "Version": "1.5"
+              }
+            ],
+            "Version": "3.3"
+          },
+          {
+            "Name": "SDTMIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Cited_Guidance": "The correct STF file-tags must be used for all standardized datasets and corresponding define.xml files in Module 4, sections 4.2.3.1, 4.2.3.2, 4.2.3.4, and in Module 5, sections 5.3.1.1, 5.3.1.2, 5.3.3.1, 5.3.3.2, 5.3.3.3, 5.3.3.4, 5.3.4, 5.3.5.1, 5.3.5.2.",
+                    "Document": "FDA",
+                    "Section": "TRC1735"
+                  }
+                ],
+                "Origin": "FDA Business Rules",
+                "Rule_Identifier": {
+                  "Id": "TRC1735",
+                  "Version": "1"
+                },
+                "Version": "1.5"
+              }
+            ],
+            "Version": "3.4"
+          },
+          {
+            "Name": "SDTMIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Cited_Guidance": "The correct STF file-tags must be used for all standardized datasets and corresponding define.xml files in Module 4, sections 4.2.3.1, 4.2.3.2, 4.2.3.4, and in Module 5, sections 5.3.1.1, 5.3.1.2, 5.3.3.1, 5.3.3.2, 5.3.3.3, 5.3.3.4, 5.3.4, 5.3.5.1, 5.3.5.2.",
+                    "Document": "FDA",
+                    "Section": "TRC1735"
+                  }
+                ],
+                "Origin": "FDA Business Rules",
+                "Rule_Identifier": {
+                  "Id": "TRC1735",
                   "Version": "1"
                 },
                 "Version": "1.5"
@@ -168449,65 +169627,857 @@
       }
     ],
     "Check": {
-      "all": [
+      "any": [
         {
-          "name": "ACTARMCD",
-          "operator": "is_contained_by_case_insensitive",
+          "name": "file_tag_name",
+          "operator": "not_contains_all",
           "value": [
-            "SCRNFAIL",
-            "NOTASSGN",
-            "NOTTRT"
+            "data-tabulation-dataset-sdtm"
           ],
           "value_is_literal": true
         },
         {
-          "name": "TSPARMCD",
-          "operator": "equal_to",
-          "value": "STYPE",
+          "name": "file_tag_name",
+          "operator": "not_contains_all",
+          "value": [
+            "data-tabulation-data-definition"
+          ],
           "value_is_literal": true
-        },
-        {
-          "name": "TSVAL",
-          "operator": "equal_to",
-          "value": "INTERVENTIONAL",
-          "value_is_literal": true
-        },
-        {
-          "name": "USUBJID",
-          "operator": "is_contained_by",
-          "value": "$usubjids_in_ex"
         }
       ]
     },
     "Core": {
-      "Id": "FB2303",
+      "Id": "CORE-002116",
       "Status": "Published",
       "Version": "1"
     },
-    "Description": "Raise an error when subject participating in an interventional study with at least one record in the EX dataset, is not assigned to an actual treatment.",
+    "Description": "Raise an error when the STF file tag 'data-tabulation-dataset-sdtm' and/or 'data-tabulation-data-definition' is not present.",
     "Executability": "Fully Executable",
-    "Match_Datasets": [
+    "Outcome": {
+      "Message": "Missing 'data-tabulation-dataset-sdtm' and/or 'data-tabulation-data-definition' STF file tag.",
+      "Output_Variables": [
+        "study_id"
+      ]
+    },
+    "Rule_Type": "STF Metadata Check",
+    "Scope": {
+      "Classes": {
+        "Include": [
+          "ALL"
+        ]
+      },
+      "Domains": {
+        "Include": [
+          "ALL"
+        ]
+      }
+    },
+    "Sensitivity": "Study"
+  },
+  "CORE-002117": {
+    "Authorities": [
       {
-        "Keys": [
-          "STUDYID"
-        ],
-        "Name": "TS"
+        "Organization": "CDISC",
+        "Standards": [
+          {
+            "Name": "SDTMIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Cited_Guidance": "Following SDTM-specified controlled terminology and format guidelines for variables, when provided",
+                    "Document": "IG v3.2",
+                    "Section": "3.2.2"
+                  }
+                ],
+                "Origin": "SDTM and SDTMIG Conformance Rules",
+                "Rule_Identifier": {
+                  "Id": "CG0011",
+                  "Version": "1"
+                },
+                "Version": "2.0"
+              }
+            ],
+            "Version": "3.2"
+          },
+          {
+            "Name": "SDTMIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Cited_Guidance": "Following SDTM-specified controlled terminology and format guidelines for variables, when provided",
+                    "Document": "IG v3.3",
+                    "Section": "3.2.2"
+                  }
+                ],
+                "Origin": "SDTM and SDTMIG Conformance Rules",
+                "Rule_Identifier": {
+                  "Id": "CG0011",
+                  "Version": "1"
+                },
+                "Version": "2.0"
+              }
+            ],
+            "Version": "3.3"
+          },
+          {
+            "Name": "SDTMIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Cited_Guidance": "Following SDTM-specified controlled terminology and format guidelines for variables, when provided",
+                    "Document": "IG v3.4",
+                    "Section": "3.2.2"
+                  }
+                ],
+                "Origin": "SDTM and SDTMIG Conformance Rules",
+                "Rule_Identifier": {
+                  "Id": "CG0011",
+                  "Version": "1"
+                },
+                "Version": "2.0"
+              }
+            ],
+            "Version": "3.4"
+          }
+        ]
+      },
+      {
+        "Organization": "FDA",
+        "Standards": [
+          {
+            "Name": "SDTMIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Cited_Guidance": "Controlled terms should use the exact term (case, spelling, and punctuation) used by the terminology maintenance organizations (e.g., MedDRA, CDISC controlled terminology).",
+                    "Document": "FDA",
+                    "Section": "FDAB017"
+                  }
+                ],
+                "Origin": "FDA Business Rules",
+                "Rule_Identifier": {
+                  "Id": "FB1702",
+                  "Version": "1"
+                },
+                "Version": "1.5"
+              }
+            ],
+            "Version": "3.2"
+          },
+          {
+            "Name": "SDTMIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Cited_Guidance": "Controlled terms should use the exact term (case, spelling, and punctuation) used by the terminology maintenance organizations (e.g., MedDRA, CDISC controlled terminology).",
+                    "Document": "FDA",
+                    "Section": "FDAB017"
+                  }
+                ],
+                "Origin": "FDA Business Rules",
+                "Rule_Identifier": {
+                  "Id": "FB1702",
+                  "Version": "1"
+                },
+                "Version": "1.5"
+              }
+            ],
+            "Version": "3.3"
+          },
+          {
+            "Name": "SDTMIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Cited_Guidance": "Controlled terms should use the exact term (case, spelling, and punctuation) used by the terminology maintenance organizations (e.g., MedDRA, CDISC controlled terminology).",
+                    "Document": "FDA",
+                    "Section": "FDAB017"
+                  }
+                ],
+                "Origin": "FDA Business Rules",
+                "Rule_Identifier": {
+                  "Id": "FB1702",
+                  "Version": "1"
+                },
+                "Version": "1.5"
+              }
+            ],
+            "Version": "3.4"
+          },
+          {
+            "Name": "SENDIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Cited_Guidance": "Controlled terms should use the exact term (case, spelling, and punctuation) used by the terminology maintenance organizations (e.g., MedDRA, CDISC controlled terminology).",
+                    "Document": "FDA",
+                    "Section": "FDAB017"
+                  }
+                ],
+                "Origin": "FDA Business Rules",
+                "Rule_Identifier": {
+                  "Id": "FB1702",
+                  "Version": "1"
+                },
+                "Version": "1.5"
+              }
+            ],
+            "Version": "3.0"
+          },
+          {
+            "Name": "SENDIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Cited_Guidance": "Controlled terms should use the exact term (case, spelling, and punctuation) used by the terminology maintenance organizations (e.g., MedDRA, CDISC controlled terminology).",
+                    "Document": "FDA",
+                    "Section": "FDAB017"
+                  }
+                ],
+                "Origin": "FDA Business Rules",
+                "Rule_Identifier": {
+                  "Id": "FB1702",
+                  "Version": "1"
+                },
+                "Version": "1.5"
+              }
+            ],
+            "Version": "3.1"
+          },
+          {
+            "Name": "SENDIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Cited_Guidance": "Controlled terms should use the exact term (case, spelling, and punctuation) used by the terminology maintenance organizations (e.g., MedDRA, CDISC controlled terminology).",
+                    "Document": "FDA",
+                    "Section": "FDAB017"
+                  }
+                ],
+                "Origin": "FDA Business Rules",
+                "Rule_Identifier": {
+                  "Id": "FB1702",
+                  "Version": "1"
+                },
+                "Version": "1.5"
+              }
+            ],
+            "Version": "3.1.1"
+          },
+          {
+            "Name": "SENDIG-GENETOX",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Cited_Guidance": "Controlled terms should use the exact term (case, spelling, and punctuation) used by the terminology maintenance organizations (e.g., MedDRA, CDISC controlled terminology).",
+                    "Document": "FDA",
+                    "Section": "FDAB017"
+                  }
+                ],
+                "Origin": "FDA Business Rules",
+                "Rule_Identifier": {
+                  "Id": "FB1702",
+                  "Version": "1"
+                },
+                "Version": "1.5"
+              }
+            ],
+            "Version": "1.0"
+          },
+          {
+            "Name": "SENDIG-DART",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Cited_Guidance": "Controlled terms should use the exact term (case, spelling, and punctuation) used by the terminology maintenance organizations (e.g., MedDRA, CDISC controlled terminology).",
+                    "Document": "FDA",
+                    "Section": "FDAB017"
+                  }
+                ],
+                "Origin": "FDA Business Rules",
+                "Rule_Identifier": {
+                  "Id": "FB1702",
+                  "Version": "1"
+                },
+                "Version": "1.5"
+              }
+            ],
+            "Version": "1.1"
+          },
+          {
+            "Name": "SENDIG-DART",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Cited_Guidance": "Controlled terms should use the exact term (case, spelling, and punctuation) used by the terminology maintenance organizations (e.g., MedDRA, CDISC controlled terminology).",
+                    "Document": "FDA",
+                    "Section": "FDAB017"
+                  }
+                ],
+                "Origin": "FDA Business Rules",
+                "Rule_Identifier": {
+                  "Id": "FB1702",
+                  "Version": "1"
+                },
+                "Version": "1.5"
+              }
+            ],
+            "Version": "1.2"
+          },
+          {
+            "Name": "SENDIG-AR",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Cited_Guidance": "Controlled terms should use the exact term (case, spelling, and punctuation) used by the terminology maintenance organizations (e.g., MedDRA, CDISC controlled terminology).",
+                    "Document": "FDA",
+                    "Section": "FDAB017"
+                  }
+                ],
+                "Origin": "FDA Business Rules",
+                "Rule_Identifier": {
+                  "Id": "FB1702",
+                  "Version": "1"
+                },
+                "Version": "1.5"
+              }
+            ],
+            "Version": "1.0"
+          }
+        ]
       }
     ],
+    "Check": {
+      "all": [
+        {
+          "name": "$duplicate_extended_terms",
+          "operator": "non_empty"
+        }
+      ]
+    },
+    "Core": {
+      "Id": "CORE-002117",
+      "Status": "Published",
+      "Version": "1"
+    },
+    "Description": "Raise an error when CDISC Controlled Terminology specifies the codelist as extensible and a new term is a duplicate, a synonym or a subset of an existing submission value.",
+    "Executability": "Fully Executable",
     "Operations": [
       {
-        "domain": "EX",
-        "id": "$usubjids_in_ex",
-        "name": "USUBJID",
-        "operator": "distinct"
+        "id": "$duplicate_extended_terms",
+        "operator": "define_extended_terms_in_ct"
       }
     ],
     "Outcome": {
-      "Message": "Subject in interventional study with exposure records in the EX dataset is not assigned to an actual treatment.",
+      "Message": "A new term has been added to an extensible code list that is a duplicate, a synonym or a subset of an existing submission value.",
       "Output_Variables": [
-        "ACTARMCD",
-        "TSPARMCD",
-        "TSVAL"
+        "$duplicate_extended_terms"
+      ]
+    },
+    "Rule_Type": "Record Data",
+    "Scope": {
+      "Classes": {
+        "Include": [
+          "ALL"
+        ]
+      },
+      "Domains": {
+        "Include": [
+          "ALL"
+        ]
+      }
+    },
+    "Sensitivity": "Study"
+  },
+  "CORE-002118": {
+    "Authorities": [
+      {
+        "Organization": "CDISC",
+        "Standards": [
+          {
+            "Name": "SDTMIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Cited_Guidance": "Following SDTM-specified controlled terminology and format guidelines for variables, when provided",
+                    "Document": "IG v3.2",
+                    "Section": "3.2.2"
+                  }
+                ],
+                "Origin": "SDTM and SDTMIG Conformance Rules",
+                "Rule_Identifier": {
+                  "Id": "CG0011",
+                  "Version": "1"
+                },
+                "Version": "2.0"
+              }
+            ],
+            "Version": "3.2"
+          },
+          {
+            "Name": "SDTMIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Cited_Guidance": "Following SDTM-specified controlled terminology and format guidelines for variables, when provided",
+                    "Document": "IG v3.3",
+                    "Section": "3.2.2"
+                  }
+                ],
+                "Origin": "SDTM and SDTMIG Conformance Rules",
+                "Rule_Identifier": {
+                  "Id": "CG0011",
+                  "Version": "1"
+                },
+                "Version": "2.0"
+              }
+            ],
+            "Version": "3.3"
+          },
+          {
+            "Name": "SDTMIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Cited_Guidance": "Following SDTM-specified controlled terminology and format guidelines for variables, when provided",
+                    "Document": "IG v3.4",
+                    "Section": "3.2.2"
+                  }
+                ],
+                "Origin": "SDTM and SDTMIG Conformance Rules",
+                "Rule_Identifier": {
+                  "Id": "CG0011",
+                  "Version": "1"
+                },
+                "Version": "2.0"
+              }
+            ],
+            "Version": "3.4"
+          }
+        ]
+      }
+    ],
+    "Check": {
+      "all": [
+        {
+          "name": "--EVLINT",
+          "operator": "non_empty"
+        },
+        {
+          "name": "--EVLINT",
+          "negative": true,
+          "operator": "invalid_duration",
+          "value": true
+        },
+        {
+          "name": "--EVLINT",
+          "operator": "invalid_date_interval",
+          "value": true
+        }
+      ]
+    },
+    "Core": {
+      "Id": "CORE-002118",
+      "Status": "Published",
+      "Version": "1"
+    },
+    "Description": "Part B - Raise an error when --EVLINT is not ISO 8601 duration or interval.",
+    "Executability": "Fully Executable",
+    "Outcome": {
+      "Message": "--EVLINT must be ISO 8601 duration or interval.",
+      "Output_Variables": [
+        "--EVLINT"
+      ]
+    },
+    "Rule_Type": "Record Data",
+    "Scope": {
+      "Classes": {
+        "Include": [
+          "ALL"
+        ]
+      },
+      "Domains": {
+        "Include": [
+          "ALL"
+        ]
+      }
+    },
+    "Sensitivity": "Record"
+  },
+  "CORE-002119": {
+    "Authorities": [
+      {
+        "Organization": "CDISC",
+        "Standards": [
+          {
+            "Name": "SENDIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Cited_Guidance": "AGETXT is number-number",
+                    "Document": "SENDIG v3.0",
+                    "Item": "AGETXT CDISC Notes",
+                    "Section": "5.1.1"
+                  }
+                ],
+                "Origin": "SEND Conformance Rules",
+                "Rule_Identifier": {
+                  "Id": "SEND102",
+                  "Version": "1"
+                },
+                "Version": "5.0"
+              }
+            ],
+            "Version": "3.0"
+          },
+          {
+            "Name": "SENDIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Cited_Guidance": "AGETXT is number-number",
+                    "Document": "SENDIG v3.1",
+                    "Item": "AGETXT CDISC Notes",
+                    "Section": "5.1.1"
+                  }
+                ],
+                "Origin": "SEND Conformance Rules",
+                "Rule_Identifier": {
+                  "Id": "SEND102",
+                  "Version": "1"
+                },
+                "Version": "5.0"
+              }
+            ],
+            "Version": "3.1"
+          },
+          {
+            "Name": "SENDIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Cited_Guidance": "AGETXT is number-number",
+                    "Document": "SENDIG v3.1.1",
+                    "Item": "AGETXT CDISC Notes",
+                    "Section": "5.1.1"
+                  }
+                ],
+                "Origin": "SEND Conformance Rules",
+                "Rule_Identifier": {
+                  "Id": "SEND102",
+                  "Version": "1"
+                },
+                "Version": "5.0"
+              }
+            ],
+            "Version": "3.1.1"
+          },
+          {
+            "Name": "SENDIG-GENETOX",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Cited_Guidance": "AGETXT is number-number",
+                    "Document": "SENDIG v3.1.1",
+                    "Item": "AGETXT CDISC Notes",
+                    "Section": "5.1.1"
+                  }
+                ],
+                "Origin": "SEND Conformance Rules",
+                "Rule_Identifier": {
+                  "Id": "SEND102",
+                  "Version": "1"
+                },
+                "Version": "5.0"
+              }
+            ],
+            "Version": "1.0"
+          },
+          {
+            "Name": "SENDIG-DART",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Cited_Guidance": "AGETXT is number-number",
+                    "Document": "SENDIG v3.1",
+                    "Item": "AGETXT CDISC Notes",
+                    "Section": "5.1.1"
+                  }
+                ],
+                "Origin": "SEND Conformance Rules",
+                "Rule_Identifier": {
+                  "Id": "SEND102",
+                  "Version": "1"
+                },
+                "Version": "5.0"
+              }
+            ],
+            "Version": "1.1"
+          },
+          {
+            "Name": "SENDIG-DART",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Cited_Guidance": "AGETXT is number-number",
+                    "Document": "SENDIG v3.1.1",
+                    "Item": "AGETXT CDISC Notes",
+                    "Section": "5.1.1"
+                  }
+                ],
+                "Origin": "SEND Conformance Rules",
+                "Rule_Identifier": {
+                  "Id": "SEND102",
+                  "Version": "1"
+                },
+                "Version": "5.0"
+              }
+            ],
+            "Version": "1.2"
+          },
+          {
+            "Name": "SDTMIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Cited_Guidance": "Following SDTM-specified controlled terminology and format guidelines for variables, when provided",
+                    "Document": "IG v3.2",
+                    "Section": "3.2.2"
+                  }
+                ],
+                "Origin": "SDTM and SDTMIG Conformance Rules",
+                "Rule_Identifier": {
+                  "Id": "CG0011",
+                  "Version": "1"
+                },
+                "Version": "2.0"
+              }
+            ],
+            "Version": "3.2"
+          },
+          {
+            "Name": "SDTMIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Cited_Guidance": "Following SDTM-specified controlled terminology and format guidelines for variables, when provided",
+                    "Document": "IG v3.3",
+                    "Section": "3.2.2"
+                  }
+                ],
+                "Origin": "SDTM and SDTMIG Conformance Rules",
+                "Rule_Identifier": {
+                  "Id": "CG0011",
+                  "Version": "1"
+                },
+                "Version": "2.0"
+              }
+            ],
+            "Version": "3.3"
+          },
+          {
+            "Name": "SDTMIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Cited_Guidance": "Following SDTM-specified controlled terminology and format guidelines for variables, when provided",
+                    "Document": "IG v3.4",
+                    "Section": "3.2.2"
+                  }
+                ],
+                "Origin": "SDTM and SDTMIG Conformance Rules",
+                "Rule_Identifier": {
+                  "Id": "CG0011",
+                  "Version": "1"
+                },
+                "Version": "2.0"
+              }
+            ],
+            "Version": "3.4"
+          }
+        ]
+      },
+      {
+        "Organization": "FDA",
+        "Standards": [
+          {
+            "Name": "SENDIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Cited_Guidance": "If an age range is supplied, it should be in 'number-number' format.",
+                    "Document": "FDA",
+                    "Section": "FDAB053"
+                  }
+                ],
+                "Origin": "FDA Business Rules",
+                "Rule_Identifier": {
+                  "Id": "FB5301",
+                  "Version": "1"
+                },
+                "Version": "1.5"
+              }
+            ],
+            "Version": "3.1"
+          },
+          {
+            "Name": "SENDIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Cited_Guidance": "If an age range is supplied, it should be in 'number-number' format.",
+                    "Document": "FDA",
+                    "Section": "FDAB053"
+                  }
+                ],
+                "Origin": "FDA Business Rules",
+                "Rule_Identifier": {
+                  "Id": "FB5301",
+                  "Version": "1"
+                },
+                "Version": "1.5"
+              }
+            ],
+            "Version": "3.1.1"
+          },
+          {
+            "Name": "SENDIG-GENETOX",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Cited_Guidance": "If an age range is supplied, it should be in 'number-number' format.",
+                    "Document": "FDA",
+                    "Section": "FDAB053"
+                  }
+                ],
+                "Origin": "FDA Business Rules",
+                "Rule_Identifier": {
+                  "Id": "FB5301",
+                  "Version": "1"
+                },
+                "Version": "1.5"
+              }
+            ],
+            "Version": "1.0"
+          },
+          {
+            "Name": "SENDIG-DART",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Cited_Guidance": "If an age range is supplied, it should be in 'number-number' format.",
+                    "Document": "FDA",
+                    "Section": "FDAB053"
+                  }
+                ],
+                "Origin": "FDA Business Rules",
+                "Rule_Identifier": {
+                  "Id": "FB5301",
+                  "Version": "1"
+                },
+                "Version": "1.5"
+              }
+            ],
+            "Version": "1.1"
+          },
+          {
+            "Name": "SENDIG-DART",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Cited_Guidance": "If an age range is supplied, it should be in 'number-number' format.",
+                    "Document": "FDA",
+                    "Section": "FDAB053"
+                  }
+                ],
+                "Origin": "FDA Business Rules",
+                "Rule_Identifier": {
+                  "Id": "FB5301",
+                  "Version": "1"
+                },
+                "Version": "1.5"
+              }
+            ],
+            "Version": "1.2"
+          },
+          {
+            "Name": "SENDIG-AR",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Cited_Guidance": "If an age range is supplied, it should be in 'number-number' format.",
+                    "Document": "FDA",
+                    "Section": "FDAB053"
+                  }
+                ],
+                "Origin": "FDA Business Rules",
+                "Rule_Identifier": {
+                  "Id": "FB5301",
+                  "Version": "1"
+                },
+                "Version": "1.5"
+              }
+            ],
+            "Version": "1.0"
+          }
+        ]
+      }
+    ],
+    "Check": {
+      "all": [
+        {
+          "name": "AGETXT",
+          "operator": "non_empty"
+        },
+        {
+          "name": "AGETXT",
+          "operator": "not_matches_regex",
+          "value": "^[0-9]+-[0-9]+$"
+        }
+      ]
+    },
+    "Core": {
+      "Id": "CORE-002119",
+      "Status": "Published",
+      "Version": "1"
+    },
+    "Description": "Raise an error when Age Range (AGETXT) is not populated with a number-number format when age range is supplied. when age range is supplied.",
+    "Executability": "Fully Executable",
+    "Outcome": {
+      "Message": "AGETXT is not in number - number format.",
+      "Output_Variables": [
+        "AGETXT"
       ]
     },
     "Rule_Type": "Record Data",
@@ -168520,6 +170490,1182 @@
       "Domains": {
         "Include": [
           "DM"
+        ]
+      }
+    },
+    "Sensitivity": "Record"
+  },
+  "CORE-002120": {
+    "Authorities": [
+      {
+        "Organization": "CDISC",
+        "Standards": [
+          {
+            "Name": "SDTMIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Cited_Guidance": "Logical Observation Identifiers Names and Codes (LOINC) code for the topic variable such as a lab test.",
+                    "Document": "Model v1.4",
+                    "Section": "2.2.3"
+                  }
+                ],
+                "Origin": "SDTM and SDTMIG Conformance Rules",
+                "Rule_Identifier": {
+                  "Id": "CG0400",
+                  "Version": "1"
+                },
+                "Version": "2.0"
+              }
+            ],
+            "Version": "3.2"
+          },
+          {
+            "Name": "SDTMIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Cited_Guidance": "Logical Observation Identifiers Names and Codes (LOINC) code for the topic variable such as a lab test.",
+                    "Document": "Model v1.7",
+                    "Section": "2.2.3"
+                  }
+                ],
+                "Origin": "SDTM and SDTMIG Conformance Rules",
+                "Rule_Identifier": {
+                  "Id": "CG0400",
+                  "Version": "1"
+                },
+                "Version": "2.0"
+              }
+            ],
+            "Version": "3.3"
+          },
+          {
+            "Name": "SDTMIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Cited_Guidance": "A short sequence of characters used to represent laboratory and clinical tests within the Logical Observation Identifiers Names and Codes (LOINC) database.",
+                    "Document": "Model v2.0",
+                    "Item": "--LOINC",
+                    "Section": "Findings"
+                  }
+                ],
+                "Origin": "SDTM and SDTMIG Conformance Rules",
+                "Rule_Identifier": {
+                  "Id": "CG0400",
+                  "Version": "1"
+                },
+                "Version": "2.0"
+              }
+            ],
+            "Version": "3.4"
+          }
+        ]
+      }
+    ],
+    "Check": {
+      "any": [
+        {
+          "name": "$define_loinc_version",
+          "operator": "greater_than",
+          "value": "$dict_loinc_version"
+        },
+        {
+          "filter_attribute": "status",
+          "filter_value": "DEPRECATED",
+          "name": "--LOINC",
+          "operator": "is_valid_loinc_code_reference"
+        },
+        {
+          "filter_attribute": "version",
+          "filter_value": "$define_loinc_version",
+          "name": "--LOINC",
+          "operator": "is_not_valid_loinc_code_reference"
+        }
+      ]
+    },
+    "Core": {
+      "Id": "CORE-002120",
+      "Status": "Published",
+      "Version": "1"
+    },
+    "Description": "Raise error when --LOINC is not a valid code in the version of the LOINC dictionary specified in the define.xml document.",
+    "Executability": "Fully Executable",
+    "Operations": [
+      {
+        "external_dictionary_type": "loinc",
+        "id": "$define_loinc_version",
+        "operator": "get_define_external_dictionary_version"
+      },
+      {
+        "external_dictionary_type": "loinc",
+        "id": "$dict_loinc_version",
+        "operator": "get_external_dictionary_version"
+      }
+    ],
+    "Outcome": {
+      "Message": "--LOINC is not a valid code in the version of the LOINC dictionary specified in the define.xml document.",
+      "Output_Variables": [
+        "--LOINC",
+        "--TESTCD",
+        "$define_loinc_version"
+      ]
+    },
+    "Rule_Type": "Record Data",
+    "Scope": {
+      "Classes": {
+        "Include": [
+          "FINDINGS"
+        ]
+      },
+      "Domains": {
+        "Include": [
+          "ALL"
+        ]
+      }
+    },
+    "Sensitivity": "Record"
+  },
+  "CORE-002121": {
+    "Authorities": [
+      {
+        "Organization": "CDISC",
+        "Standards": [
+          {
+            "Name": "SDTMIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Cited_Guidance": "Following SDTM-specified controlled terminology and format guidelines for variables, when provided",
+                    "Document": "IG v3.2",
+                    "Section": "3.2.2"
+                  }
+                ],
+                "Origin": "SDTM and SDTMIG Conformance Rules",
+                "Rule_Identifier": {
+                  "Id": "CG0011",
+                  "Version": "1"
+                },
+                "Version": "2.0"
+              }
+            ],
+            "Version": "3.2"
+          },
+          {
+            "Name": "SDTMIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Cited_Guidance": "Following SDTM-specified controlled terminology and format guidelines for variables, when provided",
+                    "Document": "IG v3.3",
+                    "Section": "3.2.2"
+                  }
+                ],
+                "Origin": "SDTM and SDTMIG Conformance Rules",
+                "Rule_Identifier": {
+                  "Id": "CG0011",
+                  "Version": "1"
+                },
+                "Version": "2.0"
+              }
+            ],
+            "Version": "3.3"
+          },
+          {
+            "Name": "SDTMIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Cited_Guidance": "Following SDTM-specified controlled terminology and format guidelines for variables, when provided",
+                    "Document": "IG v3.4",
+                    "Section": "3.2.2"
+                  }
+                ],
+                "Origin": "SDTM and SDTMIG Conformance Rules",
+                "Rule_Identifier": {
+                  "Id": "CG0011",
+                  "Version": "1"
+                },
+                "Version": "2.0"
+              }
+            ],
+            "Version": "3.4"
+          }
+        ]
+      }
+    ],
+    "Check": {
+      "all": [
+        {
+          "any": [
+            {
+              "name": "variable_name",
+              "operator": "ends_with",
+              "value": "DTC",
+              "value_is_literal": true
+            },
+            {
+              "name": "variable_name",
+              "operator": "ends_with",
+              "value": "STDTC",
+              "value_is_literal": true
+            },
+            {
+              "name": "variable_name",
+              "operator": "ends_with",
+              "value": "ENDTC",
+              "value_is_literal": true
+            },
+            {
+              "name": "variable_name",
+              "operator": "ends_with",
+              "value": "RFTDTC",
+              "value_is_literal": true
+            },
+            {
+              "name": "variable_name",
+              "operator": "is_contained_by",
+              "value": [
+                "MIDSDTC",
+                "RFSTDTC",
+                "RFENDTC",
+                "RFXSTDTC",
+                "RFXENDTC",
+                "RFCSTDTC",
+                "RFCENDTC",
+                "RFICDTC",
+                "RFPENDTC",
+                "DTHDTC",
+                "BRTHDTC",
+                "DMDTC"
+              ],
+              "value_is_literal": true
+            }
+          ]
+        },
+        {
+          "name": "variable_value",
+          "operator": "non_empty"
+        },
+        {
+          "name": "variable_value",
+          "operator": "invalid_date"
+        },
+        {
+          "name": "variable_value",
+          "operator": "invalid_date_interval"
+        }
+      ]
+    },
+    "Core": {
+      "Id": "CORE-002121",
+      "Status": "Published",
+      "Version": "1"
+    },
+    "Description": "Part D - Raise an error when any of the values for --DTC, --STDTC, --ENDTC, --RFTDTC, MIDSDTC, RFSTDTC, RFENDTC, RFXSTDTC, RFXENDTC, RFCSTDTC, RFCENDTC, RFICDTC, RFPENDTC, DTHDTC, BRTHDTC, DMDTC is not ISO 8601 datetime or interval.",
+    "Executability": "Fully Executable",
+    "Outcome": {
+      "Message": "Value must be a valid ISO 8601 datetime or interval.",
+      "Output_Variables": [
+        "variable_name",
+        "variable_value"
+      ]
+    },
+    "Rule_Type": "Value Check with Dataset Metadata",
+    "Scope": {
+      "Classes": {
+        "Include": [
+          "ALL"
+        ]
+      },
+      "Domains": {
+        "Include": [
+          "ALL"
+        ]
+      }
+    },
+    "Sensitivity": "Record"
+  },
+  "CORE-002122": {
+    "Authorities": [
+      {
+        "Organization": "CDISC",
+        "Standards": [
+          {
+            "Name": "SDTMIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Cited_Guidance": "When collected data fit a Qualifier variable listed in SDTM: Sections 3.1.1, 3.1.2, or 3.1.3, and are represented in the Findings About domain, then the name of the variable should be used as the value of FATESTCD.",
+                    "Document": "IG v3.4",
+                    "Section": "6.4.3"
+                  }
+                ],
+                "Origin": "SDTM and SDTMIG Conformance Rules",
+                "Rule_Identifier": {
+                  "Id": "CG0173",
+                  "Version": "1"
+                },
+                "Version": "2.0"
+              }
+            ],
+            "Version": "3.4"
+          },
+          {
+            "Name": "SDTMIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Cited_Guidance": "When collected data fit a Qualifier variable listed in SDTM: Sections 2.2.1, 2.2.2, or 2.2.3, and are represented in the Findings About domain, then the name of the variable should be used as the value of FATESTCD.",
+                    "Document": "IG v3.2",
+                    "Section": "6.4.3"
+                  }
+                ],
+                "Origin": "SDTM and SDTMIG Conformance Rules",
+                "Rule_Identifier": {
+                  "Id": "CG0173",
+                  "Version": "1"
+                },
+                "Version": "2.0"
+              }
+            ],
+            "Version": "3.2"
+          },
+          {
+            "Name": "SDTMIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Cited_Guidance": "When collected data fit a Qualifier variable listed in SDTM: Sections 2.2.1, 2.2.2, or 2.2.3, and are represented in the Findings About domain, then the name of the variable should be used as the value of FATESTCD.",
+                    "Document": "IG v3.3",
+                    "Section": "6.4.3"
+                  }
+                ],
+                "Origin": "SDTM and SDTMIG Conformance Rules",
+                "Rule_Identifier": {
+                  "Id": "CG0173",
+                  "Version": "1"
+                },
+                "Version": "2.0"
+              }
+            ],
+            "Version": "3.3"
+          }
+        ]
+      }
+    ],
+    "Check": {
+      "all": [
+        {
+          "any": [
+            {
+              "name": "$fatest_lib_roles",
+              "operator": "contains",
+              "value": "Record Qualifier",
+              "value_is_literal": true
+            },
+            {
+              "name": "$fatest_lib_roles",
+              "operator": "contains",
+              "value": "Variable Qualifier",
+              "value_is_literal": true
+            },
+            {
+              "name": "$fatest_lib_roles",
+              "operator": "contains",
+              "value": "Result Qualifier",
+              "value_is_literal": true
+            },
+            {
+              "name": "$fatest_lib_roles",
+              "operator": "contains",
+              "value": "Grouping Qualifier",
+              "value_is_literal": true
+            },
+            {
+              "name": "$fatest_lib_roles",
+              "operator": "contains",
+              "value": "Synonym Qualifier",
+              "value_is_literal": true
+            }
+          ]
+        },
+        {
+          "name": "FATESTCD",
+          "operator": "is_not_substring_of",
+          "value": "$fatest_lib_names"
+        }
+      ]
+    },
+    "Core": {
+      "Id": "CORE-002122",
+      "Status": "Published",
+      "Version": "1"
+    },
+    "Description": "Raise an error when collected data fits a Qualifier variable listed in specified SDTM Sections and are represented in the Findings About domain, and the name of the variable is used as FATEST.",
+    "Executability": "Partially Executable - Possible Underreporting",
+    "Operations": [
+      {
+        "attribute_name": "role",
+        "id": "$fatest_lib_roles",
+        "name": "FATEST",
+        "operator": "label_referenced_variable_metadata"
+      },
+      {
+        "attribute_name": "name",
+        "id": "$fatest_lib_names",
+        "name": "FATEST",
+        "operator": "label_referenced_variable_metadata"
+      }
+    ],
+    "Outcome": {
+      "Message": "FATEST matches a qualifier variable label defined in the SDTM model, but FATESTCD does not match the corresponding variable name.",
+      "Output_Variables": [
+        "FATEST",
+        "FATESTCD",
+        "$fatest_lib_names",
+        "$fatest_lib_roles"
+      ]
+    },
+    "Rule_Type": "Record Data",
+    "Scope": {
+      "Classes": {
+        "Include": [
+          "FINDINGS ABOUT"
+        ]
+      },
+      "Domains": {
+        "Include": [
+          "FA"
+        ]
+      }
+    },
+    "Sensitivity": "Record"
+  },
+  "CORE-002123": {
+    "Authorities": [
+      {
+        "Organization": "CDISC",
+        "Standards": [
+          {
+            "Name": "SDTMIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Cited_Guidance": "Following SDTM-specified controlled terminology and format guidelines for variables, when provided",
+                    "Document": "IG v3.2",
+                    "Section": "3.2.2"
+                  }
+                ],
+                "Origin": "SDTM and SDTMIG Conformance Rules",
+                "Rule_Identifier": {
+                  "Id": "CG0011",
+                  "Version": "1"
+                },
+                "Version": "2.0"
+              }
+            ],
+            "Version": "3.2"
+          },
+          {
+            "Name": "SDTMIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Cited_Guidance": "Following SDTM-specified controlled terminology and format guidelines for variables, when provided",
+                    "Document": "IG v3.3",
+                    "Section": "3.2.2"
+                  }
+                ],
+                "Origin": "SDTM and SDTMIG Conformance Rules",
+                "Rule_Identifier": {
+                  "Id": "CG0011",
+                  "Version": "1"
+                },
+                "Version": "2.0"
+              }
+            ],
+            "Version": "3.3"
+          },
+          {
+            "Name": "SDTMIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Cited_Guidance": "Following SDTM-specified controlled terminology and format guidelines for variables, when provided",
+                    "Document": "IG v3.4",
+                    "Section": "3.2.2"
+                  }
+                ],
+                "Origin": "SDTM and SDTMIG Conformance Rules",
+                "Rule_Identifier": {
+                  "Id": "CG0011",
+                  "Version": "1"
+                },
+                "Version": "2.0"
+              }
+            ],
+            "Version": "3.4"
+          }
+        ]
+      },
+      {
+        "Organization": "FDA",
+        "Standards": [
+          {
+            "Name": "SDTMIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Cited_Guidance": "Controlled terms should use the exact term (case, spelling, and punctuation) used by the terminology maintenance organizations (e.g., MedDRA, CDISC controlled terminology).",
+                    "Document": "FDA",
+                    "Section": "FDAB017"
+                  }
+                ],
+                "Origin": "FDA Business Rules",
+                "Rule_Identifier": {
+                  "Id": "FB1701",
+                  "Version": "1"
+                },
+                "Version": "1.5"
+              }
+            ],
+            "Version": "3.2"
+          },
+          {
+            "Name": "SDTMIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Cited_Guidance": "Controlled terms should use the exact term (case, spelling, and punctuation) used by the terminology maintenance organizations (e.g., MedDRA, CDISC controlled terminology).",
+                    "Document": "FDA",
+                    "Section": "FDAB017"
+                  }
+                ],
+                "Origin": "FDA Business Rules",
+                "Rule_Identifier": {
+                  "Id": "FB1701",
+                  "Version": "1"
+                },
+                "Version": "1.5"
+              }
+            ],
+            "Version": "3.3"
+          },
+          {
+            "Name": "SDTMIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Cited_Guidance": "Controlled terms should use the exact term (case, spelling, and punctuation) used by the terminology maintenance organizations (e.g., MedDRA, CDISC controlled terminology).",
+                    "Document": "FDA",
+                    "Section": "FDAB017"
+                  }
+                ],
+                "Origin": "FDA Business Rules",
+                "Rule_Identifier": {
+                  "Id": "FB1701",
+                  "Version": "1"
+                },
+                "Version": "1.5"
+              }
+            ],
+            "Version": "3.4"
+          },
+          {
+            "Name": "SENDIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Cited_Guidance": "Controlled terms should use the exact term (case, spelling, and punctuation) used by the terminology maintenance organizations (e.g., MedDRA, CDISC controlled terminology).",
+                    "Document": "FDA",
+                    "Section": "FDAB017"
+                  }
+                ],
+                "Origin": "FDA Business Rules",
+                "Rule_Identifier": {
+                  "Id": "FB1701",
+                  "Version": "1"
+                },
+                "Version": "1.5"
+              }
+            ],
+            "Version": "3.0"
+          },
+          {
+            "Name": "SENDIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Cited_Guidance": "Controlled terms should use the exact term (case, spelling, and punctuation) used by the terminology maintenance organizations (e.g., MedDRA, CDISC controlled terminology).",
+                    "Document": "FDA",
+                    "Section": "FDAB017"
+                  }
+                ],
+                "Origin": "FDA Business Rules",
+                "Rule_Identifier": {
+                  "Id": "FB1701",
+                  "Version": "1"
+                },
+                "Version": "1.5"
+              }
+            ],
+            "Version": "3.1"
+          },
+          {
+            "Name": "SENDIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Cited_Guidance": "Controlled terms should use the exact term (case, spelling, and punctuation) used by the terminology maintenance organizations (e.g., MedDRA, CDISC controlled terminology).",
+                    "Document": "FDA",
+                    "Section": "FDAB017"
+                  }
+                ],
+                "Origin": "FDA Business Rules",
+                "Rule_Identifier": {
+                  "Id": "FB1701",
+                  "Version": "1"
+                },
+                "Version": "1.5"
+              }
+            ],
+            "Version": "3.1.1"
+          },
+          {
+            "Name": "SENDIG-GENETOX",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Cited_Guidance": "Controlled terms should use the exact term (case, spelling, and punctuation) used by the terminology maintenance organizations (e.g., MedDRA, CDISC controlled terminology).",
+                    "Document": "FDA",
+                    "Section": "FDAB017"
+                  }
+                ],
+                "Origin": "FDA Business Rules",
+                "Rule_Identifier": {
+                  "Id": "FB1701",
+                  "Version": "1"
+                },
+                "Version": "1.5"
+              }
+            ],
+            "Version": "1.0"
+          },
+          {
+            "Name": "SENDIG-DART",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Cited_Guidance": "Controlled terms should use the exact term (case, spelling, and punctuation) used by the terminology maintenance organizations (e.g., MedDRA, CDISC controlled terminology).",
+                    "Document": "FDA",
+                    "Section": "FDAB017"
+                  }
+                ],
+                "Origin": "FDA Business Rules",
+                "Rule_Identifier": {
+                  "Id": "FB1701",
+                  "Version": "1"
+                },
+                "Version": "1.5"
+              }
+            ],
+            "Version": "1.1"
+          },
+          {
+            "Name": "SENDIG-DART",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Cited_Guidance": "Controlled terms should use the exact term (case, spelling, and punctuation) used by the terminology maintenance organizations (e.g., MedDRA, CDISC controlled terminology).",
+                    "Document": "FDA",
+                    "Section": "FDAB017"
+                  }
+                ],
+                "Origin": "FDA Business Rules",
+                "Rule_Identifier": {
+                  "Id": "FB1701",
+                  "Version": "1"
+                },
+                "Version": "1.5"
+              }
+            ],
+            "Version": "1.2"
+          },
+          {
+            "Name": "SENDIG-AR",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Cited_Guidance": "Controlled terms should use the exact term (case, spelling, and punctuation) used by the terminology maintenance organizations (e.g., MedDRA, CDISC controlled terminology).",
+                    "Document": "FDA",
+                    "Section": "FDAB017"
+                  }
+                ],
+                "Origin": "FDA Business Rules",
+                "Rule_Identifier": {
+                  "Id": "FB1701",
+                  "Version": "1"
+                },
+                "Version": "1.5"
+              }
+            ],
+            "Version": "1.0"
+          }
+        ]
+      }
+    ],
+    "Check": {
+      "all": [
+        {
+          "name": "library_variable_ccode_values",
+          "operator": "non_empty"
+        },
+        {
+          "name": "library_variable_ccode",
+          "operator": "is_contained_by",
+          "value": "$non_extensible_codelist_codes"
+        },
+        {
+          "name": "variable_value",
+          "operator": "non_empty"
+        },
+        {
+          "name": "variable_value",
+          "operator": "is_not_substring_of",
+          "value": "library_variable_ccode_values"
+        }
+      ]
+    },
+    "Core": {
+      "Id": "CORE-002123",
+      "Status": "Published",
+      "Version": "1"
+    },
+    "Description": "Raise an error when CDISC Controlled Terminology specifies the codelist as non-extensible and a term not included in the codelist is used.",
+    "Executability": "Fully Executable",
+    "Operations": [
+      {
+        "ct_attribute": "Codelist Code",
+        "ct_conditions": [
+          {
+            "Extensible": "No"
+          },
+          {
+            "Standard_Type": "sdtm"
+          }
+        ],
+        "id": "$non_extensible_codelist_codes",
+        "name": "$non_extensible_codelist_codes",
+        "operator": "get_codelist_attributes"
+      }
+    ],
+    "Outcome": {
+      "Message": "A new term has been added to a non-extensible code list.",
+      "Output_Variables": [
+        "variable_name",
+        "variable_value",
+        "library_variable_ccode",
+        "library_variable_codelist_value"
+      ]
+    },
+    "Rule_Type": "Value Check against Library Metadata",
+    "Scope": {
+      "Classes": {
+        "Include": [
+          "ALL"
+        ]
+      },
+      "Domains": {
+        "Include": [
+          "ALL"
+        ]
+      }
+    },
+    "Sensitivity": "Record"
+  },
+  "CORE-002124": {
+    "Authorities": [
+      {
+        "Organization": "CDISC",
+        "Standards": [
+          {
+            "Name": "SDTMIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Cited_Guidance": "--EVAL and --EVALID must not be used to model QRS data in SDTM.",
+                    "Document": "IG v3.4",
+                    "Item": "Assumption 8",
+                    "Section": "6.3.9.1"
+                  },
+                  {
+                    "Cited_Guidance": "--EVAL and --EVALID must not be used to model QRS data in SDTM.",
+                    "Document": "IG v3.4",
+                    "Item": "Assumption 8",
+                    "Section": "6.3.9.2"
+                  },
+                  {
+                    "Cited_Guidance": "--EVAL and --EVALID must not be used to model QRS data in SDTM.",
+                    "Document": "IG v3.4",
+                    "Item": "Assumption 8",
+                    "Section": "6.3.9.3.2"
+                  }
+                ],
+                "Origin": "SDTM and SDTMIG Conformance Rules",
+                "Rule_Identifier": {
+                  "Id": "CG0659",
+                  "Version": "1"
+                },
+                "Version": "2.0"
+              }
+            ],
+            "Version": "3.4"
+          }
+        ]
+      }
+    ],
+    "Check": {
+      "all": [
+        {
+          "name": "$rscat_ccode",
+          "operator": "equal_to",
+          "value": "C118971",
+          "value_is_literal": true
+        },
+        {
+          "name": "RSEVAL",
+          "operator": "exists"
+        }
+      ]
+    },
+    "Core": {
+      "Id": "CORE-002124",
+      "Status": "Published",
+      "Version": "1"
+    },
+    "Description": "Raise an error when RSCAT is only populated with values from the Clinical Classification Use Case as per the define.xml document, but RSEVAL is present in the RS dataset.",
+    "Executability": "Fully Executable",
+    "Operations": [
+      {
+        "attribute_name": "define_variable_ccode",
+        "id": "$rscat_ccode",
+        "name": "RSCAT",
+        "operator": "define_variable_metadata"
+      }
+    ],
+    "Outcome": {
+      "Message": "RSEVAL must not be present when RSCAT is only populated with values from the Clinical Classification Use Case.",
+      "Output_Variables": [
+        "RSEVAL"
+      ]
+    },
+    "Rule_Type": "Record Data",
+    "Scope": {
+      "Classes": {
+        "Include": [
+          "FINDINGS"
+        ]
+      },
+      "Domains": {
+        "Include": [
+          "RS"
+        ]
+      }
+    },
+    "Sensitivity": "Dataset"
+  },
+  "CORE-002125": {
+    "Authorities": [
+      {
+        "Organization": "CDISC",
+        "Standards": [
+          {
+            "Name": "SDTMIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Cited_Guidance": "--EVAL and --EVALID must not be used to model QRS data in SDTM.",
+                    "Document": "IG v3.4",
+                    "Item": "Assumption 8",
+                    "Section": "6.3.9.1"
+                  },
+                  {
+                    "Cited_Guidance": "--EVAL and --EVALID must not be used to model QRS data in SDTM.",
+                    "Document": "IG v3.4",
+                    "Item": "Assumption 8",
+                    "Section": "6.3.9.2"
+                  },
+                  {
+                    "Cited_Guidance": "--EVAL and --EVALID must not be used to model QRS data in SDTM.",
+                    "Document": "IG v3.4",
+                    "Item": "Assumption 8",
+                    "Section": "6.3.9.3.2"
+                  }
+                ],
+                "Origin": "SDTM and SDTMIG Conformance Rules",
+                "Rule_Identifier": {
+                  "Id": "CG0660",
+                  "Version": "1"
+                },
+                "Version": "2.0"
+              }
+            ],
+            "Version": "3.4"
+          }
+        ]
+      }
+    ],
+    "Check": {
+      "all": [
+        {
+          "name": "$rscat_ccode",
+          "operator": "equal_to",
+          "value": "C118971",
+          "value_is_literal": true
+        },
+        {
+          "name": "RSEVALID",
+          "operator": "exists"
+        }
+      ]
+    },
+    "Core": {
+      "Id": "CORE-002125",
+      "Status": "Published",
+      "Version": "1"
+    },
+    "Description": "Raise an error when RSCAT is only populated with values from the Clinical Classification Use Case as per the define.xml document, but RSEVALID is present in the RS dataset.",
+    "Executability": "Fully Executable",
+    "Operations": [
+      {
+        "attribute_name": "define_variable_ccode",
+        "id": "$rscat_ccode",
+        "name": "RSCAT",
+        "operator": "define_variable_metadata"
+      }
+    ],
+    "Outcome": {
+      "Message": "RSEVALID must not be present when RSCAT is only populated with values from the Clinical Classification Use Case.",
+      "Output_Variables": [
+        "RSEVALID"
+      ]
+    },
+    "Rule_Type": "Record Data",
+    "Scope": {
+      "Classes": {
+        "Include": [
+          "FINDINGS"
+        ]
+      },
+      "Domains": {
+        "Include": [
+          "RS"
+        ]
+      }
+    },
+    "Sensitivity": "Dataset"
+  },
+  "CORE-002126": {
+    "Authorities": [
+      {
+        "Organization": "CDISC",
+        "Standards": [
+          {
+            "Name": "SDTMIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Cited_Guidance": "--EVAL and --EVALID must not be used to model QRS data in SDTM.",
+                    "Document": "IG v3.4",
+                    "Item": "Assumption 8",
+                    "Section": "6.3.9.1"
+                  },
+                  {
+                    "Cited_Guidance": "--EVAL and --EVALID must not be used to model QRS data in SDTM.",
+                    "Document": "IG v3.4",
+                    "Item": "Assumption 8",
+                    "Section": "6.3.9.2"
+                  },
+                  {
+                    "Cited_Guidance": "--EVAL and --EVALID must not be used to model QRS data in SDTM.",
+                    "Document": "IG v3.4",
+                    "Item": "Assumption 8",
+                    "Section": "6.3.9.3.2"
+                  }
+                ],
+                "Origin": "SDTM and SDTMIG Conformance Rules",
+                "Rule_Identifier": {
+                  "Id": "CG0659",
+                  "Version": "1"
+                },
+                "Version": "2.0"
+              }
+            ],
+            "Version": "3.4"
+          }
+        ]
+      }
+    ],
+    "Check": {
+      "all": [
+        {
+          "name": "variable_name",
+          "operator": "equal_to",
+          "value": "RSCAT",
+          "value_is_literal": true
+        },
+        {
+          "name": "define_vlm_ccode",
+          "operator": "equal_to",
+          "value": "C118971",
+          "value_is_literal": true
+        },
+        {
+          "name": "RSEVAL",
+          "operator": "non_empty"
+        }
+      ]
+    },
+    "Core": {
+      "Id": "CORE-002126",
+      "Status": "Published",
+      "Version": "1"
+    },
+    "Description": "Raise an error when some records in the RS dataset have RSCAT populated with values from the Clinical Classification Use Case as per the define.xml document but RSEVAL for those RSCAT records is populated.",
+    "Executability": "Fully Executable",
+    "Outcome": {
+      "Message": "RSEVAL must not be populated for records where RSCAT is populated with values from the Clinical Classification Use Case.",
+      "Output_Variables": [
+        "RSEVAL"
+      ]
+    },
+    "Rule_Type": "Value Check against Define XML VLM",
+    "Scope": {
+      "Classes": {
+        "Include": [
+          "FINDINGS"
+        ]
+      },
+      "Domains": {
+        "Include": [
+          "RS"
+        ]
+      }
+    },
+    "Sensitivity": "Record"
+  },
+  "CORE-002127": {
+    "Authorities": [
+      {
+        "Organization": "CDISC",
+        "Standards": [
+          {
+            "Name": "SDTMIG",
+            "References": [
+              {
+                "Citations": [
+                  {
+                    "Cited_Guidance": "--EVAL and --EVALID must not be used to model QRS data in SDTM.",
+                    "Document": "IG v3.4",
+                    "Item": "Assumption 8",
+                    "Section": "6.3.9.1"
+                  },
+                  {
+                    "Cited_Guidance": "--EVAL and --EVALID must not be used to model QRS data in SDTM.",
+                    "Document": "IG v3.4",
+                    "Item": "Assumption 8",
+                    "Section": "6.3.9.2"
+                  },
+                  {
+                    "Cited_Guidance": "--EVAL and --EVALID must not be used to model QRS data in SDTM.",
+                    "Document": "IG v3.4",
+                    "Item": "Assumption 8",
+                    "Section": "6.3.9.3.2"
+                  }
+                ],
+                "Origin": "SDTM and SDTMIG Conformance Rules",
+                "Rule_Identifier": {
+                  "Id": "CG0660",
+                  "Version": "1"
+                },
+                "Version": "2.0"
+              }
+            ],
+            "Version": "3.4"
+          }
+        ]
+      }
+    ],
+    "Check": {
+      "all": [
+        {
+          "name": "variable_name",
+          "operator": "equal_to",
+          "value": "RSCAT",
+          "value_is_literal": true
+        },
+        {
+          "name": "define_vlm_ccode",
+          "operator": "equal_to",
+          "value": "C118971",
+          "value_is_literal": true
+        },
+        {
+          "name": "RSEVALID",
+          "operator": "non_empty"
+        }
+      ]
+    },
+    "Core": {
+      "Id": "CORE-002127",
+      "Status": "Published",
+      "Version": "1"
+    },
+    "Description": "Raise an error when some records in the RS dataset have RSCAT populated with values from the Clinical Classification Use Case as per the define.xml document but RSEVALID for those RSCAT records is populated.",
+    "Executability": "Fully Executable",
+    "Outcome": {
+      "Message": "RSEVALID must not be populated for records where RSCAT is populated with values from the Clinical Classification Use Case.",
+      "Output_Variables": [
+        "RSEVALID"
+      ]
+    },
+    "Rule_Type": "Value Check against Define XML VLM",
+    "Scope": {
+      "Classes": {
+        "Include": [
+          "FINDINGS"
+        ]
+      },
+      "Domains": {
+        "Include": [
+          "RS"
         ]
       }
     },
