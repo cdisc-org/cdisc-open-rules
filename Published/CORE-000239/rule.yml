@@ -72,7 +72,7 @@ Check:
       operator: is_contained_by
       value: $ex_usubjid
     - name: RFXSTDTC
-      operator: not_equal_to
+      operator: date_not_equal_to
       value: $min_ex_exstdtc
 Core:
   Id: CORE-000239

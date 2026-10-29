@@ -71,12 +71,36 @@ Check:
     - name: USUBJID
       operator: is_contained_by
       value: $ex_usubjid
-    - name: RFXENDTC
-      operator: not_equal_to
-      value: $max_ex_exstdtc
-    - name: RFXENDTC
-      operator: not_equal_to
-      value: $max_ex_exendtc
+    - any:
+        - all:
+            - name: RFXENDTC
+              operator: non_empty
+            - any:
+                - name: RFXENDTC
+                  operator: date_not_equal_to
+                  value: $max_ex_exstdtc
+                - name: $max_ex_exstdtc
+                  operator: empty
+            - any:
+                - name: RFXENDTC
+                  operator: date_not_equal_to
+                  value: $max_ex_exendtc
+                - name: $max_ex_exendtc
+                  operator: empty
+        - all:
+            - name: RFXENDTC
+              operator: empty
+            - any:
+                - name: $max_ex_exstdtc
+                  operator: non_empty
+                - name: $max_ex_exendtc
+                  operator: non_empty
+        - name: RFXENDTC
+          operator: date_less_than
+          value: $max_ex_exendtc
+        - name: RFXENDTC
+          operator: date_less_than
+          value: $max_ex_exstdtc
 Core:
   Id: CORE-000238
   Status: Published

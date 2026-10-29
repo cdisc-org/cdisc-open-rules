@@ -80,21 +80,30 @@ Authorities:
             Version: "1.0"
         Substandard: SDTM
         Version: "1.0"
-# Variable: RFICDTC
-# Condition: DS.DSTERM indicates informed consent obtained
-# Rule: RFICDTC = earliest DS.DSSTDTC
 Check:
   all:
     - name: DSTERM
       operator: contains
       value: INFORMED CONSENT
       value_is_literal: true
-    - name: RFICDTC
-      operator: date_not_equal_to
-      value: $min_ds_dsstdtc
-    - name: $min_ds_dsstdtc
-      operator: equal_to
-      value: DSSTDTC
+    - any:
+        - all:
+            - name: $min_ds_dsstdtc
+              operator: date_equal_to
+              value: DSSTDTC
+            - any:
+                - name: RFICDTC
+                  operator: date_not_equal_to
+                  value: $min_ds_dsstdtc
+                - name: RFICDTC
+                  operator: empty
+        - all:
+            - name: DSSTDTC
+              operator: empty
+            - name: RFICDTC
+              operator: non_empty
+            - name: $min_consent_dsstdtc
+              operator: empty
 Core:
   Id: CORE-000370
   Status: Published
@@ -111,6 +120,14 @@ Operations:
     group:
       - USUBJID
     id: $min_ds_dsstdtc
+    name: DSSTDTC
+    operator: min_date
+  - domain: DS
+    filter:
+      DSDECOD: INFORMED CONSENT OBTAINED
+    group:
+      - USUBJID
+    id: $min_consent_dsstdtc
     name: DSSTDTC
     operator: min_date
 Outcome:

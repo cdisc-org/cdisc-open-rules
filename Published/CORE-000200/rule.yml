@@ -97,6 +97,13 @@ Check:
           value_is_literal: true
         - name: --ORRES
           operator: empty
+    - all:
+        - name: --STAT
+          operator: not_exists
+        - name: --DRVFL
+          operator: not_exists
+        - name: --ORRES
+          operator: empty
 Core:
   Id: CORE-000200
   Status: Published
