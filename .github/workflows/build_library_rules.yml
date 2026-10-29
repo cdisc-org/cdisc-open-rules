@@ -40,7 +40,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.CORE_CONTRIBUTOR_TOKEN || github.token }}
           CORE_CONTRIBUTOR_REPO: cdisc-org/core-contributor
           CORE_CONTRIBUTOR_REF: main
-          CORE_CONTRIBUTOR_RULES_DIR: rules
+          CORE_CONTRIBUTOR_RULES_DIR: sdtm_rules
           OPEN_RULES_DIR: Published
           OUTPUT_PATH: Library/rule.json
           PR_BODY_PATH: ${{ runner.temp }}/pr_body.md
