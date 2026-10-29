@@ -67,22 +67,35 @@ Authorities:
         Substandard: SDTM
         Version: "1.0"
 Check:
-  any:
-    - all:
+  all:
+    - any:
         - name: RELREC.**TERM
           operator: non_empty
-        - name: FAOBJ
-          operator: not_equal_to
-          value: RELREC.**TERM
-    - all:
         - name: RELREC.**TRT
           operator: non_empty
-        - name: FAOBJ
-          operator: not_equal_to
-          value: RELREC.**TRT
-    - all:
         - name: RELREC.**DECOD
           operator: non_empty
+    - any:
+        - name: RELREC.**TERM
+          operator: not_exists
+        - name: RELREC.**TERM
+          operator: empty
+        - name: FAOBJ
+          operator: not_equal_to_case_insensitive
+          value: RELREC.**TERM
+    - any:
+        - name: RELREC.**TRT
+          operator: not_exists
+        - name: RELREC.**TRT
+          operator: empty
+        - name: FAOBJ
+          operator: not_equal_to_case_insensitive
+          value: RELREC.**TRT
+    - any:
+        - name: RELREC.**DECOD
+          operator: not_exists
+        - name: RELREC.**DECOD
+          operator: empty
         - name: FAOBJ
           operator: not_equal_to_case_insensitive
           value: RELREC.**DECOD

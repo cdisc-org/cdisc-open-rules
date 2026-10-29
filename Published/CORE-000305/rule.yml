@@ -146,8 +146,8 @@ Check:
     - name: --DUR
       operator: non_empty
     - name: --DUR
-      negative: false
-      operator: invalid_duration
+      operator: matches_regex
+      value: "-"
 Core:
   Id: CORE-000305
   Status: Published
