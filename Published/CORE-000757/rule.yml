@@ -47,8 +47,9 @@ Check:
 Core:
   Id: CORE-000757
   Status: Published
-  Version: '1'
-Description: Raise an error when interventions parent record exists and --DECOD is not populated or not present, but FAOBJ is not equal
+  Version: "1"
+Description:
+  Raise an error when interventions parent record exists and --DECOD is not populated or not present, but FAOBJ is not equal
   to --TRT.
 Executability: Fully Executable
 Match Datasets:

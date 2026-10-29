@@ -11,9 +11,9 @@ Authorities:
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB4403
-              Version: '1'
-            Version: '1.5'
-        Version: '3.2'
+              Version: "1"
+            Version: "1.5"
+        Version: "3.2"
       - Name: SDTMIG
         References:
           - Citations:
@@ -24,9 +24,9 @@ Authorities:
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB4403
-              Version: '1'
-            Version: '1.5'
-        Version: '3.3'
+              Version: "1"
+            Version: "1.5"
+        Version: "3.3"
       - Name: SDTMIG
         References:
           - Citations:
@@ -37,9 +37,9 @@ Authorities:
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB4403
-              Version: '1'
-            Version: '1.5'
-        Version: '3.4'
+              Version: "1"
+            Version: "1.5"
+        Version: "3.4"
       # REMARK: SENDIG: NOT applicable to SEND 3.0 and 3.1
       - Name: SENDIG
         References:
@@ -51,9 +51,9 @@ Authorities:
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB4403
-              Version: '1'
-            Version: '1.5'
-        Version: '3.1.1'
+              Version: "1"
+            Version: "1.5"
+        Version: "3.1.1"
       - Name: SENDIG-DART
         References:
           - Citations:
@@ -64,9 +64,9 @@ Authorities:
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB4403
-              Version: '1'
-            Version: '1.5'
-        Version: '1.1'
+              Version: "1"
+            Version: "1.5"
+        Version: "1.1"
       - Name: SENDIG-DART
         References:
           - Citations:
@@ -77,9 +77,9 @@ Authorities:
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB4403
-              Version: '1'
-            Version: '1.5'
-        Version: '1.2'
+              Version: "1"
+            Version: "1.5"
+        Version: "1.2"
       - Name: SENDIG-AR
         References:
           - Citations:
@@ -90,9 +90,9 @@ Authorities:
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB4403
-              Version: '1'
-            Version: '1.5'
-        Version: '1.0'
+              Version: "1"
+            Version: "1.5"
+        Version: "1.0"
       - Name: SENDIG-GENETOX
         References:
           - Citations:
@@ -103,23 +103,23 @@ Authorities:
             Origin: FDA Business Rules
             Rule Identifier:
               Id: FB4403
-              Version: '1'
-            Version: '1.5'
-        Version: '1.0'
+              Version: "1"
+            Version: "1.5"
+        Version: "1.0"
 Check:
   all:
     - name: --STINT
       operator: non_empty
     - any:
-      - name: --TPTREF
-        operator: empty
-      - name: --TPTREF
-        operator: not_exists
+        - name: --TPTREF
+          operator: empty
+        - name: --TPTREF
+          operator: not_exists
 Core:
   Id: CORE-000616
   Status: Published
-  Version: '1'
-Description: Raise an error when Planned Start of Assessment Interval (--STINT) is populated and 
+  Version: "1"
+Description: Raise an error when Planned Start of Assessment Interval (--STINT) is populated and
   Time Point Reference (--TPTREF) is not populated.
 Executability: Fully Executable
 Outcome:

@@ -144,13 +144,13 @@ Authorities:
         Version: "1.0"
 Check:
   all:
-    - name: '--ELTM'
-      operator: 'non_empty'
+    - name: "--ELTM"
+      operator: "non_empty"
     - any:
-      - name: '--TPTREF'
-        operator: 'empty'
-      - name: '--TPTREF'
-        operator: not_exists
+        - name: "--TPTREF"
+          operator: "empty"
+        - name: "--TPTREF"
+          operator: not_exists
 Core:
   Id: CORE-000865
   Status: Published
