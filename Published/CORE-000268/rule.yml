@@ -130,11 +130,6 @@ Check:
     - name: --PTCD
       operator: is_not_unique_relationship
       value: --DECOD
-    - name: --PTCD
-      operator: exists
-    - name: --PTCD
-      operator: is_not_unique_relationship
-      value: --DECOD
 Core:
   Id: CORE-000268
   Status: Published

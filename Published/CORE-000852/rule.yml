@@ -185,26 +185,28 @@ Check:
   all:
     - name: $column_order_from_dataset
       operator: is_not_ordered_subset_of
-      value: $column_order_from_library
+      value: $library_with_dataset_only
 Core:
   Id: CORE-000852
   Status: Published
   Version: "1"
-Description: "Raise an error when variables are not in the specified order"
+Description: Raise an error when variables are not in the specified order
 Executability: Fully Executable
 Operations:
-  # variable order in CDISC-Library
   - id: $column_order_from_library
-    operator:
-      get_column_order_from_library
-      # variable order in dataset
+    operator: get_column_order_from_library
   - id: $column_order_from_dataset
     operator: get_column_order_from_dataset
+  - id: $library_with_dataset_only
+    name: $column_order_from_library
+    operator: intersect
+    subtract: $column_order_from_dataset
 Outcome:
-  Message: Variables are not in the correct order as shown in SDTM for the observation class.
+  Message: Variables are not in the correct order as shown in SDTM for the
+    observation class.
   Output Variables:
     - $column_order_from_dataset
-    - $column_order_from_library
+    - $library_with_dataset_only
 Rule Type: Variable Metadata Check
 Scope:
   Classes:

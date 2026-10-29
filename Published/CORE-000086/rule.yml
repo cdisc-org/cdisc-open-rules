@@ -78,7 +78,6 @@ Check:
   all:
     - name: DVSTDTC
       operator: non_empty
-      value: RFICDTC
     - name: DVSTDTC
       operator: date_less_than
       value: RFICDTC

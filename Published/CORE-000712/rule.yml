@@ -113,14 +113,14 @@ Match Datasets:
 Operations:
   - domain: SUPP--
     id: $rdomain_variables
-    name: IDVAR
-    operator: distinct
-    value_is_reference: true
+    name: RDOMAIN
+    operator: referenced_domain_variable_names
 Outcome:
-  Message: Value for IDVAR in SUPP-- does not represent a variable present in the dataset referenced
-    in RDOMAIN.
+  Message: Value for IDVAR in SUPP-- does not represent a variable present in
+    the dataset referenced in RDOMAIN.
   Output Variables:
     - IDVAR
+    - RDOMAIN
 Rule Type: Record Data
 Scope:
   Classes:
