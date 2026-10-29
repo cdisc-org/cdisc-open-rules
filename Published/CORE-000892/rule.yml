@@ -142,94 +142,36 @@ Authorities:
             Version: "1.5"
         Version: "1.0"
 Check:
-  # TODO: FAILS when e.g. --ENRF and --STDTC columns are absent
   all:
     - any:
-        # Case ENDTC populated: check that one of --STDTC, --STRF or --STRTPT is populated
-        - all:
-            - name: --ENDTC
-              operator:
-                non_empty
-                # we need to take into account that the column --STDTC may be absent
-            - any:
-                - name: --STDTC
-                  operator: not_exists
-                - name: --STDTC
-                  operator:
-                    empty
-                    # we need to take into account that the column --STRF may be absent
-            - any:
-                - name: --STRF
-                  operator: not_exists
-                - name: --STRF
-                  operator:
-                    empty
-                    # we need to take into account that the column --STRTPT may be absent
-            - any:
-                - name: --STRTPT
-                  operator: not_exists
-                - name: --STRTPT
-                  operator:
-                    empty
-                    # Case ENRF populated: check that one of --STDTC, --STRF or --STRTPT is populated
-        - all:
-            - name: --ENRF
-              operator:
-                non_empty
-                # we need to take into account that the column --STDTC may be absent
-            - any:
-                - name: --STDTC
-                  operator: not_exists
-                - name: --STDTC
-                  operator:
-                    empty
-                    # we need to take into account that the column --STRF may be absent
-            - any:
-                - name: --STRF
-                  operator: not_exists
-                - name: --STRF
-                  operator:
-                    empty
-                    # we need to take into account that the column --STRTPT may be absent
-            - any:
-                - name: --STRTPT
-                  operator: not_exists
-                - name: --STRTPT
-                  operator:
-                    empty
-
-                    # Case ENRTPT populated: check that one of --STDTC, --STRF or --STRTPT is populated
-        - all:
-            - name: --ENRTPT
-              operator:
-                non_empty
-                # we need to take into account that the column --STDTC may be absent
-            - any:
-                - name: --STDTC
-                  operator: not_exists
-                - name: --STDTC
-                  operator:
-                    empty
-                    # we need to take into account that the column --STRF may be absent
-            - any:
-                - name: --STRF
-                  operator: not_exists
-                - name: --STRF
-                  operator:
-                    empty
-                    # we need to take into account that the column --STRTPT may be absent
-            - any:
-                - name: --STRTPT
-                  operator: not_exists
-                - name: --STRTPT
-                  operator: empty
-
+        - name: --ENDTC
+          operator: non_empty
+        - name: --ENRF
+          operator: non_empty
+        - name: --ENRTPT
+          operator: non_empty
+    - all:
+        - any:
+            - name: --STDTC
+              operator: not_exists
+            - name: --STDTC
+              operator: empty
+        - any:
+            - name: --STRF
+              operator: not_exists
+            - name: --STRF
+              operator: empty
+        - any:
+            - name: --STRTPT
+              operator: not_exists
+            - name: --STRTPT
+              operator: empty
 Core:
   Id: CORE-000892
   Status: Published
   Version: "1"
-Description: When Eed timepoint (--ENDTC, --ENRF or --ENRTPT) is populated, related start timepoint
-  (--STDTC, --STRF or --STRTPT should also be populated.
+Description: Raise an error when end timepoint (--ENDTC, --ENRF or --ENRTPT) is populated but
+  related start timepoint (--STDTC, --STRF or --STRTPT) is not populated.
 Executability: Fully Executable
 Outcome:
   Message: End timepoint is populated but start timepoint is missing.
@@ -243,12 +185,10 @@ Outcome:
 Rule Type: Record Data
 Scope:
   Classes:
-    # Only applicable to EVENTS and INTERVENTIONS and Findings
     Include:
       - INTERVENTIONS
       - EVENTS
-      - FINDINGS
   Domains:
-    Exclude:
-      - NONE
+    Include:
+      - ALL
 Sensitivity: Record

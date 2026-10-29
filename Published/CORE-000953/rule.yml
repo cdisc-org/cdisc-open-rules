@@ -100,27 +100,25 @@ Core:
   Id: CORE-000953
   Status: Published
   Version: "1"
-Description: Part C - Raise and error when IDVAR in CO is not populated with a valid variable from
-  the dataset referenced in RDOMAIN.
+Description: Part C - Raise and error when IDVAR in CO is not populated with a
+  valid variable from the dataset referenced in RDOMAIN.
 Executability: Fully Executable
 Match Datasets:
   - Child: true
     Keys:
       - USUBJID
-      - IDVAR
-      - IDVARVAL
     Name: CO
 Operations:
   - domain: CO
     id: $rdomain_variables
-    name: IDVAR
-    operator: distinct
-    value_is_reference: true
+    name: RDOMAIN
+    operator: referenced_domain_variable_names
 Outcome:
-  Message: Value for IDVAR in CO does not represent a variable present in the dataset referenced in
-    RDOMAIN.
+  Message: Value for IDVAR in CO does not represent a variable present in the
+    dataset referenced in RDOMAIN.
   Output Variables:
     - IDVAR
+    - RDOMAIN
 Rule Type: Record Data
 Scope:
   Classes:
