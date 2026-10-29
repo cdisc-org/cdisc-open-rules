@@ -77,7 +77,7 @@ Check:
           operator: empty
         - name: --DRVFL
           operator: not_equal_to
-          value: "Y"
+          value: 'Y'
           value_is_literal: true
         - name: --ORRES
           operator: empty
@@ -93,8 +93,15 @@ Check:
           operator: not_exists
         - name: --DRVFL
           operator: not_equal_to
-          value: "Y"
+          value: 'Y'
           value_is_literal: true
+        - name: --ORRES
+          operator: empty
+    - all:
+        - name: --STAT
+          operator: not_exists
+        - name: --DRVFL
+          operator: not_exists
         - name: --ORRES
           operator: empty
 Core:

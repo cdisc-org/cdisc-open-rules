@@ -90,7 +90,7 @@ Check:
   all:
     - name: SEENDTC
       operator: does_not_have_next_corresponding_record
-      ordering: SESEQ
+      ordering: SESTDTC
       value: SESTDTC
       within: USUBJID
 Core:

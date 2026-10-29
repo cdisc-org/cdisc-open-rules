@@ -169,14 +169,8 @@ Authorities:
 Check:
   all:
     - name: variable_label
-      operator:
-        not_matches_regex
-        # value: ^\s*[A-Z]\S*\s*((a|an|the|and|per|to|but|or|for|in|of|on|with|([A-Z]\S*))\s*)*$
-        # Updated by Jozef Aerts, added "and/or", "is", "within" and "from"
-        # as these appear in existing labels in SDTM Model 2.0 (I did not check in earlier model versions)
-        # value: ^\s*[A-Z]\S*\s*((a|an|the|and|per|to|but|or|for|in|of|on|with|and/or|is|within|from|([A-Z]\S*))\s*)*$
-        # update 2025-07-24:
-      value: ^\s*[A-Z]\S*(?:\s+(?:(?:a|an|the|as|and|per|to|but|or|for|in|is|of|on|with|within|from)|[A-Z]\S*|[^A-Za-z\s]+))*\s*$
+      operator: not_matches_regex
+      value: '^\s*[A-Z]\S*(?:\s+(?:(?:a|an|the|as|and|or|nor|but|for|so|yet|per|to|in|is|of|on|at|by|up|via|vs|with|within|without|from|into|onto|over|than|after|before|between)(?:/(?:a|an|the|as|and|or|nor|but|for|so|yet|per|to|in|is|of|on|at|by|up|via|vs|with|within|without|from|into|onto|over|than|after|before|between|[A-Z]\S*))*|[A-Z]\S*|[^A-Za-z\s]+))*\s*$'
 Core:
   Id: CORE-000594
   Status: Published
