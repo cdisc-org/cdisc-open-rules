@@ -37,7 +37,7 @@ OUTPUT_PATH = Path(os.getenv("OUTPUT_PATH", "Library/rule.json"))
 OPEN_RULES_DIR = Path(os.getenv("OPEN_RULES_DIR", "Published"))
 CORE_REPO = os.getenv("CORE_CONTRIBUTOR_REPO", "cdisc-org/core-contributor")
 CORE_REF = os.getenv("CORE_CONTRIBUTOR_REF", "main")
-CORE_RULES_DIR = os.getenv("CORE_CONTRIBUTOR_RULES_DIR", "rules")
+CORE_RULES_DIR = os.getenv("CORE_CONTRIBUTOR_RULES_DIR", "sdtm_rules")
 PR_BODY_PATH = os.getenv("PR_BODY_PATH")
 TOKEN = os.getenv("GITHUB_TOKEN")
 
