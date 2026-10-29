@@ -233,6 +233,8 @@ Check:
   all:
     - name: --STRESC
       operator: non_empty
+    - name: --STRESN
+      operator: exists
     - name: --STRESC
       operator: matches_regex
       value: ^-?(0|[1-9]\d*)(\.\d+)?$
@@ -241,7 +243,7 @@ Check:
           operator: empty
         - name: --STRESC
           operator: not_equal_to
-          type_insensitive: true
+          type_insensitive: numeric
           value: --STRESN
 Core:
   Id: CORE-000542

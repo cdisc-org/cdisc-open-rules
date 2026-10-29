@@ -149,11 +149,12 @@ Check:
     - name: $dataset_size
       operator: greater_than
       value: 5368709120
+      value_is_literal: true
 Core:
   Id: CORE-000765
   Status: Published
   Version: "1"
-Description: The submitted dataset is larger than 5 GB
+Description: Raise an error when the submitted dataset is larger than 5 GB.
 Executability: Fully Executable
 Operations:
   - id: $dataset_size
