@@ -1,0 +1,166 @@
+# ==============================================================================
+# check-published-results.yml
+#
+# Runs the CORE engine against every Published rule's test cases, pulling each
+# rule from the CDISC Library API by CORE ID (`-r <CORE-ID>`, the rule's folder
+# name), and diffs the engine output against the repo's expected results.csv.
+# Nothing is written back to the repo.
+#
+# Triggers:
+#   - Manual (workflow_dispatch) — optionally target a specific engine branch
+#     and/or a subset of rules
+# ==============================================================================
+name: Check Published Results Against Library
+
+on:
+  workflow_dispatch:
+    inputs:
+      engine_ref:
+        description: "Branch/tag/SHA of cdisc-rules-engine to run"
+        required: false
+        default: "main"
+        type: string
+      core_ids:
+        description: >-
+          Space-separated rule IDs to check (e.g. CORE-000001 CORE-000002).
+          Leave blank to check all Published rules.
+        required: false
+        default: ""
+        type: string
+
+env:
+  engine_ref: ${{ inputs.engine_ref || 'main' }}
+
+permissions:
+  contents: read
+
+jobs:
+  check-results:
+    runs-on: ubuntu-latest
+
+    steps:
+      # -----------------------------------------------------------------------
+      # 1. Checkout this repo (cdisc-open-rules)
+      # -----------------------------------------------------------------------
+      - name: Checkout cdisc-open-rules
+        uses: actions/checkout@v4
+
+      # -----------------------------------------------------------------------
+      # 2. Checkout the engine into ./engine/
+      # -----------------------------------------------------------------------
+      - name: Checkout cdisc-rules-engine
+        uses: actions/checkout@v4
+        with:
+          repository: cdisc-org/cdisc-rules-engine
+          ref: ${{ env.engine_ref }}
+          path: engine
+
+      # -----------------------------------------------------------------------
+      # 3. Python + dependencies
+      # -----------------------------------------------------------------------
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install engine dependencies
+        run: |
+          python -m venv venv
+          venv/bin/pip install --upgrade pip
+          cd engine
+          ../venv/bin/pip install . --group dev
+
+      - name: Install script dependencies
+        run: venv/bin/pip install tabulate jmespath pyyaml ruamel.yaml
+
+      # -----------------------------------------------------------------------
+      # 4. Pull rules (and standards/CT) from the CDISC Library API into the
+      #    engine cache so `-r CORE-XXXXXX` resolves against the Library
+      # -----------------------------------------------------------------------
+      - name: Update engine cache from CDISC Library
+        working-directory: engine
+        env:
+          CDISC_LIBRARY_API_KEY: ${{ secrets.CDISC_LIBRARY_API_KEY }}
+        run: |
+          if [ -z "$CDISC_LIBRARY_API_KEY" ]; then
+            echo "::error::CDISC_LIBRARY_API_KEY secret is not available to this workflow."
+            exit 1
+          fi
+          ../venv/bin/python core.py update-cache
+
+      # -----------------------------------------------------------------------
+      # 5. Run the engine for Published rules filtered by Authorities.Standards.Name
+      #    and diff each case against the repo's expected results.csv
+      # -----------------------------------------------------------------------
+      - name: Run engine and compare results
+        id: run_engine
+        continue-on-error: true
+        env:
+          CDISC_LIBRARY_API_KEY: ${{ secrets.CDISC_LIBRARY_API_KEY }}
+        run: |
+          chmod +x .github/scripts/run_library_validation.sh
+          FILTER_STANDARDS=("USDM" "TIG")
+          mapfile -t FILTER_RESULT < <(venv/bin/python .github/scripts/filter_core_ids_by_standard.py \
+            --rules-root "$(pwd)" \
+            --standards "${FILTER_STANDARDS[@]}" \
+            --core-ids "${{ inputs.core_ids }}")
+          FILTERED_CORE_IDS="${FILTER_RESULT[0]}"
+          CORE_IDS_TO_RUN="${FILTER_RESULT[1]}"
+
+          if [ -z "$FILTERED_CORE_IDS" ]; then
+            echo "No Published rules found for standards: ${FILTER_STANDARDS[*]}"
+            exit 0
+          fi
+
+          if [ -z "$CORE_IDS_TO_RUN" ]; then
+            echo "No requested core_ids matched Published rules for standards: ${FILTER_STANDARDS[*]}"
+            exit 0
+          fi
+
+          echo "Running validation for standards: ${FILTER_STANDARDS[*]}"
+          echo "Rule count: $(echo "$CORE_IDS_TO_RUN" | wc -w | tr -d ' ')"
+
+          CORE_IDS_ARG="--core-ids $CORE_IDS_TO_RUN"
+
+          ENGINE_DIR_OVERRIDE="$(pwd)/engine" \
+          venv/bin/python engine/scripts/validate_published_rules.py \
+            --rules-root "$(pwd)" \
+            --engine-dir "$(pwd)/engine" \
+            --python-cmd "$(pwd)/venv/bin/python" \
+            --output-dir "$(pwd)" \
+            $CORE_IDS_ARG
+
+      # -----------------------------------------------------------------------
+      # 6. Write summary to Job Summary
+      # -----------------------------------------------------------------------
+      - name: Write summary to workflow summary
+        if: always()
+        run: |
+          {
+            echo "**Engine ref:** \`${{ env.engine_ref }}\`  |  **Rule source:** CDISC Library API (\`-r <CORE-ID>\`)"
+            echo ""
+            [ -f summary_table.md ] && cat summary_table.md || echo "_No summary was generated._"
+          } >> $GITHUB_STEP_SUMMARY
+
+      # -----------------------------------------------------------------------
+      # 7. Upload reports and actual engine output for inspection
+      # -----------------------------------------------------------------------
+      - name: Upload validation artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: check-results-${{ github.run_id }}
+          path: |
+            Published/**/results/actual.csv
+            summary_table.md
+            detail_report.md
+          if-no-files-found: warn
+
+      # -----------------------------------------------------------------------
+      # 8. Fail the job if any case errored or didn't match
+      # -----------------------------------------------------------------------
+      - name: Check overall status
+        if: steps.run_engine.outcome == 'failure'
+        run: |
+          echo "One or more Published rules did not match their expected results — see the summary and detail_report.md artifact."
+          exit 1
