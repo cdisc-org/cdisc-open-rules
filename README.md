@@ -5,6 +5,19 @@ A Note from the Dev Team: Currently, SDTM-only rules are housed in the Deprecate
 The same goes for SEND-only rules in Published/: as we transferred these from SharePoint, they were not scoped within v1.0. We continue to house them in Published/, but the rules and their data have not been fully validated at this juncture.
 
 
+## Which Engine Should I Use?
+
+> **At present**, rule validation is split across two engines while work is underway to merge
+> the SQL fork back into this repository. Until that merge is complete, please select the
+> engine based on the rules you’re running:
+
+| If you’re running…                 | Use…                                                                                                              | Rules                                                                       |
+|------------------------------------|-------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------|
+| **SDTM** or **FDA Business Rules** | The **refactored SQL Engine** — [verisianHQ/cdisc-rules-engine](https://github.com/verisianHQ/cdisc-rules-engine) | [cdisc-org/core-contributor](https://github.com/cdisc-org/core-contributor) |
+| **TIG**, **USDM**, or **SEND**     | The **CDISC Engine** (this repository), as described below                                                        | [cdisc-org/cdisc-open-rules](https://github.com/cdisc-org/cdisc-open-rules) |
+
+
+
 **Rule Authoring Reference Guide**
 https://cdisc-org.github.io/cdisc-open-rules/#/
 
