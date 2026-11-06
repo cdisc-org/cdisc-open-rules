@@ -16,8 +16,6 @@ The same goes for SEND-only rules in Published/: as we transferred these from Sh
 | **SDTM** or **FDA Business Rules** | The **refactored SQL Engine** — [verisianHQ/cdisc-rules-engine](https://github.com/verisianHQ/cdisc-rules-engine) | [cdisc-org/core-contributor](https://github.com/cdisc-org/core-contributor) |
 | **TIG**, **USDM**, or **SEND**     | The **CDISC Engine** (this repository), as described below                                                        | [cdisc-org/cdisc-open-rules](https://github.com/cdisc-org/cdisc-open-rules) |
 
-
-
 **Rule Authoring Reference Guide**
 https://cdisc-org.github.io/cdisc-open-rules/#/
 
