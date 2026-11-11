@@ -23,6 +23,8 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    outputs:
+      pr_operation: ${{ steps.cpr.outputs.pull-request-operation }}
     steps:
       - name: Check out cdisc-open-rules
         uses: actions/checkout@v5
@@ -47,6 +49,7 @@ jobs:
         run: python .github/scripts/build_library_rules.py
 
       - name: Open or update PR
+        id: cpr
         uses: peter-evans/create-pull-request@v7
         with:
           token: ${{ github.token }}
@@ -56,3 +59,10 @@ jobs:
           commit-message: "chore: rebuild Library/rule.json"
           title: "Update Library/rule.json"
           body-path: ${{ runner.temp }}/pr_body.md
+
+  mappings:
+    needs: build
+    if: needs.build.outputs.pr_operation == 'created' || needs.build.outputs.pr_operation == 'updated'
+    uses: ./.github/workflows/build_mappings.yml
+    with:
+      target_branch: automation/library-rule-json
