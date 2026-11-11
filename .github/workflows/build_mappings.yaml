@@ -1,0 +1,78 @@
+name: Build mappings
+
+on:
+  # Manual: rebuilds mappings/ from the Library/rule.json on the branch you pick
+  # in "Use workflow from". Leave target_branch empty to get a PR; set it to
+  # commit straight onto that branch instead.
+  workflow_dispatch:
+    inputs:
+      target_branch:
+        description: "Commit directly to this branch (leave empty to open a PR)"
+        type: string
+        default: ""
+
+  # Called by "Build Library rule.json" after it opens/updates its PR, with
+  # target_branch = that PR's branch, so rule.json + mappings land in one PR.
+  workflow_call:
+    inputs:
+      target_branch:
+        type: string
+        default: ""
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    # Job-level and named differently from the caller's "build-library-rules"
+    # group, otherwise the called run waits on its own caller.
+    concurrency:
+      group: build-mappings-${{ inputs.target_branch || github.ref_name }}
+      cancel-in-progress: false
+    env:
+      TARGET_BRANCH: ${{ inputs.target_branch }}
+    steps:
+      - name: Check out cdisc-open-rules
+        uses: actions/checkout@v5
+        with:
+          ref: ${{ inputs.target_branch || github.ref }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Build mappings/
+        env:
+          RULES_PATH: Library/rule.json
+          MAPPINGS_DIR: mappings
+          PRUNE_STALE: "true"
+          PR_BODY_PATH: ${{ runner.temp }}/mappings_pr_body.md
+        run: python .github/scripts/build_mappings.py
+
+      - name: Commit to target branch
+        if: inputs.target_branch != ''
+        run: |
+          git add -A mappings
+          if git diff --cached --quiet; then
+            echo "No mapping changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore: rebuild mappings from Library/rule.json"
+          git push origin "HEAD:${TARGET_BRANCH}"
+
+      - name: Open or update PR
+        if: inputs.target_branch == ''
+        uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ github.token }}
+          branch: automation/mappings
+          delete-branch: true
+          add-paths: mappings
+          commit-message: "chore: rebuild mappings from Library/rule.json"
+          title: "Update mappings"
+          body-path: ${{ runner.temp }}/mappings_pr_body.md
